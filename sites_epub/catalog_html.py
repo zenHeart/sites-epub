@@ -126,6 +126,9 @@ def write_site(dest: Path, vendors: list[Vendor] | None = None, dist: Path | Non
         epub_src = (dist or ROOT / "dist") / f"{v.id}.epub"
         if epub_src.is_file():
             (dest / f"{v.id}.epub").write_bytes(epub_src.read_bytes())
+    hashes = (dist or ROOT / "dist") / "pack-hashes.json"
+    if hashes.is_file():
+        shutil.copy2(hashes, dest / "pack-hashes.json")
     src_covers = ROOT / "covers"
     if src_covers.is_dir():
         for path in src_covers.iterdir():

@@ -20,6 +20,8 @@ python3 -m sites_epub fetch --id codex
 
 # offline pack from committed corpus (what CI runs)
 python3 -m sites_epub pack
+python3 -m sites_epub pack --force          # rebuild every vendor
+python3 -m sites_epub pack --id claude      # rebuild one book
 ```
 
 ## Create vs incremental
@@ -28,7 +30,7 @@ python3 -m sites_epub pack
 2. If it exists, compare `vendors/<id>/fingerprints.json` to cached `corpus/pages`; **do not refetch unchanged routes**.
 3. Docs nav order first; **Blog is the last TOC parent**.
 4. Commit `catalog.json`, `vendors/<id>/vendor.json`, `fingerprints.json`, `corpus/pages`, `corpus/routes.json`, `corpus/image-map.json`, and compressed images. Never commit cookies, tokens, `.env`, or `work/`.
-5. Push `main`. Actions sets `SITESEPUB_OFFLINE=1` and runs `python3 -m sites_epub pack` only (no live crawl) and publishes `epub.zenheart.site`.
+5. Push `main`. Actions sets `SITESEPUB_OFFLINE=1` and runs `python3 -m sites_epub pack` only (no live crawl) and publishes `epub.zenheart.site`. **Pack is per-vendor:** a book is rebuilt only when its corpus, cover, or packer source changes. Unchanged books are copied from the previous `gh-pages` publish (`SITESEPUB_PREV_SITE`). `--force` / workflow_dispatch `force` rebuilds every vendor. A packer change (for example title-link CSS) changes the shared fingerprint and rebuilds all books.
 6. `fetch` writes `updated_at` (语料时间) onto `catalog.json` so the shelf shows how stale the book is versus the live docs/blog. Other EPUB sites live in `catalog.json` → `sites` and the shelf jumps to those URLs.
 
 ## Images

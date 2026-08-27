@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      force:
+        description: Rebuild every vendor EPUB even if corpus and packer are unchanged
+        type: boolean
+        default: false
 
 concurrency:
   group: build-epub-${{ github.ref }}
@@ -24,6 +29,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Restore previously published EPUBs
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: prev-site
+
       - name: Install pandoc and python deps
         run: |
           sudo apt-get update
@@ -32,6 +44,9 @@ jobs:
           pandoc --version | head -1
 
       - name: Pack catalog vendors (offline)
+        env:
+          SITESEPUB_PREV_SITE: prev-site
+          SITESEPUB_FORCE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.force == 'true' && '1' || '0' }}
         run: |
           python3 -m sites_epub pack
           python3 -m sites_epub catalog --dest site

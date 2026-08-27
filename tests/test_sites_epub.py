@@ -16,6 +16,7 @@ if str(ROOT) not in sys.path:
 from sites_epub.catalog import load_sites, upsert_vendor  # noqa: E402
 from sites_epub.catalog_html import render_index, shelf_books  # noqa: E402
 from sites_epub.compile import compile_from_sources, discover_entries, pack_vendor  # noqa: E402
+from sites_epub.pack_cache import run_pack, vendor_pack_key  # noqa: E402
 from sites_epub.epub_pack import grouped_html  # noqa: E402
 from sites_epub.generic_blog import parse_blog_html  # noqa: E402
 from sites_epub.generic_nav import parse_llms_generic  # noqa: E402
@@ -212,6 +213,80 @@ class TestPackFromCorpus(unittest.TestCase):
                 chapter = _chapter_text(zf)
                 self.assertIn("Blog body phrase unique", chapter)
                 self.assertIn("curl install", chapter)
+
+
+class TestPackSkipUnchanged(unittest.TestCase):
+    def _vendor_tree(self, root: Path) -> Vendor:
+        entries = _entries()
+        src = _sources()
+        vdir = root / "vendors" / "codex"
+        corpus = vdir / "corpus" / "pages"
+        corpus.mkdir(parents=True)
+        for route, text in src.items():
+            dest = corpus / f"{route}.md"
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_text(text, encoding="utf-8")
+        import json
+
+        (vdir / "corpus" / "routes.json").write_text(
+            json.dumps(
+                [
+                    {
+                        "group": e.group,
+                        "title": e.title,
+                        "md_url": e.md_url,
+                        "html_url": e.html_url,
+                        "route": e.route,
+                        "kind": e.kind,
+                    }
+                    for e in entries
+                ]
+            ),
+            encoding="utf-8",
+        )
+        (vdir / "icon.png").write_bytes(SAMPLE.read_bytes())
+        return Vendor(
+            id="codex",
+            name="Codex",
+            docs_url="https://example.test/docs",
+            blog_url="https://example.test/blog",
+            icon="vendors/codex/icon.png",
+            adapter="codex",
+        )
+
+    def test_second_pack_skips_until_corpus_changes(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            vendor = self._vendor_tree(root)
+            dest = root / "dist"
+            first = run_pack([vendor], dest, root=root, stamp=False)
+            self.assertEqual(first[0]["action"], "packed")
+            epub = dest / "codex.epub"
+            self.assertTrue(epub.is_file())
+            key = vendor_pack_key(vendor, root)
+            self.assertEqual(first[0]["sha256"], key)
+            mtime = epub.stat().st_mtime_ns
+            second = run_pack([vendor], dest, root=root, stamp=False)
+            self.assertEqual(second[0]["action"], "skipped")
+            self.assertEqual(epub.stat().st_mtime_ns, mtime)
+            page = root / "vendors" / "codex" / "corpus" / "pages" / "codex.md"
+            page.write_text(page.read_text(encoding="utf-8") + "\nchanged body\n", encoding="utf-8")
+            self.assertNotEqual(vendor_pack_key(vendor, root), key)
+            third = run_pack([vendor], dest, root=root, stamp=False)
+            self.assertEqual(third[0]["action"], "packed")
+            self.assertGreater(epub.stat().st_mtime_ns, mtime)
+
+    def test_reuses_epub_from_previous_site(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            vendor = self._vendor_tree(root)
+            prev = root / "prev-site"
+            first = run_pack([vendor], prev, root=root, stamp=False)
+            self.assertEqual(first[0]["action"], "packed")
+            dest = root / "dist"
+            second = run_pack([vendor], dest, root=root, prev_site=prev, stamp=False)
+            self.assertEqual(second[0]["action"], "skipped")
+            self.assertTrue((dest / "codex.epub").is_file())
 
 
 class TestGenericLlmsAndBlog(unittest.TestCase):

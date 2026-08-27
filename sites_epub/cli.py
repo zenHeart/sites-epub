@@ -18,8 +18,9 @@ from .catalog import (
     vendor_to_dict,
 )
 from .catalog_html import write_site
-from .compile import fetch_vendor, pack_vendor
+from .compile import fetch_vendor
 from .models import Vendor
+from .pack_cache import force_from_env, prev_site_from_env, run_pack
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -109,25 +110,25 @@ def cmd_pack(args: argparse.Namespace) -> int:
             return 1
     dest = ROOT / "dist"
     dest.mkdir(exist_ok=True)
+    force = bool(getattr(args, "force", False) or getattr(args, "all", False) or force_from_env())
+    prev = Path(args.prev_site) if getattr(args, "prev_site", None) else prev_site_from_env()
+    force_ids = {args.id} if args.id else None
     code = 0
-    for v in vendors:
-        try:
-            out = dest / f"{v.id}.epub"
-            result = pack_vendor(v, out, root=ROOT)
-            stamp_vendor(v.id, packed_at=now_iso(), chapters=result.chapters)
-            print(
-                json.dumps(
-                    {
-                        "ok": True,
-                        "vendor": v.id,
-                        "output": result.output,
-                        "chapters": result.chapters,
-                        "packed_at": now_iso(),
-                    }
-                )
-            )
-        except Exception as exc:  # noqa: BLE001
-            print(f"error {v.id}: {exc}", file=sys.stderr)
+    try:
+        results = run_pack(
+            vendors,
+            dest,
+            root=ROOT,
+            prev_site=prev,
+            force=force and not args.id,
+            force_ids=force_ids,
+        )
+    except Exception as exc:  # noqa: BLE001
+        print(f"error pack: {exc}", file=sys.stderr)
+        return 1
+    for row in results:
+        print(json.dumps(row))
+        if not row.get("ok"):
             code = 1
     write_site(ROOT / "site", load_catalog(), dist=dest)
     return code
@@ -161,7 +162,9 @@ def main(argv: list[str] | None = None) -> int:
 
     pack = sub.add_parser("pack", help="offline EPUB pack from corpus (GitHub Actions)")
     pack.add_argument("--id")
-    pack.add_argument("--all", action="store_true")
+    pack.add_argument("--all", action="store_true", help="rebuild every vendor (same as --force)")
+    pack.add_argument("--force", action="store_true", help="rebuild even when corpus and packer are unchanged")
+    pack.add_argument("--prev-site", help="previous gh-pages dir with *.epub and pack-hashes.json")
     pack.set_defaults(func=cmd_pack)
 
     cat = sub.add_parser("catalog", help="write static catalog HTML")

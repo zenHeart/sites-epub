@@ -27,11 +27,12 @@ sites_epub/           抓取 → MDX/HTML 转换 → pandoc EPUB3
 python3 -m sites_epub add https://cursor.com/docs https://cursor.com/blog --name Cursor
 python3 -m sites_epub fetch --id cursor
 
-# 离线打包（GitHub Actions 跑这一步）
+# 离线打包（GitHub Actions 跑这一步；未变化的书会跳过）
 python3 -m sites_epub pack
+python3 -m sites_epub pack --force
 python3 -m sites_epub catalog
 ```
 
-提交 `corpus` 与 `fingerprints.json` 后推送 `main`。Actions 设置 `SITESEPUB_OFFLINE=1`，只跑 `pack`，再发布 `gh-pages`（CNAME 为 `epub.zenheart.site`）。
+提交 `corpus` 与 `fingerprints.json` 后推送 `main`。Actions 设置 `SITESEPUB_OFFLINE=1`，只跑 `pack`，再发布 `gh-pages`（CNAME 为 `epub.zenheart.site`）。打包按厂商增量：语料、封面和打包器都没变的书直接复用上次发布的 EPUB，不会每次全量重打。
 
 不要提交令牌、cookie、`.env` 或 `work/`。
