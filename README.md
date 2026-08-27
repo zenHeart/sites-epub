@@ -1,37 +1,37 @@
 # sites-epub
 
-Pack official product **docs + blog** into one EPUB per model vendor. Catalog (ZenShelf): [epub.zenheart.site](http://epub.zenheart.site/).
+按厂商把官方文档和博客打成一部 EPUB。目录站：[epub.zenheart.site](http://epub.zenheart.site/)（ZenShelf）。
 
-厂商文档点封面下载 EPUB；源码书（Pi / Claude Code / DeepSeek Harness）点封面进入各自落地站。卡片「语料」日期是最近一次本地增量抓取。
+- **厂商文档**（Codex / Claude / Cursor）：点封面下载 EPUB。
+- **源码书**（Pi、Claude Code 架构分析、DeepSeek Harness）：点封面进入各自落地站，不在本仓库重复托管文件。
+- 卡片上的「语料」对应 `catalog.json` 的 `updated_at`，即最近一次本地增量抓取的时间，用来对照线上是否过期。
 
-The shelf shows **语料更新** time (`catalog.json` `updated_at`) so an incremental `fetch` can be judged against the live site. Linked handbooks (Pi, Claude Code 架构分析) open their own sites instead of duplicating the EPUB here.
+抓取只在本地执行（`add` / `fetch`，未变更的页面会跳过）。GitHub Actions 只从已提交的 `vendors/<id>/corpus` 离线打包 EPUB，不访问产品站点。
 
-**Crawl is local** (`add` / `fetch`, including incremental skip). **GitHub Actions only packs** EPUB from the committed `vendors/<id>/corpus` (no live fetch).
-
-## Layout
+## 目录
 
 ```
-catalog.json          vendor list (no secrets)
-vendors/<id>/         icon + fingerprints.json (content hashes only)
-  corpus/             pages + images + routes.json (committed source for CI pack)
-sites_epub/           crawl → MDX/HTML transform → pandoc EPUB3
+catalog.json          厂商与源码书清单（不含密钥）
+vendors/<id>/         图标与 fingerprints.json（仅内容哈希）
+  corpus/             页面、图片、routes.json（CI 打包的输入）
+sites_epub/           抓取 → MDX/HTML 转换 → pandoc EPUB3
 .grok/skills/site2epub
 ```
 
-TOC: live docs nav groups first, **Blog last**.
+目录顺序：站点文档导航在前，**Blog 放在最后**。
 
-## Commands
+## 命令
 
 ```bash
-# local create or incremental crawl (agents / this machine)
+# 本地新建或增量抓取（本机 / agent）
 python3 -m sites_epub add https://cursor.com/docs https://cursor.com/blog --name Cursor
 python3 -m sites_epub fetch --id cursor
 
-# offline pack (what GitHub Actions runs)
+# 离线打包（GitHub Actions 跑这一步）
 python3 -m sites_epub pack
 python3 -m sites_epub catalog
 ```
 
-Push `main` after committing corpus + fingerprints. Actions sets `SITESEPUB_OFFLINE=1` and runs `pack` only, then publishes `gh-pages` (CNAME `epub.zenheart.site`).
+提交 `corpus` 与 `fingerprints.json` 后推送 `main`。Actions 设置 `SITESEPUB_OFFLINE=1`，只跑 `pack`，再发布 `gh-pages`（CNAME 为 `epub.zenheart.site`）。
 
-Do not commit tokens, cookies, `.env`, or `work/`.
+不要提交令牌、cookie、`.env` 或 `work/`。
