@@ -11,6 +11,7 @@ from .epub_pack import pack_epub
 from .fingerprint import content_hash, load_fingerprints, save_fingerprints
 from .http import fetch_bytes, fetch_text
 from .images import collect_source_image_urls, guess_ext, local_name_for_url
+from .mdx import looks_like_runtime_source, merge_explorer_into_html
 from .models import CompileResult, FetchResult, IndexEntry, Vendor
 from .page import DocPage, extract_page
 
@@ -167,13 +168,29 @@ def compile_from_sources(
 
 
 def fetch_source(entry: IndexEntry) -> str:
+    """Prefer readable HTML when the .md twin is React/MDX runtime source.
+
+    Mintlify "View as Markdown" / rel=alternate points at the MDX source. Pages
+    like claude-directory.md are `export const` + useMemo, not the rendered
+    article. The live HTML article is what the reader sees.
+    """
+    md = ""
     try:
-        text = fetch_text(entry.md_url)
+        md = fetch_text(entry.md_url)
     except Exception:
-        text = ""
-    if _looks_missing(text):
-        text = fetch_text(entry.html_url)
-    return text
+        md = ""
+    html = ""
+    need_html = _looks_missing(md) or looks_like_runtime_source(md)
+    if need_html:
+        try:
+            html = fetch_text(entry.html_url)
+        except Exception:
+            html = ""
+    if looks_like_runtime_source(md) and html and not _looks_missing(html):
+        return merge_explorer_into_html(html, md, entry.html_url)
+    if not _looks_missing(md):
+        return md
+    return html
 
 
 def _entry_dict(e: IndexEntry) -> dict:
@@ -325,7 +342,12 @@ def fetch_vendor(
         dest = pages_dir / f"{entry.route}.md"
         dest.parent.mkdir(parents=True, exist_ok=True)
         cached = dest.read_text(encoding="utf-8", errors="replace") if dest.is_file() else ""
-        if cached and prev.get(entry.route) == content_hash(cached) and not _looks_missing(cached):
+        if (
+            cached
+            and prev.get(entry.route) == content_hash(cached)
+            and not _looks_missing(cached)
+            and not looks_like_runtime_source(cached)
+        ):
             return entry.route, cached, False
         text = fetch_source(entry)
         dest.write_text(text, encoding="utf-8")
@@ -360,8 +382,10 @@ def fetch_vendor(
                 ).image_urls
         except Exception:
             img_list = []
-        if not img_list:
-            img_list = collect_source_image_urls(text, entry.html_url)
+        extra = collect_source_image_urls(text, entry.html_url)
+        for item in extra:
+            if item not in img_list:
+                img_list.append(item)
         for u in img_list:
             if u not in seen:
                 seen.add(u)
@@ -373,6 +397,10 @@ def fetch_vendor(
         image_map = json.loads(map_path.read_text(encoding="utf-8"))
 
     def one_img(url: str) -> tuple[str, str | None]:
+        from .images import is_chrome_image
+
+        if is_chrome_image(url):
+            return url, None
         name = local_name_for_url(url)
         mapped = image_map.get(url)
         cached = image_dir / mapped if mapped else image_dir / name
@@ -382,7 +410,9 @@ def fetch_vendor(
             data, ctype = fetch_bytes(url)
         except Exception:
             return url, None
-        if not data or len(data) > 1_500_000:
+        if not data:
+            return url, None
+        if len(data) > 2_500_000:
             return url, None
         if not Path(name).suffix:
             name = name + guess_ext(ctype, url)

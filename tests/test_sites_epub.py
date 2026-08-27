@@ -21,6 +21,8 @@ from sites_epub.epub_pack import grouped_html  # noqa: E402
 from sites_epub.generic_blog import parse_blog_html  # noqa: E402
 from sites_epub.generic_nav import parse_llms_generic  # noqa: E402
 from sites_epub.images import repair_epub_images, rewrite_body_images  # noqa: E402
+from sites_epub.mdx import looks_like_runtime_source, transform_mdx  # noqa: E402
+from sites_epub.page import extract_from_html, extract_from_markdown  # noqa: E402
 from sites_epub.models import IndexEntry, Vendor  # noqa: E402
 from sites_epub.page import DocPage  # noqa: E402
 from sites_epub.walk import blocking_defects, walk_chapters  # noqa: E402
@@ -497,6 +499,89 @@ class TestShelf(unittest.TestCase):
         self.assertIn("padding-bottom: 133.333%", html)
         sites = load_sites()
         self.assertTrue(any(s.id == "claude-code-sourcemap" for s in sites))
+
+
+class TestRuntimeSourceAndImages(unittest.TestCase):
+    _MDX = """# Explore the .claude directory
+
+> Where Claude Code reads CLAUDE.md.
+
+export const ClaudeExplorer = () => {
+  const A = useMemo(() => ({href, children}) => <a href={href}>{children}</a>, []);
+  const FILE_TREE = useMemo(() => ({
+    project: {
+      label: 'your-project/',
+      children: [{
+        id: 'claude-md',
+        label: 'CLAUDE.md',
+        type: 'file',
+        oneLiner: 'Project instructions Claude reads every session',
+        when: 'Loaded into context at the start of every session',
+        description: 'Project-specific instructions that shape how Claude works.',
+        example: `# Project conventions
+- Build: npm run build`,
+        docsLink: '/en/memory'
+      }]
+    }
+  }), []);
+  return <div>{FILE_TREE}</div>;
+};
+
+## What’s not shown
+
+The explorer covers files you author and edit.
+"""
+
+    def test_transform_strips_react_islands(self) -> None:
+        self.assertTrue(looks_like_runtime_source(self._MDX))
+        out = transform_mdx(self._MDX)
+        self.assertNotIn("useMemo", out)
+        self.assertNotIn("export const", out)
+        self.assertIn("What’s not shown", out)
+        self.assertIn("explore-the-directory", out)
+        self.assertIn("CLAUDE.md", out)
+
+    def test_extract_markdown_does_not_leak_react(self) -> None:
+        page = extract_from_markdown(
+            self._MDX,
+            route="claude-directory",
+            url="https://code.claude.com/docs/en/claude-directory",
+        )
+        self.assertNotIn("useMemo", page.body_html)
+        self.assertNotIn("FILE_TREE", page.body_text)
+        self.assertIn("not shown", page.body_text.lower())
+        self.assertIn("https://code.claude.com/docs/en/claude-directory#explore-the-directory", page.body_html)
+        self.assertIn("CLAUDE.md", page.body_text)
+
+    def test_html_article_keeps_readable_copy(self) -> None:
+        html = (
+            "<!DOCTYPE html><html><body><article>"
+            "<h1>Explore the .claude directory</h1>"
+            "<p>Claude Code reads instructions from your project directory.</p>"
+            "<h2>What’s not shown</h2>"
+            "<p>The explorer covers files you author and edit.</p>"
+            '<img src="https://mintcdn.com/claude-code/x/images/vs-code.png" alt="VS Code">'
+            "</article></body></html>"
+        )
+        page = extract_from_html(
+            html,
+            route="claude-directory",
+            url="https://code.claude.com/docs/en/claude-directory",
+        )
+        self.assertIn("project directory", page.body_text)
+        self.assertNotIn("useMemo", page.body_html)
+        self.assertTrue(any("vs-code.png" in u for u in page.image_urls))
+
+    def test_rewrite_maps_query_string_variants(self) -> None:
+        html = '<p><img src="https://mintcdn.com/x/a.png?fit=max&amp;auto=format" alt="a"></p>'
+        out = rewrite_body_images(
+            html,
+            {"https://mintcdn.com/x/a.png?q=85": "images/a.png"},
+            base="https://code.claude.com/docs",
+            available={"images/a.png"},
+        )
+        self.assertIn("images/a.png", out)
+        self.assertNotIn("mintcdn.com", out)
 
 
 class TestSourceTitleLinks(unittest.TestCase):

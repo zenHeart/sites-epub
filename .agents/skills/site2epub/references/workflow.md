@@ -14,7 +14,7 @@ python3 -m sites_epub catalog
 ## 新建 vs 增量
 
 1. `catalog.json` 没有该 vendor id：建 `vendors/<id>/`，爬全部路由。
-2. 已存在：用 `vendors/<id>/fingerprints.json` 对照 `corpus/pages`，**未变路由不重抓**。
+2. 已存在：用 `vendors/<id>/fingerprints.json` 对照 `corpus/pages`，**未变路由不重抓**。若缓存仍是 React/MDX 运行时源码（`export const` / `useMemo`），即使哈希未变也要重抓 HTML。
 3. 站点文档导航在前；**Blog 必须是最后一个 TOC parent**。
 4. `fetch` 把 `updated_at`（语料时间）写进 `catalog.json`，书架用来对照线上是否过期。其他 EPUB 站点在 `catalog.json` → `sites`，封面点击跳到那些 URL。
 

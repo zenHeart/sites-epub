@@ -60,6 +60,11 @@ th { background: #f0f0f0; font-weight: 600; }
 .mdx-codegroup { margin: 1em 0; }
 .mdx-codepanel { border: 1px solid #ddd; border-radius: 6px; padding: 0.75em 1em; margin: 0.6em 0; background: #fafafa; }
 .mdx-codepanel-title { font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0 0 0.4em; }
+.mdx-live-widget { border: 1px solid #c5d0dc; border-left: 4px solid #0f4c81; padding: 0.75em 1em; margin: 1em 0; background: #f4f7fb; }
+.mdx-live-widget-label { font-weight: 600; margin: 0 0 0.35em; font-size: 0.9em; }
+.mdx-file-card { border: 1px solid #ddd; border-radius: 6px; padding: 0.75em 1em; margin: 0.8em 0; background: #fafafa; }
+.mdx-file-card h3 { margin: 0 0 0.35em; font-size: 1.05em; }
+.mdx-when { font-size: 0.92em; color: #444; }
 """
 
 

@@ -7,8 +7,263 @@ import re
 import shutil
 import subprocess
 import textwrap
+from urllib.parse import urljoin
 
 OPEN_TAG = re.compile(r"<([A-Za-z][\w.-]*)(\s[^>]*)?>")
+RUNTIME_ASSIGN = re.compile(
+    r"(?m)^(export\s+)?const\s+[A-Za-z_]\w*\s*=\s*(?:\(\s*\)\s*=>|useMemo\s*\(|useCallback\s*\(|useState\s*\()"
+)
+
+
+def looks_like_runtime_source(text: str) -> bool:
+    """True when a Mintlify .md twin is React/MDX source, not readable markdown."""
+    if not text:
+        return False
+    if re.search(r"(?m)^export\s+const\s+\w+\s*=", text):
+        return True
+    if "useMemo(" in text or "useCallback(" in text or "useState(" in text:
+        return True
+    if re.search(r"(?m)^import\s+.+\sfrom\s+['\"]react['\"]", text):
+        return True
+    return False
+
+
+def _skip_balanced(text: str, start: int) -> int:
+    """Return index after the statement that starts at start, using brace/paren depth."""
+    opener = None
+    i = start
+    while i < len(text):
+        ch = text[i]
+        if ch in "{(":
+            opener = ch
+            break
+        i += 1
+    if opener is None:
+        nl = text.find("\n", start)
+        return len(text) if nl < 0 else nl + 1
+    close = "}" if opener == "{" else ")"
+    depth = 0
+    in_str = None
+    escape = False
+    while i < len(text):
+        ch = text[i]
+        if in_str:
+            if escape:
+                escape = False
+            elif ch == "\\":
+                escape = True
+            elif ch == in_str:
+                in_str = None
+            i += 1
+            continue
+        if ch in "\"'`":
+            in_str = ch
+            i += 1
+            continue
+        if ch == opener:
+            depth += 1
+        elif ch == close:
+            depth -= 1
+            if depth == 0:
+                i += 1
+                while i < len(text) and text[i] in " \t;":
+                    i += 1
+                if i < len(text) and text[i] == "\n":
+                    i += 1
+                return i
+        i += 1
+    return len(text)
+
+
+def strip_runtime_source(md: str) -> str:
+    """Drop export-const / useMemo islands so pandoc never prints React source."""
+    text = md or ""
+    guard = 0
+    while guard < 80:
+        guard += 1
+        match = RUNTIME_ASSIGN.search(text)
+        if not match:
+            break
+        # `useMemo(` already consumed '('; `() => {` must start at the body brace.
+        cursor = match.end() - 1 if text[match.end() - 1 : match.end()] == "(" else match.end()
+        end = _skip_balanced(text, cursor)
+        text = text[: match.start()] + text[end:]
+    return text
+
+
+def _jsx_to_text(raw: str) -> str:
+    text = raw or ""
+    text = re.sub(
+        r'<A\s+href="([^"]+)">([^<]*)</A>',
+        lambda m: f"[{m.group(2)}]({m.group(1)})",
+        text,
+    )
+    text = re.sub(r"<C>([\s\S]*?)</C>", r"`\1`", text)
+    text = re.sub(r"\{['\"]([^'\"]*)['\"]\}", r"\1", text)
+    text = re.sub(r"</?[A-Za-z][^>]*>", "", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _quoted_field(chunk: str, name: str) -> str:
+    match = re.search(rf"{name}:\s*'((?:\\'|[^'])*)'", chunk)
+    if match:
+        return match.group(1).replace("\\'", "'")
+    match = re.search(rf"{name}:\s*<>", chunk)
+    if not match:
+        return ""
+    start = match.end()
+    end = chunk.find("</>", start)
+    return _jsx_to_text(chunk[start:end] if end > 0 else chunk[start : start + 800])
+
+
+def _example_field(chunk: str) -> str:
+    match = re.search(r"example:\s*`([\s\S]*?)`", chunk)
+    return match.group(1).strip() if match else ""
+
+
+def _doc_href(href: str, page_url: str | None) -> str:
+    if not href:
+        return ""
+    if href.startswith("http"):
+        return href
+    base = page_url or "https://code.claude.com/docs/en/"
+    if href.startswith("/docs/"):
+        return urljoin("https://code.claude.com", href)
+    if href.startswith("/en/"):
+        return urljoin("https://code.claude.com/docs", href)
+    return urljoin(base if base.endswith("/") else base + "/", href.lstrip("/"))
+
+
+def explorer_fragment(page_url: str | None) -> str:
+    if page_url and page_url.rstrip("/").endswith("claude-directory"):
+        return "explore-the-directory"
+    return "explore-the-directory"
+
+
+def extract_explorer_nodes(md: str) -> list[dict[str, str | list[str]]]:
+    """Pull FILE_TREE file cards out of ClaudeExplorer MDX source."""
+    nodes: list[dict[str, str | list[str]]] = []
+    seen: set[str] = set()
+    for part in re.split(r"\bid:\s*'", md or "")[1:]:
+        nid, _, rest = part.partition("'")
+        label = _quoted_field(rest, "label")
+        if not label or label in seen:
+            continue
+        one = _quoted_field(rest, "oneLiner")
+        desc = _quoted_field(rest, "description")
+        when = _quoted_field(rest, "when")
+        intro = _quoted_field(rest, "exampleIntro")
+        example = _example_field(rest)
+        docs = _quoted_field(rest, "docsLink")
+        tips_raw = re.search(r"tips:\s*\[([\s\S]*?)\]\s*,", rest)
+        tips: list[str] = []
+        if tips_raw:
+            inner = tips_raw.group(1)
+            tips.extend(re.findall(r"'((?:\\'|[^'])*)'", inner))
+            for frag in re.findall(r"<>([\s\S]*?)</>", inner):
+                got = _jsx_to_text(frag)
+                if got:
+                    tips.append(got)
+        if not (one or desc or example or tips):
+            continue
+        seen.add(label)
+        nodes.append(
+            {
+                "id": nid,
+                "label": label,
+                "oneLiner": one,
+                "when": when,
+                "description": desc,
+                "tips": tips,
+                "exampleIntro": intro,
+                "example": example,
+                "docsLink": docs,
+            }
+        )
+    return nodes
+
+
+def render_explorer_fallback(md: str, page_url: str | None) -> str:
+    """Static stand-in for interactive directory explorers that EPUB cannot run."""
+    url = (page_url or "").split("?")[0].rstrip("/")
+    if not url:
+        url = "https://code.claude.com/docs/en/claude-directory"
+    href = f"{url}#{explorer_fragment(url)}"
+    parts = [
+        '<aside class="mdx-live-widget">',
+        '<p class="mdx-live-widget-label">Interactive explorer</p>',
+        "<p>This directory tree is interactive on the original page and cannot run inside an EPUB. "
+        f'Open it here: <a class="source-title" href="{html.escape(href, quote=True)}" rel="external">'
+        f"{html.escape(href)}</a></p>",
+        "</aside>",
+    ]
+    nodes = extract_explorer_nodes(md)
+    if not nodes:
+        return "\n".join(parts) + "\n"
+    parts.append('<div class="mdx-file-index">')
+    parts.append("<p>File-by-file notes from that explorer:</p>")
+    for node in nodes:
+        parts.append('<div class="mdx-file-card">')
+        label = html.escape(str(node["label"]))
+        docs = _doc_href(str(node.get("docsLink") or ""), page_url)
+        heading = f"<code>{label}</code>"
+        if docs:
+            heading = (
+                f'<a href="{html.escape(docs, quote=True)}" rel="external">{heading}</a>'
+            )
+        parts.append(f"<h3>{heading}</h3>")
+        if node.get("oneLiner"):
+            parts.append(f"<p>{html.escape(str(node['oneLiner']))}</p>")
+        if node.get("when"):
+            parts.append(
+                f'<p class="mdx-when"><strong>When it loads.</strong> {html.escape(str(node["when"]))}</p>'
+            )
+        if node.get("description"):
+            parts.append(f"<p>{html.escape(str(node['description']))}</p>")
+        tips = node.get("tips") or []
+        if isinstance(tips, list) and tips:
+            parts.append("<p><strong>Tips</strong></p><ul>")
+            for tip in tips:
+                if tip:
+                    parts.append(f"<li>{html.escape(str(tip))}</li>")
+            parts.append("</ul>")
+        if node.get("exampleIntro"):
+            parts.append(f"<p>{html.escape(str(node['exampleIntro']))}</p>")
+        if node.get("example"):
+            parts.append(
+                f"<pre><code>{html.escape(str(node['example']))}</code></pre>"
+            )
+        parts.append("</div>")
+    parts.append("</div>")
+    return "\n".join(parts) + "\n"
+
+
+def merge_explorer_into_html(html_page: str, md: str, page_url: str | None) -> str:
+    """Keep rendered article copy and splice in explorer notes + live link."""
+    from bs4 import BeautifulSoup
+
+    block = render_explorer_fallback(md, page_url)
+    soup = BeautifulSoup(html_page, "lxml")
+    article = soup.select_one("article") or soup.select_one("main") or soup.body
+    if article is None:
+        return html_page
+    frag = BeautifulSoup(block, "lxml")
+    root = frag.body if frag.body else frag
+    children = [child.extract() for child in list(root.contents) if str(child).strip()]
+    anchor = None
+    for heading in article.find_all(["h2", "h3"]):
+        if "explore" in heading.get_text(" ", strip=True).lower():
+            anchor = heading
+            break
+    if anchor is None:
+        anchor = article.find(["h1", "h2"])
+    if anchor is not None:
+        for child in reversed(children):
+            anchor.insert_after(child)
+    else:
+        for child in reversed(children):
+            article.insert(0, child)
+    return str(soup)
 
 
 def _attr(attrs: str, name: str) -> str:
@@ -871,9 +1126,13 @@ def convert_remaining_fences(text: str) -> str:
     return result
 
 
-def transform_mdx(md: str) -> str:
+def transform_mdx(md: str, page_url: str | None = None) -> str:
     """Convert Mintlify/Starlight MDX in a docs page to readable Markdown/HTML."""
-    text = strip_mdx_comments(md)
+    extra = ""
+    if looks_like_runtime_source(md) and ("FILE_TREE" in md or "ClaudeExplorer" in md):
+        extra = render_explorer_fallback(md, page_url)
+    text = strip_runtime_source(md)
+    text = strip_mdx_comments(text)
     text = clean_fence_headers(text)
     text = _replace_jsx(text, "CodexDocsOverviewLanding", _render_landing)
     text = _replace_innermost(text, "ContentModeSwitch", _unwrap)
@@ -904,4 +1163,7 @@ def transform_mdx(md: str) -> str:
     text = _replace_innermost(text, "Steps", _render_steps)
     text = strip_remaining_jsx(text)
     text = convert_remaining_fences(text)
-    return _close_raw_html_divs(text)
+    text = _close_raw_html_divs(text)
+    if extra:
+        return extra + "\n" + text
+    return text

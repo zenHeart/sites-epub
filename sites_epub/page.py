@@ -78,7 +78,7 @@ def extract_from_markdown(
     title = title_from_markdown(cleaned) or "Untitled"
     # Drop the first ATX h1 so the packer can own heading levels.
     body_md = re.sub(r"^# .+\n+", "", cleaned, count=1)
-    body_md = transform_mdx(body_md)
+    body_md = transform_mdx(body_md, page_url=url)
     html = markdown_to_html(body_md)
     soup = BeautifulSoup(html, "lxml")
     root = soup.body if soup.body else soup
@@ -122,7 +122,6 @@ def sanitize_body_html(html: str) -> str:
         "iframe",
         "astro-island",
         "noscript",
-        "svg",
         "[data-markdown-export='illustration']",
     ):
         for el in root.select(sel):

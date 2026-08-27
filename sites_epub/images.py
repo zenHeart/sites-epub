@@ -102,14 +102,39 @@ def guess_ext(content_type: str | None, url: str) -> str:
     return ".img"
 
 
+def is_chrome_image(url: str) -> bool:
+    text = (url or "").lower()
+    return any(
+        token in text
+        for token in ("/logo/", "placeholder.svg", "favicon", "/og/", "og-image")
+    )
+
+
+def _rel_for_image(url: str | None, raw: str, url_to_rel: dict[str, str]) -> str | None:
+    if url and url in url_to_rel:
+        return url_to_rel[url]
+    if raw in url_to_rel:
+        return url_to_rel[raw]
+    base = (url or raw or "").split("?")[0]
+    if not base:
+        return None
+    if base in url_to_rel:
+        return url_to_rel[base]
+    for key, rel in url_to_rel.items():
+        if key.split("?")[0] == base:
+            return rel
+    return None
+
+
 def collect_source_image_urls(text: str, base: str) -> list[str]:
     """Markdown + HTML (including site-relative /images/...) from raw page source."""
     seen: set[str] = set()
     out: list[str] = []
     for url in collect_markdown_image_urls(text, base=base) + collect_image_urls(text, base=base):
-        if url not in seen:
-            seen.add(url)
-            out.append(url)
+        if is_chrome_image(url) or url in seen:
+            continue
+        seen.add(url)
+        out.append(url)
     return out
 
 
@@ -129,12 +154,8 @@ def rewrite_body_images(
             srcset = img.get("srcset") or ""
             raw = srcset.split(",")[0].strip().split(" ")[0] if srcset else ""
         url = normalize_image_url(raw, base=base)
-        rel = None
-        if url and url in url_to_rel:
-            rel = url_to_rel[url]
-        elif raw in url_to_rel:
-            rel = url_to_rel[raw]
-        elif (raw or "").split("?")[0].startswith("images/"):
+        rel = _rel_for_image(url, raw, url_to_rel)
+        if not rel and (raw or "").split("?")[0].startswith("images/"):
             rel = raw.split("?")[0]
         if not rel or rel not in available:
             img.decompose()

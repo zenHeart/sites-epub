@@ -1,70 +1,1503 @@
-> ## Documentation Index
-> Fetch the complete documentation index at: https://code.claude.com/docs/llms.txt
-> Use this file to discover all available pages before exploring further.
+<!DOCTYPE html>
+<html class="inter_1d81deff-module__CYM0aG__variable papermono_89c757f2-module__6aS5zq__variable dark" data-assistant-state="closed" data-banner-state="visible" data-current-path="/" data-page-mode="none" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/><link as="font" crossorigin="" href="/docs/_next/static/media/83afe278b6a6bb3c.p.3a6ba036.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="/docs/_next/static/media/PaperMono_Variable.p.aa32f7a0.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="/docs/_next/static/media/f67ad414ed34149c.p.84166d94.woff2" rel="preload" type="font/woff2"/><link as="image" href="https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/light.svg?fit=max&amp;auto=format&amp;n=c5r9_6tjPMzFdDDT&amp;q=85&amp;s=78fd01ff4f4340295a4f66e2ea54903c" rel="preload"/><link as="image" href="https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/dark.svg?fit=max&amp;auto=format&amp;n=c5r9_6tjPMzFdDDT&amp;q=85&amp;s=1298a0c3b3a1da603b190d0de0e31712" rel="preload"/><link data-precedence="next" href="/docs/_next/static/chunks/462bacc63bed9960.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV" rel="stylesheet"/><link data-precedence="next" href="/docs/_next/static/chunks/0685d76b264a77ed.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV" rel="stylesheet"/><style data-href="base-ui-disable-scrollbar" data-precedence="base-ui:low">.base-ui-disable-scrollbar{scrollbar-width:none}.base-ui-disable-scrollbar::-webkit-scrollbar{display:none}</style><link as="script" fetchpriority="low" href="/docs/_next/static/chunks/6d55b684068fd47e.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV" rel="preload"/><script async="" src="/docs/_next/static/chunks/44795504c795ca32.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/54c913690d097f77.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/f486afc314643ce1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/f3f92ec2a3db1ff8.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/turbopack-2bd0ee3cf09bf3af.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/0d1a5e3ce583526e.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/969c4092baa44954.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/6083aa7cbfc6209c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/b7de670ceb1b1925.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><title>Explore the .claude directory - Claude Code Docs</title><meta content="Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory." name="description"/><meta content="Claude Code Docs" name="application-name"/><meta content="Mintlify" name="generator"/><meta content="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/browserconfig.xml" name="msapplication-config"/><meta content="Claude Code Docs" name="apple-mobile-web-app-title"/><meta content="#0E0E0E" name="msapplication-TileColor"/><link href="https://code.claude.com/docs/en/claude-directory" rel="canonical"/><link href="/docs/sitemap.xml" rel="alternate" type="application/xml"/><link href="/docs/en/claude-directory.md" rel="alternate" type="text/markdown"/><meta content="Explore the .claude directory - Claude Code Docs" property="og:title"/><meta content="Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory." property="og:description"/><meta content="https://code.claude.com/docs/en/claude-directory" property="og:url"/><meta content="Claude Code Docs" property="og:site_name"/><meta content="https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DCore%2Bconcepts%26appearance%3Dsystem%26title%3DExplore%2Bthe%2B.claude%2Bdirectory%26description%3DWhere%2BClaude%2BCode%2Breads%2BCLAUDE.md%252C%2Bsettings.json%252C%2Bhooks%252C%2Bskills%252C%2Bcommands%252C%2Bsubagents%252C%2Bworkflows%252C%2Brules%252C%2Band%2Bauto%2Bmemory.%2BExplore%2Bthe%2B.claude%2Bdirectory%2Bin%2Byour%2Bp%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Flight.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D78fd01ff4f4340295a4f66e2ea54903c%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Fdark.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D1298a0c3b3a1da603b190d0de0e31712%26primaryColor%3D%25230E0E0E%26lightColor%3D%2523D4A27F%26backgroundLight%3D%2523FDFDF7%26backgroundDark%3D%252309090B&amp;w=1200&amp;q=100" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="website" property="og:type"/><meta content="summary_large_image" name="twitter:card"/><meta content="Explore the .claude directory - Claude Code Docs" name="twitter:title"/><meta content="Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory." name="twitter:description"/><meta content="https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DCore%2Bconcepts%26appearance%3Dsystem%26title%3DExplore%2Bthe%2B.claude%2Bdirectory%26description%3DWhere%2BClaude%2BCode%2Breads%2BCLAUDE.md%252C%2Bsettings.json%252C%2Bhooks%252C%2Bskills%252C%2Bcommands%252C%2Bsubagents%252C%2Bworkflows%252C%2Brules%252C%2Band%2Bauto%2Bmemory.%2BExplore%2Bthe%2B.claude%2Bdirectory%2Bin%2Byour%2Bp%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Flight.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D78fd01ff4f4340295a4f66e2ea54903c%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Fdark.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D1298a0c3b3a1da603b190d0de0e31712%26primaryColor%3D%25230E0E0E%26lightColor%3D%2523D4A27F%26backgroundLight%3D%2523FDFDF7%26backgroundDark%3D%252309090B&amp;w=1200&amp;q=100" name="twitter:image"/><meta content="1200" name="twitter:image:width"/><meta content="630" name="twitter:image:height"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/android-chrome-192x192.png" media="(prefers-color-scheme: light)" rel="icon" sizes="192x192" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-16x16.png" media="(prefers-color-scheme: light)" rel="icon" sizes="16x16" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png" media="(prefers-color-scheme: light)" rel="icon" sizes="32x32" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon.ico" media="(prefers-color-scheme: light)" rel="shortcut icon" type="image/x-icon"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/android-chrome-192x192.png" media="(prefers-color-scheme: dark)" rel="icon" sizes="192x192" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/favicon-16x16.png" media="(prefers-color-scheme: dark)" rel="icon" sizes="16x16" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/favicon-32x32.png" media="(prefers-color-scheme: dark)" rel="icon" sizes="32x32" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/favicon.ico" media="(prefers-color-scheme: dark)" rel="shortcut icon" type="image/x-icon"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/><link as="style" href="https://d4tuoctqmanu0.cloudfront.net/katex.min.css" rel="preload"/><script type="text/javascript">!function(){var b="/docs";
+function a(p){if(p==null)return"/";p=""+p;if(""===p)return"/";return"/"===p.charAt(0)?p:"/"+p}
+function u(p){if(p==null)return p;p=""+p;if(!p||p.charAt(p.length-1)==="/")return p.slice(0,-1);return p}
+function i(p){if(p==null)return p;p=""+p;if(6<=p.length&&p.substring(p.length-6)==="/index")return p.substring(0,p.length-6);if("index"===p)return"";return p}
+var p=(location.pathname||"").split("?")[0].split("#")[0]||"";
+if(b)if(p===b)p="";else if(0===p.indexOf(b+"/"))p=p.substring(b.length);
+p=a(p);p=u(p);p=i(p);p=""===p||"index"===p?"/":a(p);
+document.documentElement.setAttribute("data-current-path",p);
+}();</script><script type="text/javascript">(() => {
+  const isIOS =
+    /iP(hone|ad|od)/.test(navigator.userAgent) ||
+    (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+  if (!isIOS) return;
+  const apply = () => {
+    for (const meta of document.querySelectorAll('meta[name="viewport"]')) {
+      const content = meta.getAttribute('content') || '';
+      if (!content.includes('maximum-scale')) {
+        meta.setAttribute('content', content + ', maximum-scale=1');
+      }
+    }
+  };
+  apply();
+  new MutationObserver(apply).observe(document.head, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['content'],
+  });
+})();</script><script type="text/javascript">!function(){
+function read(){try{
+var e=performance.getEntriesByType?performance.getEntriesByType("navigation"):[];
+var st=(e[0]&&e[0].serverTiming)||[];
+var g={};
+for(var i=0;i<st.length;i++){var n=st[i].name,d=st[i].description;if(!d)continue;try{d=decodeURIComponent(d)}catch(x){}
+if(n==="country")g.country=d;else if(n==="region")g.region=d;else if(n==="continent")g.continent=d;}
+var w=window;w.mintlify=w.mintlify||{};w.mintlify.geo=g;
+}catch(x){}}
+read();document.addEventListener("DOMContentLoaded",read);
+}();</script><script type="text/javascript">!function(){try{
+var w=window;w.mintlify=w.mintlify||{};
+var q=w.mintlify.__apiPlaygroundInputsQueue;
+if(!Array.isArray(q)){q=[];w.mintlify.__apiPlaygroundInputsQueue=q;}
+w.mintlify.api=w.mintlify.api||{};
+w.mintlify.api.playground=w.mintlify.api.playground||{};
+if(typeof w.mintlify.api.playground.setServerVariables!=="function"){
+w.mintlify.api.playground.setServerVariables=function(v){q.push({type:"set",variables:v});};
+}
+if(typeof w.mintlify.api.playground.clearServerVariables!=="function"){
+w.mintlify.api.playground.clearServerVariables=function(){q.push({type:"clear"});};
+}
+}catch(e){}}();</script><script type="text/javascript">(function(a,b){try{let c=document.getElementById("banner")?.innerText;if(c){for(let d=0;d<localStorage.length;d++){let e=localStorage.key(d);if(e?.endsWith(a)&&localStorage.getItem(e)===c)return void document.documentElement.setAttribute(b,"hidden")}document.documentElement.setAttribute(b,"visible");return}for(let c=0;c<localStorage.length;c++){let d=localStorage.key(c);if(d?.endsWith(a)&&localStorage.getItem(d))return void document.documentElement.setAttribute(b,"hidden")}document.documentElement.setAttribute(b,"visible")}catch(a){document.documentElement.setAttribute(b,"hidden")}})(
+  "bannerDismissed",
+  "data-banner-state",
+)</script><script nomodule="" src="/docs/_next/static/chunks/a6dad97d9634a72d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script></head><body class="antialiased"><div hidden=""><!--$--><!--/$--></div><script>((a,b,c,d,e,f,g,h)=>{let i=document.documentElement,j=["light","dark"];function k(b){var c;(Array.isArray(a)?a:[a]).forEach(a=>{let c="class"===a,d=c&&f?e.map(a=>f[a]||a):e;c?(i.classList.remove(...d),i.classList.add(f&&f[b]?f[b]:b)):i.setAttribute(a,b)}),c=b,h&&j.includes(c)&&(i.style.colorScheme=c)}if(d)k(d);else try{let a=localStorage.getItem(b)||c,d=g&&"system"===a?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":a;k(d)}catch(a){}})("class","isDarkMode","system",null,["dark","light","true","false","system"],{"true":"dark","false":"light","dark":"dark","light":"light"},true,false)</script><script>(function(){try{var f=null;var v=f||localStorage.getItem("isDarkMode");if(v==='true')v='dark';else if(v==='false')v='light';if(v!=='light'&&v!=='dark'&&v!=='system')v="system";document.documentElement.setAttribute("data-theme-preference",v)}catch(e){}})();</script><blockquote aria-hidden="true" class="sr-only" data-agent-docs-index="true"><h2>Documentation Index</h2><p>Fetch the complete documentation index at:<!-- --> <a href="/docs/llms.txt" tabindex="-1">/docs/llms.txt</a></p><p>Use this file to discover all available pages before exploring further.</p></blockquote><style>:root{--banner-height:0px!important}</style><script>(self.__next_s=self.__next_s||[]).push([0,{"children":"(function j(a,b,c,d,e){try{let f,g,h=[];try{h=window.location.pathname.split(\"/\").filter(a=\u003e\"\"!==a\u0026\u0026\"global\"!==a).slice(0,2)}catch{h=[]}let i=h.find(a=\u003ec.includes(a)),j=[];for(let c of(i?j.push(i):j.push(b),j.push(\"global\"),j)){if(!c)continue;let b=a[c];if(b?.content){f=b.content,g=c;break}}if(!f)return void document.documentElement.setAttribute(d,\"hidden\");let k=!0,l=0;for(;l\u003clocalStorage.length;){let a=localStorage.key(l);if(l++,!a?.endsWith(e))continue;let b=localStorage.getItem(a);if(b\u0026\u0026b===f){k=!1;break}g\u0026\u0026(a.startsWith(`lang:${g}_`)||!a.startsWith(\"lang:\"))\u0026\u0026(localStorage.removeItem(a),l--)}document.documentElement.setAttribute(d,k?\"visible\":\"hidden\")}catch(a){console.error(a),document.documentElement.setAttribute(d,\"hidden\")}})(\n  {},\n  \"en\",\n  [\"en\",\"fr\",\"de\",\"it\",\"jp\",\"es\",\"ko\",\"cn\",\"zh-Hant\",\"ru\",\"id\",\"pt-BR\"],\n  \"data-banner-state\",\n  \"bannerDismissed\",\n)","id":"_mintlify-banner-script"}])</script><link href="https://fonts.googleapis.com/css2?family=Anthropic+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Anthropic+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet"/><style>:root {
+  --font-family-headings-custom: "Anthropic Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  
+  --font-family-body-custom: "Anthropic Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  
+  
+}
+</style><style>:root {
+    --primary: 14 14 14;
+    --primary-light: 212 162 127;
+    --primary-dark: 14 14 14;
+    --tooltip-foreground: 255 255 255;
+    --background-light: 253 253 247;
+    --background-dark: 9 9 11;
+    --gray-50: 243 243 243;
+    --gray-100: 238 238 238;
+    --gray-200: 222 222 222;
+    --gray-300: 206 206 206;
+    --gray-400: 158 158 158;
+    --gray-500: 112 112 112;
+    --gray-600: 80 80 80;
+    --gray-700: 62 62 62;
+    --gray-800: 37 37 37;
+    --gray-900: 23 23 23;
+    --gray-950: 10 10 10;
+  }</style><script type="text/javascript">
+          (function() {
+            function loadKatex() {
+              const link = document.querySelector('link[href="https://d4tuoctqmanu0.cloudfront.net/katex.min.css"]');
+              if (link) link.rel = 'stylesheet';
+            }
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', loadKatex);
+            } else {
+              loadKatex();
+            }
+          })();
+        </script><div class="relative antialiased text-gray-500 dark:text-gray-400"><script>(self.__next_s=self.__next_s||[]).push([0,{"suppressHydrationWarning":true,"children":"(function(a){let b,c=(b=\"navbar-transition\",\"maple\"===a\u0026\u0026(b+=\"-maple\"),b),d=function(){let a=document.createElement(\"style\");return a.appendChild(document.createTextNode(\"*,*::before,*::after{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}\")),document.head.appendChild(a),function(){window.getComputedStyle(document.body),setTimeout(()=\u003e{document.head.removeChild(a)},1)}}();(\"requestAnimationFrame\"in globalThis?requestAnimationFrame:setTimeout)(()=\u003e{let a;a=!1,a=window.scrollY\u003e50,document.getElementById(c)?.setAttribute(\"data-is-opaque\",`${!!a}`),d()})})(\"mint\")","id":"_mintlify-navbar-transition-script"}])</script><script>(self.__next_s=self.__next_s||[]).push([0,{"suppressHydrationWarning":true,"children":"(function () {\n  var measure = function(){let a=document.querySelectorAll(\"[id='navbar'], [data-top-chrome]\"),b=0;a.forEach(a=\u003e{let c=a.getBoundingClientRect();c.height\u003e0\u0026\u0026(b=Math.max(b,c.bottom))});let c=0,d=document.getElementById(\"content-container\");if(d){let{overflowY:a}=getComputedStyle(d);(\"auto\"===a||\"scroll\"===a)\u0026\u0026(c=Math.max(0,d.getBoundingClientRect().top))}let e=`${Math.round(Math.max(0,b-c))+40}px`,f=document.documentElement.style;f.getPropertyValue(\"--scroll-mt\")!==e\u0026\u0026f.setProperty(\"--scroll-mt\",e)};\n  (function(a){let b=[],c=0,d=\"undefined\"==typeof ResizeObserver?null:new ResizeObserver(f);function e(){let c=Array.from(document.querySelectorAll(\"[id='navbar'], [data-top-chrome]\"));(c.length!==b.length||c.some((a,c)=\u003ea!==b[c]))\u0026\u0026d\u0026\u0026(d.disconnect(),c.forEach(a=\u003ed.observe(a))),b=c,a()}function f(){c||(c=requestAnimationFrame(()=\u003e{c=0,e()}))}let g=\"[id='navbar'], [data-top-chrome]\";function h(a){let b=a.target;if(b instanceof Element\u0026\u0026b.closest(g))return!0;for(let b of a.addedNodes)if(b instanceof Element\u0026\u0026(b.matches(g)||b.querySelector(g)))return!0;for(let b of a.removedNodes)if(b instanceof Element\u0026\u0026(b.matches(g)||b.querySelector(g)))return!0;return!1}new MutationObserver(a=\u003e{a.some(h)\u0026\u0026f()}).observe(document.documentElement,{childList:!0,subtree:!0}),window.addEventListener(\"resize\",f),\"loading\"===document.readyState\u0026\u0026document.addEventListener(\"DOMContentLoaded\",e),e()})(measure);\n  (function(a){let b=window.location.hash.slice(1);if(!b)return;function c(){return\"smooth\"===getComputedStyle(document.documentElement).scrollBehavior}function d(c){let d=document.getElementById(b);return!!d\u0026\u0026(a(),d.scrollIntoView(c?{behavior:c}:void 0),!0)}if(\"complete\"===document.readyState)return void d();let e=new MutationObserver(()=\u003e{!c()\u0026\u0026d(\"instant\")\u0026\u0026f()});function f(){e.disconnect(),window.removeEventListener(\"load\",g)}function g(){let a=c();f(),a\u0026\u0026requestAnimationFrame(()=\u003e{d(),function(){let a=[\"wheel\",\"touchstart\",\"keydown\",\"pointerdown\"],c=0,e=window.scrollY,f=setInterval(()=\u003e{c+=1;let a=document.getElementById(b);if(!a||c\u003e=6)return g();let f=Math.abs(window.scrollY-e)\u003e1;if(e=window.scrollY,f)return;let h=parseFloat(getComputedStyle(a).scrollMarginTop)||0;Math.abs(a.getBoundingClientRect().top-h)\u003e4\u0026\u0026d()},350);function g(){clearInterval(f),a.forEach(a=\u003ewindow.removeEventListener(a,g))}a.forEach(a=\u003ewindow.addEventListener(a,g,{passive:!0}))}()})}window.addEventListener(\"load\",g),e.observe(document.documentElement,{childList:!0,subtree:!0}),!c()\u0026\u0026d(\"instant\")\u0026\u0026f()})(measure);\n})();","id":"_mintlify-scroll-margin-script"}])</script><a class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:p-2 focus:text-sm focus:bg-background-light dark:focus:bg-background-dark focus:rounded-md focus:outline-primary dark:focus:outline-primary-light" href="#content-area">Skip to main content</a><script>(function i(a,b,c,d){try{if(window.matchMedia("(max-width: 1024px)").matches||!d){document.documentElement.style.setProperty(c,"0px"),document.documentElement.setAttribute("data-assistant-state","closed"),d||localStorage.setItem(a,"false");return}let e=localStorage.getItem(a);if(null===e){document.documentElement.style.setProperty(c,"0px"),document.documentElement.setAttribute("data-assistant-state","closed");return}let f=JSON.parse(e),g=localStorage.getItem(b),h=null!==g?JSON.parse(g):368;document.documentElement.style.setProperty(c,f?h+"px":"0px"),document.documentElement.setAttribute("data-assistant-state",f?"open":"closed")}catch(a){document.documentElement.style.setProperty(c,"0px"),document.documentElement.setAttribute("data-assistant-state","closed")}})(
+    "chat-assistant-sheet-open",
+    "chat-assistant-sheet-width",
+    "--assistant-sheet-width",
+    true
+  )</script><div class="max-lg:contents lg:flex lg:w-full" data-docs-theme="mint"><div class="max-lg:contents lg:flex-1 lg:min-w-0 lg:overflow-x-clip"><header class="z-30 fixed lg:sticky top-0 w-full peer is-not-custom peer is-not-center peer is-wide peer is-not-frame" id="navbar"><div class="absolute w-full h-full flex-none transition-colors duration-500 border-b border-gray-500/5 dark:border-gray-300/[0.06] bg-background-light dark:bg-background-dark" data-is-opaque="false" id="navbar-transition"></div><div class="max-w-8xl mx-auto relative"><div><div class="relative"><div class="flex items-center lg:px-12 h-16 min-w-0 mx-4 lg:mx-0"><div class="h-full relative flex-1 flex items-center gap-x-4 min-w-0 border-b border-gray-500/5 dark:border-gray-300/[0.06]"><div class="flex-1 flex items-center gap-x-4"><a class="select-none" href="/docs/en/overview" style="-webkit-touch-callout:none"><span class="sr-only">Claude Code Docs<!-- --> home page</span><img alt="light logo" class="nav-logo w-auto h-7 relative object-contain shrink-0 block dark:hidden" src="https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/light.svg?fit=max&amp;auto=format&amp;n=c5r9_6tjPMzFdDDT&amp;q=85&amp;s=78fd01ff4f4340295a4f66e2ea54903c"/><img alt="dark logo" class="nav-logo w-auto h-7 relative object-contain shrink-0 hidden dark:block" src="https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/dark.svg?fit=max&amp;auto=format&amp;n=c5r9_6tjPMzFdDDT&amp;q=85&amp;s=1298a0c3b3a1da603b190d0de0e31712"/></a><div class="hidden lg:flex items-center gap-x-2"><button aria-haspopup="menu" class="group disabled:pointer-events-none [&amp;&gt;span]:line-clamp-1 overflow-hidden group focus-visible:outline-2 focus-visible:-outline-offset-2 group-hover:text-gray-950/70 dark:group-hover:text-white/70 py-1.5 px-2.5 rounded-xl hover:bg-gray-600/5! dark:hover:bg-gray-200/5! aria-[expanded=true]:bg-gray-600/5 dark:aria-[expanded=true]:bg-gray-200/5 text-sm font-medium text-gray-900 h-8 focus-visible:outline-primary dark:focus-visible:outline-primary-light dark:text-gray-300 group/trigger flex items-center gap-2 whitespace-nowrap" data-component-part="localization-select-trigger" id="localization-select-trigger" tabindex="0" type="button"><span class="truncate max-w-[12.5rem]">English</span><svg aria-hidden="true" class="size-3 transition-transform text-gray-400 group-hover:text-gray-600 dark:text-gray-600 dark:group-hover:text-gray-400 shrink-0 rotate-90 group-aria-[expanded=true]/trigger:rotate-[270deg] ml-auto" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div><div class="relative hidden lg:flex items-center flex-1 z-20 gap-2.5"><button aria-label="Open search" class="group/search flex pointer-events-auto rounded-xl w-full items-center text-sm leading-6 h-9 pl-3.5 pr-3 text-gray-500 dark:text-white/50 bg-background-light dark:bg-background-dark dark:brightness-[1.1] dark:ring-1 dark:hover:brightness-[1.25] ring-1 ring-gray-400/30 hover:ring-gray-600/30 dark:ring-gray-600/30 dark:hover:ring-gray-500/30 justify-between truncate gap-2" id="search-bar-entry" type="button"><div class="flex items-center gap-2"><svg aria-hidden="true" class="size-4 min-w-4 flex-none text-gray-700 group-hover/search:text-gray-800 dark:text-gray-400 dark:group-hover/search:text-gray-200" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M15.25 15.25L11.285 11.285" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M7.75 12.75C10.5114 12.75 12.75 10.5114 12.75 7.75C12.75 4.98858 10.5114 2.75 7.75 2.75C4.98858 2.75 2.75 4.98858 2.75 7.75C2.75 10.5114 4.98858 12.75 7.75 12.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><div class="truncate min-w-0">Search...</div></div><span class="flex-none text-xs font-semibold">⌘<!-- -->K</span></button><button aria-label="Toggle assistant panel" class="group/ai flex-none hidden lg:flex items-center justify-center gap-1.5 pl-3 pr-3.5 h-9 rounded-xl bg-background-light dark:bg-background-dark dark:brightness-[1.1] dark:ring-1 dark:hover:brightness-[1.25] ring-1 ring-gray-400/30 hover:ring-gray-600/30 dark:ring-gray-600/30 dark:hover:ring-gray-500/30" data-base-ui-tooltip-trigger="" id="assistant-entry" type="button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-700 group-hover/ai:text-gray-800 dark:text-gray-400 dark:group-hover/ai:text-gray-200" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.65799 2.99L4.39499 2.569L3.97399 1.306C3.83699 0.898 3.16199 0.898 3.02499 1.306L2.60399 2.569L1.34099 2.99C1.13699 3.058 0.998993 3.249 0.998993 3.464C0.998993 3.679 1.13699 3.87 1.34099 3.938L2.60399 4.359L3.02499 5.622C3.09299 5.826 3.28499 5.964 3.49999 5.964C3.71499 5.964 3.90599 5.826 3.97499 5.622L4.39599 4.359L5.65899 3.938C5.86299 3.87 6.00099 3.679 6.00099 3.464C6.00099 3.249 5.86199 3.058 5.65799 2.99Z" fill="currentColor" stroke="none"></path><path d="M9.5 2.75L11.412 7.587L16.25 9.5L11.412 11.413L9.5 16.25L7.587 11.413L2.75 9.5L7.587 7.587L9.5 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><span class="text-sm text-gray-500 dark:text-white/50 whitespace-nowrap">Ask Assistant</span></button></div><div class="flex-1 relative hidden lg:flex items-center ml-auto justify-end space-x-4"><nav aria-label="Main" class="text-sm"><ul class="flex space-x-6 items-center"><li class="navbar-link"><a class="flex items-center gap-1.5 whitespace-nowrap font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="https://platform.claude.com/" rel="noopener noreferrer" target="_blank"><span class="min-w-0 truncate">Claude Developer Platform</span></a></li><li class="block lg:hidden"><a class="flex items-center gap-1.5 whitespace-nowrap font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="https://claude.ai/code"><span class="min-w-0 truncate">Claude Code on the Web</span></a></li><li class="whitespace-nowrap hidden lg:flex" id="topbar-cta-button"><a class="group pl-3 pr-2 py-2 relative inline-flex items-center text-sm font-medium" href="https://claude.ai/code" rel="noopener noreferrer" target="_blank"><span class="absolute inset-0 bg-primary-dark rounded-xl group-hover:opacity-[0.9]"></span><div class="z-10 gap-1 flex items-center"><span class="text-white">Claude Code on the Web</span><svg aria-hidden="true" class="size-3 shrink-0 text-white/90" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></li></ul></nav><div class="flex items-center"><button aria-haspopup="menu" aria-label="Change theme preference" class="group disabled:pointer-events-none rounded-lg overflow-hidden gap-1 text-sm text-gray-950/50 dark:text-white/50 group-hover:text-gray-950/70 dark:group-hover:text-white/70 theme-preference-menu-trigger group p-2 flex items-center justify-center" data-component-name="theme-preference-menu" data-component-part="theme-preference-menu-trigger" data-testid="theme-preference-menu-trigger" id="theme-preference-menu-trigger" tabindex="0" type="button"><span data-theme-preference-icon="system"><svg class="size-4 text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 15.5L9 14.5L13.5 15.5" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9 11.75V14.5" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M14.25 2.75H3.75C2.64543 2.75 1.75 3.64543 1.75 4.75V9.75C1.75 10.8546 2.64543 11.75 3.75 11.75H14.25C15.3546 11.75 16.25 10.8546 16.25 9.75V4.75C16.25 3.64543 15.3546 2.75 14.25 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></span><span data-theme-preference-icon="light"><svg class="size-4 text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9 1.25V2.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M14.48 3.52002L13.773 4.22702" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M16.75 9H15.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M14.48 14.4799L13.773 13.7729" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9 16.75V15.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M3.52 14.4799L4.227 13.7729" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M1.25 9H2.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M3.52 3.52002L4.227 4.22702" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9 13.25C11.3472 13.25 13.25 11.3472 13.25 9C13.25 6.65279 11.3472 4.75 9 4.75C6.65279 4.75 4.75 6.65279 4.75 9C4.75 11.3472 6.65279 13.25 9 13.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></span><span data-theme-preference-icon="dark"><svg class="size-4 text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M13 11.75C9.548 11.75 6.75 8.95201 6.75 5.50001C6.75 4.14801 7.183 2.90101 7.912 1.87801C4.548 2.50601 2 5.45301 2 9.00001C2 13.004 5.246 16.25 9.25 16.25C12.622 16.25 15.448 13.944 16.259 10.826C15.309 11.409 14.196 11.75 13 11.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></span></button></div></div><div class="flex lg:hidden items-center gap-3"><button aria-label="Open search" class="text-gray-500 w-8 h-8 flex items-center justify-center hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300" id="search-bar-entry-mobile" type="button"><span class="sr-only">Search...</span><svg aria-hidden="true" class="forced-colors:forced-color-adjust-none forced-colors:bg-[color:CanvasText]! h-4 w-4 bg-gray-500 dark:bg-gray-400 hover:bg-gray-600 dark:hover:bg-gray-300" focusable="false" style='-webkit-mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/magnifying-glass.svg");-webkit-mask-repeat:no-repeat;-webkit-mask-position:center;mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/magnifying-glass.svg");mask-repeat:no-repeat;mask-position:center'></svg></button><button aria-label="Toggle assistant panel" id="assistant-entry-mobile"><svg aria-hidden="true" class="size-4.5 text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.65799 2.99L4.39499 2.569L3.97399 1.306C3.83699 0.898 3.16199 0.898 3.02499 1.306L2.60399 2.569L1.34099 2.99C1.13699 3.058 0.998993 3.249 0.998993 3.464C0.998993 3.679 1.13699 3.87 1.34099 3.938L2.60399 4.359L3.02499 5.622C3.09299 5.826 3.28499 5.964 3.49999 5.964C3.71499 5.964 3.90599 5.826 3.97499 5.622L4.39599 4.359L5.65899 3.938C5.86299 3.87 6.00099 3.679 6.00099 3.464C6.00099 3.249 5.86199 3.058 5.65799 2.99Z" fill="currentColor" stroke="none"></path><path d="M9.5 2.75L11.412 7.587L16.25 9.5L11.412 11.413L9.5 16.25L7.587 11.413L2.75 9.5L7.587 7.587L9.5 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button><button aria-label="More actions" class="h-7 w-5 flex items-center justify-center relative after:content-[''] after:absolute after:-inset-y-2 after:-left-1 after:-right-4" type="button"><svg aria-hidden="true" class="forced-colors:forced-color-adjust-none forced-colors:bg-[color:CanvasText]! size-4 shrink-0 bg-gray-500 dark:bg-gray-400 hover:bg-gray-600 dark:hover:bg-gray-300" focusable="false" style='-webkit-mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/ellipsis-vertical.svg");-webkit-mask-repeat:no-repeat;-webkit-mask-position:center;mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/ellipsis-vertical.svg");mask-repeat:no-repeat;mask-position:center'></svg></button></div></div></div><button class="flex items-center h-14 py-4 px-5 lg:hidden focus:outline-0 w-full text-left" type="button"><div class="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"><span class="sr-only">Navigation</span><svg aria-hidden="true" class="size-4 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M2.25 9H15.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.25 3.75H15.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.25 14.25H15.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div><div class="ml-4 flex text-sm leading-6 whitespace-nowrap min-w-0 space-x-3 overflow-hidden"><div class="flex items-center space-x-3 shrink-0"><span>Core concepts</span><svg aria-hidden="true" class="size-3 text-gray-400 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div><div class="font-semibold text-gray-900 truncate dark:text-gray-200 min-w-0 flex-1">Explore the .claude directory</div></div></button></div><div class="hidden lg:flex px-12 h-12"><div class="nav-tabs h-full flex text-sm gap-x-6"><a aria-current="location" class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium hover:text-gray-800 dark:hover:text-gray-300 text-gray-800 dark:text-gray-200 [text-shadow:-0.2px_0_0_currentColor,0.2px_0_0_currentColor]" data-active="true" href="/docs/en/overview">Getting started<div class="absolute bottom-0 h-[1.5px] w-full left-0 bg-primary dark:bg-primary-light"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/agents">Build with Claude Code<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/admin-setup">Administration<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/settings">Configuration<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/cli-reference">Reference<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/agent-sdk/overview">Agent SDK<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/whats-new">What's New<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/legal-and-compliance">Resources<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a></div></div><style>:root{--topbar-tabs-height:3rem}</style></div></div></header><div class="scroll-mt-(--scroll-mt) peer-[.is-custom]:max-w-none peer-[.is-center]:max-w-3xl peer-[.is-not-custom]:peer-[.is-not-center]:max-w-8xl peer-[.is-not-custom]:px-4 peer-[.is-not-custom]:mx-auto peer-[.is-not-custom]:lg:px-8 peer-[.is-wide]:lg:*:last:max-w-216 peer-[.is-not-custom]:peer-[.is-not-center]:lg:flex peer-[.is-custom]:[&amp;&gt;:first-child]:hidden! peer-[.is-custom]:[&amp;&gt;:first-child]:sm:hidden! peer-[.is-custom]:[&amp;&gt;:first-child]:md:hidden! peer-[.is-custom]:[&amp;&gt;:first-child]:lg:hidden! peer-[.is-custom]:[&amp;&gt;:first-child]:xl:hidden! peer-[.is-center]:[&amp;&gt;:first-child]:hidden! peer-[.is-center]:[&amp;&gt;:first-child]:sm:hidden! peer-[.is-center]:[&amp;&gt;:first-child]:md:hidden! peer-[.is-center]:[&amp;&gt;:first-child]:lg:hidden! peer-[.is-center]:[&amp;&gt;:first-child]:xl:hidden!"><nav aria-label="Pages" class="z-20 hidden lg:block sticky self-start shrink-0 w-[18rem] top-(--mintlify-slot-header-height,calc(4rem+var(--topbar-tabs-height,0rem))) h-[calc(100dvh-var(--mintlify-slot-header-height,calc(4rem+var(--topbar-tabs-height,0rem))))]" id="sidebar"><div class="min-w-0 absolute! inset-0 z-10" data-component-part="scroll-area" id="sidebar-content" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px"><div class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] pr-8 pb-10 base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_2tbsnlhjiuasnpfiutb_-viewport" role="presentation" style="overflow:scroll" tabindex="-1"><div class="min-w-0! w-full" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="relative lg:text-sm lg:leading-6"><div class="sticky top-0 h-8 pointer-events-none z-10 bg-linear-to-b from-background-light dark:from-background-dark"></div><div id="navigation-items"><div><div class="sidebar-group-header flex items-center gap-2.5 pl-4 mb-3.5 lg:mb-2.5 font-semibold text-gray-900 dark:text-gray-200"><h3 class="sidebar-title text-[length:inherit] font-[inherit] leading-[inherit]"><span>Getting started</span></h3></div><ul class="sidebar-group space-y-px"><li class="relative scroll-m-4 first:scroll-m-20" data-title="Overview" id="/en/overview"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 break-words hyphens-auto rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/overview" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Overview</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Quickstart" id="/en/quickstart"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 break-words hyphens-auto rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/quickstart" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Quickstart</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Changelog" id="/en/changelog"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 break-words hyphens-auto rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/changelog" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Changelog</span></div></div></a></li></ul></div><div class="mt-6 lg:mt-8"><div class="sidebar-group-header flex items-center gap-2.5 pl-4 mb-3.5 lg:mb-2.5 font-semibold text-gray-900 dark:text-gray-200"><h3 class="sidebar-title text-[length:inherit] font-[inherit] leading-[inherit]"><span>Core concepts</span></h3></div><ul class="sidebar-group space-y-px"><li class="relative scroll-m-4 first:scroll-m-20" data-title="How Claude Code works" id="/en/how-claude-code-works"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/how-claude-code-works" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">How Claude Code works</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Extend Claude Code" id="/en/features-overview"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/features-overview" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Extend Claude Code</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-active="true" data-active-nav-item="true" data-title="Explore the .claude directory" id="/en/claude-directory"><a aria-current="page" class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] bg-primary/10 text-primary [text-shadow:-0.2px_0_0_currentColor,0.2px_0_0_currentColor] dark:text-primary-light dark:bg-primary-light/10" href="/docs/en/claude-directory" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Explore the .claude directory</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Explore the context window" id="/en/context-window"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/context-window" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Explore the context window</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Prompt caching" id="/en/prompt-caching"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/prompt-caching" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Prompt caching</span></div></div></a></li></ul></div><div class="mt-6 lg:mt-8"><div class="sidebar-group-header flex items-center gap-2.5 pl-4 mb-3.5 lg:mb-2.5 font-semibold text-gray-900 dark:text-gray-200"><h3 class="sidebar-title text-[length:inherit] font-[inherit] leading-[inherit]"><span>Use Claude Code</span></h3></div><ul class="sidebar-group space-y-px"><li class="relative scroll-m-4 first:scroll-m-20" data-title="Store instructions and memories" id="/en/memory"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/memory" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Store instructions and memories</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Manage sessions" id="/en/sessions"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/sessions" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Manage sessions</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Common workflows" id="/en/common-workflows"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/common-workflows" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Common workflows</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Prompt library" id="/en/prompt-library"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/prompt-library" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Prompt library</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Best practices" id="/en/best-practices"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/best-practices" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Best practices</span></div></div></a></li></ul></div><div class="mt-6 lg:mt-8"><div class="sidebar-group-header flex items-center gap-2.5 pl-4 mb-3.5 lg:mb-2.5 font-semibold text-gray-900 dark:text-gray-200"><h3 class="sidebar-title text-[length:inherit] font-[inherit] leading-[inherit]"><span>Platforms and integrations</span></h3></div><ul class="sidebar-group space-y-px"><li class="relative scroll-m-4 first:scroll-m-20" data-title="Overview" id="/en/platforms"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 break-words hyphens-auto rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/platforms" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Overview</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Remote Control" id="/en/remote-control"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/remote-control" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Remote Control</span></div></div></a></li><li class="space-y-px" data-group-tag="" data-title="Claude Code on the web"><button aria-expanded="false" class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" style="padding-left:1rem"><div class=""><span>Claude Code on the web</span></div><div class="h-[1lh] flex items-center shrink-0"><svg aria-hidden="true" class="size-3 transition-transform text-gray-400 group-hover:text-gray-600 dark:text-gray-600 dark:group-hover:text-gray-400 shrink-0 w-2 h-[1lh] -mr-0.5" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></button></li><li class="space-y-px" data-group-tag="" data-title="Claude Code on desktop"><button aria-expanded="false" class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" style="padding-left:1rem"><div class=""><span>Claude Code on desktop</span></div><div class="h-[1lh] flex items-center shrink-0"><svg aria-hidden="true" class="size-3 transition-transform text-gray-400 group-hover:text-gray-600 dark:text-gray-600 dark:group-hover:text-gray-400 shrink-0 w-2 h-[1lh] -mr-0.5" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></button></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Mobile" id="/en/mobile"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 break-words hyphens-auto rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/mobile" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Mobile</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Chrome extension" id="/en/chrome"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/chrome" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Chrome extension</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Computer use (preview)" id="/en/computer-use"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/computer-use" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Computer use (preview)</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Visual Studio Code" id="/en/vs-code"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/vs-code" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Visual Studio Code</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="JetBrains IDEs" id="/en/jetbrains"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/jetbrains" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">JetBrains IDEs</span></div></div></a></li><li class="space-y-px" data-group-tag="" data-title="Code review &amp; CI/CD"><button aria-expanded="false" class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" style="padding-left:1rem"><div class=""><span>Code review &amp; CI/CD</span></div><div class="h-[1lh] flex items-center shrink-0"><svg aria-hidden="true" class="size-3 transition-transform text-gray-400 group-hover:text-gray-600 dark:text-gray-600 dark:group-hover:text-gray-400 shrink-0 w-2 h-[1lh] -mr-0.5" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></button></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Claude Code in Slack" id="/en/slack"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/slack" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Claude Code in Slack</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Claude Tag" id="/en/claude-tag"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/claude-tag" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Claude Tag</span></div></div></a></li></ul></div><script>(function () {
+  try {
+    if (window.__mintlifyInitialSidebarScrollDone) return;
+    window.__mintlifyInitialSidebarScrollDone = true;
 
-# Explore the .claude directory
+    var path = (window.location.pathname || '/').split('#')[0].split('?')[0];
+    if (path.endsWith('/index')) path = path.slice(0, -6);
+    else if (path === 'index') path = '';
 
-> Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.
+    var candidates = [];
+    if (path) candidates.push(path);
+    if (path.startsWith('/')) candidates.push(path.slice(1));
+    else candidates.push('/' + path);
 
-export const ClaudeExplorer = () => {
-  const A = useMemo(() => ({href, children}) => <a href={href} style={{
-    color: 'var(--ce-accent)',
-    textDecoration: 'none',
-    borderBottom: '1px dotted var(--ce-accent)'
-  }}>{children}</a>, []);
-  const C = useMemo(() => ({children}) => <code style={{
-    fontFamily: 'var(--ce-mono)',
-    fontSize: '0.92em',
-    padding: '1px 4px',
-    borderRadius: '3px',
-    background: 'var(--ce-surface)',
-    border: '0.5px solid var(--ce-border-subtle)'
-  }}>{children}</code>, []);
-  const commandsNote = useMemo(() => <>Commands and skills are now the same mechanism. For new workflows, use <A href="/docs/en/skills">skills/</A> instead: same <C>/name</C> invocation, plus you can bundle supporting files.</>, []);
-  const FILE_TREE = useMemo(() => ({
-    project: {
-      label: 'your-project/',
-      children: [{
-        id: 'claude-md',
-        label: 'CLAUDE.md',
-        type: 'file',
-        icon: 'md',
-        color: '#6A9BCC',
-        badge: 'committed',
-        oneLiner: 'Project instructions Claude reads every session',
-        when: 'Loaded into context at the start of every session',
-        description: 'Project-specific instructions that shape how Claude works in this repository. Put your conventions, common commands, and architectural context here so Claude operates with the same assumptions your team does.',
-        tips: ['Target under 200 lines. Longer files still load in full but may reduce adherence', <>CLAUDE.md loads into every session. If something only matters for specific tasks, move it to a <A href="/docs/en/skills">skill</A> or a path-scoped <A href="/docs/en/memory#organize-rules-with-claude/rules/">rule</A> so it loads only when needed</>, 'List the commands you run most, like build, test, and format, so Claude knows them without you spelling them out each time', <>Run <C>/memory</C> to open and edit CLAUDE.md from within a session</>, <>Also works at <C>.claude/CLAUDE.md</C> if you prefer to keep the project root clean</>],
-        exampleIntro: 'This example is for a TypeScript and React project. It lists the build and test commands, the framework conventions Claude should follow, and project-specific rules like export style and file layout.',
-        example: `# Project conventions
+    var item = null;
+    for (var i = 0; i < candidates.length && !item; i++) {
+      var matches = document.querySelectorAll('[id="' + candidates[i].replace(/"/g, '\\"') + '"]');
+      for (var j = 0; j < matches.length; j++) {
+        if (matches[j].closest('#sidebar, #sidebar-content')) {
+          item = matches[j];
+          break;
+        }
+      }
+    }
+    if (!item) return;
+
+    var parent = item.closest('[data-component-part="scroll-area-viewport"]');
+    if (!parent) {
+      parent = item.parentElement;
+      while (parent) {
+        var style = getComputedStyle(parent);
+        if (style.overflowY === 'auto' || style.overflowY === 'scroll') break;
+        parent = parent.parentElement;
+      }
+    }
+    if (!parent) return;
+
+    var parentRect = parent.getBoundingClientRect();
+    var itemRect = item.getBoundingClientRect();
+    if (itemRect.top >= parentRect.top && itemRect.bottom <= parentRect.bottom) return;
+
+    var itemTopRelative = itemRect.top - parentRect.top + parent.scrollTop;
+    parent.scrollTop = itemTopRelative - parentRect.height / 2 + itemRect.height / 2;
+  } catch (e) {}
+})();</script></div></div></div></div></div></nav><main class="lg:flex-1 lg:min-w-0" id="content-container"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://code.claude.com/#organization","name":"Claude Code Docs","url":"https://code.claude.com","logo":{"@type":"ImageObject","url":"https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/light.svg?fit=max&auto=format&n=c5r9_6tjPMzFdDDT&q=85&s=78fd01ff4f4340295a4f66e2ea54903c"}},{"@type":"WebSite","@id":"https://code.claude.com/docs#website","name":"Claude Code Docs","url":"https://code.claude.com/docs","publisher":{"@id":"https://code.claude.com/#organization"}},{"@type":"WebPage","@id":"https://code.claude.com/docs/en/claude-directory#webpage","url":"https://code.claude.com/docs/en/claude-directory","name":"Explore the .claude directory","description":"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.","dateModified":"2026-08-26T19:17:07.229Z","isPartOf":{"@id":"https://code.claude.com/docs#website"},"breadcrumb":{"@id":"https://code.claude.com/docs/en/claude-directory#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://code.claude.com/docs/en/claude-directory#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Core concepts","item":"https://code.claude.com/docs/en/how-claude-code-works"},{"@type":"ListItem","position":2,"name":"Explore the .claude directory","item":"https://code.claude.com/docs/en/claude-directory"}]},{"@type":["Article","TechArticle"],"@id":"https://code.claude.com/docs/en/claude-directory#article","headline":"Explore the .claude directory","name":"Explore the .claude directory","description":"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.","url":"https://code.claude.com/docs/en/claude-directory","mainEntityOfPage":{"@id":"https://code.claude.com/docs/en/claude-directory#webpage"},"dateModified":"2026-08-26T19:17:07.229Z","publisher":{"@id":"https://code.claude.com/#organization"},"isPartOf":{"@id":"https://code.claude.com/docs#website"}}]}</script><script>document.documentElement.setAttribute('data-page-mode', "wide");</script><span class="fixed inset-0 bg-background-light dark:bg-background-dark -z-10 pointer-events-none" id="background-color"></span><span class="block absolute dark:hidden inset-0 overflow-hidden pointer-events-none"></span><span class="hidden absolute dark:block inset-0 overflow-hidden pointer-events-none"></span><style data-custom-css-index="0" data-custom-css-path="button.css">
+/* These styles mirror the internal design system's button component, converted to plain CSS. */
+
+/* Base button styles */
+.btn {
+  position: relative;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 5rem;
+  height: 2.25rem;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  font-family: Styrene;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  &:active {
+    transform: scale(0.985);
+  }
+
+  /* Size variants */
+  &.size-xs {
+    height: 1.75rem;
+    min-width: 3.5rem;
+    padding: 0 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    gap: 0.25rem;
+  }
+  
+  &.size-sm {
+    height: 2rem;
+    min-width: 4rem;
+    padding: 0 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+  }
+
+  &.size-lg {
+    height: 2.75rem;
+    min-width: 6rem;
+    padding: 0 1.25rem;
+    border-radius: 0.6rem;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow);
+  }
+
+  /* Primary variant */
+  &.primary {
+    font-weight: 600;
+    color: hsl(var(--oncolor-100));
+    background-color: hsl(var(--accent-main-100));
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--accent-main-100)) 0%,
+      hsl(var(--accent-main-200) / 0.5) 50%,
+      hsl(var(--accent-main-200)) 100%
+    );
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    border: 0.5px solid hsl(var(--border-300) / 0.25);
+    box-shadow: 
+      inset 0 0.5px 0px rgba(255, 255, 0, 0.15),
+      0 1px 1px rgba(0, 0, 0, 0.05);
+    text-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      background-position: 100% 0%;
+      background-image: linear-gradient(
+        to right,
+        hsl(var(--accent-main-200)) 0%,
+        hsl(var(--accent-main-200)) 100%
+      );
+    }
+
+    &:active {
+      background-color: hsl(var(--accent-main-000));
+      box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.2);
+      transform: scale(0.985);
+    }
+  }
+
+  /* Flat variant */
+  &.flat {
+    font-weight: 500;
+    color: hsl(var(--oncolor-100));
+    background-color: hsl(var(--accent-main-100));
+    transition: background-color 150ms;
+
+    &:hover {
+      background-color: hsl(var(--accent-main-200));
+    }
+  }
+
+  /* Secondary variant */
+  &.secondary {
+    font-weight: 600;
+    color: hsl(var(--text-100) / 0.9);
+    background-image: radial-gradient(
+      ellipse at center,
+      hsl(var(--bg-500) / 0.1) 50%,
+      hsl(var(--bg-500) / 0.3) 100%
+    );
+    border: 0.5px solid hsl(var(--border-400));
+    transition: color 150ms, background-color 150ms;
+
+    &:hover {
+      color: hsl(var(--text-000));
+      background-color: hsl(var(--bg-500) / 0.6);
+    }
+
+    &:active {
+      background-color: hsl(var(--bg-500) / 0.5);
+    }
+  }
+
+  /* Outline variant */
+  &.outline {
+    font-weight: 600;
+    color: hsl(var(--text-200));
+    background-color: transparent;
+    border: 1.5px solid currentColor;
+    transition: color 150ms, background-color 150ms;
+
+    &:hover {
+      color: hsl(var(--text-100));
+      background-color: hsl(var(--bg-400));
+      border-color: hsl(var(--bg-400));
+    }
+  }
+
+  /* Ghost variant */
+  &.ghost {
+    color: hsl(var(--text-200));
+    border-color: transparent;
+    transition: color 150ms, background-color 150ms;
+
+    &:hover {
+      color: hsl(var(--text-100));
+      background-color: hsl(var(--bg-500) / 0.4);
+    }
+
+    &:active {
+      background-color: hsl(var(--bg-400));
+    }
+  }
+
+  /* Underline variant */
+  &.underline {
+    opacity: 0.8;
+    text-decoration-line: none;
+    text-underline-offset: 3px;
+    transition: all 150ms;
+
+    &:hover {
+      opacity: 1;
+      text-decoration-line: underline;
+    }
+
+    &:active {
+      transform: scale(0.985);
+    }
+  }
+
+  /* Danger variant */
+  &.danger {
+    font-weight: 600;
+    color: hsl(var(--oncolor-100));
+    background-color: hsl(var(--danger-100));
+    transition: background-color 150ms;
+
+    &:hover {
+      background-color: hsl(var(--danger-200));
+    }
+  }
+}
+</style><style data-custom-css-index="1" data-custom-css-path="style.css">/* Anthropic Sans - Static fonts from assets.claude.ai */
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-Regular-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-RegularItalic-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-Medium-Static.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-MediumItalic-Static.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-Semibold-Static.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-SemiboldItalic-Static.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-Bold-Static.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-BoldItalic-Static.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Anthropic Serif Display - for headlines */
+@font-face {
+  font-family: "Anthropic Serif Display";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-Regular-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif Display";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-RegularItalic-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif Display";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-Medium-Static.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif Display";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-Semibold-Static.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif Display";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-Bold-Static.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Anthropic Serif - Static fonts from assets.claude.ai */
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-Regular-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-RegularItalic-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-Medium-Static.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-MediumItalic-Static.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-Semibold-Static.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-SemiboldItalic-Static.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-Bold-Static.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-BoldItalic-Static.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Color variables mirror the internal design system's generated theme palette. */
+:root {
+  --always-white: 0 0% 100%;
+  --always-black: 0 0% 0%;
+  --constant-book-cloth: 15 55% 80%;
+  --constant-clay: 15 60% 85%;
+  --constant-kraft: 25 40% 83%;
+  --constant-manilla: 40 20% 92%;
+  --constant-slate-000: 0 0% 100%;
+  --constant-slate-050: 48 33.3% 97.1%;
+  --constant-slate-100: 53 28.6% 94.5%;
+  --constant-slate-150: 48 25% 92.2%;
+  --constant-slate-200: 50 20.7% 88.6%;
+  --constant-slate-250: 51 16.5% 84.5%;
+  --constant-slate-300: 50 11.5% 79.6%;
+  --constant-slate-350: 50 9% 73.7%;
+  --constant-slate-400: 49 6.5% 66.9%;
+  --constant-slate-450: 48 4.8% 59.2%;
+  --constant-slate-500: 53 3.2% 51.4%;
+  --constant-slate-550: 51 3.1% 43.7%;
+  --constant-slate-600: 48 2.7% 35.9%;
+  --constant-slate-650: 48 3.4% 29.2%;
+  --constant-slate-700: 60 2.5% 23.3%;
+  --constant-slate-750: 60 2.1% 18.4%;
+  --constant-slate-800: 60 2.7% 14.5%;
+  --constant-slate-850: 30 3.3% 11.8%;
+  --constant-slate-900: 30 4% 9.8%;
+  --constant-slate-950: 60 2.6% 7.6%;
+  --constant-slate-1000: 60 3.4% 5.7%;
+}
+
+:root:not(.dark) {
+  --accent-brand: 15 63.1% 59.6%;
+  --accent-main-000: 15 55.6% 52.4%;
+  --accent-main-100: 15 55.6% 52.4%;
+  --accent-main-200: 15 63.1% 59.6%;
+  --accent-main-900: 0 0% 0%;
+  --accent-pro-000: 251 34.2% 33.3%;
+  --accent-pro-100: 251 40% 45.1%;
+  --accent-pro-200: 251 61% 72.2%;
+  --accent-pro-900: 253 33.3% 91.8%;
+  --accent-secondary-000: 210 73.7% 40.2%;
+  --accent-secondary-100: 210 70.9% 51.6%;
+  --accent-secondary-200: 210 70.9% 51.6%;
+  --accent-secondary-900: 211 72% 90%;
+  --bg-000: 0 0% 100%;
+  --bg-100: 48 33.3% 97.1%;
+  --bg-200: 53 28.6% 94.5%;
+  --bg-300: 48 25% 92.2%;
+  --bg-400: 50 20.7% 88.6%;
+  --bg-500: 50 20.7% 88.6%;
+  --border-100: 30 3.3% 11.8%;
+  --border-200: 30 3.3% 11.8%;
+  --border-300: 30 3.3% 11.8%;
+  --border-400: 30 3.3% 11.8%;
+  --danger-000: 0 61.4% 22.4%;
+  --danger-100: 0 58.6% 34.1%;
+  --danger-200: 0 58.6% 34.1%;
+  --danger-900: 0 50% 95%;
+  --oncolor-100: 0 0% 100%;
+  --oncolor-200: 60 6.7% 97.1%;
+  --oncolor-300: 60 6.7% 97.1%;
+  --text-000: 60 2.6% 7.6%;
+  --text-100: 60 2.6% 7.6%;
+  --text-200: 60 2.5% 23.3%;
+  --text-300: 60 2.5% 23.3%;
+  --text-400: 51 3.1% 43.7%;
+  --text-500: 51 3.1% 43.7%;
+}
+
+:root.dark {
+  --accent-brand: 15 63.1% 59.6%;
+  --accent-main-000: 15 55.6% 52.4%;
+  --accent-main-100: 15 63.1% 59.6%;
+  --accent-main-200: 15 63.1% 59.6%;
+  --accent-main-900: 0 0% 0%;
+  --accent-pro-000: 251 84.6% 74.5%;
+  --accent-pro-100: 251 40.2% 54.1%;
+  --accent-pro-200: 251 40% 45.1%;
+  --accent-pro-900: 250 25.3% 19.4%;
+  --accent-secondary-000: 210 71.1% 62%;
+  --accent-secondary-100: 210 70.9% 51.6%;
+  --accent-secondary-200: 210 70.9% 51.6%;
+  --accent-secondary-900: 210 55.9% 24.6%;
+  --bg-000: 60 2.1% 18.4%;
+  --bg-100: 60 2.7% 14.5%;
+  --bg-200: 30 3.3% 11.8%;
+  --bg-300: 60 2.6% 7.6%;
+  --bg-400: 60 3.4% 5.7%;
+  --bg-500: 60 3.4% 5.7%;
+  --border-100: 51 16.5% 84.5%;
+  --border-200: 51 16.5% 84.5%;
+  --border-300: 51 16.5% 84.5%;
+  --border-400: 51 16.5% 84.5%;
+  --danger-000: 0 73.1% 66.5%;
+  --danger-100: 0 58.6% 34.1%;
+  --danger-200: 0 58.6% 34.1%;
+  --danger-900: 0 23% 15.6%;
+  --oncolor-100: 0 0% 100%;
+  --oncolor-200: 60 6.7% 97.1%;
+  --oncolor-300: 60 6.7% 97.1%;
+  --text-000: 48 33.3% 97.1%;
+  --text-100: 48 33.3% 97.1%;
+  --text-200: 50 9% 73.7%;
+  --text-300: 50 9% 73.7%;
+  --text-400: 48 4.8% 59.2%;
+  --text-500: 48 4.8% 59.2%;
+}
+
+#home-header {
+  font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400 !important;
+  font-size: 50px;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: --text-000;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+#localization-select-trigger > :has(img[src*="flags"]) {
+  display: none;
+}
+
+div[id^="localization-select-item"] > :has(img[src*="flags"]) {
+  display: none;
+}
+
+/* Keep home header centered on all screen sizes */
+@media (min-width: 768px) {
+  #home-header {
+    justify-content: center;
+  }
+}
+
+.build-with {
+  font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.claude-wordmark-wrapper {
+  display: inline-flex;
+  align-items: baseline;
+  margin-left: 10px; /* Space between "Build with" and the wordmark */
+}
+
+.claude-wordmark {
+  height: 40px; /* Adjust this value to match your desired size */
+  width: auto;
+  position: relative;
+}
+
+.dark #home-header {
+  color: white;
+}
+
+.description-text {
+  color: black;
+}
+
+.dark .description-text {
+  color: white;
+}
+
+.dark .claude-wordmark {
+  filter: invert(1);
+}
+
+:root {
+  --bg-color: #f0efea;
+}
+
+.dark {
+  --bg-color: #2b2b2b;
+}
+
+body,
+input,
+#category-select,
+.dropdown-item,
+#table-of-contents {
+  font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.eyebrow {
+  font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+}
+
+#content-container {
+  font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#content-container h1,
+#content-container h2,
+#content-container h3,
+#content-container h4,
+#content-container h5,
+#content-container h6 {
+  font-family: "Anthropic Serif Display", Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  /* Mintlify applies tracking-tight (-0.025em) to #page-title, which collapses
+     word gaps in Serif Display's already-narrow space glyph. Reset tracking to
+     the font's natural metrics and widen word gaps slightly. */
+  letter-spacing: 0;
+  word-spacing: 0.1em;
+}
+
+#content-container p {
+  font-size: 1rem;
+  line-height: 1.65rem;
+}
+
+.font-extrabold {
+  font-weight: 600 !important;
+}
+
+.wide-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.wide-table table {
+  width: 175%;
+  margin-bottom: 0;
+}
+
+/* Prompt Library */
+#prompt-library-container {
+  margin: 4rem auto;
+  max-width: 48rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.prompt-library-title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.dark .prompt-library-title {
+  color: #e5e7eb;
+}
+
+.prompt-library-description {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.main-content {
+  margin-bottom: 10rem;
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.prompt-controllers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.prompt-search-container {
+  position: relative;
+  flex: 1 1 0%;
+}
+
+.prompt-search-icon-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  padding-left: 0.75rem;
+}
+
+.prompt-search-icon {
+  margin-left: 0.25rem;
+  margin-right: 0.75rem;
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  background-color: #6b7280;
+  mask-image: url(https://mintlify.b-cdn.net/v6.5.1/solid/magnifying-glass.svg);
+  mask-repeat: no-repeat;
+  mask-position: center center;
+}
+
+input.prompt-search-bar {
+  display: block;
+  height: 2.5rem;
+  padding-left: 2.5rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  background-color: #ffffff;
+  width: 100%;
+  color: #111827;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.dark input.prompt-search-bar {
+  color: #ffffff;
+  background-color: rgb(var(--background-dark));
+  border-color: #d1d5db1a;
+}
+
+input.prompt-search-bar:focus {
+  outline-color: rgb(var(--primary));
+}
+
+.dark input.prompt-search-bar:focus {
+  outline-color: rgb(var(--primary-light));
+}
+
+.dark .prompt-search-icon {
+  background-color: #ffffff80;
+}
+
+#category-select {
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  color: #111827;
+  background-color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+}
+
+.dark #category-select {
+  background-color: rgb(var(--background-dark));
+  border-color: #d1d5db1a;
+  color: #ffffff;
+}
+
+#category-select:hover {
+  background-color: #f9fafb;
+}
+
+.dark #category-select:hover {
+  background-color: #ffffff0d;
+}
+
+#category-select:focus {
+  outline-color: rgb(var(--primary));
+}
+
+.dark #category-select:focus {
+  outline-color: rgb(var(--primary-light));
+}
+
+#categories-dropdown {
+  top: calc(100% + 4px);
+  padding: 0.5rem 0.5rem;
+  display: none;
+  position: absolute;
+  z-index: 10;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  width: 100%;
+  color: #111827;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.dark #categories-dropdown {
+  background-color: rgb(var(--background-dark));
+  border-color: #d1d5db1a;
+  color: #ffffff;
+}
+
+#categories-dropdown-clickout {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.dropdown-icon-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  padding-right: 0.25rem;
+}
+
+.dropdown-icon {
+  margin-left: 0.25rem;
+  margin-right: 0.75rem;
+  flex: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #6b7280;
+  mask-image: url(https://mintlify.b-cdn.net/v6.5.1/solid/caret-down.svg);
+  mask-repeat: no-repeat;
+  mask-position: center center;
+}
+
+.dark .dropdown-icon {
+  background-color: #ffffff80;
+}
+
+#prompts-container {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.dropdown-item {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f9fafb;
+}
+
+.dark .dropdown-item:hover {
+  background-color: #ffffff0d;
+}
+
+.check-icon {
+  mask-image: url(https://mintlify.b-cdn.net/v6.5.1/solid/check.svg);
+  height: 0.875rem;
+  width: 1rem;
+  background-color: rgb(var(--primary-light));
+  mask-repeat: no-repeat;
+  mask-position: center center;
+}
+
+.prompt-card {
+  margin: -0.75rem;
+  padding: 0.75rem;
+  display: flex;
+  border-radius: 1rem;
+}
+
+.prompt-card:hover {
+  background-color: #03071208;
+}
+
+.dark .prompt-card:hover {
+  background-color: #ffffff08;
+}
+
+.prompt-icon-container {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  border-radius: 0.75rem;
+  height: 4rem;
+  width: 4rem;
+  background-color: #cb785c1a;
+}
+
+.prompt-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: rgb(var(--primary-light));
+  mask-repeat: no-repeat;
+  mask-position: center center;
+}
+
+.prompt-title {
+  color: rgb(31 41 55);
+  font-weight: 600;
+}
+
+.dark .prompt-title {
+  color: rgb(229 231 235);
+}
+
+.prompt-description {
+  margin-top: 0.25rem;
+}
+
+#prompts-container {
+  display: grid;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  #category-select {
+    width: 16rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #prompts-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Home page card styling */
+.home-cards-custom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1.5rem;
+}
+
+.home-cards-custom .card {
+  background: transparent;
+  border: 0.5px solid hsl(var(--border-300));
+  border-radius: 12px;
+  padding: 0.25rem;
+}
+
+/* Responsive: change to 2 columns on tablet, single column on mobile */
+@media (max-width: 1024px) {
+  .home-cards-custom {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-cards-custom {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+  }
+}
+
+/* Utility classes */
+.relative {
+  position: relative;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+/* Mermaid diagram styling with graph paper background using Anthropic brand colors */
+.mermaid {
+  position: relative;
+  background-color: #FDFDFB; /* Very light version of neutral #F0F0EB */
+  background-image:
+    linear-gradient(rgba(235, 219, 188, .25) 1px, transparent 1px), /* Secondary color #EBDBBC with low opacity */
+    linear-gradient(90deg, rgba(235, 219, 188, .25) 1px, transparent 1px),
+    linear-gradient(rgba(235, 219, 188, .1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(235, 219, 188, .1) 1px, transparent 1px);
+  background-size:
+    20px 20px,
+    20px 20px,
+    4px 4px,
+    4px 4px;
+  background-position:
+    -1px -1px,
+    -1px -1px,
+    -1px -1px,
+    -1px -1px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(235, 219, 188, .4); /* Secondary color border */
+  box-shadow: 0 2px 4px rgba(64, 64, 62, 0.08); /* Subtle shadow using #40403E */
+}
+
+.dark .mermaid {
+  background-color: #1a1918; /* Dark version maintaining brand tone */
+  background-image:
+    linear-gradient(rgba(212, 162, 127, .15) 1px, transparent 1px), /* Tertiary color #D4A27F with low opacity */
+    linear-gradient(90deg, rgba(212, 162, 127, .15) 1px, transparent 1px),
+    linear-gradient(rgba(212, 162, 127, .08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 162, 127, .08) 1px, transparent 1px);
+  border: 1px solid rgba(102, 102, 99, .5); /* Using #666663 from brand */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================
+   What's New digest — feature block component
+   ============================================================ */
+
+.digest-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0 2.5rem;
+  border: 1px solid hsl(var(--border-300) / 0.15);
+  background: hsl(var(--bg-200));
+  font-variant-numeric: tabular-nums;
+  font-size: 0.875rem;
+  color: hsl(var(--text-400));
+}
+
+#content-container .digest-meta a {
+  color: hsl(var(--accent-main-100));
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#content-container .digest-meta a:hover {
+  text-decoration: underline;
+}
+
+.digest-feature {
+  position: relative;
+  margin: 2.5rem 0;
+  padding: 1.875rem 1.875rem 1.625rem;
+  background:
+    radial-gradient(circle, hsl(var(--text-000) / 0.025) 1px, transparent 1px) 0 0 / 18px 18px,
+    linear-gradient(180deg, hsl(var(--constant-manilla) / 0.55), hsl(var(--constant-manilla) / 0.38));
+  border: 1px solid hsl(var(--border-300) / 0.12);
+  box-shadow:
+    inset 0 1px 0 hsl(var(--text-000) / 0.04),
+    0 1px 2px hsl(var(--always-black) / 0.04);
+}
+
+.digest-feature::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: hsl(var(--accent-brand));
+}
+
+.dark .digest-feature {
+  background:
+    radial-gradient(circle, hsl(var(--text-000) / 0.02) 1px, transparent 1px) 0 0 / 18px 18px,
+    linear-gradient(180deg, hsl(var(--bg-000) / 0.75), hsl(var(--bg-000) / 0.5));
+  border-color: hsl(var(--border-300) / 0.1);
+  box-shadow:
+    inset 0 1px 0 hsl(var(--text-000) / 0.03),
+    0 1px 2px hsl(var(--always-black) / 0.25);
+}
+
+.digest-feature > :first-child {
+  margin-top: 0;
+}
+
+.digest-feature > :last-child {
+  margin-bottom: 0;
+}
+
+.digest-feature-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  margin: 0 0 0.75rem;
+}
+
+#content-container .digest-feature-title {
+  font-family: "Anthropic Serif Display", Georgia, serif;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: hsl(var(--text-000));
+  margin: 0;
+}
+
+#content-container .digest-feature-pill {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: hsl(var(--accent-brand) / 0.12);
+  color: hsl(var(--accent-main-000));
+  border: 1px solid hsl(var(--accent-brand) / 0.25);
+  white-space: nowrap;
+  transform: translateY(1px);
+}
+
+#content-container .digest-feature-lede {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: hsl(var(--text-100));
+  margin: 0 0 1.25rem;
+  max-width: none;
+}
+
+#content-container .digest-feature-lede code {
+  font-size: 0.875em;
+  padding: 0.1em 0.35em;
+}
+
+#content-container .digest-feature-try {
+  font-size: 0.875rem;
+  color: hsl(var(--text-400));
+  margin: 1.25rem 0 0.5rem;
+}
+
+#content-container .digest-feature .frame {
+  margin: 1rem 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+#content-container .digest-feature .frame > * {
+  border-radius: 0;
+}
+
+#content-container .digest-feature pre,
+#content-container .digest-feature [class*="CodeBlock"] {
+  border-radius: 0;
+}
+
+#content-container .digest-feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--accent-main-100));
+  text-decoration: none;
+  border-bottom: none;
+  margin-top: 0.75rem;
+}
+
+#content-container .digest-feature-link::after {
+  content: "→";
+  transition: transform 120ms ease-out;
+}
+
+#content-container .digest-feature-link:hover::after {
+  transform: translateX(3px);
+}
+
+/* Other wins — compact companion block */
+.digest-wins {
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.75rem 1.25rem;
+  background: hsl(var(--bg-200));
+  border: 1px solid hsl(var(--border-300) / 0.1);
+}
+
+.dark .digest-wins {
+  background: hsl(var(--bg-200) / 0.6);
+}
+
+#content-container .digest-wins-title {
+  font-family: "Anthropic Serif Display", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: hsl(var(--text-000));
+  margin: 0 0 0.75rem;
+}
+
+.digest-wins-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  column-gap: 2rem;
+}
+
+#content-container .digest-wins-grid > div {
+  position: relative;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: hsl(var(--text-300));
+  padding: 0.5rem 0 0.5rem 1.125rem;
+  border-top: 1px solid hsl(var(--border-300) / 0.06);
+  margin: 0;
+}
+
+#content-container .digest-wins-grid > div::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--accent-brand));
+}
+
+#content-container .digest-wins-grid > div:first-child,
+#content-container .digest-wins-grid > div:nth-child(2) {
+  border-top: none;
+  padding-top: 0;
+}
+
+#content-container .digest-wins-grid > div:first-child::before,
+#content-container .digest-wins-grid > div:nth-child(2)::before {
+  top: 0;
+}
+
+#content-container .digest-wins-grid code {
+  font-size: 0.8125rem;
+  padding: 0.1em 0.3em;
+}
+
+/* ============================================================
+   Collapsible right table of contents (toggled by toc-collapse.js)
+   ============================================================ */
+
+/* Dimensions mirrored from Mintlify's compiled mint-theme layout. If a
+   Mintlify update moves the button or the collapsed reading column,
+   re-measure these on a rendered page. */
+:root {
+  --toc-wrapper-max: 92rem; /* centered layout wrapper max-width */
+  --toc-wrapper-pad: 2rem; /* wrapper right padding */
+  --toc-col: 19rem; /* ToC column width, incl. its 2.5rem left padding */
+  --toc-side: 28rem; /* side column space #content-area reserves */
+  --toc-btn-size: 1.75rem; /* ours, not mirrored: the toggle's diameter */
+}
+
+/* Hidden by default: below the xl breakpoint Mintlify hides the ToC
+   anyway, and pages that render no ToC (wide-mode pages) get no toggle. */
+#toc-collapse-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 10rem;
+  /* Sits just left of the ToC column, inside its 2.5rem left-padding
+     strip: at the column's left edge, minus the button's own width and
+     a small gap. 100% rather than 100vw so a classic scrollbar doesn't
+     shift the math (percentages on fixed elements resolve against the
+     layout viewport). */
+  right: calc(
+    max((100% - var(--toc-wrapper-max)) / 2, 0px) + var(--toc-wrapper-pad) +
+      var(--toc-col) - var(--toc-btn-size) - 0.35rem
+  );
+  transition: right 200ms ease-out;
+  z-index: 30;
+  width: var(--toc-btn-size);
+  height: var(--toc-btn-size);
+  border-radius: 9999px;
+  border: 1px solid hsl(var(--border-300) / 0.15);
+  background: hsl(var(--bg-100));
+  color: hsl(var(--text-400));
+  cursor: pointer;
+}
+
+#toc-collapse-toggle:hover {
+  background: hsl(var(--bg-300));
+  color: hsl(var(--text-100));
+}
+
+#toc-collapse-toggle svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* The list glyph only appears while the button is parked at the right
+   edge, so the collapsed control still reads as the table of contents. */
+#toc-collapse-toggle .toc-glyph {
+  display: none;
+  stroke-width: 2;
+}
+
+/* A fixed-position button would repeat on every printed page. */
+@media print {
+  #toc-collapse-toggle {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #toc-collapse-toggle {
+    transition: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  html:has(#table-of-contents-layout) #toc-collapse-toggle {
+    display: flex;
+  }
+
+  html.toc-collapsed #toc-collapse-toggle .toc-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* The column is gone while collapsed, so the button moves to the
+     right edge where the restored ToC will reappear, widening into a
+     pill that pairs the chevron with the list glyph. */
+  html.toc-collapsed #toc-collapse-toggle {
+    right: 0.5rem;
+    width: auto;
+    padding: 0 0.5rem;
+    gap: 0.25rem;
+  }
+
+  html.toc-collapsed #toc-collapse-toggle .toc-glyph {
+    display: block;
+  }
+
+  html.toc-collapsed #table-of-contents-layout {
+    display: none !important;
+  }
+
+  /* Also hide the side column's wrapper: left in flow at zero width,
+     it keeps its 3rem flex gap as dead space at the right edge. Scoped
+     with :has() so the wrapper is untouched when it holds other
+     content, such as the open assistant panel. */
+  html.toc-collapsed #content-side-layout:has(#table-of-contents-layout) {
+    display: none !important;
+  }
+
+  /* Mintlify sizes the content column assuming the side column is
+     present (xl:w-[calc(100%-28rem)]); reclaim that space when collapsed.
+     Scoped with :has() so pages that render no ToC, such as wide-mode
+     pages, keep their own layout. Written out twice rather than nested:
+     CSS nesting shipped later than :has(), so nesting here would break
+     the cap in browsers that pass the :has() support guard. */
+  html.toc-collapsed #content-container:has(#table-of-contents-layout) #content-area {
+    width: 100% !important;
+  }
+
+  /* Safety bound on the widened reading column. The centered wrapper
+     already caps overall width, so today this only bites at the
+     wrapper's max, where it equals the natural content width; it exists
+     so line length can't run away if the wrapper cap ever changes. */
+  html.toc-collapsed #content-container:has(#table-of-contents-layout) #content-area > * {
+    max-width: calc(var(--toc-wrapper-max) - var(--toc-side));
+  }
+}
+
+@media (max-width: 640px) {
+  .digest-feature {
+    padding: 1.25rem 1rem 1rem;
+    margin: 1.5rem 0;
+  }
+  #content-container .digest-feature-title {
+    font-size: 1.375rem;
+  }
+  .digest-wins {
+    padding: 1.25rem 1rem 1rem;
+  }
+  .digest-wins-grid {
+    grid-template-columns: 1fr;
+  }
+  #content-container .digest-wins-grid > div:nth-child(2) {
+    border-top: 1px solid hsl(var(--border-300) / 0.06);
+    padding-top: 0.5rem;
+  }
+  #content-container .digest-wins-grid > div:nth-child(2)::before {
+    top: 0.5rem;
+  }
+}
+</style><!--$--><!--/$--><div class="flex flex-row-reverse gap-12 box-border w-full pt-40 lg:pt-10"><div class="relative grow box-border flex-col w-full mx-auto px-1 lg:pl-[5.7rem] lg:-ml-12 xl:w-[calc(100%-19rem)] xl:min-w-full" id="content-area"><header class="relative leading-none @container/page-header" id="header"><div class="mt-0.5 space-y-2.5"><div class="eyebrow h-5 text-primary dark:text-primary-light text-sm font-semibold">Core concepts</div><div class="flex flex-col sm:flex-row items-start sm:items-center relative gap-2 min-w-0"><h1 class="text-3xl sm:text-4xl text-gray-900 tracking-tight dark:text-gray-200 [overflow-wrap:anywhere] font-semibold" id="page-title">Explore the .claude directory</h1><div class="items-center shrink-0 min-w-[156px] justify-end ml-auto hidden @[520px]/page-header:flex" id="page-context-menu"><button aria-label="Copy page" class="rounded-l-xl px-3 text-gray-700 dark:text-gray-300 py-1.5 border border-gray-200 dark:border-white/[0.07] bg-background-light dark:bg-background-dark hover:bg-gray-600/5 dark:hover:bg-gray-200/5 border-r-0" id="page-context-menu-button"><div class="flex items-center gap-2 text-sm text-center font-medium"><svg aria-hidden="true" class="size-4 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M14.25 5.25H7.25C6.14543 5.25 5.25 6.14543 5.25 7.25V14.25C5.25 15.3546 6.14543 16.25 7.25 16.25H14.25C15.3546 16.25 16.25 15.3546 16.25 14.25V7.25C16.25 6.14543 15.3546 5.25 14.25 5.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.80103 11.998L1.77203 5.07397C1.61003 3.98097 2.36403 2.96397 3.45603 2.80197L10.38 1.77297C11.313 1.63397 12.19 2.16297 12.528 3.00097" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><span class="grid"><span aria-hidden="true" class="invisible col-start-1 row-start-1">Copy page</span><span class="col-start-1 row-start-1">Copy page</span></span></div></button><button aria-haspopup="menu" aria-label="More actions" class="group disabled:pointer-events-none [&amp;&gt;span]:line-clamp-1 overflow-hidden group focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-primary-light py-0.5 gap-1 text-sm text-gray-950/50 dark:text-white/50 group-hover:text-gray-950/70 dark:group-hover:text-white/70 rounded-none rounded-r-xl border flex items-center justify-center h-[34px] border-gray-200 aspect-square dark:border-white/[0.07] bg-background-light dark:bg-background-dark hover:bg-gray-600/5 dark:hover:bg-gray-200/5" id="base-ui-_R_1mshlktbsnlhjiuasnpfiutb_" tabindex="0" type="button"><svg aria-hidden="true" class="size-3 transition-transform text-gray-400 group-hover:text-gray-600 dark:text-gray-600 dark:group-hover:text-gray-400 shrink-0 rotate-90" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div></div><div class="mt-2 text-lg prose prose-gray dark:prose-invert [&amp;&gt;*]:[overflow-wrap:anywhere]"><p>Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.</p></div><div class="flex items-center shrink-0 min-w-[156px] mt-3 @[520px]/page-header:hidden" id="page-context-menu"><button aria-label="Copy page" class="rounded-l-xl px-3 text-gray-700 dark:text-gray-300 py-1.5 border border-gray-200 dark:border-white/[0.07] bg-background-light dark:bg-background-dark hover:bg-gray-600/5 dark:hover:bg-gray-200/5 border-r-0" id="page-context-menu-button"><div class="flex items-center gap-2 text-sm text-center font-medium"><svg aria-hidden="true" class="size-4 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M14.25 5.25H7.25C6.14543 5.25 5.25 6.14543 5.25 7.25V14.25C5.25 15.3546 6.14543 16.25 7.25 16.25H14.25C15.3546 16.25 16.25 15.3546 16.25 14.25V7.25C16.25 6.14543 15.3546 5.25 14.25 5.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.80103 11.998L1.77203 5.07397C1.61003 3.98097 2.36403 2.96397 3.45603 2.80197L10.38 1.77297C11.313 1.63397 12.19 2.16297 12.528 3.00097" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><span class="grid"><span aria-hidden="true" class="invisible col-start-1 row-start-1">Copy page</span><span class="col-start-1 row-start-1">Copy page</span></span></div></button><button aria-haspopup="menu" aria-label="More actions" class="group disabled:pointer-events-none [&amp;&gt;span]:line-clamp-1 overflow-hidden group focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-primary-light py-0.5 gap-1 text-sm text-gray-950/50 dark:text-white/50 group-hover:text-gray-950/70 dark:group-hover:text-white/70 rounded-none rounded-r-xl border flex items-center justify-center h-[34px] border-gray-200 aspect-square dark:border-white/[0.07] bg-background-light dark:bg-background-dark hover:bg-gray-600/5 dark:hover:bg-gray-200/5" id="base-ui-_R_3dhlktbsnlhjiuasnpfiutb_" tabindex="0" type="button"><svg aria-hidden="true" class="size-3 transition-transform text-gray-400 group-hover:text-gray-600 dark:text-gray-600 dark:group-hover:text-gray-400 shrink-0 rotate-90" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></header><div class="mdx-content @container/columns-container relative mt-8 prose prose-gray dark:prose-invert [contain:inline-size] isolate empty:hidden mb-14" data-page-href="/en/claude-directory" data-page-title="Explore the .claude directory" id="content"><span data-as="p">Claude Code reads instructions, settings, skills, subagents, and memory from your project directory and from <code>~/.claude</code> in your home directory. Commit project files to git to share them with your team; files in <code>~/.claude</code> are personal configuration that applies across all your projects.</span>
+<span data-as="p">On Windows, <code>~/.claude</code> resolves to <code>%USERPROFILE%\.claude</code>. If you set <a class="link" href="/docs/en/env-vars"><code>CLAUDE_CONFIG_DIR</code></a>, every <code>~/.claude</code> path on this page lives under that directory instead.</span>
+<span data-as="p">Most users only edit <code>CLAUDE.md</code> and <code>settings.json</code>. The rest of the directory is optional: add skills, rules, or subagents as you need them.</span>
+<h2 class="flex whitespace-pre-wrap group font-semibold" id="explore-the-directory"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#explore-the-directory">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">Explore the directory</span></h2><aside class="mdx-live-widget">
+<p class="mdx-live-widget-label">Interactive explorer</p>
+<p>This directory tree is interactive on the original page and cannot run inside an EPUB. Open it here: <a class="source-title" href="https://code.claude.com/docs/en/claude-directory#explore-the-directory" rel="external">https://code.claude.com/docs/en/claude-directory#explore-the-directory</a></p>
+</aside><div class="mdx-file-index">
+<p>File-by-file notes from that explorer:</p>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/memory" rel="external"><code>CLAUDE.md</code></a></h3>
+<p>Project instructions Claude reads every session</p>
+<p class="mdx-when"><strong>When it loads.</strong> Loaded into context at the start of every session</p>
+<p>Project-specific instructions that shape how Claude works in this repository. Put your conventions, common commands, and architectural context here so Claude operates with the same assumptions your team does.</p>
+<p><strong>Tips</strong></p><ul>
+<li>Target under 200 lines. Longer files still load in full but may reduce adherence</li>
+<li>List the commands you run most, like build, test, and format, so Claude knows them without you spelling them out each time</li>
+<li>CLAUDE.md loads into every session. If something only matters for specific tasks, move it to a [skill](/docs/en/skills) or a path-scoped [rule](/docs/en/memory#organize-rules-with-claude/rules/) so it loads only when needed</li>
+<li>Run `/memory` to open and edit CLAUDE.md from within a session</li>
+<li>Also works at `.claude/CLAUDE.md` if you prefer to keep the project root clean</li>
+</ul>
+<p>This example is for a TypeScript and React project. It lists the build and test commands, the framework conventions Claude should follow, and project-specific rules like export style and file layout.</p>
+<pre><code># Project conventions
 
 ## Commands
-- Build: \`npm run build\`
-- Test: \`npm test\`
-- Lint: \`npm run lint\`
-
-## Stack
-- TypeScript with strict mode
-- React 19, functional components only
-
-## Rules
-- Named exports, never default exports
-- Tests live next to source: \`foo.ts\` -> \`foo.test.ts\`
-- All API routes return \`{ data, error }\` shape`,
-        docsLink: '/en/memory'
-      }, {
-        id: 'mcp-json',
-        label: '.mcp.json',
-        type: 'file',
-        icon: 'json',
-        color: '#9B7BC4',
-        badge: 'committed',
-        oneLiner: 'Project-scoped MCP servers, shared with your team',
-        when: <>Servers connect when the session begins. Tool schemas are deferred by default and load on demand via <A href="/docs/en/mcp#scale-with-mcp-tool-search">tool search</A></>,
-        description: <>Configures Model Context Protocol (MCP) servers that give Claude access to external tools: databases, APIs, browsers, and more. This file holds the project-scoped servers your whole team uses. Personal servers you want to keep to yourself go in <C>~/.claude.json</C> instead.</>,
-        tips: [<>Use environment variable references for secrets: <C>{'${NOTION_TOKEN}'}</C></>, <>Lives at the project root, not inside <C>.claude/</C></>, <>For servers only you need, run <C>claude mcp add --scope user</C>. This writes to <C>~/.claude.json</C> instead of <C>.mcp.json</C></>],
-        exampleIntro: <>This example configures the Notion MCP server so Claude can read and update pages in your workspace. The <C>{'${NOTION_TOKEN}'}</C> reference is read from your shell environment when Claude Code starts the server, so the token never lands in the file.</>,
-        example: `{
+- Build: \</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/mcp" rel="external"><code>.mcp.json</code></a></h3>
+<p>Project-scoped MCP servers, shared with your team</p>
+<p class="mdx-when"><strong>When it loads.</strong> Servers connect when the session begins. Tool schemas are deferred by default and load on demand via [tool search](/docs/en/mcp#scale-with-mcp-tool-search)</p>
+<p>Configures Model Context Protocol (MCP) servers that give Claude access to external tools: databases, APIs, browsers, and more. This file holds the project-scoped servers your whole team uses. Personal servers you want to keep to yourself go in `~/.claude.json` instead.</p>
+<p><strong>Tips</strong></p><ul>
+<li>${NOTION_TOKEN}</li>
+<li>Use environment variable references for secrets: `${NOTION_TOKEN}`</li>
+<li>Lives at the project root, not inside `.claude/`</li>
+<li>For servers only you need, run `claude mcp add --scope user`. This writes to `~/.claude.json` instead of `.mcp.json`</li>
+</ul>
+<p>This example configures the Notion MCP server so Claude can read and update pages in your workspace. The `${NOTION_TOKEN}` reference is read from your shell environment when Claude Code starts the server, so the token never lands in the file.</p>
+<pre><code>{
   "mcpServers": {
     "notion": {
       "command": "npx",
@@ -74,49 +1507,42 @@ export const ClaudeExplorer = () => {
       }
     }
   }
-}`,
-        docsLink: '/en/mcp'
-      }, {
-        id: 'worktreeinclude',
-        label: '.worktreeinclude',
-        type: 'file',
-        icon: 'md',
-        color: '#8FA876',
-        badge: 'committed',
-        oneLiner: 'Gitignored files to copy into new worktrees',
-        when: <>Read when Claude creates a git worktree via <C>--worktree</C>, the <C>EnterWorktree</C> tool, or subagent <C>isolation: worktree</C></>,
-        description: <>Lists gitignored files to copy from your main repository into each new worktree. Worktrees are fresh checkouts, so untracked files like <C>.env</C> are missing by default. Patterns here use <C>.gitignore</C> syntax. Only files that match a pattern and are also gitignored get copied, so tracked files are never duplicated.</>,
-        tips: [<>Lives at the project root, not inside <C>.claude/</C></>, <>Git-only: if you configure a <A href="/docs/en/hooks#worktreecreate">WorktreeCreate hook</A> for a different VCS, this file is not read. Copy files inside your hook script instead</>, <>Also applies to parallel sessions in the <A href="/docs/en/desktop#work-in-parallel-with-sessions">desktop app</A></>],
-        exampleIntro: 'This example copies your local environment files and a secrets config into every worktree Claude creates. Comments start with # and blank lines are ignored, same as .gitignore.',
-        example: `# Local environment
+}</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/worktrees#copy-gitignored-files-into-worktrees" rel="external"><code>.worktreeinclude</code></a></h3>
+<p>Gitignored files to copy into new worktrees</p>
+<p class="mdx-when"><strong>When it loads.</strong> Read when Claude creates a git worktree via `--worktree`, the `EnterWorktree` tool, or subagent `isolation: worktree`</p>
+<p>Lists gitignored files to copy from your main repository into each new worktree. Worktrees are fresh checkouts, so untracked files like `.env` are missing by default. Patterns here use `.gitignore` syntax. Only files that match a pattern and are also gitignored get copied, so tracked files are never duplicated.</p>
+<p><strong>Tips</strong></p><ul>
+<li>Lives at the project root, not inside `.claude/`</li>
+<li>Git-only: if you configure a [WorktreeCreate hook](/docs/en/hooks#worktreecreate) for a different VCS, this file is not read. Copy files inside your hook script instead</li>
+<li>Also applies to parallel sessions in the [desktop app](/docs/en/desktop#work-in-parallel-with-sessions)</li>
+</ul>
+<p>This example copies your local environment files and a secrets config into every worktree Claude creates. Comments start with # and blank lines are ignored, same as .gitignore.</p>
+<pre><code># Local environment
 .env
 .env.local
 
 # API credentials
-config/secrets.json`,
-        docsLink: '/en/worktrees#copy-gitignored-files-into-worktrees'
-      }, {
-        id: 'dot-claude',
-        label: '.claude/',
-        type: 'folder',
-        icon: 'folder',
-        color: 'var(--ce-accent)',
-        oneLiner: 'Project-level configuration, rules, and extensions',
-        description: 'Everything Claude Code reads that is specific to this project. If you use git, commit most files here so your team shares them; a few, like settings.local.json, are gitignored when Claude Code saves settings to them. Each file badge shows which.',
-        children: [{
-          id: 'settings-json',
-          label: 'settings.json',
-          type: 'file',
-          icon: 'json',
-          color: 'var(--ce-text-3)',
-          badge: 'committed',
-          oneLiner: 'Permissions, hooks, and configuration',
-          when: <>Overrides global <C>~/.claude/settings.json</C>. Local settings, CLI flags, and managed settings override this</>,
-          description: 'Settings that Claude Code applies directly. Permissions control which commands and tools Claude can use; hooks run your scripts at specific points in a session. Unlike CLAUDE.md, which Claude reads as guidance, these are enforced whether Claude follows them or not.',
-          contains: [<><A href="/docs/en/permissions">permissions</A>: allow, deny, or prompt before Claude uses specific tools or commands</>, <><A href="/docs/en/hooks">hooks</A>: run your own scripts on events like before a tool call or after a file edit</>, <><A href="/docs/en/statusline">statusLine</A>: customize the line shown at the bottom while Claude works</>, <><A href="/docs/en/settings-reference#available-settings">model</A>: pick a default model for this project</>, <><A href="/docs/en/settings-reference#environment-variables">env</A>: environment variables set in every session</>, <><A href="/docs/en/output-styles">outputStyle</A>: select a custom system-prompt style from output-styles/</>],
-          tips: [<>Bash permission patterns support wildcards: <C>Bash(npm test *)</C> matches any command starting with <C>npm test</C></>, <>Array settings like <C>permissions.allow</C> combine across all scopes; scalar settings like <C>model</C> use the most specific value</>],
-          exampleIntro: <>This example allows <C>npm test</C> and <C>npm run</C> commands without prompting, blocks <C>rm -rf</C>, and runs Prettier on files after Claude edits or writes them.</>,
-          example: `{
+config/secrets.json</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><code>.claude/</code></h3>
+<p>Project-level configuration, rules, and extensions</p>
+<p>Everything Claude Code reads that is specific to this project. If you use git, commit most files here so your team shares them; a few, like settings.local.json, are gitignored when Claude Code saves settings to them. Each file badge shows which.</p>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/settings" rel="external"><code>settings.json</code></a></h3>
+<p>Permissions, hooks, and configuration</p>
+<p class="mdx-when"><strong>When it loads.</strong> Overrides global `~/.claude/settings.json`. Local settings, CLI flags, and managed settings override this</p>
+<p>Settings that Claude Code applies directly. Permissions control which commands and tools Claude can use; hooks run your scripts at specific points in a session. Unlike CLAUDE.md, which Claude reads as guidance, these are enforced whether Claude follows them or not.</p>
+<p><strong>Tips</strong></p><ul>
+<li>Bash permission patterns support wildcards: `Bash(npm test *)` matches any command starting with `npm test`</li>
+<li>Array settings like `permissions.allow` combine across all scopes; scalar settings like `model` use the most specific value</li>
+</ul>
+<p>This example allows `npm test` and `npm run` commands without prompting, blocks `rm -rf`, and runs Prettier on files after Claude edits or writes them.</p>
+<pre><code>{
   "permissions": {
     "allow": [
       "Bash(npm test *)",
@@ -135,50 +1561,43 @@ config/secrets.json`,
       }]
     }]
   }
-}`,
-          docsLink: '/en/settings'
-        }, {
-          id: 'settings-local-json',
-          label: 'settings.local.json',
-          type: 'file',
-          icon: 'json',
-          color: 'var(--ce-text-3)',
-          badge: 'gitignored',
-          oneLiner: 'Your personal settings overrides for this project',
-          when: 'Highest of the user-editable settings files; CLI flags and managed settings still take precedence',
-          description: 'Personal settings that take precedence over the project defaults. Same JSON format as settings.json, gitignored when Claude Code saves a setting to it. Use this when you need different permissions or defaults than the team config.',
-          tips: [<>Same schema as settings.json. Array settings like <C>permissions.allow</C> combine across scopes; scalar settings like <C>model</C> use the local value</>, <>When Claude Code saves a setting to this file in a repository that doesn't already ignore it, it adds <C>**/.claude/settings.local.json</C> to your global git excludes file: <C>core.excludesFile</C> from your global git config when it's set to an absolute or <C>~</C>-prefixed path, otherwise <C>$XDG_CONFIG_HOME/git/ignore</C>, or <C>~/.config/git/ignore</C>. To share the ignore rule with your team, also add it to the project <C>.gitignore</C></>],
-          exampleIntro: 'This example adds Docker permissions on top of whatever the team settings.json allows.',
-          example: `{
+}</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/settings" rel="external"><code>settings.local.json</code></a></h3>
+<p>Your personal settings overrides for this project</p>
+<p class="mdx-when"><strong>When it loads.</strong> Highest of the user-editable settings files; CLI flags and managed settings still take precedence</p>
+<p>Personal settings that take precedence over the project defaults. Same JSON format as settings.json, gitignored when Claude Code saves a setting to it. Use this when you need different permissions or defaults than the team config.</p>
+<p><strong>Tips</strong></p><ul>
+<li>t already ignore it, it adds &lt;C&gt;**/.claude/settings.local.json&lt;/C&gt; to your global git excludes file: &lt;C&gt;core.excludesFile&lt;/C&gt; from your global git config when it</li>
+<li>Same schema as settings.json. Array settings like `permissions.allow` combine across scopes; scalar settings like `model` use the local value</li>
+<li>When Claude Code saves a setting to this file in a repository that doesn't already ignore it, it adds `**/.claude/settings.local.json` to your global git excludes file: `core.excludesFile` from your global git config when it's set to an absolute or `~`-prefixed path, otherwise `$XDG_CONFIG_HOME/git/ignore`, or `~/.config/git/ignore`. To share the ignore rule with your team, also add it to the project `.gitignore`</li>
+</ul>
+<p>This example adds Docker permissions on top of whatever the team settings.json allows.</p>
+<pre><code>{
   "permissions": {
     "allow": [
       "Bash(docker *)"
     ]
   }
-}`,
-          docsLink: '/en/settings'
-        }, {
-          id: 'rules',
-          label: 'rules/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#9B7BC4',
-          oneLiner: 'Topic-scoped instructions, optionally gated by file paths',
-          when: <>Rules without <C>paths:</C> load at session start. Rules with <C>paths:</C> load when a matching file enters context</>,
-          description: [<>Project instructions split into topic files that can load conditionally based on file paths. A rule without <C>paths:</C> frontmatter loads at session start like CLAUDE.md; a rule with <C>paths:</C> loads only when Claude reads a matching file.</>, <>Like CLAUDE.md, rules are guidance Claude reads, not configuration Claude Code enforces. For guaranteed behavior use <A href="/docs/en/hooks">hooks</A> or <A href="/docs/en/permissions">permissions</A>.</>],
-          tips: [<>Use <C>paths:</C> frontmatter with globs to scope rules to directories or file types</>, <>Subdirectories work: <C>.claude/rules/frontend/react.md</C> is discovered automatically</>, 'When CLAUDE.md approaches 200 lines, start splitting into rules'],
-          docsLink: '/en/memory#organize-rules-with-claude/rules/',
-          children: [{
-            id: 'rule-testing',
-            label: 'testing.md',
-            type: 'file',
-            icon: 'md',
-            color: '#9B7BC4',
-            badge: 'committed',
-            oneLiner: 'Test conventions scoped to test files',
-            when: <>Loaded when Claude reads a file matching the <C>paths:</C> globs below</>,
-            description: <>An example rule that only loads when Claude is working on test files. The <C>paths:</C> globs in the frontmatter define which files trigger it; here, anything ending in .test.ts or .test.tsx. For other files, this rule is not loaded into context.</>,
-            example: `---
+}</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/memory#organize-rules-with-claude/rules/" rel="external"><code>rules/</code></a></h3>
+<p>Topic-scoped instructions, optionally gated by file paths</p>
+<p class="mdx-when"><strong>When it loads.</strong> Rules without `paths:` load at session start. Rules with `paths:` load when a matching file enters context</p>
+<p><strong>Tips</strong></p><ul>
+<li>When CLAUDE.md approaches 200 lines, start splitting into rules</li>
+<li>Use `paths:` frontmatter with globs to scope rules to directories or file types</li>
+<li>Subdirectories work: `.claude/rules/frontend/react.md` is discovered automatically</li>
+</ul>
+</div>
+<div class="mdx-file-card">
+<h3><code>testing.md</code></h3>
+<p>Test conventions scoped to test files</p>
+<p class="mdx-when"><strong>When it loads.</strong> Loaded when Claude reads a file matching the `paths:` globs below</p>
+<p>An example rule that only loads when Claude is working on test files. The `paths:` globs in the frontmatter define which files trigger it; here, anything ending in .test.ts or .test.tsx. For other files, this rule is not loaded into context.</p>
+<pre><code>---
 paths:
   - "**/*.test.ts"
   - "**/*.test.tsx"
@@ -188,18 +1607,14 @@ paths:
 
 - Use descriptive test names: "should [expected] when [condition]"
 - Mock external dependencies, not internal modules
-- Clean up side effects in afterEach`
-          }, {
-            id: 'rule-api',
-            label: 'api-design.md',
-            type: 'file',
-            icon: 'md',
-            color: '#9B7BC4',
-            badge: 'committed',
-            oneLiner: 'API conventions scoped to backend code',
-            when: <>Loaded when Claude reads a file matching the <C>paths:</C> glob below</>,
-            description: <>A second example showing a rule scoped to backend code. The <C>paths:</C> glob matches files under src/api/, so these conventions load only when Claude is editing API routes.</>,
-            example: `---
+- Clean up side effects in afterEach</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><code>api-design.md</code></h3>
+<p>API conventions scoped to backend code</p>
+<p class="mdx-when"><strong>When it loads.</strong> Loaded when Claude reads a file matching the `paths:` glob below</p>
+<p>A second example showing a rule scoped to backend code. The `paths:` glob matches files under src/api/, so these conventions load only when Claude is editing API routes.</p>
+<pre><code>---
 paths:
   - "src/api/**/*.ts"
 ---
@@ -208,66 +1623,43 @@ paths:
 
 - All endpoints must validate input with Zod schemas
 - Return shape: { data: T } | { error: string }
-- Rate limit all public endpoints`
-          }]
-        }, {
-          id: 'skills',
-          label: 'skills/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#D4A843',
-          oneLiner: 'Reusable prompts you or Claude invoke by name',
-          when: <>Invoked with <C>/skill-name</C> or when Claude matches the task to a skill</>,
-          description: <>Each skill is a folder with a SKILL.md file plus any supporting files it needs. By default, both you and Claude can invoke a skill. Use frontmatter to control that: <C>disable-model-invocation: true</C> for user-only workflows like <C>/deploy</C>, or <C>user-invocable: false</C> to hide from the <C>/</C> menu while Claude can still invoke it.</>,
-          tips: [<>Skills accept arguments: <C>/deploy staging</C> passes "staging" as <C>$ARGUMENTS</C>. Use <C>$0</C>, <C>$1</C>, and so on for positional access</>, <>The <C>description</C> frontmatter determines when Claude auto-invokes the skill</>, 'Bundle reference docs alongside SKILL.md. Claude knows the skill directory path and can read supporting files when you mention them'],
-          docsLink: '/en/skills',
-          children: [{
-            id: 'skill-review',
-            label: 'security-review/',
-            type: 'folder',
-            icon: 'folder',
-            color: '#D4A843',
-            oneLiner: 'A skill bundling SKILL.md with supporting files',
-            children: [{
-              id: 'skill-review-md',
-              label: 'SKILL.md',
-              type: 'file',
-              icon: 'md',
-              color: '#D4A843',
-              badge: 'committed',
-              oneLiner: 'Entrypoint: trigger, invocability, instructions',
-              when: <>User types <C>/security-review &lt;target&gt;</C>; Claude cannot auto-invoke this skill</>,
-              description: [<>This skill uses <C>disable-model-invocation: true</C> so only you can trigger it; Claude never invokes it on its own.</>, <>The <C>!`...`</C> line runs a shell command and injects its output into the prompt. <C>$ARGUMENTS</C> substitutes whatever you typed after the skill name. Claude sees the skill directory path, so mentioning a bundled file like checklist.md lets Claude read it.</>],
-              example: `---
+- Rate limit all public endpoints</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/skills" rel="external"><code>skills/</code></a></h3>
+<p>Reusable prompts you or Claude invoke by name</p>
+<p class="mdx-when"><strong>When it loads.</strong> Invoked with `/skill-name` or when Claude matches the task to a skill</p>
+<p>Each skill is a folder with a SKILL.md file plus any supporting files it needs. By default, both you and Claude can invoke a skill. Use frontmatter to control that: `disable-model-invocation: true` for user-only workflows like `/deploy`, or `user-invocable: false` to hide from the `/` menu while Claude can still invoke it.</p>
+<p><strong>Tips</strong></p><ul>
+<li>Bundle reference docs alongside SKILL.md. Claude knows the skill directory path and can read supporting files when you mention them</li>
+<li>Skills accept arguments: `/deploy staging` passes "staging" as `$ARGUMENTS`. Use `$0`, `$1`, and so on for positional access</li>
+<li>The `description` frontmatter determines when Claude auto-invokes the skill</li>
+</ul>
+</div>
+<div class="mdx-file-card">
+<h3><code>security-review/</code></h3>
+<p>A skill bundling SKILL.md with supporting files</p>
+</div>
+<div class="mdx-file-card">
+<h3><code>SKILL.md</code></h3>
+<p>Entrypoint: trigger, invocability, instructions</p>
+<p class="mdx-when"><strong>When it loads.</strong> User types `/security-review &amp;lt;target&amp;gt;`; Claude cannot auto-invoke this skill</p>
+<pre><code>---
 description: Reviews code changes for security vulnerabilities, authentication gaps, and injection risks
 disable-model-invocation: true
-argument-hint: <branch-or-path>
+argument-hint: &lt;branch-or-path&gt;
 ---
 
 ## Diff to review
 
-!\`git diff $ARGUMENTS\`
-
-Audit the changes above for:
-
-1. Injection vulnerabilities (SQL, XSS, command)
-2. Authentication and authorization gaps
-3. Hardcoded secrets or credentials
-
-Use checklist.md in this skill directory for the full review checklist.
-
-Report findings with severity ratings and remediation steps.`
-            }, {
-              id: 'skill-checklist',
-              label: 'checklist.md',
-              type: 'file',
-              icon: 'md',
-              color: '#D4A843',
-              badge: 'committed',
-              oneLiner: 'Supporting file bundled with the skill',
-              when: 'Claude reads it on demand while running the skill',
-              description: <>Skills can bundle any supporting files: reference docs, templates, scripts. The skill directory path is prepended to SKILL.md, so Claude can read bundled files by name. For scripts in bash injection commands, use the <C>{'${CLAUDE_SKILL_DIR}'}</C> placeholder.</>,
-              example: `# Security Review Checklist
+!\</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><code>checklist.md</code></h3>
+<p>Supporting file bundled with the skill</p>
+<p class="mdx-when"><strong>When it loads.</strong> Claude reads it on demand while running the skill</p>
+<p>Skills can bundle any supporting files: reference docs, templates, scripts. The skill directory path is prepended to SKILL.md, so Claude can read bundled files by name. For scripts in bash injection commands, use the `${CLAUDE_SKILL_DIR}` placeholder.</p>
+<pre><code># Security Review Checklist
 
 ## Input Validation
 - [ ] All user input sanitized before DB queries
@@ -277,77 +1669,51 @@ Report findings with severity ratings and remediation steps.`
 ## Authentication
 - [ ] JWT tokens expire after 24 hours
 - [ ] API keys stored in environment variables
-- [ ] Passwords hashed with bcrypt or argon2`
-            }]
-          }]
-        }, {
-          id: 'commands',
-          label: 'commands/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#788C5D',
-          oneLiner: <>Single-file prompts invoked with <C>/name</C></>,
-          note: commandsNote,
-          when: <>User types <C>/command-name</C></>,
-          description: <>A file at <C>commands/deploy.md</C> creates <C>/deploy</C> the same way a skill at <C>skills/deploy/SKILL.md</C> does, and both can be auto-invoked by Claude. Skills use a directory with SKILL.md, letting you bundle reference docs, templates, or scripts alongside the prompt.</>,
-          tips: [<>Use <C>$ARGUMENTS</C> in the file to accept parameters: <C>/fix-issue 123</C></>, 'If a skill and command share a name, the skill takes precedence', 'New commands should usually be skills instead; commands remain supported'],
-          docsLink: '/en/skills',
-          children: [{
-            id: 'cmd-example',
-            label: 'fix-issue.md',
-            type: 'file',
-            icon: 'md',
-            color: '#788C5D',
-            badge: 'committed',
-            oneLiner: <>Invoked as <C>/fix-issue &lt;number&gt;</C></>,
-            note: commandsNote,
-            description: [<>An example command for fixing a GitHub issue. Type <C>/fix-issue 123</C> and the <C>!`...`</C> line runs <C>gh issue view 123</C> in your shell, injecting the output into the prompt before Claude sees it.</>, <><C>$ARGUMENTS</C> substitutes whatever you typed after the command name. For positional access, use <C>$0</C> <C>$1</C> and so on.</>],
-            example: `---
-argument-hint: <issue-number>
+- [ ] Passwords hashed with bcrypt or argon2</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/skills" rel="external"><code>commands/</code></a></h3>
+<p>Single-file prompts invoked with `/name`</p>
+<p class="mdx-when"><strong>When it loads.</strong> User types `/command-name`</p>
+<p>A file at `commands/deploy.md` creates `/deploy` the same way a skill at `skills/deploy/SKILL.md` does, and both can be auto-invoked by Claude. Skills use a directory with SKILL.md, letting you bundle reference docs, templates, or scripts alongside the prompt.</p>
+<p><strong>Tips</strong></p><ul>
+<li>If a skill and command share a name, the skill takes precedence</li>
+<li>New commands should usually be skills instead; commands remain supported</li>
+<li>Use `$ARGUMENTS` in the file to accept parameters: `/fix-issue 123`</li>
+</ul>
+</div>
+<div class="mdx-file-card">
+<h3><code>fix-issue.md</code></h3>
+<p>Invoked as `/fix-issue &amp;lt;number&amp;gt;`</p>
+<pre><code>---
+argument-hint: &lt;issue-number&gt;
 ---
 
-!\`gh issue view $ARGUMENTS\`
-
-Investigate and fix the issue above.
-
-1. Trace the bug to its root cause
-2. Implement the fix
-3. Write or update tests
-4. Summarize what you changed and why`
-          }]
-        }, {
-          id: 'output-styles',
-          label: 'output-styles/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#5AA7A7',
-          oneLiner: 'Project-scoped output styles, if your team shares any',
-          when: 'Applied at session start when selected via the outputStyle setting',
-          description: <>Output styles are usually personal, so most live in <C>~/.claude/output-styles/</C>. Put one here if your team shares a style, like a review mode everyone uses. See <A href="#ce-global-output-styles">the Global tab</A> for the full explanation and example.</>,
-          docsLink: '/en/output-styles',
-          children: []
-        }, {
-          id: 'agents',
-          label: 'agents/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#C46686',
-          oneLiner: 'Specialized subagents with their own context window',
-          when: 'Runs in its own context window when you or Claude invoke it',
-          description: 'Each markdown file defines a subagent with its own system prompt, tool access, and optionally its own model. Subagents run in a fresh context window, keeping the main conversation clean. Useful for parallel work or isolated tasks.',
-          tips: ['Each agent gets a fresh context window, separate from your main session', <>Restrict tool access per agent with the <C>tools:</C> frontmatter field</>, 'Type @ and pick an agent from the autocomplete to delegate directly'],
-          docsLink: '/en/sub-agents',
-          children: [{
-            id: 'agent-reviewer',
-            label: 'code-reviewer.md',
-            type: 'file',
-            icon: 'md',
-            color: '#C46686',
-            badge: 'committed',
-            oneLiner: 'Subagent for isolated code review',
-            when: 'Claude spawns it for review tasks, or you @-mention it from the autocomplete',
-            description: <>An example subagent restricted to read-only tools. The <C>description</C> frontmatter tells Claude when to delegate to it automatically; <C>tools:</C> limits it to Read, Grep, and Glob so it can inspect code but never edit. The body becomes the subagent's system prompt.</>,
-            example: `---
+!\</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/output-styles" rel="external"><code>output-styles/</code></a></h3>
+<p>Project-scoped output styles, if your team shares any</p>
+<p class="mdx-when"><strong>When it loads.</strong> Applied at session start when selected via the outputStyle setting</p>
+<p>Output styles are usually personal, so most live in `~/.claude/output-styles/`. Put one here if your team shares a style, like a review mode everyone uses. See [the Global tab](#ce-global-output-styles) for the full explanation and example.</p>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/sub-agents" rel="external"><code>agents/</code></a></h3>
+<p>Specialized subagents with their own context window</p>
+<p class="mdx-when"><strong>When it loads.</strong> Runs in its own context window when you or Claude invoke it</p>
+<p>Each markdown file defines a subagent with its own system prompt, tool access, and optionally its own model. Subagents run in a fresh context window, keeping the main conversation clean. Useful for parallel work or isolated tasks.</p>
+<p><strong>Tips</strong></p><ul>
+<li>Each agent gets a fresh context window, separate from your main session</li>
+<li>Type @ and pick an agent from the autocomplete to delegate directly</li>
+<li>Restrict tool access per agent with the `tools:` frontmatter field</li>
+</ul>
+</div>
+<div class="mdx-file-card">
+<h3><code>code-reviewer.md</code></h3>
+<p>Subagent for isolated code review</p>
+<p class="mdx-when"><strong>When it loads.</strong> Claude spawns it for review tasks, or you @-mention it from the autocomplete</p>
+<p>An example subagent restricted to read-only tools. The `description` frontmatter tells Claude when to delegate to it automatically; `tools:` limits it to Read, Grep, and Glob so it can inspect code but never edit. The body becomes the subagent's system prompt.</p>
+<pre><code>---
 name: code-reviewer
 description: Reviews code for correctness, security, and maintainability
 tools: Read, Grep, Glob
@@ -359,79 +1725,56 @@ You are a senior code reviewer. Review for:
 2. Security: injection, auth bypass, data exposure
 3. Maintainability: naming, complexity, duplication
 
-Every finding must include a concrete fix.`
-          }]
-        }, {
-          id: 'workflows',
-          label: 'workflows/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#C46686',
-          oneLiner: 'Dynamic workflow scripts that orchestrate many subagents',
-          when: 'Loaded at startup; each file becomes a /<name> command',
-          description: <>Each <C>.js</C> file is a <A href="/docs/en/workflows">dynamic workflow</A>: a script the runtime executes to spawn and coordinate many subagents. Workflows are written by Claude and saved here from <C>/workflows</C> rather than authored from scratch.</>,
-          tips: [<>Save a run from <C>/workflows</C> with <C>s</C> to create one of these</>, <>A project workflow takes precedence over a personal one in <C>~/.claude/workflows/</C> with the same name</>],
-          docsLink: '/en/workflows'
-        }, {
-          id: 'agent-memory',
-          label: 'agent-memory/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#C46686',
-          badge: 'committed',
-          autogen: true,
-          oneLiner: 'Subagent persistent memory, separate from your main session auto memory',
-          when: 'First 200 lines (capped at 25KB) of MEMORY.md loaded into the subagent system prompt when it runs',
-          description: <>Subagents with <C>memory: project</C> in their frontmatter get a dedicated memory directory here. This is distinct from your <A href="/docs/en/memory#auto-memory">main session auto memory</A> at <C>~/.claude/projects/</C>: each subagent reads and writes its own MEMORY.md, not yours.</>,
-          tips: [<>Only created for subagents that set the <C>memory:</C> frontmatter field</>, <>This directory holds project-scoped subagent memory, meant to be shared with your team. To keep memory out of version control use <C>memory: local</C>, which writes to <C>.claude/agent-memory-local/</C> instead. For cross-project memory use <C>memory: user</C>, which writes to <C>~/.claude/agent-memory/</C></>, <>The main session auto memory is a different feature; see <C>~/.claude/projects/</C> in the Global tab</>],
-          docsLink: '/en/sub-agents#enable-persistent-memory',
-          children: [{
-            id: 'agent-memory-sub',
-            label: '<agent-name>/',
-            type: 'folder',
-            icon: 'folder',
-            color: '#C46686',
-            autogen: true,
-            children: [{
-              id: 'agent-memory-md',
-              label: 'MEMORY.md',
-              type: 'file',
-              icon: 'md',
-              color: '#C46686',
-              badge: 'committed',
-              autogen: true,
-              oneLiner: 'The subagent writes and maintains this file automatically',
-              when: 'Loaded into the subagent system prompt when the subagent starts',
-              description: <>Works the same as your <A href="/docs/en/memory#auto-memory">main auto memory</A>: the subagent creates and updates this file itself. You do not write it. The subagent reads it at the start of each task and writes back what it learns.</>,
-              example: `# code-reviewer memory
+Every finding must include a concrete fix.</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/workflows" rel="external"><code>workflows/</code></a></h3>
+<p>Dynamic workflow scripts that orchestrate many subagents</p>
+<p class="mdx-when"><strong>When it loads.</strong> Loaded at startup; each file becomes a /&lt;name&gt; command</p>
+<p>Each `.js` file is a [dynamic workflow](/docs/en/workflows): a script the runtime executes to spawn and coordinate many subagents. Workflows are written by Claude and saved here from `/workflows` rather than authored from scratch.</p>
+<p><strong>Tips</strong></p><ul>
+<li>Save a run from `/workflows` with `s` to create one of these</li>
+<li>A project workflow takes precedence over a personal one in `~/.claude/workflows/` with the same name</li>
+</ul>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/sub-agents#enable-persistent-memory" rel="external"><code>agent-memory/</code></a></h3>
+<p>Subagent persistent memory, separate from your main session auto memory</p>
+<p class="mdx-when"><strong>When it loads.</strong> First 200 lines (capped at 25KB) of MEMORY.md loaded into the subagent system prompt when it runs</p>
+<p>Subagents with `memory: project` in their frontmatter get a dedicated memory directory here. This is distinct from your [main session auto memory](/docs/en/memory#auto-memory) at `~/.claude/projects/`: each subagent reads and writes its own MEMORY.md, not yours.</p>
+<p><strong>Tips</strong></p><ul>
+<li>Only created for subagents that set the `memory:` frontmatter field</li>
+<li>This directory holds project-scoped subagent memory, meant to be shared with your team. To keep memory out of version control use `memory: local`, which writes to `.claude/agent-memory-local/` instead. For cross-project memory use `memory: user`, which writes to `~/.claude/agent-memory/`</li>
+<li>The main session auto memory is a different feature; see `~/.claude/projects/` in the Global tab</li>
+</ul>
+</div>
+<div class="mdx-file-card">
+<h3><code>MEMORY.md</code></h3>
+<p>The subagent writes and maintains this file automatically</p>
+<p class="mdx-when"><strong>When it loads.</strong> Loaded into the subagent system prompt when the subagent starts</p>
+<p>Works the same as your [main auto memory](/docs/en/memory#auto-memory): the subagent creates and updates this file itself. You do not write it. The subagent reads it at the start of each task and writes back what it learns.</p>
+<pre><code># code-reviewer memory
 
 ## Patterns seen
-- Project uses custom Result<T, E> type, not exceptions
+- Project uses custom Result&lt;T, E&gt; type, not exceptions
 - Auth middleware expects Bearer token in Authorization header
 - Tests use factory functions in test/factories/
 
 ## Recurring issues
 - Missing null checks on API responses (src/api/*)
-- Unhandled promise rejections in background jobs`
-            }]
-          }]
-        }]
-      }]
-    },
-    global: {
-      label: '~/',
-      children: [{
-        id: 'claude-json',
-        label: '.claude.json',
-        type: 'file',
-        icon: 'json',
-        color: 'var(--ce-text-3)',
-        badge: 'local',
-        oneLiner: 'App state and UI preferences',
-        when: <>Read at session start for your preferences and MCP servers. Claude Code writes back to it when you change settings in <C>/config</C> or approve trust prompts</>,
-        description: <>Holds state that does not belong in settings.json: theme, OAuth session, per-project trust decisions, your personal MCP servers, and UI toggles. Mostly managed through <C>/config</C> rather than editing directly.</>,
-        tips: [<>IDE toggles like <C>autoConnectIde</C> and <C>externalEditorContext</C> live here, not in settings.json</>, <>The <C>projects</C> key tracks per-project state like trust-dialog acceptance and last-session metrics. Permission rules you approve in-session go to <C>.claude/settings.local.json</C> instead</>, <>MCP servers here are yours only: user scope applies across all projects, local scope is per-project but not committed. Team-shared servers go in <C>.mcp.json</C> at the project root instead</>],
-        example: `{
+- Unhandled promise rejections in background jobs</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/settings-reference#global-config-settings" rel="external"><code>.claude.json</code></a></h3>
+<p>App state and UI preferences</p>
+<p class="mdx-when"><strong>When it loads.</strong> Read at session start for your preferences and MCP servers. Claude Code writes back to it when you change settings in `/config` or approve trust prompts</p>
+<p>Holds state that does not belong in settings.json: theme, OAuth session, per-project trust decisions, your personal MCP servers, and UI toggles. Mostly managed through `/config` rather than editing directly.</p>
+<p><strong>Tips</strong></p><ul>
+<li>IDE toggles like `autoConnectIde` and `externalEditorContext` live here, not in settings.json</li>
+<li>The `projects` key tracks per-project state like trust-dialog acceptance and last-session metrics. Permission rules you approve in-session go to `.claude/settings.local.json` instead</li>
+<li>MCP servers here are yours only: user scope applies across all projects, local scope is per-project but not committed. Team-shared servers go in `.mcp.json` at the project root instead</li>
+</ul>
+<pre><code>{
   "autoConnectIde": true,
   "externalEditorContext": true,
   "mcpServers": {
@@ -440,65 +1783,15 @@ Every finding must include a concrete fix.`
       "args": ["-y", "@example/mcp-server"]
     }
   }
-}`,
-        docsLink: '/en/settings-reference#global-config-settings'
-      }, {
-        id: 'global-dot-claude',
-        label: '.claude/',
-        type: 'folder',
-        icon: 'folder',
-        color: 'var(--ce-accent)',
-        oneLiner: 'Your personal configuration across all projects',
-        description: 'The global counterpart to your project .claude/ directory. Files here apply to every project you work in and are never committed to any repository.',
-        children: [{
-          id: 'global-claude-md',
-          label: 'CLAUDE.md',
-          type: 'file',
-          icon: 'md',
-          color: '#6A9BCC',
-          badge: 'local',
-          oneLiner: 'Personal preferences across every project',
-          when: 'Loaded at the start of every session, in every project',
-          description: 'Your global instruction file. Loaded alongside the project CLAUDE.md at session start, so both are in context together. When instructions conflict, project-level instructions take priority. Keep this to preferences that apply everywhere: response style, commit format, personal conventions.',
-          tips: ['Keep it short since it loads into context for every project, alongside that project\'s own CLAUDE.md', 'Good for response style, commit format, and personal conventions'],
-          example: `# Global preferences
-
-- Keep explanations concise
-- Use conventional commit format
-- Show the terminal command to verify changes
-- Prefer composition over inheritance`,
-          docsLink: '/en/memory'
-        }, {
-          id: 'global-settings',
-          label: 'settings.json',
-          type: 'file',
-          icon: 'json',
-          color: 'var(--ce-text-3)',
-          badge: 'local',
-          oneLiner: 'Default settings for all projects',
-          when: 'Your defaults. Project and local settings.json override any keys you also set there',
-          description: [<>Same keys as project <C>settings.json</C>: permissions, hooks, model, environment variables, and the rest. Put settings here that you want in every project, like permissions you always allow, a preferred model, or a notification hook that runs regardless of which project you're in.</>, <>Settings follow a precedence order: project <C>settings.json</C> overrides any matching keys you set here. This is different from CLAUDE.md, where global and project files are both loaded into context rather than merged key by key.</>],
-          example: `{
-  "permissions": {
-    "allow": [
-      "Bash(git log *)",
-      "Bash(git diff *)"
-    ]
-  }
-}`,
-          docsLink: '/en/settings'
-        }, {
-          id: 'keybindings',
-          label: 'keybindings.json',
-          type: 'file',
-          icon: 'json',
-          color: 'var(--ce-text-3)',
-          badge: 'local',
-          oneLiner: 'Custom keyboard shortcuts',
-          when: 'Read at session start and hot-reloaded when you edit the file',
-          description: <>Rebind keyboard shortcuts in the interactive CLI. Run <C>/keybindings</C> to create or open this file with a schema reference. Ctrl+C, Ctrl+D, Ctrl+M, and Caps Lock are reserved and cannot be rebound.</>,
-          exampleIntro: <>This example binds <C>Ctrl+E</C> to open your external editor and unbinds <C>Ctrl+U</C> by setting it to <C>null</C>. The <C>context</C> field scopes bindings to a specific part of the CLI, here the main chat input.</>,
-          example: `{
+}</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/keybindings" rel="external"><code>keybindings.json</code></a></h3>
+<p>Custom keyboard shortcuts</p>
+<p class="mdx-when"><strong>When it loads.</strong> Read at session start and hot-reloaded when you edit the file</p>
+<p>Rebind keyboard shortcuts in the interactive CLI. Run `/keybindings` to create or open this file with a schema reference. Ctrl+C, Ctrl+D, Ctrl+M, and Caps Lock are reserved and cannot be rebound.</p>
+<p>This example binds `Ctrl+E` to open your external editor and unbinds `Ctrl+U` by setting it to `null`. The `context` field scopes bindings to a specific part of the CLI, here the main chat input.</p>
+<pre><code>{
   "$schema": "https://www.schemastore.org/claude-code-keybindings.json",
   "$docs": "https://code.claude.com/docs/en/keybindings",
   "bindings": [
@@ -510,18 +1803,14 @@ Every finding must include a concrete fix.`
       }
     }
   ]
-}`,
-          docsLink: '/en/keybindings'
-        }, {
-          id: 'themes',
-          label: 'themes/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#5AA7A7',
-          oneLiner: 'Custom color themes',
-          when: <>Read at session start and hot-reloaded when files change. Listed in <C>/theme</C></>,
-          description: <>Each <C>.json</C> file defines a custom color theme: a built-in <C>base</C> preset plus an <C>overrides</C> map of color tokens. Create one interactively with <C>/theme</C> or write the JSON by hand. Selecting a custom theme stores <C>custom:&lt;slug&gt;</C> as your theme preference.</>,
-          example: `{
+}</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/terminal-config#create-a-custom-theme" rel="external"><code>themes/</code></a></h3>
+<p>Custom color themes</p>
+<p class="mdx-when"><strong>When it loads.</strong> Read at session start and hot-reloaded when files change. Listed in `/theme`</p>
+<p>Each `.json` file defines a custom color theme: a built-in `base` preset plus an `overrides` map of color tokens. Create one interactively with `/theme` or write the JSON by hand. Selecting a custom theme stores `custom:&amp;lt;slug&amp;gt;` as your theme preference.</p>
+<pre><code>{
   "name": "Dracula",
   "base": "dark",
   "overrides": {
@@ -529,61 +1818,25 @@ Every finding must include a concrete fix.`
     "error": "#ff5555",
     "success": "#50fa7b"
   }
-}`,
-          docsLink: '/en/terminal-config#create-a-custom-theme',
-          children: []
-        }, {
-          id: 'global-projects',
-          label: 'projects/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#E8A45C',
-          autogen: true,
-          oneLiner: "Auto memory: Claude's notes to itself, per project",
-          when: 'MEMORY.md loaded at session start; topic files read on demand',
-          description: 'Auto memory lets Claude accumulate knowledge across sessions without you writing anything. Claude saves notes as it works: build commands, debugging insights, architecture notes. Each project gets its own memory directory keyed by the repository path.',
-          tips: [<>On by default. Toggle with <C>/memory</C> or <C>autoMemoryEnabled</C> in settings</>, 'MEMORY.md is the index loaded each session. The first 200 lines, or 25KB, whichever comes first, are read', 'Topic files like debugging.md are read on demand, not at startup', 'These are plain markdown. Edit or delete them anytime'],
-          docsLink: '/en/memory#auto-memory',
-          children: [{
-            id: 'memory-dir',
-            label: '<project>/memory/',
-            type: 'folder',
-            icon: 'folder',
-            color: '#E8A45C',
-            autogen: true,
-            oneLiner: "Claude's accumulated knowledge for one project",
-            children: [{
-              id: 'memory-md',
-              label: 'MEMORY.md',
-              type: 'file',
-              icon: 'md',
-              color: '#E8A45C',
-              badge: 'local',
-              autogen: true,
-              oneLiner: 'Claude writes and maintains this file automatically',
-              when: 'First 200 lines (capped at 25KB) loaded at session start',
-              description: 'Claude creates and updates this file as it works; you do not write it yourself. It acts as an index that Claude reads at the start of every session, pointing to topic files for detail. You can edit or delete it, but Claude will keep updating it.',
-              example: `# Memory Index
-
-## Project
-- [build-and-test.md](build-and-test.md): npm run build (~45s), Vitest, dev server on 3001
-- [architecture.md](architecture.md): API client singleton, refresh-token auth
-
-## Reference
-- [debugging.md](debugging.md): auth token rotation and DB connection troubleshooting`,
-              docsLink: '/en/memory'
-            }, {
-              id: 'memory-topic',
-              label: 'debugging.md',
-              type: 'file',
-              icon: 'md',
-              color: '#E8A45C',
-              badge: 'local',
-              autogen: true,
-              oneLiner: 'Topic notes Claude writes when MEMORY.md gets long',
-              when: 'Claude reads this when a related task comes up',
-              description: 'An example of a topic file Claude creates when MEMORY.md grows too long. Claude picks the filename based on what it splits out: debugging.md, architecture.md, build-commands.md, or similar. You never create these yourself. Claude reads a topic file back only when the current task relates to it.',
-              example: `---
+}</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><a href="https://code.claude.com/en/memory#auto-memory" rel="external"><code>projects/</code></a></h3>
+<p class="mdx-when"><strong>When it loads.</strong> MEMORY.md loaded at session start; topic files read on demand</p>
+<p>Auto memory lets Claude accumulate knowledge across sessions without you writing anything. Claude saves notes as it works: build commands, debugging insights, architecture notes. Each project gets its own memory directory keyed by the repository path.</p>
+<p><strong>Tips</strong></p><ul>
+<li>MEMORY.md is the index loaded each session. The first 200 lines, or 25KB, whichever comes first, are read</li>
+<li>Topic files like debugging.md are read on demand, not at startup</li>
+<li>These are plain markdown. Edit or delete them anytime</li>
+<li>On by default. Toggle with `/memory` or `autoMemoryEnabled` in settings</li>
+</ul>
+</div>
+<div class="mdx-file-card">
+<h3><code>debugging.md</code></h3>
+<p>Topic notes Claude writes when MEMORY.md gets long</p>
+<p class="mdx-when"><strong>When it loads.</strong> Claude reads this when a related task comes up</p>
+<p>An example of a topic file Claude creates when MEMORY.md grows too long. Claude picks the filename based on what it splits out: debugging.md, architecture.md, build-commands.md, or similar. You never create these yourself. Claude reads a topic file back only when the current task relates to it.</p>
+<pre><code>---
 name: Debugging patterns
 description: Auth token rotation and database connection troubleshooting for this project
 type: reference
@@ -595,65 +1848,14 @@ type: reference
 
 ## Database Connection Drops
 - Connection pool: max 10 in dev, 50 in prod
-- Always check \`docker compose ps\` first`
-            }]
-          }]
-        }, {
-          id: 'global-rules',
-          label: 'rules/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#9B7BC4',
-          oneLiner: 'User-level rules that apply to every project',
-          when: <>Rules without <C>paths:</C> load at session start. Rules with <C>paths:</C> load when a matching file enters context</>,
-          description: 'Same as project .claude/rules/ but applies everywhere. Use this for conventions you want across all your work, like personal code style or commit message format.',
-          docsLink: '/en/memory#organize-rules-with-claude/rules/',
-          children: []
-        }, {
-          id: 'global-skills',
-          label: 'skills/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#D4A843',
-          oneLiner: 'Personal skills available in every project',
-          when: <>Invoked with <C>/skill-name</C> in any project</>,
-          description: 'Skills you built for yourself that work everywhere. Same structure as project skills: each is a folder with SKILL.md, scoped to your user account instead of a single project.',
-          docsLink: '/en/skills',
-          children: []
-        }, {
-          id: 'global-commands',
-          label: 'commands/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#788C5D',
-          oneLiner: 'Personal single-file commands available in every project',
-          note: commandsNote,
-          when: <>User types <C>/command-name</C> in any project</>,
-          description: 'Same as project commands/ but scoped to your user account. Each markdown file becomes a command available everywhere.',
-          docsLink: '/en/skills',
-          children: []
-        }, {
-          id: 'global-output-styles',
-          label: 'output-styles/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#5AA7A7',
-          oneLiner: 'Custom system-prompt sections that adjust how Claude works',
-          when: 'Applied at session start when selected via the outputStyle setting',
-          description: [<>Each markdown file defines an output style: a section appended to the system prompt that, by default, also drops the built-in software-engineering task instructions. Use this to adapt Claude Code for uses beyond coding, or to add teaching or review modes.</>, <>Select a built-in or custom style with <C>/config</C> or the <C>outputStyle</C> key in settings. Styles here are available in every project; project-level styles with the same name take precedence.</>],
-          tips: ['Built-in styles Explanatory and Learning are included with Claude Code; custom styles go here', <>Set <C>keep-coding-instructions: true</C> in frontmatter to keep the default task instructions alongside your additions</>, 'Changes take effect on the next session since the system prompt is fixed at startup for caching'],
-          docsLink: '/en/output-styles',
-          children: [{
-            id: 'output-style-example',
-            label: 'teaching.md',
-            type: 'file',
-            icon: 'md',
-            color: '#5AA7A7',
-            badge: 'local',
-            oneLiner: 'Example style that adds explanations and leaves small changes for you',
-            when: <>Active when <C>outputStyle</C> in settings is set to <C>teaching</C></>,
-            description: <>This style appends instructions to the system prompt: Claude adds a "Why this approach" note after each task and leaves TODO(human) markers for changes under 10 lines instead of writing them itself. Select it by setting <C>outputStyle</C> to the filename without .md, or to the <C>name</C> field if you set one in frontmatter.</>,
-            example: `---
+- Always check \</code></pre>
+</div>
+<div class="mdx-file-card">
+<h3><code>teaching.md</code></h3>
+<p>Example style that adds explanations and leaves small changes for you</p>
+<p class="mdx-when"><strong>When it loads.</strong> Active when `outputStyle` in settings is set to `teaching`</p>
+<p>This style appends instructions to the system prompt: Claude adds a "Why this approach" note after each task and leaves TODO(human) markers for changes under 10 lines instead of writing them itself. Select it by setting `outputStyle` to the filename without .md, or to the `name` field if you set one in frontmatter.</p>
+<pre><code>---
 description: Explains reasoning and asks you to implement small pieces
 keep-coding-instructions: true
 ---
@@ -662,989 +1864,96 @@ After completing each task, add a brief "Why this approach" note
 explaining the key design decision.
 
 When a change is under 10 lines, ask the user to implement it
-themselves by leaving a TODO(human) marker instead of writing it.`
-          }]
-        }, {
-          id: 'global-agents',
-          label: 'agents/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#C46686',
-          oneLiner: 'Personal subagents available in every project',
-          when: 'Claude delegates or you @-mention in any project',
-          description: 'Subagents defined here are available across all your projects. Same format as project agents.',
-          docsLink: '/en/sub-agents',
-          children: []
-        }, {
-          id: 'global-workflows',
-          label: 'workflows/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#C46686',
-          oneLiner: 'Personal dynamic workflows available in every project',
-          when: 'Loaded at startup; each file becomes a /<name> command',
-          description: <>Workflow scripts saved here are available across all your projects. A project workflow with the same name in <C>.claude/workflows/</C> takes precedence.</>,
-          docsLink: '/en/workflows',
-          children: []
-        }, {
-          id: 'global-agent-memory',
-          label: 'agent-memory/',
-          type: 'folder',
-          icon: 'folder',
-          color: '#C46686',
-          autogen: true,
-          oneLiner: <>Persistent memory for subagents with <C>memory: user</C></>,
-          when: 'Loaded into the subagent system prompt when the subagent starts',
-          description: <>Subagents with <C>memory: user</C> in their frontmatter store knowledge here that persists across all projects. For project-scoped subagent memory, see <C>.claude/agent-memory/</C> instead.</>,
-          docsLink: '/en/sub-agents#enable-persistent-memory',
-          children: []
-        }]
-      }]
-    }
-  }), []);
-  const BADGE_STYLES = useMemo(() => ({
-    committed: {
-      bg: 'rgba(85,138,66,0.08)',
-      color: 'var(--ce-badge-committed)',
-      border: 'rgba(85,138,66,0.15)',
-      label: 'committed'
-    },
-    gitignored: {
-      bg: 'rgba(217,119,87,0.06)',
-      color: 'var(--ce-badge-gitignored)',
-      border: 'rgba(217,119,87,0.15)',
-      label: 'gitignored'
-    },
-    local: {
-      bg: 'rgba(115,114,108,0.06)',
-      color: 'var(--ce-badge-local)',
-      border: 'rgba(115,114,108,0.12)',
-      label: 'local only'
-    },
-    autogen: {
-      bg: 'rgba(232,164,92,0.1)',
-      color: 'var(--ce-badge-autogen)',
-      border: 'rgba(232,164,92,0.2)',
-      label: 'Claude writes'
-    }
-  }), []);
-  const allNodes = useMemo(() => {
-    const flatten = (nodes, acc, path, parentId) => {
-      for (const node of nodes) {
-        const nextPath = [...path, node.label];
-        acc[node.id] = {
-          ...node,
-          path: nextPath,
-          parentId
-        };
-        if (node.children) flatten(node.children, acc, nextPath, node.id);
-      }
-      return acc;
-    };
-    const project = flatten(FILE_TREE.project.children, {}, [FILE_TREE.project.label]);
-    const global = flatten(FILE_TREE.global.children, {}, [FILE_TREE.global.label]);
-    for (const id in project) project[id].root = 'project';
-    for (const id in global) global[id].root = 'global';
-    return {
-      ...project,
-      ...global
-    };
-  }, [FILE_TREE]);
-  const allFolderIds = useMemo(() => Object.keys(allNodes).filter(id => allNodes[id].type === 'folder'), [allNodes]);
-  const DEFAULT_EXPANDED = ['dot-claude', 'rules', 'skills', 'skill-review', 'commands', 'agents', 'agent-memory', 'agent-memory-sub', 'global-dot-claude', 'global-output-styles', 'global-projects', 'memory-dir'];
-  const [mounted, setMounted] = useState(false);
-  const [activeRoot, setActiveRoot] = useState('project');
-  const [selectedId, setSelectedId] = useState('claude-md');
-  const [expandedFolders, setExpandedFolders] = useState(() => new Set(DEFAULT_EXPANDED));
-  const [forceMobile, setForceMobile] = useState(false);
-  const [copiedId, setCopiedId] = useState(null);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const copyTimeoutRef = useRef(null);
-  const rootRef = useRef(null);
-  useEffect(() => {
-    setMounted(true);
-    const applyHash = scroll => {
-      const hash = window.location.hash.slice(1);
-      if (!hash.startsWith('ce-')) return;
-      const id = hash.slice(3);
-      const node = allNodes[id];
-      if (!node) return;
-      setActiveRoot(node.root);
-      setSelectedId(id);
-      setExpandedFolders(new Set(allFolderIds));
-      if (scroll && rootRef.current) rootRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    };
-    applyHash(false);
-    const onHashChange = () => applyHash(true);
-    const onFsChange = () => setIsFullscreen(!!document.fullscreenElement);
-    window.addEventListener('hashchange', onHashChange);
-    document.addEventListener('fullscreenchange', onFsChange);
-    return () => {
-      if (copyTimeoutRef.current) clearTimeout(copyTimeoutRef.current);
-      window.removeEventListener('hashchange', onHashChange);
-      document.removeEventListener('fullscreenchange', onFsChange);
-    };
-  }, []);
-  useEffect(() => {
-    if (!mounted || !rootRef.current) return;
-    const hash = window.location.hash.slice(1);
-    if (hash.startsWith('ce-') && allNodes[hash.slice(3)]) {
-      rootRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  }, [mounted]);
-  if (!mounted) return null;
-  const selected = allNodes[selectedId];
-  const tree = FILE_TREE[activeRoot];
-  const isCopied = copiedId === selected.id;
-  const toggleFolder = id => {
-    const next = new Set(expandedFolders);
-    next.has(id) ? next.delete(id) : next.add(id);
-    setExpandedFolders(next);
-  };
-  const switchRoot = root => {
-    if (root === activeRoot) return;
-    setActiveRoot(root);
-    const firstId = FILE_TREE[root].children[0].id;
-    setSelectedId(firstId);
-    try {
-      history.replaceState(null, '', '#ce-' + firstId);
-    } catch (e) {}
-  };
-  const toggleFullscreen = () => {
-    if (!rootRef.current) return;
-    if (document.fullscreenElement) document.exitFullscreen(); else rootRef.current.requestFullscreen().catch(() => {});
-  };
-  const selectNode = n => {
-    setSelectedId(n.id);
-    if (n.type === 'folder' && !expandedFolders.has(n.id)) toggleFolder(n.id);
-    try {
-      history.replaceState(null, '', '#ce-' + n.id);
-    } catch (e) {}
-  };
-  const iconBtn = {
-    width: 28,
-    flexShrink: 0,
-    borderRadius: '6px',
-    border: 'none',
-    cursor: 'pointer',
-    background: 'transparent',
-    color: 'var(--ce-text-4)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  };
-  const visibleFolderIds = allFolderIds.filter(id => allNodes[id].root === activeRoot);
-  const allExpanded = visibleFolderIds.every(id => expandedFolders.has(id));
-  const toggleAllFolders = () => {
-    const next = new Set(expandedFolders);
-    visibleFolderIds.forEach(id => allExpanded ? next.delete(id) : next.add(id));
-    setExpandedFolders(next);
-  };
-  const onTreeKeyDown = e => {
-    if (!['ArrowDown', 'ArrowUp', 'ArrowRight', 'ArrowLeft'].includes(e.key)) return;
-    const visible = [];
-    const walk = nodes => {
-      for (const n of nodes) {
-        visible.push(n.id);
-        if (n.children && expandedFolders.has(n.id)) walk(n.children);
-      }
-    };
-    walk(tree.children);
-    const i = visible.indexOf(selectedId);
-    if (i === -1) return;
-    e.preventDefault();
-    if (e.key === 'ArrowDown' && i < visible.length - 1) selectNode(allNodes[visible[i + 1]]); else if (e.key === 'ArrowUp' && i > 0) selectNode(allNodes[visible[i - 1]]); else if (e.key === 'ArrowRight' && selected.type === 'folder') {
-      if (!expandedFolders.has(selectedId)) toggleFolder(selectedId); else if (selected.children && selected.children.length) selectNode(allNodes[selected.children[0].id]);
-    } else if (e.key === 'ArrowLeft') {
-      if (selected.type === 'folder' && expandedFolders.has(selectedId)) toggleFolder(selectedId); else if (selected.parentId) selectNode(allNodes[selected.parentId]);
-    }
-  };
-  const copyExample = (id, text) => {
-    const done = () => {
-      setCopiedId(id);
-      if (copyTimeoutRef.current) clearTimeout(copyTimeoutRef.current);
-      copyTimeoutRef.current = setTimeout(() => setCopiedId(null), 2000);
-    };
-    const fallback = () => {
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      try {
-        if (document.execCommand('copy')) done();
-      } catch (e) {}
-      document.body.removeChild(ta);
-    };
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(text).then(done, fallback);
-    } else {
-      fallback();
-    }
-  };
-  const renderIcon = (icon, color, size) => {
-    const sz = size || 14;
-    if (icon === 'folder') {
-      return <svg width={sz} height={sz} viewBox="0 0 14 14" fill="none">
-          <path d="M1.5 3.5a1 1 0 0 1 1-1h2.6l1 1.2h5.4a1 1 0 0 1 1 1v5.8a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1V3.5z" fill={color} fillOpacity="0.15" stroke={color} strokeWidth="1" />
-        </svg>;
-    }
-    if (icon === 'json') {
-      return <svg width={sz} height={sz} viewBox="0 0 14 14" fill="none">
-          <rect x="2" y="1.5" width="10" height="11" rx="1.5" fill={color} fillOpacity="0.15" stroke={color} strokeWidth="1" />
-          <text x="7" y="9" fontSize="6" fontFamily="monospace" fill={color} textAnchor="middle" fontWeight="700">{'{}'}</text>
-        </svg>;
-    }
-    return <svg width={sz} height={sz} viewBox="0 0 14 14" fill="none">
-        <rect x="2" y="1.5" width="10" height="11" rx="1.5" fill={color} fillOpacity="0.15" stroke={color} strokeWidth="1" />
-        <line x1="4.5" y1="5" x2="9.5" y2="5" stroke={color} strokeWidth="1" />
-        <line x1="4.5" y1="7" x2="9.5" y2="7" stroke={color} strokeWidth="1" />
-        <line x1="4.5" y1="9" x2="8" y2="9" stroke={color} strokeWidth="1" />
-      </svg>;
-  };
-  const renderNode = (node, depth) => {
-    const isFolder = node.type === 'folder';
-    const isExpanded = expandedFolders.has(node.id);
-    const isSelected = selectedId === node.id;
-    return <div key={node.id}>
-        <button role="treeitem" tabIndex={-1} onClick={() => selectNode(node)} aria-selected={isSelected} aria-expanded={isFolder ? isExpanded : undefined} style={{
-      display: 'flex',
-      alignItems: 'center',
-      gap: '5px',
-      width: '100%',
-      padding: `4px 8px 4px ${8 + depth * 16}px`,
-      background: isSelected ? 'var(--ce-accent-bg)' : 'transparent',
-      borderTop: 'none',
-      borderRight: 'none',
-      borderBottom: 'none',
-      borderLeft: isSelected ? '2px solid var(--ce-accent)' : '2px solid transparent',
-      outline: 'none',
-      cursor: 'pointer',
-      textAlign: 'left',
-      fontFamily: 'var(--ce-mono)',
-      fontSize: '13.5px',
-      color: isSelected ? 'var(--ce-accent)' : 'var(--ce-text-2)',
-      fontWeight: isSelected ? 550 : 400,
-      transition: 'all 0.1s'
-    }}>
-          {isFolder ? <span onClick={e => {
-      e.stopPropagation();
-      toggleFolder(node.id);
-    }} style={{
-      fontSize: '14px',
-      color: 'var(--ce-text-4)',
-      width: '20px',
-      height: '20px',
-      display: 'inline-flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      cursor: 'pointer',
-      borderRadius: '4px',
-      marginLeft: '-6px',
-      flexShrink: 0
-    }} onMouseEnter={e => {
-      e.currentTarget.style.background = 'var(--ce-arrow-hover)';
-      e.currentTarget.style.color = 'var(--ce-text-2)';
-    }} onMouseLeave={e => {
-      e.currentTarget.style.background = 'transparent';
-      e.currentTarget.style.color = 'var(--ce-text-4)';
-    }}>{isExpanded ? '▾' : '▸'}</span> : <span style={{
-      width: '14px',
-      flexShrink: 0
-    }} />}
-          {renderIcon(node.icon, node.color)}
-          <span style={{
-      flex: 1,
-      overflow: 'hidden',
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap'
-    }}>{node.label}</span>
-          {node.badge && BADGE_STYLES[node.badge] && <span title={BADGE_STYLES[node.badge].label} style={{
-      width: 6,
-      height: 6,
-      borderRadius: '50%',
-      background: BADGE_STYLES[node.badge].color,
-      flexShrink: 0,
-      opacity: 0.7
-    }} />}
-        </button>
-        {isFolder && isExpanded && node.children && <div role="group">{node.children.map(child => renderNode(child, depth + 1))}</div>}
-      </div>;
-  };
-  return <>
-    <style>{`
-      .ce-root {
-        --ce-mono: var(--font-mono, ui-monospace, monospace);
-        --ce-accent: #D97757;
-        --ce-accent-bg: rgba(217,119,87,0.06);
-        --ce-accent-border: rgba(217,119,87,0.12);
-        --ce-bg: #fff;
-        --ce-surface: #FAFAF7;
-        --ce-surface-hover: #F0EEE6;
-        --ce-border: #E8E6DC;
-        --ce-border-subtle: #F0EEE6;
-        --ce-text: #141413;
-        --ce-text-2: #5E5D59;
-        --ce-text-3: #73726C;
-        --ce-text-4: #9C9A92;
-        --ce-text-5: #B8B6AE;
-        --ce-sep: #D1CFC5;
-        --ce-code-header: #F5F4ED;
-        --ce-code-bg: #1A1918;
-        --ce-arrow-hover: rgba(0,0,0,0.08);
-        --ce-badge-committed: #3d6b2e;
-        --ce-badge-gitignored: #b85c3a;
-        --ce-badge-local: #5e5d59;
-        --ce-badge-autogen: #b07520;
-        --ce-when-text: #4a7fb5;
-      }
-      .dark .ce-root {
-        --ce-bg: #1a1918;
-        --ce-surface: #232221;
-        --ce-surface-hover: #2e2d2b;
-        --ce-border: #3a3936;
-        --ce-border-subtle: #2e2d2b;
-        --ce-text: #e8e6dc;
-        --ce-text-2: #c4c2b8;
-        --ce-text-3: #9c9a92;
-        --ce-text-4: #73726c;
-        --ce-text-5: #5e5d59;
-        --ce-sep: #4a4946;
-        --ce-code-header: #2e2d2b;
-        --ce-code-bg: #0d0d0c;
-        --ce-arrow-hover: rgba(255,255,255,0.08);
-        --ce-badge-committed: #6fa85c;
-        --ce-badge-gitignored: #e08a60;
-        --ce-badge-local: #9c9a92;
-        --ce-badge-autogen: #e8a45c;
-        --ce-when-text: #8bb4e0;
-      }
-      .ce-mobile-fallback { display: none; border: 1px solid rgba(0,0,0,0.1); background: rgba(0,0,0,0.03); }
-      .dark .ce-mobile-fallback { border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.04); }
-      @media (max-width: 700px) {
-        .ce-root:not(.ce-force) { display: none !important; }
-        .ce-mobile-fallback { display: block; }
-      }
-    `}</style>
-    {!forceMobile && <div className="ce-mobile-fallback" style={{
-    padding: '14px 16px',
-    borderRadius: '8px',
-    fontSize: '14px'
-  }}>
-      The interactive explorer works best on a larger screen. See the <a href="#file-reference" style={{
-    color: '#D97757'
-  }}>file reference table</a> below, or <button onClick={() => setForceMobile(true)} style={{
-    border: 'none',
-    background: 'none',
-    padding: 0,
-    color: '#D97757',
-    textDecoration: 'underline',
-    cursor: 'pointer',
-    font: 'inherit'
-  }}>show the explorer anyway</button>.
-    </div>}
-    <div ref={rootRef} className={forceMobile ? 'ce-root ce-force' : 'ce-root'} style={{
-    borderRadius: isFullscreen ? 0 : '12px',
-    border: '1px solid var(--ce-border)',
-    background: 'var(--ce-bg)',
-    display: 'flex',
-    alignItems: 'stretch',
-    overflow: 'hidden',
-    fontFamily: 'var(--font-sans, -apple-system, sans-serif)',
-    ...isFullscreen && ({
-      height: '100vh'
-    })
-  }}>
-      {}
-      <div style={{
-    width: 'min(240px, 35%)',
-    minWidth: '180px',
-    flexShrink: 0,
-    borderRight: '1px solid var(--ce-border-subtle)',
-    background: 'var(--ce-surface)',
-    display: 'flex',
-    flexDirection: 'column'
-  }}>
-        <div style={{
-    padding: '8px 8px 4px',
-    borderBottom: '1px solid var(--ce-border-subtle)',
-    display: 'flex',
-    gap: '4px'
-  }}>
-          {['project', 'global'].map(root => <button key={root} onClick={() => switchRoot(root)} style={{
-    flex: 1,
-    padding: '6px 0',
-    borderRadius: '6px',
-    border: 'none',
-    cursor: 'pointer',
-    fontFamily: 'var(--ce-mono)',
-    fontSize: '11.5px',
-    background: activeRoot === root ? 'var(--ce-accent-bg)' : 'transparent',
-    color: activeRoot === root ? 'var(--ce-accent)' : 'var(--ce-text-4)',
-    fontWeight: activeRoot === root ? 600 : 430
-  }}>
-              {root === 'project' ? 'Project' : 'Global (~/)'}
-            </button>)}
-          <button onClick={toggleAllFolders} title={allExpanded ? 'Collapse all' : 'Expand all'} style={{
-    ...iconBtn,
-    fontSize: 11
-  }}>
-            {allExpanded ? '⊟' : '⊞'}
-          </button>
-          <button onClick={toggleFullscreen} title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'} style={{
-    ...iconBtn,
-    fontSize: 13
-  }}>
-            {isFullscreen ? '⤡' : '⛶'}
-          </button>
-        </div>
-        <div role="tree" aria-label="Configuration files" tabIndex={0} onKeyDown={onTreeKeyDown} style={{
-    padding: '6px 0',
-    overflowY: 'auto',
-    flex: 1,
-    outline: 'none'
-  }}>
-          {tree.children.map(node => renderNode(node, 0))}
-        </div>
-      </div>
-
-      {}
-      <div style={{
-    flex: 1,
-    minWidth: 0,
-    padding: '20px 24px',
-    minHeight: '400px',
-    overflowY: 'auto'
-  }}>
-            <span aria-live="polite" style={{
-    position: 'absolute',
-    width: 1,
-    height: 1,
-    overflow: 'hidden',
-    clip: 'rect(0 0 0 0)'
-  }}>{selected.label} selected</span>
-            {}
-            <div style={{
-    fontFamily: 'var(--ce-mono)',
-    fontSize: '11px',
-    color: 'var(--ce-text-4)',
-    marginBottom: '10px',
-    cursor: 'default'
-  }}>
-              {selected.path.map((seg, i) => <span key={i}>
-                  <span style={{
-    color: i === selected.path.length - 1 ? 'var(--ce-accent)' : 'var(--ce-text-4)'
-  }}>{seg.replace(/\/$/, '')}</span>
-                  {i < selected.path.length - 1 && <span style={{
-    color: 'var(--ce-sep)'
-  }}> / </span>}
-                </span>)}
-            </div>
-
-            {}
-            <div style={{
-    display: 'flex',
-    alignItems: 'flex-start',
-    gap: '10px',
-    marginBottom: '10px'
-  }}>
-              <span style={{
-    flexShrink: 0,
-    display: 'flex'
-  }}>{renderIcon(selected.icon, selected.color, 24)}</span>
-              <div style={{
-    flex: 1,
-    minWidth: 0
-  }}>
-                <div style={{
-    fontSize: '22px',
-    fontWeight: 600,
-    color: 'var(--ce-text)',
-    letterSpacing: '-0.3px',
-    lineHeight: '26px'
-  }}>{selected.label}</div>
-                {selected.oneLiner && <div style={{
-    fontSize: '15px',
-    color: 'var(--ce-text-3)',
-    marginTop: '3px'
-  }}>{selected.oneLiner}</div>}
-              </div>
-              <div style={{
-    display: 'flex',
-    gap: '4px',
-    flexShrink: 0
-  }}>
-                {[selected.autogen && 'autogen', selected.badge].filter(Boolean).map(k => {
-    const s = BADGE_STYLES[k];
-    if (!s) return null;
-    return <span key={k} style={{
-      fontFamily: 'var(--ce-mono)',
-      fontSize: '10px',
-      fontWeight: 600,
-      textTransform: 'uppercase',
-      letterSpacing: '0.3px',
-      padding: '2px 6px',
-      borderRadius: '4px',
-      background: s.bg,
-      color: s.color,
-      border: `0.5px solid ${s.border}`
-    }}>{s.label}</span>;
-  })}
-              </div>
-            </div>
-
-            {}
-            {selected.note && <div style={{
-    padding: '10px 12px',
-    borderRadius: '8px',
-    marginBottom: '14px',
-    background: 'rgba(217,119,87,0.06)',
-    border: '1px solid rgba(217,119,87,0.2)',
-    borderLeft: '3px solid var(--ce-accent)',
-    fontSize: '15px',
-    color: 'var(--ce-text-2)',
-    lineHeight: 1.6
-  }}>
-                {selected.note}
-              </div>}
-
-            {}
-            {selected.when && <div style={{
-    padding: '8px 12px',
-    borderRadius: '6px',
-    background: 'rgba(106,155,204,0.06)',
-    border: '0.5px solid rgba(106,155,204,0.12)',
-    fontSize: '15px',
-    color: 'var(--ce-when-text)',
-    marginBottom: '16px'
-  }}>
-                <div style={{
-    fontSize: '10px',
-    fontWeight: 700,
-    textTransform: 'uppercase',
-    letterSpacing: '0.4px',
-    opacity: 0.65,
-    marginBottom: '3px'
-  }}>When it loads</div>
-                <div style={{
-    fontWeight: 500
-  }}>{selected.when}</div>
-              </div>}
-
-            {}
-            {selected.description && <div style={{
-    fontSize: '16px',
-    color: 'var(--ce-text-2)',
-    lineHeight: 1.65,
-    marginBottom: '16px'
-  }}>
-                {Array.isArray(selected.description) ? selected.description.map((para, i) => <div key={i} style={{
-    marginBottom: i < selected.description.length - 1 ? '12px' : 0
-  }}>{para}</div>) : selected.description}
-              </div>}
-
-            {}
-            {selected.contains && selected.contains.length > 0 && <div style={{
-    marginBottom: '16px'
-  }}>
-                <div style={{
-    fontSize: '11px',
-    fontWeight: 700,
-    color: 'var(--ce-text-4)',
-    textTransform: 'uppercase',
-    letterSpacing: '0.4px',
-    marginBottom: '8px'
-  }}>Common keys</div>
-                {selected.contains.map((item, i) => <div key={i} style={{
-    display: 'flex',
-    gap: '7px',
-    fontSize: '15px',
-    color: 'var(--ce-text-2)',
-    lineHeight: 1.5,
-    marginBottom: '5px'
-  }}>
-                    <span style={{
-    fontSize: '7px',
-    color: 'var(--ce-text-4)',
-    marginTop: '6px'
-  }}>●</span>
-                    <span>{item}</span>
-                  </div>)}
-              </div>}
-
-            {}
-            {selected.tips && selected.tips.length > 0 && <div style={{
-    padding: '12px 14px',
-    borderRadius: '8px',
-    background: 'var(--ce-surface)',
-    border: '1px solid var(--ce-border-subtle)',
-    marginBottom: '16px'
-  }}>
-                <div style={{
-    fontSize: '11px',
-    fontWeight: 700,
-    color: 'var(--ce-accent)',
-    textTransform: 'uppercase',
-    letterSpacing: '0.4px',
-    marginBottom: '6px'
-  }}>Tips</div>
-                {selected.tips.map((tip, i) => <div key={i} style={{
-    display: 'flex',
-    gap: '7px',
-    fontSize: '14.5px',
-    color: 'var(--ce-text-2)',
-    marginBottom: i < selected.tips.length - 1 ? '5px' : 0
-  }}>
-                    <span style={{
-    fontSize: '7px',
-    color: 'var(--ce-accent)',
-    marginTop: '6px'
-  }}>●</span>
-                    <span>{tip}</span>
-                  </div>)}
-              </div>}
-
-            {}
-            {selected.example && <div style={{
-    marginBottom: '16px'
-  }}>
-                {selected.exampleIntro && <div style={{
-    fontSize: '15px',
-    color: 'var(--ce-text-2)',
-    lineHeight: 1.6,
-    marginBottom: '10px'
-  }}>
-                    {selected.exampleIntro}
-                  </div>}
-                <div style={{
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '6px 10px',
-    background: 'var(--ce-code-header)',
-    border: '1px solid var(--ce-border)',
-    borderRadius: '8px 8px 0 0'
-  }}>
-                  <span style={{
-    fontFamily: 'var(--ce-mono)',
-    fontSize: '11px',
-    fontWeight: 600,
-    color: 'var(--ce-text-3)'
-  }}>{selected.label}</span>
-                  <button onClick={() => copyExample(selected.id, selected.example)} style={{
-    padding: '3px 8px',
-    borderRadius: '4px',
-    fontSize: '11px',
-    fontWeight: 600,
-    cursor: 'pointer',
-    transition: 'all 0.15s',
-    background: isCopied ? 'rgba(85,138,66,0.08)' : 'var(--ce-code-header)',
-    border: isCopied ? '0.5px solid rgba(85,138,66,0.2)' : '0.5px solid var(--ce-border)',
-    color: isCopied ? '#558A42' : 'var(--ce-text-3)'
-  }}>
-                    {isCopied ? '✓ Copied' : 'Copy'}
-                  </button>
-                </div>
-                <pre style={{
-    margin: 0,
-    padding: '12px 14px',
-    background: 'var(--ce-code-bg)',
-    color: '#E8E6DC',
-    fontFamily: 'var(--ce-mono)',
-    fontSize: '13px',
-    lineHeight: 1.65,
-    borderRadius: '0 0 8px 8px',
-    overflowX: 'auto',
-    whiteSpace: 'pre'
-  }}>{selected.example}</pre>
-              </div>}
-
-            {}
-            {selected.docsLink && <a href={selected.docsLink} style={{
-    display: 'inline-flex',
-    padding: '5px 12px',
-    borderRadius: '6px',
-    background: 'var(--ce-accent-bg)',
-    border: '1px solid var(--ce-accent-border)',
-    color: 'var(--ce-accent)',
-    fontSize: '12px',
-    fontWeight: 600,
-    textDecoration: 'none'
-  }}>Full docs →</a>}
-
-            {}
-            {selected.children && selected.children.length > 0 && <div style={{
-    marginTop: '20px'
-  }}>
-                <div style={{
-    fontSize: '11px',
-    fontWeight: 700,
-    color: 'var(--ce-text-4)',
-    textTransform: 'uppercase',
-    letterSpacing: '0.4px',
-    marginBottom: '8px'
-  }}>Contents</div>
-                <div style={{
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '4px'
-  }}>
-                  {selected.children.map(child => <button key={child.id} onClick={() => selectNode(child)} style={{
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
-    padding: '6px 8px',
-    width: '100%',
-    background: 'var(--ce-surface)',
-    borderRadius: '6px',
-    border: 'none',
-    cursor: 'pointer',
-    textAlign: 'left',
-    transition: 'background 0.1s'
-  }} onMouseEnter={e => e.currentTarget.style.background = 'var(--ce-surface-hover)'} onMouseLeave={e => e.currentTarget.style.background = 'var(--ce-surface)'}>
-                      {renderIcon(child.icon, child.color, 13)}
-                      <span style={{
-    fontFamily: 'var(--ce-mono)',
-    fontSize: '12px',
-    color: 'var(--ce-text-2)'
-  }}>{child.label}</span>
-                      {child.oneLiner && <span style={{
-    fontSize: '11px',
-    color: 'var(--ce-text-4)',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap'
-  }}>{child.oneLiner}</span>}
-                    </button>)}
-                </div>
-              </div>}
-      </div>
-    </div>
-    </>;
-};
-
-Claude Code reads instructions, settings, skills, subagents, and memory from your project directory and from `~/.claude` in your home directory. Commit project files to git to share them with your team; files in `~/.claude` are personal configuration that applies across all your projects.
-
-On Windows, `~/.claude` resolves to `%USERPROFILE%\.claude`. If you set [`CLAUDE_CONFIG_DIR`](/docs/en/env-vars), every `~/.claude` path on this page lives under that directory instead.
-
-Most users only edit `CLAUDE.md` and `settings.json`. The rest of the directory is optional: add skills, rules, or subagents as you need them.
-
-## Explore the directory
-
-Click files in the tree to see what each one does, when it loads, and an example.
-
-<ClaudeExplorer />
-
-## What's not shown
-
-The explorer covers files you author and edit. A few related files live elsewhere:
-
-| File                    | Location                   | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ----------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `managed-settings.json` | System-level, varies by OS | Enterprise-enforced settings that you can't override, apart from [narrow exceptions](/docs/en/settings#security-keys-where-the-stricter-value-applies). See [where to save the file](/docs/en/managed-settings#deploy-a-managed-settings-file) and [which managed source Claude Code uses](/docs/en/managed-settings#precedence-within-the-managed-tier).                                                                                                                               |
-| `CLAUDE.local.md`       | Project root               | Your private preferences for this project, loaded alongside CLAUDE.md. Create it manually and add it to `.gitignore`.                                                                                                                                                                                                                                                                                                                                                    |
-| Installed plugins       | `~/.claude/plugins`        | Cloned marketplaces, installed plugin versions, and per-plugin data, managed by `claude plugin` commands. For a plugin installed from a marketplace [`command` source](/docs/en/plugin-marketplaces#command-sources) in link mode, Claude Code stores links here instead of a copy, and the plugin's files stay in the directory the command prints. See [plugin caching](/docs/en/plugins-reference#plugin-caching-and-file-resolution) for how orphaned versions are cleaned up. |
-
-`~/.claude` also holds data Claude Code writes as you work: transcripts, prompt history, file snapshots, caches, and logs. See [application data](#application-data) below.
-
-## Choose the right file
-
-Different kinds of customization live in different files. Use this table to find where a change belongs.
-
-| You want to                                        | Edit                                     | Scope             | Reference                                           |
-| :------------------------------------------------- | :--------------------------------------- | :---------------- | :-------------------------------------------------- |
-| Give Claude project context and conventions        | `CLAUDE.md`                              | project or global | [Memory](/docs/en/memory)                                |
-| Allow or block specific tool calls                 | `settings.json` `permissions` or `hooks` | project or global | [Permissions](/docs/en/permissions), [Hooks](/docs/en/hooks)  |
-| Run a script before or after tool calls            | `settings.json` `hooks`                  | project or global | [Hooks](/docs/en/hooks)                                  |
-| Set environment variables for the session          | `settings.json` `env`                    | project or global | [Settings](/docs/en/settings-reference#all-settings)     |
-| Keep personal overrides out of git                 | `settings.local.json`                    | project only      | [Settings scopes](/docs/en/settings#where-settings-live) |
-| Add a prompt or capability you invoke with `/name` | `skills/<name>/SKILL.md`                 | project or global | [Skills](/docs/en/skills)                                |
-| Define a specialized subagent with its own tools   | `agents/*.md`                            | project or global | [Subagents](/docs/en/sub-agents)                         |
-| Orchestrate many subagents from a script           | `workflows/*.js`                         | project or global | [Dynamic workflows](/docs/en/workflows)                  |
-| Connect external tools over MCP                    | `.mcp.json`                              | project only      | [MCP](/docs/en/mcp)                                      |
-| Change how Claude formats responses                | `output-styles/*.md`                     | project or global | [Output styles](/docs/en/output-styles)                  |
-
-## File reference
-
-This table lists every file the explorer covers. Project-scope files live in your repo under `.claude/` (or at the root for `CLAUDE.md`, `.mcp.json`, and `.worktreeinclude`). Global-scope files live in `~/.claude/` and apply across all projects.
-
-<Note>
-  Several things can override what you put in these files:
-
-  * [Managed settings](/docs/en/server-managed-settings) deployed by your organization take precedence over everything, apart from the [exceptions under Settings precedence](/docs/en/settings#exceptions-to-managed-settings-precedence)
-  * CLI flags like `--permission-mode` or `--settings` override `settings.json` for that session
-  * Some environment variables take precedence over their equivalent setting, but this varies: check the [environment variables reference](/docs/en/env-vars) for each one
-
-  See [settings precedence](/docs/en/settings#settings-precedence) for the full order.
-</Note>
-
-Click a filename to open that node in the explorer above.
-
-| File                                                | Scope              | Commit | What it does                                                                                                  | Reference                                                       |
-| --------------------------------------------------- | ------------------ | ------ | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| [`CLAUDE.md`](#ce-claude-md)                        | Project and global | ✓      | Instructions loaded every session                                                                             | [Memory](/docs/en/memory)                                            |
-| [`rules/*.md`](#ce-rules)                           | Project and global | ✓      | Topic-scoped instructions, optionally path-gated                                                              | [Rules](/docs/en/memory#organize-rules-with-claude/rules/)           |
-| [`settings.json`](#ce-settings-json)                | Project and global | ✓      | Permissions, hooks, env vars, model defaults                                                                  | [Settings](/docs/en/settings)                                        |
-| [`settings.local.json`](#ce-settings-local-json)    | Project only       |        | Your personal overrides, gitignored when Claude Code saves a setting to it                                    | [Settings scopes](/docs/en/settings#where-settings-live)             |
-| [`.mcp.json`](#ce-mcp-json)                         | Project only       | ✓      | Team-shared MCP servers                                                                                       | [MCP scopes](/docs/en/mcp#mcp-installation-scopes)                   |
-| [`.worktreeinclude`](#ce-worktreeinclude)           | Project only       | ✓      | Gitignored files to copy into new worktrees                                                                   | [Worktrees](/docs/en/worktrees#copy-gitignored-files-into-worktrees) |
-| [`skills/<name>/SKILL.md`](#ce-skills)              | Project and global | ✓      | Reusable prompts invoked with `/name` or auto-invoked                                                         | [Skills](/docs/en/skills)                                            |
-| [`commands/*.md`](#ce-commands)                     | Project and global | ✓      | Single-file prompts; same mechanism as skills                                                                 | [Skills](/docs/en/skills)                                            |
-| [`output-styles/*.md`](#ce-output-styles)           | Project and global | ✓      | Custom system-prompt sections                                                                                 | [Output styles](/docs/en/output-styles)                              |
-| [`agents/*.md`](#ce-agents)                         | Project and global | ✓      | Subagent definitions with their own prompt and tools                                                          | [Subagents](/docs/en/sub-agents)                                     |
-| [`workflows/*.js`](#ce-workflows)                   | Project and global | ✓      | Dynamic workflow scripts written by Claude and saved from `/workflows`; each file becomes a `/<name>` command | [Dynamic workflows](/docs/en/workflows)                              |
-| [`agent-memory/<name>/`](#ce-agent-memory)          | Project and global | ✓      | Persistent memory for subagents                                                                               | [Persistent memory](/docs/en/sub-agents#enable-persistent-memory)    |
-| [`~/.claude.json`](#ce-claude-json)                 | Global only        |        | App state, OAuth, UI toggles, personal MCP servers                                                            | [Global config](/docs/en/settings-reference#global-config-settings)  |
-| [`projects/<project>/memory/`](#ce-global-projects) | Global only        |        | Auto memory: Claude's notes to itself across sessions                                                         | [Auto memory](/docs/en/memory#auto-memory)                           |
-| [`keybindings.json`](#ce-keybindings)               | Global only        |        | Custom keyboard shortcuts                                                                                     | [Keybindings](/docs/en/keybindings)                                  |
-| [`themes/*.json`](#ce-themes)                       | Global only        |        | Custom color themes                                                                                           | [Custom themes](/docs/en/terminal-config#create-a-custom-theme)      |
-
-## Troubleshoot configuration
-
-If a setting, hook, or file isn't taking effect, see [Debug your configuration](/docs/en/debug-your-config) for the inspection commands and a symptom-first lookup table.
-
-## Application data
-
-Beyond the config you author, `~/.claude` holds data Claude Code writes during sessions. These files are plaintext. Anything that passes through a tool lands in a transcript on disk: file contents, command output, pasted text.
-
-### Cleaned up automatically
-
-Claude Code deletes the files in the paths below once they're older than [`cleanupPeriodDays`](/docs/en/settings-reference#cleanupperioddays), as long as it can safely determine the retention period. The default is 30 days and the minimum is 1; setting `0` fails with a validation error. The same age cutoff applies to automatic removal of [orphaned worktrees](/docs/en/worktrees#clean-up-subagent-and-background-session-worktrees).
-
-| Path under `~/.claude/`                      | Contents                                                                                                                                                                                                                                                                                             |
-| -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `projects/<project>/<session>.jsonl`         | Full conversation transcript: every message, tool call, and tool result                                                                                                                                                                                                                              |
-| `projects/<project>/<session>/subagents/`    | [Subagent](/docs/en/sub-agents) conversation transcripts, removed with the parent session transcript when it ages out                                                                                                                                                                                     |
-| `projects/<project>/<session>/tool-results/` | Large tool outputs spilled to separate files                                                                                                                                                                                                                                                         |
-| `file-history/<session>/`                    | Pre-edit snapshots of files Claude changed, used for [checkpoint restore](/docs/en/checkpointing). Holds snapshots for the 100 most recent checkpoints; snapshot files that no retained checkpoint references are deleted, except each file's first snapshot                                              |
-| `plans/`                                     | Plan files written during [plan mode](/docs/en/permission-modes#analyze-before-you-edit-with-plan-mode)                                                                                                                                                                                                   |
-| `debug/`                                     | Per-session debug logs, written only when you start with `--debug` or run `/debug`                                                                                                                                                                                                                   |
-| `paste-cache/`                               | Contents of large pastes                                                                                                                                                                                                                                                                             |
-| `image-cache/<session>/`                     | Attached images. On each sweep, Claude Code removes the directories of all other sessions, whatever their age.                                                                                                                                                                                       |
-| `uploads/<session>/`                         | Files you attach from the web or mobile app, and photos you attach from the mobile app, when messaging a [Remote Control](/docs/en/remote-control) session. An attachment to a [cloud session](/docs/en/claude-code-on-the-web) is saved in that session's own cloud environment instead, not on your machine. |
-| `session-env/`                               | Per-session environment metadata                                                                                                                                                                                                                                                                     |
-| `tasks/`                                     | Per-session task lists written by the task tools                                                                                                                                                                                                                                                     |
-| `shell-snapshots/`                           | Aliases, functions, and shell options captured at startup and applied by the [Bash tool](/docs/en/tools-reference#bash-tool-behavior) to each command. Removed on clean exit. The sweep clears any left after a crash.                                                                                    |
-| `backups/`                                   | Earlier versions of `~/.claude.json`, copied when Claude Code rewrites the file. Claude Code keeps the five newest, plus a copy of any version it couldn't parse.                                                                                                                                    |
-| `feedback-bundles/`                          | Redacted transcript archives written by `/feedback` on third-party providers or when no Anthropic credentials are configured, for sending to your Anthropic account team                                                                                                                             |
-| `usage-data/`                                | `report.html` and timestamped report copies written by [`/insights`](/docs/en/costs#analyze-your-usage-patterns), plus cached per-session analysis data used to build them                                                                                                                                |
-| `todos/`, `statsig/`, `logs/`                | Legacy directories from older versions. No longer written. The sweep removes their contents and then the empty directory.                                                                                                                                                                            |
-
-Claude Code makes four exceptions to this sweep:
-
-* **`sessions/`**: holds one small file per running session, used to detect concurrent sessions and crashes. It isn't part of the age-based sweep: Claude Code removes each file when its session exits and clears crash leftovers on the next launch.
-* **Auto memory**: Claude Code excludes a project's [auto memory](/docs/en/memory#auto-memory) directory, `projects/<project>/memory/`, from this sweep, and removes the directory itself only after it has been empty for the whole retention period. Before v2.1.228, the sweep treated folders inside the memory directory as session data and could delete old files beneath it.
-* **Bare mode**: when you run `claude -p` with [`--bare`](/docs/en/headless#start-faster-with-bare-mode), Claude Code doesn't run the sweep in that session.
-* **Paused sweep**: if Claude Code can't safely determine the retention period, it pauses the retention cleanup sweep; the [`retention_sweep` event](/docs/en/monitoring-usage#retention-sweep-event) lists each configuration that pauses it. When the cause is a settings file that can't be read or parsed, or settings errors with `cleanupPeriodDays` explicitly set, Claude Code also shows a warning in `/status` until you fix the settings errors. When [managed settings](/docs/en/server-managed-settings) provide `cleanupPeriodDays`, Claude Code runs the sweep at the managed value in either case.
-
-### Kept until you delete them
-
-The retention cleanup sweep doesn't cover the following paths. Claude Code keeps them until you delete them, apart from the two caches whose rows say that logging out deletes them.
-
-| Path under `~/.claude/` | Contents                                                                                                                                                                                                                                                                                                                                                          |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `history.jsonl`         | Every prompt you've typed, with timestamp and project path. Used for up-arrow recall.                                                                                                                                                                                                                                                                             |
-| `stats-cache.json`      | Aggregated token and cost counts shown by `/usage`                                                                                                                                                                                                                                                                                                                |
-| `remote-settings.json`  | Cached copy of [server-managed settings](/docs/en/server-managed-settings) for your organization, or `{}` when your organization has configured none. Only present when the session [fetches them](/docs/en/server-managed-settings#platform-availability). Claude Code checks for updates at startup and hourly during a session. Claude Code deletes it when you log out. |
-| `cache/changelog.md`    | Cached copy of the Claude Code changelog, used to show release notes after an update. Refreshed in the background.                                                                                                                                                                                                                                                |
-| `policy-limits.json`    | Cached feature policy settings for your organization. Only present for some account types. Refreshed automatically. Claude Code deletes it when you log out.                                                                                                                                                                                                      |
-
-Other small cache and lock files appear depending on which features you use and are safe to delete.
-
-### Plaintext storage
-
-Transcripts and history are not encrypted at rest. OS file permissions are the only protection. If a tool reads a `.env` file or a command prints a credential, that value is written to `projects/<project>/<session>.jsonl`. To reduce exposure:
-
-* Lower `cleanupPeriodDays` to shorten how long transcripts are kept
-* Set the [`CLAUDE_CODE_SKIP_PROMPT_HISTORY`](/docs/en/env-vars) environment variable to skip writing transcripts and prompt history in any mode. In non-interactive mode, you can instead pass `--no-session-persistence` alongside `-p`, or set `persistSession: false` in the TypeScript Agent SDK; the Python SDK has no equivalent option.
-* Use [permission rules](/docs/en/permissions) to deny reads of credential files
-
-### Clear local data
-
-Run `claude project purge` to delete the state Claude Code holds for one project. It deletes:
-
-* Transcripts and auto memory under `projects/`
-* Per-session `tasks/`, `debug/`, and `file-history/` entries
-* Matching prompt lines in `history.jsonl`
-* The project's entry in `~/.claude.json`
-
-The command prints the full deletion plan and asks for confirmation before removing anything.
-
-The examples below use `~/work/my-repo` as a placeholder. Replace it with the path to your project. If no state matches the path, the command prints an error and exits with status 1.
-
-Preview the plan without deleting anything:
-
-```bash theme={null}
-claude project purge ~/work/my-repo --dry-run
-```
-
-The plan lists each matching item and why it is included:
-
-```text theme={null}
-Purge plan for /home/user/work/my-repo:
-
-  dir:    /home/user/.claude/projects/-home-user-work-my-repo
-           project transcripts (.jsonl) and memory/
-  config: projects["/home/user/work/my-repo"]
-           project entry in ~/.claude.json (trust, history, MCP servers)
-  filter: /home/user/.claude/history.jsonl
-           12 prompt(s) typed in this project
-
-shell-snapshots/ are not project-scoped and will not be touched
-backups/ may still contain this project entry in old .claude.json snapshots (/home/user/.claude/backups); at most 5 are kept and they rotate out automatically
-Dry run: 3 item(s) would be deleted.
-```
-
-Delete with a single confirmation prompt:
-
-```bash theme={null}
-claude project purge ~/work/my-repo
-```
-
-The command prints the same plan, then asks `Delete 3 item(s) for /home/user/work/my-repo? This cannot be undone. [y/N]` and deletes only if you answer `y`.
-
-Omit the path to pick a project from an interactive list.
-
-Skip the confirmation prompt for use in scripts:
-
-```bash theme={null}
-claude project purge ~/work/my-repo --yes
-```
-
-Pass `--all` instead of a path to purge state for every project at once, which deletes `history.jsonl` outright rather than filtering it. Pass `-i` to step through the deletion plan one item at a time.
-
-The command leaves `shell-snapshots/` and `backups/` alone because those are not project-scoped, and warns about them in the plan output.
-
-You can also delete any of the application-data paths above by hand. New sessions are unaffected. The table below shows what you lose for past sessions.
-
-| Delete                                                                                                                                                             | You lose                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| `~/.claude/projects/`                                                                                                                                              | Resume, continue, and rewind for past sessions, and auto memory for every project                                 |
-| `~/.claude/history.jsonl`                                                                                                                                          | Up-arrow prompt recall                                                                                            |
-| `~/.claude/paste-cache/`                                                                                                                                           | Pasted text in recalled prompts; see [paste large content](/docs/en/terminal-config#paste-large-content)               |
-| `~/.claude/uploads/`                                                                                                                                               | Attachments that past [Remote Control](/docs/en/remote-control) sessions refer to by path                              |
-| `~/.claude/file-history/`                                                                                                                                          | Checkpoint restore for past sessions                                                                              |
-| `~/.claude/stats-cache.json`                                                                                                                                       | Historical totals shown by `/usage`                                                                               |
-| `~/.claude/usage-data/`                                                                                                                                            | Past [`/insights`](/docs/en/costs#analyze-your-usage-patterns) reports and the cached analysis data used to build them |
-| `~/.claude/feedback-bundles/`                                                                                                                                      | Feedback and bug-report archives you haven't yet sent to your Anthropic account team                              |
-| `~/.claude/remote-settings.json`                                                                                                                                   | Nothing. Re-fetched on next launch.                                                                               |
-| `~/.claude/cache/changelog.md`                                                                                                                                     | Nothing. Refreshed in the background.                                                                             |
-| `~/.claude/policy-limits.json`                                                                                                                                     | Nothing. Refreshed automatically.                                                                                 |
-| `~/.claude/debug/`, `~/.claude/plans/`, `~/.claude/image-cache/`, `~/.claude/session-env/`, `~/.claude/tasks/`, `~/.claude/shell-snapshots/`, `~/.claude/backups/` | Nothing user-facing                                                                                               |
-| `~/.claude/todos/`, `~/.claude/statsig/`, `~/.claude/logs/`                                                                                                        | Nothing. Legacy directories not written by current versions.                                                      |
-
-Don't delete `~/.claude.json`, `~/.claude/settings.json`, or `~/.claude/plugins/`: those hold your auth, preferences, and installed plugins.
-
-## Related resources
-
-* [Manage Claude's memory](/docs/en/memory): write and organize CLAUDE.md, rules, and auto memory
-* [Configure settings](/docs/en/settings): set permissions, hooks, environment variables, and model defaults
-* [Create skills](/docs/en/skills): build reusable prompts and workflows
-* [Configure subagents](/docs/en/sub-agents): define specialized agents with their own context
+themselves by leaving a TODO(human) marker instead of writing it.</code></pre>
+</div>
+</div>
+<span data-as="p">Click files in the tree to see what each one does, when it loads, and an example.</span>
+<!-- -->
+<h2 class="flex whitespace-pre-wrap group font-semibold" id="what’s-not-shown"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#what’s-not-shown">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">What’s not shown</span></h2>
+<span data-as="p">The explorer covers files you author and edit. A few related files live elsewhere:</span>
+<!-- --><div class="min-w-0 [--page-padding:20px] flex w-[calc(100%+(var(--page-padding)*2))] my-[1em] py-[1em] -mx-(--page-padding) max-w-none [contain:inline-size]" data-component-part="scroll-area" data-table-wrapper="true" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px"><div aria-label="Scrollable table" class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] overflow-y-hidden! base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_24llktbsnlhjiuasnpfiutb_-viewport" role="region" style="overflow:scroll" tabindex="-1"><div class="flex" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="px-(--page-padding) grow max-w-none table"><table class="m-0 min-w-full w-full max-w-none table [&amp;_td]:min-w-[150px] [&amp;_th]:text-left [&amp;_td[data-numeric]]:tabular-nums"><thead><tr><th>File</th><th>Location</th><th>Purpose</th></tr></thead><tbody><tr><td><code>managed-settings.json</code></td><td>System-level, varies by OS</td><td>Enterprise-enforced settings that you can’t override, apart from <a class="link" href="/docs/en/settings#security-keys-where-the-stricter-value-applies">narrow exceptions</a>. See <a class="link" href="/docs/en/managed-settings#deploy-a-managed-settings-file">where to save the file</a> and <a class="link" href="/docs/en/managed-settings#precedence-within-the-managed-tier">which managed source Claude Code uses</a>.</td></tr><tr><td><code>CLAUDE.local.md</code></td><td>Project root</td><td>Your private preferences for this project, loaded alongside CLAUDE.md. Create it manually and add it to <code>.gitignore</code>.</td></tr><tr><td>Installed plugins</td><td><code>~/.claude/plugins</code></td><td>Cloned marketplaces, installed plugin versions, and per-plugin data, managed by <code>claude plugin</code> commands. For a plugin installed from a marketplace <a class="link" href="/docs/en/plugin-marketplaces#command-sources"><code>command</code> source</a> in link mode, Claude Code stores links here instead of a copy, and the plugin’s files stay in the directory the command prints. See <a class="link" href="/docs/en/plugins-reference#plugin-caching-and-file-resolution">plugin caching</a> for how orphaned versions are cleaned up.</td></tr></tbody></table></div></div></div></div>
+<span data-as="p"><code>~/.claude</code> also holds data Claude Code writes as you work: transcripts, prompt history, file snapshots, caches, and logs. See <a class="link" href="#application-data">application data</a> below.</span>
+<h2 class="flex whitespace-pre-wrap group font-semibold" id="choose-the-right-file"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#choose-the-right-file">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">Choose the right file</span></h2>
+<span data-as="p">Different kinds of customization live in different files. Use this table to find where a change belongs.</span>
+<!-- --><div class="min-w-0 [--page-padding:20px] flex w-[calc(100%+(var(--page-padding)*2))] my-[1em] py-[1em] -mx-(--page-padding) max-w-none [contain:inline-size]" data-component-part="scroll-area" data-table-wrapper="true" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px"><div aria-label="Scrollable table" class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] overflow-y-hidden! base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_34llktbsnlhjiuasnpfiutb_-viewport" role="region" style="overflow:scroll" tabindex="-1"><div class="flex" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="px-(--page-padding) grow max-w-none table"><table class="m-0 min-w-full w-full max-w-none table [&amp;_td]:min-w-[150px] [&amp;_th]:text-left [&amp;_td[data-numeric]]:tabular-nums"><thead><tr><th style="text-align:left">You want to</th><th style="text-align:left">Edit</th><th style="text-align:left">Scope</th><th style="text-align:left">Reference</th></tr></thead><tbody><tr><td style="text-align:left">Give Claude project context and conventions</td><td style="text-align:left"><code>CLAUDE.md</code></td><td style="text-align:left">project or global</td><td style="text-align:left"><a class="link" href="/docs/en/memory">Memory</a></td></tr><tr><td style="text-align:left">Allow or block specific tool calls</td><td style="text-align:left"><code>settings.json</code> <code>permissions</code> or <code>hooks</code></td><td style="text-align:left">project or global</td><td style="text-align:left"><a class="link" href="/docs/en/permissions">Permissions</a>, <a class="link" href="/docs/en/hooks">Hooks</a></td></tr><tr><td style="text-align:left">Run a script before or after tool calls</td><td style="text-align:left"><code>settings.json</code> <code>hooks</code></td><td style="text-align:left">project or global</td><td style="text-align:left"><a class="link" href="/docs/en/hooks">Hooks</a></td></tr><tr><td style="text-align:left">Set environment variables for the session</td><td style="text-align:left"><code>settings.json</code> <code>env</code></td><td style="text-align:left">project or global</td><td style="text-align:left"><a class="link" href="/docs/en/settings-reference#all-settings">Settings</a></td></tr><tr><td style="text-align:left">Keep personal overrides out of git</td><td style="text-align:left"><code>settings.local.json</code></td><td style="text-align:left">project only</td><td style="text-align:left"><a class="link" href="/docs/en/settings#where-settings-live">Settings scopes</a></td></tr><tr><td style="text-align:left">Add a prompt or capability you invoke with <code>/name</code></td><td style="text-align:left"><code>skills/&lt;name&gt;/SKILL.md</code></td><td style="text-align:left">project or global</td><td style="text-align:left"><a class="link" href="/docs/en/skills">Skills</a></td></tr><tr><td style="text-align:left">Define a specialized subagent with its own tools</td><td style="text-align:left"><code>agents/*.md</code></td><td style="text-align:left">project or global</td><td style="text-align:left"><a class="link" href="/docs/en/sub-agents">Subagents</a></td></tr><tr><td style="text-align:left">Orchestrate many subagents from a script</td><td style="text-align:left"><code>workflows/*.js</code></td><td style="text-align:left">project or global</td><td style="text-align:left"><a class="link" href="/docs/en/workflows">Dynamic workflows</a></td></tr><tr><td style="text-align:left">Connect external tools over MCP</td><td style="text-align:left"><code>.mcp.json</code></td><td style="text-align:left">project only</td><td style="text-align:left"><a class="link" href="/docs/en/mcp">MCP</a></td></tr><tr><td style="text-align:left">Change how Claude formats responses</td><td style="text-align:left"><code>output-styles/*.md</code></td><td style="text-align:left">project or global</td><td style="text-align:left"><a class="link" href="/docs/en/output-styles">Output styles</a></td></tr></tbody></table></div></div></div></div>
+<h2 class="flex whitespace-pre-wrap group font-semibold" id="file-reference"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#file-reference">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">File reference</span></h2>
+<span data-as="p">This table lists every file the explorer covers. Project-scope files live in your repo under <code>.claude/</code> (or at the root for <code>CLAUDE.md</code>, <code>.mcp.json</code>, and <code>.worktreeinclude</code>). Global-scope files live in <code>~/.claude/</code> and apply across all projects.</span>
+<div aria-label="Note" class="callout my-4 px-5 py-4 overflow-hidden rounded-2xl flex gap-3 border border-blue-200 bg-blue-50 dark:border-blue-900 dark:bg-blue-600/20" data-callout-type="note" role="note"><div class="mt-0.5 w-4" data-component-part="callout-icon"><svg aria-hidden="true" class="size-4 text-blue-800 dark:text-blue-300" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M 9 1.6714 C 13.0371 1.6714 16.3286 4.9629 16.3286 9 C 16.3286 13.0371 13.0371 16.3286 9 16.3286 C 7.0574 16.3252 5.1953 15.552 3.8217 14.1783 C 2.448 12.8047 1.6748 10.9426 1.6714 9 C 1.6714 4.9629 4.9629 1.6714 9 1.6714 Z M 9 0 C 4.0371 0 0 4.0371 0 9 C 0 13.9629 4.0371 18 9 18 C 13.9629 18 18 13.9629 18 9 C 18 4.0371 13.9629 0 9 0 Z M 10.2857 3.8571 H 7.7143 V 10.2857 H 10.2857 V 3.8571 Z M 10.2857 11.5714 H 7.7143 V 14.1429 H 10.2857 V 11.5714 Z" fill="currentColor" fill-rule="evenodd" stroke="none"></path></svg></div><div class="text-sm prose dark:prose-invert min-w-0 w-full [&amp;_kbd]:bg-background-light dark:[&amp;_kbd]:bg-background-dark [&amp;_code]:text-current! [&amp;_kbd]:text-current! [&amp;_a]:text-current! [&amp;_a]:border-current [&amp;_strong]:text-current! text-blue-800 dark:text-blue-300" data-component-part="callout-content"><span data-as="p">Several things can override what you put in these files:</span><ul>
+<li><a class="link" href="/docs/en/server-managed-settings">Managed settings</a> deployed by your organization take precedence over everything, apart from the <a class="link" href="/docs/en/settings#exceptions-to-managed-settings-precedence">exceptions under Settings precedence</a></li>
+<li>CLI flags like <code>--permission-mode</code> or <code>--settings</code> override <code>settings.json</code> for that session</li>
+<li>Some environment variables take precedence over their equivalent setting, but this varies: check the <a class="link" href="/docs/en/env-vars">environment variables reference</a> for each one</li>
+</ul><span data-as="p">See <a class="link" href="/docs/en/settings#settings-precedence">settings precedence</a> for the full order.</span></div></div>
+<span data-as="p">Click a filename to open that node in the explorer above.</span>
+<!-- --><div class="min-w-0 [--page-padding:20px] flex w-[calc(100%+(var(--page-padding)*2))] my-[1em] py-[1em] -mx-(--page-padding) max-w-none [contain:inline-size]" data-component-part="scroll-area" data-table-wrapper="true" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px"><div aria-label="Scrollable table" class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] overflow-y-hidden! base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_4cllktbsnlhjiuasnpfiutb_-viewport" role="region" style="overflow:scroll" tabindex="-1"><div class="flex" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="px-(--page-padding) grow max-w-none table"><table class="m-0 min-w-full w-full max-w-none table [&amp;_td]:min-w-[150px] [&amp;_th]:text-left [&amp;_td[data-numeric]]:tabular-nums"><thead><tr><th>File</th><th>Scope</th><th>Commit</th><th>What it does</th><th>Reference</th></tr></thead><tbody><tr><td><a class="link" href="#ce-claude-md"><code>CLAUDE.md</code></a></td><td>Project and global</td><td>✓</td><td>Instructions loaded every session</td><td><a class="link" href="/docs/en/memory">Memory</a></td></tr><tr><td><a class="link" href="#ce-rules"><code>rules/*.md</code></a></td><td>Project and global</td><td>✓</td><td>Topic-scoped instructions, optionally path-gated</td><td><a class="link" href="/docs/en/memory#organize-rules-with-claude/rules/">Rules</a></td></tr><tr><td><a class="link" href="#ce-settings-json"><code>settings.json</code></a></td><td>Project and global</td><td>✓</td><td>Permissions, hooks, env vars, model defaults</td><td><a class="link" href="/docs/en/settings">Settings</a></td></tr><tr><td><a class="link" href="#ce-settings-local-json"><code>settings.local.json</code></a></td><td>Project only</td><td></td><td>Your personal overrides, gitignored when Claude Code saves a setting to it</td><td><a class="link" href="/docs/en/settings#where-settings-live">Settings scopes</a></td></tr><tr><td><a class="link" href="#ce-mcp-json"><code>.mcp.json</code></a></td><td>Project only</td><td>✓</td><td>Team-shared MCP servers</td><td><a class="link" href="/docs/en/mcp#mcp-installation-scopes">MCP scopes</a></td></tr><tr><td><a class="link" href="#ce-worktreeinclude"><code>.worktreeinclude</code></a></td><td>Project only</td><td>✓</td><td>Gitignored files to copy into new worktrees</td><td><a class="link" href="/docs/en/worktrees#copy-gitignored-files-into-worktrees">Worktrees</a></td></tr><tr><td><a class="link" href="#ce-skills"><code>skills/&lt;name&gt;/SKILL.md</code></a></td><td>Project and global</td><td>✓</td><td>Reusable prompts invoked with <code>/name</code> or auto-invoked</td><td><a class="link" href="/docs/en/skills">Skills</a></td></tr><tr><td><a class="link" href="#ce-commands"><code>commands/*.md</code></a></td><td>Project and global</td><td>✓</td><td>Single-file prompts; same mechanism as skills</td><td><a class="link" href="/docs/en/skills">Skills</a></td></tr><tr><td><a class="link" href="#ce-output-styles"><code>output-styles/*.md</code></a></td><td>Project and global</td><td>✓</td><td>Custom system-prompt sections</td><td><a class="link" href="/docs/en/output-styles">Output styles</a></td></tr><tr><td><a class="link" href="#ce-agents"><code>agents/*.md</code></a></td><td>Project and global</td><td>✓</td><td>Subagent definitions with their own prompt and tools</td><td><a class="link" href="/docs/en/sub-agents">Subagents</a></td></tr><tr><td><a class="link" href="#ce-workflows"><code>workflows/*.js</code></a></td><td>Project and global</td><td>✓</td><td>Dynamic workflow scripts written by Claude and saved from <code>/workflows</code>; each file becomes a <code>/&lt;name&gt;</code> command</td><td><a class="link" href="/docs/en/workflows">Dynamic workflows</a></td></tr><tr><td><a class="link" href="#ce-agent-memory"><code>agent-memory/&lt;name&gt;/</code></a></td><td>Project and global</td><td>✓</td><td>Persistent memory for subagents</td><td><a class="link" href="/docs/en/sub-agents#enable-persistent-memory">Persistent memory</a></td></tr><tr><td><a class="link" href="#ce-claude-json"><code>~/.claude.json</code></a></td><td>Global only</td><td></td><td>App state, OAuth, UI toggles, personal MCP servers</td><td><a class="link" href="/docs/en/settings-reference#global-config-settings">Global config</a></td></tr><tr><td><a class="link" href="#ce-global-projects"><code>projects/&lt;project&gt;/memory/</code></a></td><td>Global only</td><td></td><td>Auto memory: Claude’s notes to itself across sessions</td><td><a class="link" href="/docs/en/memory#auto-memory">Auto memory</a></td></tr><tr><td><a class="link" href="#ce-keybindings"><code>keybindings.json</code></a></td><td>Global only</td><td></td><td>Custom keyboard shortcuts</td><td><a class="link" href="/docs/en/keybindings">Keybindings</a></td></tr><tr><td><a class="link" href="#ce-themes"><code>themes/*.json</code></a></td><td>Global only</td><td></td><td>Custom color themes</td><td><a class="link" href="/docs/en/terminal-config#create-a-custom-theme">Custom themes</a></td></tr></tbody></table></div></div></div></div>
+<h2 class="flex whitespace-pre-wrap group font-semibold" id="troubleshoot-configuration"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#troubleshoot-configuration">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">Troubleshoot configuration</span></h2>
+<span data-as="p">If a setting, hook, or file isn’t taking effect, see <a class="link" href="/docs/en/debug-your-config">Debug your configuration</a> for the inspection commands and a symptom-first lookup table.</span>
+<h2 class="flex whitespace-pre-wrap group font-semibold" id="application-data"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#application-data">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">Application data</span></h2>
+<span data-as="p">Beyond the config you author, <code>~/.claude</code> holds data Claude Code writes during sessions. These files are plaintext. Anything that passes through a tool lands in a transcript on disk: file contents, command output, pasted text.</span>
+<h3 class="flex whitespace-pre-wrap group font-semibold" id="cleaned-up-automatically"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#cleaned-up-automatically">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">Cleaned up automatically</span></h3>
+<span data-as="p">Claude Code deletes the files in the paths below once they’re older than <a class="link" href="/docs/en/settings-reference#cleanupperioddays"><code>cleanupPeriodDays</code></a>, as long as it can safely determine the retention period. The default is 30 days and the minimum is 1; setting <code>0</code> fails with a validation error. The same age cutoff applies to automatic removal of <a class="link" href="/docs/en/worktrees#clean-up-subagent-and-background-session-worktrees">orphaned worktrees</a>.</span>
+<!-- --><div class="min-w-0 [--page-padding:20px] flex w-[calc(100%+(var(--page-padding)*2))] my-[1em] py-[1em] -mx-(--page-padding) max-w-none [contain:inline-size]" data-component-part="scroll-area" data-table-wrapper="true" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px"><div aria-label="Scrollable table" class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] overflow-y-hidden! base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_64llktbsnlhjiuasnpfiutb_-viewport" role="region" style="overflow:scroll" tabindex="-1"><div class="flex" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="px-(--page-padding) grow max-w-none table"><table class="m-0 min-w-full w-full max-w-none table [&amp;_td]:min-w-[150px] [&amp;_th]:text-left [&amp;_td[data-numeric]]:tabular-nums"><thead><tr><th>Path under <code>~/.claude/</code></th><th>Contents</th></tr></thead><tbody><tr><td><code>projects/&lt;project&gt;/&lt;session&gt;.jsonl</code></td><td>Full conversation transcript: every message, tool call, and tool result</td></tr><tr><td><code>projects/&lt;project&gt;/&lt;session&gt;/subagents/</code></td><td><a class="link" href="/docs/en/sub-agents">Subagent</a> conversation transcripts, removed with the parent session transcript when it ages out</td></tr><tr><td><code>projects/&lt;project&gt;/&lt;session&gt;/tool-results/</code></td><td>Large tool outputs spilled to separate files</td></tr><tr><td><code>file-history/&lt;session&gt;/</code></td><td>Pre-edit snapshots of files Claude changed, used for <a class="link" href="/docs/en/checkpointing">checkpoint restore</a>. Holds snapshots for the 100 most recent checkpoints; snapshot files that no retained checkpoint references are deleted, except each file’s first snapshot</td></tr><tr><td><code>plans/</code></td><td>Plan files written during <a class="link" href="/docs/en/permission-modes#analyze-before-you-edit-with-plan-mode">plan mode</a></td></tr><tr><td><code>debug/</code></td><td>Per-session debug logs, written only when you start with <code>--debug</code> or run <code>/debug</code></td></tr><tr><td><code>paste-cache/</code></td><td>Contents of large pastes</td></tr><tr><td><code>image-cache/&lt;session&gt;/</code></td><td>Attached images. On each sweep, Claude Code removes the directories of all other sessions, whatever their age.</td></tr><tr><td><code>uploads/&lt;session&gt;/</code></td><td>Files you attach from the web or mobile app, and photos you attach from the mobile app, when messaging a <a class="link" href="/docs/en/remote-control">Remote Control</a> session. An attachment to a <a class="link" href="/docs/en/claude-code-on-the-web">cloud session</a> is saved in that session’s own cloud environment instead, not on your machine.</td></tr><tr><td><code>session-env/</code></td><td>Per-session environment metadata</td></tr><tr><td><code>tasks/</code></td><td>Per-session task lists written by the task tools</td></tr><tr><td><code>shell-snapshots/</code></td><td>Aliases, functions, and shell options captured at startup and applied by the <a class="link" href="/docs/en/tools-reference#bash-tool-behavior">Bash tool</a> to each command. Removed on clean exit. The sweep clears any left after a crash.</td></tr><tr><td><code>backups/</code></td><td>Earlier versions of <code>~/.claude.json</code>, copied when Claude Code rewrites the file. Claude Code keeps the five newest, plus a copy of any version it couldn’t parse.</td></tr><tr><td><code>feedback-bundles/</code></td><td>Redacted transcript archives written by <code>/feedback</code> on third-party providers or when no Anthropic credentials are configured, for sending to your Anthropic account team</td></tr><tr><td><code>feedback/drafts/</code></td><td>Queued <a class="link" href="/docs/en/tools-reference#sendfeedback-tool-behavior">Claude-drafted feedback</a> awaiting your review in <code>/feedback</code>. Swept after <code>cleanupPeriodDays</code> or 30 days, whichever is shorter. When the queue is at its 10-draft limit, Claude Code deletes the oldest draft to make room.</td></tr><tr><td><code>usage-data/</code></td><td><code>report.html</code> and timestamped report copies written by <a class="link" href="/docs/en/costs#analyze-your-usage-patterns"><code>/insights</code></a>, plus cached per-session analysis data used to build them</td></tr><tr><td><code>todos/</code>, <code>statsig/</code>, <code>logs/</code></td><td>Legacy directories from older versions. No longer written. The sweep removes their contents and then the empty directory.</td></tr></tbody></table></div></div></div></div>
+<span data-as="p">Claude Code makes four exceptions to this sweep:</span>
+<ul>
+<li><strong><code>sessions/</code></strong>: holds one small file per running session, used to detect concurrent sessions and crashes. It isn’t part of the age-based sweep: Claude Code removes each file when its session exits and clears crash leftovers on the next launch.</li>
+<li><strong>Auto memory</strong>: Claude Code excludes a project’s <a class="link" href="/docs/en/memory#auto-memory">auto memory</a> directory, <code>projects/&lt;project&gt;/memory/</code>, from this sweep, and removes the directory itself only after it has been empty for the whole retention period. Before v2.1.228, the sweep treated folders inside the memory directory as session data and could delete old files beneath it.</li>
+<li><strong>Bare mode</strong>: when you run <code>claude -p</code> with <a class="link" href="/docs/en/headless#start-faster-with-bare-mode"><code>--bare</code></a>, Claude Code doesn’t run the sweep in that session.</li>
+<li><strong>Paused sweep</strong>: if Claude Code can’t safely determine the retention period, it pauses the retention cleanup sweep; the <a class="link" href="/docs/en/monitoring-usage#retention-sweep-event"><code>retention_sweep</code> event</a> lists each configuration that pauses it. When the cause is a settings file that can’t be read or parsed, or settings errors with <code>cleanupPeriodDays</code> explicitly set, Claude Code also shows a warning in <code>/status</code> until you fix the settings errors. When <a class="link" href="/docs/en/server-managed-settings">managed settings</a> provide <code>cleanupPeriodDays</code>, Claude Code runs the sweep at the managed value in either case.</li>
+</ul>
+<h3 class="flex whitespace-pre-wrap group font-semibold" id="kept-until-you-delete-them"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#kept-until-you-delete-them">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">Kept until you delete them</span></h3>
+<span data-as="p">The retention cleanup sweep doesn’t cover the following paths. Claude Code keeps them until you delete them, apart from the two caches whose rows say that logging out deletes them.</span>
+<!-- --><div class="min-w-0 [--page-padding:20px] flex w-[calc(100%+(var(--page-padding)*2))] my-[1em] py-[1em] -mx-(--page-padding) max-w-none [contain:inline-size]" data-component-part="scroll-area" data-table-wrapper="true" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px"><div aria-label="Scrollable table" class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] overflow-y-hidden! base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_7cllktbsnlhjiuasnpfiutb_-viewport" role="region" style="overflow:scroll" tabindex="-1"><div class="flex" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="px-(--page-padding) grow max-w-none table"><table class="m-0 min-w-full w-full max-w-none table [&amp;_td]:min-w-[150px] [&amp;_th]:text-left [&amp;_td[data-numeric]]:tabular-nums"><thead><tr><th>Path under <code>~/.claude/</code></th><th>Contents</th></tr></thead><tbody><tr><td><code>history.jsonl</code></td><td>Every prompt you’ve typed, with timestamp and project path. Used for up-arrow recall.</td></tr><tr><td><code>stats-cache.json</code></td><td>Aggregated token and cost counts shown by <code>/usage</code></td></tr><tr><td><code>remote-settings.json</code></td><td>Cached copy of <a class="link" href="/docs/en/server-managed-settings">server-managed settings</a> for your organization, or <code>{}</code> when your organization has configured none. Only present when the session <a class="link" href="/docs/en/server-managed-settings#platform-availability">fetches them</a>. Claude Code checks for updates at startup and hourly during a session. Claude Code deletes it when you log out.</td></tr><tr><td><code>cache/changelog.md</code></td><td>Cached copy of the Claude Code changelog, used to show release notes after an update. Refreshed in the background.</td></tr><tr><td><code>policy-limits.json</code></td><td>Cached feature policy settings for your organization. Only present for some account types. Refreshed automatically. Claude Code deletes it when you log out.</td></tr></tbody></table></div></div></div></div>
+<span data-as="p">Other small cache and lock files appear depending on which features you use and are safe to delete.</span>
+<h3 class="flex whitespace-pre-wrap group font-semibold" id="plaintext-storage"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#plaintext-storage">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">Plaintext storage</span></h3>
+<span data-as="p">Transcripts and history are not encrypted at rest. OS file permissions are the only protection. If a tool reads a <code>.env</code> file or a command prints a credential, that value is written to <code>projects/&lt;project&gt;/&lt;session&gt;.jsonl</code>. To reduce exposure:</span>
+<ul>
+<li>Lower <code>cleanupPeriodDays</code> to shorten how long transcripts are kept</li>
+<li>Set the <a class="link" href="/docs/en/env-vars"><code>CLAUDE_CODE_SKIP_PROMPT_HISTORY</code></a> environment variable to skip writing transcripts and prompt history in any mode. In non-interactive mode, you can instead pass <code>--no-session-persistence</code> alongside <code>-p</code>, or set <code>persistSession: false</code> in the TypeScript Agent SDK; the Python SDK has no equivalent option.</li>
+<li>Use <a class="link" href="/docs/en/permissions">permission rules</a> to deny reads of credential files</li>
+</ul>
+<h3 class="flex whitespace-pre-wrap group font-semibold" id="clear-local-data"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#clear-local-data">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">Clear local data</span></h3>
+<span data-as="p">Run <code>claude project purge</code> to delete the state Claude Code holds for one project. It deletes:</span>
+<ul>
+<li>Transcripts and auto memory under <code>projects/</code></li>
+<li>Per-session <code>tasks/</code>, <code>debug/</code>, and <code>file-history/</code> entries</li>
+<li>Matching prompt lines in <code>history.jsonl</code></li>
+<li>The project’s entry in <code>~/.claude.json</code></li>
+</ul>
+<span data-as="p">The command prints the full deletion plan and asks for confirmation before removing anything.</span>
+<span data-as="p">The examples below use <code>~/work/my-repo</code> as a placeholder. Replace it with the path to your project. If no state matches the path, the command prints an error and exits with status 1.</span>
+<span data-as="p">Preview the plan without deleting anything:</span>
+<div class="code-block mt-5 mb-8 not-prose rounded-2xl relative group min-w-0 print:print-color-exact text-gray-950 dark:text-gray-50 codeblock-light border border-gray-950/10 dark:border-white/10 dark:twoslash-dark bg-transparent dark:bg-transparent" language="shellscript" numberoflines="1"><div class="absolute top-3 right-4 flex items-center gap-1.5 print:hidden" data-floating-buttons="true"><div class="z-10 select-none" data-base-ui-tooltip-trigger="" id="base-ui-_R_faq4llktbsnlhjiuasnpfiutb_"><button aria-label="Report incorrect code" class="size-6.5 flex items-center justify-center rounded-md group/code-snippet-feedback-button in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-100 dark:in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-800" id="code-snippet-feedback-button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-400 group-hover/code-snippet-feedback-button:text-gray-500 dark:text-white/40 dark:group-hover/code-snippet-feedback-button:text-white/60" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9 5.431V9.569" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9 11.417C8.449 11.417 8 11.866 8 12.417C8 12.968 8.449 13.417 9 13.417C9.551 13.417 10 12.968 10 12.417C10 11.866 9.551 11.417 9 11.417Z" fill="currentColor" stroke="none"></path><path d="M10.968 2.25H7.03301C6.50301 2.25 5.99401 2.461 5.61901 2.836L2.83701 5.618C2.46201 5.993 2.25101 6.502 2.25101 7.032V10.967C2.25101 11.497 2.46201 12.006 2.83701 12.381L5.61901 15.163C5.99401 15.538 6.50301 15.749 7.03301 15.749H10.968C11.498 15.749 12.007 15.538 12.382 15.163L15.164 12.381C15.539 12.006 15.75 11.497 15.75 10.967V7.032C15.75 6.502 15.539 5.993 15.164 5.618L12.382 2.836C12.007 2.461 11.498 2.25 10.968 2.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div><div class="code-block-copy-button z-10 select-none" data-base-ui-tooltip-trigger="" id="base-ui-_R_fiq4llktbsnlhjiuasnpfiutb_"><button aria-label="Copy the contents from the code block" class="size-6.5 flex items-center justify-center rounded-md group/copy-button in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-100 dark:in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-800" data-testid="copy-code-button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-400 group-hover/copy-button:text-gray-500 dark:text-white/40 dark:group-hover/copy-button:text-white/60" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M14.25 5.25H7.25C6.14543 5.25 5.25 6.14543 5.25 7.25V14.25C5.25 15.3546 6.14543 16.25 7.25 16.25H14.25C15.3546 16.25 16.25 15.3546 16.25 14.25V7.25C16.25 6.14543 15.3546 5.25 14.25 5.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.80103 11.998L1.77203 5.07397C1.61003 3.98097 2.36403 2.96397 3.45603 2.80197L10.38 1.77297C11.313 1.63397 12.19 2.16297 12.528 3.00097" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button><span class="sr-only" role="status"></span></div><div class="z-10 select-none" data-base-ui-tooltip-trigger="" id="base-ui-_R_fqq4llktbsnlhjiuasnpfiutb_"><button aria-label="Ask Assistant" class="size-6.5 flex items-center justify-center rounded-md group/ask-assistant-button in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-100 dark:in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-800" data-chat-payload-element-id="lang-shellscript-code-claude_project_purge" id="ask-assistant-code-block-button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-400 group-hover/ask-assistant-button:text-gray-500 dark:text-white/40 dark:group-hover/ask-assistant-button:text-white/60" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.65799 2.99L4.39499 2.569L3.97399 1.306C3.83699 0.898 3.16199 0.898 3.02499 1.306L2.60399 2.569L1.34099 2.99C1.13699 3.058 0.998993 3.249 0.998993 3.464C0.998993 3.679 1.13699 3.87 1.34099 3.938L2.60399 4.359L3.02499 5.622C3.09299 5.826 3.28499 5.964 3.49999 5.964C3.71499 5.964 3.90599 5.826 3.97499 5.622L4.39599 4.359L5.65899 3.938C5.86299 3.87 6.00099 3.679 6.00099 3.464C6.00099 3.249 5.86199 3.058 5.65799 2.99Z" fill="currentColor" stroke="none"></path><path d="M9.5 2.75L11.412 7.587L16.25 9.5L11.412 11.413L9.5 16.25L7.587 11.413L2.75 9.5L7.587 7.587L9.5 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div><div class="w-0 min-w-full max-w-full h-full dark:bg-codeblock text-sm leading-6 transition-[height] duration-300 ease-in-out code-block-background **:ring-0 **:outline-0 **:focus:ring-0 **:focus:outline-0 rounded-2xl bg-white" data-component-part="code-block-root" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px;font-variant-ligatures:none;height:auto;background-color:#ffffff;--shiki-dark-bg:#0B0C0E"><div class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] py-3.5 px-4 overflow-y-hidden! base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_cq4llktbsnlhjiuasnpfiutb_-viewport" role="presentation" style="overflow:scroll" tabindex="-1"><div class="min-w-full! h-full children:my-0! children:shadow-none! children:bg-transparent!" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="font-mono whitespace-pre leading-6"><pre class="shiki shiki-themes github-light-default dark-plus" language="shellscript" style="background-color:#ffffff;--shiki-dark-bg:#0B0C0E;color:#1f2328;--shiki-dark:#D4D4D4"><code language="shellscript" numberoflines="1"><span class="line"><span style="color:#953800;--shiki-dark:#DCDCAA">claude</span><span style="color:#0A3069;--shiki-dark:#CE9178"> project</span><span style="color:#0A3069;--shiki-dark:#CE9178"> purge</span><span style="color:#0A3069;--shiki-dark:#CE9178"> ~/work/my-repo</span><span style="color:#0550AE;--shiki-dark:#569CD6"> --dry-run</span></span>
+</code></pre></div></div></div></div><div aria-hidden="true" class="code-block-fade-overlay print:hidden" data-fade-overlay="true" style="--fade-color-light:#ffffff;--fade-color-dark:#0B0C0E"></div></div>
+<span data-as="p">The plan lists each matching item and why it is included:</span>
+<div class="code-block mt-5 mb-8 not-prose rounded-2xl relative group min-w-0 print:print-color-exact text-gray-950 dark:text-gray-50 codeblock-light border border-gray-950/10 dark:border-white/10 dark:twoslash-dark bg-transparent dark:bg-transparent" language="text" numberoflines="13"><div class="absolute top-3 right-4 flex items-center gap-1.5 print:hidden" data-floating-buttons="true"><div class="z-10 select-none" data-base-ui-tooltip-trigger="" id="base-ui-_R_faqkllktbsnlhjiuasnpfiutb_"><button aria-label="Report incorrect code" class="size-6.5 flex items-center justify-center rounded-md group/code-snippet-feedback-button in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-100 dark:in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-800" id="code-snippet-feedback-button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-400 group-hover/code-snippet-feedback-button:text-gray-500 dark:text-white/40 dark:group-hover/code-snippet-feedback-button:text-white/60" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9 5.431V9.569" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9 11.417C8.449 11.417 8 11.866 8 12.417C8 12.968 8.449 13.417 9 13.417C9.551 13.417 10 12.968 10 12.417C10 11.866 9.551 11.417 9 11.417Z" fill="currentColor" stroke="none"></path><path d="M10.968 2.25H7.03301C6.50301 2.25 5.99401 2.461 5.61901 2.836L2.83701 5.618C2.46201 5.993 2.25101 6.502 2.25101 7.032V10.967C2.25101 11.497 2.46201 12.006 2.83701 12.381L5.61901 15.163C5.99401 15.538 6.50301 15.749 7.03301 15.749H10.968C11.498 15.749 12.007 15.538 12.382 15.163L15.164 12.381C15.539 12.006 15.75 11.497 15.75 10.967V7.032C15.75 6.502 15.539 5.993 15.164 5.618L12.382 2.836C12.007 2.461 11.498 2.25 10.968 2.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div><div class="code-block-copy-button z-10 select-none" data-base-ui-tooltip-trigger="" id="base-ui-_R_fiqkllktbsnlhjiuasnpfiutb_"><button aria-label="Copy the contents from the code block" class="size-6.5 flex items-center justify-center rounded-md group/copy-button in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-100 dark:in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-800" data-testid="copy-code-button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-400 group-hover/copy-button:text-gray-500 dark:text-white/40 dark:group-hover/copy-button:text-white/60" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M14.25 5.25H7.25C6.14543 5.25 5.25 6.14543 5.25 7.25V14.25C5.25 15.3546 6.14543 16.25 7.25 16.25H14.25C15.3546 16.25 16.25 15.3546 16.25 14.25V7.25C16.25 6.14543 15.3546 5.25 14.25 5.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.80103 11.998L1.77203 5.07397C1.61003 3.98097 2.36403 2.96397 3.45603 2.80197L10.38 1.77297C11.313 1.63397 12.19 2.16297 12.528 3.00097" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button><span class="sr-only" role="status"></span></div><div class="z-10 select-none" data-base-ui-tooltip-trigger="" id="base-ui-_R_fqqkllktbsnlhjiuasnpfiutb_"><button aria-label="Ask Assistant" class="size-6.5 flex items-center justify-center rounded-md group/ask-assistant-button in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-100 dark:in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-800" data-chat-payload-element-id="lang-text-code-Purge_plan_for__home" id="ask-assistant-code-block-button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-400 group-hover/ask-assistant-button:text-gray-500 dark:text-white/40 dark:group-hover/ask-assistant-button:text-white/60" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.65799 2.99L4.39499 2.569L3.97399 1.306C3.83699 0.898 3.16199 0.898 3.02499 1.306L2.60399 2.569L1.34099 2.99C1.13699 3.058 0.998993 3.249 0.998993 3.464C0.998993 3.679 1.13699 3.87 1.34099 3.938L2.60399 4.359L3.02499 5.622C3.09299 5.826 3.28499 5.964 3.49999 5.964C3.71499 5.964 3.90599 5.826 3.97499 5.622L4.39599 4.359L5.65899 3.938C5.86299 3.87 6.00099 3.679 6.00099 3.464C6.00099 3.249 5.86199 3.058 5.65799 2.99Z" fill="currentColor" stroke="none"></path><path d="M9.5 2.75L11.412 7.587L16.25 9.5L11.412 11.413L9.5 16.25L7.587 11.413L2.75 9.5L7.587 7.587L9.5 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div><div class="w-0 min-w-full max-w-full h-full dark:bg-codeblock text-sm leading-6 transition-[height] duration-300 ease-in-out code-block-background **:ring-0 **:outline-0 **:focus:ring-0 **:focus:outline-0 rounded-2xl bg-white" data-component-part="code-block-root" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px;font-variant-ligatures:none;height:auto;background-color:#ffffff;--shiki-dark-bg:#0B0C0E"><div class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] py-3.5 px-4 overflow-y-hidden! base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_cqkllktbsnlhjiuasnpfiutb_-viewport" role="presentation" style="overflow:scroll" tabindex="-1"><div class="min-w-full! h-full children:my-0! children:shadow-none! children:bg-transparent!" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="font-mono whitespace-pre leading-6"><pre class="shiki shiki-themes github-light-default dark-plus" language="text" style="background-color:#ffffff;--shiki-dark-bg:#0B0C0E;color:#1f2328;--shiki-dark:#D4D4D4"><code language="text" numberoflines="13"><span class="line"><span>Purge plan for /home/user/work/my-repo:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  dir:    /home/user/.claude/projects/-home-user-work-my-repo</span></span>
+<span class="line"><span>           project transcripts (.jsonl) and memory/</span></span>
+<span class="line"><span>  config: projects["/home/user/work/my-repo"]</span></span>
+<span class="line"><span>           project entry in ~/.claude.json (trust, history, MCP servers)</span></span>
+<span class="line"><span>  filter: /home/user/.claude/history.jsonl</span></span>
+<span class="line"><span>           12 prompt(s) typed in this project</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>shell-snapshots/ are not project-scoped and will not be touched</span></span>
+<span class="line"><span>backups/ may still contain this project entry in old .claude.json snapshots (/home/user/.claude/backups); at most 5 are kept and they rotate out automatically</span></span>
+<span class="line"><span>Dry run: 3 item(s) would be deleted.</span></span>
+<span class="line"><span></span></span></code></pre></div></div></div></div><div aria-hidden="true" class="code-block-fade-overlay print:hidden" data-fade-overlay="true" style="--fade-color-light:#ffffff;--fade-color-dark:#0B0C0E"></div></div>
+<span data-as="p">Delete with a single confirmation prompt:</span>
+<div class="code-block mt-5 mb-8 not-prose rounded-2xl relative group min-w-0 print:print-color-exact text-gray-950 dark:text-gray-50 codeblock-light border border-gray-950/10 dark:border-white/10 dark:twoslash-dark bg-transparent dark:bg-transparent" language="shellscript" numberoflines="1"><div class="absolute top-3 right-4 flex items-center gap-1.5 print:hidden" data-floating-buttons="true"><div class="z-10 select-none" data-base-ui-tooltip-trigger="" id="base-ui-_R_far4llktbsnlhjiuasnpfiutb_"><button aria-label="Report incorrect code" class="size-6.5 flex items-center justify-center rounded-md group/code-snippet-feedback-button in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-100 dark:in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-800" id="code-snippet-feedback-button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-400 group-hover/code-snippet-feedback-button:text-gray-500 dark:text-white/40 dark:group-hover/code-snippet-feedback-button:text-white/60" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9 5.431V9.569" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9 11.417C8.449 11.417 8 11.866 8 12.417C8 12.968 8.449 13.417 9 13.417C9.551 13.417 10 12.968 10 12.417C10 11.866 9.551 11.417 9 11.417Z" fill="currentColor" stroke="none"></path><path d="M10.968 2.25H7.03301C6.50301 2.25 5.99401 2.461 5.61901 2.836L2.83701 5.618C2.46201 5.993 2.25101 6.502 2.25101 7.032V10.967C2.25101 11.497 2.46201 12.006 2.83701 12.381L5.61901 15.163C5.99401 15.538 6.50301 15.749 7.03301 15.749H10.968C11.498 15.749 12.007 15.538 12.382 15.163L15.164 12.381C15.539 12.006 15.75 11.497 15.75 10.967V7.032C15.75 6.502 15.539 5.993 15.164 5.618L12.382 2.836C12.007 2.461 11.498 2.25 10.968 2.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div><div class="code-block-copy-button z-10 select-none" data-base-ui-tooltip-trigger="" id="base-ui-_R_fir4llktbsnlhjiuasnpfiutb_"><button aria-label="Copy the contents from the code block" class="size-6.5 flex items-center justify-center rounded-md group/copy-button in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-100 dark:in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-800" data-testid="copy-code-button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-400 group-hover/copy-button:text-gray-500 dark:text-white/40 dark:group-hover/copy-button:text-white/60" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M14.25 5.25H7.25C6.14543 5.25 5.25 6.14543 5.25 7.25V14.25C5.25 15.3546 6.14543 16.25 7.25 16.25H14.25C15.3546 16.25 16.25 15.3546 16.25 14.25V7.25C16.25 6.14543 15.3546 5.25 14.25 5.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.80103 11.998L1.77203 5.07397C1.61003 3.98097 2.36403 2.96397 3.45603 2.80197L10.38 1.77297C11.313 1.63397 12.19 2.16297 12.528 3.00097" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button><span class="sr-only" role="status"></span></div><div class="z-10 select-none" data-base-ui-tooltip-trigger="" id="base-ui-_R_fqr4llktbsnlhjiuasnpfiutb_"><button aria-label="Ask Assistant" class="size-6.5 flex items-center justify-center rounded-md group/ask-assistant-button in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-100 dark:in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-800" data-chat-payload-element-id="lang-shellscript-code-claude_project_purge" id="ask-assistant-code-block-button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-400 group-hover/ask-assistant-button:text-gray-500 dark:text-white/40 dark:group-hover/ask-assistant-button:text-white/60" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.65799 2.99L4.39499 2.569L3.97399 1.306C3.83699 0.898 3.16199 0.898 3.02499 1.306L2.60399 2.569L1.34099 2.99C1.13699 3.058 0.998993 3.249 0.998993 3.464C0.998993 3.679 1.13699 3.87 1.34099 3.938L2.60399 4.359L3.02499 5.622C3.09299 5.826 3.28499 5.964 3.49999 5.964C3.71499 5.964 3.90599 5.826 3.97499 5.622L4.39599 4.359L5.65899 3.938C5.86299 3.87 6.00099 3.679 6.00099 3.464C6.00099 3.249 5.86199 3.058 5.65799 2.99Z" fill="currentColor" stroke="none"></path><path d="M9.5 2.75L11.412 7.587L16.25 9.5L11.412 11.413L9.5 16.25L7.587 11.413L2.75 9.5L7.587 7.587L9.5 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div><div class="w-0 min-w-full max-w-full h-full dark:bg-codeblock text-sm leading-6 transition-[height] duration-300 ease-in-out code-block-background **:ring-0 **:outline-0 **:focus:ring-0 **:focus:outline-0 rounded-2xl bg-white" data-component-part="code-block-root" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px;font-variant-ligatures:none;height:auto;background-color:#ffffff;--shiki-dark-bg:#0B0C0E"><div class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] py-3.5 px-4 overflow-y-hidden! base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_cr4llktbsnlhjiuasnpfiutb_-viewport" role="presentation" style="overflow:scroll" tabindex="-1"><div class="min-w-full! h-full children:my-0! children:shadow-none! children:bg-transparent!" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="font-mono whitespace-pre leading-6"><pre class="shiki shiki-themes github-light-default dark-plus" language="shellscript" style="background-color:#ffffff;--shiki-dark-bg:#0B0C0E;color:#1f2328;--shiki-dark:#D4D4D4"><code language="shellscript" numberoflines="1"><span class="line"><span style="color:#953800;--shiki-dark:#DCDCAA">claude</span><span style="color:#0A3069;--shiki-dark:#CE9178"> project</span><span style="color:#0A3069;--shiki-dark:#CE9178"> purge</span><span style="color:#0A3069;--shiki-dark:#CE9178"> ~/work/my-repo</span></span>
+</code></pre></div></div></div></div><div aria-hidden="true" class="code-block-fade-overlay print:hidden" data-fade-overlay="true" style="--fade-color-light:#ffffff;--fade-color-dark:#0B0C0E"></div></div>
+<span data-as="p">The command prints the same plan, then asks <code>Delete 3 item(s) for /home/user/work/my-repo? This cannot be undone. [y/N]</code> and deletes only if you answer <code>y</code>.</span>
+<span data-as="p">Omit the path to pick a project from an interactive list.</span>
+<span data-as="p">Skip the confirmation prompt for use in scripts:</span>
+<div class="code-block mt-5 mb-8 not-prose rounded-2xl relative group min-w-0 print:print-color-exact text-gray-950 dark:text-gray-50 codeblock-light border border-gray-950/10 dark:border-white/10 dark:twoslash-dark bg-transparent dark:bg-transparent" language="shellscript" numberoflines="1"><div class="absolute top-3 right-4 flex items-center gap-1.5 print:hidden" data-floating-buttons="true"><div class="z-10 select-none" data-base-ui-tooltip-trigger="" id="base-ui-_R_fas4llktbsnlhjiuasnpfiutb_"><button aria-label="Report incorrect code" class="size-6.5 flex items-center justify-center rounded-md group/code-snippet-feedback-button in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-100 dark:in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-800" id="code-snippet-feedback-button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-400 group-hover/code-snippet-feedback-button:text-gray-500 dark:text-white/40 dark:group-hover/code-snippet-feedback-button:text-white/60" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9 5.431V9.569" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9 11.417C8.449 11.417 8 11.866 8 12.417C8 12.968 8.449 13.417 9 13.417C9.551 13.417 10 12.968 10 12.417C10 11.866 9.551 11.417 9 11.417Z" fill="currentColor" stroke="none"></path><path d="M10.968 2.25H7.03301C6.50301 2.25 5.99401 2.461 5.61901 2.836L2.83701 5.618C2.46201 5.993 2.25101 6.502 2.25101 7.032V10.967C2.25101 11.497 2.46201 12.006 2.83701 12.381L5.61901 15.163C5.99401 15.538 6.50301 15.749 7.03301 15.749H10.968C11.498 15.749 12.007 15.538 12.382 15.163L15.164 12.381C15.539 12.006 15.75 11.497 15.75 10.967V7.032C15.75 6.502 15.539 5.993 15.164 5.618L12.382 2.836C12.007 2.461 11.498 2.25 10.968 2.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div><div class="code-block-copy-button z-10 select-none" data-base-ui-tooltip-trigger="" id="base-ui-_R_fis4llktbsnlhjiuasnpfiutb_"><button aria-label="Copy the contents from the code block" class="size-6.5 flex items-center justify-center rounded-md group/copy-button in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-100 dark:in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-800" data-testid="copy-code-button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-400 group-hover/copy-button:text-gray-500 dark:text-white/40 dark:group-hover/copy-button:text-white/60" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M14.25 5.25H7.25C6.14543 5.25 5.25 6.14543 5.25 7.25V14.25C5.25 15.3546 6.14543 16.25 7.25 16.25H14.25C15.3546 16.25 16.25 15.3546 16.25 14.25V7.25C16.25 6.14543 15.3546 5.25 14.25 5.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.80103 11.998L1.77203 5.07397C1.61003 3.98097 2.36403 2.96397 3.45603 2.80197L10.38 1.77297C11.313 1.63397 12.19 2.16297 12.528 3.00097" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button><span class="sr-only" role="status"></span></div><div class="z-10 select-none" data-base-ui-tooltip-trigger="" id="base-ui-_R_fqs4llktbsnlhjiuasnpfiutb_"><button aria-label="Ask Assistant" class="size-6.5 flex items-center justify-center rounded-md group/ask-assistant-button in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-100 dark:in-data-floating-buttons:group-[:not(:has([data-fade-overlay]))]:bg-gray-800" data-chat-payload-element-id="lang-shellscript-code-claude_project_purge" id="ask-assistant-code-block-button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-400 group-hover/ask-assistant-button:text-gray-500 dark:text-white/40 dark:group-hover/ask-assistant-button:text-white/60" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.65799 2.99L4.39499 2.569L3.97399 1.306C3.83699 0.898 3.16199 0.898 3.02499 1.306L2.60399 2.569L1.34099 2.99C1.13699 3.058 0.998993 3.249 0.998993 3.464C0.998993 3.679 1.13699 3.87 1.34099 3.938L2.60399 4.359L3.02499 5.622C3.09299 5.826 3.28499 5.964 3.49999 5.964C3.71499 5.964 3.90599 5.826 3.97499 5.622L4.39599 4.359L5.65899 3.938C5.86299 3.87 6.00099 3.679 6.00099 3.464C6.00099 3.249 5.86199 3.058 5.65799 2.99Z" fill="currentColor" stroke="none"></path><path d="M9.5 2.75L11.412 7.587L16.25 9.5L11.412 11.413L9.5 16.25L7.587 11.413L2.75 9.5L7.587 7.587L9.5 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div><div class="w-0 min-w-full max-w-full h-full dark:bg-codeblock text-sm leading-6 transition-[height] duration-300 ease-in-out code-block-background **:ring-0 **:outline-0 **:focus:ring-0 **:focus:outline-0 rounded-2xl bg-white" data-component-part="code-block-root" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px;font-variant-ligatures:none;height:auto;background-color:#ffffff;--shiki-dark-bg:#0B0C0E"><div class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] py-3.5 px-4 overflow-y-hidden! base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_cs4llktbsnlhjiuasnpfiutb_-viewport" role="presentation" style="overflow:scroll" tabindex="-1"><div class="min-w-full! h-full children:my-0! children:shadow-none! children:bg-transparent!" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="font-mono whitespace-pre leading-6"><pre class="shiki shiki-themes github-light-default dark-plus" language="shellscript" style="background-color:#ffffff;--shiki-dark-bg:#0B0C0E;color:#1f2328;--shiki-dark:#D4D4D4"><code language="shellscript" numberoflines="1"><span class="line"><span style="color:#953800;--shiki-dark:#DCDCAA">claude</span><span style="color:#0A3069;--shiki-dark:#CE9178"> project</span><span style="color:#0A3069;--shiki-dark:#CE9178"> purge</span><span style="color:#0A3069;--shiki-dark:#CE9178"> ~/work/my-repo</span><span style="color:#0550AE;--shiki-dark:#569CD6"> --yes</span></span>
+</code></pre></div></div></div></div><div aria-hidden="true" class="code-block-fade-overlay print:hidden" data-fade-overlay="true" style="--fade-color-light:#ffffff;--fade-color-dark:#0B0C0E"></div></div>
+<span data-as="p">Pass <code>--all</code> instead of a path to purge state for every project at once, which deletes <code>history.jsonl</code> outright rather than filtering it. Pass <code>-i</code> to step through the deletion plan one item at a time.</span>
+<span data-as="p">The command leaves <code>shell-snapshots/</code> and <code>backups/</code> alone because those are not project-scoped, and warns about them in the plan output.</span>
+<span data-as="p">You can also delete any of the application-data paths above by hand. New sessions are unaffected. The table below shows what you lose for past sessions.</span>
+<!-- --><div class="min-w-0 [--page-padding:20px] flex w-[calc(100%+(var(--page-padding)*2))] my-[1em] py-[1em] -mx-(--page-padding) max-w-none [contain:inline-size]" data-component-part="scroll-area" data-table-wrapper="true" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px"><div aria-label="Scrollable table" class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] overflow-y-hidden! base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_d4llktbsnlhjiuasnpfiutb_-viewport" role="region" style="overflow:scroll" tabindex="-1"><div class="flex" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="px-(--page-padding) grow max-w-none table"><table class="m-0 min-w-full w-full max-w-none table [&amp;_td]:min-w-[150px] [&amp;_th]:text-left [&amp;_td[data-numeric]]:tabular-nums"><thead><tr><th>Delete</th><th>You lose</th></tr></thead><tbody><tr><td><code>~/.claude/projects/</code></td><td>Resume, continue, and rewind for past sessions, and auto memory for every project</td></tr><tr><td><code>~/.claude/history.jsonl</code></td><td>Up-arrow prompt recall</td></tr><tr><td><code>~/.claude/paste-cache/</code></td><td>Pasted text in recalled prompts; see <a class="link" href="/docs/en/terminal-config#paste-large-content">paste large content</a></td></tr><tr><td><code>~/.claude/uploads/</code></td><td>Attachments that past <a class="link" href="/docs/en/remote-control">Remote Control</a> sessions refer to by path</td></tr><tr><td><code>~/.claude/file-history/</code></td><td>Checkpoint restore for past sessions</td></tr><tr><td><code>~/.claude/stats-cache.json</code></td><td>Historical totals shown by <code>/usage</code></td></tr><tr><td><code>~/.claude/usage-data/</code></td><td>Past <a class="link" href="/docs/en/costs#analyze-your-usage-patterns"><code>/insights</code></a> reports and the cached analysis data used to build them</td></tr><tr><td><code>~/.claude/feedback-bundles/</code></td><td>Feedback and bug-report archives you haven’t yet sent to your Anthropic account team</td></tr><tr><td><code>~/.claude/feedback/drafts/</code></td><td><a class="link" href="/docs/en/tools-reference#sendfeedback-tool-behavior">Claude-drafted feedback</a> you haven’t sent</td></tr><tr><td><code>~/.claude/remote-settings.json</code></td><td>Nothing. Re-fetched on next launch.</td></tr><tr><td><code>~/.claude/cache/changelog.md</code></td><td>Nothing. Refreshed in the background.</td></tr><tr><td><code>~/.claude/policy-limits.json</code></td><td>Nothing. Refreshed automatically.</td></tr><tr><td><code>~/.claude/debug/</code>, <code>~/.claude/plans/</code>, <code>~/.claude/image-cache/</code>, <code>~/.claude/session-env/</code>, <code>~/.claude/tasks/</code>, <code>~/.claude/shell-snapshots/</code>, <code>~/.claude/backups/</code></td><td>Nothing user-facing</td></tr><tr><td><code>~/.claude/todos/</code>, <code>~/.claude/statsig/</code>, <code>~/.claude/logs/</code></td><td>Nothing. Legacy directories not written by current versions.</td></tr></tbody></table></div></div></div></div>
+<span data-as="p">Don’t delete <code>~/.claude.json</code>, <code>~/.claude/settings.json</code>, or <code>~/.claude/plugins/</code>: those hold your auth, preferences, and installed plugins.</span>
+<h2 class="flex whitespace-pre-wrap group font-semibold" id="related-resources"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#related-resources">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">Related resources</span></h2>
+<ul>
+<li><a class="link" href="/docs/en/memory">Manage Claude’s memory</a>: write and organize CLAUDE.md, rules, and auto memory</li>
+<li><a class="link" href="/docs/en/settings">Configure settings</a>: set permissions, hooks, environment variables, and model defaults</li>
+<li><a class="link" href="/docs/en/skills">Create skills</a>: build reusable prompts and workflows</li>
+<li><a class="link" href="/docs/en/sub-agents">Configure subagents</a>: define specialized agents with their own context</li>
+</ul></div><div class="feedback-toolbar pb-16 w-full flex flex-col gap-y-8"><div class="flex flex-row flex-wrap gap-4 items-center justify-between"><p class="inline-block text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">Was this page helpful?</p><div class="flex flex-wrap grow gap-3 items-center justify-end"><div class="flex gap-3 items-center"><button class="px-3.5 py-2 flex flex-row gap-3 items-center border-standard rounded-xl text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 bg-white/50 dark:bg-codeblock/50 hover:border-gray-500 hover:dark:border-gray-500 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-primary-light" id="feedback-thumbs-up"><svg aria-hidden="true" class="size-4 shrink-0 text-current" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.25 7.494C5.25 7.014 5.423 6.55 5.736 6.187L10 1.25C10.854 1.677 11.25 2.678 10.92 3.574L9.75 6.75H14.152C15.465 6.75 16.421 7.993 16.085 9.262L14.894 13.762C14.662 14.639 13.868 15.25 12.961 15.25H7.25C6.145 15.25 5.25 14.355 5.25 13.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M4.25 6.75H2.75C2.19772 6.75 1.75 7.19772 1.75 7.75V14.25C1.75 14.8023 2.19772 15.25 2.75 15.25H4.25C4.80228 15.25 5.25 14.8023 5.25 14.25V7.75C5.25 7.19772 4.80228 6.75 4.25 6.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><small class="text-sm font-normal leading-4">Yes</small></button><button class="px-3.5 py-2 flex flex-row gap-3 items-center border-standard rounded-xl text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 bg-white/50 dark:bg-codeblock/50 hover:border-gray-500 hover:dark:border-gray-500 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-primary-light" id="feedback-thumbs-down"><svg aria-hidden="true" class="size-4 shrink-0 text-current" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.25 10.506C5.25 10.986 5.423 11.45 5.736 11.813L10 16.75C10.854 16.323 11.25 15.322 10.92 14.426L9.75 11.25H14.152C15.465 11.25 16.421 10.007 16.085 8.738L14.894 4.238C14.662 3.361 13.868 2.75 12.961 2.75H7.25C6.145 2.75 5.25 3.645 5.25 4.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M4.25 2.75H2.75C2.19772 2.75 1.75 3.19772 1.75 3.75V10.25C1.75 10.8023 2.19772 11.25 2.75 11.25H4.25C4.80228 11.25 5.25 10.8023 5.25 10.25V3.75C5.25 3.19772 4.80228 2.75 4.25 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><small class="text-sm font-normal leading-4">No</small></button></div><div class="flex gap-3"></div></div></div></div><nav aria-label="Pagination" class="px-0.5 flex items-center gap-6 text-sm font-semibold text-gray-700 dark:text-gray-200" id="pagination"><a aria-label="Previous: Extend Claude Code" class="group flex items-center min-w-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-primary-light gap-3 rounded-sm pagination-prev" data-component-part="pagination-prev" href="/docs/en/features-overview" rel="prev"><svg aria-hidden="true" class="h-1.5 shrink-0 stroke-gray-400 overflow-visible group-hover:stroke-gray-600 dark:group-hover:stroke-gray-300" data-component-part="pagination-chevron" viewbox="0 0 3 6"><path d="M3 0L0 3L3 6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><div class="truncate group-hover:text-gray-900 dark:group-hover:text-white" data-component-part="pagination-title">Extend Claude Code</div></a><a aria-label="Next: Explore the context window" class="group flex items-center min-w-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-primary-light gap-3 rounded-sm ml-auto pagination-next" data-component-part="pagination-next" href="/docs/en/context-window" rel="next"><div class="truncate group-hover:text-gray-900 dark:group-hover:text-white" data-component-part="pagination-title">Explore the context window</div><svg aria-hidden="true" class="h-1.5 shrink-0 stroke-gray-400 overflow-visible group-hover:stroke-gray-600 dark:group-hover:stroke-gray-300 rotate-180" data-component-part="pagination-chevron" viewbox="0 0 3 6"><path d="M3 0L0 3L3 6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a></nav><div class="left-0 right-0 sticky bottom-0 w-full overflow-hidden z-20 pointer-events-none print:hidden"><div class='chat-assistant-floating-input w-full group/assistant-bar relative before:content-[""] before:absolute before:left-0 before:right-0 before:top-1/2 before:h-[200px] before:bg-background-light dark:before:bg-background-dark translate-y-[100px] opacity-0'><div class="relative pb-4 sm:pb-6 max-w-2xl mx-auto"><div class="flex flex-col w-full rounded-2xl pointer-events-auto bg-background-light dark:bg-background-dark border border-gray-200 dark:border-white/30 focus-within:border-primary dark:focus-within:border-primary-light transition-colors max-w-[386px] mx-auto"><div class="relative flex items-end"><textarea aria-label="Ask a question..." autocomplete="off" class="chat-assistant-input w-full bg-transparent border-0 peer/input text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 outline-hidden! focus:outline-hidden! focus:ring-0 py-2.5 pl-3.5 pr-10 font-bodyWeight text-sm" id="chat-assistant-textarea" placeholder="Ask a question..." style="resize:none"></textarea><span class="absolute right-11 bottom-3 text-xs font-medium text-gray-400 dark:text-gray-500 select-none pointer-events-none peer-focus/input:hidden hidden sm:inline">⌘<!-- -->I</span><button aria-label="Send message" class="chat-assistant-send-button flex justify-center items-center rounded-full p-1 size-6 bg-primary/30 dark:bg-primary-dark/30 absolute right-2.5 bottom-2" disabled=""><svg aria-hidden="true" class="size-2.5 shrink-0 text-white dark:text-white" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9.0 1.5754L8.9999 16.4171" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.2563 8.319L8.9999 1.5754L15.7435 8.3191" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div></div></div></div></div></div></main></div><footer class="advanced-footer flex flex-col items-center mx-auto border-t border-gray-100 dark:border-gray-800/50 peer-[.is-custom]:hidden! peer-[.is-custom]:sm:hidden! peer-[.is-custom]:md:hidden! peer-[.is-custom]:lg:hidden! peer-[.is-custom]:xl:hidden!" id="footer"><div class="flex w-full flex-col gap-12 justify-between px-8 py-16 md:py-20 lg:py-28 max-w-246 z-20"><div class="flex flex-col md:flex-row gap-8 justify-between min-h-19"><div class="flex md:flex-col justify-between items-center md:items-start min-w-16 md:min-w-20 lg:min-w-48 md:gap-y-24"><a class="select-none" href="/docs/en/overview" style="-webkit-touch-callout:none"><span class="sr-only">Claude Code Docs<!-- --> home page</span><img alt="light logo" class="nav-logo w-auto relative object-contain shrink-0 block dark:hidden max-w-48 h-[26px]" src="https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/light.svg?fit=max&amp;auto=format&amp;n=c5r9_6tjPMzFdDDT&amp;q=85&amp;s=78fd01ff4f4340295a4f66e2ea54903c"/><img alt="dark logo" class="nav-logo w-auto relative object-contain shrink-0 hidden dark:block max-w-48 h-[26px]" src="https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/dark.svg?fit=max&amp;auto=format&amp;n=c5r9_6tjPMzFdDDT&amp;q=85&amp;s=1298a0c3b3a1da603b190d0de0e31712"/></a><div class="gap-4 min-w-[140px] max-w-[492px] flex-wrap h-fit flex justify-end md:justify-start"><a class="h-fit" href="https://x.com/AnthropicAI" rel="noopener noreferrer" target="_blank"><span class="sr-only">x</span><svg aria-hidden="true" class="forced-colors:forced-color-adjust-none forced-colors:bg-[color:CanvasText]! w-5 h-5 bg-gray-500 dark:bg-gray-600 hover:bg-gray-600 dark:hover:bg-gray-500" focusable="false" style='-webkit-mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/brands/x-twitter.svg");-webkit-mask-repeat:no-repeat;-webkit-mask-position:center;mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/brands/x-twitter.svg");mask-repeat:no-repeat;mask-position:center'></svg></a><a class="h-fit" href="https://www.linkedin.com/company/anthropicresearch" rel="noopener noreferrer" target="_blank"><span class="sr-only">linkedin</span><svg aria-hidden="true" class="forced-colors:forced-color-adjust-none forced-colors:bg-[color:CanvasText]! w-5 h-5 bg-gray-500 dark:bg-gray-600 hover:bg-gray-600 dark:hover:bg-gray-500" focusable="false" style='-webkit-mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/brands/linkedin.svg");-webkit-mask-repeat:no-repeat;-webkit-mask-position:center;mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/brands/linkedin.svg");mask-repeat:no-repeat;mask-position:center'></svg></a></div></div><div class="flex flex-col sm:grid max-md:grid-cols-2! gap-8 flex-1" style="grid-template-columns:repeat(4, minmax(0, 1fr))"><div class="flex flex-col gap-4 flex-1 whitespace-nowrap w-full md:items-center"><div class="flex gap-4 flex-col"><p class="text-sm font-semibold text-gray-950 dark:text-white mb-1">Company</p><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/company" rel="noreferrer" target="_blank">Anthropic</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/careers" rel="noreferrer" target="_blank">Careers</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/economic-futures" rel="noreferrer" target="_blank">Economic Futures</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/research" rel="noreferrer" target="_blank">Research</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/news" rel="noreferrer" target="_blank">News</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://trust.anthropic.com/" rel="noreferrer" target="_blank">Trust center</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/transparency" rel="noreferrer" target="_blank">Transparency</a></div></div><div class="flex flex-col gap-4 flex-1 whitespace-nowrap w-full md:items-center"><div class="flex gap-4 flex-col"><p class="text-sm font-semibold text-gray-950 dark:text-white mb-1">Help and security</p><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/supported-countries" rel="noreferrer" target="_blank">Availability</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://status.anthropic.com/" rel="noreferrer" target="_blank">Status</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://support.claude.com/" rel="noreferrer" target="_blank">Support center</a></div></div><div class="flex flex-col gap-4 flex-1 whitespace-nowrap w-full md:items-center"><div class="flex gap-4 flex-col"><p class="text-sm font-semibold text-gray-950 dark:text-white mb-1">Learn</p><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/learn" rel="noreferrer" target="_blank">Courses</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://claude.com/partners/mcp" rel="noreferrer" target="_blank">MCP connectors</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.claude.com/customers" rel="noreferrer" target="_blank">Customer stories</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/engineering" rel="noreferrer" target="_blank">Engineering blog</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/events" rel="noreferrer" target="_blank">Events</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://claude.com/partners/powered-by-claude" rel="noreferrer" target="_blank">Powered by Claude</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://claude.com/partners/services" rel="noreferrer" target="_blank">Service partners</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://claude.com/programs/startups" rel="noreferrer" target="_blank">Startups program</a></div></div><div class="flex flex-col gap-4 flex-1 whitespace-nowrap w-full md:items-center"><div class="flex gap-4 flex-col"><p class="text-sm font-semibold text-gray-950 dark:text-white mb-1">Terms and policies</p><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/legal/privacy" rel="noreferrer" target="_blank">Privacy choices</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/legal/privacy" rel="noreferrer" target="_blank">Privacy policy</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/responsible-disclosure-policy" rel="noreferrer" target="_blank">Disclosure policy</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/legal/aup" rel="noreferrer" target="_blank">Usage policy</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/legal/commercial-terms" rel="noreferrer" target="_blank">Commercial terms</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/legal/consumer-terms" rel="noreferrer" target="_blank">Consumer terms</a></div></div></div></div></div></footer><!--$--><!--/$--></div><div class="sticky shrink-0 z-22 bg-background-light dark:bg-background-dark mt-(--banner-height,0px) top-(--banner-height,0px) h-[calc(100vh-var(--banner-height,0px))] max-lg:hidden print:hidden" data-assistant-sheet-container="" style="width:var(--assistant-sheet-width, 0px);overflow:hidden"><div class='absolute left-0 top-0 bottom-0 w-px z-10 cursor-col-resize after:content-[""] after:absolute after:inset-y-0 after:-inset-x-2 after:select-none bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'></div><div aria-hidden="true" class="flex flex-col overflow-hidden shrink-0 relative h-full bg-background-light dark:bg-background-dark chat-assistant-sheet" id="chat-assistant-sheet"><div class="w-full flex flex-col flex-1 min-h-0 lg:pt-3"><div class="chat-assistant-sheet-header flex items-center justify-between pb-3 px-4"><div class="flex items-center gap-2"><svg aria-hidden="true" class="size-5 text-primary dark:text-primary-light shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.65799 2.99L4.39499 2.569L3.97399 1.306C3.83699 0.898 3.16199 0.898 3.02499 1.306L2.60399 2.569L1.34099 2.99C1.13699 3.058 0.998993 3.249 0.998993 3.464C0.998993 3.679 1.13699 3.87 1.34099 3.938L2.60399 4.359L3.02499 5.622C3.09299 5.826 3.28499 5.964 3.49999 5.964C3.71499 5.964 3.90599 5.826 3.97499 5.622L4.39599 4.359L5.65899 3.938C5.86299 3.87 6.00099 3.679 6.00099 3.464C6.00099 3.249 5.86199 3.058 5.65799 2.99Z" fill="currentColor" stroke="none"></path><path d="M9.5 2.75L11.412 7.587L16.25 9.5L11.412 11.413L9.5 16.25L7.587 11.413L2.75 9.5L7.587 7.587L9.5 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><span class="font-medium text-gray-900 dark:text-gray-100">Assistant</span></div><div class="flex items-center gap-1"><button aria-label="Maximize assistant panel" class="group hover:bg-gray-100 dark:hover:bg-white/10 p-1.5 rounded-lg"><svg aria-hidden="true" class="size-4 sm:size-3.5 text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300 shrink-0" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M10.75 2.75H15.25V7.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M15.25 2.75L10.75 7.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.75 10.75V15.25H7.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.75 15.25L7.25 10.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button><button aria-label="Close assistant panel" class="group hover:bg-gray-100 dark:hover:bg-white/10 p-1.5 rounded-lg"><svg aria-hidden="true" class="size-[20px] sm:size-4 text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300 shrink-0" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M14 4L4 14" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M4 4L14 14" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div><div class="chat-assistant-sheet-content flex flex-col-reverse flex-1 overflow-y-auto relative px-5 min-h-0" id="chat-content"><div class="grow"></div><div class="h-full flex flex-col justify-between"><div class="mt-4 flex flex-col items-center text-sm"><div class="mx-8 text-center text-gray-400 dark:text-gray-600 text-xs chat-assistant-disclaimer-text">Responses are generated using AI and may contain mistakes.</div></div></div></div><div class="px-4 pb-4 shrink-0"><div class=""><div class="flex flex-col w-full rounded-2xl pointer-events-auto bg-background-light dark:bg-background-dark border border-gray-200 dark:border-white/30 focus-within:border-primary dark:focus-within:border-primary-light transition-colors"><div class="relative flex items-end"><textarea aria-label="Ask a question..." autocomplete="off" class="chat-assistant-input w-full bg-transparent border-0 peer/input text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 outline-hidden! focus:outline-hidden! focus:ring-0 py-2.5 pl-3.5 pr-10 font-bodyWeight text-sm pb-0!" id="chat-assistant-textarea" placeholder="Ask a question..." rows="2" style="resize:none"></textarea></div><div class="flex items-center justify-between px-2 pb-2"><input accept="image/*,.pdf,.js,.jsx,.ts,.tsx,.mjs,.cjs,.md,.mdx,.json,.html,.css,.py,.csv,.txt,.yaml,.yml,.xml,.sql,.sh,.bash,.zsh,.graphql,.gql,.toml,.env,.go,.rs,.rb,.java,.kt,.swift,.c,.cpp,.cc,.h,.hpp,.cs,.php,.dart,.lua,.r,.scala,.ini,.cfg,.conf,.log,.dockerfile,.makefile,.gitignore" class="hidden" multiple="" type="file"/><button aria-label="Add attachment" class="p-1 rounded-lg text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10" type="button"><svg aria-hidden="true" class="size-3.5 shrink-0" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7.75 5V11.75C7.75 12.578 8.422 13.25 9.25 13.25C10.078 13.25 10.75 12.578 10.75 11.75V4.75C10.75 3.093 9.407 1.75 7.75 1.75C6.093 1.75 4.75 3.093 4.75 4.75V11.75C4.75 14.235 6.765 16.25 9.25 16.25C11.735 16.25 13.75 14.235 13.75 11.75V5" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button><button aria-label="Send message" class="chat-assistant-send-button flex justify-center items-center rounded-full p-1 size-6 bg-primary/30 dark:bg-primary-dark/30" disabled=""><svg aria-hidden="true" class="size-2.5 shrink-0 text-white dark:text-white" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9.0 1.5754L8.9999 16.4171" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.2563 8.319L8.9999 1.5754L15.7435 8.3191" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div></div></div></div></div></div></div></div><script async="" id="_R_" src="/docs/_next/static/chunks/6d55b684068fd47e.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\na:I[168027,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n:HL[\"/docs/_next/static/chunks/462bacc63bed9960.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"style\"]\n:HL[\"/docs/_next/static/chunks/0685d76b264a77ed.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"style\"]\n:HL[\"/docs/_next/static/media/83afe278b6a6bb3c.p.3a6ba036.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/docs/_next/static/media/PaperMono_Variable.p.aa32f7a0.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/docs/_next/static/media/f67ad414ed34149c.p.84166d94.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"iXdsDs2bjKFuJvYilB5dh\",\"p\":\"/docs\",\"c\":[\"\",\"_sites\",\"claude-code\",\"en\",\"claude-directory\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"%5Fsites\",{\"children\":[[\"subdomain\",\"claude-code\",\"d\"],{\"children\":[\"(multitenant)\",{\"children\":[[\"slug\",\"en/claude-directory\",\"oc\"],{\"children\":[\"__PAGE__\",{}]}]}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/docs/_next/static/chunks/462bacc63bed9960.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"link\",\"1\",{\"rel\":\"stylesheet\",\"href\":\"/docs/_next/static/chunks/0685d76b264a77ed.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-0\",{\"src\":\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"suppressHydrationWarning\":true,\"lang\":\"en\",\"className\":\"inter_1d81deff-module__CYM0aG__variable papermono_89c757f2-module__6aS5zq__variable dark\",\"data-banner-state\":\"visible\",\"data-assistant-state\":\"closed\",\"data-page-mode\":\"none\",\"data-current-path\":\"/\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"dangerouslySetInnerHTML\":{\"__html\":\"!function(){var b=\\\"/docs\\\";\\nfunction a(p){if(p==null)return\\\"/\\\";p=\\\"\\\"+p;if(\\\"\\\"===p)return\\\"/\\\";return\\\"/\\\"===p.charAt(0)?p:\\\"/\\\"+p}\\nfunction u(p){if(p==null)return p;p=\\\"\\\"+p;if(!p||p.charAt(p.length-1)===\\\"/\\\")return p.slice(0,-1);return p}\\nfunction i(p){if(p==null)return p;p=\\\"\\\"+p;if(6\u003c=p.length\u0026\u0026p.substring(p.length-6)===\\\"/index\\\")return p.substring(0,p.length-6);if(\\\"index\\\"===p)return\\\"\\\";return p}\\nvar p=(location.pathname||\\\"\\\").split(\\\"?\\\")[0].split(\\\"#\\\")[0]||\\\"\\\";\\nif(b)if(p===b)p=\\\"\\\";else if(0===p.indexOf(b+\\\"/\\\"))p=p.substring(b.length);\\np=a(p);p=u(p);p=i(p);p=\\\"\\\"===p||\\\"index\\\"===p?\\\"/\\\":a(p);\\ndocument.documentElement.setAttribute(\\\"data-current-path\\\",p);\\n}();\"}}],[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"dangerouslySetInnerHTML\":{\"__html\":\"(() =\u003e {\\n  const isIOS =\\n    /iP(hone|ad|od)/.test(navigator.userAgent) ||\\n    (/Macintosh/.test(navigator.userAgent) \u0026\u0026 navigator.maxTouchPoints \u003e 1);\\n  if (!isIOS) return;\\n  const apply = () =\u003e {\\n    for (const meta of document.querySelectorAll('meta[name=\\\"viewport\\\"]')) {\\n      const content = meta.getAttribute('content') || '';\\n      if (!content.includes('maximum-scale')) {\\n        meta.setAttribute('content', content + ', maximum-scale=1');\\n      }\\n    }\\n  };\\n  apply();\\n  new MutationObserver(apply).observe(document.head, {\\n    childList: true,\\n    subtree: true,\\n    attributes: true,\\n    attributeFilter: ['content'],\\n  });\\n})();\"}}],[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"dangerouslySetInnerHTML\":{\"__html\":\"!function(){\\nfunction read(){try{\\nvar e=performance.getEntriesByType?performance.getEntriesByType(\\\"navigation\\\"):[];\\nvar st=(e[0]\u0026\u0026e[0].serverTiming)||[];\\nvar g={};\\nfor(var i=0;i\u003cst.length;i++){var n=st[i].name,d=st[i].description;if(!d)continue;try{d=decodeURIComponent(d)}catch(x){}\\nif(n===\\\"country\\\")g.country=d;else if(n===\\\"region\\\")g.region=d;else if(n===\\\"continent\\\")g.continent=d;}\\nvar w=window;w.mintlify=w.mintlify||{};w.mintlify.geo=g;\\n}catch(x){}}\\nread();document.addEventListener(\\\"DOMContentLoaded\\\",read);\\n}();\"}}],[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"dangerouslySetInnerHTML\":{\"__html\":\"!function(){try{\\nvar w=window;w.mintlify=w.mintlify||{};\\nvar q=w.mintlify.__apiPlaygroundInputsQueue;\\nif(!Array.isArray(q)){q=[];w.mintlify.__apiPlaygroundInputsQueue=q;}\\nw.mintlify.api=w.mintlify.api||{};\\nw.mintlify.api.playground=w.mintlify.api.playground||{};\\nif(typeof w.mintlify.api.playground.setServerVariables!==\\\"function\\\"){\\nw.mintlify.api.playground.setServerVariables=function(v){q.push({type:\\\"set\\\",variables:v});};\\n}\\nif(typeof w.mintlify.api.playground.clearServerVariables!==\\\"function\\\"){\\nw.mintlify.api.playground.clearServerVariables=function(){q.push({type:\\\"clear\\\"});};\\n}\\n}catch(e){}}();\"}}],\"$L2\",false]}],\"$L3\"]}]]}],{\"children\":[\"%5Fsites\",\"$L4\",{\"children\":[[\"subdomain\",\"claude-code\",\"d\"],\"$L5\",{\"children\":[\"(multitenant)\",\"$L6\",{\"children\":[[\"slug\",\"en/claude-directory\",\"oc\"],\"$L7\",{\"children\":[\"__PAGE__\",\"$L8\",{},null,false]},null,false]},null,false]},null,false]},null,false]},null,false],\"$L9\",false]],\"m\":\"$undefined\",\"G\":[\"$a\",[\"$Lb\",\"$Lc\"]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"d:I[667786,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"MintlifyApiPlaygroundInputsInit\"]\ne:I[339756,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\nf:I[556357,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0d1a5e3ce583526e.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n10:I[837457,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n"])</script><script>self.__next_f.push([1,"11:I[894587,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ThemeProvider\"]\n"])</script><script>self.__next_f.push([1,"12:I[152823,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ColorVariables\"]\n"])</script><script>self.__next_f.push([1,"13:I[531961,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"FontScript\"]\n"])</script><script>self.__next_f.push([1,"14:I[649328,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"RoundedVariables\"]\n"])</script><script>self.__next_f.push([1,"15:I[702910,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/969c4092baa44954.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"RecommendedPagesList\"]\n16:I[570420,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"DataCurrentPathUpdater\"]\n17:I[341175,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/6083aa7cbfc6209c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n1a:I[897367,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"OutletBoundary\"]\n1c:I[711533,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"AsyncMetadataOutlet\"]\n1e:I[897367,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSK"])</script><script>self.__next_f.push([1,"vGfNV\"],\"ViewportBoundary\"]\n20:I[897367,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"MetadataBoundary\"]\n21:\"$Sreact.suspense\"\n"])</script><script>self.__next_f.push([1,"2:[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"dangerouslySetInnerHTML\":{\"__html\":\"(function(a,b){try{let c=document.getElementById(\\\"banner\\\")?.innerText;if(c){for(let d=0;d\u003clocalStorage.length;d++){let e=localStorage.key(d);if(e?.endsWith(a)\u0026\u0026localStorage.getItem(e)===c)return void document.documentElement.setAttribute(b,\\\"hidden\\\")}document.documentElement.setAttribute(b,\\\"visible\\\");return}for(let c=0;c\u003clocalStorage.length;c++){let d=localStorage.key(c);if(d?.endsWith(a)\u0026\u0026localStorage.getItem(d))return void document.documentElement.setAttribute(b,\\\"hidden\\\")}document.documentElement.setAttribute(b,\\\"visible\\\")}catch(a){document.documentElement.setAttribute(b,\\\"hidden\\\")}})(\\n  \\\"bannerDismissed\\\",\\n  \\\"data-banner-state\\\",\\n)\"}}]\n"])</script><script>self.__next_f.push([1,"3:[\"$\",\"body\",null,{\"className\":\"antialiased\",\"children\":[[\"$\",\"$Ld\",null,{}],false,[\"$\",\"$Le\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$f\",\"errorStyles\":[],\"errorScripts\":[[\"$\",\"script\",\"script-0\",{\"src\":\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-1\",{\"src\":\"/docs/_next/static/chunks/0d1a5e3ce583526e.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-2\",{\"src\":\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-3\",{\"src\":\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-4\",{\"src\":\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}]],\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"$L11\",null,{\"children\":[[\"$\",\"$L12\",null,{}],[\"$\",\"$L13\",null,{}],[\"$\",\"$L14\",null,{}],[\"$\",\"style\",null,{\"children\":\":root {\\n  --primary: 17 120 102;\\n  --primary-light: 74 222 128;\\n  --primary-dark: 22 101 52;\\n  --background-light: 255 255 255;\\n  --background-dark: 15 17 23;\\n}\"}],[\"$\",\"main\",null,{\"className\":\"h-screen bg-background-light dark:bg-background-dark text-left\",\"children\":[\"$\",\"article\",null,{\"className\":\"bg-custom bg-fixed bg-center bg-cover relative flex flex-col items-center justify-center h-full\",\"children\":[\"$\",\"div\",null,{\"className\":\"w-full max-w-xl px-10\",\"children\":[[\"$\",\"span\",null,{\"className\":\"inline-flex mb-6 rounded-full px-3 py-1 text-sm font-semibold mr-4 text-white p-1 bg-primary\",\"children\":[\"Error \",404]}],[\"$\",\"h1\",null,{\"className\":\"font-semibold mb-3 text-3xl\",\"children\":\"Page not found!\"}],[\"$\",\"p\",null,{\"className\":\"text-lg text-gray-600 dark:text-gray-400 mb-6\",\"children\":\"We couldn't find the page.\"}],[\"$\",\"$L15\",null,{}]]}]}]}]]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}],false,[\"$\",\"$L16\",null,{}]]}]\n"])</script><script>self.__next_f.push([1,"4:[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$Le\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}]\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$Le\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$17\",\"errorStyles\":[],\"errorScripts\":[[\"$\",\"script\",\"script-0\",{\"src\":\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-1\",{\"src\":\"/docs/_next/static/chunks/6083aa7cbfc6209c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-2\",{\"src\":\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-3\",{\"src\":\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-4\",{\"src\":\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}]],\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"$L11\",null,{\"children\":[[\"$\",\"$L12\",null,{}],[\"$\",\"$L13\",null,{}],[\"$\",\"$L14\",null,{}],[\"$\",\"style\",null,{\"children\":\":root {\\n  --primary: 17 120 102;\\n  --primary-light: 74 222 128;\\n  --primary-dark: 22 101 52;\\n  --background-light: 255 255 255;\\n  --background-dark: 15 17 23;\\n}\"}],[\"$\",\"main\",null,{\"className\":\"h-screen bg-background-light dark:bg-background-dark text-left\",\"children\":[\"$\",\"article\",null,{\"className\":\"bg-custom bg-fixed bg-center bg-cover relative flex flex-col items-center justify-center h-full\",\"children\":[\"$\",\"div\",null,{\"className\":\"w-full max-w-xl px-10\",\"children\":[[\"$\",\"span\",null,{\"className\":\"inline-flex mb-6 rounded-full px-3 py-1 text-sm font-semibold mr-4 text-white p-1 bg-primary\",\"children\":[\"Error \",404]}],[\"$\",\"h1\",null,{\"className\":\"font-semibold mb-3 text-3xl\",\"children\":\"Page not found!\"}],[\"$\",\"p\",null,{\"className\":\"text-lg text-gray-600 dark:text-gray-400 mb-6\",\"children\":\"We couldn't find the page.\"}],[\"$\",\"$L15\",null,{}]]}]}]}]]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}]\n"])</script><script>self.__next_f.push([1,"6:[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"script\",\"script-0\",{\"src\":\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-2\",{\"src\":\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-3\",{\"src\":\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-4\",{\"src\":\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-5\",{\"src\":\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-6\",{\"src\":\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-7\",{\"src\":\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-8\",{\"src\":\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-9\",{\"src\":\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-10\",{\"src\":\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-11\",{\"src\":\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-12\",{\"src\":\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-13\",{\"src\":\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}]],\"$L18\"]}]\n"])</script><script>self.__next_f.push([1,"7:[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$Le\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}]\n"])</script><script>self.__next_f.push([1,"8:[\"$\",\"$1\",\"c\",{\"children\":[\"$L19\",[[\"$\",\"script\",\"script-0\",{\"src\":\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-2\",{\"src\":\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-3\",{\"src\":\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-4\",{\"src\":\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-5\",{\"src\":\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-6\",{\"src\":\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-7\",{\"src\":\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"$L1a\",null,{\"children\":[\"$L1b\",[\"$\",\"$L1c\",null,{\"promise\":\"$@1d\"}]]}]]}]\n"])</script><script>self.__next_f.push([1,"9:[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$L1e\",null,{\"children\":\"$L1f\"}],null],[\"$\",\"$L20\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$21\",null,{\"fallback\":null,\"children\":\"$L22\"}]}]}]]}]\nb:[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/docs/_next/static/chunks/462bacc63bed9960.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]\nc:[\"$\",\"link\",\"1\",{\"rel\":\"stylesheet\",\"href\":\"/docs/_next/static/chunks/0685d76b264a77ed.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]\n"])</script><script>self.__next_f.push([1,"1f:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1, viewport-fit=cover\"}]]\n1b:null\n"])</script><script>self.__next_f.push([1,"1d:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Explore the .claude directory - Claude Code Docs\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"application-name\",\"content\":\"Claude Code Docs\"}],[\"$\",\"meta\",\"3\",{\"name\":\"generator\",\"content\":\"Mintlify\"}],[\"$\",\"meta\",\"4\",{\"name\":\"msapplication-config\",\"content\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/browserconfig.xml\"}],[\"$\",\"meta\",\"5\",{\"name\":\"apple-mobile-web-app-title\",\"content\":\"Claude Code Docs\"}],[\"$\",\"meta\",\"6\",{\"name\":\"msapplication-TileColor\",\"content\":\"#0E0E0E\"}],[\"$\",\"link\",\"7\",{\"rel\":\"canonical\",\"href\":\"https://code.claude.com/docs/en/claude-directory\"}],[\"$\",\"link\",\"8\",{\"rel\":\"alternate\",\"type\":\"application/xml\",\"href\":\"/docs/sitemap.xml\"}],[\"$\",\"link\",\"9\",{\"rel\":\"alternate\",\"type\":\"text/markdown\",\"href\":\"/docs/en/claude-directory.md\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:title\",\"content\":\"Explore the .claude directory - Claude Code Docs\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:description\",\"content\":\"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:url\",\"content\":\"https://code.claude.com/docs/en/claude-directory\"}],[\"$\",\"meta\",\"13\",{\"property\":\"og:site_name\",\"content\":\"Claude Code Docs\"}],[\"$\",\"meta\",\"14\",{\"property\":\"og:image\",\"content\":\"https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DCore%2Bconcepts%26appearance%3Dsystem%26title%3DExplore%2Bthe%2B.claude%2Bdirectory%26description%3DWhere%2BClaude%2BCode%2Breads%2BCLAUDE.md%252C%2Bsettings.json%252C%2Bhooks%252C%2Bskills%252C%2Bcommands%252C%2Bsubagents%252C%2Bworkflows%252C%2Brules%252C%2Band%2Bauto%2Bmemory.%2BExplore%2Bthe%2B.claude%2Bdirectory%2Bin%2Byour%2Bp%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Flight.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D78fd01ff4f4340295a4f66e2ea54903c%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Fdark.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D1298a0c3b3a1da603b190d0de0e31712%26primaryColor%3D%25230E0E0E%26lightColor%3D%2523D4A27F%26backgroundLight%3D%2523FDFDF7%26backgroundDark%3D%252309090B\u0026w=1200\u0026q=100\"}],[\"$\",\"meta\",\"15\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"16\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"17\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"18\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"19\",{\"name\":\"twitter:title\",\"content\":\"Explore the .claude directory - Claude Code Docs\"}],[\"$\",\"meta\",\"20\",{\"name\":\"twitter:description\",\"content\":\"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.\"}],[\"$\",\"meta\",\"21\",{\"name\":\"twitter:image\",\"content\":\"https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DCore%2Bconcepts%26appearance%3Dsystem%26title%3DExplore%2Bthe%2B.claude%2Bdirectory%26description%3DWhere%2BClaude%2BCode%2Breads%2BCLAUDE.md%252C%2Bsettings.json%252C%2Bhooks%252C%2Bskills%252C%2Bcommands%252C%2Bsubagents%252C%2Bworkflows%252C%2Brules%252C%2Band%2Bauto%2Bmemory.%2BExplore%2Bthe%2B.claude%2Bdirectory%2Bin%2Byour%2Bp%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Flight.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D78fd01ff4f4340295a4f66e2ea54903c%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Fdark.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D1298a0c3b3a1da603b190d0de0e31712%26primaryColor%3D%25230E0E0E%26lightColor%3D%2523D4A27F%26backgroundLight%3D%2523FDFDF7%26backgroundDark%3D%252309090B\u0026w=1200\u0026q=100\"}],\"$L23\",\"$L24\",\"$L25\",\"$L26\",\"$L27\",\"$L28\",\"$L29\",\"$L2a\",\"$L2b\",\"$L2c\",\"$L2d\",\"$L2e\"],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"22:\"$1d:metadata\"\n"])</script><script>self.__next_f.push([1,"2f:I[27201,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"IconMark\"]\n23:[\"$\",\"meta\",\"22\",{\"name\":\"twitter:image:width\",\"content\":\"1200\"}]\n24:[\"$\",\"meta\",\"23\",{\"name\":\"twitter:image:height\",\"content\":\"630\"}]\n25:[\"$\",\"link\",\"24\",{\"rel\":\"icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/android-chrome-192x192.png\",\"type\":\"image/png\",\"sizes\":\"192x192\",\"media\":\"(prefers-color-scheme: light)\"}]\n26:[\"$\",\"link\",\"25\",{\"rel\":\"apple-touch-icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/apple-touch-icon.png\",\"type\":\"image/png\",\"sizes\":\"180x180\",\"media\":\"$undefined\"}]\n27:[\"$\",\"link\",\"26\",{\"rel\":\"icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-16x16.png\",\"type\":\"image/png\",\"sizes\":\"16x16\",\"media\":\"(prefers-color-scheme: light)\"}]\n28:[\"$\",\"link\",\"27\",{\"rel\":\"icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png\",\"type\":\"image/png\",\"sizes\":\"32x32\",\"media\":\"(prefers-color-scheme: light)\"}]\n29:[\"$\",\"link\",\"28\",{\"rel\":\"shortcut icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"$undefined\",\"media\":\"(prefers-color-scheme: light)\"}]\n2a:[\"$\",\"link\",\"29\",{\"rel\":\"icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/android-chrome-192x192.png\",\"type\":\"image/png\",\"sizes\":\"192x192\",\"media\":\"(prefers-color-scheme: dark)\"}]\n2b:[\"$\",\"link\",\"30\",{\"rel\":\"icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/favicon-16x16.png\",\"type\":\"image/png\",\"sizes\":\"16x16\",\"media\":\"(prefers-color-scheme: dark)\"}]\n2c:[\"$\",\"link\",\"31\",{\"rel\":\"icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/favicon-32x32.png\",\"type\":\"image/png\",\"sizes\":\"32x32\",\"media\":\"(prefers-color-s"])</script><script>self.__next_f.push([1,"cheme: dark)\"}]\n2d:[\"$\",\"link\",\"32\",{\"rel\":\"shortcut icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"$undefined\",\"media\":\"(prefers-color-scheme: dark)\"}]\n2e:[\"$\",\"$L2f\",\"33\",{}]\n"])</script><script>self.__next_f.push([1,"30:I[707934,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"WebMcpRegistration\"]\n"])</script><script>self.__next_f.push([1,"31:I[590280,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"LivePreviewProvider\"]\n"])</script><script>self.__next_f.push([1,"32:I[973254,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"LivePreviewFavicon\"]\n"])</script><script>self.__next_f.push([1,"33:I[479520,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"\"]\n"])</script><script>self.__next_f.push([1,"34:I[197336,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n"])</script><script>self.__next_f.push([1,"35:I[91557,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"AuthProvider\"]\n"])</script><script>self.__next_f.push([1,"36:I[91557,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"DeploymentMetadataProvider\"]\n"])</script><script>self.__next_f.push([1,"38:I[597003,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ScopedNavProvider\"]\n"])</script><script>self.__next_f.push([1,"18:[null,[\"$\",\"$L30\",null,{\"subdomain\":\"claude-code\"}],[\"$\",\"$L31\",null,{\"isLivePreviewRoute\":false,\"children\":[[\"$\",\"$L32\",null,{}],[\"$\",\"$L11\",null,{\"appearance\":{\"default\":\"system\"},\"codeblockTheme\":\"system\",\"children\":[[\"$\",\"blockquote\",null,{\"className\":\"sr-only\",\"data-agent-docs-index\":true,\"aria-hidden\":\"true\",\"children\":[[\"$\",\"h2\",null,{\"children\":\"Documentation Index\"}],[\"$\",\"p\",null,{\"children\":[\"Fetch the complete documentation index at:\",\" \",[\"$\",\"a\",null,{\"href\":\"/docs/llms.txt\",\"tabIndex\":-1,\"children\":\"/docs/llms.txt\"}]]}],[\"$\",\"p\",null,{\"children\":\"Use this file to discover all available pages before exploring further.\"}]]}],[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\":root{--banner-height:0px!important}\"}}],false,null,null,[\"$\",\"$L33\",null,{\"id\":\"_mintlify-banner-script\",\"strategy\":\"beforeInteractive\",\"dangerouslySetInnerHTML\":{\"__html\":\"(function j(a,b,c,d,e){try{let f,g,h=[];try{h=window.location.pathname.split(\\\"/\\\").filter(a=\u003e\\\"\\\"!==a\u0026\u0026\\\"global\\\"!==a).slice(0,2)}catch{h=[]}let i=h.find(a=\u003ec.includes(a)),j=[];for(let c of(i?j.push(i):j.push(b),j.push(\\\"global\\\"),j)){if(!c)continue;let b=a[c];if(b?.content){f=b.content,g=c;break}}if(!f)return void document.documentElement.setAttribute(d,\\\"hidden\\\");let k=!0,l=0;for(;l\u003clocalStorage.length;){let a=localStorage.key(l);if(l++,!a?.endsWith(e))continue;let b=localStorage.getItem(a);if(b\u0026\u0026b===f){k=!1;break}g\u0026\u0026(a.startsWith(`lang:${g}_`)||!a.startsWith(\\\"lang:\\\"))\u0026\u0026(localStorage.removeItem(a),l--)}document.documentElement.setAttribute(d,k?\\\"visible\\\":\\\"hidden\\\")}catch(a){console.error(a),document.documentElement.setAttribute(d,\\\"hidden\\\")}})(\\n  {},\\n  \\\"en\\\",\\n  [\\\"en\\\",\\\"fr\\\",\\\"de\\\",\\\"it\\\",\\\"jp\\\",\\\"es\\\",\\\"ko\\\",\\\"cn\\\",\\\"zh-Hant\\\",\\\"ru\\\",\\\"id\\\",\\\"pt-BR\\\"],\\n  \\\"data-banner-state\\\",\\n  \\\"bannerDismissed\\\",\\n)\"}}],[\"$\",\"$L34\",null,{\"appId\":\"$undefined\",\"autoBoot\":true,\"children\":[\"$\",\"$L35\",null,{\"value\":{\"auth\":\"$undefined\",\"userAuth\":\"$undefined\"},\"children\":[\"$\",\"$L36\",null,{\"value\":{\"subdomain\":\"claude-code\",\"actualSubdomain\":\"claude-code\",\"gitSource\":{\"type\":\"github\",\"owner\":\"anthropics\",\"repo\":\"claude-code-docs\",\"deployBranch\":\"main\",\"contentDirectory\":\"\",\"isPrivate\":true,\"mountPath\":\"\",\"label\":\"\"},\"chroma\":{\"liveDeploymentHistoryId\":\"6a8f901f679efd6f970aa3de\",\"collectionId\":\"20399b94-33a5-4ef6-8091-ac291ac12381\",\"schemaVersion\":\"v3\",\"latestBuiltDeploymentHistoryId\":\"6a8f901f679efd6f970aa3de\"},\"feedback\":{\"thumbs\":true},\"entitlements\":{\"AI_CHAT\":{\"status\":\"ENABLED\"},\"REMOVE_BRANDING\":{\"status\":\"ENABLED\"},\"CONTEXTUAL_FEEDBACK\":{\"status\":\"ENABLED\",\"enabled\":\"ENABLED\"},\"CODE_SNIPPET_FEEDBACK\":{\"status\":\"ENABLED\",\"enabled\":\"ENABLED\"}},\"buildId\":\"6a8fba2232f3a0d5a4e35062\",\"clientVersion\":\"0.0.3513\",\"preview\":\"$undefined\",\"searchFilterCounts\":[{\"language\":\"en\",\"tag\":\"What's New\",\"count\":44},{\"language\":\"en\",\"tag\":\"Getting started\",\"count\":42},{\"language\":\"de\",\"tag\":\"Erste Schritte\",\"count\":38},{\"language\":\"es\",\"tag\":\"Primeros pasos\",\"count\":38},{\"language\":\"fr\",\"tag\":\"Démarrer\",\"count\":38},{\"language\":\"id\",\"tag\":\"Memulai\",\"count\":38},{\"language\":\"it\",\"tag\":\"Guida introduttiva\",\"count\":38},{\"language\":\"jp\",\"tag\":\"はじめに\",\"count\":38},{\"language\":\"ko\",\"tag\":\"시작하기\",\"count\":38},{\"language\":\"pt-BR\",\"tag\":\"Primeiros passos\",\"count\":38},{\"language\":\"ru\",\"tag\":\"Начало работы\",\"count\":38},{\"language\":\"cn\",\"tag\":\"快速开始\",\"count\":38},{\"language\":\"zh-Hant\",\"tag\":\"開始使用\",\"count\":38},{\"language\":\"en\",\"tag\":\"Administration\",\"count\":37},{\"language\":\"de\",\"tag\":\"Verwaltung\",\"count\":35},{\"language\":\"es\",\"tag\":\"Administración\",\"count\":35},{\"language\":\"fr\",\"tag\":\"Administration\",\"count\":35},{\"language\":\"id\",\"tag\":\"Administrasi\",\"count\":35},{\"language\":\"it\",\"tag\":\"Amministrazione\",\"count\":35},{\"language\":\"jp\",\"tag\":\"管理\",\"count\":35},{\"language\":\"ko\",\"tag\":\"관리\",\"count\":35},{\"language\":\"pt-BR\",\"tag\":\"Administração\",\"count\":35},{\"language\":\"ru\",\"tag\":\"Администрирование\",\"count\":35},{\"language\":\"cn\",\"tag\":\"管理\",\"count\":35},{\"language\":\"zh-Hant\",\"tag\":\"管理\",\"count\":35},{\"language\":\"de\",\"tag\":\"Neuigkeiten\",\"count\":34},{\"language\":\"es\",\"tag\":\"Novedades\",\"count\":34},{\"language\":\"fr\",\"tag\":\"Nouveautés\",\"count\":34},{\"language\":\"id\",\"tag\":\"Apa yang Baru\",\"count\":34},{\"language\":\"it\",\"tag\":\"Novità\",\"count\":34},{\"language\":\"ko\",\"tag\":\"새로운 소식\",\"count\":34},{\"language\":\"pt-BR\",\"tag\":\"O Que Há de Novo\",\"count\":34},{\"language\":\"ru\",\"tag\":\"Что нового\",\"count\":34},{\"language\":\"cn\",\"tag\":\"最新动态\",\"count\":34},{\"language\":\"zh-Hant\",\"tag\":\"最新消息\",\"count\":34},{\"language\":\"en\",\"tag\":\"Agent SDK\",\"count\":33},{\"language\":\"de\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"fr\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"id\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"it\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"jp\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"ko\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"pt-BR\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"ru\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"cn\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"zh-Hant\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"es\",\"tag\":\"SDK de Agente\",\"count\":29},{\"language\":\"en\",\"tag\":\"Platforms and integrations\",\"count\":26},{\"language\":\"en\",\"tag\":\"Configuration\",\"count\":24},{\"language\":\"en\",\"tag\":\"Build with Claude Code\",\"count\":24},{\"language\":\"de\",\"tag\":\"Mit Claude Code erstellen\",\"count\":23},{\"language\":\"es\",\"tag\":\"Crear con Claude Code\",\"count\":23},{\"language\":\"fr\",\"tag\":\"Créer avec Claude Code\",\"count\":23},{\"language\":\"id\",\"tag\":\"Bangun dengan Claude Code\",\"count\":23},{\"language\":\"it\",\"tag\":\"Crea con Claude Code\",\"count\":23},{\"language\":\"jp\",\"tag\":\"Claude Code で構築する\",\"count\":23},{\"language\":\"ko\",\"tag\":\"Claude Code로 빌드하기\",\"count\":23},{\"language\":\"pt-BR\",\"tag\":\"Construir com Claude Code\",\"count\":23},{\"language\":\"ru\",\"tag\":\"Разработка с Claude Code\",\"count\":23},{\"language\":\"cn\",\"tag\":\"使用 Claude Code 构建\",\"count\":23},{\"language\":\"zh-Hant\",\"tag\":\"使用 Claude Code 建構\",\"count\":23},{\"language\":\"de\",\"tag\":\"Plattformen und Integrationen\",\"count\":21},{\"language\":\"es\",\"tag\":\"Plataformas e integraciones\",\"count\":21},{\"language\":\"fr\",\"tag\":\"Plateformes et intégrations\",\"count\":21},{\"language\":\"id\",\"tag\":\"Platform dan integrasi\",\"count\":21},{\"language\":\"it\",\"tag\":\"Piattaforme e integrazioni\",\"count\":21},{\"language\":\"jp\",\"tag\":\"プラットフォームと統合\",\"count\":21},{\"language\":\"ko\",\"tag\":\"플랫폼 및 통합\",\"count\":21},{\"language\":\"pt-BR\",\"tag\":\"Plataformas e integrações\",\"count\":21},{\"language\":\"ru\",\"tag\":\"Платформы и интеграции\",\"count\":21},{\"language\":\"cn\",\"tag\":\"平台和集成\",\"count\":21},{\"language\":\"zh-Hant\",\"tag\":\"平台與整合\",\"count\":21},{\"language\":\"de\",\"tag\":\"Referenz\",\"count\":19},{\"language\":\"en\",\"tag\":\"Reference\",\"count\":19},{\"language\":\"es\",\"tag\":\"Referencia\",\"count\":19},{\"language\":\"fr\",\"tag\":\"Référence\",\"count\":19},{\"language\":\"id\",\"tag\":\"Referensi\",\"count\":19},{\"language\":\"it\",\"tag\":\"Riferimento\",\"count\":19},{\"language\":\"jp\",\"tag\":\"リファレンス\",\"count\":19},{\"language\":\"ko\",\"tag\":\"참고\",\"count\":19},{\"language\":\"pt-BR\",\"tag\":\"Referência\",\"count\":19},{\"language\":\"ru\",\"tag\":\"Справочник\",\"count\":19},{\"language\":\"cn\",\"tag\":\"参考\",\"count\":19},{\"language\":\"zh-Hant\",\"tag\":\"參考資料\",\"count\":19},{\"language\":\"jp\",\"tag\":\"新機能\",\"count\":17},{\"language\":\"jp\",\"tag\":\"新着情報\",\"count\":17},{\"language\":\"de\",\"tag\":\"Konfiguration\",\"count\":14},{\"language\":\"es\",\"tag\":\"Configuración\",\"count\":14},{\"language\":\"fr\",\"tag\":\"Configuration\",\"count\":14},{\"language\":\"id\",\"tag\":\"Konfigurasi\",\"count\":14},{\"language\":\"it\",\"tag\":\"Configurazione\",\"count\":14},{\"language\":\"jp\",\"tag\":\"設定\",\"count\":14},{\"language\":\"ko\",\"tag\":\"구성\",\"count\":14},{\"language\":\"pt-BR\",\"tag\":\"Configuração\",\"count\":14},{\"language\":\"ru\",\"tag\":\"Конфигурация\",\"count\":14},{\"language\":\"cn\",\"tag\":\"配置\",\"count\":14},{\"language\":\"zh-Hant\",\"tag\":\"配置\",\"count\":14},{\"language\":\"de\",\"tag\":\"Bereitstellung\",\"count\":11},{\"language\":\"en\",\"tag\":\"Deployment\",\"count\":11},{\"language\":\"es\",\"tag\":\"Implementación\",\"count\":11},{\"language\":\"fr\",\"tag\":\"Déploiement\",\"count\":11},{\"language\":\"id\",\"tag\":\"Penyebaran\",\"count\":11},{\"language\":\"it\",\"tag\":\"Distribuzione\",\"count\":11},{\"language\":\"jp\",\"tag\":\"デプロイメント\",\"count\":11},{\"language\":\"ko\",\"tag\":\"배포\",\"count\":11},{\"language\":\"pt-BR\",\"tag\":\"Implantação\",\"count\":11},{\"language\":\"ru\",\"tag\":\"Развертывание\",\"count\":11},{\"language\":\"cn\",\"tag\":\"部署\",\"count\":11},{\"language\":\"zh-Hant\",\"tag\":\"部署\",\"count\":11},{\"language\":\"de\",\"tag\":\"Kernkonzepte\",\"count\":9},{\"language\":\"en\",\"tag\":\"Core concepts\",\"count\":9},{\"language\":\"es\",\"tag\":\"Conceptos fundamentales\",\"count\":9},{\"language\":\"fr\",\"tag\":\"Concepts fondamentaux\",\"count\":9},{\"language\":\"id\",\"tag\":\"Konsep Inti\",\"count\":9},{\"language\":\"it\",\"tag\":\"Concetti fondamentali\",\"count\":9},{\"language\":\"ko\",\"tag\":\"핵심 개념\",\"count\":9},{\"language\":\"pt-BR\",\"tag\":\"Conceitos principais\",\"count\":9},{\"language\":\"ru\",\"tag\":\"Основные концепции\",\"count\":9},{\"language\":\"cn\",\"tag\":\"核心概念\",\"count\":9},{\"language\":\"zh-Hant\",\"tag\":\"核心概念\",\"count\":9}],\"searchSettings\":\"$undefined\",\"disableKonamiCode\":\"$undefined\"},\"children\":\"$L37\"}]}]}]]}]]}]]\n"])</script><script>self.__next_f.push([1,"19:[\"$\",\"$L38\",null,{\"scopedNav\":{\"global\":null,\"languages\":[{\"language\":\"en\",\"tabs\":[{\"tab\":\"Getting started\",\"groups\":[{\"group\":\"Getting started\",\"pages\":[{\"sidebarTitle\":\"Overview\",\"title\":\"Overview\",\"description\":\"Claude Code is an agentic coding tool that reads your codebase, edits files, runs commands, and integrates with your development tools. Available in your terminal, IDE, desktop app, and browser.\",\"href\":\"/en/overview\"},{\"title\":\"Quickstart\",\"description\":\"Welcome to Claude Code!\",\"href\":\"/en/quickstart\"},{\"title\":\"Claude Code changelog\",\"sidebarTitle\":\"Changelog\",\"description\":\"Release notes for Claude Code, including new features, improvements, and bug fixes by version.\",\"rss\":true,\"href\":\"/en/changelog\"}]},{\"group\":\"Core concepts\",\"pages\":[{\"title\":\"How Claude Code works\",\"description\":\"Understand the agentic loop, built-in tools, and how Claude Code interacts with your project.\",\"href\":\"/en/how-claude-code-works\"},{\"title\":\"Extend Claude Code\",\"sidebarTitle\":\"Extend Claude Code\",\"description\":\"Understand when to use CLAUDE.md, Skills, subagents, hooks, MCP, and plugins.\",\"href\":\"/en/features-overview\"},{\"title\":\"Explore the .claude directory\",\"description\":\"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.\",\"mode\":\"wide\",\"href\":\"/en/claude-directory\"},{\"title\":\"Explore the context window\",\"description\":\"An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.\",\"mode\":\"wide\",\"href\":\"/en/context-window\"},{\"sidebarTitle\":\"Prompt caching\",\"title\":\"How Claude Code uses prompt caching\",\"description\":\"Claude Code manages prompt caching automatically. See why a model switch triggers a slow uncached turn, what `/compact` costs, why CLAUDE.md edits don't apply mid-session, and how to check your cache hit rate.\",\"keywords\":[\"prompt cache\",\"caching\",\"cache invalidation\",\"cache miss\",\"cache_control\",\"ephemeral\"],\"href\":\"/en/prompt-caching\"}]},{\"group\":\"Use Claude Code\",\"pages\":[{\"sidebarTitle\":\"Store instructions and memories\",\"title\":\"How Claude remembers your project\",\"description\":\"Give Claude persistent instructions with CLAUDE.md files, and let Claude accumulate learnings automatically with auto memory.\",\"keywords\":[\"claude.md\",\"CLAUDE.md\",\"claudemd\",\"memory\",\"rules\",\".claude/rules\",\"remember\",\"auto memory\"],\"href\":\"/en/memory\"},{\"title\":\"Manage sessions\",\"description\":\"Name, resume, branch, and switch between Claude Code conversations. Covers `--continue`, `--resume`, `--from-pr`, the `/resume` picker, session naming, exporting transcripts, and where transcripts are stored.\",\"keywords\":[\"resume\",\"continue\",\"--resume\",\"--continue\",\"session picker\",\"/resume\",\"/rename\",\"fork\",\"branch\",\"export\",\"/export\",\"transcript\",\"jsonl\"],\"href\":\"/en/sessions\"},{\"title\":\"Common workflows\",\"description\":\"Step-by-step guides for exploring codebases, fixing bugs, refactoring, testing, and other everyday tasks with Claude Code.\",\"keywords\":[\"workflow\",\"examples\",\"prompts\",\"recipes\"],\"href\":\"/en/common-workflows\"},{\"title\":\"Prompt library\",\"sidebarTitle\":\"Prompt library\",\"description\":\"Copy-paste prompts for Claude Code, tagged by task and role.\",\"href\":\"/en/prompt-library\"},{\"title\":\"Best practices for Claude Code\",\"sidebarTitle\":\"Best practices\",\"description\":\"Tips and patterns for getting the most out of Claude Code, from configuring your environment to scaling across parallel sessions.\",\"keywords\":[\"verification\",\"verification loop\",\"verify\",\"feedback loop\",\"check its work\",\"definition of done\"],\"href\":\"/en/best-practices\"}]},{\"group\":\"Platforms and integrations\",\"pages\":[{\"title\":\"Platforms and integrations\",\"sidebarTitle\":\"Overview\",\"description\":\"Choose where to run Claude Code and what to connect it to. Compare the CLI, Desktop, VS Code, JetBrains, web, mobile, and integrations like Chrome, Slack, and CI/CD.\",\"href\":\"/en/platforms\"},{\"title\":\"Continue local sessions from any device with Remote Control\",\"sidebarTitle\":\"Remote Control\",\"description\":\"Continue a local Claude Code session from your phone, tablet, or any browser using Remote Control. Works with claude.ai/code and the Claude mobile app.\",\"href\":\"/en/remote-control\"},{\"group\":\"Claude Code on the web\",\"pages\":[{\"title\":\"Get started with Claude Code on the web\",\"sidebarTitle\":\"Get started\",\"description\":\"Run Claude Code in the cloud from your browser or phone. Connect a GitHub repository, submit a task, and review the PR without local setup.\",\"href\":\"/en/web-quickstart\"},{\"title\":\"Use Claude Code on the web\",\"sidebarTitle\":\"Reference\",\"description\":\"Move sessions between web and terminal with `--cloud` and `--teleport`, manage and share sessions, and auto-fix pull requests from the cloud.\",\"href\":\"/en/claude-code-on-the-web\"},{\"title\":\"Automate work with routines\",\"sidebarTitle\":\"Routines\",\"description\":\"Put Claude Code on autopilot. Define routines that run on a schedule, trigger on API calls, or react to GitHub events from cloud infrastructure.\",\"keywords\":[\"/schedule\",\"schedule\",\"scheduled task\",\"cloud cron\",\"remote schedule\",\"trigger\"],\"href\":\"/en/routines\"},{\"title\":\"Find bugs with ultrareview\",\"sidebarTitle\":\"Ultrareview\",\"description\":\"Run a deep, multi-agent code review in the cloud with /code-review ultra to find and verify bugs before you merge.\",\"keywords\":[\"ultra\",\"ultrareview\",\"ultra review\",\"ultra-review\",\"/ultrareview\",\"/code-review ultra\",\"code review\",\"bug finding\",\"remote review\",\"deep review\",\"multi-agent review\"],\"href\":\"/en/ultrareview\"}]},{\"group\":\"Claude Code on desktop\",\"pages\":[{\"title\":\"Get started with the desktop app\",\"sidebarTitle\":\"Get started\",\"description\":\"Install Claude Code on desktop and start your first coding session\",\"href\":\"/en/desktop-quickstart\"},{\"title\":\"Desktop application\",\"sidebarTitle\":\"Reference\",\"description\":\"Get more out of Claude Code Desktop: parallel sessions with Git isolation, drag-and-drop pane layout, integrated terminal and file editor, side chats, computer use, Dispatch sessions from your phone, visual diff review, app previews, PR monitoring, connectors, and enterprise configuration.\",\"href\":\"/en/desktop\"},{\"title\":\"Claude Desktop on Linux (beta)\",\"sidebarTitle\":\"Linux (beta)\",\"description\":\"Install and update the Claude desktop app on Ubuntu and Debian\",\"href\":\"/en/desktop-linux\"},{\"title\":\"Claude Code Desktop in WSL\",\"sidebarTitle\":\"Windows (WSL)\",\"description\":\"Run Code sessions inside a WSL 2 distribution on Windows\",\"href\":\"/en/desktop-wsl\"},{\"title\":\"Schedule recurring tasks in Claude Code Desktop\",\"sidebarTitle\":\"Scheduled tasks\",\"description\":\"Set up scheduled tasks in Claude Code Desktop to run Claude automatically on a recurring basis for daily code reviews, dependency audits, or morning briefings.\",\"href\":\"/en/desktop-scheduled-tasks\"},{\"title\":\"Test iOS apps in the simulator\",\"sidebarTitle\":\"iOS simulator (beta)\",\"description\":\"Claude Code Desktop opens your app in the iOS Simulator pane when Claude builds, runs, or checks it, with a separate simulator for each session.\",\"href\":\"/en/desktop-ios-simulator\"}]},{\"title\":\"Claude Code on mobile\",\"sidebarTitle\":\"Mobile\",\"description\":\"Start, monitor, and steer Claude Code tasks from your phone with the Claude app for iOS and Android.\",\"href\":\"/en/mobile\"},{\"title\":\"Use Claude Code with Chrome\",\"sidebarTitle\":\"Chrome extension\",\"description\":\"Connect Claude Code to your Chrome browser to test web apps, debug with console logs, automate form filling, and extract data from web pages.\",\"href\":\"/en/chrome\"},{\"title\":\"Let Claude use your computer from the CLI\",\"sidebarTitle\":\"Computer use (preview)\",\"description\":\"Enable computer use in the Claude Code CLI so Claude can open apps, click, type, and see your screen on macOS. Test native apps, debug visual issues, and automate GUI-only tools without leaving your terminal.\",\"href\":\"/en/computer-use\"},{\"title\":\"Use Claude Code in VS Code\",\"sidebarTitle\":\"Visual Studio Code\",\"description\":\"Install and configure the Claude Code extension for VS Code. Get AI coding assistance with inline diffs, @-mentions, plan review, and keyboard shortcuts.\",\"keywords\":[\"vscode\",\"vs code\",\"visual studio code\",\"cursor\",\"devin desktop\",\"windsurf\",\"kiro\",\"vs code fork\",\"extension\",\"open vsx\"],\"href\":\"/en/vs-code\"},{\"title\":\"JetBrains IDEs\",\"description\":\"Use Claude Code with JetBrains IDEs including IntelliJ, PyCharm, WebStorm, and more\",\"href\":\"/en/jetbrains\"},{\"group\":\"Code review \u0026 CI/CD\",\"pages\":[{\"title\":\"Catch security issues as Claude writes code\",\"sidebarTitle\":\"Security guidance plugin\",\"description\":\"Install the security-guidance plugin to have Claude review its own code changes for vulnerabilities and fix them in the same session.\",\"keywords\":[\"find security issues\",\"scan for vulnerabilities\",\"security scan\",\"check my code for security issues\",\"security audit\",\"vulnerability review\",\"secure my code\"],\"href\":\"/en/security-guidance\"},{\"title\":\"Scan your codebase for vulnerabilities\",\"sidebarTitle\":\"Claude Security plugin\",\"description\":\"Install the Claude Security plugin to scan your codebase for vulnerabilities in a Claude Code session and turn findings into patches you review and apply.\",\"href\":\"/en/claude-security\"},{\"title\":\"Code Review\",\"sidebarTitle\":\"Code Review\",\"description\":\"Set up automated PR reviews that catch logic errors, security vulnerabilities, and regressions using multi-agent analysis of your full codebase\",\"href\":\"/en/code-review\"},{\"title\":\"Claude Code GitHub Actions\",\"sidebarTitle\":\"GitHub Actions\",\"description\":\"Run Claude Code in GitHub Actions workflows to respond to @claude mentions, automate tasks, and turn issues into pull requests\",\"href\":\"/en/github-actions\"},{\"title\":\"Use Claude Code GitHub Actions with cloud providers\",\"sidebarTitle\":\"GitHub Actions cloud providers\",\"description\":\"Run Claude Code GitHub Actions through Amazon Bedrock, Google Cloud's Agent Platform, or Microsoft Foundry instead of the Claude API\",\"href\":\"/en/github-actions-cloud-providers\"},{\"title\":\"Claude Code with GitHub Enterprise Server\",\"sidebarTitle\":\"GitHub Enterprise Server\",\"description\":\"Connect Claude Code to your self-hosted GitHub Enterprise Server instance for web sessions, code review, and plugin marketplaces.\",\"href\":\"/en/github-enterprise-server\"},{\"title\":\"Claude Code GitLab CI/CD\",\"sidebarTitle\":\"GitLab CI/CD\",\"description\":\"Learn about integrating Claude Code into your development workflow with GitLab CI/CD\",\"href\":\"/en/gitlab-ci-cd\"}]},{\"title\":\"Claude Code in Slack\",\"description\":\"Delegate coding tasks directly from your Slack workspace. Anthropic is retiring this earlier version for Team and Enterprise workspaces in favor of Claude Tag; it remains the setup path on Pro and Max plans.\",\"href\":\"/en/slack\"},{\"title\":\"Claude Tag\",\"description\":\"Bring Claude into your team's Slack channels with Claude Tag and find its setup and usage documentation on claude.com.\",\"href\":\"/en/claude-tag\"}]}]},{\"tab\":\"Build with Claude Code\",\"pages\":[{\"title\":\"Build with Claude Code\",\"href\":\"/en/agents\"}]},{\"tab\":\"Administration\",\"pages\":[{\"title\":\"Administration\",\"href\":\"/en/admin-setup\"}]},{\"tab\":\"Configuration\",\"pages\":[{\"title\":\"Configuration\",\"href\":\"/en/settings\"}]},{\"tab\":\"Reference\",\"pages\":[{\"title\":\"Reference\",\"href\":\"/en/cli-reference\"}]},{\"tab\":\"Agent SDK\",\"pages\":[{\"title\":\"Agent SDK\",\"href\":\"/en/agent-sdk/overview\"}]},{\"tab\":\"What's New\",\"pages\":[{\"title\":\"What's New\",\"href\":\"/en/whats-new\"}]},{\"tab\":\"Resources\",\"pages\":[{\"title\":\"Resources\",\"href\":\"/en/legal-and-compliance\"}]}]},{\"language\":\"fr\",\"pages\":[{\"title\":\"fr\",\"href\":\"/fr/claude-directory\"}]},{\"language\":\"de\",\"pages\":[{\"title\":\"de\",\"href\":\"/de/claude-directory\"}]},{\"language\":\"it\",\"pages\":[{\"title\":\"it\",\"href\":\"/it/claude-directory\"}]},{\"language\":\"jp\",\"pages\":[{\"title\":\"jp\",\"href\":\"/ja/claude-directory\"}]},{\"language\":\"es\",\"pages\":[{\"title\":\"es\",\"href\":\"/es/claude-directory\"}]},{\"language\":\"ko\",\"pages\":[{\"title\":\"ko\",\"href\":\"/ko/claude-directory\"}]},{\"language\":\"cn\",\"pages\":[{\"title\":\"cn\",\"href\":\"/zh-CN/claude-directory\"}]},{\"language\":\"zh-Hant\",\"pages\":[{\"title\":\"zh-Hant\",\"href\":\"/zh-TW/claude-directory\"}]},{\"language\":\"ru\",\"pages\":[{\"title\":\"ru\",\"href\":\"/ru/claude-directory\"}]},{\"language\":\"id\",\"pages\":[{\"title\":\"id\",\"href\":\"/id/claude-directory\"}]},{\"language\":\"pt-BR\",\"pages\":[{\"title\":\"pt-BR\",\"href\":\"/pt/claude-directory\"}]}]},\"maps\":{\"firstHrefInVersion\":{},\"firstHrefInLanguage\":{\"en\":{\"href\":\"/en/claude-directory\",\"matchLevel\":0},\"fr\":{\"href\":\"/fr/claude-directory\",\"matchLevel\":1},\"de\":{\"href\":\"/de/claude-directory\",\"matchLevel\":1},\"it\":{\"href\":\"/it/claude-directory\",\"matchLevel\":1},\"jp\":{\"href\":\"/ja/claude-directory\",\"matchLevel\":1},\"es\":{\"href\":\"/es/claude-directory\",\"matchLevel\":1},\"ko\":{\"href\":\"/ko/claude-directory\",\"matchLevel\":1},\"cn\":{\"href\":\"/zh-CN/claude-directory\",\"matchLevel\":1},\"zh-Hant\":{\"href\":\"/zh-TW/claude-directory\",\"matchLevel\":1},\"ru\":{\"href\":\"/ru/claude-directory\",\"matchLevel\":1},\"id\":{\"href\":\"/id/claude-directory\",\"matchLevel\":1},\"pt-BR\":{\"href\":\"/pt/claude-directory\",\"matchLevel\":1}}},\"children\":\"$L39\"}]\n"])</script><script>self.__next_f.push([1,"3a:I[91557,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"DocsConfigProvider\"]\n"])</script><script>self.__next_f.push([1,"3b:I[604804,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"LoginButtonProvider\"]\n"])</script><script>self.__next_f.push([1,"3c:I[141180,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"SidebarLoginButtonProvider\"]\n"])</script><script>self.__next_f.push([1,"3d:I[343590,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"NavigationContextController\"]\n"])</script><script>self.__next_f.push([1,"3f:I[763509,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ThemeLayout\"]\n"])</script><script>self.__next_f.push([1,"40:I[91557,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ApiReferenceProvider\"]\n"])</script><script>self.__next_f.push([1,"41:I[91557,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"PageProvider\"]\n"])</script><script>self.__next_f.push([1,"42:I[91557,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"OpenApiProvider\"]\n"])</script><script>self.__next_f.push([1,"43:I[525343,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"TabSyncContextProvider\"]\n"])</script><script>self.__next_f.push([1,"37:[\"$\",\"$L3a\",null,{\"value\":{\"docsConfig\":{\"theme\":\"mint\",\"$schema\":\"https://mintlify.com/docs.json\",\"name\":\"Claude Code Docs\",\"description\":\"Official documentation for Claude Code, Anthropic's agentic coding tool available in the terminal, IDE, desktop app, and browser. Covers installation, configuration, skills, subagents, hooks, MCP, the Agent SDK, and reference material.\",\"colors\":{\"primary\":\"#0E0E0E\",\"light\":\"#D4A27F\",\"dark\":\"#0E0E0E\"},\"logo\":{\"light\":\"https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/light.svg?fit=max\u0026auto=format\u0026n=c5r9_6tjPMzFdDDT\u0026q=85\u0026s=78fd01ff4f4340295a4f66e2ea54903c\",\"dark\":\"https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/dark.svg?fit=max\u0026auto=format\u0026n=c5r9_6tjPMzFdDDT\u0026q=85\u0026s=1298a0c3b3a1da603b190d0de0e31712\"},\"favicon\":\"https://mintcdn.com/claude-code/T2WlxklWBkR5Y1mJ/favicon.ico?fit=max\u0026auto=format\u0026n=T2WlxklWBkR5Y1mJ\u0026q=85\u0026s=346a85952ae08d5ee90e3c34d4423930\",\"appearance\":\"$18:2:props:children:1:props:appearance\",\"background\":{\"color\":{\"light\":\"#FDFDF7\",\"dark\":\"#09090B\"}},\"navbar\":{\"links\":[{\"href\":\"https://platform.claude.com/\",\"label\":\"Claude Developer Platform\"}],\"primary\":{\"type\":\"button\",\"label\":\"Claude Code on the Web\",\"href\":\"https://claude.ai/code\"}},\"footer\":{\"socials\":{\"x\":\"https://x.com/AnthropicAI\",\"linkedin\":\"https://www.linkedin.com/company/anthropicresearch\"},\"links\":[{\"header\":\"Company\",\"items\":[{\"label\":\"Anthropic\",\"href\":\"https://www.anthropic.com/company\"},{\"label\":\"Careers\",\"href\":\"https://www.anthropic.com/careers\"},{\"label\":\"Economic Futures\",\"href\":\"https://www.anthropic.com/economic-futures\"},{\"label\":\"Research\",\"href\":\"https://www.anthropic.com/research\"},{\"label\":\"News\",\"href\":\"https://www.anthropic.com/news\"},{\"label\":\"Trust center\",\"href\":\"https://trust.anthropic.com/\"},{\"label\":\"Transparency\",\"href\":\"https://www.anthropic.com/transparency\"}]},{\"header\":\"Help and security\",\"items\":[{\"label\":\"Availability\",\"href\":\"https://www.anthropic.com/supported-countries\"},{\"label\":\"Status\",\"href\":\"https://status.anthropic.com/\"},{\"label\":\"Support center\",\"href\":\"https://support.claude.com/\"}]},{\"header\":\"Learn\",\"items\":[{\"label\":\"Courses\",\"href\":\"https://www.anthropic.com/learn\"},{\"label\":\"MCP connectors\",\"href\":\"https://claude.com/partners/mcp\"},{\"label\":\"Customer stories\",\"href\":\"https://www.claude.com/customers\"},{\"label\":\"Engineering blog\",\"href\":\"https://www.anthropic.com/engineering\"},{\"label\":\"Events\",\"href\":\"https://www.anthropic.com/events\"},{\"label\":\"Powered by Claude\",\"href\":\"https://claude.com/partners/powered-by-claude\"},{\"label\":\"Service partners\",\"href\":\"https://claude.com/partners/services\"},{\"label\":\"Startups program\",\"href\":\"https://claude.com/programs/startups\"}]},{\"header\":\"Terms and policies\",\"items\":[{\"label\":\"Privacy choices\",\"href\":\"https://www.anthropic.com/legal/privacy\"},{\"label\":\"Privacy policy\",\"href\":\"https://www.anthropic.com/legal/privacy\"},{\"label\":\"Disclosure policy\",\"href\":\"https://www.anthropic.com/responsible-disclosure-policy\"},{\"label\":\"Usage policy\",\"href\":\"https://www.anthropic.com/legal/aup\"},{\"label\":\"Commercial terms\",\"href\":\"https://www.anthropic.com/legal/commercial-terms\"},{\"label\":\"Consumer terms\",\"href\":\"https://www.anthropic.com/legal/consumer-terms\"}]}]},\"seo\":{\"metatags\":{\"canonical\":\"https://code.claude.com/docs\"}},\"fonts\":{\"family\":\"Anthropic Sans\"},\"contextual\":{\"options\":[\"copy\",\"view\",\"claude\"],\"display\":\"header\"},\"styling\":{\"latex\":true,\"codeblocks\":\"system\"},\"navigation\":{\"languages\":[{\"language\":\"en\",\"href\":\"en/overview\"},{\"language\":\"fr\",\"href\":\"fr/overview\"},{\"language\":\"de\",\"href\":\"de/overview\"},{\"language\":\"it\",\"href\":\"it/overview\"},{\"language\":\"jp\",\"href\":\"ja/overview\"},{\"language\":\"es\",\"href\":\"es/overview\"},{\"language\":\"ko\",\"href\":\"ko/overview\"},{\"language\":\"cn\",\"href\":\"zh-CN/overview\"},{\"language\":\"zh-Hant\",\"href\":\"zh-TW/overview\"},{\"language\":\"ru\",\"href\":\"ru/overview\"},{\"language\":\"id\",\"href\":\"id/overview\"},{\"language\":\"pt-BR\",\"href\":\"pt/overview\"}]}},\"docsNavWithMetadata\":\"$undefined\",\"anonymizedNav\":\"$undefined\",\"hasFullNav\":false},\"children\":[\"$\",\"$L3b\",null,{\"children\":[\"$\",\"$L3c\",null,{\"children\":[\"$\",\"$L3d\",null,{\"children\":\"$L3e\"}]}]}]}]\n"])</script><script>self.__next_f.push([1,"44:T899,"])</script><script>self.__next_f.push([1,"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://code.claude.com/#organization\",\"name\":\"Claude Code Docs\",\"url\":\"https://code.claude.com\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/light.svg?fit=max\u0026auto=format\u0026n=c5r9_6tjPMzFdDDT\u0026q=85\u0026s=78fd01ff4f4340295a4f66e2ea54903c\"}},{\"@type\":\"WebSite\",\"@id\":\"https://code.claude.com/docs#website\",\"name\":\"Claude Code Docs\",\"url\":\"https://code.claude.com/docs\",\"publisher\":{\"@id\":\"https://code.claude.com/#organization\"}},{\"@type\":\"WebPage\",\"@id\":\"https://code.claude.com/docs/en/claude-directory#webpage\",\"url\":\"https://code.claude.com/docs/en/claude-directory\",\"name\":\"Explore the .claude directory\",\"description\":\"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.\",\"dateModified\":\"2026-08-26T19:17:07.229Z\",\"isPartOf\":{\"@id\":\"https://code.claude.com/docs#website\"},\"breadcrumb\":{\"@id\":\"https://code.claude.com/docs/en/claude-directory#breadcrumb\"}},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://code.claude.com/docs/en/claude-directory#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Core concepts\",\"item\":\"https://code.claude.com/docs/en/how-claude-code-works\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Explore the .claude directory\",\"item\":\"https://code.claude.com/docs/en/claude-directory\"}]},{\"@type\":[\"Article\",\"TechArticle\"],\"@id\":\"https://code.claude.com/docs/en/claude-directory#article\",\"headline\":\"Explore the .claude directory\",\"name\":\"Explore the .claude directory\",\"description\":\"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.\",\"url\":\"https://code.claude.com/docs/en/claude-directory\",\"mainEntityOfPage\":{\"@id\":\"https://code.claude.com/docs/en/claude-directory#webpage\"},\"dateModified\":\"2026-08-26T19:17:07.229Z\",\"publisher\":{\"@id\":\"https://code.claude.com/#organization\"},\"isPartOf\":{\"@id\":\"https://code.claude.com/docs#website\"}}]}"])</script><script>self.__next_f.push([1,"39:[\"$\",\"$L3f\",null,{\"theme\":\"mint\",\"pageMetadata\":{\"title\":\"Explore the .claude directory\",\"description\":\"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.\",\"mode\":\"wide\",\"href\":\"/en/claude-directory\"},\"children\":[\"$\",\"$L40\",null,{\"value\":{\"apiReferenceData\":{},\"graphqlReferenceData\":\"$undefined\"},\"children\":[\"$\",\"$L41\",null,{\"value\":{\"pageMetadata\":\"$39:props:pageMetadata\",\"lastModified\":\"2026-08-26T19:17:07.229Z\",\"gitLastModified\":\"$undefined\",\"originalFileLocation\":\"en/claude-directory.mdx\",\"description\":{\"compiledSource\":\"\\\"use strict\\\";\\nconst {jsx: _jsx} = arguments[0];\\nconst {useMDXComponents: _provideComponents} = arguments[0];\\nfunction _createMdxContent(props) {\\n  const _components = {\\n    p: \\\"p\\\",\\n    ..._provideComponents(),\\n    ...props.components\\n  };\\n  return _jsx(_components.p, {\\n    children: \\\"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.\\\"\\n  });\\n}\\nfunction MDXContent(props = {}) {\\n  const {wrapper: MDXLayout} = {\\n    ..._provideComponents(),\\n    ...props.components\\n  };\\n  return MDXLayout ? _jsx(MDXLayout, {\\n    ...props,\\n    children: _jsx(_createMdxContent, {\\n      ...props\\n    })\\n  }) : _createMdxContent(props);\\n}\\nreturn {\\n  default: MDXContent\\n};\\n\",\"frontmatter\":{},\"scope\":{}},\"mdxExtracts\":{\"tableOfContents\":[{\"title\":\"Explore the directory\",\"slug\":\"explore-the-directory\",\"depth\":2,\"children\":[]},{\"title\":\"What’s not shown\",\"slug\":\"what’s-not-shown\",\"depth\":2,\"children\":[]},{\"title\":\"Choose the right file\",\"slug\":\"choose-the-right-file\",\"depth\":2,\"children\":[]},{\"title\":\"File reference\",\"slug\":\"file-reference\",\"depth\":2,\"children\":[]},{\"title\":\"Troubleshoot configuration\",\"slug\":\"troubleshoot-configuration\",\"depth\":2,\"children\":[]},{\"title\":\"Application data\",\"slug\":\"application-data\",\"depth\":2,\"children\":[{\"title\":\"Cleaned up automatically\",\"slug\":\"cleaned-up-automatically\",\"depth\":3,\"children\":[]},{\"title\":\"Kept until you delete them\",\"slug\":\"kept-until-you-delete-them\",\"depth\":3,\"children\":[]},{\"title\":\"Plaintext storage\",\"slug\":\"plaintext-storage\",\"depth\":3,\"children\":[]},{\"title\":\"Clear local data\",\"slug\":\"clear-local-data\",\"depth\":3,\"children\":[]}]},{\"title\":\"Related resources\",\"slug\":\"related-resources\",\"depth\":2,\"children\":[]}],\"codeExamples\":{}},\"pageType\":\"$undefined\",\"panelMdxSource\":\"$undefined\",\"panelMdxSourceWithNoJs\":\"$undefined\",\"contextualStarterQuestions\":\"$undefined\",\"relatedPages\":\"$undefined\"},\"children\":[\"$\",\"$L42\",null,{\"pageMetadata\":\"$39:props:pageMetadata\",\"mdxExtracts\":\"$39:props:children:props:children:props:value:mdxExtracts\",\"openApiReferenceData\":\"$undefined\",\"children\":[\"$\",\"$L43\",null,{\"children\":[[\"$\",\"script\",null,{\"type\":\"application/ld+json\",\"dangerouslySetInnerHTML\":{\"__html\":\"$44\"}}],\"$L45\",\"$L46\",\"$L47\",\"$L48\",\"$L49\"]}]}]}]}]}]\n"])</script><script>self.__next_f.push([1,"4a:I[378486,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"PageListProvider\"]\n"])</script><script>self.__next_f.push([1,"4b:I[742977,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"PrefetchProvider\"]\n"])</script><script>self.__next_f.push([1,"4c:I[237978,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"PageModeOverrideProvider\"]\n"])</script><script>self.__next_f.push([1,"4d:I[378896,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ConfiguredVariationProvider\"]\n"])</script><script>self.__next_f.push([1,"4e:I[557611,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"Fonts\"]\n"])</script><script>self.__next_f.push([1,"4f:I[330080,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"BannerProvider\"]\n"])</script><script>self.__next_f.push([1,"50:I[864506,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"NavbarTransitionScript\"]\n"])</script><script>self.__next_f.push([1,"53:I[228341,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"PageModeUpdater\"]\n"])</script><script>self.__next_f.push([1,"54:I[575126,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"Background\"]\n"])</script><script>self.__next_f.push([1,"57:I[36098,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"CustomJsFiles\"]\n"])</script><script>self.__next_f.push([1,"5a:I[530359,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"MDXContentController\"]\n"])</script><script>self.__next_f.push([1,"5b:I[448287,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n"])</script><script>self.__next_f.push([1,"51:T9e0,"])</script><script>self.__next_f.push([1,"(function () {\n  var measure = function(){let a=document.querySelectorAll(\"[id='navbar'], [data-top-chrome]\"),b=0;a.forEach(a=\u003e{let c=a.getBoundingClientRect();c.height\u003e0\u0026\u0026(b=Math.max(b,c.bottom))});let c=0,d=document.getElementById(\"content-container\");if(d){let{overflowY:a}=getComputedStyle(d);(\"auto\"===a||\"scroll\"===a)\u0026\u0026(c=Math.max(0,d.getBoundingClientRect().top))}let e=`${Math.round(Math.max(0,b-c))+40}px`,f=document.documentElement.style;f.getPropertyValue(\"--scroll-mt\")!==e\u0026\u0026f.setProperty(\"--scroll-mt\",e)};\n  (function(a){let b=[],c=0,d=\"undefined\"==typeof ResizeObserver?null:new ResizeObserver(f);function e(){let c=Array.from(document.querySelectorAll(\"[id='navbar'], [data-top-chrome]\"));(c.length!==b.length||c.some((a,c)=\u003ea!==b[c]))\u0026\u0026d\u0026\u0026(d.disconnect(),c.forEach(a=\u003ed.observe(a))),b=c,a()}function f(){c||(c=requestAnimationFrame(()=\u003e{c=0,e()}))}let g=\"[id='navbar'], [data-top-chrome]\";function h(a){let b=a.target;if(b instanceof Element\u0026\u0026b.closest(g))return!0;for(let b of a.addedNodes)if(b instanceof Element\u0026\u0026(b.matches(g)||b.querySelector(g)))return!0;for(let b of a.removedNodes)if(b instanceof Element\u0026\u0026(b.matches(g)||b.querySelector(g)))return!0;return!1}new MutationObserver(a=\u003e{a.some(h)\u0026\u0026f()}).observe(document.documentElement,{childList:!0,subtree:!0}),window.addEventListener(\"resize\",f),\"loading\"===document.readyState\u0026\u0026document.addEventListener(\"DOMContentLoaded\",e),e()})(measure);\n  (function(a){let b=window.location.hash.slice(1);if(!b)return;function c(){return\"smooth\"===getComputedStyle(document.documentElement).scrollBehavior}function d(c){let d=document.getElementById(b);return!!d\u0026\u0026(a(),d.scrollIntoView(c?{behavior:c}:void 0),!0)}if(\"complete\"===document.readyState)return void d();let e=new MutationObserver(()=\u003e{!c()\u0026\u0026d(\"instant\")\u0026\u0026f()});function f(){e.disconnect(),window.removeEventListener(\"load\",g)}function g(){let a=c();f(),a\u0026\u0026requestAnimationFrame(()=\u003e{d(),function(){let a=[\"wheel\",\"touchstart\",\"keydown\",\"pointerdown\"],c=0,e=window.scrollY,f=setInterval(()=\u003e{c+=1;let a=document.getElementById(b);if(!a||c\u003e=6)return g();let f=Math.abs(window.scrollY-e)\u003e1;if(e=window.scrollY,f)return;let h=parseFloat(getComputedStyle(a).scrollMarginTop)||0;Math.abs(a.getBoundingClientRect().top-h)\u003e4\u0026\u0026d()},350);function g(){clearInterval(f),a.forEach(a=\u003ewindow.removeEventListener(a,g))}a.forEach(a=\u003ewindow.addEventListener(a,g,{passive:!0}))}()})}window.addEventListener(\"load\",g),e.observe(document.documentElement,{childList:!0,subtree:!0}),!c()\u0026\u0026d(\"instant\")\u0026\u0026f()})(measure);\n})();"])</script><script>self.__next_f.push([1,"3e:[\"$\",\"$L4a\",null,{\"pageListDataMap\":{},\"children\":[\"$\",\"$L4b\",null,{\"disabled\":\"$undefined\",\"children\":[\"$\",\"$L4c\",null,{\"children\":[\"$\",\"$L4d\",null,{\"children\":[[\"$\",\"$L13\",null,{\"fonts\":\"$37:props:value:docsConfig:fonts\",\"theme\":\"mint\",\"subdomain\":\"claude-code\"}],[[\"$\",\"$L12\",null,{\"docsConfig\":\"$37:props:value:docsConfig\"}],[[\"$\",\"link\",null,{\"rel\":\"preload\",\"href\":\"https://d4tuoctqmanu0.cloudfront.net/katex.min.css\",\"as\":\"style\"}],[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"children\":\"\\n          (function() {\\n            function loadKatex() {\\n              const link = document.querySelector('link[href=\\\"https://d4tuoctqmanu0.cloudfront.net/katex.min.css\\\"]');\\n              if (link) link.rel = 'stylesheet';\\n            }\\n            if (document.readyState === 'loading') {\\n              document.addEventListener('DOMContentLoaded', loadKatex);\\n            } else {\\n              loadKatex();\\n            }\\n          })();\\n        \"}]],[\"$\",\"$L14\",null,{\"theme\":\"mint\"}],[\"$\",\"$L4e\",null,{\"fonts\":\"$37:props:value:docsConfig:fonts\",\"children\":[\"$\",\"$L4f\",null,{\"bannersByLocale\":{},\"subdomain\":\"claude-code\",\"children\":[[\"$\",\"$L50\",null,{\"theme\":\"mint\"}],[\"$\",\"$L33\",null,{\"strategy\":\"beforeInteractive\",\"id\":\"_mintlify-scroll-margin-script\",\"dangerouslySetInnerHTML\":{\"__html\":\"$51\"},\"suppressHydrationWarning\":true}],\"$L52\"]}]}]]]}]}]}]}]\n"])</script><script>self.__next_f.push([1,"45:[[\"$\",\"script\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"document.documentElement.setAttribute('data-page-mode', \\\"wide\\\");\"}}],[\"$\",\"$L53\",null,{\"pageMetadata\":\"$39:props:pageMetadata\"}]]\n46:[\"$\",\"$L54\",null,{\"pageMetadata\":\"$39:props:pageMetadata\"}]\n55:T1108,"])</script><script>self.__next_f.push([1,"\n/* These styles mirror the internal design system's button component, converted to plain CSS. */\n\n/* Base button styles */\n.btn {\n  position: relative;\n  display: inline-flex;\n  gap: 0.5rem;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  min-width: 5rem;\n  height: 2.25rem;\n  padding: 0.5rem 1rem;\n  white-space: nowrap;\n  font-family: Styrene;\n  font-weight: 600;\n  border-radius: 0.5rem;\n  \u0026:active {\n    transform: scale(0.985);\n  }\n\n  /* Size variants */\n  \u0026.size-xs {\n    height: 1.75rem;\n    min-width: 3.5rem;\n    padding: 0 0.5rem;\n    border-radius: 0.25rem;\n    font-size: 0.75rem;\n    gap: 0.25rem;\n  }\n  \n  \u0026.size-sm {\n    height: 2rem;\n    min-width: 4rem;\n    padding: 0 0.75rem;\n    border-radius: 0.375rem;\n    font-size: 0.75rem;\n  }\n\n  \u0026.size-lg {\n    height: 2.75rem;\n    min-width: 6rem;\n    padding: 0 1.25rem;\n    border-radius: 0.6rem;\n  }\n\n  \u0026:disabled {\n    pointer-events: none;\n    opacity: 0.5;\n    box-shadow: none;\n  }\n\n  \u0026:focus-visible {\n    outline: none;\n    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);\n    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);\n    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow);\n  }\n\n  /* Primary variant */\n  \u0026.primary {\n    font-weight: 600;\n    color: hsl(var(--oncolor-100));\n    background-color: hsl(var(--accent-main-100));\n    background-image: linear-gradient(\n      to right,\n      hsl(var(--accent-main-100)) 0%,\n      hsl(var(--accent-main-200) / 0.5) 50%,\n      hsl(var(--accent-main-200)) 100%\n    );\n    background-size: 200% 100%;\n    background-position: 0% 0%;\n    border: 0.5px solid hsl(var(--border-300) / 0.25);\n    box-shadow: \n      inset 0 0.5px 0px rgba(255, 255, 0, 0.15),\n      0 1px 1px rgba(0, 0, 0, 0.05);\n    text-shadow: 0 1px 2px rgb(0 0 0 / 10%);\n    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);\n\n    \u0026:hover {\n      background-position: 100% 0%;\n      background-image: linear-gradient(\n        to right,\n        hsl(var(--accent-main-200)) 0%,\n        hsl(var(--accent-main-200)) 100%\n      );\n    }\n\n    \u0026:active {\n      background-color: hsl(var(--accent-main-000));\n      box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.2);\n      transform: scale(0.985);\n    }\n  }\n\n  /* Flat variant */\n  \u0026.flat {\n    font-weight: 500;\n    color: hsl(var(--oncolor-100));\n    background-color: hsl(var(--accent-main-100));\n    transition: background-color 150ms;\n\n    \u0026:hover {\n      background-color: hsl(var(--accent-main-200));\n    }\n  }\n\n  /* Secondary variant */\n  \u0026.secondary {\n    font-weight: 600;\n    color: hsl(var(--text-100) / 0.9);\n    background-image: radial-gradient(\n      ellipse at center,\n      hsl(var(--bg-500) / 0.1) 50%,\n      hsl(var(--bg-500) / 0.3) 100%\n    );\n    border: 0.5px solid hsl(var(--border-400));\n    transition: color 150ms, background-color 150ms;\n\n    \u0026:hover {\n      color: hsl(var(--text-000));\n      background-color: hsl(var(--bg-500) / 0.6);\n    }\n\n    \u0026:active {\n      background-color: hsl(var(--bg-500) / 0.5);\n    }\n  }\n\n  /* Outline variant */\n  \u0026.outline {\n    font-weight: 600;\n    color: hsl(var(--text-200));\n    background-color: transparent;\n    border: 1.5px solid currentColor;\n    transition: color 150ms, background-color 150ms;\n\n    \u0026:hover {\n      color: hsl(var(--text-100));\n      background-color: hsl(var(--bg-400));\n      border-color: hsl(var(--bg-400));\n    }\n  }\n\n  /* Ghost variant */\n  \u0026.ghost {\n    color: hsl(var(--text-200));\n    border-color: transparent;\n    transition: color 150ms, background-color 150ms;\n\n    \u0026:hover {\n      color: hsl(var(--text-100));\n      background-color: hsl(var(--bg-500) / 0.4);\n    }\n\n    \u0026:active {\n      background-color: hsl(var(--bg-400));\n    }\n  }\n\n  /* Underline variant */\n  \u0026.underline {\n    opacity: 0.8;\n    text-decoration-line: none;\n    text-underline-offset: 3px;\n    transition: all 150ms;\n\n    \u0026:hover {\n      opacity: 1;\n      text-decoration-line: underline;\n    }\n\n    \u0026:active {\n      transform: scale(0.985);\n    }\n  }\n\n  /* Danger variant */\n  \u0026.danger {\n    font-weight: 600;\n    color: hsl(var(--oncolor-100));\n    background-color: hsl(var(--danger-100));\n    transition: background-color 150ms;\n\n    \u0026:hover {\n      background-color: hsl(var(--danger-200));\n    }\n  }\n}\n"])</script><script>self.__next_f.push([1,"47:[[\"$\",\"style\",\"0\",{\"data-custom-css-index\":0,\"data-custom-css-path\":\"button.css\",\"dangerouslySetInnerHTML\":{\"__html\":\"$55\"}}],\"$L56\"]\n58:Tce9,"])</script><script>self.__next_f.push([1,"/**\n * First-party analytics for code.claude.com/docs.\n *\n * Loads the SDK bundle (window.antalytics) from the CDN and initialises it.\n * The bundle is rebuilt and republished automatically whenever the SDK\n * source changes upstream, so this file rarely needs to change.\n *\n * Consent: events are gated on the anthropic-consent-preferences cookie\n * written by the shared banner (consent-loader.js). Fail-closed when the\n * cookie is absent or unparseable, so visitors who have not opted in via\n * the banner are not tracked.\n */\n;(function () {\n  if (typeof window === 'undefined' || typeof document === 'undefined') return\n\n  function hasAnalyticsConsent() {\n    try {\n      if (navigator.globalPrivacyControl) return false\n      var m = document.cookie.match(/(?:^|;\\s*)anthropic-consent-preferences=([^;]+)/)\n      if (!m) return false\n      return JSON.parse(decodeURIComponent(m[1])).analytics === true\n    } catch (_) {\n      return false\n    }\n  }\n\n  function start() {\n    if (!window.antalytics) return\n    window.antalytics.init({\n      // Matches the x-service-name used by snippets/experiment.jsx so\n      // page-view events and GrowthBook exposure events join on the same\n      // service_name in BigQuery.\n      serviceName: 'claude_code_docs',\n      allowedOrigins: ['https://code.claude.com'],\n      plugins: [\n        {\n          name: 'consentGate',\n          type: 'before',\n          fn: function (event) {\n            return hasAnalyticsConsent() ? event : null\n          },\n        },\n      ],\n      onError: function (error, ctx) {\n        // eslint-disable-next-line no-console\n        console.warn('[antalytics:' + ctx.method + ']', error)\n      },\n    })\n    window.antalytics.page()\n\n    var lastPath = location.pathname\n    function onRouteChange() {\n      if (location.pathname === lastPath) return\n      lastPath = location.pathname\n      window.antalytics.page()\n    }\n    var origPushState = history.pushState\n    history.pushState = function () {\n      origPushState.apply(this, arguments)\n      onRouteChange()\n    }\n    window.addEventListener('popstate', onRouteChange)\n  }\n\n  var loaded = false\n  function loadSdk() {\n    if (loaded) return\n    loaded = true\n    var s = document.createElement('script')\n    s.src = 'https://assets.claude.ai/sdk/antalytics/latest.umd.js'\n    s.async = true\n    // No cookies or page URL sent with the cross-origin fetch.\n    s.crossOrigin = 'anonymous'\n    s.referrerPolicy = 'no-referrer'\n    s.onload = start\n    s.onerror = function () {\n      // eslint-disable-next-line no-console\n      console.warn('[antalytics] failed to load SDK bundle from CDN')\n    }\n    document.head.appendChild(s)\n  }\n\n  // Only fetch the SDK once analytics consent is granted, so visitors who\n  // have not opted in never trigger a request to the CDN at all. Re-check\n  // when the consent cookie changes (banner accept/reject).\n  if (hasAnalyticsConsent()) {\n    loadSdk()\n  }\n  if (typeof window.cookieStore !== 'undefined' \u0026\u0026 window.cookieStore.addEventListener) {\n    window.cookieStore.addEventListener('change', function (e) {\n      for (var i = 0; i \u003c e.changed.length; i++) {\n        if (e.changed[i].name === 'anthropic-consent-preferences' \u0026\u0026 hasAnalyticsConsent()) {\n          loadSdk()\n          return\n        }\n      }\n    })\n  }\n})()\n"])</script><script>self.__next_f.push([1,"59:T1694,"])</script><script>self.__next_f.push([1,"/**\n * Collapse toggle for the right \"On this page\" table of contents.\n *\n * Adds a floating button that hides the ToC column and lets the content\n * area use the freed space (see the matching rules in style.css). The\n * choice persists per browser via localStorage.\n *\n * The button is appended to document.body, outside the Next.js app root,\n * so it survives client-side navigation. Visibility on pages without a\n * ToC and the chevron direction are both handled in style.css, so this\n * script only creates the button and manages state.\n */\n;(function () {\n  if (typeof window === 'undefined' || typeof document === 'undefined') return\n  // The layout rules in style.css depend on :has(). Without support the\n  // ToC would hide but the content column would never widen, so leave\n  // the button out entirely.\n  if (!(window.CSS \u0026\u0026 CSS.supports('selector(:has(*))'))) return\n\n  var STORAGE_KEY = 'docs-toc-collapsed'\n  var COLLAPSED_CLASS = 'toc-collapsed'\n\n  // [hide, show] labels per locale directory. Keyed by URL path segment\n  // because the rendered page's lang attribute carries nonstandard\n  // values (e.g. \"jp\" on /ja/ pages).\n  var LABELS = {\n    en: ['Hide table of contents', 'Show table of contents'],\n    de: ['Inhaltsverzeichnis ausblenden', 'Inhaltsverzeichnis anzeigen'],\n    es: ['Ocultar tabla de contenido', 'Mostrar tabla de contenido'],\n    fr: ['Masquer la table des matières', 'Afficher la table des matières'],\n    id: ['Sembunyikan daftar isi', 'Tampilkan daftar isi'],\n    it: ['Nascondi indice', 'Mostra indice'],\n    ja: ['目次を隠す', '目次を表示'],\n    ko: ['목차 숨기기', '목차 보기'],\n    pt: ['Ocultar sumário', 'Mostrar sumário'],\n    ru: ['Скрыть оглавление', 'Показать оглавление'],\n    'zh-CN': ['隐藏目录', '显示目录'],\n    'zh-TW': ['隱藏目錄', '顯示目錄'],\n  }\n\n  function localeLabels() {\n    // Scan rather than index: production serves under the /docs base\n    // path while mint dev and previews serve root-relative, so the\n    // locale isn't always the first segment. The locale directory comes\n    // before any page slug, so the first matching segment wins.\n    var segments = window.location.pathname.split('/')\n    for (var i = 1; i \u003c segments.length; i++) {\n      if (Object.prototype.hasOwnProperty.call(LABELS, segments[i])) {\n        return LABELS[segments[i]]\n      }\n    }\n    return LABELS.en\n  }\n\n  function isCollapsed() {\n    return document.documentElement.classList.contains(COLLAPSED_CLASS)\n  }\n\n  function setCollapsed(collapsed) {\n    document.documentElement.classList.toggle(COLLAPSED_CLASS, collapsed)\n    try {\n      if (collapsed) {\n        localStorage.setItem(STORAGE_KEY, '1')\n      } else {\n        localStorage.removeItem(STORAGE_KEY)\n      }\n    } catch (_) {}\n  }\n\n  // Apply the saved state as early as possible to minimize layout flash.\n  try {\n    if (localStorage.getItem(STORAGE_KEY) === '1') setCollapsed(true)\n  } catch (_) {}\n\n  function render(btn) {\n    var collapsed = isCollapsed()\n    var label = localeLabels()[collapsed ? 1 : 0]\n    btn.setAttribute('aria-expanded', String(!collapsed))\n    btn.setAttribute('aria-label', label)\n    btn.title = label\n  }\n\n  function start() {\n    if (document.getElementById('toc-collapse-toggle')) return\n\n    var btn = document.createElement('button')\n    btn.id = 'toc-collapse-toggle'\n    btn.type = 'button'\n    btn.setAttribute('aria-controls', 'table-of-contents-layout')\n\n    var SVG_NS = 'http://www.w3.org/2000/svg'\n    function makeIcon(className, d) {\n      var svg = document.createElementNS(SVG_NS, 'svg')\n      svg.setAttribute('viewBox', '0 0 24 24')\n      svg.setAttribute('aria-hidden', 'true')\n      svg.setAttribute('class', className)\n      var path = document.createElementNS(SVG_NS, 'path')\n      path.setAttribute('d', d)\n      svg.appendChild(path)\n      return svg\n    }\n    btn.appendChild(makeIcon('toc-chevron', 'M9 18l6-6-6-6'))\n    // List glyph, shown only while collapsed (see style.css).\n    btn.appendChild(makeIcon('toc-glyph', 'M4 6h16M4 12h10M4 18h16'))\n\n    btn.addEventListener('click', function () {\n      setCollapsed(!isCollapsed())\n      render(btn)\n    })\n    // Re-read the saved state when another tab changes it (storage) and\n    // when this page returns from the back/forward cache, where storage\n    // events fired while cached were never delivered (pageshow).\n    function syncFromStorage() {\n      var stored = false\n      try {\n        stored = localStorage.getItem(STORAGE_KEY) === '1'\n      } catch (_) {}\n      setCollapsed(stored)\n      render(btn)\n    }\n    window.addEventListener('storage', function (e) {\n      if (e.storageArea !== localStorage) return\n      // key is null when localStorage.clear() ran; re-read either way.\n      if (e.key === null || e.key === STORAGE_KEY) syncFromStorage()\n    })\n    window.addEventListener('pageshow', syncFromStorage)\n    // Client-side navigation can cross locale directories, so re-render\n    // the label whenever the route changes.\n    function onNavigate() {\n      setTimeout(function () {\n        render(btn)\n      }, 0)\n    }\n    var origPushState = history.pushState\n    history.pushState = function () {\n      var result = origPushState.apply(this, arguments)\n      onNavigate()\n      return result\n    }\n    window.addEventListener('popstate', onNavigate)\n    render(btn)\n    // Prepend rather than append: the button still lives outside the\n    // app root and survives client-side navigation, but lands at the\n    // start of the tab order instead of after the entire page.\n    document.body.prepend(btn)\n  }\n\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', start, { once: true })\n  } else {\n    start()\n  }\n})()\n"])</script><script>self.__next_f.push([1,"48:[\"$\",\"$L57\",null,{\"customJsDisabled\":false,\"jsFiles\":[{\"_id\":\"69bdb9fd7ba705a281409ac4\",\"filePath\":\"consent-loader.js\",\"subdomain\":\"claude-code\",\"__v\":0,\"content\":\"/**\\n * Consent banner loader for code.claude.com/docs.\\n *\\n * Mintlify auto-includes any .js file in the content root on every page.\\n * This loader injects the shared consent banner hosted on claude.com.\\n */\\n;(function () {\\n  var s = document.createElement('script')\\n  s.src = 'https://claude.com/shared/consent-banner.js'\\n  s.async = true\\n  document.head.appendChild(s)\\n})()\\n\"},{\"_id\":\"69fe40dc388017ee55c19b7a\",\"subdomain\":\"claude-code\",\"filePath\":\"antalytics-loader.js\",\"__v\":0,\"content\":\"$58\"},{\"_id\":\"6a567ad87ec0f756509df168\",\"filePath\":\"toc-collapse.js\",\"subdomain\":\"claude-code\",\"__v\":0,\"content\":\"$59\"}]}]\n"])</script><script>self.__next_f.push([1,"5c:T194fd,"])</script><script>self.__next_f.push([1,"\"use strict\";const{Fragment:_Fragment,jsx:_jsx,jsxs:_jsxs}=arguments[0];const{useMDXComponents:_provideComponents}=arguments[0];const ClaudeExplorer=()=\u003e{const _components={a:`a`,..._provideComponents()};const A=useMemo(()=\u003e({href,children})=\u003e_jsx(_components.a,{href,style:{color:`var(--ce-accent)`,textDecoration:`none`,borderBottom:`1px dotted var(--ce-accent)`},children}),[]);const C=useMemo(()=\u003e({children})=\u003e_jsx(`code`,{style:{fontFamily:`var(--ce-mono)`,fontSize:`0.92em`,padding:`1px 4px`,borderRadius:`3px`,background:`var(--ce-surface)`,border:`0.5px solid var(--ce-border-subtle)`},children}),[]);const commandsNote=useMemo(()=\u003e_jsxs(_Fragment,{children:[`Commands and skills are now the same mechanism. For new workflows, use `,_jsx(A,{href:`/en/skills`,children:`skills/`}),` instead: same `,_jsx(C,{children:`/name`}),` invocation, plus you can bundle supporting files.`]}),[]);const FILE_TREE=useMemo(()=\u003e({project:{label:`your-project/`,children:[{id:`claude-md`,label:`CLAUDE.md`,type:`file`,icon:`md`,color:`#6A9BCC`,badge:`committed`,oneLiner:`Project instructions Claude reads every session`,when:`Loaded into context at the start of every session`,description:`Project-specific instructions that shape how Claude works in this repository. Put your conventions, common commands, and architectural context here so Claude operates with the same assumptions your team does.`,tips:[`Target under 200 lines. Longer files still load in full but may reduce adherence`,_jsxs(_Fragment,{children:[`CLAUDE.md loads into every session. If something only matters for specific tasks, move it to a `,_jsx(A,{href:`/en/skills`,children:`skill`}),` or a path-scoped `,_jsx(A,{href:`/en/memory#organize-rules-with-claude/rules/`,children:`rule`}),` so it loads only when needed`]}),`List the commands you run most, like build, test, and format, so Claude knows them without you spelling them out each time`,_jsxs(_Fragment,{children:[`Run `,_jsx(C,{children:`/memory`}),` to open and edit CLAUDE.md from within a session`]}),_jsxs(_Fragment,{children:[`Also works at `,_jsx(C,{children:`.claude/CLAUDE.md`}),` if you prefer to keep the project root clean`]})],exampleIntro:`This example is for a TypeScript and React project. It lists the build and test commands, the framework conventions Claude should follow, and project-specific rules like export style and file layout.`,example:`# Project conventions\n\n## Commands\n- Build: \\`npm run build\\`\n- Test: \\`npm test\\`\n- Lint: \\`npm run lint\\`\n\n## Stack\n- TypeScript with strict mode\n- React 19, functional components only\n\n## Rules\n- Named exports, never default exports\n- Tests live next to source: \\`foo.ts\\` -\u003e \\`foo.test.ts\\`\n- All API routes return \\`{ data, error }\\` shape`,docsLink:`/en/memory`},{id:`mcp-json`,label:`.mcp.json`,type:`file`,icon:`json`,color:`#9B7BC4`,badge:`committed`,oneLiner:`Project-scoped MCP servers, shared with your team`,when:_jsxs(_Fragment,{children:[`Servers connect when the session begins. Tool schemas are deferred by default and load on demand via `,_jsx(A,{href:`/en/mcp#scale-with-mcp-tool-search`,children:`tool search`})]}),description:_jsxs(_Fragment,{children:[`Configures Model Context Protocol (MCP) servers that give Claude access to external tools: databases, APIs, browsers, and more. This file holds the project-scoped servers your whole team uses. Personal servers you want to keep to yourself go in `,_jsx(C,{children:`~/.claude.json`}),` instead.`]}),tips:[_jsxs(_Fragment,{children:[`Use environment variable references for secrets: `,_jsx(C,{children:\"${NOTION_TOKEN}\"})]}),_jsxs(_Fragment,{children:[`Lives at the project root, not inside `,_jsx(C,{children:`.claude/`})]}),_jsxs(_Fragment,{children:[`For servers only you need, run `,_jsx(C,{children:`claude mcp add --scope user`}),`. This writes to `,_jsx(C,{children:`~/.claude.json`}),` instead of `,_jsx(C,{children:`.mcp.json`})]})],exampleIntro:_jsxs(_Fragment,{children:[`This example configures the Notion MCP server so Claude can read and update pages in your workspace. The `,_jsx(C,{children:\"${NOTION_TOKEN}\"}),` reference is read from your shell environment when Claude Code starts the server, so the token never lands in the file.`]}),example:`{\n  \"mcpServers\": {\n    \"notion\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@notionhq/notion-mcp-server\"],\n      \"env\": {\n        \"NOTION_TOKEN\": \"\\${NOTION_TOKEN}\"\n      }\n    }\n  }\n}`,docsLink:`/en/mcp`},{id:`worktreeinclude`,label:`.worktreeinclude`,type:`file`,icon:`md`,color:`#8FA876`,badge:`committed`,oneLiner:`Gitignored files to copy into new worktrees`,when:_jsxs(_Fragment,{children:[`Read when Claude creates a git worktree via `,_jsx(C,{children:`--worktree`}),`, the `,_jsx(C,{children:`EnterWorktree`}),` tool, or subagent `,_jsx(C,{children:`isolation: worktree`})]}),description:_jsxs(_Fragment,{children:[`Lists gitignored files to copy from your main repository into each new worktree. Worktrees are fresh checkouts, so untracked files like `,_jsx(C,{children:`.env`}),` are missing by default. Patterns here use `,_jsx(C,{children:`.gitignore`}),` syntax. Only files that match a pattern and are also gitignored get copied, so tracked files are never duplicated.`]}),tips:[_jsxs(_Fragment,{children:[`Lives at the project root, not inside `,_jsx(C,{children:`.claude/`})]}),_jsxs(_Fragment,{children:[`Git-only: if you configure a `,_jsx(A,{href:`/en/hooks#worktreecreate`,children:`WorktreeCreate hook`}),` for a different VCS, this file is not read. Copy files inside your hook script instead`]}),_jsxs(_Fragment,{children:[`Also applies to parallel sessions in the `,_jsx(A,{href:`/en/desktop#work-in-parallel-with-sessions`,children:`desktop app`})]})],exampleIntro:`This example copies your local environment files and a secrets config into every worktree Claude creates. Comments start with # and blank lines are ignored, same as .gitignore.`,example:`# Local environment\n.env\n.env.local\n\n# API credentials\nconfig/secrets.json`,docsLink:`/en/worktrees#copy-gitignored-files-into-worktrees`},{id:`dot-claude`,label:`.claude/`,type:`folder`,icon:`folder`,color:`var(--ce-accent)`,oneLiner:`Project-level configuration, rules, and extensions`,description:`Everything Claude Code reads that is specific to this project. If you use git, commit most files here so your team shares them; a few, like settings.local.json, are gitignored when Claude Code saves settings to them. Each file badge shows which.`,children:[{id:`settings-json`,label:`settings.json`,type:`file`,icon:`json`,color:`var(--ce-text-3)`,badge:`committed`,oneLiner:`Permissions, hooks, and configuration`,when:_jsxs(_Fragment,{children:[`Overrides global `,_jsx(C,{children:`~/.claude/settings.json`}),`. Local settings, CLI flags, and managed settings override this`]}),description:`Settings that Claude Code applies directly. Permissions control which commands and tools Claude can use; hooks run your scripts at specific points in a session. Unlike CLAUDE.md, which Claude reads as guidance, these are enforced whether Claude follows them or not.`,contains:[_jsxs(_Fragment,{children:[_jsx(A,{href:`/en/permissions`,children:`permissions`}),`: allow, deny, or prompt before Claude uses specific tools or commands`]}),_jsxs(_Fragment,{children:[_jsx(A,{href:`/en/hooks`,children:`hooks`}),`: run your own scripts on events like before a tool call or after a file edit`]}),_jsxs(_Fragment,{children:[_jsx(A,{href:`/en/statusline`,children:`statusLine`}),`: customize the line shown at the bottom while Claude works`]}),_jsxs(_Fragment,{children:[_jsx(A,{href:`/en/settings-reference#available-settings`,children:`model`}),`: pick a default model for this project`]}),_jsxs(_Fragment,{children:[_jsx(A,{href:`/en/settings-reference#environment-variables`,children:`env`}),`: environment variables set in every session`]}),_jsxs(_Fragment,{children:[_jsx(A,{href:`/en/output-styles`,children:`outputStyle`}),`: select a custom system-prompt style from output-styles/`]})],tips:[_jsxs(_Fragment,{children:[`Bash permission patterns support wildcards: `,_jsx(C,{children:`Bash(npm test *)`}),` matches any command starting with `,_jsx(C,{children:`npm test`})]}),_jsxs(_Fragment,{children:[`Array settings like `,_jsx(C,{children:`permissions.allow`}),` combine across all scopes; scalar settings like `,_jsx(C,{children:`model`}),` use the most specific value`]})],exampleIntro:_jsxs(_Fragment,{children:[`This example allows `,_jsx(C,{children:`npm test`}),` and `,_jsx(C,{children:`npm run`}),` commands without prompting, blocks `,_jsx(C,{children:`rm -rf`}),`, and runs Prettier on files after Claude edits or writes them.`]}),example:`{\n  \"permissions\": {\n    \"allow\": [\n      \"Bash(npm test *)\",\n      \"Bash(npm run *)\"\n    ],\n    \"deny\": [\n      \"Bash(rm -rf *)\"\n    ]\n  },\n  \"hooks\": {\n    \"PostToolUse\": [{\n      \"matcher\": \"Edit|Write\",\n      \"hooks\": [{\n        \"type\": \"command\",\n        \"command\": \"jq -r '.tool_input.file_path' | xargs npx prettier --write\"\n      }]\n    }]\n  }\n}`,docsLink:`/en/settings`},{id:`settings-local-json`,label:`settings.local.json`,type:`file`,icon:`json`,color:`var(--ce-text-3)`,badge:`gitignored`,oneLiner:`Your personal settings overrides for this project`,when:`Highest of the user-editable settings files; CLI flags and managed settings still take precedence`,description:`Personal settings that take precedence over the project defaults. Same JSON format as settings.json, gitignored when Claude Code saves a setting to it. Use this when you need different permissions or defaults than the team config.`,tips:[_jsxs(_Fragment,{children:[`Same schema as settings.json. Array settings like `,_jsx(C,{children:`permissions.allow`}),` combine across scopes; scalar settings like `,_jsx(C,{children:`model`}),` use the local value`]}),_jsxs(_Fragment,{children:[`When Claude Code saves a setting to this file in a repository that doesn't already ignore it, it adds `,_jsx(C,{children:`**/.claude/settings.local.json`}),` to your global git excludes file: `,_jsx(C,{children:`core.excludesFile`}),` from your global git config when it's set to an absolute or `,_jsx(C,{children:`~`}),`-prefixed path, otherwise `,_jsx(C,{children:`$XDG_CONFIG_HOME/git/ignore`}),`, or `,_jsx(C,{children:`~/.config/git/ignore`}),`. To share the ignore rule with your team, also add it to the project `,_jsx(C,{children:`.gitignore`})]})],exampleIntro:`This example adds Docker permissions on top of whatever the team settings.json allows.`,example:`{\n  \"permissions\": {\n    \"allow\": [\n      \"Bash(docker *)\"\n    ]\n  }\n}`,docsLink:`/en/settings`},{id:`rules`,label:`rules/`,type:`folder`,icon:`folder`,color:`#9B7BC4`,oneLiner:`Topic-scoped instructions, optionally gated by file paths`,when:_jsxs(_Fragment,{children:[`Rules without `,_jsx(C,{children:`paths:`}),` load at session start. Rules with `,_jsx(C,{children:`paths:`}),` load when a matching file enters context`]}),description:[_jsxs(_Fragment,{children:[`Project instructions split into topic files that can load conditionally based on file paths. A rule without `,_jsx(C,{children:`paths:`}),` frontmatter loads at session start like CLAUDE.md; a rule with `,_jsx(C,{children:`paths:`}),` loads only when Claude reads a matching file.`]}),_jsxs(_Fragment,{children:[`Like CLAUDE.md, rules are guidance Claude reads, not configuration Claude Code enforces. For guaranteed behavior use `,_jsx(A,{href:`/en/hooks`,children:`hooks`}),` or `,_jsx(A,{href:`/en/permissions`,children:`permissions`}),`.`]})],tips:[_jsxs(_Fragment,{children:[`Use `,_jsx(C,{children:`paths:`}),` frontmatter with globs to scope rules to directories or file types`]}),_jsxs(_Fragment,{children:[`Subdirectories work: `,_jsx(C,{children:`.claude/rules/frontend/react.md`}),` is discovered automatically`]}),`When CLAUDE.md approaches 200 lines, start splitting into rules`],docsLink:`/en/memory#organize-rules-with-claude/rules/`,children:[{id:`rule-testing`,label:`testing.md`,type:`file`,icon:`md`,color:`#9B7BC4`,badge:`committed`,oneLiner:`Test conventions scoped to test files`,when:_jsxs(_Fragment,{children:[`Loaded when Claude reads a file matching the `,_jsx(C,{children:`paths:`}),` globs below`]}),description:_jsxs(_Fragment,{children:[`An example rule that only loads when Claude is working on test files. The `,_jsx(C,{children:`paths:`}),` globs in the frontmatter define which files trigger it; here, anything ending in .test.ts or .test.tsx. For other files, this rule is not loaded into context.`]}),example:`---\npaths:\n  - \"**/*.test.ts\"\n  - \"**/*.test.tsx\"\n---\n\n# Testing Rules\n\n- Use descriptive test names: \"should [expected] when [condition]\"\n- Mock external dependencies, not internal modules\n- Clean up side effects in afterEach`},{id:`rule-api`,label:`api-design.md`,type:`file`,icon:`md`,color:`#9B7BC4`,badge:`committed`,oneLiner:`API conventions scoped to backend code`,when:_jsxs(_Fragment,{children:[`Loaded when Claude reads a file matching the `,_jsx(C,{children:`paths:`}),` glob below`]}),description:_jsxs(_Fragment,{children:[`A second example showing a rule scoped to backend code. The `,_jsx(C,{children:`paths:`}),` glob matches files under src/api/, so these conventions load only when Claude is editing API routes.`]}),example:`---\npaths:\n  - \"src/api/**/*.ts\"\n---\n\n# API Design Rules\n\n- All endpoints must validate input with Zod schemas\n- Return shape: { data: T } | { error: string }\n- Rate limit all public endpoints`}]},{id:`skills`,label:`skills/`,type:`folder`,icon:`folder`,color:`#D4A843`,oneLiner:`Reusable prompts you or Claude invoke by name`,when:_jsxs(_Fragment,{children:[`Invoked with `,_jsx(C,{children:`/skill-name`}),` or when Claude matches the task to a skill`]}),description:_jsxs(_Fragment,{children:[`Each skill is a folder with a SKILL.md file plus any supporting files it needs. By default, both you and Claude can invoke a skill. Use frontmatter to control that: `,_jsx(C,{children:`disable-model-invocation: true`}),` for user-only workflows like `,_jsx(C,{children:`/deploy`}),`, or `,_jsx(C,{children:`user-invocable: false`}),` to hide from the `,_jsx(C,{children:`/`}),` menu while Claude can still invoke it.`]}),tips:[_jsxs(_Fragment,{children:[`Skills accept arguments: `,_jsx(C,{children:`/deploy staging`}),` passes \"staging\" as `,_jsx(C,{children:`$ARGUMENTS`}),`. Use `,_jsx(C,{children:`$0`}),`, `,_jsx(C,{children:`$1`}),`, and so on for positional access`]}),_jsxs(_Fragment,{children:[`The `,_jsx(C,{children:`description`}),` frontmatter determines when Claude auto-invokes the skill`]}),`Bundle reference docs alongside SKILL.md. Claude knows the skill directory path and can read supporting files when you mention them`],docsLink:`/en/skills`,children:[{id:`skill-review`,label:`security-review/`,type:`folder`,icon:`folder`,color:`#D4A843`,oneLiner:`A skill bundling SKILL.md with supporting files`,children:[{id:`skill-review-md`,label:`SKILL.md`,type:`file`,icon:`md`,color:`#D4A843`,badge:`committed`,oneLiner:`Entrypoint: trigger, invocability, instructions`,when:_jsxs(_Fragment,{children:[`User types `,_jsx(C,{children:`/security-review \u003ctarget\u003e`}),`; Claude cannot auto-invoke this skill`]}),description:[_jsxs(_Fragment,{children:[`This skill uses `,_jsx(C,{children:`disable-model-invocation: true`}),` so only you can trigger it; Claude never invokes it on its own.`]}),_jsxs(_Fragment,{children:[`The `,_jsx(C,{children:\"!`...`\"}),` line runs a shell command and injects its output into the prompt. `,_jsx(C,{children:`$ARGUMENTS`}),` substitutes whatever you typed after the skill name. Claude sees the skill directory path, so mentioning a bundled file like checklist.md lets Claude read it.`]})],example:`---\ndescription: Reviews code changes for security vulnerabilities, authentication gaps, and injection risks\ndisable-model-invocation: true\nargument-hint: \u003cbranch-or-path\u003e\n---\n\n## Diff to review\n\n!\\`git diff $ARGUMENTS\\`\n\nAudit the changes above for:\n\n1. Injection vulnerabilities (SQL, XSS, command)\n2. Authentication and authorization gaps\n3. Hardcoded secrets or credentials\n\nUse checklist.md in this skill directory for the full review checklist.\n\nReport findings with severity ratings and remediation steps.`},{id:`skill-checklist`,label:`checklist.md`,type:`file`,icon:`md`,color:`#D4A843`,badge:`committed`,oneLiner:`Supporting file bundled with the skill`,when:`Claude reads it on demand while running the skill`,description:_jsxs(_Fragment,{children:[`Skills can bundle any supporting files: reference docs, templates, scripts. The skill directory path is prepended to SKILL.md, so Claude can read bundled files by name. For scripts in bash injection commands, use the `,_jsx(C,{children:\"${CLAUDE_SKILL_DIR}\"}),` placeholder.`]}),example:`# Security Review Checklist\n\n## Input Validation\n- [ ] All user input sanitized before DB queries\n- [ ] File upload MIME types validated\n- [ ] Path traversal prevented on file operations\n\n## Authentication\n- [ ] JWT tokens expire after 24 hours\n- [ ] API keys stored in environment variables\n- [ ] Passwords hashed with bcrypt or argon2`}]}]},{id:`commands`,label:`commands/`,type:`folder`,icon:`folder`,color:`#788C5D`,oneLiner:_jsxs(_Fragment,{children:[`Single-file prompts invoked with `,_jsx(C,{children:`/name`})]}),note:commandsNote,when:_jsxs(_Fragment,{children:[`User types `,_jsx(C,{children:`/command-name`})]}),description:_jsxs(_Fragment,{children:[`A file at `,_jsx(C,{children:`commands/deploy.md`}),` creates `,_jsx(C,{children:`/deploy`}),` the same way a skill at `,_jsx(C,{children:`skills/deploy/SKILL.md`}),` does, and both can be auto-invoked by Claude. Skills use a directory with SKILL.md, letting you bundle reference docs, templates, or scripts alongside the prompt.`]}),tips:[_jsxs(_Fragment,{children:[`Use `,_jsx(C,{children:`$ARGUMENTS`}),` in the file to accept parameters: `,_jsx(C,{children:`/fix-issue 123`})]}),`If a skill and command share a name, the skill takes precedence`,`New commands should usually be skills instead; commands remain supported`],docsLink:`/en/skills`,children:[{id:`cmd-example`,label:`fix-issue.md`,type:`file`,icon:`md`,color:`#788C5D`,badge:`committed`,oneLiner:_jsxs(_Fragment,{children:[`Invoked as `,_jsx(C,{children:`/fix-issue \u003cnumber\u003e`})]}),note:commandsNote,description:[_jsxs(_Fragment,{children:[`An example command for fixing a GitHub issue. Type `,_jsx(C,{children:`/fix-issue 123`}),` and the `,_jsx(C,{children:\"!`...`\"}),` line runs `,_jsx(C,{children:`gh issue view 123`}),` in your shell, injecting the output into the prompt before Claude sees it.`]}),_jsxs(_Fragment,{children:[_jsx(C,{children:`$ARGUMENTS`}),` substitutes whatever you typed after the command name. For positional access, use `,_jsx(C,{children:`$0`}),` `,_jsx(C,{children:`$1`}),` and so on.`]})],example:`---\nargument-hint: \u003cissue-number\u003e\n---\n\n!\\`gh issue view $ARGUMENTS\\`\n\nInvestigate and fix the issue above.\n\n1. Trace the bug to its root cause\n2. Implement the fix\n3. Write or update tests\n4. Summarize what you changed and why`}]},{id:`output-styles`,label:`output-styles/`,type:`folder`,icon:`folder`,color:`#5AA7A7`,oneLiner:`Project-scoped output styles, if your team shares any`,when:`Applied at session start when selected via the outputStyle setting`,description:_jsxs(_Fragment,{children:[`Output styles are usually personal, so most live in `,_jsx(C,{children:`~/.claude/output-styles/`}),`. Put one here if your team shares a style, like a review mode everyone uses. See `,_jsx(A,{href:`#ce-global-output-styles`,children:`the Global tab`}),` for the full explanation and example.`]}),docsLink:`/en/output-styles`,children:[]},{id:`agents`,label:`agents/`,type:`folder`,icon:`folder`,color:`#C46686`,oneLiner:`Specialized subagents with their own context window`,when:`Runs in its own context window when you or Claude invoke it`,description:`Each markdown file defines a subagent with its own system prompt, tool access, and optionally its own model. Subagents run in a fresh context window, keeping the main conversation clean. Useful for parallel work or isolated tasks.`,tips:[`Each agent gets a fresh context window, separate from your main session`,_jsxs(_Fragment,{children:[`Restrict tool access per agent with the `,_jsx(C,{children:`tools:`}),` frontmatter field`]}),`Type @ and pick an agent from the autocomplete to delegate directly`],docsLink:`/en/sub-agents`,children:[{id:`agent-reviewer`,label:`code-reviewer.md`,type:`file`,icon:`md`,color:`#C46686`,badge:`committed`,oneLiner:`Subagent for isolated code review`,when:`Claude spawns it for review tasks, or you @-mention it from the autocomplete`,description:_jsxs(_Fragment,{children:[`An example subagent restricted to read-only tools. The `,_jsx(C,{children:`description`}),` frontmatter tells Claude when to delegate to it automatically; `,_jsx(C,{children:`tools:`}),` limits it to Read, Grep, and Glob so it can inspect code but never edit. The body becomes the subagent's system prompt.`]}),example:`---\nname: code-reviewer\ndescription: Reviews code for correctness, security, and maintainability\ntools: Read, Grep, Glob\n---\n\nYou are a senior code reviewer. Review for:\n\n1. Correctness: logic errors, edge cases, null handling\n2. Security: injection, auth bypass, data exposure\n3. Maintainability: naming, complexity, duplication\n\nEvery finding must include a concrete fix.`}]},{id:`workflows`,label:`workflows/`,type:`folder`,icon:`folder`,color:`#C46686`,oneLiner:`Dynamic workflow scripts that orchestrate many subagents`,when:`Loaded at startup; each file becomes a /\u003cname\u003e command`,description:_jsxs(_Fragment,{children:[`Each `,_jsx(C,{children:`.js`}),` file is a `,_jsx(A,{href:`/en/workflows`,children:`dynamic workflow`}),`: a script the runtime executes to spawn and coordinate many subagents. Workflows are written by Claude and saved here from `,_jsx(C,{children:`/workflows`}),` rather than authored from scratch.`]}),tips:[_jsxs(_Fragment,{children:[`Save a run from `,_jsx(C,{children:`/workflows`}),` with `,_jsx(C,{children:`s`}),` to create one of these`]}),_jsxs(_Fragment,{children:[`A project workflow takes precedence over a personal one in `,_jsx(C,{children:`~/.claude/workflows/`}),` with the same name`]})],docsLink:`/en/workflows`},{id:`agent-memory`,label:`agent-memory/`,type:`folder`,icon:`folder`,color:`#C46686`,badge:`committed`,autogen:true,oneLiner:`Subagent persistent memory, separate from your main session auto memory`,when:`First 200 lines (capped at 25KB) of MEMORY.md loaded into the subagent system prompt when it runs`,description:_jsxs(_Fragment,{children:[`Subagents with `,_jsx(C,{children:`memory: project`}),` in their frontmatter get a dedicated memory directory here. This is distinct from your `,_jsx(A,{href:`/en/memory#auto-memory`,children:`main session auto memory`}),` at `,_jsx(C,{children:`~/.claude/projects/`}),`: each subagent reads and writes its own MEMORY.md, not yours.`]}),tips:[_jsxs(_Fragment,{children:[`Only created for subagents that set the `,_jsx(C,{children:`memory:`}),` frontmatter field`]}),_jsxs(_Fragment,{children:[`This directory holds project-scoped subagent memory, meant to be shared with your team. To keep memory out of version control use `,_jsx(C,{children:`memory: local`}),`, which writes to `,_jsx(C,{children:`.claude/agent-memory-local/`}),` instead. For cross-project memory use `,_jsx(C,{children:`memory: user`}),`, which writes to `,_jsx(C,{children:`~/.claude/agent-memory/`})]}),_jsxs(_Fragment,{children:[`The main session auto memory is a different feature; see `,_jsx(C,{children:`~/.claude/projects/`}),` in the Global tab`]})],docsLink:`/en/sub-agents#enable-persistent-memory`,children:[{id:`agent-memory-sub`,label:`\u003cagent-name\u003e/`,type:`folder`,icon:`folder`,color:`#C46686`,autogen:true,children:[{id:`agent-memory-md`,label:`MEMORY.md`,type:`file`,icon:`md`,color:`#C46686`,badge:`committed`,autogen:true,oneLiner:`The subagent writes and maintains this file automatically`,when:`Loaded into the subagent system prompt when the subagent starts`,description:_jsxs(_Fragment,{children:[`Works the same as your `,_jsx(A,{href:`/en/memory#auto-memory`,children:`main auto memory`}),`: the subagent creates and updates this file itself. You do not write it. The subagent reads it at the start of each task and writes back what it learns.`]}),example:`# code-reviewer memory\n\n## Patterns seen\n- Project uses custom Result\u003cT, E\u003e type, not exceptions\n- Auth middleware expects Bearer token in Authorization header\n- Tests use factory functions in test/factories/\n\n## Recurring issues\n- Missing null checks on API responses (src/api/*)\n- Unhandled promise rejections in background jobs`}]}]}]}]},global:{label:`~/`,children:[{id:`claude-json`,label:`.claude.json`,type:`file`,icon:`json`,color:`var(--ce-text-3)`,badge:`local`,oneLiner:`App state and UI preferences`,when:_jsxs(_Fragment,{children:[`Read at session start for your preferences and MCP servers. Claude Code writes back to it when you change settings in `,_jsx(C,{children:`/config`}),` or approve trust prompts`]}),description:_jsxs(_Fragment,{children:[`Holds state that does not belong in settings.json: theme, OAuth session, per-project trust decisions, your personal MCP servers, and UI toggles. Mostly managed through `,_jsx(C,{children:`/config`}),` rather than editing directly.`]}),tips:[_jsxs(_Fragment,{children:[`IDE toggles like `,_jsx(C,{children:`autoConnectIde`}),` and `,_jsx(C,{children:`externalEditorContext`}),` live here, not in settings.json`]}),_jsxs(_Fragment,{children:[`The `,_jsx(C,{children:`projects`}),` key tracks per-project state like trust-dialog acceptance and last-session metrics. Permission rules you approve in-session go to `,_jsx(C,{children:`.claude/settings.local.json`}),` instead`]}),_jsxs(_Fragment,{children:[`MCP servers here are yours only: user scope applies across all projects, local scope is per-project but not committed. Team-shared servers go in `,_jsx(C,{children:`.mcp.json`}),` at the project root instead`]})],example:`{\n  \"autoConnectIde\": true,\n  \"externalEditorContext\": true,\n  \"mcpServers\": {\n    \"my-tools\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@example/mcp-server\"]\n    }\n  }\n}`,docsLink:`/en/settings-reference#global-config-settings`},{id:`global-dot-claude`,label:`.claude/`,type:`folder`,icon:`folder`,color:`var(--ce-accent)`,oneLiner:`Your personal configuration across all projects`,description:`The global counterpart to your project .claude/ directory. Files here apply to every project you work in and are never committed to any repository.`,children:[{id:`global-claude-md`,label:`CLAUDE.md`,type:`file`,icon:`md`,color:`#6A9BCC`,badge:`local`,oneLiner:`Personal preferences across every project`,when:`Loaded at the start of every session, in every project`,description:`Your global instruction file. Loaded alongside the project CLAUDE.md at session start, so both are in context together. When instructions conflict, project-level instructions take priority. Keep this to preferences that apply everywhere: response style, commit format, personal conventions.`,tips:[`Keep it short since it loads into context for every project, alongside that project's own CLAUDE.md`,`Good for response style, commit format, and personal conventions`],example:`# Global preferences\n\n- Keep explanations concise\n- Use conventional commit format\n- Show the terminal command to verify changes\n- Prefer composition over inheritance`,docsLink:`/en/memory`},{id:`global-settings`,label:`settings.json`,type:`file`,icon:`json`,color:`var(--ce-text-3)`,badge:`local`,oneLiner:`Default settings for all projects`,when:`Your defaults. Project and local settings.json override any keys you also set there`,description:[_jsxs(_Fragment,{children:[`Same keys as project `,_jsx(C,{children:`settings.json`}),`: permissions, hooks, model, environment variables, and the rest. Put settings here that you want in every project, like permissions you always allow, a preferred model, or a notification hook that runs regardless of which project you're in.`]}),_jsxs(_Fragment,{children:[`Settings follow a precedence order: project `,_jsx(C,{children:`settings.json`}),` overrides any matching keys you set here. This is different from CLAUDE.md, where global and project files are both loaded into context rather than merged key by key.`]})],example:`{\n  \"permissions\": {\n    \"allow\": [\n      \"Bash(git log *)\",\n      \"Bash(git diff *)\"\n    ]\n  }\n}`,docsLink:`/en/settings`},{id:`keybindings`,label:`keybindings.json`,type:`file`,icon:`json`,color:`var(--ce-text-3)`,badge:`local`,oneLiner:`Custom keyboard shortcuts`,when:`Read at session start and hot-reloaded when you edit the file`,description:_jsxs(_Fragment,{children:[`Rebind keyboard shortcuts in the interactive CLI. Run `,_jsx(C,{children:`/keybindings`}),` to create or open this file with a schema reference. Ctrl+C, Ctrl+D, Ctrl+M, and Caps Lock are reserved and cannot be rebound.`]}),exampleIntro:_jsxs(_Fragment,{children:[`This example binds `,_jsx(C,{children:`Ctrl+E`}),` to open your external editor and unbinds `,_jsx(C,{children:`Ctrl+U`}),` by setting it to `,_jsx(C,{children:`null`}),`. The `,_jsx(C,{children:`context`}),` field scopes bindings to a specific part of the CLI, here the main chat input.`]}),example:`{\n  \"$schema\": \"https://www.schemastore.org/claude-code-keybindings.json\",\n  \"$docs\": \"https://code.claude.com/docs/en/keybindings\",\n  \"bindings\": [\n    {\n      \"context\": \"Chat\",\n      \"bindings\": {\n        \"ctrl+e\": \"chat:externalEditor\",\n        \"ctrl+u\": null\n      }\n    }\n  ]\n}`,docsLink:`/en/keybindings`},{id:`themes`,label:`themes/`,type:`folder`,icon:`folder`,color:`#5AA7A7`,oneLiner:`Custom color themes`,when:_jsxs(_Fragment,{children:[`Read at session start and hot-reloaded when files change. Listed in `,_jsx(C,{children:`/theme`})]}),description:_jsxs(_Fragment,{children:[`Each `,_jsx(C,{children:`.json`}),` file defines a custom color theme: a built-in `,_jsx(C,{children:`base`}),` preset plus an `,_jsx(C,{children:`overrides`}),` map of color tokens. Create one interactively with `,_jsx(C,{children:`/theme`}),` or write the JSON by hand. Selecting a custom theme stores `,_jsx(C,{children:`custom:\u003cslug\u003e`}),` as your theme preference.`]}),example:`{\n  \"name\": \"Dracula\",\n  \"base\": \"dark\",\n  \"overrides\": {\n    \"claude\": \"#bd93f9\",\n    \"error\": \"#ff5555\",\n    \"success\": \"#50fa7b\"\n  }\n}`,docsLink:`/en/terminal-config#create-a-custom-theme`,children:[]},{id:`global-projects`,label:`projects/`,type:`folder`,icon:`folder`,color:`#E8A45C`,autogen:true,oneLiner:`Auto memory: Claude's notes to itself, per project`,when:`MEMORY.md loaded at session start; topic files read on demand`,description:`Auto memory lets Claude accumulate knowledge across sessions without you writing anything. Claude saves notes as it works: build commands, debugging insights, architecture notes. Each project gets its own memory directory keyed by the repository path.`,tips:[_jsxs(_Fragment,{children:[`On by default. Toggle with `,_jsx(C,{children:`/memory`}),` or `,_jsx(C,{children:`autoMemoryEnabled`}),` in settings`]}),`MEMORY.md is the index loaded each session. The first 200 lines, or 25KB, whichever comes first, are read`,`Topic files like debugging.md are read on demand, not at startup`,`These are plain markdown. Edit or delete them anytime`],docsLink:`/en/memory#auto-memory`,children:[{id:`memory-dir`,label:`\u003cproject\u003e/memory/`,type:`folder`,icon:`folder`,color:`#E8A45C`,autogen:true,oneLiner:`Claude's accumulated knowledge for one project`,children:[{id:`memory-md`,label:`MEMORY.md`,type:`file`,icon:`md`,color:`#E8A45C`,badge:`local`,autogen:true,oneLiner:`Claude writes and maintains this file automatically`,when:`First 200 lines (capped at 25KB) loaded at session start`,description:`Claude creates and updates this file as it works; you do not write it yourself. It acts as an index that Claude reads at the start of every session, pointing to topic files for detail. You can edit or delete it, but Claude will keep updating it.`,example:`# Memory Index\n\n## Project\n- [build-and-test.md](build-and-test.md): npm run build (~45s), Vitest, dev server on 3001\n- [architecture.md](architecture.md): API client singleton, refresh-token auth\n\n## Reference\n- [debugging.md](debugging.md): auth token rotation and DB connection troubleshooting`,docsLink:`/en/memory`},{id:`memory-topic`,label:`debugging.md`,type:`file`,icon:`md`,color:`#E8A45C`,badge:`local`,autogen:true,oneLiner:`Topic notes Claude writes when MEMORY.md gets long`,when:`Claude reads this when a related task comes up`,description:`An example of a topic file Claude creates when MEMORY.md grows too long. Claude picks the filename based on what it splits out: debugging.md, architecture.md, build-commands.md, or similar. You never create these yourself. Claude reads a topic file back only when the current task relates to it.`,example:`---\nname: Debugging patterns\ndescription: Auth token rotation and database connection troubleshooting for this project\ntype: reference\n---\n\n## Auth Token Issues\n- Refresh token rotation: old token invalidated immediately\n- If 401 after refresh: check clock skew between client and server\n\n## Database Connection Drops\n- Connection pool: max 10 in dev, 50 in prod\n- Always check \\`docker compose ps\\` first`}]}]},{id:`global-rules`,label:`rules/`,type:`folder`,icon:`folder`,color:`#9B7BC4`,oneLiner:`User-level rules that apply to every project`,when:_jsxs(_Fragment,{children:[`Rules without `,_jsx(C,{children:`paths:`}),` load at session start. Rules with `,_jsx(C,{children:`paths:`}),` load when a matching file enters context`]}),description:`Same as project .claude/rules/ but applies everywhere. Use this for conventions you want across all your work, like personal code style or commit message format.`,docsLink:`/en/memory#organize-rules-with-claude/rules/`,children:[]},{id:`global-skills`,label:`skills/`,type:`folder`,icon:`folder`,color:`#D4A843`,oneLiner:`Personal skills available in every project`,when:_jsxs(_Fragment,{children:[`Invoked with `,_jsx(C,{children:`/skill-name`}),` in any project`]}),description:`Skills you built for yourself that work everywhere. Same structure as project skills: each is a folder with SKILL.md, scoped to your user account instead of a single project.`,docsLink:`/en/skills`,children:[]},{id:`global-commands`,label:`commands/`,type:`folder`,icon:`folder`,color:`#788C5D`,oneLiner:`Personal single-file commands available in every project`,note:commandsNote,when:_jsxs(_Fragment,{children:[`User types `,_jsx(C,{children:`/command-name`}),` in any project`]}),description:`Same as project commands/ but scoped to your user account. Each markdown file becomes a command available everywhere.`,docsLink:`/en/skills`,children:[]},{id:`global-output-styles`,label:`output-styles/`,type:`folder`,icon:`folder`,color:`#5AA7A7`,oneLiner:`Custom system-prompt sections that adjust how Claude works`,when:`Applied at session start when selected via the outputStyle setting`,description:[_jsx(_Fragment,{children:`Each markdown file defines an output style: a section appended to the system prompt that, by default, also drops the built-in software-engineering task instructions. Use this to adapt Claude Code for uses beyond coding, or to add teaching or review modes.`}),_jsxs(_Fragment,{children:[`Select a built-in or custom style with `,_jsx(C,{children:`/config`}),` or the `,_jsx(C,{children:`outputStyle`}),` key in settings. Styles here are available in every project; project-level styles with the same name take precedence.`]})],tips:[`Built-in styles Explanatory and Learning are included with Claude Code; custom styles go here`,_jsxs(_Fragment,{children:[`Set `,_jsx(C,{children:`keep-coding-instructions: true`}),` in frontmatter to keep the default task instructions alongside your additions`]}),`Changes take effect on the next session since the system prompt is fixed at startup for caching`],docsLink:`/en/output-styles`,children:[{id:`output-style-example`,label:`teaching.md`,type:`file`,icon:`md`,color:`#5AA7A7`,badge:`local`,oneLiner:`Example style that adds explanations and leaves small changes for you`,when:_jsxs(_Fragment,{children:[`Active when `,_jsx(C,{children:`outputStyle`}),` in settings is set to `,_jsx(C,{children:`teaching`})]}),description:_jsxs(_Fragment,{children:[`This style appends instructions to the system prompt: Claude adds a \"Why this approach\" note after each task and leaves TODO(human) markers for changes under 10 lines instead of writing them itself. Select it by setting `,_jsx(C,{children:`outputStyle`}),` to the filename without .md, or to the `,_jsx(C,{children:`name`}),` field if you set one in frontmatter.`]}),example:`---\ndescription: Explains reasoning and asks you to implement small pieces\nkeep-coding-instructions: true\n---\n\nAfter completing each task, add a brief \"Why this approach\" note\nexplaining the key design decision.\n\nWhen a change is under 10 lines, ask the user to implement it\nthemselves by leaving a TODO(human) marker instead of writing it.`}]},{id:`global-agents`,label:`agents/`,type:`folder`,icon:`folder`,color:`#C46686`,oneLiner:`Personal subagents available in every project`,when:`Claude delegates or you @-mention in any project`,description:`Subagents defined here are available across all your projects. Same format as project agents.`,docsLink:`/en/sub-agents`,children:[]},{id:`global-workflows`,label:`workflows/`,type:`folder`,icon:`folder`,color:`#C46686`,oneLiner:`Personal dynamic workflows available in every project`,when:`Loaded at startup; each file becomes a /\u003cname\u003e command`,description:_jsxs(_Fragment,{children:[`Workflow scripts saved here are available across all your projects. A project workflow with the same name in `,_jsx(C,{children:`.claude/workflows/`}),` takes precedence.`]}),docsLink:`/en/workflows`,children:[]},{id:`global-agent-memory`,label:`agent-memory/`,type:`folder`,icon:`folder`,color:`#C46686`,autogen:true,oneLiner:_jsxs(_Fragment,{children:[`Persistent memory for subagents with `,_jsx(C,{children:`memory: user`})]}),when:`Loaded into the subagent system prompt when the subagent starts`,description:_jsxs(_Fragment,{children:[`Subagents with `,_jsx(C,{children:`memory: user`}),` in their frontmatter store knowledge here that persists across all projects. For project-scoped subagent memory, see `,_jsx(C,{children:`.claude/agent-memory/`}),` instead.`]}),docsLink:`/en/sub-agents#enable-persistent-memory`,children:[]}]}]}}),[]);const BADGE_STYLES=useMemo(()=\u003e({committed:{bg:`rgba(85,138,66,0.08)`,color:`var(--ce-badge-committed)`,border:`rgba(85,138,66,0.15)`,label:`committed`},gitignored:{bg:`rgba(217,119,87,0.06)`,color:`var(--ce-badge-gitignored)`,border:`rgba(217,119,87,0.15)`,label:`gitignored`},local:{bg:`rgba(115,114,108,0.06)`,color:`var(--ce-badge-local)`,border:`rgba(115,114,108,0.12)`,label:`local only`},autogen:{bg:`rgba(232,164,92,0.1)`,color:`var(--ce-badge-autogen)`,border:`rgba(232,164,92,0.2)`,label:`Claude writes`}}),[]);const allNodes=useMemo(()=\u003e{const flatten=(nodes,acc,path,parentId)=\u003e{for(const node of nodes){const nextPath=[...path,node.label];acc[node.id]={...node,path:nextPath,parentId};if(node.children)flatten(node.children,acc,nextPath,node.id)}return acc};const project=flatten(FILE_TREE.project.children,{},[FILE_TREE.project.label]);const global=flatten(FILE_TREE.global.children,{},[FILE_TREE.global.label]);for(const id in project)project[id].root=`project`;for(const id in global)global[id].root=`global`;return{...project,...global}},[FILE_TREE]);const allFolderIds=useMemo(()=\u003eObject.keys(allNodes).filter(id=\u003eallNodes[id].type===`folder`),[allNodes]);const DEFAULT_EXPANDED=[`dot-claude`,`rules`,`skills`,`skill-review`,`commands`,`agents`,`agent-memory`,`agent-memory-sub`,`global-dot-claude`,`global-output-styles`,`global-projects`,`memory-dir`];const[mounted,setMounted]=useState(false);const[activeRoot,setActiveRoot]=useState(`project`);const[selectedId,setSelectedId]=useState(`claude-md`);const[expandedFolders,setExpandedFolders]=useState(()=\u003enew Set(DEFAULT_EXPANDED));const[forceMobile,setForceMobile]=useState(false);const[copiedId,setCopiedId]=useState(null);const[isFullscreen,setIsFullscreen]=useState(false);const copyTimeoutRef=useRef(null);const rootRef=useRef(null);useEffect(()=\u003e{setMounted(true);const applyHash=scroll=\u003e{const hash=window.location.hash.slice(1);if(!hash.startsWith(`ce-`))return;const id=hash.slice(3);const node=allNodes[id];if(!node)return;setActiveRoot(node.root);setSelectedId(id);setExpandedFolders(new Set(allFolderIds));if(scroll\u0026\u0026rootRef.current)rootRef.current.scrollIntoView({behavior:`smooth`,block:`start`})};applyHash(false);const onHashChange=()=\u003eapplyHash(true);const onFsChange=()=\u003esetIsFullscreen(!!document.fullscreenElement);window.addEventListener(`hashchange`,onHashChange);document.addEventListener(`fullscreenchange`,onFsChange);return()=\u003e{if(copyTimeoutRef.current)clearTimeout(copyTimeoutRef.current);window.removeEventListener(`hashchange`,onHashChange);document.removeEventListener(`fullscreenchange`,onFsChange)}},[]);useEffect(()=\u003e{if(!mounted||!rootRef.current)return;const hash=window.location.hash.slice(1);if(hash.startsWith(`ce-`)\u0026\u0026allNodes[hash.slice(3)]){rootRef.current.scrollIntoView({behavior:`smooth`,block:`start`})}},[mounted]);if(!mounted)return null;const selected=allNodes[selectedId];const tree=FILE_TREE[activeRoot];const isCopied=copiedId===selected.id;const toggleFolder=id=\u003e{const next=new Set(expandedFolders);next.has(id)?next.delete(id):next.add(id);setExpandedFolders(next)};const switchRoot=root=\u003e{if(root===activeRoot)return;setActiveRoot(root);const firstId=FILE_TREE[root].children[0].id;setSelectedId(firstId);try{history.replaceState(null,``,`#ce-`+firstId)}catch(e){}};const toggleFullscreen=()=\u003e{if(!rootRef.current)return;if(document.fullscreenElement)document.exitFullscreen();else rootRef.current.requestFullscreen().catch(()=\u003e{})};const selectNode=n=\u003e{setSelectedId(n.id);if(n.type===`folder`\u0026\u0026!expandedFolders.has(n.id))toggleFolder(n.id);try{history.replaceState(null,``,`#ce-`+n.id)}catch(e){}};const iconBtn={width:28,flexShrink:0,borderRadius:`6px`,border:`none`,cursor:`pointer`,background:`transparent`,color:`var(--ce-text-4)`,display:`flex`,alignItems:`center`,justifyContent:`center`};const visibleFolderIds=allFolderIds.filter(id=\u003eallNodes[id].root===activeRoot);const allExpanded=visibleFolderIds.every(id=\u003eexpandedFolders.has(id));const toggleAllFolders=()=\u003e{const next=new Set(expandedFolders);visibleFolderIds.forEach(id=\u003eallExpanded?next.delete(id):next.add(id));setExpandedFolders(next)};const onTreeKeyDown=e=\u003e{if(![`ArrowDown`,`ArrowUp`,`ArrowRight`,`ArrowLeft`].includes(e.key))return;const visible=[];const walk=nodes=\u003e{for(const n of nodes){visible.push(n.id);if(n.children\u0026\u0026expandedFolders.has(n.id))walk(n.children)}};walk(tree.children);const i=visible.indexOf(selectedId);if(i===-1)return;e.preventDefault();if(e.key===`ArrowDown`\u0026\u0026i\u003cvisible.length-1)selectNode(allNodes[visible[i+1]]);else if(e.key===`ArrowUp`\u0026\u0026i\u003e0)selectNode(allNodes[visible[i-1]]);else if(e.key===`ArrowRight`\u0026\u0026selected.type===`folder`){if(!expandedFolders.has(selectedId))toggleFolder(selectedId);else if(selected.children\u0026\u0026selected.children.length)selectNode(allNodes[selected.children[0].id])}else if(e.key===`ArrowLeft`){if(selected.type===`folder`\u0026\u0026expandedFolders.has(selectedId))toggleFolder(selectedId);else if(selected.parentId)selectNode(allNodes[selected.parentId])}};const copyExample=(id,text)=\u003e{const done=()=\u003e{setCopiedId(id);if(copyTimeoutRef.current)clearTimeout(copyTimeoutRef.current);copyTimeoutRef.current=setTimeout(()=\u003esetCopiedId(null),2e3)};const fallback=()=\u003e{const ta=document.createElement(`textarea`);ta.value=text;ta.style.position=`fixed`;ta.style.opacity=`0`;document.body.appendChild(ta);ta.select();try{if(document.execCommand(`copy`))done()}catch(e){}document.body.removeChild(ta)};if(navigator.clipboard){navigator.clipboard.writeText(text).then(done,fallback)}else{fallback()}};const renderIcon=(icon,color,size)=\u003e{const sz=size||14;if(icon===`folder`){return _jsx(`svg`,{width:sz,height:sz,viewBox:`0 0 14 14`,fill:`none`,children:_jsx(`path`,{d:`M1.5 3.5a1 1 0 0 1 1-1h2.6l1 1.2h5.4a1 1 0 0 1 1 1v5.8a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1V3.5z`,fill:color,fillOpacity:`0.15`,stroke:color,strokeWidth:`1`})})}if(icon===`json`){return _jsxs(`svg`,{width:sz,height:sz,viewBox:`0 0 14 14`,fill:`none`,children:[_jsx(`rect`,{x:`2`,y:`1.5`,width:`10`,height:`11`,rx:`1.5`,fill:color,fillOpacity:`0.15`,stroke:color,strokeWidth:`1`}),_jsx(`text`,{x:`7`,y:`9`,fontSize:`6`,fontFamily:`monospace`,fill:color,textAnchor:`middle`,fontWeight:`700`,children:`{}`})]})}return _jsxs(`svg`,{width:sz,height:sz,viewBox:`0 0 14 14`,fill:`none`,children:[_jsx(`rect`,{x:`2`,y:`1.5`,width:`10`,height:`11`,rx:`1.5`,fill:color,fillOpacity:`0.15`,stroke:color,strokeWidth:`1`}),_jsx(`line`,{x1:`4.5`,y1:`5`,x2:`9.5`,y2:`5`,stroke:color,strokeWidth:`1`}),_jsx(`line`,{x1:`4.5`,y1:`7`,x2:`9.5`,y2:`7`,stroke:color,strokeWidth:`1`}),_jsx(`line`,{x1:`4.5`,y1:`9`,x2:`8`,y2:`9`,stroke:color,strokeWidth:`1`})]})};const renderNode=(node,depth)=\u003e{const isFolder=node.type===`folder`;const isExpanded=expandedFolders.has(node.id);const isSelected=selectedId===node.id;return _jsxs(`div`,{children:[_jsxs(`button`,{role:`treeitem`,tabIndex:-1,onClick:()=\u003eselectNode(node),\"aria-selected\":isSelected,\"aria-expanded\":isFolder?isExpanded:undefined,style:{display:`flex`,alignItems:`center`,gap:`5px`,width:`100%`,padding:`4px 8px 4px ${8+depth*16}px`,background:isSelected?`var(--ce-accent-bg)`:`transparent`,borderTop:`none`,borderRight:`none`,borderBottom:`none`,borderLeft:isSelected?`2px solid var(--ce-accent)`:`2px solid transparent`,outline:`none`,cursor:`pointer`,textAlign:`left`,fontFamily:`var(--ce-mono)`,fontSize:`13.5px`,color:isSelected?`var(--ce-accent)`:`var(--ce-text-2)`,fontWeight:isSelected?550:400,transition:`all 0.1s`},children:[isFolder?_jsx(`span`,{onClick:e=\u003e{e.stopPropagation();toggleFolder(node.id)},style:{fontSize:`14px`,color:`var(--ce-text-4)`,width:`20px`,height:`20px`,display:`inline-flex`,alignItems:`center`,justifyContent:`center`,cursor:`pointer`,borderRadius:`4px`,marginLeft:`-6px`,flexShrink:0},onMouseEnter:e=\u003e{e.currentTarget.style.background=`var(--ce-arrow-hover)`;e.currentTarget.style.color=`var(--ce-text-2)`},onMouseLeave:e=\u003e{e.currentTarget.style.background=`transparent`;e.currentTarget.style.color=`var(--ce-text-4)`},children:isExpanded?`▾`:`▸`}):_jsx(`span`,{style:{width:`14px`,flexShrink:0}}),renderIcon(node.icon,node.color),_jsx(`span`,{style:{flex:1,overflow:`hidden`,textOverflow:`ellipsis`,whiteSpace:`nowrap`},children:node.label}),node.badge\u0026\u0026BADGE_STYLES[node.badge]\u0026\u0026_jsx(`span`,{title:BADGE_STYLES[node.badge].label,style:{width:6,height:6,borderRadius:`50%`,background:BADGE_STYLES[node.badge].color,flexShrink:0,opacity:.7}})]}),isFolder\u0026\u0026isExpanded\u0026\u0026node.children\u0026\u0026_jsx(`div`,{role:`group`,children:node.children.map(child=\u003erenderNode(child,depth+1))})]},node.id)};return _jsxs(_Fragment,{children:[_jsx(`style`,{children:`\n      .ce-root {\n        --ce-mono: var(--font-mono, ui-monospace, monospace);\n        --ce-accent: #D97757;\n        --ce-accent-bg: rgba(217,119,87,0.06);\n        --ce-accent-border: rgba(217,119,87,0.12);\n        --ce-bg: #fff;\n        --ce-surface: #FAFAF7;\n        --ce-surface-hover: #F0EEE6;\n        --ce-border: #E8E6DC;\n        --ce-border-subtle: #F0EEE6;\n        --ce-text: #141413;\n        --ce-text-2: #5E5D59;\n        --ce-text-3: #73726C;\n        --ce-text-4: #9C9A92;\n        --ce-text-5: #B8B6AE;\n        --ce-sep: #D1CFC5;\n        --ce-code-header: #F5F4ED;\n        --ce-code-bg: #1A1918;\n        --ce-arrow-hover: rgba(0,0,0,0.08);\n        --ce-badge-committed: #3d6b2e;\n        --ce-badge-gitignored: #b85c3a;\n        --ce-badge-local: #5e5d59;\n        --ce-badge-autogen: #b07520;\n        --ce-when-text: #4a7fb5;\n      }\n      .dark .ce-root {\n        --ce-bg: #1a1918;\n        --ce-surface: #232221;\n        --ce-surface-hover: #2e2d2b;\n        --ce-border: #3a3936;\n        --ce-border-subtle: #2e2d2b;\n        --ce-text: #e8e6dc;\n        --ce-text-2: #c4c2b8;\n        --ce-text-3: #9c9a92;\n        --ce-text-4: #73726c;\n        --ce-text-5: #5e5d59;\n        --ce-sep: #4a4946;\n        --ce-code-header: #2e2d2b;\n        --ce-code-bg: #0d0d0c;\n        --ce-arrow-hover: rgba(255,255,255,0.08);\n        --ce-badge-committed: #6fa85c;\n        --ce-badge-gitignored: #e08a60;\n        --ce-badge-local: #9c9a92;\n        --ce-badge-autogen: #e8a45c;\n        --ce-when-text: #8bb4e0;\n      }\n      .ce-mobile-fallback { display: none; border: 1px solid rgba(0,0,0,0.1); background: rgba(0,0,0,0.03); }\n      .dark .ce-mobile-fallback { border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.04); }\n      @media (max-width: 700px) {\n        .ce-root:not(.ce-force) { display: none !important; }\n        .ce-mobile-fallback { display: block; }\n      }\n    `}),!forceMobile\u0026\u0026_jsxs(`div`,{className:`ce-mobile-fallback`,style:{padding:`14px 16px`,borderRadius:`8px`,fontSize:`14px`},children:[`The interactive explorer works best on a larger screen. See the `,_jsx(`a`,{href:`#file-reference`,style:{color:`#D97757`},children:`file reference table`}),` below, or `,_jsx(`button`,{onClick:()=\u003esetForceMobile(true),style:{border:`none`,background:`none`,padding:0,color:`#D97757`,textDecoration:`underline`,cursor:`pointer`,font:`inherit`},children:`show the explorer anyway`}),`.`]}),_jsxs(`div`,{ref:rootRef,className:forceMobile?`ce-root ce-force`:`ce-root`,style:{borderRadius:isFullscreen?0:`12px`,border:`1px solid var(--ce-border)`,background:`var(--ce-bg)`,display:`flex`,alignItems:`stretch`,overflow:`hidden`,fontFamily:`var(--font-sans, -apple-system, sans-serif)`,...isFullscreen\u0026\u0026{height:`100vh`}},children:[_jsxs(`div`,{style:{width:`min(240px, 35%)`,minWidth:`180px`,flexShrink:0,borderRight:`1px solid var(--ce-border-subtle)`,background:`var(--ce-surface)`,display:`flex`,flexDirection:`column`},children:[_jsxs(`div`,{style:{padding:`8px 8px 4px`,borderBottom:`1px solid var(--ce-border-subtle)`,display:`flex`,gap:`4px`},children:[[`project`,`global`].map(root=\u003e_jsx(`button`,{onClick:()=\u003eswitchRoot(root),style:{flex:1,padding:`6px 0`,borderRadius:`6px`,border:`none`,cursor:`pointer`,fontFamily:`var(--ce-mono)`,fontSize:`11.5px`,background:activeRoot===root?`var(--ce-accent-bg)`:`transparent`,color:activeRoot===root?`var(--ce-accent)`:`var(--ce-text-4)`,fontWeight:activeRoot===root?600:430},children:root===`project`?`Project`:`Global (~/)`},root)),_jsx(`button`,{onClick:toggleAllFolders,title:allExpanded?`Collapse all`:`Expand all`,style:{...iconBtn,fontSize:11},children:allExpanded?`⊟`:`⊞`}),_jsx(`button`,{onClick:toggleFullscreen,title:isFullscreen?`Exit fullscreen`:`Fullscreen`,style:{...iconBtn,fontSize:13},children:isFullscreen?`⤡`:`⛶`})]}),_jsx(`div`,{role:`tree`,\"aria-label\":`Configuration files`,tabIndex:0,onKeyDown:onTreeKeyDown,style:{padding:`6px 0`,overflowY:`auto`,flex:1,outline:`none`},children:tree.children.map(node=\u003erenderNode(node,0))})]}),_jsxs(`div`,{style:{flex:1,minWidth:0,padding:`20px 24px`,minHeight:`400px`,overflowY:`auto`},children:[_jsxs(`span`,{\"aria-live\":`polite`,style:{position:`absolute`,width:1,height:1,overflow:`hidden`,clip:`rect(0 0 0 0)`},children:[selected.label,` selected`]}),_jsx(`div`,{style:{fontFamily:`var(--ce-mono)`,fontSize:`11px`,color:`var(--ce-text-4)`,marginBottom:`10px`,cursor:`default`},children:selected.path.map((seg,i)=\u003e_jsxs(`span`,{children:[_jsx(`span`,{style:{color:i===selected.path.length-1?`var(--ce-accent)`:`var(--ce-text-4)`},children:seg.replace(/\\/$/,``)}),i\u003cselected.path.length-1\u0026\u0026_jsx(`span`,{style:{color:`var(--ce-sep)`},children:` / `})]},i))}),_jsxs(`div`,{style:{display:`flex`,alignItems:`flex-start`,gap:`10px`,marginBottom:`10px`},children:[_jsx(`span`,{style:{flexShrink:0,display:`flex`},children:renderIcon(selected.icon,selected.color,24)}),_jsxs(`div`,{style:{flex:1,minWidth:0},children:[_jsx(`div`,{style:{fontSize:`22px`,fontWeight:600,color:`var(--ce-text)`,letterSpacing:`-0.3px`,lineHeight:`26px`},children:selected.label}),selected.oneLiner\u0026\u0026_jsx(`div`,{style:{fontSize:`15px`,color:`var(--ce-text-3)`,marginTop:`3px`},children:selected.oneLiner})]}),_jsx(`div`,{style:{display:`flex`,gap:`4px`,flexShrink:0},children:[selected.autogen\u0026\u0026`autogen`,selected.badge].filter(Boolean).map(k=\u003e{const s=BADGE_STYLES[k];if(!s)return null;return _jsx(`span`,{style:{fontFamily:`var(--ce-mono)`,fontSize:`10px`,fontWeight:600,textTransform:`uppercase`,letterSpacing:`0.3px`,padding:`2px 6px`,borderRadius:`4px`,background:s.bg,color:s.color,border:`0.5px solid ${s.border}`},children:s.label},k)})})]}),selected.note\u0026\u0026_jsx(`div`,{style:{padding:`10px 12px`,borderRadius:`8px`,marginBottom:`14px`,background:`rgba(217,119,87,0.06)`,border:`1px solid rgba(217,119,87,0.2)`,borderLeft:`3px solid var(--ce-accent)`,fontSize:`15px`,color:`var(--ce-text-2)`,lineHeight:1.6},children:selected.note}),selected.when\u0026\u0026_jsxs(`div`,{style:{padding:`8px 12px`,borderRadius:`6px`,background:`rgba(106,155,204,0.06)`,border:`0.5px solid rgba(106,155,204,0.12)`,fontSize:`15px`,color:`var(--ce-when-text)`,marginBottom:`16px`},children:[_jsx(`div`,{style:{fontSize:`10px`,fontWeight:700,textTransform:`uppercase`,letterSpacing:`0.4px`,opacity:.65,marginBottom:`3px`},children:`When it loads`}),_jsx(`div`,{style:{fontWeight:500},children:selected.when})]}),selected.description\u0026\u0026_jsx(`div`,{style:{fontSize:`16px`,color:`var(--ce-text-2)`,lineHeight:1.65,marginBottom:`16px`},children:Array.isArray(selected.description)?selected.description.map((para,i)=\u003e_jsx(`div`,{style:{marginBottom:i\u003cselected.description.length-1?`12px`:0},children:para},i)):selected.description}),selected.contains\u0026\u0026selected.contains.length\u003e0\u0026\u0026_jsxs(`div`,{style:{marginBottom:`16px`},children:[_jsx(`div`,{style:{fontSize:`11px`,fontWeight:700,color:`var(--ce-text-4)`,textTransform:`uppercase`,letterSpacing:`0.4px`,marginBottom:`8px`},children:`Common keys`}),selected.contains.map((item,i)=\u003e_jsxs(`div`,{style:{display:`flex`,gap:`7px`,fontSize:`15px`,color:`var(--ce-text-2)`,lineHeight:1.5,marginBottom:`5px`},children:[_jsx(`span`,{style:{fontSize:`7px`,color:`var(--ce-text-4)`,marginTop:`6px`},children:`●`}),_jsx(`span`,{children:item})]},i))]}),selected.tips\u0026\u0026selected.tips.length\u003e0\u0026\u0026_jsxs(`div`,{style:{padding:`12px 14px`,borderRadius:`8px`,background:`var(--ce-surface)`,border:`1px solid var(--ce-border-subtle)`,marginBottom:`16px`},children:[_jsx(`div`,{style:{fontSize:`11px`,fontWeight:700,color:`var(--ce-accent)`,textTransform:`uppercase`,letterSpacing:`0.4px`,marginBottom:`6px`},children:`Tips`}),selected.tips.map((tip,i)=\u003e_jsxs(`div`,{style:{display:`flex`,gap:`7px`,fontSize:`14.5px`,color:`var(--ce-text-2)`,marginBottom:i\u003cselected.tips.length-1?`5px`:0},children:[_jsx(`span`,{style:{fontSize:`7px`,color:`var(--ce-accent)`,marginTop:`6px`},children:`●`}),_jsx(`span`,{children:tip})]},i))]}),selected.example\u0026\u0026_jsxs(`div`,{style:{marginBottom:`16px`},children:[selected.exampleIntro\u0026\u0026_jsx(`div`,{style:{fontSize:`15px`,color:`var(--ce-text-2)`,lineHeight:1.6,marginBottom:`10px`},children:selected.exampleIntro}),_jsxs(`div`,{style:{display:`flex`,justifyContent:`space-between`,alignItems:`center`,padding:`6px 10px`,background:`var(--ce-code-header)`,border:`1px solid var(--ce-border)`,borderRadius:`8px 8px 0 0`},children:[_jsx(`span`,{style:{fontFamily:`var(--ce-mono)`,fontSize:`11px`,fontWeight:600,color:`var(--ce-text-3)`},children:selected.label}),_jsx(`button`,{onClick:()=\u003ecopyExample(selected.id,selected.example),style:{padding:`3px 8px`,borderRadius:`4px`,fontSize:`11px`,fontWeight:600,cursor:`pointer`,transition:`all 0.15s`,background:isCopied?`rgba(85,138,66,0.08)`:`var(--ce-code-header)`,border:isCopied?`0.5px solid rgba(85,138,66,0.2)`:`0.5px solid var(--ce-border)`,color:isCopied?`#558A42`:`var(--ce-text-3)`},children:isCopied?`✓ Copied`:`Copy`})]}),_jsx(`pre`,{style:{margin:0,padding:`12px 14px`,background:`var(--ce-code-bg)`,color:`#E8E6DC`,fontFamily:`var(--ce-mono)`,fontSize:`13px`,lineHeight:1.65,borderRadius:`0 0 8px 8px`,overflowX:`auto`,whiteSpace:`pre`},children:selected.example})]}),selected.docsLink\u0026\u0026_jsx(_components.a,{href:selected.docsLink,style:{display:`inline-flex`,padding:`5px 12px`,borderRadius:`6px`,background:`var(--ce-accent-bg)`,border:`1px solid var(--ce-accent-border)`,color:`var(--ce-accent)`,fontSize:`12px`,fontWeight:600,textDecoration:`none`},children:`Full docs →`}),selected.children\u0026\u0026selected.children.length\u003e0\u0026\u0026_jsxs(`div`,{style:{marginTop:`20px`},children:[_jsx(`div`,{style:{fontSize:`11px`,fontWeight:700,color:`var(--ce-text-4)`,textTransform:`uppercase`,letterSpacing:`0.4px`,marginBottom:`8px`},children:`Contents`}),_jsx(`div`,{style:{display:`flex`,flexDirection:`column`,gap:`4px`},children:selected.children.map(child=\u003e_jsxs(`button`,{onClick:()=\u003eselectNode(child),style:{display:`flex`,alignItems:`center`,gap:`8px`,padding:`6px 8px`,width:`100%`,background:`var(--ce-surface)`,borderRadius:`6px`,border:`none`,cursor:`pointer`,textAlign:`left`,transition:`background 0.1s`},onMouseEnter:e=\u003ee.currentTarget.style.background=`var(--ce-surface-hover)`,onMouseLeave:e=\u003ee.currentTarget.style.background=`var(--ce-surface)`,children:[renderIcon(child.icon,child.color,13),_jsx(`span`,{style:{fontFamily:`var(--ce-mono)`,fontSize:`12px`,color:`var(--ce-text-2)`},children:child.label}),child.oneLiner\u0026\u0026_jsx(`span`,{style:{fontSize:`11px`,color:`var(--ce-text-4)`,overflow:`hidden`,textOverflow:`ellipsis`,whiteSpace:`nowrap`},children:child.oneLiner})]},child.id))})]})]})]})]})};function _createMdxContent(props){const _components={a:`a`,code:`code`,li:`li`,p:`p`,pre:`pre`,span:`span`,strong:`strong`,tbody:`tbody`,td:`td`,th:`th`,thead:`thead`,tr:`tr`,ul:`ul`,..._provideComponents(),...props.components},{CodeBlock,Heading,Note,Table,_MdxComponentBoundary}=_components;if(!CodeBlock)_missingMdxReference(`CodeBlock`,true);if(!Heading)_missingMdxReference(`Heading`,true);if(!Note)_missingMdxReference(`Note`,true);if(!Table)_missingMdxReference(`Table`,true);if(!_MdxComponentBoundary)_missingMdxReference(`_MdxComponentBoundary`,true);return _jsxs(_Fragment,{children:[_jsxs(_components.p,{children:[`Claude Code reads instructions, settings, skills, subagents, and memory from your project directory and from `,_jsx(_components.code,{children:`~/.claude`}),` in your home directory. Commit project files to git to share them with your team; files in `,_jsx(_components.code,{children:`~/.claude`}),` are personal configuration that applies across all your projects.`]}),`\n`,_jsxs(_components.p,{children:[`On Windows, `,_jsx(_components.code,{children:`~/.claude`}),` resolves to `,_jsx(_components.code,{children:`%USERPROFILE%\\\\.claude`}),`. If you set `,_jsx(_components.a,{href:`/en/env-vars`,children:_jsx(_components.code,{children:`CLAUDE_CONFIG_DIR`})}),`, every `,_jsx(_components.code,{children:`~/.claude`}),` path on this page lives under that directory instead.`]}),`\n`,_jsxs(_components.p,{children:[`Most users only edit `,_jsx(_components.code,{children:`CLAUDE.md`}),` and `,_jsx(_components.code,{children:`settings.json`}),`. The rest of the directory is optional: add skills, rules, or subagents as you need them.`]}),`\n`,_jsx(Heading,{level:`2`,id:`explore-the-directory`,children:`Explore the directory`}),`\n`,_jsx(_components.p,{children:`Click files in the tree to see what each one does, when it loads, and an example.`}),`\n`,_jsx(_MdxComponentBoundary,{name:`ClaudeExplorer`,children:_jsx(ClaudeExplorer,{})}),`\n`,_jsx(Heading,{level:`2`,id:`what’s-not-shown`,children:`What’s not shown`}),`\n`,_jsx(_components.p,{children:`The explorer covers files you author and edit. A few related files live elsewhere:`}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsx(_components.th,{children:`File`}),_jsx(_components.th,{children:`Location`}),_jsx(_components.th,{children:`Purpose`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`managed-settings.json`})}),_jsx(_components.td,{children:`System-level, varies by OS`}),_jsxs(_components.td,{children:[`Enterprise-enforced settings that you can’t override, apart from `,_jsx(_components.a,{href:`/en/settings#security-keys-where-the-stricter-value-applies`,children:`narrow exceptions`}),`. See `,_jsx(_components.a,{href:`/en/managed-settings#deploy-a-managed-settings-file`,children:`where to save the file`}),` and `,_jsx(_components.a,{href:`/en/managed-settings#precedence-within-the-managed-tier`,children:`which managed source Claude Code uses`}),`.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`CLAUDE.local.md`})}),_jsx(_components.td,{children:`Project root`}),_jsxs(_components.td,{children:[`Your private preferences for this project, loaded alongside CLAUDE.md. Create it manually and add it to `,_jsx(_components.code,{children:`.gitignore`}),`.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:`Installed plugins`}),_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/plugins`})}),_jsxs(_components.td,{children:[`Cloned marketplaces, installed plugin versions, and per-plugin data, managed by `,_jsx(_components.code,{children:`claude plugin`}),` commands. For a plugin installed from a marketplace `,_jsxs(_components.a,{href:`/en/plugin-marketplaces#command-sources`,children:[_jsx(_components.code,{children:`command`}),` source`]}),` in link mode, Claude Code stores links here instead of a copy, and the plugin’s files stay in the directory the command prints. See `,_jsx(_components.a,{href:`/en/plugins-reference#plugin-caching-and-file-resolution`,children:`plugin caching`}),` for how orphaned versions are cleaned up.`]})]})]})]}),`\n`,_jsxs(_components.p,{children:[_jsx(_components.code,{children:`~/.claude`}),` also holds data Claude Code writes as you work: transcripts, prompt history, file snapshots, caches, and logs. See `,_jsx(_components.a,{href:`#application-data`,children:`application data`}),` below.`]}),`\n`,_jsx(Heading,{level:`2`,id:`choose-the-right-file`,children:`Choose the right file`}),`\n`,_jsx(_components.p,{children:`Different kinds of customization live in different files. Use this table to find where a change belongs.`}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsx(_components.th,{style:{textAlign:`left`},children:`You want to`}),_jsx(_components.th,{style:{textAlign:`left`},children:`Edit`}),_jsx(_components.th,{style:{textAlign:`left`},children:`Scope`}),_jsx(_components.th,{style:{textAlign:`left`},children:`Reference`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Give Claude project context and conventions`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`CLAUDE.md`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/memory`,children:`Memory`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Allow or block specific tool calls`}),_jsxs(_components.td,{style:{textAlign:`left`},children:[_jsx(_components.code,{children:`settings.json`}),` `,_jsx(_components.code,{children:`permissions`}),` or `,_jsx(_components.code,{children:`hooks`})]}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsxs(_components.td,{style:{textAlign:`left`},children:[_jsx(_components.a,{href:`/en/permissions`,children:`Permissions`}),`, `,_jsx(_components.a,{href:`/en/hooks`,children:`Hooks`})]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Run a script before or after tool calls`}),_jsxs(_components.td,{style:{textAlign:`left`},children:[_jsx(_components.code,{children:`settings.json`}),` `,_jsx(_components.code,{children:`hooks`})]}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/hooks`,children:`Hooks`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Set environment variables for the session`}),_jsxs(_components.td,{style:{textAlign:`left`},children:[_jsx(_components.code,{children:`settings.json`}),` `,_jsx(_components.code,{children:`env`})]}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/settings-reference#all-settings`,children:`Settings`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Keep personal overrides out of git`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`settings.local.json`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project only`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/settings#where-settings-live`,children:`Settings scopes`})})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{style:{textAlign:`left`},children:[`Add a prompt or capability you invoke with `,_jsx(_components.code,{children:`/name`})]}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`skills/\u003cname\u003e/SKILL.md`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/skills`,children:`Skills`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Define a specialized subagent with its own tools`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`agents/*.md`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/sub-agents`,children:`Subagents`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Orchestrate many subagents from a script`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`workflows/*.js`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/workflows`,children:`Dynamic workflows`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Connect external tools over MCP`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`.mcp.json`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project only`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/mcp`,children:`MCP`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Change how Claude formats responses`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`output-styles/*.md`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/output-styles`,children:`Output styles`})})]})]})]}),`\n`,_jsx(Heading,{level:`2`,id:`file-reference`,children:`File reference`}),`\n`,_jsxs(_components.p,{children:[`This table lists every file the explorer covers. Project-scope files live in your repo under `,_jsx(_components.code,{children:`.claude/`}),` (or at the root for `,_jsx(_components.code,{children:`CLAUDE.md`}),`, `,_jsx(_components.code,{children:`.mcp.json`}),`, and `,_jsx(_components.code,{children:`.worktreeinclude`}),`). Global-scope files live in `,_jsx(_components.code,{children:`~/.claude/`}),` and apply across all projects.`]}),`\n`,_jsxs(Note,{children:[_jsx(_components.p,{children:`Several things can override what you put in these files:`}),_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/server-managed-settings`,children:`Managed settings`}),` deployed by your organization take precedence over everything, apart from the `,_jsx(_components.a,{href:`/en/settings#exceptions-to-managed-settings-precedence`,children:`exceptions under Settings precedence`})]}),`\n`,_jsxs(_components.li,{children:[`CLI flags like `,_jsx(_components.code,{children:`--permission-mode`}),` or `,_jsx(_components.code,{children:`--settings`}),` override `,_jsx(_components.code,{children:`settings.json`}),` for that session`]}),`\n`,_jsxs(_components.li,{children:[`Some environment variables take precedence over their equivalent setting, but this varies: check the `,_jsx(_components.a,{href:`/en/env-vars`,children:`environment variables reference`}),` for each one`]}),`\n`]}),_jsxs(_components.p,{children:[`See `,_jsx(_components.a,{href:`/en/settings#settings-precedence`,children:`settings precedence`}),` for the full order.`]})]}),`\n`,_jsx(_components.p,{children:`Click a filename to open that node in the explorer above.`}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsx(_components.th,{children:`File`}),_jsx(_components.th,{children:`Scope`}),_jsx(_components.th,{children:`Commit`}),_jsx(_components.th,{children:`What it does`}),_jsx(_components.th,{children:`Reference`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-claude-md`,children:_jsx(_components.code,{children:`CLAUDE.md`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Instructions loaded every session`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/memory`,children:`Memory`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-rules`,children:_jsx(_components.code,{children:`rules/*.md`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Topic-scoped instructions, optionally path-gated`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/memory#organize-rules-with-claude/rules/`,children:`Rules`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-settings-json`,children:_jsx(_components.code,{children:`settings.json`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Permissions, hooks, env vars, model defaults`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/settings`,children:`Settings`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-settings-local-json`,children:_jsx(_components.code,{children:`settings.local.json`})})}),_jsx(_components.td,{children:`Project only`}),_jsx(_components.td,{}),_jsx(_components.td,{children:`Your personal overrides, gitignored when Claude Code saves a setting to it`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/settings#where-settings-live`,children:`Settings scopes`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-mcp-json`,children:_jsx(_components.code,{children:`.mcp.json`})})}),_jsx(_components.td,{children:`Project only`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Team-shared MCP servers`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/mcp#mcp-installation-scopes`,children:`MCP scopes`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-worktreeinclude`,children:_jsx(_components.code,{children:`.worktreeinclude`})})}),_jsx(_components.td,{children:`Project only`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Gitignored files to copy into new worktrees`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/worktrees#copy-gitignored-files-into-worktrees`,children:`Worktrees`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-skills`,children:_jsx(_components.code,{children:`skills/\u003cname\u003e/SKILL.md`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsxs(_components.td,{children:[`Reusable prompts invoked with `,_jsx(_components.code,{children:`/name`}),` or auto-invoked`]}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/skills`,children:`Skills`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-commands`,children:_jsx(_components.code,{children:`commands/*.md`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Single-file prompts; same mechanism as skills`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/skills`,children:`Skills`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-output-styles`,children:_jsx(_components.code,{children:`output-styles/*.md`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Custom system-prompt sections`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/output-styles`,children:`Output styles`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-agents`,children:_jsx(_components.code,{children:`agents/*.md`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Subagent definitions with their own prompt and tools`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/sub-agents`,children:`Subagents`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-workflows`,children:_jsx(_components.code,{children:`workflows/*.js`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsxs(_components.td,{children:[`Dynamic workflow scripts written by Claude and saved from `,_jsx(_components.code,{children:`/workflows`}),`; each file becomes a `,_jsx(_components.code,{children:`/\u003cname\u003e`}),` command`]}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/workflows`,children:`Dynamic workflows`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-agent-memory`,children:_jsx(_components.code,{children:`agent-memory/\u003cname\u003e/`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Persistent memory for subagents`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/sub-agents#enable-persistent-memory`,children:`Persistent memory`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-claude-json`,children:_jsx(_components.code,{children:`~/.claude.json`})})}),_jsx(_components.td,{children:`Global only`}),_jsx(_components.td,{}),_jsx(_components.td,{children:`App state, OAuth, UI toggles, personal MCP servers`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/settings-reference#global-config-settings`,children:`Global config`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-global-projects`,children:_jsx(_components.code,{children:`projects/\u003cproject\u003e/memory/`})})}),_jsx(_components.td,{children:`Global only`}),_jsx(_components.td,{}),_jsx(_components.td,{children:`Auto memory: Claude’s notes to itself across sessions`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/memory#auto-memory`,children:`Auto memory`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-keybindings`,children:_jsx(_components.code,{children:`keybindings.json`})})}),_jsx(_components.td,{children:`Global only`}),_jsx(_components.td,{}),_jsx(_components.td,{children:`Custom keyboard shortcuts`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/keybindings`,children:`Keybindings`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-themes`,children:_jsx(_components.code,{children:`themes/*.json`})})}),_jsx(_components.td,{children:`Global only`}),_jsx(_components.td,{}),_jsx(_components.td,{children:`Custom color themes`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/terminal-config#create-a-custom-theme`,children:`Custom themes`})})]})]})]}),`\n`,_jsx(Heading,{level:`2`,id:`troubleshoot-configuration`,children:`Troubleshoot configuration`}),`\n`,_jsxs(_components.p,{children:[`If a setting, hook, or file isn’t taking effect, see `,_jsx(_components.a,{href:`/en/debug-your-config`,children:`Debug your configuration`}),` for the inspection commands and a symptom-first lookup table.`]}),`\n`,_jsx(Heading,{level:`2`,id:`application-data`,children:`Application data`}),`\n`,_jsxs(_components.p,{children:[`Beyond the config you author, `,_jsx(_components.code,{children:`~/.claude`}),` holds data Claude Code writes during sessions. These files are plaintext. Anything that passes through a tool lands in a transcript on disk: file contents, command output, pasted text.`]}),`\n`,_jsx(Heading,{level:`3`,id:`cleaned-up-automatically`,children:`Cleaned up automatically`}),`\n`,_jsxs(_components.p,{children:[`Claude Code deletes the files in the paths below once they’re older than `,_jsx(_components.a,{href:`/en/settings-reference#cleanupperioddays`,children:_jsx(_components.code,{children:`cleanupPeriodDays`})}),`, as long as it can safely determine the retention period. The default is 30 days and the minimum is 1; setting `,_jsx(_components.code,{children:`0`}),` fails with a validation error. The same age cutoff applies to automatic removal of `,_jsx(_components.a,{href:`/en/worktrees#clean-up-subagent-and-background-session-worktrees`,children:`orphaned worktrees`}),`.`]}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsxs(_components.th,{children:[`Path under `,_jsx(_components.code,{children:`~/.claude/`})]}),_jsx(_components.th,{children:`Contents`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`projects/\u003cproject\u003e/\u003csession\u003e.jsonl`})}),_jsx(_components.td,{children:`Full conversation transcript: every message, tool call, and tool result`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`projects/\u003cproject\u003e/\u003csession\u003e/subagents/`})}),_jsxs(_components.td,{children:[_jsx(_components.a,{href:`/en/sub-agents`,children:`Subagent`}),` conversation transcripts, removed with the parent session transcript when it ages out`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`projects/\u003cproject\u003e/\u003csession\u003e/tool-results/`})}),_jsx(_components.td,{children:`Large tool outputs spilled to separate files`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`file-history/\u003csession\u003e/`})}),_jsxs(_components.td,{children:[`Pre-edit snapshots of files Claude changed, used for `,_jsx(_components.a,{href:`/en/checkpointing`,children:`checkpoint restore`}),`. Holds snapshots for the 100 most recent checkpoints; snapshot files that no retained checkpoint references are deleted, except each file’s first snapshot`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`plans/`})}),_jsxs(_components.td,{children:[`Plan files written during `,_jsx(_components.a,{href:`/en/permission-modes#analyze-before-you-edit-with-plan-mode`,children:`plan mode`})]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`debug/`})}),_jsxs(_components.td,{children:[`Per-session debug logs, written only when you start with `,_jsx(_components.code,{children:`--debug`}),` or run `,_jsx(_components.code,{children:`/debug`})]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`paste-cache/`})}),_jsx(_components.td,{children:`Contents of large pastes`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`image-cache/\u003csession\u003e/`})}),_jsx(_components.td,{children:`Attached images. On each sweep, Claude Code removes the directories of all other sessions, whatever their age.`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`uploads/\u003csession\u003e/`})}),_jsxs(_components.td,{children:[`Files you attach from the web or mobile app, and photos you attach from the mobile app, when messaging a `,_jsx(_components.a,{href:`/en/remote-control`,children:`Remote Control`}),` session. An attachment to a `,_jsx(_components.a,{href:`/en/claude-code-on-the-web`,children:`cloud session`}),` is saved in that session’s own cloud environment instead, not on your machine.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`session-env/`})}),_jsx(_components.td,{children:`Per-session environment metadata`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`tasks/`})}),_jsx(_components.td,{children:`Per-session task lists written by the task tools`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`shell-snapshots/`})}),_jsxs(_components.td,{children:[`Aliases, functions, and shell options captured at startup and applied by the `,_jsx(_components.a,{href:`/en/tools-reference#bash-tool-behavior`,children:`Bash tool`}),` to each command. Removed on clean exit. The sweep clears any left after a crash.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`backups/`})}),_jsxs(_components.td,{children:[`Earlier versions of `,_jsx(_components.code,{children:`~/.claude.json`}),`, copied when Claude Code rewrites the file. Claude Code keeps the five newest, plus a copy of any version it couldn’t parse.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`feedback-bundles/`})}),_jsxs(_components.td,{children:[`Redacted transcript archives written by `,_jsx(_components.code,{children:`/feedback`}),` on third-party providers or when no Anthropic credentials are configured, for sending to your Anthropic account team`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`feedback/drafts/`})}),_jsxs(_components.td,{children:[`Queued `,_jsx(_components.a,{href:`/en/tools-reference#sendfeedback-tool-behavior`,children:`Claude-drafted feedback`}),` awaiting your review in `,_jsx(_components.code,{children:`/feedback`}),`. Swept after `,_jsx(_components.code,{children:`cleanupPeriodDays`}),` or 30 days, whichever is shorter. When the queue is at its 10-draft limit, Claude Code deletes the oldest draft to make room.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`usage-data/`})}),_jsxs(_components.td,{children:[_jsx(_components.code,{children:`report.html`}),` and timestamped report copies written by `,_jsx(_components.a,{href:`/en/costs#analyze-your-usage-patterns`,children:_jsx(_components.code,{children:`/insights`})}),`, plus cached per-session analysis data used to build them`]})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{children:[_jsx(_components.code,{children:`todos/`}),`, `,_jsx(_components.code,{children:`statsig/`}),`, `,_jsx(_components.code,{children:`logs/`})]}),_jsx(_components.td,{children:`Legacy directories from older versions. No longer written. The sweep removes their contents and then the empty directory.`})]})]})]}),`\n`,_jsx(_components.p,{children:`Claude Code makes four exceptions to this sweep:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:_jsx(_components.code,{children:`sessions/`})}),`: holds one small file per running session, used to detect concurrent sessions and crashes. It isn’t part of the age-based sweep: Claude Code removes each file when its session exits and clears crash leftovers on the next launch.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Auto memory`}),`: Claude Code excludes a project’s `,_jsx(_components.a,{href:`/en/memory#auto-memory`,children:`auto memory`}),` directory, `,_jsx(_components.code,{children:`projects/\u003cproject\u003e/memory/`}),`, from this sweep, and removes the directory itself only after it has been empty for the whole retention period. Before v2.1.228, the sweep treated folders inside the memory directory as session data and could delete old files beneath it.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Bare mode`}),`: when you run `,_jsx(_components.code,{children:`claude -p`}),` with `,_jsx(_components.a,{href:`/en/headless#start-faster-with-bare-mode`,children:_jsx(_components.code,{children:`--bare`})}),`, Claude Code doesn’t run the sweep in that session.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Paused sweep`}),`: if Claude Code can’t safely determine the retention period, it pauses the retention cleanup sweep; the `,_jsxs(_components.a,{href:`/en/monitoring-usage#retention-sweep-event`,children:[_jsx(_components.code,{children:`retention_sweep`}),` event`]}),` lists each configuration that pauses it. When the cause is a settings file that can’t be read or parsed, or settings errors with `,_jsx(_components.code,{children:`cleanupPeriodDays`}),` explicitly set, Claude Code also shows a warning in `,_jsx(_components.code,{children:`/status`}),` until you fix the settings errors. When `,_jsx(_components.a,{href:`/en/server-managed-settings`,children:`managed settings`}),` provide `,_jsx(_components.code,{children:`cleanupPeriodDays`}),`, Claude Code runs the sweep at the managed value in either case.`]}),`\n`]}),`\n`,_jsx(Heading,{level:`3`,id:`kept-until-you-delete-them`,children:`Kept until you delete them`}),`\n`,_jsx(_components.p,{children:`The retention cleanup sweep doesn’t cover the following paths. Claude Code keeps them until you delete them, apart from the two caches whose rows say that logging out deletes them.`}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsxs(_components.th,{children:[`Path under `,_jsx(_components.code,{children:`~/.claude/`})]}),_jsx(_components.th,{children:`Contents`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`history.jsonl`})}),_jsx(_components.td,{children:`Every prompt you’ve typed, with timestamp and project path. Used for up-arrow recall.`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`stats-cache.json`})}),_jsxs(_components.td,{children:[`Aggregated token and cost counts shown by `,_jsx(_components.code,{children:`/usage`})]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`remote-settings.json`})}),_jsxs(_components.td,{children:[`Cached copy of `,_jsx(_components.a,{href:`/en/server-managed-settings`,children:`server-managed settings`}),` for your organization, or `,_jsx(_components.code,{children:`{}`}),` when your organization has configured none. Only present when the session `,_jsx(_components.a,{href:`/en/server-managed-settings#platform-availability`,children:`fetches them`}),`. Claude Code checks for updates at startup and hourly during a session. Claude Code deletes it when you log out.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`cache/changelog.md`})}),_jsx(_components.td,{children:`Cached copy of the Claude Code changelog, used to show release notes after an update. Refreshed in the background.`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`policy-limits.json`})}),_jsx(_components.td,{children:`Cached feature policy settings for your organization. Only present for some account types. Refreshed automatically. Claude Code deletes it when you log out.`})]})]})]}),`\n`,_jsx(_components.p,{children:`Other small cache and lock files appear depending on which features you use and are safe to delete.`}),`\n`,_jsx(Heading,{level:`3`,id:`plaintext-storage`,children:`Plaintext storage`}),`\n`,_jsxs(_components.p,{children:[`Transcripts and history are not encrypted at rest. OS file permissions are the only protection. If a tool reads a `,_jsx(_components.code,{children:`.env`}),` file or a command prints a credential, that value is written to `,_jsx(_components.code,{children:`projects/\u003cproject\u003e/\u003csession\u003e.jsonl`}),`. To reduce exposure:`]}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[`Lower `,_jsx(_components.code,{children:`cleanupPeriodDays`}),` to shorten how long transcripts are kept`]}),`\n`,_jsxs(_components.li,{children:[`Set the `,_jsx(_components.a,{href:`/en/env-vars`,children:_jsx(_components.code,{children:`CLAUDE_CODE_SKIP_PROMPT_HISTORY`})}),` environment variable to skip writing transcripts and prompt history in any mode. In non-interactive mode, you can instead pass `,_jsx(_components.code,{children:`--no-session-persistence`}),` alongside `,_jsx(_components.code,{children:`-p`}),`, or set `,_jsx(_components.code,{children:`persistSession: false`}),` in the TypeScript Agent SDK; the Python SDK has no equivalent option.`]}),`\n`,_jsxs(_components.li,{children:[`Use `,_jsx(_components.a,{href:`/en/permissions`,children:`permission rules`}),` to deny reads of credential files`]}),`\n`]}),`\n`,_jsx(Heading,{level:`3`,id:`clear-local-data`,children:`Clear local data`}),`\n`,_jsxs(_components.p,{children:[`Run `,_jsx(_components.code,{children:`claude project purge`}),` to delete the state Claude Code holds for one project. It deletes:`]}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[`Transcripts and auto memory under `,_jsx(_components.code,{children:`projects/`})]}),`\n`,_jsxs(_components.li,{children:[`Per-session `,_jsx(_components.code,{children:`tasks/`}),`, `,_jsx(_components.code,{children:`debug/`}),`, and `,_jsx(_components.code,{children:`file-history/`}),` entries`]}),`\n`,_jsxs(_components.li,{children:[`Matching prompt lines in `,_jsx(_components.code,{children:`history.jsonl`})]}),`\n`,_jsxs(_components.li,{children:[`The project’s entry in `,_jsx(_components.code,{children:`~/.claude.json`})]}),`\n`]}),`\n`,_jsx(_components.p,{children:`The command prints the full deletion plan and asks for confirmation before removing anything.`}),`\n`,_jsxs(_components.p,{children:[`The examples below use `,_jsx(_components.code,{children:`~/work/my-repo`}),` as a placeholder. Replace it with the path to your project. If no state matches the path, the command prints an error and exits with status 1.`]}),`\n`,_jsx(_components.p,{children:`Preview the plan without deleting anything:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"--shiki-dark\":`#DCDCAA`},children:`claude`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` project`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` purge`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` ~/work/my-repo`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-dark\":`#569CD6`},children:` --dry-run`})]}),`\n`]})})}),`\n`,_jsx(_components.p,{children:`The plan lists each matching item and why it is included:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`13`,language:`text`,children:_jsx(_components.pre,{className:`shiki shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-dark\":`#D4D4D4`},language:`text`,children:_jsxs(_components.code,{language:`text`,numberOfLines:`13`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`Purge plan for /home/user/work/my-repo:`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`  dir:    /home/user/.claude/projects/-home-user-work-my-repo`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`           project transcripts (.jsonl) and memory/`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`  config: projects[\"/home/user/work/my-repo\"]`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`           project entry in ~/.claude.json (trust, history, MCP servers)`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`  filter: /home/user/.claude/history.jsonl`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`           12 prompt(s) typed in this project`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`shell-snapshots/ are not project-scoped and will not be touched`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`backups/ may still contain this project entry in old .claude.json snapshots (/home/user/.claude/backups); at most 5 are kept and they rotate out automatically`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`Dry run: 3 item(s) would be deleted.`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{})})]})})}),`\n`,_jsx(_components.p,{children:`Delete with a single confirmation prompt:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"--shiki-dark\":`#DCDCAA`},children:`claude`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` project`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` purge`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` ~/work/my-repo`})]}),`\n`]})})}),`\n`,_jsxs(_components.p,{children:[`The command prints the same plan, then asks `,_jsx(_components.code,{children:`Delete 3 item(s) for /home/user/work/my-repo? This cannot be undone. [y/N]`}),` and deletes only if you answer `,_jsx(_components.code,{children:`y`}),`.`]}),`\n`,_jsx(_components.p,{children:`Omit the path to pick a project from an interactive list.`}),`\n`,_jsx(_components.p,{children:`Skip the confirmation prompt for use in scripts:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"--shiki-dark\":`#DCDCAA`},children:`claude`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` project`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` purge`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` ~/work/my-repo`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-dark\":`#569CD6`},children:` --yes`})]}),`\n`]})})}),`\n`,_jsxs(_components.p,{children:[`Pass `,_jsx(_components.code,{children:`--all`}),` instead of a path to purge state for every project at once, which deletes `,_jsx(_components.code,{children:`history.jsonl`}),` outright rather than filtering it. Pass `,_jsx(_components.code,{children:`-i`}),` to step through the deletion plan one item at a time.`]}),`\n`,_jsxs(_components.p,{children:[`The command leaves `,_jsx(_components.code,{children:`shell-snapshots/`}),` and `,_jsx(_components.code,{children:`backups/`}),` alone because those are not project-scoped, and warns about them in the plan output.`]}),`\n`,_jsx(_components.p,{children:`You can also delete any of the application-data paths above by hand. New sessions are unaffected. The table below shows what you lose for past sessions.`}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsx(_components.th,{children:`Delete`}),_jsx(_components.th,{children:`You lose`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/projects/`})}),_jsx(_components.td,{children:`Resume, continue, and rewind for past sessions, and auto memory for every project`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/history.jsonl`})}),_jsx(_components.td,{children:`Up-arrow prompt recall`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/paste-cache/`})}),_jsxs(_components.td,{children:[`Pasted text in recalled prompts; see `,_jsx(_components.a,{href:`/en/terminal-config#paste-large-content`,children:`paste large content`})]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/uploads/`})}),_jsxs(_components.td,{children:[`Attachments that past `,_jsx(_components.a,{href:`/en/remote-control`,children:`Remote Control`}),` sessions refer to by path`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/file-history/`})}),_jsx(_components.td,{children:`Checkpoint restore for past sessions`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/stats-cache.json`})}),_jsxs(_components.td,{children:[`Historical totals shown by `,_jsx(_components.code,{children:`/usage`})]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/usage-data/`})}),_jsxs(_components.td,{children:[`Past `,_jsx(_components.a,{href:`/en/costs#analyze-your-usage-patterns`,children:_jsx(_components.code,{children:`/insights`})}),` reports and the cached analysis data used to build them`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/feedback-bundles/`})}),_jsx(_components.td,{children:`Feedback and bug-report archives you haven’t yet sent to your Anthropic account team`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/feedback/drafts/`})}),_jsxs(_components.td,{children:[_jsx(_components.a,{href:`/en/tools-reference#sendfeedback-tool-behavior`,children:`Claude-drafted feedback`}),` you haven’t sent`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/remote-settings.json`})}),_jsx(_components.td,{children:`Nothing. Re-fetched on next launch.`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/cache/changelog.md`})}),_jsx(_components.td,{children:`Nothing. Refreshed in the background.`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/policy-limits.json`})}),_jsx(_components.td,{children:`Nothing. Refreshed automatically.`})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{children:[_jsx(_components.code,{children:`~/.claude/debug/`}),`, `,_jsx(_components.code,{children:`~/.claude/plans/`}),`, `,_jsx(_components.code,{children:`~/.claude/image-cache/`}),`, `,_jsx(_components.code,{children:`~/.claude/session-env/`}),`, `,_jsx(_components.code,{children:`~/.claude/tasks/`}),`, `,_jsx(_components.code,{children:`~/.claude/shell-snapshots/`}),`, `,_jsx(_components.code,{children:`~/.claude/backups/`})]}),_jsx(_components.td,{children:`Nothing user-facing`})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{children:[_jsx(_components.code,{children:`~/.claude/todos/`}),`, `,_jsx(_components.code,{children:`~/.claude/statsig/`}),`, `,_jsx(_components.code,{children:`~/.claude/logs/`})]}),_jsx(_components.td,{children:`Nothing. Legacy directories not written by current versions.`})]})]})]}),`\n`,_jsxs(_components.p,{children:[`Don’t delete `,_jsx(_components.code,{children:`~/.claude.json`}),`, `,_jsx(_components.code,{children:`~/.claude/settings.json`}),`, or `,_jsx(_components.code,{children:`~/.claude/plugins/`}),`: those hold your auth, preferences, and installed plugins.`]}),`\n`,_jsx(Heading,{level:`2`,id:`related-resources`,children:`Related resources`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/memory`,children:`Manage Claude’s memory`}),`: write and organize CLAUDE.md, rules, and auto memory`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/settings`,children:`Configure settings`}),`: set permissions, hooks, environment variables, and model defaults`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/skills`,children:`Create skills`}),`: build reusable prompts and workflows`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/sub-agents`,children:`Configure subagents`}),`: define specialized agents with their own context`]}),`\n`]})]})}function MDXContent(props={}){const{wrapper:MDXLayout}={..._provideComponents(),...props.components};return MDXLayout?_jsx(MDXLayout,{...props,children:_jsx(_createMdxContent,{...props})}):_createMdxContent(props)}return{ClaudeExplorer,default:MDXContent};function _missingMdxReference(id,component){throw new Error(`Expected `+(component?`component`:`object`)+\" `\"+id+\"` to be defined: you likely forgot to import, pass, or provide it.\")}"])</script><script>self.__next_f.push([1,"5d:Tb3f8,"])</script><script>self.__next_f.push([1,"\"use strict\";const{Fragment:_Fragment,jsx:_jsx,jsxs:_jsxs}=arguments[0];const{useMDXComponents:_provideComponents}=arguments[0];const ClaudeExplorer=()=\u003enull;function _createMdxContent(props){const _components={a:`a`,code:`code`,li:`li`,p:`p`,pre:`pre`,span:`span`,strong:`strong`,tbody:`tbody`,td:`td`,th:`th`,thead:`thead`,tr:`tr`,ul:`ul`,..._provideComponents(),...props.components},{CodeBlock,Heading,Note,Table,_MdxComponentBoundary}=_components;if(!CodeBlock)_missingMdxReference(`CodeBlock`,true);if(!Heading)_missingMdxReference(`Heading`,true);if(!Note)_missingMdxReference(`Note`,true);if(!Table)_missingMdxReference(`Table`,true);if(!_MdxComponentBoundary)_missingMdxReference(`_MdxComponentBoundary`,true);return _jsxs(_Fragment,{children:[_jsxs(_components.p,{children:[`Claude Code reads instructions, settings, skills, subagents, and memory from your project directory and from `,_jsx(_components.code,{children:`~/.claude`}),` in your home directory. Commit project files to git to share them with your team; files in `,_jsx(_components.code,{children:`~/.claude`}),` are personal configuration that applies across all your projects.`]}),`\n`,_jsxs(_components.p,{children:[`On Windows, `,_jsx(_components.code,{children:`~/.claude`}),` resolves to `,_jsx(_components.code,{children:`%USERPROFILE%\\\\.claude`}),`. If you set `,_jsx(_components.a,{href:`/en/env-vars`,children:_jsx(_components.code,{children:`CLAUDE_CONFIG_DIR`})}),`, every `,_jsx(_components.code,{children:`~/.claude`}),` path on this page lives under that directory instead.`]}),`\n`,_jsxs(_components.p,{children:[`Most users only edit `,_jsx(_components.code,{children:`CLAUDE.md`}),` and `,_jsx(_components.code,{children:`settings.json`}),`. The rest of the directory is optional: add skills, rules, or subagents as you need them.`]}),`\n`,_jsx(Heading,{level:`2`,id:`explore-the-directory`,children:`Explore the directory`}),`\n`,_jsx(_components.p,{children:`Click files in the tree to see what each one does, when it loads, and an example.`}),`\n`,_jsx(_MdxComponentBoundary,{name:`ClaudeExplorer`,children:_jsx(ClaudeExplorer,{})}),`\n`,_jsx(Heading,{level:`2`,id:`what’s-not-shown`,children:`What’s not shown`}),`\n`,_jsx(_components.p,{children:`The explorer covers files you author and edit. A few related files live elsewhere:`}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsx(_components.th,{children:`File`}),_jsx(_components.th,{children:`Location`}),_jsx(_components.th,{children:`Purpose`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`managed-settings.json`})}),_jsx(_components.td,{children:`System-level, varies by OS`}),_jsxs(_components.td,{children:[`Enterprise-enforced settings that you can’t override, apart from `,_jsx(_components.a,{href:`/en/settings#security-keys-where-the-stricter-value-applies`,children:`narrow exceptions`}),`. See `,_jsx(_components.a,{href:`/en/managed-settings#deploy-a-managed-settings-file`,children:`where to save the file`}),` and `,_jsx(_components.a,{href:`/en/managed-settings#precedence-within-the-managed-tier`,children:`which managed source Claude Code uses`}),`.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`CLAUDE.local.md`})}),_jsx(_components.td,{children:`Project root`}),_jsxs(_components.td,{children:[`Your private preferences for this project, loaded alongside CLAUDE.md. Create it manually and add it to `,_jsx(_components.code,{children:`.gitignore`}),`.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:`Installed plugins`}),_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/plugins`})}),_jsxs(_components.td,{children:[`Cloned marketplaces, installed plugin versions, and per-plugin data, managed by `,_jsx(_components.code,{children:`claude plugin`}),` commands. For a plugin installed from a marketplace `,_jsxs(_components.a,{href:`/en/plugin-marketplaces#command-sources`,children:[_jsx(_components.code,{children:`command`}),` source`]}),` in link mode, Claude Code stores links here instead of a copy, and the plugin’s files stay in the directory the command prints. See `,_jsx(_components.a,{href:`/en/plugins-reference#plugin-caching-and-file-resolution`,children:`plugin caching`}),` for how orphaned versions are cleaned up.`]})]})]})]}),`\n`,_jsxs(_components.p,{children:[_jsx(_components.code,{children:`~/.claude`}),` also holds data Claude Code writes as you work: transcripts, prompt history, file snapshots, caches, and logs. See `,_jsx(_components.a,{href:`#application-data`,children:`application data`}),` below.`]}),`\n`,_jsx(Heading,{level:`2`,id:`choose-the-right-file`,children:`Choose the right file`}),`\n`,_jsx(_components.p,{children:`Different kinds of customization live in different files. Use this table to find where a change belongs.`}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsx(_components.th,{style:{textAlign:`left`},children:`You want to`}),_jsx(_components.th,{style:{textAlign:`left`},children:`Edit`}),_jsx(_components.th,{style:{textAlign:`left`},children:`Scope`}),_jsx(_components.th,{style:{textAlign:`left`},children:`Reference`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Give Claude project context and conventions`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`CLAUDE.md`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/memory`,children:`Memory`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Allow or block specific tool calls`}),_jsxs(_components.td,{style:{textAlign:`left`},children:[_jsx(_components.code,{children:`settings.json`}),` `,_jsx(_components.code,{children:`permissions`}),` or `,_jsx(_components.code,{children:`hooks`})]}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsxs(_components.td,{style:{textAlign:`left`},children:[_jsx(_components.a,{href:`/en/permissions`,children:`Permissions`}),`, `,_jsx(_components.a,{href:`/en/hooks`,children:`Hooks`})]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Run a script before or after tool calls`}),_jsxs(_components.td,{style:{textAlign:`left`},children:[_jsx(_components.code,{children:`settings.json`}),` `,_jsx(_components.code,{children:`hooks`})]}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/hooks`,children:`Hooks`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Set environment variables for the session`}),_jsxs(_components.td,{style:{textAlign:`left`},children:[_jsx(_components.code,{children:`settings.json`}),` `,_jsx(_components.code,{children:`env`})]}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/settings-reference#all-settings`,children:`Settings`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Keep personal overrides out of git`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`settings.local.json`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project only`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/settings#where-settings-live`,children:`Settings scopes`})})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{style:{textAlign:`left`},children:[`Add a prompt or capability you invoke with `,_jsx(_components.code,{children:`/name`})]}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`skills/\u003cname\u003e/SKILL.md`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/skills`,children:`Skills`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Define a specialized subagent with its own tools`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`agents/*.md`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/sub-agents`,children:`Subagents`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Orchestrate many subagents from a script`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`workflows/*.js`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/workflows`,children:`Dynamic workflows`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Connect external tools over MCP`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`.mcp.json`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project only`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/mcp`,children:`MCP`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Change how Claude formats responses`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.code,{children:`output-styles/*.md`})}),_jsx(_components.td,{style:{textAlign:`left`},children:`project or global`}),_jsx(_components.td,{style:{textAlign:`left`},children:_jsx(_components.a,{href:`/en/output-styles`,children:`Output styles`})})]})]})]}),`\n`,_jsx(Heading,{level:`2`,id:`file-reference`,children:`File reference`}),`\n`,_jsxs(_components.p,{children:[`This table lists every file the explorer covers. Project-scope files live in your repo under `,_jsx(_components.code,{children:`.claude/`}),` (or at the root for `,_jsx(_components.code,{children:`CLAUDE.md`}),`, `,_jsx(_components.code,{children:`.mcp.json`}),`, and `,_jsx(_components.code,{children:`.worktreeinclude`}),`). Global-scope files live in `,_jsx(_components.code,{children:`~/.claude/`}),` and apply across all projects.`]}),`\n`,_jsxs(Note,{children:[_jsx(_components.p,{children:`Several things can override what you put in these files:`}),_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/server-managed-settings`,children:`Managed settings`}),` deployed by your organization take precedence over everything, apart from the `,_jsx(_components.a,{href:`/en/settings#exceptions-to-managed-settings-precedence`,children:`exceptions under Settings precedence`})]}),`\n`,_jsxs(_components.li,{children:[`CLI flags like `,_jsx(_components.code,{children:`--permission-mode`}),` or `,_jsx(_components.code,{children:`--settings`}),` override `,_jsx(_components.code,{children:`settings.json`}),` for that session`]}),`\n`,_jsxs(_components.li,{children:[`Some environment variables take precedence over their equivalent setting, but this varies: check the `,_jsx(_components.a,{href:`/en/env-vars`,children:`environment variables reference`}),` for each one`]}),`\n`]}),_jsxs(_components.p,{children:[`See `,_jsx(_components.a,{href:`/en/settings#settings-precedence`,children:`settings precedence`}),` for the full order.`]})]}),`\n`,_jsx(_components.p,{children:`Click a filename to open that node in the explorer above.`}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsx(_components.th,{children:`File`}),_jsx(_components.th,{children:`Scope`}),_jsx(_components.th,{children:`Commit`}),_jsx(_components.th,{children:`What it does`}),_jsx(_components.th,{children:`Reference`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-claude-md`,children:_jsx(_components.code,{children:`CLAUDE.md`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Instructions loaded every session`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/memory`,children:`Memory`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-rules`,children:_jsx(_components.code,{children:`rules/*.md`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Topic-scoped instructions, optionally path-gated`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/memory#organize-rules-with-claude/rules/`,children:`Rules`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-settings-json`,children:_jsx(_components.code,{children:`settings.json`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Permissions, hooks, env vars, model defaults`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/settings`,children:`Settings`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-settings-local-json`,children:_jsx(_components.code,{children:`settings.local.json`})})}),_jsx(_components.td,{children:`Project only`}),_jsx(_components.td,{}),_jsx(_components.td,{children:`Your personal overrides, gitignored when Claude Code saves a setting to it`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/settings#where-settings-live`,children:`Settings scopes`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-mcp-json`,children:_jsx(_components.code,{children:`.mcp.json`})})}),_jsx(_components.td,{children:`Project only`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Team-shared MCP servers`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/mcp#mcp-installation-scopes`,children:`MCP scopes`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-worktreeinclude`,children:_jsx(_components.code,{children:`.worktreeinclude`})})}),_jsx(_components.td,{children:`Project only`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Gitignored files to copy into new worktrees`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/worktrees#copy-gitignored-files-into-worktrees`,children:`Worktrees`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-skills`,children:_jsx(_components.code,{children:`skills/\u003cname\u003e/SKILL.md`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsxs(_components.td,{children:[`Reusable prompts invoked with `,_jsx(_components.code,{children:`/name`}),` or auto-invoked`]}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/skills`,children:`Skills`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-commands`,children:_jsx(_components.code,{children:`commands/*.md`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Single-file prompts; same mechanism as skills`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/skills`,children:`Skills`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-output-styles`,children:_jsx(_components.code,{children:`output-styles/*.md`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Custom system-prompt sections`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/output-styles`,children:`Output styles`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-agents`,children:_jsx(_components.code,{children:`agents/*.md`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Subagent definitions with their own prompt and tools`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/sub-agents`,children:`Subagents`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-workflows`,children:_jsx(_components.code,{children:`workflows/*.js`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsxs(_components.td,{children:[`Dynamic workflow scripts written by Claude and saved from `,_jsx(_components.code,{children:`/workflows`}),`; each file becomes a `,_jsx(_components.code,{children:`/\u003cname\u003e`}),` command`]}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/workflows`,children:`Dynamic workflows`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-agent-memory`,children:_jsx(_components.code,{children:`agent-memory/\u003cname\u003e/`})})}),_jsx(_components.td,{children:`Project and global`}),_jsx(_components.td,{children:`✓`}),_jsx(_components.td,{children:`Persistent memory for subagents`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/sub-agents#enable-persistent-memory`,children:`Persistent memory`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-claude-json`,children:_jsx(_components.code,{children:`~/.claude.json`})})}),_jsx(_components.td,{children:`Global only`}),_jsx(_components.td,{}),_jsx(_components.td,{children:`App state, OAuth, UI toggles, personal MCP servers`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/settings-reference#global-config-settings`,children:`Global config`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-global-projects`,children:_jsx(_components.code,{children:`projects/\u003cproject\u003e/memory/`})})}),_jsx(_components.td,{children:`Global only`}),_jsx(_components.td,{}),_jsx(_components.td,{children:`Auto memory: Claude’s notes to itself across sessions`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/memory#auto-memory`,children:`Auto memory`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-keybindings`,children:_jsx(_components.code,{children:`keybindings.json`})})}),_jsx(_components.td,{children:`Global only`}),_jsx(_components.td,{}),_jsx(_components.td,{children:`Custom keyboard shortcuts`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/keybindings`,children:`Keybindings`})})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.a,{href:`#ce-themes`,children:_jsx(_components.code,{children:`themes/*.json`})})}),_jsx(_components.td,{children:`Global only`}),_jsx(_components.td,{}),_jsx(_components.td,{children:`Custom color themes`}),_jsx(_components.td,{children:_jsx(_components.a,{href:`/en/terminal-config#create-a-custom-theme`,children:`Custom themes`})})]})]})]}),`\n`,_jsx(Heading,{level:`2`,id:`troubleshoot-configuration`,children:`Troubleshoot configuration`}),`\n`,_jsxs(_components.p,{children:[`If a setting, hook, or file isn’t taking effect, see `,_jsx(_components.a,{href:`/en/debug-your-config`,children:`Debug your configuration`}),` for the inspection commands and a symptom-first lookup table.`]}),`\n`,_jsx(Heading,{level:`2`,id:`application-data`,children:`Application data`}),`\n`,_jsxs(_components.p,{children:[`Beyond the config you author, `,_jsx(_components.code,{children:`~/.claude`}),` holds data Claude Code writes during sessions. These files are plaintext. Anything that passes through a tool lands in a transcript on disk: file contents, command output, pasted text.`]}),`\n`,_jsx(Heading,{level:`3`,id:`cleaned-up-automatically`,children:`Cleaned up automatically`}),`\n`,_jsxs(_components.p,{children:[`Claude Code deletes the files in the paths below once they’re older than `,_jsx(_components.a,{href:`/en/settings-reference#cleanupperioddays`,children:_jsx(_components.code,{children:`cleanupPeriodDays`})}),`, as long as it can safely determine the retention period. The default is 30 days and the minimum is 1; setting `,_jsx(_components.code,{children:`0`}),` fails with a validation error. The same age cutoff applies to automatic removal of `,_jsx(_components.a,{href:`/en/worktrees#clean-up-subagent-and-background-session-worktrees`,children:`orphaned worktrees`}),`.`]}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsxs(_components.th,{children:[`Path under `,_jsx(_components.code,{children:`~/.claude/`})]}),_jsx(_components.th,{children:`Contents`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`projects/\u003cproject\u003e/\u003csession\u003e.jsonl`})}),_jsx(_components.td,{children:`Full conversation transcript: every message, tool call, and tool result`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`projects/\u003cproject\u003e/\u003csession\u003e/subagents/`})}),_jsxs(_components.td,{children:[_jsx(_components.a,{href:`/en/sub-agents`,children:`Subagent`}),` conversation transcripts, removed with the parent session transcript when it ages out`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`projects/\u003cproject\u003e/\u003csession\u003e/tool-results/`})}),_jsx(_components.td,{children:`Large tool outputs spilled to separate files`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`file-history/\u003csession\u003e/`})}),_jsxs(_components.td,{children:[`Pre-edit snapshots of files Claude changed, used for `,_jsx(_components.a,{href:`/en/checkpointing`,children:`checkpoint restore`}),`. Holds snapshots for the 100 most recent checkpoints; snapshot files that no retained checkpoint references are deleted, except each file’s first snapshot`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`plans/`})}),_jsxs(_components.td,{children:[`Plan files written during `,_jsx(_components.a,{href:`/en/permission-modes#analyze-before-you-edit-with-plan-mode`,children:`plan mode`})]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`debug/`})}),_jsxs(_components.td,{children:[`Per-session debug logs, written only when you start with `,_jsx(_components.code,{children:`--debug`}),` or run `,_jsx(_components.code,{children:`/debug`})]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`paste-cache/`})}),_jsx(_components.td,{children:`Contents of large pastes`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`image-cache/\u003csession\u003e/`})}),_jsx(_components.td,{children:`Attached images. On each sweep, Claude Code removes the directories of all other sessions, whatever their age.`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`uploads/\u003csession\u003e/`})}),_jsxs(_components.td,{children:[`Files you attach from the web or mobile app, and photos you attach from the mobile app, when messaging a `,_jsx(_components.a,{href:`/en/remote-control`,children:`Remote Control`}),` session. An attachment to a `,_jsx(_components.a,{href:`/en/claude-code-on-the-web`,children:`cloud session`}),` is saved in that session’s own cloud environment instead, not on your machine.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`session-env/`})}),_jsx(_components.td,{children:`Per-session environment metadata`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`tasks/`})}),_jsx(_components.td,{children:`Per-session task lists written by the task tools`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`shell-snapshots/`})}),_jsxs(_components.td,{children:[`Aliases, functions, and shell options captured at startup and applied by the `,_jsx(_components.a,{href:`/en/tools-reference#bash-tool-behavior`,children:`Bash tool`}),` to each command. Removed on clean exit. The sweep clears any left after a crash.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`backups/`})}),_jsxs(_components.td,{children:[`Earlier versions of `,_jsx(_components.code,{children:`~/.claude.json`}),`, copied when Claude Code rewrites the file. Claude Code keeps the five newest, plus a copy of any version it couldn’t parse.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`feedback-bundles/`})}),_jsxs(_components.td,{children:[`Redacted transcript archives written by `,_jsx(_components.code,{children:`/feedback`}),` on third-party providers or when no Anthropic credentials are configured, for sending to your Anthropic account team`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`feedback/drafts/`})}),_jsxs(_components.td,{children:[`Queued `,_jsx(_components.a,{href:`/en/tools-reference#sendfeedback-tool-behavior`,children:`Claude-drafted feedback`}),` awaiting your review in `,_jsx(_components.code,{children:`/feedback`}),`. Swept after `,_jsx(_components.code,{children:`cleanupPeriodDays`}),` or 30 days, whichever is shorter. When the queue is at its 10-draft limit, Claude Code deletes the oldest draft to make room.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`usage-data/`})}),_jsxs(_components.td,{children:[_jsx(_components.code,{children:`report.html`}),` and timestamped report copies written by `,_jsx(_components.a,{href:`/en/costs#analyze-your-usage-patterns`,children:_jsx(_components.code,{children:`/insights`})}),`, plus cached per-session analysis data used to build them`]})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{children:[_jsx(_components.code,{children:`todos/`}),`, `,_jsx(_components.code,{children:`statsig/`}),`, `,_jsx(_components.code,{children:`logs/`})]}),_jsx(_components.td,{children:`Legacy directories from older versions. No longer written. The sweep removes their contents and then the empty directory.`})]})]})]}),`\n`,_jsx(_components.p,{children:`Claude Code makes four exceptions to this sweep:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:_jsx(_components.code,{children:`sessions/`})}),`: holds one small file per running session, used to detect concurrent sessions and crashes. It isn’t part of the age-based sweep: Claude Code removes each file when its session exits and clears crash leftovers on the next launch.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Auto memory`}),`: Claude Code excludes a project’s `,_jsx(_components.a,{href:`/en/memory#auto-memory`,children:`auto memory`}),` directory, `,_jsx(_components.code,{children:`projects/\u003cproject\u003e/memory/`}),`, from this sweep, and removes the directory itself only after it has been empty for the whole retention period. Before v2.1.228, the sweep treated folders inside the memory directory as session data and could delete old files beneath it.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Bare mode`}),`: when you run `,_jsx(_components.code,{children:`claude -p`}),` with `,_jsx(_components.a,{href:`/en/headless#start-faster-with-bare-mode`,children:_jsx(_components.code,{children:`--bare`})}),`, Claude Code doesn’t run the sweep in that session.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Paused sweep`}),`: if Claude Code can’t safely determine the retention period, it pauses the retention cleanup sweep; the `,_jsxs(_components.a,{href:`/en/monitoring-usage#retention-sweep-event`,children:[_jsx(_components.code,{children:`retention_sweep`}),` event`]}),` lists each configuration that pauses it. When the cause is a settings file that can’t be read or parsed, or settings errors with `,_jsx(_components.code,{children:`cleanupPeriodDays`}),` explicitly set, Claude Code also shows a warning in `,_jsx(_components.code,{children:`/status`}),` until you fix the settings errors. When `,_jsx(_components.a,{href:`/en/server-managed-settings`,children:`managed settings`}),` provide `,_jsx(_components.code,{children:`cleanupPeriodDays`}),`, Claude Code runs the sweep at the managed value in either case.`]}),`\n`]}),`\n`,_jsx(Heading,{level:`3`,id:`kept-until-you-delete-them`,children:`Kept until you delete them`}),`\n`,_jsx(_components.p,{children:`The retention cleanup sweep doesn’t cover the following paths. Claude Code keeps them until you delete them, apart from the two caches whose rows say that logging out deletes them.`}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsxs(_components.th,{children:[`Path under `,_jsx(_components.code,{children:`~/.claude/`})]}),_jsx(_components.th,{children:`Contents`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`history.jsonl`})}),_jsx(_components.td,{children:`Every prompt you’ve typed, with timestamp and project path. Used for up-arrow recall.`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`stats-cache.json`})}),_jsxs(_components.td,{children:[`Aggregated token and cost counts shown by `,_jsx(_components.code,{children:`/usage`})]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`remote-settings.json`})}),_jsxs(_components.td,{children:[`Cached copy of `,_jsx(_components.a,{href:`/en/server-managed-settings`,children:`server-managed settings`}),` for your organization, or `,_jsx(_components.code,{children:`{}`}),` when your organization has configured none. Only present when the session `,_jsx(_components.a,{href:`/en/server-managed-settings#platform-availability`,children:`fetches them`}),`. Claude Code checks for updates at startup and hourly during a session. Claude Code deletes it when you log out.`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`cache/changelog.md`})}),_jsx(_components.td,{children:`Cached copy of the Claude Code changelog, used to show release notes after an update. Refreshed in the background.`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`policy-limits.json`})}),_jsx(_components.td,{children:`Cached feature policy settings for your organization. Only present for some account types. Refreshed automatically. Claude Code deletes it when you log out.`})]})]})]}),`\n`,_jsx(_components.p,{children:`Other small cache and lock files appear depending on which features you use and are safe to delete.`}),`\n`,_jsx(Heading,{level:`3`,id:`plaintext-storage`,children:`Plaintext storage`}),`\n`,_jsxs(_components.p,{children:[`Transcripts and history are not encrypted at rest. OS file permissions are the only protection. If a tool reads a `,_jsx(_components.code,{children:`.env`}),` file or a command prints a credential, that value is written to `,_jsx(_components.code,{children:`projects/\u003cproject\u003e/\u003csession\u003e.jsonl`}),`. To reduce exposure:`]}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[`Lower `,_jsx(_components.code,{children:`cleanupPeriodDays`}),` to shorten how long transcripts are kept`]}),`\n`,_jsxs(_components.li,{children:[`Set the `,_jsx(_components.a,{href:`/en/env-vars`,children:_jsx(_components.code,{children:`CLAUDE_CODE_SKIP_PROMPT_HISTORY`})}),` environment variable to skip writing transcripts and prompt history in any mode. In non-interactive mode, you can instead pass `,_jsx(_components.code,{children:`--no-session-persistence`}),` alongside `,_jsx(_components.code,{children:`-p`}),`, or set `,_jsx(_components.code,{children:`persistSession: false`}),` in the TypeScript Agent SDK; the Python SDK has no equivalent option.`]}),`\n`,_jsxs(_components.li,{children:[`Use `,_jsx(_components.a,{href:`/en/permissions`,children:`permission rules`}),` to deny reads of credential files`]}),`\n`]}),`\n`,_jsx(Heading,{level:`3`,id:`clear-local-data`,children:`Clear local data`}),`\n`,_jsxs(_components.p,{children:[`Run `,_jsx(_components.code,{children:`claude project purge`}),` to delete the state Claude Code holds for one project. It deletes:`]}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[`Transcripts and auto memory under `,_jsx(_components.code,{children:`projects/`})]}),`\n`,_jsxs(_components.li,{children:[`Per-session `,_jsx(_components.code,{children:`tasks/`}),`, `,_jsx(_components.code,{children:`debug/`}),`, and `,_jsx(_components.code,{children:`file-history/`}),` entries`]}),`\n`,_jsxs(_components.li,{children:[`Matching prompt lines in `,_jsx(_components.code,{children:`history.jsonl`})]}),`\n`,_jsxs(_components.li,{children:[`The project’s entry in `,_jsx(_components.code,{children:`~/.claude.json`})]}),`\n`]}),`\n`,_jsx(_components.p,{children:`The command prints the full deletion plan and asks for confirmation before removing anything.`}),`\n`,_jsxs(_components.p,{children:[`The examples below use `,_jsx(_components.code,{children:`~/work/my-repo`}),` as a placeholder. Replace it with the path to your project. If no state matches the path, the command prints an error and exits with status 1.`]}),`\n`,_jsx(_components.p,{children:`Preview the plan without deleting anything:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"--shiki-dark\":`#DCDCAA`},children:`claude`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` project`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` purge`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` ~/work/my-repo`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-dark\":`#569CD6`},children:` --dry-run`})]}),`\n`]})})}),`\n`,_jsx(_components.p,{children:`The plan lists each matching item and why it is included:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`13`,language:`text`,children:_jsx(_components.pre,{className:`shiki shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-dark\":`#D4D4D4`},language:`text`,children:_jsxs(_components.code,{language:`text`,numberOfLines:`13`,children:[_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`Purge plan for /home/user/work/my-repo:`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`  dir:    /home/user/.claude/projects/-home-user-work-my-repo`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`           project transcripts (.jsonl) and memory/`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`  config: projects[\"/home/user/work/my-repo\"]`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`           project entry in ~/.claude.json (trust, history, MCP servers)`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`  filter: /home/user/.claude/history.jsonl`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`           12 prompt(s) typed in this project`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`shell-snapshots/ are not project-scoped and will not be touched`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`backups/ may still contain this project entry in old .claude.json snapshots (/home/user/.claude/backups); at most 5 are kept and they rotate out automatically`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{children:`Dry run: 3 item(s) would be deleted.`})}),`\n`,_jsx(_components.span,{className:`line`,children:_jsx(_components.span,{})})]})})}),`\n`,_jsx(_components.p,{children:`Delete with a single confirmation prompt:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"--shiki-dark\":`#DCDCAA`},children:`claude`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` project`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` purge`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` ~/work/my-repo`})]}),`\n`]})})}),`\n`,_jsxs(_components.p,{children:[`The command prints the same plan, then asks `,_jsx(_components.code,{children:`Delete 3 item(s) for /home/user/work/my-repo? This cannot be undone. [y/N]`}),` and deletes only if you answer `,_jsx(_components.code,{children:`y`}),`.`]}),`\n`,_jsx(_components.p,{children:`Omit the path to pick a project from an interactive list.`}),`\n`,_jsx(_components.p,{children:`Skip the confirmation prompt for use in scripts:`}),`\n`,_jsx(CodeBlock,{filename:``,numberOfLines:`1`,language:`shellscript`,children:_jsx(_components.pre,{className:`shiki shiki-themes github-light-default dark-plus`,style:{backgroundColor:`#ffffff`,\"--shiki-dark-bg\":`#0B0C0E`,color:`#1f2328`,\"--shiki-dark\":`#D4D4D4`},language:`shellscript`,children:_jsxs(_components.code,{language:`shellscript`,numberOfLines:`1`,children:[_jsxs(_components.span,{className:`line`,children:[_jsx(_components.span,{style:{color:`#953800`,\"--shiki-dark\":`#DCDCAA`},children:`claude`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` project`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` purge`}),_jsx(_components.span,{style:{color:`#0A3069`,\"--shiki-dark\":`#CE9178`},children:` ~/work/my-repo`}),_jsx(_components.span,{style:{color:`#0550AE`,\"--shiki-dark\":`#569CD6`},children:` --yes`})]}),`\n`]})})}),`\n`,_jsxs(_components.p,{children:[`Pass `,_jsx(_components.code,{children:`--all`}),` instead of a path to purge state for every project at once, which deletes `,_jsx(_components.code,{children:`history.jsonl`}),` outright rather than filtering it. Pass `,_jsx(_components.code,{children:`-i`}),` to step through the deletion plan one item at a time.`]}),`\n`,_jsxs(_components.p,{children:[`The command leaves `,_jsx(_components.code,{children:`shell-snapshots/`}),` and `,_jsx(_components.code,{children:`backups/`}),` alone because those are not project-scoped, and warns about them in the plan output.`]}),`\n`,_jsx(_components.p,{children:`You can also delete any of the application-data paths above by hand. New sessions are unaffected. The table below shows what you lose for past sessions.`}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsx(_components.th,{children:`Delete`}),_jsx(_components.th,{children:`You lose`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/projects/`})}),_jsx(_components.td,{children:`Resume, continue, and rewind for past sessions, and auto memory for every project`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/history.jsonl`})}),_jsx(_components.td,{children:`Up-arrow prompt recall`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/paste-cache/`})}),_jsxs(_components.td,{children:[`Pasted text in recalled prompts; see `,_jsx(_components.a,{href:`/en/terminal-config#paste-large-content`,children:`paste large content`})]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/uploads/`})}),_jsxs(_components.td,{children:[`Attachments that past `,_jsx(_components.a,{href:`/en/remote-control`,children:`Remote Control`}),` sessions refer to by path`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/file-history/`})}),_jsx(_components.td,{children:`Checkpoint restore for past sessions`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/stats-cache.json`})}),_jsxs(_components.td,{children:[`Historical totals shown by `,_jsx(_components.code,{children:`/usage`})]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/usage-data/`})}),_jsxs(_components.td,{children:[`Past `,_jsx(_components.a,{href:`/en/costs#analyze-your-usage-patterns`,children:_jsx(_components.code,{children:`/insights`})}),` reports and the cached analysis data used to build them`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/feedback-bundles/`})}),_jsx(_components.td,{children:`Feedback and bug-report archives you haven’t yet sent to your Anthropic account team`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/feedback/drafts/`})}),_jsxs(_components.td,{children:[_jsx(_components.a,{href:`/en/tools-reference#sendfeedback-tool-behavior`,children:`Claude-drafted feedback`}),` you haven’t sent`]})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/remote-settings.json`})}),_jsx(_components.td,{children:`Nothing. Re-fetched on next launch.`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/cache/changelog.md`})}),_jsx(_components.td,{children:`Nothing. Refreshed in the background.`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{children:_jsx(_components.code,{children:`~/.claude/policy-limits.json`})}),_jsx(_components.td,{children:`Nothing. Refreshed automatically.`})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{children:[_jsx(_components.code,{children:`~/.claude/debug/`}),`, `,_jsx(_components.code,{children:`~/.claude/plans/`}),`, `,_jsx(_components.code,{children:`~/.claude/image-cache/`}),`, `,_jsx(_components.code,{children:`~/.claude/session-env/`}),`, `,_jsx(_components.code,{children:`~/.claude/tasks/`}),`, `,_jsx(_components.code,{children:`~/.claude/shell-snapshots/`}),`, `,_jsx(_components.code,{children:`~/.claude/backups/`})]}),_jsx(_components.td,{children:`Nothing user-facing`})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{children:[_jsx(_components.code,{children:`~/.claude/todos/`}),`, `,_jsx(_components.code,{children:`~/.claude/statsig/`}),`, `,_jsx(_components.code,{children:`~/.claude/logs/`})]}),_jsx(_components.td,{children:`Nothing. Legacy directories not written by current versions.`})]})]})]}),`\n`,_jsxs(_components.p,{children:[`Don’t delete `,_jsx(_components.code,{children:`~/.claude.json`}),`, `,_jsx(_components.code,{children:`~/.claude/settings.json`}),`, or `,_jsx(_components.code,{children:`~/.claude/plugins/`}),`: those hold your auth, preferences, and installed plugins.`]}),`\n`,_jsx(Heading,{level:`2`,id:`related-resources`,children:`Related resources`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/memory`,children:`Manage Claude’s memory`}),`: write and organize CLAUDE.md, rules, and auto memory`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/settings`,children:`Configure settings`}),`: set permissions, hooks, environment variables, and model defaults`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/skills`,children:`Create skills`}),`: build reusable prompts and workflows`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/sub-agents`,children:`Configure subagents`}),`: define specialized agents with their own context`]}),`\n`]})]})}function MDXContent(props={}){const{wrapper:MDXLayout}={..._provideComponents(),...props.components};return MDXLayout?_jsx(MDXLayout,{...props,children:_jsx(_createMdxContent,{...props})}):_createMdxContent(props)}return{ClaudeExplorer,default:MDXContent};function _missingMdxReference(id,component){throw new Error(`Expected `+(component?`component`:`object`)+\" `\"+id+\"` to be defined: you likely forgot to import, pass, or provide it.\")}"])</script><script>self.__next_f.push([1,"49:[\"$\",\"$L5a\",null,{\"slug\":\"en/claude-directory\",\"pageMetadata\":\"$39:props:pageMetadata\",\"theme\":\"mint\",\"children\":[\"$\",\"$L5b\",null,{\"mdxSource\":{\"compiledSource\":\"$5c\",\"frontmatter\":{},\"scope\":{\"config\":{},\"pageMetadata\":{\"title\":\"Explore the .claude directory\",\"description\":\"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.\",\"mode\":\"wide\",\"href\":\"/en/claude-directory\"}}},\"mdxSourceWithNoJs\":{\"compiledSource\":\"$5d\",\"frontmatter\":{},\"scope\":{\"config\":{},\"pageMetadata\":{\"title\":\"Explore the .claude directory\",\"description\":\"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.\",\"mode\":\"wide\",\"href\":\"/en/claude-directory\"}}},\"displayDomain\":\"code.claude.com/docs\"}]}]\n"])</script><script>self.__next_f.push([1,"5e:I[540345,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ConsentProvider\"]\n"])</script><script>self.__next_f.push([1,"5f:I[529058,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"LocalStorageAndAnalyticsProviders\"]\n"])</script><script>self.__next_f.push([1,"60:I[958547,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n"])</script><script>self.__next_f.push([1,"61:I[604780,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"CaptchaProvider\"]\n"])</script><script>self.__next_f.push([1,"62:I[601054,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"SearchProvider\"]\n"])</script><script>self.__next_f.push([1,"63:I[28330,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"SkipToContent\"]\n"])</script><script>self.__next_f.push([1,"64:I[87732,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"AssistantLayoutWrapper\"]\n"])</script><script>self.__next_f.push([1,"52:[\"$\",\"$L5e\",null,{\"privacy\":\"$undefined\",\"children\":[\"$\",\"$L5f\",null,{\"subdomain\":\"claude-code\",\"isAtlas\":false,\"children\":[\"$\",\"$L60\",null,{\"toggles\":[{\"name\":\"dashboard-editor-theseus\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"kill-isr\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"assistant-bash\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"chat-bucketing-batched\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"agent-mintlify-slack\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"editor-v7-file-tree\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"agent-integrations-settings\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"automations-pr-grouping\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"pause-preview-search-indexing\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"custom-prefix\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"analytics-v7\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"llms-txt-v2\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"user-flows-analytics\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"no-publish-flow\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"pause-universal-search-reconcile\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"snapshot-serving-live\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"stripTemperatureMiddleware\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"editor-branches-v2-autocommit\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"editor-branches-v2\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"snapshot-serving\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"instant-rollback\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"automations-fable\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false}],\"children\":[\"$\",\"$L61\",null,{\"enabled\":true,\"isPreview\":false,\"children\":[\"$\",\"$L62\",null,{\"subdomain\":\"claude-code\",\"hasChatPermissions\":true,\"isLoggedInCli\":false,\"assistantConfig\":{\"enableAskAiButton\":false,\"enableStarterQuestions\":false,\"enableAskAiSearchBar\":true},\"starterQuestions\":\"$undefined\",\"children\":[[\"$\",\"$L63\",null,{}],[\"$\",\"script\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"(function i(a,b,c,d){try{if(window.matchMedia(\\\"(max-width: 1024px)\\\").matches||!d){document.documentElement.style.setProperty(c,\\\"0px\\\"),document.documentElement.setAttribute(\\\"data-assistant-state\\\",\\\"closed\\\"),d||localStorage.setItem(a,\\\"false\\\");return}let e=localStorage.getItem(a);if(null===e){document.documentElement.style.setProperty(c,\\\"0px\\\"),document.documentElement.setAttribute(\\\"data-assistant-state\\\",\\\"closed\\\");return}let f=JSON.parse(e),g=localStorage.getItem(b),h=null!==g?JSON.parse(g):368;document.documentElement.style.setProperty(c,f?h+\\\"px\\\":\\\"0px\\\"),document.documentElement.setAttribute(\\\"data-assistant-state\\\",f?\\\"open\\\":\\\"closed\\\")}catch(a){document.documentElement.style.setProperty(c,\\\"0px\\\"),document.documentElement.setAttribute(\\\"data-assistant-state\\\",\\\"closed\\\")}})(\\n    \\\"chat-assistant-sheet-open\\\",\\n    \\\"chat-assistant-sheet-width\\\",\\n    \\\"--assistant-sheet-width\\\",\\n    true\\n  )\"}}],false,[\"$\",\"$L64\",null,{\"children\":[[\"$\",\"$Le\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$L65\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}],\"$undefined\"]}]]}]}]}]}]}]\n"])</script><script>self.__next_f.push([1,"66:T6e48,"])</script><script>self.__next_f.push([1,"/* Anthropic Sans - Static fonts from assets.claude.ai */\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-Regular-Static.otf\") format(\"opentype\");\n  font-weight: 400;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-RegularItalic-Static.otf\") format(\"opentype\");\n  font-weight: 400;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-Medium-Static.otf\") format(\"opentype\");\n  font-weight: 500;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-MediumItalic-Static.otf\") format(\"opentype\");\n  font-weight: 500;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-Semibold-Static.otf\") format(\"opentype\");\n  font-weight: 600;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-SemiboldItalic-Static.otf\") format(\"opentype\");\n  font-weight: 600;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-Bold-Static.otf\") format(\"opentype\");\n  font-weight: 700;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-BoldItalic-Static.otf\") format(\"opentype\");\n  font-weight: 700;\n  font-style: italic;\n  font-display: swap;\n}\n\n/* Anthropic Serif Display - for headlines */\n@font-face {\n  font-family: \"Anthropic Serif Display\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Display-Regular-Static.otf\") format(\"opentype\");\n  font-weight: 400;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif Display\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Display-RegularItalic-Static.otf\") format(\"opentype\");\n  font-weight: 400;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif Display\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Display-Medium-Static.otf\") format(\"opentype\");\n  font-weight: 500;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif Display\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Display-Semibold-Static.otf\") format(\"opentype\");\n  font-weight: 600;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif Display\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Display-Bold-Static.otf\") format(\"opentype\");\n  font-weight: 700;\n  font-style: normal;\n  font-display: swap;\n}\n\n/* Anthropic Serif - Static fonts from assets.claude.ai */\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-Regular-Static.otf\") format(\"opentype\");\n  font-weight: 400;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-RegularItalic-Static.otf\") format(\"opentype\");\n  font-weight: 400;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-Medium-Static.otf\") format(\"opentype\");\n  font-weight: 500;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-MediumItalic-Static.otf\") format(\"opentype\");\n  font-weight: 500;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-Semibold-Static.otf\") format(\"opentype\");\n  font-weight: 600;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-SemiboldItalic-Static.otf\") format(\"opentype\");\n  font-weight: 600;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-Bold-Static.otf\") format(\"opentype\");\n  font-weight: 700;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-BoldItalic-Static.otf\") format(\"opentype\");\n  font-weight: 700;\n  font-style: italic;\n  font-display: swap;\n}\n\n/* Color variables mirror the internal design system's generated theme palette. */\n:root {\n  --always-white: 0 0% 100%;\n  --always-black: 0 0% 0%;\n  --constant-book-cloth: 15 55% 80%;\n  --constant-clay: 15 60% 85%;\n  --constant-kraft: 25 40% 83%;\n  --constant-manilla: 40 20% 92%;\n  --constant-slate-000: 0 0% 100%;\n  --constant-slate-050: 48 33.3% 97.1%;\n  --constant-slate-100: 53 28.6% 94.5%;\n  --constant-slate-150: 48 25% 92.2%;\n  --constant-slate-200: 50 20.7% 88.6%;\n  --constant-slate-250: 51 16.5% 84.5%;\n  --constant-slate-300: 50 11.5% 79.6%;\n  --constant-slate-350: 50 9% 73.7%;\n  --constant-slate-400: 49 6.5% 66.9%;\n  --constant-slate-450: 48 4.8% 59.2%;\n  --constant-slate-500: 53 3.2% 51.4%;\n  --constant-slate-550: 51 3.1% 43.7%;\n  --constant-slate-600: 48 2.7% 35.9%;\n  --constant-slate-650: 48 3.4% 29.2%;\n  --constant-slate-700: 60 2.5% 23.3%;\n  --constant-slate-750: 60 2.1% 18.4%;\n  --constant-slate-800: 60 2.7% 14.5%;\n  --constant-slate-850: 30 3.3% 11.8%;\n  --constant-slate-900: 30 4% 9.8%;\n  --constant-slate-950: 60 2.6% 7.6%;\n  --constant-slate-1000: 60 3.4% 5.7%;\n}\n\n:root:not(.dark) {\n  --accent-brand: 15 63.1% 59.6%;\n  --accent-main-000: 15 55.6% 52.4%;\n  --accent-main-100: 15 55.6% 52.4%;\n  --accent-main-200: 15 63.1% 59.6%;\n  --accent-main-900: 0 0% 0%;\n  --accent-pro-000: 251 34.2% 33.3%;\n  --accent-pro-100: 251 40% 45.1%;\n  --accent-pro-200: 251 61% 72.2%;\n  --accent-pro-900: 253 33.3% 91.8%;\n  --accent-secondary-000: 210 73.7% 40.2%;\n  --accent-secondary-100: 210 70.9% 51.6%;\n  --accent-secondary-200: 210 70.9% 51.6%;\n  --accent-secondary-900: 211 72% 90%;\n  --bg-000: 0 0% 100%;\n  --bg-100: 48 33.3% 97.1%;\n  --bg-200: 53 28.6% 94.5%;\n  --bg-300: 48 25% 92.2%;\n  --bg-400: 50 20.7% 88.6%;\n  --bg-500: 50 20.7% 88.6%;\n  --border-100: 30 3.3% 11.8%;\n  --border-200: 30 3.3% 11.8%;\n  --border-300: 30 3.3% 11.8%;\n  --border-400: 30 3.3% 11.8%;\n  --danger-000: 0 61.4% 22.4%;\n  --danger-100: 0 58.6% 34.1%;\n  --danger-200: 0 58.6% 34.1%;\n  --danger-900: 0 50% 95%;\n  --oncolor-100: 0 0% 100%;\n  --oncolor-200: 60 6.7% 97.1%;\n  --oncolor-300: 60 6.7% 97.1%;\n  --text-000: 60 2.6% 7.6%;\n  --text-100: 60 2.6% 7.6%;\n  --text-200: 60 2.5% 23.3%;\n  --text-300: 60 2.5% 23.3%;\n  --text-400: 51 3.1% 43.7%;\n  --text-500: 51 3.1% 43.7%;\n}\n\n:root.dark {\n  --accent-brand: 15 63.1% 59.6%;\n  --accent-main-000: 15 55.6% 52.4%;\n  --accent-main-100: 15 63.1% 59.6%;\n  --accent-main-200: 15 63.1% 59.6%;\n  --accent-main-900: 0 0% 0%;\n  --accent-pro-000: 251 84.6% 74.5%;\n  --accent-pro-100: 251 40.2% 54.1%;\n  --accent-pro-200: 251 40% 45.1%;\n  --accent-pro-900: 250 25.3% 19.4%;\n  --accent-secondary-000: 210 71.1% 62%;\n  --accent-secondary-100: 210 70.9% 51.6%;\n  --accent-secondary-200: 210 70.9% 51.6%;\n  --accent-secondary-900: 210 55.9% 24.6%;\n  --bg-000: 60 2.1% 18.4%;\n  --bg-100: 60 2.7% 14.5%;\n  --bg-200: 30 3.3% 11.8%;\n  --bg-300: 60 2.6% 7.6%;\n  --bg-400: 60 3.4% 5.7%;\n  --bg-500: 60 3.4% 5.7%;\n  --border-100: 51 16.5% 84.5%;\n  --border-200: 51 16.5% 84.5%;\n  --border-300: 51 16.5% 84.5%;\n  --border-400: 51 16.5% 84.5%;\n  --danger-000: 0 73.1% 66.5%;\n  --danger-100: 0 58.6% 34.1%;\n  --danger-200: 0 58.6% 34.1%;\n  --danger-900: 0 23% 15.6%;\n  --oncolor-100: 0 0% 100%;\n  --oncolor-200: 60 6.7% 97.1%;\n  --oncolor-300: 60 6.7% 97.1%;\n  --text-000: 48 33.3% 97.1%;\n  --text-100: 48 33.3% 97.1%;\n  --text-200: 50 9% 73.7%;\n  --text-300: 50 9% 73.7%;\n  --text-400: 48 4.8% 59.2%;\n  --text-500: 48 4.8% 59.2%;\n}\n\n#home-header {\n  font-family: \"Anthropic Sans\", system-ui, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n  font-weight: 400 !important;\n  font-size: 50px;\n  line-height: 1.2;\n  margin-bottom: 1rem;\n  color: --text-000;\n  display: flex;\n  align-items: baseline;\n  justify-content: center;\n  flex-wrap: nowrap;\n}\n\n#localization-select-trigger \u003e :has(img[src*=\"flags\"]) {\n  display: none;\n}\n\ndiv[id^=\"localization-select-item\"] \u003e :has(img[src*=\"flags\"]) {\n  display: none;\n}\n\n/* Keep home header centered on all screen sizes */\n@media (min-width: 768px) {\n  #home-header {\n    justify-content: center;\n  }\n}\n\n.build-with {\n  font-family: \"Anthropic Sans\", system-ui, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n  letter-spacing: -0.02em;\n}\n\n.claude-wordmark-wrapper {\n  display: inline-flex;\n  align-items: baseline;\n  margin-left: 10px; /* Space between \"Build with\" and the wordmark */\n}\n\n.claude-wordmark {\n  height: 40px; /* Adjust this value to match your desired size */\n  width: auto;\n  position: relative;\n}\n\n.dark #home-header {\n  color: white;\n}\n\n.description-text {\n  color: black;\n}\n\n.dark .description-text {\n  color: white;\n}\n\n.dark .claude-wordmark {\n  filter: invert(1);\n}\n\n:root {\n  --bg-color: #f0efea;\n}\n\n.dark {\n  --bg-color: #2b2b2b;\n}\n\nbody,\ninput,\n#category-select,\n.dropdown-item,\n#table-of-contents {\n  font-family: \"Anthropic Sans\", system-ui, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n}\n\n.eyebrow {\n  font-family: \"Anthropic Sans\", system-ui, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n  text-transform: uppercase;\n  letter-spacing: 0.02rem;\n}\n\n#content-container {\n  font-family: \"Anthropic Sans\", system-ui, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n}\n\n#content-container h1,\n#content-container h2,\n#content-container h3,\n#content-container h4,\n#content-container h5,\n#content-container h6 {\n  font-family: \"Anthropic Serif Display\", Georgia, \"Times New Roman\", Times, serif;\n  font-weight: 400;\n  /* Mintlify applies tracking-tight (-0.025em) to #page-title, which collapses\n     word gaps in Serif Display's already-narrow space glyph. Reset tracking to\n     the font's natural metrics and widen word gaps slightly. */\n  letter-spacing: 0;\n  word-spacing: 0.1em;\n}\n\n#content-container p {\n  font-size: 1rem;\n  line-height: 1.65rem;\n}\n\n.font-extrabold {\n  font-weight: 600 !important;\n}\n\n.wide-table {\n  width: 100%;\n  overflow-x: auto;\n}\n\n.wide-table table {\n  width: 175%;\n  margin-bottom: 0;\n}\n\n/* Prompt Library */\n#prompt-library-container {\n  margin: 4rem auto;\n  max-width: 48rem;\n  padding-left: 1.25rem;\n  padding-right: 1.25rem;\n}\n\n.prompt-library-title {\n  font-size: 24px;\n  text-align: center;\n  font-weight: 700;\n  color: #1f2937;\n}\n\n.dark .prompt-library-title {\n  color: #e5e7eb;\n}\n\n.prompt-library-description {\n  margin-top: 1rem;\n  text-align: center;\n}\n\n.main-content {\n  margin-bottom: 10rem;\n  max-width: 64rem;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: 1.25rem;\n  padding-right: 1.25rem;\n}\n\n.prompt-controllers {\n  display: flex;\n  gap: 0.5rem;\n}\n\n.prompt-search-container {\n  position: relative;\n  flex: 1 1 0%;\n}\n\n.prompt-search-icon-container {\n  display: flex;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  align-items: center;\n  padding-left: 0.75rem;\n}\n\n.prompt-search-icon {\n  margin-left: 0.25rem;\n  margin-right: 0.75rem;\n  flex: none;\n  width: 1rem;\n  height: 1rem;\n  background-color: #6b7280;\n  mask-image: url(https://mintlify.b-cdn.net/v6.5.1/solid/magnifying-glass.svg);\n  mask-repeat: no-repeat;\n  mask-position: center center;\n}\n\ninput.prompt-search-bar {\n  display: block;\n  height: 2.5rem;\n  padding-left: 2.5rem;\n  border-radius: 0.75rem;\n  border-width: 1px;\n  background-color: #ffffff;\n  width: 100%;\n  color: #111827;\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n}\n\n.dark input.prompt-search-bar {\n  color: #ffffff;\n  background-color: rgb(var(--background-dark));\n  border-color: #d1d5db1a;\n}\n\ninput.prompt-search-bar:focus {\n  outline-color: rgb(var(--primary));\n}\n\n.dark input.prompt-search-bar:focus {\n  outline-color: rgb(var(--primary-light));\n}\n\n.dark .prompt-search-icon {\n  background-color: #ffffff80;\n}\n\n#category-select {\n  padding-left: 1rem;\n  padding-right: 2.5rem;\n  height: 2.5rem;\n  display: flex;\n  align-items: center;\n  border-radius: 0.75rem;\n  border-width: 1px;\n  color: #111827;\n  background-color: #ffffff;\n  cursor: pointer;\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n  white-space: nowrap;\n}\n\n.dark #category-select {\n  background-color: rgb(var(--background-dark));\n  border-color: #d1d5db1a;\n  color: #ffffff;\n}\n\n#category-select:hover {\n  background-color: #f9fafb;\n}\n\n.dark #category-select:hover {\n  background-color: #ffffff0d;\n}\n\n#category-select:focus {\n  outline-color: rgb(var(--primary));\n}\n\n.dark #category-select:focus {\n  outline-color: rgb(var(--primary-light));\n}\n\n#categories-dropdown {\n  top: calc(100% + 4px);\n  padding: 0.5rem 0.5rem;\n  display: none;\n  position: absolute;\n  z-index: 10;\n  border-radius: 0.75rem;\n  border-width: 1px;\n  width: 100%;\n  color: #111827;\n  background-color: #ffffff;\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n}\n\n.dark #categories-dropdown {\n  background-color: rgb(var(--background-dark));\n  border-color: #d1d5db1a;\n  color: #ffffff;\n}\n\n#categories-dropdown-clickout {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 0;\n}\n\n.dropdown-icon-container {\n  display: flex;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  align-items: center;\n  padding-right: 0.25rem;\n}\n\n.dropdown-icon {\n  margin-left: 0.25rem;\n  margin-right: 0.75rem;\n  flex: none;\n  width: 0.75rem;\n  height: 0.75rem;\n  background-color: #6b7280;\n  mask-image: url(https://mintlify.b-cdn.net/v6.5.1/solid/caret-down.svg);\n  mask-repeat: no-repeat;\n  mask-position: center center;\n}\n\n.dark .dropdown-icon {\n  background-color: #ffffff80;\n}\n\n#prompts-container {\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n  gap: 2rem;\n}\n\n.dropdown-item {\n  padding: 0.25rem 0.5rem;\n  border-radius: 0.375rem;\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n}\n\n.dropdown-item:hover {\n  background-color: #f9fafb;\n}\n\n.dark .dropdown-item:hover {\n  background-color: #ffffff0d;\n}\n\n.check-icon {\n  mask-image: url(https://mintlify.b-cdn.net/v6.5.1/solid/check.svg);\n  height: 0.875rem;\n  width: 1rem;\n  background-color: rgb(var(--primary-light));\n  mask-repeat: no-repeat;\n  mask-position: center center;\n}\n\n.prompt-card {\n  margin: -0.75rem;\n  padding: 0.75rem;\n  display: flex;\n  border-radius: 1rem;\n}\n\n.prompt-card:hover {\n  background-color: #03071208;\n}\n\n.dark .prompt-card:hover {\n  background-color: #ffffff08;\n}\n\n.prompt-icon-container {\n  display: flex;\n  flex: none;\n  align-items: center;\n  justify-content: center;\n  margin-right: 1.5rem;\n  border-radius: 0.75rem;\n  height: 4rem;\n  width: 4rem;\n  background-color: #cb785c1a;\n}\n\n.prompt-icon {\n  height: 1.5rem;\n  width: 1.5rem;\n  background-color: rgb(var(--primary-light));\n  mask-repeat: no-repeat;\n  mask-position: center center;\n}\n\n.prompt-title {\n  color: rgb(31 41 55);\n  font-weight: 600;\n}\n\n.dark .prompt-title {\n  color: rgb(229 231 235);\n}\n\n.prompt-description {\n  margin-top: 0.25rem;\n}\n\n#prompts-container {\n  display: grid;\n  margin-top: 2.5rem;\n}\n\n@media (min-width: 640px) {\n  #category-select {\n    width: 16rem;\n  }\n}\n\n@media (min-width: 1024px) {\n  #prompts-container {\n    grid-template-columns: repeat(2, minmax(0, 1fr));\n  }\n}\n\n/* Home page card styling */\n.home-cards-custom {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-template-rows: repeat(2, auto);\n  gap: 1.5rem;\n}\n\n.home-cards-custom .card {\n  background: transparent;\n  border: 0.5px solid hsl(var(--border-300));\n  border-radius: 12px;\n  padding: 0.25rem;\n}\n\n/* Responsive: change to 2 columns on tablet, single column on mobile */\n@media (max-width: 1024px) {\n  .home-cards-custom {\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: repeat(3, auto);\n  }\n}\n\n@media (max-width: 768px) {\n  .home-cards-custom {\n    grid-template-columns: 1fr;\n    grid-template-rows: repeat(6, auto);\n  }\n}\n\n/* Utility classes */\n.relative {\n  position: relative;\n}\n\n.flex-1 {\n  flex: 1 1 0%;\n}\n\n/* Mermaid diagram styling with graph paper background using Anthropic brand colors */\n.mermaid {\n  position: relative;\n  background-color: #FDFDFB; /* Very light version of neutral #F0F0EB */\n  background-image:\n    linear-gradient(rgba(235, 219, 188, .25) 1px, transparent 1px), /* Secondary color #EBDBBC with low opacity */\n    linear-gradient(90deg, rgba(235, 219, 188, .25) 1px, transparent 1px),\n    linear-gradient(rgba(235, 219, 188, .1) 1px, transparent 1px),\n    linear-gradient(90deg, rgba(235, 219, 188, .1) 1px, transparent 1px);\n  background-size:\n    20px 20px,\n    20px 20px,\n    4px 4px,\n    4px 4px;\n  background-position:\n    -1px -1px,\n    -1px -1px,\n    -1px -1px,\n    -1px -1px;\n  padding: 20px;\n  border-radius: 8px;\n  border: 1px solid rgba(235, 219, 188, .4); /* Secondary color border */\n  box-shadow: 0 2px 4px rgba(64, 64, 62, 0.08); /* Subtle shadow using #40403E */\n}\n\n.dark .mermaid {\n  background-color: #1a1918; /* Dark version maintaining brand tone */\n  background-image:\n    linear-gradient(rgba(212, 162, 127, .15) 1px, transparent 1px), /* Tertiary color #D4A27F with low opacity */\n    linear-gradient(90deg, rgba(212, 162, 127, .15) 1px, transparent 1px),\n    linear-gradient(rgba(212, 162, 127, .08) 1px, transparent 1px),\n    linear-gradient(90deg, rgba(212, 162, 127, .08) 1px, transparent 1px);\n  border: 1px solid rgba(102, 102, 99, .5); /* Using #666663 from brand */\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n/* ============================================================\n   What's New digest — feature block component\n   ============================================================ */\n\n.digest-meta {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-wrap: wrap;\n  gap: 0.5rem 1rem;\n  padding: 0.75rem 1rem;\n  margin: 1.5rem 0 2.5rem;\n  border: 1px solid hsl(var(--border-300) / 0.15);\n  background: hsl(var(--bg-200));\n  font-variant-numeric: tabular-nums;\n  font-size: 0.875rem;\n  color: hsl(var(--text-400));\n}\n\n#content-container .digest-meta a {\n  color: hsl(var(--accent-main-100));\n  font-weight: 500;\n  text-decoration: none;\n  border-bottom: none;\n}\n\n#content-container .digest-meta a:hover {\n  text-decoration: underline;\n}\n\n.digest-feature {\n  position: relative;\n  margin: 2.5rem 0;\n  padding: 1.875rem 1.875rem 1.625rem;\n  background:\n    radial-gradient(circle, hsl(var(--text-000) / 0.025) 1px, transparent 1px) 0 0 / 18px 18px,\n    linear-gradient(180deg, hsl(var(--constant-manilla) / 0.55), hsl(var(--constant-manilla) / 0.38));\n  border: 1px solid hsl(var(--border-300) / 0.12);\n  box-shadow:\n    inset 0 1px 0 hsl(var(--text-000) / 0.04),\n    0 1px 2px hsl(var(--always-black) / 0.04);\n}\n\n.digest-feature::before {\n  content: \"\";\n  position: absolute;\n  inset: 0 auto 0 0;\n  width: 4px;\n  background: hsl(var(--accent-brand));\n}\n\n.dark .digest-feature {\n  background:\n    radial-gradient(circle, hsl(var(--text-000) / 0.02) 1px, transparent 1px) 0 0 / 18px 18px,\n    linear-gradient(180deg, hsl(var(--bg-000) / 0.75), hsl(var(--bg-000) / 0.5));\n  border-color: hsl(var(--border-300) / 0.1);\n  box-shadow:\n    inset 0 1px 0 hsl(var(--text-000) / 0.03),\n    0 1px 2px hsl(var(--always-black) / 0.25);\n}\n\n.digest-feature \u003e :first-child {\n  margin-top: 0;\n}\n\n.digest-feature \u003e :last-child {\n  margin-bottom: 0;\n}\n\n.digest-feature-header {\n  display: flex;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 0.625rem;\n  margin: 0 0 0.75rem;\n}\n\n#content-container .digest-feature-title {\n  font-family: \"Anthropic Serif Display\", Georgia, serif;\n  font-size: 1.75rem;\n  line-height: 1.15;\n  font-weight: 500;\n  letter-spacing: -0.015em;\n  color: hsl(var(--text-000));\n  margin: 0;\n}\n\n#content-container .digest-feature-pill {\n  font-family: ui-monospace, \"SF Mono\", Menlo, Consolas, monospace;\n  font-size: 0.75rem;\n  line-height: 1;\n  letter-spacing: 0.01em;\n  padding: 0.3rem 0.6rem;\n  border-radius: 999px;\n  background: hsl(var(--accent-brand) / 0.12);\n  color: hsl(var(--accent-main-000));\n  border: 1px solid hsl(var(--accent-brand) / 0.25);\n  white-space: nowrap;\n  transform: translateY(1px);\n}\n\n#content-container .digest-feature-lede {\n  font-size: 1.0625rem;\n  line-height: 1.65;\n  color: hsl(var(--text-100));\n  margin: 0 0 1.25rem;\n  max-width: none;\n}\n\n#content-container .digest-feature-lede code {\n  font-size: 0.875em;\n  padding: 0.1em 0.35em;\n}\n\n#content-container .digest-feature-try {\n  font-size: 0.875rem;\n  color: hsl(var(--text-400));\n  margin: 1.25rem 0 0.5rem;\n}\n\n#content-container .digest-feature .frame {\n  margin: 1rem 0;\n  border-radius: 0;\n  padding: 0;\n}\n\n#content-container .digest-feature .frame \u003e * {\n  border-radius: 0;\n}\n\n#content-container .digest-feature pre,\n#content-container .digest-feature [class*=\"CodeBlock\"] {\n  border-radius: 0;\n}\n\n#content-container .digest-feature-link {\n  display: inline-flex;\n  align-items: center;\n  gap: 0.35rem;\n  font-size: 0.875rem;\n  font-weight: 500;\n  color: hsl(var(--accent-main-100));\n  text-decoration: none;\n  border-bottom: none;\n  margin-top: 0.75rem;\n}\n\n#content-container .digest-feature-link::after {\n  content: \"→\";\n  transition: transform 120ms ease-out;\n}\n\n#content-container .digest-feature-link:hover::after {\n  transform: translateX(3px);\n}\n\n/* Other wins — compact companion block */\n.digest-wins {\n  margin: 2.5rem 0;\n  padding: 1.5rem 1.75rem 1.25rem;\n  background: hsl(var(--bg-200));\n  border: 1px solid hsl(var(--border-300) / 0.1);\n}\n\n.dark .digest-wins {\n  background: hsl(var(--bg-200) / 0.6);\n}\n\n#content-container .digest-wins-title {\n  font-family: \"Anthropic Serif Display\", Georgia, serif;\n  font-size: 1.25rem;\n  font-weight: 500;\n  color: hsl(var(--text-000));\n  margin: 0 0 0.75rem;\n}\n\n.digest-wins-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));\n  column-gap: 2rem;\n}\n\n#content-container .digest-wins-grid \u003e div {\n  position: relative;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  color: hsl(var(--text-300));\n  padding: 0.5rem 0 0.5rem 1.125rem;\n  border-top: 1px solid hsl(var(--border-300) / 0.06);\n  margin: 0;\n}\n\n#content-container .digest-wins-grid \u003e div::before {\n  content: \"+\";\n  position: absolute;\n  left: 0;\n  top: 0.5rem;\n  font-family: ui-monospace, \"SF Mono\", Menlo, Consolas, monospace;\n  font-size: 0.8125rem;\n  font-weight: 600;\n  color: hsl(var(--accent-brand));\n}\n\n#content-container .digest-wins-grid \u003e div:first-child,\n#content-container .digest-wins-grid \u003e div:nth-child(2) {\n  border-top: none;\n  padding-top: 0;\n}\n\n#content-container .digest-wins-grid \u003e div:first-child::before,\n#content-container .digest-wins-grid \u003e div:nth-child(2)::before {\n  top: 0;\n}\n\n#content-container .digest-wins-grid code {\n  font-size: 0.8125rem;\n  padding: 0.1em 0.3em;\n}\n\n/* ============================================================\n   Collapsible right table of contents (toggled by toc-collapse.js)\n   ============================================================ */\n\n/* Dimensions mirrored from Mintlify's compiled mint-theme layout. If a\n   Mintlify update moves the button or the collapsed reading column,\n   re-measure these on a rendered page. */\n:root {\n  --toc-wrapper-max: 92rem; /* centered layout wrapper max-width */\n  --toc-wrapper-pad: 2rem; /* wrapper right padding */\n  --toc-col: 19rem; /* ToC column width, incl. its 2.5rem left padding */\n  --toc-side: 28rem; /* side column space #content-area reserves */\n  --toc-btn-size: 1.75rem; /* ours, not mirrored: the toggle's diameter */\n}\n\n/* Hidden by default: below the xl breakpoint Mintlify hides the ToC\n   anyway, and pages that render no ToC (wide-mode pages) get no toggle. */\n#toc-collapse-toggle {\n  display: none;\n  align-items: center;\n  justify-content: center;\n  position: fixed;\n  top: 10rem;\n  /* Sits just left of the ToC column, inside its 2.5rem left-padding\n     strip: at the column's left edge, minus the button's own width and\n     a small gap. 100% rather than 100vw so a classic scrollbar doesn't\n     shift the math (percentages on fixed elements resolve against the\n     layout viewport). */\n  right: calc(\n    max((100% - var(--toc-wrapper-max)) / 2, 0px) + var(--toc-wrapper-pad) +\n      var(--toc-col) - var(--toc-btn-size) - 0.35rem\n  );\n  transition: right 200ms ease-out;\n  z-index: 30;\n  width: var(--toc-btn-size);\n  height: var(--toc-btn-size);\n  border-radius: 9999px;\n  border: 1px solid hsl(var(--border-300) / 0.15);\n  background: hsl(var(--bg-100));\n  color: hsl(var(--text-400));\n  cursor: pointer;\n}\n\n#toc-collapse-toggle:hover {\n  background: hsl(var(--bg-300));\n  color: hsl(var(--text-100));\n}\n\n#toc-collapse-toggle svg {\n  width: 14px;\n  height: 14px;\n  fill: none;\n  stroke: currentColor;\n  stroke-width: 2.5;\n  stroke-linecap: round;\n  stroke-linejoin: round;\n}\n\n/* The list glyph only appears while the button is parked at the right\n   edge, so the collapsed control still reads as the table of contents. */\n#toc-collapse-toggle .toc-glyph {\n  display: none;\n  stroke-width: 2;\n}\n\n/* A fixed-position button would repeat on every printed page. */\n@media print {\n  #toc-collapse-toggle {\n    display: none !important;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  #toc-collapse-toggle {\n    transition: none;\n  }\n}\n\n@media (min-width: 1280px) {\n  html:has(#table-of-contents-layout) #toc-collapse-toggle {\n    display: flex;\n  }\n\n  html.toc-collapsed #toc-collapse-toggle .toc-chevron {\n    transform: rotate(180deg);\n  }\n\n  /* The column is gone while collapsed, so the button moves to the\n     right edge where the restored ToC will reappear, widening into a\n     pill that pairs the chevron with the list glyph. */\n  html.toc-collapsed #toc-collapse-toggle {\n    right: 0.5rem;\n    width: auto;\n    padding: 0 0.5rem;\n    gap: 0.25rem;\n  }\n\n  html.toc-collapsed #toc-collapse-toggle .toc-glyph {\n    display: block;\n  }\n\n  html.toc-collapsed #table-of-contents-layout {\n    display: none !important;\n  }\n\n  /* Also hide the side column's wrapper: left in flow at zero width,\n     it keeps its 3rem flex gap as dead space at the right edge. Scoped\n     with :has() so the wrapper is untouched when it holds other\n     content, such as the open assistant panel. */\n  html.toc-collapsed #content-side-layout:has(#table-of-contents-layout) {\n    display: none !important;\n  }\n\n  /* Mintlify sizes the content column assuming the side column is\n     present (xl:w-[calc(100%-28rem)]); reclaim that space when collapsed.\n     Scoped with :has() so pages that render no ToC, such as wide-mode\n     pages, keep their own layout. Written out twice rather than nested:\n     CSS nesting shipped later than :has(), so nesting here would break\n     the cap in browsers that pass the :has() support guard. */\n  html.toc-collapsed #content-container:has(#table-of-contents-layout) #content-area {\n    width: 100% !important;\n  }\n\n  /* Safety bound on the widened reading column. The centered wrapper\n     already caps overall width, so today this only bites at the\n     wrapper's max, where it equals the natural content width; it exists\n     so line length can't run away if the wrapper cap ever changes. */\n  html.toc-collapsed #content-container:has(#table-of-contents-layout) #content-area \u003e * {\n    max-width: calc(var(--toc-wrapper-max) - var(--toc-side));\n  }\n}\n\n@media (max-width: 640px) {\n  .digest-feature {\n    padding: 1.25rem 1rem 1rem;\n    margin: 1.5rem 0;\n  }\n  #content-container .digest-feature-title {\n    font-size: 1.375rem;\n  }\n  .digest-wins {\n    padding: 1.25rem 1rem 1rem;\n  }\n  .digest-wins-grid {\n    grid-template-columns: 1fr;\n  }\n  #content-container .digest-wins-grid \u003e div:nth-child(2) {\n    border-top: 1px solid hsl(var(--border-300) / 0.06);\n    padding-top: 0.5rem;\n  }\n  #content-container .digest-wins-grid \u003e div:nth-child(2)::before {\n    top: 0.5rem;\n  }\n}\n"])</script><script>self.__next_f.push([1,"56:[\"$\",\"style\",\"1\",{\"data-custom-css-index\":1,\"data-custom-css-path\":\"style.css\",\"dangerouslySetInnerHTML\":{\"__html\":\"$66\"}}]\n"])</script><script>self.__next_f.push([1,"67:I[118717,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b7de670ceb1b1925.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"NotFoundHydrator\"]\n"])</script><script>self.__next_f.push([1,"65:[[\"$\",\"$L67\",null,{\"source\":\"multitenant\"}],[]]\n"])</script></body></html>

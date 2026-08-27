@@ -1,1644 +1,1503 @@
-> ## Documentation Index
-> Fetch the complete documentation index at: https://code.claude.com/docs/llms.txt
-> Use this file to discover all available pages before exploring further.
-
-# Explore the context window
-
-> An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.
-
-export const ContextWindow = () => {
-  const MAX = 200000;
-  const STARTUP_END = 0.2;
-  {}
-  const EVENTS = useMemo(() => [{}, {
-    t: 0.015,
-    kind: 'auto',
-    label: 'System prompt',
-    tokens: 4200,
-    color: '#6B6964',
-    vis: 'hidden',
-    desc: 'Core instructions for behavior, tool use, and response formatting. Always loaded first. You never see it.',
-    link: null
-  }, {
-    t: 0.035,
-    kind: 'auto',
-    label: 'Auto memory (MEMORY.md)',
-    tokens: 680,
-    color: '#E8A45C',
-    vis: 'hidden',
-    desc: "Claude's notes to itself from previous sessions: build commands it learned, patterns it noticed, mistakes to avoid. The first 200 lines or 25KB, whichever comes first, are loaded into the conversation context.",
-    link: '/en/memory#auto-memory'
-  }, {
-    t: 0.06,
-    kind: 'auto',
-    label: 'Environment info',
-    tokens: 280,
-    color: '#6B6964',
-    vis: 'hidden',
-    desc: 'Working directory, platform, shell, OS version, and whether this is a git repo. Git branch, status, and recent commits load as a separate block at the very end of the system prompt.',
-    link: null
-  }, {
-    t: 0.08,
-    kind: 'auto',
-    label: 'MCP tools (deferred)',
-    tokens: 120,
-    color: '#9B7BC4',
-    vis: 'hidden',
-    desc: 'MCP tool names listed so Claude knows what is available. By default, full schemas stay deferred and Claude loads specific ones on demand via tool search when a task needs them. Set `ENABLE_TOOL_SEARCH=auto` to load schemas upfront when they fit within 10% of the context window, or `ENABLE_TOOL_SEARCH=false` to load everything.',
-    link: '/en/mcp#scale-with-mcp-tool-search'
-  }, {
-    t: 0.1,
-    kind: 'auto',
-    label: 'Skill descriptions',
-    tokens: 450,
-    color: '#D4A843',
-    vis: 'hidden',
-    noSurviveCompact: true,
-    desc: 'One-line descriptions of available skills so Claude knows what it can invoke. Full skill content loads only when Claude actually uses one. Skills with `disable-model-invocation: true` are not in this list. They stay completely out of context until you invoke them with `/name`. Unlike the rest of the startup content, this listing is not re-injected after `/compact`. Only skills you actually invoked get preserved.',
-    link: '/en/skills'
-  }, {
-    t: 0.12,
-    kind: 'auto',
-    label: '~/.claude/CLAUDE.md',
-    tokens: 320,
-    color: '#6A9BCC',
-    vis: 'hidden',
-    desc: 'Your global preferences. Applies to every project. Loaded alongside project instructions at the start of every conversation.',
-    link: '/en/memory#choose-where-to-put-claude-md-files'
-  }, {
-    t: 0.14,
-    kind: 'auto',
-    label: 'Project CLAUDE.md',
-    tokens: 1800,
-    color: '#6A9BCC',
-    vis: 'hidden',
-    desc: 'Project conventions, build commands, architecture notes. The most important file you can create. Lives in your project root, so your whole team gets the same instructions.',
-    tip: 'Keep it under 200 lines. Move reference content to skills or path-scoped rules so it only loads when needed.',
-    link: '/en/memory'
-  }, {}, {
-    t: 0.22,
-    kind: 'user',
-    label: 'Your prompt',
-    tokens: 45,
-    color: '#558A42',
-    vis: 'full',
-    desc: '"Fix the auth bug where users get 401 after token refresh"',
-    link: null
-  }, {}, {
-    t: 0.28,
-    kind: 'claude',
-    label: 'Read src/api/auth.ts',
-    tokens: 2400,
-    color: '#8A8880',
-    vis: 'brief',
-    restoredAfterCompact: true,
-    desc: 'Main auth file. You see "Read auth.ts" in your terminal, but the 2,400 tokens of file content only Claude sees.',
-    tip: 'File reads dominate context usage. Be specific in prompts ("fix the bug in auth.ts") so Claude reads fewer files. For research-heavy tasks, use a subagent.',
-    link: null
-  }, {
-    t: 0.32,
-    kind: 'claude',
-    label: 'Read src/lib/tokens.ts',
-    tokens: 1100,
-    color: '#8A8880',
-    vis: 'brief',
-    restoredAfterCompact: true,
-    desc: 'Following imports to the token module. Shown as a one-liner in your terminal.',
-    link: null
-  }, {
-    t: 0.35,
-    kind: 'auto',
-    label: 'Rule: api-conventions.md',
-    tokens: 380,
-    color: '#4A9B8E',
-    vis: 'brief',
-    restoredAfterCompact: true,
-    desc: 'This rule in `.claude/rules/` has a `paths:` pattern matching `src/api/**`. It loaded automatically when Claude read a file in that directory. You see "Loaded .claude/rules/api-conventions.md" in your terminal, but not the rule content.',
-    link: '/en/memory#path-specific-rules'
-  }, {
-    t: 0.38,
-    kind: 'claude',
-    label: 'Read middleware.ts',
-    tokens: 1800,
-    color: '#8A8880',
-    vis: 'brief',
-    restoredAfterCompact: true,
-    desc: 'Tracing the auth flow deeper.',
-    link: null
-  }, {
-    t: 0.41,
-    kind: 'claude',
-    label: 'Read auth.test.ts',
-    tokens: 1600,
-    color: '#8A8880',
-    vis: 'brief',
-    restoredAfterCompact: true,
-    desc: 'Checking existing tests for expected behavior.',
-    link: null
-  }, {
-    t: 0.44,
-    kind: 'auto',
-    label: 'Rule: testing.md',
-    tokens: 290,
-    color: '#4A9B8E',
-    vis: 'brief',
-    restoredAfterCompact: true,
-    desc: 'Another path-scoped rule, this one matching `*.test.ts` files. Triggered when Claude read auth.test.ts. Shown as a one-line "Loaded" notice.',
-    link: '/en/memory#path-specific-rules'
-  }, {
-    t: 0.47,
-    kind: 'claude',
-    label: 'grep "refreshToken"',
-    tokens: 600,
-    color: '#A09E96',
-    vis: 'brief',
-    desc: 'Search results across the codebase. You see the command ran, not the full output.',
-    link: null
-  }, {}, {
-    t: 0.53,
-    kind: 'claude',
-    label: "Claude's analysis",
-    tokens: 800,
-    color: '#D97757',
-    vis: 'full',
-    desc: 'Explains the bug: token invalidated too early in the rotation. This text appears in your terminal.',
-    link: null
-  }, {
-    t: 0.57,
-    kind: 'claude',
-    label: 'Edit auth.ts',
-    tokens: 400,
-    color: '#D97757',
-    vis: 'full',
-    desc: 'Fixes the token rotation order. The diff appears in your terminal.',
-    link: null
-  }, {
-    t: 0.59,
-    kind: 'hook',
-    label: 'Hook: prettier',
-    tokens: 120,
-    color: '#B8860B',
-    vis: 'hidden',
-    desc: 'A PostToolUse hook in `settings.json` runs prettier after every file edit and reports back via `hookSpecificOutput.additionalContext`. That field enters Claude\'s context. Plain stdout on exit 0 does not. It is written to the debug log only.',
-    tip: 'Output JSON with `additionalContext` to send info to Claude. For PostToolUse hooks, exit code 2 surfaces stderr as an error but cannot block since the tool already ran. Keep output concise since it enters context without truncation.',
-    link: '/en/hooks-guide'
-  }, {
-    t: 0.62,
-    kind: 'claude',
-    label: 'Edit auth.test.ts',
-    tokens: 600,
-    color: '#D97757',
-    vis: 'full',
-    desc: 'Adds a regression test for the fix. The diff appears in your terminal.',
-    link: null
-  }, {
-    t: 0.64,
-    kind: 'hook',
-    label: 'Hook: prettier',
-    tokens: 100,
-    color: '#B8860B',
-    vis: 'hidden',
-    desc: 'The same hook fires again for the test file. Every matching tool event triggers it.',
-    link: '/en/hooks-guide'
-  }, {
-    t: 0.67,
-    kind: 'claude',
-    label: 'npm test output',
-    tokens: 1200,
-    color: '#A09E96',
-    vis: 'brief',
-    desc: 'Runs the test suite. You see "Running npm test..." and the pass count, not the full 1,200 tokens of output.',
-    link: null
-  }, {
-    t: 0.70,
-    kind: 'claude',
-    label: 'Summary',
-    tokens: 400,
-    color: '#D97757',
-    vis: 'full',
-    desc: '"Fixed token rotation. Added regression test. All tests pass."',
-    link: null
-  }, {}, {
-    t: 0.72,
-    kind: 'user',
-    label: 'Your follow-up',
-    tokens: 40,
-    color: '#558A42',
-    vis: 'full',
-    desc: '"Use a subagent to research session timeout handling, then fix it"',
-    tip: 'Follow-ups add to the same context. Delegating research to a subagent keeps large file reads out of your main window.',
-    link: null
-  }, {
-    t: 0.79,
-    kind: 'claude',
-    label: 'Spawn research subagent',
-    tokens: 80,
-    color: '#D97757',
-    vis: 'brief',
-    desc: "Claude delegates the research to a subagent with a fresh, separate context window. It loads CLAUDE.md and the same MCP and skill setup, but starts without your conversation history or the main session's auto memory.",
-    link: '/en/sub-agents'
-  }, {
-    t: 0.795,
-    kind: 'sub',
-    label: 'System prompt',
-    tokens: 0,
-    subTokens: 900,
-    color: '#6B6964',
-    vis: 'hidden',
-    desc: "The subagent gets its own system prompt, shorter than the main session's. For the general-purpose agent, it's a brief prompt plus environment details. The main session's auto memory is not included. If a custom agent has memory: in its frontmatter, it loads its own separate MEMORY.md here instead.",
-    link: '/en/sub-agents#enable-persistent-memory'
-  }, {
-    t: 0.80,
-    kind: 'sub',
-    label: 'Project CLAUDE.md (own copy)',
-    tokens: 0,
-    subTokens: 1800,
-    color: '#6A9BCC',
-    vis: 'hidden',
-    desc: "The subagent loads CLAUDE.md too. Same file, same content, but it counts against the subagent's context, not yours. The built-in Explore and Plan agents skip this for a smaller context.",
-    link: '/en/sub-agents'
-  }, {
-    t: 0.805,
-    kind: 'sub',
-    label: 'MCP tools + skills',
-    tokens: 0,
-    subTokens: 970,
-    color: '#9B7BC4',
-    vis: 'hidden',
-    desc: "The subagent has access to the same MCP servers and skills. It gets most of the parent's tools, minus several that don't apply in a nested context, including plan-mode controls, background-task tools, and by default the Agent tool itself to prevent recursion.",
-    link: '/en/sub-agents'
-  }, {
-    t: 0.81,
-    kind: 'sub',
-    label: 'Task prompt from main',
-    tokens: 0,
-    subTokens: 120,
-    color: '#558A42',
-    vis: 'hidden',
-    desc: "Instead of a user prompt, the subagent receives the task Claude wrote for it: 'Research session timeout handling in this codebase.'",
-    link: '/en/sub-agents'
-  }, {
-    t: 0.82,
-    kind: 'sub',
-    label: 'Read session.ts',
-    tokens: 0,
-    subTokens: 2200,
-    color: '#8A8880',
-    vis: 'hidden',
-    desc: "Now the subagent does its work. This file read fills the subagent's context, not yours.",
-    link: '/en/sub-agents'
-  }, {
-    t: 0.825,
-    kind: 'sub',
-    label: 'Read timeouts.ts',
-    tokens: 0,
-    subTokens: 800,
-    color: '#8A8880',
-    vis: 'hidden',
-    desc: "Another file read in the subagent's separate context.",
-    link: '/en/sub-agents'
-  }, {
-    t: 0.83,
-    kind: 'sub',
-    label: 'Read config/*.ts',
-    tokens: 0,
-    subTokens: 3100,
-    color: '#8A8880',
-    vis: 'hidden',
-    desc: "The subagent can read as many files as it needs. None of this touches your main context.",
-    link: '/en/sub-agents'
-  }, {
-    t: 0.85,
-    kind: 'claude',
-    label: 'Subagent returns summary',
-    tokens: 420,
-    color: '#D97757',
-    vis: 'brief',
-    desc: "Only the subagent's final text response comes back to your context, plus a small metadata trailer with token counts and duration. The subagent read 6,100 tokens of files. You got a 420-token result. That's the context savings.",
-    link: '/en/sub-agents'
-  }, {
-    t: 0.86,
-    kind: 'claude',
-    label: "Claude's response",
-    tokens: 1200,
-    color: '#D97757',
-    vis: 'full',
-    desc: 'Analysis and fix for session timeouts. This text appears in your terminal.',
-    link: null
-  }, {}, {
-    t: 0.875,
-    kind: 'user',
-    label: '!git status',
-    tokens: 180,
-    color: '#558A42',
-    vis: 'full',
-    desc: "You ran a shell command with the ! prefix to see which files Claude modified. The command and its output both enter context as part of your message. Useful for grounding Claude in command output without Claude running it.",
-    link: '/en/interactive-mode#bash-mode-with-prefix'
-  }, {
-    t: 0.89,
-    kind: 'user',
-    label: '/commit-push',
-    tokens: 620,
-    color: '#558A42',
-    vis: 'brief',
-    restoredAfterCompact: true,
-    desc: 'You invoked a skill that has `disable-model-invocation: true`. Its description was not in the skill index at startup, so it cost zero context until this moment. Now the full skill content loads and Claude follows its instructions to stage, commit, and push your changes. After `/compact`, Claude Code re-injects the body of each skill you invoked, capped at 5,000 tokens per skill.',
-    tip: 'Set `disable-model-invocation: true` on skills with side effects like committing, deploying, or sending messages. They stay out of context entirely until you need them.',
-    link: '/en/skills#control-who-invokes-a-skill'
-  }, {}, {
-    t: 0.93,
-    kind: 'compact',
-    label: '/compact',
-    tokens: 0,
-    color: '#D97757',
-    vis: 'brief',
-    desc: 'Replaces the conversation with a structured summary. You see a "Conversation compacted" message. The summarization happens without appearing in your terminal.',
-    link: '/en/how-claude-code-works#the-context-window'
-  }].filter(e => e.t !== undefined), []);
-  const VIS_META = {
-    hidden: {
-      label: 'Invisible in your terminal',
-      sub: 'This content does not appear in your terminal.'
-    },
-    brief: {
-      label: 'One-liner in your terminal',
-      sub: 'You see a brief mention, not the full content.'
-    },
-    full: {
-      label: 'Shown in your terminal',
-      sub: 'The actual content appears in your terminal.'
-    }
-  };
-  {}
-  const GATES = [{
-    at: 0.18,
-    kind: 'prompt',
-    text: 'Fix the auth bug where users get 401 after token refresh',
-    resumeTo: 0.22
-  }, {
-    at: 0.705,
-    kind: 'prompt',
-    text: 'Use a subagent to research session timeout handling, then fix it',
-    resumeTo: 0.72
-  }, {
-    at: 0.865,
-    kind: 'bang',
-    text: '!git status',
-    resumeTo: 0.875
-  }, {
-    at: 0.88,
-    kind: 'slash',
-    text: '/commit-push',
-    resumeTo: 0.89
-  }, {
-    at: 0.90,
-    kind: 'compact',
-    text: '/compact',
-    resumeTo: 1
-  }];
-  const KIND_META = {
-    auto: {
-      badge: 'auto',
-      detail: 'Auto-loaded',
-      badgeBg: 'rgba(94,93,89,0.15)',
-      badgeColor: '#8A8880'
-    },
-    user: {
-      badge: 'you',
-      detail: 'You typed this',
-      badgeBg: 'rgba(85,138,66,0.15)',
-      badgeColor: '#6BA656'
-    },
-    claude: {
-      badge: 'claude',
-      detail: "Claude's work",
-      badgeBg: 'rgba(217,119,87,0.12)',
-      badgeColor: '#D97757'
-    },
-    hook: {
-      badge: 'hook',
-      detail: 'Hook (automatic)',
-      badgeBg: 'rgba(184,134,11,0.15)',
-      badgeColor: '#CCA020'
-    },
-    compact: {
-      badge: 'compact',
-      detail: 'Compaction',
-      badgeBg: 'rgba(217,119,87,0.12)',
-      badgeColor: '#D97757'
-    },
-    sub: {
-      badge: 'subagent',
-      detail: "In subagent's context",
-      badgeBg: 'rgba(155,123,196,0.12)',
-      badgeColor: '#9B7BC4'
-    }
-  };
-  const LEGEND = [{
-    c: '#6B6964',
-    l: 'System'
-  }, {
-    c: '#6A9BCC',
-    l: 'CLAUDE.md'
-  }, {
-    c: '#E8A45C',
-    l: 'Memory'
-  }, {
-    c: '#D4A843',
-    l: 'Skills'
-  }, {
-    c: '#9B7BC4',
-    l: 'MCP'
-  }, {
-    c: '#4A9B8E',
-    l: 'Rules'
-  }, {
-    c: '#558A42',
-    l: 'You'
-  }, {
-    c: '#8A8880',
-    l: 'Files'
-  }, {
-    c: '#A09E96',
-    l: 'Output'
-  }, {
-    c: '#D97757',
-    l: 'Claude'
-  }, {
-    c: '#B8860B',
-    l: 'Hooks'
-  }];
-  const fmt = n => n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'K' : n + '';
-  const [time, setTime] = useState(0);
-  const [playing, setPlaying] = useState(false);
-  const [hovIdx, setHovIdx] = useState(null);
-  const [selIdx, setSelIdx] = useState(null);
-  const [hovCat, setHovCat] = useState(null);
-  const [gatesPassed, setGatesPassed] = useState(0);
-  const [mounted, setMounted] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
-  const lastRef = useRef(null);
-  const scrollRef = useRef(null);
-  const detailRef = useRef(null);
-  useEffect(() => setMounted(true), []);
-  const activeGate = GATES.find((g, i) => i >= gatesPassed && time >= g.at && time < g.resumeTo);
-  useEffect(() => {
-    if (!playing) return;
-    let raf;
-    let stopped = false;
-    const tick = ts => {
-      if (stopped) return;
-      if (!lastRef.current) lastRef.current = ts;
-      const dt = (ts - lastRef.current) / 1000;
-      lastRef.current = ts;
-      setTime(prev => {
-        const next = prev + dt * 0.032;
-        const gate = GATES.find((g, i) => i >= gatesPassed && next >= g.at && prev < g.resumeTo);
-        if (gate) {
-          stopped = true;
-          setPlaying(false);
-          return gate.at;
-        }
-        if (next >= 1) {
-          stopped = true;
-          setPlaying(false);
-          return 1;
-        }
-        return next;
-      });
-      if (!stopped) raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => {
-      stopped = true;
-      cancelAnimationFrame(raf);
-      lastRef.current = null;
-    };
-  }, [playing, gatesPassed]);
-  const sendPrompt = () => {
-    if (!activeGate) return;
-    const isCompact = activeGate.kind === 'compact';
-    setGatesPassed(n => n + 1);
-    setTime(activeGate.resumeTo);
-    setSelIdx(null);
-    setHovIdx(null);
-    if (!isCompact) setPlaying(true);
-  };
-  const visibleCount = EVENTS.filter(e => e.t <= time).length;
-  const preCompactVisible = useMemo(() => EVENTS.slice(0, visibleCount), [EVENTS, visibleCount]);
-  const compactGateIdx = GATES.length - 1;
-  const isCompacted = gatesPassed > compactGateIdx && preCompactVisible.some(e => e.kind === 'compact');
-  const {visible, preCompactTotal} = useMemo(() => {
-    const nonCompact = preCompactVisible.filter(e => e.kind !== 'compact');
-    if (!isCompacted) {
-      return {
-        visible: preCompactVisible,
-        preCompactTotal: 0
-      };
-    }
-    {}
-    const autoLoads = nonCompact.filter(e => e.kind === 'auto' && e.t < STARTUP_END && !e.noSurviveCompact);
-    const restored = nonCompact.filter(e => e.restoredAfterCompact);
-    const summarized = nonCompact.filter(e => e.t >= STARTUP_END && e.kind !== 'sub');
-    const sumTokens = summarized.reduce((s, e) => s + e.tokens, 0);
-    const summaryBlock = {
-      t: STARTUP_END,
-      kind: 'compact',
-      label: 'Conversation summary',
-      tokens: Math.round(sumTokens * 0.12),
-      color: '#A09E96',
-      vis: 'hidden',
-      desc: `All ${summarized.length} conversation events condensed into one structured summary. The summary keeps: your requests and intent, key technical concepts, files examined or modified with important code snippets, errors and how they were fixed, pending tasks, and current work. It replaces the verbatim conversation: full tool outputs and intermediate reasoning are gone. Claude Code re-reads the files modified most recently and re-injects the skills you invoked, listed below. Claude can still reference the rest of the work but won't have the exact content.`,
-      link: '/en/how-claude-code-works#the-context-window'
-    };
-    return {
-      visible: [...autoLoads, summaryBlock, ...restored],
-      preCompactTotal: nonCompact.reduce((s, e) => s + e.tokens, 0)
-    };
-  }, [preCompactVisible, isCompacted]);
-  const {blocks, totalTokens} = useMemo(() => {
-    const bl = visible.map((e, visIdx) => ({
-      ...e,
-      id: e.label + e.t,
-      visIdx
-    })).filter(e => e.tokens > 0 || e.label === 'Conversation summary');
-    return {
-      blocks: bl,
-      totalTokens: bl.reduce((s, b) => s + b.tokens, 0)
-    };
-  }, [visible]);
-  const subTotal = useMemo(() => visible.filter(e => e.kind === 'sub').reduce((s, e) => s + (e.subTokens || 0), 0), [visible]);
-  useEffect(() => {
-    if (!scrollRef.current) return;
-    if (isCompacted) scrollRef.current.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    }); else if (playing || activeGate) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-  }, [visible.length, !!activeGate, isCompacted]);
-  const rootRef = useRef(null);
-  const keyStateRef = useRef({});
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  keyStateRef.current = {
-    time,
-    activeGate,
-    sendPrompt,
-    hasInteracted
-  };
-  useEffect(() => {
-    const onFsChange = () => setIsFullscreen(!!document.fullscreenElement);
-    document.addEventListener('fullscreenchange', onFsChange);
-    return () => document.removeEventListener('fullscreenchange', onFsChange);
-  }, []);
-  const toggleFullscreen = () => {
-    if (!rootRef.current) return;
-    if (document.fullscreenElement) document.exitFullscreen(); else rootRef.current.requestFullscreen().catch(() => {});
-  };
-  useEffect(() => {
-    const onKey = e => {
-      const tag = e.target.tagName;
-      if (tag === 'INPUT' || tag === 'BUTTON' || tag === 'TEXTAREA' || tag === 'SELECT' || e.target.isContentEditable) return;
-      if (!rootRef.current) return;
-      const rect = rootRef.current.getBoundingClientRect();
-      if (rect.width === 0 && rect.height === 0) return;
-      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
-      if (e.code === 'Space') {
-        const {time: t, activeGate: g, sendPrompt: send, hasInteracted: hi} = keyStateRef.current;
-        if (!hi) return;
-        e.preventDefault();
-        if (t === 0) setPlaying(true); else if (g) send(); else if (t >= 1) {
-          setTime(0);
-          setGatesPassed(0);
-          setSelIdx(null);
-          setHovIdx(null);
-          setPlaying(true);
-        } else setPlaying(p => !p);
+<!DOCTYPE html>
+<html class="inter_1d81deff-module__CYM0aG__variable papermono_89c757f2-module__6aS5zq__variable dark" data-assistant-state="closed" data-banner-state="visible" data-current-path="/" data-page-mode="none" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/><link as="font" crossorigin="" href="/docs/_next/static/media/83afe278b6a6bb3c.p.3a6ba036.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="/docs/_next/static/media/PaperMono_Variable.p.aa32f7a0.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="/docs/_next/static/media/f67ad414ed34149c.p.84166d94.woff2" rel="preload" type="font/woff2"/><link as="image" href="https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/light.svg?fit=max&amp;auto=format&amp;n=c5r9_6tjPMzFdDDT&amp;q=85&amp;s=78fd01ff4f4340295a4f66e2ea54903c" rel="preload"/><link as="image" href="https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/dark.svg?fit=max&amp;auto=format&amp;n=c5r9_6tjPMzFdDDT&amp;q=85&amp;s=1298a0c3b3a1da603b190d0de0e31712" rel="preload"/><link data-precedence="next" href="/docs/_next/static/chunks/462bacc63bed9960.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV" rel="stylesheet"/><link data-precedence="next" href="/docs/_next/static/chunks/0685d76b264a77ed.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV" rel="stylesheet"/><style data-href="base-ui-disable-scrollbar" data-precedence="base-ui:low">.base-ui-disable-scrollbar{scrollbar-width:none}.base-ui-disable-scrollbar::-webkit-scrollbar{display:none}</style><link as="script" fetchpriority="low" href="/docs/_next/static/chunks/6d55b684068fd47e.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV" rel="preload"/><script async="" src="/docs/_next/static/chunks/44795504c795ca32.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/54c913690d097f77.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/f486afc314643ce1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/f3f92ec2a3db1ff8.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/turbopack-2bd0ee3cf09bf3af.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/0d1a5e3ce583526e.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/969c4092baa44954.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/6083aa7cbfc6209c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script async="" src="/docs/_next/static/chunks/b7de670ceb1b1925.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/><link as="style" href="https://d4tuoctqmanu0.cloudfront.net/katex.min.css" rel="preload"/><title>Explore the context window - Claude Code Docs</title><meta content="An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire." name="description"/><meta content="Claude Code Docs" name="application-name"/><meta content="Mintlify" name="generator"/><meta content="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/browserconfig.xml" name="msapplication-config"/><meta content="Claude Code Docs" name="apple-mobile-web-app-title"/><meta content="#0E0E0E" name="msapplication-TileColor"/><link href="https://code.claude.com/docs/en/context-window" rel="canonical"/><link href="/docs/sitemap.xml" rel="alternate" type="application/xml"/><link href="/docs/en/context-window.md" rel="alternate" type="text/markdown"/><meta content="Explore the context window - Claude Code Docs" property="og:title"/><meta content="An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire." property="og:description"/><meta content="https://code.claude.com/docs/en/context-window" property="og:url"/><meta content="Claude Code Docs" property="og:site_name"/><meta content="https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DCore%2Bconcepts%26appearance%3Dsystem%26title%3DExplore%2Bthe%2Bcontext%2Bwindow%26description%3DAn%2Binteractive%2Bsimulation%2Bof%2Bhow%2BClaude%2BCode%2527s%2Bcontext%2Bwindow%2Bfills%2Bduring%2Ba%2Bsession.%2BSee%2Bwhat%2Bloads%2Bautomatically%252C%2Bwhat%2Beach%2Bfile%2Bread%2Bcosts%252C%2Band%2Bwhen%2Brules%2Ban%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Flight.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D78fd01ff4f4340295a4f66e2ea54903c%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Fdark.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D1298a0c3b3a1da603b190d0de0e31712%26primaryColor%3D%25230E0E0E%26lightColor%3D%2523D4A27F%26backgroundLight%3D%2523FDFDF7%26backgroundDark%3D%252309090B&amp;w=1200&amp;q=100" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="website" property="og:type"/><meta content="summary_large_image" name="twitter:card"/><meta content="Explore the context window - Claude Code Docs" name="twitter:title"/><meta content="An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire." name="twitter:description"/><meta content="https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DCore%2Bconcepts%26appearance%3Dsystem%26title%3DExplore%2Bthe%2Bcontext%2Bwindow%26description%3DAn%2Binteractive%2Bsimulation%2Bof%2Bhow%2BClaude%2BCode%2527s%2Bcontext%2Bwindow%2Bfills%2Bduring%2Ba%2Bsession.%2BSee%2Bwhat%2Bloads%2Bautomatically%252C%2Bwhat%2Beach%2Bfile%2Bread%2Bcosts%252C%2Band%2Bwhen%2Brules%2Ban%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Flight.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D78fd01ff4f4340295a4f66e2ea54903c%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Fdark.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D1298a0c3b3a1da603b190d0de0e31712%26primaryColor%3D%25230E0E0E%26lightColor%3D%2523D4A27F%26backgroundLight%3D%2523FDFDF7%26backgroundDark%3D%252309090B&amp;w=1200&amp;q=100" name="twitter:image"/><meta content="1200" name="twitter:image:width"/><meta content="630" name="twitter:image:height"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/android-chrome-192x192.png" media="(prefers-color-scheme: light)" rel="icon" sizes="192x192" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-16x16.png" media="(prefers-color-scheme: light)" rel="icon" sizes="16x16" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png" media="(prefers-color-scheme: light)" rel="icon" sizes="32x32" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon.ico" media="(prefers-color-scheme: light)" rel="shortcut icon" type="image/x-icon"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/android-chrome-192x192.png" media="(prefers-color-scheme: dark)" rel="icon" sizes="192x192" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/favicon-16x16.png" media="(prefers-color-scheme: dark)" rel="icon" sizes="16x16" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/favicon-32x32.png" media="(prefers-color-scheme: dark)" rel="icon" sizes="32x32" type="image/png"/><link href="/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/favicon.ico" media="(prefers-color-scheme: dark)" rel="shortcut icon" type="image/x-icon"/><script type="text/javascript">!function(){var b="/docs";
+function a(p){if(p==null)return"/";p=""+p;if(""===p)return"/";return"/"===p.charAt(0)?p:"/"+p}
+function u(p){if(p==null)return p;p=""+p;if(!p||p.charAt(p.length-1)==="/")return p.slice(0,-1);return p}
+function i(p){if(p==null)return p;p=""+p;if(6<=p.length&&p.substring(p.length-6)==="/index")return p.substring(0,p.length-6);if("index"===p)return"";return p}
+var p=(location.pathname||"").split("?")[0].split("#")[0]||"";
+if(b)if(p===b)p="";else if(0===p.indexOf(b+"/"))p=p.substring(b.length);
+p=a(p);p=u(p);p=i(p);p=""===p||"index"===p?"/":a(p);
+document.documentElement.setAttribute("data-current-path",p);
+}();</script><script type="text/javascript">(() => {
+  const isIOS =
+    /iP(hone|ad|od)/.test(navigator.userAgent) ||
+    (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+  if (!isIOS) return;
+  const apply = () => {
+    for (const meta of document.querySelectorAll('meta[name="viewport"]')) {
+      const content = meta.getAttribute('content') || '';
+      if (!content.includes('maximum-scale')) {
+        meta.setAttribute('content', content + ', maximum-scale=1');
       }
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, []);
-  const pct = totalTokens / MAX * 100;
-  const barColor = pct > 75 ? '#D97757' : pct > 50 ? '#B8860B' : '#558A42';
-  const activeIdx = selIdx !== null ? selIdx : hovIdx;
-  const hovEvent = activeIdx !== null ? visible[activeIdx] : null;
-  useEffect(() => {
-    if (detailRef.current) detailRef.current.scrollTop = 0;
-  }, [hovEvent]);
-  const focusT = hovEvent ? hovEvent.t : time;
-  const takeaway = isCompacted ? 'Compaction replaces the conversation with a structured summary. System prompt, CLAUDE.md, memory, and MCP tools reload automatically. Claude Code also re-reads up to five of the files modified most recently, reloads the rules that match them, and re-injects the skills you invoked. The skill listing does not reload.' : focusT < STARTUP_END ? 'A lot loads before you type anything. CLAUDE.md, memory, skills, and MCP tools are all in context before your first prompt.' : focusT < 0.28 ? "Your prompt is tiny compared to what's already loaded. Most of Claude's context is project knowledge, not your words." : focusT < 0.50 ? 'Each file Claude reads grows the context. Path-scoped rules load automatically alongside matching files.' : focusT < 0.71 ? 'Hooks fire automatically on tool events. Output reaches Claude via additionalContext JSON. Exit code 2 surfaces stderr to Claude. Plain stdout on exit 0 goes to the debug log, not the transcript.' : focusT < 0.79 ? 'Follow-up questions keep building on the same context. Everything from earlier is still there.' : focusT < 0.87 ? "The subagent works in its own separate context window. None of its file reads touch yours. Only the final summary comes back." : focusT < 0.88 ? 'Bang commands run in your shell and prefix the output to your next message. Useful for grounding Claude in command results without it running them.' : focusT < 0.90 ? 'User-only skills stay out of context entirely until you invoke them. The skill index at startup only lists skills Claude can call on its own.' : '/compact summarizes the conversation to free space while keeping key information. In a real session, run it when context starts affecting performance or before a long new task.';
-  const terminalView = isCompacted ? 'A "Conversation compacted" message, then a one-line "Read auth.ts" for each re-read file and "Skills restored (commit-push)". The rules show as "Loaded" lines on Claude\'s next turn. None of the content itself appears.' : focusT < STARTUP_END ? 'The input box, waiting for your first message. Everything above loads silently before you type anything.' : focusT < 0.28 ? 'Your prompt. Claude hasn\'t started working yet.' : focusT < 0.52 ? 'Your prompt and "Reading files...". Rules show as one-line "Loaded" notices, not their content.' : focusT < 0.72 ? "Claude's response and file diffs. Hooks fire silently. Tool output like npm test shows as a brief summary, not the full content." : focusT < 0.79 ? 'Your follow-up prompt.' : focusT < 0.86 ? "A brief notice that a subagent is working, then its result. You don't see the subagent's individual file reads." : focusT < 0.90 ? "Claude's response, your git status output, and the commit-push skill running." : 'Your full conversation. /compact is available to run.';
-  const mono = 'var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace)';
-  const renderWithCode = s => s.split('`').map((part, i) => i % 2 === 1 ? <code key={i} style={{
-    fontFamily: mono,
-    fontSize: '0.92em',
-    background: 'var(--cw-track)',
-    padding: '1px 4px',
-    borderRadius: 3
-  }}>{part}</code> : part);
-  if (!mounted) return null;
-  return <>
-    <div className="cw-mobile-fallback">
-      This interactive timeline works best on a larger screen. See <a href="#what-the-timeline-shows" style={{
-    color: '#D97757'
-  }}>the written breakdown below</a> for the same concepts.
-    </div>
-    <div className="cw-root" ref={rootRef} onClickCapture={() => setHasInteracted(true)} style={isFullscreen ? {
-    height: '100vh',
-    borderRadius: 0,
-    display: 'flex',
-    flexDirection: 'column'
-  } : {}}>
-      <style>{`
-        .cw-root {
-          --cw-bg: #FAFAF8;
-          --cw-text: #1A1918;
-          --cw-text-2: #3D3C38;
-          --cw-text-3: #5E5D59;
-          --cw-text-dim: #6E6C64;
-          --cw-text-faint: #8A8880;
-          --cw-surface: rgba(0,0,0,0.025);
-          --cw-surface-2: rgba(0,0,0,0.04);
-          --cw-border: rgba(0,0,0,0.08);
-          --cw-track: rgba(0,0,0,0.04);
-          --cw-hover: rgba(0,0,0,0.04);
-          --cw-rail: rgba(0,0,0,0.08);
-          --cw-scrollbar: rgba(0,0,0,0.22);
-          background: var(--cw-bg);
-          border-radius: 12px;
-          overflow: hidden;
-          font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, sans-serif);
-          color: var(--cw-text);
-          border: 1px solid var(--cw-border);
+    }
+  };
+  apply();
+  new MutationObserver(apply).observe(document.head, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['content'],
+  });
+})();</script><script type="text/javascript">!function(){
+function read(){try{
+var e=performance.getEntriesByType?performance.getEntriesByType("navigation"):[];
+var st=(e[0]&&e[0].serverTiming)||[];
+var g={};
+for(var i=0;i<st.length;i++){var n=st[i].name,d=st[i].description;if(!d)continue;try{d=decodeURIComponent(d)}catch(x){}
+if(n==="country")g.country=d;else if(n==="region")g.region=d;else if(n==="continent")g.continent=d;}
+var w=window;w.mintlify=w.mintlify||{};w.mintlify.geo=g;
+}catch(x){}}
+read();document.addEventListener("DOMContentLoaded",read);
+}();</script><script type="text/javascript">!function(){try{
+var w=window;w.mintlify=w.mintlify||{};
+var q=w.mintlify.__apiPlaygroundInputsQueue;
+if(!Array.isArray(q)){q=[];w.mintlify.__apiPlaygroundInputsQueue=q;}
+w.mintlify.api=w.mintlify.api||{};
+w.mintlify.api.playground=w.mintlify.api.playground||{};
+if(typeof w.mintlify.api.playground.setServerVariables!=="function"){
+w.mintlify.api.playground.setServerVariables=function(v){q.push({type:"set",variables:v});};
+}
+if(typeof w.mintlify.api.playground.clearServerVariables!=="function"){
+w.mintlify.api.playground.clearServerVariables=function(){q.push({type:"clear"});};
+}
+}catch(e){}}();</script><script type="text/javascript">(function(a,b){try{let c=document.getElementById("banner")?.innerText;if(c){for(let d=0;d<localStorage.length;d++){let e=localStorage.key(d);if(e?.endsWith(a)&&localStorage.getItem(e)===c)return void document.documentElement.setAttribute(b,"hidden")}document.documentElement.setAttribute(b,"visible");return}for(let c=0;c<localStorage.length;c++){let d=localStorage.key(c);if(d?.endsWith(a)&&localStorage.getItem(d))return void document.documentElement.setAttribute(b,"hidden")}document.documentElement.setAttribute(b,"visible")}catch(a){document.documentElement.setAttribute(b,"hidden")}})(
+  "bannerDismissed",
+  "data-banner-state",
+)</script><script nomodule="" src="/docs/_next/static/chunks/a6dad97d9634a72d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script></head><body class="antialiased"><div hidden=""><!--$--><!--/$--></div><script>((a,b,c,d,e,f,g,h)=>{let i=document.documentElement,j=["light","dark"];function k(b){var c;(Array.isArray(a)?a:[a]).forEach(a=>{let c="class"===a,d=c&&f?e.map(a=>f[a]||a):e;c?(i.classList.remove(...d),i.classList.add(f&&f[b]?f[b]:b)):i.setAttribute(a,b)}),c=b,h&&j.includes(c)&&(i.style.colorScheme=c)}if(d)k(d);else try{let a=localStorage.getItem(b)||c,d=g&&"system"===a?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":a;k(d)}catch(a){}})("class","isDarkMode","system",null,["dark","light","true","false","system"],{"true":"dark","false":"light","dark":"dark","light":"light"},true,false)</script><script>(function(){try{var f=null;var v=f||localStorage.getItem("isDarkMode");if(v==='true')v='dark';else if(v==='false')v='light';if(v!=='light'&&v!=='dark'&&v!=='system')v="system";document.documentElement.setAttribute("data-theme-preference",v)}catch(e){}})();</script><blockquote aria-hidden="true" class="sr-only" data-agent-docs-index="true"><h2>Documentation Index</h2><p>Fetch the complete documentation index at:<!-- --> <a href="/docs/llms.txt" tabindex="-1">/docs/llms.txt</a></p><p>Use this file to discover all available pages before exploring further.</p></blockquote><style>:root{--banner-height:0px!important}</style><script>(self.__next_s=self.__next_s||[]).push([0,{"children":"(function j(a,b,c,d,e){try{let f,g,h=[];try{h=window.location.pathname.split(\"/\").filter(a=\u003e\"\"!==a\u0026\u0026\"global\"!==a).slice(0,2)}catch{h=[]}let i=h.find(a=\u003ec.includes(a)),j=[];for(let c of(i?j.push(i):j.push(b),j.push(\"global\"),j)){if(!c)continue;let b=a[c];if(b?.content){f=b.content,g=c;break}}if(!f)return void document.documentElement.setAttribute(d,\"hidden\");let k=!0,l=0;for(;l\u003clocalStorage.length;){let a=localStorage.key(l);if(l++,!a?.endsWith(e))continue;let b=localStorage.getItem(a);if(b\u0026\u0026b===f){k=!1;break}g\u0026\u0026(a.startsWith(`lang:${g}_`)||!a.startsWith(\"lang:\"))\u0026\u0026(localStorage.removeItem(a),l--)}document.documentElement.setAttribute(d,k?\"visible\":\"hidden\")}catch(a){console.error(a),document.documentElement.setAttribute(d,\"hidden\")}})(\n  {},\n  \"en\",\n  [\"en\",\"fr\",\"de\",\"it\",\"jp\",\"es\",\"ko\",\"cn\",\"zh-Hant\",\"ru\",\"id\",\"pt-BR\"],\n  \"data-banner-state\",\n  \"bannerDismissed\",\n)","id":"_mintlify-banner-script"}])</script><link href="https://fonts.googleapis.com/css2?family=Anthropic+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Anthropic+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet"/><style>:root {
+  --font-family-headings-custom: "Anthropic Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  
+  --font-family-body-custom: "Anthropic Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  
+  
+}
+</style><style>:root {
+    --primary: 14 14 14;
+    --primary-light: 212 162 127;
+    --primary-dark: 14 14 14;
+    --tooltip-foreground: 255 255 255;
+    --background-light: 253 253 247;
+    --background-dark: 9 9 11;
+    --gray-50: 243 243 243;
+    --gray-100: 238 238 238;
+    --gray-200: 222 222 222;
+    --gray-300: 206 206 206;
+    --gray-400: 158 158 158;
+    --gray-500: 112 112 112;
+    --gray-600: 80 80 80;
+    --gray-700: 62 62 62;
+    --gray-800: 37 37 37;
+    --gray-900: 23 23 23;
+    --gray-950: 10 10 10;
+  }</style><script type="text/javascript">
+          (function() {
+            function loadKatex() {
+              const link = document.querySelector('link[href="https://d4tuoctqmanu0.cloudfront.net/katex.min.css"]');
+              if (link) link.rel = 'stylesheet';
+            }
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', loadKatex);
+            } else {
+              loadKatex();
+            }
+          })();
+        </script><div class="relative antialiased text-gray-500 dark:text-gray-400"><script>(self.__next_s=self.__next_s||[]).push([0,{"suppressHydrationWarning":true,"children":"(function(a){let b,c=(b=\"navbar-transition\",\"maple\"===a\u0026\u0026(b+=\"-maple\"),b),d=function(){let a=document.createElement(\"style\");return a.appendChild(document.createTextNode(\"*,*::before,*::after{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}\")),document.head.appendChild(a),function(){window.getComputedStyle(document.body),setTimeout(()=\u003e{document.head.removeChild(a)},1)}}();(\"requestAnimationFrame\"in globalThis?requestAnimationFrame:setTimeout)(()=\u003e{let a;a=!1,a=window.scrollY\u003e50,document.getElementById(c)?.setAttribute(\"data-is-opaque\",`${!!a}`),d()})})(\"mint\")","id":"_mintlify-navbar-transition-script"}])</script><script>(self.__next_s=self.__next_s||[]).push([0,{"suppressHydrationWarning":true,"children":"(function () {\n  var measure = function(){let a=document.querySelectorAll(\"[id='navbar'], [data-top-chrome]\"),b=0;a.forEach(a=\u003e{let c=a.getBoundingClientRect();c.height\u003e0\u0026\u0026(b=Math.max(b,c.bottom))});let c=0,d=document.getElementById(\"content-container\");if(d){let{overflowY:a}=getComputedStyle(d);(\"auto\"===a||\"scroll\"===a)\u0026\u0026(c=Math.max(0,d.getBoundingClientRect().top))}let e=`${Math.round(Math.max(0,b-c))+40}px`,f=document.documentElement.style;f.getPropertyValue(\"--scroll-mt\")!==e\u0026\u0026f.setProperty(\"--scroll-mt\",e)};\n  (function(a){let b=[],c=0,d=\"undefined\"==typeof ResizeObserver?null:new ResizeObserver(f);function e(){let c=Array.from(document.querySelectorAll(\"[id='navbar'], [data-top-chrome]\"));(c.length!==b.length||c.some((a,c)=\u003ea!==b[c]))\u0026\u0026d\u0026\u0026(d.disconnect(),c.forEach(a=\u003ed.observe(a))),b=c,a()}function f(){c||(c=requestAnimationFrame(()=\u003e{c=0,e()}))}let g=\"[id='navbar'], [data-top-chrome]\";function h(a){let b=a.target;if(b instanceof Element\u0026\u0026b.closest(g))return!0;for(let b of a.addedNodes)if(b instanceof Element\u0026\u0026(b.matches(g)||b.querySelector(g)))return!0;for(let b of a.removedNodes)if(b instanceof Element\u0026\u0026(b.matches(g)||b.querySelector(g)))return!0;return!1}new MutationObserver(a=\u003e{a.some(h)\u0026\u0026f()}).observe(document.documentElement,{childList:!0,subtree:!0}),window.addEventListener(\"resize\",f),\"loading\"===document.readyState\u0026\u0026document.addEventListener(\"DOMContentLoaded\",e),e()})(measure);\n  (function(a){let b=window.location.hash.slice(1);if(!b)return;function c(){return\"smooth\"===getComputedStyle(document.documentElement).scrollBehavior}function d(c){let d=document.getElementById(b);return!!d\u0026\u0026(a(),d.scrollIntoView(c?{behavior:c}:void 0),!0)}if(\"complete\"===document.readyState)return void d();let e=new MutationObserver(()=\u003e{!c()\u0026\u0026d(\"instant\")\u0026\u0026f()});function f(){e.disconnect(),window.removeEventListener(\"load\",g)}function g(){let a=c();f(),a\u0026\u0026requestAnimationFrame(()=\u003e{d(),function(){let a=[\"wheel\",\"touchstart\",\"keydown\",\"pointerdown\"],c=0,e=window.scrollY,f=setInterval(()=\u003e{c+=1;let a=document.getElementById(b);if(!a||c\u003e=6)return g();let f=Math.abs(window.scrollY-e)\u003e1;if(e=window.scrollY,f)return;let h=parseFloat(getComputedStyle(a).scrollMarginTop)||0;Math.abs(a.getBoundingClientRect().top-h)\u003e4\u0026\u0026d()},350);function g(){clearInterval(f),a.forEach(a=\u003ewindow.removeEventListener(a,g))}a.forEach(a=\u003ewindow.addEventListener(a,g,{passive:!0}))}()})}window.addEventListener(\"load\",g),e.observe(document.documentElement,{childList:!0,subtree:!0}),!c()\u0026\u0026d(\"instant\")\u0026\u0026f()})(measure);\n})();","id":"_mintlify-scroll-margin-script"}])</script><a class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:p-2 focus:text-sm focus:bg-background-light dark:focus:bg-background-dark focus:rounded-md focus:outline-primary dark:focus:outline-primary-light" href="#content-area">Skip to main content</a><script>(function i(a,b,c,d){try{if(window.matchMedia("(max-width: 1024px)").matches||!d){document.documentElement.style.setProperty(c,"0px"),document.documentElement.setAttribute("data-assistant-state","closed"),d||localStorage.setItem(a,"false");return}let e=localStorage.getItem(a);if(null===e){document.documentElement.style.setProperty(c,"0px"),document.documentElement.setAttribute("data-assistant-state","closed");return}let f=JSON.parse(e),g=localStorage.getItem(b),h=null!==g?JSON.parse(g):368;document.documentElement.style.setProperty(c,f?h+"px":"0px"),document.documentElement.setAttribute("data-assistant-state",f?"open":"closed")}catch(a){document.documentElement.style.setProperty(c,"0px"),document.documentElement.setAttribute("data-assistant-state","closed")}})(
+    "chat-assistant-sheet-open",
+    "chat-assistant-sheet-width",
+    "--assistant-sheet-width",
+    true
+  )</script><div class="max-lg:contents lg:flex lg:w-full" data-docs-theme="mint"><div class="max-lg:contents lg:flex-1 lg:min-w-0 lg:overflow-x-clip"><header class="z-30 fixed lg:sticky top-0 w-full peer is-not-custom peer is-not-center peer is-wide peer is-not-frame" id="navbar"><div class="absolute w-full h-full flex-none transition-colors duration-500 border-b border-gray-500/5 dark:border-gray-300/[0.06] bg-background-light dark:bg-background-dark" data-is-opaque="false" id="navbar-transition"></div><div class="max-w-8xl mx-auto relative"><div><div class="relative"><div class="flex items-center lg:px-12 h-16 min-w-0 mx-4 lg:mx-0"><div class="h-full relative flex-1 flex items-center gap-x-4 min-w-0 border-b border-gray-500/5 dark:border-gray-300/[0.06]"><div class="flex-1 flex items-center gap-x-4"><a class="select-none" href="/docs/en/overview" style="-webkit-touch-callout:none"><span class="sr-only">Claude Code Docs<!-- --> home page</span><img alt="light logo" class="nav-logo w-auto h-7 relative object-contain shrink-0 block dark:hidden" src="https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/light.svg?fit=max&amp;auto=format&amp;n=c5r9_6tjPMzFdDDT&amp;q=85&amp;s=78fd01ff4f4340295a4f66e2ea54903c"/><img alt="dark logo" class="nav-logo w-auto h-7 relative object-contain shrink-0 hidden dark:block" src="https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/dark.svg?fit=max&amp;auto=format&amp;n=c5r9_6tjPMzFdDDT&amp;q=85&amp;s=1298a0c3b3a1da603b190d0de0e31712"/></a><div class="hidden lg:flex items-center gap-x-2"><button aria-haspopup="menu" class="group disabled:pointer-events-none [&amp;&gt;span]:line-clamp-1 overflow-hidden group focus-visible:outline-2 focus-visible:-outline-offset-2 group-hover:text-gray-950/70 dark:group-hover:text-white/70 py-1.5 px-2.5 rounded-xl hover:bg-gray-600/5! dark:hover:bg-gray-200/5! aria-[expanded=true]:bg-gray-600/5 dark:aria-[expanded=true]:bg-gray-200/5 text-sm font-medium text-gray-900 h-8 focus-visible:outline-primary dark:focus-visible:outline-primary-light dark:text-gray-300 group/trigger flex items-center gap-2 whitespace-nowrap" data-component-part="localization-select-trigger" id="localization-select-trigger" tabindex="0" type="button"><span class="truncate max-w-[12.5rem]">English</span><svg aria-hidden="true" class="size-3 transition-transform text-gray-400 group-hover:text-gray-600 dark:text-gray-600 dark:group-hover:text-gray-400 shrink-0 rotate-90 group-aria-[expanded=true]/trigger:rotate-[270deg] ml-auto" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div><div class="relative hidden lg:flex items-center flex-1 z-20 gap-2.5"><button aria-label="Open search" class="group/search flex pointer-events-auto rounded-xl w-full items-center text-sm leading-6 h-9 pl-3.5 pr-3 text-gray-500 dark:text-white/50 bg-background-light dark:bg-background-dark dark:brightness-[1.1] dark:ring-1 dark:hover:brightness-[1.25] ring-1 ring-gray-400/30 hover:ring-gray-600/30 dark:ring-gray-600/30 dark:hover:ring-gray-500/30 justify-between truncate gap-2" id="search-bar-entry" type="button"><div class="flex items-center gap-2"><svg aria-hidden="true" class="size-4 min-w-4 flex-none text-gray-700 group-hover/search:text-gray-800 dark:text-gray-400 dark:group-hover/search:text-gray-200" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M15.25 15.25L11.285 11.285" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M7.75 12.75C10.5114 12.75 12.75 10.5114 12.75 7.75C12.75 4.98858 10.5114 2.75 7.75 2.75C4.98858 2.75 2.75 4.98858 2.75 7.75C2.75 10.5114 4.98858 12.75 7.75 12.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><div class="truncate min-w-0">Search...</div></div><span class="flex-none text-xs font-semibold">⌘<!-- -->K</span></button><button aria-label="Toggle assistant panel" class="group/ai flex-none hidden lg:flex items-center justify-center gap-1.5 pl-3 pr-3.5 h-9 rounded-xl bg-background-light dark:bg-background-dark dark:brightness-[1.1] dark:ring-1 dark:hover:brightness-[1.25] ring-1 ring-gray-400/30 hover:ring-gray-600/30 dark:ring-gray-600/30 dark:hover:ring-gray-500/30" data-base-ui-tooltip-trigger="" id="assistant-entry" type="button"><svg aria-hidden="true" class="size-4 shrink-0 text-gray-700 group-hover/ai:text-gray-800 dark:text-gray-400 dark:group-hover/ai:text-gray-200" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.65799 2.99L4.39499 2.569L3.97399 1.306C3.83699 0.898 3.16199 0.898 3.02499 1.306L2.60399 2.569L1.34099 2.99C1.13699 3.058 0.998993 3.249 0.998993 3.464C0.998993 3.679 1.13699 3.87 1.34099 3.938L2.60399 4.359L3.02499 5.622C3.09299 5.826 3.28499 5.964 3.49999 5.964C3.71499 5.964 3.90599 5.826 3.97499 5.622L4.39599 4.359L5.65899 3.938C5.86299 3.87 6.00099 3.679 6.00099 3.464C6.00099 3.249 5.86199 3.058 5.65799 2.99Z" fill="currentColor" stroke="none"></path><path d="M9.5 2.75L11.412 7.587L16.25 9.5L11.412 11.413L9.5 16.25L7.587 11.413L2.75 9.5L7.587 7.587L9.5 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><span class="text-sm text-gray-500 dark:text-white/50 whitespace-nowrap">Ask Assistant</span></button></div><div class="flex-1 relative hidden lg:flex items-center ml-auto justify-end space-x-4"><nav aria-label="Main" class="text-sm"><ul class="flex space-x-6 items-center"><li class="navbar-link"><a class="flex items-center gap-1.5 whitespace-nowrap font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="https://platform.claude.com/" rel="noopener noreferrer" target="_blank"><span class="min-w-0 truncate">Claude Developer Platform</span></a></li><li class="block lg:hidden"><a class="flex items-center gap-1.5 whitespace-nowrap font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="https://claude.ai/code"><span class="min-w-0 truncate">Claude Code on the Web</span></a></li><li class="whitespace-nowrap hidden lg:flex" id="topbar-cta-button"><a class="group pl-3 pr-2 py-2 relative inline-flex items-center text-sm font-medium" href="https://claude.ai/code" rel="noopener noreferrer" target="_blank"><span class="absolute inset-0 bg-primary-dark rounded-xl group-hover:opacity-[0.9]"></span><div class="z-10 gap-1 flex items-center"><span class="text-white">Claude Code on the Web</span><svg aria-hidden="true" class="size-3 shrink-0 text-white/90" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></li></ul></nav><div class="flex items-center"><button aria-haspopup="menu" aria-label="Change theme preference" class="group disabled:pointer-events-none rounded-lg overflow-hidden gap-1 text-sm text-gray-950/50 dark:text-white/50 group-hover:text-gray-950/70 dark:group-hover:text-white/70 theme-preference-menu-trigger group p-2 flex items-center justify-center" data-component-name="theme-preference-menu" data-component-part="theme-preference-menu-trigger" data-testid="theme-preference-menu-trigger" id="theme-preference-menu-trigger" tabindex="0" type="button"><span data-theme-preference-icon="system"><svg class="size-4 text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 15.5L9 14.5L13.5 15.5" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9 11.75V14.5" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M14.25 2.75H3.75C2.64543 2.75 1.75 3.64543 1.75 4.75V9.75C1.75 10.8546 2.64543 11.75 3.75 11.75H14.25C15.3546 11.75 16.25 10.8546 16.25 9.75V4.75C16.25 3.64543 15.3546 2.75 14.25 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></span><span data-theme-preference-icon="light"><svg class="size-4 text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9 1.25V2.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M14.48 3.52002L13.773 4.22702" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M16.75 9H15.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M14.48 14.4799L13.773 13.7729" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9 16.75V15.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M3.52 14.4799L4.227 13.7729" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M1.25 9H2.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M3.52 3.52002L4.227 4.22702" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9 13.25C11.3472 13.25 13.25 11.3472 13.25 9C13.25 6.65279 11.3472 4.75 9 4.75C6.65279 4.75 4.75 6.65279 4.75 9C4.75 11.3472 6.65279 13.25 9 13.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></span><span data-theme-preference-icon="dark"><svg class="size-4 text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M13 11.75C9.548 11.75 6.75 8.95201 6.75 5.50001C6.75 4.14801 7.183 2.90101 7.912 1.87801C4.548 2.50601 2 5.45301 2 9.00001C2 13.004 5.246 16.25 9.25 16.25C12.622 16.25 15.448 13.944 16.259 10.826C15.309 11.409 14.196 11.75 13 11.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></span></button></div></div><div class="flex lg:hidden items-center gap-3"><button aria-label="Open search" class="text-gray-500 w-8 h-8 flex items-center justify-center hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300" id="search-bar-entry-mobile" type="button"><span class="sr-only">Search...</span><svg aria-hidden="true" class="forced-colors:forced-color-adjust-none forced-colors:bg-[color:CanvasText]! h-4 w-4 bg-gray-500 dark:bg-gray-400 hover:bg-gray-600 dark:hover:bg-gray-300" focusable="false" style='-webkit-mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/magnifying-glass.svg");-webkit-mask-repeat:no-repeat;-webkit-mask-position:center;mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/magnifying-glass.svg");mask-repeat:no-repeat;mask-position:center'></svg></button><button aria-label="Toggle assistant panel" id="assistant-entry-mobile"><svg aria-hidden="true" class="size-4.5 text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.65799 2.99L4.39499 2.569L3.97399 1.306C3.83699 0.898 3.16199 0.898 3.02499 1.306L2.60399 2.569L1.34099 2.99C1.13699 3.058 0.998993 3.249 0.998993 3.464C0.998993 3.679 1.13699 3.87 1.34099 3.938L2.60399 4.359L3.02499 5.622C3.09299 5.826 3.28499 5.964 3.49999 5.964C3.71499 5.964 3.90599 5.826 3.97499 5.622L4.39599 4.359L5.65899 3.938C5.86299 3.87 6.00099 3.679 6.00099 3.464C6.00099 3.249 5.86199 3.058 5.65799 2.99Z" fill="currentColor" stroke="none"></path><path d="M9.5 2.75L11.412 7.587L16.25 9.5L11.412 11.413L9.5 16.25L7.587 11.413L2.75 9.5L7.587 7.587L9.5 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button><button aria-label="More actions" class="h-7 w-5 flex items-center justify-center relative after:content-[''] after:absolute after:-inset-y-2 after:-left-1 after:-right-4" type="button"><svg aria-hidden="true" class="forced-colors:forced-color-adjust-none forced-colors:bg-[color:CanvasText]! size-4 shrink-0 bg-gray-500 dark:bg-gray-400 hover:bg-gray-600 dark:hover:bg-gray-300" focusable="false" style='-webkit-mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/ellipsis-vertical.svg");-webkit-mask-repeat:no-repeat;-webkit-mask-position:center;mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/ellipsis-vertical.svg");mask-repeat:no-repeat;mask-position:center'></svg></button></div></div></div><button class="flex items-center h-14 py-4 px-5 lg:hidden focus:outline-0 w-full text-left" type="button"><div class="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"><span class="sr-only">Navigation</span><svg aria-hidden="true" class="size-4 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M2.25 9H15.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.25 3.75H15.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.25 14.25H15.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div><div class="ml-4 flex text-sm leading-6 whitespace-nowrap min-w-0 space-x-3 overflow-hidden"><div class="flex items-center space-x-3 shrink-0"><span>Core concepts</span><svg aria-hidden="true" class="size-3 text-gray-400 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div><div class="font-semibold text-gray-900 truncate dark:text-gray-200 min-w-0 flex-1">Explore the context window</div></div></button></div><div class="hidden lg:flex px-12 h-12"><div class="nav-tabs h-full flex text-sm gap-x-6"><a aria-current="location" class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium hover:text-gray-800 dark:hover:text-gray-300 text-gray-800 dark:text-gray-200 [text-shadow:-0.2px_0_0_currentColor,0.2px_0_0_currentColor]" data-active="true" href="/docs/en/overview">Getting started<div class="absolute bottom-0 h-[1.5px] w-full left-0 bg-primary dark:bg-primary-light"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/agents">Build with Claude Code<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/admin-setup">Administration<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/settings">Configuration<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/cli-reference">Reference<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/agent-sdk/overview">Agent SDK<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/whats-new">What's New<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a><a class="link nav-tabs-item group relative h-full gap-2 flex items-center font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300" href="/docs/en/legal-and-compliance">Resources<div class="absolute bottom-0 h-[1.5px] w-full left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700"></div></a></div></div><style>:root{--topbar-tabs-height:3rem}</style></div></div></header><div class="scroll-mt-(--scroll-mt) peer-[.is-custom]:max-w-none peer-[.is-center]:max-w-3xl peer-[.is-not-custom]:peer-[.is-not-center]:max-w-8xl peer-[.is-not-custom]:px-4 peer-[.is-not-custom]:mx-auto peer-[.is-not-custom]:lg:px-8 peer-[.is-wide]:lg:*:last:max-w-216 peer-[.is-not-custom]:peer-[.is-not-center]:lg:flex peer-[.is-custom]:[&amp;&gt;:first-child]:hidden! peer-[.is-custom]:[&amp;&gt;:first-child]:sm:hidden! peer-[.is-custom]:[&amp;&gt;:first-child]:md:hidden! peer-[.is-custom]:[&amp;&gt;:first-child]:lg:hidden! peer-[.is-custom]:[&amp;&gt;:first-child]:xl:hidden! peer-[.is-center]:[&amp;&gt;:first-child]:hidden! peer-[.is-center]:[&amp;&gt;:first-child]:sm:hidden! peer-[.is-center]:[&amp;&gt;:first-child]:md:hidden! peer-[.is-center]:[&amp;&gt;:first-child]:lg:hidden! peer-[.is-center]:[&amp;&gt;:first-child]:xl:hidden!"><nav aria-label="Pages" class="z-20 hidden lg:block sticky self-start shrink-0 w-[18rem] top-(--mintlify-slot-header-height,calc(4rem+var(--topbar-tabs-height,0rem))) h-[calc(100dvh-var(--mintlify-slot-header-height,calc(4rem+var(--topbar-tabs-height,0rem))))]" id="sidebar"><div class="min-w-0 absolute! inset-0 z-10" data-component-part="scroll-area" id="sidebar-content" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px"><div class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] pr-8 pb-10 base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_2tbsnlhjiuasnpfiutb_-viewport" role="presentation" style="overflow:scroll" tabindex="-1"><div class="min-w-0! w-full" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="relative lg:text-sm lg:leading-6"><div class="sticky top-0 h-8 pointer-events-none z-10 bg-linear-to-b from-background-light dark:from-background-dark"></div><div id="navigation-items"><div><div class="sidebar-group-header flex items-center gap-2.5 pl-4 mb-3.5 lg:mb-2.5 font-semibold text-gray-900 dark:text-gray-200"><h3 class="sidebar-title text-[length:inherit] font-[inherit] leading-[inherit]"><span>Getting started</span></h3></div><ul class="sidebar-group space-y-px"><li class="relative scroll-m-4 first:scroll-m-20" data-title="Overview" id="/en/overview"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 break-words hyphens-auto rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/overview" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Overview</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Quickstart" id="/en/quickstart"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 break-words hyphens-auto rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/quickstart" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Quickstart</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Changelog" id="/en/changelog"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 break-words hyphens-auto rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/changelog" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Changelog</span></div></div></a></li></ul></div><div class="mt-6 lg:mt-8"><div class="sidebar-group-header flex items-center gap-2.5 pl-4 mb-3.5 lg:mb-2.5 font-semibold text-gray-900 dark:text-gray-200"><h3 class="sidebar-title text-[length:inherit] font-[inherit] leading-[inherit]"><span>Core concepts</span></h3></div><ul class="sidebar-group space-y-px"><li class="relative scroll-m-4 first:scroll-m-20" data-title="How Claude Code works" id="/en/how-claude-code-works"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/how-claude-code-works" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">How Claude Code works</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Extend Claude Code" id="/en/features-overview"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/features-overview" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Extend Claude Code</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Explore the .claude directory" id="/en/claude-directory"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/claude-directory" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Explore the .claude directory</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-active="true" data-active-nav-item="true" data-title="Explore the context window" id="/en/context-window"><a aria-current="page" class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] bg-primary/10 text-primary [text-shadow:-0.2px_0_0_currentColor,0.2px_0_0_currentColor] dark:text-primary-light dark:bg-primary-light/10" href="/docs/en/context-window" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Explore the context window</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Prompt caching" id="/en/prompt-caching"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/prompt-caching" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Prompt caching</span></div></div></a></li></ul></div><div class="mt-6 lg:mt-8"><div class="sidebar-group-header flex items-center gap-2.5 pl-4 mb-3.5 lg:mb-2.5 font-semibold text-gray-900 dark:text-gray-200"><h3 class="sidebar-title text-[length:inherit] font-[inherit] leading-[inherit]"><span>Use Claude Code</span></h3></div><ul class="sidebar-group space-y-px"><li class="relative scroll-m-4 first:scroll-m-20" data-title="Store instructions and memories" id="/en/memory"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/memory" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Store instructions and memories</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Manage sessions" id="/en/sessions"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/sessions" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Manage sessions</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Common workflows" id="/en/common-workflows"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/common-workflows" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Common workflows</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Prompt library" id="/en/prompt-library"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/prompt-library" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Prompt library</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Best practices" id="/en/best-practices"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/best-practices" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Best practices</span></div></div></a></li></ul></div><div class="mt-6 lg:mt-8"><div class="sidebar-group-header flex items-center gap-2.5 pl-4 mb-3.5 lg:mb-2.5 font-semibold text-gray-900 dark:text-gray-200"><h3 class="sidebar-title text-[length:inherit] font-[inherit] leading-[inherit]"><span>Platforms and integrations</span></h3></div><ul class="sidebar-group space-y-px"><li class="relative scroll-m-4 first:scroll-m-20" data-title="Overview" id="/en/platforms"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 break-words hyphens-auto rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/platforms" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Overview</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Remote Control" id="/en/remote-control"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/remote-control" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Remote Control</span></div></div></a></li><li class="space-y-px" data-group-tag="" data-title="Claude Code on the web"><button aria-expanded="false" class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" style="padding-left:1rem"><div class=""><span>Claude Code on the web</span></div><div class="h-[1lh] flex items-center shrink-0"><svg aria-hidden="true" class="size-3 transition-transform text-gray-400 group-hover:text-gray-600 dark:text-gray-600 dark:group-hover:text-gray-400 shrink-0 w-2 h-[1lh] -mr-0.5" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></button></li><li class="space-y-px" data-group-tag="" data-title="Claude Code on desktop"><button aria-expanded="false" class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" style="padding-left:1rem"><div class=""><span>Claude Code on desktop</span></div><div class="h-[1lh] flex items-center shrink-0"><svg aria-hidden="true" class="size-3 transition-transform text-gray-400 group-hover:text-gray-600 dark:text-gray-600 dark:group-hover:text-gray-400 shrink-0 w-2 h-[1lh] -mr-0.5" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></button></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Mobile" id="/en/mobile"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 break-words hyphens-auto rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/mobile" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Mobile</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Chrome extension" id="/en/chrome"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/chrome" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Chrome extension</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Computer use (preview)" id="/en/computer-use"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/computer-use" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Computer use (preview)</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Visual Studio Code" id="/en/vs-code"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/vs-code" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Visual Studio Code</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="JetBrains IDEs" id="/en/jetbrains"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/jetbrains" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">JetBrains IDEs</span></div></div></a></li><li class="space-y-px" data-group-tag="" data-title="Code review &amp; CI/CD"><button aria-expanded="false" class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" style="padding-left:1rem"><div class=""><span>Code review &amp; CI/CD</span></div><div class="h-[1lh] flex items-center shrink-0"><svg aria-hidden="true" class="size-3 transition-transform text-gray-400 group-hover:text-gray-600 dark:text-gray-600 dark:group-hover:text-gray-400 shrink-0 w-2 h-[1lh] -mr-0.5" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></button></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Claude Code in Slack" id="/en/slack"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/slack" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Claude Code in Slack</span></div></div></a></li><li class="relative scroll-m-4 first:scroll-m-20" data-title="Claude Tag" id="/en/claude-tag"><a class="group flex items-start pr-3 py-1.5 cursor-pointer gap-x-3 text-left focus-visible:-outline-offset-2 rounded-xl w-full outline-offset-[-1px] hover:bg-gray-600/5 dark:hover:bg-gray-200/5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300" href="/docs/en/claude-tag" style="padding-left:1rem"><div class="flex-1 flex min-w-0 items-start gap-x-2.5"><div class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]"><span class="min-w-0 max-w-full break-words hyphens-auto">Claude Tag</span></div></div></a></li></ul></div><script>(function () {
+  try {
+    if (window.__mintlifyInitialSidebarScrollDone) return;
+    window.__mintlifyInitialSidebarScrollDone = true;
+
+    var path = (window.location.pathname || '/').split('#')[0].split('?')[0];
+    if (path.endsWith('/index')) path = path.slice(0, -6);
+    else if (path === 'index') path = '';
+
+    var candidates = [];
+    if (path) candidates.push(path);
+    if (path.startsWith('/')) candidates.push(path.slice(1));
+    else candidates.push('/' + path);
+
+    var item = null;
+    for (var i = 0; i < candidates.length && !item; i++) {
+      var matches = document.querySelectorAll('[id="' + candidates[i].replace(/"/g, '\\"') + '"]');
+      for (var j = 0; j < matches.length; j++) {
+        if (matches[j].closest('#sidebar, #sidebar-content')) {
+          item = matches[j];
+          break;
         }
-        .dark .cw-root {
-          --cw-bg: #111110;
-          --cw-text: #E8E6DC;
-          --cw-text-2: #B8B6AE;
-          --cw-text-3: #9C9A92;
-          --cw-text-dim: #8A8880;
-          --cw-text-faint: #6E6C64;
-          --cw-surface: rgba(255,255,255,0.02);
-          --cw-surface-2: rgba(255,255,255,0.015);
-          --cw-border: rgba(255,255,255,0.06);
-          --cw-track: rgba(255,255,255,0.03);
-          --cw-hover: rgba(255,255,255,0.04);
-          --cw-rail: rgba(255,255,255,0.04);
-          --cw-scrollbar: rgba(255,255,255,0.18);
-        }
-        .cw-scroll::-webkit-scrollbar { width: 6px; }
-        .cw-scroll::-webkit-scrollbar-track { background: transparent; }
-        .cw-scroll::-webkit-scrollbar-thumb { background: var(--cw-scrollbar); border-radius: 3px; }
-        @keyframes cw-blink { 50% { opacity: 0; } }
-        @keyframes cw-fadein { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
-        .cw-compacted-row { animation: cw-fadein 0.3s ease-out backwards; }
-        .cw-mobile-fallback { display: none; padding: 14px 16px; border-radius: 8px; font-size: 14px; border: 1px solid rgba(0,0,0,0.1); background: rgba(0,0,0,0.03); }
-        .dark .cw-mobile-fallback { border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.04); }
-        @media (max-width: 700px) {
-          .cw-root { display: none !important; }
-          .cw-mobile-fallback { display: block; }
-        }
-      `}</style>
+      }
+    }
+    if (!item) return;
 
-      {}
-      <div style={{
-    padding: '16px 20px 12px',
-    display: 'flex',
-    alignItems: 'flex-end',
-    gap: 24
-  }}>
-        <div style={{
-    flex: 1,
-    minWidth: 0
-  }}>
-          <div style={{
-    fontSize: 18,
-    fontWeight: 600,
-    letterSpacing: -0.3,
-    lineHeight: 1
-  }}>
-            Explore the context window
-          </div>
-          <div style={{
-    fontSize: 14,
-    color: 'var(--cw-text-dim)',
-    marginTop: 4
-  }}>
-            A simulated session showing what enters context and what it costs
-          </div>
-        </div>
-        <div style={{
-    textAlign: 'right',
-    flexShrink: 0
-  }}>
-          <div style={{
-    fontFamily: mono,
-    fontSize: 20,
-    fontWeight: 600,
-    color: barColor,
-    letterSpacing: -0.5,
-    lineHeight: 1
-  }}>
-            ~{fmt(totalTokens)}<span style={{
-    fontSize: 15,
-    fontWeight: 500,
-    marginLeft: 4
-  }}>tokens</span>
-          </div>
-          <div style={{
-    fontFamily: mono,
-    fontSize: 13,
-    color: 'var(--cw-text-dim)',
-    marginTop: 2
-  }} title="Token counts are illustrative. Actual values vary with your CLAUDE.md size, MCP servers, and file lengths.">
-            / {fmt(MAX)} · illustrative
-          </div>
-        </div>
-      </div>
+    var parent = item.closest('[data-component-part="scroll-area-viewport"]');
+    if (!parent) {
+      parent = item.parentElement;
+      while (parent) {
+        var style = getComputedStyle(parent);
+        if (style.overflowY === 'auto' || style.overflowY === 'scroll') break;
+        parent = parent.parentElement;
+      }
+    }
+    if (!parent) return;
 
-      {}
-      <div style={{
-    padding: '0 20px'
-  }}>
-        <div style={{
-    height: 4,
-    borderRadius: 2,
-    background: 'var(--cw-track)',
-    overflow: 'hidden',
-    marginBottom: 6
-  }}>
-          <div style={{
-    width: pct + '%',
-    height: '100%',
-    background: barColor,
-    transition: 'width 0.6s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s'
-  }} />
-        </div>
-        <div style={{
-    height: 28,
-    borderRadius: 5,
-    background: 'var(--cw-track)',
-    border: '1px solid var(--cw-border)',
-    overflow: 'hidden',
-    display: 'flex'
-  }}>
-          {blocks.map((b, i) => {
-    const w = Math.max(b.tokens / MAX * 100, 0.15);
-    const isHov = b.visIdx === activeIdx;
-    const catMatch = hovCat && b.color === hovCat;
-    const dimmed = hovCat ? !catMatch : activeIdx !== null && !isHov;
-    return <div key={b.id} onMouseEnter={() => setHovIdx(b.visIdx)} onMouseLeave={() => setHovIdx(null)} onClick={() => setSelIdx(selIdx === b.visIdx ? null : b.visIdx)} style={{
-      width: w + '%',
-      height: '100%',
-      background: b.color,
-      opacity: isHov || catMatch ? 1 : dimmed ? 0.25 : 0.65,
-      borderRight: i < blocks.length - 1 ? '0.5px solid var(--cw-border)' : 'none',
-      transition: 'opacity 0.15s',
-      cursor: 'pointer'
-    }} />;
-  })}
-        </div>
-        <div style={{
-    display: 'flex',
-    gap: 12,
-    marginTop: 6,
-    flexWrap: 'wrap',
-    justifyContent: 'space-between'
-  }}>
-          <div style={{
-    display: 'flex',
-    gap: 12,
-    flexWrap: 'wrap'
-  }}>
-            {LEGEND.map(x => {
-    const active = hovCat === x.c;
-    return <div key={x.l} onMouseEnter={() => setHovCat(x.c)} onMouseLeave={() => setHovCat(null)} style={{
-      display: 'flex',
-      alignItems: 'center',
-      gap: 4,
-      padding: '2px 6px',
-      borderRadius: 4,
-      cursor: 'pointer',
-      background: active ? 'var(--cw-hover)' : 'transparent',
-      transition: 'background 0.1s'
-    }}>
-                  <div style={{
-      width: 6,
-      height: 6,
-      borderRadius: 1.5,
-      background: x.c,
-      opacity: active ? 1 : 0.7
-    }} />
-                  <span style={{
-      fontSize: 12,
-      color: active ? 'var(--cw-text)' : 'var(--cw-text-dim)'
-    }}>{x.l}</span>
-                </div>;
-  })}
-          </div>
-          <div style={{
-    display: 'flex',
-    gap: 6,
-    alignItems: 'center',
-    fontSize: 12,
-    color: 'var(--cw-text-dim)'
-  }}>
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#558A42" strokeWidth="2.5">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
-            </svg>
-            <span>= appears in your terminal</span>
-          </div>
-        </div>
-      </div>
+    var parentRect = parent.getBoundingClientRect();
+    var itemRect = item.getBoundingClientRect();
+    if (itemRect.top >= parentRect.top && itemRect.bottom <= parentRect.bottom) return;
 
-      {}
-      <div style={{
-    display: 'flex',
-    padding: '14px 20px 0',
-    gap: 16,
-    height: isFullscreen ? 'calc(100vh - 240px)' : 420
-  }}>
+    var itemTopRelative = itemRect.top - parentRect.top + parent.scrollTop;
+    parent.scrollTop = itemTopRelative - parentRect.height / 2 + itemRect.height / 2;
+  } catch (e) {}
+})();</script></div></div></div></div></div></nav><main class="lg:flex-1 lg:min-w-0" id="content-container"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://code.claude.com/#organization","name":"Claude Code Docs","url":"https://code.claude.com","logo":{"@type":"ImageObject","url":"https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/light.svg?fit=max&auto=format&n=c5r9_6tjPMzFdDDT&q=85&s=78fd01ff4f4340295a4f66e2ea54903c"}},{"@type":"WebSite","@id":"https://code.claude.com/docs#website","name":"Claude Code Docs","url":"https://code.claude.com/docs","publisher":{"@id":"https://code.claude.com/#organization"}},{"@type":"WebPage","@id":"https://code.claude.com/docs/en/context-window#webpage","url":"https://code.claude.com/docs/en/context-window","name":"Explore the context window","description":"An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.","dateModified":"2026-08-24T18:59:23.920Z","isPartOf":{"@id":"https://code.claude.com/docs#website"},"breadcrumb":{"@id":"https://code.claude.com/docs/en/context-window#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://code.claude.com/docs/en/context-window#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Core concepts","item":"https://code.claude.com/docs/en/how-claude-code-works"},{"@type":"ListItem","position":2,"name":"Explore the context window","item":"https://code.claude.com/docs/en/context-window"}]},{"@type":["Article","TechArticle"],"@id":"https://code.claude.com/docs/en/context-window#article","headline":"Explore the context window","name":"Explore the context window","description":"An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.","url":"https://code.claude.com/docs/en/context-window","mainEntityOfPage":{"@id":"https://code.claude.com/docs/en/context-window#webpage"},"dateModified":"2026-08-24T18:59:23.920Z","publisher":{"@id":"https://code.claude.com/#organization"},"isPartOf":{"@id":"https://code.claude.com/docs#website"}}]}</script><script>document.documentElement.setAttribute('data-page-mode', "wide");</script><span class="fixed inset-0 bg-background-light dark:bg-background-dark -z-10 pointer-events-none" id="background-color"></span><span class="block absolute dark:hidden inset-0 overflow-hidden pointer-events-none"></span><span class="hidden absolute dark:block inset-0 overflow-hidden pointer-events-none"></span><style data-custom-css-index="0" data-custom-css-path="button.css">
+/* These styles mirror the internal design system's button component, converted to plain CSS. */
 
-        {}
-        <div ref={scrollRef} className="cw-scroll" style={{
-    flex: 1,
-    minWidth: 0,
-    overflowY: 'auto',
-    paddingRight: 8,
-    scrollBehavior: 'smooth'
-  }}>
-          {visible.length === 0 && !playing && <div style={{
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 16
-  }}>
-              <div style={{
-    fontFamily: mono,
-    fontSize: 16,
-    color: 'var(--cw-text-dim)',
-    display: 'flex',
-    alignItems: 'center',
-    gap: 8
-  }}>
-                <span style={{
-    color: 'var(--cw-text-faint)'
-  }}>$</span>
-                <span>claude</span>
-                <span style={{
-    display: 'inline-block',
-    width: 8,
-    height: 16,
-    background: 'var(--cw-text-dim)',
-    opacity: 0.5,
-    animation: 'cw-blink 1s step-end infinite'
-  }} />
-              </div>
-              <button onClick={() => setPlaying(true)} style={{
-    padding: '10px 20px',
-    borderRadius: 8,
-    border: '1px solid rgba(217,119,87,0.3)',
-    background: 'rgba(217,119,87,0.08)',
-    color: '#D97757',
-    fontSize: 15,
-    fontWeight: 600,
-    cursor: 'pointer',
-    display: 'flex',
-    alignItems: 'center',
-    gap: 8
-  }}>
-                <span>▶</span>
-                <span>Start session</span>
-              </button>
-              <div style={{
-    fontSize: 13,
-    color: 'var(--cw-text-faint)',
-    maxWidth: 280,
-    textAlign: 'center',
-    lineHeight: 1.5
-  }}>
-                Watch what loads into context, from the moment you run <code style={{
-    fontFamily: mono
-  }}>claude</code> through a full conversation.
-              </div>
-            </div>}
-          {isCompacted && <div style={{
-    marginBottom: 10,
-    padding: '10px 12px',
-    borderRadius: 6,
-    background: 'rgba(217,119,87,0.05)',
-    border: '1px solid rgba(217,119,87,0.15)'
-  }}>
-              <div style={{
-    fontSize: 13,
-    fontWeight: 600,
-    color: '#D97757',
-    marginBottom: 3
-  }}>
-                After /compact
-              </div>
-              <div style={{
-    fontSize: 13,
-    color: 'var(--cw-text-3)',
-    lineHeight: 1.5,
-    fontFamily: mono
-  }}>
-                {fmt(preCompactTotal)} → {fmt(totalTokens)} tokens · freed {fmt(preCompactTotal - totalTokens)}
-              </div>
-              <div style={{
-    fontSize: 13,
-    color: 'var(--cw-text-dim)',
-    lineHeight: 1.5,
-    marginTop: 4
-  }}>
-                This is what's left in context: startup content, which lives outside the message history and reloads after compaction, a structured summary of the entire conversation, the files modified most recently, which Claude Code re-reads along with the rules that match them, and the body of each skill you invoked. Skill descriptions don't reload.
-              </div>
-            </div>}
-          {time > 0 && visible.length > 0 && <div style={{
-    fontSize: 12,
-    fontWeight: 700,
-    color: 'var(--cw-text-faint)',
-    textTransform: 'uppercase',
-    letterSpacing: 0.6,
-    marginBottom: 6,
-    paddingLeft: 28
-  }}>
-              {isCompacted ? 'Reloaded after compact' : 'Before you type anything'}
-            </div>}
+/* Base button styles */
+.btn {
+  position: relative;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 5rem;
+  height: 2.25rem;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  font-family: Styrene;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  &:active {
+    transform: scale(0.985);
+  }
 
-          {time > 0 && visible.map((evt, i) => {
-    const meta = KIND_META[evt.kind];
-    const isHov = hovIdx === i;
-    const prevKind = i > 0 ? visible[i - 1].kind : null;
-    const isSub = evt.kind === 'sub';
-    const enteringSubagent = isSub && prevKind !== 'sub';
-    const leavingSubagent = prevKind === 'sub' && !isSub;
-    let showPhase = null;
-    if (isCompacted && evt.restoredAfterCompact) {
-      if (prevKind === 'compact') showPhase = 'Restored after /compact';
-    } else if (evt.kind === 'user' && prevKind !== 'user') showPhase = 'You'; else if (evt.kind === 'claude' && prevKind === 'user') showPhase = 'Claude works'; else if (evt.label === 'Conversation summary') showPhase = 'Summarized by /compact';
-    const isNewRow = isCompacted && !(evt.kind === 'auto' && evt.t < STARTUP_END);
-    return <div key={evt.label + evt.t} className={isNewRow ? 'cw-compacted-row' : ''} style={isNewRow ? {
-      animationDelay: `${i * 60}ms`
-    } : {}}>
-                {showPhase && <div style={{
-      fontSize: 12,
-      fontWeight: 700,
-      color: 'var(--cw-text-faint)',
-      textTransform: 'uppercase',
-      letterSpacing: 0.6,
-      marginTop: 14,
-      marginBottom: 6,
-      paddingLeft: 28
-    }}>
-                    {showPhase}
-                  </div>}
-                {enteringSubagent && <div style={{
-      marginLeft: 28,
-      marginTop: 6,
-      marginBottom: 2,
-      paddingLeft: 10,
-      borderLeft: '2px solid rgba(155,123,196,0.4)',
-      fontSize: 12,
-      fontWeight: 600,
-      color: '#9B7BC4',
-      textTransform: 'uppercase',
-      letterSpacing: 0.5
-    }}>
-                    Subagent's separate context window
-                  </div>}
-                {leavingSubagent && <div style={{
-      marginLeft: 28,
-      marginBottom: 6,
-      paddingLeft: 10,
-      paddingBottom: 6,
-      borderLeft: '2px solid rgba(155,123,196,0.4)',
-      fontSize: 12,
-      color: 'var(--cw-text-dim)',
-      fontFamily: mono
-    }}>
-                    ↓ {fmt(subTotal)} tokens stayed in subagent's context · only the summary returns
-                  </div>}
-                <div onMouseEnter={() => setHovIdx(i)} onMouseLeave={() => setHovIdx(null)} onClick={() => setSelIdx(selIdx === i ? null : i)} style={{
-      display: 'flex',
-      alignItems: 'flex-start',
-      borderRadius: 6,
-      cursor: 'pointer',
-      background: selIdx === i || isHov ? 'var(--cw-hover)' : 'transparent',
-      outline: selIdx === i ? '1px solid rgba(217,119,87,0.4)' : 'none',
-      opacity: hovCat && evt.color !== hovCat ? 0.35 : 1,
-      transition: 'background 0.1s, opacity 0.15s',
-      marginLeft: isSub ? 28 : 0,
-      paddingLeft: isSub ? 10 : 0,
-      borderLeft: isSub ? '2px solid rgba(155,123,196,0.4)' : 'none'
-    }}>
-                  <div style={{
-      width: 28,
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      paddingTop: 8,
-      flexShrink: 0
-    }}>
-                    <div style={{
-      width: evt.kind === 'user' || evt.kind === 'compact' ? 10 : 7,
-      height: evt.kind === 'user' || evt.kind === 'compact' ? 10 : 7,
-      borderRadius: '50%',
-      background: evt.color,
-      opacity: isHov ? 1 : 0.6,
-      transition: 'opacity 0.15s',
-      boxShadow: isHov ? `0 0 8px ${evt.color}40` : 'none'
-    }} />
-                    {i < visible.length - 1 && <div style={{
-      width: 1.5,
-      flex: 1,
-      background: 'var(--cw-rail)',
-      marginTop: 2,
-      minHeight: 6
-    }} />}
-                  </div>
-                  <div style={{
-      flex: 1,
-      minWidth: 0,
-      padding: '5px 10px 5px 4px',
-      display: 'flex',
-      alignItems: 'center',
-      gap: 8
-    }}>
-                    <span style={{
-      fontSize: 12,
-      fontWeight: 600,
-      padding: '1px 5px',
-      borderRadius: 3,
-      background: meta.badgeBg,
-      color: meta.badgeColor,
-      flexShrink: 0,
-      fontFamily: mono
-    }}>
-                      {meta.badge}
-                    </span>
-                    <span style={{
-      fontSize: 15,
-      fontFamily: mono,
-      color: isHov ? 'var(--cw-text)' : evt.kind === 'user' ? '#558A42' : evt.kind === 'auto' ? 'var(--cw-text-dim)' : 'var(--cw-text-2)',
-      flex: 1,
-      minWidth: 0,
-      overflow: 'hidden',
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap',
-      fontWeight: evt.kind === 'user' ? 550 : 400
-    }}>
-                      {evt.label}
-                    </span>
-                    {evt.tokens > 0 && <span style={{
-      fontSize: 12,
-      fontFamily: mono,
-      color: 'var(--cw-text-faint)',
-      flexShrink: 0
-    }}>
-                        +{fmt(evt.tokens)}
-                      </span>}
-                    {evt.subTokens > 0 && <span style={{
-      fontSize: 12,
-      fontFamily: mono,
-      color: '#9B7BC4',
-      flexShrink: 0,
-      opacity: 0.6
-    }}>
-                        +{fmt(evt.subTokens)}
-                      </span>}
-                    {evt.tokens > 0 && <div style={{
-      width: 50,
-      height: 5,
-      borderRadius: 2,
-      background: 'var(--cw-track)',
-      flexShrink: 0,
-      overflow: 'hidden'
-    }}>
-                        <div style={{
-      width: Math.min(evt.tokens / 5000 * 100, 100) + '%',
-      height: '100%',
-      background: evt.color,
-      opacity: isHov ? 0.8 : 0.4,
-      transition: 'opacity 0.15s'
-    }} />
-                      </div>}
-                    <span style={{
-      width: 14,
-      flexShrink: 0,
-      display: 'flex',
-      justifyContent: 'center'
-    }} title={VIS_META[evt.vis].label}>
-                      {evt.vis !== 'hidden' && <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={evt.vis === 'full' ? '#558A42' : 'currentColor'} style={{
-      color: 'var(--cw-text-faint)',
-      opacity: evt.vis === 'full' ? 1 : 0.5
-    }} strokeWidth="2">
-                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
-                        </svg>}
-                    </span>
-                  </div>
-                </div>
-              </div>;
-  })}
+  /* Size variants */
+  &.size-xs {
+    height: 1.75rem;
+    min-width: 3.5rem;
+    padding: 0 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    gap: 0.25rem;
+  }
+  
+  &.size-sm {
+    height: 2rem;
+    min-width: 4rem;
+    padding: 0 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+  }
 
-          {activeGate && (activeGate.kind === 'prompt' || activeGate.kind === 'bang' || activeGate.kind === 'slash') && <div style={{
-    paddingLeft: 28,
-    marginTop: 12,
-    paddingRight: 8
-  }}>
-              <div style={{
-    fontSize: 11,
-    fontWeight: 600,
-    color: '#6BA656',
-    fontFamily: mono,
-    textTransform: 'uppercase',
-    letterSpacing: 0.5,
-    marginBottom: 4,
-    paddingLeft: 2
-  }}>
-                You type in your terminal
-              </div>
-              <div style={{
-    display: 'flex',
-    alignItems: 'flex-start',
-    gap: 8,
-    padding: '10px 12px',
-    borderRadius: 6,
-    background: 'rgba(85,138,66,0.06)',
-    border: '1px solid rgba(85,138,66,0.2)'
-  }}>
-                <span style={{
-    color: '#558A42',
-    fontSize: 15,
-    fontFamily: mono,
-    flexShrink: 0
-  }}>❯</span>
-                <span style={{
-    fontSize: 15,
-    fontFamily: mono,
-    color: 'var(--cw-text-2)',
-    flex: 1,
-    lineHeight: 1.5
-  }}>
-                  {activeGate.text}
-                  <span style={{
-    display: 'inline-block',
-    width: 7,
-    height: 13,
-    marginLeft: 2,
-    background: '#558A42',
-    opacity: 0.5,
-    verticalAlign: 'middle',
-    animation: 'cw-blink 1s step-end infinite'
-  }} />
-                </span>
-                <button onClick={sendPrompt} style={{
-    padding: '5px 12px',
-    borderRadius: 5,
-    border: 'none',
-    background: '#558A42',
-    color: '#fff',
-    fontSize: 13,
-    fontWeight: 600,
-    cursor: 'pointer',
-    flexShrink: 0
-  }}>
-                  {activeGate.kind === 'prompt' ? 'Send ↵' : 'Run ↵'}
-                </button>
-              </div>
-            </div>}
-          {activeGate && activeGate.kind === 'compact' && <div style={{
-    paddingLeft: 28,
-    marginTop: 12,
-    paddingRight: 8
-  }}>
-              <div style={{
-    padding: '12px 14px',
-    borderRadius: 6,
-    background: 'rgba(217,119,87,0.06)',
-    border: '1px solid rgba(217,119,87,0.25)'
-  }}>
-                <div style={{
-    fontSize: 13,
-    color: 'var(--cw-text-3)',
-    marginBottom: 8,
-    lineHeight: 1.5
-  }}>
-                  Context is at <span style={{
-    fontFamily: mono,
-    fontWeight: 600,
-    color: barColor
-  }}>{fmt(totalTokens)} tokens</span>.
-                  Run <code style={{
-    fontFamily: mono,
-    background: 'var(--cw-track)',
-    padding: '1px 4px',
-    borderRadius: 3
-  }}>/compact</code> to
-                  summarize older exchanges and free space for more work.
-                </div>
-                <div style={{
-    display: 'flex',
-    alignItems: 'center',
-    gap: 8
-  }}>
-                  <span style={{
-    color: '#D97757',
-    fontSize: 15,
-    fontFamily: mono
-  }}>❯</span>
-                  <span style={{
-    fontSize: 15,
-    fontFamily: mono,
-    color: 'var(--cw-text-2)',
-    flex: 1
-  }}>
-                    {activeGate.text}
-                  </span>
-                  <button onClick={sendPrompt} style={{
-    padding: '5px 12px',
-    borderRadius: 5,
-    border: 'none',
-    background: '#D97757',
-    color: '#fff',
-    fontSize: 13,
-    fontWeight: 600,
-    cursor: 'pointer',
-    flexShrink: 0
-  }}>
-                    Run ↵
-                  </button>
-                </div>
-              </div>
-            </div>}
-        </div>
+  &.size-lg {
+    height: 2.75rem;
+    min-width: 6rem;
+    padding: 0 1.25rem;
+    border-radius: 0.6rem;
+  }
 
-        {}
-        <div style={{
-    width: 300,
-    flexShrink: 0,
-    display: 'flex',
-    flexDirection: 'column'
-  }}>
-          <div ref={detailRef} className="cw-scroll" style={{
-    padding: '14px 16px',
-    borderRadius: 10,
-    background: 'var(--cw-surface)',
-    border: '1px solid var(--cw-border)',
-    flex: 1,
-    minHeight: 0,
-    overflowY: 'auto',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 10
-  }}>
-            {hovEvent ? <div>
-                <div style={{
-    display: 'flex',
-    alignItems: 'center',
-    gap: 8,
-    marginBottom: 8
-  }}>
-                  <div style={{
-    width: 10,
-    height: 10,
-    borderRadius: 3,
-    background: hovEvent.color,
-    opacity: 0.8
-  }} />
-                  <span style={{
-    fontSize: 16,
-    fontWeight: 600
-  }}>{hovEvent.label}</span>
-                </div>
-                <div style={{
-    display: 'flex',
-    width: 'fit-content',
-    padding: '3px 8px',
-    borderRadius: 4,
-    marginBottom: 8,
-    background: KIND_META[hovEvent.kind].badgeBg
-  }}>
-                  <span style={{
-    fontSize: 12,
-    fontWeight: 600,
-    color: KIND_META[hovEvent.kind].badgeColor
-  }}>
-                    {KIND_META[hovEvent.kind].detail}
-                  </span>
-                </div>
-                {hovEvent.tokens > 0 && <div style={{
-    fontSize: 14,
-    fontFamily: mono,
-    color: 'var(--cw-text-dim)',
-    marginBottom: 6
-  }}>
-                    {fmt(hovEvent.tokens)} tokens
-                  </div>}
-                {hovEvent.subTokens > 0 && <div style={{
-    fontSize: 14,
-    fontFamily: mono,
-    color: '#9B7BC4',
-    marginBottom: 6
-  }}>
-                    {fmt(hovEvent.subTokens)} tokens in the subagent's context
-                  </div>}
-                <p style={{
-    fontSize: 15,
-    color: 'var(--cw-text-3)',
-    lineHeight: 1.55,
-    margin: 0
-  }}>
-                  {renderWithCode(hovEvent.desc)}
-                </p>
-                <div style={{
-    marginTop: 10,
-    padding: '8px 10px',
-    borderRadius: 6,
-    background: hovEvent.vis === 'full' ? 'rgba(85,138,66,0.08)' : 'var(--cw-surface-2)',
-    border: '1px solid ' + (hovEvent.vis === 'full' ? 'rgba(85,138,66,0.2)' : 'var(--cw-border)')
-  }}>
-                  <div style={{
-    display: 'flex',
-    alignItems: 'center',
-    gap: 6,
-    marginBottom: 3
-  }}>
-                    <span style={{
-    fontSize: 13,
-    color: hovEvent.vis === 'full' ? '#558A42' : 'var(--cw-text-dim)'
-  }}>
-                      {hovEvent.vis === 'full' ? '●' : hovEvent.vis === 'brief' ? '◐' : '○'}
-                    </span>
-                    <span style={{
-    fontSize: 12,
-    fontWeight: 600,
-    color: 'var(--cw-text-2)'
-  }}>
-                      {VIS_META[hovEvent.vis].label}
-                    </span>
-                  </div>
-                  <div style={{
-    fontSize: 13,
-    color: 'var(--cw-text-dim)',
-    lineHeight: 1.4
-  }}>
-                    {VIS_META[hovEvent.vis].sub}
-                  </div>
-                </div>
-                {hovEvent.tip && <div style={{
-    marginTop: 10,
-    padding: '8px 10px',
-    borderRadius: 6,
-    background: 'rgba(85,138,66,0.06)',
-    border: '1px solid rgba(85,138,66,0.15)'
-  }}>
-                    <div style={{
-    fontSize: 12,
-    fontWeight: 600,
-    color: '#558A42',
-    marginBottom: 3,
-    display: 'flex',
-    alignItems: 'center',
-    gap: 4
-  }}>
-                      <span>💡</span> Save context
-                    </div>
-                    <div style={{
-    fontSize: 13,
-    color: 'var(--cw-text-3)',
-    lineHeight: 1.5
-  }}>
-                      {renderWithCode(hovEvent.tip)}
-                    </div>
-                  </div>}
-                {hovEvent.link && <a href={hovEvent.link} style={{
-    display: 'inline-block',
-    marginTop: 10,
-    fontSize: 13,
-    color: '#D97757',
-    textDecoration: 'none',
-    borderBottom: '1px solid rgba(217,119,87,0.3)'
-  }}>
-                    Learn more →
-                  </a>}
-              </div> : <div style={{
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center',
-    gap: 4,
-    padding: '12px 0 4px'
-  }}>
-                <div style={{
-    fontSize: 22,
-    opacity: 0.2
-  }}>👁</div>
-                <div style={{
-    fontSize: 14,
-    fontWeight: 500,
-    color: 'var(--cw-text-dim)'
-  }}>Hover or click any event</div>
-                <div style={{
-    fontSize: 12,
-    color: 'var(--cw-text-faint)',
-    lineHeight: 1.4,
-    maxWidth: 200
-  }}>
-                  Hover to preview. Click to pin so you can scroll.
-                </div>
-              </div>}
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    box-shadow: none;
+  }
 
-            <div style={{
-    padding: '10px 12px',
-    borderRadius: 8,
-    background: 'rgba(217,119,87,0.05)',
-    border: '1px solid rgba(217,119,87,0.12)'
-  }}>
-              <div style={{
-    fontSize: 11,
-    fontWeight: 700,
-    color: '#D97757',
-    textTransform: 'uppercase',
-    letterSpacing: 0.5,
-    marginBottom: 3
-  }}>
-                Key takeaway
-              </div>
-              <div style={{
-    fontSize: 13,
-    color: 'var(--cw-text-3)',
-    lineHeight: 1.5
-  }}>
-                {takeaway}
-              </div>
-            </div>
+  &:focus-visible {
+    outline: none;
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow);
+  }
 
-            <div style={{
-    padding: '10px 12px',
-    borderRadius: 8,
-    background: 'var(--cw-surface-2)',
-    border: '1px solid var(--cw-border)'
-  }}>
-              <div style={{
-    fontSize: 11,
-    fontWeight: 700,
-    color: 'var(--cw-text-dim)',
-    textTransform: 'uppercase',
-    letterSpacing: 0.5,
-    marginBottom: 3
-  }}>
-                In your terminal you see
-              </div>
-              <div style={{
-    fontSize: 13,
-    color: 'var(--cw-text-3)',
-    lineHeight: 1.5
-  }}>
-                {terminalView}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  /* Primary variant */
+  &.primary {
+    font-weight: 600;
+    color: hsl(var(--oncolor-100));
+    background-color: hsl(var(--accent-main-100));
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--accent-main-100)) 0%,
+      hsl(var(--accent-main-200) / 0.5) 50%,
+      hsl(var(--accent-main-200)) 100%
+    );
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    border: 0.5px solid hsl(var(--border-300) / 0.25);
+    box-shadow: 
+      inset 0 0.5px 0px rgba(255, 255, 0, 0.15),
+      0 1px 1px rgba(0, 0, 0, 0.05);
+    text-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
-      {}
-      <div style={{
-    padding: '10px 20px 14px',
-    display: 'flex',
-    alignItems: 'center',
-    gap: 10
-  }}>
-        <button aria-label={time >= 1 ? 'Restart' : activeGate ? 'Continue' : playing ? 'Pause' : 'Play'} onClick={() => {
-    if (time >= 1) {
-      setTime(0);
-      setGatesPassed(0);
-      setSelIdx(null);
-      setHovIdx(null);
-      setPlaying(true);
-    } else if (activeGate) sendPrompt(); else setPlaying(!playing);
-  }} style={{
-    width: 30,
-    height: 30,
-    borderRadius: 6,
-    border: 'none',
-    background: 'rgba(217,119,87,0.1)',
-    color: '#D97757',
-    cursor: 'pointer',
-    fontSize: 15,
-    fontWeight: 700,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }}>
-          {time >= 1 ? '↺' : playing ? '⏸' : '▶'}
-        </button>
-        <div style={{
-    flex: 1,
-    height: 3,
-    borderRadius: 2,
-    background: 'var(--cw-track)',
-    overflow: 'hidden'
-  }}>
-          <div style={{
-    width: time * 100 + '%',
-    height: '100%',
-    background: '#D97757',
-    transition: 'width 0.1s linear'
-  }} />
-        </div>
-        <span style={{
-    fontSize: 12,
-    fontFamily: mono,
-    color: 'var(--cw-text-faint)',
-    minWidth: 30
-  }}>
-          {Math.round(time * 100)}%
-        </span>
-        <button onClick={toggleFullscreen} aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'} title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'} style={{
-    width: 28,
-    height: 28,
-    borderRadius: 6,
-    border: '1px solid var(--cw-border)',
-    background: 'var(--cw-surface)',
-    color: 'var(--cw-text-dim)',
-    cursor: 'pointer',
-    fontSize: 15,
-    flexShrink: 0,
-    marginLeft: 4,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }}>
-          {isFullscreen ? '⤡' : '⛶'}
-        </button>
-      </div>
-    </div>
-    </>;
-};
+    &:hover {
+      background-position: 100% 0%;
+      background-image: linear-gradient(
+        to right,
+        hsl(var(--accent-main-200)) 0%,
+        hsl(var(--accent-main-200)) 100%
+      );
+    }
 
-Claude Code's context window holds everything Claude knows about your session: your instructions, the files it reads, its own responses, and content that never appears in your terminal. The timeline below plays a full session from startup to compaction: what loads before you type, what each file read, rule, and hook adds as Claude works, and how a subagent keeps large reads out of your context. See [the written breakdown](#what-the-timeline-shows) for the same content as a list.
+    &:active {
+      background-color: hsl(var(--accent-main-000));
+      box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.2);
+      transform: scale(0.985);
+    }
+  }
 
-<ContextWindow />
+  /* Flat variant */
+  &.flat {
+    font-weight: 500;
+    color: hsl(var(--oncolor-100));
+    background-color: hsl(var(--accent-main-100));
+    transition: background-color 150ms;
 
-## What the timeline shows
+    &:hover {
+      background-color: hsl(var(--accent-main-200));
+    }
+  }
 
-The session walks through a realistic flow with representative token counts:
+  /* Secondary variant */
+  &.secondary {
+    font-weight: 600;
+    color: hsl(var(--text-100) / 0.9);
+    background-image: radial-gradient(
+      ellipse at center,
+      hsl(var(--bg-500) / 0.1) 50%,
+      hsl(var(--bg-500) / 0.3) 100%
+    );
+    border: 0.5px solid hsl(var(--border-400));
+    transition: color 150ms, background-color 150ms;
 
-* **Before you type anything**: CLAUDE.md, auto memory, MCP tool names, and skill descriptions all load into context. Your own setup may add more here, like an [output style](/docs/en/output-styles) or text from [`--append-system-prompt`](/docs/en/cli-reference), which both go into the system prompt the same way.
-* **As Claude works**: each file read adds to context, [path-scoped rules](/docs/en/memory#path-specific-rules) load automatically alongside matching files, and a [PostToolUse hook](/docs/en/hooks-guide) fires after each edit.
-* **The follow-up prompt**: a [subagent](/docs/en/sub-agents) handles the research in its own separate context window, so the large file reads stay out of yours. Only the summary and a small metadata trailer come back.
-* **At the end**: `/compact` replaces the conversation with a structured summary. Most startup content reloads automatically; the table below shows what happens to each mechanism.
+    &:hover {
+      color: hsl(var(--text-000));
+      background-color: hsl(var(--bg-500) / 0.6);
+    }
 
-## What survives compaction
+    &:active {
+      background-color: hsl(var(--bg-500) / 0.5);
+    }
+  }
 
-When a long session compacts, Claude Code summarizes the conversation history to fit the context window. As of v2.1.198, the summarization request inherits your session's [extended thinking](/docs/en/model-config#extended-thinking) configuration, so it reasons with thinking enabled when your session has it enabled and stays off otherwise. Thinking affects only how the summary is produced; your session settings are unchanged afterward. What happens to each kind of content depends on how it was loaded:
+  /* Outline variant */
+  &.outline {
+    font-weight: 600;
+    color: hsl(var(--text-200));
+    background-color: transparent;
+    border: 1.5px solid currentColor;
+    transition: color 150ms, background-color 150ms;
 
-| Mechanism                                                                                                | After compaction                                                                            |
-| :------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
-| System prompt and output style                                                                           | Unchanged; not part of message history                                                      |
-| Project-root CLAUDE.md and unscoped rules                                                                | Re-injected from disk                                                                       |
-| Auto memory                                                                                              | Re-injected from disk                                                                       |
-| The plan Claude wrote in [plan mode](/docs/en/permission-modes#analyze-before-you-edit-with-plan-mode)        | Re-injected from disk                                                                       |
-| Rules with `paths:` frontmatter                                                                          | Claude Code reloads them as Claude reads files they match                                   |
-| Nested CLAUDE.md in subdirectories                                                                       | Claude Code reloads them as Claude reads files in that subdirectory                         |
-| Files Claude read or edited                                                                              | Claude Code re-reads up to five, most recently modified first                               |
-| Invoked skill bodies                                                                                     | Re-injected, capped at 5,000 tokens per skill and 25,000 tokens total; oldest dropped first |
-| Context that hooks added earlier                                                                         | Summarized with the rest of the conversation                                                |
-| [SessionStart hooks](/docs/en/hooks-guide#re-inject-context-after-compaction) that match the `compact` source | Claude Code runs them and adds their output to the compacted context                        |
+    &:hover {
+      color: hsl(var(--text-100));
+      background-color: hsl(var(--bg-400));
+      border-color: hsl(var(--bg-400));
+    }
+  }
 
-Path-scoped rules and nested CLAUDE.md files load into message history when their trigger file is read, so compaction summarizes them away with everything else. Right after compaction, Claude Code re-reads up to five of the files Claude has read or edited in the session, choosing the ones modified most recently, and reloads the rules and nested CLAUDE.md files that apply to those files. A file over 5,000 tokens comes back as a path reference without its content, shown as `Referenced file` instead of `Read`. Its rules still reload. If a rule must persist across compaction, drop the `paths:` frontmatter or move it to the project-root CLAUDE.md.
+  /* Ghost variant */
+  &.ghost {
+    color: hsl(var(--text-200));
+    border-color: transparent;
+    transition: color 150ms, background-color 150ms;
 
-Skill bodies are re-injected after compaction, but large skills are truncated to fit the per-skill cap, and the oldest invoked skills are dropped once the total budget is exceeded. Truncation keeps the start of the file, so put the most important instructions near the top of `SKILL.md`.
+    &:hover {
+      color: hsl(var(--text-100));
+      background-color: hsl(var(--bg-500) / 0.4);
+    }
 
-## When your context fills up
+    &:active {
+      background-color: hsl(var(--bg-400));
+    }
+  }
 
-Claude Code compacts automatically as you approach the limit, so a full context window doesn't end your session. The automatic pass works the same way as the `/compact` step in the timeline. See [When context fills up](/docs/en/how-claude-code-works#when-context-fills-up) for what it preserves.
+  /* Underline variant */
+  &.underline {
+    opacity: 0.8;
+    text-decoration-line: none;
+    text-underline-offset: 3px;
+    transition: all 150ms;
 
-You can also act before the automatic pass runs:
+    &:hover {
+      opacity: 1;
+      text-decoration-line: underline;
+    }
 
-* **Compact with a focus**: run `/compact` with instructions, like `/compact focus on the auth bug fix`, before starting a long new task. The summary keeps what you choose instead of what the automatic pass guesses is important.
-* **Compact part of the conversation**: run `/rewind`, select a message, and choose **Summarize from here** or **Summarize up to here**. See [Rewind and summarize](/docs/en/checkpointing#rewind-and-summarize) for what each option keeps and how to guide the summary.
-* **Compact earlier**: run [`/autocompact`](/docs/en/commands#all-commands) with a token count, like `/autocompact 500k`, to set how full the context window gets before the automatic pass runs. See [Set the auto-compact window](/docs/en/model-config#set-the-auto-compact-window) for accepted values and overrides.
-* **Clear between tasks**: run `/clear` when switching to unrelated work. Old conversation crowds out the files you need next and costs tokens on every message.
-* **Delegate large reads**: send research to a [subagent](/docs/en/sub-agents) so the file contents stay in its context window, not yours.
+    &:active {
+      transform: scale(0.985);
+    }
+  }
 
-If you need a larger window rather than a smaller conversation, Fable 5, Sonnet 5, Opus 4.6 and later, and Sonnet 4.6 support a 1 million token context window. See [Extended context](/docs/en/model-config#extended-context) for availability by plan and how to select a `[1m]` model variant. Sonnet 5 runs at 1M with no `[1m]` variant to select; see [Sonnet 5 context window](/docs/en/model-config#sonnet-5-context-window) for its auto-compaction thresholds and the LLM gateway exception. Compaction works the same way at the larger limit.
+  /* Danger variant */
+  &.danger {
+    font-weight: 600;
+    color: hsl(var(--oncolor-100));
+    background-color: hsl(var(--danger-100));
+    transition: background-color 150ms;
 
-The point where automatic compaction runs depends on your model and configuration. See [Default auto-compact thresholds](/docs/en/model-config#default-auto-compact-thresholds) for the boundaries per model, and [Correct the window for a gateway or custom model ID](/docs/en/model-config#correct-the-window-for-a-gateway-or-custom-model-id) if Claude Code assumes the wrong window for your model ID, such as an [LLM gateway](/docs/en/llm-gateway) alias.
+    &:hover {
+      background-color: hsl(var(--danger-200));
+    }
+  }
+}
+</style><style data-custom-css-index="1" data-custom-css-path="style.css">/* Anthropic Sans - Static fonts from assets.claude.ai */
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-Regular-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-## Check your own session
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-RegularItalic-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
-The visualization uses representative numbers. To see your actual context usage at any point, run `/context` for a live breakdown by category with optimization suggestions, including which CLAUDE.md and auto memory files loaded. Run `/memory` to open and edit those files.
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-Medium-Static.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
-## Related resources
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-MediumItalic-Static.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
 
-For deeper coverage of the features shown in the timeline, see these pages:
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-Semibold-Static.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
-* [Extend Claude Code](/docs/en/features-overview): when to use CLAUDE.md vs skills vs rules vs hooks vs MCP
-* [Store instructions and memories](/docs/en/memory): CLAUDE.md hierarchy and auto memory
-* [Subagents](/docs/en/sub-agents): delegate research to a separate context window
-* [Best practices](/docs/en/best-practices): managing context as your primary constraint
-* [Prompt caching](/docs/en/prompt-caching): which actions invalidate the cached prefix
-* [Reduce token usage](/docs/en/costs#reduce-token-usage): strategies for keeping context usage low
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-SemiboldItalic-Static.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-Bold-Static.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSans-Text-BoldItalic-Static.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Anthropic Serif Display - for headlines */
+@font-face {
+  font-family: "Anthropic Serif Display";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-Regular-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif Display";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-RegularItalic-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif Display";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-Medium-Static.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif Display";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-Semibold-Static.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif Display";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Display-Bold-Static.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Anthropic Serif - Static fonts from assets.claude.ai */
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-Regular-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-RegularItalic-Static.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-Medium-Static.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-MediumItalic-Static.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-Semibold-Static.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-SemiboldItalic-Static.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-Bold-Static.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://assets.claude.ai/Fonts/AnthropicSerif-Text-BoldItalic-Static.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Color variables mirror the internal design system's generated theme palette. */
+:root {
+  --always-white: 0 0% 100%;
+  --always-black: 0 0% 0%;
+  --constant-book-cloth: 15 55% 80%;
+  --constant-clay: 15 60% 85%;
+  --constant-kraft: 25 40% 83%;
+  --constant-manilla: 40 20% 92%;
+  --constant-slate-000: 0 0% 100%;
+  --constant-slate-050: 48 33.3% 97.1%;
+  --constant-slate-100: 53 28.6% 94.5%;
+  --constant-slate-150: 48 25% 92.2%;
+  --constant-slate-200: 50 20.7% 88.6%;
+  --constant-slate-250: 51 16.5% 84.5%;
+  --constant-slate-300: 50 11.5% 79.6%;
+  --constant-slate-350: 50 9% 73.7%;
+  --constant-slate-400: 49 6.5% 66.9%;
+  --constant-slate-450: 48 4.8% 59.2%;
+  --constant-slate-500: 53 3.2% 51.4%;
+  --constant-slate-550: 51 3.1% 43.7%;
+  --constant-slate-600: 48 2.7% 35.9%;
+  --constant-slate-650: 48 3.4% 29.2%;
+  --constant-slate-700: 60 2.5% 23.3%;
+  --constant-slate-750: 60 2.1% 18.4%;
+  --constant-slate-800: 60 2.7% 14.5%;
+  --constant-slate-850: 30 3.3% 11.8%;
+  --constant-slate-900: 30 4% 9.8%;
+  --constant-slate-950: 60 2.6% 7.6%;
+  --constant-slate-1000: 60 3.4% 5.7%;
+}
+
+:root:not(.dark) {
+  --accent-brand: 15 63.1% 59.6%;
+  --accent-main-000: 15 55.6% 52.4%;
+  --accent-main-100: 15 55.6% 52.4%;
+  --accent-main-200: 15 63.1% 59.6%;
+  --accent-main-900: 0 0% 0%;
+  --accent-pro-000: 251 34.2% 33.3%;
+  --accent-pro-100: 251 40% 45.1%;
+  --accent-pro-200: 251 61% 72.2%;
+  --accent-pro-900: 253 33.3% 91.8%;
+  --accent-secondary-000: 210 73.7% 40.2%;
+  --accent-secondary-100: 210 70.9% 51.6%;
+  --accent-secondary-200: 210 70.9% 51.6%;
+  --accent-secondary-900: 211 72% 90%;
+  --bg-000: 0 0% 100%;
+  --bg-100: 48 33.3% 97.1%;
+  --bg-200: 53 28.6% 94.5%;
+  --bg-300: 48 25% 92.2%;
+  --bg-400: 50 20.7% 88.6%;
+  --bg-500: 50 20.7% 88.6%;
+  --border-100: 30 3.3% 11.8%;
+  --border-200: 30 3.3% 11.8%;
+  --border-300: 30 3.3% 11.8%;
+  --border-400: 30 3.3% 11.8%;
+  --danger-000: 0 61.4% 22.4%;
+  --danger-100: 0 58.6% 34.1%;
+  --danger-200: 0 58.6% 34.1%;
+  --danger-900: 0 50% 95%;
+  --oncolor-100: 0 0% 100%;
+  --oncolor-200: 60 6.7% 97.1%;
+  --oncolor-300: 60 6.7% 97.1%;
+  --text-000: 60 2.6% 7.6%;
+  --text-100: 60 2.6% 7.6%;
+  --text-200: 60 2.5% 23.3%;
+  --text-300: 60 2.5% 23.3%;
+  --text-400: 51 3.1% 43.7%;
+  --text-500: 51 3.1% 43.7%;
+}
+
+:root.dark {
+  --accent-brand: 15 63.1% 59.6%;
+  --accent-main-000: 15 55.6% 52.4%;
+  --accent-main-100: 15 63.1% 59.6%;
+  --accent-main-200: 15 63.1% 59.6%;
+  --accent-main-900: 0 0% 0%;
+  --accent-pro-000: 251 84.6% 74.5%;
+  --accent-pro-100: 251 40.2% 54.1%;
+  --accent-pro-200: 251 40% 45.1%;
+  --accent-pro-900: 250 25.3% 19.4%;
+  --accent-secondary-000: 210 71.1% 62%;
+  --accent-secondary-100: 210 70.9% 51.6%;
+  --accent-secondary-200: 210 70.9% 51.6%;
+  --accent-secondary-900: 210 55.9% 24.6%;
+  --bg-000: 60 2.1% 18.4%;
+  --bg-100: 60 2.7% 14.5%;
+  --bg-200: 30 3.3% 11.8%;
+  --bg-300: 60 2.6% 7.6%;
+  --bg-400: 60 3.4% 5.7%;
+  --bg-500: 60 3.4% 5.7%;
+  --border-100: 51 16.5% 84.5%;
+  --border-200: 51 16.5% 84.5%;
+  --border-300: 51 16.5% 84.5%;
+  --border-400: 51 16.5% 84.5%;
+  --danger-000: 0 73.1% 66.5%;
+  --danger-100: 0 58.6% 34.1%;
+  --danger-200: 0 58.6% 34.1%;
+  --danger-900: 0 23% 15.6%;
+  --oncolor-100: 0 0% 100%;
+  --oncolor-200: 60 6.7% 97.1%;
+  --oncolor-300: 60 6.7% 97.1%;
+  --text-000: 48 33.3% 97.1%;
+  --text-100: 48 33.3% 97.1%;
+  --text-200: 50 9% 73.7%;
+  --text-300: 50 9% 73.7%;
+  --text-400: 48 4.8% 59.2%;
+  --text-500: 48 4.8% 59.2%;
+}
+
+#home-header {
+  font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400 !important;
+  font-size: 50px;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: --text-000;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+#localization-select-trigger > :has(img[src*="flags"]) {
+  display: none;
+}
+
+div[id^="localization-select-item"] > :has(img[src*="flags"]) {
+  display: none;
+}
+
+/* Keep home header centered on all screen sizes */
+@media (min-width: 768px) {
+  #home-header {
+    justify-content: center;
+  }
+}
+
+.build-with {
+  font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.claude-wordmark-wrapper {
+  display: inline-flex;
+  align-items: baseline;
+  margin-left: 10px; /* Space between "Build with" and the wordmark */
+}
+
+.claude-wordmark {
+  height: 40px; /* Adjust this value to match your desired size */
+  width: auto;
+  position: relative;
+}
+
+.dark #home-header {
+  color: white;
+}
+
+.description-text {
+  color: black;
+}
+
+.dark .description-text {
+  color: white;
+}
+
+.dark .claude-wordmark {
+  filter: invert(1);
+}
+
+:root {
+  --bg-color: #f0efea;
+}
+
+.dark {
+  --bg-color: #2b2b2b;
+}
+
+body,
+input,
+#category-select,
+.dropdown-item,
+#table-of-contents {
+  font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.eyebrow {
+  font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+}
+
+#content-container {
+  font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#content-container h1,
+#content-container h2,
+#content-container h3,
+#content-container h4,
+#content-container h5,
+#content-container h6 {
+  font-family: "Anthropic Serif Display", Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  /* Mintlify applies tracking-tight (-0.025em) to #page-title, which collapses
+     word gaps in Serif Display's already-narrow space glyph. Reset tracking to
+     the font's natural metrics and widen word gaps slightly. */
+  letter-spacing: 0;
+  word-spacing: 0.1em;
+}
+
+#content-container p {
+  font-size: 1rem;
+  line-height: 1.65rem;
+}
+
+.font-extrabold {
+  font-weight: 600 !important;
+}
+
+.wide-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.wide-table table {
+  width: 175%;
+  margin-bottom: 0;
+}
+
+/* Prompt Library */
+#prompt-library-container {
+  margin: 4rem auto;
+  max-width: 48rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.prompt-library-title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.dark .prompt-library-title {
+  color: #e5e7eb;
+}
+
+.prompt-library-description {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.main-content {
+  margin-bottom: 10rem;
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.prompt-controllers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.prompt-search-container {
+  position: relative;
+  flex: 1 1 0%;
+}
+
+.prompt-search-icon-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  padding-left: 0.75rem;
+}
+
+.prompt-search-icon {
+  margin-left: 0.25rem;
+  margin-right: 0.75rem;
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  background-color: #6b7280;
+  mask-image: url(https://mintlify.b-cdn.net/v6.5.1/solid/magnifying-glass.svg);
+  mask-repeat: no-repeat;
+  mask-position: center center;
+}
+
+input.prompt-search-bar {
+  display: block;
+  height: 2.5rem;
+  padding-left: 2.5rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  background-color: #ffffff;
+  width: 100%;
+  color: #111827;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.dark input.prompt-search-bar {
+  color: #ffffff;
+  background-color: rgb(var(--background-dark));
+  border-color: #d1d5db1a;
+}
+
+input.prompt-search-bar:focus {
+  outline-color: rgb(var(--primary));
+}
+
+.dark input.prompt-search-bar:focus {
+  outline-color: rgb(var(--primary-light));
+}
+
+.dark .prompt-search-icon {
+  background-color: #ffffff80;
+}
+
+#category-select {
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  color: #111827;
+  background-color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+}
+
+.dark #category-select {
+  background-color: rgb(var(--background-dark));
+  border-color: #d1d5db1a;
+  color: #ffffff;
+}
+
+#category-select:hover {
+  background-color: #f9fafb;
+}
+
+.dark #category-select:hover {
+  background-color: #ffffff0d;
+}
+
+#category-select:focus {
+  outline-color: rgb(var(--primary));
+}
+
+.dark #category-select:focus {
+  outline-color: rgb(var(--primary-light));
+}
+
+#categories-dropdown {
+  top: calc(100% + 4px);
+  padding: 0.5rem 0.5rem;
+  display: none;
+  position: absolute;
+  z-index: 10;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  width: 100%;
+  color: #111827;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.dark #categories-dropdown {
+  background-color: rgb(var(--background-dark));
+  border-color: #d1d5db1a;
+  color: #ffffff;
+}
+
+#categories-dropdown-clickout {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.dropdown-icon-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  padding-right: 0.25rem;
+}
+
+.dropdown-icon {
+  margin-left: 0.25rem;
+  margin-right: 0.75rem;
+  flex: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #6b7280;
+  mask-image: url(https://mintlify.b-cdn.net/v6.5.1/solid/caret-down.svg);
+  mask-repeat: no-repeat;
+  mask-position: center center;
+}
+
+.dark .dropdown-icon {
+  background-color: #ffffff80;
+}
+
+#prompts-container {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.dropdown-item {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f9fafb;
+}
+
+.dark .dropdown-item:hover {
+  background-color: #ffffff0d;
+}
+
+.check-icon {
+  mask-image: url(https://mintlify.b-cdn.net/v6.5.1/solid/check.svg);
+  height: 0.875rem;
+  width: 1rem;
+  background-color: rgb(var(--primary-light));
+  mask-repeat: no-repeat;
+  mask-position: center center;
+}
+
+.prompt-card {
+  margin: -0.75rem;
+  padding: 0.75rem;
+  display: flex;
+  border-radius: 1rem;
+}
+
+.prompt-card:hover {
+  background-color: #03071208;
+}
+
+.dark .prompt-card:hover {
+  background-color: #ffffff08;
+}
+
+.prompt-icon-container {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  border-radius: 0.75rem;
+  height: 4rem;
+  width: 4rem;
+  background-color: #cb785c1a;
+}
+
+.prompt-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: rgb(var(--primary-light));
+  mask-repeat: no-repeat;
+  mask-position: center center;
+}
+
+.prompt-title {
+  color: rgb(31 41 55);
+  font-weight: 600;
+}
+
+.dark .prompt-title {
+  color: rgb(229 231 235);
+}
+
+.prompt-description {
+  margin-top: 0.25rem;
+}
+
+#prompts-container {
+  display: grid;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  #category-select {
+    width: 16rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #prompts-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Home page card styling */
+.home-cards-custom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1.5rem;
+}
+
+.home-cards-custom .card {
+  background: transparent;
+  border: 0.5px solid hsl(var(--border-300));
+  border-radius: 12px;
+  padding: 0.25rem;
+}
+
+/* Responsive: change to 2 columns on tablet, single column on mobile */
+@media (max-width: 1024px) {
+  .home-cards-custom {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-cards-custom {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+  }
+}
+
+/* Utility classes */
+.relative {
+  position: relative;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+/* Mermaid diagram styling with graph paper background using Anthropic brand colors */
+.mermaid {
+  position: relative;
+  background-color: #FDFDFB; /* Very light version of neutral #F0F0EB */
+  background-image:
+    linear-gradient(rgba(235, 219, 188, .25) 1px, transparent 1px), /* Secondary color #EBDBBC with low opacity */
+    linear-gradient(90deg, rgba(235, 219, 188, .25) 1px, transparent 1px),
+    linear-gradient(rgba(235, 219, 188, .1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(235, 219, 188, .1) 1px, transparent 1px);
+  background-size:
+    20px 20px,
+    20px 20px,
+    4px 4px,
+    4px 4px;
+  background-position:
+    -1px -1px,
+    -1px -1px,
+    -1px -1px,
+    -1px -1px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(235, 219, 188, .4); /* Secondary color border */
+  box-shadow: 0 2px 4px rgba(64, 64, 62, 0.08); /* Subtle shadow using #40403E */
+}
+
+.dark .mermaid {
+  background-color: #1a1918; /* Dark version maintaining brand tone */
+  background-image:
+    linear-gradient(rgba(212, 162, 127, .15) 1px, transparent 1px), /* Tertiary color #D4A27F with low opacity */
+    linear-gradient(90deg, rgba(212, 162, 127, .15) 1px, transparent 1px),
+    linear-gradient(rgba(212, 162, 127, .08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 162, 127, .08) 1px, transparent 1px);
+  border: 1px solid rgba(102, 102, 99, .5); /* Using #666663 from brand */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================
+   What's New digest — feature block component
+   ============================================================ */
+
+.digest-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0 2.5rem;
+  border: 1px solid hsl(var(--border-300) / 0.15);
+  background: hsl(var(--bg-200));
+  font-variant-numeric: tabular-nums;
+  font-size: 0.875rem;
+  color: hsl(var(--text-400));
+}
+
+#content-container .digest-meta a {
+  color: hsl(var(--accent-main-100));
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#content-container .digest-meta a:hover {
+  text-decoration: underline;
+}
+
+.digest-feature {
+  position: relative;
+  margin: 2.5rem 0;
+  padding: 1.875rem 1.875rem 1.625rem;
+  background:
+    radial-gradient(circle, hsl(var(--text-000) / 0.025) 1px, transparent 1px) 0 0 / 18px 18px,
+    linear-gradient(180deg, hsl(var(--constant-manilla) / 0.55), hsl(var(--constant-manilla) / 0.38));
+  border: 1px solid hsl(var(--border-300) / 0.12);
+  box-shadow:
+    inset 0 1px 0 hsl(var(--text-000) / 0.04),
+    0 1px 2px hsl(var(--always-black) / 0.04);
+}
+
+.digest-feature::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: hsl(var(--accent-brand));
+}
+
+.dark .digest-feature {
+  background:
+    radial-gradient(circle, hsl(var(--text-000) / 0.02) 1px, transparent 1px) 0 0 / 18px 18px,
+    linear-gradient(180deg, hsl(var(--bg-000) / 0.75), hsl(var(--bg-000) / 0.5));
+  border-color: hsl(var(--border-300) / 0.1);
+  box-shadow:
+    inset 0 1px 0 hsl(var(--text-000) / 0.03),
+    0 1px 2px hsl(var(--always-black) / 0.25);
+}
+
+.digest-feature > :first-child {
+  margin-top: 0;
+}
+
+.digest-feature > :last-child {
+  margin-bottom: 0;
+}
+
+.digest-feature-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  margin: 0 0 0.75rem;
+}
+
+#content-container .digest-feature-title {
+  font-family: "Anthropic Serif Display", Georgia, serif;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: hsl(var(--text-000));
+  margin: 0;
+}
+
+#content-container .digest-feature-pill {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: hsl(var(--accent-brand) / 0.12);
+  color: hsl(var(--accent-main-000));
+  border: 1px solid hsl(var(--accent-brand) / 0.25);
+  white-space: nowrap;
+  transform: translateY(1px);
+}
+
+#content-container .digest-feature-lede {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: hsl(var(--text-100));
+  margin: 0 0 1.25rem;
+  max-width: none;
+}
+
+#content-container .digest-feature-lede code {
+  font-size: 0.875em;
+  padding: 0.1em 0.35em;
+}
+
+#content-container .digest-feature-try {
+  font-size: 0.875rem;
+  color: hsl(var(--text-400));
+  margin: 1.25rem 0 0.5rem;
+}
+
+#content-container .digest-feature .frame {
+  margin: 1rem 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+#content-container .digest-feature .frame > * {
+  border-radius: 0;
+}
+
+#content-container .digest-feature pre,
+#content-container .digest-feature [class*="CodeBlock"] {
+  border-radius: 0;
+}
+
+#content-container .digest-feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--accent-main-100));
+  text-decoration: none;
+  border-bottom: none;
+  margin-top: 0.75rem;
+}
+
+#content-container .digest-feature-link::after {
+  content: "→";
+  transition: transform 120ms ease-out;
+}
+
+#content-container .digest-feature-link:hover::after {
+  transform: translateX(3px);
+}
+
+/* Other wins — compact companion block */
+.digest-wins {
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.75rem 1.25rem;
+  background: hsl(var(--bg-200));
+  border: 1px solid hsl(var(--border-300) / 0.1);
+}
+
+.dark .digest-wins {
+  background: hsl(var(--bg-200) / 0.6);
+}
+
+#content-container .digest-wins-title {
+  font-family: "Anthropic Serif Display", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: hsl(var(--text-000));
+  margin: 0 0 0.75rem;
+}
+
+.digest-wins-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  column-gap: 2rem;
+}
+
+#content-container .digest-wins-grid > div {
+  position: relative;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: hsl(var(--text-300));
+  padding: 0.5rem 0 0.5rem 1.125rem;
+  border-top: 1px solid hsl(var(--border-300) / 0.06);
+  margin: 0;
+}
+
+#content-container .digest-wins-grid > div::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--accent-brand));
+}
+
+#content-container .digest-wins-grid > div:first-child,
+#content-container .digest-wins-grid > div:nth-child(2) {
+  border-top: none;
+  padding-top: 0;
+}
+
+#content-container .digest-wins-grid > div:first-child::before,
+#content-container .digest-wins-grid > div:nth-child(2)::before {
+  top: 0;
+}
+
+#content-container .digest-wins-grid code {
+  font-size: 0.8125rem;
+  padding: 0.1em 0.3em;
+}
+
+/* ============================================================
+   Collapsible right table of contents (toggled by toc-collapse.js)
+   ============================================================ */
+
+/* Dimensions mirrored from Mintlify's compiled mint-theme layout. If a
+   Mintlify update moves the button or the collapsed reading column,
+   re-measure these on a rendered page. */
+:root {
+  --toc-wrapper-max: 92rem; /* centered layout wrapper max-width */
+  --toc-wrapper-pad: 2rem; /* wrapper right padding */
+  --toc-col: 19rem; /* ToC column width, incl. its 2.5rem left padding */
+  --toc-side: 28rem; /* side column space #content-area reserves */
+  --toc-btn-size: 1.75rem; /* ours, not mirrored: the toggle's diameter */
+}
+
+/* Hidden by default: below the xl breakpoint Mintlify hides the ToC
+   anyway, and pages that render no ToC (wide-mode pages) get no toggle. */
+#toc-collapse-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 10rem;
+  /* Sits just left of the ToC column, inside its 2.5rem left-padding
+     strip: at the column's left edge, minus the button's own width and
+     a small gap. 100% rather than 100vw so a classic scrollbar doesn't
+     shift the math (percentages on fixed elements resolve against the
+     layout viewport). */
+  right: calc(
+    max((100% - var(--toc-wrapper-max)) / 2, 0px) + var(--toc-wrapper-pad) +
+      var(--toc-col) - var(--toc-btn-size) - 0.35rem
+  );
+  transition: right 200ms ease-out;
+  z-index: 30;
+  width: var(--toc-btn-size);
+  height: var(--toc-btn-size);
+  border-radius: 9999px;
+  border: 1px solid hsl(var(--border-300) / 0.15);
+  background: hsl(var(--bg-100));
+  color: hsl(var(--text-400));
+  cursor: pointer;
+}
+
+#toc-collapse-toggle:hover {
+  background: hsl(var(--bg-300));
+  color: hsl(var(--text-100));
+}
+
+#toc-collapse-toggle svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* The list glyph only appears while the button is parked at the right
+   edge, so the collapsed control still reads as the table of contents. */
+#toc-collapse-toggle .toc-glyph {
+  display: none;
+  stroke-width: 2;
+}
+
+/* A fixed-position button would repeat on every printed page. */
+@media print {
+  #toc-collapse-toggle {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #toc-collapse-toggle {
+    transition: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  html:has(#table-of-contents-layout) #toc-collapse-toggle {
+    display: flex;
+  }
+
+  html.toc-collapsed #toc-collapse-toggle .toc-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* The column is gone while collapsed, so the button moves to the
+     right edge where the restored ToC will reappear, widening into a
+     pill that pairs the chevron with the list glyph. */
+  html.toc-collapsed #toc-collapse-toggle {
+    right: 0.5rem;
+    width: auto;
+    padding: 0 0.5rem;
+    gap: 0.25rem;
+  }
+
+  html.toc-collapsed #toc-collapse-toggle .toc-glyph {
+    display: block;
+  }
+
+  html.toc-collapsed #table-of-contents-layout {
+    display: none !important;
+  }
+
+  /* Also hide the side column's wrapper: left in flow at zero width,
+     it keeps its 3rem flex gap as dead space at the right edge. Scoped
+     with :has() so the wrapper is untouched when it holds other
+     content, such as the open assistant panel. */
+  html.toc-collapsed #content-side-layout:has(#table-of-contents-layout) {
+    display: none !important;
+  }
+
+  /* Mintlify sizes the content column assuming the side column is
+     present (xl:w-[calc(100%-28rem)]); reclaim that space when collapsed.
+     Scoped with :has() so pages that render no ToC, such as wide-mode
+     pages, keep their own layout. Written out twice rather than nested:
+     CSS nesting shipped later than :has(), so nesting here would break
+     the cap in browsers that pass the :has() support guard. */
+  html.toc-collapsed #content-container:has(#table-of-contents-layout) #content-area {
+    width: 100% !important;
+  }
+
+  /* Safety bound on the widened reading column. The centered wrapper
+     already caps overall width, so today this only bites at the
+     wrapper's max, where it equals the natural content width; it exists
+     so line length can't run away if the wrapper cap ever changes. */
+  html.toc-collapsed #content-container:has(#table-of-contents-layout) #content-area > * {
+    max-width: calc(var(--toc-wrapper-max) - var(--toc-side));
+  }
+}
+
+@media (max-width: 640px) {
+  .digest-feature {
+    padding: 1.25rem 1rem 1rem;
+    margin: 1.5rem 0;
+  }
+  #content-container .digest-feature-title {
+    font-size: 1.375rem;
+  }
+  .digest-wins {
+    padding: 1.25rem 1rem 1rem;
+  }
+  .digest-wins-grid {
+    grid-template-columns: 1fr;
+  }
+  #content-container .digest-wins-grid > div:nth-child(2) {
+    border-top: 1px solid hsl(var(--border-300) / 0.06);
+    padding-top: 0.5rem;
+  }
+  #content-container .digest-wins-grid > div:nth-child(2)::before {
+    top: 0.5rem;
+  }
+}
+</style><!--$--><!--/$--><div class="flex flex-row-reverse gap-12 box-border w-full pt-40 lg:pt-10"><div class="relative grow box-border flex-col w-full mx-auto px-1 lg:pl-[5.7rem] lg:-ml-12 xl:w-[calc(100%-19rem)] xl:min-w-full" id="content-area"><header class="relative leading-none @container/page-header" id="header"><div class="mt-0.5 space-y-2.5"><div class="eyebrow h-5 text-primary dark:text-primary-light text-sm font-semibold">Core concepts</div><div class="flex flex-col sm:flex-row items-start sm:items-center relative gap-2 min-w-0"><h1 class="text-3xl sm:text-4xl text-gray-900 tracking-tight dark:text-gray-200 [overflow-wrap:anywhere] font-semibold" id="page-title">Explore the context window</h1><aside class="mdx-live-widget">
+<p class="mdx-live-widget-label">Interactive explorer</p>
+<p>This directory tree is interactive on the original page and cannot run inside an EPUB. Open it here: <a class="source-title" href="https://code.claude.com/docs/en/context-window#explore-the-directory" rel="external">https://code.claude.com/docs/en/context-window#explore-the-directory</a></p>
+</aside><div class="items-center shrink-0 min-w-[156px] justify-end ml-auto hidden @[520px]/page-header:flex" id="page-context-menu"><button aria-label="Copy page" class="rounded-l-xl px-3 text-gray-700 dark:text-gray-300 py-1.5 border border-gray-200 dark:border-white/[0.07] bg-background-light dark:bg-background-dark hover:bg-gray-600/5 dark:hover:bg-gray-200/5 border-r-0" id="page-context-menu-button"><div class="flex items-center gap-2 text-sm text-center font-medium"><svg aria-hidden="true" class="size-4 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M14.25 5.25H7.25C6.14543 5.25 5.25 6.14543 5.25 7.25V14.25C5.25 15.3546 6.14543 16.25 7.25 16.25H14.25C15.3546 16.25 16.25 15.3546 16.25 14.25V7.25C16.25 6.14543 15.3546 5.25 14.25 5.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.80103 11.998L1.77203 5.07397C1.61003 3.98097 2.36403 2.96397 3.45603 2.80197L10.38 1.77297C11.313 1.63397 12.19 2.16297 12.528 3.00097" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><span class="grid"><span aria-hidden="true" class="invisible col-start-1 row-start-1">Copy page</span><span class="col-start-1 row-start-1">Copy page</span></span></div></button><button aria-haspopup="menu" aria-label="More actions" class="group disabled:pointer-events-none [&amp;&gt;span]:line-clamp-1 overflow-hidden group focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-primary-light py-0.5 gap-1 text-sm text-gray-950/50 dark:text-white/50 group-hover:text-gray-950/70 dark:group-hover:text-white/70 rounded-none rounded-r-xl border flex items-center justify-center h-[34px] border-gray-200 aspect-square dark:border-white/[0.07] bg-background-light dark:bg-background-dark hover:bg-gray-600/5 dark:hover:bg-gray-200/5" id="base-ui-_R_1mshlktbsnlhjiuasnpfiutb_" tabindex="0" type="button"><svg aria-hidden="true" class="size-3 transition-transform text-gray-400 group-hover:text-gray-600 dark:text-gray-600 dark:group-hover:text-gray-400 shrink-0 rotate-90" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div></div><div class="mt-2 text-lg prose prose-gray dark:prose-invert [&amp;&gt;*]:[overflow-wrap:anywhere]"><p>An interactive simulation of how Claude Code’s context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.</p></div><div class="flex items-center shrink-0 min-w-[156px] mt-3 @[520px]/page-header:hidden" id="page-context-menu"><button aria-label="Copy page" class="rounded-l-xl px-3 text-gray-700 dark:text-gray-300 py-1.5 border border-gray-200 dark:border-white/[0.07] bg-background-light dark:bg-background-dark hover:bg-gray-600/5 dark:hover:bg-gray-200/5 border-r-0" id="page-context-menu-button"><div class="flex items-center gap-2 text-sm text-center font-medium"><svg aria-hidden="true" class="size-4 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M14.25 5.25H7.25C6.14543 5.25 5.25 6.14543 5.25 7.25V14.25C5.25 15.3546 6.14543 16.25 7.25 16.25H14.25C15.3546 16.25 16.25 15.3546 16.25 14.25V7.25C16.25 6.14543 15.3546 5.25 14.25 5.25Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.80103 11.998L1.77203 5.07397C1.61003 3.98097 2.36403 2.96397 3.45603 2.80197L10.38 1.77297C11.313 1.63397 12.19 2.16297 12.528 3.00097" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><span class="grid"><span aria-hidden="true" class="invisible col-start-1 row-start-1">Copy page</span><span class="col-start-1 row-start-1">Copy page</span></span></div></button><button aria-haspopup="menu" aria-label="More actions" class="group disabled:pointer-events-none [&amp;&gt;span]:line-clamp-1 overflow-hidden group focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-primary-light py-0.5 gap-1 text-sm text-gray-950/50 dark:text-white/50 group-hover:text-gray-950/70 dark:group-hover:text-white/70 rounded-none rounded-r-xl border flex items-center justify-center h-[34px] border-gray-200 aspect-square dark:border-white/[0.07] bg-background-light dark:bg-background-dark hover:bg-gray-600/5 dark:hover:bg-gray-200/5" id="base-ui-_R_3dhlktbsnlhjiuasnpfiutb_" tabindex="0" type="button"><svg aria-hidden="true" class="size-3 transition-transform text-gray-400 group-hover:text-gray-600 dark:text-gray-600 dark:group-hover:text-gray-400 shrink-0 rotate-90" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2.75L12.75 9L6.5 15.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></header><div class="mdx-content @container/columns-container relative mt-8 prose prose-gray dark:prose-invert [contain:inline-size] isolate empty:hidden mb-14" data-page-href="/en/context-window" data-page-title="Explore the context window" id="content"><span data-as="p">Claude Code’s context window holds everything Claude knows about your session: your instructions, the files it reads, its own responses, and content that never appears in your terminal. The timeline below plays a full session from startup to compaction: what loads before you type, what each file read, rule, and hook adds as Claude works, and how a subagent keeps large reads out of your context. See <a class="link" href="#what-the-timeline-shows">the written breakdown</a> for the same content as a list.</span>
+<!-- -->
+<h2 class="flex whitespace-pre-wrap group font-semibold" id="what-the-timeline-shows"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#what-the-timeline-shows">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">What the timeline shows</span></h2>
+<span data-as="p">The session walks through a realistic flow with representative token counts:</span>
+<ul>
+<li><strong>Before you type anything</strong>: CLAUDE.md, auto memory, MCP tool names, and skill descriptions all load into context. Your own setup may add more here, like an <a class="link" href="/docs/en/output-styles">output style</a> or text from <a class="link" href="/docs/en/cli-reference"><code>--append-system-prompt</code></a>, which both go into the system prompt the same way.</li>
+<li><strong>As Claude works</strong>: each file read adds to context, <a class="link" href="/docs/en/memory#path-specific-rules">path-scoped rules</a> load automatically alongside matching files, and a <a class="link" href="/docs/en/hooks-guide">PostToolUse hook</a> fires after each edit.</li>
+<li><strong>The follow-up prompt</strong>: a <a class="link" href="/docs/en/sub-agents">subagent</a> handles the research in its own separate context window, so the large file reads stay out of yours. Only the summary and a small metadata trailer come back.</li>
+<li><strong>At the end</strong>: <code>/compact</code> replaces the conversation with a structured summary. Most startup content reloads automatically; the table below shows what happens to each mechanism.</li>
+</ul>
+<h2 class="flex whitespace-pre-wrap group font-semibold" id="what-survives-compaction"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#what-survives-compaction">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">What survives compaction</span></h2>
+<span data-as="p">When a long session compacts, Claude Code summarizes the conversation history to fit the context window. As of v2.1.198, the summarization request inherits your session’s <a class="link" href="/docs/en/model-config#extended-thinking">extended thinking</a> configuration, so it reasons with thinking enabled when your session has it enabled and stays off otherwise. Thinking affects only how the summary is produced; your session settings are unchanged afterward. What happens to each kind of content depends on how it was loaded:</span>
+<!-- --><div class="min-w-0 [--page-padding:20px] flex w-[calc(100%+(var(--page-padding)*2))] my-[1em] py-[1em] -mx-(--page-padding) max-w-none [contain:inline-size]" data-component-part="scroll-area" data-table-wrapper="true" role="presentation" style="position:relative;--scroll-area-corner-height:0px;--scroll-area-corner-width:0px"><div aria-label="Scrollable table" class="size-full rounded-[inherit] [--scroll-area-fade-size:32px] overflow-y-hidden! base-ui-disable-scrollbar" data-component-part="scroll-area-viewport" data-id="base-ui-_R_1sllktbsnlhjiuasnpfiutb_-viewport" role="region" style="overflow:scroll" tabindex="-1"><div class="flex" data-component-part="scroll-area-content" role="presentation" style="min-width:fit-content"><div class="px-(--page-padding) grow max-w-none table"><table class="m-0 min-w-full w-full max-w-none table [&amp;_td]:min-w-[150px] [&amp;_th]:text-left [&amp;_td[data-numeric]]:tabular-nums"><thead><tr><th style="text-align:left">Mechanism</th><th style="text-align:left">After compaction</th></tr></thead><tbody><tr><td style="text-align:left">System prompt and output style</td><td style="text-align:left">Unchanged; not part of message history</td></tr><tr><td style="text-align:left">Project-root CLAUDE.md and unscoped rules</td><td style="text-align:left">Re-injected from disk</td></tr><tr><td style="text-align:left">Auto memory</td><td style="text-align:left">Re-injected from disk</td></tr><tr><td style="text-align:left">The plan Claude wrote in <a class="link" href="/docs/en/permission-modes#analyze-before-you-edit-with-plan-mode">plan mode</a></td><td style="text-align:left">Re-injected from disk</td></tr><tr><td style="text-align:left">Rules with <code>paths:</code> frontmatter</td><td style="text-align:left">Claude Code reloads them as Claude reads files they match</td></tr><tr><td style="text-align:left">Nested CLAUDE.md in subdirectories</td><td style="text-align:left">Claude Code reloads them as Claude reads files in that subdirectory</td></tr><tr><td style="text-align:left">Files Claude read or edited</td><td style="text-align:left">Claude Code re-reads up to five, most recently modified first</td></tr><tr><td style="text-align:left">Invoked skill bodies</td><td style="text-align:left">Re-injected, capped at 5,000 tokens per skill and 25,000 tokens total; oldest dropped first</td></tr><tr><td style="text-align:left">Context that hooks added earlier</td><td style="text-align:left">Summarized with the rest of the conversation</td></tr><tr><td style="text-align:left"><a class="link" href="/docs/en/hooks-guide#re-inject-context-after-compaction">SessionStart hooks</a> that match the <code>compact</code> source</td><td style="text-align:left">Claude Code runs them and adds their output to the compacted context</td></tr></tbody></table></div></div></div></div>
+<span data-as="p">Path-scoped rules and nested CLAUDE.md files load into message history when their trigger file is read, so compaction summarizes them away with everything else. Right after compaction, Claude Code re-reads up to five of the files Claude has read or edited in the session, choosing the ones modified most recently, and reloads the rules and nested CLAUDE.md files that apply to those files. A file over 5,000 tokens comes back as a path reference without its content, shown as <code>Referenced file</code> instead of <code>Read</code>. Its rules still reload. If a rule must persist across compaction, drop the <code>paths:</code> frontmatter or move it to the project-root CLAUDE.md.</span>
+<span data-as="p">Skill bodies are re-injected after compaction, but large skills are truncated to fit the per-skill cap, and the oldest invoked skills are dropped once the total budget is exceeded. Truncation keeps the start of the file, so put the most important instructions near the top of <code>SKILL.md</code>.</span>
+<h2 class="flex whitespace-pre-wrap group font-semibold" id="when-your-context-fills-up"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#when-your-context-fills-up">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">When your context fills up</span></h2>
+<span data-as="p">Claude Code compacts automatically as you approach the limit, so a full context window doesn’t end your session. The automatic pass works the same way as the <code>/compact</code> step in the timeline. See <a class="link" href="/docs/en/how-claude-code-works#when-context-fills-up">When context fills up</a> for what it preserves.</span>
+<span data-as="p">You can also act before the automatic pass runs:</span>
+<ul>
+<li><strong>Compact with a focus</strong>: run <code>/compact</code> with instructions, like <code>/compact focus on the auth bug fix</code>, before starting a long new task. The summary keeps what you choose instead of what the automatic pass guesses is important.</li>
+<li><strong>Compact part of the conversation</strong>: run <code>/rewind</code>, select a message, and choose <strong>Summarize from here</strong> or <strong>Summarize up to here</strong>. See <a class="link" href="/docs/en/checkpointing#rewind-and-summarize">Rewind and summarize</a> for what each option keeps and how to guide the summary.</li>
+<li><strong>Compact earlier</strong>: run <a class="link" href="/docs/en/commands#all-commands"><code>/autocompact</code></a> with a token count, like <code>/autocompact 500k</code>, to set how full the context window gets before the automatic pass runs. See <a class="link" href="/docs/en/model-config#set-the-auto-compact-window">Set the auto-compact window</a> for accepted values and overrides.</li>
+<li><strong>Clear between tasks</strong>: run <code>/clear</code> when switching to unrelated work. Old conversation crowds out the files you need next and costs tokens on every message.</li>
+<li><strong>Delegate large reads</strong>: send research to a <a class="link" href="/docs/en/sub-agents">subagent</a> so the file contents stay in its context window, not yours.</li>
+</ul>
+<span data-as="p">If you need a larger window rather than a smaller conversation, Fable 5, Sonnet 5, Opus 4.6 and later, and Sonnet 4.6 support a 1 million token context window. See <a class="link" href="/docs/en/model-config#extended-context">Extended context</a> for availability by plan and how to select a <code>[1m]</code> model variant. Sonnet 5 runs at 1M with no <code>[1m]</code> variant to select; see <a class="link" href="/docs/en/model-config#sonnet-5-context-window">Sonnet 5 context window</a> for its auto-compaction thresholds and the LLM gateway exception. Compaction works the same way at the larger limit.</span>
+<span data-as="p">The point where automatic compaction runs depends on your model and configuration. See <a class="link" href="/docs/en/model-config#default-auto-compact-thresholds">Default auto-compact thresholds</a> for the boundaries per model, and <a class="link" href="/docs/en/model-config#correct-the-window-for-a-gateway-or-custom-model-id">Correct the window for a gateway or custom model ID</a> if Claude Code assumes the wrong window for your model ID, such as an <a class="link" href="/docs/en/llm-gateway">LLM gateway</a> alias.</span>
+<h2 class="flex whitespace-pre-wrap group font-semibold" id="check-your-own-session"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#check-your-own-session">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">Check your own session</span></h2>
+<span data-as="p">The visualization uses representative numbers. To see your actual context usage at any point, run <code>/context</code> for a live breakdown by category with optimization suggestions, including which CLAUDE.md and auto memory files loaded. Run <code>/memory</code> to open and edit those files.</span>
+<h2 class="flex whitespace-pre-wrap group font-semibold" id="related-resources"><div class="absolute" tabindex="-1"><a aria-label="Navigate to header" class="-ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100 focus:opacity-100 focus:outline-0 group/link" href="#related-resources">​<div class="size-6 rounded-md flex items-center justify-center shadow-xs text-gray-400 dark:text-white/50 dark:bg-background-dark dark:brightness-[1.35] dark:ring-1 dark:hover:brightness-150 bg-white ring-1 ring-gray-400/30 dark:ring-gray-700/25 hover:ring-gray-400/60 dark:hover:ring-white/20 group-focus/link:border-2 group-focus/link:border-primary dark:group-focus/link:border-primary-light"><svg aria-hidden="true" class="size-3 shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M8.50001 6.827C8.14801 6.995 7.81801 7.225 7.52701 7.517L7.51701 7.527C6.13601 8.908 6.13601 11.146 7.51701 12.527L9.69201 14.702C11.073 16.083 13.311 16.083 14.692 14.702L14.702 14.692C16.083 13.311 16.083 11.073 14.702 9.692L13.771 8.761" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M9.50002 11.173C9.85202 11.005 10.182 10.775 10.473 10.483L10.483 10.473C11.864 9.092 11.864 6.854 10.483 5.473L8.30802 3.298C6.92702 1.917 4.68902 1.917 3.30802 3.298L3.29802 3.308C1.91702 4.689 1.91702 6.927 3.29802 8.308L4.22902 9.239" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></div></a></div><span class="cursor-pointer">Related resources</span></h2>
+<span data-as="p">For deeper coverage of the features shown in the timeline, see these pages:</span>
+<ul>
+<li><a class="link" href="/docs/en/features-overview">Extend Claude Code</a>: when to use CLAUDE.md vs skills vs rules vs hooks vs MCP</li>
+<li><a class="link" href="/docs/en/memory">Store instructions and memories</a>: CLAUDE.md hierarchy and auto memory</li>
+<li><a class="link" href="/docs/en/sub-agents">Subagents</a>: delegate research to a separate context window</li>
+<li><a class="link" href="/docs/en/best-practices">Best practices</a>: managing context as your primary constraint</li>
+<li><a class="link" href="/docs/en/prompt-caching">Prompt caching</a>: which actions invalidate the cached prefix</li>
+<li><a class="link" href="/docs/en/costs#reduce-token-usage">Reduce token usage</a>: strategies for keeping context usage low</li>
+</ul></div><div class="feedback-toolbar pb-16 w-full flex flex-col gap-y-8"><div class="flex flex-row flex-wrap gap-4 items-center justify-between"><p class="inline-block text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">Was this page helpful?</p><div class="flex flex-wrap grow gap-3 items-center justify-end"><div class="flex gap-3 items-center"><button class="px-3.5 py-2 flex flex-row gap-3 items-center border-standard rounded-xl text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 bg-white/50 dark:bg-codeblock/50 hover:border-gray-500 hover:dark:border-gray-500 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-primary-light" id="feedback-thumbs-up"><svg aria-hidden="true" class="size-4 shrink-0 text-current" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.25 7.494C5.25 7.014 5.423 6.55 5.736 6.187L10 1.25C10.854 1.677 11.25 2.678 10.92 3.574L9.75 6.75H14.152C15.465 6.75 16.421 7.993 16.085 9.262L14.894 13.762C14.662 14.639 13.868 15.25 12.961 15.25H7.25C6.145 15.25 5.25 14.355 5.25 13.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M4.25 6.75H2.75C2.19772 6.75 1.75 7.19772 1.75 7.75V14.25C1.75 14.8023 2.19772 15.25 2.75 15.25H4.25C4.80228 15.25 5.25 14.8023 5.25 14.25V7.75C5.25 7.19772 4.80228 6.75 4.25 6.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><small class="text-sm font-normal leading-4">Yes</small></button><button class="px-3.5 py-2 flex flex-row gap-3 items-center border-standard rounded-xl text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 bg-white/50 dark:bg-codeblock/50 hover:border-gray-500 hover:dark:border-gray-500 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-primary-light" id="feedback-thumbs-down"><svg aria-hidden="true" class="size-4 shrink-0 text-current" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.25 10.506C5.25 10.986 5.423 11.45 5.736 11.813L10 16.75C10.854 16.323 11.25 15.322 10.92 14.426L9.75 11.25H14.152C15.465 11.25 16.421 10.007 16.085 8.738L14.894 4.238C14.662 3.361 13.868 2.75 12.961 2.75H7.25C6.145 2.75 5.25 3.645 5.25 4.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M4.25 2.75H2.75C2.19772 2.75 1.75 3.19772 1.75 3.75V10.25C1.75 10.8023 2.19772 11.25 2.75 11.25H4.25C4.80228 11.25 5.25 10.8023 5.25 10.25V3.75C5.25 3.19772 4.80228 2.75 4.25 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><small class="text-sm font-normal leading-4">No</small></button></div><div class="flex gap-3"></div></div></div></div><nav aria-label="Pagination" class="px-0.5 flex items-center gap-6 text-sm font-semibold text-gray-700 dark:text-gray-200" id="pagination"><a aria-label="Previous: Explore the .claude directory" class="group flex items-center min-w-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-primary-light gap-3 rounded-sm pagination-prev" data-component-part="pagination-prev" href="/docs/en/claude-directory" rel="prev"><svg aria-hidden="true" class="h-1.5 shrink-0 stroke-gray-400 overflow-visible group-hover:stroke-gray-600 dark:group-hover:stroke-gray-300" data-component-part="pagination-chevron" viewbox="0 0 3 6"><path d="M3 0L0 3L3 6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><div class="truncate group-hover:text-gray-900 dark:group-hover:text-white" data-component-part="pagination-title">Explore the .claude directory</div></a><a aria-label="Next: Prompt caching" class="group flex items-center min-w-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-primary-light gap-3 rounded-sm ml-auto pagination-next" data-component-part="pagination-next" href="/docs/en/prompt-caching" rel="next"><div class="truncate group-hover:text-gray-900 dark:group-hover:text-white" data-component-part="pagination-title">Prompt caching</div><svg aria-hidden="true" class="h-1.5 shrink-0 stroke-gray-400 overflow-visible group-hover:stroke-gray-600 dark:group-hover:stroke-gray-300 rotate-180" data-component-part="pagination-chevron" viewbox="0 0 3 6"><path d="M3 0L0 3L3 6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a></nav><div class="left-0 right-0 sticky bottom-0 w-full overflow-hidden z-20 pointer-events-none print:hidden"><div class='chat-assistant-floating-input w-full group/assistant-bar relative before:content-[""] before:absolute before:left-0 before:right-0 before:top-1/2 before:h-[200px] before:bg-background-light dark:before:bg-background-dark translate-y-[100px] opacity-0'><div class="relative pb-4 sm:pb-6 max-w-2xl mx-auto"><div class="flex flex-col w-full rounded-2xl pointer-events-auto bg-background-light dark:bg-background-dark border border-gray-200 dark:border-white/30 focus-within:border-primary dark:focus-within:border-primary-light transition-colors max-w-[386px] mx-auto"><div class="relative flex items-end"><textarea aria-label="Ask a question..." autocomplete="off" class="chat-assistant-input w-full bg-transparent border-0 peer/input text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 outline-hidden! focus:outline-hidden! focus:ring-0 py-2.5 pl-3.5 pr-10 font-bodyWeight text-sm" id="chat-assistant-textarea" placeholder="Ask a question..." style="resize:none"></textarea><span class="absolute right-11 bottom-3 text-xs font-medium text-gray-400 dark:text-gray-500 select-none pointer-events-none peer-focus/input:hidden hidden sm:inline">⌘<!-- -->I</span><button aria-label="Send message" class="chat-assistant-send-button flex justify-center items-center rounded-full p-1 size-6 bg-primary/30 dark:bg-primary-dark/30 absolute right-2.5 bottom-2" disabled=""><svg aria-hidden="true" class="size-2.5 shrink-0 text-white dark:text-white" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9.0 1.5754L8.9999 16.4171" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.2563 8.319L8.9999 1.5754L15.7435 8.3191" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div></div></div></div></div></div></main></div><footer class="advanced-footer flex flex-col items-center mx-auto border-t border-gray-100 dark:border-gray-800/50 peer-[.is-custom]:hidden! peer-[.is-custom]:sm:hidden! peer-[.is-custom]:md:hidden! peer-[.is-custom]:lg:hidden! peer-[.is-custom]:xl:hidden!" id="footer"><div class="flex w-full flex-col gap-12 justify-between px-8 py-16 md:py-20 lg:py-28 max-w-246 z-20"><div class="flex flex-col md:flex-row gap-8 justify-between min-h-19"><div class="flex md:flex-col justify-between items-center md:items-start min-w-16 md:min-w-20 lg:min-w-48 md:gap-y-24"><a class="select-none" href="/docs/en/overview" style="-webkit-touch-callout:none"><span class="sr-only">Claude Code Docs<!-- --> home page</span><img alt="light logo" class="nav-logo w-auto relative object-contain shrink-0 block dark:hidden max-w-48 h-[26px]" src="https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/light.svg?fit=max&amp;auto=format&amp;n=c5r9_6tjPMzFdDDT&amp;q=85&amp;s=78fd01ff4f4340295a4f66e2ea54903c"/><img alt="dark logo" class="nav-logo w-auto relative object-contain shrink-0 hidden dark:block max-w-48 h-[26px]" src="https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/dark.svg?fit=max&amp;auto=format&amp;n=c5r9_6tjPMzFdDDT&amp;q=85&amp;s=1298a0c3b3a1da603b190d0de0e31712"/></a><div class="gap-4 min-w-[140px] max-w-[492px] flex-wrap h-fit flex justify-end md:justify-start"><a class="h-fit" href="https://x.com/AnthropicAI" rel="noopener noreferrer" target="_blank"><span class="sr-only">x</span><svg aria-hidden="true" class="forced-colors:forced-color-adjust-none forced-colors:bg-[color:CanvasText]! w-5 h-5 bg-gray-500 dark:bg-gray-600 hover:bg-gray-600 dark:hover:bg-gray-500" focusable="false" style='-webkit-mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/brands/x-twitter.svg");-webkit-mask-repeat:no-repeat;-webkit-mask-position:center;mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/brands/x-twitter.svg");mask-repeat:no-repeat;mask-position:center'></svg></a><a class="h-fit" href="https://www.linkedin.com/company/anthropicresearch" rel="noopener noreferrer" target="_blank"><span class="sr-only">linkedin</span><svg aria-hidden="true" class="forced-colors:forced-color-adjust-none forced-colors:bg-[color:CanvasText]! w-5 h-5 bg-gray-500 dark:bg-gray-600 hover:bg-gray-600 dark:hover:bg-gray-500" focusable="false" style='-webkit-mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/brands/linkedin.svg");-webkit-mask-repeat:no-repeat;-webkit-mask-position:center;mask-image:url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/brands/linkedin.svg");mask-repeat:no-repeat;mask-position:center'></svg></a></div></div><div class="flex flex-col sm:grid max-md:grid-cols-2! gap-8 flex-1" style="grid-template-columns:repeat(4, minmax(0, 1fr))"><div class="flex flex-col gap-4 flex-1 whitespace-nowrap w-full md:items-center"><div class="flex gap-4 flex-col"><p class="text-sm font-semibold text-gray-950 dark:text-white mb-1">Company</p><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/company" rel="noreferrer" target="_blank">Anthropic</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/careers" rel="noreferrer" target="_blank">Careers</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/economic-futures" rel="noreferrer" target="_blank">Economic Futures</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/research" rel="noreferrer" target="_blank">Research</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/news" rel="noreferrer" target="_blank">News</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://trust.anthropic.com/" rel="noreferrer" target="_blank">Trust center</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/transparency" rel="noreferrer" target="_blank">Transparency</a></div></div><div class="flex flex-col gap-4 flex-1 whitespace-nowrap w-full md:items-center"><div class="flex gap-4 flex-col"><p class="text-sm font-semibold text-gray-950 dark:text-white mb-1">Help and security</p><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/supported-countries" rel="noreferrer" target="_blank">Availability</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://status.anthropic.com/" rel="noreferrer" target="_blank">Status</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://support.claude.com/" rel="noreferrer" target="_blank">Support center</a></div></div><div class="flex flex-col gap-4 flex-1 whitespace-nowrap w-full md:items-center"><div class="flex gap-4 flex-col"><p class="text-sm font-semibold text-gray-950 dark:text-white mb-1">Learn</p><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/learn" rel="noreferrer" target="_blank">Courses</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://claude.com/partners/mcp" rel="noreferrer" target="_blank">MCP connectors</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.claude.com/customers" rel="noreferrer" target="_blank">Customer stories</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/engineering" rel="noreferrer" target="_blank">Engineering blog</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/events" rel="noreferrer" target="_blank">Events</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://claude.com/partners/powered-by-claude" rel="noreferrer" target="_blank">Powered by Claude</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://claude.com/partners/services" rel="noreferrer" target="_blank">Service partners</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://claude.com/programs/startups" rel="noreferrer" target="_blank">Startups program</a></div></div><div class="flex flex-col gap-4 flex-1 whitespace-nowrap w-full md:items-center"><div class="flex gap-4 flex-col"><p class="text-sm font-semibold text-gray-950 dark:text-white mb-1">Terms and policies</p><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/legal/privacy" rel="noreferrer" target="_blank">Privacy choices</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/legal/privacy" rel="noreferrer" target="_blank">Privacy policy</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/responsible-disclosure-policy" rel="noreferrer" target="_blank">Disclosure policy</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/legal/aup" rel="noreferrer" target="_blank">Usage policy</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/legal/commercial-terms" rel="noreferrer" target="_blank">Commercial terms</a><a class="text-sm max-w-36 whitespace-normal md:truncate text-gray-950/50 dark:text-white/50 hover:text-gray-950/70 dark:hover:text-white/70" href="https://www.anthropic.com/legal/consumer-terms" rel="noreferrer" target="_blank">Consumer terms</a></div></div></div></div></div></footer><!--$--><!--/$--></div><div class="sticky shrink-0 z-22 bg-background-light dark:bg-background-dark mt-(--banner-height,0px) top-(--banner-height,0px) h-[calc(100vh-var(--banner-height,0px))] max-lg:hidden print:hidden" data-assistant-sheet-container="" style="width:var(--assistant-sheet-width, 0px);overflow:hidden"><div class='absolute left-0 top-0 bottom-0 w-px z-10 cursor-col-resize after:content-[""] after:absolute after:inset-y-0 after:-inset-x-2 after:select-none bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'></div><div aria-hidden="true" class="flex flex-col overflow-hidden shrink-0 relative h-full bg-background-light dark:bg-background-dark chat-assistant-sheet" id="chat-assistant-sheet"><div class="w-full flex flex-col flex-1 min-h-0 lg:pt-3"><div class="chat-assistant-sheet-header flex items-center justify-between pb-3 px-4"><div class="flex items-center gap-2"><svg aria-hidden="true" class="size-5 text-primary dark:text-primary-light shrink-0" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.65799 2.99L4.39499 2.569L3.97399 1.306C3.83699 0.898 3.16199 0.898 3.02499 1.306L2.60399 2.569L1.34099 2.99C1.13699 3.058 0.998993 3.249 0.998993 3.464C0.998993 3.679 1.13699 3.87 1.34099 3.938L2.60399 4.359L3.02499 5.622C3.09299 5.826 3.28499 5.964 3.49999 5.964C3.71499 5.964 3.90599 5.826 3.97499 5.622L4.39599 4.359L5.65899 3.938C5.86299 3.87 6.00099 3.679 6.00099 3.464C6.00099 3.249 5.86199 3.058 5.65799 2.99Z" fill="currentColor" stroke="none"></path><path d="M9.5 2.75L11.412 7.587L16.25 9.5L11.412 11.413L9.5 16.25L7.587 11.413L2.75 9.5L7.587 7.587L9.5 2.75Z" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg><span class="font-medium text-gray-900 dark:text-gray-100">Assistant</span></div><div class="flex items-center gap-1"><button aria-label="Maximize assistant panel" class="group hover:bg-gray-100 dark:hover:bg-white/10 p-1.5 rounded-lg"><svg aria-hidden="true" class="size-4 sm:size-3.5 text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300 shrink-0" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M10.75 2.75H15.25V7.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M15.25 2.75L10.75 7.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.75 10.75V15.25H7.25" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.75 15.25L7.25 10.75" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button><button aria-label="Close assistant panel" class="group hover:bg-gray-100 dark:hover:bg-white/10 p-1.5 rounded-lg"><svg aria-hidden="true" class="size-[20px] sm:size-4 text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300 shrink-0" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M14 4L4 14" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M4 4L14 14" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div><div class="chat-assistant-sheet-content flex flex-col-reverse flex-1 overflow-y-auto relative px-5 min-h-0" id="chat-content"><div class="grow"></div><div class="h-full flex flex-col justify-between"><div class="mt-4 flex flex-col items-center text-sm"><div class="mx-8 text-center text-gray-400 dark:text-gray-600 text-xs chat-assistant-disclaimer-text">Responses are generated using AI and may contain mistakes.</div></div></div></div><div class="px-4 pb-4 shrink-0"><div class=""><div class="flex flex-col w-full rounded-2xl pointer-events-auto bg-background-light dark:bg-background-dark border border-gray-200 dark:border-white/30 focus-within:border-primary dark:focus-within:border-primary-light transition-colors"><div class="relative flex items-end"><textarea aria-label="Ask a question..." autocomplete="off" class="chat-assistant-input w-full bg-transparent border-0 peer/input text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 outline-hidden! focus:outline-hidden! focus:ring-0 py-2.5 pl-3.5 pr-10 font-bodyWeight text-sm pb-0!" id="chat-assistant-textarea" placeholder="Ask a question..." rows="2" style="resize:none"></textarea></div><div class="flex items-center justify-between px-2 pb-2"><input accept="image/*,.pdf,.js,.jsx,.ts,.tsx,.mjs,.cjs,.md,.mdx,.json,.html,.css,.py,.csv,.txt,.yaml,.yml,.xml,.sql,.sh,.bash,.zsh,.graphql,.gql,.toml,.env,.go,.rs,.rb,.java,.kt,.swift,.c,.cpp,.cc,.h,.hpp,.cs,.php,.dart,.lua,.r,.scala,.ini,.cfg,.conf,.log,.dockerfile,.makefile,.gitignore" class="hidden" multiple="" type="file"/><button aria-label="Add attachment" class="p-1 rounded-lg text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10" type="button"><svg aria-hidden="true" class="size-3.5 shrink-0" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7.75 5V11.75C7.75 12.578 8.422 13.25 9.25 13.25C10.078 13.25 10.75 12.578 10.75 11.75V4.75C10.75 3.093 9.407 1.75 7.75 1.75C6.093 1.75 4.75 3.093 4.75 4.75V11.75C4.75 14.235 6.765 16.25 9.25 16.25C11.735 16.25 13.75 14.235 13.75 11.75V5" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button><button aria-label="Send message" class="chat-assistant-send-button flex justify-center items-center rounded-full p-1 size-6 bg-primary/30 dark:bg-primary-dark/30" disabled=""><svg aria-hidden="true" class="size-2.5 shrink-0 text-white dark:text-white" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M9.0 1.5754L8.9999 16.4171" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path><path d="M2.2563 8.319L8.9999 1.5754L15.7435 8.3191" linecap="round" linejoin="round" stroke="currentColor" width="1.5"></path></svg></button></div></div></div></div></div></div></div></div></div><script async="" id="_R_" src="/docs/_next/static/chunks/6d55b684068fd47e.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV"></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\na:I[168027,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n:HL[\"/docs/_next/static/chunks/462bacc63bed9960.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"style\"]\n:HL[\"/docs/_next/static/chunks/0685d76b264a77ed.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"style\"]\n:HL[\"/docs/_next/static/media/83afe278b6a6bb3c.p.3a6ba036.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/docs/_next/static/media/PaperMono_Variable.p.aa32f7a0.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/docs/_next/static/media/f67ad414ed34149c.p.84166d94.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"iXdsDs2bjKFuJvYilB5dh\",\"p\":\"/docs\",\"c\":[\"\",\"_sites\",\"claude-code\",\"en\",\"context-window\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"%5Fsites\",{\"children\":[[\"subdomain\",\"claude-code\",\"d\"],{\"children\":[\"(multitenant)\",{\"children\":[[\"slug\",\"en/context-window\",\"oc\"],{\"children\":[\"__PAGE__\",{}]}]}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/docs/_next/static/chunks/462bacc63bed9960.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"link\",\"1\",{\"rel\":\"stylesheet\",\"href\":\"/docs/_next/static/chunks/0685d76b264a77ed.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-0\",{\"src\":\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"suppressHydrationWarning\":true,\"lang\":\"en\",\"className\":\"inter_1d81deff-module__CYM0aG__variable papermono_89c757f2-module__6aS5zq__variable dark\",\"data-banner-state\":\"visible\",\"data-assistant-state\":\"closed\",\"data-page-mode\":\"none\",\"data-current-path\":\"/\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"dangerouslySetInnerHTML\":{\"__html\":\"!function(){var b=\\\"/docs\\\";\\nfunction a(p){if(p==null)return\\\"/\\\";p=\\\"\\\"+p;if(\\\"\\\"===p)return\\\"/\\\";return\\\"/\\\"===p.charAt(0)?p:\\\"/\\\"+p}\\nfunction u(p){if(p==null)return p;p=\\\"\\\"+p;if(!p||p.charAt(p.length-1)===\\\"/\\\")return p.slice(0,-1);return p}\\nfunction i(p){if(p==null)return p;p=\\\"\\\"+p;if(6\u003c=p.length\u0026\u0026p.substring(p.length-6)===\\\"/index\\\")return p.substring(0,p.length-6);if(\\\"index\\\"===p)return\\\"\\\";return p}\\nvar p=(location.pathname||\\\"\\\").split(\\\"?\\\")[0].split(\\\"#\\\")[0]||\\\"\\\";\\nif(b)if(p===b)p=\\\"\\\";else if(0===p.indexOf(b+\\\"/\\\"))p=p.substring(b.length);\\np=a(p);p=u(p);p=i(p);p=\\\"\\\"===p||\\\"index\\\"===p?\\\"/\\\":a(p);\\ndocument.documentElement.setAttribute(\\\"data-current-path\\\",p);\\n}();\"}}],[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"dangerouslySetInnerHTML\":{\"__html\":\"(() =\u003e {\\n  const isIOS =\\n    /iP(hone|ad|od)/.test(navigator.userAgent) ||\\n    (/Macintosh/.test(navigator.userAgent) \u0026\u0026 navigator.maxTouchPoints \u003e 1);\\n  if (!isIOS) return;\\n  const apply = () =\u003e {\\n    for (const meta of document.querySelectorAll('meta[name=\\\"viewport\\\"]')) {\\n      const content = meta.getAttribute('content') || '';\\n      if (!content.includes('maximum-scale')) {\\n        meta.setAttribute('content', content + ', maximum-scale=1');\\n      }\\n    }\\n  };\\n  apply();\\n  new MutationObserver(apply).observe(document.head, {\\n    childList: true,\\n    subtree: true,\\n    attributes: true,\\n    attributeFilter: ['content'],\\n  });\\n})();\"}}],[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"dangerouslySetInnerHTML\":{\"__html\":\"!function(){\\nfunction read(){try{\\nvar e=performance.getEntriesByType?performance.getEntriesByType(\\\"navigation\\\"):[];\\nvar st=(e[0]\u0026\u0026e[0].serverTiming)||[];\\nvar g={};\\nfor(var i=0;i\u003cst.length;i++){var n=st[i].name,d=st[i].description;if(!d)continue;try{d=decodeURIComponent(d)}catch(x){}\\nif(n===\\\"country\\\")g.country=d;else if(n===\\\"region\\\")g.region=d;else if(n===\\\"continent\\\")g.continent=d;}\\nvar w=window;w.mintlify=w.mintlify||{};w.mintlify.geo=g;\\n}catch(x){}}\\nread();document.addEventListener(\\\"DOMContentLoaded\\\",read);\\n}();\"}}],[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"dangerouslySetInnerHTML\":{\"__html\":\"!function(){try{\\nvar w=window;w.mintlify=w.mintlify||{};\\nvar q=w.mintlify.__apiPlaygroundInputsQueue;\\nif(!Array.isArray(q)){q=[];w.mintlify.__apiPlaygroundInputsQueue=q;}\\nw.mintlify.api=w.mintlify.api||{};\\nw.mintlify.api.playground=w.mintlify.api.playground||{};\\nif(typeof w.mintlify.api.playground.setServerVariables!==\\\"function\\\"){\\nw.mintlify.api.playground.setServerVariables=function(v){q.push({type:\\\"set\\\",variables:v});};\\n}\\nif(typeof w.mintlify.api.playground.clearServerVariables!==\\\"function\\\"){\\nw.mintlify.api.playground.clearServerVariables=function(){q.push({type:\\\"clear\\\"});};\\n}\\n}catch(e){}}();\"}}],\"$L2\",false]}],\"$L3\"]}]]}],{\"children\":[\"%5Fsites\",\"$L4\",{\"children\":[[\"subdomain\",\"claude-code\",\"d\"],\"$L5\",{\"children\":[\"(multitenant)\",\"$L6\",{\"children\":[[\"slug\",\"en/context-window\",\"oc\"],\"$L7\",{\"children\":[\"__PAGE__\",\"$L8\",{},null,false]},null,false]},null,false]},null,false]},null,false]},null,false],\"$L9\",false]],\"m\":\"$undefined\",\"G\":[\"$a\",[\"$Lb\",\"$Lc\"]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"d:I[667786,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"MintlifyApiPlaygroundInputsInit\"]\ne:I[339756,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\nf:I[556357,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0d1a5e3ce583526e.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n10:I[837457,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n"])</script><script>self.__next_f.push([1,"11:I[894587,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ThemeProvider\"]\n"])</script><script>self.__next_f.push([1,"12:I[152823,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ColorVariables\"]\n"])</script><script>self.__next_f.push([1,"13:I[531961,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"FontScript\"]\n"])</script><script>self.__next_f.push([1,"14:I[649328,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"RoundedVariables\"]\n"])</script><script>self.__next_f.push([1,"15:I[702910,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/969c4092baa44954.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"RecommendedPagesList\"]\n16:I[570420,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"DataCurrentPathUpdater\"]\n17:I[341175,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/6083aa7cbfc6209c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n1a:I[897367,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"OutletBoundary\"]\n1c:I[711533,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"AsyncMetadataOutlet\"]\n1e:I[897367,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSK"])</script><script>self.__next_f.push([1,"vGfNV\"],\"ViewportBoundary\"]\n20:I[897367,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"MetadataBoundary\"]\n21:\"$Sreact.suspense\"\n"])</script><script>self.__next_f.push([1,"2:[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"dangerouslySetInnerHTML\":{\"__html\":\"(function(a,b){try{let c=document.getElementById(\\\"banner\\\")?.innerText;if(c){for(let d=0;d\u003clocalStorage.length;d++){let e=localStorage.key(d);if(e?.endsWith(a)\u0026\u0026localStorage.getItem(e)===c)return void document.documentElement.setAttribute(b,\\\"hidden\\\")}document.documentElement.setAttribute(b,\\\"visible\\\");return}for(let c=0;c\u003clocalStorage.length;c++){let d=localStorage.key(c);if(d?.endsWith(a)\u0026\u0026localStorage.getItem(d))return void document.documentElement.setAttribute(b,\\\"hidden\\\")}document.documentElement.setAttribute(b,\\\"visible\\\")}catch(a){document.documentElement.setAttribute(b,\\\"hidden\\\")}})(\\n  \\\"bannerDismissed\\\",\\n  \\\"data-banner-state\\\",\\n)\"}}]\n"])</script><script>self.__next_f.push([1,"3:[\"$\",\"body\",null,{\"className\":\"antialiased\",\"children\":[[\"$\",\"$Ld\",null,{}],false,[\"$\",\"$Le\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$f\",\"errorStyles\":[],\"errorScripts\":[[\"$\",\"script\",\"script-0\",{\"src\":\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-1\",{\"src\":\"/docs/_next/static/chunks/0d1a5e3ce583526e.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-2\",{\"src\":\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-3\",{\"src\":\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-4\",{\"src\":\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}]],\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"$L11\",null,{\"children\":[[\"$\",\"$L12\",null,{}],[\"$\",\"$L13\",null,{}],[\"$\",\"$L14\",null,{}],[\"$\",\"style\",null,{\"children\":\":root {\\n  --primary: 17 120 102;\\n  --primary-light: 74 222 128;\\n  --primary-dark: 22 101 52;\\n  --background-light: 255 255 255;\\n  --background-dark: 15 17 23;\\n}\"}],[\"$\",\"main\",null,{\"className\":\"h-screen bg-background-light dark:bg-background-dark text-left\",\"children\":[\"$\",\"article\",null,{\"className\":\"bg-custom bg-fixed bg-center bg-cover relative flex flex-col items-center justify-center h-full\",\"children\":[\"$\",\"div\",null,{\"className\":\"w-full max-w-xl px-10\",\"children\":[[\"$\",\"span\",null,{\"className\":\"inline-flex mb-6 rounded-full px-3 py-1 text-sm font-semibold mr-4 text-white p-1 bg-primary\",\"children\":[\"Error \",404]}],[\"$\",\"h1\",null,{\"className\":\"font-semibold mb-3 text-3xl\",\"children\":\"Page not found!\"}],[\"$\",\"p\",null,{\"className\":\"text-lg text-gray-600 dark:text-gray-400 mb-6\",\"children\":\"We couldn't find the page.\"}],[\"$\",\"$L15\",null,{}]]}]}]}]]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}],false,[\"$\",\"$L16\",null,{}]]}]\n"])</script><script>self.__next_f.push([1,"4:[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$Le\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}]\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$Le\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$17\",\"errorStyles\":[],\"errorScripts\":[[\"$\",\"script\",\"script-0\",{\"src\":\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-1\",{\"src\":\"/docs/_next/static/chunks/6083aa7cbfc6209c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-2\",{\"src\":\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-3\",{\"src\":\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}],[\"$\",\"script\",\"script-4\",{\"src\":\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true}]],\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"$L11\",null,{\"children\":[[\"$\",\"$L12\",null,{}],[\"$\",\"$L13\",null,{}],[\"$\",\"$L14\",null,{}],[\"$\",\"style\",null,{\"children\":\":root {\\n  --primary: 17 120 102;\\n  --primary-light: 74 222 128;\\n  --primary-dark: 22 101 52;\\n  --background-light: 255 255 255;\\n  --background-dark: 15 17 23;\\n}\"}],[\"$\",\"main\",null,{\"className\":\"h-screen bg-background-light dark:bg-background-dark text-left\",\"children\":[\"$\",\"article\",null,{\"className\":\"bg-custom bg-fixed bg-center bg-cover relative flex flex-col items-center justify-center h-full\",\"children\":[\"$\",\"div\",null,{\"className\":\"w-full max-w-xl px-10\",\"children\":[[\"$\",\"span\",null,{\"className\":\"inline-flex mb-6 rounded-full px-3 py-1 text-sm font-semibold mr-4 text-white p-1 bg-primary\",\"children\":[\"Error \",404]}],[\"$\",\"h1\",null,{\"className\":\"font-semibold mb-3 text-3xl\",\"children\":\"Page not found!\"}],[\"$\",\"p\",null,{\"className\":\"text-lg text-gray-600 dark:text-gray-400 mb-6\",\"children\":\"We couldn't find the page.\"}],[\"$\",\"$L15\",null,{}]]}]}]}]]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}]\n"])</script><script>self.__next_f.push([1,"6:[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"script\",\"script-0\",{\"src\":\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-2\",{\"src\":\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-3\",{\"src\":\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-4\",{\"src\":\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-5\",{\"src\":\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-6\",{\"src\":\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-7\",{\"src\":\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-8\",{\"src\":\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-9\",{\"src\":\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-10\",{\"src\":\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-11\",{\"src\":\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-12\",{\"src\":\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-13\",{\"src\":\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}]],\"$L18\"]}]\n"])</script><script>self.__next_f.push([1,"7:[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$Le\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}]\n"])</script><script>self.__next_f.push([1,"8:[\"$\",\"$1\",\"c\",{\"children\":[\"$L19\",[[\"$\",\"script\",\"script-0\",{\"src\":\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-2\",{\"src\":\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-3\",{\"src\":\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-4\",{\"src\":\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-5\",{\"src\":\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-6\",{\"src\":\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-7\",{\"src\":\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"$L1a\",null,{\"children\":[\"$L1b\",[\"$\",\"$L1c\",null,{\"promise\":\"$@1d\"}]]}]]}]\n"])</script><script>self.__next_f.push([1,"9:[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$L1e\",null,{\"children\":\"$L1f\"}],null],[\"$\",\"$L20\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$21\",null,{\"fallback\":null,\"children\":\"$L22\"}]}]}]]}]\nb:[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/docs/_next/static/chunks/462bacc63bed9960.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]\nc:[\"$\",\"link\",\"1\",{\"rel\":\"stylesheet\",\"href\":\"/docs/_next/static/chunks/0685d76b264a77ed.css?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]\n"])</script><script>self.__next_f.push([1,"1f:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1, viewport-fit=cover\"}]]\n1b:null\n"])</script><script>self.__next_f.push([1,"23:I[707934,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"WebMcpRegistration\"]\n"])</script><script>self.__next_f.push([1,"24:I[590280,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"LivePreviewProvider\"]\n"])</script><script>self.__next_f.push([1,"25:I[973254,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"LivePreviewFavicon\"]\n"])</script><script>self.__next_f.push([1,"26:I[479520,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"\"]\n"])</script><script>self.__next_f.push([1,"27:I[197336,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n"])</script><script>self.__next_f.push([1,"28:I[91557,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"AuthProvider\"]\n"])</script><script>self.__next_f.push([1,"29:I[91557,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"DeploymentMetadataProvider\"]\n"])</script><script>self.__next_f.push([1,"18:[null,[\"$\",\"$L23\",null,{\"subdomain\":\"claude-code\"}],[\"$\",\"$L24\",null,{\"isLivePreviewRoute\":false,\"children\":[[\"$\",\"$L25\",null,{}],[\"$\",\"$L11\",null,{\"appearance\":{\"default\":\"system\"},\"codeblockTheme\":\"system\",\"children\":[[\"$\",\"blockquote\",null,{\"className\":\"sr-only\",\"data-agent-docs-index\":true,\"aria-hidden\":\"true\",\"children\":[[\"$\",\"h2\",null,{\"children\":\"Documentation Index\"}],[\"$\",\"p\",null,{\"children\":[\"Fetch the complete documentation index at:\",\" \",[\"$\",\"a\",null,{\"href\":\"/docs/llms.txt\",\"tabIndex\":-1,\"children\":\"/docs/llms.txt\"}]]}],[\"$\",\"p\",null,{\"children\":\"Use this file to discover all available pages before exploring further.\"}]]}],[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\":root{--banner-height:0px!important}\"}}],false,null,null,[\"$\",\"$L26\",null,{\"id\":\"_mintlify-banner-script\",\"strategy\":\"beforeInteractive\",\"dangerouslySetInnerHTML\":{\"__html\":\"(function j(a,b,c,d,e){try{let f,g,h=[];try{h=window.location.pathname.split(\\\"/\\\").filter(a=\u003e\\\"\\\"!==a\u0026\u0026\\\"global\\\"!==a).slice(0,2)}catch{h=[]}let i=h.find(a=\u003ec.includes(a)),j=[];for(let c of(i?j.push(i):j.push(b),j.push(\\\"global\\\"),j)){if(!c)continue;let b=a[c];if(b?.content){f=b.content,g=c;break}}if(!f)return void document.documentElement.setAttribute(d,\\\"hidden\\\");let k=!0,l=0;for(;l\u003clocalStorage.length;){let a=localStorage.key(l);if(l++,!a?.endsWith(e))continue;let b=localStorage.getItem(a);if(b\u0026\u0026b===f){k=!1;break}g\u0026\u0026(a.startsWith(`lang:${g}_`)||!a.startsWith(\\\"lang:\\\"))\u0026\u0026(localStorage.removeItem(a),l--)}document.documentElement.setAttribute(d,k?\\\"visible\\\":\\\"hidden\\\")}catch(a){console.error(a),document.documentElement.setAttribute(d,\\\"hidden\\\")}})(\\n  {},\\n  \\\"en\\\",\\n  [\\\"en\\\",\\\"fr\\\",\\\"de\\\",\\\"it\\\",\\\"jp\\\",\\\"es\\\",\\\"ko\\\",\\\"cn\\\",\\\"zh-Hant\\\",\\\"ru\\\",\\\"id\\\",\\\"pt-BR\\\"],\\n  \\\"data-banner-state\\\",\\n  \\\"bannerDismissed\\\",\\n)\"}}],[\"$\",\"$L27\",null,{\"appId\":\"$undefined\",\"autoBoot\":true,\"children\":[\"$\",\"$L28\",null,{\"value\":{\"auth\":\"$undefined\",\"userAuth\":\"$undefined\"},\"children\":[\"$\",\"$L29\",null,{\"value\":{\"subdomain\":\"claude-code\",\"actualSubdomain\":\"claude-code\",\"gitSource\":{\"type\":\"github\",\"owner\":\"anthropics\",\"repo\":\"claude-code-docs\",\"deployBranch\":\"main\",\"contentDirectory\":\"\",\"isPrivate\":true,\"mountPath\":\"\",\"label\":\"\"},\"chroma\":{\"liveDeploymentHistoryId\":\"6a8f901f679efd6f970aa3de\",\"collectionId\":\"20399b94-33a5-4ef6-8091-ac291ac12381\",\"schemaVersion\":\"v3\",\"latestBuiltDeploymentHistoryId\":\"6a8f901f679efd6f970aa3de\"},\"feedback\":{\"thumbs\":true},\"entitlements\":{\"AI_CHAT\":{\"status\":\"ENABLED\"},\"REMOVE_BRANDING\":{\"status\":\"ENABLED\"},\"CONTEXTUAL_FEEDBACK\":{\"status\":\"ENABLED\",\"enabled\":\"ENABLED\"},\"CODE_SNIPPET_FEEDBACK\":{\"status\":\"ENABLED\",\"enabled\":\"ENABLED\"}},\"buildId\":\"6a8fba2232f3a0d5a4e35062\",\"clientVersion\":\"0.0.3513\",\"preview\":\"$undefined\",\"searchFilterCounts\":[{\"language\":\"en\",\"tag\":\"What's New\",\"count\":44},{\"language\":\"en\",\"tag\":\"Getting started\",\"count\":42},{\"language\":\"de\",\"tag\":\"Erste Schritte\",\"count\":38},{\"language\":\"es\",\"tag\":\"Primeros pasos\",\"count\":38},{\"language\":\"fr\",\"tag\":\"Démarrer\",\"count\":38},{\"language\":\"id\",\"tag\":\"Memulai\",\"count\":38},{\"language\":\"it\",\"tag\":\"Guida introduttiva\",\"count\":38},{\"language\":\"jp\",\"tag\":\"はじめに\",\"count\":38},{\"language\":\"ko\",\"tag\":\"시작하기\",\"count\":38},{\"language\":\"pt-BR\",\"tag\":\"Primeiros passos\",\"count\":38},{\"language\":\"ru\",\"tag\":\"Начало работы\",\"count\":38},{\"language\":\"cn\",\"tag\":\"快速开始\",\"count\":38},{\"language\":\"zh-Hant\",\"tag\":\"開始使用\",\"count\":38},{\"language\":\"en\",\"tag\":\"Administration\",\"count\":37},{\"language\":\"de\",\"tag\":\"Verwaltung\",\"count\":35},{\"language\":\"es\",\"tag\":\"Administración\",\"count\":35},{\"language\":\"fr\",\"tag\":\"Administration\",\"count\":35},{\"language\":\"id\",\"tag\":\"Administrasi\",\"count\":35},{\"language\":\"it\",\"tag\":\"Amministrazione\",\"count\":35},{\"language\":\"jp\",\"tag\":\"管理\",\"count\":35},{\"language\":\"ko\",\"tag\":\"관리\",\"count\":35},{\"language\":\"pt-BR\",\"tag\":\"Administração\",\"count\":35},{\"language\":\"ru\",\"tag\":\"Администрирование\",\"count\":35},{\"language\":\"cn\",\"tag\":\"管理\",\"count\":35},{\"language\":\"zh-Hant\",\"tag\":\"管理\",\"count\":35},{\"language\":\"de\",\"tag\":\"Neuigkeiten\",\"count\":34},{\"language\":\"es\",\"tag\":\"Novedades\",\"count\":34},{\"language\":\"fr\",\"tag\":\"Nouveautés\",\"count\":34},{\"language\":\"id\",\"tag\":\"Apa yang Baru\",\"count\":34},{\"language\":\"it\",\"tag\":\"Novità\",\"count\":34},{\"language\":\"ko\",\"tag\":\"새로운 소식\",\"count\":34},{\"language\":\"pt-BR\",\"tag\":\"O Que Há de Novo\",\"count\":34},{\"language\":\"ru\",\"tag\":\"Что нового\",\"count\":34},{\"language\":\"cn\",\"tag\":\"最新动态\",\"count\":34},{\"language\":\"zh-Hant\",\"tag\":\"最新消息\",\"count\":34},{\"language\":\"en\",\"tag\":\"Agent SDK\",\"count\":33},{\"language\":\"de\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"fr\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"id\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"it\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"jp\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"ko\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"pt-BR\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"ru\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"cn\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"zh-Hant\",\"tag\":\"Agent SDK\",\"count\":31},{\"language\":\"es\",\"tag\":\"SDK de Agente\",\"count\":29},{\"language\":\"en\",\"tag\":\"Platforms and integrations\",\"count\":26},{\"language\":\"en\",\"tag\":\"Configuration\",\"count\":24},{\"language\":\"en\",\"tag\":\"Build with Claude Code\",\"count\":24},{\"language\":\"de\",\"tag\":\"Mit Claude Code erstellen\",\"count\":23},{\"language\":\"es\",\"tag\":\"Crear con Claude Code\",\"count\":23},{\"language\":\"fr\",\"tag\":\"Créer avec Claude Code\",\"count\":23},{\"language\":\"id\",\"tag\":\"Bangun dengan Claude Code\",\"count\":23},{\"language\":\"it\",\"tag\":\"Crea con Claude Code\",\"count\":23},{\"language\":\"jp\",\"tag\":\"Claude Code で構築する\",\"count\":23},{\"language\":\"ko\",\"tag\":\"Claude Code로 빌드하기\",\"count\":23},{\"language\":\"pt-BR\",\"tag\":\"Construir com Claude Code\",\"count\":23},{\"language\":\"ru\",\"tag\":\"Разработка с Claude Code\",\"count\":23},{\"language\":\"cn\",\"tag\":\"使用 Claude Code 构建\",\"count\":23},{\"language\":\"zh-Hant\",\"tag\":\"使用 Claude Code 建構\",\"count\":23},{\"language\":\"de\",\"tag\":\"Plattformen und Integrationen\",\"count\":21},{\"language\":\"es\",\"tag\":\"Plataformas e integraciones\",\"count\":21},{\"language\":\"fr\",\"tag\":\"Plateformes et intégrations\",\"count\":21},{\"language\":\"id\",\"tag\":\"Platform dan integrasi\",\"count\":21},{\"language\":\"it\",\"tag\":\"Piattaforme e integrazioni\",\"count\":21},{\"language\":\"jp\",\"tag\":\"プラットフォームと統合\",\"count\":21},{\"language\":\"ko\",\"tag\":\"플랫폼 및 통합\",\"count\":21},{\"language\":\"pt-BR\",\"tag\":\"Plataformas e integrações\",\"count\":21},{\"language\":\"ru\",\"tag\":\"Платформы и интеграции\",\"count\":21},{\"language\":\"cn\",\"tag\":\"平台和集成\",\"count\":21},{\"language\":\"zh-Hant\",\"tag\":\"平台與整合\",\"count\":21},{\"language\":\"de\",\"tag\":\"Referenz\",\"count\":19},{\"language\":\"en\",\"tag\":\"Reference\",\"count\":19},{\"language\":\"es\",\"tag\":\"Referencia\",\"count\":19},{\"language\":\"fr\",\"tag\":\"Référence\",\"count\":19},{\"language\":\"id\",\"tag\":\"Referensi\",\"count\":19},{\"language\":\"it\",\"tag\":\"Riferimento\",\"count\":19},{\"language\":\"jp\",\"tag\":\"リファレンス\",\"count\":19},{\"language\":\"ko\",\"tag\":\"참고\",\"count\":19},{\"language\":\"pt-BR\",\"tag\":\"Referência\",\"count\":19},{\"language\":\"ru\",\"tag\":\"Справочник\",\"count\":19},{\"language\":\"cn\",\"tag\":\"参考\",\"count\":19},{\"language\":\"zh-Hant\",\"tag\":\"參考資料\",\"count\":19},{\"language\":\"jp\",\"tag\":\"新機能\",\"count\":17},{\"language\":\"jp\",\"tag\":\"新着情報\",\"count\":17},{\"language\":\"de\",\"tag\":\"Konfiguration\",\"count\":14},{\"language\":\"es\",\"tag\":\"Configuración\",\"count\":14},{\"language\":\"fr\",\"tag\":\"Configuration\",\"count\":14},{\"language\":\"id\",\"tag\":\"Konfigurasi\",\"count\":14},{\"language\":\"it\",\"tag\":\"Configurazione\",\"count\":14},{\"language\":\"jp\",\"tag\":\"設定\",\"count\":14},{\"language\":\"ko\",\"tag\":\"구성\",\"count\":14},{\"language\":\"pt-BR\",\"tag\":\"Configuração\",\"count\":14},{\"language\":\"ru\",\"tag\":\"Конфигурация\",\"count\":14},{\"language\":\"cn\",\"tag\":\"配置\",\"count\":14},{\"language\":\"zh-Hant\",\"tag\":\"配置\",\"count\":14},{\"language\":\"de\",\"tag\":\"Bereitstellung\",\"count\":11},{\"language\":\"en\",\"tag\":\"Deployment\",\"count\":11},{\"language\":\"es\",\"tag\":\"Implementación\",\"count\":11},{\"language\":\"fr\",\"tag\":\"Déploiement\",\"count\":11},{\"language\":\"id\",\"tag\":\"Penyebaran\",\"count\":11},{\"language\":\"it\",\"tag\":\"Distribuzione\",\"count\":11},{\"language\":\"jp\",\"tag\":\"デプロイメント\",\"count\":11},{\"language\":\"ko\",\"tag\":\"배포\",\"count\":11},{\"language\":\"pt-BR\",\"tag\":\"Implantação\",\"count\":11},{\"language\":\"ru\",\"tag\":\"Развертывание\",\"count\":11},{\"language\":\"cn\",\"tag\":\"部署\",\"count\":11},{\"language\":\"zh-Hant\",\"tag\":\"部署\",\"count\":11},{\"language\":\"de\",\"tag\":\"Kernkonzepte\",\"count\":9},{\"language\":\"en\",\"tag\":\"Core concepts\",\"count\":9},{\"language\":\"es\",\"tag\":\"Conceptos fundamentales\",\"count\":9},{\"language\":\"fr\",\"tag\":\"Concepts fondamentaux\",\"count\":9},{\"language\":\"id\",\"tag\":\"Konsep Inti\",\"count\":9},{\"language\":\"it\",\"tag\":\"Concetti fondamentali\",\"count\":9},{\"language\":\"ko\",\"tag\":\"핵심 개념\",\"count\":9},{\"language\":\"pt-BR\",\"tag\":\"Conceitos principais\",\"count\":9},{\"language\":\"ru\",\"tag\":\"Основные концепции\",\"count\":9},{\"language\":\"cn\",\"tag\":\"核心概念\",\"count\":9},{\"language\":\"zh-Hant\",\"tag\":\"核心概念\",\"count\":9}],\"searchSettings\":\"$undefined\",\"disableKonamiCode\":\"$undefined\"},\"children\":\"$L2a\"}]}]}]]}]]}]]\n"])</script><script>self.__next_f.push([1,"2b:I[91557,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"DocsConfigProvider\"]\n"])</script><script>self.__next_f.push([1,"2c:I[604804,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"LoginButtonProvider\"]\n"])</script><script>self.__next_f.push([1,"2d:I[141180,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"SidebarLoginButtonProvider\"]\n"])</script><script>self.__next_f.push([1,"2e:I[343590,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"NavigationContextController\"]\n"])</script><script>self.__next_f.push([1,"2a:[\"$\",\"$L2b\",null,{\"value\":{\"docsConfig\":{\"theme\":\"mint\",\"$schema\":\"https://mintlify.com/docs.json\",\"name\":\"Claude Code Docs\",\"description\":\"Official documentation for Claude Code, Anthropic's agentic coding tool available in the terminal, IDE, desktop app, and browser. Covers installation, configuration, skills, subagents, hooks, MCP, the Agent SDK, and reference material.\",\"colors\":{\"primary\":\"#0E0E0E\",\"light\":\"#D4A27F\",\"dark\":\"#0E0E0E\"},\"logo\":{\"light\":\"https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/light.svg?fit=max\u0026auto=format\u0026n=c5r9_6tjPMzFdDDT\u0026q=85\u0026s=78fd01ff4f4340295a4f66e2ea54903c\",\"dark\":\"https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/dark.svg?fit=max\u0026auto=format\u0026n=c5r9_6tjPMzFdDDT\u0026q=85\u0026s=1298a0c3b3a1da603b190d0de0e31712\"},\"favicon\":\"https://mintcdn.com/claude-code/T2WlxklWBkR5Y1mJ/favicon.ico?fit=max\u0026auto=format\u0026n=T2WlxklWBkR5Y1mJ\u0026q=85\u0026s=346a85952ae08d5ee90e3c34d4423930\",\"appearance\":\"$18:2:props:children:1:props:appearance\",\"background\":{\"color\":{\"light\":\"#FDFDF7\",\"dark\":\"#09090B\"}},\"navbar\":{\"links\":[{\"href\":\"https://platform.claude.com/\",\"label\":\"Claude Developer Platform\"}],\"primary\":{\"type\":\"button\",\"label\":\"Claude Code on the Web\",\"href\":\"https://claude.ai/code\"}},\"footer\":{\"socials\":{\"x\":\"https://x.com/AnthropicAI\",\"linkedin\":\"https://www.linkedin.com/company/anthropicresearch\"},\"links\":[{\"header\":\"Company\",\"items\":[{\"label\":\"Anthropic\",\"href\":\"https://www.anthropic.com/company\"},{\"label\":\"Careers\",\"href\":\"https://www.anthropic.com/careers\"},{\"label\":\"Economic Futures\",\"href\":\"https://www.anthropic.com/economic-futures\"},{\"label\":\"Research\",\"href\":\"https://www.anthropic.com/research\"},{\"label\":\"News\",\"href\":\"https://www.anthropic.com/news\"},{\"label\":\"Trust center\",\"href\":\"https://trust.anthropic.com/\"},{\"label\":\"Transparency\",\"href\":\"https://www.anthropic.com/transparency\"}]},{\"header\":\"Help and security\",\"items\":[{\"label\":\"Availability\",\"href\":\"https://www.anthropic.com/supported-countries\"},{\"label\":\"Status\",\"href\":\"https://status.anthropic.com/\"},{\"label\":\"Support center\",\"href\":\"https://support.claude.com/\"}]},{\"header\":\"Learn\",\"items\":[{\"label\":\"Courses\",\"href\":\"https://www.anthropic.com/learn\"},{\"label\":\"MCP connectors\",\"href\":\"https://claude.com/partners/mcp\"},{\"label\":\"Customer stories\",\"href\":\"https://www.claude.com/customers\"},{\"label\":\"Engineering blog\",\"href\":\"https://www.anthropic.com/engineering\"},{\"label\":\"Events\",\"href\":\"https://www.anthropic.com/events\"},{\"label\":\"Powered by Claude\",\"href\":\"https://claude.com/partners/powered-by-claude\"},{\"label\":\"Service partners\",\"href\":\"https://claude.com/partners/services\"},{\"label\":\"Startups program\",\"href\":\"https://claude.com/programs/startups\"}]},{\"header\":\"Terms and policies\",\"items\":[{\"label\":\"Privacy choices\",\"href\":\"https://www.anthropic.com/legal/privacy\"},{\"label\":\"Privacy policy\",\"href\":\"https://www.anthropic.com/legal/privacy\"},{\"label\":\"Disclosure policy\",\"href\":\"https://www.anthropic.com/responsible-disclosure-policy\"},{\"label\":\"Usage policy\",\"href\":\"https://www.anthropic.com/legal/aup\"},{\"label\":\"Commercial terms\",\"href\":\"https://www.anthropic.com/legal/commercial-terms\"},{\"label\":\"Consumer terms\",\"href\":\"https://www.anthropic.com/legal/consumer-terms\"}]}]},\"seo\":{\"metatags\":{\"canonical\":\"https://code.claude.com/docs\"}},\"fonts\":{\"family\":\"Anthropic Sans\"},\"contextual\":{\"options\":[\"copy\",\"view\",\"claude\"],\"display\":\"header\"},\"styling\":{\"latex\":true,\"codeblocks\":\"system\"},\"navigation\":{\"languages\":[{\"language\":\"en\",\"href\":\"en/overview\"},{\"language\":\"fr\",\"href\":\"fr/overview\"},{\"language\":\"de\",\"href\":\"de/overview\"},{\"language\":\"it\",\"href\":\"it/overview\"},{\"language\":\"jp\",\"href\":\"ja/overview\"},{\"language\":\"es\",\"href\":\"es/overview\"},{\"language\":\"ko\",\"href\":\"ko/overview\"},{\"language\":\"cn\",\"href\":\"zh-CN/overview\"},{\"language\":\"zh-Hant\",\"href\":\"zh-TW/overview\"},{\"language\":\"ru\",\"href\":\"ru/overview\"},{\"language\":\"id\",\"href\":\"id/overview\"},{\"language\":\"pt-BR\",\"href\":\"pt/overview\"}]}},\"docsNavWithMetadata\":\"$undefined\",\"anonymizedNav\":\"$undefined\",\"hasFullNav\":false},\"children\":[\"$\",\"$L2c\",null,{\"children\":[\"$\",\"$L2d\",null,{\"children\":[\"$\",\"$L2e\",null,{\"children\":\"$L2f\"}]}]}]}]\n"])</script><script>self.__next_f.push([1,"30:I[378486,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"PageListProvider\"]\n"])</script><script>self.__next_f.push([1,"31:I[742977,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"PrefetchProvider\"]\n"])</script><script>self.__next_f.push([1,"32:I[237978,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"PageModeOverrideProvider\"]\n"])</script><script>self.__next_f.push([1,"33:I[378896,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ConfiguredVariationProvider\"]\n"])</script><script>self.__next_f.push([1,"34:I[557611,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"Fonts\"]\n"])</script><script>self.__next_f.push([1,"35:I[330080,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"BannerProvider\"]\n"])</script><script>self.__next_f.push([1,"36:I[864506,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"NavbarTransitionScript\"]\n"])</script><script>self.__next_f.push([1,"37:T9e0,"])</script><script>self.__next_f.push([1,"(function () {\n  var measure = function(){let a=document.querySelectorAll(\"[id='navbar'], [data-top-chrome]\"),b=0;a.forEach(a=\u003e{let c=a.getBoundingClientRect();c.height\u003e0\u0026\u0026(b=Math.max(b,c.bottom))});let c=0,d=document.getElementById(\"content-container\");if(d){let{overflowY:a}=getComputedStyle(d);(\"auto\"===a||\"scroll\"===a)\u0026\u0026(c=Math.max(0,d.getBoundingClientRect().top))}let e=`${Math.round(Math.max(0,b-c))+40}px`,f=document.documentElement.style;f.getPropertyValue(\"--scroll-mt\")!==e\u0026\u0026f.setProperty(\"--scroll-mt\",e)};\n  (function(a){let b=[],c=0,d=\"undefined\"==typeof ResizeObserver?null:new ResizeObserver(f);function e(){let c=Array.from(document.querySelectorAll(\"[id='navbar'], [data-top-chrome]\"));(c.length!==b.length||c.some((a,c)=\u003ea!==b[c]))\u0026\u0026d\u0026\u0026(d.disconnect(),c.forEach(a=\u003ed.observe(a))),b=c,a()}function f(){c||(c=requestAnimationFrame(()=\u003e{c=0,e()}))}let g=\"[id='navbar'], [data-top-chrome]\";function h(a){let b=a.target;if(b instanceof Element\u0026\u0026b.closest(g))return!0;for(let b of a.addedNodes)if(b instanceof Element\u0026\u0026(b.matches(g)||b.querySelector(g)))return!0;for(let b of a.removedNodes)if(b instanceof Element\u0026\u0026(b.matches(g)||b.querySelector(g)))return!0;return!1}new MutationObserver(a=\u003e{a.some(h)\u0026\u0026f()}).observe(document.documentElement,{childList:!0,subtree:!0}),window.addEventListener(\"resize\",f),\"loading\"===document.readyState\u0026\u0026document.addEventListener(\"DOMContentLoaded\",e),e()})(measure);\n  (function(a){let b=window.location.hash.slice(1);if(!b)return;function c(){return\"smooth\"===getComputedStyle(document.documentElement).scrollBehavior}function d(c){let d=document.getElementById(b);return!!d\u0026\u0026(a(),d.scrollIntoView(c?{behavior:c}:void 0),!0)}if(\"complete\"===document.readyState)return void d();let e=new MutationObserver(()=\u003e{!c()\u0026\u0026d(\"instant\")\u0026\u0026f()});function f(){e.disconnect(),window.removeEventListener(\"load\",g)}function g(){let a=c();f(),a\u0026\u0026requestAnimationFrame(()=\u003e{d(),function(){let a=[\"wheel\",\"touchstart\",\"keydown\",\"pointerdown\"],c=0,e=window.scrollY,f=setInterval(()=\u003e{c+=1;let a=document.getElementById(b);if(!a||c\u003e=6)return g();let f=Math.abs(window.scrollY-e)\u003e1;if(e=window.scrollY,f)return;let h=parseFloat(getComputedStyle(a).scrollMarginTop)||0;Math.abs(a.getBoundingClientRect().top-h)\u003e4\u0026\u0026d()},350);function g(){clearInterval(f),a.forEach(a=\u003ewindow.removeEventListener(a,g))}a.forEach(a=\u003ewindow.addEventListener(a,g,{passive:!0}))}()})}window.addEventListener(\"load\",g),e.observe(document.documentElement,{childList:!0,subtree:!0}),!c()\u0026\u0026d(\"instant\")\u0026\u0026f()})(measure);\n})();"])</script><script>self.__next_f.push([1,"2f:[\"$\",\"$L30\",null,{\"pageListDataMap\":{},\"children\":[\"$\",\"$L31\",null,{\"disabled\":\"$undefined\",\"children\":[\"$\",\"$L32\",null,{\"children\":[\"$\",\"$L33\",null,{\"children\":[[\"$\",\"$L13\",null,{\"fonts\":\"$2a:props:value:docsConfig:fonts\",\"theme\":\"mint\",\"subdomain\":\"claude-code\"}],[[\"$\",\"$L12\",null,{\"docsConfig\":\"$2a:props:value:docsConfig\"}],[[\"$\",\"link\",null,{\"rel\":\"preload\",\"href\":\"https://d4tuoctqmanu0.cloudfront.net/katex.min.css\",\"as\":\"style\"}],[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"children\":\"\\n          (function() {\\n            function loadKatex() {\\n              const link = document.querySelector('link[href=\\\"https://d4tuoctqmanu0.cloudfront.net/katex.min.css\\\"]');\\n              if (link) link.rel = 'stylesheet';\\n            }\\n            if (document.readyState === 'loading') {\\n              document.addEventListener('DOMContentLoaded', loadKatex);\\n            } else {\\n              loadKatex();\\n            }\\n          })();\\n        \"}]],[\"$\",\"$L14\",null,{\"theme\":\"mint\"}],[\"$\",\"$L34\",null,{\"fonts\":\"$2a:props:value:docsConfig:fonts\",\"children\":[\"$\",\"$L35\",null,{\"bannersByLocale\":{},\"subdomain\":\"claude-code\",\"children\":[[\"$\",\"$L36\",null,{\"theme\":\"mint\"}],[\"$\",\"$L26\",null,{\"strategy\":\"beforeInteractive\",\"id\":\"_mintlify-scroll-margin-script\",\"dangerouslySetInnerHTML\":{\"__html\":\"$37\"},\"suppressHydrationWarning\":true}],\"$L38\"]}]}]]]}]}]}]}]\n"])</script><script>self.__next_f.push([1,"39:I[540345,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ConsentProvider\"]\n"])</script><script>self.__next_f.push([1,"3a:I[529058,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"LocalStorageAndAnalyticsProviders\"]\n"])</script><script>self.__next_f.push([1,"3b:I[958547,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n"])</script><script>self.__next_f.push([1,"3c:I[604780,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"CaptchaProvider\"]\n"])</script><script>self.__next_f.push([1,"3d:I[601054,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"SearchProvider\"]\n"])</script><script>self.__next_f.push([1,"3e:I[28330,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"SkipToContent\"]\n"])</script><script>self.__next_f.push([1,"3f:I[87732,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"AssistantLayoutWrapper\"]\n"])</script><script>self.__next_f.push([1,"38:[\"$\",\"$L39\",null,{\"privacy\":\"$undefined\",\"children\":[\"$\",\"$L3a\",null,{\"subdomain\":\"claude-code\",\"isAtlas\":false,\"children\":[\"$\",\"$L3b\",null,{\"toggles\":[{\"name\":\"dashboard-editor-theseus\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"kill-isr\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"assistant-bash\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"chat-bucketing-batched\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"agent-mintlify-slack\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"editor-v7-file-tree\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"agent-integrations-settings\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"automations-pr-grouping\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"pause-preview-search-indexing\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"custom-prefix\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"analytics-v7\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"llms-txt-v2\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"user-flows-analytics\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"no-publish-flow\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"pause-universal-search-reconcile\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"snapshot-serving-live\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"stripTemperatureMiddleware\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"editor-branches-v2-autocommit\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"editor-branches-v2\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"snapshot-serving\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"instant-rollback\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false},{\"name\":\"automations-fable\",\"enabled\":true,\"variant\":{\"name\":\"disabled\",\"enabled\":false,\"feature_enabled\":true},\"impressionData\":false}],\"children\":[\"$\",\"$L3c\",null,{\"enabled\":true,\"isPreview\":false,\"children\":[\"$\",\"$L3d\",null,{\"subdomain\":\"claude-code\",\"hasChatPermissions\":true,\"isLoggedInCli\":false,\"assistantConfig\":{\"enableAskAiButton\":false,\"enableStarterQuestions\":false,\"enableAskAiSearchBar\":true},\"starterQuestions\":\"$undefined\",\"children\":[[\"$\",\"$L3e\",null,{}],[\"$\",\"script\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"(function i(a,b,c,d){try{if(window.matchMedia(\\\"(max-width: 1024px)\\\").matches||!d){document.documentElement.style.setProperty(c,\\\"0px\\\"),document.documentElement.setAttribute(\\\"data-assistant-state\\\",\\\"closed\\\"),d||localStorage.setItem(a,\\\"false\\\");return}let e=localStorage.getItem(a);if(null===e){document.documentElement.style.setProperty(c,\\\"0px\\\"),document.documentElement.setAttribute(\\\"data-assistant-state\\\",\\\"closed\\\");return}let f=JSON.parse(e),g=localStorage.getItem(b),h=null!==g?JSON.parse(g):368;document.documentElement.style.setProperty(c,f?h+\\\"px\\\":\\\"0px\\\"),document.documentElement.setAttribute(\\\"data-assistant-state\\\",f?\\\"open\\\":\\\"closed\\\")}catch(a){document.documentElement.style.setProperty(c,\\\"0px\\\"),document.documentElement.setAttribute(\\\"data-assistant-state\\\",\\\"closed\\\")}})(\\n    \\\"chat-assistant-sheet-open\\\",\\n    \\\"chat-assistant-sheet-width\\\",\\n    \\\"--assistant-sheet-width\\\",\\n    true\\n  )\"}}],false,[\"$\",\"$L3f\",null,{\"children\":[[\"$\",\"$Le\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$L40\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}],\"$undefined\"]}]]}]}]}]}]}]\n"])</script><script>self.__next_f.push([1,"41:I[118717,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b7de670ceb1b1925.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"NotFoundHydrator\"]\n"])</script><script>self.__next_f.push([1,"40:[[\"$\",\"$L41\",null,{\"source\":\"multitenant\"}],[]]\n"])</script><script>self.__next_f.push([1,"4e:I[597003,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ScopedNavProvider\"]\n"])</script><script>self.__next_f.push([1,"1d:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Explore the context window - Claude Code Docs\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"application-name\",\"content\":\"Claude Code Docs\"}],[\"$\",\"meta\",\"3\",{\"name\":\"generator\",\"content\":\"Mintlify\"}],[\"$\",\"meta\",\"4\",{\"name\":\"msapplication-config\",\"content\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/browserconfig.xml\"}],[\"$\",\"meta\",\"5\",{\"name\":\"apple-mobile-web-app-title\",\"content\":\"Claude Code Docs\"}],[\"$\",\"meta\",\"6\",{\"name\":\"msapplication-TileColor\",\"content\":\"#0E0E0E\"}],[\"$\",\"link\",\"7\",{\"rel\":\"canonical\",\"href\":\"https://code.claude.com/docs/en/context-window\"}],[\"$\",\"link\",\"8\",{\"rel\":\"alternate\",\"type\":\"application/xml\",\"href\":\"/docs/sitemap.xml\"}],[\"$\",\"link\",\"9\",{\"rel\":\"alternate\",\"type\":\"text/markdown\",\"href\":\"/docs/en/context-window.md\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:title\",\"content\":\"Explore the context window - Claude Code Docs\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:description\",\"content\":\"An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:url\",\"content\":\"https://code.claude.com/docs/en/context-window\"}],[\"$\",\"meta\",\"13\",{\"property\":\"og:site_name\",\"content\":\"Claude Code Docs\"}],[\"$\",\"meta\",\"14\",{\"property\":\"og:image\",\"content\":\"https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DCore%2Bconcepts%26appearance%3Dsystem%26title%3DExplore%2Bthe%2Bcontext%2Bwindow%26description%3DAn%2Binteractive%2Bsimulation%2Bof%2Bhow%2BClaude%2BCode%2527s%2Bcontext%2Bwindow%2Bfills%2Bduring%2Ba%2Bsession.%2BSee%2Bwhat%2Bloads%2Bautomatically%252C%2Bwhat%2Beach%2Bfile%2Bread%2Bcosts%252C%2Band%2Bwhen%2Brules%2Ban%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Flight.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D78fd01ff4f4340295a4f66e2ea54903c%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Fdark.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D1298a0c3b3a1da603b190d0de0e31712%26primaryColor%3D%25230E0E0E%26lightColor%3D%2523D4A27F%26backgroundLight%3D%2523FDFDF7%26backgroundDark%3D%252309090B\u0026w=1200\u0026q=100\"}],[\"$\",\"meta\",\"15\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"16\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"17\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"18\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"19\",{\"name\":\"twitter:title\",\"content\":\"Explore the context window - Claude Code Docs\"}],[\"$\",\"meta\",\"20\",{\"name\":\"twitter:description\",\"content\":\"An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.\"}],[\"$\",\"meta\",\"21\",{\"name\":\"twitter:image\",\"content\":\"https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DCore%2Bconcepts%26appearance%3Dsystem%26title%3DExplore%2Bthe%2Bcontext%2Bwindow%26description%3DAn%2Binteractive%2Bsimulation%2Bof%2Bhow%2BClaude%2BCode%2527s%2Bcontext%2Bwindow%2Bfills%2Bduring%2Ba%2Bsession.%2BSee%2Bwhat%2Bloads%2Bautomatically%252C%2Bwhat%2Beach%2Bfile%2Bread%2Bcosts%252C%2Band%2Bwhen%2Brules%2Ban%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Flight.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D78fd01ff4f4340295a4f66e2ea54903c%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Fdark.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D1298a0c3b3a1da603b190d0de0e31712%26primaryColor%3D%25230E0E0E%26lightColor%3D%2523D4A27F%26backgroundLight%3D%2523FDFDF7%26backgroundDark%3D%252309090B\u0026w=1200\u0026q=100\"}],\"$L42\",\"$L43\",\"$L44\",\"$L45\",\"$L46\",\"$L47\",\"$L48\",\"$L49\",\"$L4a\",\"$L4b\",\"$L4c\",\"$L4d\"],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"22:\"$1d:metadata\"\n"])</script><script>self.__next_f.push([1,"19:[\"$\",\"$L4e\",null,{\"scopedNav\":{\"global\":null,\"languages\":[{\"language\":\"en\",\"tabs\":[{\"tab\":\"Getting started\",\"groups\":[{\"group\":\"Getting started\",\"pages\":[{\"sidebarTitle\":\"Overview\",\"title\":\"Overview\",\"description\":\"Claude Code is an agentic coding tool that reads your codebase, edits files, runs commands, and integrates with your development tools. Available in your terminal, IDE, desktop app, and browser.\",\"href\":\"/en/overview\"},{\"title\":\"Quickstart\",\"description\":\"Welcome to Claude Code!\",\"href\":\"/en/quickstart\"},{\"title\":\"Claude Code changelog\",\"sidebarTitle\":\"Changelog\",\"description\":\"Release notes for Claude Code, including new features, improvements, and bug fixes by version.\",\"rss\":true,\"href\":\"/en/changelog\"}]},{\"group\":\"Core concepts\",\"pages\":[{\"title\":\"How Claude Code works\",\"description\":\"Understand the agentic loop, built-in tools, and how Claude Code interacts with your project.\",\"href\":\"/en/how-claude-code-works\"},{\"title\":\"Extend Claude Code\",\"sidebarTitle\":\"Extend Claude Code\",\"description\":\"Understand when to use CLAUDE.md, Skills, subagents, hooks, MCP, and plugins.\",\"href\":\"/en/features-overview\"},{\"title\":\"Explore the .claude directory\",\"description\":\"Where Claude Code reads CLAUDE.md, settings.json, hooks, skills, commands, subagents, workflows, rules, and auto memory. Explore the .claude directory in your project and ~/.claude in your home directory.\",\"mode\":\"wide\",\"href\":\"/en/claude-directory\"},{\"title\":\"Explore the context window\",\"description\":\"An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.\",\"mode\":\"wide\",\"href\":\"/en/context-window\"},{\"sidebarTitle\":\"Prompt caching\",\"title\":\"How Claude Code uses prompt caching\",\"description\":\"Claude Code manages prompt caching automatically. See why a model switch triggers a slow uncached turn, what `/compact` costs, why CLAUDE.md edits don't apply mid-session, and how to check your cache hit rate.\",\"keywords\":[\"prompt cache\",\"caching\",\"cache invalidation\",\"cache miss\",\"cache_control\",\"ephemeral\"],\"href\":\"/en/prompt-caching\"}]},{\"group\":\"Use Claude Code\",\"pages\":[{\"sidebarTitle\":\"Store instructions and memories\",\"title\":\"How Claude remembers your project\",\"description\":\"Give Claude persistent instructions with CLAUDE.md files, and let Claude accumulate learnings automatically with auto memory.\",\"keywords\":[\"claude.md\",\"CLAUDE.md\",\"claudemd\",\"memory\",\"rules\",\".claude/rules\",\"remember\",\"auto memory\"],\"href\":\"/en/memory\"},{\"title\":\"Manage sessions\",\"description\":\"Name, resume, branch, and switch between Claude Code conversations. Covers `--continue`, `--resume`, `--from-pr`, the `/resume` picker, session naming, exporting transcripts, and where transcripts are stored.\",\"keywords\":[\"resume\",\"continue\",\"--resume\",\"--continue\",\"session picker\",\"/resume\",\"/rename\",\"fork\",\"branch\",\"export\",\"/export\",\"transcript\",\"jsonl\"],\"href\":\"/en/sessions\"},{\"title\":\"Common workflows\",\"description\":\"Step-by-step guides for exploring codebases, fixing bugs, refactoring, testing, and other everyday tasks with Claude Code.\",\"keywords\":[\"workflow\",\"examples\",\"prompts\",\"recipes\"],\"href\":\"/en/common-workflows\"},{\"title\":\"Prompt library\",\"sidebarTitle\":\"Prompt library\",\"description\":\"Copy-paste prompts for Claude Code, tagged by task and role.\",\"href\":\"/en/prompt-library\"},{\"title\":\"Best practices for Claude Code\",\"sidebarTitle\":\"Best practices\",\"description\":\"Tips and patterns for getting the most out of Claude Code, from configuring your environment to scaling across parallel sessions.\",\"keywords\":[\"verification\",\"verification loop\",\"verify\",\"feedback loop\",\"check its work\",\"definition of done\"],\"href\":\"/en/best-practices\"}]},{\"group\":\"Platforms and integrations\",\"pages\":[{\"title\":\"Platforms and integrations\",\"sidebarTitle\":\"Overview\",\"description\":\"Choose where to run Claude Code and what to connect it to. Compare the CLI, Desktop, VS Code, JetBrains, web, mobile, and integrations like Chrome, Slack, and CI/CD.\",\"href\":\"/en/platforms\"},{\"title\":\"Continue local sessions from any device with Remote Control\",\"sidebarTitle\":\"Remote Control\",\"description\":\"Continue a local Claude Code session from your phone, tablet, or any browser using Remote Control. Works with claude.ai/code and the Claude mobile app.\",\"href\":\"/en/remote-control\"},{\"group\":\"Claude Code on the web\",\"pages\":[{\"title\":\"Get started with Claude Code on the web\",\"sidebarTitle\":\"Get started\",\"description\":\"Run Claude Code in the cloud from your browser or phone. Connect a GitHub repository, submit a task, and review the PR without local setup.\",\"href\":\"/en/web-quickstart\"},{\"title\":\"Use Claude Code on the web\",\"sidebarTitle\":\"Reference\",\"description\":\"Move sessions between web and terminal with `--cloud` and `--teleport`, manage and share sessions, and auto-fix pull requests from the cloud.\",\"href\":\"/en/claude-code-on-the-web\"},{\"title\":\"Automate work with routines\",\"sidebarTitle\":\"Routines\",\"description\":\"Put Claude Code on autopilot. Define routines that run on a schedule, trigger on API calls, or react to GitHub events from cloud infrastructure.\",\"keywords\":[\"/schedule\",\"schedule\",\"scheduled task\",\"cloud cron\",\"remote schedule\",\"trigger\"],\"href\":\"/en/routines\"},{\"title\":\"Find bugs with ultrareview\",\"sidebarTitle\":\"Ultrareview\",\"description\":\"Run a deep, multi-agent code review in the cloud with /code-review ultra to find and verify bugs before you merge.\",\"keywords\":[\"ultra\",\"ultrareview\",\"ultra review\",\"ultra-review\",\"/ultrareview\",\"/code-review ultra\",\"code review\",\"bug finding\",\"remote review\",\"deep review\",\"multi-agent review\"],\"href\":\"/en/ultrareview\"}]},{\"group\":\"Claude Code on desktop\",\"pages\":[{\"title\":\"Get started with the desktop app\",\"sidebarTitle\":\"Get started\",\"description\":\"Install Claude Code on desktop and start your first coding session\",\"href\":\"/en/desktop-quickstart\"},{\"title\":\"Desktop application\",\"sidebarTitle\":\"Reference\",\"description\":\"Get more out of Claude Code Desktop: parallel sessions with Git isolation, drag-and-drop pane layout, integrated terminal and file editor, side chats, computer use, Dispatch sessions from your phone, visual diff review, app previews, PR monitoring, connectors, and enterprise configuration.\",\"href\":\"/en/desktop\"},{\"title\":\"Claude Desktop on Linux (beta)\",\"sidebarTitle\":\"Linux (beta)\",\"description\":\"Install and update the Claude desktop app on Ubuntu and Debian\",\"href\":\"/en/desktop-linux\"},{\"title\":\"Claude Code Desktop in WSL\",\"sidebarTitle\":\"Windows (WSL)\",\"description\":\"Run Code sessions inside a WSL 2 distribution on Windows\",\"href\":\"/en/desktop-wsl\"},{\"title\":\"Schedule recurring tasks in Claude Code Desktop\",\"sidebarTitle\":\"Scheduled tasks\",\"description\":\"Set up scheduled tasks in Claude Code Desktop to run Claude automatically on a recurring basis for daily code reviews, dependency audits, or morning briefings.\",\"href\":\"/en/desktop-scheduled-tasks\"},{\"title\":\"Test iOS apps in the simulator\",\"sidebarTitle\":\"iOS simulator (beta)\",\"description\":\"Claude Code Desktop opens your app in the iOS Simulator pane when Claude builds, runs, or checks it, with a separate simulator for each session.\",\"href\":\"/en/desktop-ios-simulator\"}]},{\"title\":\"Claude Code on mobile\",\"sidebarTitle\":\"Mobile\",\"description\":\"Start, monitor, and steer Claude Code tasks from your phone with the Claude app for iOS and Android.\",\"href\":\"/en/mobile\"},{\"title\":\"Use Claude Code with Chrome\",\"sidebarTitle\":\"Chrome extension\",\"description\":\"Connect Claude Code to your Chrome browser to test web apps, debug with console logs, automate form filling, and extract data from web pages.\",\"href\":\"/en/chrome\"},{\"title\":\"Let Claude use your computer from the CLI\",\"sidebarTitle\":\"Computer use (preview)\",\"description\":\"Enable computer use in the Claude Code CLI so Claude can open apps, click, type, and see your screen on macOS. Test native apps, debug visual issues, and automate GUI-only tools without leaving your terminal.\",\"href\":\"/en/computer-use\"},{\"title\":\"Use Claude Code in VS Code\",\"sidebarTitle\":\"Visual Studio Code\",\"description\":\"Install and configure the Claude Code extension for VS Code. Get AI coding assistance with inline diffs, @-mentions, plan review, and keyboard shortcuts.\",\"keywords\":[\"vscode\",\"vs code\",\"visual studio code\",\"cursor\",\"devin desktop\",\"windsurf\",\"kiro\",\"vs code fork\",\"extension\",\"open vsx\"],\"href\":\"/en/vs-code\"},{\"title\":\"JetBrains IDEs\",\"description\":\"Use Claude Code with JetBrains IDEs including IntelliJ, PyCharm, WebStorm, and more\",\"href\":\"/en/jetbrains\"},{\"group\":\"Code review \u0026 CI/CD\",\"pages\":[{\"title\":\"Catch security issues as Claude writes code\",\"sidebarTitle\":\"Security guidance plugin\",\"description\":\"Install the security-guidance plugin to have Claude review its own code changes for vulnerabilities and fix them in the same session.\",\"keywords\":[\"find security issues\",\"scan for vulnerabilities\",\"security scan\",\"check my code for security issues\",\"security audit\",\"vulnerability review\",\"secure my code\"],\"href\":\"/en/security-guidance\"},{\"title\":\"Scan your codebase for vulnerabilities\",\"sidebarTitle\":\"Claude Security plugin\",\"description\":\"Install the Claude Security plugin to scan your codebase for vulnerabilities in a Claude Code session and turn findings into patches you review and apply.\",\"href\":\"/en/claude-security\"},{\"title\":\"Code Review\",\"sidebarTitle\":\"Code Review\",\"description\":\"Set up automated PR reviews that catch logic errors, security vulnerabilities, and regressions using multi-agent analysis of your full codebase\",\"href\":\"/en/code-review\"},{\"title\":\"Claude Code GitHub Actions\",\"sidebarTitle\":\"GitHub Actions\",\"description\":\"Run Claude Code in GitHub Actions workflows to respond to @claude mentions, automate tasks, and turn issues into pull requests\",\"href\":\"/en/github-actions\"},{\"title\":\"Use Claude Code GitHub Actions with cloud providers\",\"sidebarTitle\":\"GitHub Actions cloud providers\",\"description\":\"Run Claude Code GitHub Actions through Amazon Bedrock, Google Cloud's Agent Platform, or Microsoft Foundry instead of the Claude API\",\"href\":\"/en/github-actions-cloud-providers\"},{\"title\":\"Claude Code with GitHub Enterprise Server\",\"sidebarTitle\":\"GitHub Enterprise Server\",\"description\":\"Connect Claude Code to your self-hosted GitHub Enterprise Server instance for web sessions, code review, and plugin marketplaces.\",\"href\":\"/en/github-enterprise-server\"},{\"title\":\"Claude Code GitLab CI/CD\",\"sidebarTitle\":\"GitLab CI/CD\",\"description\":\"Learn about integrating Claude Code into your development workflow with GitLab CI/CD\",\"href\":\"/en/gitlab-ci-cd\"}]},{\"title\":\"Claude Code in Slack\",\"description\":\"Delegate coding tasks directly from your Slack workspace. Anthropic is retiring this earlier version for Team and Enterprise workspaces in favor of Claude Tag; it remains the setup path on Pro and Max plans.\",\"href\":\"/en/slack\"},{\"title\":\"Claude Tag\",\"description\":\"Bring Claude into your team's Slack channels with Claude Tag and find its setup and usage documentation on claude.com.\",\"href\":\"/en/claude-tag\"}]}]},{\"tab\":\"Build with Claude Code\",\"pages\":[{\"title\":\"Build with Claude Code\",\"href\":\"/en/agents\"}]},{\"tab\":\"Administration\",\"pages\":[{\"title\":\"Administration\",\"href\":\"/en/admin-setup\"}]},{\"tab\":\"Configuration\",\"pages\":[{\"title\":\"Configuration\",\"href\":\"/en/settings\"}]},{\"tab\":\"Reference\",\"pages\":[{\"title\":\"Reference\",\"href\":\"/en/cli-reference\"}]},{\"tab\":\"Agent SDK\",\"pages\":[{\"title\":\"Agent SDK\",\"href\":\"/en/agent-sdk/overview\"}]},{\"tab\":\"What's New\",\"pages\":[{\"title\":\"What's New\",\"href\":\"/en/whats-new\"}]},{\"tab\":\"Resources\",\"pages\":[{\"title\":\"Resources\",\"href\":\"/en/legal-and-compliance\"}]}]},{\"language\":\"fr\",\"pages\":[{\"title\":\"fr\",\"href\":\"/fr/context-window\"}]},{\"language\":\"de\",\"pages\":[{\"title\":\"de\",\"href\":\"/de/context-window\"}]},{\"language\":\"it\",\"pages\":[{\"title\":\"it\",\"href\":\"/it/context-window\"}]},{\"language\":\"jp\",\"pages\":[{\"title\":\"jp\",\"href\":\"/ja/context-window\"}]},{\"language\":\"es\",\"pages\":[{\"title\":\"es\",\"href\":\"/es/context-window\"}]},{\"language\":\"ko\",\"pages\":[{\"title\":\"ko\",\"href\":\"/ko/context-window\"}]},{\"language\":\"cn\",\"pages\":[{\"title\":\"cn\",\"href\":\"/zh-CN/context-window\"}]},{\"language\":\"zh-Hant\",\"pages\":[{\"title\":\"zh-Hant\",\"href\":\"/zh-TW/context-window\"}]},{\"language\":\"ru\",\"pages\":[{\"title\":\"ru\",\"href\":\"/ru/context-window\"}]},{\"language\":\"id\",\"pages\":[{\"title\":\"id\",\"href\":\"/id/context-window\"}]},{\"language\":\"pt-BR\",\"pages\":[{\"title\":\"pt-BR\",\"href\":\"/pt/context-window\"}]}]},\"maps\":{\"firstHrefInVersion\":{},\"firstHrefInLanguage\":{\"en\":{\"href\":\"/en/context-window\",\"matchLevel\":0},\"fr\":{\"href\":\"/fr/context-window\",\"matchLevel\":1},\"de\":{\"href\":\"/de/context-window\",\"matchLevel\":1},\"it\":{\"href\":\"/it/context-window\",\"matchLevel\":1},\"jp\":{\"href\":\"/ja/context-window\",\"matchLevel\":1},\"es\":{\"href\":\"/es/context-window\",\"matchLevel\":1},\"ko\":{\"href\":\"/ko/context-window\",\"matchLevel\":1},\"cn\":{\"href\":\"/zh-CN/context-window\",\"matchLevel\":1},\"zh-Hant\":{\"href\":\"/zh-TW/context-window\",\"matchLevel\":1},\"ru\":{\"href\":\"/ru/context-window\",\"matchLevel\":1},\"id\":{\"href\":\"/id/context-window\",\"matchLevel\":1},\"pt-BR\":{\"href\":\"/pt/context-window\",\"matchLevel\":1}}},\"children\":\"$L4f\"}]\n"])</script><script>self.__next_f.push([1,"50:I[27201,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"51:I[763509,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ThemeLayout\"]\n"])</script><script>self.__next_f.push([1,"52:I[91557,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"ApiReferenceProvider\"]\n"])</script><script>self.__next_f.push([1,"53:I[91557,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"PageProvider\"]\n"])</script><script>self.__next_f.push([1,"54:I[91557,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"OpenApiProvider\"]\n"])</script><script>self.__next_f.push([1,"55:I[525343,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"TabSyncContextProvider\"]\n"])</script><script>self.__next_f.push([1,"42:[\"$\",\"meta\",\"22\",{\"name\":\"twitter:image:width\",\"content\":\"1200\"}]\n43:[\"$\",\"meta\",\"23\",{\"name\":\"twitter:image:height\",\"content\":\"630\"}]\n44:[\"$\",\"link\",\"24\",{\"rel\":\"icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/android-chrome-192x192.png\",\"type\":\"image/png\",\"sizes\":\"192x192\",\"media\":\"(prefers-color-scheme: light)\"}]\n45:[\"$\",\"link\",\"25\",{\"rel\":\"apple-touch-icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/apple-touch-icon.png\",\"type\":\"image/png\",\"sizes\":\"180x180\",\"media\":\"$undefined\"}]\n46:[\"$\",\"link\",\"26\",{\"rel\":\"icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-16x16.png\",\"type\":\"image/png\",\"sizes\":\"16x16\",\"media\":\"(prefers-color-scheme: light)\"}]\n47:[\"$\",\"link\",\"27\",{\"rel\":\"icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png\",\"type\":\"image/png\",\"sizes\":\"32x32\",\"media\":\"(prefers-color-scheme: light)\"}]\n48:[\"$\",\"link\",\"28\",{\"rel\":\"shortcut icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"$undefined\",\"media\":\"(prefers-color-scheme: light)\"}]\n49:[\"$\",\"link\",\"29\",{\"rel\":\"icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/android-chrome-192x192.png\",\"type\":\"image/png\",\"sizes\":\"192x192\",\"media\":\"(prefers-color-scheme: dark)\"}]\n4a:[\"$\",\"link\",\"30\",{\"rel\":\"icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/favicon-16x16.png\",\"type\":\"image/png\",\"sizes\":\"16x16\",\"media\":\"(prefers-color-scheme: dark)\"}]\n4b:[\"$\",\"link\",\"31\",{\"rel\":\"icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/favicon-32x32.png\",\"type\":\"image/png\",\"sizes\":\"32x32\",\"media\":\"(prefers-color-scheme: dark)\"}]\n4c:[\"$\",\"link\",\"32\",{\"rel\":\"shortcut icon\",\"href\":\"/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon-dark/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"$undef"])</script><script>self.__next_f.push([1,"ined\",\"media\":\"(prefers-color-scheme: dark)\"}]\n4d:[\"$\",\"$L50\",\"33\",{}]\n56:T83f,"])</script><script>self.__next_f.push([1,"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://code.claude.com/#organization\",\"name\":\"Claude Code Docs\",\"url\":\"https://code.claude.com\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://mintcdn.com/claude-code/c5r9_6tjPMzFdDDT/logo/light.svg?fit=max\u0026auto=format\u0026n=c5r9_6tjPMzFdDDT\u0026q=85\u0026s=78fd01ff4f4340295a4f66e2ea54903c\"}},{\"@type\":\"WebSite\",\"@id\":\"https://code.claude.com/docs#website\",\"name\":\"Claude Code Docs\",\"url\":\"https://code.claude.com/docs\",\"publisher\":{\"@id\":\"https://code.claude.com/#organization\"}},{\"@type\":\"WebPage\",\"@id\":\"https://code.claude.com/docs/en/context-window#webpage\",\"url\":\"https://code.claude.com/docs/en/context-window\",\"name\":\"Explore the context window\",\"description\":\"An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.\",\"dateModified\":\"2026-08-24T18:59:23.920Z\",\"isPartOf\":{\"@id\":\"https://code.claude.com/docs#website\"},\"breadcrumb\":{\"@id\":\"https://code.claude.com/docs/en/context-window#breadcrumb\"}},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://code.claude.com/docs/en/context-window#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Core concepts\",\"item\":\"https://code.claude.com/docs/en/how-claude-code-works\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Explore the context window\",\"item\":\"https://code.claude.com/docs/en/context-window\"}]},{\"@type\":[\"Article\",\"TechArticle\"],\"@id\":\"https://code.claude.com/docs/en/context-window#article\",\"headline\":\"Explore the context window\",\"name\":\"Explore the context window\",\"description\":\"An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.\",\"url\":\"https://code.claude.com/docs/en/context-window\",\"mainEntityOfPage\":{\"@id\":\"https://code.claude.com/docs/en/context-window#webpage\"},\"dateModified\":\"2026-08-24T18:59:23.920Z\",\"publisher\":{\"@id\":\"https://code.claude.com/#organization\"},\"isPartOf\":{\"@id\":\"https://code.claude.com/docs#website\"}}]}"])</script><script>self.__next_f.push([1,"4f:[\"$\",\"$L51\",null,{\"theme\":\"mint\",\"pageMetadata\":{\"title\":\"Explore the context window\",\"description\":\"An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.\",\"mode\":\"wide\",\"href\":\"/en/context-window\"},\"children\":[\"$\",\"$L52\",null,{\"value\":{\"apiReferenceData\":{},\"graphqlReferenceData\":\"$undefined\"},\"children\":[\"$\",\"$L53\",null,{\"value\":{\"pageMetadata\":\"$4f:props:pageMetadata\",\"lastModified\":\"2026-08-24T18:59:23.920Z\",\"gitLastModified\":\"$undefined\",\"originalFileLocation\":\"en/context-window.mdx\",\"description\":{\"compiledSource\":\"\\\"use strict\\\";\\nconst {jsx: _jsx} = arguments[0];\\nconst {useMDXComponents: _provideComponents} = arguments[0];\\nfunction _createMdxContent(props) {\\n  const _components = {\\n    p: \\\"p\\\",\\n    ..._provideComponents(),\\n    ...props.components\\n  };\\n  return _jsx(_components.p, {\\n    children: \\\"An interactive simulation of how Claude Code’s context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.\\\"\\n  });\\n}\\nfunction MDXContent(props = {}) {\\n  const {wrapper: MDXLayout} = {\\n    ..._provideComponents(),\\n    ...props.components\\n  };\\n  return MDXLayout ? _jsx(MDXLayout, {\\n    ...props,\\n    children: _jsx(_createMdxContent, {\\n      ...props\\n    })\\n  }) : _createMdxContent(props);\\n}\\nreturn {\\n  default: MDXContent\\n};\\n\",\"frontmatter\":{},\"scope\":{}},\"mdxExtracts\":{\"tableOfContents\":[{\"title\":\"What the timeline shows\",\"slug\":\"what-the-timeline-shows\",\"depth\":2,\"children\":[]},{\"title\":\"What survives compaction\",\"slug\":\"what-survives-compaction\",\"depth\":2,\"children\":[]},{\"title\":\"When your context fills up\",\"slug\":\"when-your-context-fills-up\",\"depth\":2,\"children\":[]},{\"title\":\"Check your own session\",\"slug\":\"check-your-own-session\",\"depth\":2,\"children\":[]},{\"title\":\"Related resources\",\"slug\":\"related-resources\",\"depth\":2,\"children\":[]}],\"codeExamples\":{}},\"pageType\":\"$undefined\",\"panelMdxSource\":\"$undefined\",\"panelMdxSourceWithNoJs\":\"$undefined\",\"contextualStarterQuestions\":\"$undefined\",\"relatedPages\":\"$undefined\"},\"children\":[\"$\",\"$L54\",null,{\"pageMetadata\":\"$4f:props:pageMetadata\",\"mdxExtracts\":\"$4f:props:children:props:children:props:value:mdxExtracts\",\"openApiReferenceData\":\"$undefined\",\"children\":[\"$\",\"$L55\",null,{\"children\":[[\"$\",\"script\",null,{\"type\":\"application/ld+json\",\"dangerouslySetInnerHTML\":{\"__html\":\"$56\"}}],\"$L57\",\"$L58\",\"$L59\",\"$L5a\",\"$L5b\"]}]}]}]}]}]\n"])</script><script>self.__next_f.push([1,"5c:I[228341,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"PageModeUpdater\"]\n"])</script><script>self.__next_f.push([1,"5d:I[575126,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"Background\"]\n"])</script><script>self.__next_f.push([1,"60:I[36098,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"CustomJsFiles\"]\n"])</script><script>self.__next_f.push([1,"63:I[530359,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"MDXContentController\"]\n"])</script><script>self.__next_f.push([1,"64:I[448287,[\"/docs/_next/static/chunks/19ae1768f166fab9.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/b664fc8bb1e7ab0d.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/f5976305ab1768eb.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a5edc6734daa1561.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/71fd098bc8edc96a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cde9521bba917b79.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0890ba15c670d9b1.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/8778b596bb8e1fac.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/74101320c8c5fcae.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3df48e92ab491c72.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cfd727ba62f1c54c.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/95810dccb4b634b5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/cc5fb492c7259b04.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/3e14be6f7db58aad.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/a919d558158c76f7.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/c7c9dfd26f25e785.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/17906d4215e30866.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/0eb894a8519f24ea.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ca8fe0ccebe75085.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/190f7abfa78edae5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/329b5be61330e31a.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/ffe460cdbc2efcef.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/9090d55f1c6244ff.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\",\"/docs/_next/static/chunks/2dd53f5a4cfe6dd5.js?dpl=dpl_EkPTVfi5bSmEbsJNZYzbnSKvGfNV\"],\"default\"]\n"])</script><script>self.__next_f.push([1,"57:[[\"$\",\"script\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"document.documentElement.setAttribute('data-page-mode', \\\"wide\\\");\"}}],[\"$\",\"$L5c\",null,{\"pageMetadata\":\"$4f:props:pageMetadata\"}]]\n58:[\"$\",\"$L5d\",null,{\"pageMetadata\":\"$4f:props:pageMetadata\"}]\n5e:T1108,"])</script><script>self.__next_f.push([1,"\n/* These styles mirror the internal design system's button component, converted to plain CSS. */\n\n/* Base button styles */\n.btn {\n  position: relative;\n  display: inline-flex;\n  gap: 0.5rem;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  min-width: 5rem;\n  height: 2.25rem;\n  padding: 0.5rem 1rem;\n  white-space: nowrap;\n  font-family: Styrene;\n  font-weight: 600;\n  border-radius: 0.5rem;\n  \u0026:active {\n    transform: scale(0.985);\n  }\n\n  /* Size variants */\n  \u0026.size-xs {\n    height: 1.75rem;\n    min-width: 3.5rem;\n    padding: 0 0.5rem;\n    border-radius: 0.25rem;\n    font-size: 0.75rem;\n    gap: 0.25rem;\n  }\n  \n  \u0026.size-sm {\n    height: 2rem;\n    min-width: 4rem;\n    padding: 0 0.75rem;\n    border-radius: 0.375rem;\n    font-size: 0.75rem;\n  }\n\n  \u0026.size-lg {\n    height: 2.75rem;\n    min-width: 6rem;\n    padding: 0 1.25rem;\n    border-radius: 0.6rem;\n  }\n\n  \u0026:disabled {\n    pointer-events: none;\n    opacity: 0.5;\n    box-shadow: none;\n  }\n\n  \u0026:focus-visible {\n    outline: none;\n    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);\n    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);\n    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow);\n  }\n\n  /* Primary variant */\n  \u0026.primary {\n    font-weight: 600;\n    color: hsl(var(--oncolor-100));\n    background-color: hsl(var(--accent-main-100));\n    background-image: linear-gradient(\n      to right,\n      hsl(var(--accent-main-100)) 0%,\n      hsl(var(--accent-main-200) / 0.5) 50%,\n      hsl(var(--accent-main-200)) 100%\n    );\n    background-size: 200% 100%;\n    background-position: 0% 0%;\n    border: 0.5px solid hsl(var(--border-300) / 0.25);\n    box-shadow: \n      inset 0 0.5px 0px rgba(255, 255, 0, 0.15),\n      0 1px 1px rgba(0, 0, 0, 0.05);\n    text-shadow: 0 1px 2px rgb(0 0 0 / 10%);\n    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);\n\n    \u0026:hover {\n      background-position: 100% 0%;\n      background-image: linear-gradient(\n        to right,\n        hsl(var(--accent-main-200)) 0%,\n        hsl(var(--accent-main-200)) 100%\n      );\n    }\n\n    \u0026:active {\n      background-color: hsl(var(--accent-main-000));\n      box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.2);\n      transform: scale(0.985);\n    }\n  }\n\n  /* Flat variant */\n  \u0026.flat {\n    font-weight: 500;\n    color: hsl(var(--oncolor-100));\n    background-color: hsl(var(--accent-main-100));\n    transition: background-color 150ms;\n\n    \u0026:hover {\n      background-color: hsl(var(--accent-main-200));\n    }\n  }\n\n  /* Secondary variant */\n  \u0026.secondary {\n    font-weight: 600;\n    color: hsl(var(--text-100) / 0.9);\n    background-image: radial-gradient(\n      ellipse at center,\n      hsl(var(--bg-500) / 0.1) 50%,\n      hsl(var(--bg-500) / 0.3) 100%\n    );\n    border: 0.5px solid hsl(var(--border-400));\n    transition: color 150ms, background-color 150ms;\n\n    \u0026:hover {\n      color: hsl(var(--text-000));\n      background-color: hsl(var(--bg-500) / 0.6);\n    }\n\n    \u0026:active {\n      background-color: hsl(var(--bg-500) / 0.5);\n    }\n  }\n\n  /* Outline variant */\n  \u0026.outline {\n    font-weight: 600;\n    color: hsl(var(--text-200));\n    background-color: transparent;\n    border: 1.5px solid currentColor;\n    transition: color 150ms, background-color 150ms;\n\n    \u0026:hover {\n      color: hsl(var(--text-100));\n      background-color: hsl(var(--bg-400));\n      border-color: hsl(var(--bg-400));\n    }\n  }\n\n  /* Ghost variant */\n  \u0026.ghost {\n    color: hsl(var(--text-200));\n    border-color: transparent;\n    transition: color 150ms, background-color 150ms;\n\n    \u0026:hover {\n      color: hsl(var(--text-100));\n      background-color: hsl(var(--bg-500) / 0.4);\n    }\n\n    \u0026:active {\n      background-color: hsl(var(--bg-400));\n    }\n  }\n\n  /* Underline variant */\n  \u0026.underline {\n    opacity: 0.8;\n    text-decoration-line: none;\n    text-underline-offset: 3px;\n    transition: all 150ms;\n\n    \u0026:hover {\n      opacity: 1;\n      text-decoration-line: underline;\n    }\n\n    \u0026:active {\n      transform: scale(0.985);\n    }\n  }\n\n  /* Danger variant */\n  \u0026.danger {\n    font-weight: 600;\n    color: hsl(var(--oncolor-100));\n    background-color: hsl(var(--danger-100));\n    transition: background-color 150ms;\n\n    \u0026:hover {\n      background-color: hsl(var(--danger-200));\n    }\n  }\n}\n"])</script><script>self.__next_f.push([1,"59:[[\"$\",\"style\",\"0\",{\"data-custom-css-index\":0,\"data-custom-css-path\":\"button.css\",\"dangerouslySetInnerHTML\":{\"__html\":\"$5e\"}}],\"$L5f\"]\n61:Tce9,"])</script><script>self.__next_f.push([1,"/**\n * First-party analytics for code.claude.com/docs.\n *\n * Loads the SDK bundle (window.antalytics) from the CDN and initialises it.\n * The bundle is rebuilt and republished automatically whenever the SDK\n * source changes upstream, so this file rarely needs to change.\n *\n * Consent: events are gated on the anthropic-consent-preferences cookie\n * written by the shared banner (consent-loader.js). Fail-closed when the\n * cookie is absent or unparseable, so visitors who have not opted in via\n * the banner are not tracked.\n */\n;(function () {\n  if (typeof window === 'undefined' || typeof document === 'undefined') return\n\n  function hasAnalyticsConsent() {\n    try {\n      if (navigator.globalPrivacyControl) return false\n      var m = document.cookie.match(/(?:^|;\\s*)anthropic-consent-preferences=([^;]+)/)\n      if (!m) return false\n      return JSON.parse(decodeURIComponent(m[1])).analytics === true\n    } catch (_) {\n      return false\n    }\n  }\n\n  function start() {\n    if (!window.antalytics) return\n    window.antalytics.init({\n      // Matches the x-service-name used by snippets/experiment.jsx so\n      // page-view events and GrowthBook exposure events join on the same\n      // service_name in BigQuery.\n      serviceName: 'claude_code_docs',\n      allowedOrigins: ['https://code.claude.com'],\n      plugins: [\n        {\n          name: 'consentGate',\n          type: 'before',\n          fn: function (event) {\n            return hasAnalyticsConsent() ? event : null\n          },\n        },\n      ],\n      onError: function (error, ctx) {\n        // eslint-disable-next-line no-console\n        console.warn('[antalytics:' + ctx.method + ']', error)\n      },\n    })\n    window.antalytics.page()\n\n    var lastPath = location.pathname\n    function onRouteChange() {\n      if (location.pathname === lastPath) return\n      lastPath = location.pathname\n      window.antalytics.page()\n    }\n    var origPushState = history.pushState\n    history.pushState = function () {\n      origPushState.apply(this, arguments)\n      onRouteChange()\n    }\n    window.addEventListener('popstate', onRouteChange)\n  }\n\n  var loaded = false\n  function loadSdk() {\n    if (loaded) return\n    loaded = true\n    var s = document.createElement('script')\n    s.src = 'https://assets.claude.ai/sdk/antalytics/latest.umd.js'\n    s.async = true\n    // No cookies or page URL sent with the cross-origin fetch.\n    s.crossOrigin = 'anonymous'\n    s.referrerPolicy = 'no-referrer'\n    s.onload = start\n    s.onerror = function () {\n      // eslint-disable-next-line no-console\n      console.warn('[antalytics] failed to load SDK bundle from CDN')\n    }\n    document.head.appendChild(s)\n  }\n\n  // Only fetch the SDK once analytics consent is granted, so visitors who\n  // have not opted in never trigger a request to the CDN at all. Re-check\n  // when the consent cookie changes (banner accept/reject).\n  if (hasAnalyticsConsent()) {\n    loadSdk()\n  }\n  if (typeof window.cookieStore !== 'undefined' \u0026\u0026 window.cookieStore.addEventListener) {\n    window.cookieStore.addEventListener('change', function (e) {\n      for (var i = 0; i \u003c e.changed.length; i++) {\n        if (e.changed[i].name === 'anthropic-consent-preferences' \u0026\u0026 hasAnalyticsConsent()) {\n          loadSdk()\n          return\n        }\n      }\n    })\n  }\n})()\n"])</script><script>self.__next_f.push([1,"62:T1694,"])</script><script>self.__next_f.push([1,"/**\n * Collapse toggle for the right \"On this page\" table of contents.\n *\n * Adds a floating button that hides the ToC column and lets the content\n * area use the freed space (see the matching rules in style.css). The\n * choice persists per browser via localStorage.\n *\n * The button is appended to document.body, outside the Next.js app root,\n * so it survives client-side navigation. Visibility on pages without a\n * ToC and the chevron direction are both handled in style.css, so this\n * script only creates the button and manages state.\n */\n;(function () {\n  if (typeof window === 'undefined' || typeof document === 'undefined') return\n  // The layout rules in style.css depend on :has(). Without support the\n  // ToC would hide but the content column would never widen, so leave\n  // the button out entirely.\n  if (!(window.CSS \u0026\u0026 CSS.supports('selector(:has(*))'))) return\n\n  var STORAGE_KEY = 'docs-toc-collapsed'\n  var COLLAPSED_CLASS = 'toc-collapsed'\n\n  // [hide, show] labels per locale directory. Keyed by URL path segment\n  // because the rendered page's lang attribute carries nonstandard\n  // values (e.g. \"jp\" on /ja/ pages).\n  var LABELS = {\n    en: ['Hide table of contents', 'Show table of contents'],\n    de: ['Inhaltsverzeichnis ausblenden', 'Inhaltsverzeichnis anzeigen'],\n    es: ['Ocultar tabla de contenido', 'Mostrar tabla de contenido'],\n    fr: ['Masquer la table des matières', 'Afficher la table des matières'],\n    id: ['Sembunyikan daftar isi', 'Tampilkan daftar isi'],\n    it: ['Nascondi indice', 'Mostra indice'],\n    ja: ['目次を隠す', '目次を表示'],\n    ko: ['목차 숨기기', '목차 보기'],\n    pt: ['Ocultar sumário', 'Mostrar sumário'],\n    ru: ['Скрыть оглавление', 'Показать оглавление'],\n    'zh-CN': ['隐藏目录', '显示目录'],\n    'zh-TW': ['隱藏目錄', '顯示目錄'],\n  }\n\n  function localeLabels() {\n    // Scan rather than index: production serves under the /docs base\n    // path while mint dev and previews serve root-relative, so the\n    // locale isn't always the first segment. The locale directory comes\n    // before any page slug, so the first matching segment wins.\n    var segments = window.location.pathname.split('/')\n    for (var i = 1; i \u003c segments.length; i++) {\n      if (Object.prototype.hasOwnProperty.call(LABELS, segments[i])) {\n        return LABELS[segments[i]]\n      }\n    }\n    return LABELS.en\n  }\n\n  function isCollapsed() {\n    return document.documentElement.classList.contains(COLLAPSED_CLASS)\n  }\n\n  function setCollapsed(collapsed) {\n    document.documentElement.classList.toggle(COLLAPSED_CLASS, collapsed)\n    try {\n      if (collapsed) {\n        localStorage.setItem(STORAGE_KEY, '1')\n      } else {\n        localStorage.removeItem(STORAGE_KEY)\n      }\n    } catch (_) {}\n  }\n\n  // Apply the saved state as early as possible to minimize layout flash.\n  try {\n    if (localStorage.getItem(STORAGE_KEY) === '1') setCollapsed(true)\n  } catch (_) {}\n\n  function render(btn) {\n    var collapsed = isCollapsed()\n    var label = localeLabels()[collapsed ? 1 : 0]\n    btn.setAttribute('aria-expanded', String(!collapsed))\n    btn.setAttribute('aria-label', label)\n    btn.title = label\n  }\n\n  function start() {\n    if (document.getElementById('toc-collapse-toggle')) return\n\n    var btn = document.createElement('button')\n    btn.id = 'toc-collapse-toggle'\n    btn.type = 'button'\n    btn.setAttribute('aria-controls', 'table-of-contents-layout')\n\n    var SVG_NS = 'http://www.w3.org/2000/svg'\n    function makeIcon(className, d) {\n      var svg = document.createElementNS(SVG_NS, 'svg')\n      svg.setAttribute('viewBox', '0 0 24 24')\n      svg.setAttribute('aria-hidden', 'true')\n      svg.setAttribute('class', className)\n      var path = document.createElementNS(SVG_NS, 'path')\n      path.setAttribute('d', d)\n      svg.appendChild(path)\n      return svg\n    }\n    btn.appendChild(makeIcon('toc-chevron', 'M9 18l6-6-6-6'))\n    // List glyph, shown only while collapsed (see style.css).\n    btn.appendChild(makeIcon('toc-glyph', 'M4 6h16M4 12h10M4 18h16'))\n\n    btn.addEventListener('click', function () {\n      setCollapsed(!isCollapsed())\n      render(btn)\n    })\n    // Re-read the saved state when another tab changes it (storage) and\n    // when this page returns from the back/forward cache, where storage\n    // events fired while cached were never delivered (pageshow).\n    function syncFromStorage() {\n      var stored = false\n      try {\n        stored = localStorage.getItem(STORAGE_KEY) === '1'\n      } catch (_) {}\n      setCollapsed(stored)\n      render(btn)\n    }\n    window.addEventListener('storage', function (e) {\n      if (e.storageArea !== localStorage) return\n      // key is null when localStorage.clear() ran; re-read either way.\n      if (e.key === null || e.key === STORAGE_KEY) syncFromStorage()\n    })\n    window.addEventListener('pageshow', syncFromStorage)\n    // Client-side navigation can cross locale directories, so re-render\n    // the label whenever the route changes.\n    function onNavigate() {\n      setTimeout(function () {\n        render(btn)\n      }, 0)\n    }\n    var origPushState = history.pushState\n    history.pushState = function () {\n      var result = origPushState.apply(this, arguments)\n      onNavigate()\n      return result\n    }\n    window.addEventListener('popstate', onNavigate)\n    render(btn)\n    // Prepend rather than append: the button still lives outside the\n    // app root and survives client-side navigation, but lands at the\n    // start of the tab order instead of after the entire page.\n    document.body.prepend(btn)\n  }\n\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', start, { once: true })\n  } else {\n    start()\n  }\n})()\n"])</script><script>self.__next_f.push([1,"5a:[\"$\",\"$L60\",null,{\"customJsDisabled\":false,\"jsFiles\":[{\"_id\":\"69bdb9fd7ba705a281409ac4\",\"filePath\":\"consent-loader.js\",\"subdomain\":\"claude-code\",\"__v\":0,\"content\":\"/**\\n * Consent banner loader for code.claude.com/docs.\\n *\\n * Mintlify auto-includes any .js file in the content root on every page.\\n * This loader injects the shared consent banner hosted on claude.com.\\n */\\n;(function () {\\n  var s = document.createElement('script')\\n  s.src = 'https://claude.com/shared/consent-banner.js'\\n  s.async = true\\n  document.head.appendChild(s)\\n})()\\n\"},{\"_id\":\"69fe40dc388017ee55c19b7a\",\"subdomain\":\"claude-code\",\"filePath\":\"antalytics-loader.js\",\"__v\":0,\"content\":\"$61\"},{\"_id\":\"6a567ad87ec0f756509df168\",\"filePath\":\"toc-collapse.js\",\"subdomain\":\"claude-code\",\"__v\":0,\"content\":\"$62\"}]}]\n"])</script><script>self.__next_f.push([1,"65:Td652,"])</script><script>self.__next_f.push([1,"\"use strict\";const{Fragment:_Fragment,jsx:_jsx,jsxs:_jsxs}=arguments[0];const{useMDXComponents:_provideComponents}=arguments[0];const ContextWindow=()=\u003e{const _components={a:`a`,..._provideComponents()};const MAX=2e5;const STARTUP_END=.2;{}const EVENTS=useMemo(()=\u003e[{},{t:.015,kind:`auto`,label:`System prompt`,tokens:4200,color:`#6B6964`,vis:`hidden`,desc:`Core instructions for behavior, tool use, and response formatting. Always loaded first. You never see it.`,link:null},{t:.035,kind:`auto`,label:`Auto memory (MEMORY.md)`,tokens:680,color:`#E8A45C`,vis:`hidden`,desc:`Claude's notes to itself from previous sessions: build commands it learned, patterns it noticed, mistakes to avoid. The first 200 lines or 25KB, whichever comes first, are loaded into the conversation context.`,link:`/en/memory#auto-memory`},{t:.06,kind:`auto`,label:`Environment info`,tokens:280,color:`#6B6964`,vis:`hidden`,desc:`Working directory, platform, shell, OS version, and whether this is a git repo. Git branch, status, and recent commits load as a separate block at the very end of the system prompt.`,link:null},{t:.08,kind:`auto`,label:`MCP tools (deferred)`,tokens:120,color:`#9B7BC4`,vis:`hidden`,desc:\"MCP tool names listed so Claude knows what is available. By default, full schemas stay deferred and Claude loads specific ones on demand via tool search when a task needs them. Set `ENABLE_TOOL_SEARCH=auto` to load schemas upfront when they fit within 10% of the context window, or `ENABLE_TOOL_SEARCH=false` to load everything.\",link:`/en/mcp#scale-with-mcp-tool-search`},{t:.1,kind:`auto`,label:`Skill descriptions`,tokens:450,color:`#D4A843`,vis:`hidden`,noSurviveCompact:true,desc:\"One-line descriptions of available skills so Claude knows what it can invoke. Full skill content loads only when Claude actually uses one. Skills with `disable-model-invocation: true` are not in this list. They stay completely out of context until you invoke them with `/name`. Unlike the rest of the startup content, this listing is not re-injected after `/compact`. Only skills you actually invoked get preserved.\",link:`/en/skills`},{t:.12,kind:`auto`,label:`~/.claude/CLAUDE.md`,tokens:320,color:`#6A9BCC`,vis:`hidden`,desc:`Your global preferences. Applies to every project. Loaded alongside project instructions at the start of every conversation.`,link:`/en/memory#choose-where-to-put-claude-md-files`},{t:.14,kind:`auto`,label:`Project CLAUDE.md`,tokens:1800,color:`#6A9BCC`,vis:`hidden`,desc:`Project conventions, build commands, architecture notes. The most important file you can create. Lives in your project root, so your whole team gets the same instructions.`,tip:`Keep it under 200 lines. Move reference content to skills or path-scoped rules so it only loads when needed.`,link:`/en/memory`},{},{t:.22,kind:`user`,label:`Your prompt`,tokens:45,color:`#558A42`,vis:`full`,desc:`\"Fix the auth bug where users get 401 after token refresh\"`,link:null},{},{t:.28,kind:`claude`,label:`Read src/api/auth.ts`,tokens:2400,color:`#8A8880`,vis:`brief`,restoredAfterCompact:true,desc:`Main auth file. You see \"Read auth.ts\" in your terminal, but the 2,400 tokens of file content only Claude sees.`,tip:`File reads dominate context usage. Be specific in prompts (\"fix the bug in auth.ts\") so Claude reads fewer files. For research-heavy tasks, use a subagent.`,link:null},{t:.32,kind:`claude`,label:`Read src/lib/tokens.ts`,tokens:1100,color:`#8A8880`,vis:`brief`,restoredAfterCompact:true,desc:`Following imports to the token module. Shown as a one-liner in your terminal.`,link:null},{t:.35,kind:`auto`,label:`Rule: api-conventions.md`,tokens:380,color:`#4A9B8E`,vis:`brief`,restoredAfterCompact:true,desc:'This rule in `.claude/rules/` has a `paths:` pattern matching `src/api/**`. It loaded automatically when Claude read a file in that directory. You see \"Loaded .claude/rules/api-conventions.md\" in your terminal, but not the rule content.',link:`/en/memory#path-specific-rules`},{t:.38,kind:`claude`,label:`Read middleware.ts`,tokens:1800,color:`#8A8880`,vis:`brief`,restoredAfterCompact:true,desc:`Tracing the auth flow deeper.`,link:null},{t:.41,kind:`claude`,label:`Read auth.test.ts`,tokens:1600,color:`#8A8880`,vis:`brief`,restoredAfterCompact:true,desc:`Checking existing tests for expected behavior.`,link:null},{t:.44,kind:`auto`,label:`Rule: testing.md`,tokens:290,color:`#4A9B8E`,vis:`brief`,restoredAfterCompact:true,desc:'Another path-scoped rule, this one matching `*.test.ts` files. Triggered when Claude read auth.test.ts. Shown as a one-line \"Loaded\" notice.',link:`/en/memory#path-specific-rules`},{t:.47,kind:`claude`,label:`grep \"refreshToken\"`,tokens:600,color:`#A09E96`,vis:`brief`,desc:`Search results across the codebase. You see the command ran, not the full output.`,link:null},{},{t:.53,kind:`claude`,label:`Claude's analysis`,tokens:800,color:`#D97757`,vis:`full`,desc:`Explains the bug: token invalidated too early in the rotation. This text appears in your terminal.`,link:null},{t:.57,kind:`claude`,label:`Edit auth.ts`,tokens:400,color:`#D97757`,vis:`full`,desc:`Fixes the token rotation order. The diff appears in your terminal.`,link:null},{t:.59,kind:`hook`,label:`Hook: prettier`,tokens:120,color:`#B8860B`,vis:`hidden`,desc:\"A PostToolUse hook in `settings.json` runs prettier after every file edit and reports back via `hookSpecificOutput.additionalContext`. That field enters Claude's context. Plain stdout on exit 0 does not. It is written to the debug log only.\",tip:\"Output JSON with `additionalContext` to send info to Claude. For PostToolUse hooks, exit code 2 surfaces stderr as an error but cannot block since the tool already ran. Keep output concise since it enters context without truncation.\",link:`/en/hooks-guide`},{t:.62,kind:`claude`,label:`Edit auth.test.ts`,tokens:600,color:`#D97757`,vis:`full`,desc:`Adds a regression test for the fix. The diff appears in your terminal.`,link:null},{t:.64,kind:`hook`,label:`Hook: prettier`,tokens:100,color:`#B8860B`,vis:`hidden`,desc:`The same hook fires again for the test file. Every matching tool event triggers it.`,link:`/en/hooks-guide`},{t:.67,kind:`claude`,label:`npm test output`,tokens:1200,color:`#A09E96`,vis:`brief`,desc:`Runs the test suite. You see \"Running npm test...\" and the pass count, not the full 1,200 tokens of output.`,link:null},{t:.7,kind:`claude`,label:`Summary`,tokens:400,color:`#D97757`,vis:`full`,desc:`\"Fixed token rotation. Added regression test. All tests pass.\"`,link:null},{},{t:.72,kind:`user`,label:`Your follow-up`,tokens:40,color:`#558A42`,vis:`full`,desc:`\"Use a subagent to research session timeout handling, then fix it\"`,tip:`Follow-ups add to the same context. Delegating research to a subagent keeps large file reads out of your main window.`,link:null},{t:.79,kind:`claude`,label:`Spawn research subagent`,tokens:80,color:`#D97757`,vis:`brief`,desc:`Claude delegates the research to a subagent with a fresh, separate context window. It loads CLAUDE.md and the same MCP and skill setup, but starts without your conversation history or the main session's auto memory.`,link:`/en/sub-agents`},{t:.795,kind:`sub`,label:`System prompt`,tokens:0,subTokens:900,color:`#6B6964`,vis:`hidden`,desc:`The subagent gets its own system prompt, shorter than the main session's. For the general-purpose agent, it's a brief prompt plus environment details. The main session's auto memory is not included. If a custom agent has memory: in its frontmatter, it loads its own separate MEMORY.md here instead.`,link:`/en/sub-agents#enable-persistent-memory`},{t:.8,kind:`sub`,label:`Project CLAUDE.md (own copy)`,tokens:0,subTokens:1800,color:`#6A9BCC`,vis:`hidden`,desc:`The subagent loads CLAUDE.md too. Same file, same content, but it counts against the subagent's context, not yours. The built-in Explore and Plan agents skip this for a smaller context.`,link:`/en/sub-agents`},{t:.805,kind:`sub`,label:`MCP tools + skills`,tokens:0,subTokens:970,color:`#9B7BC4`,vis:`hidden`,desc:`The subagent has access to the same MCP servers and skills. It gets most of the parent's tools, minus several that don't apply in a nested context, including plan-mode controls, background-task tools, and by default the Agent tool itself to prevent recursion.`,link:`/en/sub-agents`},{t:.81,kind:`sub`,label:`Task prompt from main`,tokens:0,subTokens:120,color:`#558A42`,vis:`hidden`,desc:`Instead of a user prompt, the subagent receives the task Claude wrote for it: 'Research session timeout handling in this codebase.'`,link:`/en/sub-agents`},{t:.82,kind:`sub`,label:`Read session.ts`,tokens:0,subTokens:2200,color:`#8A8880`,vis:`hidden`,desc:`Now the subagent does its work. This file read fills the subagent's context, not yours.`,link:`/en/sub-agents`},{t:.825,kind:`sub`,label:`Read timeouts.ts`,tokens:0,subTokens:800,color:`#8A8880`,vis:`hidden`,desc:`Another file read in the subagent's separate context.`,link:`/en/sub-agents`},{t:.83,kind:`sub`,label:`Read config/*.ts`,tokens:0,subTokens:3100,color:`#8A8880`,vis:`hidden`,desc:`The subagent can read as many files as it needs. None of this touches your main context.`,link:`/en/sub-agents`},{t:.85,kind:`claude`,label:`Subagent returns summary`,tokens:420,color:`#D97757`,vis:`brief`,desc:`Only the subagent's final text response comes back to your context, plus a small metadata trailer with token counts and duration. The subagent read 6,100 tokens of files. You got a 420-token result. That's the context savings.`,link:`/en/sub-agents`},{t:.86,kind:`claude`,label:`Claude's response`,tokens:1200,color:`#D97757`,vis:`full`,desc:`Analysis and fix for session timeouts. This text appears in your terminal.`,link:null},{},{t:.875,kind:`user`,label:`!git status`,tokens:180,color:`#558A42`,vis:`full`,desc:`You ran a shell command with the ! prefix to see which files Claude modified. The command and its output both enter context as part of your message. Useful for grounding Claude in command output without Claude running it.`,link:`/en/interactive-mode#bash-mode-with-prefix`},{t:.89,kind:`user`,label:`/commit-push`,tokens:620,color:`#558A42`,vis:`brief`,restoredAfterCompact:true,desc:\"You invoked a skill that has `disable-model-invocation: true`. Its description was not in the skill index at startup, so it cost zero context until this moment. Now the full skill content loads and Claude follows its instructions to stage, commit, and push your changes. After `/compact`, Claude Code re-injects the body of each skill you invoked, capped at 5,000 tokens per skill.\",tip:\"Set `disable-model-invocation: true` on skills with side effects like committing, deploying, or sending messages. They stay out of context entirely until you need them.\",link:`/en/skills#control-who-invokes-a-skill`},{},{t:.93,kind:`compact`,label:`/compact`,tokens:0,color:`#D97757`,vis:`brief`,desc:`Replaces the conversation with a structured summary. You see a \"Conversation compacted\" message. The summarization happens without appearing in your terminal.`,link:`/en/how-claude-code-works#the-context-window`}].filter(e=\u003ee.t!==undefined),[]);const VIS_META={hidden:{label:`Invisible in your terminal`,sub:`This content does not appear in your terminal.`},brief:{label:`One-liner in your terminal`,sub:`You see a brief mention, not the full content.`},full:{label:`Shown in your terminal`,sub:`The actual content appears in your terminal.`}};{}const GATES=[{at:.18,kind:`prompt`,text:`Fix the auth bug where users get 401 after token refresh`,resumeTo:.22},{at:.705,kind:`prompt`,text:`Use a subagent to research session timeout handling, then fix it`,resumeTo:.72},{at:.865,kind:`bang`,text:`!git status`,resumeTo:.875},{at:.88,kind:`slash`,text:`/commit-push`,resumeTo:.89},{at:.9,kind:`compact`,text:`/compact`,resumeTo:1}];const KIND_META={auto:{badge:`auto`,detail:`Auto-loaded`,badgeBg:`rgba(94,93,89,0.15)`,badgeColor:`#8A8880`},user:{badge:`you`,detail:`You typed this`,badgeBg:`rgba(85,138,66,0.15)`,badgeColor:`#6BA656`},claude:{badge:`claude`,detail:`Claude's work`,badgeBg:`rgba(217,119,87,0.12)`,badgeColor:`#D97757`},hook:{badge:`hook`,detail:`Hook (automatic)`,badgeBg:`rgba(184,134,11,0.15)`,badgeColor:`#CCA020`},compact:{badge:`compact`,detail:`Compaction`,badgeBg:`rgba(217,119,87,0.12)`,badgeColor:`#D97757`},sub:{badge:`subagent`,detail:`In subagent's context`,badgeBg:`rgba(155,123,196,0.12)`,badgeColor:`#9B7BC4`}};const LEGEND=[{c:`#6B6964`,l:`System`},{c:`#6A9BCC`,l:`CLAUDE.md`},{c:`#E8A45C`,l:`Memory`},{c:`#D4A843`,l:`Skills`},{c:`#9B7BC4`,l:`MCP`},{c:`#4A9B8E`,l:`Rules`},{c:`#558A42`,l:`You`},{c:`#8A8880`,l:`Files`},{c:`#A09E96`,l:`Output`},{c:`#D97757`,l:`Claude`},{c:`#B8860B`,l:`Hooks`}];const fmt=n=\u003en\u003e=1e3?(n/1e3).toFixed(1).replace(/\\.0$/,``)+`K`:n+``;const[time,setTime]=useState(0);const[playing,setPlaying]=useState(false);const[hovIdx,setHovIdx]=useState(null);const[selIdx,setSelIdx]=useState(null);const[hovCat,setHovCat]=useState(null);const[gatesPassed,setGatesPassed]=useState(0);const[mounted,setMounted]=useState(false);const[hasInteracted,setHasInteracted]=useState(false);const lastRef=useRef(null);const scrollRef=useRef(null);const detailRef=useRef(null);useEffect(()=\u003esetMounted(true),[]);const activeGate=GATES.find((g,i)=\u003ei\u003e=gatesPassed\u0026\u0026time\u003e=g.at\u0026\u0026time\u003cg.resumeTo);useEffect(()=\u003e{if(!playing)return;let raf;let stopped=false;const tick=ts=\u003e{if(stopped)return;if(!lastRef.current)lastRef.current=ts;const dt=(ts-lastRef.current)/1e3;lastRef.current=ts;setTime(prev=\u003e{const next=prev+dt*.032;const gate=GATES.find((g,i)=\u003ei\u003e=gatesPassed\u0026\u0026next\u003e=g.at\u0026\u0026prev\u003cg.resumeTo);if(gate){stopped=true;setPlaying(false);return gate.at}if(next\u003e=1){stopped=true;setPlaying(false);return 1}return next});if(!stopped)raf=requestAnimationFrame(tick)};raf=requestAnimationFrame(tick);return()=\u003e{stopped=true;cancelAnimationFrame(raf);lastRef.current=null}},[playing,gatesPassed]);const sendPrompt=()=\u003e{if(!activeGate)return;const isCompact=activeGate.kind===`compact`;setGatesPassed(n=\u003en+1);setTime(activeGate.resumeTo);setSelIdx(null);setHovIdx(null);if(!isCompact)setPlaying(true)};const visibleCount=EVENTS.filter(e=\u003ee.t\u003c=time).length;const preCompactVisible=useMemo(()=\u003eEVENTS.slice(0,visibleCount),[EVENTS,visibleCount]);const compactGateIdx=GATES.length-1;const isCompacted=gatesPassed\u003ecompactGateIdx\u0026\u0026preCompactVisible.some(e=\u003ee.kind===`compact`);const{visible,preCompactTotal}=useMemo(()=\u003e{const nonCompact=preCompactVisible.filter(e=\u003ee.kind!==`compact`);if(!isCompacted){return{visible:preCompactVisible,preCompactTotal:0}}{}const autoLoads=nonCompact.filter(e=\u003ee.kind===`auto`\u0026\u0026e.t\u003cSTARTUP_END\u0026\u0026!e.noSurviveCompact);const restored=nonCompact.filter(e=\u003ee.restoredAfterCompact);const summarized=nonCompact.filter(e=\u003ee.t\u003e=STARTUP_END\u0026\u0026e.kind!==`sub`);const sumTokens=summarized.reduce((s,e)=\u003es+e.tokens,0);const summaryBlock={t:STARTUP_END,kind:`compact`,label:`Conversation summary`,tokens:Math.round(sumTokens*.12),color:`#A09E96`,vis:`hidden`,desc:`All ${summarized.length} conversation events condensed into one structured summary. The summary keeps: your requests and intent, key technical concepts, files examined or modified with important code snippets, errors and how they were fixed, pending tasks, and current work. It replaces the verbatim conversation: full tool outputs and intermediate reasoning are gone. Claude Code re-reads the files modified most recently and re-injects the skills you invoked, listed below. Claude can still reference the rest of the work but won't have the exact content.`,link:`/en/how-claude-code-works#the-context-window`};return{visible:[...autoLoads,summaryBlock,...restored],preCompactTotal:nonCompact.reduce((s,e)=\u003es+e.tokens,0)}},[preCompactVisible,isCompacted]);const{blocks,totalTokens}=useMemo(()=\u003e{const bl=visible.map((e,visIdx)=\u003e({...e,id:e.label+e.t,visIdx})).filter(e=\u003ee.tokens\u003e0||e.label===`Conversation summary`);return{blocks:bl,totalTokens:bl.reduce((s,b)=\u003es+b.tokens,0)}},[visible]);const subTotal=useMemo(()=\u003evisible.filter(e=\u003ee.kind===`sub`).reduce((s,e)=\u003es+(e.subTokens||0),0),[visible]);useEffect(()=\u003e{if(!scrollRef.current)return;if(isCompacted)scrollRef.current.scrollTo({top:0,behavior:`smooth`});else if(playing||activeGate)scrollRef.current.scrollTop=scrollRef.current.scrollHeight},[visible.length,!!activeGate,isCompacted]);const rootRef=useRef(null);const keyStateRef=useRef({});const[isFullscreen,setIsFullscreen]=useState(false);keyStateRef.current={time,activeGate,sendPrompt,hasInteracted};useEffect(()=\u003e{const onFsChange=()=\u003esetIsFullscreen(!!document.fullscreenElement);document.addEventListener(`fullscreenchange`,onFsChange);return()=\u003edocument.removeEventListener(`fullscreenchange`,onFsChange)},[]);const toggleFullscreen=()=\u003e{if(!rootRef.current)return;if(document.fullscreenElement)document.exitFullscreen();else rootRef.current.requestFullscreen().catch(()=\u003e{})};useEffect(()=\u003e{const onKey=e=\u003e{const tag=e.target.tagName;if(tag===`INPUT`||tag===`BUTTON`||tag===`TEXTAREA`||tag===`SELECT`||e.target.isContentEditable)return;if(!rootRef.current)return;const rect=rootRef.current.getBoundingClientRect();if(rect.width===0\u0026\u0026rect.height===0)return;if(rect.bottom\u003c0||rect.top\u003ewindow.innerHeight)return;if(e.code===`Space`){const{time:t,activeGate:g,sendPrompt:send,hasInteracted:hi}=keyStateRef.current;if(!hi)return;e.preventDefault();if(t===0)setPlaying(true);else if(g)send();else if(t\u003e=1){setTime(0);setGatesPassed(0);setSelIdx(null);setHovIdx(null);setPlaying(true)}else setPlaying(p=\u003e!p)}};window.addEventListener(`keydown`,onKey);return()=\u003ewindow.removeEventListener(`keydown`,onKey)},[]);const pct=totalTokens/MAX*100;const barColor=pct\u003e75?`#D97757`:pct\u003e50?`#B8860B`:`#558A42`;const activeIdx=selIdx!==null?selIdx:hovIdx;const hovEvent=activeIdx!==null?visible[activeIdx]:null;useEffect(()=\u003e{if(detailRef.current)detailRef.current.scrollTop=0},[hovEvent]);const focusT=hovEvent?hovEvent.t:time;const takeaway=isCompacted?`Compaction replaces the conversation with a structured summary. System prompt, CLAUDE.md, memory, and MCP tools reload automatically. Claude Code also re-reads up to five of the files modified most recently, reloads the rules that match them, and re-injects the skills you invoked. The skill listing does not reload.`:focusT\u003cSTARTUP_END?`A lot loads before you type anything. CLAUDE.md, memory, skills, and MCP tools are all in context before your first prompt.`:focusT\u003c.28?`Your prompt is tiny compared to what's already loaded. Most of Claude's context is project knowledge, not your words.`:focusT\u003c.5?`Each file Claude reads grows the context. Path-scoped rules load automatically alongside matching files.`:focusT\u003c.71?`Hooks fire automatically on tool events. Output reaches Claude via additionalContext JSON. Exit code 2 surfaces stderr to Claude. Plain stdout on exit 0 goes to the debug log, not the transcript.`:focusT\u003c.79?`Follow-up questions keep building on the same context. Everything from earlier is still there.`:focusT\u003c.87?`The subagent works in its own separate context window. None of its file reads touch yours. Only the final summary comes back.`:focusT\u003c.88?`Bang commands run in your shell and prefix the output to your next message. Useful for grounding Claude in command results without it running them.`:focusT\u003c.9?`User-only skills stay out of context entirely until you invoke them. The skill index at startup only lists skills Claude can call on its own.`:`/compact summarizes the conversation to free space while keeping key information. In a real session, run it when context starts affecting performance or before a long new task.`;const terminalView=isCompacted?`A \"Conversation compacted\" message, then a one-line \"Read auth.ts\" for each re-read file and \"Skills restored (commit-push)\". The rules show as \"Loaded\" lines on Claude's next turn. None of the content itself appears.`:focusT\u003cSTARTUP_END?`The input box, waiting for your first message. Everything above loads silently before you type anything.`:focusT\u003c.28?`Your prompt. Claude hasn't started working yet.`:focusT\u003c.52?`Your prompt and \"Reading files...\". Rules show as one-line \"Loaded\" notices, not their content.`:focusT\u003c.72?`Claude's response and file diffs. Hooks fire silently. Tool output like npm test shows as a brief summary, not the full content.`:focusT\u003c.79?`Your follow-up prompt.`:focusT\u003c.86?`A brief notice that a subagent is working, then its result. You don't see the subagent's individual file reads.`:focusT\u003c.9?`Claude's response, your git status output, and the commit-push skill running.`:`Your full conversation. /compact is available to run.`;const mono=`var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace)`;const renderWithCode=s=\u003es.split(\"`\").map((part,i)=\u003ei%2===1?_jsx(`code`,{style:{fontFamily:mono,fontSize:`0.92em`,background:`var(--cw-track)`,padding:`1px 4px`,borderRadius:3},children:part},i):part);if(!mounted)return null;return _jsxs(_Fragment,{children:[_jsxs(`div`,{className:`cw-mobile-fallback`,children:[`This interactive timeline works best on a larger screen. See `,_jsx(`a`,{href:`#what-the-timeline-shows`,style:{color:`#D97757`},children:`the written breakdown below`}),` for the same concepts.`]}),_jsxs(`div`,{className:`cw-root`,ref:rootRef,onClickCapture:()=\u003esetHasInteracted(true),style:isFullscreen?{height:`100vh`,borderRadius:0,display:`flex`,flexDirection:`column`}:{},children:[_jsx(`style`,{children:`\n        .cw-root {\n          --cw-bg: #FAFAF8;\n          --cw-text: #1A1918;\n          --cw-text-2: #3D3C38;\n          --cw-text-3: #5E5D59;\n          --cw-text-dim: #6E6C64;\n          --cw-text-faint: #8A8880;\n          --cw-surface: rgba(0,0,0,0.025);\n          --cw-surface-2: rgba(0,0,0,0.04);\n          --cw-border: rgba(0,0,0,0.08);\n          --cw-track: rgba(0,0,0,0.04);\n          --cw-hover: rgba(0,0,0,0.04);\n          --cw-rail: rgba(0,0,0,0.08);\n          --cw-scrollbar: rgba(0,0,0,0.22);\n          background: var(--cw-bg);\n          border-radius: 12px;\n          overflow: hidden;\n          font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, sans-serif);\n          color: var(--cw-text);\n          border: 1px solid var(--cw-border);\n        }\n        .dark .cw-root {\n          --cw-bg: #111110;\n          --cw-text: #E8E6DC;\n          --cw-text-2: #B8B6AE;\n          --cw-text-3: #9C9A92;\n          --cw-text-dim: #8A8880;\n          --cw-text-faint: #6E6C64;\n          --cw-surface: rgba(255,255,255,0.02);\n          --cw-surface-2: rgba(255,255,255,0.015);\n          --cw-border: rgba(255,255,255,0.06);\n          --cw-track: rgba(255,255,255,0.03);\n          --cw-hover: rgba(255,255,255,0.04);\n          --cw-rail: rgba(255,255,255,0.04);\n          --cw-scrollbar: rgba(255,255,255,0.18);\n        }\n        .cw-scroll::-webkit-scrollbar { width: 6px; }\n        .cw-scroll::-webkit-scrollbar-track { background: transparent; }\n        .cw-scroll::-webkit-scrollbar-thumb { background: var(--cw-scrollbar); border-radius: 3px; }\n        @keyframes cw-blink { 50% { opacity: 0; } }\n        @keyframes cw-fadein { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }\n        .cw-compacted-row { animation: cw-fadein 0.3s ease-out backwards; }\n        .cw-mobile-fallback { display: none; padding: 14px 16px; border-radius: 8px; font-size: 14px; border: 1px solid rgba(0,0,0,0.1); background: rgba(0,0,0,0.03); }\n        .dark .cw-mobile-fallback { border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.04); }\n        @media (max-width: 700px) {\n          .cw-root { display: none !important; }\n          .cw-mobile-fallback { display: block; }\n        }\n      `}),_jsxs(`div`,{style:{padding:`16px 20px 12px`,display:`flex`,alignItems:`flex-end`,gap:24},children:[_jsxs(`div`,{style:{flex:1,minWidth:0},children:[_jsx(`div`,{style:{fontSize:18,fontWeight:600,letterSpacing:-.3,lineHeight:1},children:`Explore the context window`}),_jsx(`div`,{style:{fontSize:14,color:`var(--cw-text-dim)`,marginTop:4},children:`A simulated session showing what enters context and what it costs`})]}),_jsxs(`div`,{style:{textAlign:`right`,flexShrink:0},children:[_jsxs(`div`,{style:{fontFamily:mono,fontSize:20,fontWeight:600,color:barColor,letterSpacing:-.5,lineHeight:1},children:[`~`,fmt(totalTokens),_jsx(`span`,{style:{fontSize:15,fontWeight:500,marginLeft:4},children:`tokens`})]}),_jsxs(`div`,{style:{fontFamily:mono,fontSize:13,color:`var(--cw-text-dim)`,marginTop:2},title:`Token counts are illustrative. Actual values vary with your CLAUDE.md size, MCP servers, and file lengths.`,children:[`/ `,fmt(MAX),` · illustrative`]})]})]}),_jsxs(`div`,{style:{padding:`0 20px`},children:[_jsx(`div`,{style:{height:4,borderRadius:2,background:`var(--cw-track)`,overflow:`hidden`,marginBottom:6},children:_jsx(`div`,{style:{width:pct+`%`,height:`100%`,background:barColor,transition:`width 0.6s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s`}})}),_jsx(`div`,{style:{height:28,borderRadius:5,background:`var(--cw-track)`,border:`1px solid var(--cw-border)`,overflow:`hidden`,display:`flex`},children:blocks.map((b,i)=\u003e{const w=Math.max(b.tokens/MAX*100,.15);const isHov=b.visIdx===activeIdx;const catMatch=hovCat\u0026\u0026b.color===hovCat;const dimmed=hovCat?!catMatch:activeIdx!==null\u0026\u0026!isHov;return _jsx(`div`,{onMouseEnter:()=\u003esetHovIdx(b.visIdx),onMouseLeave:()=\u003esetHovIdx(null),onClick:()=\u003esetSelIdx(selIdx===b.visIdx?null:b.visIdx),style:{width:w+`%`,height:`100%`,background:b.color,opacity:isHov||catMatch?1:dimmed?.25:.65,borderRight:i\u003cblocks.length-1?`0.5px solid var(--cw-border)`:`none`,transition:`opacity 0.15s`,cursor:`pointer`}},b.id)})}),_jsxs(`div`,{style:{display:`flex`,gap:12,marginTop:6,flexWrap:`wrap`,justifyContent:`space-between`},children:[_jsx(`div`,{style:{display:`flex`,gap:12,flexWrap:`wrap`},children:LEGEND.map(x=\u003e{const active=hovCat===x.c;return _jsxs(`div`,{onMouseEnter:()=\u003esetHovCat(x.c),onMouseLeave:()=\u003esetHovCat(null),style:{display:`flex`,alignItems:`center`,gap:4,padding:`2px 6px`,borderRadius:4,cursor:`pointer`,background:active?`var(--cw-hover)`:`transparent`,transition:`background 0.1s`},children:[_jsx(`div`,{style:{width:6,height:6,borderRadius:1.5,background:x.c,opacity:active?1:.7}}),_jsx(`span`,{style:{fontSize:12,color:active?`var(--cw-text)`:`var(--cw-text-dim)`},children:x.l})]},x.l)})}),_jsxs(`div`,{style:{display:`flex`,gap:6,alignItems:`center`,fontSize:12,color:`var(--cw-text-dim)`},children:[_jsxs(`svg`,{width:`11`,height:`11`,viewBox:`0 0 24 24`,fill:`none`,stroke:`#558A42`,strokeWidth:`2.5`,children:[_jsx(`path`,{d:`M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z`}),_jsx(`circle`,{cx:`12`,cy:`12`,r:`3`})]}),_jsx(`span`,{children:`= appears in your terminal`})]})]})]}),_jsxs(`div`,{style:{display:`flex`,padding:`14px 20px 0`,gap:16,height:isFullscreen?`calc(100vh - 240px)`:420},children:[_jsxs(`div`,{ref:scrollRef,className:`cw-scroll`,style:{flex:1,minWidth:0,overflowY:`auto`,paddingRight:8,scrollBehavior:`smooth`},children:[visible.length===0\u0026\u0026!playing\u0026\u0026_jsxs(`div`,{style:{height:`100%`,display:`flex`,flexDirection:`column`,alignItems:`center`,justifyContent:`center`,gap:16},children:[_jsxs(`div`,{style:{fontFamily:mono,fontSize:16,color:`var(--cw-text-dim)`,display:`flex`,alignItems:`center`,gap:8},children:[_jsx(`span`,{style:{color:`var(--cw-text-faint)`},children:`$`}),_jsx(`span`,{children:`claude`}),_jsx(`span`,{style:{display:`inline-block`,width:8,height:16,background:`var(--cw-text-dim)`,opacity:.5,animation:`cw-blink 1s step-end infinite`}})]}),_jsxs(`button`,{onClick:()=\u003esetPlaying(true),style:{padding:`10px 20px`,borderRadius:8,border:`1px solid rgba(217,119,87,0.3)`,background:`rgba(217,119,87,0.08)`,color:`#D97757`,fontSize:15,fontWeight:600,cursor:`pointer`,display:`flex`,alignItems:`center`,gap:8},children:[_jsx(`span`,{children:`▶`}),_jsx(`span`,{children:`Start session`})]}),_jsxs(`div`,{style:{fontSize:13,color:`var(--cw-text-faint)`,maxWidth:280,textAlign:`center`,lineHeight:1.5},children:[`Watch what loads into context, from the moment you run `,_jsx(`code`,{style:{fontFamily:mono},children:`claude`}),` through a full conversation.`]})]}),isCompacted\u0026\u0026_jsxs(`div`,{style:{marginBottom:10,padding:`10px 12px`,borderRadius:6,background:`rgba(217,119,87,0.05)`,border:`1px solid rgba(217,119,87,0.15)`},children:[_jsx(`div`,{style:{fontSize:13,fontWeight:600,color:`#D97757`,marginBottom:3},children:`After /compact`}),_jsxs(`div`,{style:{fontSize:13,color:`var(--cw-text-3)`,lineHeight:1.5,fontFamily:mono},children:[fmt(preCompactTotal),` → `,fmt(totalTokens),` tokens · freed `,fmt(preCompactTotal-totalTokens)]}),_jsx(`div`,{style:{fontSize:13,color:`var(--cw-text-dim)`,lineHeight:1.5,marginTop:4},children:`This is what's left in context: startup content, which lives outside the message history and reloads after compaction, a structured summary of the entire conversation, the files modified most recently, which Claude Code re-reads along with the rules that match them, and the body of each skill you invoked. Skill descriptions don't reload.`})]}),time\u003e0\u0026\u0026visible.length\u003e0\u0026\u0026_jsx(`div`,{style:{fontSize:12,fontWeight:700,color:`var(--cw-text-faint)`,textTransform:`uppercase`,letterSpacing:.6,marginBottom:6,paddingLeft:28},children:isCompacted?`Reloaded after compact`:`Before you type anything`}),time\u003e0\u0026\u0026visible.map((evt,i)=\u003e{const meta=KIND_META[evt.kind];const isHov=hovIdx===i;const prevKind=i\u003e0?visible[i-1].kind:null;const isSub=evt.kind===`sub`;const enteringSubagent=isSub\u0026\u0026prevKind!==`sub`;const leavingSubagent=prevKind===`sub`\u0026\u0026!isSub;let showPhase=null;if(isCompacted\u0026\u0026evt.restoredAfterCompact){if(prevKind===`compact`)showPhase=`Restored after /compact`}else if(evt.kind===`user`\u0026\u0026prevKind!==`user`)showPhase=`You`;else if(evt.kind===`claude`\u0026\u0026prevKind===`user`)showPhase=`Claude works`;else if(evt.label===`Conversation summary`)showPhase=`Summarized by /compact`;const isNewRow=isCompacted\u0026\u0026!(evt.kind===`auto`\u0026\u0026evt.t\u003cSTARTUP_END);return _jsxs(`div`,{className:isNewRow?`cw-compacted-row`:``,style:isNewRow?{animationDelay:`${i*60}ms`}:{},children:[showPhase\u0026\u0026_jsx(`div`,{style:{fontSize:12,fontWeight:700,color:`var(--cw-text-faint)`,textTransform:`uppercase`,letterSpacing:.6,marginTop:14,marginBottom:6,paddingLeft:28},children:showPhase}),enteringSubagent\u0026\u0026_jsx(`div`,{style:{marginLeft:28,marginTop:6,marginBottom:2,paddingLeft:10,borderLeft:`2px solid rgba(155,123,196,0.4)`,fontSize:12,fontWeight:600,color:`#9B7BC4`,textTransform:`uppercase`,letterSpacing:.5},children:`Subagent's separate context window`}),leavingSubagent\u0026\u0026_jsxs(`div`,{style:{marginLeft:28,marginBottom:6,paddingLeft:10,paddingBottom:6,borderLeft:`2px solid rgba(155,123,196,0.4)`,fontSize:12,color:`var(--cw-text-dim)`,fontFamily:mono},children:[`↓ `,fmt(subTotal),` tokens stayed in subagent's context · only the summary returns`]}),_jsxs(`div`,{onMouseEnter:()=\u003esetHovIdx(i),onMouseLeave:()=\u003esetHovIdx(null),onClick:()=\u003esetSelIdx(selIdx===i?null:i),style:{display:`flex`,alignItems:`flex-start`,borderRadius:6,cursor:`pointer`,background:selIdx===i||isHov?`var(--cw-hover)`:`transparent`,outline:selIdx===i?`1px solid rgba(217,119,87,0.4)`:`none`,opacity:hovCat\u0026\u0026evt.color!==hovCat?.35:1,transition:`background 0.1s, opacity 0.15s`,marginLeft:isSub?28:0,paddingLeft:isSub?10:0,borderLeft:isSub?`2px solid rgba(155,123,196,0.4)`:`none`},children:[_jsxs(`div`,{style:{width:28,display:`flex`,flexDirection:`column`,alignItems:`center`,paddingTop:8,flexShrink:0},children:[_jsx(`div`,{style:{width:evt.kind===`user`||evt.kind===`compact`?10:7,height:evt.kind===`user`||evt.kind===`compact`?10:7,borderRadius:`50%`,background:evt.color,opacity:isHov?1:.6,transition:`opacity 0.15s`,boxShadow:isHov?`0 0 8px ${evt.color}40`:`none`}}),i\u003cvisible.length-1\u0026\u0026_jsx(`div`,{style:{width:1.5,flex:1,background:`var(--cw-rail)`,marginTop:2,minHeight:6}})]}),_jsxs(`div`,{style:{flex:1,minWidth:0,padding:`5px 10px 5px 4px`,display:`flex`,alignItems:`center`,gap:8},children:[_jsx(`span`,{style:{fontSize:12,fontWeight:600,padding:`1px 5px`,borderRadius:3,background:meta.badgeBg,color:meta.badgeColor,flexShrink:0,fontFamily:mono},children:meta.badge}),_jsx(`span`,{style:{fontSize:15,fontFamily:mono,color:isHov?`var(--cw-text)`:evt.kind===`user`?`#558A42`:evt.kind===`auto`?`var(--cw-text-dim)`:`var(--cw-text-2)`,flex:1,minWidth:0,overflow:`hidden`,textOverflow:`ellipsis`,whiteSpace:`nowrap`,fontWeight:evt.kind===`user`?550:400},children:evt.label}),evt.tokens\u003e0\u0026\u0026_jsxs(`span`,{style:{fontSize:12,fontFamily:mono,color:`var(--cw-text-faint)`,flexShrink:0},children:[`+`,fmt(evt.tokens)]}),evt.subTokens\u003e0\u0026\u0026_jsxs(`span`,{style:{fontSize:12,fontFamily:mono,color:`#9B7BC4`,flexShrink:0,opacity:.6},children:[`+`,fmt(evt.subTokens)]}),evt.tokens\u003e0\u0026\u0026_jsx(`div`,{style:{width:50,height:5,borderRadius:2,background:`var(--cw-track)`,flexShrink:0,overflow:`hidden`},children:_jsx(`div`,{style:{width:Math.min(evt.tokens/5e3*100,100)+`%`,height:`100%`,background:evt.color,opacity:isHov?.8:.4,transition:`opacity 0.15s`}})}),_jsx(`span`,{style:{width:14,flexShrink:0,display:`flex`,justifyContent:`center`},title:VIS_META[evt.vis].label,children:evt.vis!==`hidden`\u0026\u0026_jsxs(`svg`,{width:`12`,height:`12`,viewBox:`0 0 24 24`,fill:`none`,stroke:evt.vis===`full`?`#558A42`:`currentColor`,style:{color:`var(--cw-text-faint)`,opacity:evt.vis===`full`?1:.5},strokeWidth:`2`,children:[_jsx(`path`,{d:`M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z`}),_jsx(`circle`,{cx:`12`,cy:`12`,r:`3`})]})})]})]})]},evt.label+evt.t)}),activeGate\u0026\u0026(activeGate.kind===`prompt`||activeGate.kind===`bang`||activeGate.kind===`slash`)\u0026\u0026_jsxs(`div`,{style:{paddingLeft:28,marginTop:12,paddingRight:8},children:[_jsx(`div`,{style:{fontSize:11,fontWeight:600,color:`#6BA656`,fontFamily:mono,textTransform:`uppercase`,letterSpacing:.5,marginBottom:4,paddingLeft:2},children:`You type in your terminal`}),_jsxs(`div`,{style:{display:`flex`,alignItems:`flex-start`,gap:8,padding:`10px 12px`,borderRadius:6,background:`rgba(85,138,66,0.06)`,border:`1px solid rgba(85,138,66,0.2)`},children:[_jsx(`span`,{style:{color:`#558A42`,fontSize:15,fontFamily:mono,flexShrink:0},children:`❯`}),_jsxs(`span`,{style:{fontSize:15,fontFamily:mono,color:`var(--cw-text-2)`,flex:1,lineHeight:1.5},children:[activeGate.text,_jsx(`span`,{style:{display:`inline-block`,width:7,height:13,marginLeft:2,background:`#558A42`,opacity:.5,verticalAlign:`middle`,animation:`cw-blink 1s step-end infinite`}})]}),_jsx(`button`,{onClick:sendPrompt,style:{padding:`5px 12px`,borderRadius:5,border:`none`,background:`#558A42`,color:`#fff`,fontSize:13,fontWeight:600,cursor:`pointer`,flexShrink:0},children:activeGate.kind===`prompt`?`Send ↵`:`Run ↵`})]})]}),activeGate\u0026\u0026activeGate.kind===`compact`\u0026\u0026_jsx(`div`,{style:{paddingLeft:28,marginTop:12,paddingRight:8},children:_jsxs(`div`,{style:{padding:`12px 14px`,borderRadius:6,background:`rgba(217,119,87,0.06)`,border:`1px solid rgba(217,119,87,0.25)`},children:[_jsxs(`div`,{style:{fontSize:13,color:`var(--cw-text-3)`,marginBottom:8,lineHeight:1.5},children:[`Context is at `,_jsxs(`span`,{style:{fontFamily:mono,fontWeight:600,color:barColor},children:[fmt(totalTokens),` tokens`]}),`. Run `,_jsx(`code`,{style:{fontFamily:mono,background:`var(--cw-track)`,padding:`1px 4px`,borderRadius:3},children:`/compact`}),` to summarize older exchanges and free space for more work.`]}),_jsxs(`div`,{style:{display:`flex`,alignItems:`center`,gap:8},children:[_jsx(`span`,{style:{color:`#D97757`,fontSize:15,fontFamily:mono},children:`❯`}),_jsx(`span`,{style:{fontSize:15,fontFamily:mono,color:`var(--cw-text-2)`,flex:1},children:activeGate.text}),_jsx(`button`,{onClick:sendPrompt,style:{padding:`5px 12px`,borderRadius:5,border:`none`,background:`#D97757`,color:`#fff`,fontSize:13,fontWeight:600,cursor:`pointer`,flexShrink:0},children:`Run ↵`})]})]})})]}),_jsx(`div`,{style:{width:300,flexShrink:0,display:`flex`,flexDirection:`column`},children:_jsxs(`div`,{ref:detailRef,className:`cw-scroll`,style:{padding:`14px 16px`,borderRadius:10,background:`var(--cw-surface)`,border:`1px solid var(--cw-border)`,flex:1,minHeight:0,overflowY:`auto`,display:`flex`,flexDirection:`column`,gap:10},children:[hovEvent?_jsxs(`div`,{children:[_jsxs(`div`,{style:{display:`flex`,alignItems:`center`,gap:8,marginBottom:8},children:[_jsx(`div`,{style:{width:10,height:10,borderRadius:3,background:hovEvent.color,opacity:.8}}),_jsx(`span`,{style:{fontSize:16,fontWeight:600},children:hovEvent.label})]}),_jsx(`div`,{style:{display:`flex`,width:`fit-content`,padding:`3px 8px`,borderRadius:4,marginBottom:8,background:KIND_META[hovEvent.kind].badgeBg},children:_jsx(`span`,{style:{fontSize:12,fontWeight:600,color:KIND_META[hovEvent.kind].badgeColor},children:KIND_META[hovEvent.kind].detail})}),hovEvent.tokens\u003e0\u0026\u0026_jsxs(`div`,{style:{fontSize:14,fontFamily:mono,color:`var(--cw-text-dim)`,marginBottom:6},children:[fmt(hovEvent.tokens),` tokens`]}),hovEvent.subTokens\u003e0\u0026\u0026_jsxs(`div`,{style:{fontSize:14,fontFamily:mono,color:`#9B7BC4`,marginBottom:6},children:[fmt(hovEvent.subTokens),` tokens in the subagent's context`]}),_jsx(`p`,{style:{fontSize:15,color:`var(--cw-text-3)`,lineHeight:1.55,margin:0},children:renderWithCode(hovEvent.desc)}),_jsxs(`div`,{style:{marginTop:10,padding:`8px 10px`,borderRadius:6,background:hovEvent.vis===`full`?`rgba(85,138,66,0.08)`:`var(--cw-surface-2)`,border:`1px solid `+(hovEvent.vis===`full`?`rgba(85,138,66,0.2)`:`var(--cw-border)`)},children:[_jsxs(`div`,{style:{display:`flex`,alignItems:`center`,gap:6,marginBottom:3},children:[_jsx(`span`,{style:{fontSize:13,color:hovEvent.vis===`full`?`#558A42`:`var(--cw-text-dim)`},children:hovEvent.vis===`full`?`●`:hovEvent.vis===`brief`?`◐`:`○`}),_jsx(`span`,{style:{fontSize:12,fontWeight:600,color:`var(--cw-text-2)`},children:VIS_META[hovEvent.vis].label})]}),_jsx(`div`,{style:{fontSize:13,color:`var(--cw-text-dim)`,lineHeight:1.4},children:VIS_META[hovEvent.vis].sub})]}),hovEvent.tip\u0026\u0026_jsxs(`div`,{style:{marginTop:10,padding:`8px 10px`,borderRadius:6,background:`rgba(85,138,66,0.06)`,border:`1px solid rgba(85,138,66,0.15)`},children:[_jsxs(`div`,{style:{fontSize:12,fontWeight:600,color:`#558A42`,marginBottom:3,display:`flex`,alignItems:`center`,gap:4},children:[_jsx(`span`,{children:`💡`}),` Save context`]}),_jsx(`div`,{style:{fontSize:13,color:`var(--cw-text-3)`,lineHeight:1.5},children:renderWithCode(hovEvent.tip)})]}),hovEvent.link\u0026\u0026_jsx(_components.a,{href:hovEvent.link,style:{display:`inline-block`,marginTop:10,fontSize:13,color:`#D97757`,textDecoration:`none`,borderBottom:`1px solid rgba(217,119,87,0.3)`},children:`Learn more →`})]}):_jsxs(`div`,{style:{display:`flex`,flexDirection:`column`,alignItems:`center`,textAlign:`center`,gap:4,padding:`12px 0 4px`},children:[_jsx(`div`,{style:{fontSize:22,opacity:.2},children:`👁`}),_jsx(`div`,{style:{fontSize:14,fontWeight:500,color:`var(--cw-text-dim)`},children:`Hover or click any event`}),_jsx(`div`,{style:{fontSize:12,color:`var(--cw-text-faint)`,lineHeight:1.4,maxWidth:200},children:`Hover to preview. Click to pin so you can scroll.`})]}),_jsxs(`div`,{style:{padding:`10px 12px`,borderRadius:8,background:`rgba(217,119,87,0.05)`,border:`1px solid rgba(217,119,87,0.12)`},children:[_jsx(`div`,{style:{fontSize:11,fontWeight:700,color:`#D97757`,textTransform:`uppercase`,letterSpacing:.5,marginBottom:3},children:`Key takeaway`}),_jsx(`div`,{style:{fontSize:13,color:`var(--cw-text-3)`,lineHeight:1.5},children:takeaway})]}),_jsxs(`div`,{style:{padding:`10px 12px`,borderRadius:8,background:`var(--cw-surface-2)`,border:`1px solid var(--cw-border)`},children:[_jsx(`div`,{style:{fontSize:11,fontWeight:700,color:`var(--cw-text-dim)`,textTransform:`uppercase`,letterSpacing:.5,marginBottom:3},children:`In your terminal you see`}),_jsx(`div`,{style:{fontSize:13,color:`var(--cw-text-3)`,lineHeight:1.5},children:terminalView})]})]})})]}),_jsxs(`div`,{style:{padding:`10px 20px 14px`,display:`flex`,alignItems:`center`,gap:10},children:[_jsx(`button`,{\"aria-label\":time\u003e=1?`Restart`:activeGate?`Continue`:playing?`Pause`:`Play`,onClick:()=\u003e{if(time\u003e=1){setTime(0);setGatesPassed(0);setSelIdx(null);setHovIdx(null);setPlaying(true)}else if(activeGate)sendPrompt();else setPlaying(!playing)},style:{width:30,height:30,borderRadius:6,border:`none`,background:`rgba(217,119,87,0.1)`,color:`#D97757`,cursor:`pointer`,fontSize:15,fontWeight:700,display:`flex`,alignItems:`center`,justifyContent:`center`},children:time\u003e=1?`↺`:playing?`⏸`:`▶`}),_jsx(`div`,{style:{flex:1,height:3,borderRadius:2,background:`var(--cw-track)`,overflow:`hidden`},children:_jsx(`div`,{style:{width:time*100+`%`,height:`100%`,background:`#D97757`,transition:`width 0.1s linear`}})}),_jsxs(`span`,{style:{fontSize:12,fontFamily:mono,color:`var(--cw-text-faint)`,minWidth:30},children:[Math.round(time*100),`%`]}),_jsx(`button`,{onClick:toggleFullscreen,\"aria-label\":isFullscreen?`Exit fullscreen`:`Enter fullscreen`,title:isFullscreen?`Exit fullscreen`:`Fullscreen`,style:{width:28,height:28,borderRadius:6,border:`1px solid var(--cw-border)`,background:`var(--cw-surface)`,color:`var(--cw-text-dim)`,cursor:`pointer`,fontSize:15,flexShrink:0,marginLeft:4,display:`flex`,alignItems:`center`,justifyContent:`center`},children:isFullscreen?`⤡`:`⛶`})]})]})]})};function _createMdxContent(props){const _components={a:`a`,code:`code`,li:`li`,p:`p`,strong:`strong`,tbody:`tbody`,td:`td`,th:`th`,thead:`thead`,tr:`tr`,ul:`ul`,..._provideComponents(),...props.components},{Heading,Table,_MdxComponentBoundary}=_components;if(!Heading)_missingMdxReference(`Heading`,true);if(!Table)_missingMdxReference(`Table`,true);if(!_MdxComponentBoundary)_missingMdxReference(`_MdxComponentBoundary`,true);return _jsxs(_Fragment,{children:[_jsxs(_components.p,{children:[`Claude Code’s context window holds everything Claude knows about your session: your instructions, the files it reads, its own responses, and content that never appears in your terminal. The timeline below plays a full session from startup to compaction: what loads before you type, what each file read, rule, and hook adds as Claude works, and how a subagent keeps large reads out of your context. See `,_jsx(_components.a,{href:`#what-the-timeline-shows`,children:`the written breakdown`}),` for the same content as a list.`]}),`\n`,_jsx(_MdxComponentBoundary,{name:`ContextWindow`,children:_jsx(ContextWindow,{})}),`\n`,_jsx(Heading,{level:`2`,id:`what-the-timeline-shows`,children:`What the timeline shows`}),`\n`,_jsx(_components.p,{children:`The session walks through a realistic flow with representative token counts:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Before you type anything`}),`: CLAUDE.md, auto memory, MCP tool names, and skill descriptions all load into context. Your own setup may add more here, like an `,_jsx(_components.a,{href:`/en/output-styles`,children:`output style`}),` or text from `,_jsx(_components.a,{href:`/en/cli-reference`,children:_jsx(_components.code,{children:`--append-system-prompt`})}),`, which both go into the system prompt the same way.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`As Claude works`}),`: each file read adds to context, `,_jsx(_components.a,{href:`/en/memory#path-specific-rules`,children:`path-scoped rules`}),` load automatically alongside matching files, and a `,_jsx(_components.a,{href:`/en/hooks-guide`,children:`PostToolUse hook`}),` fires after each edit.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`The follow-up prompt`}),`: a `,_jsx(_components.a,{href:`/en/sub-agents`,children:`subagent`}),` handles the research in its own separate context window, so the large file reads stay out of yours. Only the summary and a small metadata trailer come back.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`At the end`}),`: `,_jsx(_components.code,{children:`/compact`}),` replaces the conversation with a structured summary. Most startup content reloads automatically; the table below shows what happens to each mechanism.`]}),`\n`]}),`\n`,_jsx(Heading,{level:`2`,id:`what-survives-compaction`,children:`What survives compaction`}),`\n`,_jsxs(_components.p,{children:[`When a long session compacts, Claude Code summarizes the conversation history to fit the context window. As of v2.1.198, the summarization request inherits your session’s `,_jsx(_components.a,{href:`/en/model-config#extended-thinking`,children:`extended thinking`}),` configuration, so it reasons with thinking enabled when your session has it enabled and stays off otherwise. Thinking affects only how the summary is produced; your session settings are unchanged afterward. What happens to each kind of content depends on how it was loaded:`]}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsx(_components.th,{style:{textAlign:`left`},children:`Mechanism`}),_jsx(_components.th,{style:{textAlign:`left`},children:`After compaction`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`System prompt and output style`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Unchanged; not part of message history`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Project-root CLAUDE.md and unscoped rules`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Re-injected from disk`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Auto memory`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Re-injected from disk`})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{style:{textAlign:`left`},children:[`The plan Claude wrote in `,_jsx(_components.a,{href:`/en/permission-modes#analyze-before-you-edit-with-plan-mode`,children:`plan mode`})]}),_jsx(_components.td,{style:{textAlign:`left`},children:`Re-injected from disk`})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{style:{textAlign:`left`},children:[`Rules with `,_jsx(_components.code,{children:`paths:`}),` frontmatter`]}),_jsx(_components.td,{style:{textAlign:`left`},children:`Claude Code reloads them as Claude reads files they match`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Nested CLAUDE.md in subdirectories`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Claude Code reloads them as Claude reads files in that subdirectory`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Files Claude read or edited`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Claude Code re-reads up to five, most recently modified first`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Invoked skill bodies`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Re-injected, capped at 5,000 tokens per skill and 25,000 tokens total; oldest dropped first`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Context that hooks added earlier`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Summarized with the rest of the conversation`})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{style:{textAlign:`left`},children:[_jsx(_components.a,{href:`/en/hooks-guide#re-inject-context-after-compaction`,children:`SessionStart hooks`}),` that match the `,_jsx(_components.code,{children:`compact`}),` source`]}),_jsx(_components.td,{style:{textAlign:`left`},children:`Claude Code runs them and adds their output to the compacted context`})]})]})]}),`\n`,_jsxs(_components.p,{children:[`Path-scoped rules and nested CLAUDE.md files load into message history when their trigger file is read, so compaction summarizes them away with everything else. Right after compaction, Claude Code re-reads up to five of the files Claude has read or edited in the session, choosing the ones modified most recently, and reloads the rules and nested CLAUDE.md files that apply to those files. A file over 5,000 tokens comes back as a path reference without its content, shown as `,_jsx(_components.code,{children:`Referenced file`}),` instead of `,_jsx(_components.code,{children:`Read`}),`. Its rules still reload. If a rule must persist across compaction, drop the `,_jsx(_components.code,{children:`paths:`}),` frontmatter or move it to the project-root CLAUDE.md.`]}),`\n`,_jsxs(_components.p,{children:[`Skill bodies are re-injected after compaction, but large skills are truncated to fit the per-skill cap, and the oldest invoked skills are dropped once the total budget is exceeded. Truncation keeps the start of the file, so put the most important instructions near the top of `,_jsx(_components.code,{children:`SKILL.md`}),`.`]}),`\n`,_jsx(Heading,{level:`2`,id:`when-your-context-fills-up`,children:`When your context fills up`}),`\n`,_jsxs(_components.p,{children:[`Claude Code compacts automatically as you approach the limit, so a full context window doesn’t end your session. The automatic pass works the same way as the `,_jsx(_components.code,{children:`/compact`}),` step in the timeline. See `,_jsx(_components.a,{href:`/en/how-claude-code-works#when-context-fills-up`,children:`When context fills up`}),` for what it preserves.`]}),`\n`,_jsx(_components.p,{children:`You can also act before the automatic pass runs:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Compact with a focus`}),`: run `,_jsx(_components.code,{children:`/compact`}),` with instructions, like `,_jsx(_components.code,{children:`/compact focus on the auth bug fix`}),`, before starting a long new task. The summary keeps what you choose instead of what the automatic pass guesses is important.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Compact part of the conversation`}),`: run `,_jsx(_components.code,{children:`/rewind`}),`, select a message, and choose `,_jsx(_components.strong,{children:`Summarize from here`}),` or `,_jsx(_components.strong,{children:`Summarize up to here`}),`. See `,_jsx(_components.a,{href:`/en/checkpointing#rewind-and-summarize`,children:`Rewind and summarize`}),` for what each option keeps and how to guide the summary.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Compact earlier`}),`: run `,_jsx(_components.a,{href:`/en/commands#all-commands`,children:_jsx(_components.code,{children:`/autocompact`})}),` with a token count, like `,_jsx(_components.code,{children:`/autocompact 500k`}),`, to set how full the context window gets before the automatic pass runs. See `,_jsx(_components.a,{href:`/en/model-config#set-the-auto-compact-window`,children:`Set the auto-compact window`}),` for accepted values and overrides.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Clear between tasks`}),`: run `,_jsx(_components.code,{children:`/clear`}),` when switching to unrelated work. Old conversation crowds out the files you need next and costs tokens on every message.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Delegate large reads`}),`: send research to a `,_jsx(_components.a,{href:`/en/sub-agents`,children:`subagent`}),` so the file contents stay in its context window, not yours.`]}),`\n`]}),`\n`,_jsxs(_components.p,{children:[`If you need a larger window rather than a smaller conversation, Fable 5, Sonnet 5, Opus 4.6 and later, and Sonnet 4.6 support a 1 million token context window. See `,_jsx(_components.a,{href:`/en/model-config#extended-context`,children:`Extended context`}),` for availability by plan and how to select a `,_jsx(_components.code,{children:`[1m]`}),` model variant. Sonnet 5 runs at 1M with no `,_jsx(_components.code,{children:`[1m]`}),` variant to select; see `,_jsx(_components.a,{href:`/en/model-config#sonnet-5-context-window`,children:`Sonnet 5 context window`}),` for its auto-compaction thresholds and the LLM gateway exception. Compaction works the same way at the larger limit.`]}),`\n`,_jsxs(_components.p,{children:[`The point where automatic compaction runs depends on your model and configuration. See `,_jsx(_components.a,{href:`/en/model-config#default-auto-compact-thresholds`,children:`Default auto-compact thresholds`}),` for the boundaries per model, and `,_jsx(_components.a,{href:`/en/model-config#correct-the-window-for-a-gateway-or-custom-model-id`,children:`Correct the window for a gateway or custom model ID`}),` if Claude Code assumes the wrong window for your model ID, such as an `,_jsx(_components.a,{href:`/en/llm-gateway`,children:`LLM gateway`}),` alias.`]}),`\n`,_jsx(Heading,{level:`2`,id:`check-your-own-session`,children:`Check your own session`}),`\n`,_jsxs(_components.p,{children:[`The visualization uses representative numbers. To see your actual context usage at any point, run `,_jsx(_components.code,{children:`/context`}),` for a live breakdown by category with optimization suggestions, including which CLAUDE.md and auto memory files loaded. Run `,_jsx(_components.code,{children:`/memory`}),` to open and edit those files.`]}),`\n`,_jsx(Heading,{level:`2`,id:`related-resources`,children:`Related resources`}),`\n`,_jsx(_components.p,{children:`For deeper coverage of the features shown in the timeline, see these pages:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/features-overview`,children:`Extend Claude Code`}),`: when to use CLAUDE.md vs skills vs rules vs hooks vs MCP`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/memory`,children:`Store instructions and memories`}),`: CLAUDE.md hierarchy and auto memory`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/sub-agents`,children:`Subagents`}),`: delegate research to a separate context window`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/best-practices`,children:`Best practices`}),`: managing context as your primary constraint`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/prompt-caching`,children:`Prompt caching`}),`: which actions invalidate the cached prefix`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/costs#reduce-token-usage`,children:`Reduce token usage`}),`: strategies for keeping context usage low`]}),`\n`]})]})}function MDXContent(props={}){const{wrapper:MDXLayout}={..._provideComponents(),...props.components};return MDXLayout?_jsx(MDXLayout,{...props,children:_jsx(_createMdxContent,{...props})}):_createMdxContent(props)}return{ContextWindow,default:MDXContent};function _missingMdxReference(id,component){throw new Error(`Expected `+(component?`component`:`object`)+\" `\"+id+\"` to be defined: you likely forgot to import, pass, or provide it.\")}"])</script><script>self.__next_f.push([1,"66:T35ee,"])</script><script>self.__next_f.push([1,"\"use strict\";const{Fragment:_Fragment,jsx:_jsx,jsxs:_jsxs}=arguments[0];const{useMDXComponents:_provideComponents}=arguments[0];const ContextWindow=()=\u003enull;function _createMdxContent(props){const _components={a:`a`,code:`code`,li:`li`,p:`p`,strong:`strong`,tbody:`tbody`,td:`td`,th:`th`,thead:`thead`,tr:`tr`,ul:`ul`,..._provideComponents(),...props.components},{Heading,Table,_MdxComponentBoundary}=_components;if(!Heading)_missingMdxReference(`Heading`,true);if(!Table)_missingMdxReference(`Table`,true);if(!_MdxComponentBoundary)_missingMdxReference(`_MdxComponentBoundary`,true);return _jsxs(_Fragment,{children:[_jsxs(_components.p,{children:[`Claude Code’s context window holds everything Claude knows about your session: your instructions, the files it reads, its own responses, and content that never appears in your terminal. The timeline below plays a full session from startup to compaction: what loads before you type, what each file read, rule, and hook adds as Claude works, and how a subagent keeps large reads out of your context. See `,_jsx(_components.a,{href:`#what-the-timeline-shows`,children:`the written breakdown`}),` for the same content as a list.`]}),`\n`,_jsx(_MdxComponentBoundary,{name:`ContextWindow`,children:_jsx(ContextWindow,{})}),`\n`,_jsx(Heading,{level:`2`,id:`what-the-timeline-shows`,children:`What the timeline shows`}),`\n`,_jsx(_components.p,{children:`The session walks through a realistic flow with representative token counts:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Before you type anything`}),`: CLAUDE.md, auto memory, MCP tool names, and skill descriptions all load into context. Your own setup may add more here, like an `,_jsx(_components.a,{href:`/en/output-styles`,children:`output style`}),` or text from `,_jsx(_components.a,{href:`/en/cli-reference`,children:_jsx(_components.code,{children:`--append-system-prompt`})}),`, which both go into the system prompt the same way.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`As Claude works`}),`: each file read adds to context, `,_jsx(_components.a,{href:`/en/memory#path-specific-rules`,children:`path-scoped rules`}),` load automatically alongside matching files, and a `,_jsx(_components.a,{href:`/en/hooks-guide`,children:`PostToolUse hook`}),` fires after each edit.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`The follow-up prompt`}),`: a `,_jsx(_components.a,{href:`/en/sub-agents`,children:`subagent`}),` handles the research in its own separate context window, so the large file reads stay out of yours. Only the summary and a small metadata trailer come back.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`At the end`}),`: `,_jsx(_components.code,{children:`/compact`}),` replaces the conversation with a structured summary. Most startup content reloads automatically; the table below shows what happens to each mechanism.`]}),`\n`]}),`\n`,_jsx(Heading,{level:`2`,id:`what-survives-compaction`,children:`What survives compaction`}),`\n`,_jsxs(_components.p,{children:[`When a long session compacts, Claude Code summarizes the conversation history to fit the context window. As of v2.1.198, the summarization request inherits your session’s `,_jsx(_components.a,{href:`/en/model-config#extended-thinking`,children:`extended thinking`}),` configuration, so it reasons with thinking enabled when your session has it enabled and stays off otherwise. Thinking affects only how the summary is produced; your session settings are unchanged afterward. What happens to each kind of content depends on how it was loaded:`]}),`\n`,_jsxs(Table,{children:[_jsx(_components.thead,{children:_jsxs(_components.tr,{children:[_jsx(_components.th,{style:{textAlign:`left`},children:`Mechanism`}),_jsx(_components.th,{style:{textAlign:`left`},children:`After compaction`})]})}),_jsxs(_components.tbody,{children:[_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`System prompt and output style`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Unchanged; not part of message history`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Project-root CLAUDE.md and unscoped rules`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Re-injected from disk`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Auto memory`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Re-injected from disk`})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{style:{textAlign:`left`},children:[`The plan Claude wrote in `,_jsx(_components.a,{href:`/en/permission-modes#analyze-before-you-edit-with-plan-mode`,children:`plan mode`})]}),_jsx(_components.td,{style:{textAlign:`left`},children:`Re-injected from disk`})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{style:{textAlign:`left`},children:[`Rules with `,_jsx(_components.code,{children:`paths:`}),` frontmatter`]}),_jsx(_components.td,{style:{textAlign:`left`},children:`Claude Code reloads them as Claude reads files they match`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Nested CLAUDE.md in subdirectories`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Claude Code reloads them as Claude reads files in that subdirectory`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Files Claude read or edited`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Claude Code re-reads up to five, most recently modified first`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Invoked skill bodies`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Re-injected, capped at 5,000 tokens per skill and 25,000 tokens total; oldest dropped first`})]}),_jsxs(_components.tr,{children:[_jsx(_components.td,{style:{textAlign:`left`},children:`Context that hooks added earlier`}),_jsx(_components.td,{style:{textAlign:`left`},children:`Summarized with the rest of the conversation`})]}),_jsxs(_components.tr,{children:[_jsxs(_components.td,{style:{textAlign:`left`},children:[_jsx(_components.a,{href:`/en/hooks-guide#re-inject-context-after-compaction`,children:`SessionStart hooks`}),` that match the `,_jsx(_components.code,{children:`compact`}),` source`]}),_jsx(_components.td,{style:{textAlign:`left`},children:`Claude Code runs them and adds their output to the compacted context`})]})]})]}),`\n`,_jsxs(_components.p,{children:[`Path-scoped rules and nested CLAUDE.md files load into message history when their trigger file is read, so compaction summarizes them away with everything else. Right after compaction, Claude Code re-reads up to five of the files Claude has read or edited in the session, choosing the ones modified most recently, and reloads the rules and nested CLAUDE.md files that apply to those files. A file over 5,000 tokens comes back as a path reference without its content, shown as `,_jsx(_components.code,{children:`Referenced file`}),` instead of `,_jsx(_components.code,{children:`Read`}),`. Its rules still reload. If a rule must persist across compaction, drop the `,_jsx(_components.code,{children:`paths:`}),` frontmatter or move it to the project-root CLAUDE.md.`]}),`\n`,_jsxs(_components.p,{children:[`Skill bodies are re-injected after compaction, but large skills are truncated to fit the per-skill cap, and the oldest invoked skills are dropped once the total budget is exceeded. Truncation keeps the start of the file, so put the most important instructions near the top of `,_jsx(_components.code,{children:`SKILL.md`}),`.`]}),`\n`,_jsx(Heading,{level:`2`,id:`when-your-context-fills-up`,children:`When your context fills up`}),`\n`,_jsxs(_components.p,{children:[`Claude Code compacts automatically as you approach the limit, so a full context window doesn’t end your session. The automatic pass works the same way as the `,_jsx(_components.code,{children:`/compact`}),` step in the timeline. See `,_jsx(_components.a,{href:`/en/how-claude-code-works#when-context-fills-up`,children:`When context fills up`}),` for what it preserves.`]}),`\n`,_jsx(_components.p,{children:`You can also act before the automatic pass runs:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Compact with a focus`}),`: run `,_jsx(_components.code,{children:`/compact`}),` with instructions, like `,_jsx(_components.code,{children:`/compact focus on the auth bug fix`}),`, before starting a long new task. The summary keeps what you choose instead of what the automatic pass guesses is important.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Compact part of the conversation`}),`: run `,_jsx(_components.code,{children:`/rewind`}),`, select a message, and choose `,_jsx(_components.strong,{children:`Summarize from here`}),` or `,_jsx(_components.strong,{children:`Summarize up to here`}),`. See `,_jsx(_components.a,{href:`/en/checkpointing#rewind-and-summarize`,children:`Rewind and summarize`}),` for what each option keeps and how to guide the summary.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Compact earlier`}),`: run `,_jsx(_components.a,{href:`/en/commands#all-commands`,children:_jsx(_components.code,{children:`/autocompact`})}),` with a token count, like `,_jsx(_components.code,{children:`/autocompact 500k`}),`, to set how full the context window gets before the automatic pass runs. See `,_jsx(_components.a,{href:`/en/model-config#set-the-auto-compact-window`,children:`Set the auto-compact window`}),` for accepted values and overrides.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Clear between tasks`}),`: run `,_jsx(_components.code,{children:`/clear`}),` when switching to unrelated work. Old conversation crowds out the files you need next and costs tokens on every message.`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Delegate large reads`}),`: send research to a `,_jsx(_components.a,{href:`/en/sub-agents`,children:`subagent`}),` so the file contents stay in its context window, not yours.`]}),`\n`]}),`\n`,_jsxs(_components.p,{children:[`If you need a larger window rather than a smaller conversation, Fable 5, Sonnet 5, Opus 4.6 and later, and Sonnet 4.6 support a 1 million token context window. See `,_jsx(_components.a,{href:`/en/model-config#extended-context`,children:`Extended context`}),` for availability by plan and how to select a `,_jsx(_components.code,{children:`[1m]`}),` model variant. Sonnet 5 runs at 1M with no `,_jsx(_components.code,{children:`[1m]`}),` variant to select; see `,_jsx(_components.a,{href:`/en/model-config#sonnet-5-context-window`,children:`Sonnet 5 context window`}),` for its auto-compaction thresholds and the LLM gateway exception. Compaction works the same way at the larger limit.`]}),`\n`,_jsxs(_components.p,{children:[`The point where automatic compaction runs depends on your model and configuration. See `,_jsx(_components.a,{href:`/en/model-config#default-auto-compact-thresholds`,children:`Default auto-compact thresholds`}),` for the boundaries per model, and `,_jsx(_components.a,{href:`/en/model-config#correct-the-window-for-a-gateway-or-custom-model-id`,children:`Correct the window for a gateway or custom model ID`}),` if Claude Code assumes the wrong window for your model ID, such as an `,_jsx(_components.a,{href:`/en/llm-gateway`,children:`LLM gateway`}),` alias.`]}),`\n`,_jsx(Heading,{level:`2`,id:`check-your-own-session`,children:`Check your own session`}),`\n`,_jsxs(_components.p,{children:[`The visualization uses representative numbers. To see your actual context usage at any point, run `,_jsx(_components.code,{children:`/context`}),` for a live breakdown by category with optimization suggestions, including which CLAUDE.md and auto memory files loaded. Run `,_jsx(_components.code,{children:`/memory`}),` to open and edit those files.`]}),`\n`,_jsx(Heading,{level:`2`,id:`related-resources`,children:`Related resources`}),`\n`,_jsx(_components.p,{children:`For deeper coverage of the features shown in the timeline, see these pages:`}),`\n`,_jsxs(_components.ul,{children:[`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/features-overview`,children:`Extend Claude Code`}),`: when to use CLAUDE.md vs skills vs rules vs hooks vs MCP`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/memory`,children:`Store instructions and memories`}),`: CLAUDE.md hierarchy and auto memory`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/sub-agents`,children:`Subagents`}),`: delegate research to a separate context window`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/best-practices`,children:`Best practices`}),`: managing context as your primary constraint`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/prompt-caching`,children:`Prompt caching`}),`: which actions invalidate the cached prefix`]}),`\n`,_jsxs(_components.li,{children:[_jsx(_components.a,{href:`/en/costs#reduce-token-usage`,children:`Reduce token usage`}),`: strategies for keeping context usage low`]}),`\n`]})]})}function MDXContent(props={}){const{wrapper:MDXLayout}={..._provideComponents(),...props.components};return MDXLayout?_jsx(MDXLayout,{...props,children:_jsx(_createMdxContent,{...props})}):_createMdxContent(props)}return{ContextWindow,default:MDXContent};function _missingMdxReference(id,component){throw new Error(`Expected `+(component?`component`:`object`)+\" `\"+id+\"` to be defined: you likely forgot to import, pass, or provide it.\")}"])</script><script>self.__next_f.push([1,"5b:[\"$\",\"$L63\",null,{\"slug\":\"en/context-window\",\"pageMetadata\":\"$4f:props:pageMetadata\",\"theme\":\"mint\",\"children\":[\"$\",\"$L64\",null,{\"mdxSource\":{\"compiledSource\":\"$65\",\"frontmatter\":{},\"scope\":{\"config\":{},\"pageMetadata\":{\"title\":\"Explore the context window\",\"description\":\"An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.\",\"mode\":\"wide\",\"href\":\"/en/context-window\"}}},\"mdxSourceWithNoJs\":{\"compiledSource\":\"$66\",\"frontmatter\":{},\"scope\":{\"config\":{},\"pageMetadata\":{\"title\":\"Explore the context window\",\"description\":\"An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.\",\"mode\":\"wide\",\"href\":\"/en/context-window\"}}},\"displayDomain\":\"code.claude.com/docs\"}]}]\n"])</script><script>self.__next_f.push([1,"67:T6e48,"])</script><script>self.__next_f.push([1,"/* Anthropic Sans - Static fonts from assets.claude.ai */\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-Regular-Static.otf\") format(\"opentype\");\n  font-weight: 400;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-RegularItalic-Static.otf\") format(\"opentype\");\n  font-weight: 400;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-Medium-Static.otf\") format(\"opentype\");\n  font-weight: 500;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-MediumItalic-Static.otf\") format(\"opentype\");\n  font-weight: 500;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-Semibold-Static.otf\") format(\"opentype\");\n  font-weight: 600;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-SemiboldItalic-Static.otf\") format(\"opentype\");\n  font-weight: 600;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-Bold-Static.otf\") format(\"opentype\");\n  font-weight: 700;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Sans\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSans-Text-BoldItalic-Static.otf\") format(\"opentype\");\n  font-weight: 700;\n  font-style: italic;\n  font-display: swap;\n}\n\n/* Anthropic Serif Display - for headlines */\n@font-face {\n  font-family: \"Anthropic Serif Display\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Display-Regular-Static.otf\") format(\"opentype\");\n  font-weight: 400;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif Display\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Display-RegularItalic-Static.otf\") format(\"opentype\");\n  font-weight: 400;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif Display\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Display-Medium-Static.otf\") format(\"opentype\");\n  font-weight: 500;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif Display\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Display-Semibold-Static.otf\") format(\"opentype\");\n  font-weight: 600;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif Display\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Display-Bold-Static.otf\") format(\"opentype\");\n  font-weight: 700;\n  font-style: normal;\n  font-display: swap;\n}\n\n/* Anthropic Serif - Static fonts from assets.claude.ai */\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-Regular-Static.otf\") format(\"opentype\");\n  font-weight: 400;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-RegularItalic-Static.otf\") format(\"opentype\");\n  font-weight: 400;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-Medium-Static.otf\") format(\"opentype\");\n  font-weight: 500;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-MediumItalic-Static.otf\") format(\"opentype\");\n  font-weight: 500;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-Semibold-Static.otf\") format(\"opentype\");\n  font-weight: 600;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-SemiboldItalic-Static.otf\") format(\"opentype\");\n  font-weight: 600;\n  font-style: italic;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-Bold-Static.otf\") format(\"opentype\");\n  font-weight: 700;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: \"Anthropic Serif\";\n  src: url(\"https://assets.claude.ai/Fonts/AnthropicSerif-Text-BoldItalic-Static.otf\") format(\"opentype\");\n  font-weight: 700;\n  font-style: italic;\n  font-display: swap;\n}\n\n/* Color variables mirror the internal design system's generated theme palette. */\n:root {\n  --always-white: 0 0% 100%;\n  --always-black: 0 0% 0%;\n  --constant-book-cloth: 15 55% 80%;\n  --constant-clay: 15 60% 85%;\n  --constant-kraft: 25 40% 83%;\n  --constant-manilla: 40 20% 92%;\n  --constant-slate-000: 0 0% 100%;\n  --constant-slate-050: 48 33.3% 97.1%;\n  --constant-slate-100: 53 28.6% 94.5%;\n  --constant-slate-150: 48 25% 92.2%;\n  --constant-slate-200: 50 20.7% 88.6%;\n  --constant-slate-250: 51 16.5% 84.5%;\n  --constant-slate-300: 50 11.5% 79.6%;\n  --constant-slate-350: 50 9% 73.7%;\n  --constant-slate-400: 49 6.5% 66.9%;\n  --constant-slate-450: 48 4.8% 59.2%;\n  --constant-slate-500: 53 3.2% 51.4%;\n  --constant-slate-550: 51 3.1% 43.7%;\n  --constant-slate-600: 48 2.7% 35.9%;\n  --constant-slate-650: 48 3.4% 29.2%;\n  --constant-slate-700: 60 2.5% 23.3%;\n  --constant-slate-750: 60 2.1% 18.4%;\n  --constant-slate-800: 60 2.7% 14.5%;\n  --constant-slate-850: 30 3.3% 11.8%;\n  --constant-slate-900: 30 4% 9.8%;\n  --constant-slate-950: 60 2.6% 7.6%;\n  --constant-slate-1000: 60 3.4% 5.7%;\n}\n\n:root:not(.dark) {\n  --accent-brand: 15 63.1% 59.6%;\n  --accent-main-000: 15 55.6% 52.4%;\n  --accent-main-100: 15 55.6% 52.4%;\n  --accent-main-200: 15 63.1% 59.6%;\n  --accent-main-900: 0 0% 0%;\n  --accent-pro-000: 251 34.2% 33.3%;\n  --accent-pro-100: 251 40% 45.1%;\n  --accent-pro-200: 251 61% 72.2%;\n  --accent-pro-900: 253 33.3% 91.8%;\n  --accent-secondary-000: 210 73.7% 40.2%;\n  --accent-secondary-100: 210 70.9% 51.6%;\n  --accent-secondary-200: 210 70.9% 51.6%;\n  --accent-secondary-900: 211 72% 90%;\n  --bg-000: 0 0% 100%;\n  --bg-100: 48 33.3% 97.1%;\n  --bg-200: 53 28.6% 94.5%;\n  --bg-300: 48 25% 92.2%;\n  --bg-400: 50 20.7% 88.6%;\n  --bg-500: 50 20.7% 88.6%;\n  --border-100: 30 3.3% 11.8%;\n  --border-200: 30 3.3% 11.8%;\n  --border-300: 30 3.3% 11.8%;\n  --border-400: 30 3.3% 11.8%;\n  --danger-000: 0 61.4% 22.4%;\n  --danger-100: 0 58.6% 34.1%;\n  --danger-200: 0 58.6% 34.1%;\n  --danger-900: 0 50% 95%;\n  --oncolor-100: 0 0% 100%;\n  --oncolor-200: 60 6.7% 97.1%;\n  --oncolor-300: 60 6.7% 97.1%;\n  --text-000: 60 2.6% 7.6%;\n  --text-100: 60 2.6% 7.6%;\n  --text-200: 60 2.5% 23.3%;\n  --text-300: 60 2.5% 23.3%;\n  --text-400: 51 3.1% 43.7%;\n  --text-500: 51 3.1% 43.7%;\n}\n\n:root.dark {\n  --accent-brand: 15 63.1% 59.6%;\n  --accent-main-000: 15 55.6% 52.4%;\n  --accent-main-100: 15 63.1% 59.6%;\n  --accent-main-200: 15 63.1% 59.6%;\n  --accent-main-900: 0 0% 0%;\n  --accent-pro-000: 251 84.6% 74.5%;\n  --accent-pro-100: 251 40.2% 54.1%;\n  --accent-pro-200: 251 40% 45.1%;\n  --accent-pro-900: 250 25.3% 19.4%;\n  --accent-secondary-000: 210 71.1% 62%;\n  --accent-secondary-100: 210 70.9% 51.6%;\n  --accent-secondary-200: 210 70.9% 51.6%;\n  --accent-secondary-900: 210 55.9% 24.6%;\n  --bg-000: 60 2.1% 18.4%;\n  --bg-100: 60 2.7% 14.5%;\n  --bg-200: 30 3.3% 11.8%;\n  --bg-300: 60 2.6% 7.6%;\n  --bg-400: 60 3.4% 5.7%;\n  --bg-500: 60 3.4% 5.7%;\n  --border-100: 51 16.5% 84.5%;\n  --border-200: 51 16.5% 84.5%;\n  --border-300: 51 16.5% 84.5%;\n  --border-400: 51 16.5% 84.5%;\n  --danger-000: 0 73.1% 66.5%;\n  --danger-100: 0 58.6% 34.1%;\n  --danger-200: 0 58.6% 34.1%;\n  --danger-900: 0 23% 15.6%;\n  --oncolor-100: 0 0% 100%;\n  --oncolor-200: 60 6.7% 97.1%;\n  --oncolor-300: 60 6.7% 97.1%;\n  --text-000: 48 33.3% 97.1%;\n  --text-100: 48 33.3% 97.1%;\n  --text-200: 50 9% 73.7%;\n  --text-300: 50 9% 73.7%;\n  --text-400: 48 4.8% 59.2%;\n  --text-500: 48 4.8% 59.2%;\n}\n\n#home-header {\n  font-family: \"Anthropic Sans\", system-ui, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n  font-weight: 400 !important;\n  font-size: 50px;\n  line-height: 1.2;\n  margin-bottom: 1rem;\n  color: --text-000;\n  display: flex;\n  align-items: baseline;\n  justify-content: center;\n  flex-wrap: nowrap;\n}\n\n#localization-select-trigger \u003e :has(img[src*=\"flags\"]) {\n  display: none;\n}\n\ndiv[id^=\"localization-select-item\"] \u003e :has(img[src*=\"flags\"]) {\n  display: none;\n}\n\n/* Keep home header centered on all screen sizes */\n@media (min-width: 768px) {\n  #home-header {\n    justify-content: center;\n  }\n}\n\n.build-with {\n  font-family: \"Anthropic Sans\", system-ui, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n  letter-spacing: -0.02em;\n}\n\n.claude-wordmark-wrapper {\n  display: inline-flex;\n  align-items: baseline;\n  margin-left: 10px; /* Space between \"Build with\" and the wordmark */\n}\n\n.claude-wordmark {\n  height: 40px; /* Adjust this value to match your desired size */\n  width: auto;\n  position: relative;\n}\n\n.dark #home-header {\n  color: white;\n}\n\n.description-text {\n  color: black;\n}\n\n.dark .description-text {\n  color: white;\n}\n\n.dark .claude-wordmark {\n  filter: invert(1);\n}\n\n:root {\n  --bg-color: #f0efea;\n}\n\n.dark {\n  --bg-color: #2b2b2b;\n}\n\nbody,\ninput,\n#category-select,\n.dropdown-item,\n#table-of-contents {\n  font-family: \"Anthropic Sans\", system-ui, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n}\n\n.eyebrow {\n  font-family: \"Anthropic Sans\", system-ui, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n  text-transform: uppercase;\n  letter-spacing: 0.02rem;\n}\n\n#content-container {\n  font-family: \"Anthropic Sans\", system-ui, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n}\n\n#content-container h1,\n#content-container h2,\n#content-container h3,\n#content-container h4,\n#content-container h5,\n#content-container h6 {\n  font-family: \"Anthropic Serif Display\", Georgia, \"Times New Roman\", Times, serif;\n  font-weight: 400;\n  /* Mintlify applies tracking-tight (-0.025em) to #page-title, which collapses\n     word gaps in Serif Display's already-narrow space glyph. Reset tracking to\n     the font's natural metrics and widen word gaps slightly. */\n  letter-spacing: 0;\n  word-spacing: 0.1em;\n}\n\n#content-container p {\n  font-size: 1rem;\n  line-height: 1.65rem;\n}\n\n.font-extrabold {\n  font-weight: 600 !important;\n}\n\n.wide-table {\n  width: 100%;\n  overflow-x: auto;\n}\n\n.wide-table table {\n  width: 175%;\n  margin-bottom: 0;\n}\n\n/* Prompt Library */\n#prompt-library-container {\n  margin: 4rem auto;\n  max-width: 48rem;\n  padding-left: 1.25rem;\n  padding-right: 1.25rem;\n}\n\n.prompt-library-title {\n  font-size: 24px;\n  text-align: center;\n  font-weight: 700;\n  color: #1f2937;\n}\n\n.dark .prompt-library-title {\n  color: #e5e7eb;\n}\n\n.prompt-library-description {\n  margin-top: 1rem;\n  text-align: center;\n}\n\n.main-content {\n  margin-bottom: 10rem;\n  max-width: 64rem;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: 1.25rem;\n  padding-right: 1.25rem;\n}\n\n.prompt-controllers {\n  display: flex;\n  gap: 0.5rem;\n}\n\n.prompt-search-container {\n  position: relative;\n  flex: 1 1 0%;\n}\n\n.prompt-search-icon-container {\n  display: flex;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  align-items: center;\n  padding-left: 0.75rem;\n}\n\n.prompt-search-icon {\n  margin-left: 0.25rem;\n  margin-right: 0.75rem;\n  flex: none;\n  width: 1rem;\n  height: 1rem;\n  background-color: #6b7280;\n  mask-image: url(https://mintlify.b-cdn.net/v6.5.1/solid/magnifying-glass.svg);\n  mask-repeat: no-repeat;\n  mask-position: center center;\n}\n\ninput.prompt-search-bar {\n  display: block;\n  height: 2.5rem;\n  padding-left: 2.5rem;\n  border-radius: 0.75rem;\n  border-width: 1px;\n  background-color: #ffffff;\n  width: 100%;\n  color: #111827;\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n}\n\n.dark input.prompt-search-bar {\n  color: #ffffff;\n  background-color: rgb(var(--background-dark));\n  border-color: #d1d5db1a;\n}\n\ninput.prompt-search-bar:focus {\n  outline-color: rgb(var(--primary));\n}\n\n.dark input.prompt-search-bar:focus {\n  outline-color: rgb(var(--primary-light));\n}\n\n.dark .prompt-search-icon {\n  background-color: #ffffff80;\n}\n\n#category-select {\n  padding-left: 1rem;\n  padding-right: 2.5rem;\n  height: 2.5rem;\n  display: flex;\n  align-items: center;\n  border-radius: 0.75rem;\n  border-width: 1px;\n  color: #111827;\n  background-color: #ffffff;\n  cursor: pointer;\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n  white-space: nowrap;\n}\n\n.dark #category-select {\n  background-color: rgb(var(--background-dark));\n  border-color: #d1d5db1a;\n  color: #ffffff;\n}\n\n#category-select:hover {\n  background-color: #f9fafb;\n}\n\n.dark #category-select:hover {\n  background-color: #ffffff0d;\n}\n\n#category-select:focus {\n  outline-color: rgb(var(--primary));\n}\n\n.dark #category-select:focus {\n  outline-color: rgb(var(--primary-light));\n}\n\n#categories-dropdown {\n  top: calc(100% + 4px);\n  padding: 0.5rem 0.5rem;\n  display: none;\n  position: absolute;\n  z-index: 10;\n  border-radius: 0.75rem;\n  border-width: 1px;\n  width: 100%;\n  color: #111827;\n  background-color: #ffffff;\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n}\n\n.dark #categories-dropdown {\n  background-color: rgb(var(--background-dark));\n  border-color: #d1d5db1a;\n  color: #ffffff;\n}\n\n#categories-dropdown-clickout {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 0;\n}\n\n.dropdown-icon-container {\n  display: flex;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  align-items: center;\n  padding-right: 0.25rem;\n}\n\n.dropdown-icon {\n  margin-left: 0.25rem;\n  margin-right: 0.75rem;\n  flex: none;\n  width: 0.75rem;\n  height: 0.75rem;\n  background-color: #6b7280;\n  mask-image: url(https://mintlify.b-cdn.net/v6.5.1/solid/caret-down.svg);\n  mask-repeat: no-repeat;\n  mask-position: center center;\n}\n\n.dark .dropdown-icon {\n  background-color: #ffffff80;\n}\n\n#prompts-container {\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n  gap: 2rem;\n}\n\n.dropdown-item {\n  padding: 0.25rem 0.5rem;\n  border-radius: 0.375rem;\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n}\n\n.dropdown-item:hover {\n  background-color: #f9fafb;\n}\n\n.dark .dropdown-item:hover {\n  background-color: #ffffff0d;\n}\n\n.check-icon {\n  mask-image: url(https://mintlify.b-cdn.net/v6.5.1/solid/check.svg);\n  height: 0.875rem;\n  width: 1rem;\n  background-color: rgb(var(--primary-light));\n  mask-repeat: no-repeat;\n  mask-position: center center;\n}\n\n.prompt-card {\n  margin: -0.75rem;\n  padding: 0.75rem;\n  display: flex;\n  border-radius: 1rem;\n}\n\n.prompt-card:hover {\n  background-color: #03071208;\n}\n\n.dark .prompt-card:hover {\n  background-color: #ffffff08;\n}\n\n.prompt-icon-container {\n  display: flex;\n  flex: none;\n  align-items: center;\n  justify-content: center;\n  margin-right: 1.5rem;\n  border-radius: 0.75rem;\n  height: 4rem;\n  width: 4rem;\n  background-color: #cb785c1a;\n}\n\n.prompt-icon {\n  height: 1.5rem;\n  width: 1.5rem;\n  background-color: rgb(var(--primary-light));\n  mask-repeat: no-repeat;\n  mask-position: center center;\n}\n\n.prompt-title {\n  color: rgb(31 41 55);\n  font-weight: 600;\n}\n\n.dark .prompt-title {\n  color: rgb(229 231 235);\n}\n\n.prompt-description {\n  margin-top: 0.25rem;\n}\n\n#prompts-container {\n  display: grid;\n  margin-top: 2.5rem;\n}\n\n@media (min-width: 640px) {\n  #category-select {\n    width: 16rem;\n  }\n}\n\n@media (min-width: 1024px) {\n  #prompts-container {\n    grid-template-columns: repeat(2, minmax(0, 1fr));\n  }\n}\n\n/* Home page card styling */\n.home-cards-custom {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-template-rows: repeat(2, auto);\n  gap: 1.5rem;\n}\n\n.home-cards-custom .card {\n  background: transparent;\n  border: 0.5px solid hsl(var(--border-300));\n  border-radius: 12px;\n  padding: 0.25rem;\n}\n\n/* Responsive: change to 2 columns on tablet, single column on mobile */\n@media (max-width: 1024px) {\n  .home-cards-custom {\n    grid-template-columns: repeat(2, 1fr);\n    grid-template-rows: repeat(3, auto);\n  }\n}\n\n@media (max-width: 768px) {\n  .home-cards-custom {\n    grid-template-columns: 1fr;\n    grid-template-rows: repeat(6, auto);\n  }\n}\n\n/* Utility classes */\n.relative {\n  position: relative;\n}\n\n.flex-1 {\n  flex: 1 1 0%;\n}\n\n/* Mermaid diagram styling with graph paper background using Anthropic brand colors */\n.mermaid {\n  position: relative;\n  background-color: #FDFDFB; /* Very light version of neutral #F0F0EB */\n  background-image:\n    linear-gradient(rgba(235, 219, 188, .25) 1px, transparent 1px), /* Secondary color #EBDBBC with low opacity */\n    linear-gradient(90deg, rgba(235, 219, 188, .25) 1px, transparent 1px),\n    linear-gradient(rgba(235, 219, 188, .1) 1px, transparent 1px),\n    linear-gradient(90deg, rgba(235, 219, 188, .1) 1px, transparent 1px);\n  background-size:\n    20px 20px,\n    20px 20px,\n    4px 4px,\n    4px 4px;\n  background-position:\n    -1px -1px,\n    -1px -1px,\n    -1px -1px,\n    -1px -1px;\n  padding: 20px;\n  border-radius: 8px;\n  border: 1px solid rgba(235, 219, 188, .4); /* Secondary color border */\n  box-shadow: 0 2px 4px rgba(64, 64, 62, 0.08); /* Subtle shadow using #40403E */\n}\n\n.dark .mermaid {\n  background-color: #1a1918; /* Dark version maintaining brand tone */\n  background-image:\n    linear-gradient(rgba(212, 162, 127, .15) 1px, transparent 1px), /* Tertiary color #D4A27F with low opacity */\n    linear-gradient(90deg, rgba(212, 162, 127, .15) 1px, transparent 1px),\n    linear-gradient(rgba(212, 162, 127, .08) 1px, transparent 1px),\n    linear-gradient(90deg, rgba(212, 162, 127, .08) 1px, transparent 1px);\n  border: 1px solid rgba(102, 102, 99, .5); /* Using #666663 from brand */\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n/* ============================================================\n   What's New digest — feature block component\n   ============================================================ */\n\n.digest-meta {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-wrap: wrap;\n  gap: 0.5rem 1rem;\n  padding: 0.75rem 1rem;\n  margin: 1.5rem 0 2.5rem;\n  border: 1px solid hsl(var(--border-300) / 0.15);\n  background: hsl(var(--bg-200));\n  font-variant-numeric: tabular-nums;\n  font-size: 0.875rem;\n  color: hsl(var(--text-400));\n}\n\n#content-container .digest-meta a {\n  color: hsl(var(--accent-main-100));\n  font-weight: 500;\n  text-decoration: none;\n  border-bottom: none;\n}\n\n#content-container .digest-meta a:hover {\n  text-decoration: underline;\n}\n\n.digest-feature {\n  position: relative;\n  margin: 2.5rem 0;\n  padding: 1.875rem 1.875rem 1.625rem;\n  background:\n    radial-gradient(circle, hsl(var(--text-000) / 0.025) 1px, transparent 1px) 0 0 / 18px 18px,\n    linear-gradient(180deg, hsl(var(--constant-manilla) / 0.55), hsl(var(--constant-manilla) / 0.38));\n  border: 1px solid hsl(var(--border-300) / 0.12);\n  box-shadow:\n    inset 0 1px 0 hsl(var(--text-000) / 0.04),\n    0 1px 2px hsl(var(--always-black) / 0.04);\n}\n\n.digest-feature::before {\n  content: \"\";\n  position: absolute;\n  inset: 0 auto 0 0;\n  width: 4px;\n  background: hsl(var(--accent-brand));\n}\n\n.dark .digest-feature {\n  background:\n    radial-gradient(circle, hsl(var(--text-000) / 0.02) 1px, transparent 1px) 0 0 / 18px 18px,\n    linear-gradient(180deg, hsl(var(--bg-000) / 0.75), hsl(var(--bg-000) / 0.5));\n  border-color: hsl(var(--border-300) / 0.1);\n  box-shadow:\n    inset 0 1px 0 hsl(var(--text-000) / 0.03),\n    0 1px 2px hsl(var(--always-black) / 0.25);\n}\n\n.digest-feature \u003e :first-child {\n  margin-top: 0;\n}\n\n.digest-feature \u003e :last-child {\n  margin-bottom: 0;\n}\n\n.digest-feature-header {\n  display: flex;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 0.625rem;\n  margin: 0 0 0.75rem;\n}\n\n#content-container .digest-feature-title {\n  font-family: \"Anthropic Serif Display\", Georgia, serif;\n  font-size: 1.75rem;\n  line-height: 1.15;\n  font-weight: 500;\n  letter-spacing: -0.015em;\n  color: hsl(var(--text-000));\n  margin: 0;\n}\n\n#content-container .digest-feature-pill {\n  font-family: ui-monospace, \"SF Mono\", Menlo, Consolas, monospace;\n  font-size: 0.75rem;\n  line-height: 1;\n  letter-spacing: 0.01em;\n  padding: 0.3rem 0.6rem;\n  border-radius: 999px;\n  background: hsl(var(--accent-brand) / 0.12);\n  color: hsl(var(--accent-main-000));\n  border: 1px solid hsl(var(--accent-brand) / 0.25);\n  white-space: nowrap;\n  transform: translateY(1px);\n}\n\n#content-container .digest-feature-lede {\n  font-size: 1.0625rem;\n  line-height: 1.65;\n  color: hsl(var(--text-100));\n  margin: 0 0 1.25rem;\n  max-width: none;\n}\n\n#content-container .digest-feature-lede code {\n  font-size: 0.875em;\n  padding: 0.1em 0.35em;\n}\n\n#content-container .digest-feature-try {\n  font-size: 0.875rem;\n  color: hsl(var(--text-400));\n  margin: 1.25rem 0 0.5rem;\n}\n\n#content-container .digest-feature .frame {\n  margin: 1rem 0;\n  border-radius: 0;\n  padding: 0;\n}\n\n#content-container .digest-feature .frame \u003e * {\n  border-radius: 0;\n}\n\n#content-container .digest-feature pre,\n#content-container .digest-feature [class*=\"CodeBlock\"] {\n  border-radius: 0;\n}\n\n#content-container .digest-feature-link {\n  display: inline-flex;\n  align-items: center;\n  gap: 0.35rem;\n  font-size: 0.875rem;\n  font-weight: 500;\n  color: hsl(var(--accent-main-100));\n  text-decoration: none;\n  border-bottom: none;\n  margin-top: 0.75rem;\n}\n\n#content-container .digest-feature-link::after {\n  content: \"→\";\n  transition: transform 120ms ease-out;\n}\n\n#content-container .digest-feature-link:hover::after {\n  transform: translateX(3px);\n}\n\n/* Other wins — compact companion block */\n.digest-wins {\n  margin: 2.5rem 0;\n  padding: 1.5rem 1.75rem 1.25rem;\n  background: hsl(var(--bg-200));\n  border: 1px solid hsl(var(--border-300) / 0.1);\n}\n\n.dark .digest-wins {\n  background: hsl(var(--bg-200) / 0.6);\n}\n\n#content-container .digest-wins-title {\n  font-family: \"Anthropic Serif Display\", Georgia, serif;\n  font-size: 1.25rem;\n  font-weight: 500;\n  color: hsl(var(--text-000));\n  margin: 0 0 0.75rem;\n}\n\n.digest-wins-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));\n  column-gap: 2rem;\n}\n\n#content-container .digest-wins-grid \u003e div {\n  position: relative;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  color: hsl(var(--text-300));\n  padding: 0.5rem 0 0.5rem 1.125rem;\n  border-top: 1px solid hsl(var(--border-300) / 0.06);\n  margin: 0;\n}\n\n#content-container .digest-wins-grid \u003e div::before {\n  content: \"+\";\n  position: absolute;\n  left: 0;\n  top: 0.5rem;\n  font-family: ui-monospace, \"SF Mono\", Menlo, Consolas, monospace;\n  font-size: 0.8125rem;\n  font-weight: 600;\n  color: hsl(var(--accent-brand));\n}\n\n#content-container .digest-wins-grid \u003e div:first-child,\n#content-container .digest-wins-grid \u003e div:nth-child(2) {\n  border-top: none;\n  padding-top: 0;\n}\n\n#content-container .digest-wins-grid \u003e div:first-child::before,\n#content-container .digest-wins-grid \u003e div:nth-child(2)::before {\n  top: 0;\n}\n\n#content-container .digest-wins-grid code {\n  font-size: 0.8125rem;\n  padding: 0.1em 0.3em;\n}\n\n/* ============================================================\n   Collapsible right table of contents (toggled by toc-collapse.js)\n   ============================================================ */\n\n/* Dimensions mirrored from Mintlify's compiled mint-theme layout. If a\n   Mintlify update moves the button or the collapsed reading column,\n   re-measure these on a rendered page. */\n:root {\n  --toc-wrapper-max: 92rem; /* centered layout wrapper max-width */\n  --toc-wrapper-pad: 2rem; /* wrapper right padding */\n  --toc-col: 19rem; /* ToC column width, incl. its 2.5rem left padding */\n  --toc-side: 28rem; /* side column space #content-area reserves */\n  --toc-btn-size: 1.75rem; /* ours, not mirrored: the toggle's diameter */\n}\n\n/* Hidden by default: below the xl breakpoint Mintlify hides the ToC\n   anyway, and pages that render no ToC (wide-mode pages) get no toggle. */\n#toc-collapse-toggle {\n  display: none;\n  align-items: center;\n  justify-content: center;\n  position: fixed;\n  top: 10rem;\n  /* Sits just left of the ToC column, inside its 2.5rem left-padding\n     strip: at the column's left edge, minus the button's own width and\n     a small gap. 100% rather than 100vw so a classic scrollbar doesn't\n     shift the math (percentages on fixed elements resolve against the\n     layout viewport). */\n  right: calc(\n    max((100% - var(--toc-wrapper-max)) / 2, 0px) + var(--toc-wrapper-pad) +\n      var(--toc-col) - var(--toc-btn-size) - 0.35rem\n  );\n  transition: right 200ms ease-out;\n  z-index: 30;\n  width: var(--toc-btn-size);\n  height: var(--toc-btn-size);\n  border-radius: 9999px;\n  border: 1px solid hsl(var(--border-300) / 0.15);\n  background: hsl(var(--bg-100));\n  color: hsl(var(--text-400));\n  cursor: pointer;\n}\n\n#toc-collapse-toggle:hover {\n  background: hsl(var(--bg-300));\n  color: hsl(var(--text-100));\n}\n\n#toc-collapse-toggle svg {\n  width: 14px;\n  height: 14px;\n  fill: none;\n  stroke: currentColor;\n  stroke-width: 2.5;\n  stroke-linecap: round;\n  stroke-linejoin: round;\n}\n\n/* The list glyph only appears while the button is parked at the right\n   edge, so the collapsed control still reads as the table of contents. */\n#toc-collapse-toggle .toc-glyph {\n  display: none;\n  stroke-width: 2;\n}\n\n/* A fixed-position button would repeat on every printed page. */\n@media print {\n  #toc-collapse-toggle {\n    display: none !important;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  #toc-collapse-toggle {\n    transition: none;\n  }\n}\n\n@media (min-width: 1280px) {\n  html:has(#table-of-contents-layout) #toc-collapse-toggle {\n    display: flex;\n  }\n\n  html.toc-collapsed #toc-collapse-toggle .toc-chevron {\n    transform: rotate(180deg);\n  }\n\n  /* The column is gone while collapsed, so the button moves to the\n     right edge where the restored ToC will reappear, widening into a\n     pill that pairs the chevron with the list glyph. */\n  html.toc-collapsed #toc-collapse-toggle {\n    right: 0.5rem;\n    width: auto;\n    padding: 0 0.5rem;\n    gap: 0.25rem;\n  }\n\n  html.toc-collapsed #toc-collapse-toggle .toc-glyph {\n    display: block;\n  }\n\n  html.toc-collapsed #table-of-contents-layout {\n    display: none !important;\n  }\n\n  /* Also hide the side column's wrapper: left in flow at zero width,\n     it keeps its 3rem flex gap as dead space at the right edge. Scoped\n     with :has() so the wrapper is untouched when it holds other\n     content, such as the open assistant panel. */\n  html.toc-collapsed #content-side-layout:has(#table-of-contents-layout) {\n    display: none !important;\n  }\n\n  /* Mintlify sizes the content column assuming the side column is\n     present (xl:w-[calc(100%-28rem)]); reclaim that space when collapsed.\n     Scoped with :has() so pages that render no ToC, such as wide-mode\n     pages, keep their own layout. Written out twice rather than nested:\n     CSS nesting shipped later than :has(), so nesting here would break\n     the cap in browsers that pass the :has() support guard. */\n  html.toc-collapsed #content-container:has(#table-of-contents-layout) #content-area {\n    width: 100% !important;\n  }\n\n  /* Safety bound on the widened reading column. The centered wrapper\n     already caps overall width, so today this only bites at the\n     wrapper's max, where it equals the natural content width; it exists\n     so line length can't run away if the wrapper cap ever changes. */\n  html.toc-collapsed #content-container:has(#table-of-contents-layout) #content-area \u003e * {\n    max-width: calc(var(--toc-wrapper-max) - var(--toc-side));\n  }\n}\n\n@media (max-width: 640px) {\n  .digest-feature {\n    padding: 1.25rem 1rem 1rem;\n    margin: 1.5rem 0;\n  }\n  #content-container .digest-feature-title {\n    font-size: 1.375rem;\n  }\n  .digest-wins {\n    padding: 1.25rem 1rem 1rem;\n  }\n  .digest-wins-grid {\n    grid-template-columns: 1fr;\n  }\n  #content-container .digest-wins-grid \u003e div:nth-child(2) {\n    border-top: 1px solid hsl(var(--border-300) / 0.06);\n    padding-top: 0.5rem;\n  }\n  #content-container .digest-wins-grid \u003e div:nth-child(2)::before {\n    top: 0.5rem;\n  }\n}\n"])</script><script>self.__next_f.push([1,"5f:[\"$\",\"style\",\"1\",{\"data-custom-css-index\":1,\"data-custom-css-path\":\"style.css\",\"dangerouslySetInnerHTML\":{\"__html\":\"$67\"}}]\n"])</script></body></html>
