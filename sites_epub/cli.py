@@ -107,7 +107,6 @@ def cmd_catalog(args: argparse.Namespace) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="site2epub")
-    p.add_argument("--workers", type=int, default=12)
     sub = p.add_subparsers(dest="cmd", required=True)
 
     add = sub.add_parser("add", help="create or update a vendor and compile")
@@ -117,18 +116,21 @@ def main(argv: list[str] | None = None) -> int:
     add.add_argument("--name")
     add.add_argument("--adapter")
     add.add_argument("--author")
+    add.add_argument("--workers", type=int, default=12)
     add.add_argument("--no-build", action="store_true")
     add.set_defaults(func=cmd_add)
 
     build = sub.add_parser("build", help="rebuild one or all catalog vendors")
     build.add_argument("--id")
     build.add_argument("--all", action="store_true")
+    build.add_argument("--workers", type=int, default=12)
     build.set_defaults(func=lambda a: cmd_all(a) if a.all or not a.id else cmd_build_one(
         next(v for v in load_catalog() if v.id == a.id), a
     ))
 
     cat = sub.add_parser("catalog", help="write static catalog HTML")
     cat.add_argument("--dest")
+    cat.add_argument("--workers", type=int, default=12)
     cat.set_defaults(func=cmd_catalog)
 
     args = p.parse_args(argv)
