@@ -216,12 +216,18 @@
       return String(s || "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
     }
     function fmtDate(iso) {
-      // 展示完整本地时区时间戳（YYYY-MM-DD hh:mm:ss），便于对照本机时钟判断语料新鲜度。
+      // 展示完整本地时区时间戳（YYYY-MM-DD hh:mm:ss），便于对照本机时钟判断新鲜度。
       if (!iso) return "";
       const d = new Date(iso);
       if (isNaN(d.getTime())) return iso.slice(0, 19).replace("T", " ");
       const p = n => String(n).padStart(2, "0");
       return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`;
+    }
+    function latestStamp(b) {
+      // 卡片展示「这本书最近一次被动过」的时间:语料抓取与打包成书取较新者。
+      const a = Date.parse(b.updatedAt || "") || 0;
+      const c = Date.parse(b.packedAt || "") || 0;
+      return a >= c ? (b.updatedAt || b.packedAt || "") : (b.packedAt || "");
     }
     function getFilteredBooks() {
       const q = state.searchQuery.toLowerCase();
@@ -284,7 +290,7 @@
             <div class="meta">
               <h3>${esc(b.title)}</h3>
               <p>${esc(b.author)}</p>
-              <time>${fmtDate(b.updatedAt) || fmtDate(b.packedAt) || ""}</time>
+              <time>${fmtDate(latestStamp(b))}</time>
             </div>
           </article>`).join("")}</div>`;
       } else {
@@ -297,7 +303,7 @@
                 <p>${esc(b.author)}</p>
               </div>
             </div>
-            <div class="count">${fmtDate(b.updatedAt) || fmtDate(b.packedAt) || ""}</div>
+            <div class="count">${fmtDate(latestStamp(b))}</div>
           </div>`).join("")}</div>`;
       }
     }
