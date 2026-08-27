@@ -14,7 +14,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from sites_epub.catalog import upsert_vendor  # noqa: E402
-from sites_epub.compile import compile_from_sources, discover_entries  # noqa: E402
+from sites_epub.compile import compile_from_sources, discover_entries, pack_vendor  # noqa: E402
 from sites_epub.models import IndexEntry, Vendor  # noqa: E402
 from sites_epub.walk import walk_chapters  # noqa: E402
 
@@ -152,6 +152,56 @@ class TestCompileIncremental(unittest.TestCase):
                 chapter = _chapter_text(zf)
                 self.assertIn("CHANGED quickstart body phrase after incremental", chapter)
                 self.assertIn("Blog body phrase unique", chapter)
+
+
+class TestPackFromCorpus(unittest.TestCase):
+    def test_pack_vendor_reads_disk_corpus_offline(self) -> None:
+        entries = _entries()
+        src = _sources()
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            vdir = root / "vendors" / "codex"
+            corpus = vdir / "corpus" / "pages"
+            corpus.mkdir(parents=True)
+            for route, text in src.items():
+                dest = corpus / f"{route}.md"
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                dest.write_text(text, encoding="utf-8")
+            import json
+
+            (vdir / "corpus" / "routes.json").write_text(
+                json.dumps(
+                    [
+                        {
+                            "group": e.group,
+                            "title": e.title,
+                            "md_url": e.md_url,
+                            "html_url": e.html_url,
+                            "route": e.route,
+                            "kind": e.kind,
+                        }
+                        for e in entries
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            vendor = Vendor(
+                id="codex",
+                name="Codex",
+                docs_url="https://example.test/docs",
+                blog_url="https://example.test/blog",
+                icon="vendors/codex/icon.png",
+                adapter="codex",
+            )
+            (vdir / "icon.png").write_bytes(SAMPLE.read_bytes())
+            out = root / "dist" / "codex.epub"
+            result = pack_vendor(vendor, out, root=root)
+            self.assertTrue(out.is_file())
+            self.assertEqual(result.chapters, 3)
+            with zipfile.ZipFile(out) as zf:
+                chapter = _chapter_text(zf)
+                self.assertIn("Blog body phrase unique", chapter)
+                self.assertIn("curl install", chapter)
 
 
 class TestCatalogUpsert(unittest.TestCase):

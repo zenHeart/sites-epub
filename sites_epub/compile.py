@@ -9,7 +9,7 @@ from .epub_pack import pack_epub
 from .fingerprint import content_hash, load_fingerprints, save_fingerprints
 from .http import fetch_bytes, fetch_text
 from .images import guess_ext, local_name_for_url
-from .models import CompileResult, IndexEntry, Vendor
+from .models import CompileResult, FetchResult, IndexEntry, Vendor
 from .page import DocPage, extract_page
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -174,25 +174,55 @@ def fetch_source(entry: IndexEntry) -> str:
     return text
 
 
-def compile_vendor_live(
+def _entry_dict(e: IndexEntry) -> dict:
+    return {
+        "group": e.group,
+        "title": e.title,
+        "md_url": e.md_url,
+        "html_url": e.html_url,
+        "route": e.route,
+        "kind": e.kind,
+    }
+
+
+def _entry_from_dict(d: dict) -> IndexEntry:
+    return IndexEntry(
+        group=d["group"],
+        title=d["title"],
+        md_url=d["md_url"],
+        html_url=d["html_url"],
+        route=d["route"],
+        kind=d.get("kind") or "doc",
+    )
+
+
+def corpus_dir(vendor: Vendor, root: Path | None = None) -> Path:
+    base = Path(root) if root else ROOT
+    return base / "vendors" / vendor.id / "corpus"
+
+
+def fetch_vendor(
     vendor: Vendor,
-    output: Path,
     *,
     root: Path | None = None,
     workers: int = 12,
-) -> CompileResult:
+) -> FetchResult:
+    """Local incremental crawl. Writes corpus/ (pages, images, routes). No EPUB."""
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
     base = Path(root) if root else ROOT
     vdir = base / "vendors" / vendor.id
     vdir.mkdir(parents=True, exist_ok=True)
-    work = vdir / "work"
-    work.mkdir(exist_ok=True)
+    corpus = corpus_dir(vendor, base)
+    pages_dir = corpus / "pages"
+    image_dir = corpus / "images"
+    pages_dir.mkdir(parents=True, exist_ok=True)
+    image_dir.mkdir(exist_ok=True)
     fp_path = vdir / "fingerprints.json"
     prev = load_fingerprints(fp_path)
 
     docs_html = fetch_text(vendor.docs_url)
-    (work / "docs.html").write_text(docs_html, encoding="utf-8")
+    (corpus / "docs.html").write_text(docs_html, encoding="utf-8")
     docs_llms = ""
     for llms in (
         vendor.docs_url.rstrip("/") + "/llms.txt",
@@ -205,6 +235,7 @@ def compile_vendor_live(
         try:
             docs_llms = fetch_text(llms)
             if docs_llms and not _looks_missing(docs_llms):
+                (corpus / "llms.txt").write_text(docs_llms, encoding="utf-8")
                 break
         except Exception:
             continue
@@ -215,24 +246,25 @@ def compile_vendor_live(
         except Exception:
             blog_html = ""
         if blog_html:
-            (work / "blog.html").write_text(blog_html, encoding="utf-8")
+            (corpus / "blog.html").write_text(blog_html, encoding="utf-8")
 
     entries = discover_entries(
         vendor, docs_html=docs_html, docs_llms=docs_llms, blog_html=blog_html
     )
     if not entries:
         raise RuntimeError(f"no routes discovered for {vendor.id}")
+    (corpus / "routes.json").write_text(
+        json.dumps([_entry_dict(e) for e in entries], indent=2), encoding="utf-8"
+    )
 
-    pages_dir = work / "pages"
-    pages_dir.mkdir(exist_ok=True)
+    fetched: list[str] = []
+    skipped: list[str] = []
     sources: dict[str, str] = {}
 
     def load_one(entry: IndexEntry) -> tuple[str, str, bool]:
         dest = pages_dir / f"{entry.route}.md"
         dest.parent.mkdir(parents=True, exist_ok=True)
-        cached = ""
-        if dest.is_file():
-            cached = dest.read_text(encoding="utf-8", errors="replace")
+        cached = dest.read_text(encoding="utf-8", errors="replace") if dest.is_file() else ""
         if cached and prev.get(entry.route) == content_hash(cached) and not _looks_missing(cached):
             return entry.route, cached, False
         text = fetch_source(entry)
@@ -242,95 +274,110 @@ def compile_vendor_live(
     with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
         futs = [pool.submit(load_one, e) for e in entries]
         for fut in as_completed(futs):
-            route, text, _did = fut.result()
+            route, text, did_fetch = fut.result()
             sources[route] = text
+            (fetched if did_fetch else skipped).append(route)
 
-    # images
-    pages_preview: list[DocPage] = []
-    # compile_from_sources extracts again; collect image urls after extract inside it
-    # download images for extracted pages in a second pass via compile_from_sources then...
-    # Simpler: extract here for images, then pack through compile_from_sources with image_files.
+    new_fp = {route: content_hash(text) for route, text in sources.items()}
+    save_fingerprints(fp_path, new_fp)
 
-    from concurrent.futures import ThreadPoolExecutor as Pool2
+    # images for changed (and missing) pages
+    from .page import DocPage as DP
 
-    image_dir = work / "images"
-    image_dir.mkdir(exist_ok=True)
-    # Pre-extract to gather image URLs only for fetched/changed routes
-    tmp_pages: list[DocPage] = []
+    urls: list[str] = []
+    seen: set[str] = set()
     for entry in entries:
-        text = sources.get(entry.route)
-        if not text:
+        if entry.route in skipped:
             continue
+        text = sources.get(entry.route) or ""
         kind = "html" if text.lstrip().lower().startswith("<!") else "md"
         try:
             if entry.kind == "blog" and kind == "html":
                 from .blog_article import extract_article
 
                 art = extract_article(text, url=entry.html_url)
-                from .page import DocPage as DP
-
-                tmp_pages.append(
-                    DP(
-                        title=art.title or entry.title,
-                        body_html=art.body_html,
-                        body_text=art.body_text,
-                        image_urls=art.image_urls,
-                        route=entry.route,
-                        group=entry.group,
-                        url=entry.html_url,
-                    )
-                )
+                img_list = art.image_urls
             else:
-                tmp_pages.append(
-                    extract_page(
-                        text,
-                        route=entry.route,
-                        group=entry.group,
-                        url=entry.html_url,
-                        kind=kind,
-                    )
-                )
+                img_list = extract_page(
+                    text, route=entry.route, group=entry.group, url=entry.html_url, kind=kind
+                ).image_urls
         except Exception:
-            continue
-    urls: list[str] = []
-    seen: set[str] = set()
-    for p in tmp_pages:
-        for u in p.image_urls:
+            img_list = []
+        for u in img_list:
             if u not in seen:
                 seen.add(u)
                 urls.append(u)
 
-    image_files: dict[str, Path] = {}
+    image_map: dict[str, str] = {}
+    map_path = corpus / "image-map.json"
+    if map_path.is_file():
+        image_map = json.loads(map_path.read_text(encoding="utf-8"))
 
-    def one_img(url: str) -> tuple[str, Path | None]:
+    def one_img(url: str) -> tuple[str, str | None]:
         name = local_name_for_url(url)
         cached = image_dir / name
         if cached.is_file() and cached.stat().st_size > 0:
-            return url, cached
+            return url, name
         try:
             data, ctype = fetch_bytes(url)
         except Exception:
             return url, None
-        if not data:
-            return url, None
-        if len(data) > 800_000:
+        if not data or len(data) > 800_000:
             return url, None
         if not Path(name).suffix:
             name = name + guess_ext(ctype, url)
-        path = image_dir / name
-        path.write_bytes(data)
-        return url, path
+        (image_dir / name).write_bytes(data)
+        return url, name
 
-    with Pool2(max_workers=min(12, workers)) as pool:
+    with ThreadPoolExecutor(max_workers=min(12, workers)) as pool:
         futs = [pool.submit(one_img, u) for u in urls]
         for fut in as_completed(futs):
-            url, path = fut.result()
-            if path is not None:
-                image_files[url] = path
+            url, name = fut.result()
+            if name:
+                image_map[url] = name
+    map_path.write_text(json.dumps(image_map, indent=2), encoding="utf-8")
 
+    return FetchResult(
+        fetched_routes=sorted(fetched),
+        skipped_routes=sorted(skipped),
+        fingerprints=new_fp,
+        entries=len(entries),
+    )
+
+
+def pack_vendor(
+    vendor: Vendor,
+    output: Path,
+    *,
+    root: Path | None = None,
+) -> CompileResult:
+    """Offline pack from committed corpus. No network."""
+    base = Path(root) if root else ROOT
+    corpus = corpus_dir(vendor, base)
+    routes_path = corpus / "routes.json"
+    if not routes_path.is_file():
+        raise FileNotFoundError(f"missing corpus for {vendor.id}: {routes_path}")
+    entries = [_entry_from_dict(d) for d in json.loads(routes_path.read_text(encoding="utf-8"))]
+    pages_dir = corpus / "pages"
+    sources: dict[str, str] = {}
+    for e in entries:
+        p = pages_dir / f"{e.route}.md"
+        if p.is_file():
+            sources[e.route] = p.read_text(encoding="utf-8", errors="replace")
+    image_files: dict[str, Path] = {}
+    map_path = corpus / "image-map.json"
+    image_dir = corpus / "images"
+    if map_path.is_file():
+        mapping = json.loads(map_path.read_text(encoding="utf-8"))
+        for url, name in mapping.items():
+            path = image_dir / name
+            if path.is_file():
+                image_files[url] = path
     icon = base / vendor.icon
     if not icon.is_file():
-        icon = vdir / "icon.png"
+        icon = base / "vendors" / vendor.id / "icon.png"
+    vdir = base / "vendors" / vendor.id
+    prev = load_fingerprints(vdir / "fingerprints.json")
     result = compile_from_sources(
         entries,
         sources,
@@ -340,15 +387,18 @@ def compile_vendor_live(
         title=vendor.name,
         author=vendor.author,
         cover_image=icon if icon.is_file() else None,
-        work_dir=work / "epub-build",
+        work_dir=vdir / "work" / "epub-build",
     )
-    save_fingerprints(fp_path, result.fingerprints)
-    stats = {
-        "vendor": vendor.id,
-        "chapters": result.chapters,
-        "fetched": len(result.fetched_routes),
-        "skipped": len(result.skipped_routes),
-        "output": result.output,
-    }
-    (work / "compile-stats.json").write_text(json.dumps(stats, indent=2), encoding="utf-8")
     return result
+
+
+def compile_vendor_live(
+    vendor: Vendor,
+    output: Path,
+    *,
+    root: Path | None = None,
+    workers: int = 12,
+) -> CompileResult:
+    """Fetch locally then pack. GitHub Actions should call pack_vendor only."""
+    fetch_vendor(vendor, root=root, workers=workers)
+    return pack_vendor(vendor, output, root=root)

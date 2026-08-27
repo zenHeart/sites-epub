@@ -54,3 +54,11 @@ class CompileResult:
     skipped_routes: list[str] = field(default_factory=list)
     fingerprints: dict[str, str] = field(default_factory=dict)
     chapters: int = 0
+
+
+@dataclass
+class FetchResult:
+    fetched_routes: list[str] = field(default_factory=list)
+    skipped_routes: list[str] = field(default_factory=list)
+    fingerprints: dict[str, str] = field(default_factory=dict)
+    entries: int = 0

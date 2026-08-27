@@ -4,11 +4,6 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-    inputs:
-      vendor:
-        description: Vendor id to build (empty = all)
-        required: false
-        default: ""
 
 concurrency:
   group: build-epub-${{ github.ref }}
@@ -20,10 +15,10 @@ permissions:
   id-token: write
 
 jobs:
-  build:
-    name: Build vendor EPUBs
+  pack:
+    name: Pack EPUBs from committed corpus
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -34,16 +29,9 @@ jobs:
           python3 -m pip install --user beautifulsoup4 lxml
           pandoc --version | head -1
 
-      - name: Cache vendor work
-        uses: actions/cache@v4
-        with:
-          path: vendors/*/work
-          key: vendor-work-${{ github.sha }}
-          restore-keys: vendor-work-
-
-      - name: Compile catalog vendors
+      - name: Pack catalog vendors (offline)
         run: |
-          python3 -m sites_epub build --all --workers 8
+          python3 -m sites_epub pack
           python3 -m sites_epub catalog --dest site
           ls -la dist/*.epub site/
 
@@ -52,8 +40,7 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           import zipfile
-          dist = Path("dist")
-          epubs = list(dist.glob("*.epub"))
+          epubs = list(Path("dist").glob("*.epub"))
           assert epubs, "no epub produced"
           for p in epubs:
               assert p.stat().st_size > 1000

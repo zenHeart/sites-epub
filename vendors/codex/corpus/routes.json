@@ -1,0 +1,1354 @@
+[
+  {
+    "group": "Overview",
+    "title": "Home",
+    "md_url": "https://learn.chatgpt.com/codex.md",
+    "html_url": "https://learn.chatgpt.com/codex",
+    "route": "codex",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Quickstart",
+    "md_url": "https://learn.chatgpt.com/codex/quickstart.md",
+    "html_url": "https://learn.chatgpt.com/codex/quickstart",
+    "route": "codex/quickstart",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Use ChatGPT",
+    "md_url": "https://learn.chatgpt.com/codex/use-chatgpt.md",
+    "html_url": "https://learn.chatgpt.com/codex/use-chatgpt",
+    "route": "codex/use-chatgpt",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Get started with Work",
+    "md_url": "https://learn.chatgpt.com/codex/get-started-with-work.md",
+    "html_url": "https://learn.chatgpt.com/codex/get-started-with-work",
+    "route": "codex/get-started-with-work",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Import from another agent",
+    "md_url": "https://learn.chatgpt.com/codex/import.md",
+    "html_url": "https://learn.chatgpt.com/codex/import",
+    "route": "codex/import",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Prompting",
+    "md_url": "https://learn.chatgpt.com/codex/prompting.md",
+    "html_url": "https://learn.chatgpt.com/codex/prompting",
+    "route": "codex/prompting",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Personalize ChatGPT",
+    "md_url": "https://learn.chatgpt.com/codex/personalize.md",
+    "html_url": "https://learn.chatgpt.com/codex/personalize",
+    "route": "codex/personalize",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Skills & Plugins",
+    "md_url": "https://learn.chatgpt.com/codex/skills-and-plugins.md",
+    "html_url": "https://learn.chatgpt.com/codex/skills-and-plugins",
+    "route": "codex/skills-and-plugins",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Permissions",
+    "md_url": "https://learn.chatgpt.com/codex/permission-modes.md",
+    "html_url": "https://learn.chatgpt.com/codex/permission-modes",
+    "route": "codex/permission-modes",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "What's new",
+    "md_url": "https://learn.chatgpt.com/codex/whats-new.md",
+    "html_url": "https://learn.chatgpt.com/codex/whats-new",
+    "route": "codex/whats-new",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Models",
+    "md_url": "https://learn.chatgpt.com/codex/models.md",
+    "html_url": "https://learn.chatgpt.com/codex/models",
+    "route": "codex/models",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Pricing",
+    "md_url": "https://learn.chatgpt.com/codex/pricing.md",
+    "html_url": "https://learn.chatgpt.com/codex/pricing",
+    "route": "codex/pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Glossary",
+    "md_url": "https://learn.chatgpt.com/codex/glossary.md",
+    "html_url": "https://learn.chatgpt.com/codex/glossary",
+    "route": "codex/glossary",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "ChatGPT desktop app",
+    "md_url": "https://learn.chatgpt.com/codex/app.md",
+    "html_url": "https://learn.chatgpt.com/codex/app",
+    "route": "codex/app",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Remote",
+    "md_url": "https://learn.chatgpt.com/codex/remote.md",
+    "html_url": "https://learn.chatgpt.com/codex/remote",
+    "route": "codex/remote",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "ChatGPT on the web",
+    "md_url": "https://learn.chatgpt.com/codex/web.md",
+    "html_url": "https://learn.chatgpt.com/codex/web",
+    "route": "codex/web",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Codex CLI",
+    "md_url": "https://learn.chatgpt.com/codex/cli.md",
+    "html_url": "https://learn.chatgpt.com/codex/cli",
+    "route": "codex/cli",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Codex IDE extension",
+    "md_url": "https://learn.chatgpt.com/codex/ide.md",
+    "html_url": "https://learn.chatgpt.com/codex/ide",
+    "route": "codex/ide",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Codex cloud",
+    "md_url": "https://learn.chatgpt.com/codex/cloud.md",
+    "html_url": "https://learn.chatgpt.com/codex/cloud",
+    "route": "codex/cloud",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Changelog",
+    "md_url": "https://learn.chatgpt.com/codex/changelog.md",
+    "html_url": "https://learn.chatgpt.com/codex/changelog",
+    "route": "codex/changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Feature Maturity",
+    "md_url": "https://learn.chatgpt.com/codex/feature-maturity.md",
+    "html_url": "https://learn.chatgpt.com/codex/feature-maturity",
+    "route": "codex/feature-maturity",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
+    "title": "Open Source",
+    "md_url": "https://learn.chatgpt.com/codex/open-source.md",
+    "html_url": "https://learn.chatgpt.com/codex/open-source",
+    "route": "codex/open-source",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Overview",
+    "md_url": "https://learn.chatgpt.com/codex/features.md",
+    "html_url": "https://learn.chatgpt.com/codex/features",
+    "route": "codex/features",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Projects and chats",
+    "md_url": "https://learn.chatgpt.com/codex/projects.md",
+    "html_url": "https://learn.chatgpt.com/codex/projects",
+    "route": "codex/projects",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Sites",
+    "md_url": "https://learn.chatgpt.com/codex/sites.md",
+    "html_url": "https://learn.chatgpt.com/codex/sites",
+    "route": "codex/sites",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Visualizations",
+    "md_url": "https://learn.chatgpt.com/codex/visualizations.md",
+    "html_url": "https://learn.chatgpt.com/codex/visualizations",
+    "route": "codex/visualizations",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Scheduled tasks",
+    "md_url": "https://learn.chatgpt.com/codex/automations.md",
+    "html_url": "https://learn.chatgpt.com/codex/automations",
+    "route": "codex/automations",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Long-running work",
+    "md_url": "https://learn.chatgpt.com/codex/long-running-work.md",
+    "html_url": "https://learn.chatgpt.com/codex/long-running-work",
+    "route": "codex/long-running-work",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Notifications",
+    "md_url": "https://learn.chatgpt.com/codex/notifications.md",
+    "html_url": "https://learn.chatgpt.com/codex/notifications",
+    "route": "codex/notifications",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Pets",
+    "md_url": "https://learn.chatgpt.com/codex/pets.md",
+    "html_url": "https://learn.chatgpt.com/codex/pets",
+    "route": "codex/pets",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Codex Micro",
+    "md_url": "https://learn.chatgpt.com/codex/features/codex-micro.md",
+    "html_url": "https://learn.chatgpt.com/codex/features/codex-micro",
+    "route": "codex/features/codex-micro",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Browser",
+    "md_url": "https://learn.chatgpt.com/codex/browser.md",
+    "html_url": "https://learn.chatgpt.com/codex/browser",
+    "route": "codex/browser",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Computer use",
+    "md_url": "https://learn.chatgpt.com/codex/computer-use.md",
+    "html_url": "https://learn.chatgpt.com/codex/computer-use",
+    "route": "codex/computer-use",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Voice",
+    "md_url": "https://learn.chatgpt.com/codex/features/voice.md",
+    "html_url": "https://learn.chatgpt.com/codex/features/voice",
+    "route": "codex/features/voice",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Plugins",
+    "md_url": "https://learn.chatgpt.com/codex/plugins.md",
+    "html_url": "https://learn.chatgpt.com/codex/plugins",
+    "route": "codex/plugins",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Web search",
+    "md_url": "https://learn.chatgpt.com/codex/web-search.md",
+    "html_url": "https://learn.chatgpt.com/codex/web-search",
+    "route": "codex/web-search",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Image generation",
+    "md_url": "https://learn.chatgpt.com/codex/image-generation.md",
+    "html_url": "https://learn.chatgpt.com/codex/image-generation",
+    "route": "codex/image-generation",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Image inputs",
+    "md_url": "https://learn.chatgpt.com/codex/image-inputs.md",
+    "html_url": "https://learn.chatgpt.com/codex/image-inputs",
+    "route": "codex/image-inputs",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Appshots",
+    "md_url": "https://learn.chatgpt.com/codex/appshots.md",
+    "html_url": "https://learn.chatgpt.com/codex/appshots",
+    "route": "codex/appshots",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Browser extension",
+    "md_url": "https://learn.chatgpt.com/codex/chrome-extension.md",
+    "html_url": "https://learn.chatgpt.com/codex/chrome-extension",
+    "route": "codex/chrome-extension",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Work with files",
+    "md_url": "https://learn.chatgpt.com/codex/artifacts-viewer.md",
+    "html_url": "https://learn.chatgpt.com/codex/artifacts-viewer",
+    "route": "codex/artifacts-viewer",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Commands",
+    "md_url": "https://learn.chatgpt.com/codex/reference/commands.md",
+    "html_url": "https://learn.chatgpt.com/codex/reference/commands",
+    "route": "codex/reference/commands",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Slash commands",
+    "md_url": "https://learn.chatgpt.com/codex/reference/slash-commands.md",
+    "html_url": "https://learn.chatgpt.com/codex/reference/slash-commands",
+    "route": "codex/reference/slash-commands",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Settings",
+    "md_url": "https://learn.chatgpt.com/codex/reference/settings.md",
+    "html_url": "https://learn.chatgpt.com/codex/reference/settings",
+    "route": "codex/reference/settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "Troubleshooting",
+    "md_url": "https://learn.chatgpt.com/codex/reference/troubleshooting.md",
+    "html_url": "https://learn.chatgpt.com/codex/reference/troubleshooting",
+    "route": "codex/reference/troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Overview",
+    "md_url": "https://learn.chatgpt.com/codex/configuration.md",
+    "html_url": "https://learn.chatgpt.com/codex/configuration",
+    "route": "codex/configuration",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Overview",
+    "md_url": "https://learn.chatgpt.com/codex/customization/overview.md",
+    "html_url": "https://learn.chatgpt.com/codex/customization/overview",
+    "route": "codex/customization/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Memories",
+    "md_url": "https://learn.chatgpt.com/codex/customization/memories.md",
+    "html_url": "https://learn.chatgpt.com/codex/customization/memories",
+    "route": "codex/customization/memories",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Computer History",
+    "md_url": "https://learn.chatgpt.com/codex/customization/computer-history.md",
+    "html_url": "https://learn.chatgpt.com/codex/customization/computer-history",
+    "route": "codex/customization/computer-history",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Config Basics",
+    "md_url": "https://learn.chatgpt.com/codex/config-file/config-basic.md",
+    "html_url": "https://learn.chatgpt.com/codex/config-file/config-basic",
+    "route": "codex/config-file/config-basic",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Advanced Config",
+    "md_url": "https://learn.chatgpt.com/codex/config-file/config-advanced.md",
+    "html_url": "https://learn.chatgpt.com/codex/config-file/config-advanced",
+    "route": "codex/config-file/config-advanced",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Config Reference",
+    "md_url": "https://learn.chatgpt.com/codex/config-file/config-reference.md",
+    "html_url": "https://learn.chatgpt.com/codex/config-file/config-reference",
+    "route": "codex/config-file/config-reference",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Environment Variables",
+    "md_url": "https://learn.chatgpt.com/codex/config-file/environment-variables.md",
+    "html_url": "https://learn.chatgpt.com/codex/config-file/environment-variables",
+    "route": "codex/config-file/environment-variables",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Sample Config",
+    "md_url": "https://learn.chatgpt.com/codex/config-file/config-sample.md",
+    "html_url": "https://learn.chatgpt.com/codex/config-file/config-sample",
+    "route": "codex/config-file/config-sample",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "AGENTS.md",
+    "md_url": "https://learn.chatgpt.com/codex/agent-configuration/agents-md.md",
+    "html_url": "https://learn.chatgpt.com/codex/agent-configuration/agents-md",
+    "route": "codex/agent-configuration/agents-md",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Subagents",
+    "md_url": "https://learn.chatgpt.com/codex/agent-configuration/subagents.md",
+    "html_url": "https://learn.chatgpt.com/codex/agent-configuration/subagents",
+    "route": "codex/agent-configuration/subagents",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Speed",
+    "md_url": "https://learn.chatgpt.com/codex/agent-configuration/speed.md",
+    "html_url": "https://learn.chatgpt.com/codex/agent-configuration/speed",
+    "route": "codex/agent-configuration/speed",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Rules",
+    "md_url": "https://learn.chatgpt.com/codex/agent-configuration/rules.md",
+    "html_url": "https://learn.chatgpt.com/codex/agent-configuration/rules",
+    "route": "codex/agent-configuration/rules",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Record & Replay",
+    "md_url": "https://learn.chatgpt.com/codex/extend/record-and-replay.md",
+    "html_url": "https://learn.chatgpt.com/codex/extend/record-and-replay",
+    "route": "codex/extend/record-and-replay",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "MCP",
+    "md_url": "https://learn.chatgpt.com/codex/extend/mcp.md",
+    "html_url": "https://learn.chatgpt.com/codex/extend/mcp",
+    "route": "codex/extend/mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Desktop app",
+    "md_url": "https://learn.chatgpt.com/codex/linux/linux-app.md",
+    "html_url": "https://learn.chatgpt.com/codex/linux/linux-app",
+    "route": "codex/linux/linux-app",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Desktop app",
+    "md_url": "https://learn.chatgpt.com/codex/windows/windows-app.md",
+    "html_url": "https://learn.chatgpt.com/codex/windows/windows-app",
+    "route": "codex/windows/windows-app",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "Windows sandbox",
+    "md_url": "https://learn.chatgpt.com/codex/windows/windows-sandbox.md",
+    "html_url": "https://learn.chatgpt.com/codex/windows/windows-sandbox",
+    "route": "codex/windows/windows-sandbox",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
+    "title": "WSL",
+    "md_url": "https://learn.chatgpt.com/codex/windows/wsl.md",
+    "html_url": "https://learn.chatgpt.com/codex/windows/wsl",
+    "route": "codex/windows/wsl",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Overview",
+    "md_url": "https://learn.chatgpt.com/codex/developers.md",
+    "html_url": "https://learn.chatgpt.com/codex/developers",
+    "route": "codex/developers",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Code review",
+    "md_url": "https://learn.chatgpt.com/codex/code-review.md",
+    "html_url": "https://learn.chatgpt.com/codex/code-review",
+    "route": "codex/code-review",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Integrated terminal",
+    "md_url": "https://learn.chatgpt.com/codex/integrated-terminal.md",
+    "html_url": "https://learn.chatgpt.com/codex/integrated-terminal",
+    "route": "codex/integrated-terminal",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Build skills",
+    "md_url": "https://learn.chatgpt.com/codex/build-skills.md",
+    "html_url": "https://learn.chatgpt.com/codex/build-skills",
+    "route": "codex/build-skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Build plugins",
+    "md_url": "https://learn.chatgpt.com/codex/build-plugins.md",
+    "html_url": "https://learn.chatgpt.com/codex/build-plugins",
+    "route": "codex/build-plugins",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Site tools (WebMCP)",
+    "md_url": "https://learn.chatgpt.com/codex/webmcp.md",
+    "html_url": "https://learn.chatgpt.com/codex/webmcp",
+    "route": "codex/webmcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Hooks",
+    "md_url": "https://learn.chatgpt.com/codex/hooks.md",
+    "html_url": "https://learn.chatgpt.com/codex/hooks",
+    "route": "codex/hooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Modes",
+    "md_url": "https://learn.chatgpt.com/codex/environments/modes.md",
+    "html_url": "https://learn.chatgpt.com/codex/environments/modes",
+    "route": "codex/environments/modes",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Local environments",
+    "md_url": "https://learn.chatgpt.com/codex/environments/local-environment.md",
+    "html_url": "https://learn.chatgpt.com/codex/environments/local-environment",
+    "route": "codex/environments/local-environment",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Cloud environment",
+    "md_url": "https://learn.chatgpt.com/codex/environments/cloud-environment.md",
+    "html_url": "https://learn.chatgpt.com/codex/environments/cloud-environment",
+    "route": "codex/environments/cloud-environment",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Git worktrees",
+    "md_url": "https://learn.chatgpt.com/codex/environments/git-worktrees.md",
+    "html_url": "https://learn.chatgpt.com/codex/environments/git-worktrees",
+    "route": "codex/environments/git-worktrees",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Codex SDK",
+    "md_url": "https://learn.chatgpt.com/codex/codex-sdk.md",
+    "html_url": "https://learn.chatgpt.com/codex/codex-sdk",
+    "route": "codex/codex-sdk",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "App Server",
+    "md_url": "https://learn.chatgpt.com/codex/app-server.md",
+    "html_url": "https://learn.chatgpt.com/codex/app-server",
+    "route": "codex/app-server",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "MCP Server",
+    "md_url": "https://learn.chatgpt.com/codex/mcp-server.md",
+    "html_url": "https://learn.chatgpt.com/codex/mcp-server",
+    "route": "codex/mcp-server",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "GitHub Action",
+    "md_url": "https://learn.chatgpt.com/codex/github-action.md",
+    "html_url": "https://learn.chatgpt.com/codex/github-action",
+    "route": "codex/github-action",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Non-interactive mode",
+    "md_url": "https://learn.chatgpt.com/codex/non-interactive-mode.md",
+    "html_url": "https://learn.chatgpt.com/codex/non-interactive-mode",
+    "route": "codex/non-interactive-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "GitHub",
+    "md_url": "https://learn.chatgpt.com/codex/third-party/github.md",
+    "html_url": "https://learn.chatgpt.com/codex/third-party/github",
+    "route": "codex/third-party/github",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "GitLab (Beta)",
+    "md_url": "https://learn.chatgpt.com/codex/third-party/gitlab.md",
+    "html_url": "https://learn.chatgpt.com/codex/third-party/gitlab",
+    "route": "codex/third-party/gitlab",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Slack",
+    "md_url": "https://learn.chatgpt.com/codex/third-party/slack.md",
+    "html_url": "https://learn.chatgpt.com/codex/third-party/slack",
+    "route": "codex/third-party/slack",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Linear",
+    "md_url": "https://learn.chatgpt.com/codex/third-party/linear.md",
+    "html_url": "https://learn.chatgpt.com/codex/third-party/linear",
+    "route": "codex/third-party/linear",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "CLI customization",
+    "md_url": "https://learn.chatgpt.com/codex/cli-customization.md",
+    "html_url": "https://learn.chatgpt.com/codex/cli-customization",
+    "route": "codex/cli-customization",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Developer commands",
+    "md_url": "https://learn.chatgpt.com/codex/developer-commands.md",
+    "html_url": "https://learn.chatgpt.com/codex/developer-commands",
+    "route": "codex/developer-commands",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Developer settings",
+    "md_url": "https://learn.chatgpt.com/codex/developer-settings.md",
+    "html_url": "https://learn.chatgpt.com/codex/developer-settings",
+    "route": "codex/developer-settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Overview",
+    "md_url": "https://learn.chatgpt.com/codex/security-administration.md",
+    "html_url": "https://learn.chatgpt.com/codex/security-administration",
+    "route": "codex/security-administration",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Profiles",
+    "md_url": "https://learn.chatgpt.com/codex/permissions.md",
+    "html_url": "https://learn.chatgpt.com/codex/permissions",
+    "route": "codex/permissions",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Sandboxing",
+    "md_url": "https://learn.chatgpt.com/codex/sandboxing.md",
+    "html_url": "https://learn.chatgpt.com/codex/sandboxing",
+    "route": "codex/sandboxing",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Auto-review",
+    "md_url": "https://learn.chatgpt.com/codex/sandboxing/auto-review.md",
+    "html_url": "https://learn.chatgpt.com/codex/sandboxing/auto-review",
+    "route": "codex/sandboxing/auto-review",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Agent approvals & security",
+    "md_url": "https://learn.chatgpt.com/codex/agent-approvals-security.md",
+    "html_url": "https://learn.chatgpt.com/codex/agent-approvals-security",
+    "route": "codex/agent-approvals-security",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Internet access",
+    "md_url": "https://learn.chatgpt.com/codex/cloud/internet-access.md",
+    "html_url": "https://learn.chatgpt.com/codex/cloud/internet-access",
+    "route": "codex/cloud/internet-access",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Overview",
+    "md_url": "https://learn.chatgpt.com/codex/security.md",
+    "html_url": "https://learn.chatgpt.com/codex/security",
+    "route": "codex/security",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Quickstart",
+    "md_url": "https://learn.chatgpt.com/codex/security/plugin.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/plugin",
+    "route": "codex/security/plugin",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Run a security scan",
+    "md_url": "https://learn.chatgpt.com/codex/security/plugin/scans.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/plugin/scans",
+    "route": "codex/security/plugin/scans",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Run a deep scan",
+    "md_url": "https://learn.chatgpt.com/codex/security/plugin/deep-scans.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/plugin/deep-scans",
+    "route": "codex/security/plugin/deep-scans",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Review code changes",
+    "md_url": "https://learn.chatgpt.com/codex/security/plugin/code-changes.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/plugin/code-changes",
+    "route": "codex/security/plugin/code-changes",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Use the Security workbench",
+    "md_url": "https://learn.chatgpt.com/codex/security/plugin/workbench.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/plugin/workbench",
+    "route": "codex/security/plugin/workbench",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Triage a backlog",
+    "md_url": "https://learn.chatgpt.com/codex/security/plugin/triage-backlog.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/plugin/triage-backlog",
+    "route": "codex/security/plugin/triage-backlog",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Fix findings",
+    "md_url": "https://learn.chatgpt.com/codex/security/plugin/fix-findings.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/plugin/fix-findings",
+    "route": "codex/security/plugin/fix-findings",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Propose security hardening",
+    "md_url": "https://learn.chatgpt.com/codex/security/plugin/security-hardening.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/plugin/security-hardening",
+    "route": "codex/security/plugin/security-hardening",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Write vulnerability reports",
+    "md_url": "https://learn.chatgpt.com/codex/security/plugin/vulnerability-reports.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/plugin/vulnerability-reports",
+    "route": "codex/security/plugin/vulnerability-reports",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Export and track findings",
+    "md_url": "https://learn.chatgpt.com/codex/security/plugin/export-findings.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/plugin/export-findings",
+    "route": "codex/security/plugin/export-findings",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Changelog",
+    "md_url": "https://learn.chatgpt.com/codex/security/plugin/changelog.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/plugin/changelog",
+    "route": "codex/security/plugin/changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Quickstart",
+    "md_url": "https://learn.chatgpt.com/codex/security/cli.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/cli",
+    "route": "codex/security/cli",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Run bulk scans",
+    "md_url": "https://learn.chatgpt.com/codex/security/cli/bulk-scans.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/cli/bulk-scans",
+    "route": "codex/security/cli/bulk-scans",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Run scans in CI",
+    "md_url": "https://learn.chatgpt.com/codex/security/cli/ci.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/cli/ci",
+    "route": "codex/security/cli/ci",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "GitLab CI/CD",
+    "md_url": "https://learn.chatgpt.com/codex/security/cli/ci/gitlab.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/cli/ci/gitlab",
+    "route": "codex/security/cli/ci/gitlab",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Reference",
+    "md_url": "https://learn.chatgpt.com/codex/security/cli/reference.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/cli/reference",
+    "route": "codex/security/cli/reference",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "FAQ",
+    "md_url": "https://learn.chatgpt.com/codex/security/cli/faq.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/cli/faq",
+    "route": "codex/security/cli/faq",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "TypeScript SDK",
+    "md_url": "https://learn.chatgpt.com/codex/security/sdk.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/sdk",
+    "route": "codex/security/sdk",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Setup",
+    "md_url": "https://learn.chatgpt.com/codex/security/setup.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/setup",
+    "route": "codex/security/setup",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Security Review",
+    "md_url": "https://learn.chatgpt.com/codex/security/security-review.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/security-review",
+    "route": "codex/security/security-review",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Improving the threat model",
+    "md_url": "https://learn.chatgpt.com/codex/security/threat-model.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/threat-model",
+    "route": "codex/security/threat-model",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "FAQ",
+    "md_url": "https://learn.chatgpt.com/codex/security/faq.md",
+    "html_url": "https://learn.chatgpt.com/codex/security/faq",
+    "route": "codex/security/faq",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Models & Trusted Access",
+    "md_url": "https://learn.chatgpt.com/codex/cyber-safety.md",
+    "html_url": "https://learn.chatgpt.com/codex/cyber-safety",
+    "route": "codex/cyber-safety",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Recommended configuration",
+    "md_url": "https://learn.chatgpt.com/codex/cyber-safety/recommended-configuration.md",
+    "html_url": "https://learn.chatgpt.com/codex/cyber-safety/recommended-configuration",
+    "route": "codex/cyber-safety/recommended-configuration",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Overview",
+    "md_url": "https://learn.chatgpt.com/codex/administration.md",
+    "html_url": "https://learn.chatgpt.com/codex/administration",
+    "route": "codex/administration",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Admin rollout guide",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/admin-setup.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/admin-setup",
+    "route": "codex/enterprise/admin-setup",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "ChatGPT Work Overview",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/chatgpt-work-overview.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/chatgpt-work-overview",
+    "route": "codex/enterprise/chatgpt-work-overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "ChatGPT Work cloud security",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/chatgpt-work-cloud-security.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/chatgpt-work-cloud-security",
+    "route": "codex/enterprise/chatgpt-work-cloud-security",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "ChatGPT Work admin FAQ",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/work-admin-faq.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/work-admin-faq",
+    "route": "codex/enterprise/work-admin-faq",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Authentication overview",
+    "md_url": "https://learn.chatgpt.com/codex/auth.md",
+    "html_url": "https://learn.chatgpt.com/codex/auth",
+    "route": "codex/auth",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Workload identity",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/workload-identity.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/workload-identity",
+    "route": "codex/enterprise/workload-identity",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Personal Access Tokens",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/access-tokens.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/access-tokens",
+    "route": "codex/enterprise/access-tokens",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Service accounts",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/service-accounts.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/service-accounts",
+    "route": "codex/enterprise/service-accounts",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Groups and provisioning",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/groups-and-provisioning.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/groups-and-provisioning",
+    "route": "codex/enterprise/groups-and-provisioning",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Roles and workspace permissions",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/roles-and-workspace-permissions.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/roles-and-workspace-permissions",
+    "route": "codex/enterprise/roles-and-workspace-permissions",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "GPTs and Sharing",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/gpts-and-sharing.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/gpts-and-sharing",
+    "route": "codex/enterprise/gpts-and-sharing",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Managed configuration",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/managed-configuration.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/managed-configuration",
+    "route": "codex/enterprise/managed-configuration",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Prisma AIRS",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/prisma-airs.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/prisma-airs",
+    "route": "codex/enterprise/prisma-airs",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "HIPAA configuration",
+    "md_url": "https://learn.chatgpt.com/codex/hipaa-configuration.md",
+    "html_url": "https://learn.chatgpt.com/codex/hipaa-configuration",
+    "route": "codex/hipaa-configuration",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Workspace model availability",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/workspace-model-availability.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/workspace-model-availability",
+    "route": "codex/enterprise/workspace-model-availability",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Plugin controls",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/apps-and-connectors.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/apps-and-connectors",
+    "route": "codex/enterprise/apps-and-connectors",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Skill controls",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/skills.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/skills",
+    "route": "codex/enterprise/skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Governance",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/governance.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/governance",
+    "route": "codex/enterprise/governance",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Workspace analytics",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/workspace-analytics.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/workspace-analytics",
+    "route": "codex/enterprise/workspace-analytics",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Analytics API",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/analytics-api.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/analytics-api",
+    "route": "codex/enterprise/analytics-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Compliance API and audit events",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/compliance-api.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/compliance-api",
+    "route": "codex/enterprise/compliance-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Manage app updates",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/manage-app-updates.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/manage-app-updates",
+    "route": "codex/enterprise/manage-app-updates",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Windows app deployment",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/windows-deployment.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/windows-deployment",
+    "route": "codex/enterprise/windows-deployment",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Remote connections",
+    "md_url": "https://learn.chatgpt.com/codex/remote-connections.md",
+    "html_url": "https://learn.chatgpt.com/codex/remote-connections",
+    "route": "codex/remote-connections",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Amazon Bedrock",
+    "md_url": "https://learn.chatgpt.com/codex/amazon-bedrock.md",
+    "html_url": "https://learn.chatgpt.com/codex/amazon-bedrock",
+    "route": "codex/amazon-bedrock",
+    "kind": "doc"
+  },
+  {
+    "group": "Blog",
+    "title": "Automating repetitive work at OpenAI with Codex",
+    "md_url": "https://learn.chatgpt.com/blog/automating-repetitive-work-at-openai-with-codex.md",
+    "html_url": "https://learn.chatgpt.com/blog/automating-repetitive-work-at-openai-with-codex",
+    "route": "blog/automating-repetitive-work-at-openai-with-codex",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "Meet the winners of OpenAI Build Week",
+    "md_url": "https://learn.chatgpt.com/blog/build-week-winners.md",
+    "html_url": "https://learn.chatgpt.com/blog/build-week-winners",
+    "route": "blog/build-week-winners",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "Scaling cyber defenders with Daybreak",
+    "md_url": "https://learn.chatgpt.com/blog/scaling-cyber-defenders-with-daybreak.md",
+    "html_url": "https://learn.chatgpt.com/blog/scaling-cyber-defenders-with-daybreak",
+    "route": "blog/scaling-cyber-defenders-with-daybreak",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "Codex as a platform: build on the open agent harness",
+    "md_url": "https://learn.chatgpt.com/blog/codex-as-a-platform.md",
+    "html_url": "https://learn.chatgpt.com/blog/codex-as-a-platform",
+    "route": "blog/codex-as-a-platform",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "Custom Code Review rules for Codex",
+    "md_url": "https://learn.chatgpt.com/blog/custom-code-review-rules-for-codex.md",
+    "html_url": "https://learn.chatgpt.com/blog/custom-code-review-rules-for-codex",
+    "route": "blog/custom-code-review-rules-for-codex",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "mastering codex remote for engineering",
+    "md_url": "https://learn.chatgpt.com/blog/mastering-codex-remote-for-engineering.md",
+    "html_url": "https://learn.chatgpt.com/blog/mastering-codex-remote-for-engineering",
+    "route": "blog/mastering-codex-remote-for-engineering",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "connect private mcp servers to openai products",
+    "md_url": "https://learn.chatgpt.com/blog/connect-private-mcp-servers-to-openai-products.md",
+    "html_url": "https://learn.chatgpt.com/blog/connect-private-mcp-servers-to-openai-products",
+    "route": "blog/connect-private-mcp-servers-to-openai-products",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "realtime perplexity computer",
+    "md_url": "https://learn.chatgpt.com/blog/realtime-perplexity-computer.md",
+    "html_url": "https://learn.chatgpt.com/blog/realtime-perplexity-computer",
+    "route": "blog/realtime-perplexity-computer",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "designing delightful frontends with gpt 5 4",
+    "md_url": "https://learn.chatgpt.com/blog/designing-delightful-frontends-with-gpt-5-4.md",
+    "html_url": "https://learn.chatgpt.com/blog/designing-delightful-frontends-with-gpt-5-4",
+    "route": "blog/designing-delightful-frontends-with-gpt-5-4",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "one year of responses",
+    "md_url": "https://learn.chatgpt.com/blog/one-year-of-responses.md",
+    "html_url": "https://learn.chatgpt.com/blog/one-year-of-responses",
+    "route": "blog/one-year-of-responses",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "skills agents sdk",
+    "md_url": "https://learn.chatgpt.com/blog/skills-agents-sdk.md",
+    "html_url": "https://learn.chatgpt.com/blog/skills-agents-sdk",
+    "route": "blog/skills-agents-sdk",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "building frontend uis with codex and figma",
+    "md_url": "https://learn.chatgpt.com/blog/building-frontend-uis-with-codex-and-figma.md",
+    "html_url": "https://learn.chatgpt.com/blog/building-frontend-uis-with-codex-and-figma",
+    "route": "blog/building-frontend-uis-with-codex-and-figma",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "Feb 23 Run long horizon tasks with Codex Codex",
+    "md_url": "https://learn.chatgpt.com/blog/run-long-horizon-tasks-with-codex.md",
+    "html_url": "https://learn.chatgpt.com/blog/run-long-horizon-tasks-with-codex",
+    "route": "blog/run-long-horizon-tasks-with-codex",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "skills shell tips",
+    "md_url": "https://learn.chatgpt.com/blog/skills-shell-tips.md",
+    "html_url": "https://learn.chatgpt.com/blog/skills-shell-tips",
+    "route": "blog/skills-shell-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "15 lessons building chatgpt apps",
+    "md_url": "https://learn.chatgpt.com/blog/15-lessons-building-chatgpt-apps.md",
+    "html_url": "https://learn.chatgpt.com/blog/15-lessons-building-chatgpt-apps",
+    "route": "blog/15-lessons-building-chatgpt-apps",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "eval skills",
+    "md_url": "https://learn.chatgpt.com/blog/eval-skills.md",
+    "html_url": "https://learn.chatgpt.com/blog/eval-skills",
+    "route": "blog/eval-skills",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "skyscanner codex jetbrains mcp",
+    "md_url": "https://learn.chatgpt.com/blog/skyscanner-codex-jetbrains-mcp.md",
+    "html_url": "https://learn.chatgpt.com/blog/skyscanner-codex-jetbrains-mcp",
+    "route": "blog/skyscanner-codex-jetbrains-mcp",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "openai for developers 2025",
+    "md_url": "https://learn.chatgpt.com/blog/openai-for-developers-2025.md",
+    "html_url": "https://learn.chatgpt.com/blog/openai-for-developers-2025",
+    "route": "blog/openai-for-developers-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "updates audio models",
+    "md_url": "https://learn.chatgpt.com/blog/updates-audio-models.md",
+    "html_url": "https://learn.chatgpt.com/blog/updates-audio-models",
+    "route": "blog/updates-audio-models",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "Nov 24 What makes a great ChatGPT app How to build capabilities that make conversations better. Apps SDK",
+    "md_url": "https://learn.chatgpt.com/blog/what-makes-a-great-chatgpt-app.md",
+    "html_url": "https://learn.chatgpt.com/blog/what-makes-a-great-chatgpt-app",
+    "route": "blog/what-makes-a-great-chatgpt-app",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "codex for documentation dagster",
+    "md_url": "https://learn.chatgpt.com/blog/codex-for-documentation-dagster.md",
+    "html_url": "https://learn.chatgpt.com/blog/codex-for-documentation-dagster",
+    "route": "blog/codex-for-documentation-dagster",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "Oct 10 How Codex ran OpenAI DevDay 2025 Learn how Codex helped us build experiences, demos, products, and more Codex",
+    "md_url": "https://learn.chatgpt.com/blog/codex-at-devday.md",
+    "html_url": "https://learn.chatgpt.com/blog/codex-at-devday",
+    "route": "blog/codex-at-devday",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "responses api",
+    "md_url": "https://learn.chatgpt.com/blog/responses-api.md",
+    "html_url": "https://learn.chatgpt.com/blog/responses-api",
+    "route": "blog/responses-api",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "Sep 12 Developer notes on the Realtime API Details worth noticing in recent realtime speech-to-speech updates Audio",
+    "md_url": "https://learn.chatgpt.com/blog/realtime-api.md",
+    "html_url": "https://learn.chatgpt.com/blog/realtime-api",
+    "route": "blog/realtime-api",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "Sep 11 Hello, world! Introducing our developer blog General",
+    "md_url": "https://learn.chatgpt.com/blog/intro.md",
+    "html_url": "https://learn.chatgpt.com/blog/intro",
+    "route": "blog/intro",
+    "kind": "blog"
+  }
+]

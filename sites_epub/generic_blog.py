@@ -27,7 +27,7 @@ def parse_blog_html(html: str, blog_url: str) -> list[IndexEntry]:
         if not match:
             continue
         slug = match.group(1).strip("/")
-        if not slug or slug in {"category", "tag", "author", "page", "topic"}:
+        if not slug or slug.split("/", 1)[0] in {"category", "tag", "author", "page", "topic"}:
             continue
         route = f"blog/{slug}"
         if route in seen:
