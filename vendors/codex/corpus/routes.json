@@ -1153,7 +1153,7 @@
   },
   {
     "group": "Blog",
-    "title": "Automating repetitive work at OpenAI with Codex",
+    "title": "automating repetitive work at openai with codex",
     "md_url": "https://learn.chatgpt.com/blog/automating-repetitive-work-at-openai-with-codex.md",
     "html_url": "https://learn.chatgpt.com/blog/automating-repetitive-work-at-openai-with-codex",
     "route": "blog/automating-repetitive-work-at-openai-with-codex",
@@ -1161,7 +1161,7 @@
   },
   {
     "group": "Blog",
-    "title": "Meet the winners of OpenAI Build Week",
+    "title": "build week winners",
     "md_url": "https://learn.chatgpt.com/blog/build-week-winners.md",
     "html_url": "https://learn.chatgpt.com/blog/build-week-winners",
     "route": "blog/build-week-winners",
@@ -1169,7 +1169,7 @@
   },
   {
     "group": "Blog",
-    "title": "Scaling cyber defenders with Daybreak",
+    "title": "scaling cyber defenders with daybreak",
     "md_url": "https://learn.chatgpt.com/blog/scaling-cyber-defenders-with-daybreak.md",
     "html_url": "https://learn.chatgpt.com/blog/scaling-cyber-defenders-with-daybreak",
     "route": "blog/scaling-cyber-defenders-with-daybreak",
@@ -1177,7 +1177,7 @@
   },
   {
     "group": "Blog",
-    "title": "Codex as a platform: build on the open agent harness",
+    "title": "codex as a platform",
     "md_url": "https://learn.chatgpt.com/blog/codex-as-a-platform.md",
     "html_url": "https://learn.chatgpt.com/blog/codex-as-a-platform",
     "route": "blog/codex-as-a-platform",
@@ -1185,7 +1185,7 @@
   },
   {
     "group": "Blog",
-    "title": "Custom Code Review rules for Codex",
+    "title": "custom code review rules for codex",
     "md_url": "https://learn.chatgpt.com/blog/custom-code-review-rules-for-codex.md",
     "html_url": "https://learn.chatgpt.com/blog/custom-code-review-rules-for-codex",
     "route": "blog/custom-code-review-rules-for-codex",
@@ -1249,7 +1249,7 @@
   },
   {
     "group": "Blog",
-    "title": "Feb 23 Run long horizon tasks with Codex Codex",
+    "title": "run long horizon tasks with codex",
     "md_url": "https://learn.chatgpt.com/blog/run-long-horizon-tasks-with-codex.md",
     "html_url": "https://learn.chatgpt.com/blog/run-long-horizon-tasks-with-codex",
     "route": "blog/run-long-horizon-tasks-with-codex",
@@ -1305,7 +1305,7 @@
   },
   {
     "group": "Blog",
-    "title": "Nov 24 What makes a great ChatGPT app How to build capabilities that make conversations better. Apps SDK",
+    "title": "what makes a great chatgpt app",
     "md_url": "https://learn.chatgpt.com/blog/what-makes-a-great-chatgpt-app.md",
     "html_url": "https://learn.chatgpt.com/blog/what-makes-a-great-chatgpt-app",
     "route": "blog/what-makes-a-great-chatgpt-app",
@@ -1321,7 +1321,7 @@
   },
   {
     "group": "Blog",
-    "title": "Oct 10 How Codex ran OpenAI DevDay 2025 Learn how Codex helped us build experiences, demos, products, and more Codex",
+    "title": "codex at devday",
     "md_url": "https://learn.chatgpt.com/blog/codex-at-devday.md",
     "html_url": "https://learn.chatgpt.com/blog/codex-at-devday",
     "route": "blog/codex-at-devday",
@@ -1337,7 +1337,7 @@
   },
   {
     "group": "Blog",
-    "title": "Sep 12 Developer notes on the Realtime API Details worth noticing in recent realtime speech-to-speech updates Audio",
+    "title": "realtime api",
     "md_url": "https://learn.chatgpt.com/blog/realtime-api.md",
     "html_url": "https://learn.chatgpt.com/blog/realtime-api",
     "route": "blog/realtime-api",
@@ -1345,7 +1345,7 @@
   },
   {
     "group": "Blog",
-    "title": "Sep 11 Hello, world! Introducing our developer blog General",
+    "title": "intro",
     "md_url": "https://learn.chatgpt.com/blog/intro.md",
     "html_url": "https://learn.chatgpt.com/blog/intro",
     "route": "blog/intro",

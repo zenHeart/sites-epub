@@ -20,7 +20,11 @@ from sites_epub.pack_cache import run_pack, vendor_pack_key  # noqa: E402
 from sites_epub.epub_pack import grouped_html  # noqa: E402
 from sites_epub.generic_blog import parse_blog_html  # noqa: E402
 from sites_epub.generic_nav import parse_llms_generic  # noqa: E402
-from sites_epub.images import repair_epub_images, rewrite_body_images  # noqa: E402
+from sites_epub.images import (  # noqa: E402
+    collect_image_urls,
+    repair_epub_images,
+    rewrite_body_images,
+)
 from sites_epub.mdx import looks_like_runtime_source, transform_mdx  # noqa: E402
 from sites_epub.page import extract_from_html, extract_from_markdown  # noqa: E402
 from sites_epub.models import IndexEntry, Vendor  # noqa: E402
@@ -629,6 +633,240 @@ class TestSceneRestore(unittest.TestCase):
             md, route="x", url="https://code.claude.com/docs/en/x"
         )
         self.assertIn("https://code.claude.com/docs/en/hooks", page.body_html)
+
+    def test_missing_atx_title_uses_first_sentence(self) -> None:
+        page = extract_from_markdown(
+            Path("vendors/cursor/corpus/pages/docs/models/grok-4-6.md").read_text(
+                encoding="utf-8"
+            ),
+            route="docs/models/grok-4-6",
+            url="https://cursor.com/docs/models/grok-4-6",
+        )
+        self.assertIn("Grok 4.6", page.title)
+        self.assertNotEqual(page.title, "Untitled")
+        self.assertIn("long-horizon agentic", page.body_text)
+
+    def test_communications_kit_keeps_table_and_callout(self) -> None:
+        page = extract_from_markdown(
+            Path("vendors/claude/corpus/pages/communications-kit.md").read_text(
+                encoding="utf-8"
+            ),
+            route="communications-kit",
+            url="https://code.claude.com/docs/en/communications-kit",
+        )
+        self.assertEqual(page.title, "Communications kit")
+        self.assertIn("<table", page.body_html.lower())
+        self.assertIn("mdx-callout", page.body_html)
+        self.assertIn("copy-ready launch announcements", page.body_text.lower())
+
+    def test_next_image_wrapper_unwraps_blob_url(self) -> None:
+        html = (
+            '<img src="https://cursor.com/marketing-static/_next/image?'
+            "url=https%3A%2F%2Fptht05hbb1ssoooe.public.blob.vercel-storage.com"
+            '%2Fassets%2Fblog%2Fmarketplace-20-logos-light-final.png&w=1920&q=70">'
+        )
+        urls = collect_image_urls(html, base="https://cursor.com/blog/marketplace")
+        self.assertTrue(any("blob.vercel-storage.com" in u and "/_next/image" not in u for u in urls))
+        self.assertTrue(any("/_next/image" in u for u in urls))
+        mapped = rewrite_body_images(
+            html,
+            {
+                "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/blog/marketplace-20-logos-light-final.png": "images/logos.png"
+            },
+            base="https://cursor.com/blog/marketplace",
+            available={"images/logos.png"},
+        )
+        self.assertIn("images/logos.png", mapped)
+        self.assertNotIn("_next/image", mapped)
+
+
+class TestFetchSourceImageFallback(unittest.TestCase):
+    def _run(self, md: str, html: str) -> tuple[str, int]:
+        from sites_epub import compile as c
+        from sites_epub.models import IndexEntry
+
+        calls: list[str] = []
+
+        def fake_fetch(url: str) -> str:
+            calls.append(url)
+            return html if url.endswith(".html") or ".html" in url.split("?")[-1] else md
+
+        entry = IndexEntry(
+            group="Docs",
+            title="Quickstart",
+            md_url="https://x.test/p.md",
+            html_url="https://x.test/p.html",
+            route="p",
+            kind="doc",
+        )
+        orig = c.fetch_text
+        c.fetch_text = fake_fetch  # type: ignore[assignment]
+        try:
+            out = c.fetch_source(entry)
+        finally:
+            c.fetch_text = orig  # type: ignore[assignment]
+        return out, calls
+
+    def test_md_without_images_falls_back_to_rich_html(self) -> None:
+        md = "# Quickstart\n\nStep one. Step two.\n\n```bash\nls\n```\n"
+        body_paras = " ".join(
+            f"<p>Paragraph {i} carries enough prose to pass the body-length "
+            "sanity threshold used against thin marketing pages.</p>" for i in range(8)
+        )
+        html = (
+            "<!DOCTYPE html><html><body><main>"
+            "<h1>Quickstart</h1>"
+            '<img src="https://cdn.x.test/a/hero.png" alt="product selector">'
+            + body_paras
+            + "</main></body></html>"
+        )
+        out, _ = self._run(md, html)
+        self.assertTrue(out.lstrip().startswith("<!"))
+
+    def test_md_with_images_not_fetched_again(self) -> None:
+        md = "# Guide\n\n![diagram](https://cdn.x.test/d.png)\n"
+        out, calls = self._run(md, "<!DOCTYPE html><html><body>hi</body></html>")
+        self.assertEqual(out, md)
+        self.assertEqual(calls, ["https://x.test/p.md"])
+
+    def test_imageless_html_keeps_md(self) -> None:
+        md = "# Quickstart\n\nPlain text only.\n"
+        html = "<!DOCTYPE html><html><body><main><p>No images here at all.</p></main></body></html>"
+        out, _ = self._run(md, html)
+        self.assertEqual(out, md)
+
+
+class TestOversizeImageDownscale(unittest.TestCase):
+    """one_img 的下载分支部在闭包内;这里锁定其策略函数行为:
+    超限图先降采样并采用结果;阈值内不动;压缩失败返回空即放弃。"""
+
+    def _apply_one_img_policy(self, data: bytes) -> bytes:
+        from sites_epub import compile as c
+
+        if data and len(data) <= c.MAX_IMAGE_BYTES:
+            return data
+        return c.downscale_image_bytes(data)
+
+    def test_small_image_passes_through_without_downscale(self) -> None:
+        from sites_epub import compile as c
+
+        calls = []
+
+        def fake_downscale(data, **kw):
+            calls.append(data)
+            return b""
+
+        orig = c.downscale_image_bytes
+        c.downscale_image_bytes = fake_downscale  # type: ignore[assignment]
+        try:
+            payload = b"\x89PNG small"
+            out = self._apply_one_img_policy(payload)
+            self.assertEqual(out, payload)
+            self.assertEqual(calls, [])
+        finally:
+            c.downscale_image_bytes = orig  # type: ignore[assignment]
+
+    def test_oversize_image_uses_downscale_result(self) -> None:
+        from sites_epub import compile as c
+
+        calls = []
+        small = b"\x89PNG tiny"
+
+        def fake_downscale(data, **kw):
+            calls.append(len(data))
+            return small
+
+        orig = c.downscale_image_bytes
+        c.downscale_image_bytes = fake_downscale  # type: ignore[assignment]
+        try:
+            big = b"x" * (c.MAX_IMAGE_BYTES + 100)
+            out = self._apply_one_img_policy(big)
+            self.assertEqual(out, small)
+            self.assertEqual(calls, [len(big)])
+        finally:
+            c.downscale_image_bytes = orig  # type: ignore[assignment]
+
+    def test_failed_downscale_signals_drop(self) -> None:
+        from sites_epub import compile as c
+
+        orig = c.downscale_image_bytes
+        c.downscale_image_bytes = lambda data, **kw: b""  # type: ignore[assignment]
+        try:
+            self.assertEqual(self._apply_one_img_policy(b"x" * (c.MAX_IMAGE_BYTES + 1)), b"")
+        finally:
+            c.downscale_image_bytes = orig  # type: ignore[assignment]
+
+
+class TestChromeImgFilter(unittest.TestCase):
+    def test_sidebar_icon_img_excluded_from_body_and_collection(self) -> None:
+        from sites_epub.images import collect_image_urls, rewrite_body_images
+        from sites_epub.page import extract_from_html
+
+        html = (
+            "<!DOCTYPE html><html><body><main>"
+            '<h1>Q</h1>'
+            '<img class="_sidebarIcon_f6f0e_93" src="/images/codex/icons/folder.svg" alt="">'
+            '<p>Real body paragraph with enough text.</p>'
+            '<img src="/images/codex/quickstart/hero.png" alt="flow diagram">'
+            "</main></body></html>"
+        )
+        page = extract_from_html(html, route="q", url="https://x.test/q")
+        self.assertNotIn("folder.svg", page.body_html)
+        self.assertIn("hero.png", page.body_html)
+        urls = collect_image_urls(html, base="https://x.test/q")
+        self.assertTrue(any("hero.png" in u for u in urls))
+        self.assertFalse(any("icons/folder.svg" in u for u in urls))
+
+    def test_rewrite_keeps_mapped_only(self) -> None:
+        from sites_epub.images import rewrite_body_images
+
+        html = '<img src="https://x.test/images/a.png">'
+        out = rewrite_body_images(
+            html,
+            {"https://x.test/images/a.png": "images/a.png"},
+            base="https://x.test",
+            available={"images/a.png"},
+        )
+        self.assertIn('src="images/a.png"', out)
+
+
+class TestBlogArticleExtract(unittest.TestCase):
+    def test_testimonials_between_richtext_blocks_survive(self) -> None:
+        from sites_epub.blog_article import extract_article
+
+        html = (
+            "<html><body><main>"
+            '<div class="blog_post_wrap"><div class="blog_post_content_wrap">'
+            '<div class="u-rich-text-blog w-richtext"><p>First part of the article body.</p></div>'
+            "</div>"
+            '<div class="card_testimonial_col_text">“When building Sculptor we wanted'
+            " a more flexible way to take actions.” Ryan Chang, AI Engineering</div>"
+            '<div class="blog_post_content_wrap">'
+            '<div class="u-rich-text-blog w-richtext"><p>Second part of the body.</p></div>'
+            "</div></div>"
+            "</main></body></html>"
+        )
+        art = extract_article(html, url="https://claude.com/blog/x")
+        self.assertIn("First part of the article body.", art.body_html)
+        self.assertIn("Second part of the body.", art.body_html)
+        # 夹在两个 richtext 之间的客户引述卡必须进入正文
+        self.assertIn("When building Sculptor", art.body_html)
+        self.assertIn("Ryan Chang", art.body_text)
+
+    def test_related_posts_still_dropped(self) -> None:
+        from sites_epub.blog_article import extract_article
+
+        html = (
+            "<html><body><main>"
+            '<div class="blog_post_content_wrap">'
+            '<div class="u-rich-text-blog w-richtext"><p>Only one rich block.</p></div>'
+            "</div>"
+            '<div class="blog_related_section_wrap"><div>Related posts noise</div></div>'
+            "</main></body></html>"
+        )
+        art = extract_article(html, url="https://claude.com/blog/y")
+        self.assertIn("Only one rich block.", art.body_html)
+        self.assertNotIn("Related posts noise", art.body_html)
 
 
 class TestSourceTitleLinks(unittest.TestCase):

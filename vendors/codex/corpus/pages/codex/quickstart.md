@@ -1,201 +1,2147 @@
-# Quickstart
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>(function(){const siteVariantDomains = [{"id":"chatgpt-docs","domains":["learn.chatgpt.com","learn.chatgpt-staging.com","learn-chatgpt-preview.localhost"]}];
+const forcedSiteVariantId = undefined;
+const siteVariantQueryParam = "site_variant";
+const chatGptSiteVariant = "chatgpt";
+const chatGptDocsVariantId = "chatgpt-docs";
+const developersOpenAiHostname = "developers.openai.com";
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+  (() => {
+    const hostname = window.location.hostname.toLowerCase().replace(/\.$/, "");
+    const queryVariant =
+      hostname !== developersOpenAiHostname &&
+      new URLSearchParams(window.location.search).get(siteVariantQueryParam) ===
+        chatGptSiteVariant
+        ? chatGptDocsVariantId
+        : undefined;
+    const hostnameVariant = siteVariantDomains.find((variant) =>
+      variant.domains.some(
+        (domain) => domain.toLowerCase().replace(/\.$/, "") === hostname
+      )
+    )?.id;
+    const activeVariantId =
+      forcedSiteVariantId || hostnameVariant || queryVariant;
 
-## Where to use ChatGPT
+    if (forcedSiteVariantId) {
+      document.documentElement.dataset.siteVariantForced = forcedSiteVariantId;
+    } else {
+      delete document.documentElement.dataset.siteVariantForced;
+    }
 
-Use ChatGPT across different surfaces, including the
-[ChatGPT desktop app](https://learn.chatgpt.com/docs/app) and [ChatGPT on the web](https://learn.chatgpt.com/docs/web). Choose
-the option that fits your work.
+    if (activeVariantId) {
+      document.documentElement.dataset.siteVariant = activeVariantId;
+    } else {
+      delete document.documentElement.dataset.siteVariant;
+    }
+  })();
+})();</script><link rel="icon" type="image/png" href="/favicon.png"><meta name="generator" content="Astro v6.0.4"><link rel="preconnect" href="https://cdn.openai.com" crossorigin><link rel="preload" href="https://cdn.openai.com/common/fonts/openai-sans/v2/OpenAISans-Regular.woff2" as="font" type="font/woff2" crossorigin><style>
+  @layer theme, base, components, utilities;
+</style><!-- Canonical URL --><link rel="canonical" href="https://learn.chatgpt.com/docs/quickstart"><!-- Primary Meta Tags --><title data-default-meta-title="Quickstart – Codex | OpenAI Developers" data-site-variant-meta-titles="{&#34;chatgpt-docs&#34;:&#34;Quickstart | ChatGPT Learn&#34;}">
+  Quickstart | ChatGPT Learn
+</title><meta name="title" content="Quickstart | ChatGPT Learn"><meta name="description" content="Start using ChatGPT on the web or in the desktop app."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://learn.chatgpt.com/docs/quickstart"><meta property="og:site_name" content="ChatGPT Learn"><meta property="og:title" content="Quickstart | ChatGPT Learn"><meta property="og:description" content="Start using ChatGPT on the web or in the desktop app."><meta property="og:image" content="https://learn.chatgpt.com/og/docs/quickstart.png"><meta property="og:image:alt" content="Quickstart | ChatGPT Learn"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@ChatGPTapp"><meta name="twitter:url" content="https://learn.chatgpt.com/docs/quickstart"><meta name="twitter:title" content="Quickstart | ChatGPT Learn"><meta name="twitter:description" content="Start using ChatGPT on the web or in the desktop app."><meta name="twitter:image" content="https://learn.chatgpt.com/og/docs/quickstart.png"><meta name="twitter:image:width" content="1200"><meta name="twitter:image:height" content="630"><meta name="twitter:image:alt" content="Quickstart | ChatGPT Learn"><!-- Sitemap --><link rel="sitemap" href="/sitemap-index.xml"><!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="Quickstart | ChatGPT Learn" data-page-meta-title href="https://developers.openai.com/rss.xml"><!-- Global Scripts --><script src="/js/theme.js"></script><script src="/js/scroll.js"></script><script src="/js/animate.js"></script><script defer src="/js/copy.js"></script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="swap"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BVNpka2d.js"></script><link rel="stylesheet" href="/_astro/PageLayout.C-trUsYL.css">
+<style>.page-copy-action:where(.astro-y3m22efp){display:inline-flex;min-height:26px;align-items:center;justify-content:center;gap:6px;border:1px solid var(--border-primary-outline, rgb(209 213 219));border-radius:8px;background:var(--surface-primary, #fff);padding:5px 10px;color:var(--text-primary, #202123);font-size:12px;font-weight:500;line-height:1;white-space:nowrap;transition:border-color .12s ease,background-color .12s ease,color .12s ease,opacity .12s ease}.page-copy-action:where(.astro-y3m22efp):hover:not(:disabled){background:var(--surface-primary-hover, #f7f7f8)}.page-copy-action:where(.astro-y3m22efp):focus-visible{outline:2px solid var(--border-primary, #111);outline-offset:2px}.page-copy-action:where(.astro-y3m22efp):disabled{cursor:progress;opacity:.7}.page-copy-action--cta:where(.astro-y3m22efp){min-height:42px;gap:8px;border-radius:9999px;padding:10px 18px;font-size:14px}.page-copy-action__icon:where(.astro-y3m22efp){display:inline-flex;width:14px;height:14px;align-items:center;justify-content:center}.page-copy-action__icon:where(.astro-y3m22efp) svg{width:14px;height:14px}.page-copy-action__icon--check:where(.astro-y3m22efp),.page-copy-action:where(.astro-y3m22efp)[data-copied=true] .page-copy-action__icon--copy:where(.astro-y3m22efp){display:none}.page-copy-action:where(.astro-y3m22efp)[data-copied=true] .page-copy-action__icon--check:where(.astro-y3m22efp){display:inline-flex}
+@layer components{._Arrow_t2o77_1{--arrow-size: 6px;position:absolute;width:0;height:0}._Arrow_t2o77_1[data-side=top]{bottom:0;left:50%;border-top:var(--arrow-size) solid var(--gray-700);border-right:var(--arrow-size) solid transparent;border-left:var(--arrow-size) solid transparent;margin-right:-8px;transform:translate(-50%) translateY(100%)}._Arrow_t2o77_1[data-side=bottom]{top:0;left:50%;border-right:var(--arrow-size) solid transparent;border-bottom:var(--arrow-size) solid var(--gray-700);border-left:var(--arrow-size) solid transparent;margin-left:-8px;transform:translate(-50%) translateY(-100%)}._Arrow_t2o77_1[data-side=left]{top:50%;right:0;border-top:var(--arrow-size) solid transparent;border-bottom:var(--arrow-size) solid transparent;border-left:var(--arrow-size) solid var(--gray-700);margin-right:-8px;transform:translate(100%) translateY(-50%)}._Arrow_t2o77_1[data-side=right]{top:50%;left:0;border-top:var(--arrow-size) solid transparent;border-right:var(--arrow-size) solid var(--gray-700);border-bottom:var(--arrow-size) solid transparent;margin-left:-8px;transform:translate(-100%) translateY(-50%)}}@layer components{._surfaceOption_spfw2_1>div>div>div:first-child{display:none}._surfaceOption_spfw2_1>div>div{align-items:center}[data-radix-popper-content-wrapper]:has(.codex-surface-option){z-index:40!important}[role=listbox]:has(.codex-surface-option){outline:none}}
+</style>
+<link rel="stylesheet" href="/_astro/AgentDocsDirective.DEiRrpNI.css"><script type="module" src="/_astro/page.CUcic4cG.js"></script><style>@layer components{._TransitionItem_1lpir_1{will-change:var(--tg-will-change)}[data-transition-position=absolute] ._TransitionItem_1lpir_1[data-exiting],[data-transition-position=absolute] ._TransitionItem_1lpir_1:not([data-exiting])+._TransitionItem_1lpir_1[data-entering]{position:absolute;top:0;left:0;width:100%}._TransitionItem_1lpir_1[data-entering]{filter:var(--tg-initial-filter);opacity:var(--tg-initial-opacity);transform:var(--tg-initial-transform)}._TransitionItem_1lpir_1[data-exiting]{filter:var(--tg-enter-filter);opacity:var(--tg-enter-opacity);transform:var(--tg-enter-transform)}._TransitionItem_1lpir_1[data-entering-active],._TransitionItem_1lpir_1[data-entering][data-interrupted]{filter:var(--tg-enter-filter);opacity:var(--tg-enter-opacity);transform:var(--tg-enter-transform);transition:opacity var(--tg-enter-duration) var(--tg-enter-timing-function) var(--tg-enter-delay),transform var(--tg-enter-duration) var(--tg-enter-timing-function) var(--tg-enter-delay),filter var(--tg-enter-duration) var(--tg-enter-timing-function) var(--tg-enter-delay)}._TransitionItem_1lpir_1[data-exiting-active],._TransitionItem_1lpir_1[data-exiting][data-interrupted]{filter:var(--tg-exit-filter, none);opacity:var(--tg-exit-opacity, 0);transform:var(--tg-exit-transform, none);transition:opacity var(--tg-exit-duration) var(--tg-exit-timing-function) var(--tg-exit-delay),transform var(--tg-exit-duration) var(--tg-exit-timing-function) var(--tg-exit-delay),filter var(--tg-exit-duration) var(--tg-exit-timing-function) var(--tg-exit-delay)}._TransitionItem_1lpir_1[data-entering][data-interrupted],._TransitionItem_1lpir_1[data-exiting][data-interrupted]{transition-delay:0ms}}
+</style><style>@layer components{._TextLink_ssta1_1{display:inline-flex;align-items:center;gap:var(--link-gap);border-radius:var(--link-radius);color:currentcolor;cursor:pointer;font-weight:var(--link-font-weight);overflow-wrap:anywhere;transition-duration:var(--transition-duration-basic);transition-property:opacity,color,box-shadow,text-decoration-color;transition-timing-function:var(--transition-ease-basic)}@media(hover:hover)and (pointer:fine){._TextLink_ssta1_1:hover{color:color-mix(in oklab,currentcolor 80%,transparent)}.text-secondary ._TextLink_ssta1_1:hover{color:var(--color-text)}.text-tertiary ._TextLink_ssta1_1:hover{color:var(--color-text-secondary)}}._TextLink_ssta1_1:focus-visible{outline:2px solid var(--color-ring);outline-offset:1px}._TextLink_ssta1_1[data-underline=always]{text-decoration:underline;text-decoration-color:color-mix(in oklab,currentcolor 70%,transparent);text-underline-offset:var(--link-underline-decoration-offset)}@media(hover:hover)and (pointer:fine){._TextLink_ssta1_1[data-underline=hover]:hover{text-decoration:underline;text-decoration-color:color-mix(in oklab,currentcolor 70%,transparent);text-underline-offset:var(--link-underline-decoration-offset)}}._TextLink_ssta1_1[data-primary]{color:var(--link-primary-text-color)}@media(hover:hover)and (pointer:fine){._TextLink_ssta1_1[data-primary]:hover{color:var(--link-primary-text-color-hover)}}}
+</style><style>.workflow-steps:where(.astro-4drqtmie)>ol{counter-reset:workflow-step;list-style:none;padding-left:0;margin:1.5rem 0}.workflow-steps:where(.astro-4drqtmie)>ol>li{counter-increment:workflow-step;position:relative;padding-left:2.75rem;margin:0}.workflow-steps:where(.astro-4drqtmie)>ol>li:not(:last-child){padding-bottom:.75rem}.workflow-steps:where(.astro-4drqtmie)>ol>li:before{content:counter(workflow-step);position:absolute;left:0;top:0;height:27px;min-width:27px;padding:0 6px;display:inline-flex;align-items:center;justify-content:center;border-radius:9999px;background:var(--color-gray-100);color:var(--color-gray-700);font-size:12px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums;box-sizing:border-box}.workflow-steps--headings:where(.astro-4drqtmie)>ol>li>p:first-child{font-weight:600}.workflow-steps--headings:where(.astro-4drqtmie)>ol>li>h3:first-child{margin:0;font-size:inherit;line-height:inherit;font-weight:600}
+</style><style>@layer components{._segmentedControl_1qynh_1._stacked_1qynh_1[data-block]{display:flex;flex-direction:column;align-items:stretch;height:auto;overflow:hidden;white-space:normal;touch-action:auto}._segmentedControl_1qynh_1._stacked_1qynh_1>div:first-child{display:none}._segmentedControl_1qynh_1._stacked_1qynh_1>button{display:flex;width:100%;min-height:var(--segmented-control-size);align-items:center;justify-content:flex-start;text-align:left}._segmentedControl_1qynh_1._stacked_1qynh_1>button[data-state=on]{background:var(--segmented-control-thumb-background);box-shadow:var(--segmented-control-thumb-shadow)}}.tabs-selector:where(.astro-xlvzfuxv){width:100%;max-width:100%;margin-bottom:24px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;touch-action:pan-x}
+</style><style>@layer components{._eventBoundary_1di2e_1{display:flex;width:100%;justify-content:center}._control_1di2e_7{--segmented-control-gap: 0;--segmented-control-gutter: 0;--segmented-control-background: #f2f2f2;--segmented-control-font-weight: 500;--segmented-control-thumb-background: #fff;--segmented-control-thumb-shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 3px 10px rgba(0, 0, 0, .08);--quickstart-segmented-label-active: #101010;--quickstart-segmented-label-inactive: #5f5f5f;--quickstart-segmented-track-background: #f2f2f2;--quickstart-segmented-thumb-border: rgba(0, 0, 0, .1);overflow:visible!important;background:transparent!important;color:var(--quickstart-segmented-label-inactive);font-family:var(--font-sans, system-ui, sans-serif);font-size:.9375rem;font-weight:500;letter-spacing:-.018em}._control_1di2e_7:before{position:absolute;inset:1px;border-radius:inherit;background:var(--quickstart-segmented-track-background);content:"";pointer-events:none}._control_1di2e_7>div:first-child{top:-.5px;bottom:-.5px;width:calc(var(--quickstart-segment-width) + 9px)!important;translate:var(--quickstart-segment-thumb-offset) 0;border:.5px solid var(--quickstart-segmented-thumb-border);transition:width .3s var(--cubic-enter),transform .3s var(--cubic-enter),translate .3s var(--cubic-enter)!important}._control_1di2e_7>button{min-width:0;justify-content:center;color:var(--quickstart-segmented-label-inactive);font-size:inherit;font-weight:inherit;letter-spacing:inherit;white-space:nowrap}._control_1di2e_7>button[data-state=on]{color:var(--quickstart-segmented-label-active)}._control_1di2e_7>button:hover:before,._control_1di2e_7>button:active:before{opacity:0!important}:where(html.dark,html[data-theme=dark]) ._control_1di2e_7{--segmented-control-background: #2c2c2c;--segmented-control-thumb-background: #3a3a3a;--quickstart-segmented-label-active: #f7f7f7;--quickstart-segmented-label-inactive: #aaa;--quickstart-segmented-track-background: #2c2c2c;--quickstart-segmented-thumb-border: rgba(255, 255, 255, .1)}@media(prefers-reduced-motion:reduce){._control_1di2e_7>div:first-child,._control_1di2e_7>button{transition:none!important}}}@layer components{._root_wc7wp_1{width:100%;max-width:34.375rem;margin-inline:auto;padding-block:.375rem}._controlWrapper_wc7wp_8{display:flex;width:100%;justify-content:center;margin-bottom:1rem}._control_wc7wp_8{width:min(32rem,100%);max-width:32rem}._viewport_wc7wp_20{overflow:hidden;margin:-.75rem;padding-block:.75rem;touch-action:pan-y}._track_wc7wp_27{display:flex;width:100%;align-items:stretch;transition:transform .3s cubic-bezier(.19,1,.22,1);will-change:transform}._track_wc7wp_27[data-dragging]{transition:none}._panel_wc7wp_39{display:flex;min-width:0;flex:0 0 100%;padding-inline:.75rem}._panel_wc7wp_39[aria-hidden=true]{pointer-events:none}._panel_wc7wp_39>*{width:100%}@media(max-width:640px){._control_wc7wp_8{--segmented-control-size: 3rem;font-size:.75rem}._control_wc7wp_8>button{padding-inline:.375rem;line-height:1.1;white-space:normal}}@media(prefers-reduced-motion:reduce){._track_wc7wp_27{transition:none!important}}}
+</style><style>@layer components{._Tooltip_purug_1{max-width:300px;border-radius:var(--tooltip-border-radius);animation-duration:.25s;animation-name:_scale-in_purug_1;animation-timing-function:var(--cubic-enter);background:var(--tooltip-background-color);box-shadow:var(--tooltip-box-shadow);color:var(--tooltip-text-color);font-size:var(--tooltip-font-size);font-weight:var(--tooltip-font-weight);line-height:var(--tooltip-line-height);transform-origin:var(--radix-tooltip-content-transform-origin);transition:background-color .15s ease}._Tooltip_purug_1[data-state=closed]{animation:_scale-out_purug_1 .25s var(--cubic-enter)}._Tooltip_purug_1[data-clickable=false]{cursor:default}._Tooltip_purug_1[data-clickable=true]{cursor:pointer}@media(hover:hover)and (pointer:fine){._Tooltip_purug_1[data-compact=true][data-clickable=true]:hover{background:var(--tooltip-compact-interactive-background-color-hover);color:var(--tooltip-compact-interactive-text-color-hover)}}._Tooltip_purug_1[data-gutter-size=sm]{padding:var(--tooltip-padding-sm)}._Tooltip_purug_1[data-gutter-size=md]{padding:var(--tooltip-padding-md)}._Tooltip_purug_1[data-gutter-size=lg]{padding:var(--tooltip-padding-lg)}._Tooltip_purug_1[data-compact=true]{padding:var(--tooltip-compact-padding);background:var(--tooltip-compact-background-color);color:var(--tooltip-compact-text-color);font-size:var(--tooltip-compact-font-size);font-weight:var(--tooltip-compact-font-weight)}@keyframes _scale-in_purug_1{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}@keyframes _scale-out_purug_1{0%{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(.97)}}._TriggerDecorator_purug_84{display:inline-flex;cursor:pointer;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;text-decoration-color:transparent;transition:-webkit-text-decoration .2s var(--cubic-exit);transition:text-decoration .2s var(--cubic-exit);transition:text-decoration .2s var(--cubic-exit),-webkit-text-decoration .2s var(--cubic-exit)}._TriggerDecorator_purug_84:focus{outline:0}._TriggerDecorator_purug_84[data-state*=open]{text-decoration-color:var(--color-text-tertiary);transition-timing-function:var(--cubic-enter)}}
+</style><link rel="stylesheet" href="/_astro/Menu.k78gxe7N.css"><link rel="stylesheet" href="/_astro/SegmentedControl.BVdWyLBX.css"><link rel="stylesheet" href="/_astro/Select.ZFNnOywo.css"><link rel="stylesheet" href="/_astro/Button.Cu9_vjWu.css"><link rel="stylesheet" href="/_astro/quickstart.CF1_X_U4.css"></head> <body class="overflow-x-hidden" data-pagefind-filter="section:codex" data-has-context-subnav="true" data-docs-page="quickstart"> <div class="agent-docs-directive astro-e454tk5z" data-agent-docs-directive>
+For the complete documentation index, see <a href="/llms.txt" tabindex="-1" class="astro-e454tk5z">llms.txt</a>. Markdown versions of documentation pages are available by appending
+<code class="astro-e454tk5z">.md</code> to the page URL.
+</div> <script type="module" src="/_astro/Header.astro_astro_type_script_index_0_lang.TAOik6Em.js"></script> <header id="header" class="fixed top-0 w-full h-16 z-50 bg-white dark:bg-black border-b border-primary-surface astro-3ef6ksr2"> <div class="flex items-center h-full px-4 md:px-8 lg:grid lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:gap-6 astro-3ef6ksr2"> <!-- Logo --> <a href="/" class="flex items-center font-semibold ml-0 lg:-ml-2 lg:justify-self-start astro-3ef6ksr2"> <img src="/OpenAI_Developers.svg" alt="OpenAI Developers" class="h-6 w-48 md:h-6 dark:invert astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> <span class="flex items-center text-default astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs">  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" viewBox="0 0 100 100" class="h-6 w-6 astro-3ef6ksr2 " aria-hidden="true" ><path color="currentColor" d="M38.355 36.52v-9.415c0-.793.297-1.388.99-1.784l18.93-10.902c2.578-1.486 5.65-2.18 8.82-2.18 11.894 0 19.426 9.218 19.426 19.029 0 .694 0 1.486-.1 2.28L66.799 22.05c-1.189-.694-2.379-.694-3.568 0L38.355 36.52Zm44.202 36.67V50.694c0-1.388-.596-2.38-1.785-3.073L55.897 33.15l8.126-4.658c.694-.396 1.289-.396 1.982 0l18.93 10.902c5.452 3.172 9.118 9.91 9.118 16.452 0 7.531-4.46 14.47-11.496 17.344Zm-50.05-19.82-8.127-4.757c-.693-.396-.99-.99-.99-1.784V25.025c0-10.605 8.126-18.633 19.127-18.633 4.163 0 8.028 1.388 11.3 3.865l-19.525 11.3c-1.189.693-1.784 1.684-1.784 3.072v28.74ZM50 63.478l-11.645-6.541V43.062L50 36.522l11.645 6.54v13.875L50 63.477Zm7.483 30.129c-4.163 0-8.028-1.388-11.3-3.865l19.525-11.3c1.189-.693 1.784-1.684 1.784-3.071V46.629l8.226 4.757c.694.396.991.991.991 1.784v21.803c0 10.605-8.226 18.633-19.226 18.633v.001Zm-23.49-22.101-18.93-10.902c-5.45-3.172-9.117-9.91-9.117-16.451 0-7.632 4.559-14.47 11.595-17.344v22.596c0 1.388.595 2.379 1.784 3.072l24.777 14.37-8.126 4.659c-.694.396-1.289.396-1.982 0ZM32.905 87.76c-11.2 0-19.425-8.425-19.425-18.83 0-.794.1-1.587.198-2.38L33.2 77.85c1.189.693 2.379.693 3.568 0l24.876-14.37v9.415c0 .793-.298 1.388-.992 1.784L41.724 85.58c-2.576 1.486-5.649 2.18-8.82 2.18h.001Zm24.579 11.793c11.992 0 22.001-8.523 24.281-19.822C92.864 76.857 100 66.451 100 55.846c0-6.937-2.973-13.676-8.325-18.533.496-2.081.793-4.163.793-6.243 0-14.172-11.496-24.777-24.777-24.777-2.676 0-5.253.396-7.83 1.288C55.401 3.221 49.257.445 42.517.445c-11.992 0-22.001 8.523-24.281 19.822C7.136 23.14 0 33.547 0 44.152c0 6.938 2.973 13.676 8.325 18.533-.496 2.081-.793 4.163-.793 6.243 0 14.172 11.497 24.778 24.777 24.778 2.676 0 5.253-.397 7.83-1.289 4.459 4.36 10.604 7.136 17.344 7.136Z"></path></svg> <span class="sr-only astro-3ef6ksr2">ChatGPT</span>  </span> </a> <!-- Links --> <nav class="hidden lg:flex items-center justify-center gap-1 astro-3ef6ksr2"> <div class="relative group astro-3ef6ksr2"> <a href="/" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2"> Home  </a>  </div><div class="relative group astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> <a href="/api/docs" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2"> API  </a>  </div><div class="relative group astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> <a href="https://learn.chatgpt.com/docs" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2" aria-haspopup="menu"> Codex <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-tertiary astro-3ef6ksr2 " ><path d="M11.2929 16.2929C11.6834 16.6834 12.3166 16.6834 12.7071 16.2929L18.7071 10.2929C19.0976 9.90237 19.0976 9.26921 18.7071 8.87868C18.3166 8.48816 17.6834 8.48816 17.2929 8.87868L12 14.1716L6.70711 8.87868C6.31658 8.48816 5.68342 8.48816 5.29289 8.87868C4.90237 9.26921 4.90237 9.90237 5.29289 10.2929L11.2929 16.2929Z" fill="currentColor"></path></svg> </a> <div class="invisible opacity-0 absolute left-0 top-full z-50 mt-2 min-w-full w-max transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-has-focus-visible:visible group-has-focus-visible:opacity-100 before:content-[''] before:absolute before:-top-2 before:left-0 before:right-0 before:h-2 astro-3ef6ksr2" role="menu"> <div class="overflow-hidden rounded-md border border-primary-surface bg-surface shadow-md ring-1 ring-black/5 dark:ring-white/10 astro-3ef6ksr2"> <div class="astro-3ef6ksr2"> <a role="menuitem" href="https://learn.chatgpt.com/docs" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Docs</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Guides, concepts, and product docs for Codex </div> </div> </a><a role="menuitem" href="https://learn.chatgpt.com/use-cases" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Use cases</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Example workflows and tasks teams can take on with ChatGPT or Codex </div> </div> </a> </div> </div> </div> </div><div class="relative group astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs"> <a href="/codex" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-default bg-primary-soft astro-3ef6ksr2"> Docs  </a>  </div><div class="relative group astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs"> <a href="/codex/use-cases" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2"> Use cases  </a>  </div><div class="relative group astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs"> <a href="/codex/resources" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2"> Resources  </a>  </div><div class="relative group astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> <a href="/chatgpt" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2" aria-haspopup="menu"> ChatGPT <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-tertiary astro-3ef6ksr2 " ><path d="M11.2929 16.2929C11.6834 16.6834 12.3166 16.6834 12.7071 16.2929L18.7071 10.2929C19.0976 9.90237 19.0976 9.26921 18.7071 8.87868C18.3166 8.48816 17.6834 8.48816 17.2929 8.87868L12 14.1716L6.70711 8.87868C6.31658 8.48816 5.68342 8.48816 5.29289 8.87868C4.90237 9.26921 4.90237 9.90237 5.29289 10.2929L11.2929 16.2929Z" fill="currentColor"></path></svg> </a> <div class="invisible opacity-0 absolute left-0 top-full z-50 mt-2 min-w-full w-max transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-has-focus-visible:visible group-has-focus-visible:opacity-100 before:content-[''] before:absolute before:-top-2 before:left-0 before:right-0 before:h-2 astro-3ef6ksr2" role="menu"> <div class="overflow-hidden rounded-md border border-primary-surface bg-surface shadow-md ring-1 ring-black/5 dark:ring-white/10 astro-3ef6ksr2"> <div class="astro-3ef6ksr2"> <a role="menuitem" href="/plugins" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Plugins</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Extend ChatGPT and Codex </div> </div> </a><a role="menuitem" href="/workspace-agents" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Workspace Agents</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Trigger published ChatGPT workspace agents </div> </div> </a><a role="menuitem" href="/commerce" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Commerce</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Build commerce flows in ChatGPT </div> </div> </a><a role="menuitem" href="/ads" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Ads</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Publish and measure ads in ChatGPT </div> </div> </a> </div> </div> </div> </div><div class="relative group astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> <a href="/learn" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2" aria-haspopup="menu"> Resources <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-tertiary astro-3ef6ksr2 " ><path d="M11.2929 16.2929C11.6834 16.6834 12.3166 16.6834 12.7071 16.2929L18.7071 10.2929C19.0976 9.90237 19.0976 9.26921 18.7071 8.87868C18.3166 8.48816 17.6834 8.48816 17.2929 8.87868L12 14.1716L6.70711 8.87868C6.31658 8.48816 5.68342 8.48816 5.29289 8.87868C4.90237 9.26921 4.90237 9.90237 5.29289 10.2929L11.2929 16.2929Z" fill="currentColor"></path></svg> </a> <div class="invisible opacity-0 absolute left-0 top-full z-50 mt-2 min-w-full w-max transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-has-focus-visible:visible group-has-focus-visible:opacity-100 before:content-[''] before:absolute before:-top-2 before:left-0 before:right-0 before:h-2 astro-3ef6ksr2" role="menu"> <div class="overflow-hidden rounded-md border border-primary-surface bg-surface shadow-md ring-1 ring-black/5 dark:ring-white/10 astro-3ef6ksr2"> <div class="astro-3ef6ksr2"> <a role="menuitem" href="/showcase" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Showcase</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Demo apps to get inspired </div> </div> </a><a role="menuitem" href="/blog" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Blog</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Learnings and experiences from developers </div> </div> </a><a role="menuitem" href="/cookbook" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Cookbook</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Notebook examples for building with OpenAI models </div> </div> </a><a role="menuitem" href="/learn" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Learn</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Docs, videos, and demo apps for building with OpenAI </div> </div> </a><a role="menuitem" href="/community" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Community</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Programs, meetups, and support for builders </div> </div> </a> </div> </div> </div> </div>  </nav> <!-- Theme Toggle, Mobile Menu --> <div class="ml-auto flex items-center gap-4 lg:gap-5 lg:ml-0 lg:justify-end lg:justify-self-end astro-3ef6ksr2"> <button type="button" data-header-search-button aria-controls="header-search-overlay" aria-expanded="false" class="hidden min-w-52 items-center justify-between gap-3 rounded-full border border-primary-surface bg-surface px-4 py-2 text-sm text-secondary transition-colors hover:bg-primary-soft-alpha hover:text-default xl:flex astro-3ef6ksr2"> <span class="truncate astro-3ef6ksr2">Start searching</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 astro-3ef6ksr2 " ><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> </button> <div class="hidden lg:flex astro-3ef6ksr2"> <div data-site-visibility-exclude="chatgpt-docs" class="astro-3ef6ksr2"> <div class="flex items-center gap-2"><a target="_blank" rel="noopener noreferrer" href="https://platform.openai.com/login" class="_Button_6dmow_1 not-prose !h-9 !w-9 justify-center !px-0 min-[1000px]:!w-auto min-[1000px]:!px-4" data-color="primary" data-variant="solid" data-pill="" data-size="md"><span class="_ButtonInner_6dmow_4"><span class="sr-only min-[1000px]:not-sr-only">API Dashboard</span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" data-external-link-indicator="persistent" class="shrink-0"><path fill-rule="evenodd" d="M16.243 6.757a1 1 0 0 1 1 1v7.072a1 1 0 0 1-2 0v-4.657L8.464 16.95a1 1 0 0 1-1.414-1.414l6.778-6.779H9.172a1 1 0 0 1 0-2h7.07Z" clip-rule="evenodd"></path></svg></span></a></div> </div><div data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <div class="flex items-center gap-2"><a target="_blank" rel="noopener noreferrer" href="https://chatgpt.com/" class="_Button_6dmow_1 not-prose  !w-9 justify-center !px-0 min-[1000px]:!w-auto min-[1000px]:!px-4" data-color="primary" data-variant="solid" data-pill="" data-size="lg"><span class="_ButtonInner_6dmow_4"><span class="sr-only min-[1000px]:not-sr-only">Try ChatGPT</span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" data-external-link-indicator="persistent" class="shrink-0"><path fill-rule="evenodd" d="M16.243 6.757a1 1 0 0 1 1 1v7.072a1 1 0 0 1-2 0v-4.657L8.464 16.95a1 1 0 0 1-1.414-1.414l6.778-6.779H9.172a1 1 0 0 1 0-2h7.07Z" clip-rule="evenodd"></path></svg></span></a></div> </div> </div> <button id="header-theme-button" aria-label="Toggle light and dark theme" class="hidden lg:flex text-secondary hover:text-default transition-colors astro-3ef6ksr2"> <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="block dark:hidden w-4 h-4 astro-3ef6ksr2 " ><path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C11.5523 0 12 0.447715 12 1V3C12 3.55228 11.5523 4 11 4C10.4477 4 10 3.55228 10 3V1C10 0.447715 10.4477 0 11 0ZM3.22183 3.22183C3.61235 2.8313 4.24551 2.8313 4.63604 3.22183L6.05025 4.63604C6.44078 5.02656 6.44078 5.65973 6.05025 6.05025C5.65973 6.44078 5.02656 6.44078 4.63604 6.05025L3.22183 4.63604C2.8313 4.24551 2.8313 3.61235 3.22183 3.22183ZM18.7782 3.22183C19.1687 3.61235 19.1687 4.24551 18.7782 4.63604L17.364 6.05025C16.9734 6.44078 16.3403 6.44078 15.9497 6.05025C15.5592 5.65973 15.5592 5.02656 15.9497 4.63604L17.364 3.22183C17.7545 2.8313 18.3876 2.8313 18.7782 3.22183ZM11 8C9.34315 8 8 9.34315 8 11C8 12.6569 9.34315 14 11 14C12.6569 14 14 12.6569 14 11C14 9.34315 12.6569 8 11 8ZM6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11ZM0 11C0 10.4477 0.447715 10 1 10H3C3.55228 10 4 10.4477 4 11C4 11.5523 3.55228 12 3 12H1C0.447715 12 0 11.5523 0 11ZM18 11C18 10.4477 18.4477 10 19 10H21C21.5523 10 22 10.4477 22 11C22 11.5523 21.5523 12 21 12H19C18.4477 12 18 11.5523 18 11ZM6.05025 15.9497C6.44078 16.3403 6.44078 16.9734 6.05025 17.364L4.63604 18.7782C4.24551 19.1687 3.61235 19.1687 3.22183 18.7782C2.8313 18.3876 2.8313 17.7545 3.22183 17.364L4.63604 15.9497C5.02656 15.5592 5.65973 15.5592 6.05025 15.9497ZM15.9497 15.9497C16.3403 15.5592 16.9734 15.5592 17.364 15.9497L18.7782 17.364C19.1687 17.7545 19.1687 18.3876 18.7782 18.7782C18.3877 19.1687 17.7545 19.1687 17.364 18.7782L15.9497 17.364C15.5592 16.9734 15.5592 16.3403 15.9497 15.9497ZM11 18C11.5523 18 12 18.4477 12 19V21C12 21.5523 11.5523 22 11 22C10.4477 22 10 21.5523 10 21V19C10 18.4477 10.4477 18 11 18Z" fill="currentColor"></path></svg> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden dark:block w-4 h-4 astro-3ef6ksr2 " ><path d="M10.7836 0.470481C10.9676 0.765118 10.9855 1.13415 10.8309 1.44525C10.2994 2.51497 10 3.7211 10 5.00001C10 9.41829 13.5817 13 18 13L18.0575 12.9998C18.4049 12.9974 18.7287 13.1754 18.9127 13.47C19.0968 13.7647 19.1147 14.1337 18.9601 14.4448C17.325 17.7352 13.9279 20 10 20C4.47715 20 0 15.5229 0 10C0 4.50107 4.43841 0.038857 9.92838 0.000268937C10.2758 -0.00217271 10.5995 0.175844 10.7836 0.470481ZM8.40989 2.15803C4.75344 2.8954 2 6.12619 2 10C2 14.4183 5.58172 18 10 18C12.587 18 14.8886 16.7721 16.3516 14.8648C11.6131 14.0789 8 9.96139 8 5.00001C8 4.01361 8.1431 3.05953 8.40989 2.15803Z" fill="currentColor"></path></svg> </button> <button type="button" data-header-search-button aria-label="Search the docs" aria-controls="header-search-overlay" aria-expanded="false" class="text-secondary hover:text-default transition-colors md:inline-flex xl:hidden astro-3ef6ksr2"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-secondary hover:text-default transition-colors astro-3ef6ksr2 " ><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> </button> <!-- Mobile Menu Button --> <button id="header-drawer-button" type="button" aria-label="Toggle menu" aria-controls="drawer" aria-expanded="false" class="lg:hidden relative right-1 text-secondary hover:text-default transition-colors astro-3ef6ksr2"> <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-secondary hover:text-default transition-colors astro-3ef6ksr2 " ><path d="M0 1C0 0.447715 0.447715 0 1 0H17C17.5523 0 18 0.447715 18 1C18 1.55228 17.5523 2 17 2H1C0.447715 2 0 1.55228 0 1ZM0 9C0 8.44772 0.447715 8 1 8H11C11.5523 8 12 8.44772 12 9C12 9.55229 11.5523 10 11 10H1C0.447715 10 0 9.55229 0 9Z" fill="currentColor"></path></svg> </button> </div> </div> </header> <div class="fixed inset-x-0 top-16 z-40 hidden h-12 border-b border-primary-surface bg-gray-75 dark:bg-black lg:block astro-s3vzaxny" data-context-subnav data-site-visibility-include="chatgpt-docs"> <nav aria-label="Docs sections" class="flex h-full items-stretch gap-1 overflow-x-auto px-6 whitespace-nowrap lg:justify-center lg:px-8 astro-s3vzaxny"> <a href="/codex" aria-current="true" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-default astro-s3vzaxny"> <span class="px-2.5 py-1 astro-s3vzaxny">Overview</span> <span class="absolute inset-x-2.5 bottom-0 h-0.5 rounded-t bg-primary-solid astro-s3vzaxny" aria-hidden="true"></span> </a><a href="/codex/features" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny"> <span class="px-2.5 py-1 astro-s3vzaxny">Features</span>  </a><a href="/codex/configuration" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny"> <span class="px-2.5 py-1 astro-s3vzaxny">Configuration</span>  </a><a href="/codex/developers" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny"> <span class="px-2.5 py-1 astro-s3vzaxny">Developers</span>  </a><a href="/codex/security-administration" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny"> <span class="px-2.5 py-1 astro-s3vzaxny">Security</span>  </a><a href="/codex/administration" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny"> <span class="px-2.5 py-1 astro-s3vzaxny">Administration</span>  </a><a href="/codex/use-cases" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny" data-site-visibility-exclude="chatgpt-docs"> <span class="px-2.5 py-1 astro-s3vzaxny">Use Cases</span>  </a><a href="/codex/resources" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny" data-site-visibility-exclude="chatgpt-docs"> <span class="px-2.5 py-1 astro-s3vzaxny">Resources</span>  </a> </nav> </div> <div id="header-search-overlay" role="dialog" aria-modal="true" aria-labelledby="header-search-title" aria-hidden="true" data-open="false" class="fixed inset-0 z-[60] hidden items-start justify-center px-4 pt-20 pb-10 md:px-6 md:pt-24 astro-3ef6ksr2"> <div class="absolute inset-0 bg-black/35 backdrop-blur-xs transition-opacity dark:bg-black/70 astro-3ef6ksr2" data-header-search-dismiss></div> <div class="relative z-10 w-full max-w-4xl overflow-hidden rounded-[28px] bg-surface shadow-[0_36px_120px_-48px_rgba(15,23,42,0.55)] ring-1 ring-black/10 dark:ring-white/10 astro-3ef6ksr2" data-header-search-panel> <div data-header-search-body class="p-0 astro-3ef6ksr2"> <h2 id="header-search-title" class="sr-only astro-3ef6ksr2"> Search the docs </h2> <div class="relative flex min-h-0 flex-1 flex-col astro-3ef6ksr2"> <button type="button" data-header-search-close aria-label="Close search" class="absolute right-5 top-7 z-20 inline-flex h-8 w-8 shrink-0 appearance-none items-center justify-center rounded-md border-0 bg-transparent p-0 leading-none text-tertiary shadow-none transition-colors hover:text-default focus-visible:outline-none focus-visible:ring-0 md:right-7 astro-3ef6ksr2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px] shrink-0 astro-3ef6ksr2 " ><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> </button> <astro-island uid="Z38Jfq" prefix="r88" component-url="/_astro/AlgoliaSearch.react.D2swSZ1o.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;id&quot;:[0,&quot;header-site-search&quot;],&quot;className&quot;:[0,&quot;pagefind-header-ui pagefind-desktop-ui oai-site-search-overlay astro-3ef6ksr2&quot;],&quot;query&quot;:[0,&quot;&quot;],&quot;scope&quot;:[0,&quot;codex&quot;],&quot;uiOptions&quot;:[0,{&quot;showImages&quot;:[0,false],&quot;showSubResults&quot;:[0,false],&quot;translations&quot;:[0,{&quot;placeholder&quot;:[0,&quot;Start searching&quot;],&quot;zeroResults&quot;:[0,&quot;No matches yet. Try a different keyword.&quot;]}]}]}" ssr client="load" opts="{&quot;name&quot;:&quot;AlgoliaSearchReact&quot;,&quot;value&quot;:true}" await-children><div id="header-site-search" class="pagefind-header-ui pagefind-desktop-ui oai-site-search-overlay astro-3ef6ksr2 _root_1wztd_1" data-site-search-root="true" data-site-search-provider="algolia" data-site-search-variant="overlay" data-query="" data-scope="codex"><div class="flex h-full min-h-0 flex-col gap-0"><div class="shrink-0 border-b border-primary-surface px-4 py-4 md:px-6 md:py-5"><label class="sr-only" for="header-site-search-input">Search docs</label><input id="header-site-search-input" type="text" placeholder="Start searching" autoComplete="off" spellCheck="false" data-site-search-input="true" class="w-full outline-none transition-colors rounded-none border-0 bg-transparent py-0 pl-0 pr-14 text-[18px] leading-tight text-default placeholder:text-tertiary focus:ring-0 md:text-[18px]" value=""/></div><div class="flex min-h-0 flex-1 flex-col gap-4 px-4 py-4 md:px-6 md:py-5"><div data-site-search-empty-state="true" class="flex flex-col gap-4"><section class="_emptySection_1wztd_68" data-site-search-suggestions="true"><h3 class="_emptyHeading_1wztd_74">Suggested</h3><div class="flex flex-wrap gap-2"><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="responses create">responses create</button><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="reasoning_effort">reasoning_effort</button><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="realtime">realtime</button><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="prompt caching">prompt caching</button></div></section></div></div></div></div><!--astro:end--></astro-island> </div> </div> </div> </div> <div id="drawer" data-default-tab-id="mobile-nav-tab-3" data-default-search-placeholder="Start searching" data-default-search-scope="codex" class="fixed inset-0 z-40 flex flex-col bg-surface transform translate-x-full transition-transform duration-300 lg:hidden astro-3ef6ksr2"> <div class="flex flex-col h-full w-full astro-3ef6ksr2"> <div class="px-6 pt-6 w-full mt-16 astro-3ef6ksr2"> <span id="mobile-nav-primary-label" class="sr-only astro-3ef6ksr2">Primary navigation</span> <div class="flex items-center gap-2 astro-3ef6ksr2"> <nav class="min-w-0 flex-1 flex items-center gap-2 overflow-x-auto pb-2 -mx-1 px-1 astro-3ef6ksr2" role="tablist" aria-labelledby="mobile-nav-primary-label"> <button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-1" data-has-nav="true" data-href="/api/docs" data-label="API" data-search-placeholder="Start searching" data-search-scope="api" data-is-active="false" data-selected="false" aria-selected="false" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> API </button><button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-2" data-has-nav="true" data-href="https://learn.chatgpt.com/docs" data-label="Codex" data-search-placeholder="Start searching" data-search-scope data-is-active="false" data-selected="false" aria-selected="false" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> Codex </button><button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-6" data-has-nav="true" data-href="/chatgpt" data-label="ChatGPT" data-search-placeholder="Start searching" data-search-scope="chatgpt" data-is-active="false" data-selected="false" aria-selected="false" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> ChatGPT </button><button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-3" data-has-nav="true" data-href="/codex" data-label="Docs" data-search-placeholder="Start searching" data-search-scope="codex" data-is-active="true" data-selected="true" aria-selected="true" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs"> Docs </button><button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-4" data-has-nav="true" data-href="/codex/use-cases" data-label="Use cases" data-search-placeholder="Start searching" data-search-scope="codex" data-is-active="false" data-selected="false" aria-selected="false" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs"> Use cases </button><button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-5" data-has-nav="true" data-href="/codex/resources" data-label="Resources" data-search-placeholder="Start searching" data-search-scope="codex" data-is-active="false" data-selected="false" aria-selected="false" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs"> Resources </button><button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-7" data-has-nav="true" data-href="/learn" data-label="Resources" data-search-placeholder="Start searching" data-search-scope="learn" data-is-active="false" data-selected="false" aria-selected="false" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> Resources </button> </nav> <button id="drawer-theme-button" type="button" aria-label="Toggle light and dark theme" class="shrink-0 mb-2 rounded-full border border-primary-surface p-2 text-secondary transition-colors hover:text-default astro-3ef6ksr2"> <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="block dark:hidden w-5 h-5 astro-3ef6ksr2 " ><path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C11.5523 0 12 0.447715 12 1V3C12 3.55228 11.5523 4 11 4C10.4477 4 10 3.55228 10 3V1C10 0.447715 10.4477 0 11 0ZM3.22183 3.22183C3.61235 2.8313 4.24551 2.8313 4.63604 3.22183L6.05025 4.63604C6.44078 5.02656 6.44078 5.65973 6.05025 6.05025C5.65973 6.44078 5.02656 6.44078 4.63604 6.05025L3.22183 4.63604C2.8313 4.24551 2.8313 3.61235 3.22183 3.22183ZM18.7782 3.22183C19.1687 3.61235 19.1687 4.24551 18.7782 4.63604L17.364 6.05025C16.9734 6.44078 16.3403 6.44078 15.9497 6.05025C15.5592 5.65973 15.5592 5.02656 15.9497 4.63604L17.364 3.22183C17.7545 2.8313 18.3876 2.8313 18.7782 3.22183ZM11 8C9.34315 8 8 9.34315 8 11C8 12.6569 9.34315 14 11 14C12.6569 14 14 12.6569 14 11C14 9.34315 12.6569 8 11 8ZM6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11ZM0 11C0 10.4477 0.447715 10 1 10H3C3.55228 10 4 10.4477 4 11C4 11.5523 3.55228 12 3 12H1C0.447715 12 0 11.5523 0 11ZM18 11C18 10.4477 18.4477 10 19 10H21C21.5523 10 22 10.4477 22 11C22 11.5523 21.5523 12 21 12H19C18.4477 12 18 11.5523 18 11ZM6.05025 15.9497C6.44078 16.3403 6.44078 16.9734 6.05025 17.364L4.63604 18.7782C4.24551 19.1687 3.61235 19.1687 3.22183 18.7782C2.8313 18.3876 2.8313 17.7545 3.22183 17.364L4.63604 15.9497C5.02656 15.5592 5.65973 15.5592 6.05025 15.9497ZM15.9497 15.9497C16.3403 15.5592 16.9734 15.5592 17.364 15.9497L18.7782 17.364C19.1687 17.7545 19.1687 18.3876 18.7782 18.7782C18.3877 19.1687 17.7545 19.1687 17.364 18.7782L15.9497 17.364C15.5592 16.9734 15.5592 16.3403 15.9497 15.9497ZM11 18C11.5523 18 12 18.4477 12 19V21C12 21.5523 11.5523 22 11 22C10.4477 22 10 21.5523 10 21V19C10 18.4477 10.4477 18 11 18Z" fill="currentColor"></path></svg> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden dark:block w-5 h-5 astro-3ef6ksr2 " ><path d="M10.7836 0.470481C10.9676 0.765118 10.9855 1.13415 10.8309 1.44525C10.2994 2.51497 10 3.7211 10 5.00001C10 9.41829 13.5817 13 18 13L18.0575 12.9998C18.4049 12.9974 18.7287 13.1754 18.9127 13.47C19.0968 13.7647 19.1147 14.1337 18.9601 14.4448C17.325 17.7352 13.9279 20 10 20C4.47715 20 0 15.5229 0 10C0 4.50107 4.43841 0.038857 9.92838 0.000268937C10.2758 -0.00217271 10.5995 0.175844 10.7836 0.470481ZM8.40989 2.15803C4.75344 2.8954 2 6.12619 2 10C2 14.4183 5.58172 18 10 18C12.587 18 14.8886 16.7721 16.3516 14.8648C11.6131 14.0789 8 9.96139 8 5.00001C8 4.01361 8.1431 3.05953 8.40989 2.15803Z" fill="currentColor"></path></svg> </button> </div> </div> <div class="flex-1 w-full overflow-y-auto px-6 py-4 flex flex-col gap-6 astro-3ef6ksr2" data-mobile-nav-panels> <div data-mobile-search class="astro-3ef6ksr2"> <astro-island uid="2kSym0" prefix="r89" component-url="/_astro/AlgoliaSearch.react.D2swSZ1o.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;id&quot;:[0,&quot;header-mobile-search&quot;],&quot;className&quot;:[0,&quot;pagefind-header-ui pagefind-mobile-ui astro-3ef6ksr2&quot;],&quot;query&quot;:[0,&quot;&quot;],&quot;scope&quot;:[0,&quot;codex&quot;],&quot;uiOptions&quot;:[0,{&quot;showImages&quot;:[0,false],&quot;showSubResults&quot;:[0,false],&quot;translations&quot;:[0,{&quot;placeholder&quot;:[0,&quot;Start searching&quot;],&quot;zeroResults&quot;:[0,&quot;No matches yet. Try a different keyword.&quot;]}]}]}" ssr client="load" opts="{&quot;name&quot;:&quot;AlgoliaSearchReact&quot;,&quot;value&quot;:true}" await-children><div id="header-mobile-search" class="pagefind-header-ui pagefind-mobile-ui astro-3ef6ksr2 _root_1wztd_1" data-site-search-root="true" data-site-search-provider="algolia" data-site-search-variant="default" data-query="" data-scope="codex"><div class="flex h-full min-h-0 flex-col gap-4"><div class=""><label class="sr-only" for="header-mobile-search-input">Search docs</label><input id="header-mobile-search-input" type="text" placeholder="Start searching" autoComplete="off" spellCheck="false" data-site-search-input="true" class="w-full outline-none transition-colors rounded-[18px] border border-transparent bg-primary-soft-alpha py-4 pl-6 pr-14 text-[18px] leading-tight text-default placeholder:text-tertiary focus:border-transparent focus:ring-0" value=""/></div><div class="flex min-h-0 flex-1 flex-col gap-4"><div data-site-search-empty-state="true" class="flex flex-col gap-4"><section class="_emptySection_1wztd_68" data-site-search-suggestions="true"><h3 class="_emptyHeading_1wztd_74">Suggested</h3><div class="flex flex-wrap gap-2"><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="responses create">responses create</button><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="reasoning_effort">reasoning_effort</button><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="realtime">realtime</button><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="prompt caching">prompt caching</button></div></section></div></div></div></div><!--astro:end--></astro-island> </div> <div id="mobile-nav-panel-1" data-mobile-nav-content data-tab-id="mobile-nav-tab-1" data-href="/api/docs" data-default-variant-id="mobile-nav-tab-1-variant-0" hidden class="flex flex-col gap-4 pb-8 astro-3ef6ksr2"> <script>(()=>{var n=(a,t)=>{let i=async()=>{await(await a())()};if(t.value){let e=matchMedia(t.value);e.matches?i():e.addEventListener("change",i,{once:!0})}};(self.Astro||(self.Astro={})).media=n;window.dispatchEvent(new Event("astro:media"));})();</script> <div class="group flex flex-col gap-1 astro-3ef6ksr2" data-mobile-context-options data-context-active="false" data-site-visibility-exclude="chatgpt-docs"> <button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-0" data-context-label="Overview" data-context-href="/api/docs" data-context-is-home="true" data-selected="true"> Overview </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-1" data-context-label="Models" data-context-href="/api/docs/models" data-context-is-home="false" data-selected="false"> Models </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-2" data-context-label="Agents" data-context-href="/api/docs/guides/agents" data-context-is-home="false" data-selected="false"> Agents </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-3" data-context-label="Tools" data-context-href="/api/docs/guides/tools" data-context-is-home="false" data-selected="false"> Tools </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-4" data-context-label="Voice &#38; Audio" data-context-href="/api/docs/guides/realtime" data-context-is-home="false" data-selected="false"> Voice &amp; Audio </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-5" data-context-label="Production" data-context-href="/api/docs/guides/production-best-practices" data-context-is-home="false" data-selected="false"> Production </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-6" data-context-label="API reference" data-context-href="/api/reference/overview" data-context-is-home="false" data-selected="false"> API reference </button> </div> <div id="mobile-nav-tab-1-context-select" data-mobile-context-select data-value="mobile-nav-tab-1-variant-0" data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <astro-island uid="Z1I8BNk" prefix="r78" component-url="/_astro/MobileContextDropdown.react.CzopcHpz.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;rootId&quot;:[0,&quot;mobile-nav-tab-1-context-select&quot;],&quot;initialValue&quot;:[0,&quot;mobile-nav-tab-1-variant-0&quot;],&quot;options&quot;:[1,[[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-0&quot;],&quot;label&quot;:[0,&quot;Overview&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-1&quot;],&quot;label&quot;:[0,&quot;Models&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-2&quot;],&quot;label&quot;:[0,&quot;Agents&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-3&quot;],&quot;label&quot;:[0,&quot;Tools&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-4&quot;],&quot;label&quot;:[0,&quot;Voice &amp; Audio&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-5&quot;],&quot;label&quot;:[0,&quot;Production&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-6&quot;],&quot;label&quot;:[0,&quot;API reference&quot;]}]]]}" ssr client="media" opts="{&quot;name&quot;:&quot;MobileContextDropdown&quot;,&quot;value&quot;:&quot;(max-width: 63.999rem)&quot;}" await-children><div class="flex min-w-0"><div class="relative max-w-full w-full"><select aria-label="Docs section" class="_NativeSelect_10bwq_299" data-native-selectcontrol=""><option value="mobile-nav-tab-1-variant-0" selected="">Overview</option><option value="mobile-nav-tab-1-variant-1">Models</option><option value="mobile-nav-tab-1-variant-2">Agents</option><option value="mobile-nav-tab-1-variant-3">Tools</option><option value="mobile-nav-tab-1-variant-4">Voice &amp; Audio</option><option value="mobile-nav-tab-1-variant-5">Production</option><option value="mobile-nav-tab-1-variant-6">API reference</option></select><span class="_SelectControl_x887o_1" role="button" tabindex="-1" data-variant="outline" data-block="" data-size="3xl" data-selected="true" aria-disabled="false" id="select-trigger-_r78R_0_" aria-labelledby="_r78R_5H1_ _r78R_5_" aria-hidden="true"><span class="_TriggerText_x887o_510"><span id="_r78R_5H1_" class="sr-only w-full h-0 left-0 bottom-0 pointer-events-none">Docs section</span><span id="_r78R_5_">Overview</span></span><div class="_IndicatorWrapper_x887o_520"><svg width="1em" height="1em" viewBox="0 0 16 9" fill="currentColor" class="_DropdownIcon_x887o_475 _DropdownIconChevron_x887o_586"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292894C14.6834 -0.0976305 15.3166 -0.0976304 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"></path></svg></div></span></div></div><!--astro:end--></astro-island> </div>  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Get started </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/quickstart" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li><li> <a href="/api/docs/guides/latest-model" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Using GPT-5.6   </a> </li><li> <a href="/api/docs/concepts" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Key concepts   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Core concepts </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/migrate-to-responses" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Responses API   </a> </li><li> <a href="/api/docs/guides/conversation-state" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Conversation state   </a> </li><li> <a href="/api/docs/guides/background" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Background mode   </a> </li><li> <a href="/api/docs/guides/streaming-responses" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Streaming   </a> </li><li> <a href="/api/docs/guides/websocket-mode" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> WebSocket mode   </a> </li><li> <a href="/api/docs/guides/responses-multi-agent" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Multi-agent   </a> </li><li> <a href="/api/docs/guides/webhooks" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Webhooks   </a> </li><li> <a href="/api/docs/guides/file-inputs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> File inputs   </a> </li><li> <a href="/api/docs/guides/compaction" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Compaction   </a> </li><li> <a href="/api/docs/guides/token-counting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Counting tokens   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> SDKs and CLI </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/libraries" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> OpenAI SDK   </a> </li><li> <a href="/api/docs/libraries/openai-cli" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> OpenAI CLI   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Resources </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/changelog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Changelog   </a> </li><li> <a href="/api/docs/deprecations" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Deprecations   </a> </li><li> <a href="/api/docs/supported-countries" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Supported countries   </a> </li><li> <a href="/api/docs/bots" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> OpenAI Crawlers   </a> </li><li> <a href="https://openai.com/policies" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Terms and policies  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Legacy APIs </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Agent Builder</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/agent-builder" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/api/docs/guides/agent-builder/migrate-from-agent-builder" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Migration guide   </a> </li><li> <a href="/api/docs/guides/node-reference" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Node reference   </a> </li><li> <a href="/api/docs/guides/agent-builder-safety" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Safety in building agents   </a> </li> </ul> </details> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Evals</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/evaluation-getting-started" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Getting started   </a> </li><li> <a href="/api/docs/guides/evals" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Working with evals   </a> </li><li> <a href="/api/docs/guides/prompt-optimizer" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prompt optimizer   </a> </li><li> <a href="/api/docs/guides/external-models" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> External models   </a> </li><li> <a href="/api/docs/guides/evaluation-best-practices" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Best practices   </a> </li><li> <a href="/api/docs/guides/graders" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Graders   </a> </li> </ul> </details> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Fine-tuning</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/model-optimization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Optimization cycle   </a> </li><li> <a href="/api/docs/guides/supervised-fine-tuning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Supervised fine-tuning   </a> </li><li> <a href="/api/docs/guides/vision-fine-tuning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Vision fine-tuning   </a> </li><li> <a href="/api/docs/guides/direct-preference-optimization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Direct preference optimization   </a> </li><li> <a href="/api/docs/guides/reinforcement-fine-tuning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Reinforcement fine-tuning   </a> </li><li> <a href="/api/docs/guides/rft-use-cases" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> RFT use cases   </a> </li><li> <a href="/api/docs/guides/fine-tuning-best-practices" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Best practices   </a> </li> </ul> </details> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Assistants API</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/assistants/migration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Migration guide   </a> </li><li> <a href="/api/docs/assistants/deep-dive" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Deep dive   </a> </li><li> <a href="/api/docs/assistants/tools" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Tools   </a> </li> </ul> </details> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-1" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/models" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Model catalog   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Choose a model </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/pricing" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Pricing   </a> </li><li> <a href="/api/docs/guides/model-selection" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Model selection   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Text and code </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/text" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Text generation   </a> </li><li> <a href="/api/docs/guides/code-generation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Code generation   </a> </li><li> <a href="/api/docs/guides/structured-outputs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Structured output   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Prompting </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/prompting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/api/docs/guides/prompt-engineering" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prompt engineering   </a> </li><li> <a href="/api/docs/guides/citation-formatting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Citation formatting   </a> </li><li> <a href="/api/docs/guides/prompting/migrate-from-prompt-object" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Migration guide   </a> </li><li> <a href="/api/docs/guides/prompt-generation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prompt generation   </a> </li><li> <a href="/api/docs/guides/frontend-prompt" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Frontend prompting   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Reasoning </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/reasoning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Reasoning models   </a> </li><li> <a href="/api/docs/guides/reasoning-best-practices" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Reasoning best practices   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Images and video </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <a href="/api/docs/guides/images-vision" class="flex-1 " data-mobile-nav-link> Images and vision  </a> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/image-cost-calculator" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image input cost calculator   </a> </li> </ul> </details> </li><li> <a href="/api/docs/guides/image-generation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image generation   </a> </li><li> <a href="/api/docs/guides/video-generation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Video generation   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Realtime and audio </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/audio" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Audio and speech   </a> </li><li> <a href="/api/docs/guides/realtime" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/api/docs/guides/voice-agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Voice agents   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Specialized models </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/deep-research" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Deep research   </a> </li><li> <a href="/api/docs/guides/embeddings" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Embeddings   </a> </li><li> <a href="/api/docs/guides/moderation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Moderation   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-2" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Agents SDK </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/agents/quickstart" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li><li> <a href="/api/docs/guides/agents/define-agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Agent definitions   </a> </li><li> <a href="/api/docs/guides/agents/models" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Models and providers   </a> </li><li> <a href="/api/docs/guides/agents/running-agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Running agents   </a> </li><li> <a href="/api/docs/guides/agents/sandboxes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Sandbox agents   </a> </li><li> <a href="/api/docs/guides/agents/orchestration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Orchestration   </a> </li><li> <a href="/api/docs/guides/agents/guardrails-approvals" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Guardrails   </a> </li><li> <a href="/api/docs/guides/agents/results" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Results and state   </a> </li><li> <a href="/api/docs/guides/agents/integrations-observability" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Integrations and observability   </a> </li><li> <a href="/api/docs/guides/agent-evals" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Evaluate agent workflows   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> ChatKit </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/chatkit" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/api/docs/guides/chatkit-themes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Customize   </a> </li><li> <a href="/api/docs/guides/chatkit-widgets" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Widgets   </a> </li><li> <a href="/api/docs/guides/chatkit-actions" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Actions   </a> </li><li> <a href="/api/docs/guides/custom-chatkit" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Advanced integrations   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-3" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/tools" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/api/docs/guides/function-calling" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Function calling   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Search and retrieval </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/tools-web-search" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Web search   </a> </li><li> <a href="/api/docs/guides/tools-file-search" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> File search   </a> </li><li> <a href="/api/docs/guides/retrieval" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Retrieval   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Connect tools and data </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/tools-connectors-mcp" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> MCP and Connectors   </a> </li><li> <a href="/api/docs/guides/secure-mcp-tunnels" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Secure MCP Tunnel   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Build tool workflows </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/tools-skills" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Skills   </a> </li><li> <a href="/api/docs/guides/tools-tool-search" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Tool search   </a> </li><li> <a href="/api/docs/guides/tools-programmatic-tool-calling" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Programmatic tool calling   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Computer and code </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/tools-shell" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Shell   </a> </li><li> <a href="/api/docs/guides/tools-computer-use" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Computer use   </a> </li><li> <a href="/api/docs/guides/tools-apply-patch" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Apply Patch   </a> </li><li> <a href="/api/docs/guides/tools-local-shell" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Local shell   </a> </li><li> <a href="/api/docs/guides/tools-code-interpreter" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Code interpreter   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Media </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/tools-image-generation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image generation   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-4" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/realtime" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Get started </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/voice-agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Voice agents   </a> </li><li> <a href="/api/docs/guides/realtime-translation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Live translation   </a> </li><li> <a href="/api/docs/guides/realtime-models-prompting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Realtime prompting guide   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Audio </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/audio" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Audio and speech   </a> </li><li> <a href="/api/docs/guides/transcription" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Transcription   </a> </li><li> <a href="/api/docs/guides/speech-to-text" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> File transcription   </a> </li><li> <a href="/api/docs/guides/realtime-transcription" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Realtime transcription   </a> </li><li> <a href="/api/docs/guides/text-to-speech" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Speech generation   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Connection methods </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/realtime-webrtc" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> WebRTC   </a> </li><li> <a href="/api/docs/guides/realtime-websocket" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> WebSocket   </a> </li><li> <a href="/api/docs/guides/realtime-sip" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> SIP   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Sessions and operations </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/realtime-conversations" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Managing conversations   </a> </li><li> <a href="/api/docs/guides/realtime-vad" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Voice activity detection   </a> </li><li> <a href="/api/docs/guides/realtime-mcp" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Realtime with tools   </a> </li><li> <a href="/api/docs/guides/realtime-server-controls" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Webhooks and server-side controls   </a> </li><li> <a href="/api/docs/guides/realtime-costs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Managing costs   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-5" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Go live </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/production-best-practices" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Production best practices   </a> </li><li> <a href="/api/docs/guides/deployment-checklist" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Deployment checklist   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Performance and quality </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/latency-optimization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Latency optimization   </a> </li><li> <a href="/api/docs/guides/predicted-outputs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Predicted Outputs   </a> </li><li> <a href="/api/docs/guides/fast-mode" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Fast mode   </a> </li><li> <a href="/api/docs/guides/optimizing-llm-accuracy" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Accuracy optimization   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Cost and throughput </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/cost-optimization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Cost optimization   </a> </li><li> <a href="/api/docs/guides/prompt-caching" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prompt caching   </a> </li><li> <a href="/api/docs/guides/batch" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Batch   </a> </li><li> <a href="/api/docs/guides/flex-processing" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Flex processing   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Safety and governance </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/safety-best-practices" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Safety best practices   </a> </li><li> <a href="/api/docs/guides/red-teaming" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Red teaming   </a> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <a href="/api/docs/guides/safety-checks" class="flex-1 " data-mobile-nav-link> Safety checks  </a> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/safety-checks/cybersecurity" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Cybersecurity checks   </a> </li><li> <a href="/api/docs/guides/safety-checks/under-18-api-guidance" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Under 18 API Guidance   </a> </li> </ul> </details> </li><li> <a href="/api/docs/guides/csam-guidance" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> CSAM guidance   </a> </li><li> <a href="/api/docs/guides/content-provenance" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Content provenance   </a> </li><li> <a href="/api/docs/guides/your-data" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Your data   </a> </li><li> <a href="/api/docs/guides/rbac" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Permissions   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Infrastructure and access </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <a href="/api/docs/guides/terraform" class="flex-1 " data-mobile-nav-link> Terraform provider  </a> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/terraform" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/api/docs/guides/terraform/projects-and-access" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Projects and access   </a> </li><li> <a href="/api/docs/guides/terraform/service-accounts" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Service accounts   </a> </li><li> <a href="/api/docs/guides/terraform/rate-limits-and-spend" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Rate limits and spend   </a> </li><li> <a href="/api/docs/guides/terraform/project-controls" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Model, tool, and data controls   </a> </li><li> <a href="/api/docs/guides/terraform/import-and-reconcile" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Import and reconciliation   </a> </li> </ul> </details> </li><li> <a href="/api/docs/guides/private-link" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Private Link   </a> </li><li> <a href="/api/docs/guides/ip-allowlist" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> IP allowlist   </a> </li><li> <a href="/api/docs/guides/mutual-tls" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Mutual TLS   </a> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <a href="/api/docs/guides/workload-identity-federation" class="flex-1 " data-mobile-nav-link> Workload identity federation  </a> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/enterprise/workload-identity" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex setup   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/federation-rules" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Federation rules   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/admin-api" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Admin API   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/x509" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> X.509 certificates   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/kubernetes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Kubernetes   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/aws" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> AWS   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/microsoft-azure" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Microsoft Azure   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/google-cloud" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Google Cloud   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/oracle-cloud" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Oracle Cloud Infrastructure   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/github-actions" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GitHub Actions   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/spiffe" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> SPIFFE   </a> </li> </ul> </details> </li><li> <a href="/api/docs/guides/ip-addresses" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> IP egress ranges   </a> </li><li> <a href="/api/docs/guides/amazon-bedrock" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Amazon Bedrock   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Operations </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/rate-limits" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Rate limits   </a> </li><li> <a href="/api/docs/guides/spend-limits" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Spend limits   </a> </li><li> <a href="/api/docs/guides/admin-apis" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Admin APIs   </a> </li><li> <a href="/api/docs/guides/error-codes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Error codes   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-6" hidden class="flex flex-col gap-6 astro-3ef6ksr2">  </div> </div><div id="mobile-nav-panel-2" data-mobile-nav-content data-tab-id="mobile-nav-tab-2" data-href="https://learn.chatgpt.com/docs" data-default-variant-id="mobile-nav-tab-2-variant-0" hidden class="flex flex-col gap-4 pb-8 astro-3ef6ksr2">  <div class="group flex flex-col gap-1 astro-3ef6ksr2" data-mobile-context-options data-context-active="false" data-site-visibility-exclude="chatgpt-docs"> <a href="https://learn.chatgpt.com/docs" target="_blank" rel="noopener noreferrer" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default astro-3ef6ksr2" data-mobile-nav-link> Docs </a><a href="https://learn.chatgpt.com/use-cases" target="_blank" rel="noopener noreferrer" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default astro-3ef6ksr2" data-mobile-nav-link> Use cases </a> </div> <div id="mobile-nav-tab-2-context-select" data-mobile-context-select data-value="mobile-nav-tab-2-variant-0" data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <astro-island uid="1xWppf" prefix="r79" component-url="/_astro/MobileContextDropdown.react.CzopcHpz.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;rootId&quot;:[0,&quot;mobile-nav-tab-2-context-select&quot;],&quot;initialValue&quot;:[0,&quot;mobile-nav-tab-2-variant-0&quot;],&quot;options&quot;:[1,[[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-2-variant-0&quot;],&quot;label&quot;:[0,&quot;Docs&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-2-variant-1&quot;],&quot;label&quot;:[0,&quot;Use cases&quot;]}]]]}" ssr client="media" opts="{&quot;name&quot;:&quot;MobileContextDropdown&quot;,&quot;value&quot;:&quot;(max-width: 63.999rem)&quot;}" await-children><div class="flex min-w-0"><div class="relative max-w-full w-full"><select aria-label="Docs section" class="_NativeSelect_10bwq_299" data-native-selectcontrol=""><option value="mobile-nav-tab-2-variant-0" selected="">Docs</option><option value="mobile-nav-tab-2-variant-1">Use cases</option></select><span class="_SelectControl_x887o_1" role="button" tabindex="-1" data-variant="outline" data-block="" data-size="3xl" data-selected="true" aria-disabled="false" id="select-trigger-_r79R_0_" aria-labelledby="_r79R_5H1_ _r79R_5_" aria-hidden="true"><span class="_TriggerText_x887o_510"><span id="_r79R_5H1_" class="sr-only w-full h-0 left-0 bottom-0 pointer-events-none">Docs section</span><span id="_r79R_5_">Docs</span></span><div class="_IndicatorWrapper_x887o_520"><svg width="1em" height="1em" viewBox="0 0 16 9" fill="currentColor" class="_DropdownIcon_x887o_475 _DropdownIconChevron_x887o_586"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292894C14.6834 -0.0976305 15.3166 -0.0976304 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"></path></svg></div></span></div></div><!--astro:end--></astro-island> </div>  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-2-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2">  </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-2-variant-1" hidden class="flex flex-col gap-6 astro-3ef6ksr2">  </div> </div><div id="mobile-nav-panel-6" data-mobile-nav-content data-tab-id="mobile-nav-tab-6" data-href="/chatgpt" data-default-variant-id="mobile-nav-tab-6-variant-0" hidden class="flex flex-col gap-4 pb-8 astro-3ef6ksr2">  <div class="group flex flex-col gap-1 astro-3ef6ksr2" data-mobile-context-options data-context-active="false" data-site-visibility-exclude="chatgpt-docs"> <button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-6-variant-1" data-context-label="Plugins" data-context-href="/plugins" data-context-is-home="false" data-selected="false"> Plugins </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-6-variant-2" data-context-label="Workspace Agents" data-context-href="/workspace-agents" data-context-is-home="false" data-selected="false"> Workspace Agents </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-6-variant-3" data-context-label="Commerce" data-context-href="/commerce" data-context-is-home="false" data-selected="false"> Commerce </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-6-variant-4" data-context-label="Ads" data-context-href="/ads" data-context-is-home="false" data-selected="false"> Ads </button> </div> <div id="mobile-nav-tab-6-context-select" data-mobile-context-select data-value="mobile-nav-tab-6-variant-0" data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <astro-island uid="1e57It" prefix="r80" component-url="/_astro/MobileContextDropdown.react.CzopcHpz.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;rootId&quot;:[0,&quot;mobile-nav-tab-6-context-select&quot;],&quot;initialValue&quot;:[0,&quot;mobile-nav-tab-6-variant-0&quot;],&quot;options&quot;:[1,[[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-6-variant-1&quot;],&quot;label&quot;:[0,&quot;Plugins&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-6-variant-2&quot;],&quot;label&quot;:[0,&quot;Workspace Agents&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-6-variant-3&quot;],&quot;label&quot;:[0,&quot;Commerce&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-6-variant-4&quot;],&quot;label&quot;:[0,&quot;Ads&quot;]}]]]}" ssr client="media" opts="{&quot;name&quot;:&quot;MobileContextDropdown&quot;,&quot;value&quot;:&quot;(max-width: 63.999rem)&quot;}" await-children><div class="flex min-w-0"><div class="relative max-w-full w-full"><select aria-label="Docs section" class="_NativeSelect_10bwq_299" data-native-selectcontrol=""><option value="mobile-nav-tab-6-variant-1">Plugins</option><option value="mobile-nav-tab-6-variant-2">Workspace Agents</option><option value="mobile-nav-tab-6-variant-3">Commerce</option><option value="mobile-nav-tab-6-variant-4">Ads</option></select><span class="_SelectControl_x887o_1" role="button" tabindex="-1" data-variant="outline" data-block="" data-size="3xl" data-selected="true" aria-disabled="false" id="select-trigger-_r80R_0_" aria-labelledby="_r80R_5H1_ _r80R_5_" aria-hidden="true"><span class="_TriggerText_x887o_510"><span id="_r80R_5H1_" class="sr-only w-full h-0 left-0 bottom-0 pointer-events-none">Docs section</span><span id="_r80R_5_">Select...</span></span><div class="_IndicatorWrapper_x887o_520"><svg width="1em" height="1em" viewBox="0 0 16 9" fill="currentColor" class="_DropdownIcon_x887o_475 _DropdownIconChevron_x887o_586"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292894C14.6834 -0.0976305 15.3166 -0.0976304 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"></path></svg></div></span></div></div><!--astro:end--></astro-island> </div>  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-6-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2">  </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-6-variant-1" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li><li> <a href="/plugins/quickstart" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Core concepts </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/concepts/plugins" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Plugin architecture   </a> </li><li> <a href="/plugins/concepts/skills" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Skills   </a> </li><li> <a href="/plugins/concepts/mcp-server" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> MCP server   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Plan </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/plan/use-case" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Brainstorm use cases   </a> </li><li> <a href="/plugins/plan/tools" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Define tools   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Build </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/build/mcp-server" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Build an MCP server   </a> </li><li> <a href="/plugins/build/chatgpt-ui" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Add UI to your MCP server (optional)   </a> </li><li> <a href="/plugins/build/auth" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Authenticate users   </a> </li><li> <a href="/plugins/build/skills" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Build skills   </a> </li><li> <a href="/plugins/build/plugins" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Package your plugin   </a> </li><li> <a href="/plugins/build/examples" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Examples   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Test and publish </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/deploy/connect-chatgpt" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Connect and test your plugin   </a> </li><li> <a href="/plugins/deploy/submission" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Submit and publish   </a> </li><li> <a href="/plugins/deploy/submission-errors" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Submission error reference   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Conversion specs </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/guides/restaurant-reservation-conversion-spec" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Restaurant reservation spec   </a> </li><li> <a href="/plugins/guides/local-services-request-quote-conversion-spec" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Get Quote spec   </a> </li><li> <a href="/plugins/guides/product-checkout-conversion-spec" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Product checkout spec   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Guides </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/concepts/ui-guidelines" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> UI guidelines   </a> </li><li> <a href="/plugins/guides/optimize-metadata" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Optimize Metadata   </a> </li><li> <a href="/plugins/guides/submit-claude-plugin" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Submit a Claude Code plugin   </a> </li><li> <a href="/plugins/guides/security-privacy" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Security &amp; Privacy   </a> </li><li> <a href="/plugins/deploy/troubleshooting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Troubleshooting   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Resources </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/changelog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Changelog   </a> </li><li> <a href="/plugins/app-guidelines" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Plugin guidelines   </a> </li><li> <a href="/plugins/deploy/app-review" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> MCP server review requirements   </a> </li><li> <a href="/plugins/reference" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Plugin UI reference   </a> </li><li> <a href="/plugins/build/monetization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Checkout API reference   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-6-variant-2" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/workspace-agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Get started </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/workspace-agents/trigger-runs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Trigger workspace agent runs   </a> </li><li> <a href="/workspace-agents/authentication" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Authenticate with Workspace Agent access tokens   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-6-variant-3" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/commerce" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Guides </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/commerce/guides/get-started" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Get started   </a> </li><li> <a href="/commerce/guides/best-practices" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Best practices   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> File Upload </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/commerce/specs/file-upload/overview" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/commerce/specs/file-upload/products" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Products   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> API </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/commerce/specs/api/overview" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/commerce/specs/api/feeds" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Feeds   </a> </li><li> <a href="/commerce/specs/api/products" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Products   </a> </li><li> <a href="/commerce/specs/api/promotions" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Promotions   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-6-variant-4" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/ads" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Ads Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Measurement </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/ads/measurement-pixel" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Measurement Pixel   </a> </li><li> <a href="/ads/multiple-pixels" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Multiple Pixels (Advanced)   </a> </li><li> <a href="/ads/image-tag" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image Tag   </a> </li><li> <a href="/ads/conversions-api" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Conversions API   </a> </li><li> <a href="/ads/supported-events" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Supported Events   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Advertiser API </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/ads/api-overview" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/ads/api-partner-setup" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> API Partner Setup   </a> </li><li> <a href="/ads/api-quickstart" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li><li> <a href="/ads/bulk-api" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Bulk API   </a> </li><li> <a href="/ads/product-feeds" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Product Feeds   </a> </li><li> <a href="/ads/delta-feeds" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Delta Feeds API   </a> </li><li> <a href="/ads/campaign-targeting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Campaign Targeting   </a> </li><li> <a href="/ads/conversion-optimized-campaigns" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Conversion-Optimized Campaigns   </a> </li><li> <a href="/ads/custom-audiences" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Custom Audiences   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> API Reference </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/ads/api-reference/authentication" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Authentication   </a> </li><li> <a href="/ads/api-reference/ad-account" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Ad Account   </a> </li><li> <a href="/ads/api-reference/campaigns" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Campaigns   </a> </li><li> <a href="/ads/api-reference/ad-groups" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Ad Groups   </a> </li><li> <a href="/ads/api-reference/ads" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Ads   </a> </li><li> <a href="/ads/api-reference/insights" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Insights   </a> </li><li> <a href="/ads/api-reference/files" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Files   </a> </li><li> <a href="/ads/api-reference/conversion-setup" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Conversion Setup   </a> </li> </ul> </div> </div> </div><div id="mobile-nav-panel-3" data-mobile-nav-content data-tab-id="mobile-nav-tab-3" data-href="/codex" data-default-variant-id="mobile-nav-tab-3-variant-0" class="flex flex-col gap-4 pb-8 astro-3ef6ksr2">  <div class="group flex flex-col gap-1 astro-3ef6ksr2" data-mobile-context-options data-context-active="false" data-site-visibility-exclude="chatgpt-docs"> <button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-0" data-context-label="Overview" data-context-href="/codex" data-context-is-home="true" data-selected="true"> Overview </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-1" data-context-label="Features" data-context-href="/codex/features" data-context-is-home="false" data-selected="false"> Features </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-2" data-context-label="Configuration" data-context-href="/codex/configuration" data-context-is-home="false" data-selected="false"> Configuration </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-3" data-context-label="Developers" data-context-href="/codex/developers" data-context-is-home="false" data-selected="false"> Developers </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-4" data-context-label="Security" data-context-href="/codex/security-administration" data-context-is-home="false" data-selected="false"> Security </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-5" data-context-label="Administration" data-context-href="/codex/administration" data-context-is-home="false" data-selected="false"> Administration </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-6" data-context-label="Use Cases" data-context-href="/codex/use-cases" data-context-is-home="false" data-selected="false" data-site-visibility-exclude="chatgpt-docs"> Use Cases </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-7" data-context-label="Resources" data-context-href="/codex/resources" data-context-is-home="false" data-selected="false" data-site-visibility-exclude="chatgpt-docs"> Resources </button> </div> <div id="mobile-nav-tab-3-context-select" data-mobile-context-select data-value="mobile-nav-tab-3-variant-0" data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <astro-island uid="1TXojY" prefix="r81" component-url="/_astro/MobileContextDropdown.react.CzopcHpz.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;rootId&quot;:[0,&quot;mobile-nav-tab-3-context-select&quot;],&quot;initialValue&quot;:[0,&quot;mobile-nav-tab-3-variant-0&quot;],&quot;options&quot;:[1,[[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-0&quot;],&quot;label&quot;:[0,&quot;Overview&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-1&quot;],&quot;label&quot;:[0,&quot;Features&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-2&quot;],&quot;label&quot;:[0,&quot;Configuration&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-3&quot;],&quot;label&quot;:[0,&quot;Developers&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-4&quot;],&quot;label&quot;:[0,&quot;Security&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-5&quot;],&quot;label&quot;:[0,&quot;Administration&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-6&quot;],&quot;label&quot;:[0,&quot;Use Cases&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-7&quot;],&quot;label&quot;:[0,&quot;Resources&quot;]}]]]}" ssr client="media" opts="{&quot;name&quot;:&quot;MobileContextDropdown&quot;,&quot;value&quot;:&quot;(max-width: 63.999rem)&quot;}" await-children><div class="flex min-w-0"><div class="relative max-w-full w-full"><select aria-label="Docs section" class="_NativeSelect_10bwq_299" data-native-selectcontrol=""><option value="mobile-nav-tab-3-variant-0" selected="">Overview</option><option value="mobile-nav-tab-3-variant-1">Features</option><option value="mobile-nav-tab-3-variant-2">Configuration</option><option value="mobile-nav-tab-3-variant-3">Developers</option><option value="mobile-nav-tab-3-variant-4">Security</option><option value="mobile-nav-tab-3-variant-5">Administration</option><option value="mobile-nav-tab-3-variant-6">Use Cases</option><option value="mobile-nav-tab-3-variant-7">Resources</option></select><span class="_SelectControl_x887o_1" role="button" tabindex="-1" data-variant="outline" data-block="" data-size="3xl" data-selected="true" aria-disabled="false" id="select-trigger-_r81R_0_" aria-labelledby="_r81R_5H1_ _r81R_5_" aria-hidden="true"><span class="_TriggerText_x887o_510"><span id="_r81R_5H1_" class="sr-only w-full h-0 left-0 bottom-0 pointer-events-none">Docs section</span><span id="_r81R_5_">Overview</span></span><div class="_IndicatorWrapper_x887o_520"><svg width="1em" height="1em" viewBox="0 0 16 9" fill="currentColor" class="_DropdownIcon_x887o_475 _DropdownIconChevron_x887o_586"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292894C14.6834 -0.0976305 15.3166 -0.0976304 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"></path></svg></div></span></div></div><!--astro:end--></astro-island> </div>  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Get started </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/quickstart" class="px-3 py-1.5 rounded-lg transition-colors block text-default bg-primary-ghost-active " data-mobile-nav-link> Quickstart   </a> </li><li> <a href="/codex/use-chatgpt" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Use ChatGPT   </a> </li><li> <a href="/codex/get-started-with-work" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Get started with Work   </a> </li><li> <a href="/codex/import" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Import from another agent   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Foundations </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/prompting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prompting   </a> </li><li> <a href="/codex/personalize" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Personalize ChatGPT   </a> </li><li> <a href="/codex/skills-and-plugins" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Skills &amp; Plugins   </a> </li><li> <a href="/codex/permission-modes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Permissions   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Explore </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/whats-new" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> What&#39;s new   </a> </li><li> <a href="/codex/models" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Models   </a> </li><li> <a href="/codex/pricing" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Pricing   </a> </li><li> <a href="/codex/glossary" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Glossary   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Available on </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/app" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> ChatGPT desktop app   </a> </li><li> <a href="/codex/remote" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Remote   </a> </li><li> <a href="/codex/web" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> ChatGPT on the web   </a> </li><li> <a href="/codex/cli" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex CLI   </a> </li><li> <a href="/codex/ide" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex IDE extension   </a> </li><li> <a href="/codex/cloud" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex cloud   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Releases </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/changelog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Changelog   </a> </li><li> <a href="/codex/feature-maturity" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Feature Maturity   </a> </li><li> <a href="/codex/open-source" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Open Source   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-1" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/features" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Workflows </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/projects" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Projects and chats   </a> </li><li> <a href="/codex/sites" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Sites   </a> </li><li> <a href="/codex/visualizations" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Visualizations   </a> </li><li> <a href="/codex/automations" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Scheduled tasks   </a> </li><li> <a href="/codex/long-running-work" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Long-running work   </a> </li><li> <a href="/codex/notifications" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Notifications   </a> </li><li> <a href="/codex/pets" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Pets   </a> </li><li> <a href="/codex/features/codex-micro" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex Micro   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Capabilities </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/browser" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Browser   </a> </li><li> <a href="/codex/computer-use" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Computer use   </a> </li><li> <a href="/codex/features/voice" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Voice   </a> </li><li> <a href="/codex/plugins" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Plugins   </a> </li><li> <a href="/codex/web-search" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Web search   </a> </li><li> <a href="/codex/image-generation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image generation   </a> </li><li> <a href="/codex/image-inputs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image inputs   </a> </li><li> <a href="/codex/appshots" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Appshots   </a> </li><li> <a href="/codex/chrome-extension" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Browser extension   </a> </li><li> <a href="/codex/artifacts-viewer" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Work with files   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Reference </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/reference/commands" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Commands   </a> </li><li> <a href="/codex/reference/slash-commands" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Slash commands   </a> </li><li> <a href="/codex/reference/settings" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Settings   </a> </li><li> <a href="/codex/reference/troubleshooting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Troubleshooting   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-2" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/configuration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Customization </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/customization/overview" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/codex/customization/memories" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Memories   </a> </li><li> <a href="/codex/customization/computer-history" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Computer History   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Config file </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/config-file/config-basic" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Config Basics   </a> </li><li> <a href="/codex/config-file/config-advanced" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Advanced Config   </a> </li><li> <a href="/codex/config-file/config-reference" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Config Reference   </a> </li><li> <a href="/codex/config-file/environment-variables" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Environment Variables   </a> </li><li> <a href="/codex/config-file/config-sample" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Sample Config   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Agent configuration </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/agent-configuration/agents-md" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> AGENTS.md   </a> </li><li> <a href="/codex/agent-configuration/subagents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Subagents   </a> </li><li> <a href="/codex/agent-configuration/speed" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Speed   </a> </li><li> <a href="/codex/agent-configuration/rules" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Rules   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Extend ChatGPT and Codex </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/extend/record-and-replay" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Record &amp; Replay   </a> </li><li> <a href="/codex/extend/mcp" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> MCP   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Linux </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/linux/linux-app" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Desktop app   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Windows </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/windows/windows-app" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Desktop app   </a> </li><li> <a href="/codex/windows/windows-sandbox" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Windows sandbox   </a> </li><li> <a href="/codex/windows/wsl" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> WSL   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-3" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/developers" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Development workflows </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/code-review" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Code review   </a> </li><li> <a href="/codex/integrated-terminal" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Integrated terminal   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Extend and automate </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/build-skills" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Build skills   </a> </li><li> <a href="/codex/build-plugins" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Build plugins   </a> </li><li> <a href="/codex/webmcp" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Site tools (WebMCP)   </a> </li><li> <a href="/codex/hooks" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Hooks   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Environments </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/environments/modes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Modes   </a> </li><li> <a href="/codex/environments/local-environment" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Local environments   </a> </li><li> <a href="/codex/environments/cloud-environment" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Cloud environment   </a> </li><li> <a href="/codex/environments/git-worktrees" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Git worktrees   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Build with Codex </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/codex-sdk" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex SDK   </a> </li><li> <a href="/codex/app-server" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> App Server   </a> </li><li> <a href="/codex/mcp-server" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> MCP Server   </a> </li><li> <a href="/codex/github-action" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GitHub Action   </a> </li><li> <a href="/codex/non-interactive-mode" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Non-interactive mode   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Third-party integrations </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/third-party/github" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GitHub   </a> </li><li> <a href="/codex/third-party/gitlab" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GitLab (Beta)   </a> </li><li> <a href="/codex/third-party/slack" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Slack   </a> </li><li> <a href="/codex/third-party/linear" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Linear   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Reference </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/cli-customization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> CLI customization   </a> </li><li> <a href="/codex/developer-commands" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Developer commands   </a> </li><li> <a href="/codex/developer-settings" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Developer settings   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-4" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/security-administration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Permissions </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/permissions" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Profiles   </a> </li><li> <a href="/codex/sandboxing" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Sandboxing   </a> </li><li> <a href="/codex/sandboxing/auto-review" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Auto-review   </a> </li><li> <a href="/codex/agent-approvals-security" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Agent approvals &amp; security   </a> </li><li> <a href="/codex/cloud/internet-access" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Internet access   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Codex Security </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/security" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Codex Security plugin</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/security/plugin" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li><li> <a href="/codex/security/plugin/scans" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Run a security scan   </a> </li><li> <a href="/codex/security/plugin/deep-scans" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Run a deep scan   </a> </li><li> <a href="/codex/security/plugin/code-changes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Review code changes   </a> </li><li> <a href="/codex/security/plugin/workbench" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Use the Security workbench   </a> </li><li> <a href="/codex/security/plugin/triage-backlog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Triage a backlog   </a> </li><li> <a href="/codex/security/plugin/fix-findings" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Fix findings   </a> </li><li> <a href="/codex/security/plugin/security-hardening" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Propose security hardening   </a> </li><li> <a href="/codex/security/plugin/vulnerability-reports" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Write vulnerability reports   </a> </li><li> <a href="/codex/security/plugin/export-findings" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Export and track findings   </a> </li><li> <a href="/codex/security/plugin/changelog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Changelog   </a> </li> </ul> </details> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Codex Security CLI</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/security/cli" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li><li> <a href="/codex/security/cli/bulk-scans" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Run bulk scans   </a> </li><li> <a href="/codex/security/cli/ci" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Run scans in CI   </a> </li><li> <a href="/codex/security/cli/ci/gitlab" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GitLab CI/CD   </a> </li><li> <a href="/codex/security/cli/reference" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Reference   </a> </li><li> <a href="/codex/security/cli/faq" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> FAQ   </a> </li> </ul> </details> </li><li> <a href="/codex/security/sdk" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> TypeScript SDK   </a> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Codex Security cloud</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/security/setup" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Setup   </a> </li><li> <a href="/codex/security/security-review" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Security Review   </a> </li><li> <a href="/codex/security/threat-model" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Improving the threat model   </a> </li><li> <a href="/codex/security/faq" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> FAQ   </a> </li> </ul> </details> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Cyber safety </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/cyber-safety" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Models &amp; Trusted Access   </a> </li><li> <a href="/codex/cyber-safety/recommended-configuration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Recommended configuration   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-5" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/administration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Getting started </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/enterprise/admin-setup" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Admin rollout guide   </a> </li><li> <a href="/codex/enterprise/chatgpt-work-overview" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> ChatGPT Work Overview   </a> </li><li> <a href="/codex/enterprise/chatgpt-work-cloud-security" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> ChatGPT Work cloud security   </a> </li><li> <a href="/codex/enterprise/work-admin-faq" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> ChatGPT Work admin FAQ   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Identity and authentication </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/auth" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Authentication overview   </a> </li><li> <a href="/codex/enterprise/workload-identity" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Workload identity   </a> </li><li> <a href="/codex/enterprise/access-tokens" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Personal Access Tokens   </a> </li><li> <a href="/codex/enterprise/service-accounts" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Service accounts   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Workspace access, policy, and models </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/enterprise/groups-and-provisioning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Groups and provisioning   </a> </li><li> <a href="/codex/enterprise/roles-and-workspace-permissions" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Roles and workspace permissions   </a> </li><li> <a href="/codex/enterprise/gpts-and-sharing" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GPTs and Sharing   </a> </li><li> <a href="/codex/enterprise/managed-configuration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Managed configuration   </a> </li><li> <a href="/codex/enterprise/prisma-airs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prisma AIRS   </a> </li><li> <a href="/codex/hipaa-configuration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> HIPAA configuration   </a> </li><li> <a href="/codex/enterprise/workspace-model-availability" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Workspace model availability   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Plugin and connector controls </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/enterprise/apps-and-connectors" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Plugin controls   </a> </li><li> <a href="/codex/enterprise/skills" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Skill controls   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Usage, governance, and compliance </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/enterprise/governance" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Governance   </a> </li><li> <a href="/codex/enterprise/workspace-analytics" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Workspace analytics   </a> </li><li> <a href="/codex/enterprise/analytics-api" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Analytics API   </a> </li><li> <a href="/codex/enterprise/compliance-api" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Compliance API and audit events   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Deployment and model providers </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/enterprise/manage-app-updates" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Manage app updates   </a> </li><li> <a href="/codex/enterprise/windows-deployment" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Windows app deployment   </a> </li><li> <a href="/codex/remote-connections" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Remote connections   </a> </li><li> <a href="/codex/amazon-bedrock" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Amazon Bedrock   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-6" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/use-cases" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Explore use cases   </a> </li><li> <a href="/codex/use-cases/collections" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Collections   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-7" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/resources" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li><li> <a href="/codex/videos" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Videos   </a> </li><li> <a href="https://developers.openai.com/showcase" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Showcase  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://openai.com/academy/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> OpenAI Academy  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://academy.openai.com/home/events" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Online trainings  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Community </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="https://developers.openai.com/community/codex-ambassadors" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Codex Ambassadors  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/community/students" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Codex for Students  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/community/codex-for-oss" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Codex for Open Source  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/community/meetups" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Meetups  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Blog </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="https://openai.com/news/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Company blog  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/blog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Developer blog  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div> </div> </div><div id="mobile-nav-panel-4" data-mobile-nav-content data-tab-id="mobile-nav-tab-4" data-href="/codex/use-cases" data-default-variant-id="mobile-nav-tab-4-variant-0" hidden class="flex flex-col gap-4 pb-8 astro-3ef6ksr2">  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-4-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/use-cases" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Explore use cases   </a> </li><li> <a href="/codex/use-cases/collections" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Collections   </a> </li> </ul> </div> </div> </div><div id="mobile-nav-panel-5" data-mobile-nav-content data-tab-id="mobile-nav-tab-5" data-href="/codex/resources" data-default-variant-id="mobile-nav-tab-5-variant-0" hidden class="flex flex-col gap-4 pb-8 astro-3ef6ksr2">  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-5-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/resources" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li><li> <a href="/codex/videos" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Videos   </a> </li><li> <a href="https://developers.openai.com/showcase" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Showcase  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://openai.com/academy/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> OpenAI Academy  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://academy.openai.com/home/events" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Online trainings  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Community </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="https://developers.openai.com/community/codex-ambassadors" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Codex Ambassadors  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/community/students" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Codex for Students  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/community/codex-for-oss" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Codex for Open Source  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/community/meetups" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Meetups  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Blog </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="https://openai.com/news/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Company blog  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/blog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Developer blog  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div> </div> </div><div id="mobile-nav-panel-7" data-mobile-nav-content data-tab-id="mobile-nav-tab-7" data-href="/learn" data-default-variant-id="mobile-nav-tab-7-variant-0" hidden class="flex flex-col gap-4 pb-8 astro-3ef6ksr2">  <div class="group flex flex-col gap-1 astro-3ef6ksr2" data-mobile-context-options data-context-active="false" data-site-visibility-exclude="chatgpt-docs"> <a href="/showcase" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default astro-3ef6ksr2" data-mobile-nav-link> Showcase </a><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-7-variant-2" data-context-label="Blog" data-context-href="/blog" data-context-is-home="false" data-selected="false"> Blog </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-7-variant-3" data-context-label="Cookbook" data-context-href="/cookbook" data-context-is-home="false" data-selected="false"> Cookbook </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-7-variant-4" data-context-label="Learn" data-context-href="/learn" data-context-is-home="false" data-selected="false"> Learn </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-7-variant-5" data-context-label="Community" data-context-href="/community" data-context-is-home="false" data-selected="false"> Community </button> </div> <div id="mobile-nav-tab-7-context-select" data-mobile-context-select data-value="mobile-nav-tab-7-variant-0" data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <astro-island uid="Z250r5d" prefix="r82" component-url="/_astro/MobileContextDropdown.react.CzopcHpz.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;rootId&quot;:[0,&quot;mobile-nav-tab-7-context-select&quot;],&quot;initialValue&quot;:[0,&quot;mobile-nav-tab-7-variant-0&quot;],&quot;options&quot;:[1,[[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-7-variant-1&quot;],&quot;label&quot;:[0,&quot;Showcase&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-7-variant-2&quot;],&quot;label&quot;:[0,&quot;Blog&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-7-variant-3&quot;],&quot;label&quot;:[0,&quot;Cookbook&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-7-variant-4&quot;],&quot;label&quot;:[0,&quot;Learn&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-7-variant-5&quot;],&quot;label&quot;:[0,&quot;Community&quot;]}]]]}" ssr client="media" opts="{&quot;name&quot;:&quot;MobileContextDropdown&quot;,&quot;value&quot;:&quot;(max-width: 63.999rem)&quot;}" await-children><div class="flex min-w-0"><div class="relative max-w-full w-full"><select aria-label="Docs section" class="_NativeSelect_10bwq_299" data-native-selectcontrol=""><option value="mobile-nav-tab-7-variant-1">Showcase</option><option value="mobile-nav-tab-7-variant-2">Blog</option><option value="mobile-nav-tab-7-variant-3">Cookbook</option><option value="mobile-nav-tab-7-variant-4">Learn</option><option value="mobile-nav-tab-7-variant-5">Community</option></select><span class="_SelectControl_x887o_1" role="button" tabindex="-1" data-variant="outline" data-block="" data-size="3xl" data-selected="true" aria-disabled="false" id="select-trigger-_r82R_0_" aria-labelledby="_r82R_5H1_ _r82R_5_" aria-hidden="true"><span class="_TriggerText_x887o_510"><span id="_r82R_5H1_" class="sr-only w-full h-0 left-0 bottom-0 pointer-events-none">Docs section</span><span id="_r82R_5_">Select...</span></span><div class="_IndicatorWrapper_x887o_520"><svg width="1em" height="1em" viewBox="0 0 16 9" fill="currentColor" class="_DropdownIcon_x887o_475 _DropdownIconChevron_x887o_586"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292894C14.6834 -0.0976305 15.3166 -0.0976304 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"></path></svg></div></span></div></div><!--astro:end--></astro-island> </div>  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-7-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2">  </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-7-variant-1" hidden class="flex flex-col gap-6 astro-3ef6ksr2">  </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-7-variant-2" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/blog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> All posts   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Recent </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/blog/automating-repetitive-work-at-openai-with-codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Automating repetitive work at OpenAI with Codex   </a> </li><li> <a href="/blog/build-week-winners" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Meet the winners of OpenAI Build Week   </a> </li><li> <a href="/blog/scaling-cyber-defenders-with-daybreak" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Scaling cyber defenders with Daybreak   </a> </li><li> <a href="/blog/codex-as-a-platform" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex as a platform: build on the open agent harness   </a> </li><li> <a href="/blog/custom-code-review-rules-for-codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Custom Code Review rules for Codex   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Topics </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/blog/topic/general" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> General   </a> </li><li> <a href="/blog/topic/api" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> API   </a> </li><li> <a href="/blog/topic/apps-sdk" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Apps SDK   </a> </li><li> <a href="/blog/topic/audio" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Audio   </a> </li><li> <a href="/blog/topic/codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-7-variant-3" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/cookbook" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Topics </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/cookbook/topic/agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Agents   </a> </li><li> <a href="/cookbook/topic/evals" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Evals   </a> </li><li> <a href="/cookbook/topic/multimodal" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Multimodal   </a> </li><li> <a href="/cookbook/topic/text" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Text   </a> </li><li> <a href="/cookbook/topic/guardrails" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Guardrails   </a> </li><li> <a href="/cookbook/topic/optimization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Optimization   </a> </li><li> <a href="/cookbook/topic/chatgpt" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> ChatGPT   </a> </li><li> <a href="/cookbook/topic/codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex   </a> </li><li> <a href="/cookbook/topic/gpt-oss" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> gpt-oss   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Contribute </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="https://github.com/openai/openai-cookbook" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Cookbook on GitHub  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-7-variant-4" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/learn" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li><li> <a href="/learn/developers-codex-plugin" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> OpenAI Developers plugin   </a> </li><li> <a href="/learn/docs-mcp" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Docs MCP   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Categories </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/learn/code" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Demo apps   </a> </li><li> <a href="/learn/videos" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Videos   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Topics </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/learn/agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Agents   </a> </li><li> <a href="/learn/audio" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Audio &amp; Voice   </a> </li><li> <a href="/learn/cua" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Computer Use   </a> </li><li> <a href="/learn/codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex   </a> </li><li> <a href="/learn/evals" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Evals   </a> </li><li> <a href="/learn/gpt-oss" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> gpt-oss   </a> </li><li> <a href="/learn/fine-tuning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Fine-tuning   </a> </li><li> <a href="/learn/imagegen" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image generation   </a> </li><li> <a href="/learn/scaling" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Scaling   </a> </li><li> <a href="/learn/tools" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Tools   </a> </li><li> <a href="/learn/videogen" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Video generation   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-7-variant-5" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/community" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Community   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Programs </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/community/codex-ambassadors" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex Ambassadors   </a> </li><li> <a href="/community/students" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex for Students   </a> </li><li> <a href="/community/codex-for-oss" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex for Open Source   </a> </li><li> <a href="https://openai.com/business/why-openai/startups/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> OpenAI for Startups  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Events </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/community/meetups" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Meetups   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Spaces </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="https://community.openai.com/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Developer Forum  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://discord.com/invite/openai" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Discord  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://www.reddit.com/r/OpenAI/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Reddit  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://x.com/OpenAIDevs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> X  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div> </div> </div> </div> <div class="w-full px-6 py-6 border-t border-primary-surface astro-3ef6ksr2" data-mobile-nav-footer> <div class="flex flex-col gap-5 astro-3ef6ksr2"> <div data-site-visibility-exclude="chatgpt-docs" class="astro-3ef6ksr2"> <div class="flex items-center gap-2 w-full gap-3 astro-3ef6ksr2"><a target="_blank" rel="noopener noreferrer" href="https://platform.openai.com/login" class="_Button_6dmow_1 not-prose flex-1 justify-center" data-color="primary" data-variant="solid" data-pill="" data-size="md"><span class="_ButtonInner_6dmow_4"><span class="">API Dashboard</span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" data-external-link-indicator="persistent" class="shrink-0"><path fill-rule="evenodd" d="M16.243 6.757a1 1 0 0 1 1 1v7.072a1 1 0 0 1-2 0v-4.657L8.464 16.95a1 1 0 0 1-1.414-1.414l6.778-6.779H9.172a1 1 0 0 1 0-2h7.07Z" clip-rule="evenodd"></path></svg></span></a></div> </div><div data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <div class="flex items-center gap-2 w-full gap-3 astro-3ef6ksr2"><a target="_blank" rel="noopener noreferrer" href="https://chatgpt.com/" class="_Button_6dmow_1 not-prose flex-1 justify-center" data-color="primary" data-variant="solid" data-pill="" data-size="lg"><span class="_ButtonInner_6dmow_4"><span class="">Try ChatGPT</span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" data-external-link-indicator="persistent" class="shrink-0"><path fill-rule="evenodd" d="M16.243 6.757a1 1 0 0 1 1 1v7.072a1 1 0 0 1-2 0v-4.657L8.464 16.95a1 1 0 0 1-1.414-1.414l6.778-6.779H9.172a1 1 0 0 1 0-2h7.07Z" clip-rule="evenodd"></path></svg></span></a></div> </div> <div class="flex flex-wrap items-center gap-4 text-sm text-gray-700 dark:text-gray-300 astro-3ef6ksr2">  </div> </div> </div> </div> </div> <script>
+  document.dispatchEvent(new CustomEvent("site-variant:apply"));
+</script>  <script>
+  const MOBILE_NAV_PERSIST_KEY = "mobile-nav:restore-open";
 
+  const readPersistedMobileNavOpen = () => {
+    try {
+      return sessionStorage.getItem(MOBILE_NAV_PERSIST_KEY) === "true";
+    } catch {
+      return false;
+    }
+  };
 
+  const setPersistedMobileNavOpen = (isOpen) => {
+    try {
+      if (isOpen) {
+        sessionStorage.setItem(MOBILE_NAV_PERSIST_KEY, "true");
+      } else {
+        sessionStorage.removeItem(MOBILE_NAV_PERSIST_KEY);
+      }
+    } catch {}
+  };
 
-> Illustration: Cards compare the ChatGPT desktop app and ChatGPT on the web
+  function initializeMobileNavigation() {
+    document.dispatchEvent(new CustomEvent("site-variant:apply"));
 
+    const drawer = document.getElementById("drawer");
+    const drawerButton = document.getElementById("header-drawer-button");
 
+    if (
+      !drawer ||
+      !drawerButton ||
+      drawer.dataset.mobileNavInitialized === "true"
+    ) {
+      return;
+    }
 
-If you're a developer and want to use Codex in your terminal or code editor,
-  try [Codex CLI](https://learn.chatgpt.com/docs/codex/cli) or the [Codex IDE extension](https://learn.chatgpt.com/docs/codex/ide).
+    const navTabElements = Array.from(
+      drawer.querySelectorAll("[data-mobile-nav-tab]")
+    );
+    const visibleNavTabElements = navTabElements.filter((tab) => !tab.hidden);
+    const defaultSearchPlaceholder =
+      drawer.dataset.defaultSearchPlaceholder || "Search the site";
+    const defaultSearchScope = drawer.dataset.defaultSearchScope || "";
+    const headerSearchOverlay = document.getElementById(
+      "header-search-overlay"
+    );
+    const navLinkElements = Array.from(
+      drawer.querySelectorAll("[data-mobile-nav-link]")
+    );
+    const tabPanels = Array.from(
+      drawer.querySelectorAll("[data-mobile-nav-content]")
+    );
+    const isStarlightApiReferenceRoute =
+      window.location.pathname === "/api/reference" ||
+      window.location.pathname.startsWith("/api/reference/");
+    const shouldRestoreDrawerOpen =
+      matchMedia("(max-width: 63.999rem)").matches &&
+      !isStarlightApiReferenceRoute &&
+      readPersistedMobileNavOpen();
 
-## Setup
+    const configuredDefaultTab = navTabElements.find(
+      (tab) => tab.dataset.tabId === drawer.dataset.defaultTabId
+    );
+    let activeTabId =
+      visibleNavTabElements.find((tab) => tab.dataset.isActive === "true")
+        ?.dataset.tabId ||
+      (!configuredDefaultTab?.hidden
+        ? configuredDefaultTab?.dataset.tabId
+        : undefined) ||
+      visibleNavTabElements[0]?.dataset.tabId ||
+      null;
 
-{/* prettier-ignore */}
-<Tabs
-  id="codex-quickstart-setup"
-  param="setup"
-  defaultTab="web"
-  size="md"
-  tabs={[
-    { id: "app", label: "Desktop" },
-    { id: "web", label: "Web" },
-  ]}
->
-  
+    const updateSelectedOption = (tabId) => {
+      let selectedLabel = "";
+      let selectedPlaceholder = "";
+      let selectedScope = "";
 
-The ChatGPT desktop app is available for macOS, Windows, and Linux. Use it for
+      navTabElements.forEach((tab) => {
+        const isSelected = tab.dataset.tabId === tabId;
+        tab.dataset.selected = isSelected ? "true" : "false";
+        tab.setAttribute("aria-selected", isSelected ? "true" : "false");
+
+        if (isSelected && !selectedLabel) {
+          selectedLabel = tab.dataset.label || tab.textContent?.trim() || "";
+        }
+
+        if (isSelected && !selectedPlaceholder) {
+          selectedPlaceholder = tab.dataset.searchPlaceholder || "";
+        }
+
+        if (isSelected && !selectedScope) {
+          selectedScope = tab.dataset.searchScope || "";
+        }
+      });
+
+      if (!selectedLabel && visibleNavTabElements[0]) {
+        selectedLabel =
+          visibleNavTabElements[0].dataset.label ||
+          visibleNavTabElements[0].textContent?.trim() ||
+          "";
+      }
+
+      if (!selectedPlaceholder && visibleNavTabElements[0]) {
+        selectedPlaceholder =
+          visibleNavTabElements[0].dataset.searchPlaceholder || "";
+      }
+
+      if (!selectedScope && visibleNavTabElements[0]) {
+        selectedScope = visibleNavTabElements[0].dataset.searchScope || "";
+      }
+
+      const nextPlaceholder = selectedPlaceholder || defaultSearchPlaceholder;
+      const nextScope = selectedScope || defaultSearchScope;
+      const updatePlaceholder = (container) => {
+        if (!container) return;
+        const input = container.querySelector("[data-site-search-input]");
+        if (input instanceof HTMLInputElement) {
+          input.placeholder = nextPlaceholder;
+        }
+      };
+      const updateScope = (container) => {
+        if (!container) return;
+        const target = container.querySelector("[data-site-search-root]");
+        if (!target) return;
+        target.setAttribute("data-scope", nextScope);
+        target.dispatchEvent(new CustomEvent("site-search:update"));
+      };
+      updatePlaceholder(drawer);
+      updatePlaceholder(headerSearchOverlay);
+      updateScope(drawer);
+      updateScope(headerSearchOverlay);
+    };
+
+    const activeVariantByTabId = new Map();
+
+    const getTabLabel = (tabId) => {
+      return (
+        navTabElements.find((tab) => tab.dataset.tabId === tabId)?.dataset
+          .label || ""
+      );
+    };
+
+    const updatePanelBreadcrumb = (panel, tabId, contextLabel) => {
+      const breadcrumb = panel.querySelector("[data-mobile-breadcrumb]");
+      const parent = panel.querySelector("[data-mobile-breadcrumb-parent]");
+      const childWrapper = panel.querySelector(
+        "[data-mobile-breadcrumb-child-wrapper]"
+      );
+      const child = panel.querySelector("[data-mobile-breadcrumb-child]");
+      const contextOptions = panel.querySelector(
+        "[data-mobile-context-options]"
+      );
+
+      if (contextOptions) {
+        contextOptions.dataset.contextActive = contextLabel ? "true" : "false";
+      }
+
+      if (!breadcrumb || !parent || !childWrapper || !child) {
+        return;
+      }
+
+      const tabLabel = getTabLabel(tabId);
+      parent.textContent = tabLabel;
+
+      if (!contextLabel) {
+        breadcrumb.setAttribute("hidden", "true");
+        childWrapper.setAttribute("hidden", "true");
+        child.textContent = "";
+        return;
+      }
+
+      breadcrumb.removeAttribute("hidden");
+      childWrapper.removeAttribute("hidden");
+      child.textContent = contextLabel;
+    };
+
+    const selectVariantForPanel = (panel, tabId, variantId) => {
+      if (!variantId) {
+        updatePanelBreadcrumb(panel, tabId, "");
+        return;
+      }
+
+      const contextOptions = Array.from(
+        panel.querySelectorAll("[data-mobile-context-option]")
+      );
+      const contextSelects = Array.from(
+        panel.querySelectorAll("[data-mobile-context-select]")
+      );
+      let selectedContextLabel = "";
+
+      contextOptions.forEach((option) => {
+        const isSelected = option.dataset.contextId === variantId;
+        option.dataset.selected = isSelected ? "true" : "false";
+        if (isSelected) {
+          selectedContextLabel = option.dataset.contextLabel || "";
+        }
+      });
+
+      contextSelects.forEach((select) => {
+        select.dataset.value = variantId;
+        select.dispatchEvent(
+          new CustomEvent("mobile-context-select-sync", {
+            detail: { value: variantId },
+          })
+        );
+      });
+
+      const variantSections = Array.from(
+        panel.querySelectorAll("[data-mobile-nav-variant-content]")
+      );
+      variantSections.forEach((section) => {
+        const isSelected = section.dataset.variantId === variantId;
+        if (isSelected) {
+          section.removeAttribute("hidden");
+        } else {
+          section.setAttribute("hidden", "true");
+        }
+      });
+
+      updatePanelBreadcrumb(panel, tabId, selectedContextLabel);
+      activeVariantByTabId.set(tabId, variantId);
+    };
+
+    const activateTab = (tabId) => {
+      if (!tabId) return;
+      activeTabId = tabId;
+      updateSelectedOption(tabId);
+
+      tabPanels.forEach((panel) => {
+        const panelTabId = panel.getAttribute("data-tab-id");
+        const isActive = panelTabId === tabId;
+        if (isActive) {
+          panel.removeAttribute("hidden");
+          const defaultVariantId = panel.getAttribute(
+            "data-default-variant-id"
+          );
+          const nextVariantId =
+            activeVariantByTabId.get(tabId) ||
+            defaultVariantId ||
+            panel.querySelector("[data-mobile-nav-variant-content]")?.dataset
+              .variantId ||
+            "";
+          selectVariantForPanel(panel, tabId, nextVariantId);
+        } else {
+          panel.setAttribute("hidden", "true");
+        }
+      });
+    };
+
+    const closeDrawer = () => {
+      drawer.classList.remove("open");
+      drawerButton.classList.remove("open");
+      drawerButton.setAttribute("aria-expanded", "false");
+      setPersistedMobileNavOpen(false);
+    };
+
+    const openDrawer = () => {
+      drawer.classList.add("open");
+      drawerButton.classList.add("open");
+      drawerButton.setAttribute("aria-expanded", "true");
+      if (activeTabId) {
+        activateTab(activeTabId);
+      }
+    };
+
+    const toggleDrawer = () => {
+      if (drawer.classList.contains("open")) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    };
+
+    const handleTabSelection = (tab) => {
+      const hasNav = tab.dataset.hasNav === "true";
+      const href = tab.dataset.href;
+      const tabId = tab.dataset.tabId;
+
+      if (!tabId) {
+        return;
+      }
+
+      if (!hasNav && href) {
+        setPersistedMobileNavOpen(true);
+        window.location.href = href;
+        return;
+      }
+
+      activateTab(tabId);
+    };
+
+    drawerButton.addEventListener("click", toggleDrawer);
+
+    navTabElements.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        handleTabSelection(tab);
+      });
+
+      tab.addEventListener("keydown", (event) => {
+        if (!visibleNavTabElements.length) return;
+
+        const currentIndex = visibleNavTabElements.indexOf(tab);
+
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          const nextIndex = (currentIndex + 1) % visibleNavTabElements.length;
+          visibleNavTabElements[nextIndex]?.focus();
+        } else if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          const prevIndex =
+            (currentIndex - 1 + visibleNavTabElements.length) %
+            visibleNavTabElements.length;
+          visibleNavTabElements[prevIndex]?.focus();
+        } else if (event.key === "Home") {
+          event.preventDefault();
+          visibleNavTabElements[0]?.focus();
+        } else if (event.key === "End") {
+          event.preventDefault();
+          visibleNavTabElements[visibleNavTabElements.length - 1]?.focus();
+        } else if (
+          event.key === "Enter" ||
+          event.key === " " ||
+          event.key === "Space" ||
+          event.key === "Spacebar"
+        ) {
+          event.preventDefault();
+          handleTabSelection(tab);
+        } else if (event.key === "Escape") {
+          event.preventDefault();
+          closeDrawer();
+          drawerButton.focus();
+        }
+      });
+    });
+
+    tabPanels.forEach((panel) => {
+      const tabId = panel.getAttribute("data-tab-id") || "";
+      const contextOptions = Array.from(
+        panel.querySelectorAll("[data-mobile-context-option]")
+      );
+
+      contextOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+          const contextHref = option.dataset.contextHref;
+          if (
+            contextHref &&
+            contextHref.startsWith("/api/reference") &&
+            tabId
+          ) {
+            closeDrawer();
+            window.location.href = contextHref;
+            return;
+          }
+
+          const variantId = option.dataset.contextId;
+          if (!variantId || !tabId) {
+            return;
+          }
+
+          selectVariantForPanel(panel, tabId, variantId);
+        });
+      });
+
+      const contextSelects = Array.from(
+        panel.querySelectorAll("[data-mobile-context-select]")
+      );
+      contextSelects.forEach((select) => {
+        select.addEventListener("mobile-context-select-change", (event) => {
+          if (!(event instanceof CustomEvent) || !tabId) {
+            return;
+          }
+
+          const variantId = event.detail?.value;
+          if (typeof variantId !== "string") {
+            return;
+          }
+
+          selectVariantForPanel(panel, tabId, variantId);
+        });
+      });
+    });
+
+    navLinkElements.forEach((link) => {
+      link.addEventListener("click", () => {
+        closeDrawer();
+      });
+    });
+
+    const mobileSearch = drawer.querySelector("[data-mobile-search]");
+    mobileSearch?.addEventListener("click", (event) => {
+      const target = event.target;
+      if (target instanceof Element) {
+        const anchor = target.closest("a[href]");
+        if (anchor) {
+          closeDrawer();
+        }
+      }
+    });
+
+    mobileSearch?.addEventListener("focusin", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLInputElement) || target.type !== "text") {
+        return;
+      }
+      closeDrawer();
+      window.requestAnimationFrame(() => {
+        if (document.activeElement === target) {
+          target.blur();
+        }
+        document.dispatchEvent(
+          new CustomEvent("header:open-search", {
+            detail: {
+              trigger: target,
+              variant: "mobile",
+            },
+          })
+        );
+      });
+    });
+
+    drawer.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeDrawer();
+        drawerButton.focus();
+      }
+    });
+
+    drawer.dataset.mobileNavInitialized = "true";
+    if (activeTabId) {
+      activateTab(activeTabId);
+    }
+
+    if (shouldRestoreDrawerOpen) {
+      openDrawer();
+      setPersistedMobileNavOpen(false);
+    }
+  }
+
+  function initializeHeaderSearch() {
+    const overlay = document.getElementById("header-search-overlay");
+    if (!overlay) {
+      return;
+    }
+
+    const getSearchButtons = () =>
+      Array.from(document.querySelectorAll("[data-header-search-button]"));
+
+    const closeButtons = overlay.querySelectorAll("[data-header-search-close]");
+    const dismissTarget = overlay.querySelector("[data-header-search-dismiss]");
+    const panel = overlay.querySelector("[data-header-search-panel]");
+    const overlayMobileClass = "header-search-overlay--mobile";
+    const panelMobileClass = "header-search-panel--mobile";
+    let lastTrigger = null;
+    let lastVariant = null;
+
+    const setExpandedState = (isOpen) => {
+      const expanded = isOpen ? "true" : "false";
+      getSearchButtons().forEach((button) => {
+        button.setAttribute("aria-expanded", expanded);
+        button.setAttribute("data-active", expanded);
+      });
+      overlay.dataset.open = expanded;
+      overlay.setAttribute("aria-hidden", isOpen ? "false" : "true");
+    };
+
+    const focusSearchInput = () => {
+      window.requestAnimationFrame(() => {
+        const input = overlay.querySelector("[data-site-search-input]");
+        if (input) {
+          input.focus();
+          input.select();
+        }
+      });
+    };
+
+    const openOverlay = (trigger, options = {}) => {
+      lastTrigger = trigger ?? document.activeElement;
+      const variant = options.variant ?? null;
+      lastVariant = typeof variant === "string" ? variant : null;
+      overlay.classList.remove("hidden");
+      overlay.classList.add("flex");
+      const isMobileVariant = lastVariant === "mobile";
+      if (isMobileVariant) {
+        overlay.dataset.variant = "mobile";
+      } else {
+        delete overlay.dataset.variant;
+      }
+      overlay.classList.toggle(overlayMobileClass, isMobileVariant);
+      panel?.classList.toggle(panelMobileClass, isMobileVariant);
+      document.documentElement.classList.add("has-header-search-open");
+      setExpandedState(true);
+      focusSearchInput();
+    };
+
+    const closeOverlay = () => {
+      overlay.classList.add("hidden");
+      overlay.classList.remove("flex");
+      document.documentElement.classList.remove("has-header-search-open");
+      overlay.classList.remove(overlayMobileClass);
+      panel?.classList.remove(panelMobileClass);
+      delete overlay.dataset.variant;
+      setExpandedState(false);
+      if (lastTrigger instanceof HTMLElement) {
+        if (
+          lastVariant === "mobile" &&
+          typeof lastTrigger.blur === "function"
+        ) {
+          lastTrigger.blur();
+        } else if (lastVariant !== "mobile") {
+          lastTrigger.focus();
+        }
+      }
+      lastTrigger = null;
+      lastVariant = null;
+    };
+
+    const bindSearchButtons = () => {
+      getSearchButtons().forEach((button) => {
+        if (button.dataset.searchButtonInitialized === "true") {
+          return;
+        }
+
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          openOverlay(button);
+        });
+
+        button.dataset.searchButtonInitialized = "true";
+      });
+    };
+
+    if (overlay.dataset.searchInitialized !== "true") {
+      closeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          closeOverlay();
+        });
+      });
+
+      overlay.addEventListener("click", (event) => {
+        if (event.target === overlay) {
+          closeOverlay();
+        }
+      });
+
+      dismissTarget?.addEventListener("click", closeOverlay);
+
+      const handleKeydown = (event) => {
+        const key = "key" in event ? event.key : undefined;
+        const isShortcut =
+          !!key &&
+          key.toLowerCase() === "k" &&
+          (event.metaKey || event.ctrlKey);
+
+        if (isShortcut) {
+          event.preventDefault();
+          const buttons = getSearchButtons();
+          openOverlay(buttons[0] ?? null);
+          return;
+        }
+
+        if (key === "Escape" && overlay.dataset.open === "true") {
+          event.preventDefault();
+          closeOverlay();
+        }
+      };
+
+      document.addEventListener("keydown", handleKeydown);
+
+      document.addEventListener("header:open-search", (event) => {
+        const detail =
+          event instanceof CustomEvent && typeof event.detail === "object"
+            ? event.detail
+            : {};
+        const trigger =
+          detail && detail.trigger instanceof HTMLElement
+            ? detail.trigger
+            : null;
+        openOverlay(trigger, detail);
+      });
+
+      document.addEventListener("astro:before-swap", () => {
+        if (overlay.dataset.open === "true") {
+          closeOverlay();
+        }
+      });
+
+      overlay.dataset.searchInitialized = "true";
+    }
+
+    bindSearchButtons();
+  }
+
+  const handleAfterSwap = () => {
+    initializeMobileNavigation();
+    window.requestAnimationFrame(() => {
+      initializeHeaderSearch();
+    });
+  };
+
+  document.addEventListener("astro:after-swap", handleAfterSwap);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", handleAfterSwap, {
+      once: true,
+    });
+  } else {
+    handleAfterSwap();
+  }
+</script> <div data-docs-agent-page class="min-h-dvh"> <div class="flex" style="padding-top: var(--docs-header-offset)"> <div class="hidden lg:flex lg:flex-col w-[218px] px-3 pb-6 pt-2 lg:fixed lg:bottom-0 lg:z-40 bg-surface dark:bg-black astro-73gi4scu" style="top: var(--docs-header-offset)" data-left-nav-container><nav class="flex-1 overflow-y-auto overflow-x-visible astro-73gi4scu" data-left-nav data-left-nav-id="/codex"><div class="mt-6 astro-73gi4scu"><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/codex" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Home </span>   </a> </li> </ul></div><div class=" astro-73gi4scu"><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none astro-73gi4scu">Get started</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/codex/quickstart" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block bg-primary-ghost-hover "> <span class="line-clamp-2 "> Quickstart </span>   </a> </li><li> <a href="/codex/use-chatgpt" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Use ChatGPT </span>   </a> </li><li> <a href="/codex/get-started-with-work" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Get started with Work </span>   </a> </li><li> <a href="/codex/import" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Import from another agent </span>   </a> </li> </ul></div><div class=" astro-73gi4scu"><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none astro-73gi4scu">Foundations</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/codex/prompting" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Prompting </span>   </a> </li><li> <a href="/codex/personalize" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Personalize ChatGPT </span>   </a> </li><li> <a href="/codex/skills-and-plugins" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Skills &amp; Plugins </span>   </a> </li><li> <a href="/codex/permission-modes" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Permissions </span>   </a> </li> </ul></div><div class=" astro-73gi4scu"><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none astro-73gi4scu">Explore</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/codex/whats-new" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> What&#39;s new </span>   </a> </li><li> <a href="/codex/models" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Models </span>   </a> </li><li> <a href="/codex/pricing" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Pricing </span>   </a> </li><li> <a href="/codex/glossary" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Glossary </span>   </a> </li> </ul></div><div class=" astro-73gi4scu"><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none astro-73gi4scu">Available on</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/codex/app" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> ChatGPT desktop app </span>   </a> </li><li> <a href="/codex/remote" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Remote </span>   </a> </li><li> <a href="/codex/web" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> ChatGPT on the web </span>   </a> </li><li> <a href="/codex/cli" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Codex CLI </span>   </a> </li><li> <a href="/codex/ide" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Codex IDE extension </span>   </a> </li><li> <a href="/codex/cloud" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Codex cloud </span>   </a> </li> </ul></div><div class=" astro-73gi4scu"><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none astro-73gi4scu">Releases</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/codex/changelog" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Changelog </span>   </a> </li><li> <a href="/codex/feature-maturity" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Feature Maturity </span>   </a> </li><li> <a href="/codex/open-source" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Open Source </span>   </a> </li> </ul></div></nav></div><script>
+  const NAV_SELECTOR = "nav[data-left-nav]";
+  const STORAGE_PREFIX = "left-nav-scroll:";
+  const INITIALIZED_ATTRIBUTE = "data-left-nav-scroll-initialized";
+
+  const isStorageAvailable = (() => {
+    try {
+      const storageKey = `${STORAGE_PREFIX}__test__`;
+      sessionStorage.setItem(storageKey, "1");
+      sessionStorage.removeItem(storageKey);
+      return true;
+    } catch (error) {
+      return false;
+    }
+  })();
+
+  const getNav = () => document.querySelector(NAV_SELECTOR);
+
+  const getStorageKey = (nav) =>
+    `${STORAGE_PREFIX}${nav.dataset.leftNavId ?? "default"}`;
+
+  const restoreScrollPosition = (nav) => {
+    if (!isStorageAvailable) return;
+    const storedValue = sessionStorage.getItem(getStorageKey(nav));
+    if (storedValue !== null) {
+      nav.scrollTop = Number(storedValue);
+    }
+  };
+
+  const saveScrollPosition = (nav) => {
+    if (!isStorageAvailable) return;
+    sessionStorage.setItem(getStorageKey(nav), String(nav.scrollTop));
+  };
+
+  const setupNav = () => {
+    const nav = getNav();
+    if (!nav || nav.getAttribute(INITIALIZED_ATTRIBUTE) === "true") return;
+
+    restoreScrollPosition(nav);
+
+    nav.addEventListener(
+      "scroll",
+      () => {
+        saveScrollPosition(nav);
+      },
+      { passive: true }
+    );
+
+    nav.setAttribute(INITIALIZED_ATTRIBUTE, "true");
+  };
+
+  const persistScrollPosition = () => {
+    const nav = getNav();
+    if (!nav) return;
+    saveScrollPosition(nav);
+  };
+
+  const initialize = () => {
+    setupNav();
+    const nav = getNav();
+    if (!nav) return;
+    restoreScrollPosition(nav);
+  };
+
+  window.addEventListener("pageshow", initialize);
+  document.addEventListener("astro:page-load", initialize);
+  document.addEventListener("astro:after-swap", initialize);
+
+  document.addEventListener("astro:before-swap", persistScrollPosition);
+  window.addEventListener("beforeunload", persistScrollPosition);
+
+  initialize();
+</script> <main class="min-w-0 flex-1 lg:pl-[240px]">  <div class="page-container md:max-w-6xl pb-12 pt-0" data-content-page-container> <div class="mx-auto md:w-full grid grid-cols-1 gap-12 max-w-7xl xl:grid-cols-[minmax(0,1fr)_200px]"> <div data-content-page-toc-rail class="sticky z-30 hidden min-h-0 w-full self-start pb-6 xl:col-start-2 xl:row-start-1 xl:flex xl:flex-col" style="top: var(--docs-toc-offset); height: fit-content; max-height: calc(100vh - var(--docs-toc-offset))">  <script>window._$HY||(e=>{let t=e=>e&&e.hasAttribute&&(e.hasAttribute("data-hk")?e:t(e.host&&e.host.nodeType?e.host:e.parentNode));["click", "input"].forEach((o=>document.addEventListener(o,(o=>{if(!e.events)return;let s=t(o.composedPath&&o.composedPath()[0]||o.target);s&&!e.completed.has(s)&&e.events.push([s,o])}))))})(_$HY={events:[],completed:new WeakSet,r:{},fe(){}});</script><!--xs--><astro-island uid="27RqyC" data-solid-render-id="s0" component-url="/_astro/TableOfContents.CtyrnPYJ.js" component-export="default" renderer-url="/_astro/client.DZeCTsdm.js" props="{&quot;variant&quot;:[0,&quot;static&quot;],&quot;targetSelector&quot;:[0,&quot;#mainContent&quot;],&quot;headingSelector&quot;:[0,&quot;h2, [data-panel]:not([hidden]) h3&quot;],&quot;class&quot;:[0,&quot;min-h-0 shrink overflow-y-auto pr-1&quot;]}" ssr client="media" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 80rem)&quot;}" await-children><nav data-hk="s00000" class="hidden xl:block w-full overflow-y-auto min-h-0 shrink overflow-y-auto pr-1"><div class="relative"><div class="absolute left-0 top-0 bottom-0 w-[2.15px] bg-primary-soft"></div><div class="absolute left-0 w-[2.15px] bg-primary-solid transition-transform duration-200 ease-out" style="transform:translateY(0);height:0px"></div><ul class="relative list-none p-0 m-0 ml-3 [&amp;>*+*]:mt-3"></ul></div></nav><!--astro:end--></astro-island> <div class="mt-4 shrink-0"> <button type="button" class="page-copy-action astro-y3m22efp" data-page-copy-action data-page-copy-default-label="Copy Page" data-page-copy-copied-label="Copied"> <span class="page-copy-action__icon page-copy-action__icon--copy astro-y3m22efp" aria-hidden="true"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="astro-y3m22efp " ><path fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2V5Zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1v2ZM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1H5Z" clip-rule="evenodd"></path></svg> </span> <span class="page-copy-action__icon page-copy-action__icon--check astro-y3m22efp" aria-hidden="true"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="astro-y3m22efp " ><path fill-rule="evenodd" d="M18.063 5.674a1 1 0 0 1 .263 1.39l-7.5 11a1 1 0 0 1-1.533.143l-4.5-4.5a1 1 0 1 1 1.414-1.414l3.647 3.647 6.82-10.003a1 1 0 0 1 1.39-.263Z" clip-rule="evenodd"></path></svg> </span> <span data-page-copy-label class="astro-y3m22efp">Copy Page</span> </button> <script type="module" src="/_astro/PageCopyAction.astro_astro_type_script_index_0_lang.Df1nqr2j.js"></script> </div>  </div> <div class="relative flex flex-col xl:col-start-1 xl:row-start-1">  <div class="flex flex-col gap-8 mb-2">  <header class="flex flex-col not-prose gap-1 pt-10 lg:pt-20 xl:pt-7 items-start text-left"> <div class="w-full">  </div> <div class="flex flex-wrap items-center gap-3"> <h1 class="heading-2xl md:heading-2xl">Quickstart</h1>  </div> <p class="text-lg text-secondary">Start using ChatGPT on the web or in the desktop app.</p> <div class="w-full"> <div class="flex w-full flex-wrap items-center gap-3 justify-start">   <div class="xl:hidden"> <button type="button" class="page-copy-action astro-y3m22efp" data-page-copy-action data-page-copy-default-label="Copy Page" data-page-copy-copied-label="Copied"> <span class="page-copy-action__icon page-copy-action__icon--copy astro-y3m22efp" aria-hidden="true"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="astro-y3m22efp " ><path fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2V5Zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1v2ZM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1H5Z" clip-rule="evenodd"></path></svg> </span> <span class="page-copy-action__icon page-copy-action__icon--check astro-y3m22efp" aria-hidden="true"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="astro-y3m22efp " ><path fill-rule="evenodd" d="M18.063 5.674a1 1 0 0 1 .263 1.39l-7.5 11a1 1 0 0 1-1.533.143l-4.5-4.5a1 1 0 1 1 1.414-1.414l3.647 3.647 6.82-10.003a1 1 0 0 1 1.39-.263Z" clip-rule="evenodd"></path></svg> </span> <span data-page-copy-label class="astro-y3m22efp">Copy Page</span> </button>  </div> </div> </div> </header>  </div> <article id="mainContent" class="prose prose-content dark:prose-invert max-w-none pt-4 pb-0"> <h2 id="where-to-use-chatgpt" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Where to use ChatGPT</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="where-to-use-chatgpt" aria-label="Copy link to where to use chatgpt" title="Copy link to where to use chatgpt"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>Use ChatGPT across different surfaces, including the
+<a href="/codex/app">ChatGPT desktop app</a> and <a href="/codex/web">ChatGPT on the web</a>. Choose
+the option that fits your work.</p>
+<div class="contents" data-markdown-export="illustration" data-markdown-description="Cards compare the ChatGPT desktop app and ChatGPT on the web"> <script data-astro-rerun>
+(() => {
+  const platform =
+    (navigator.userAgentData?.platform || navigator.platform || "").toLowerCase();
+  const isDesktopAppPlatform =
+    platform.includes("mac") ||
+    platform.includes("win") ||
+    /macintosh|mac os x|windows|win64|win32/i.test(navigator.userAgent || "");
+
+  const shouldPreferApp = () => {
+    try {
+      const url = new URL(window.location.href);
+      return (
+        !url.searchParams.get("setup") &&
+        !url.hash.startsWith("#setup-web-")
+      );
+    } catch {
+      return true;
+    }
+  };
+
+  window.__tabsPreferred = window.__tabsPreferred || {};
+  if (!isDesktopAppPlatform || !shouldPreferApp()) {
+    delete window.__tabsPreferred.setup;
+    return;
+  }
+
+  window.__tabsPreferred.setup = "app";
+})();
+</script> <div class="not-prose"> <div class="_root_hwtxh_1" role="img" aria-label="Cards compare the ChatGPT desktop app and ChatGPT on the web"><div class="_cards_hwtxh_6" aria-hidden="true"><div class="_card_hwtxh_6"><div class="_media_hwtxh_35"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" fill="none" class="_mediaImage_hwtxh_44" aria-hidden="true" focusable="false"><defs><linearGradient id="chatgpt-desktop-bg-fallback" x1="85" y1="42" x2="913" y2="968" gradientUnits="userSpaceOnUse"><stop stop-color="#3E5BF4"></stop><stop offset="0.48" stop-color="#8A67F4"></stop><stop offset="1" stop-color="#3431D8"></stop></linearGradient><linearGradient id="chatgpt-desktop-window-sheen" x1="164" y1="288" x2="836" y2="744" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0.23"></stop><stop offset="0.52" stop-color="white" stop-opacity="0.11"></stop><stop offset="1" stop-color="white" stop-opacity="0.17"></stop></linearGradient><linearGradient id="chatgpt-desktop-sidebar-sheen" x1="142" y1="332" x2="326" y2="744" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0.31"></stop><stop offset="1" stop-color="white" stop-opacity="0.2"></stop></linearGradient><clipPath id="chatgpt-desktop-frame-clip"><rect width="1000" height="1000" rx="24"></rect></clipPath><clipPath id="chatgpt-desktop-window-clip"><rect x="130" y="286" width="740" height="470" rx="32"></rect></clipPath><clipPath id="chatgpt-desktop-titlebar-clip"><path d="M162 286H838C855.7 286 870 300.3 870 318V346H130V318C130 300.3 144.3 286 162 286Z"></path></clipPath><clipPath id="chatgpt-desktop-sidebar-clip"><path d="M130 346H320V756H162C144.3 756 130 741.7 130 724V346Z"></path></clipPath><clipPath id="chatgpt-desktop-content-clip"><path d="M320 346H870V724C870 741.7 855.7 756 838 756H320V346Z"></path></clipPath><clipPath id="chatgpt-desktop-app-icon-clip"><rect x="410" y="376" width="180" height="180" rx="44"></rect></clipPath><filter id="chatgpt-desktop-window-shadow" x="60" y="218" width="880" height="640" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#1C176D" flood-opacity="0.28"></feDropShadow></filter><filter id="chatgpt-desktop-blur-16" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="16"></feGaussianBlur></filter><filter id="chatgpt-desktop-blur-24" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="24"></feGaussianBlur></filter><filter id="chatgpt-desktop-app-icon-shadow" x="342" y="318" width="316" height="326" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#130D47" flood-opacity="0.3"></feDropShadow></filter><filter id="chatgpt-desktop-logo-shadow" x="420" y="386" width="160" height="168" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#342377" flood-opacity="0.34"></feDropShadow></filter><path id="chatgpt-desktop-openai-logo" d="M9.205 8.765V6.505c0-.19.071-.333.238-.428l4.543-2.616a4.253 4.253 0 0 1 2.117-.523c2.854 0 4.662 2.212 4.662 4.567 0 .166 0 .356-.024.547l-4.709-2.76c-.285-.166-.571-.166-.857 0l-5.97 3.473Zm10.609 8.801v-5.4c0-.333-.143-.57-.429-.737l-5.97-3.473 1.951-1.118c.166-.095.309-.095.475 0l4.544 2.617c1.308.761 2.188 2.378 2.188 3.948 0 1.808-1.07 3.473-2.759 4.163ZM7.802 12.809l-1.951-1.142c-.166-.095-.238-.238-.238-.428V6.006c0-2.545 1.951-4.472 4.591-4.472.999 0 1.927.333 2.712.928L8.23 5.174c-.285.166-.428.404-.428.737v6.898ZM12 15.235l-2.795-1.57v-3.33L12 8.765l2.795 1.57v3.33L12 15.235Zm1.796 7.231c-.999 0-1.927-.333-2.712-.928l4.686-2.711c.285-.167.428-.405.428-.738v-6.898l1.974 1.142c.167.095.238.238.238.428v5.233c0 2.545-1.974 4.472-4.614 4.472ZM8.158 17.162l-4.543-2.617c-1.308-.761-2.188-2.378-2.188-3.948 0-1.832 1.094-3.473 2.783-4.163v5.424c0 .333.143.57.428.737l5.947 3.449-1.951 1.118c-.166.095-.309.095-.476 0Zm-.261 3.9c-2.688 0-4.662-2.021-4.662-4.519 0-.19.024-.38.047-.571l4.686 2.712c.286.166.571.166.856 0l5.971-3.449v2.26c0 .19-.072.333-.238.428l-4.543 2.616a4.253 4.253 0 0 1-2.117.524Zm5.899 2.831c2.878 0 5.28-2.046 5.827-4.757C22.287 18.446 24 15.948 24 13.403c0-1.665-.714-3.282-1.998-4.448.119-.499.19-.999.19-1.498 0-3.401-2.759-5.947-5.946-5.947-.642 0-1.261.096-1.879.31A5.898 5.898 0 0 0 10.204.107c-2.878 0-5.28 2.046-5.827 4.757C1.713 5.554 0 8.052 0 10.597c0 1.665.714 3.282 1.998 4.448-.119.499-.19.999-.19 1.498 0 3.401 2.759 5.947 5.946 5.947.642 0 1.261-.095 1.879-.31a5.898 5.898 0 0 0 4.163 1.713Z"></path></defs><g clip-path="url(#chatgpt-desktop-frame-clip)"><rect width="1000" height="1000" fill="url(#chatgpt-desktop-bg-fallback)"></rect><image href="/images/codex/quickstart/chatgpt-browser-background.webp" width="1000" height="1000" preserveAspectRatio="xMidYMid slice"></image><g filter="url(#chatgpt-desktop-window-shadow)" opacity="0.54"><g clip-path="url(#chatgpt-desktop-window-clip)"><image href="/images/codex/quickstart/chatgpt-browser-background.webp" width="1000" height="1000" preserveAspectRatio="xMidYMid slice" filter="url(#chatgpt-desktop-blur-16)"></image><rect x="130" y="286" width="740" height="470" fill="url(#chatgpt-desktop-window-sheen)"></rect><g clip-path="url(#chatgpt-desktop-titlebar-clip)"><image href="/images/codex/quickstart/chatgpt-browser-background.webp" width="1000" height="1000" preserveAspectRatio="xMidYMid slice" filter="url(#chatgpt-desktop-blur-16)"></image><path d="M162 286H838C855.7 286 870 300.3 870 318V346H130V318C130 300.3 144.3 286 162 286Z" fill="white" fill-opacity="0.18"></path></g><g clip-path="url(#chatgpt-desktop-sidebar-clip)"><image href="/images/codex/quickstart/chatgpt-browser-background.webp" width="1000" height="1000" preserveAspectRatio="xMidYMid slice" filter="url(#chatgpt-desktop-blur-24)"></image><path d="M130 346H320V756H162C144.3 756 130 741.7 130 724V346Z" fill="url(#chatgpt-desktop-sidebar-sheen)"></path></g><g clip-path="url(#chatgpt-desktop-content-clip)"><image href="/images/codex/quickstart/chatgpt-browser-background.webp" width="1000" height="1000" preserveAspectRatio="xMidYMid slice" filter="url(#chatgpt-desktop-blur-16)"></image><path d="M320 346H870V724C870 741.7 855.7 756 838 756H320V346Z" fill="white" fill-opacity="0.1"></path></g></g><rect x="131.5" y="287.5" width="737" height="467" rx="30.5" stroke="white" stroke-opacity="0.78" stroke-width="3"></rect><path d="M130 346H870" stroke="white" stroke-opacity="0.52" stroke-width="2"></path><path d="M320 346V756" stroke="white" stroke-opacity="0.4" stroke-width="2"></path><circle cx="170" cy="316" r="8" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.72" stroke-width="2"></circle><circle cx="198" cy="316" r="8" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.72" stroke-width="2"></circle><circle cx="226" cy="316" r="8" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.72" stroke-width="2"></circle><rect x="370" y="618" width="450" height="90" rx="28" fill="white" fill-opacity="0.16" stroke="white" stroke-opacity="0.58" stroke-width="2"></rect><circle cx="790" cy="677" r="17" fill="white" fill-opacity="0.82"></circle></g><g filter="url(#chatgpt-desktop-app-icon-shadow)"><g clip-path="url(#chatgpt-desktop-app-icon-clip)"><image href="/images/codex/quickstart/chatgpt-browser-background.webp" width="1000" height="1000" preserveAspectRatio="xMidYMid slice" filter="url(#chatgpt-desktop-blur-24)"></image><rect x="410" y="376" width="180" height="180" fill="white" fill-opacity="0.44"></rect></g><rect x="411.5" y="377.5" width="177" height="177" rx="42.5" stroke="white" stroke-opacity="0.76" stroke-width="3"></rect><g filter="url(#chatgpt-desktop-logo-shadow)"><g transform="translate(441 407) scale(4.916667)"><use href="#chatgpt-desktop-openai-logo" fill="white"></use></g></g></g></g></svg></div><div class="_cardCopy_hwtxh_54"><span class="_labelText_hwtxh_62">Desktop app</span><span class="_description_hwtxh_71">Work across projects, local files, and long-running tasks.</span><span class="_tags_hwtxh_82"><span class="_tag_hwtxh_82">Recommended</span></span></div></div><div class="_card_hwtxh_6"><div class="_media_hwtxh_35"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" fill="none" class="_mediaImage_hwtxh_44" aria-hidden="true" focusable="false"><defs><linearGradient id="chatgpt-browser-bg-fallback" x1="85" y1="42" x2="913" y2="968" gradientUnits="userSpaceOnUse"><stop stop-color="#3E5BF4"></stop><stop offset="0.48" stop-color="#8A67F4"></stop><stop offset="1" stop-color="#3431D8"></stop></linearGradient><clipPath id="chatgpt-browser-frame-clip"><rect width="1000" height="1000" rx="24"></rect></clipPath><clipPath id="chatgpt-browser-window-clip"><rect x="66" y="241" width="2400" height="1120" rx="55"></rect></clipPath><clipPath id="chatgpt-browser-header-clip"><path d="M121 241H2466V421H66V296C66 265.6 90.6 241 121 241Z"></path></clipPath><clipPath id="chatgpt-browser-nav-clip"><rect x="66" y="421" width="2400" height="146"></rect></clipPath><clipPath id="chatgpt-browser-content-clip"><rect x="66" y="567" width="2400" height="794"></rect></clipPath><clipPath id="chatgpt-browser-tab-clip"><path d="M345 278.5H921C933.2 278.5 943 288.3 943 300.5V421H323V300.5C323 288.3 332.8 278.5 345 278.5Z"></path></clipPath><clipPath id="chatgpt-browser-address-clip"><rect x="593" y="456" width="1500" height="76" rx="38"></rect></clipPath><filter id="chatgpt-browser-blur-6" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="6"></feGaussianBlur></filter><filter id="chatgpt-browser-blur-8" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="8"></feGaussianBlur></filter><filter id="chatgpt-browser-blur-12" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="12"></feGaussianBlur></filter><filter id="chatgpt-browser-blur-16" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="16"></feGaussianBlur></filter><path id="chatgpt-browser-openai-logo" d="M9.205 8.765V6.505c0-.19.071-.333.238-.428l4.543-2.616a4.253 4.253 0 0 1 2.117-.523c2.854 0 4.662 2.212 4.662 4.567 0 .166 0 .356-.024.547l-4.709-2.76c-.285-.166-.571-.166-.857 0l-5.97 3.473Zm10.609 8.801v-5.4c0-.333-.143-.57-.429-.737l-5.97-3.473 1.951-1.118c.166-.095.309-.095.475 0l4.544 2.617c1.308.761 2.188 2.378 2.188 3.948 0 1.808-1.07 3.473-2.759 4.163ZM7.802 12.809l-1.951-1.142c-.166-.095-.238-.238-.238-.428V6.006c0-2.545 1.951-4.472 4.591-4.472.999 0 1.927.333 2.712.928L8.23 5.174c-.285.166-.428.404-.428.737v6.898ZM12 15.235l-2.795-1.57v-3.33L12 8.765l2.795 1.57v3.33L12 15.235Zm1.796 7.231c-.999 0-1.927-.333-2.712-.928l4.686-2.711c.285-.167.428-.405.428-.738v-6.898l1.974 1.142c.167.095.238.238.238.428v5.233c0 2.545-1.974 4.472-4.614 4.472ZM8.158 17.162l-4.543-2.617c-1.308-.761-2.188-2.378-2.188-3.948 0-1.832 1.094-3.473 2.783-4.163v5.424c0 .333.143.57.428.737l5.947 3.449-1.951 1.118c-.166.095-.309.095-.476 0Zm-.261 3.9c-2.688 0-4.662-2.021-4.662-4.519 0-.19.024-.38.047-.571l4.686 2.712c.286.166.571.166.856 0l5.971-3.449v2.26c0 .19-.072.333-.238.428l-4.543 2.616a4.253 4.253 0 0 1-2.117.524Zm5.899 2.831c2.878 0 5.28-2.046 5.827-4.757C22.287 18.446 24 15.948 24 13.403c0-1.665-.714-3.282-1.998-4.448.119-.499.19-.999.19-1.498 0-3.401-2.759-5.947-5.946-5.947-.642 0-1.261.096-1.879.31A5.898 5.898 0 0 0 10.204.107c-2.878 0-5.28 2.046-5.827 4.757C1.713 5.554 0 8.052 0 10.597c0 1.665.714 3.282 1.998 4.448-.119.499-.19.999-.19 1.498 0 3.401 2.759 5.947 5.946 5.947.642 0 1.261-.095 1.879-.31a5.898 5.898 0 0 0 4.163 1.713Z"></path></defs><g clip-path="url(#chatgpt-browser-frame-clip)"><rect width="1000" height="1000" fill="url(#chatgpt-browser-bg-fallback)"></rect><image href="/images/codex/quickstart/chatgpt-browser-background.webp" width="1000" height="1000" preserveAspectRatio="xMidYMid slice"></image><g transform="translate(100 90) scale(0.8)"><g clip-path="url(#chatgpt-browser-window-clip)"><rect x="66" y="241" width="2400" height="1120" fill="white" fill-opacity="0.06"></rect><g clip-path="url(#chatgpt-browser-header-clip)"><image href="/images/codex/quickstart/chatgpt-browser-background.webp" width="1000" height="1000" preserveAspectRatio="xMidYMid slice" filter="url(#chatgpt-browser-blur-6)"></image><path d="M121 241H2466V421H66V296C66 265.6 90.6 241 121 241Z" fill="white" fill-opacity="0.1"></path></g><g clip-path="url(#chatgpt-browser-nav-clip)"><image href="/images/codex/quickstart/chatgpt-browser-background.webp" width="1000" height="1000" preserveAspectRatio="xMidYMid slice" filter="url(#chatgpt-browser-blur-8)"></image><rect x="66" y="421" width="2400" height="146" fill="white" fill-opacity="0.13"></rect></g><g clip-path="url(#chatgpt-browser-content-clip)"><image href="/images/codex/quickstart/chatgpt-browser-background.webp" width="1000" height="1000" preserveAspectRatio="xMidYMid slice" filter="url(#chatgpt-browser-blur-16)"></image><rect x="66" y="567" width="2400" height="794" fill="white" fill-opacity="0.18"></rect></g><g clip-path="url(#chatgpt-browser-tab-clip)"><image href="/images/codex/quickstart/chatgpt-browser-background.webp" width="1000" height="1000" preserveAspectRatio="xMidYMid slice" filter="url(#chatgpt-browser-blur-12)"></image><path d="M345 278.5H921C933.2 278.5 943 288.3 943 300.5V421H323V300.5C323 288.3 332.8 278.5 345 278.5Z" fill="white" fill-opacity="0.22"></path></g><g clip-path="url(#chatgpt-browser-address-clip)"><image href="/images/codex/quickstart/chatgpt-browser-background.webp" width="1000" height="1000" preserveAspectRatio="xMidYMid slice" filter="url(#chatgpt-browser-blur-12)"></image><rect x="593" y="456" width="1500" height="76" rx="38" fill="white" fill-opacity="0.2"></rect></g></g><rect x="68" y="243" width="2396" height="1116" rx="53" stroke="white" stroke-opacity="0.9" stroke-width="4"></rect><path d="M66 421H2466" stroke="white" stroke-opacity="0.9" stroke-width="4"></path><path d="M66 567H2466" stroke="white" stroke-opacity="0.9" stroke-width="4"></path><circle cx="126" cy="331" r="20" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.75" stroke-width="4"></circle><circle cx="190" cy="331" r="20" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.75" stroke-width="4"></circle><circle cx="254" cy="331" r="20" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.75" stroke-width="4"></circle><path d="M345 278.5H921C933.2 278.5 943 288.3 943 300.5V421H323V300.5C323 288.3 332.8 278.5 345 278.5Z" stroke="white" stroke-opacity="0.85" stroke-width="4"></path><g transform="translate(347 318.5) scale(2.604)"><use href="#chatgpt-browser-openai-logo" fill="white"></use></g><text x="425" y="359" fill="white" font-family="system-ui, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="41" font-weight="500" letter-spacing="-0.6">ChatGPT</text><path d="M886 338L910 362M910 338L886 362" stroke="white" stroke-opacity="0.8" stroke-width="4" stroke-linecap="round"></path><path d="M151 494H111M111 494L127 478M111 494L127 510" stroke="white" stroke-opacity="0.8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M229 494H269M269 494L253 478M269 494L253 510" stroke="white" stroke-opacity="0.8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M391 477A25 25 0 0 0 350 486M350 486L351 469M350 486L367 484" stroke="white" stroke-opacity="0.8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M351 511A25 25 0 0 0 392 502M392 502L391 519M392 502L375 504" stroke="white" stroke-opacity="0.8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M465 493L492 471L519 493V521H501V501H483V521H465V493Z" stroke="white" stroke-opacity="0.8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><rect x="593" y="456" width="1500" height="76" rx="38" stroke="white" stroke-opacity="0.8" stroke-width="4"></rect><text x="616" y="506" fill="white" fill-opacity="0.9" font-family="system-ui, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, sans-serif" font-size="34" font-weight="500" letter-spacing="-0.4">chatgpt.com</text></g></g></svg></div><div class="_cardCopy_hwtxh_54"><span class="_labelText_hwtxh_62">Web</span><span class="_description_hwtxh_71">Work on complex tasks uninterrupted in the cloud.</span><span class="_tags_hwtxh_82"><span class="_tag_hwtxh_82">No installation required</span></span></div></div></div></div> </div> </div>
+<div class="not-prose [&amp;_a]:underline border-default border border-solid rounded-lg p-2 py-4 pl-5 mt-4 first:mt-0 mb-4 text-sm"><div class="flex items-center gap-4"><div class="text-default"><svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 "><path d="M11 10C11 9.44771 10.5523 9 10 9C9.44771 9 9 9.44771 9 10V14C9 14.5523 9.44771 15 10 15C10.5523 15 11 14.5523 11 14V10Z"></path><path d="M10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z"></path><path d="M10 7.30005C10.6351 7.30005 11.15 6.78518 11.15 6.15005C11.15 5.51492 10.6351 5.00005 10 5.00005C9.36487 5.00005 8.85 5.51492 8.85 6.15005C8.85 6.78518 9.36487 7.30005 10 7.30005Z"></path></svg></div><div class="text-default not-prose "><p>If you’re a developer and want to use Codex in your terminal or code editor,
+try <a href="/codex/cli">Codex CLI</a> or the <a href="/codex/ide">Codex IDE extension</a>.</p></div></div></div>
+<h2 id="setup" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Setup</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="setup" aria-label="Copy link to setup" title="Copy link to setup"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+
+<div id="codex-quickstart-setup-root" data-tabs data-tab-default="web" data-tab-param="setup" data-tab-order="[&#34;app&#34;,&#34;web&#34;]" class="w-full astro-xlvzfuxv"> <div class="not-prose astro-xlvzfuxv"> <span class="sr-only astro-xlvzfuxv" id="codex-quickstart-setup-label">  
+Choose an option  </span> <div class="tabs-selector astro-xlvzfuxv"> <astro-island uid="165tf3" prefix="r104" component-url="/_astro/TabsSelector.react.BgHU5pgH.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;rootId&quot;:[0,&quot;codex-quickstart-setup-root&quot;],&quot;param&quot;:[0,&quot;setup&quot;],&quot;tabs&quot;:[1,[[0,{&quot;id&quot;:[0,&quot;app&quot;],&quot;label&quot;:[0,&quot;Desktop&quot;]}],[0,{&quot;id&quot;:[0,&quot;web&quot;],&quot;label&quot;:[0,&quot;Web&quot;]}]]],&quot;initialTab&quot;:[0,&quot;web&quot;],&quot;fallbackTab&quot;:[0,&quot;web&quot;],&quot;size&quot;:[0,&quot;md&quot;],&quot;block&quot;:[0,false],&quot;blockThreshold&quot;:[0],&quot;selector&quot;:[0,&quot;segmented&quot;]}" ssr client="load" opts="{&quot;name&quot;:&quot;TabsSelector&quot;,&quot;value&quot;:true}" await-children><div role="group" dir="ltr" class="_SegmentedControl_16x8u_1 _segmentedControl_1qynh_1 " data-size="md" aria-label="Choose an option" tabindex="-1" style="outline:none"><div class="_SegmentedControlThumb_16x8u_226"></div><button type="button" data-state="off" role="radio" aria-checked="false" class="_SegmentedControlOption_16x8u_142" tabindex="-1" data-radix-collection-item=""><span class="relative"><span class="block w-full min-w-0 max-w-full truncate">Desktop</span></span></button><button type="button" data-state="on" role="radio" aria-checked="true" class="_SegmentedControlOption_16x8u_142" tabindex="-1" data-radix-collection-item=""><span class="relative"><span class="block w-full min-w-0 max-w-full truncate">Web</span></span></button></div><!--astro:end--></astro-island> </div> </div> <div class="mt-6 astro-xlvzfuxv"> <div id="codex-quickstart-setup-root-panel-app" role="region" aria-label="Desktop" hidden data-panel="app" class="astro-xlvzfuxv"> <div class="pl-2 astro-xlvzfuxv"> <div><p>The ChatGPT desktop app is available for macOS, Windows, and Linux. Use it for
 projects, local files, longer tasks, and quick chats. For supported Linux
 distributions and package installation, see the
-[Linux desktop app guide](https://learn.chatgpt.com/docs/linux/linux-app).
-
-<WorkflowSteps variant="headings">
-1. <h3 id="setup-app-install">Install the ChatGPT desktop app</h3>
-
-    Choose the version for your operating system:
-
-    <CodexAppDownloadCta client:load className="mb-4" />
-
-2.  <h3 id="setup-app-sign-in">Open the ChatGPT desktop app and sign in</h3>
-
-    Open the app, then sign in with your ChatGPT account.
-
-    You may also use Codex with an API key. [Some features might not be available](https://learn.chatgpt.com/docs/pricing#feature-availability).
-
-3.  <h3 id="setup-app-select-workspace">Select where ChatGPT should work</h3>
-
-    Start a chat, create a project, or open a folder. ChatGPT can read and modify
-    files in the folder you choose. [Learn more about chats and projects](https://learn.chatgpt.com/docs/projects).
-
-4.  <h3 id="setup-app-start-task">Start a chat</h3>
-
-            
-
-
-          
-
-
-                - For research, analysis, or deliverables such as documents, presentations,
-                  spreadsheets, and Sites, select **ChatGPT**, then switch to **Work** at the
-                  top of the new chat page, above the composer.
-                - For software development with codebase context and developer tools, select
-                  **Codex** from the ChatGPT dropdown.
-                - For a quick question or chat, select **ChatGPT**, then select **Chat**
-                  in the switcher at the top of the new chat page, above the composer. In
-                  Codex, point to **New chat**, then select the **Quick chat** icon on its right.
-
-                Learn more about [using ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt).
-
-              
-
-
-          <ChatGPTModeDropdown client:visible />
-
-    
-
-
-5.  <h3 id="setup-app-send-message">Send your first message</h3>
-
-    Describe your goal and add any files or context ChatGPT needs. Try an example:
-
-    
-
-**Prepare a decision:**
-
-```text
-Review the reports and notes in this project, compare the options, and create a one-page decision memo with a recommendation, risks, open questions, and source links.
-```
-
-**Analyze spreadsheets:**
-
-```text
-Combine the spreadsheets in this folder, clean inconsistent records, identify the most important trends, and create a concise report with charts and plain-English takeaways.
-```
-
-**Improve this app:**
-
-```text
-Inspect this app, identify one high-impact usability improvement, implement it, update the relevant tests, and verify the result on mobile and desktop.
-```
-
-Explore more [use cases](https://learn.chatgpt.com/use-cases).
-
-</WorkflowSteps>
-
-  
-
-
-  
-
-ChatGPT is available on the web and includes Chat and ChatGPT Work.
-
-<WorkflowSteps variant="headings">
-1. <h3 id="setup-web-sign-in">Open ChatGPT and sign in</h3>
-
-Go to [chatgpt.com](https://chatgpt.com) and sign in with your ChatGPT account.
-
-2.  <h3 id="setup-web-start-task">Start a chat</h3>
-
-            
-
-
-          
-
-
-                - Select **Chat** to ask questions, explore ideas, and work through a topic
-                  conversationally.
-                - Select **Work** to research, analyze information, and create documents,
-                  presentations, spreadsheets, Sites, or other finished work.
-
-                Learn more about [using ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt).
-
-              
-
-
-          <ChatWorkSegmentPicker client:visible />
-
-    
-
-
-3.  <h3 id="setup-web-select-workspace">Select where ChatGPT should work</h3>
-
-    Start a chat or select a project. Projects can include chats, files, and instructions.
-
-4.  <h3 id="setup-web-send-message">Send your first message</h3>
-
-    Describe your goal and add any files or context ChatGPT needs. Try an example:
-
-    
-
-**Make a decision:**
-
-```text
-Research whether I should [decision], compare the best options, explain the tradeoffs for my situation, and recommend one with citations.
-```
-
-**Daily briefing:**
-
-```text
-Every weekday at 8:00 a.m., review my connected calendar and recent messages, then send me a briefing with today’s priorities, meeting prep, replies I owe, and blockers.
-```
-
-**Plan an event:**
-
-```text
-Help me plan my event. Ask me about the occasion, guests, date, location, budget, and anything else you need. Then create a timeline, budget, invitation copy, and checklist, and publish a Site I can use to invite guests and collect RSVPs.
-```
-
-</WorkflowSteps>
-
-  
-
-
-</Tabs>
-
-
-
-## Next steps
-[Learn more about the ChatGPT desktop app
-
-
-
-      <OpenBook />
-    
-
-    Use the ChatGPT desktop app to work with your local projects.](https://learn.chatgpt.com/docs/app)
-[Import your setup
-
-
-
-      <CompareArrows />
-    
-
-    Bring supported setup, projects, and recent work into ChatGPT.](https://learn.chatgpt.com/docs/import)
+<a href="/codex/linux/linux-app">Linux desktop app guide</a>.</p><div class="workflow-steps workflow-steps--headings astro-4drqtmie"> <ol>
+<li>
+<h3 id="setup-app-install">Install the ChatGPT desktop app</h3>
+<p>Choose the version for your operating system:</p>
+<style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>Number.POSITIVE_INFINITY*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z1vTGrb" prefix="r93" component-url="/_astro/CodexAppDownloadCta.react.sdupWtIF.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;className&quot;:[0,&quot;mb-4&quot;]}" ssr client="load" opts="{&quot;name&quot;:&quot;CodexAppDownloadCta&quot;,&quot;value&quot;:true}" await-children><div class="not-prose flex flex-wrap items-center gap-2 mb-4"><div class="inline-flex max-w-full items-stretch overflow-hidden rounded-full bg-primary-solid"><a target="_blank" rel="noopener noreferrer" href="https://persistent.oaistatic.com/codex-app-prod/Codex.dmg" class="_Button_6dmow_1 not-prose min-w-0 !rounded-none" data-color="primary" data-variant="solid" data-size="lg" aria-label="Download for macOS (Apple Silicon)"><span class="_ButtonInner_6dmow_4"><span>Download ChatGPT</span></span></a><button type="button" class="_Button_6dmow_1 !rounded-none" data-color="primary" data-variant="solid" data-uniform="" data-size="lg" aria-label="Choose another ChatGPT download" id="radix-_r93R_6_" aria-haspopup="menu" aria-expanded="false" data-state="closed"><span class="_ButtonInner_6dmow_4"><svg width="1em" height="1em" viewBox="0 0 16 9" fill="currentColor" class="!h-2.5 !w-2.5" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292894C14.6834 -0.0976305 15.3166 -0.0976304 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"></path></svg></span></button></div></div><!--astro:end--></astro-island>
+</li>
+<li>
+<h3 id="setup-app-sign-in">Open the ChatGPT desktop app and sign in</h3>
+<p>Open the app, then sign in with your ChatGPT account.</p>
+<p>You may also use Codex with an API key. <a href="/codex/pricing#feature-availability">Some features might not be available</a>.</p>
+</li>
+<li>
+<h3 id="setup-app-select-workspace">Select where ChatGPT should work</h3>
+<p>Start a chat, create a project, or open a folder. ChatGPT can read and modify
+files in the folder you choose. <a href="/codex/projects">Learn more about chats and projects</a>.</p>
+</li>
+<li>
+<h3 id="setup-app-start-task">Start a chat</h3>
+<div class="grid gap-5 md:grid-cols-[minmax(0,1fr)_minmax(17rem,20rem)] md:items-start"><div><ul>
+<li>For research, analysis, or deliverables such as documents, presentations,
+spreadsheets, and Sites, select <strong>ChatGPT</strong>, then switch to <strong>Work</strong> at the
+top of the new chat page, above the composer.</li>
+<li>For software development with codebase context and developer tools, select
+<strong>Codex</strong> from the ChatGPT dropdown.</li>
+<li>For a quick question or chat, select <strong>ChatGPT</strong>, then select <strong>Chat</strong>
+in the switcher at the top of the new chat page, above the composer. In
+Codex, point to <strong>New chat</strong>, then select the <strong>Quick chat</strong> icon on its right.</li>
+</ul><p>Learn more about <a href="/codex/use-chatgpt">using ChatGPT</a>.</p></div><astro-island uid="2bHrCh" prefix="r94" component-url="/_astro/ChatGPTModeDropdown.react.jejuvJBW.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{}" ssr client="visible" opts="{&quot;name&quot;:&quot;ChatGPTModeDropdown&quot;,&quot;value&quot;:true}" await-children><div class="_illustration_f6f0e_1 not-prose"><p id="_r94R_0_" class="_srOnly_f6f0e_9">Interactive illustration of the ChatGPT desktop app product selector and sidebar. ChatGPT shows chats from Chat and Work; Codex shows Codex chats and a Quick chat icon on the New chat row. After a pause, the illustrated cursor returns to the previous selection. This does not change your ChatGPT settings.</p><p class="_srOnly_f6f0e_9" role="status" aria-live="polite"></p><div class="_stage_f6f0e_20"><span class="_windowChrome_f6f0e_59" aria-hidden="true"><span class="_trafficLights_f6f0e_66"><span class="_trafficLight_f6f0e_66 _closeLight_f6f0e_81"></span><span class="_trafficLight_f6f0e_66 _minimizeLight_f6f0e_85"></span><span class="_trafficLight_f6f0e_66 _maximizeLight_f6f0e_89"></span></span></span><span class="_sidebarNav_f6f0e_98 _chatgptSidebar_f6f0e_112" data-product-sidebar="chatgpt" aria-hidden="true"><span class="_sidebarItem_f6f0e_122  "><img class="_sidebarIcon_f6f0e_93" src="/images/codex/quickstart/app-sidebar/compose.svg" alt="" draggable="false"/><span class="_sidebarLabel_f6f0e_143">New chat</span></span><span class="_sidebarItem_f6f0e_122  "><img class="_sidebarIcon_f6f0e_93" src="/images/codex/icons/folder.svg" alt="" draggable="false"/><span class="_sidebarLabel_f6f0e_143">Projects</span></span><span class="_sidebarItem_f6f0e_122  "><img class="_sidebarIcon_f6f0e_93" src="/images/codex/quickstart/app-sidebar/apps.svg" alt="" draggable="false"/><span class="_sidebarLabel_f6f0e_143">Plugins</span></span><span class="_sidebarItem_f6f0e_122  _sectionItem_f6f0e_136"><span class="_sidebarLabel_f6f0e_143">Chats</span></span><span class="_sidebarItem_f6f0e_122 _historyItem_f6f0e_131 " data-chat-surface="work"><span class="_sidebarLabel_f6f0e_143">Plan a launch brief</span></span><span class="_sidebarItem_f6f0e_122 _historyItem_f6f0e_131 " data-chat-surface="chat"><span class="_sidebarLabel_f6f0e_143">Explore API patterns</span></span></span><span class="_sidebarNav_f6f0e_98 _codexSidebar_f6f0e_117" data-product-sidebar="codex" aria-hidden="true"><span class="_sidebarItem_f6f0e_122  "><img class="_sidebarIcon_f6f0e_93" src="/images/codex/quickstart/app-sidebar/compose.svg" alt="" draggable="false"/><span class="_sidebarLabel_f6f0e_143">New chat</span><span class="_sidebarTrailingAction_f6f0e_165" data-quick-chat-action="true"><img class="_sidebarTrailingIcon_f6f0e_175" src="/images/codex/quickstart/app-sidebar/chat-reply-plus.svg" alt="" draggable="false"/></span></span><span class="_sidebarItem_f6f0e_122  "><img class="_sidebarIcon_f6f0e_93" src="/images/codex/quickstart/app-sidebar/clock.svg" alt="" draggable="false"/><span class="_sidebarLabel_f6f0e_143">Scheduled</span><span class="_notificationDot_f6f0e_180"></span></span><span class="_sidebarItem_f6f0e_122  "><img class="_sidebarIcon_f6f0e_93" src="/images/codex/quickstart/app-sidebar/apps.svg" alt="" draggable="false"/><span class="_sidebarLabel_f6f0e_143">Plugins</span></span><span class="_sidebarItem_f6f0e_122  _sectionItem_f6f0e_136"><span class="_sidebarLabel_f6f0e_143">Chats</span></span><span class="_sidebarItem_f6f0e_122 _historyItem_f6f0e_131 " data-chat-surface="codex"><span class="_sidebarLabel_f6f0e_143">Fix retry handling</span></span></span><div class="_modeDemo_f6f0e_188"><button type="button" class="_trigger_f6f0e_207" aria-label="Product selector, current product: ChatGPT" aria-describedby="_r94R_0_" aria-haspopup="menu" aria-expanded="false" aria-controls="_r94R_0H1_"><span class="_triggerText_f6f0e_240" aria-hidden="true"><span class="_modeValues_f6f0e_256"><span class="_modeValue_f6f0e_249 _workValue_f6f0e_268">ChatGPT</span><span class="_modeValue_f6f0e_249 _codexValue_f6f0e_274">Codex</span></span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" class="_chevron_f6f0e_280"><path fill-rule="evenodd" d="M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z" clip-rule="evenodd"></path></svg></span></button><div id="_r94R_0H1_" class="_menu_f6f0e_289" role="menu" aria-label="Product selector" aria-hidden="true"><button type="button" role="menuitemradio" aria-checked="true" tabindex="-1" class="_menuItem_f6f0e_313 _workItem_f6f0e_341"><span class="_itemCopy_f6f0e_351"><span class="_itemLabel_f6f0e_359">ChatGPT</span><span class="_itemDescription_f6f0e_367">Create, learn, and explore</span></span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" class="_check_f6f0e_377 _workCheck_f6f0e_384"><path d="M18.0633 5.67387C18.5196 5.98499 18.6374 6.60712 18.3262 7.06343L10.8262 18.0634C10.6585 18.3095 10.3898 18.4679 10.0934 18.4957C9.79688 18.5235 9.50345 18.4178 9.29289 18.2072L4.79289 13.7072C4.40237 13.3167 4.40237 12.6835 4.79289 12.293C5.18342 11.9025 5.81658 11.9025 6.20711 12.293L9.85368 15.9396L16.6738 5.93676C16.9849 5.48045 17.607 5.36275 18.0633 5.67387Z" fill="currentColor"></path></svg></button><button type="button" role="menuitemradio" aria-checked="false" tabindex="-1" class="_menuItem_f6f0e_313 _codexItem_f6f0e_346"><span class="_itemCopy_f6f0e_351"><span class="_itemLabel_f6f0e_359">Codex</span><span class="_itemDescription_f6f0e_367">Build, debug, and ship</span></span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" class="_check_f6f0e_377 _codexCheck_f6f0e_389"><path d="M18.0633 5.67387C18.5196 5.98499 18.6374 6.60712 18.3262 7.06343L10.8262 18.0634C10.6585 18.3095 10.3898 18.4679 10.0934 18.4957C9.79688 18.5235 9.50345 18.4178 9.29289 18.2072L4.79289 13.7072C4.40237 13.3167 4.40237 12.6835 4.79289 12.293C5.18342 11.9025 5.81658 11.9025 6.20711 12.293L9.85368 15.9396L16.6738 5.93676C16.9849 5.48045 17.607 5.36275 18.0633 5.67387Z" fill="currentColor"></path></svg></button></div><svg class="_cursorStage_f6f0e_394" viewBox="0 0 320 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><g class="_cursorLayer_f6f0e_404 _cursorToCodex_f6f0e_420"><image href="/images/codex/quickstart/codex-cursor-pointer.svg" x="-6" y="-8" width="30" height="31"></image></g><g class="_cursorLayer_f6f0e_404 _cursorToWork_f6f0e_432"><image href="/images/codex/quickstart/codex-cursor-pointer.svg" x="-6" y="-8" width="30" height="31"></image></g></svg></div></div></div><!--astro:end--></astro-island></div>
+</li>
+<li>
+<h3 id="setup-app-send-message">Send your first message</h3>
+<p>Describe your goal and add any files or context ChatGPT needs. Try an example:</p>
+<astro-island uid="1KXOw" prefix="r95" component-url="/_astro/CodexPromptComposer.react.BeRA3mH1.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;id&quot;:[0,&quot;first-message-example&quot;],&quot;promptOptions&quot;:[1,[[0,{&quot;label&quot;:[0,&quot;Prepare a decision&quot;],&quot;prompt&quot;:[0,&quot;Review the reports and notes in this project, compare the options, and create a one-page decision memo with a recommendation, risks, open questions, and source links.&quot;]}],[0,{&quot;label&quot;:[0,&quot;Analyze spreadsheets&quot;],&quot;prompt&quot;:[0,&quot;Combine the spreadsheets in this folder, clean inconsistent records, identify the most important trends, and create a concise report with charts and plain-English takeaways.&quot;]}],[0,{&quot;label&quot;:[0,&quot;Improve this app&quot;],&quot;prompt&quot;:[0,&quot;Inspect this app, identify one high-impact usability improvement, implement it, update the relevant tests, and verify the result on mobile and desktop.&quot;]}]]],&quot;className&quot;:[0,&quot;!mt-3 !mb-10 w-full max-w-3xl min-w-0&quot;]}" ssr client="visible" opts="{&quot;name&quot;:&quot;CodexPromptComposer&quot;,&quot;value&quot;:true}" await-children><div id="first-message-example" class="not-prose my-6 !mt-3 !mb-10 w-full max-w-3xl min-w-0"><div class="_root_wc7wp_1"><div class="_controlWrapper_wc7wp_8"><div class="_eventBoundary_1di2e_1" data-quickstart-segment-count="3" data-quickstart-segment-index="0" style="--quickstart-segment-width:33.333333333333336%;--quickstart-segment-thumb-offset:-0.5px"><div role="group" dir="ltr" class="_SegmentedControl_16x8u_1 _control_1di2e_7 _control_wc7wp_8" data-block="" data-pill="" data-size="lg" aria-label="Choose an example prompt" tabindex="-1" style="outline:none"><div class="_SegmentedControlThumb_16x8u_226"></div><button type="button" data-state="on" role="radio" aria-checked="true" class="_SegmentedControlOption_16x8u_142" data-quickstart-segment-value="prompt-0" tabindex="-1" data-radix-collection-item=""><span class="relative">Prepare a decision</span></button><button type="button" data-state="off" role="radio" aria-checked="false" class="_SegmentedControlOption_16x8u_142" data-quickstart-segment-value="prompt-1" tabindex="-1" data-radix-collection-item=""><span class="relative">Analyze spreadsheets</span></button><button type="button" data-state="off" role="radio" aria-checked="false" class="_SegmentedControlOption_16x8u_142" data-quickstart-segment-value="prompt-2" tabindex="-1" data-radix-collection-item=""><span class="relative">Improve this app</span></button></div></div></div><div class="_viewport_wc7wp_20"><div class="_track_wc7wp_27" style="transform:translate3d(calc(0% + var(--drag-offset, 0px)), 0, 0)"><div class="_panel_wc7wp_39" role="region" aria-label="Prepare a decision example"><div class="w-full"><div class="light" style="display:block;width:100%;height:100%"></div></div></div><div class="_panel_wc7wp_39" role="region" aria-label="Analyze spreadsheets example" aria-hidden="true" inert=""><div class="w-full"><div class="light" style="display:block;width:100%;height:100%"></div></div></div><div class="_panel_wc7wp_39" role="region" aria-label="Improve this app example" aria-hidden="true" inert=""><div class="w-full"><div class="light" style="display:block;width:100%;height:100%"></div></div></div></div></div></div></div><!--astro:end--></astro-island>
+<p>Explore more <a href="/codex/use-cases">use cases</a>.</p>
+</li>
+</ol> </div></div> </div> </div><div id="codex-quickstart-setup-root-panel-web" role="region" aria-label="Web" data-panel="web" class="astro-xlvzfuxv"> <div class="pl-2 astro-xlvzfuxv"> <div><p>ChatGPT is available on the web and includes Chat and ChatGPT Work.</p><div class="workflow-steps workflow-steps--headings astro-4drqtmie"> <ol>
+<li>
+<h3 id="setup-web-sign-in">Open ChatGPT and sign in</h3>
+</li>
+</ol><p>Go to <a href="https://chatgpt.com">chatgpt.com</a> and sign in with your ChatGPT account.</p><ol start="2">
+<li>
+<h3 id="setup-web-start-task">Start a chat</h3>
+<div class="grid gap-5 md:grid-cols-[minmax(0,1fr)_minmax(17rem,20rem)] md:items-stretch"><div><ul>
+<li>Select <strong>Chat</strong> to ask questions, explore ideas, and work through a topic
+conversationally.</li>
+<li>Select <strong>Work</strong> to research, analyze information, and create documents,
+presentations, spreadsheets, Sites, or other finished work.</li>
+</ul><p>Learn more about <a href="/codex/use-chatgpt">using ChatGPT</a>.</p></div><script>(()=>{var a=(s,i,o)=>{let r=async()=>{await(await s())()},t=typeof i.value=="object"?i.value:void 0,c={rootMargin:t==null?void 0:t.rootMargin},n=new IntersectionObserver(e=>{for(let l of e)if(l.isIntersecting){n.disconnect(),r();break}},c);for(let e of o.children)n.observe(e)};(self.Astro||(self.Astro={})).visible=a;window.dispatchEvent(new Event("astro:visible"));})();</script><astro-island uid="19KTFu" prefix="r96" component-url="/_astro/ChatWorkSegmentPicker.react.Ps0y1Dtx.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{}" ssr client="visible" opts="{&quot;name&quot;:&quot;ChatWorkSegmentPicker&quot;,&quot;value&quot;:true}" await-children><div class="_illustration_1e6xz_1 not-prose"><p id="_r96R_0_" class="_srOnly_1e6xz_9">Interactive illustration of the ChatGPT Chat and Work picker. Choose a selection to update this demo. When motion is enabled, the animated cursor restores the previous selection after a short pause. This does not change your ChatGPT settings.</p><p class="_srOnly_1e6xz_9" role="status" aria-live="polite"></p><div class="_stage_1e6xz_20"><div class="_motionCanvas_1e6xz_34"><div class="_picker_1e6xz_51"><div class="_eventBoundary_1di2e_1" data-quickstart-segment-count="2" data-quickstart-segment-index="0" style="--quickstart-segment-width:50%;--quickstart-segment-thumb-offset:-0.5px"><div role="group" dir="ltr" class="_SegmentedControl_16x8u_1 _control_1di2e_7 _control_1e6xz_61" data-block="" data-pill="" data-size="lg" aria-label="ChatGPT Chat and Work demo" aria-describedby="_r96R_0_" tabindex="-1" style="outline:none"><div class="_SegmentedControlThumb_16x8u_226"></div><button type="button" data-state="on" role="radio" aria-checked="true" class="_SegmentedControlOption_16x8u_142" aria-label="Select Chat in this illustration" data-quickstart-segment-value="chat" tabindex="-1" data-radix-collection-item=""><span class="relative">Chat</span></button><button type="button" data-state="off" role="radio" aria-checked="false" class="_SegmentedControlOption_16x8u_142" aria-label="Select Work in this illustration" data-quickstart-segment-value="work" tabindex="-1" data-radix-collection-item=""><span class="relative">Work</span></button></div></div></div><svg class="_cursorStage_1e6xz_87" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><g class="_cursorLayer_1e6xz_97 _cursorToWork_1e6xz_115"><image href="/images/codex/quickstart/codex-cursor-pointer.svg" x="-6" y="-8" width="30" height="31"></image></g><g class="_cursorLayer_1e6xz_97 _cursorToChat_1e6xz_122"><image href="/images/codex/quickstart/codex-cursor-pointer.svg" x="-6" y="-8" width="30" height="31"></image></g></svg></div></div></div><!--astro:end--></astro-island></div>
+</li>
+<li>
+<h3 id="setup-web-select-workspace">Select where ChatGPT should work</h3>
+<p>Start a chat or select a project. Projects can include chats, files, and instructions.</p>
+</li>
+<li>
+<h3 id="setup-web-send-message">Send your first message</h3>
+<p>Describe your goal and add any files or context ChatGPT needs. Try an example:</p>
+<astro-island uid="Z2lgCFD" prefix="r97" component-url="/_astro/CodexPromptComposer.react.BeRA3mH1.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;id&quot;:[0,&quot;web-first-message-example&quot;],&quot;destination&quot;:[0,&quot;web&quot;],&quot;placeholder&quot;:[0,&quot;Message ChatGPT&quot;],&quot;promptOptions&quot;:[1,[[0,{&quot;label&quot;:[0,&quot;Make a decision&quot;],&quot;prompt&quot;:[0,&quot;Research whether I should [decision], compare the best options, explain the tradeoffs for my situation, and recommend one with citations.&quot;]}],[0,{&quot;label&quot;:[0,&quot;Daily briefing&quot;],&quot;prompt&quot;:[0,&quot;Every weekday at 8:00 a.m., review my connected calendar and recent messages, then send me a briefing with today’s priorities, meeting prep, replies I owe, and blockers.&quot;]}],[0,{&quot;label&quot;:[0,&quot;Plan an event&quot;],&quot;prompt&quot;:[0,&quot;Help me plan my event. Ask me about the occasion, guests, date, location, budget, and anything else you need. Then create a timeline, budget, invitation copy, and checklist, and publish a Site I can use to invite guests and collect RSVPs.&quot;]}]]],&quot;className&quot;:[0,&quot;!mt-3 !mb-10 w-full max-w-3xl min-w-0&quot;]}" ssr client="visible" opts="{&quot;name&quot;:&quot;CodexPromptComposer&quot;,&quot;value&quot;:true}" await-children><div id="web-first-message-example" class="not-prose my-6 !mt-3 !mb-10 w-full max-w-3xl min-w-0"><div class="_root_wc7wp_1"><div class="_controlWrapper_wc7wp_8"><div class="_eventBoundary_1di2e_1" data-quickstart-segment-count="3" data-quickstart-segment-index="0" style="--quickstart-segment-width:33.333333333333336%;--quickstart-segment-thumb-offset:-0.5px"><div role="group" dir="ltr" class="_SegmentedControl_16x8u_1 _control_1di2e_7 _control_wc7wp_8" data-block="" data-pill="" data-size="lg" aria-label="Choose an example prompt" tabindex="-1" style="outline:none"><div class="_SegmentedControlThumb_16x8u_226"></div><button type="button" data-state="on" role="radio" aria-checked="true" class="_SegmentedControlOption_16x8u_142" data-quickstart-segment-value="prompt-0" tabindex="-1" data-radix-collection-item=""><span class="relative">Make a decision</span></button><button type="button" data-state="off" role="radio" aria-checked="false" class="_SegmentedControlOption_16x8u_142" data-quickstart-segment-value="prompt-1" tabindex="-1" data-radix-collection-item=""><span class="relative">Daily briefing</span></button><button type="button" data-state="off" role="radio" aria-checked="false" class="_SegmentedControlOption_16x8u_142" data-quickstart-segment-value="prompt-2" tabindex="-1" data-radix-collection-item=""><span class="relative">Plan an event</span></button></div></div></div><div class="_viewport_wc7wp_20"><div class="_track_wc7wp_27" style="transform:translate3d(calc(0% + var(--drag-offset, 0px)), 0, 0)"><div class="_panel_wc7wp_39" role="region" aria-label="Make a decision example"><div class="w-full"><div class="light" style="display:block;width:100%;height:100%"></div></div></div><div class="_panel_wc7wp_39" role="region" aria-label="Daily briefing example" aria-hidden="true" inert=""><div class="w-full"><div class="light" style="display:block;width:100%;height:100%"></div></div></div><div class="_panel_wc7wp_39" role="region" aria-label="Plan an event example" aria-hidden="true" inert=""><div class="w-full"><div class="light" style="display:block;width:100%;height:100%"></div></div></div></div></div></div></div><!--astro:end--></astro-island>
+</li>
+</ol> </div></div> </div> </div> </div> </div> <script data-astro-rerun>
+  (() => {
+    const parseOrder = (root) => {
+      try {
+        return JSON.parse(root.dataset.tabOrder || "[]");
+      } catch {
+        return [];
+      }
+    };
+
+    const coerceTab = (value, order) =>
+      typeof value === "string" && order.includes(value) ? value : null;
+
+    const getPreferredTab = (param, order) =>
+      coerceTab(window.__tabsPreferred?.[param], order);
+
+    const readTabFromUrl = (param, order) => {
+      try {
+        const url = new URL(window.location.href);
+        return coerceTab(url.searchParams.get(param), order);
+      } catch {
+        return null;
+      }
+    };
+
+    const setActive = (root, nextId) => {
+      if (!root || !nextId) return;
+      const panels = Array.from(root.querySelectorAll("[data-panel]"));
+
+      panels.forEach((panel) => {
+        panel.hidden = panel.dataset.panel !== nextId;
+      });
+
+      root.dataset.value = nextId;
+
+      requestAnimationFrame(() => {
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const setAllActive = (param, nextId) => {
+      if (!nextId) return;
+      document.querySelectorAll("[data-tabs]").forEach((root) => {
+        if (root.dataset.tabParam !== param) return;
+        const order = parseOrder(root);
+        const value = coerceTab(nextId, order);
+        if (!value) return;
+        setActive(root, value);
+      });
+    };
+
+    const resolveValue = (root) => {
+      const param = root.dataset.tabParam || "tab";
+      const order = parseOrder(root);
+      const preferredTab = getPreferredTab(param, order);
+      const fallbackTab = coerceTab(root.dataset.tabDefault, order) ?? order[0];
+      const effectiveFallback = preferredTab ?? fallbackTab;
+      const hash = window.location.hash.slice(1);
+      const hashTarget = hash ? document.getElementById(hash) : null;
+      const hashPanel =
+        hashTarget && root.contains(hashTarget)
+          ? hashTarget.closest("[data-panel]")?.dataset?.panel
+          : null;
+      return {
+        param,
+        value:
+          readTabFromUrl(param, order) ??
+          coerceTab(hashPanel, order) ??
+          effectiveFallback,
+      };
+    };
+
+    const initTabs = (root) => {
+      if (!root) return;
+      const { param, value } = resolveValue(root);
+      setAllActive(param, value);
+    };
+
+    const initAll = () => {
+      document
+        .querySelectorAll("[data-tabs]")
+        .forEach((root) => initTabs(root));
+    };
+
+    const bindGlobalListeners = () => {
+      if (window.__tabsBound) return;
+      window.__tabsBound = true;
+
+      document.addEventListener("tabs:set", (event) => {
+        const detail = event?.detail || {};
+        const target = event.target;
+        const root =
+          target && target.closest ? target.closest("[data-tabs]") : null;
+
+        const param = detail.param || root?.dataset?.tabParam || "tab";
+        const nextId = typeof detail.value === "string" ? detail.value : null;
+        if (!nextId) return;
+        window.__tabsPreferred = window.__tabsPreferred || {};
+        window.__tabsPreferred[param] = nextId;
+        setAllActive(param, nextId);
+      });
+
+      const syncFromLocation = () => {
+        document.querySelectorAll("[data-tabs]").forEach((root) => {
+          const { param, value } = resolveValue(root);
+          setAllActive(param, value);
+        });
+      };
+
+      window.addEventListener("popstate", syncFromLocation);
+      window.addEventListener("hashchange", syncFromLocation);
+      // `astro:page-load` fires on initial load and on client-side navigation.
+      document.addEventListener("astro:page-load", initAll);
+      document.addEventListener("astro:load", initAll);
+      document.addEventListener("astro:after-swap", initAll);
+    };
+
+    bindGlobalListeners();
+    initAll();
+  })();
+</script>
+<div class="h-6" aria-hidden="true"></div>
+<h2 id="next-steps" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Next steps</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="next-steps" aria-label="Copy link to next steps" title="Copy link to next steps"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<a href="/codex/app" to="/codex/app" class="_TextLink_ssta1_1" data-underline="always"><div class="icon-item mt-2"> <div class="icon-item-icon"> <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" ><path fill-rule="evenodd" d="M8 3.51v12.222c1.1.372 2.146 1.062 3 1.941V7.211c-.31-1.455-1.524-2.948-3-3.7Zm5 4.728v11.578c.767-.38 1.51-.68 2.287-.908 1.27-.372 2.585-.533 4.187-.558V6.514c-2.68.088-4.281.55-6.474 1.724ZM9.757 19.272c-.663-.745-1.513-1.348-2.406-1.648A1.987 1.987 0 0 1 6 15.738v-9.08a11.37 11.37 0 0 0-1.535-.143h-.004l-.002.001-.004.002V18.35c2.105.033 3.7.303 5.3.922ZM6 4.635V3.512c0-1.411 1.495-2.493 2.866-1.805 1.742.873 3.269 2.533 3.901 4.402 2.119-1.046 3.93-1.506 6.658-1.594 1.142-.037 2.05.895 2.05 1.999v11.837a1.996 1.996 0 0 1-1.96 1.999c-1.485.022-2.614.17-3.666.477-1.055.31-2.079.792-3.342 1.535a1 1 0 0 1-1.014 0c-2.465-1.45-4.169-1.968-7.078-2.012a1.995 1.995 0 0 1-1.959-1.998V6.515c0-1.147.958-2.036 2.077-1.998.601.02 1.045.06 1.467.118Z" clip-rule="evenodd"></path></svg></span> </div> <div class="icon-item-right"> <div class="icon-item-title not-prose"> <div class="icon-item-title body-large not-prose">Learn more about the ChatGPT desktop app</div> <div class="pointer"> <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.293 7.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L12.586 12 9.293 8.707a1 1 0 0 1 0-1.414Z" clip-rule="evenodd"></path></svg> </div> </div>  <div class="icon-item-desc body-small not-prose"> <p>Use the ChatGPT desktop app to work with your local projects.</p> </div> </div> </div></a>
+<a href="/codex/import" to="/codex/import" class="_TextLink_ssta1_1" data-underline="always"><div class="icon-item mt-2"> <div class="icon-item-icon"> <span><svg width="18" height="16" viewBox="0 0 18 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" ><path fill-rule="evenodd" clip-rule="evenodd" d="M5.70243 1.16073C6.02787 0.835297 6.55551 0.835297 6.88094 1.16073L9.79761 4.0774C10.123 4.40284 10.123 4.93048 9.79761 5.25591L6.88094 8.17258C6.55551 8.49802 6.02787 8.49802 5.70243 8.17258C5.37699 7.84714 5.37699 7.3195 5.70243 6.99407L7.19651 5.49999H1.50002C1.03978 5.49999 0.666687 5.12689 0.666687 4.66666C0.666687 4.20642 1.03978 3.83332 1.50002 3.83332H7.19651L5.70243 2.33925C5.37699 2.01381 5.37699 1.48617 5.70243 1.16073Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12.2976 14.8392C11.9722 15.1647 11.4445 15.1647 11.1191 14.8392L8.20243 11.9226C7.87699 11.5971 7.87699 11.0695 8.20243 10.7441L11.1191 7.8274C11.4445 7.50196 11.9722 7.50196 12.2976 7.8274C12.623 8.15284 12.623 8.68048 12.2976 9.00591L10.8035 10.5H16.5C16.9603 10.5 17.3334 10.8731 17.3334 11.3333C17.3334 11.7936 16.9603 12.1667 16.5 12.1667H10.8035L12.2976 13.6607C12.623 13.9862 12.623 14.5138 12.2976 14.8392Z"></path></svg></span> </div> <div class="icon-item-right"> <div class="icon-item-title not-prose"> <div class="icon-item-title body-large not-prose">Import your setup</div> <div class="pointer"> <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.293 7.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L12.586 12 9.293 8.707a1 1 0 0 1 0-1.414Z" clip-rule="evenodd"></path></svg> </div> </div>  <div class="icon-item-desc body-small not-prose"> <p>Bring supported setup, projects, and recent work into ChatGPT.</p> </div> </div> </div></a>  </article>  </div> </div> </div> <script>
+    const alignHeadingHash = () => {
+      if (!window.location.hash) return;
+
+      let slug = window.location.hash.slice(1);
+      try {
+        slug = decodeURIComponent(slug);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+
+      requestAnimationFrame(() => {
+        document
+          .getElementById(slug)
+          ?.scrollIntoView({ behavior: "auto", block: "start" });
+      });
+    };
+
+    alignHeadingHash();
+    window.addEventListener("hashchange", alignHeadingHash);
+    document.addEventListener("astro:page-load", alignHeadingHash);
+
+    const copyHeadingLink = async (slug) => {
+      const url = `${location.origin}${location.pathname}${location.search}#${slug}`;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        try {
+          await navigator.clipboard.writeText(url);
+          return;
+        } catch (error) {
+          console.warn("Copy to clipboard failed", error);
+        }
+      }
+
+      window.prompt("Copy link", url);
+    };
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const button = target.closest("[data-anchor-id]");
+      if (!button) return;
+
+      const slug = button.getAttribute("data-anchor-id");
+      if (!slug) return;
+
+      event.preventDefault();
+      copyHeadingLink(slug);
+      const heading = document.getElementById(slug);
+      if (heading) {
+        heading.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      history.replaceState(null, "", `#${slug}`);
+    });
+  </script>  <div class="mx-4 sm:mx-8 md:mx-auto md:w-full md:max-w-6xl px-4 md:px-12 xl:px-4"> <div class="grid grid-cols-1 gap-12 xl:grid-cols-[minmax(0,1fr)_200px]"> <nav class="w-full mb-8 px-0"><div class="flex justify-between items-center"><span></span><a href="/codex/use-chatgpt" class="flex items-end gap-2"><div class="flex flex-col"><div class="text-xs font-bold text-gray-800 dark:text-gray-200">
+Next
+</div><div class="text-sm text-gray-500 dark:text-gray-400">Use ChatGPT</div></div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-800 dark:text-gray-200 mb-1 " ><path d="M21 12C21 12.2652 20.8946 12.5196 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11L17.5858 11L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C20.8946 11.4804 21 11.7348 21 12Z" fill="currentColor"></path></svg></a></div></nav> <div class="hidden xl:block"></div> </div> </div> </main> </div> </div> <script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();</script><astro-island uid="DQ4jb" component-url="/_astro/Analytics.fv2Dvl4A.js" component-export="default" renderer-url="/_astro/client.DZeCTsdm.js" props="{}" ssr client="only" opts="{&quot;name&quot;:&quot;VercelAnalyticsClient&quot;,&quot;value&quot;:&quot;solid-js&quot;}"></astro-island> <vercel-speed-insights data-props="{}" data-params="{&#34;slug&#34;:&#34;quickstart&#34;}" data-pathname="/codex/quickstart/"></vercel-speed-insights> <script type="module">var o="@vercel/speed-insights",u="1.3.1",f=()=>{window.si||(window.si=function(...r){(window.siq=window.siq||[]).push(r)})};function l(){return typeof window<"u"}function h(){try{const e="production"}catch{}return"production"}function d(){return h()==="development"}function v(e,r){if(!e||!r)return e;let n=e;try{const t=Object.entries(r);for(const[s,i]of t)if(!Array.isArray(i)){const a=c(i);a.test(n)&&(n=n.replace(a,`/[${s}]`))}for(const[s,i]of t)if(Array.isArray(i)){const a=c(i.join("/"));a.test(n)&&(n=n.replace(a,`/[...${s}]`))}return n}catch{return e}}function c(e){return new RegExp(`/${g(e)}(?=[/?#]|$)`)}function g(e){return e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}function m(e){return e.scriptSrc?e.scriptSrc:d()?"https://va.vercel-scripts.com/v1/speed-insights/script.debug.js":e.dsn?"https://va.vercel-scripts.com/v1/speed-insights/script.js":e.basePath?`${e.basePath}/speed-insights/script.js`:"/_vercel/speed-insights/script.js"}function w(e={}){var r;if(!l()||e.route===null)return null;f();const n=m(e);if(document.head.querySelector(`script[src*="${n}"]`))return null;e.beforeSend&&((r=window.si)==null||r.call(window,"beforeSend",e.beforeSend));const t=document.createElement("script");return t.src=n,t.defer=!0,t.dataset.sdkn=o+(e.framework?`/${e.framework}`:""),t.dataset.sdkv=u,e.sampleRate&&(t.dataset.sampleRate=e.sampleRate.toString()),e.route&&(t.dataset.route=e.route),e.endpoint?t.dataset.endpoint=e.endpoint:e.basePath&&(t.dataset.endpoint=`${e.basePath}/speed-insights/vitals`),e.dsn&&(t.dataset.dsn=e.dsn),d()&&e.debug===!1&&(t.dataset.debug="false"),t.onerror=()=>{console.log(`[Vercel Speed Insights] Failed to load script from ${n}. Please check if any content blockers are enabled and try again.`)},document.head.appendChild(t),{setRoute:s=>{t.dataset.route=s??void 0}}}function p(){try{return}catch{}}customElements.define("vercel-speed-insights",class extends HTMLElement{constructor(){super();try{const r=JSON.parse(this.dataset.props??"{}"),n=JSON.parse(this.dataset.params??"{}"),t=v(this.dataset.pathname??"",n);w({route:t,...r,framework:"astro",basePath:p(),beforeSend:window.speedInsightsBeforeSend})}catch(r){throw new Error(`Failed to parse SpeedInsights properties: ${r}`)}}});</script> <div data-docs-agent-root data-chatkit-api-url="/api/docs-agent/chatkit" data-chatkit-domain-key="domain_pk_69f4ea0d87748194b9ad4d8ba39fc5710f6f8241026056cb" data-docs-agent-site-domain="developers" data-chatkit-greeting="What can I help you with?" data-chatkit-start-prompts-by-route="{&#34;home&#34;:[{&#34;label&#34;:&#34;Ask a question&#34;,&#34;prompt&#34;:&#34;What is the Docs MCP server?&#34;,&#34;icon&#34;:&#34;circle-question&#34;},{&#34;label&#34;:&#34;Find a page&#34;,&#34;prompt&#34;:&#34;Show me OpenAI models&#34;,&#34;icon&#34;:&#34;search&#34;},{&#34;label&#34;:&#34;Build a custom guide&#34;,&#34;prompt&#34;:&#34;I want to build an interactive webapp that has a huge microphone in the center allowing to chat in Realtime&#34;,&#34;icon&#34;:&#34;square-code&#34;}],&#34;api&#34;:[{&#34;label&#34;:&#34;Ask a question&#34;,&#34;prompt&#34;:&#34;What are the recommended prompting best practices for building with the latest model?&#34;,&#34;icon&#34;:&#34;circle-question&#34;},{&#34;label&#34;:&#34;Find a page&#34;,&#34;prompt&#34;:&#34;show me a page to compare models&#34;,&#34;icon&#34;:&#34;search&#34;},{&#34;label&#34;:&#34;Build a custom guide&#34;,&#34;prompt&#34;:&#34;I want to build a customer support app with realtime voice&#34;,&#34;icon&#34;:&#34;square-code&#34;}],&#34;codex&#34;:[{&#34;label&#34;:&#34;Ask a question&#34;,&#34;prompt&#34;:&#34;What's the latest model to use with ChatGPT?&#34;,&#34;icon&#34;:&#34;circle-question&#34;},{&#34;label&#34;:&#34;Find a page&#34;,&#34;prompt&#34;:&#34;Do you have guidance on prompting?&#34;,&#34;icon&#34;:&#34;search&#34;},{&#34;label&#34;:&#34;Build a custom guide&#34;,&#34;prompt&#34;:&#34;I want to build an internal dashboard that gets updated with data from slack and spreadsheets and which allows to visualize weekly progress&#34;,&#34;icon&#34;:&#34;square-code&#34;}],&#34;chatgpt&#34;:[{&#34;label&#34;:&#34;Ask a question&#34;,&#34;prompt&#34;:&#34;What are best practices for building a plugin?&#34;,&#34;icon&#34;:&#34;circle-question&#34;},{&#34;label&#34;:&#34;Find a page&#34;,&#34;prompt&#34;:&#34;Show me the optional UI guidelines for plugins&#34;,&#34;icon&#34;:&#34;search&#34;},{&#34;label&#34;:&#34;Build a custom guide&#34;,&#34;prompt&#34;:&#34;Help me build a plugin that proposes a quiz to find the best match from my list of products&#34;,&#34;icon&#34;:&#34;square-code&#34;}],&#34;resources&#34;:[{&#34;label&#34;:&#34;Ask a question&#34;,&#34;prompt&#34;:&#34;What is the Docs MCP server?&#34;,&#34;icon&#34;:&#34;circle-question&#34;},{&#34;label&#34;:&#34;Find a page&#34;,&#34;prompt&#34;:&#34;Show me the Codex meetups page&#34;,&#34;icon&#34;:&#34;search&#34;},{&#34;label&#34;:&#34;Build a custom guide&#34;,&#34;prompt&#34;:&#34;I want to build an interactive webapp that has a huge microphone in the center allowing to chat in Realtime&#34;,&#34;icon&#34;:&#34;square-code&#34;}]}" data-astro-transition-persist="docs-agent-launcher" class="docs-agent-root"><button type="button" data-docs-agent-open aria-haspopup="dialog" aria-expanded="false" aria-controls="docs-agent-panel" class="fixed bottom-5 right-5 z-50 inline-flex h-11 items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-primary-solid px-4 text-sm font-medium text-primary-solid shadow-[0_16px_48px_-18px_rgba(15,23,42,0.45)] transition-colors hover:bg-primary-solid-hover active:bg-primary-solid-active focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-soft-active focus-visible:ring-offset-2 focus-visible:ring-offset-surface"><span>Ask AI</span></button><div id="docs-agent-panel" data-docs-agent-panel role="dialog" aria-labelledby="docs-agent-title" class="fixed inset-x-0 bottom-0 z-[80] flex h-[var(--docs-agent-drawer-height)] flex-col overflow-hidden rounded-t-2xl border border-subtle bg-surface transition-transform duration-300 ease-out md:inset-y-0 md:left-auto md:right-0 md:h-auto md:w-[var(--docs-agent-panel-width)] md:rounded-none md:border-y-0 md:border-r-0"><header class="flex h-16 shrink-0 items-center justify-between border-b border-subtle px-4"><h2 id="docs-agent-title" class="text-sm font-semibold text-default">
+Docs agent
+</h2><div class="flex items-center gap-1.5"><button type="button" data-docs-agent-new aria-label="Start a new docs agent chat" title="Start a new chat" class="inline-flex h-8 w-8 items-center justify-center rounded-md text-secondary transition-colors hover:bg-primary-soft-alpha hover:text-default"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="h-4 w-4 " ><path fill-rule="evenodd" d="M16.793 2.793a3.121 3.121 0 1 1 4.414 4.414l-8.5 8.5A1 1 0 0 1 12 16H9a1 1 0 0 1-1-1v-3a1 1 0 0 1 .293-.707l8.5-8.5Zm3 1.414a1.121 1.121 0 0 0-1.586 0L10 12.414V14h1.586l8.207-8.207a1.121 1.121 0 0 0 0-1.586ZM6 5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4a1 1 0 1 1 2 0v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h4a1 1 0 1 1 0 2H6Z" clip-rule="evenodd"></path></svg></button><button type="button" data-docs-agent-close aria-label="Close docs agent" class="inline-flex h-8 w-8 items-center justify-center rounded-md text-secondary transition-colors hover:bg-primary-soft-alpha hover:text-default"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 " ><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div></header><div class="relative min-h-0 flex-1"><p data-docs-agent-status class="absolute inset-x-4 top-4 rounded-lg border border-subtle bg-surface-secondary p-3 text-sm text-secondary">
+Loading docs agent...
+</p><openai-chatkit id="docs-agent-chatkit" class="block h-full w-full"></openai-chatkit></div></div></div><script>(() => {
+  const registry = window.customElements;
+  if (!registry || window.__docsAgentChatKitMoveGuardInstalled) return;
+  window.__docsAgentChatKitMoveGuardInstalled = true;
+
+  // Astro preserves the launcher with Element.moveBefore(). Registering this
+  // callback before ChatKit is defined prevents its reconnect hooks from
+  // replacing the live message-bridge iframe during that move.
+  const registryPrototype = Object.getPrototypeOf(registry);
+  const defineDescriptor = Object.getOwnPropertyDescriptor(
+    registryPrototype,
+    "define"
+  );
+  if (!defineDescriptor?.value) return;
+
+  Object.defineProperty(registryPrototype, "define", {
+    ...defineDescriptor,
+    value(name, constructor, options) {
+      if (
+        name === "openai-chatkit" &&
+        !("connectedMoveCallback" in constructor.prototype)
+      ) {
+        Object.defineProperty(
+          constructor.prototype,
+          "connectedMoveCallback",
+          {
+            configurable: true,
+            value() {},
+          }
+        );
+      }
+
+      const result = defineDescriptor.value.call(
+        this,
+        name,
+        constructor,
+        options
+      );
+      if (name === "openai-chatkit") {
+        Object.defineProperty(registryPrototype, "define", defineDescriptor);
+      }
+      return result;
+    },
+  });
+})();</script><script src="https://cdn.platform.openai.com/deployments/chatkit/chatkit.js" async></script><script type="module" src="/_astro/DocsAgentLauncher.astro_astro_type_script_index_0_lang.B_ba8fcZ.js"></script><script>
+  function initializeDocsAgentLauncher() {
+    const root = document.querySelector("[data-docs-agent-root]");
+    if (!root || root.dataset.initialized === "true") return;
+    if (
+      typeof window.__createDocsAgentNavigationQueue !== "function" ||
+      typeof window.__getDocsAgentNavigationTarget !== "function"
+    ) {
+      return;
+    }
+
+    const mobileOpenButton = root.querySelector("button[data-docs-agent-open]");
+    const closeButton = root.querySelector("[data-docs-agent-close]");
+    const newButton = root.querySelector("[data-docs-agent-new]");
+    const panel = root.querySelector("[data-docs-agent-panel]");
+    const status = root.querySelector("[data-docs-agent-status]");
+    let chatkit = root.querySelector("openai-chatkit");
+    const apiURL = root.dataset.chatkitApiUrl;
+    const domainKey = root.dataset.chatkitDomainKey || "local-dev";
+    const siteDomain =
+      root.dataset.docsAgentSiteDomain === "chatgpt" ? "chatgpt" : "developers";
+    const startGreeting =
+      root.dataset.chatkitGreeting || "OpenAI developer docs";
+    const startPromptsByParentRoute = (() => {
+      try {
+        const parsed = JSON.parse(
+          root.dataset.chatkitStartPromptsByRoute || "{}"
+        );
+        return parsed && typeof parsed === "object" && !Array.isArray(parsed)
+          ? parsed
+          : {};
+      } catch {
+        return {};
+      }
+    })();
+    const docsAgentSessionStorageKey = "docs-agent.chatkit-session-id";
+    const uuidPattern =
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+    const randomUuid = () => {
+      if (window.crypto?.randomUUID) {
+        return window.crypto.randomUUID();
+      }
+
+      const bytes = new Uint8Array(16);
+      if (window.crypto?.getRandomValues) {
+        window.crypto.getRandomValues(bytes);
+      } else {
+        for (let index = 0; index < bytes.length; index += 1) {
+          bytes[index] = Math.floor(Math.random() * 256);
+        }
+      }
+      bytes[6] = (bytes[6] & 0x0f) | 0x40;
+      bytes[8] = (bytes[8] & 0x3f) | 0x80;
+
+      const hex = Array.from(bytes, (byte) =>
+        byte.toString(16).padStart(2, "0")
+      );
+      return [
+        hex.slice(0, 4).join(""),
+        hex.slice(4, 6).join(""),
+        hex.slice(6, 8).join(""),
+        hex.slice(8, 10).join(""),
+        hex.slice(10, 16).join(""),
+      ].join("-");
+    };
+
+    let docsAgentSessionIdValue = null;
+
+    const storeDocsAgentSessionId = (sessionId) => {
+      docsAgentSessionIdValue = sessionId;
+      try {
+        window.sessionStorage.setItem(docsAgentSessionStorageKey, sessionId);
+      } catch {
+        // Ignore storage failures.
+      }
+      return sessionId;
+    };
+
+    const resetDocsAgentSessionId = () =>
+      storeDocsAgentSessionId(randomUuid().toLowerCase());
+
+    const docsAgentSessionId = () => {
+      if (
+        docsAgentSessionIdValue &&
+        uuidPattern.test(docsAgentSessionIdValue)
+      ) {
+        return docsAgentSessionIdValue.toLowerCase();
+      }
+      try {
+        const stored = window.sessionStorage.getItem(
+          docsAgentSessionStorageKey
+        );
+        if (stored && uuidPattern.test(stored)) {
+          docsAgentSessionIdValue = stored.toLowerCase();
+          return docsAgentSessionIdValue;
+        }
+      } catch {
+        // Fall through and create an in-memory session id.
+      }
+      return resetDocsAgentSessionId();
+    };
+
+    if (
+      !mobileOpenButton ||
+      !closeButton ||
+      !newButton ||
+      !(panel instanceof HTMLElement) ||
+      !chatkit ||
+      !apiURL
+    ) {
+      return;
+    }
+
+    let chatkitInitialized = false;
+    let chatkitResponseActive = false;
+    let chatkitTurnActive = false;
+    let docsAgentNavigationInProgress = false;
+    let chatkitReplacement = null;
+    let desiredPathname = window.location.pathname || "/";
+    let previousFocus = null;
+    let lastPageSelection = { text: "", capturedAt: 0 };
+    let conversationStartedTracked = false;
+
+    const selectedTextLimit = 3000;
+    const staleSelectionMs = 2 * 60 * 1000;
+    const docsAgentRequestTimeoutMs = 40 * 1000;
+    const docsAgentNavigationTimeoutMs = 8 * 1000;
+    const docsAgentTransitionWaitTimeoutMs = 15 * 1000;
+    const docsAgentInitializationTimeoutMs = 15 * 1000;
+    const docsAgentUnavailableMessage =
+      "The docs agent couldn't complete the request. Please retry.";
+    const chatKitUserTurnTypes = new Set([
+      "threads.create",
+      "threads.add_user_message",
+      "threads.retry_after_item",
+    ]);
+    const desktopPanelMedia = window.matchMedia("(min-width: 768px)");
+
+    const withTimeout = (operation, timeoutMs, message) =>
+      new Promise((resolve, reject) => {
+        const timeout = window.setTimeout(
+          () => reject(new Error(message)),
+          timeoutMs
+        );
+        Promise.resolve(operation).then(
+          (value) => {
+            window.clearTimeout(timeout);
+            resolve(value);
+          },
+          (error) => {
+            window.clearTimeout(timeout);
+            reject(error);
+          }
+        );
+      });
+
+    const requestDeadlineSignal = (existingSignal) => {
+      const controller = new AbortController();
+      const abort = (signal) => controller.abort(signal?.reason);
+      if (existingSignal) {
+        if (existingSignal.aborted) {
+          abort(existingSignal);
+        } else {
+          existingSignal.addEventListener(
+            "abort",
+            () => abort(existingSignal),
+            {
+              once: true,
+            }
+          );
+        }
+      }
+      window.setTimeout(
+        () => controller.abort(new Error("Docs agent request timed out")),
+        docsAgentRequestTimeoutMs
+      );
+      return controller.signal;
+    };
+
+    const chatKitErrorFrame = (message = docsAgentUnavailableMessage) =>
+      new TextEncoder().encode(
+        `data: ${JSON.stringify({
+          type: "error",
+          code: "custom",
+          message,
+          allow_retry: true,
+        })}\n\n`
+      );
+
+    const chatKitErrorResponse = (message = docsAgentUnavailableMessage) =>
+      new Response(chatKitErrorFrame(message), {
+        status: 200,
+        headers: {
+          "content-type": "text/event-stream; charset=utf-8",
+          "cache-control": "no-cache",
+        },
+      });
+
+    const chatKitFrameHasTerminalEvent = (frame) => {
+      const data = frame
+        .split("\n")
+        .filter((line) => line.startsWith("data: "))
+        .map((line) => line.slice("data: ".length))
+        .join("\n");
+      if (!data) return false;
+      try {
+        const payload = JSON.parse(data);
+        if (payload?.type === "error") return true;
+        return (
+          payload?.type === "thread.item.done" &&
+          payload?.item?.type === "assistant_message" &&
+          Array.isArray(payload.item.content) &&
+          payload.item.content.some(
+            (part) =>
+              typeof part?.text === "string" && Boolean(part.text.trim())
+          )
+        );
+      } catch {
+        return false;
+      }
+    };
+
+    const observeChatKitTerminalEvents = (state, chunk, final = false) => {
+      state.buffer += chunk
+        ? state.decoder.decode(chunk, { stream: !final })
+        : state.decoder.decode();
+      state.buffer = state.buffer.replace(/\r\n/g, "\n");
+      const frames = state.buffer.split("\n\n");
+      const trailingFrame = frames.pop() || "";
+      state.buffer = final ? "" : trailingFrame;
+      for (const frame of frames) {
+        if (chatKitFrameHasTerminalEvent(frame)) state.emitted = true;
+      }
+      if (
+        final &&
+        trailingFrame &&
+        chatKitFrameHasTerminalEvent(trailingFrame)
+      ) {
+        state.emitted = true;
+      }
+    };
+
+    const ensureUserTurnTerminalResponse = (response) => {
+      if (!response.body) return chatKitErrorResponse();
+      const reader = response.body.getReader();
+      const state = {
+        decoder: new TextDecoder(),
+        buffer: "",
+        emitted: false,
+      };
+      const body = new ReadableStream({
+        async pull(controller) {
+          try {
+            const result = await reader.read();
+            if (result.done) {
+              observeChatKitTerminalEvents(state, null, true);
+              if (!state.emitted) controller.enqueue(chatKitErrorFrame());
+              controller.close();
+              return;
+            }
+            observeChatKitTerminalEvents(state, result.value);
+            controller.enqueue(result.value);
+          } catch {
+            if (!state.emitted) controller.enqueue(chatKitErrorFrame());
+            controller.close();
+          }
+        },
+        cancel(reason) {
+          void reader.cancel(reason).catch(() => undefined);
+        },
+      });
+      return new Response(body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers: response.headers,
+      });
+    };
+    const syncOpenButtons = (expanded) => {
+      document
+        .querySelectorAll("button[data-docs-agent-open]")
+        .forEach((button) => {
+          button.setAttribute("aria-expanded", expanded);
+        });
+    };
+
+    const syncLayoutTargets = () => {
+      const isOpen = root.dataset.open === "true";
+      const isDesktopPanel = desktopPanelMedia.matches;
+      document.body.classList.toggle("docs-agent-open", isOpen);
+      if (isOpen) {
+        document.body.dataset.docsAgentOpen = "true";
+      } else {
+        delete document.body.dataset.docsAgentOpen;
+      }
+      syncOpenButtons(isOpen ? "true" : "false");
+      document.querySelectorAll("[data-docs-agent-page]").forEach((page) => {
+        if (page instanceof HTMLElement) {
+          page.classList.toggle("is-docs-agent-open", isOpen);
+          page.style.width =
+            isOpen && isDesktopPanel
+              ? "calc(100% - var(--docs-agent-panel-width))"
+              : "";
+          page.style.transform = isOpen
+            ? isDesktopPanel
+              ? "none"
+              : "translateY(calc(-1 * var(--docs-agent-drawer-height)))"
+            : "";
+        }
+      });
+
+      const header = document.getElementById("header");
+      header?.classList.toggle("is-docs-agent-open", isOpen);
+      if (header) {
+        const headerInner = header.firstElementChild;
+        const headerNav = header.querySelector("nav");
+        const headerSearchButton = header.querySelector(
+          "[data-header-search-button]"
+        );
+        header.style.width =
+          isOpen && isDesktopPanel
+            ? "calc(100% - var(--docs-agent-panel-width))"
+            : "";
+        if (headerInner instanceof HTMLElement) {
+          headerInner.style.gridTemplateColumns =
+            isOpen && isDesktopPanel ? "auto minmax(0, 1fr) auto" : "";
+        }
+        if (headerNav instanceof HTMLElement) {
+          headerNav.style.minWidth = isOpen && isDesktopPanel ? "0" : "";
+          headerNav.style.overflow = "";
+        }
+        if (headerSearchButton instanceof HTMLElement) {
+          headerSearchButton.style.display =
+            isOpen && isDesktopPanel ? "none" : "";
+        }
+
+        const leadingControls = headerNav?.previousElementSibling;
+        const trailingControls = headerNav?.nextElementSibling;
+        const marginBoxWidth = (element) => {
+          const styles = window.getComputedStyle(element);
+          const horizontalMargin =
+            (Number.parseFloat(styles.marginLeft) || 0) +
+            (Number.parseFloat(styles.marginRight) || 0);
+          return element.getBoundingClientRect().width + horizontalMargin;
+        };
+        const contextSubnavOffset =
+          isOpen &&
+          isDesktopPanel &&
+          leadingControls instanceof HTMLElement &&
+          trailingControls instanceof HTMLElement
+            ? (marginBoxWidth(leadingControls) -
+                marginBoxWidth(trailingControls)) /
+              2
+            : 0;
+        document.documentElement.style.setProperty(
+          "--docs-agent-context-subnav-offset",
+          `${contextSubnavOffset}px`
+        );
+      }
+
+      panel.classList.toggle("is-open", isOpen);
+      panel.style.transform = isOpen
+        ? isDesktopPanel
+          ? "translateX(0)"
+          : "translateY(0)"
+        : "";
+    };
+
+    const normalizeAnalyticsText = (value) =>
+      typeof value === "string" ? value.replace(/\s+/g, " ").trim() : "";
+
+    const analyticsSlug = (value, fallback) => {
+      const slug = normalizeAnalyticsText(value)
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "_")
+        .replace(/^_+|_+$/g, "");
+      return slug || fallback;
+    };
+
+    const normalizePathname = (pathname) => {
+      if (!pathname || pathname === "/") return "/";
+      return pathname.replace(/\/+$/, "") || "/";
+    };
+
+    const docsAgentParentRoute = (pathname) => {
+      const normalized = normalizePathname(pathname);
+
+      if (normalized === "/") return "home";
+      if (normalized === "/api" || normalized.startsWith("/api/")) {
+        return "api";
+      }
+      if (normalized === "/codex" || normalized.startsWith("/codex/")) {
+        return "codex";
+      }
+      if (
+        normalized === "/docs" ||
+        normalized.startsWith("/docs/") ||
+        normalized === "/use-cases" ||
+        normalized.startsWith("/use-cases/")
+      ) {
+        return "codex";
+      }
+      if (
+        normalized === "/chatgpt" ||
+        normalized.startsWith("/chatgpt/") ||
+        normalized === "/plugins" ||
+        normalized.startsWith("/plugins/") ||
+        normalized === "/commerce" ||
+        normalized.startsWith("/commerce/")
+      ) {
+        return "chatgpt";
+      }
+      if (
+        normalized === "/learn" ||
+        normalized.startsWith("/learn/") ||
+        normalized === "/community" ||
+        normalized.startsWith("/community/") ||
+        normalized === "/cookbook" ||
+        normalized.startsWith("/cookbook/") ||
+        normalized === "/showcase" ||
+        normalized.startsWith("/showcase/") ||
+        normalized === "/tracks" ||
+        normalized.startsWith("/tracks/") ||
+        normalized === "/blog" ||
+        normalized.startsWith("/blog/")
+      ) {
+        return "resources";
+      }
+
+      return "home";
+    };
+
+    const startPromptsForRoute = (
+      pathname = window.location.pathname || "/"
+    ) => {
+      const parentRoute = docsAgentParentRoute(pathname);
+      const prompts = startPromptsByParentRoute[parentRoute];
+
+      if (Array.isArray(prompts)) return prompts;
+      return Array.isArray(startPromptsByParentRoute.home)
+        ? startPromptsByParentRoute.home
+        : [];
+    };
+
+    const startPromptAnalyticsForRoute = (pathname) =>
+      startPromptsForRoute(pathname)
+        .map((prompt, index) => {
+          const promptText = normalizeAnalyticsText(prompt?.prompt);
+          if (!promptText) return null;
+          return {
+            id: analyticsSlug(prompt?.label, `prompt_${index + 1}`),
+            label:
+              normalizeAnalyticsText(prompt?.label) || `Prompt ${index + 1}`,
+            position: index + 1,
+            text: promptText,
+          };
+        })
+        .filter(Boolean);
+
+    const normalizeSelectedText = (value) =>
+      value.replace(/\r\n?/g, "\n").trim().slice(0, selectedTextLimit);
+
+    const nodeIsInDocsAgent = (node) => {
+      if (!node) return false;
+      const element =
+        node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
+      return element instanceof Element && root.contains(element);
+    };
+
+    const currentPageSelectionText = () => {
+      const selection = window.getSelection?.();
+      if (!selection || selection.isCollapsed) return "";
+      if (
+        nodeIsInDocsAgent(selection.anchorNode) ||
+        nodeIsInDocsAgent(selection.focusNode)
+      ) {
+        return "";
+      }
+
+      return normalizeSelectedText(selection.toString());
+    };
+
+    const rememberPageSelection = () => {
+      const text = currentPageSelectionText();
+      if (!text) return;
+      lastPageSelection = {
+        text,
+        capturedAt: Date.now(),
+      };
+    };
+
+    const selectedTextForAgentContext = () => {
+      const text = currentPageSelectionText();
+      if (text) {
+        lastPageSelection = {
+          text,
+          capturedAt: Date.now(),
+        };
+        return text;
+      }
+
+      if (Date.now() - lastPageSelection.capturedAt <= staleSelectionMs) {
+        return lastPageSelection.text;
+      }
+      return "";
+    };
+
+    const docsAgentPageContext = () => {
+      const context = {
+        route: `${window.location.pathname || "/"}${window.location.search}`,
+        siteDomain,
+      };
+      const selectedText = selectedTextForAgentContext();
+      if (selectedText) {
+        context.selectedText = selectedText;
+      }
+      return context;
+    };
+
+    const hasPageSelectionForAnalytics = () => {
+      if (currentPageSelectionText()) return true;
+      return Date.now() - lastPageSelection.capturedAt <= staleSelectionMs
+        ? Boolean(lastPageSelection.text)
+        : false;
+    };
+
+    const chatKitRequestInputText = (body) => {
+      const content = body?.params?.input?.content;
+      if (!Array.isArray(content)) return "";
+
+      return content
+        .map((part) =>
+          part?.type === "input_text" && typeof part.text === "string"
+            ? part.text
+            : ""
+        )
+        .filter(Boolean)
+        .join("\n")
+        .trim();
+    };
+
+    const defaultPromptMatch = (body) => {
+      const text = normalizeAnalyticsText(chatKitRequestInputText(body));
+      if (!text) return null;
+
+      const startPromptByText = new Map(
+        startPromptAnalyticsForRoute(window.location.pathname || "/").map(
+          (prompt) => [prompt.text, prompt]
+        )
+      );
+      return startPromptByText.get(text) || null;
+    };
+
+    const promptAnalyticsData = (prompt) =>
+      prompt
+        ? {
+            prompt_id: prompt.id,
+            prompt_label: prompt.label,
+            prompt_position: prompt.position,
+          }
+        : {};
+
+    const isDocsAgentApiRequest = (input) => {
+      try {
+        const requestUrl =
+          typeof input === "string" || input instanceof URL
+            ? new URL(input, window.location.href)
+            : new URL(input.url);
+        const configuredUrl = new URL(apiURL, window.location.href);
+        return requestUrl.href === configuredUrl.href;
+      } catch {
+        return false;
+      }
+    };
+
+    const docsAgentFetch = async (input, init) => {
+      if (!isDocsAgentApiRequest(input)) {
+        return window.fetch(input, init);
+      }
+
+      const nextInit = init ? { ...init } : {};
+      if (typeof nextInit.body === "string") {
+        try {
+          const body = JSON.parse(nextInit.body);
+          if (body && typeof body === "object" && !Array.isArray(body)) {
+            if (body.type === "threads.create" && !conversationStartedTracked) {
+              const prompt = defaultPromptMatch(body);
+              const promptData = promptAnalyticsData(prompt);
+              conversationStartedTracked = true;
+              trackDocsAgentEvent("docs_agent_conversation_started", {
+                entry_point: prompt ? "default_prompt" : "composer",
+                request_type: body.type,
+                has_page_selection: hasPageSelectionForAnalytics(),
+                ...promptData,
+              });
+              if (prompt) {
+                trackDocsAgentEvent("docs_agent_default_prompt_selected", {
+                  request_type: body.type,
+                  ...promptData,
+                });
+              }
+            }
+
+            const metadata =
+              body.metadata &&
+              typeof body.metadata === "object" &&
+              !Array.isArray(body.metadata)
+                ? body.metadata
+                : {};
+            body.metadata = {
+              ...metadata,
+              pageContext: docsAgentPageContext(),
+            };
+            nextInit.body = JSON.stringify(body);
+          }
+        } catch {
+          // Preserve the original body if it is not JSON.
+        }
+      }
+
+      const headers = new Headers(
+        nextInit.headers ||
+          (input instanceof Request ? input.headers : undefined)
+      );
+      headers.set("x-docs-agent-user", docsAgentSessionId());
+      nextInit.headers = headers;
+      nextInit.signal = requestDeadlineSignal(
+        nextInit.signal || (input instanceof Request ? input.signal : null)
+      );
+
+      let requestType = "";
+      if (typeof nextInit.body === "string") {
+        try {
+          requestType = JSON.parse(nextInit.body)?.type || "";
+        } catch {
+          // The proxy will return the protocol validation error.
+        }
+      }
+      const requireTerminalEvent = chatKitUserTurnTypes.has(requestType);
+      if (requireTerminalEvent) {
+        chatkitTurnActive = true;
+      }
+
+      try {
+        const response = await window.fetch(input, nextInit);
+        return requireTerminalEvent
+          ? ensureUserTurnTerminalResponse(response)
+          : response;
+      } catch (error) {
+        if (requireTerminalEvent) return chatKitErrorResponse();
+        throw error;
+      }
+    };
+
+    const clearLegacyStoredState = () => {
+      try {
+        window.localStorage.removeItem("docs-agent.panel-open");
+        window.localStorage.removeItem("docs-agent.thread-id");
+        window.localStorage.removeItem("docs-agent.user-id");
+      } catch {
+        // Ignore storage failures.
+      }
+    };
+
+    const showStatus = (message) => {
+      if (!status) return;
+      status.textContent = message;
+      status.hidden = false;
+    };
+
+    const hideStatus = () => {
+      if (status) status.hidden = true;
+    };
+
+    const getColorTheme = () => {
+      const html = document.documentElement;
+      return html.dataset.theme === "dark" || html.classList.contains("dark")
+        ? "dark"
+        : "light";
+    };
+
+    const normalizeClientToolArgs = (args) => {
+      if (!args) return {};
+      if (typeof args === "string") {
+        try {
+          return JSON.parse(args);
+        } catch {
+          return {};
+        }
+      }
+      return args;
+    };
+
+    const analyticsViewport = () =>
+      window.matchMedia("(min-width: 768px)").matches ? "desktop" : "mobile";
+
+    const trackDocsAgentEvent = (name, data = {}) => {
+      try {
+        window.__docsAgentTrackEvent?.(name, {
+          surface: "docs_agent",
+          route: window.location.pathname || "/",
+          viewport: analyticsViewport(),
+          ...data,
+        });
+      } catch {
+        // Ignore analytics failures.
+      }
+    };
+
+    const navigationTarget = (href, options) =>
+      window.__getDocsAgentNavigationTarget(
+        href,
+        window.location.href,
+        options
+      );
+
+    const navigateToHref = async (href, { externalNewTab = false } = {}) => {
+      const target = navigationTarget(href);
+      if (!target.ok) return target;
+      const routeHref = target.href;
+
+      if (
+        routeHref.startsWith("/") &&
+        typeof window.__docsAgentNavigate === "function"
+      ) {
+        docsAgentNavigationInProgress = true;
+        try {
+          await withTimeout(
+            window.__docsAgentNavigate(routeHref, { history: "push" }),
+            docsAgentNavigationTimeoutMs,
+            "Docs agent navigation timed out"
+          );
+        } catch (error) {
+          console.error("Docs agent navigation failed", error);
+          return { ok: false, error: "Navigation failed or timed out." };
+        } finally {
+          docsAgentNavigationInProgress = false;
+        }
+      } else if (externalNewTab) {
+        window.open(routeHref, "_blank", "noopener,noreferrer");
+      } else {
+        window.location.assign(routeHref);
+      }
+
+      return { ok: true, href: routeHref };
+    };
+
+    const navigationQueue =
+      window.__createDocsAgentNavigationQueue(navigateToHref);
+
+    const queueNavigationToHref = (href, options) => {
+      const target = navigationTarget(href, options);
+      if (!target.ok) return target;
+      navigationQueue.queue(target.href);
+      return target;
+    };
+
+    const chatKitTurnSettledCallbacks = new Set();
+
+    const chatKitTurnIsActive = () =>
+      chatkitResponseActive ||
+      chatkitTurnActive ||
+      navigationQueue.hasPending();
+
+    const notifyChatKitTurnSettled = () => {
+      if (chatKitTurnIsActive()) return;
+      for (const callback of chatKitTurnSettledCallbacks) {
+        callback();
+      }
+      chatKitTurnSettledCallbacks.clear();
+    };
+
+    const waitForChatKitTurnToSettle = (signal) => {
+      if (signal.aborted) return Promise.resolve("aborted");
+      if (!chatKitTurnIsActive()) return Promise.resolve("settled");
+
+      return new Promise((resolve) => {
+        let timeout;
+        const finish = (result) => {
+          window.clearTimeout(timeout);
+          signal.removeEventListener("abort", onAbort);
+          chatKitTurnSettledCallbacks.delete(onSettled);
+          resolve(result);
+        };
+        const onAbort = () => finish("aborted");
+        const onSettled = () => finish("settled");
+
+        signal.addEventListener("abort", onAbort, { once: true });
+        chatKitTurnSettledCallbacks.add(onSettled);
+        timeout = window.setTimeout(
+          () => finish("timed-out"),
+          docsAgentTransitionWaitTimeoutMs
+        );
+      });
+    };
+
+    const deferPageTransitionDuringChatKitTurn = (event) => {
+      if (docsAgentNavigationInProgress || !chatKitTurnIsActive()) return;
+      const loadPage = event.loader;
+      event.loader = async () => {
+        const result = await waitForChatKitTurnToSettle(event.signal);
+        if (result === "aborted" || event.signal.aborted) return;
+        if (result === "timed-out") {
+          // Asking Astro to cancel here makes it fall back to a full load. That
+          // is safer than moving a ChatKit frame whose turn did not terminate.
+          event.preventDefault();
+          return;
+        }
+        await loadPage();
+      };
+    };
+
+    const bindChatKitLifecycle = () => {
+      if (chatkit.dataset.docsAgentLifecycleBound === "true") return;
+      chatkit.dataset.docsAgentLifecycleBound = "true";
+      chatkit.addEventListener("chatkit.thread.change", (event) => {
+        const threadId = event?.detail?.threadId;
+        if (threadId === null) {
+          conversationStartedTracked = false;
+        }
+      });
+      chatkit.addEventListener("chatkit.response.start", () => {
+        chatkitResponseActive = true;
+        navigationQueue.onResponseStart();
+      });
+      chatkit.addEventListener("chatkit.response.end", () => {
+        chatkitResponseActive = false;
+        void navigationQueue
+          .onResponseEnd()
+          .then(() => {
+            if (!navigationQueue.hasPending()) {
+              chatkitTurnActive = false;
+              notifyChatKitTurnSettled();
+            }
+          })
+          .catch((error) => {
+            console.error("Docs agent navigation failed", error);
+          });
+      });
+      chatkit.addEventListener("chatkit.error", (event) => {
+        chatkitResponseActive = false;
+        chatkitTurnActive = false;
+        navigationQueue.clear();
+        notifyChatKitTurnSettled();
+        if (
+          event?.detail?.error?.name === "IntegrationError" ||
+          event?.detail?.error?.name === "DomainVerificationRequestError"
+        ) {
+          showStatus("Docs agent is unavailable.");
+        }
+      });
+    };
+
+    const buildChatKitOptions = () => ({
+      api: {
+        url: apiURL,
+        domainKey,
+        fetch: docsAgentFetch,
+      },
+      theme: {
+        colorScheme: getColorTheme(),
+      },
+      history: { enabled: false },
+      header: { enabled: false },
+      onClientTool(toolCall) {
+        const args = normalizeClientToolArgs(
+          toolCall?.params || toolCall?.arguments
+        );
+
+        if (toolCall?.name === "navigate_to_page") {
+          return queueNavigationToHref(args.href, { internalOnly: true });
+        }
+
+        if (toolCall?.name === "open_custom_guide") {
+          const guideHref =
+            args.href ||
+            (args.generated_id ? `/custom-guide/${args.generated_id}` : "");
+          trackDocsAgentEvent("docs_agent_custom_guide_opened", {
+            source: "client_tool",
+            guide_id: args.generated_id || "",
+            href: guideHref,
+          });
+          return queueNavigationToHref(guideHref);
+        }
+
+        return {
+          ok: false,
+          error: `Unknown client tool: ${toolCall?.name || "unknown"}.`,
+        };
+      },
+      widgets: {
+        onAction(action) {
+          const payload = normalizeClientToolArgs(action?.payload);
+
+          if (action?.type === "custom_guide.view") {
+            const guideHref =
+              payload.href ||
+              payload.url ||
+              (payload.generated_id
+                ? `/custom-guide/${payload.generated_id}`
+                : "");
+            trackDocsAgentEvent("docs_agent_custom_guide_opened", {
+              source: "widget_action",
+              guide_id: payload.generated_id || "",
+              href: guideHref,
+            });
+
+            return navigateToHref(guideHref);
+          }
+
+          if (action?.type === "docs_agent.navigate") {
+            const href = payload.href || payload.url || "";
+            trackDocsAgentEvent("docs_agent_suggested_page_opened", {
+              source: "widget_action",
+              href,
+              suggestion_title: payload.title || "",
+              suggestion_type: payload.type || "",
+            });
+
+            return navigateToHref(href, { externalNewTab: true });
+          }
+
+          return {
+            ok: false,
+            error: `Unknown widget action: ${action?.type || "unknown"}.`,
+          };
+        },
+      },
+      composer: {
+        placeholder: "Ask about docs or what you want to build",
+      },
+      startScreen: {
+        greeting: startGreeting,
+        prompts: startPromptsForRoute(desiredPathname),
+      },
+    });
+
+    const applyChatKitOptions = () => {
+      chatkit.setOptions(buildChatKitOptions());
+    };
+
+    // Existing ChatKit instances keep the options they were created with.
+    // Route changes only select the prompts for the next explicit new thread.
+    const syncDesiredPathnameForPageLoad = () => {
+      desiredPathname = window.location.pathname || "/";
+    };
+
+    const syncDesiredPathnameBeforeSwap = (event) => {
+      const destination = event?.to;
+      if (destination instanceof URL) {
+        desiredPathname = destination.pathname || "/";
+      } else if (typeof destination === "string") {
+        desiredPathname = new URL(destination, window.location.href).pathname;
+      }
+    };
+
+    const initializeChatKit = async () => {
+      if (chatkitInitialized) return;
+      showStatus("Loading docs agent...");
+
+      try {
+        await withTimeout(
+          customElements.whenDefined("openai-chatkit"),
+          docsAgentInitializationTimeoutMs,
+          "Docs agent initialization timed out"
+        );
+
+        bindChatKitLifecycle();
+        applyChatKitOptions();
+        chatkitInitialized = true;
+        hideStatus();
+      } catch (error) {
+        console.error("Failed to initialize Docs Agent ChatKit", error);
+        showStatus("Docs agent is unavailable.");
+      }
+    };
+
+    const resetChatKit = () => {
+      if (chatkitReplacement) return chatkitReplacement;
+      navigationQueue.clear();
+
+      chatkitReplacement = (async () => {
+        const nextChatKit = document.createElement("openai-chatkit");
+        nextChatKit.id = "docs-agent-chatkit";
+        nextChatKit.className = "block h-full w-full";
+        chatkit.replaceWith(nextChatKit);
+        chatkit = nextChatKit;
+        chatkitInitialized = false;
+        chatkitResponseActive = false;
+        chatkitTurnActive = false;
+        conversationStartedTracked = false;
+        resetDocsAgentSessionId();
+        await initializeChatKit();
+        notifyChatKitTurnSettled();
+      })();
+
+      void chatkitReplacement.then(
+        () => {
+          chatkitReplacement = null;
+        },
+        () => {
+          chatkitReplacement = null;
+        }
+      );
+      return chatkitReplacement;
+    };
+
+    const openPanel = () => {
+      if (root.dataset.open !== "true") {
+        trackDocsAgentEvent("docs_agent_panel_opened", {
+          source: "ask_button",
+          has_page_selection: hasPageSelectionForAnalytics(),
+        });
+      }
+      previousFocus = document.activeElement;
+      document.body.dataset.docsAgentOpen = "true";
+      document.body.classList.add("docs-agent-open");
+      root.dataset.open = "true";
+      root.classList.add("is-open");
+      syncLayoutTargets();
+      initializeChatKit();
+      requestAnimationFrame(() => closeButton.focus());
+    };
+
+    const closePanel = () => {
+      delete document.body.dataset.docsAgentOpen;
+      document.body.classList.remove("docs-agent-open");
+      delete root.dataset.open;
+      root.classList.remove("is-open");
+      syncLayoutTargets();
+      if (previousFocus instanceof HTMLElement) {
+        previousFocus.focus();
+      }
+    };
+
+    clearLegacyStoredState();
+    desktopPanelMedia.addEventListener("change", syncLayoutTargets);
+    document.addEventListener("selectionchange", rememberPageSelection);
+    document.addEventListener(
+      "astro:before-preparation",
+      deferPageTransitionDuringChatKitTurn
+    );
+    document.addEventListener(
+      "astro:before-swap",
+      syncDesiredPathnameBeforeSwap
+    );
+    document.addEventListener("astro:page-load", syncLayoutTargets);
+    document.addEventListener(
+      "astro:page-load",
+      syncDesiredPathnameForPageLoad
+    );
+    document.addEventListener("pointerdown", (event) => {
+      if (
+        event.target instanceof Element &&
+        event.target.closest("button[data-docs-agent-open]")
+      ) {
+        rememberPageSelection();
+      }
+    });
+    document.addEventListener("click", (event) => {
+      if (
+        event.target instanceof Element &&
+        event.target.closest("button[data-docs-agent-open]")
+      ) {
+        openPanel();
+      }
+    });
+    newButton.addEventListener("click", resetChatKit);
+    closeButton.addEventListener("click", closePanel);
+    window.addEventListener("docs-agent:close", closePanel);
+    panel.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closePanel();
+      }
+    });
+
+    root.dataset.initialized = "true";
+    syncLayoutTargets();
+  }
+
+  document.addEventListener("astro:page-load", initializeDocsAgentLauncher);
+  window.addEventListener(
+    "docs-agent:helpers-ready",
+    initializeDocsAgentLauncher
+  );
+  initializeDocsAgentLauncher();
+</script> <script type="module" src="/_astro/WebMcp.astro_astro_type_script_index_0_lang.BsrxwEGl.js"></script> <script type="module" src="/_astro/PageLayout.astro_astro_type_script_index_0_lang.zXTowJGj.js"></script> </body> </html>

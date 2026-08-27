@@ -51,7 +51,7 @@ def cmd_add(args: argparse.Namespace) -> int:
     vdir.mkdir(parents=True, exist_ok=True)
     upsert_vendor(vendor)
     _write_vendor_json(vendor, vdir)
-    result = fetch_vendor(vendor, root=ROOT, workers=args.workers)
+    result = fetch_vendor(vendor, root=ROOT, workers=args.workers, refetch=getattr(args, "refetch", False))
     stamp_vendor(vendor.id, updated_at=now_iso(), chapters=result.entries)
     print(
         json.dumps(
@@ -81,7 +81,7 @@ def cmd_fetch(args: argparse.Namespace) -> int:
     code = 0
     for v in vendors:
         try:
-            result = fetch_vendor(v, root=ROOT, workers=args.workers)
+            result = fetch_vendor(v, root=ROOT, workers=args.workers, refetch=getattr(args, "refetch", False))
             stamped = stamp_vendor(v.id, updated_at=now_iso(), chapters=result.entries)
             print(
                 json.dumps(
@@ -157,6 +157,11 @@ def main(argv: list[str] | None = None) -> int:
 
     fetch = sub.add_parser("fetch", help="incremental crawl into vendors/<id>/corpus (local)")
     fetch.add_argument("--id")
+    fetch.add_argument(
+        "--refetch",
+        action="store_true",
+        help="ignore fingerprints and re-run source selection (e.g. md->html image fallback)",
+    )
     fetch.add_argument("--workers", type=int, default=12)
     fetch.set_defaults(func=cmd_fetch)
 

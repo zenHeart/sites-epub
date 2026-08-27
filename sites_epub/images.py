@@ -6,7 +6,7 @@ import hashlib
 import mimetypes
 import re
 from pathlib import Path
-from urllib.parse import unquote, urljoin, urlparse
+from urllib.parse import parse_qs, unquote, urljoin, urlparse
 
 import warnings
 
@@ -33,6 +33,21 @@ def normalize_image_url(src: str, base: str = "https://learn.chatgpt.com") -> st
     return absolute
 
 
+def unwrap_optimizer_image(url: str) -> str | None:
+    """Vercel/Next `_next/image?url=` wrappers → the underlying asset URL."""
+    if not url or "/_next/image" not in url:
+        return None
+    inner = (parse_qs(urlparse(url).query).get("url") or [None])[0]
+    if not inner:
+        return None
+    inner = unquote(inner)
+    if inner.startswith("//"):
+        inner = "https:" + inner
+    if inner.startswith(("http://", "https://")):
+        return inner
+    return None
+
+
 def collect_markdown_image_urls(md: str, base: str = "https://learn.chatgpt.com") -> list[str]:
     seen: set[str] = set()
     out: list[str] = []
@@ -49,18 +64,22 @@ def collect_image_urls(html: str, base: str = "https://learn.chatgpt.com") -> li
     seen: set[str] = set()
     out: list[str] = []
     for img in soup.find_all("img"):
+        if is_chrome_img_tag(img):
+            continue
         raw = img.get("src") or img.get("data-src") or ""
         url = normalize_image_url(raw, base=base)
-        if url and url not in seen:
-            seen.add(url)
-            out.append(url)
+        for candidate in (url, unwrap_optimizer_image(url or "")):
+            if candidate and candidate not in seen:
+                seen.add(candidate)
+                out.append(candidate)
         srcset = img.get("srcset") or img.get("data-srcset") or ""
         for part in srcset.split(","):
             token = part.strip().split(" ")[0]
             url = normalize_image_url(token, base=base)
-            if url and url not in seen:
-                seen.add(url)
-                out.append(url)
+            for candidate in (url, unwrap_optimizer_image(url or "")):
+                if candidate and candidate not in seen:
+                    seen.add(candidate)
+                    out.append(candidate)
     return out
 
 
@@ -106,8 +125,27 @@ def is_chrome_image(url: str) -> bool:
     text = (url or "").lower()
     return any(
         token in text
-        for token in ("/logo/", "placeholder.svg", "favicon", "/og/", "og-image")
+        for token in (
+            "/logo/",
+            "placeholder.svg",
+            "favicon",
+            "/og/",
+            "og-image",
+            "/icons/",
+            "-icon.",
+            "_icon.",
+            "icon.svg",
+        )
     )
+
+
+# 正文采集时按 img 自身特征剔除站点 chrome(class 命中即跳过)
+CHROME_IMG_CLASS_RE = re.compile(r"icon|sidebar|logo", re.I)
+
+
+def is_chrome_img_tag(img) -> bool:
+    classes = " ".join(img.get("class") or [])
+    return bool(classes) and bool(CHROME_IMG_CLASS_RE.search(classes))
 
 
 def _rel_for_image(url: str | None, raw: str, url_to_rel: dict[str, str]) -> str | None:
@@ -115,6 +153,9 @@ def _rel_for_image(url: str | None, raw: str, url_to_rel: dict[str, str]) -> str
         return url_to_rel[url]
     if raw in url_to_rel:
         return url_to_rel[raw]
+    inner = unwrap_optimizer_image(url or raw or "")
+    if inner and inner in url_to_rel:
+        return url_to_rel[inner]
     base = (url or raw or "").split("?")[0]
     if not base:
         return None
@@ -145,7 +186,11 @@ def rewrite_body_images(
     *,
     available: set[str] | None = None,
 ) -> str:
-    """Keep <img> only when the local pack file exists. Never leave a dangling src."""
+    """Keep <img> only when the local pack file exists. Never leave a dangling src.
+
+    EPUB 必须完全自包含:所有图都在打包前落进 corpus 并本地嵌入,
+    不做远程引用(阅读器离线/兼容性无法保证)。抓取端负责把图收全。
+    """
     available = available if available is not None else set(url_to_rel.values())
     soup = BeautifulSoup(body_html, "lxml")
     for img in soup.find_all("img"):
@@ -168,6 +213,8 @@ def rewrite_body_images(
     if hasattr(root, "decode_contents"):
         return root.decode_contents()
     return str(root)
+
+
 
 
 def resolve_epub_img_src(chapter: str, src: str, zip_names: set[str]) -> str | None:

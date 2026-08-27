@@ -173,7 +173,7 @@
       <div class="intro-cols">
         <div>
           <h2>厂商文档</h2>
-          <p>Codex、Claude、Cursor：按站点导航抓取 docs 与 blog，合成一部 EPUB。点封面下载。卡片上的「语料」是最近一次本地增量抓取的日期，用来对照线上是否过期。</p>
+          <p>Codex、Claude、Cursor：按站点导航抓取 docs 与 blog，合成一部 EPUB。点封面下载。卡片下的时间是最近一次本地增量抓取（本地时区 YYYY-MM-DD hh:mm:ss），用来对照线上是否过期。</p>
         </div>
         <div>
           <h2>源码书</h2>
@@ -216,8 +216,12 @@
       return String(s || "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
     }
     function fmtDate(iso) {
+      // 展示完整本地时区时间戳（YYYY-MM-DD hh:mm:ss），便于对照本机时钟判断语料新鲜度。
       if (!iso) return "";
-      return iso.slice(0, 10);
+      const d = new Date(iso);
+      if (isNaN(d.getTime())) return iso.slice(0, 19).replace("T", " ");
+      const p = n => String(n).padStart(2, "0");
+      return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`;
     }
     function getFilteredBooks() {
       const q = state.searchQuery.toLowerCase();
@@ -280,7 +284,7 @@
             <div class="meta">
               <h3>${esc(b.title)}</h3>
               <p>${esc(b.author)}</p>
-              <time>${fmtDate(b.updatedAt) ? "语料 " + fmtDate(b.updatedAt) : (fmtDate(b.packedAt) ? "成书 " + fmtDate(b.packedAt) : "")}</time>
+              <time>${fmtDate(b.updatedAt) || fmtDate(b.packedAt) || ""}</time>
             </div>
           </article>`).join("")}</div>`;
       } else {

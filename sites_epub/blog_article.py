@@ -83,6 +83,14 @@ def _pick_body(soup: BeautifulSoup) -> Tag | None:
     if len(blocks) == 1:
         return blocks[0]
     if len(blocks) > 1:
+        # 新版 Claude 博客把客户引述卡等正文组件放在 richtext 块之间的夹层,
+        # 只拼接 richtext 会整段丢内容;改取所有块的最近公共祖先,
+        # 由既有的 chrome/related 清理链兜底去除噪声。
+        for candidate in blocks[0].parents:
+            if all(candidate in el.parents for el in blocks):
+                if candidate.name not in {"html", "body"} and candidate.parent is not None:
+                    return candidate
+                break
         container = soup.new_tag("div")
         container["class"] = ["article-body-merged"]
         for el in blocks:

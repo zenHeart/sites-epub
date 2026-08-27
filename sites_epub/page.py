@@ -46,6 +46,13 @@ def title_from_markdown(md: str) -> str:
     for line in md.splitlines():
         if line.startswith("# "):
             return line[2:].strip()
+    for line in md.splitlines():
+        text = line.strip()
+        if not text or text.startswith((">", "```", "<", "[", "-", "*", "#")):
+            continue
+        sentence = text.split(". ")[0].strip().rstrip(".")
+        if len(sentence) >= 8:
+            return sentence[:120]
     return ""
 
 
@@ -202,6 +209,12 @@ def extract_from_html(
         h1.decompose()
     for logo in article.select('img[src*="mintcdn.com"][src*="logo/"]'):
         logo.decompose()
+    # 站点 UI 小图标(侧栏模拟、按钮图标)不是正文插图,统一剔除。
+    from .images import is_chrome_img_tag
+
+    for img in article.find_all("img"):
+        if is_chrome_img_tag(img):
+            img.decompose()
     body_html = sanitize_body_html(
         article.decode_contents() if hasattr(article, "decode_contents") else str(article),
         page_url=url,

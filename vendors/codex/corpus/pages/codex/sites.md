@@ -1,487 +1,5749 @@
-# Sites
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>(function(){const siteVariantDomains = [{"id":"chatgpt-docs","domains":["learn.chatgpt.com","learn.chatgpt-staging.com","learn-chatgpt-preview.localhost"]}];
+const forcedSiteVariantId = undefined;
+const siteVariantQueryParam = "site_variant";
+const chatGptSiteVariant = "chatgpt";
+const chatGptDocsVariantId = "chatgpt-docs";
+const developersOpenAiHostname = "developers.openai.com";
 
-> For the complete documentation index, see [llms.txt](https://learn.chatgpt.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
+  (() => {
+    const hostname = window.location.hostname.toLowerCase().replace(/\.$/, "");
+    const queryVariant =
+      hostname !== developersOpenAiHostname &&
+      new URLSearchParams(window.location.search).get(siteVariantQueryParam) ===
+        chatGptSiteVariant
+        ? chatGptDocsVariantId
+        : undefined;
+    const hostnameVariant = siteVariantDomains.find((variant) =>
+      variant.domains.some(
+        (domain) => domain.toLowerCase().replace(/\.$/, "") === hostname
+      )
+    )?.id;
+    const activeVariantId =
+      forcedSiteVariantId || hostnameVariant || queryVariant;
 
-Sites is in public beta and is available with ChatGPT Plus, Pro, Business,
-  Enterprise and Edu plans. Plan-specific usage limits apply across all Sites
-  during the beta. ChatGPT shows the current limits and notifies you as you
-  approach one. Reaching a limit can prevent you from creating a Site, adding
-  storage, or keeping a high-usage Site public, but you can still edit and
-  manage existing Sites.
+    if (forcedSiteVariantId) {
+      document.documentElement.dataset.siteVariantForced = forcedSiteVariantId;
+    } else {
+      delete document.documentElement.dataset.siteVariantForced;
+    }
 
-Sites lets ChatGPT create, host, refine, and share websites, web apps, and games.
+    if (activeVariantId) {
+      document.documentElement.dataset.siteVariant = activeVariantId;
+    } else {
+      delete document.documentElement.dataset.siteVariant;
+    }
+  })();
+})();</script><link rel="icon" type="image/png" href="/favicon.png"><meta name="generator" content="Astro v6.0.4"><link rel="preconnect" href="https://cdn.openai.com" crossorigin><link rel="preload" href="https://cdn.openai.com/common/fonts/openai-sans/v2/OpenAISans-Regular.woff2" as="font" type="font/woff2" crossorigin><style>
+  @layer theme, base, components, utilities;
+</style><!-- Canonical URL --><link rel="canonical" href="https://learn.chatgpt.com/docs/sites"><!-- Primary Meta Tags --><title data-default-meta-title="Sites – ChatGPT | OpenAI Developers" data-site-variant-meta-titles="{&#34;chatgpt-docs&#34;:&#34;Sites – ChatGPT | ChatGPT Learn&#34;}">
+  Sites – ChatGPT | ChatGPT Learn
+</title><meta name="title" content="Sites – ChatGPT | ChatGPT Learn"><meta name="description" content="Build and share hosted sites in ChatGPT"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://learn.chatgpt.com/docs/sites"><meta property="og:site_name" content="ChatGPT Learn"><meta property="og:title" content="Sites – ChatGPT | ChatGPT Learn"><meta property="og:description" content="Build and share hosted sites in ChatGPT"><meta property="og:image" content="https://learn.chatgpt.com/og/docs/sites.png"><meta property="og:image:alt" content="Sites – ChatGPT | ChatGPT Learn"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@ChatGPTapp"><meta name="twitter:url" content="https://learn.chatgpt.com/docs/sites"><meta name="twitter:title" content="Sites – ChatGPT | ChatGPT Learn"><meta name="twitter:description" content="Build and share hosted sites in ChatGPT"><meta name="twitter:image" content="https://learn.chatgpt.com/og/docs/sites.png"><meta name="twitter:image:width" content="1200"><meta name="twitter:image:height" content="630"><meta name="twitter:image:alt" content="Sites – ChatGPT | ChatGPT Learn"><!-- Sitemap --><link rel="sitemap" href="/sitemap-index.xml"><!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="Sites – ChatGPT | ChatGPT Learn" data-page-meta-title href="https://developers.openai.com/rss.xml"><!-- Global Scripts --><script src="/js/theme.js"></script><script src="/js/scroll.js"></script><script src="/js/animate.js"></script><script defer src="/js/copy.js"></script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="swap"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BVNpka2d.js"></script><link rel="stylesheet" href="/_astro/PageLayout.C-trUsYL.css">
+<style>.page-copy-action:where(.astro-y3m22efp){display:inline-flex;min-height:26px;align-items:center;justify-content:center;gap:6px;border:1px solid var(--border-primary-outline, rgb(209 213 219));border-radius:8px;background:var(--surface-primary, #fff);padding:5px 10px;color:var(--text-primary, #202123);font-size:12px;font-weight:500;line-height:1;white-space:nowrap;transition:border-color .12s ease,background-color .12s ease,color .12s ease,opacity .12s ease}.page-copy-action:where(.astro-y3m22efp):hover:not(:disabled){background:var(--surface-primary-hover, #f7f7f8)}.page-copy-action:where(.astro-y3m22efp):focus-visible{outline:2px solid var(--border-primary, #111);outline-offset:2px}.page-copy-action:where(.astro-y3m22efp):disabled{cursor:progress;opacity:.7}.page-copy-action--cta:where(.astro-y3m22efp){min-height:42px;gap:8px;border-radius:9999px;padding:10px 18px;font-size:14px}.page-copy-action__icon:where(.astro-y3m22efp){display:inline-flex;width:14px;height:14px;align-items:center;justify-content:center}.page-copy-action__icon:where(.astro-y3m22efp) svg{width:14px;height:14px}.page-copy-action__icon--check:where(.astro-y3m22efp),.page-copy-action:where(.astro-y3m22efp)[data-copied=true] .page-copy-action__icon--copy:where(.astro-y3m22efp){display:none}.page-copy-action:where(.astro-y3m22efp)[data-copied=true] .page-copy-action__icon--check:where(.astro-y3m22efp){display:inline-flex}
+@layer components{._Arrow_t2o77_1{--arrow-size: 6px;position:absolute;width:0;height:0}._Arrow_t2o77_1[data-side=top]{bottom:0;left:50%;border-top:var(--arrow-size) solid var(--gray-700);border-right:var(--arrow-size) solid transparent;border-left:var(--arrow-size) solid transparent;margin-right:-8px;transform:translate(-50%) translateY(100%)}._Arrow_t2o77_1[data-side=bottom]{top:0;left:50%;border-right:var(--arrow-size) solid transparent;border-bottom:var(--arrow-size) solid var(--gray-700);border-left:var(--arrow-size) solid transparent;margin-left:-8px;transform:translate(-50%) translateY(-100%)}._Arrow_t2o77_1[data-side=left]{top:50%;right:0;border-top:var(--arrow-size) solid transparent;border-bottom:var(--arrow-size) solid transparent;border-left:var(--arrow-size) solid var(--gray-700);margin-right:-8px;transform:translate(100%) translateY(-50%)}._Arrow_t2o77_1[data-side=right]{top:50%;left:0;border-top:var(--arrow-size) solid transparent;border-right:var(--arrow-size) solid var(--gray-700);border-bottom:var(--arrow-size) solid transparent;margin-left:-8px;transform:translate(-100%) translateY(-50%)}}@layer components{._surfaceOption_spfw2_1>div>div>div:first-child{display:none}._surfaceOption_spfw2_1>div>div{align-items:center}[data-radix-popper-content-wrapper]:has(.codex-surface-option){z-index:40!important}[role=listbox]:has(.codex-surface-option){outline:none}}
+</style>
+<link rel="stylesheet" href="/_astro/AgentDocsDirective.DEiRrpNI.css"><script type="module" src="/_astro/page.CUcic4cG.js"></script><style>.workflow-steps:where(.astro-4drqtmie)>ol{counter-reset:workflow-step;list-style:none;padding-left:0;margin:1.5rem 0}.workflow-steps:where(.astro-4drqtmie)>ol>li{counter-increment:workflow-step;position:relative;padding-left:2.75rem;margin:0}.workflow-steps:where(.astro-4drqtmie)>ol>li:not(:last-child){padding-bottom:.75rem}.workflow-steps:where(.astro-4drqtmie)>ol>li:before{content:counter(workflow-step);position:absolute;left:0;top:0;height:27px;min-width:27px;padding:0 6px;display:inline-flex;align-items:center;justify-content:center;border-radius:9999px;background:var(--color-gray-100);color:var(--color-gray-700);font-size:12px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums;box-sizing:border-box}.workflow-steps--headings:where(.astro-4drqtmie)>ol>li>p:first-child{font-weight:600}.workflow-steps--headings:where(.astro-4drqtmie)>ol>li>h3:first-child{margin:0;font-size:inherit;line-height:inherit;font-weight:600}
+</style></head> <body class="overflow-x-hidden" data-pagefind-filter="section:codex" data-has-context-subnav="true"> <div class="agent-docs-directive astro-e454tk5z" data-agent-docs-directive>
+For the complete documentation index, see <a href="/llms.txt" tabindex="-1" class="astro-e454tk5z">llms.txt</a>. Markdown versions of documentation pages are available by appending
+<code class="astro-e454tk5z">.md</code> to the page URL.
+</div> <script type="module" src="/_astro/Header.astro_astro_type_script_index_0_lang.TAOik6Em.js"></script> <header id="header" class="fixed top-0 w-full h-16 z-50 bg-white dark:bg-black border-b border-primary-surface astro-3ef6ksr2"> <div class="flex items-center h-full px-4 md:px-8 lg:grid lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:gap-6 astro-3ef6ksr2"> <!-- Logo --> <a href="/" class="flex items-center font-semibold ml-0 lg:-ml-2 lg:justify-self-start astro-3ef6ksr2"> <img src="/OpenAI_Developers.svg" alt="OpenAI Developers" class="h-6 w-48 md:h-6 dark:invert astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> <span class="flex items-center text-default astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs">  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" viewBox="0 0 100 100" class="h-6 w-6 astro-3ef6ksr2 " aria-hidden="true" ><path color="currentColor" d="M38.355 36.52v-9.415c0-.793.297-1.388.99-1.784l18.93-10.902c2.578-1.486 5.65-2.18 8.82-2.18 11.894 0 19.426 9.218 19.426 19.029 0 .694 0 1.486-.1 2.28L66.799 22.05c-1.189-.694-2.379-.694-3.568 0L38.355 36.52Zm44.202 36.67V50.694c0-1.388-.596-2.38-1.785-3.073L55.897 33.15l8.126-4.658c.694-.396 1.289-.396 1.982 0l18.93 10.902c5.452 3.172 9.118 9.91 9.118 16.452 0 7.531-4.46 14.47-11.496 17.344Zm-50.05-19.82-8.127-4.757c-.693-.396-.99-.99-.99-1.784V25.025c0-10.605 8.126-18.633 19.127-18.633 4.163 0 8.028 1.388 11.3 3.865l-19.525 11.3c-1.189.693-1.784 1.684-1.784 3.072v28.74ZM50 63.478l-11.645-6.541V43.062L50 36.522l11.645 6.54v13.875L50 63.477Zm7.483 30.129c-4.163 0-8.028-1.388-11.3-3.865l19.525-11.3c1.189-.693 1.784-1.684 1.784-3.071V46.629l8.226 4.757c.694.396.991.991.991 1.784v21.803c0 10.605-8.226 18.633-19.226 18.633v.001Zm-23.49-22.101-18.93-10.902c-5.45-3.172-9.117-9.91-9.117-16.451 0-7.632 4.559-14.47 11.595-17.344v22.596c0 1.388.595 2.379 1.784 3.072l24.777 14.37-8.126 4.659c-.694.396-1.289.396-1.982 0ZM32.905 87.76c-11.2 0-19.425-8.425-19.425-18.83 0-.794.1-1.587.198-2.38L33.2 77.85c1.189.693 2.379.693 3.568 0l24.876-14.37v9.415c0 .793-.298 1.388-.992 1.784L41.724 85.58c-2.576 1.486-5.649 2.18-8.82 2.18h.001Zm24.579 11.793c11.992 0 22.001-8.523 24.281-19.822C92.864 76.857 100 66.451 100 55.846c0-6.937-2.973-13.676-8.325-18.533.496-2.081.793-4.163.793-6.243 0-14.172-11.496-24.777-24.777-24.777-2.676 0-5.253.396-7.83 1.288C55.401 3.221 49.257.445 42.517.445c-11.992 0-22.001 8.523-24.281 19.822C7.136 23.14 0 33.547 0 44.152c0 6.938 2.973 13.676 8.325 18.533-.496 2.081-.793 4.163-.793 6.243 0 14.172 11.497 24.778 24.777 24.778 2.676 0 5.253-.397 7.83-1.289 4.459 4.36 10.604 7.136 17.344 7.136Z"></path></svg> <span class="sr-only astro-3ef6ksr2">ChatGPT</span>  </span> </a> <!-- Links --> <nav class="hidden lg:flex items-center justify-center gap-1 astro-3ef6ksr2"> <div class="relative group astro-3ef6ksr2"> <a href="/" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2"> Home  </a>  </div><div class="relative group astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> <a href="/api/docs" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2"> API  </a>  </div><div class="relative group astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> <a href="https://learn.chatgpt.com/docs" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2" aria-haspopup="menu"> Codex <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-tertiary astro-3ef6ksr2 " ><path d="M11.2929 16.2929C11.6834 16.6834 12.3166 16.6834 12.7071 16.2929L18.7071 10.2929C19.0976 9.90237 19.0976 9.26921 18.7071 8.87868C18.3166 8.48816 17.6834 8.48816 17.2929 8.87868L12 14.1716L6.70711 8.87868C6.31658 8.48816 5.68342 8.48816 5.29289 8.87868C4.90237 9.26921 4.90237 9.90237 5.29289 10.2929L11.2929 16.2929Z" fill="currentColor"></path></svg> </a> <div class="invisible opacity-0 absolute left-0 top-full z-50 mt-2 min-w-full w-max transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-has-focus-visible:visible group-has-focus-visible:opacity-100 before:content-[''] before:absolute before:-top-2 before:left-0 before:right-0 before:h-2 astro-3ef6ksr2" role="menu"> <div class="overflow-hidden rounded-md border border-primary-surface bg-surface shadow-md ring-1 ring-black/5 dark:ring-white/10 astro-3ef6ksr2"> <div class="astro-3ef6ksr2"> <a role="menuitem" href="https://learn.chatgpt.com/docs" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Docs</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Guides, concepts, and product docs for Codex </div> </div> </a><a role="menuitem" href="https://learn.chatgpt.com/use-cases" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Use cases</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Example workflows and tasks teams can take on with ChatGPT or Codex </div> </div> </a> </div> </div> </div> </div><div class="relative group astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs"> <a href="/codex" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-default bg-primary-soft astro-3ef6ksr2"> Docs  </a>  </div><div class="relative group astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs"> <a href="/codex/use-cases" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2"> Use cases  </a>  </div><div class="relative group astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs"> <a href="/codex/resources" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2"> Resources  </a>  </div><div class="relative group astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> <a href="/chatgpt" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2" aria-haspopup="menu"> ChatGPT <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-tertiary astro-3ef6ksr2 " ><path d="M11.2929 16.2929C11.6834 16.6834 12.3166 16.6834 12.7071 16.2929L18.7071 10.2929C19.0976 9.90237 19.0976 9.26921 18.7071 8.87868C18.3166 8.48816 17.6834 8.48816 17.2929 8.87868L12 14.1716L6.70711 8.87868C6.31658 8.48816 5.68342 8.48816 5.29289 8.87868C4.90237 9.26921 4.90237 9.90237 5.29289 10.2929L11.2929 16.2929Z" fill="currentColor"></path></svg> </a> <div class="invisible opacity-0 absolute left-0 top-full z-50 mt-2 min-w-full w-max transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-has-focus-visible:visible group-has-focus-visible:opacity-100 before:content-[''] before:absolute before:-top-2 before:left-0 before:right-0 before:h-2 astro-3ef6ksr2" role="menu"> <div class="overflow-hidden rounded-md border border-primary-surface bg-surface shadow-md ring-1 ring-black/5 dark:ring-white/10 astro-3ef6ksr2"> <div class="astro-3ef6ksr2"> <a role="menuitem" href="/plugins" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Plugins</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Extend ChatGPT and Codex </div> </div> </a><a role="menuitem" href="/workspace-agents" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Workspace Agents</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Trigger published ChatGPT workspace agents </div> </div> </a><a role="menuitem" href="/commerce" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Commerce</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Build commerce flows in ChatGPT </div> </div> </a><a role="menuitem" href="/ads" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Ads</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Publish and measure ads in ChatGPT </div> </div> </a> </div> </div> </div> </div><div class="relative group astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> <a href="/learn" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha astro-3ef6ksr2" aria-haspopup="menu"> Resources <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-tertiary astro-3ef6ksr2 " ><path d="M11.2929 16.2929C11.6834 16.6834 12.3166 16.6834 12.7071 16.2929L18.7071 10.2929C19.0976 9.90237 19.0976 9.26921 18.7071 8.87868C18.3166 8.48816 17.6834 8.48816 17.2929 8.87868L12 14.1716L6.70711 8.87868C6.31658 8.48816 5.68342 8.48816 5.29289 8.87868C4.90237 9.26921 4.90237 9.90237 5.29289 10.2929L11.2929 16.2929Z" fill="currentColor"></path></svg> </a> <div class="invisible opacity-0 absolute left-0 top-full z-50 mt-2 min-w-full w-max transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-has-focus-visible:visible group-has-focus-visible:opacity-100 before:content-[''] before:absolute before:-top-2 before:left-0 before:right-0 before:h-2 astro-3ef6ksr2" role="menu"> <div class="overflow-hidden rounded-md border border-primary-surface bg-surface shadow-md ring-1 ring-black/5 dark:ring-white/10 astro-3ef6ksr2"> <div class="astro-3ef6ksr2"> <a role="menuitem" href="/showcase" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Showcase</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Demo apps to get inspired </div> </div> </a><a role="menuitem" href="/blog" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Blog</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Learnings and experiences from developers </div> </div> </a><a role="menuitem" href="/cookbook" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Cookbook</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Notebook examples for building with OpenAI models </div> </div> </a><a role="menuitem" href="/learn" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Learn</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Docs, videos, and demo apps for building with OpenAI </div> </div> </a><a role="menuitem" href="/community" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default astro-3ef6ksr2"> <div class="flex flex-col gap-1 astro-3ef6ksr2"> <div class="font-medium astro-3ef6ksr2">Community</div> <div class="text-sm text-secondary astro-3ef6ksr2"> Programs, meetups, and support for builders </div> </div> </a> </div> </div> </div> </div>  </nav> <!-- Theme Toggle, Mobile Menu --> <div class="ml-auto flex items-center gap-4 lg:gap-5 lg:ml-0 lg:justify-end lg:justify-self-end astro-3ef6ksr2"> <button type="button" data-header-search-button aria-controls="header-search-overlay" aria-expanded="false" class="hidden min-w-52 items-center justify-between gap-3 rounded-full border border-primary-surface bg-surface px-4 py-2 text-sm text-secondary transition-colors hover:bg-primary-soft-alpha hover:text-default xl:flex astro-3ef6ksr2"> <span class="truncate astro-3ef6ksr2">Start searching</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 astro-3ef6ksr2 " ><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> </button> <div class="hidden lg:flex astro-3ef6ksr2"> <div data-site-visibility-exclude="chatgpt-docs" class="astro-3ef6ksr2"> <div class="flex items-center gap-2"><a target="_blank" rel="noopener noreferrer" href="https://platform.openai.com/login" class="_Button_6dmow_1 not-prose !h-9 !w-9 justify-center !px-0 min-[1000px]:!w-auto min-[1000px]:!px-4" data-color="primary" data-variant="solid" data-pill="" data-size="md"><span class="_ButtonInner_6dmow_4"><span class="sr-only min-[1000px]:not-sr-only">API Dashboard</span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" data-external-link-indicator="persistent" class="shrink-0"><path fill-rule="evenodd" d="M16.243 6.757a1 1 0 0 1 1 1v7.072a1 1 0 0 1-2 0v-4.657L8.464 16.95a1 1 0 0 1-1.414-1.414l6.778-6.779H9.172a1 1 0 0 1 0-2h7.07Z" clip-rule="evenodd"></path></svg></span></a></div> </div><div data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <div class="flex items-center gap-2"><a target="_blank" rel="noopener noreferrer" href="https://chatgpt.com/" class="_Button_6dmow_1 not-prose  !w-9 justify-center !px-0 min-[1000px]:!w-auto min-[1000px]:!px-4" data-color="primary" data-variant="solid" data-pill="" data-size="lg"><span class="_ButtonInner_6dmow_4"><span class="sr-only min-[1000px]:not-sr-only">Try ChatGPT</span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" data-external-link-indicator="persistent" class="shrink-0"><path fill-rule="evenodd" d="M16.243 6.757a1 1 0 0 1 1 1v7.072a1 1 0 0 1-2 0v-4.657L8.464 16.95a1 1 0 0 1-1.414-1.414l6.778-6.779H9.172a1 1 0 0 1 0-2h7.07Z" clip-rule="evenodd"></path></svg></span></a></div> </div> </div> <button id="header-theme-button" aria-label="Toggle light and dark theme" class="hidden lg:flex text-secondary hover:text-default transition-colors astro-3ef6ksr2"> <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="block dark:hidden w-4 h-4 astro-3ef6ksr2 " ><path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C11.5523 0 12 0.447715 12 1V3C12 3.55228 11.5523 4 11 4C10.4477 4 10 3.55228 10 3V1C10 0.447715 10.4477 0 11 0ZM3.22183 3.22183C3.61235 2.8313 4.24551 2.8313 4.63604 3.22183L6.05025 4.63604C6.44078 5.02656 6.44078 5.65973 6.05025 6.05025C5.65973 6.44078 5.02656 6.44078 4.63604 6.05025L3.22183 4.63604C2.8313 4.24551 2.8313 3.61235 3.22183 3.22183ZM18.7782 3.22183C19.1687 3.61235 19.1687 4.24551 18.7782 4.63604L17.364 6.05025C16.9734 6.44078 16.3403 6.44078 15.9497 6.05025C15.5592 5.65973 15.5592 5.02656 15.9497 4.63604L17.364 3.22183C17.7545 2.8313 18.3876 2.8313 18.7782 3.22183ZM11 8C9.34315 8 8 9.34315 8 11C8 12.6569 9.34315 14 11 14C12.6569 14 14 12.6569 14 11C14 9.34315 12.6569 8 11 8ZM6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11ZM0 11C0 10.4477 0.447715 10 1 10H3C3.55228 10 4 10.4477 4 11C4 11.5523 3.55228 12 3 12H1C0.447715 12 0 11.5523 0 11ZM18 11C18 10.4477 18.4477 10 19 10H21C21.5523 10 22 10.4477 22 11C22 11.5523 21.5523 12 21 12H19C18.4477 12 18 11.5523 18 11ZM6.05025 15.9497C6.44078 16.3403 6.44078 16.9734 6.05025 17.364L4.63604 18.7782C4.24551 19.1687 3.61235 19.1687 3.22183 18.7782C2.8313 18.3876 2.8313 17.7545 3.22183 17.364L4.63604 15.9497C5.02656 15.5592 5.65973 15.5592 6.05025 15.9497ZM15.9497 15.9497C16.3403 15.5592 16.9734 15.5592 17.364 15.9497L18.7782 17.364C19.1687 17.7545 19.1687 18.3876 18.7782 18.7782C18.3877 19.1687 17.7545 19.1687 17.364 18.7782L15.9497 17.364C15.5592 16.9734 15.5592 16.3403 15.9497 15.9497ZM11 18C11.5523 18 12 18.4477 12 19V21C12 21.5523 11.5523 22 11 22C10.4477 22 10 21.5523 10 21V19C10 18.4477 10.4477 18 11 18Z" fill="currentColor"></path></svg> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden dark:block w-4 h-4 astro-3ef6ksr2 " ><path d="M10.7836 0.470481C10.9676 0.765118 10.9855 1.13415 10.8309 1.44525C10.2994 2.51497 10 3.7211 10 5.00001C10 9.41829 13.5817 13 18 13L18.0575 12.9998C18.4049 12.9974 18.7287 13.1754 18.9127 13.47C19.0968 13.7647 19.1147 14.1337 18.9601 14.4448C17.325 17.7352 13.9279 20 10 20C4.47715 20 0 15.5229 0 10C0 4.50107 4.43841 0.038857 9.92838 0.000268937C10.2758 -0.00217271 10.5995 0.175844 10.7836 0.470481ZM8.40989 2.15803C4.75344 2.8954 2 6.12619 2 10C2 14.4183 5.58172 18 10 18C12.587 18 14.8886 16.7721 16.3516 14.8648C11.6131 14.0789 8 9.96139 8 5.00001C8 4.01361 8.1431 3.05953 8.40989 2.15803Z" fill="currentColor"></path></svg> </button> <button type="button" data-header-search-button aria-label="Search the docs" aria-controls="header-search-overlay" aria-expanded="false" class="text-secondary hover:text-default transition-colors md:inline-flex xl:hidden astro-3ef6ksr2"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-secondary hover:text-default transition-colors astro-3ef6ksr2 " ><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> </button> <!-- Mobile Menu Button --> <button id="header-drawer-button" type="button" aria-label="Toggle menu" aria-controls="drawer" aria-expanded="false" class="lg:hidden relative right-1 text-secondary hover:text-default transition-colors astro-3ef6ksr2"> <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-secondary hover:text-default transition-colors astro-3ef6ksr2 " ><path d="M0 1C0 0.447715 0.447715 0 1 0H17C17.5523 0 18 0.447715 18 1C18 1.55228 17.5523 2 17 2H1C0.447715 2 0 1.55228 0 1ZM0 9C0 8.44772 0.447715 8 1 8H11C11.5523 8 12 8.44772 12 9C12 9.55229 11.5523 10 11 10H1C0.447715 10 0 9.55229 0 9Z" fill="currentColor"></path></svg> </button> </div> </div> </header> <div class="fixed inset-x-0 top-16 z-40 hidden h-12 border-b border-primary-surface bg-gray-75 dark:bg-black lg:block astro-s3vzaxny" data-context-subnav data-site-visibility-include="chatgpt-docs"> <nav aria-label="Docs sections" class="flex h-full items-stretch gap-1 overflow-x-auto px-6 whitespace-nowrap lg:justify-center lg:px-8 astro-s3vzaxny"> <a href="/codex" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny"> <span class="px-2.5 py-1 astro-s3vzaxny">Overview</span>  </a><a href="/codex/features" aria-current="true" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-default astro-s3vzaxny"> <span class="px-2.5 py-1 astro-s3vzaxny">Features</span> <span class="absolute inset-x-2.5 bottom-0 h-0.5 rounded-t bg-primary-solid astro-s3vzaxny" aria-hidden="true"></span> </a><a href="/codex/configuration" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny"> <span class="px-2.5 py-1 astro-s3vzaxny">Configuration</span>  </a><a href="/codex/developers" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny"> <span class="px-2.5 py-1 astro-s3vzaxny">Developers</span>  </a><a href="/codex/security-administration" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny"> <span class="px-2.5 py-1 astro-s3vzaxny">Security</span>  </a><a href="/codex/administration" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny"> <span class="px-2.5 py-1 astro-s3vzaxny">Administration</span>  </a><a href="/codex/use-cases" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny" data-site-visibility-exclude="chatgpt-docs"> <span class="px-2.5 py-1 astro-s3vzaxny">Use Cases</span>  </a><a href="/codex/resources" class="group relative flex shrink-0 items-center text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-surface text-secondary hover:text-default astro-s3vzaxny" data-site-visibility-exclude="chatgpt-docs"> <span class="px-2.5 py-1 astro-s3vzaxny">Resources</span>  </a> </nav> </div> <div id="header-search-overlay" role="dialog" aria-modal="true" aria-labelledby="header-search-title" aria-hidden="true" data-open="false" class="fixed inset-0 z-[60] hidden items-start justify-center px-4 pt-20 pb-10 md:px-6 md:pt-24 astro-3ef6ksr2"> <div class="absolute inset-0 bg-black/35 backdrop-blur-xs transition-opacity dark:bg-black/70 astro-3ef6ksr2" data-header-search-dismiss></div> <div class="relative z-10 w-full max-w-4xl overflow-hidden rounded-[28px] bg-surface shadow-[0_36px_120px_-48px_rgba(15,23,42,0.55)] ring-1 ring-black/10 dark:ring-white/10 astro-3ef6ksr2" data-header-search-panel> <div data-header-search-body class="p-0 astro-3ef6ksr2"> <h2 id="header-search-title" class="sr-only astro-3ef6ksr2"> Search the docs </h2> <div class="relative flex min-h-0 flex-1 flex-col astro-3ef6ksr2"> <button type="button" data-header-search-close aria-label="Close search" class="absolute right-5 top-7 z-20 inline-flex h-8 w-8 shrink-0 appearance-none items-center justify-center rounded-md border-0 bg-transparent p-0 leading-none text-tertiary shadow-none transition-colors hover:text-default focus-visible:outline-none focus-visible:ring-0 md:right-7 astro-3ef6ksr2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px] shrink-0 astro-3ef6ksr2 " ><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> </button> <astro-island uid="Z38Jfq" prefix="r96" component-url="/_astro/AlgoliaSearch.react.D2swSZ1o.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;id&quot;:[0,&quot;header-site-search&quot;],&quot;className&quot;:[0,&quot;pagefind-header-ui pagefind-desktop-ui oai-site-search-overlay astro-3ef6ksr2&quot;],&quot;query&quot;:[0,&quot;&quot;],&quot;scope&quot;:[0,&quot;codex&quot;],&quot;uiOptions&quot;:[0,{&quot;showImages&quot;:[0,false],&quot;showSubResults&quot;:[0,false],&quot;translations&quot;:[0,{&quot;placeholder&quot;:[0,&quot;Start searching&quot;],&quot;zeroResults&quot;:[0,&quot;No matches yet. Try a different keyword.&quot;]}]}]}" ssr client="load" opts="{&quot;name&quot;:&quot;AlgoliaSearchReact&quot;,&quot;value&quot;:true}" await-children><div id="header-site-search" class="pagefind-header-ui pagefind-desktop-ui oai-site-search-overlay astro-3ef6ksr2 _root_1wztd_1" data-site-search-root="true" data-site-search-provider="algolia" data-site-search-variant="overlay" data-query="" data-scope="codex"><div class="flex h-full min-h-0 flex-col gap-0"><div class="shrink-0 border-b border-primary-surface px-4 py-4 md:px-6 md:py-5"><label class="sr-only" for="header-site-search-input">Search docs</label><input id="header-site-search-input" type="text" placeholder="Start searching" autoComplete="off" spellCheck="false" data-site-search-input="true" class="w-full outline-none transition-colors rounded-none border-0 bg-transparent py-0 pl-0 pr-14 text-[18px] leading-tight text-default placeholder:text-tertiary focus:ring-0 md:text-[18px]" value=""/></div><div class="flex min-h-0 flex-1 flex-col gap-4 px-4 py-4 md:px-6 md:py-5"><div data-site-search-empty-state="true" class="flex flex-col gap-4"><section class="_emptySection_1wztd_68" data-site-search-suggestions="true"><h3 class="_emptyHeading_1wztd_74">Suggested</h3><div class="flex flex-wrap gap-2"><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="responses create">responses create</button><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="reasoning_effort">reasoning_effort</button><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="realtime">realtime</button><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="prompt caching">prompt caching</button></div></section></div></div></div></div><!--astro:end--></astro-island> </div> </div> </div> </div> <div id="drawer" data-default-tab-id="mobile-nav-tab-3" data-default-search-placeholder="Start searching" data-default-search-scope="codex" class="fixed inset-0 z-40 flex flex-col bg-surface transform translate-x-full transition-transform duration-300 lg:hidden astro-3ef6ksr2"> <div class="flex flex-col h-full w-full astro-3ef6ksr2"> <div class="px-6 pt-6 w-full mt-16 astro-3ef6ksr2"> <span id="mobile-nav-primary-label" class="sr-only astro-3ef6ksr2">Primary navigation</span> <div class="flex items-center gap-2 astro-3ef6ksr2"> <nav class="min-w-0 flex-1 flex items-center gap-2 overflow-x-auto pb-2 -mx-1 px-1 astro-3ef6ksr2" role="tablist" aria-labelledby="mobile-nav-primary-label"> <button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-1" data-has-nav="true" data-href="/api/docs" data-label="API" data-search-placeholder="Start searching" data-search-scope="api" data-is-active="false" data-selected="false" aria-selected="false" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> API </button><button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-2" data-has-nav="true" data-href="https://learn.chatgpt.com/docs" data-label="Codex" data-search-placeholder="Start searching" data-search-scope data-is-active="false" data-selected="false" aria-selected="false" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> Codex </button><button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-6" data-has-nav="true" data-href="/chatgpt" data-label="ChatGPT" data-search-placeholder="Start searching" data-search-scope="chatgpt" data-is-active="false" data-selected="false" aria-selected="false" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> ChatGPT </button><button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-3" data-has-nav="true" data-href="/codex" data-label="Docs" data-search-placeholder="Start searching" data-search-scope="codex" data-is-active="true" data-selected="true" aria-selected="true" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs"> Docs </button><button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-4" data-has-nav="true" data-href="/codex/use-cases" data-label="Use cases" data-search-placeholder="Start searching" data-search-scope="codex" data-is-active="false" data-selected="false" aria-selected="false" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs"> Use cases </button><button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-5" data-has-nav="true" data-href="/codex/resources" data-label="Resources" data-search-placeholder="Start searching" data-search-scope="codex" data-is-active="false" data-selected="false" aria-selected="false" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-include="chatgpt-docs"> Resources </button><button type="button" role="tab" data-mobile-nav-tab data-tab-id="mobile-nav-tab-7" data-has-nav="true" data-href="/learn" data-label="Resources" data-search-placeholder="Start searching" data-search-scope="learn" data-is-active="false" data-selected="false" aria-selected="false" class="shrink-0 rounded-full border border-primary-surface px-3.5 py-1.5 text-sm text-secondary transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface astro-3ef6ksr2" data-site-visibility-exclude="chatgpt-docs"> Resources </button> </nav> <button id="drawer-theme-button" type="button" aria-label="Toggle light and dark theme" class="shrink-0 mb-2 rounded-full border border-primary-surface p-2 text-secondary transition-colors hover:text-default astro-3ef6ksr2"> <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="block dark:hidden w-5 h-5 astro-3ef6ksr2 " ><path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C11.5523 0 12 0.447715 12 1V3C12 3.55228 11.5523 4 11 4C10.4477 4 10 3.55228 10 3V1C10 0.447715 10.4477 0 11 0ZM3.22183 3.22183C3.61235 2.8313 4.24551 2.8313 4.63604 3.22183L6.05025 4.63604C6.44078 5.02656 6.44078 5.65973 6.05025 6.05025C5.65973 6.44078 5.02656 6.44078 4.63604 6.05025L3.22183 4.63604C2.8313 4.24551 2.8313 3.61235 3.22183 3.22183ZM18.7782 3.22183C19.1687 3.61235 19.1687 4.24551 18.7782 4.63604L17.364 6.05025C16.9734 6.44078 16.3403 6.44078 15.9497 6.05025C15.5592 5.65973 15.5592 5.02656 15.9497 4.63604L17.364 3.22183C17.7545 2.8313 18.3876 2.8313 18.7782 3.22183ZM11 8C9.34315 8 8 9.34315 8 11C8 12.6569 9.34315 14 11 14C12.6569 14 14 12.6569 14 11C14 9.34315 12.6569 8 11 8ZM6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11ZM0 11C0 10.4477 0.447715 10 1 10H3C3.55228 10 4 10.4477 4 11C4 11.5523 3.55228 12 3 12H1C0.447715 12 0 11.5523 0 11ZM18 11C18 10.4477 18.4477 10 19 10H21C21.5523 10 22 10.4477 22 11C22 11.5523 21.5523 12 21 12H19C18.4477 12 18 11.5523 18 11ZM6.05025 15.9497C6.44078 16.3403 6.44078 16.9734 6.05025 17.364L4.63604 18.7782C4.24551 19.1687 3.61235 19.1687 3.22183 18.7782C2.8313 18.3876 2.8313 17.7545 3.22183 17.364L4.63604 15.9497C5.02656 15.5592 5.65973 15.5592 6.05025 15.9497ZM15.9497 15.9497C16.3403 15.5592 16.9734 15.5592 17.364 15.9497L18.7782 17.364C19.1687 17.7545 19.1687 18.3876 18.7782 18.7782C18.3877 19.1687 17.7545 19.1687 17.364 18.7782L15.9497 17.364C15.5592 16.9734 15.5592 16.3403 15.9497 15.9497ZM11 18C11.5523 18 12 18.4477 12 19V21C12 21.5523 11.5523 22 11 22C10.4477 22 10 21.5523 10 21V19C10 18.4477 10.4477 18 11 18Z" fill="currentColor"></path></svg> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden dark:block w-5 h-5 astro-3ef6ksr2 " ><path d="M10.7836 0.470481C10.9676 0.765118 10.9855 1.13415 10.8309 1.44525C10.2994 2.51497 10 3.7211 10 5.00001C10 9.41829 13.5817 13 18 13L18.0575 12.9998C18.4049 12.9974 18.7287 13.1754 18.9127 13.47C19.0968 13.7647 19.1147 14.1337 18.9601 14.4448C17.325 17.7352 13.9279 20 10 20C4.47715 20 0 15.5229 0 10C0 4.50107 4.43841 0.038857 9.92838 0.000268937C10.2758 -0.00217271 10.5995 0.175844 10.7836 0.470481ZM8.40989 2.15803C4.75344 2.8954 2 6.12619 2 10C2 14.4183 5.58172 18 10 18C12.587 18 14.8886 16.7721 16.3516 14.8648C11.6131 14.0789 8 9.96139 8 5.00001C8 4.01361 8.1431 3.05953 8.40989 2.15803Z" fill="currentColor"></path></svg> </button> </div> </div> <div class="flex-1 w-full overflow-y-auto px-6 py-4 flex flex-col gap-6 astro-3ef6ksr2" data-mobile-nav-panels> <div data-mobile-search class="astro-3ef6ksr2"> <astro-island uid="2kSym0" prefix="r97" component-url="/_astro/AlgoliaSearch.react.D2swSZ1o.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;id&quot;:[0,&quot;header-mobile-search&quot;],&quot;className&quot;:[0,&quot;pagefind-header-ui pagefind-mobile-ui astro-3ef6ksr2&quot;],&quot;query&quot;:[0,&quot;&quot;],&quot;scope&quot;:[0,&quot;codex&quot;],&quot;uiOptions&quot;:[0,{&quot;showImages&quot;:[0,false],&quot;showSubResults&quot;:[0,false],&quot;translations&quot;:[0,{&quot;placeholder&quot;:[0,&quot;Start searching&quot;],&quot;zeroResults&quot;:[0,&quot;No matches yet. Try a different keyword.&quot;]}]}]}" ssr client="load" opts="{&quot;name&quot;:&quot;AlgoliaSearchReact&quot;,&quot;value&quot;:true}" await-children><div id="header-mobile-search" class="pagefind-header-ui pagefind-mobile-ui astro-3ef6ksr2 _root_1wztd_1" data-site-search-root="true" data-site-search-provider="algolia" data-site-search-variant="default" data-query="" data-scope="codex"><div class="flex h-full min-h-0 flex-col gap-4"><div class=""><label class="sr-only" for="header-mobile-search-input">Search docs</label><input id="header-mobile-search-input" type="text" placeholder="Start searching" autoComplete="off" spellCheck="false" data-site-search-input="true" class="w-full outline-none transition-colors rounded-[18px] border border-transparent bg-primary-soft-alpha py-4 pl-6 pr-14 text-[18px] leading-tight text-default placeholder:text-tertiary focus:border-transparent focus:ring-0" value=""/></div><div class="flex min-h-0 flex-1 flex-col gap-4"><div data-site-search-empty-state="true" class="flex flex-col gap-4"><section class="_emptySection_1wztd_68" data-site-search-suggestions="true"><h3 class="_emptyHeading_1wztd_74">Suggested</h3><div class="flex flex-wrap gap-2"><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="responses create">responses create</button><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="reasoning_effort">reasoning_effort</button><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="realtime">realtime</button><button type="button" class="_emptyChip_1wztd_81" data-search-query-button="true" data-search-query="prompt caching">prompt caching</button></div></section></div></div></div></div><!--astro:end--></astro-island> </div> <div id="mobile-nav-panel-1" data-mobile-nav-content data-tab-id="mobile-nav-tab-1" data-href="/api/docs" data-default-variant-id="mobile-nav-tab-1-variant-0" hidden class="flex flex-col gap-4 pb-8 astro-3ef6ksr2"> <script>(()=>{var n=(a,t)=>{let i=async()=>{await(await a())()};if(t.value){let e=matchMedia(t.value);e.matches?i():e.addEventListener("change",i,{once:!0})}};(self.Astro||(self.Astro={})).media=n;window.dispatchEvent(new Event("astro:media"));})();</script> <div class="group flex flex-col gap-1 astro-3ef6ksr2" data-mobile-context-options data-context-active="false" data-site-visibility-exclude="chatgpt-docs"> <button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-0" data-context-label="Overview" data-context-href="/api/docs" data-context-is-home="true" data-selected="true"> Overview </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-1" data-context-label="Models" data-context-href="/api/docs/models" data-context-is-home="false" data-selected="false"> Models </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-2" data-context-label="Agents" data-context-href="/api/docs/guides/agents" data-context-is-home="false" data-selected="false"> Agents </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-3" data-context-label="Tools" data-context-href="/api/docs/guides/tools" data-context-is-home="false" data-selected="false"> Tools </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-4" data-context-label="Voice &#38; Audio" data-context-href="/api/docs/guides/realtime" data-context-is-home="false" data-selected="false"> Voice &amp; Audio </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-5" data-context-label="Production" data-context-href="/api/docs/guides/production-best-practices" data-context-is-home="false" data-selected="false"> Production </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-1-variant-6" data-context-label="API reference" data-context-href="/api/reference/overview" data-context-is-home="false" data-selected="false"> API reference </button> </div> <div id="mobile-nav-tab-1-context-select" data-mobile-context-select data-value="mobile-nav-tab-1-variant-0" data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <astro-island uid="2kGHYS" prefix="r74" component-url="/_astro/MobileContextDropdown.react.CzopcHpz.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;rootId&quot;:[0,&quot;mobile-nav-tab-1-context-select&quot;],&quot;initialValue&quot;:[0,&quot;mobile-nav-tab-1-variant-0&quot;],&quot;options&quot;:[1,[[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-0&quot;],&quot;label&quot;:[0,&quot;Overview&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-1&quot;],&quot;label&quot;:[0,&quot;Models&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-2&quot;],&quot;label&quot;:[0,&quot;Agents&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-3&quot;],&quot;label&quot;:[0,&quot;Tools&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-4&quot;],&quot;label&quot;:[0,&quot;Voice &amp; Audio&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-5&quot;],&quot;label&quot;:[0,&quot;Production&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-1-variant-6&quot;],&quot;label&quot;:[0,&quot;API reference&quot;]}]]]}" ssr client="media" opts="{&quot;name&quot;:&quot;MobileContextDropdown&quot;,&quot;value&quot;:&quot;(max-width: 63.999rem)&quot;}" await-children><div class="flex min-w-0"><div class="relative max-w-full w-full"><select aria-label="Docs section" class="_NativeSelect_10bwq_299" data-native-selectcontrol=""><option value="mobile-nav-tab-1-variant-0" selected="">Overview</option><option value="mobile-nav-tab-1-variant-1">Models</option><option value="mobile-nav-tab-1-variant-2">Agents</option><option value="mobile-nav-tab-1-variant-3">Tools</option><option value="mobile-nav-tab-1-variant-4">Voice &amp; Audio</option><option value="mobile-nav-tab-1-variant-5">Production</option><option value="mobile-nav-tab-1-variant-6">API reference</option></select><span class="_SelectControl_x887o_1" role="button" tabindex="-1" data-variant="outline" data-block="" data-size="3xl" data-selected="true" aria-disabled="false" id="select-trigger-_r74R_0_" aria-labelledby="_r74R_5H1_ _r74R_5_" aria-hidden="true"><span class="_TriggerText_x887o_510"><span id="_r74R_5H1_" class="sr-only w-full h-0 left-0 bottom-0 pointer-events-none">Docs section</span><span id="_r74R_5_">Overview</span></span><div class="_IndicatorWrapper_x887o_520"><svg width="1em" height="1em" viewBox="0 0 16 9" fill="currentColor" class="_DropdownIcon_x887o_475 _DropdownIconChevron_x887o_586"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292894C14.6834 -0.0976305 15.3166 -0.0976304 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"></path></svg></div></span></div></div><!--astro:end--></astro-island> </div>  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Get started </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/quickstart" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li><li> <a href="/api/docs/guides/latest-model" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Using GPT-5.6   </a> </li><li> <a href="/api/docs/concepts" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Key concepts   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Core concepts </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/migrate-to-responses" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Responses API   </a> </li><li> <a href="/api/docs/guides/conversation-state" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Conversation state   </a> </li><li> <a href="/api/docs/guides/background" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Background mode   </a> </li><li> <a href="/api/docs/guides/streaming-responses" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Streaming   </a> </li><li> <a href="/api/docs/guides/websocket-mode" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> WebSocket mode   </a> </li><li> <a href="/api/docs/guides/responses-multi-agent" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Multi-agent   </a> </li><li> <a href="/api/docs/guides/webhooks" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Webhooks   </a> </li><li> <a href="/api/docs/guides/file-inputs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> File inputs   </a> </li><li> <a href="/api/docs/guides/compaction" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Compaction   </a> </li><li> <a href="/api/docs/guides/token-counting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Counting tokens   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> SDKs and CLI </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/libraries" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> OpenAI SDK   </a> </li><li> <a href="/api/docs/libraries/openai-cli" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> OpenAI CLI   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Resources </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/changelog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Changelog   </a> </li><li> <a href="/api/docs/deprecations" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Deprecations   </a> </li><li> <a href="/api/docs/supported-countries" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Supported countries   </a> </li><li> <a href="/api/docs/bots" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> OpenAI Crawlers   </a> </li><li> <a href="https://openai.com/policies" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Terms and policies  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Legacy APIs </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Agent Builder</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/agent-builder" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/api/docs/guides/agent-builder/migrate-from-agent-builder" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Migration guide   </a> </li><li> <a href="/api/docs/guides/node-reference" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Node reference   </a> </li><li> <a href="/api/docs/guides/agent-builder-safety" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Safety in building agents   </a> </li> </ul> </details> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Evals</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/evaluation-getting-started" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Getting started   </a> </li><li> <a href="/api/docs/guides/evals" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Working with evals   </a> </li><li> <a href="/api/docs/guides/prompt-optimizer" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prompt optimizer   </a> </li><li> <a href="/api/docs/guides/external-models" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> External models   </a> </li><li> <a href="/api/docs/guides/evaluation-best-practices" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Best practices   </a> </li><li> <a href="/api/docs/guides/graders" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Graders   </a> </li> </ul> </details> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Fine-tuning</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/model-optimization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Optimization cycle   </a> </li><li> <a href="/api/docs/guides/supervised-fine-tuning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Supervised fine-tuning   </a> </li><li> <a href="/api/docs/guides/vision-fine-tuning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Vision fine-tuning   </a> </li><li> <a href="/api/docs/guides/direct-preference-optimization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Direct preference optimization   </a> </li><li> <a href="/api/docs/guides/reinforcement-fine-tuning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Reinforcement fine-tuning   </a> </li><li> <a href="/api/docs/guides/rft-use-cases" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> RFT use cases   </a> </li><li> <a href="/api/docs/guides/fine-tuning-best-practices" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Best practices   </a> </li> </ul> </details> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Assistants API</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/assistants/migration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Migration guide   </a> </li><li> <a href="/api/docs/assistants/deep-dive" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Deep dive   </a> </li><li> <a href="/api/docs/assistants/tools" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Tools   </a> </li> </ul> </details> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-1" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/models" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Model catalog   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Choose a model </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/pricing" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Pricing   </a> </li><li> <a href="/api/docs/guides/model-selection" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Model selection   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Text and code </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/text" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Text generation   </a> </li><li> <a href="/api/docs/guides/code-generation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Code generation   </a> </li><li> <a href="/api/docs/guides/structured-outputs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Structured output   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Prompting </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/prompting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/api/docs/guides/prompt-engineering" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prompt engineering   </a> </li><li> <a href="/api/docs/guides/citation-formatting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Citation formatting   </a> </li><li> <a href="/api/docs/guides/prompting/migrate-from-prompt-object" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Migration guide   </a> </li><li> <a href="/api/docs/guides/prompt-generation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prompt generation   </a> </li><li> <a href="/api/docs/guides/frontend-prompt" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Frontend prompting   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Reasoning </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/reasoning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Reasoning models   </a> </li><li> <a href="/api/docs/guides/reasoning-best-practices" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Reasoning best practices   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Images and video </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <a href="/api/docs/guides/images-vision" class="flex-1 " data-mobile-nav-link> Images and vision  </a> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/image-cost-calculator" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image input cost calculator   </a> </li> </ul> </details> </li><li> <a href="/api/docs/guides/image-generation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image generation   </a> </li><li> <a href="/api/docs/guides/video-generation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Video generation   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Realtime and audio </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/audio" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Audio and speech   </a> </li><li> <a href="/api/docs/guides/realtime" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/api/docs/guides/voice-agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Voice agents   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Specialized models </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/deep-research" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Deep research   </a> </li><li> <a href="/api/docs/guides/embeddings" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Embeddings   </a> </li><li> <a href="/api/docs/guides/moderation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Moderation   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-2" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Agents SDK </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/agents/quickstart" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li><li> <a href="/api/docs/guides/agents/define-agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Agent definitions   </a> </li><li> <a href="/api/docs/guides/agents/models" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Models and providers   </a> </li><li> <a href="/api/docs/guides/agents/running-agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Running agents   </a> </li><li> <a href="/api/docs/guides/agents/sandboxes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Sandbox agents   </a> </li><li> <a href="/api/docs/guides/agents/orchestration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Orchestration   </a> </li><li> <a href="/api/docs/guides/agents/guardrails-approvals" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Guardrails   </a> </li><li> <a href="/api/docs/guides/agents/results" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Results and state   </a> </li><li> <a href="/api/docs/guides/agents/integrations-observability" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Integrations and observability   </a> </li><li> <a href="/api/docs/guides/agent-evals" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Evaluate agent workflows   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> ChatKit </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/chatkit" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/api/docs/guides/chatkit-themes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Customize   </a> </li><li> <a href="/api/docs/guides/chatkit-widgets" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Widgets   </a> </li><li> <a href="/api/docs/guides/chatkit-actions" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Actions   </a> </li><li> <a href="/api/docs/guides/custom-chatkit" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Advanced integrations   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-3" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/tools" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/api/docs/guides/function-calling" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Function calling   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Search and retrieval </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/tools-web-search" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Web search   </a> </li><li> <a href="/api/docs/guides/tools-file-search" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> File search   </a> </li><li> <a href="/api/docs/guides/retrieval" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Retrieval   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Connect tools and data </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/tools-connectors-mcp" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> MCP and Connectors   </a> </li><li> <a href="/api/docs/guides/secure-mcp-tunnels" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Secure MCP Tunnel   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Build tool workflows </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/tools-skills" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Skills   </a> </li><li> <a href="/api/docs/guides/tools-tool-search" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Tool search   </a> </li><li> <a href="/api/docs/guides/tools-programmatic-tool-calling" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Programmatic tool calling   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Computer and code </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/tools-shell" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Shell   </a> </li><li> <a href="/api/docs/guides/tools-computer-use" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Computer use   </a> </li><li> <a href="/api/docs/guides/tools-apply-patch" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Apply Patch   </a> </li><li> <a href="/api/docs/guides/tools-local-shell" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Local shell   </a> </li><li> <a href="/api/docs/guides/tools-code-interpreter" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Code interpreter   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Media </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/tools-image-generation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image generation   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-4" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/realtime" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Get started </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/voice-agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Voice agents   </a> </li><li> <a href="/api/docs/guides/realtime-translation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Live translation   </a> </li><li> <a href="/api/docs/guides/realtime-models-prompting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Realtime prompting guide   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Audio </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/audio" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Audio and speech   </a> </li><li> <a href="/api/docs/guides/transcription" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Transcription   </a> </li><li> <a href="/api/docs/guides/speech-to-text" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> File transcription   </a> </li><li> <a href="/api/docs/guides/realtime-transcription" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Realtime transcription   </a> </li><li> <a href="/api/docs/guides/text-to-speech" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Speech generation   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Connection methods </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/realtime-webrtc" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> WebRTC   </a> </li><li> <a href="/api/docs/guides/realtime-websocket" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> WebSocket   </a> </li><li> <a href="/api/docs/guides/realtime-sip" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> SIP   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Sessions and operations </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/realtime-conversations" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Managing conversations   </a> </li><li> <a href="/api/docs/guides/realtime-vad" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Voice activity detection   </a> </li><li> <a href="/api/docs/guides/realtime-mcp" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Realtime with tools   </a> </li><li> <a href="/api/docs/guides/realtime-server-controls" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Webhooks and server-side controls   </a> </li><li> <a href="/api/docs/guides/realtime-costs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Managing costs   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-5" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Go live </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/production-best-practices" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Production best practices   </a> </li><li> <a href="/api/docs/guides/deployment-checklist" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Deployment checklist   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Performance and quality </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/latency-optimization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Latency optimization   </a> </li><li> <a href="/api/docs/guides/predicted-outputs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Predicted Outputs   </a> </li><li> <a href="/api/docs/guides/fast-mode" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Fast mode   </a> </li><li> <a href="/api/docs/guides/optimizing-llm-accuracy" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Accuracy optimization   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Cost and throughput </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/cost-optimization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Cost optimization   </a> </li><li> <a href="/api/docs/guides/prompt-caching" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prompt caching   </a> </li><li> <a href="/api/docs/guides/batch" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Batch   </a> </li><li> <a href="/api/docs/guides/flex-processing" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Flex processing   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Safety and governance </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/safety-best-practices" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Safety best practices   </a> </li><li> <a href="/api/docs/guides/red-teaming" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Red teaming   </a> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <a href="/api/docs/guides/safety-checks" class="flex-1 " data-mobile-nav-link> Safety checks  </a> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/safety-checks/cybersecurity" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Cybersecurity checks   </a> </li><li> <a href="/api/docs/guides/safety-checks/under-18-api-guidance" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Under 18 API Guidance   </a> </li> </ul> </details> </li><li> <a href="/api/docs/guides/csam-guidance" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> CSAM guidance   </a> </li><li> <a href="/api/docs/guides/content-provenance" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Content provenance   </a> </li><li> <a href="/api/docs/guides/your-data" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Your data   </a> </li><li> <a href="/api/docs/guides/rbac" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Permissions   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Infrastructure and access </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <a href="/api/docs/guides/terraform" class="flex-1 " data-mobile-nav-link> Terraform provider  </a> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/terraform" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/api/docs/guides/terraform/projects-and-access" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Projects and access   </a> </li><li> <a href="/api/docs/guides/terraform/service-accounts" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Service accounts   </a> </li><li> <a href="/api/docs/guides/terraform/rate-limits-and-spend" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Rate limits and spend   </a> </li><li> <a href="/api/docs/guides/terraform/project-controls" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Model, tool, and data controls   </a> </li><li> <a href="/api/docs/guides/terraform/import-and-reconcile" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Import and reconciliation   </a> </li> </ul> </details> </li><li> <a href="/api/docs/guides/private-link" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Private Link   </a> </li><li> <a href="/api/docs/guides/ip-allowlist" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> IP allowlist   </a> </li><li> <a href="/api/docs/guides/mutual-tls" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Mutual TLS   </a> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <a href="/api/docs/guides/workload-identity-federation" class="flex-1 " data-mobile-nav-link> Workload identity federation  </a> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/enterprise/workload-identity" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex setup   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/federation-rules" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Federation rules   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/admin-api" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Admin API   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/x509" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> X.509 certificates   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/kubernetes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Kubernetes   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/aws" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> AWS   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/microsoft-azure" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Microsoft Azure   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/google-cloud" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Google Cloud   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/oracle-cloud" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Oracle Cloud Infrastructure   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/github-actions" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GitHub Actions   </a> </li><li> <a href="/api/docs/guides/workload-identity-federation/spiffe" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> SPIFFE   </a> </li> </ul> </details> </li><li> <a href="/api/docs/guides/ip-addresses" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> IP egress ranges   </a> </li><li> <a href="/api/docs/guides/amazon-bedrock" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Amazon Bedrock   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Operations </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/api/docs/guides/rate-limits" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Rate limits   </a> </li><li> <a href="/api/docs/guides/spend-limits" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Spend limits   </a> </li><li> <a href="/api/docs/guides/admin-apis" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Admin APIs   </a> </li><li> <a href="/api/docs/guides/error-codes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Error codes   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-1-variant-6" hidden class="flex flex-col gap-6 astro-3ef6ksr2">  </div> </div><div id="mobile-nav-panel-2" data-mobile-nav-content data-tab-id="mobile-nav-tab-2" data-href="https://learn.chatgpt.com/docs" data-default-variant-id="mobile-nav-tab-2-variant-0" hidden class="flex flex-col gap-4 pb-8 astro-3ef6ksr2">  <div class="group flex flex-col gap-1 astro-3ef6ksr2" data-mobile-context-options data-context-active="false" data-site-visibility-exclude="chatgpt-docs"> <a href="https://learn.chatgpt.com/docs" target="_blank" rel="noopener noreferrer" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default astro-3ef6ksr2" data-mobile-nav-link> Docs </a><a href="https://learn.chatgpt.com/use-cases" target="_blank" rel="noopener noreferrer" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default astro-3ef6ksr2" data-mobile-nav-link> Use cases </a> </div> <div id="mobile-nav-tab-2-context-select" data-mobile-context-select data-value="mobile-nav-tab-2-variant-0" data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <astro-island uid="ZUHMkA" prefix="r75" component-url="/_astro/MobileContextDropdown.react.CzopcHpz.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;rootId&quot;:[0,&quot;mobile-nav-tab-2-context-select&quot;],&quot;initialValue&quot;:[0,&quot;mobile-nav-tab-2-variant-0&quot;],&quot;options&quot;:[1,[[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-2-variant-0&quot;],&quot;label&quot;:[0,&quot;Docs&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-2-variant-1&quot;],&quot;label&quot;:[0,&quot;Use cases&quot;]}]]]}" ssr client="media" opts="{&quot;name&quot;:&quot;MobileContextDropdown&quot;,&quot;value&quot;:&quot;(max-width: 63.999rem)&quot;}" await-children><div class="flex min-w-0"><div class="relative max-w-full w-full"><select aria-label="Docs section" class="_NativeSelect_10bwq_299" data-native-selectcontrol=""><option value="mobile-nav-tab-2-variant-0" selected="">Docs</option><option value="mobile-nav-tab-2-variant-1">Use cases</option></select><span class="_SelectControl_x887o_1" role="button" tabindex="-1" data-variant="outline" data-block="" data-size="3xl" data-selected="true" aria-disabled="false" id="select-trigger-_r75R_0_" aria-labelledby="_r75R_5H1_ _r75R_5_" aria-hidden="true"><span class="_TriggerText_x887o_510"><span id="_r75R_5H1_" class="sr-only w-full h-0 left-0 bottom-0 pointer-events-none">Docs section</span><span id="_r75R_5_">Docs</span></span><div class="_IndicatorWrapper_x887o_520"><svg width="1em" height="1em" viewBox="0 0 16 9" fill="currentColor" class="_DropdownIcon_x887o_475 _DropdownIconChevron_x887o_586"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292894C14.6834 -0.0976305 15.3166 -0.0976304 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"></path></svg></div></span></div></div><!--astro:end--></astro-island> </div>  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-2-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2">  </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-2-variant-1" hidden class="flex flex-col gap-6 astro-3ef6ksr2">  </div> </div><div id="mobile-nav-panel-6" data-mobile-nav-content data-tab-id="mobile-nav-tab-6" data-href="/chatgpt" data-default-variant-id="mobile-nav-tab-6-variant-0" hidden class="flex flex-col gap-4 pb-8 astro-3ef6ksr2">  <div class="group flex flex-col gap-1 astro-3ef6ksr2" data-mobile-context-options data-context-active="false" data-site-visibility-exclude="chatgpt-docs"> <button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-6-variant-1" data-context-label="Plugins" data-context-href="/plugins" data-context-is-home="false" data-selected="false"> Plugins </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-6-variant-2" data-context-label="Workspace Agents" data-context-href="/workspace-agents" data-context-is-home="false" data-selected="false"> Workspace Agents </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-6-variant-3" data-context-label="Commerce" data-context-href="/commerce" data-context-is-home="false" data-selected="false"> Commerce </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-6-variant-4" data-context-label="Ads" data-context-href="/ads" data-context-is-home="false" data-selected="false"> Ads </button> </div> <div id="mobile-nav-tab-6-context-select" data-mobile-context-select data-value="mobile-nav-tab-6-variant-0" data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <astro-island uid="Z1Lja8O" prefix="r76" component-url="/_astro/MobileContextDropdown.react.CzopcHpz.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;rootId&quot;:[0,&quot;mobile-nav-tab-6-context-select&quot;],&quot;initialValue&quot;:[0,&quot;mobile-nav-tab-6-variant-0&quot;],&quot;options&quot;:[1,[[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-6-variant-1&quot;],&quot;label&quot;:[0,&quot;Plugins&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-6-variant-2&quot;],&quot;label&quot;:[0,&quot;Workspace Agents&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-6-variant-3&quot;],&quot;label&quot;:[0,&quot;Commerce&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-6-variant-4&quot;],&quot;label&quot;:[0,&quot;Ads&quot;]}]]]}" ssr client="media" opts="{&quot;name&quot;:&quot;MobileContextDropdown&quot;,&quot;value&quot;:&quot;(max-width: 63.999rem)&quot;}" await-children><div class="flex min-w-0"><div class="relative max-w-full w-full"><select aria-label="Docs section" class="_NativeSelect_10bwq_299" data-native-selectcontrol=""><option value="mobile-nav-tab-6-variant-1">Plugins</option><option value="mobile-nav-tab-6-variant-2">Workspace Agents</option><option value="mobile-nav-tab-6-variant-3">Commerce</option><option value="mobile-nav-tab-6-variant-4">Ads</option></select><span class="_SelectControl_x887o_1" role="button" tabindex="-1" data-variant="outline" data-block="" data-size="3xl" data-selected="true" aria-disabled="false" id="select-trigger-_r76R_0_" aria-labelledby="_r76R_5H1_ _r76R_5_" aria-hidden="true"><span class="_TriggerText_x887o_510"><span id="_r76R_5H1_" class="sr-only w-full h-0 left-0 bottom-0 pointer-events-none">Docs section</span><span id="_r76R_5_">Select...</span></span><div class="_IndicatorWrapper_x887o_520"><svg width="1em" height="1em" viewBox="0 0 16 9" fill="currentColor" class="_DropdownIcon_x887o_475 _DropdownIconChevron_x887o_586"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292894C14.6834 -0.0976305 15.3166 -0.0976304 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"></path></svg></div></span></div></div><!--astro:end--></astro-island> </div>  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-6-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2">  </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-6-variant-1" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li><li> <a href="/plugins/quickstart" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Core concepts </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/concepts/plugins" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Plugin architecture   </a> </li><li> <a href="/plugins/concepts/skills" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Skills   </a> </li><li> <a href="/plugins/concepts/mcp-server" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> MCP server   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Plan </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/plan/use-case" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Brainstorm use cases   </a> </li><li> <a href="/plugins/plan/tools" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Define tools   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Build </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/build/mcp-server" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Build an MCP server   </a> </li><li> <a href="/plugins/build/chatgpt-ui" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Add UI to your MCP server (optional)   </a> </li><li> <a href="/plugins/build/auth" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Authenticate users   </a> </li><li> <a href="/plugins/build/skills" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Build skills   </a> </li><li> <a href="/plugins/build/plugins" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Package your plugin   </a> </li><li> <a href="/plugins/build/examples" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Examples   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Test and publish </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/deploy/connect-chatgpt" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Connect and test your plugin   </a> </li><li> <a href="/plugins/deploy/submission" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Submit and publish   </a> </li><li> <a href="/plugins/deploy/submission-errors" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Submission error reference   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Conversion specs </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/guides/restaurant-reservation-conversion-spec" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Restaurant reservation spec   </a> </li><li> <a href="/plugins/guides/local-services-request-quote-conversion-spec" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Get Quote spec   </a> </li><li> <a href="/plugins/guides/product-checkout-conversion-spec" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Product checkout spec   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Guides </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/concepts/ui-guidelines" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> UI guidelines   </a> </li><li> <a href="/plugins/guides/optimize-metadata" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Optimize Metadata   </a> </li><li> <a href="/plugins/guides/submit-claude-plugin" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Submit a Claude Code plugin   </a> </li><li> <a href="/plugins/guides/security-privacy" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Security &amp; Privacy   </a> </li><li> <a href="/plugins/deploy/troubleshooting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Troubleshooting   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Resources </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/plugins/changelog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Changelog   </a> </li><li> <a href="/plugins/app-guidelines" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Plugin guidelines   </a> </li><li> <a href="/plugins/deploy/app-review" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> MCP server review requirements   </a> </li><li> <a href="/plugins/reference" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Plugin UI reference   </a> </li><li> <a href="/plugins/build/monetization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Checkout API reference   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-6-variant-2" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/workspace-agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Get started </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/workspace-agents/trigger-runs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Trigger workspace agent runs   </a> </li><li> <a href="/workspace-agents/authentication" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Authenticate with Workspace Agent access tokens   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-6-variant-3" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/commerce" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Guides </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/commerce/guides/get-started" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Get started   </a> </li><li> <a href="/commerce/guides/best-practices" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Best practices   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> File Upload </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/commerce/specs/file-upload/overview" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/commerce/specs/file-upload/products" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Products   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> API </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/commerce/specs/api/overview" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/commerce/specs/api/feeds" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Feeds   </a> </li><li> <a href="/commerce/specs/api/products" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Products   </a> </li><li> <a href="/commerce/specs/api/promotions" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Promotions   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-6-variant-4" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/ads" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Ads Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Measurement </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/ads/measurement-pixel" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Measurement Pixel   </a> </li><li> <a href="/ads/multiple-pixels" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Multiple Pixels (Advanced)   </a> </li><li> <a href="/ads/image-tag" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image Tag   </a> </li><li> <a href="/ads/conversions-api" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Conversions API   </a> </li><li> <a href="/ads/supported-events" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Supported Events   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Advertiser API </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/ads/api-overview" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/ads/api-partner-setup" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> API Partner Setup   </a> </li><li> <a href="/ads/api-quickstart" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li><li> <a href="/ads/bulk-api" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Bulk API   </a> </li><li> <a href="/ads/product-feeds" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Product Feeds   </a> </li><li> <a href="/ads/delta-feeds" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Delta Feeds API   </a> </li><li> <a href="/ads/campaign-targeting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Campaign Targeting   </a> </li><li> <a href="/ads/conversion-optimized-campaigns" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Conversion-Optimized Campaigns   </a> </li><li> <a href="/ads/custom-audiences" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Custom Audiences   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> API Reference </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/ads/api-reference/authentication" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Authentication   </a> </li><li> <a href="/ads/api-reference/ad-account" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Ad Account   </a> </li><li> <a href="/ads/api-reference/campaigns" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Campaigns   </a> </li><li> <a href="/ads/api-reference/ad-groups" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Ad Groups   </a> </li><li> <a href="/ads/api-reference/ads" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Ads   </a> </li><li> <a href="/ads/api-reference/insights" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Insights   </a> </li><li> <a href="/ads/api-reference/files" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Files   </a> </li><li> <a href="/ads/api-reference/conversion-setup" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Conversion Setup   </a> </li> </ul> </div> </div> </div><div id="mobile-nav-panel-3" data-mobile-nav-content data-tab-id="mobile-nav-tab-3" data-href="/codex" data-default-variant-id="mobile-nav-tab-3-variant-1" class="flex flex-col gap-4 pb-8 astro-3ef6ksr2">  <div class="group flex flex-col gap-1 astro-3ef6ksr2" data-mobile-context-options data-context-active="false" data-site-visibility-exclude="chatgpt-docs"> <button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-0" data-context-label="Overview" data-context-href="/codex" data-context-is-home="true" data-selected="false"> Overview </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-1" data-context-label="Features" data-context-href="/codex/features" data-context-is-home="false" data-selected="true"> Features </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-2" data-context-label="Configuration" data-context-href="/codex/configuration" data-context-is-home="false" data-selected="false"> Configuration </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-3" data-context-label="Developers" data-context-href="/codex/developers" data-context-is-home="false" data-selected="false"> Developers </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-4" data-context-label="Security" data-context-href="/codex/security-administration" data-context-is-home="false" data-selected="false"> Security </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-5" data-context-label="Administration" data-context-href="/codex/administration" data-context-is-home="false" data-selected="false"> Administration </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-6" data-context-label="Use Cases" data-context-href="/codex/use-cases" data-context-is-home="false" data-selected="false" data-site-visibility-exclude="chatgpt-docs"> Use Cases </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-3-variant-7" data-context-label="Resources" data-context-href="/codex/resources" data-context-is-home="false" data-selected="false" data-site-visibility-exclude="chatgpt-docs"> Resources </button> </div> <div id="mobile-nav-tab-3-context-select" data-mobile-context-select data-value="mobile-nav-tab-3-variant-1" data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <astro-island uid="1HiUIW" prefix="r77" component-url="/_astro/MobileContextDropdown.react.CzopcHpz.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;rootId&quot;:[0,&quot;mobile-nav-tab-3-context-select&quot;],&quot;initialValue&quot;:[0,&quot;mobile-nav-tab-3-variant-1&quot;],&quot;options&quot;:[1,[[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-0&quot;],&quot;label&quot;:[0,&quot;Overview&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-1&quot;],&quot;label&quot;:[0,&quot;Features&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-2&quot;],&quot;label&quot;:[0,&quot;Configuration&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-3&quot;],&quot;label&quot;:[0,&quot;Developers&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-4&quot;],&quot;label&quot;:[0,&quot;Security&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-5&quot;],&quot;label&quot;:[0,&quot;Administration&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-6&quot;],&quot;label&quot;:[0,&quot;Use Cases&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-3-variant-7&quot;],&quot;label&quot;:[0,&quot;Resources&quot;]}]]]}" ssr client="media" opts="{&quot;name&quot;:&quot;MobileContextDropdown&quot;,&quot;value&quot;:&quot;(max-width: 63.999rem)&quot;}" await-children><div class="flex min-w-0"><div class="relative max-w-full w-full"><select aria-label="Docs section" class="_NativeSelect_10bwq_299" data-native-selectcontrol=""><option value="mobile-nav-tab-3-variant-0">Overview</option><option value="mobile-nav-tab-3-variant-1" selected="">Features</option><option value="mobile-nav-tab-3-variant-2">Configuration</option><option value="mobile-nav-tab-3-variant-3">Developers</option><option value="mobile-nav-tab-3-variant-4">Security</option><option value="mobile-nav-tab-3-variant-5">Administration</option><option value="mobile-nav-tab-3-variant-6">Use Cases</option><option value="mobile-nav-tab-3-variant-7">Resources</option></select><span class="_SelectControl_x887o_1" role="button" tabindex="-1" data-variant="outline" data-block="" data-size="3xl" data-selected="true" aria-disabled="false" id="select-trigger-_r77R_0_" aria-labelledby="_r77R_5H1_ _r77R_5_" aria-hidden="true"><span class="_TriggerText_x887o_510"><span id="_r77R_5H1_" class="sr-only w-full h-0 left-0 bottom-0 pointer-events-none">Docs section</span><span id="_r77R_5_">Features</span></span><div class="_IndicatorWrapper_x887o_520"><svg width="1em" height="1em" viewBox="0 0 16 9" fill="currentColor" class="_DropdownIcon_x887o_475 _DropdownIconChevron_x887o_586"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292894C14.6834 -0.0976305 15.3166 -0.0976304 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"></path></svg></div></span></div></div><!--astro:end--></astro-island> </div>  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-0" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Get started </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/quickstart" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li><li> <a href="/codex/use-chatgpt" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Use ChatGPT   </a> </li><li> <a href="/codex/get-started-with-work" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Get started with Work   </a> </li><li> <a href="/codex/import" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Import from another agent   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Foundations </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/prompting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prompting   </a> </li><li> <a href="/codex/personalize" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Personalize ChatGPT   </a> </li><li> <a href="/codex/skills-and-plugins" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Skills &amp; Plugins   </a> </li><li> <a href="/codex/permission-modes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Permissions   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Explore </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/whats-new" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> What&#39;s new   </a> </li><li> <a href="/codex/models" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Models   </a> </li><li> <a href="/codex/pricing" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Pricing   </a> </li><li> <a href="/codex/glossary" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Glossary   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Available on </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/app" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> ChatGPT desktop app   </a> </li><li> <a href="/codex/remote" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Remote   </a> </li><li> <a href="/codex/web" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> ChatGPT on the web   </a> </li><li> <a href="/codex/cli" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex CLI   </a> </li><li> <a href="/codex/ide" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex IDE extension   </a> </li><li> <a href="/codex/cloud" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex cloud   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Releases </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/changelog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Changelog   </a> </li><li> <a href="/codex/feature-maturity" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Feature Maturity   </a> </li><li> <a href="/codex/open-source" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Open Source   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-1" class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/features" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Workflows </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/projects" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Projects and chats   </a> </li><li> <a href="/codex/sites" class="px-3 py-1.5 rounded-lg transition-colors block text-default bg-primary-ghost-active " data-mobile-nav-link> Sites   </a> </li><li> <a href="/codex/visualizations" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Visualizations   </a> </li><li> <a href="/codex/automations" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Scheduled tasks   </a> </li><li> <a href="/codex/long-running-work" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Long-running work   </a> </li><li> <a href="/codex/notifications" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Notifications   </a> </li><li> <a href="/codex/pets" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Pets   </a> </li><li> <a href="/codex/features/codex-micro" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex Micro   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Capabilities </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/browser" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Browser   </a> </li><li> <a href="/codex/computer-use" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Computer use   </a> </li><li> <a href="/codex/features/voice" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Voice   </a> </li><li> <a href="/codex/plugins" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Plugins   </a> </li><li> <a href="/codex/web-search" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Web search   </a> </li><li> <a href="/codex/image-generation" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image generation   </a> </li><li> <a href="/codex/image-inputs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image inputs   </a> </li><li> <a href="/codex/appshots" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Appshots   </a> </li><li> <a href="/codex/chrome-extension" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Browser extension   </a> </li><li> <a href="/codex/artifacts-viewer" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Work with files   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Reference </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/reference/commands" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Commands   </a> </li><li> <a href="/codex/reference/slash-commands" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Slash commands   </a> </li><li> <a href="/codex/reference/settings" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Settings   </a> </li><li> <a href="/codex/reference/troubleshooting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Troubleshooting   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-2" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/configuration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Customization </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/customization/overview" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <a href="/codex/customization/memories" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Memories   </a> </li><li> <a href="/codex/customization/computer-history" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Computer History   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Config file </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/config-file/config-basic" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Config Basics   </a> </li><li> <a href="/codex/config-file/config-advanced" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Advanced Config   </a> </li><li> <a href="/codex/config-file/config-reference" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Config Reference   </a> </li><li> <a href="/codex/config-file/environment-variables" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Environment Variables   </a> </li><li> <a href="/codex/config-file/config-sample" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Sample Config   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Agent configuration </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/agent-configuration/agents-md" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> AGENTS.md   </a> </li><li> <a href="/codex/agent-configuration/subagents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Subagents   </a> </li><li> <a href="/codex/agent-configuration/speed" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Speed   </a> </li><li> <a href="/codex/agent-configuration/rules" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Rules   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Extend ChatGPT and Codex </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/extend/record-and-replay" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Record &amp; Replay   </a> </li><li> <a href="/codex/extend/mcp" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> MCP   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Linux </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/linux/linux-app" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Desktop app   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Windows </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/windows/windows-app" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Desktop app   </a> </li><li> <a href="/codex/windows/windows-sandbox" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Windows sandbox   </a> </li><li> <a href="/codex/windows/wsl" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> WSL   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-3" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/developers" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Development workflows </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/code-review" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Code review   </a> </li><li> <a href="/codex/integrated-terminal" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Integrated terminal   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Extend and automate </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/build-skills" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Build skills   </a> </li><li> <a href="/codex/build-plugins" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Build plugins   </a> </li><li> <a href="/codex/webmcp" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Site tools (WebMCP)   </a> </li><li> <a href="/codex/hooks" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Hooks   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Environments </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/environments/modes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Modes   </a> </li><li> <a href="/codex/environments/local-environment" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Local environments   </a> </li><li> <a href="/codex/environments/cloud-environment" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Cloud environment   </a> </li><li> <a href="/codex/environments/git-worktrees" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Git worktrees   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Build with Codex </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/codex-sdk" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex SDK   </a> </li><li> <a href="/codex/app-server" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> App Server   </a> </li><li> <a href="/codex/mcp-server" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> MCP Server   </a> </li><li> <a href="/codex/github-action" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GitHub Action   </a> </li><li> <a href="/codex/non-interactive-mode" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Non-interactive mode   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Third-party integrations </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/third-party/github" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GitHub   </a> </li><li> <a href="/codex/third-party/gitlab" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GitLab (Beta)   </a> </li><li> <a href="/codex/third-party/slack" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Slack   </a> </li><li> <a href="/codex/third-party/linear" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Linear   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Reference </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/cli-customization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> CLI customization   </a> </li><li> <a href="/codex/developer-commands" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Developer commands   </a> </li><li> <a href="/codex/developer-settings" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Developer settings   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-4" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/security-administration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Permissions </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/permissions" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Profiles   </a> </li><li> <a href="/codex/sandboxing" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Sandboxing   </a> </li><li> <a href="/codex/sandboxing/auto-review" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Auto-review   </a> </li><li> <a href="/codex/agent-approvals-security" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Agent approvals &amp; security   </a> </li><li> <a href="/codex/cloud/internet-access" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Internet access   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Codex Security </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/security" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Codex Security plugin</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/security/plugin" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li><li> <a href="/codex/security/plugin/scans" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Run a security scan   </a> </li><li> <a href="/codex/security/plugin/deep-scans" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Run a deep scan   </a> </li><li> <a href="/codex/security/plugin/code-changes" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Review code changes   </a> </li><li> <a href="/codex/security/plugin/workbench" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Use the Security workbench   </a> </li><li> <a href="/codex/security/plugin/triage-backlog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Triage a backlog   </a> </li><li> <a href="/codex/security/plugin/fix-findings" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Fix findings   </a> </li><li> <a href="/codex/security/plugin/security-hardening" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Propose security hardening   </a> </li><li> <a href="/codex/security/plugin/vulnerability-reports" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Write vulnerability reports   </a> </li><li> <a href="/codex/security/plugin/export-findings" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Export and track findings   </a> </li><li> <a href="/codex/security/plugin/changelog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Changelog   </a> </li> </ul> </details> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Codex Security CLI</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/security/cli" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart   </a> </li><li> <a href="/codex/security/cli/bulk-scans" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Run bulk scans   </a> </li><li> <a href="/codex/security/cli/ci" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Run scans in CI   </a> </li><li> <a href="/codex/security/cli/ci/gitlab" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GitLab CI/CD   </a> </li><li> <a href="/codex/security/cli/reference" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Reference   </a> </li><li> <a href="/codex/security/cli/faq" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> FAQ   </a> </li> </ul> </details> </li><li> <a href="/codex/security/sdk" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> TypeScript SDK   </a> </li><li> <details class="nav-disclosure"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Codex Security cloud</span> <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-disclosure-chevron w-3 h-3 inline-block text-secondary transition-transform duration-150 " aria-hidden="true" ><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/security/setup" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Setup   </a> </li><li> <a href="/codex/security/security-review" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Security Review   </a> </li><li> <a href="/codex/security/threat-model" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Improving the threat model   </a> </li><li> <a href="/codex/security/faq" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> FAQ   </a> </li> </ul> </details> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Cyber safety </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/cyber-safety" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Models &amp; Trusted Access   </a> </li><li> <a href="/codex/cyber-safety/recommended-configuration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Recommended configuration   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-5" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/administration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Getting started </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/enterprise/admin-setup" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Admin rollout guide   </a> </li><li> <a href="/codex/enterprise/chatgpt-work-overview" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> ChatGPT Work Overview   </a> </li><li> <a href="/codex/enterprise/chatgpt-work-cloud-security" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> ChatGPT Work cloud security   </a> </li><li> <a href="/codex/enterprise/work-admin-faq" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> ChatGPT Work admin FAQ   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Identity and authentication </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/auth" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Authentication overview   </a> </li><li> <a href="/codex/enterprise/workload-identity" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Workload identity   </a> </li><li> <a href="/codex/enterprise/access-tokens" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Personal Access Tokens   </a> </li><li> <a href="/codex/enterprise/service-accounts" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Service accounts   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Workspace access, policy, and models </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/enterprise/groups-and-provisioning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Groups and provisioning   </a> </li><li> <a href="/codex/enterprise/roles-and-workspace-permissions" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Roles and workspace permissions   </a> </li><li> <a href="/codex/enterprise/gpts-and-sharing" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GPTs and Sharing   </a> </li><li> <a href="/codex/enterprise/managed-configuration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Managed configuration   </a> </li><li> <a href="/codex/enterprise/prisma-airs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prisma AIRS   </a> </li><li> <a href="/codex/hipaa-configuration" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> HIPAA configuration   </a> </li><li> <a href="/codex/enterprise/workspace-model-availability" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Workspace model availability   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Plugin and connector controls </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/enterprise/apps-and-connectors" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Plugin controls   </a> </li><li> <a href="/codex/enterprise/skills" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Skill controls   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Usage, governance, and compliance </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/enterprise/governance" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Governance   </a> </li><li> <a href="/codex/enterprise/workspace-analytics" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Workspace analytics   </a> </li><li> <a href="/codex/enterprise/analytics-api" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Analytics API   </a> </li><li> <a href="/codex/enterprise/compliance-api" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Compliance API and audit events   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Deployment and model providers </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/enterprise/manage-app-updates" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Manage app updates   </a> </li><li> <a href="/codex/enterprise/windows-deployment" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Windows app deployment   </a> </li><li> <a href="/codex/remote-connections" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Remote connections   </a> </li><li> <a href="/codex/amazon-bedrock" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Amazon Bedrock   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-6" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/use-cases" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Explore use cases   </a> </li><li> <a href="/codex/use-cases/collections" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Collections   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-3-variant-7" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/resources" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li><li> <a href="/codex/videos" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Videos   </a> </li><li> <a href="https://developers.openai.com/showcase" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Showcase  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://openai.com/academy/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> OpenAI Academy  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://academy.openai.com/home/events" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Online trainings  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Community </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="https://developers.openai.com/community/codex-ambassadors" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Codex Ambassadors  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/community/students" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Codex for Students  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/community/codex-for-oss" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Codex for Open Source  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/community/meetups" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Meetups  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Blog </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="https://openai.com/news/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Company blog  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/blog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Developer blog  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div> </div> </div><div id="mobile-nav-panel-4" data-mobile-nav-content data-tab-id="mobile-nav-tab-4" data-href="/codex/use-cases" data-default-variant-id="mobile-nav-tab-4-variant-0" hidden class="flex flex-col gap-4 pb-8 astro-3ef6ksr2">  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-4-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/use-cases" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Explore use cases   </a> </li><li> <a href="/codex/use-cases/collections" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Collections   </a> </li> </ul> </div> </div> </div><div id="mobile-nav-panel-5" data-mobile-nav-content data-tab-id="mobile-nav-tab-5" data-href="/codex/resources" data-default-variant-id="mobile-nav-tab-5-variant-0" hidden class="flex flex-col gap-4 pb-8 astro-3ef6ksr2">  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-5-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/codex/resources" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li><li> <a href="/codex/videos" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Videos   </a> </li><li> <a href="https://developers.openai.com/showcase" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Showcase  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://openai.com/academy/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> OpenAI Academy  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://academy.openai.com/home/events" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Online trainings  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Community </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="https://developers.openai.com/community/codex-ambassadors" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Codex Ambassadors  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/community/students" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Codex for Students  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/community/codex-for-oss" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Codex for Open Source  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/community/meetups" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Meetups  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Blog </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="https://openai.com/news/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Company blog  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://developers.openai.com/blog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Developer blog  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div> </div> </div><div id="mobile-nav-panel-7" data-mobile-nav-content data-tab-id="mobile-nav-tab-7" data-href="/learn" data-default-variant-id="mobile-nav-tab-7-variant-0" hidden class="flex flex-col gap-4 pb-8 astro-3ef6ksr2">  <div class="group flex flex-col gap-1 astro-3ef6ksr2" data-mobile-context-options data-context-active="false" data-site-visibility-exclude="chatgpt-docs"> <a href="/showcase" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default astro-3ef6ksr2" data-mobile-nav-link> Showcase </a><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-7-variant-2" data-context-label="Blog" data-context-href="/blog" data-context-is-home="false" data-selected="false"> Blog </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-7-variant-3" data-context-label="Cookbook" data-context-href="/cookbook" data-context-is-home="false" data-selected="false"> Cookbook </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-7-variant-4" data-context-label="Learn" data-context-href="/learn" data-context-is-home="false" data-selected="false"> Learn </button><button type="button" class="w-full rounded-lg px-3 py-2 text-left text-sm font-normal text-secondary transition-colors hover:bg-primary-ghost-hover hover:text-default data-[selected=true]:bg-primary-ghost-active data-[selected=true]:text-default group-data-[context-active=true]:font-semibold astro-3ef6ksr2" data-mobile-context-option data-context-id="mobile-nav-tab-7-variant-5" data-context-label="Community" data-context-href="/community" data-context-is-home="false" data-selected="false"> Community </button> </div> <div id="mobile-nav-tab-7-context-select" data-mobile-context-select data-value="mobile-nav-tab-7-variant-0" data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <astro-island uid="SSqQ3" prefix="r78" component-url="/_astro/MobileContextDropdown.react.CzopcHpz.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;rootId&quot;:[0,&quot;mobile-nav-tab-7-context-select&quot;],&quot;initialValue&quot;:[0,&quot;mobile-nav-tab-7-variant-0&quot;],&quot;options&quot;:[1,[[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-7-variant-1&quot;],&quot;label&quot;:[0,&quot;Showcase&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-7-variant-2&quot;],&quot;label&quot;:[0,&quot;Blog&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-7-variant-3&quot;],&quot;label&quot;:[0,&quot;Cookbook&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-7-variant-4&quot;],&quot;label&quot;:[0,&quot;Learn&quot;]}],[0,{&quot;value&quot;:[0,&quot;mobile-nav-tab-7-variant-5&quot;],&quot;label&quot;:[0,&quot;Community&quot;]}]]]}" ssr client="media" opts="{&quot;name&quot;:&quot;MobileContextDropdown&quot;,&quot;value&quot;:&quot;(max-width: 63.999rem)&quot;}" await-children><div class="flex min-w-0"><div class="relative max-w-full w-full"><select aria-label="Docs section" class="_NativeSelect_10bwq_299" data-native-selectcontrol=""><option value="mobile-nav-tab-7-variant-1">Showcase</option><option value="mobile-nav-tab-7-variant-2">Blog</option><option value="mobile-nav-tab-7-variant-3">Cookbook</option><option value="mobile-nav-tab-7-variant-4">Learn</option><option value="mobile-nav-tab-7-variant-5">Community</option></select><span class="_SelectControl_x887o_1" role="button" tabindex="-1" data-variant="outline" data-block="" data-size="3xl" data-selected="true" aria-disabled="false" id="select-trigger-_r78R_0_" aria-labelledby="_r78R_5H1_ _r78R_5_" aria-hidden="true"><span class="_TriggerText_x887o_510"><span id="_r78R_5H1_" class="sr-only w-full h-0 left-0 bottom-0 pointer-events-none">Docs section</span><span id="_r78R_5_">Select...</span></span><div class="_IndicatorWrapper_x887o_520"><svg width="1em" height="1em" viewBox="0 0 16 9" fill="currentColor" class="_DropdownIcon_x887o_475 _DropdownIconChevron_x887o_586"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292894C14.6834 -0.0976305 15.3166 -0.0976304 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"></path></svg></div></span></div></div><!--astro:end--></astro-island> </div>  <div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-7-variant-0" class="flex flex-col gap-6 astro-3ef6ksr2">  </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-7-variant-1" hidden class="flex flex-col gap-6 astro-3ef6ksr2">  </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-7-variant-2" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/blog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> All posts   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Recent </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/blog/automating-repetitive-work-at-openai-with-codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Automating repetitive work at OpenAI with Codex   </a> </li><li> <a href="/blog/build-week-winners" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Meet the winners of OpenAI Build Week   </a> </li><li> <a href="/blog/scaling-cyber-defenders-with-daybreak" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Scaling cyber defenders with Daybreak   </a> </li><li> <a href="/blog/codex-as-a-platform" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex as a platform: build on the open agent harness   </a> </li><li> <a href="/blog/custom-code-review-rules-for-codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Custom Code Review rules for Codex   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Topics </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/blog/topic/general" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> General   </a> </li><li> <a href="/blog/topic/api" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> API   </a> </li><li> <a href="/blog/topic/apps-sdk" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Apps SDK   </a> </li><li> <a href="/blog/topic/audio" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Audio   </a> </li><li> <a href="/blog/topic/codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-7-variant-3" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/cookbook" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Topics </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/cookbook/topic/agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Agents   </a> </li><li> <a href="/cookbook/topic/evals" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Evals   </a> </li><li> <a href="/cookbook/topic/multimodal" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Multimodal   </a> </li><li> <a href="/cookbook/topic/text" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Text   </a> </li><li> <a href="/cookbook/topic/guardrails" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Guardrails   </a> </li><li> <a href="/cookbook/topic/optimization" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Optimization   </a> </li><li> <a href="/cookbook/topic/chatgpt" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> ChatGPT   </a> </li><li> <a href="/cookbook/topic/codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex   </a> </li><li> <a href="/cookbook/topic/gpt-oss" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> gpt-oss   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Contribute </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="https://github.com/openai/openai-cookbook" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Cookbook on GitHub  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-7-variant-4" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/learn" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home   </a> </li><li> <a href="/learn/developers-codex-plugin" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> OpenAI Developers plugin   </a> </li><li> <a href="/learn/docs-mcp" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Docs MCP   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Categories </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/learn/code" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Demo apps   </a> </li><li> <a href="/learn/videos" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Videos   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Topics </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/learn/agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Agents   </a> </li><li> <a href="/learn/audio" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Audio &amp; Voice   </a> </li><li> <a href="/learn/cua" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Computer Use   </a> </li><li> <a href="/learn/codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex   </a> </li><li> <a href="/learn/evals" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Evals   </a> </li><li> <a href="/learn/gpt-oss" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> gpt-oss   </a> </li><li> <a href="/learn/fine-tuning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Fine-tuning   </a> </li><li> <a href="/learn/imagegen" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image generation   </a> </li><li> <a href="/learn/scaling" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Scaling   </a> </li><li> <a href="/learn/tools" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Tools   </a> </li><li> <a href="/learn/videogen" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Video generation   </a> </li> </ul> </div> </div><div data-mobile-nav-variant-content data-variant-id="mobile-nav-tab-7-variant-5" hidden class="flex flex-col gap-6 astro-3ef6ksr2"> <div class="flex flex-col gap-3 astro-3ef6ksr2">  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/community" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Community   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Programs </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/community/codex-ambassadors" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex Ambassadors   </a> </li><li> <a href="/community/students" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex for Students   </a> </li><li> <a href="/community/codex-for-oss" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex for Open Source   </a> </li><li> <a href="https://openai.com/business/why-openai/startups/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> OpenAI for Startups  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Events </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/community/meetups" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Meetups   </a> </li> </ul> </div><div class="flex flex-col gap-3 astro-3ef6ksr2"> <h3 class="text-xs tracking-wide text-secondary astro-3ef6ksr2"> Spaces </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="https://community.openai.com/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Developer Forum  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://discord.com/invite/openai" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Discord  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://www.reddit.com/r/OpenAI/" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> Reddit  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li><li> <a href="https://x.com/OpenAIDevs" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover flex items-center justify-between gap-2" target="_blank" rel="noopener noreferrer" data-mobile-nav-link> X  <svg data-external-link-indicator="true" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 inline-block ml-1 text-gray-600 dark:text-gray-300 " ><path d="M10.2426 0.757385C10.7949 0.757385 11.2426 1.2051 11.2426 1.75738V8.82845C11.2426 9.38074 10.7949 9.82845 10.2426 9.82845C9.69035 9.82845 9.24264 9.38074 9.24264 8.82845V4.1716L2.46446 10.9498C2.07394 11.3403 1.44077 11.3403 1.05025 10.9498C0.659724 10.5592 0.659723 9.92608 1.05025 9.53556L7.82842 2.75739H3.17157C2.61928 2.75739 2.17157 2.30967 2.17157 1.75738C2.17157 1.2051 2.61928 0.757385 3.17157 0.757385H10.2426Z" fill="currentColor"></path></svg> </a> </li> </ul> </div> </div> </div> </div> <div class="w-full px-6 py-6 border-t border-primary-surface astro-3ef6ksr2" data-mobile-nav-footer> <div class="flex flex-col gap-5 astro-3ef6ksr2"> <div data-site-visibility-exclude="chatgpt-docs" class="astro-3ef6ksr2"> <div class="flex items-center gap-2 w-full gap-3 astro-3ef6ksr2"><a target="_blank" rel="noopener noreferrer" href="https://platform.openai.com/login" class="_Button_6dmow_1 not-prose flex-1 justify-center" data-color="primary" data-variant="solid" data-pill="" data-size="md"><span class="_ButtonInner_6dmow_4"><span class="">API Dashboard</span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" data-external-link-indicator="persistent" class="shrink-0"><path fill-rule="evenodd" d="M16.243 6.757a1 1 0 0 1 1 1v7.072a1 1 0 0 1-2 0v-4.657L8.464 16.95a1 1 0 0 1-1.414-1.414l6.778-6.779H9.172a1 1 0 0 1 0-2h7.07Z" clip-rule="evenodd"></path></svg></span></a></div> </div><div data-site-visibility-include="chatgpt-docs" class="astro-3ef6ksr2"> <div class="flex items-center gap-2 w-full gap-3 astro-3ef6ksr2"><a target="_blank" rel="noopener noreferrer" href="https://chatgpt.com/" class="_Button_6dmow_1 not-prose flex-1 justify-center" data-color="primary" data-variant="solid" data-pill="" data-size="lg"><span class="_ButtonInner_6dmow_4"><span class="">Try ChatGPT</span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" data-external-link-indicator="persistent" class="shrink-0"><path fill-rule="evenodd" d="M16.243 6.757a1 1 0 0 1 1 1v7.072a1 1 0 0 1-2 0v-4.657L8.464 16.95a1 1 0 0 1-1.414-1.414l6.778-6.779H9.172a1 1 0 0 1 0-2h7.07Z" clip-rule="evenodd"></path></svg></span></a></div> </div> <div class="flex flex-wrap items-center gap-4 text-sm text-gray-700 dark:text-gray-300 astro-3ef6ksr2">  </div> </div> </div> </div> </div> <script>
+  document.dispatchEvent(new CustomEvent("site-variant:apply"));
+</script>  <script>
+  const MOBILE_NAV_PERSIST_KEY = "mobile-nav:restore-open";
+
+  const readPersistedMobileNavOpen = () => {
+    try {
+      return sessionStorage.getItem(MOBILE_NAV_PERSIST_KEY) === "true";
+    } catch {
+      return false;
+    }
+  };
+
+  const setPersistedMobileNavOpen = (isOpen) => {
+    try {
+      if (isOpen) {
+        sessionStorage.setItem(MOBILE_NAV_PERSIST_KEY, "true");
+      } else {
+        sessionStorage.removeItem(MOBILE_NAV_PERSIST_KEY);
+      }
+    } catch {}
+  };
+
+  function initializeMobileNavigation() {
+    document.dispatchEvent(new CustomEvent("site-variant:apply"));
+
+    const drawer = document.getElementById("drawer");
+    const drawerButton = document.getElementById("header-drawer-button");
+
+    if (
+      !drawer ||
+      !drawerButton ||
+      drawer.dataset.mobileNavInitialized === "true"
+    ) {
+      return;
+    }
+
+    const navTabElements = Array.from(
+      drawer.querySelectorAll("[data-mobile-nav-tab]")
+    );
+    const visibleNavTabElements = navTabElements.filter((tab) => !tab.hidden);
+    const defaultSearchPlaceholder =
+      drawer.dataset.defaultSearchPlaceholder || "Search the site";
+    const defaultSearchScope = drawer.dataset.defaultSearchScope || "";
+    const headerSearchOverlay = document.getElementById(
+      "header-search-overlay"
+    );
+    const navLinkElements = Array.from(
+      drawer.querySelectorAll("[data-mobile-nav-link]")
+    );
+    const tabPanels = Array.from(
+      drawer.querySelectorAll("[data-mobile-nav-content]")
+    );
+    const isStarlightApiReferenceRoute =
+      window.location.pathname === "/api/reference" ||
+      window.location.pathname.startsWith("/api/reference/");
+    const shouldRestoreDrawerOpen =
+      matchMedia("(max-width: 63.999rem)").matches &&
+      !isStarlightApiReferenceRoute &&
+      readPersistedMobileNavOpen();
+
+    const configuredDefaultTab = navTabElements.find(
+      (tab) => tab.dataset.tabId === drawer.dataset.defaultTabId
+    );
+    let activeTabId =
+      visibleNavTabElements.find((tab) => tab.dataset.isActive === "true")
+        ?.dataset.tabId ||
+      (!configuredDefaultTab?.hidden
+        ? configuredDefaultTab?.dataset.tabId
+        : undefined) ||
+      visibleNavTabElements[0]?.dataset.tabId ||
+      null;
+
+    const updateSelectedOption = (tabId) => {
+      let selectedLabel = "";
+      let selectedPlaceholder = "";
+      let selectedScope = "";
+
+      navTabElements.forEach((tab) => {
+        const isSelected = tab.dataset.tabId === tabId;
+        tab.dataset.selected = isSelected ? "true" : "false";
+        tab.setAttribute("aria-selected", isSelected ? "true" : "false");
+
+        if (isSelected && !selectedLabel) {
+          selectedLabel = tab.dataset.label || tab.textContent?.trim() || "";
+        }
+
+        if (isSelected && !selectedPlaceholder) {
+          selectedPlaceholder = tab.dataset.searchPlaceholder || "";
+        }
+
+        if (isSelected && !selectedScope) {
+          selectedScope = tab.dataset.searchScope || "";
+        }
+      });
+
+      if (!selectedLabel && visibleNavTabElements[0]) {
+        selectedLabel =
+          visibleNavTabElements[0].dataset.label ||
+          visibleNavTabElements[0].textContent?.trim() ||
+          "";
+      }
+
+      if (!selectedPlaceholder && visibleNavTabElements[0]) {
+        selectedPlaceholder =
+          visibleNavTabElements[0].dataset.searchPlaceholder || "";
+      }
+
+      if (!selectedScope && visibleNavTabElements[0]) {
+        selectedScope = visibleNavTabElements[0].dataset.searchScope || "";
+      }
+
+      const nextPlaceholder = selectedPlaceholder || defaultSearchPlaceholder;
+      const nextScope = selectedScope || defaultSearchScope;
+      const updatePlaceholder = (container) => {
+        if (!container) return;
+        const input = container.querySelector("[data-site-search-input]");
+        if (input instanceof HTMLInputElement) {
+          input.placeholder = nextPlaceholder;
+        }
+      };
+      const updateScope = (container) => {
+        if (!container) return;
+        const target = container.querySelector("[data-site-search-root]");
+        if (!target) return;
+        target.setAttribute("data-scope", nextScope);
+        target.dispatchEvent(new CustomEvent("site-search:update"));
+      };
+      updatePlaceholder(drawer);
+      updatePlaceholder(headerSearchOverlay);
+      updateScope(drawer);
+      updateScope(headerSearchOverlay);
+    };
+
+    const activeVariantByTabId = new Map();
+
+    const getTabLabel = (tabId) => {
+      return (
+        navTabElements.find((tab) => tab.dataset.tabId === tabId)?.dataset
+          .label || ""
+      );
+    };
+
+    const updatePanelBreadcrumb = (panel, tabId, contextLabel) => {
+      const breadcrumb = panel.querySelector("[data-mobile-breadcrumb]");
+      const parent = panel.querySelector("[data-mobile-breadcrumb-parent]");
+      const childWrapper = panel.querySelector(
+        "[data-mobile-breadcrumb-child-wrapper]"
+      );
+      const child = panel.querySelector("[data-mobile-breadcrumb-child]");
+      const contextOptions = panel.querySelector(
+        "[data-mobile-context-options]"
+      );
+
+      if (contextOptions) {
+        contextOptions.dataset.contextActive = contextLabel ? "true" : "false";
+      }
+
+      if (!breadcrumb || !parent || !childWrapper || !child) {
+        return;
+      }
+
+      const tabLabel = getTabLabel(tabId);
+      parent.textContent = tabLabel;
+
+      if (!contextLabel) {
+        breadcrumb.setAttribute("hidden", "true");
+        childWrapper.setAttribute("hidden", "true");
+        child.textContent = "";
+        return;
+      }
+
+      breadcrumb.removeAttribute("hidden");
+      childWrapper.removeAttribute("hidden");
+      child.textContent = contextLabel;
+    };
+
+    const selectVariantForPanel = (panel, tabId, variantId) => {
+      if (!variantId) {
+        updatePanelBreadcrumb(panel, tabId, "");
+        return;
+      }
+
+      const contextOptions = Array.from(
+        panel.querySelectorAll("[data-mobile-context-option]")
+      );
+      const contextSelects = Array.from(
+        panel.querySelectorAll("[data-mobile-context-select]")
+      );
+      let selectedContextLabel = "";
+
+      contextOptions.forEach((option) => {
+        const isSelected = option.dataset.contextId === variantId;
+        option.dataset.selected = isSelected ? "true" : "false";
+        if (isSelected) {
+          selectedContextLabel = option.dataset.contextLabel || "";
+        }
+      });
+
+      contextSelects.forEach((select) => {
+        select.dataset.value = variantId;
+        select.dispatchEvent(
+          new CustomEvent("mobile-context-select-sync", {
+            detail: { value: variantId },
+          })
+        );
+      });
+
+      const variantSections = Array.from(
+        panel.querySelectorAll("[data-mobile-nav-variant-content]")
+      );
+      variantSections.forEach((section) => {
+        const isSelected = section.dataset.variantId === variantId;
+        if (isSelected) {
+          section.removeAttribute("hidden");
+        } else {
+          section.setAttribute("hidden", "true");
+        }
+      });
+
+      updatePanelBreadcrumb(panel, tabId, selectedContextLabel);
+      activeVariantByTabId.set(tabId, variantId);
+    };
+
+    const activateTab = (tabId) => {
+      if (!tabId) return;
+      activeTabId = tabId;
+      updateSelectedOption(tabId);
+
+      tabPanels.forEach((panel) => {
+        const panelTabId = panel.getAttribute("data-tab-id");
+        const isActive = panelTabId === tabId;
+        if (isActive) {
+          panel.removeAttribute("hidden");
+          const defaultVariantId = panel.getAttribute(
+            "data-default-variant-id"
+          );
+          const nextVariantId =
+            activeVariantByTabId.get(tabId) ||
+            defaultVariantId ||
+            panel.querySelector("[data-mobile-nav-variant-content]")?.dataset
+              .variantId ||
+            "";
+          selectVariantForPanel(panel, tabId, nextVariantId);
+        } else {
+          panel.setAttribute("hidden", "true");
+        }
+      });
+    };
+
+    const closeDrawer = () => {
+      drawer.classList.remove("open");
+      drawerButton.classList.remove("open");
+      drawerButton.setAttribute("aria-expanded", "false");
+      setPersistedMobileNavOpen(false);
+    };
+
+    const openDrawer = () => {
+      drawer.classList.add("open");
+      drawerButton.classList.add("open");
+      drawerButton.setAttribute("aria-expanded", "true");
+      if (activeTabId) {
+        activateTab(activeTabId);
+      }
+    };
+
+    const toggleDrawer = () => {
+      if (drawer.classList.contains("open")) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    };
+
+    const handleTabSelection = (tab) => {
+      const hasNav = tab.dataset.hasNav === "true";
+      const href = tab.dataset.href;
+      const tabId = tab.dataset.tabId;
+
+      if (!tabId) {
+        return;
+      }
+
+      if (!hasNav && href) {
+        setPersistedMobileNavOpen(true);
+        window.location.href = href;
+        return;
+      }
+
+      activateTab(tabId);
+    };
+
+    drawerButton.addEventListener("click", toggleDrawer);
+
+    navTabElements.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        handleTabSelection(tab);
+      });
+
+      tab.addEventListener("keydown", (event) => {
+        if (!visibleNavTabElements.length) return;
+
+        const currentIndex = visibleNavTabElements.indexOf(tab);
+
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          const nextIndex = (currentIndex + 1) % visibleNavTabElements.length;
+          visibleNavTabElements[nextIndex]?.focus();
+        } else if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          const prevIndex =
+            (currentIndex - 1 + visibleNavTabElements.length) %
+            visibleNavTabElements.length;
+          visibleNavTabElements[prevIndex]?.focus();
+        } else if (event.key === "Home") {
+          event.preventDefault();
+          visibleNavTabElements[0]?.focus();
+        } else if (event.key === "End") {
+          event.preventDefault();
+          visibleNavTabElements[visibleNavTabElements.length - 1]?.focus();
+        } else if (
+          event.key === "Enter" ||
+          event.key === " " ||
+          event.key === "Space" ||
+          event.key === "Spacebar"
+        ) {
+          event.preventDefault();
+          handleTabSelection(tab);
+        } else if (event.key === "Escape") {
+          event.preventDefault();
+          closeDrawer();
+          drawerButton.focus();
+        }
+      });
+    });
+
+    tabPanels.forEach((panel) => {
+      const tabId = panel.getAttribute("data-tab-id") || "";
+      const contextOptions = Array.from(
+        panel.querySelectorAll("[data-mobile-context-option]")
+      );
+
+      contextOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+          const contextHref = option.dataset.contextHref;
+          if (
+            contextHref &&
+            contextHref.startsWith("/api/reference") &&
+            tabId
+          ) {
+            closeDrawer();
+            window.location.href = contextHref;
+            return;
+          }
+
+          const variantId = option.dataset.contextId;
+          if (!variantId || !tabId) {
+            return;
+          }
+
+          selectVariantForPanel(panel, tabId, variantId);
+        });
+      });
+
+      const contextSelects = Array.from(
+        panel.querySelectorAll("[data-mobile-context-select]")
+      );
+      contextSelects.forEach((select) => {
+        select.addEventListener("mobile-context-select-change", (event) => {
+          if (!(event instanceof CustomEvent) || !tabId) {
+            return;
+          }
+
+          const variantId = event.detail?.value;
+          if (typeof variantId !== "string") {
+            return;
+          }
+
+          selectVariantForPanel(panel, tabId, variantId);
+        });
+      });
+    });
+
+    navLinkElements.forEach((link) => {
+      link.addEventListener("click", () => {
+        closeDrawer();
+      });
+    });
+
+    const mobileSearch = drawer.querySelector("[data-mobile-search]");
+    mobileSearch?.addEventListener("click", (event) => {
+      const target = event.target;
+      if (target instanceof Element) {
+        const anchor = target.closest("a[href]");
+        if (anchor) {
+          closeDrawer();
+        }
+      }
+    });
+
+    mobileSearch?.addEventListener("focusin", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLInputElement) || target.type !== "text") {
+        return;
+      }
+      closeDrawer();
+      window.requestAnimationFrame(() => {
+        if (document.activeElement === target) {
+          target.blur();
+        }
+        document.dispatchEvent(
+          new CustomEvent("header:open-search", {
+            detail: {
+              trigger: target,
+              variant: "mobile",
+            },
+          })
+        );
+      });
+    });
+
+    drawer.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeDrawer();
+        drawerButton.focus();
+      }
+    });
+
+    drawer.dataset.mobileNavInitialized = "true";
+    if (activeTabId) {
+      activateTab(activeTabId);
+    }
+
+    if (shouldRestoreDrawerOpen) {
+      openDrawer();
+      setPersistedMobileNavOpen(false);
+    }
+  }
+
+  function initializeHeaderSearch() {
+    const overlay = document.getElementById("header-search-overlay");
+    if (!overlay) {
+      return;
+    }
+
+    const getSearchButtons = () =>
+      Array.from(document.querySelectorAll("[data-header-search-button]"));
+
+    const closeButtons = overlay.querySelectorAll("[data-header-search-close]");
+    const dismissTarget = overlay.querySelector("[data-header-search-dismiss]");
+    const panel = overlay.querySelector("[data-header-search-panel]");
+    const overlayMobileClass = "header-search-overlay--mobile";
+    const panelMobileClass = "header-search-panel--mobile";
+    let lastTrigger = null;
+    let lastVariant = null;
+
+    const setExpandedState = (isOpen) => {
+      const expanded = isOpen ? "true" : "false";
+      getSearchButtons().forEach((button) => {
+        button.setAttribute("aria-expanded", expanded);
+        button.setAttribute("data-active", expanded);
+      });
+      overlay.dataset.open = expanded;
+      overlay.setAttribute("aria-hidden", isOpen ? "false" : "true");
+    };
+
+    const focusSearchInput = () => {
+      window.requestAnimationFrame(() => {
+        const input = overlay.querySelector("[data-site-search-input]");
+        if (input) {
+          input.focus();
+          input.select();
+        }
+      });
+    };
+
+    const openOverlay = (trigger, options = {}) => {
+      lastTrigger = trigger ?? document.activeElement;
+      const variant = options.variant ?? null;
+      lastVariant = typeof variant === "string" ? variant : null;
+      overlay.classList.remove("hidden");
+      overlay.classList.add("flex");
+      const isMobileVariant = lastVariant === "mobile";
+      if (isMobileVariant) {
+        overlay.dataset.variant = "mobile";
+      } else {
+        delete overlay.dataset.variant;
+      }
+      overlay.classList.toggle(overlayMobileClass, isMobileVariant);
+      panel?.classList.toggle(panelMobileClass, isMobileVariant);
+      document.documentElement.classList.add("has-header-search-open");
+      setExpandedState(true);
+      focusSearchInput();
+    };
+
+    const closeOverlay = () => {
+      overlay.classList.add("hidden");
+      overlay.classList.remove("flex");
+      document.documentElement.classList.remove("has-header-search-open");
+      overlay.classList.remove(overlayMobileClass);
+      panel?.classList.remove(panelMobileClass);
+      delete overlay.dataset.variant;
+      setExpandedState(false);
+      if (lastTrigger instanceof HTMLElement) {
+        if (
+          lastVariant === "mobile" &&
+          typeof lastTrigger.blur === "function"
+        ) {
+          lastTrigger.blur();
+        } else if (lastVariant !== "mobile") {
+          lastTrigger.focus();
+        }
+      }
+      lastTrigger = null;
+      lastVariant = null;
+    };
+
+    const bindSearchButtons = () => {
+      getSearchButtons().forEach((button) => {
+        if (button.dataset.searchButtonInitialized === "true") {
+          return;
+        }
+
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          openOverlay(button);
+        });
+
+        button.dataset.searchButtonInitialized = "true";
+      });
+    };
+
+    if (overlay.dataset.searchInitialized !== "true") {
+      closeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          closeOverlay();
+        });
+      });
+
+      overlay.addEventListener("click", (event) => {
+        if (event.target === overlay) {
+          closeOverlay();
+        }
+      });
+
+      dismissTarget?.addEventListener("click", closeOverlay);
+
+      const handleKeydown = (event) => {
+        const key = "key" in event ? event.key : undefined;
+        const isShortcut =
+          !!key &&
+          key.toLowerCase() === "k" &&
+          (event.metaKey || event.ctrlKey);
+
+        if (isShortcut) {
+          event.preventDefault();
+          const buttons = getSearchButtons();
+          openOverlay(buttons[0] ?? null);
+          return;
+        }
+
+        if (key === "Escape" && overlay.dataset.open === "true") {
+          event.preventDefault();
+          closeOverlay();
+        }
+      };
+
+      document.addEventListener("keydown", handleKeydown);
+
+      document.addEventListener("header:open-search", (event) => {
+        const detail =
+          event instanceof CustomEvent && typeof event.detail === "object"
+            ? event.detail
+            : {};
+        const trigger =
+          detail && detail.trigger instanceof HTMLElement
+            ? detail.trigger
+            : null;
+        openOverlay(trigger, detail);
+      });
+
+      document.addEventListener("astro:before-swap", () => {
+        if (overlay.dataset.open === "true") {
+          closeOverlay();
+        }
+      });
+
+      overlay.dataset.searchInitialized = "true";
+    }
+
+    bindSearchButtons();
+  }
+
+  const handleAfterSwap = () => {
+    initializeMobileNavigation();
+    window.requestAnimationFrame(() => {
+      initializeHeaderSearch();
+    });
+  };
+
+  document.addEventListener("astro:after-swap", handleAfterSwap);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", handleAfterSwap, {
+      once: true,
+    });
+  } else {
+    handleAfterSwap();
+  }
+</script> <div data-docs-agent-page class="min-h-dvh"> <div class="flex" style="padding-top: var(--docs-header-offset)"> <div class="hidden lg:flex lg:flex-col w-[218px] px-3 pb-6 pt-2 lg:fixed lg:bottom-0 lg:z-40 bg-surface dark:bg-black astro-73gi4scu" style="top: var(--docs-header-offset)" data-left-nav-container><nav class="flex-1 overflow-y-auto overflow-x-visible astro-73gi4scu" data-left-nav data-left-nav-id="/codex/features"><div class="mt-6 astro-73gi4scu"><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/codex/features" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Overview </span>   </a> </li> </ul></div><div class=" astro-73gi4scu"><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none astro-73gi4scu">Workflows</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/codex/projects" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Projects and chats </span>   </a> </li><li> <a href="/codex/sites" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block bg-primary-ghost-hover "> <span class="line-clamp-2 "> Sites </span>   </a> </li><li> <a href="/codex/visualizations" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Visualizations </span>   </a> </li><li> <a href="/codex/automations" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Scheduled tasks </span>   </a> </li><li> <a href="/codex/long-running-work" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Long-running work </span>   </a> </li><li> <a href="/codex/notifications" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Notifications </span>   </a> </li><li> <a href="/codex/pets" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Pets </span>   </a> </li><li> <a href="/codex/features/codex-micro" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Codex Micro </span>   </a> </li> </ul></div><div class=" astro-73gi4scu"><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none astro-73gi4scu">Capabilities</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/codex/browser" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Browser </span>   </a> </li><li> <a href="/codex/computer-use" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Computer use </span>   </a> </li><li> <a href="/codex/features/voice" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Voice </span>   </a> </li><li> <a href="/codex/plugins" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Plugins </span>   </a> </li><li> <a href="/codex/web-search" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Web search </span>   </a> </li><li> <a href="/codex/image-generation" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Image generation </span>   </a> </li><li> <a href="/codex/image-inputs" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Image inputs </span>   </a> </li><li> <a href="/codex/appshots" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Appshots </span>   </a> </li><li> <a href="/codex/chrome-extension" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Browser extension </span>   </a> </li><li> <a href="/codex/artifacts-viewer" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Work with files </span>   </a> </li> </ul></div><div class=" astro-73gi4scu"><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none astro-73gi4scu">Reference</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/codex/reference/commands" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Commands </span>   </a> </li><li> <a href="/codex/reference/slash-commands" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Slash commands </span>   </a> </li><li> <a href="/codex/reference/settings" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Settings </span>   </a> </li><li> <a href="/codex/reference/troubleshooting" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> <span class="line-clamp-2 "> Troubleshooting </span>   </a> </li> </ul></div></nav></div><script>
+  const NAV_SELECTOR = "nav[data-left-nav]";
+  const STORAGE_PREFIX = "left-nav-scroll:";
+  const INITIALIZED_ATTRIBUTE = "data-left-nav-scroll-initialized";
+
+  const isStorageAvailable = (() => {
+    try {
+      const storageKey = `${STORAGE_PREFIX}__test__`;
+      sessionStorage.setItem(storageKey, "1");
+      sessionStorage.removeItem(storageKey);
+      return true;
+    } catch (error) {
+      return false;
+    }
+  })();
+
+  const getNav = () => document.querySelector(NAV_SELECTOR);
+
+  const getStorageKey = (nav) =>
+    `${STORAGE_PREFIX}${nav.dataset.leftNavId ?? "default"}`;
+
+  const restoreScrollPosition = (nav) => {
+    if (!isStorageAvailable) return;
+    const storedValue = sessionStorage.getItem(getStorageKey(nav));
+    if (storedValue !== null) {
+      nav.scrollTop = Number(storedValue);
+    }
+  };
+
+  const saveScrollPosition = (nav) => {
+    if (!isStorageAvailable) return;
+    sessionStorage.setItem(getStorageKey(nav), String(nav.scrollTop));
+  };
+
+  const setupNav = () => {
+    const nav = getNav();
+    if (!nav || nav.getAttribute(INITIALIZED_ATTRIBUTE) === "true") return;
+
+    restoreScrollPosition(nav);
+
+    nav.addEventListener(
+      "scroll",
+      () => {
+        saveScrollPosition(nav);
+      },
+      { passive: true }
+    );
+
+    nav.setAttribute(INITIALIZED_ATTRIBUTE, "true");
+  };
+
+  const persistScrollPosition = () => {
+    const nav = getNav();
+    if (!nav) return;
+    saveScrollPosition(nav);
+  };
+
+  const initialize = () => {
+    setupNav();
+    const nav = getNav();
+    if (!nav) return;
+    restoreScrollPosition(nav);
+  };
+
+  window.addEventListener("pageshow", initialize);
+  document.addEventListener("astro:page-load", initialize);
+  document.addEventListener("astro:after-swap", initialize);
+
+  document.addEventListener("astro:before-swap", persistScrollPosition);
+  window.addEventListener("beforeunload", persistScrollPosition);
+
+  initialize();
+</script> <main class="min-w-0 flex-1 lg:pl-[240px]">  <div class="page-container md:max-w-6xl pb-12 pt-0" data-content-page-container> <div class="mx-auto md:w-full grid grid-cols-1 gap-12 max-w-7xl xl:grid-cols-[minmax(0,1fr)_200px]"> <div data-content-page-toc-rail class="sticky z-30 hidden min-h-0 w-full self-start pb-6 xl:col-start-2 xl:row-start-1 xl:flex xl:flex-col" style="top: var(--docs-toc-offset); height: fit-content; max-height: calc(100vh - var(--docs-toc-offset))"> <div class="mb-4 shrink-0"> <div class="w-fit xl:w-full"> <astro-island uid="twErS" prefix="r5" component-url="/_astro/ContentModeSelector.react.CVLHihfp.js" component-export="ContentModeSelector" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;group&quot;:[0,&quot;codex-surface&quot;],&quot;availableChoices&quot;:[0,&quot;all&quot;]}" ssr client="load" opts="{&quot;name&quot;:&quot;ContentModeSelector&quot;,&quot;value&quot;:true}" await-children><div class="flex flex-col gap-2 min-w-[200px]"><div data-state="closed"><span class="_SelectControl_x887o_1" role="button" tabindex="0" data-variant="soft" data-block="" data-size="md" data-selected="true" aria-disabled="false" id="select-trigger-_r5R_7_" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-_r5R_1n_" data-state="closed"><img src="/images/codex/surface-icons/chatgpt-app.webp" alt="" aria-hidden="true" draggable="false" class="_StartIcon_x887o_528 object-contain"/><span class="_TriggerText_x887o_510"><span id="_r5R_7n_">ChatGPT desktop app</span></span><div class="_IndicatorWrapper_x887o_520"><svg width="1em" height="1em" viewBox="0 0 10 16" fill="currentColor" class="_DropdownIcon_x887o_475"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.34151 0.747423C4.71854 0.417526 5.28149 0.417526 5.65852 0.747423L9.65852 4.24742C10.0742 4.61111 10.1163 5.24287 9.75259 5.6585C9.38891 6.07414 8.75715 6.11626 8.34151 5.75258L5.00001 2.82877L1.65852 5.75258C1.24288 6.11626 0.61112 6.07414 0.247438 5.6585C-0.116244 5.24287 -0.0741267 4.61111 0.34151 4.24742L4.34151 0.747423ZM0.246065 10.3578C0.608879 9.94139 1.24055 9.89795 1.65695 10.2608L5.00001 13.1737L8.34308 10.2608C8.75948 9.89795 9.39115 9.94139 9.75396 10.3578C10.1168 10.7742 10.0733 11.4058 9.65695 11.7687L5.65695 15.2539C5.28043 15.582 4.7196 15.582 4.34308 15.2539L0.343082 11.7687C-0.0733128 11.4058 -0.116749 10.7742 0.246065 10.3578Z"></path></svg></div></span></div></div><!--astro:end--></astro-island> </div> </div> <script>window._$HY||(e=>{let t=e=>e&&e.hasAttribute&&(e.hasAttribute("data-hk")?e:t(e.host&&e.host.nodeType?e.host:e.parentNode));["click", "input"].forEach((o=>document.addEventListener(o,(o=>{if(!e.events)return;let s=t(o.composedPath&&o.composedPath()[0]||o.target);s&&!e.completed.has(s)&&e.events.push([s,o])}))))})(_$HY={events:[],completed:new WeakSet,r:{},fe(){}});</script><!--xs--><astro-island uid="Z1hXqML" data-solid-render-id="s0" component-url="/_astro/TableOfContents.CtyrnPYJ.js" component-export="default" renderer-url="/_astro/client.DZeCTsdm.js" props="{&quot;variant&quot;:[0,&quot;static&quot;],&quot;targetSelector&quot;:[0,&quot;#mainContent&quot;],&quot;headingSelector&quot;:[0,&quot;h2&quot;],&quot;class&quot;:[0,&quot;min-h-0 shrink overflow-y-auto pr-1&quot;]}" ssr client="media" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 80rem)&quot;}" await-children><nav data-hk="s00000" class="hidden xl:block w-full overflow-y-auto min-h-0 shrink overflow-y-auto pr-1"><div class="relative"><div class="absolute left-0 top-0 bottom-0 w-[2.15px] bg-primary-soft"></div><div class="absolute left-0 w-[2.15px] bg-primary-solid transition-transform duration-200 ease-out" style="transform:translateY(0);height:0px"></div><ul class="relative list-none p-0 m-0 ml-3 [&amp;>*+*]:mt-3"></ul></div></nav><!--astro:end--></astro-island> <div class="mt-4 shrink-0"> <button type="button" class="page-copy-action astro-y3m22efp" data-page-copy-action data-page-copy-default-label="Copy Page" data-page-copy-copied-label="Copied"> <span class="page-copy-action__icon page-copy-action__icon--copy astro-y3m22efp" aria-hidden="true"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="astro-y3m22efp " ><path fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2V5Zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1v2ZM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1H5Z" clip-rule="evenodd"></path></svg> </span> <span class="page-copy-action__icon page-copy-action__icon--check astro-y3m22efp" aria-hidden="true"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="astro-y3m22efp " ><path fill-rule="evenodd" d="M18.063 5.674a1 1 0 0 1 .263 1.39l-7.5 11a1 1 0 0 1-1.533.143l-4.5-4.5a1 1 0 1 1 1.414-1.414l3.647 3.647 6.82-10.003a1 1 0 0 1 1.39-.263Z" clip-rule="evenodd"></path></svg> </span> <span data-page-copy-label class="astro-y3m22efp">Copy Page</span> </button> <script type="module" src="/_astro/PageCopyAction.astro_astro_type_script_index_0_lang.Df1nqr2j.js"></script> </div>  </div> <div class="relative flex flex-col xl:col-start-1 xl:row-start-1">  <div class="flex flex-col gap-8 mb-2">  <header class="flex flex-col not-prose gap-1 pt-10 lg:pt-20 xl:pt-7 items-start text-left"> <div class="w-full">  </div> <div class="flex flex-wrap items-center gap-3"> <h1 class="heading-2xl md:heading-2xl">Sites</h1>  </div> <p class="text-lg text-secondary">Build and share hosted sites in ChatGPT</p> <div class="w-full"> <div class="flex w-full flex-wrap items-center gap-3 justify-start">  <div class="w-fit xl:hidden"> <div class="w-fit xl:w-full"> <astro-island uid="12Emll" prefix="r71" component-url="/_astro/ContentModeSelector.react.CVLHihfp.js" component-export="ContentModeSelector" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;group&quot;:[0,&quot;codex-surface&quot;],&quot;availableChoices&quot;:[0,&quot;all&quot;]}" ssr client="load" opts="{&quot;name&quot;:&quot;ContentModeSelector&quot;,&quot;value&quot;:true}" await-children><div class="flex flex-col gap-2 min-w-[200px]"><div data-state="closed"><span class="_SelectControl_x887o_1" role="button" tabindex="0" data-variant="soft" data-block="" data-size="md" data-selected="true" aria-disabled="false" id="select-trigger-_r71R_7_" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-_r71R_1n_" data-state="closed"><img src="/images/codex/surface-icons/chatgpt-app.webp" alt="" aria-hidden="true" draggable="false" class="_StartIcon_x887o_528 object-contain"/><span class="_TriggerText_x887o_510"><span id="_r71R_7n_">ChatGPT desktop app</span></span><div class="_IndicatorWrapper_x887o_520"><svg width="1em" height="1em" viewBox="0 0 10 16" fill="currentColor" class="_DropdownIcon_x887o_475"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.34151 0.747423C4.71854 0.417526 5.28149 0.417526 5.65852 0.747423L9.65852 4.24742C10.0742 4.61111 10.1163 5.24287 9.75259 5.6585C9.38891 6.07414 8.75715 6.11626 8.34151 5.75258L5.00001 2.82877L1.65852 5.75258C1.24288 6.11626 0.61112 6.07414 0.247438 5.6585C-0.116244 5.24287 -0.0741267 4.61111 0.34151 4.24742L4.34151 0.747423ZM0.246065 10.3578C0.608879 9.94139 1.24055 9.89795 1.65695 10.2608L5.00001 13.1737L8.34308 10.2608C8.75948 9.89795 9.39115 9.94139 9.75396 10.3578C10.1168 10.7742 10.0733 11.4058 9.65695 11.7687L5.65695 15.2539C5.28043 15.582 4.7196 15.582 4.34308 15.2539L0.343082 11.7687C-0.0733128 11.4058 -0.116749 10.7742 0.246065 10.3578Z"></path></svg></div></span></div></div><!--astro:end--></astro-island> </div> </div> <div class="xl:hidden"> <button type="button" class="page-copy-action astro-y3m22efp" data-page-copy-action data-page-copy-default-label="Copy Page" data-page-copy-copied-label="Copied"> <span class="page-copy-action__icon page-copy-action__icon--copy astro-y3m22efp" aria-hidden="true"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="astro-y3m22efp " ><path fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2V5Zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1v2ZM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1H5Z" clip-rule="evenodd"></path></svg> </span> <span class="page-copy-action__icon page-copy-action__icon--check astro-y3m22efp" aria-hidden="true"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="astro-y3m22efp " ><path fill-rule="evenodd" d="M18.063 5.674a1 1 0 0 1 .263 1.39l-7.5 11a1 1 0 0 1-1.533.143l-4.5-4.5a1 1 0 1 1 1.414-1.414l3.647 3.647 6.82-10.003a1 1 0 0 1 1.39-.263Z" clip-rule="evenodd"></path></svg> </span> <span data-page-copy-label class="astro-y3m22efp">Copy Page</span> </button>  </div> </div> </div> </header>  </div> <article id="mainContent" class="prose prose-content dark:prose-invert max-w-none pt-4 pb-0"> <div class="not-prose [&amp;_a]:underline border-default border border-solid rounded-lg p-2 py-4 pl-5 mt-4 first:mt-0 mb-4 text-sm"><div class="flex items-center gap-4"><div class="text-default"><svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 "><path d="M11 10C11 9.44771 10.5523 9 10 9C9.44771 9 9 9.44771 9 10V14C9 14.5523 9.44771 15 10 15C10.5523 15 11 14.5523 11 14V10Z"></path><path d="M10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z"></path><path d="M10 7.30005C10.6351 7.30005 11.15 6.78518 11.15 6.15005C11.15 5.51492 10.6351 5.00005 10 5.00005C9.36487 5.00005 8.85 5.51492 8.85 6.15005C8.85 6.78518 9.36487 7.30005 10 7.30005Z"></path></svg></div><div class="text-default not-prose "><p>Sites is in public beta and is available with ChatGPT Plus, Pro, Business,
+Enterprise and Edu plans. Plan-specific usage limits apply across all Sites
+during the beta. ChatGPT shows the current limits and notifies you as you
+approach one. Reaching a limit can prevent you from creating a Site, adding
+storage, or keeping a high-usage Site public, but you can still edit and
+manage existing Sites.</p></div></div></div>
+<p>Sites lets ChatGPT create, host, refine, and share websites, web apps, and games.
 Use Sites when you want to turn a prompt or compatible existing project into a
-hosted experience without setting up a separate deployment workflow.
+hosted experience without setting up a separate deployment workflow.</p>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-id="app" data-ids="[&#34;app&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface"> <p>Open <strong>Sites</strong> in the ChatGPT desktop app. You can start a site from a prompt or
+from a compatible local project, then return to the Sites view to manage it.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
 
-<ContentModeSwitch group="codex-surface" id="app">
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
 
-Open **Sites** in the ChatGPT desktop app. You can start a site from a prompt or
-from a compatible local project, then return to the Sites view to manage it.
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
 
-</ContentModeSwitch>
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
 
-<ContentModeSwitch group="codex-surface" id="web">
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
 
-Use Sites in ChatGPT on the web to create and manage hosted sites. Select
-**More** > **Sites**, or go directly to
-[chatgpt.com/sites](https://chatgpt.com/sites), to find Sites you've created.
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
 
-</ContentModeSwitch>
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
 
-<ContentModeSwitch group="codex-surface" id="cli">
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
 
-Sites doesn't have a standalone Codex CLI management view. Use ChatGPT web or
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-id="web" data-ids="[&#34;web&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface" data-markdown-ignore hidden> <p>Use Sites in ChatGPT on the web to create and manage hosted sites. Select
+<strong>More</strong> &gt; <strong>Sites</strong>, or go directly to
+<a href="https://chatgpt.com/sites">chatgpt.com/sites</a>, to find Sites you’ve created.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
+
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
+
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
+
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
+
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
+
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
+
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
+
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
+
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-id="cli" data-ids="[&#34;cli&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface" data-markdown-ignore hidden> <p>Sites doesn’t have a standalone Codex CLI management view. Use ChatGPT web or
 the desktop app to create, save, deploy, and manage a Sites project. You can
-still use Codex CLI to edit and test a local project before publishing it.
+still use Codex CLI to edit and test a local project before publishing it.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
 
-</ContentModeSwitch>
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
 
-<ContentModeSwitch group="codex-surface" id="ide">
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
 
-Sites doesn't have a standalone IDE extension management view. Use ChatGPT web
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
+
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
+
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
+
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
+
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
+
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-id="ide" data-ids="[&#34;ide&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface" data-markdown-ignore hidden> <p>Sites doesn’t have a standalone IDE extension management view. Use ChatGPT web
 or the desktop app for Sites operations, and use the IDE extension to edit and
-test the local source project.
+test the local source project.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
 
-</ContentModeSwitch>
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
 
-Every Sites deployment URL is a production deployment. If you want to review a
-  build before it becomes live, ask ChatGPT to save a version without deploying
-  it.
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
 
-## Get started with Sites
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
 
-In ChatGPT, include the word "website" in your prompt or mention `@Sites` to
-start the Sites workflow explicitly.
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
 
-<WorkflowSteps variant="headings">
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
 
-1. Describe the Site
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
 
-   Describe the audience, purpose, required behavior, and information the Site
-   should use.
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
 
-2. Review the Site
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
 
-   Review the generated content and behavior. Check that the Site uses the
-   intended information and handles data as expected.
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
 
-3. Refine the Site
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
 
-   Describe the changes you want. Add relevant files or visual context when
-   they will help ChatGPT make the change.
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
 
-4. Manage and share the Site
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
 
-   Return to **Sites** to reopen or refine the Site. When it's ready, choose who
-   can visit it and share the resulting link.
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
 
-</WorkflowSteps>
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
 
-<ContentModeSwitch group="codex-surface" id="web">
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
 
-In the preview, select **Edit**. Under **Describe website edits**, describe the
-changes you want. Use **Screenshot** or **Add files and more** when additional
-context would help.
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<div class="not-prose [&amp;_a]:underline border-default border border-solid rounded-lg p-2 py-4 pl-5 mt-4 first:mt-0 mb-4 text-sm"><div class="flex items-center gap-4"><div class="text-default"><svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 "><path d="M11 10C11 9.44771 10.5523 9 10 9C9.44771 9 9 9.44771 9 10V14C9 14.5523 9.44771 15 10 15C10.5523 15 11 14.5523 11 14V10Z"></path><path d="M10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z"></path><path d="M10 7.30005C10.6351 7.30005 11.15 6.78518 11.15 6.15005C11.15 5.51492 10.6351 5.00005 10 5.00005C9.36487 5.00005 8.85 5.51492 8.85 6.15005C8.85 6.78518 9.36487 7.30005 10 7.30005Z"></path></svg></div><div class="text-default not-prose "><p>Every Sites deployment URL is a production deployment. If you want to review a
+build before it becomes live, ask ChatGPT to save a version without deploying
+it.</p></div></div></div>
+<h2 id="get-started-with-sites" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Get started with Sites</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="get-started-with-sites" aria-label="Copy link to get started with sites" title="Copy link to get started with sites"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>In ChatGPT, include the word “website” in your prompt or mention <code>@Sites</code> to
+start the Sites workflow explicitly.</p>
+<div class="workflow-steps workflow-steps--headings astro-4drqtmie"> <ol>
+<li>
+<p>Describe the Site</p>
+<p>Describe the audience, purpose, required behavior, and information the Site
+should use.</p>
+</li>
+<li>
+<p>Review the Site</p>
+<p>Review the generated content and behavior. Check that the Site uses the
+intended information and handles data as expected.</p>
+</li>
+<li>
+<p>Refine the Site</p>
+<p>Describe the changes you want. Add relevant files or visual context when
+they will help ChatGPT make the change.</p>
+</li>
+<li>
+<p>Manage and share the Site</p>
+<p>Return to <strong>Sites</strong> to reopen or refine the Site. When it’s ready, choose who
+can visit it and share the resulting link.</p>
+</li>
+</ol> </div>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-id="web" data-ids="[&#34;web&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface" data-markdown-ignore hidden> <p>In the preview, select <strong>Edit</strong>. Under <strong>Describe website edits</strong>, describe the
+changes you want. Use <strong>Screenshot</strong> or <strong>Add files and more</strong> when additional
+context would help.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
 
-</ContentModeSwitch>
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
 
-## Prompt Sites for common tasks
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
 
-For a new website, dashboard, or internal tool, include the audience, core
-experience, and required information:
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
 
-```text
-Build a project request dashboard for my operations team. Let team members
-submit requests, see who owns each one, update the status, and filter the list.
-Require people to sign in with their workspace account, and keep the request
-data saved between visits.
-```
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
 
-<ContentModeSwitch group="codex-surface" ids="app,cli,ide">
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
 
-For an existing project, ask Sites to prepare and publish the current app:
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
 
-```text
-Deploy this project with Sites. Check whether it is compatible, make any
-required changes, and give me the deployment URL.
-```
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
 
-</ContentModeSwitch>
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
 
-When a site needs durable application data or uploaded files, say so in the
-request:
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
 
-```text
-Add player scores and avatar uploads to this game. Keep the scores and uploaded
-avatars between visits.
-```
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
 
-Browse the [Sites showcase](https://developers.openai.com/showcase) for deployed internal apps and the full
-  prompts used to create them.
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
 
-## Review Site analytics
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
 
-Sites records traffic automatically, so you can see how people use a deployed
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<h2 id="prompt-sites-for-common-tasks" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Prompt Sites for common tasks</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="prompt-sites-for-common-tasks" aria-label="Copy link to prompt sites for common tasks" title="Copy link to prompt sites for common tasks"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>For a new website, dashboard, or internal tool, include the audience, core
+experience, and required information:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>Build a project request dashboard for my operations team. Let team members</span></span>
+<span class="line"><span>submit requests, see who owns each one, update the status, and filter the list.</span></span>
+<span class="line"><span>Require people to sign in with their workspace account, and keep the request</span></span>
+<span class="line"><span>data saved between visits.</span></span></code></pre>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-ids="[&#34;app&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface"> <p>For an existing project, ask Sites to prepare and publish the current app:</p><pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>Deploy this project with Sites. Check whether it is compatible, make any</span></span>
+<span class="line"><span>required changes, and give me the deployment URL.</span></span></code></pre> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
+
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
+
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
+
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
+
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
+
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
+
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
+
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
+
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<p>When a site needs durable application data or uploaded files, say so in the
+request:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>Add player scores and avatar uploads to this game. Keep the scores and uploaded</span></span>
+<span class="line"><span>avatars between visits.</span></span></code></pre>
+<div class="not-prose [&amp;_a]:underline border-default border border-solid rounded-lg p-2 py-4 pl-5 mt-4 first:mt-0 mb-4 text-sm"><div class="flex items-center gap-4"><div class="text-default"><svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 "><path d="M11 10C11 9.44771 10.5523 9 10 9C9.44771 9 9 9.44771 9 10V14C9 14.5523 9.44771 15 10 15C10.5523 15 11 14.5523 11 14V10Z"></path><path d="M10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z"></path><path d="M10 7.30005C10.6351 7.30005 11.15 6.78518 11.15 6.15005C11.15 5.51492 10.6351 5.00005 10 5.00005C9.36487 5.00005 8.85 5.51492 8.85 6.15005C8.85 6.78518 9.36487 7.30005 10 7.30005Z"></path></svg></div><div class="text-default not-prose "><p>Browse the <a href="/showcase">Sites showcase</a> for deployed internal apps and the full
+prompts used to create them.</p></div></div></div>
+<h2 id="review-site-analytics" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Review Site analytics</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="review-site-analytics" aria-label="Copy link to review site analytics" title="Copy link to review site analytics"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>Sites records traffic automatically, so you can see how people use a deployed
 Site without adding an analytics SDK. The analytics view shows total unique
 visitors and page views, plus both metrics over time. Change the date range or
-granularity to inspect a different period.
+granularity to inspect a different period.</p>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-id="app" data-ids="[&#34;app&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface"> <p>Open <strong>Sites</strong>, find the Site, then select <strong>More actions</strong> &gt; <strong>Analytics</strong>.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
 
-<ContentModeSwitch group="codex-surface" id="app">
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
 
-Open **Sites**, find the Site, then select **More actions** > **Analytics**.
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
 
-</ContentModeSwitch>
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
 
-<ContentModeSwitch group="codex-surface" id="web">
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
 
-Go to [chatgpt.com/sites](https://chatgpt.com/sites), find the Site, then select
-**More actions** > **Analytics**.
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
 
-</ContentModeSwitch>
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
 
-<ContentModeSwitch group="codex-surface" ids="cli,ide">
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
 
-Sites doesn't have a standalone analytics view in the CLI or IDE extension. Open
-the Site in ChatGPT on the web or in the desktop app to review its analytics.
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
 
-</ContentModeSwitch>
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
 
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
 
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
 
-> Illustration: Interactive Sites analytics dashboard showing unique visitors and page views over seven days.
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
 
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
 
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
 
-Analytics is currently available for Sites that aren't owned by an Enterprise
-  workspace.
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
 
-## Add Sign in with ChatGPT
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-id="web" data-ids="[&#34;web&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface" data-markdown-ignore hidden> <p>Go to <a href="https://chatgpt.com/sites">chatgpt.com/sites</a>, find the Site, then select
+<strong>More actions</strong> &gt; <strong>Analytics</strong>.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
 
-Public Sites can remain open to everyone while offering optional Sign in with
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
+
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
+
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
+
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
+
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
+
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
+
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
+
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-ids="[&#34;cli&#34;,&#34;ide&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface" data-markdown-ignore hidden> <p>Sites doesn’t have a standalone analytics view in the CLI or IDE extension. Open
+the Site in ChatGPT on the web or in the desktop app to review its analytics.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
+
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
+
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
+
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
+
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
+
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
+
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
+
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
+
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<div class="contents" data-markdown-export="illustration" data-markdown-description="Interactive Sites analytics dashboard showing unique visitors and page views over seven days."> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>Number.POSITIVE_INFINITY*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z2g3oQP" prefix="r98" component-url="/_astro/SitesAnalyticsIllustration.react.HQIuXZKm.js" component-export="default" renderer-url="/_astro/client.C28dYYSg.js" props="{&quot;className&quot;:[0]}" ssr client="load" opts="{&quot;name&quot;:&quot;SitesAnalyticsIllustrationReact&quot;,&quot;value&quot;:true}" await-children><figure class="not-prose relative isolate m-0 min-h-[38rem] w-full overflow-hidden rounded-[clamp(0.8rem,1.8cqw,1.35rem)] border border-black/10 bg-[#f7f7f5] bg-cover bg-center text-left text-[#292929] shadow-[0_22px_55px_rgba(0,0,0,0.09)] [container-type:inline-size] sm:min-h-[34rem] lg:min-h-0 dark:border-white/10 dark:bg-[#151515] dark:text-[#f1f1f1] dark:shadow-[0_24px_60px_rgba(0,0,0,0.3)]" style="aspect-ratio:1.63 / 1" role="img" aria-label="Interactive Sites analytics dashboard showing unique visitors and page views over seven days." data-markdown-export="illustration" data-markdown-description="Interactive Sites analytics dashboard showing unique visitors and page views over seven days." data-sites-analytics-illustration="true"><div aria-hidden="true" class="absolute inset-0 flex flex-col"><div class="flex h-[clamp(2.65rem,6.3cqw,4.45rem)] shrink-0 items-center gap-[clamp(0.55rem,1.4cqw,1rem)] border-b border-black/[0.055] bg-white/35 px-[clamp(0.85rem,2.3cqw,1.65rem)] text-[clamp(0.6rem,1.25cqw,0.92rem)] dark:border-white/[0.055] dark:bg-black/10"><span class="text-[#858585] dark:text-[#969696]">Sites</span><span class="text-[clamp(0.9rem,1.8cqw,1.3rem)] leading-none text-[#888] dark:text-[#999]">›</span><span class="truncate text-[#292929] dark:text-[#f1f1f1]">Goblin tales</span></div><div class="flex min-h-0 flex-1 flex-col px-[clamp(0.9rem,2.8cqw,2rem)] pt-[clamp(0.9rem,2.2cqw,1.6rem)] pb-[clamp(0.8rem,2cqw,1.45rem)]"><div class="flex flex-wrap items-end justify-between gap-[clamp(0.7rem,1.8cqw,1.35rem)]"><div class="min-w-0"><h3 class="m-0 text-[clamp(1rem,2.25cqw,1.65rem)] leading-none font-normal tracking-[-0.025em]">Analytics</h3><p class="mt-[clamp(0.3rem,0.7cqw,0.5rem)] mb-0 truncate text-[clamp(0.52rem,1.08cqw,0.78rem)] text-[#858585] dark:text-[#969696]">goblin-tales.openai.chatgpt.site</p></div><div class="grid w-full grid-cols-2 gap-[clamp(0.55rem,1.3cqw,1rem)] sm:w-[clamp(15rem,34cqw,24rem)]"><span class="min-w-0"><span class="mb-[clamp(0.18rem,0.45cqw,0.35rem)] block text-[clamp(0.55rem,1.12cqw,0.82rem)] text-[#777] dark:text-[#aaa]">Date range</span><span class="flex h-[clamp(1.75rem,3.6cqw,2.65rem)] min-w-0 items-center justify-between gap-2 rounded-[clamp(0.45rem,0.9cqw,0.7rem)] border border-black/10 bg-white/80 px-[clamp(0.55rem,1.2cqw,0.9rem)] text-[clamp(0.62rem,1.28cqw,0.92rem)] text-[#292929] dark:border-white/10 dark:bg-[#202020] dark:text-[#f1f1f1]"><span class="truncate">Last 7 days</span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" class="size-[clamp(0.55rem,1.1cqw,0.8rem)] shrink-0 text-[#777] dark:text-[#aaa]"><path fill-rule="evenodd" d="M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z" clip-rule="evenodd"></path></svg></span></span><span class="min-w-0"><span class="mb-[clamp(0.18rem,0.45cqw,0.35rem)] block text-[clamp(0.55rem,1.12cqw,0.82rem)] text-[#777] dark:text-[#aaa]">Granularity</span><span class="flex h-[clamp(1.75rem,3.6cqw,2.65rem)] min-w-0 items-center justify-between gap-2 rounded-[clamp(0.45rem,0.9cqw,0.7rem)] border border-black/10 bg-white/80 px-[clamp(0.55rem,1.2cqw,0.9rem)] text-[clamp(0.62rem,1.28cqw,0.92rem)] text-[#292929] dark:border-white/10 dark:bg-[#202020] dark:text-[#f1f1f1]"><span class="truncate">Auto</span><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" class="size-[clamp(0.55rem,1.1cqw,0.8rem)] shrink-0 text-[#777] dark:text-[#aaa]"><path fill-rule="evenodd" d="M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z" clip-rule="evenodd"></path></svg></span></span></div></div><div class="mt-[clamp(0.75rem,1.7cqw,1.2rem)]"><p class="m-0 text-[clamp(0.65rem,1.32cqw,0.95rem)] font-medium">Site performance</p><p class="mt-[clamp(0.18rem,0.45cqw,0.32rem)] mb-0 text-[clamp(0.52rem,1.08cqw,0.78rem)] text-[#858585] dark:text-[#969696]">Jul 9 – 15, 2026</p></div><div class="mt-[clamp(0.65rem,1.4cqw,1rem)] grid grid-cols-2 gap-[clamp(0.55rem,1.3cqw,1rem)]"><div class="rounded-[clamp(0.55rem,1.1cqw,0.85rem)] border border-black/10 bg-white/65 px-[clamp(0.75rem,1.6cqw,1.15rem)] py-[clamp(0.65rem,1.45cqw,1.05rem)] dark:border-white/10 dark:bg-[#1f1f1f]"><p class="m-0 text-[clamp(0.55rem,1.1cqw,0.8rem)] text-[#777] dark:text-[#aaa]">Unique visitors</p><p class="mt-[clamp(0.18rem,0.5cqw,0.4rem)] mb-0 text-[clamp(1.1rem,2.6cqw,1.9rem)] leading-none font-normal tabular-nums">190</p></div><div class="rounded-[clamp(0.55rem,1.1cqw,0.85rem)] border border-black/10 bg-white/65 px-[clamp(0.75rem,1.6cqw,1.15rem)] py-[clamp(0.65rem,1.45cqw,1.05rem)] dark:border-white/10 dark:bg-[#1f1f1f]"><p class="m-0 text-[clamp(0.55rem,1.1cqw,0.8rem)] text-[#777] dark:text-[#aaa]">Page views</p><p class="mt-[clamp(0.18rem,0.5cqw,0.4rem)] mb-0 text-[clamp(1.1rem,2.6cqw,1.9rem)] leading-none font-normal tabular-nums">359</p></div></div><div class="mt-[clamp(0.65rem,1.45cqw,1.05rem)] flex min-h-0 flex-1"><div class="flex min-h-0 flex-1 flex-col rounded-[clamp(0.7rem,1.5cqw,1.1rem)] border border-black/10 bg-white/65 p-[clamp(0.75rem,1.8cqw,1.3rem)] dark:border-white/10 dark:bg-[#1f1f1f]"><div class="flex items-start justify-between gap-4"><div class="min-w-0"><p class="m-0 text-[clamp(0.65rem,1.35cqw,0.95rem)] font-medium text-[#292929] dark:text-[#f1f1f1]">Traffic</p><p class="mt-[clamp(0.16rem,0.38cqw,0.28rem)] mb-0 text-[clamp(0.52rem,1.08cqw,0.78rem)] text-[#777] dark:text-[#999]">Hourly · Jul 9 – 15, 2026</p></div><div class="flex shrink-0 items-center gap-[clamp(0.6rem,1.6cqw,1.25rem)] text-[clamp(0.5rem,1.08cqw,0.78rem)] text-[#707070] dark:text-[#aaa]"><span class="inline-flex items-center gap-[clamp(0.28rem,0.7cqw,0.5rem)] whitespace-nowrap"><span class="size-[clamp(0.38rem,0.8cqw,0.55rem)] rounded-full bg-[#319df4]"></span><span>Unique visitors</span></span><span class="inline-flex items-center gap-[clamp(0.28rem,0.7cqw,0.5rem)] whitespace-nowrap"><span class="size-[clamp(0.38rem,0.8cqw,0.55rem)] rounded-full bg-[#a36cf7]"></span><span>Page views</span></span></div></div><div class="mt-[clamp(0.65rem,1.5cqw,1.1rem)] grid min-h-0 flex-1 grid-cols-[clamp(1.2rem,3cqw,2.25rem)_minmax(0,1fr)] gap-[clamp(0.3rem,0.8cqw,0.65rem)]"><div class="flex flex-col justify-between pb-[clamp(1.15rem,2.5cqw,1.75rem)] text-right text-[clamp(0.46rem,0.98cqw,0.7rem)] leading-none text-[#858585] dark:text-[#aaa]"><span>80</span><span>60</span><span>40</span><span>20</span><span>0</span></div><div class="flex min-h-0 flex-col"><div class="relative min-h-[8rem] flex-1 touch-pan-y cursor-crosshair" data-analytics-chart-interactive="true"><svg class="absolute inset-0 size-full overflow-visible" viewBox="0 0 800 200" preserveAspectRatio="none"><line x1="0" x2="800" y1="0" y2="0" class="stroke-black/[0.065] dark:stroke-white/[0.07]" stroke-dasharray="3 5" vector-effect="non-scaling-stroke"></line><line x1="0" x2="800" y1="50" y2="50" class="stroke-black/[0.065] dark:stroke-white/[0.07]" stroke-dasharray="3 5" vector-effect="non-scaling-stroke"></line><line x1="0" x2="800" y1="100" y2="100" class="stroke-black/[0.065] dark:stroke-white/[0.07]" stroke-dasharray="3 5" vector-effect="non-scaling-stroke"></line><line x1="0" x2="800" y1="150" y2="150" class="stroke-black/[0.065] dark:stroke-white/[0.07]" stroke-dasharray="3 5" vector-effect="non-scaling-stroke"></line><line x1="0" x2="800" y1="200" y2="200" class="stroke-black/[0.065] dark:stroke-white/[0.07]" stroke-dasharray="3 5" vector-effect="non-scaling-stroke"></line><path data-analytics-series="unique-visitors" d="M 0 200 C 8.51063829787234 200, 8.51063829787234 200, 17.02127659574468 200 C 25.53191489361702 200, 25.53191489361702 197.5, 34.04255319148936 197.5 C 42.5531914893617 197.5, 42.5531914893617 117.5, 51.06382978723404 117.5 C 59.57446808510638 117.5, 59.57446808510638 192.5, 68.08510638297872 192.5 C 76.59574468085106 192.5, 76.59574468085106 200, 85.1063829787234 200 C 93.61702127659575 200, 93.61702127659575 200, 102.12765957446808 200 C 110.63829787234042 200, 110.63829787234042 200, 119.14893617021276 200 C 127.65957446808511 200, 127.65957446808511 200, 136.17021276595744 200 C 144.68085106382978 200, 144.68085106382978 200, 153.19148936170214 200 C 161.70212765957447 200, 161.70212765957447 200, 170.2127659574468 200 C 178.72340425531917 200, 178.72340425531917 200, 187.2340425531915 200 C 195.74468085106383 200, 195.74468085106383 172.5, 204.25531914893617 172.5 C 212.7659574468085 172.5, 212.7659574468085 185, 221.27659574468086 185 C 229.7872340425532 185, 229.7872340425532 180, 238.29787234042553 180 C 246.8085106382979 180, 246.8085106382979 190, 255.31914893617022 190 C 263.82978723404256 190, 263.82978723404256 187.5, 272.3404255319149 187.5 C 280.8510638297872 187.5, 280.8510638297872 195, 289.3617021276596 195 C 297.87234042553195 195, 297.87234042553195 185, 306.3829787234043 185 C 314.89361702127655 185, 314.89361702127655 192.5, 323.4042553191489 192.5 C 331.9148936170212 192.5, 331.9148936170212 197.5, 340.4255319148936 197.5 C 348.93617021276594 197.5, 348.93617021276594 190, 357.4468085106383 190 C 365.95744680851067 190, 365.95744680851067 197.5, 374.468085106383 197.5 C 382.97872340425533 197.5, 382.97872340425533 200, 391.48936170212767 200 C 400 200, 400 195, 408.51063829787233 195 C 417.02127659574467 195, 417.02127659574467 200, 425.531914893617 200 C 434.04255319148933 200, 434.04255319148933 197.5, 442.5531914893617 197.5 C 451.0638297872341 197.5, 451.0638297872341 200, 459.57446808510645 200 C 468.0851063829788 200, 468.0851063829788 192.5, 476.59574468085106 192.5 C 485.1063829787234 192.5, 485.1063829787234 197.5, 493.6170212765957 197.5 C 502.1276595744681 197.5, 502.1276595744681 195, 510.63829787234044 195 C 519.1489361702128 195, 519.1489361702128 200, 527.6595744680851 200 C 536.1702127659574 200, 536.1702127659574 195, 544.6808510638298 195 C 553.1914893617021 195, 553.1914893617021 197.5, 561.7021276595744 197.5 C 570.2127659574469 197.5, 570.2127659574469 200, 578.7234042553192 200 C 587.2340425531916 200, 587.2340425531916 195, 595.7446808510638 195 C 604.2553191489362 195, 604.2553191489362 200, 612.7659574468086 200 C 621.2765957446809 200, 621.2765957446809 197.5, 629.7872340425532 197.5 C 638.2978723404256 197.5, 638.2978723404256 200, 646.8085106382978 200 C 655.3191489361702 200, 655.3191489361702 197.5, 663.8297872340426 197.5 C 672.3404255319149 197.5, 672.3404255319149 200, 680.8510638297872 200 C 689.3617021276596 200, 689.3617021276596 195, 697.872340425532 195 C 706.3829787234042 195, 706.3829787234042 200, 714.8936170212766 200 C 723.4042553191489 200, 723.4042553191489 197.5, 731.9148936170212 197.5 C 740.4255319148936 197.5, 740.4255319148936 200, 748.936170212766 200 C 757.4468085106383 200, 757.4468085106383 195, 765.9574468085107 195 C 774.468085106383 195, 774.468085106383 197.5, 782.9787234042553 197.5 C 791.4893617021277 197.5, 791.4893617021277 200, 800 200" fill="none" stroke="#319df4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path><path data-analytics-series="page-views" d="M 0 200 C 8.51063829787234 200, 8.51063829787234 200, 17.02127659574468 200 C 25.53191489361702 200, 25.53191489361702 197.5, 34.04255319148936 197.5 C 42.5531914893617 197.5, 42.5531914893617 35, 51.06382978723404 35 C 59.57446808510638 35, 59.57446808510638 185, 68.08510638297872 185 C 76.59574468085106 185, 76.59574468085106 200, 85.1063829787234 200 C 93.61702127659575 200, 93.61702127659575 200, 102.12765957446808 200 C 110.63829787234042 200, 110.63829787234042 200, 119.14893617021276 200 C 127.65957446808511 200, 127.65957446808511 200, 136.17021276595744 200 C 144.68085106382978 200, 144.68085106382978 200, 153.19148936170214 200 C 161.70212765957447 200, 161.70212765957447 200, 170.2127659574468 200 C 178.72340425531917 200, 178.72340425531917 200, 187.2340425531915 200 C 195.74468085106383 200, 195.74468085106383 162.5, 204.25531914893617 162.5 C 212.7659574468085 162.5, 212.7659574468085 167.5, 221.27659574468086 167.5 C 229.7872340425532 167.5, 229.7872340425532 175, 238.29787234042553 175 C 246.8085106382979 175, 246.8085106382979 185, 255.31914893617022 185 C 263.82978723404256 185, 263.82978723404256 180, 272.3404255319149 180 C 280.8510638297872 180, 280.8510638297872 187.5, 289.3617021276596 187.5 C 297.87234042553195 187.5, 297.87234042553195 172.5, 306.3829787234043 172.5 C 314.89361702127655 172.5, 314.89361702127655 190, 323.4042553191489 190 C 331.9148936170212 190, 331.9148936170212 192.5, 340.4255319148936 192.5 C 348.93617021276594 192.5, 348.93617021276594 177.5, 357.4468085106383 177.5 C 365.95744680851067 177.5, 365.95744680851067 195, 374.468085106383 195 C 382.97872340425533 195, 382.97872340425533 200, 391.48936170212767 200 C 400 200, 400 192.5, 408.51063829787233 192.5 C 417.02127659574467 192.5, 417.02127659574467 200, 425.531914893617 200 C 434.04255319148933 200, 434.04255319148933 195, 442.5531914893617 195 C 451.0638297872341 195, 451.0638297872341 197.5, 459.57446808510645 197.5 C 468.0851063829788 197.5, 468.0851063829788 185, 476.59574468085106 185 C 485.1063829787234 185, 485.1063829787234 195, 493.6170212765957 195 C 502.1276595744681 195, 502.1276595744681 190, 510.63829787234044 190 C 519.1489361702128 190, 519.1489361702128 200, 527.6595744680851 200 C 536.1702127659574 200, 536.1702127659574 187.5, 544.6808510638298 187.5 C 553.1914893617021 187.5, 553.1914893617021 195, 561.7021276595744 195 C 570.2127659574469 195, 570.2127659574469 197.5, 578.7234042553192 197.5 C 587.2340425531916 197.5, 587.2340425531916 190, 595.7446808510638 190 C 604.2553191489362 190, 604.2553191489362 200, 612.7659574468086 200 C 621.2765957446809 200, 621.2765957446809 192.5, 629.7872340425532 192.5 C 638.2978723404256 192.5, 638.2978723404256 197.5, 646.8085106382978 197.5 C 655.3191489361702 197.5, 655.3191489361702 195, 663.8297872340426 195 C 672.3404255319149 195, 672.3404255319149 197.5, 680.8510638297872 197.5 C 689.3617021276596 197.5, 689.3617021276596 180, 697.872340425532 180 C 706.3829787234042 180, 706.3829787234042 197.5, 714.8936170212766 197.5 C 723.4042553191489 197.5, 723.4042553191489 190, 731.9148936170212 190 C 740.4255319148936 190, 740.4255319148936 200, 748.936170212766 200 C 757.4468085106383 200, 757.4468085106383 182.5, 765.9574468085107 182.5 C 774.468085106383 182.5, 774.468085106383 192.5, 782.9787234042553 192.5 C 791.4893617021277 192.5, 791.4893617021277 197.5, 800 197.5" fill="none" stroke="#a36cf7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path></svg></div><div class="mt-[clamp(0.3rem,0.7cqw,0.55rem)] flex justify-between text-[clamp(0.43rem,0.9cqw,0.65rem)] leading-none text-[#858585] dark:text-[#aaa]"><span class="whitespace-nowrap">Jul 9, 12 AM</span><span class="whitespace-nowrap hidden lg:block">Jul 9, 5 PM</span><span class="whitespace-nowrap hidden lg:block md:block">Jul 10, 11 AM</span><span class="whitespace-nowrap hidden lg:block">Jul 11, 4 AM</span><span class="whitespace-nowrap hidden lg:block md:block">Jul 11, 9 PM</span><span class="whitespace-nowrap hidden lg:block">Jul 12, 3 PM</span><span class="whitespace-nowrap hidden lg:block md:block">Jul 13, 8 AM</span><span class="whitespace-nowrap hidden lg:block">Jul 14, 1 AM</span><span class="whitespace-nowrap hidden lg:block md:block">Jul 14, 7 PM</span><span class="whitespace-nowrap">Jul 15, 12 PM</span></div></div></div></div></div></div></div></figure><!--astro:end--></astro-island> </div>
+<div class="not-prose [&amp;_a]:underline border-default border border-solid rounded-lg p-2 py-4 pl-5 mt-4 first:mt-0 mb-4 text-sm"><div class="flex items-center gap-4"><div class="text-default"><svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 "><path d="M11 10C11 9.44771 10.5523 9 10 9C9.44771 9 9 9.44771 9 10V14C9 14.5523 9.44771 15 10 15C10.5523 15 11 14.5523 11 14V10Z"></path><path d="M10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z"></path><path d="M10 7.30005C10.6351 7.30005 11.15 6.78518 11.15 6.15005C11.15 5.51492 10.6351 5.00005 10 5.00005C9.36487 5.00005 8.85 5.51492 8.85 6.15005C8.85 6.78518 9.36487 7.30005 10 7.30005Z"></path></svg></div><div class="text-default not-prose "><p>Analytics is currently available for Sites that aren’t owned by an Enterprise
+workspace.</p></div></div></div>
+<h2 id="add-sign-in-with-chatgpt" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Add Sign in with ChatGPT</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="add-sign-in-with-chatgpt" aria-label="Copy link to add sign in with chatgpt" title="Copy link to add sign in with chatgpt"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>Public Sites can remain open to everyone while offering optional Sign in with
 ChatGPT for identity-aware features, such as saved progress, personalized views,
 or records that belong to a specific person. Workspace-restricted Sites already
-use ChatGPT identity to enforce their sharing settings.
-
-Ask Sites to add the sign-in experience:
-
-```text
-Add Sign in with ChatGPT to this public Site. Keep the Site available to signed-out visitors. Show a Sign in with ChatGPT action when someone is signed out. After they sign in, greet them with their full name when available, or their email address otherwise. Add a Sign out action, and keep authorization decisions in server-side code.
-```
-
-<ToggleSection title="How it works">
-
-Sites handles the sign-in and sign-out flows through platform-provided paths,
-then returns the visitor to your Site:
-
-```html
-<a href="/signin-with-chatgpt">Sign in with ChatGPT</a>
-<a href="/signout-with-chatgpt">Sign out</a>
-```
-
-After a visitor signs in, Sites forwards their identity to the server through
-these request headers:
-
-- `oai-authenticated-user-email` contains the authenticated email address.
-- `oai-authenticated-user-full-name` may contain a non-empty profile name. Treat
-  it as optional and fall back to the email address.
-
-Keep authorization decisions in server-side code, and don't depend on
-name-split headers.
-
-</ToggleSection>
-
-## Understand projects, versions, and deployments
-
-A Site is a persistent hosted output that you can reopen, refine, configure,
-and share from **Sites** in ChatGPT.
-
-<ContentModeSwitch group="codex-surface" ids="app,cli,ide">
-
-A Sites project links a local source project to hosting managed through Sites.
+use ChatGPT identity to enforce their sharing settings.</p>
+<p>Ask Sites to add the sign-in experience:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>Add Sign in with ChatGPT to this public Site. Keep the Site available to signed-out visitors. Show a Sign in with ChatGPT action when someone is signed out. After they sign in, greet them with their full name when available, or their email address otherwise. Add a Sign out action, and keep authorization decisions in server-side code.</span></span></code></pre>
+<details data-toggle-section class="toggle-section group/toggle-section mb-4 rounded-lg border border-default bg-surface animate-colors"><summary class="flex cursor-pointer select-none list-none items-center gap-2 rounded-lg px-4 py-3 text-base font-semibold text-default transition-colors hover:bg-surface-secondary focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-gray-300 dark:focus-visible:outline-gray-600"><span class="flex items-center justify-center text-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="h-3.5 w-3.5 transition-transform duration-150 ease-out group-data-[active=true]/toggle-section:rotate-90 "><path d="M15 12 9 7v10l6-5Z"></path><path fill-rule="evenodd" d="M8.576 6.094a1 1 0 0 1 1.064.138l6 5a1 1 0 0 1 0 1.536l-6 5A1 1 0 0 1 8 17V7a1 1 0 0 1 .576-.906ZM10 9.135v5.73L13.438 12 10 9.135Z" clip-rule="evenodd"></path></svg></span><div class="text-inherit my-0">How it works</div></summary><div class="toggle-section-content px-4 pb-4 pt-1"><p>Sites handles the sign-in and sign-out flows through platform-provided paths,
+then returns the visitor to your Site:</p><pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="html"><code><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">&lt;</span><span style="color:#22863A;--shiki-dark:#85E89D">a</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="color:#24292E;--shiki-dark:#E1E4E8">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;/signin-with-chatgpt&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">&gt;Sign in with ChatGPT&lt;/</span><span style="color:#22863A;--shiki-dark:#85E89D">a</span><span style="color:#24292E;--shiki-dark:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">&lt;</span><span style="color:#22863A;--shiki-dark:#85E89D">a</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="color:#24292E;--shiki-dark:#E1E4E8">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;/signout-with-chatgpt&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">&gt;Sign out&lt;/</span><span style="color:#22863A;--shiki-dark:#85E89D">a</span><span style="color:#24292E;--shiki-dark:#E1E4E8">&gt;</span></span></code></pre><p>After a visitor signs in, Sites forwards their identity to the server through
+these request headers:</p><ul>
+<li><code>oai-authenticated-user-email</code> contains the authenticated email address.</li>
+<li><code>oai-authenticated-user-full-name</code> may contain a non-empty profile name. Treat
+it as optional and fall back to the email address.</li>
+</ul><p>Keep authorization decisions in server-side code, and don’t depend on
+name-split headers.</p></div></details>
+<h2 id="understand-projects-versions-and-deployments" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Understand projects, versions, and deployments</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="understand-projects-versions-and-deployments" aria-label="Copy link to understand projects versions and deployments" title="Copy link to understand projects versions and deployments"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>A Site is a persistent hosted output that you can reopen, refine, configure,
+and share from <strong>Sites</strong> in ChatGPT.</p>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-ids="[&#34;app&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface"> <p>A Sites project links a local source project to hosting managed through Sites.
 Sites stores that linkage and optional storage binding names in
-`.openai/hosting.json`. A newly created local starter can begin without a
-`project_id`; Sites adds one after it provisions the hosted project.
+<code>.openai/hosting.json</code>. A newly created local starter can begin without a
+<code>project_id</code>; Sites adds one after it provisions the hosted project.</p><p>For example, a provisioned site that uses a relational database binding and no
+file storage can contain:</p><pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="json"><code><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  &quot;project_id&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;&lt;project-id&gt;&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  &quot;d1&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;DB&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  &quot;r2&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">null</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
 
-For example, a provisioned site that uses a relational database binding and no
-file storage can contain:
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
 
-```json
-{
-  "project_id": "<project-id>",
-  "d1": "DB",
-  "r2": null
-}
-```
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
 
-</ContentModeSwitch>
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
 
-<ContentModeSwitch group="codex-surface" id="web">
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
 
-A Site appears in your Sites list even after the ChatGPT Work chat that created it ends.
-You don't need a local project or manifest to start a Site on the web. A Site is
-separate from a ChatGPT Project.
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
 
-</ContentModeSwitch>
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
 
-<ContentModeSwitch group="codex-surface" ids="app,cli,ide">
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
 
-Sites publishing has two separate stages:
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
 
-1. **Save a version.** ChatGPT builds a deployable version. For a local source
-   project, ChatGPT associates the version with the Git commit used for the
-   build. Use this stage when you want a reviewable deployment candidate.
-2. **Deploy a version.** ChatGPT publishes a saved version and reports the
-   production URL when deployment succeeds. Use this only when you intend for
-   the selected audience to access the site.
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
 
-Ask ChatGPT to list or inspect saved versions when you need to identify a
-previous deployment candidate.
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
 
-</ContentModeSwitch>
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
 
-## Choose a supported site shape
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
 
-For new projects, the Sites workflow can start with its recommended Site
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-id="web" data-ids="[&#34;web&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface" data-markdown-ignore hidden> <p>A Site appears in your Sites list even after the ChatGPT Work chat that created it ends.
+You don’t need a local project or manifest to start a Site on the web. A Site is
+separate from a ChatGPT Project.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
+
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
+
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
+
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
+
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
+
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
+
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
+
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
+
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-ids="[&#34;app&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface"> <p>Sites publishing has two separate stages:</p><ol>
+<li><strong>Save a version.</strong> ChatGPT builds a deployable version. For a local source
+project, ChatGPT associates the version with the Git commit used for the
+build. Use this stage when you want a reviewable deployment candidate.</li>
+<li><strong>Deploy a version.</strong> ChatGPT publishes a saved version and reports the
+production URL when deployment succeeds. Use this only when you intend for
+the selected audience to access the site.</li>
+</ol><p>Ask ChatGPT to list or inspect saved versions when you need to identify a
+previous deployment candidate.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
+
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
+
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
+
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
+
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
+
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
+
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
+
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
+
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<h2 id="choose-a-supported-site-shape" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Choose a supported site shape</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="choose-a-supported-site-shape" aria-label="Copy link to choose a supported site shape" title="Copy link to choose a supported site shape"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>For new projects, the Sites workflow can start with its recommended Site
 starter. For an existing project, ask ChatGPT to confirm that the project can
-produce compatible deployment artifacts before you request a deployment.
+produce compatible deployment artifacts before you request a deployment.</p>
+<p>Tell ChatGPT about the product behavior you need so it can select the appropriate
+site shape:</p>
 
-Tell ChatGPT about the product behavior you need so it can select the appropriate
-site shape:
 
-| Site need                                                      | What to ask Sites for                                                         |
-| -------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Content-led website or landing page                            | A Site with no persistent application state unless the experience requires it |
-| Saved records, user progress, or game scores                   | D1, a relational database for durable structured data                         |
-| Images, documents, audio, video, or other uploads              | R2, object storage for files                                                  |
-| Uploaded files with searchable metadata                        | D1 for metadata and R2 for file contents                                      |
-| Internal site that needs the current workspace user's identity | Workspace-authenticated user identity                                         |
-| Public sign-in or an external identity provider                | An authentication-enabled Site                                                |
 
-Don't request durable storage for temporary presentation state, such as a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="md:max-w-5xl mx-auto overflow-x-auto"><table class="w-full "><thead><tr><th>Site need</th><th>What to ask Sites for</th></tr></thead><tbody><tr><td>Content-led website or landing page</td><td>A Site with no persistent application state unless the experience requires it</td></tr><tr><td>Saved records, user progress, or game scores</td><td>D1, a relational database for durable structured data</td></tr><tr><td>Images, documents, audio, video, or other uploads</td><td>R2, object storage for files</td></tr><tr><td>Uploaded files with searchable metadata</td><td>D1 for metadata and R2 for file contents</td></tr><tr><td>Internal site that needs the current workspace user’s identity</td><td>Workspace-authenticated user identity</td></tr><tr><td>Public sign-in or an external identity provider</td><td>An authentication-enabled Site</td></tr></tbody></table></div>
+<p>Don’t request durable storage for temporary presentation state, such as a
 theme choice or a dismissed banner. Do request it for product data that people
-expect the hosted site to remember.
-
-## Control access and secrets
-
-A new Site is limited to its owner and workspace admins until you change its
+expect the hosted site to remember.</p>
+<h2 id="control-access-and-secrets" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Control access and secrets</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="control-access-and-secrets" aria-label="Copy link to control access and secrets" title="Copy link to control access and secrets"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>A new Site is limited to its owner and workspace admins until you change its
 access. Keep access limited while you review the content, data handling, and
-expected audience.
-
-Depending on your account and workspace settings, sharing options can include:
-
-- **Owner and workspace admins**
-- **Selected active users or groups**, where supported
-- **Anyone in the workspace**, where supported
-- **Anyone on the internet**, only when public publishing is enabled
-
-Visitor access lets people open the Site; it doesn't give them editing access.
+expected audience.</p>
+<p>Depending on your account and workspace settings, sharing options can include:</p>
+<ul>
+<li><strong>Owner and workspace admins</strong></li>
+<li><strong>Selected active users or groups</strong>, where supported</li>
+<li><strong>Anyone in the workspace</strong>, where supported</li>
+<li><strong>Anyone on the internet</strong>, only when public publishing is enabled</li>
+</ul>
+<p>Visitor access lets people open the Site; it doesn’t give them editing access.
 In Enterprise workspaces, public publishing is off by default and must be
-enabled by an admin.
-
-For limited sharing, invited visitors must sign in with the account that
+enabled by an admin.</p>
+<p>For limited sharing, invited visitors must sign in with the account that
 received access. A public Site is available without ChatGPT workspace access. A
-Site's audience setting and any sign-in feature built into the Site are separate
-controls.
-
-For example:
-
-```text
-Change this Site's access to everyone in my workspace after showing me the
-current Site and confirming its URL.
-```
-
-### Collaborate on a Site
-
-Site collaboration requires a workspace. When the feature is available, a Site
-owner can invite active members of the same workspace as editors.
-
-Editors can read the Site's live database data. Invite only people you trust
-with the Site's code and data.
-
-<WorkflowSteps>
-
-1. Open the Site and select **Share**.
-2. Under **Add people or groups**, find and select a workspace member. They
-   are added as a visitor.
-3. Open **Can view** next to that person and choose **Can edit**. Access saves
-   automatically. The Site appears under **Shared with you** in the member's
-   Sites view.
-4. The editor can open the Site, make changes, save versions, and publish
-   updates after the owner has published the Site for the first time.
-
-</WorkflowSteps>
-
-The Site owner manages editor access and can promote an existing visitor to
-editor, change an editor to **Can view**, or remove their access. Co-editing
-doesn't add a separate workspace permission toggle.
-
-Editors can't change the Site's audience, invite or remove other people, manage
+Site’s audience setting and any sign-in feature built into the Site are separate
+controls.</p>
+<p>For example:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>Change this Site&#39;s access to everyone in my workspace after showing me the</span></span>
+<span class="line"><span>current Site and confirming its URL.</span></span></code></pre>
+<h3 id="collaborate-on-a-site" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Collaborate on a Site</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="collaborate-on-a-site" aria-label="Copy link to collaborate on a site" title="Copy link to collaborate on a site"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<p>Site collaboration requires a workspace. When the feature is available, a Site
+owner can invite active members of the same workspace as editors.</p>
+<p>Editors can read the Site’s live database data. Invite only people you trust
+with the Site’s code and data.</p>
+<div class="workflow-steps astro-4drqtmie"> <ol>
+<li>Open the Site and select <strong>Share</strong>.</li>
+<li>Under <strong>Add people or groups</strong>, find and select a workspace member. They
+are added as a visitor.</li>
+<li>Open <strong>Can view</strong> next to that person and choose <strong>Can edit</strong>. Access saves
+automatically. The Site appears under <strong>Shared with you</strong> in the member’s
+Sites view.</li>
+<li>The editor can open the Site, make changes, save versions, and publish
+updates after the owner has published the Site for the first time.</li>
+</ol> </div>
+<p>The Site owner manages editor access and can promote an existing visitor to
+editor, change an editor to <strong>Can view</strong>, or remove their access. Co-editing
+doesn’t add a separate workspace permission toggle.</p>
+<p>Editors can’t change the Site’s audience, invite or remove other people, manage
 settings or analytics, restore an earlier version, or transfer ownership. An
-editor also can't perform the Site's first publish; the owner must publish the
-Site before editors can publish later updates.
-
-Editor access is separate from visitor access. The steps above first add the
+editor also can’t perform the Site’s first publish; the owner must publish the
+Site before editors can publish later updates.</p>
+<p>Editor access is separate from visitor access. The steps above first add the
 person as a visitor, then grant editing access. Promoting a visitor to editor
-doesn't change the Site's audience setting.
-
-### Configure runtime environment values
-
-Open **Sites**, then open the Site's settings to add, update, or remove hosted
+doesn’t change the Site’s audience setting.</p>
+<h3 id="configure-runtime-environment-values" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Configure runtime environment values</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="configure-runtime-environment-values" aria-label="Copy link to configure runtime environment values" title="Copy link to configure runtime environment values"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<p>Open <strong>Sites</strong>, then open the Site’s settings to add, update, or remove hosted
 environment variables and secrets. Keep secret values out of prompts, attached
-files, and Site content.
+files, and Site content.</p>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-id="web" data-ids="[&#34;web&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface" data-markdown-ignore hidden> <p>Go to <a href="https://chatgpt.com/sites">chatgpt.com/sites</a>, find the Site, then select
+<strong>More actions</strong> &gt; <strong>Settings</strong>.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
 
-<ContentModeSwitch group="codex-surface" id="web">
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
 
-Go to [chatgpt.com/sites](https://chatgpt.com/sites), find the Site, then select
-**More actions** > **Settings**.
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
 
-</ContentModeSwitch>
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
 
-<ContentModeSwitch group="codex-surface" ids="app,cli,ide">
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
 
-Don't store these values in `.openai/hosting.json`. Keep local `.env` and
-`.env.example` files aligned with the keys needed for local development, and
-don't commit secret values.
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
 
-When you add, update, or remove hosted environment values, ask ChatGPT to
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
+
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
+
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-ids="[&#34;app&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface"> <p>Don’t store these values in <code>.openai/hosting.json</code>. Keep local <code>.env</code> and
+<code>.env.example</code> files aligned with the keys needed for local development, and
+don’t commit secret values.</p><p>When you add, update, or remove hosted environment values, ask ChatGPT to
 redeploy the approved saved version so the next deployment uses the updated
-configuration.
+configuration.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
 
-</ContentModeSwitch>
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
 
-## Change a Site URL
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
 
-Where URL editing is available, Site owners can change the ChatGPT-hosted URL
-for an existing Site without creating another deployment.
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
 
-1. Open **Sites**, find the Site, and open its settings.
-2. Find the Site URL and select **Change URL**.
-3. Enter an available name. It must contain at least five characters, start
-   with a lowercase letter, and use only lowercase letters, numbers, and single
-   hyphens. It can't end with a hyphen or contain consecutive hyphens.
-4. Confirm the change and wait while Sites updates the address.
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
 
-The URL change doesn't create another deployment. The previous address
-redirects to the new one, including routes and query parameters.
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
 
-Changing the ChatGPT-hosted URL doesn't add, remove, or change a custom domain.
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
+
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
+
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<h2 id="change-a-site-url" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Change a Site URL</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="change-a-site-url" aria-label="Copy link to change a site url" title="Copy link to change a site url"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>Where URL editing is available, Site owners can change the ChatGPT-hosted URL
+for an existing Site without creating another deployment.</p>
+<ol>
+<li>Open <strong>Sites</strong>, find the Site, and open its settings.</li>
+<li>Find the Site URL and select <strong>Change URL</strong>.</li>
+<li>Enter an available name. It must contain at least five characters, start
+with a lowercase letter, and use only lowercase letters, numbers, and single
+hyphens. It can’t end with a hyphen or contain consecutive hyphens.</li>
+<li>Confirm the change and wait while Sites updates the address.</li>
+</ol>
+<p>The URL change doesn’t create another deployment. The previous address
+redirects to the new one, including routes and query parameters.</p>
+<p>Changing the ChatGPT-hosted URL doesn’t add, remove, or change a custom domain.
 Custom domains are a separate, existing feature; use the custom-domain
-settings when that feature is available.
-
-## Connect a custom domain
-
-Where custom domains are available, you can connect an apex domain or subdomain
-that you already own. Sites doesn't register domains for you, so you must be
-able to change the domain's DNS records. Custom domains aren't available in
-Enterprise workspaces at launch.
-
-To connect a domain:
-
-1. Open the Site's settings and select **Add domain**.
-2. Enter the apex domain or subdomain you want to use.
-3. Copy the DNS records and values Sites provides, then add them through your
-   domain provider.
-4. Wait a few minutes, then return to the Site's settings and refresh the domain
-   status.
-
-You can also ask ChatGPT to help point the domain at your Site. If browsing or
+settings when that feature is available.</p>
+<h2 id="connect-a-custom-domain" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Connect a custom domain</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="connect-a-custom-domain" aria-label="Copy link to connect a custom domain" title="Copy link to connect a custom domain"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>Where custom domains are available, you can connect an apex domain or subdomain
+that you already own. Sites doesn’t register domains for you, so you must be
+able to change the domain’s DNS records. Custom domains aren’t available in
+Enterprise workspaces at launch.</p>
+<p>To connect a domain:</p>
+<ol>
+<li>Open the Site’s settings and select <strong>Add domain</strong>.</li>
+<li>Enter the apex domain or subdomain you want to use.</li>
+<li>Copy the DNS records and values Sites provides, then add them through your
+domain provider.</li>
+<li>Wait a few minutes, then return to the Site’s settings and refresh the domain
+status.</li>
+</ol>
+<p>You can also ask ChatGPT to help point the domain at your Site. If browsing or
 computer use is enabled, ChatGPT can help you navigate your domain provider
-after you sign in.
+after you sign in.</p>
+<h2 id="review-before-you-share" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Review before you share</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="review-before-you-share" aria-label="Copy link to review before you share" title="Copy link to review before you share"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>Before you share a Site:</p>
+<ul>
+<li>Review its content, generated text and images, links, uploaded files, forms,
+and interactive behavior.</li>
+<li>Confirm that it doesn’t expose confidential or sensitive information, secret
+values, or third-party content you don’t have the right to share.</li>
+<li>Test the Site from the intended visitor experience, including its access and
+sign-in behavior.</li>
+<li>Review features that collect personal information or other visitor content.
+Decide whether the Site should collect, share, or publish that information.</li>
+<li>If the Site uses Sign in with ChatGPT, explain what visitor information it
+receives and how it uses that information.</li>
+<li>If the Site collects or processes personal data, comply with
+<a href="https://help.openai.com/en/articles/20001340">applicable privacy and data-protection laws</a>.</li>
+<li>Choose the narrowest sharing option that fits the intended audience.</li>
+<li>Open the shared Site and confirm that the intended audience can visit it.</li>
+</ul>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-id="app" data-ids="[&#34;app&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface"> <p>For a Site built from a local project, also review the source changes and any
+database migrations in the Codex <a href="/codex/code-review?surface=app">review pane</a>.</p> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
 
-## Review before you share
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
 
-Before you share a Site:
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
 
-- Review its content, generated text and images, links, uploaded files, forms,
-  and interactive behavior.
-- Confirm that it doesn't expose confidential or sensitive information, secret
-  values, or third-party content you don't have the right to share.
-- Test the Site from the intended visitor experience, including its access and
-  sign-in behavior.
-- Review features that collect personal information or other visitor content.
-  Decide whether the Site should collect, share, or publish that information.
-- If the Site uses Sign in with ChatGPT, explain what visitor information it
-  receives and how it uses that information.
-- If the Site collects or processes personal data, comply with
-  [applicable privacy and data-protection laws](https://help.openai.com/en/articles/20001340).
-- Choose the narrowest sharing option that fits the intended audience.
-- Open the shared Site and confirm that the intended audience can visit it.
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
 
-<ContentModeSwitch group="codex-surface" id="app">
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
 
-For a Site built from a local project, also review the source changes and any
-database migrations in the Codex [review pane](https://learn.chatgpt.com/docs/code-review?surface=app).
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
 
-</ContentModeSwitch>
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
 
-## Take down or delete a Site
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
 
-To remove access without deleting a Site, open its sharing settings and restrict
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<h2 id="take-down-or-delete-a-site" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Take down or delete a Site</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="take-down-or-delete-a-site" aria-label="Copy link to take down or delete a site" title="Copy link to take down or delete a site"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>To remove access without deleting a Site, open its sharing settings and restrict
 access to yourself or selected people. Confirm that the previous audience can no
-longer open it.
-
-To permanently delete a Site:
-
-1. Open **Sites** and locate the Site.
-2. Select **Delete site** and follow the instructions in the prompt.
-3. Enter the Site slug, then select **Permanently delete**.
-
-Deleting a Site permanently removes it. You can't restore a deleted Site.
-
-## Understand limits and unsupported uses
-
-Sites hosts web experiences that run in the supported Sites runtime. Some
+longer open it.</p>
+<p>To permanently delete a Site:</p>
+<ol>
+<li>Open <strong>Sites</strong> and locate the Site.</li>
+<li>Select <strong>Delete site</strong> and follow the instructions in the prompt.</li>
+<li>Enter the Site slug, then select <strong>Permanently delete</strong>.</li>
+</ol>
+<p>Deleting a Site permanently removes it. You can’t restore a deleted Site.</p>
+<h2 id="understand-limits-and-unsupported-uses" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Understand limits and unsupported uses</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="understand-limits-and-unsupported-uses" aria-label="Copy link to understand limits and unsupported uses" title="Copy link to understand limits and unsupported uses"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>Sites hosts web experiences that run in the supported Sites runtime. Some
 frameworks, private networks, databases, background services, and hosting
-patterns aren't supported.
+patterns aren’t supported.</p>
+<p>HTTP, HTTPS, and WebSockets are supported. Raw inbound and outbound TCP
+connections aren’t.</p>
+<p>Each Site has these storage limits:</p>
 
-HTTP, HTTPS, and WebSockets are supported. Raw inbound and outbound TCP
-connections aren't.
 
-Each Site has these storage limits:
 
-| Resource            | Limit                  |
-| ------------------- | ---------------------- |
-| D1 database storage | 10 GB                  |
-| R2 object storage   | No fixed storage limit |
 
-Sites doesn't support data residency or inference residency at launch. This
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="md:max-w-5xl mx-auto overflow-x-auto"><table class="w-full "><thead><tr><th>Resource</th><th>Limit</th></tr></thead><tbody><tr><td>D1 database storage</td><td>10 GB</td></tr><tr><td>R2 object storage</td><td>No fixed storage limit</td></tr></tbody></table></div>
+<p>Sites doesn’t support data residency or inference residency at launch. This
 includes deployed Sites, Site code, D1 and R2 data and file storage, generated
-artifacts, and logs.
-
-Don't use Sites to process Protected Health Information or payment-card data;
+artifacts, and logs.</p>
+<p>Don’t use Sites to process Protected Health Information or payment-card data;
 target children under 13 or the applicable age of digital consent; enable
 financial transactions; distribute malware; enable phishing; impersonate people
 or organizations; or otherwise violate OpenAI policies. See
-[Creating and managing ChatGPT Sites](https://help.openai.com/en/articles/20001339)
-for the current limits and policy links.
+<a href="https://help.openai.com/en/articles/20001339">Creating and managing ChatGPT Sites</a>
+for the current limits and policy links.</p>
+<h2 id="related-documentation" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] " ><span class="min-w-0">Related documentation</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="related-documentation" aria-label="Copy link to related documentation" title="Copy link to related documentation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-id="app" data-ids="[&#34;app&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface"> <ul>
+<li><a href="/codex/app">ChatGPT desktop app</a> introduces app navigation, projects, and chats.</li>
+<li><a href="/codex/code-review?surface=app">Review and ship changes</a> explains how to inspect source
+changes before publishing them.</li>
+</ul> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
 
-## Related documentation
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
 
-<ContentModeSwitch group="codex-surface" id="app">
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
 
-- [ChatGPT desktop app](https://learn.chatgpt.com/docs/app) introduces app navigation, projects, and chats.
-- [Review and ship changes](https://learn.chatgpt.com/docs/code-review?surface=app) explains how to inspect source
-  changes before publishing them.
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
 
-</ContentModeSwitch>
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
 
-<ContentModeSwitch group="codex-surface" ids="cli,ide">
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
 
-- [Projects and chats](https://learn.chatgpt.com/docs/projects) explains how folder and workspace
-  context carries across chats.
-- [Review and ship changes](https://learn.chatgpt.com/docs/code-review) explains the review workflow for
-  each Codex client.
-- [Sandboxing](https://learn.chatgpt.com/docs/sandboxing) explains the local execution boundary.
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
 
-</ContentModeSwitch>
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
 
-<ContentModeSwitch group="codex-surface" id="web">
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
 
-- [Open Sites in ChatGPT](https://chatgpt.com/sites) to return to Sites you've
-  created.
-- [Projects and chats](https://learn.chatgpt.com/docs/projects?surface=web) explains how to keep
-  related chats and source files together.
-- [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer?surface=web) explains how to review
-  generated files in ChatGPT web.
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
 
-</ContentModeSwitch>
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-ids="[&#34;cli&#34;,&#34;ide&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface" data-markdown-ignore hidden> <ul>
+<li><a href="/codex/projects">Projects and chats</a> explains how folder and workspace
+context carries across chats.</li>
+<li><a href="/codex/code-review">Review and ship changes</a> explains the review workflow for
+each Codex client.</li>
+<li><a href="/codex/sandboxing">Sandboxing</a> explains the local execution boundary.</li>
+</ul> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
+
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
+
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
+
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
+
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
+
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
+
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
+
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
+
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<div class="content-mode-switch" data-content-mode-switch data-group="codex-surface" data-id="web" data-ids="[&#34;web&#34;]" data-default="app" data-choices="[&#34;app&#34;,&#34;web&#34;,&#34;cli&#34;,&#34;ide&#34;]" data-query-param="surface" data-markdown-ignore hidden> <ul>
+<li><a href="https://chatgpt.com/sites">Open Sites in ChatGPT</a> to return to Sites you’ve
+created.</li>
+<li><a href="/codex/projects?surface=web">Projects and chats</a> explains how to keep
+related chats and source files together.</li>
+<li><a href="/codex/artifacts-viewer?surface=web">Work with files</a> explains how to review
+generated files in ChatGPT web.</li>
+</ul> </div> <script data-astro-rerun>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+    const { group, default: defaultValue, queryParam = group } = root.dataset;
+    const modeIds = JSON.parse(root.dataset.ids || "[]");
+    const choices = JSON.parse(root.dataset.choices || "[]");
+    const storageKey = "oai/docs/contentMode";
+    const resolveValue = () => {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get(queryParam) ?? params.get(group);
+      if (fromQuery !== null) {
+        // Match the selector's invalid-query fallback instead of restoring a
+        // different stored value while the URL normalizes to the default.
+        return choices.includes(fromQuery) ? fromQuery : defaultValue;
+      }
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        if (stored && stored[group] && choices.includes(stored[group])) {
+          return stored[group];
+        }
+      } catch (error) {
+        // ignore parse errors
+      }
+      return defaultValue;
+    };
+
+    const normalizeSurfaceAnchors = (value) => {
+      if (group !== "codex-surface" || !modeIds.includes(value)) return;
+
+      root
+        .querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+        .forEach((heading) => {
+          const originalId =
+            heading.dataset.contentModeOriginalId ||
+            modeIds.reduce(
+              (candidate, modeId) =>
+                candidate.startsWith(`${modeId}-`)
+                  ? candidate.slice(modeId.length + 1)
+                  : candidate,
+              heading.id
+            );
+          heading.dataset.contentModeOriginalId = originalId;
+          heading.id = `${value}-${originalId}`;
+
+          heading.querySelectorAll("[data-anchor-id]").forEach((anchor) => {
+            anchor.dataset.anchorId = heading.id;
+          });
+        });
+
+      root.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const currentHash = link.getAttribute("href")?.slice(1);
+        if (!currentHash) return;
+        const originalHash =
+          link.dataset.contentModeOriginalHash ||
+          modeIds.reduce(
+            (candidate, modeId) =>
+              candidate.startsWith(`${modeId}-`)
+                ? candidate.slice(modeId.length + 1)
+                : candidate,
+            currentHash
+          );
+        link.dataset.contentModeOriginalHash = originalHash;
+        link.setAttribute("href", `#${value}-${originalHash}`);
+      });
+    };
+
+    const findHeading = (surfaceRoot, headingId) =>
+      Array.from(
+        surfaceRoot.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+      ).find((heading) => heading.id === headingId);
+
+    const findSurfaceHeading = (surfaceRoot, hash) => {
+      const surfaceIds = JSON.parse(surfaceRoot.dataset.ids || "[]");
+      return surfaceIds.some(
+        (surfaceId) =>
+          choices.includes(surfaceId) &&
+          findHeading(surfaceRoot, `${surfaceId}-${hash}`)
+      );
+    };
+
+    const restoreLegacySurfaceAnchor = () => {
+      if (group !== "codex-surface" || !window.location.hash) return;
+
+      let hash = window.location.hash.slice(1);
+      try {
+        hash = decodeURIComponent(hash);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+      if (!hash) return;
+
+      const surfaceRoots = Array.from(
+        document.querySelectorAll(
+          '[data-content-mode-switch][data-group="codex-surface"]'
+        )
+      );
+      if (surfaceRoots.some((surfaceRoot) => findHeading(surfaceRoot, hash))) {
+        return;
+      }
+      const matches = surfaceRoots.filter((surfaceRoot) =>
+        findSurfaceHeading(surfaceRoot, hash)
+      );
+      const params = new URLSearchParams(window.location.search);
+      const explicitQueryValue = params.get(queryParam) ?? params.get(group);
+      const hasExplicitQueryValue = explicitQueryValue !== null;
+      const selectedValue = resolveValue();
+      const selectedMatch = matches.find((surfaceRoot) =>
+        JSON.parse(surfaceRoot.dataset.ids || "[]").includes(selectedValue)
+      );
+      const targetRoot =
+        selectedMatch ??
+        (!hasExplicitQueryValue && matches.length === 1 ? matches[0] : null);
+      if (!targetRoot || targetRoot !== root) return;
+
+      const targetIds = JSON.parse(targetRoot.dataset.ids || "[]");
+      const targetValue = targetIds.includes(selectedValue)
+        ? selectedValue
+        : targetIds.includes(defaultValue)
+          ? defaultValue
+          : targetIds[0];
+      if (!targetValue) return;
+      params.delete(group);
+      params.set(queryParam, targetValue);
+      const nextSearch = params.toString();
+      const nextHash = `${targetValue}-${hash}`;
+      const next = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}#${nextHash}`;
+
+      try {
+        const stored = JSON.parse(
+          window.localStorage.getItem(storageKey) || "{}"
+        );
+        stored[group] = targetValue;
+        window.localStorage.setItem(storageKey, JSON.stringify(stored));
+      } catch (error) {
+        // Continue without persistence when storage isn't available.
+      }
+
+      window.history.replaceState({}, "", next);
+      window.dispatchEvent(new PopStateEvent("popstate"));
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    };
+
+    const applyValue = (value) => {
+      if (!value) return;
+      if (modeIds.includes(value)) {
+        normalizeSurfaceAnchors(value);
+        root.removeAttribute("hidden");
+        root.removeAttribute("data-markdown-ignore");
+      } else {
+        root.setAttribute("hidden", "");
+        root.setAttribute("data-markdown-ignore", "");
+      }
+      requestAnimationFrame(() => {
+        if (modeIds.includes(value) && window.location.hash) {
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }
+        document.dispatchEvent(new CustomEvent("toc:refresh"));
+      });
+    };
+
+    const initialValue = resolveValue();
+    const initialAnchorValue = modeIds.includes(initialValue)
+      ? initialValue
+      : modeIds[0];
+    normalizeSurfaceAnchors(initialAnchorValue);
+    applyValue(initialValue);
+    requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    const handleContentModeSet = (event) => {
+      const detail = event?.detail || {};
+      if (detail.group === group && typeof detail.value === "string") {
+        applyValue(detail.value);
+      }
+    };
+    const handlePopState = () => applyValue(resolveValue());
+    const handleHashChange = () =>
+      requestAnimationFrame(restoreLegacySurfaceAnchor);
+
+    document.addEventListener("content-mode:set", handleContentModeSet);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("hashchange", handleHashChange);
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        document.removeEventListener("content-mode:set", handleContentModeSet);
+        window.removeEventListener("popstate", handlePopState);
+        window.removeEventListener("hashchange", handleHashChange);
+      },
+      { once: true }
+    );
+  })();
+</script>  </article>  </div> </div> </div> <script>
+    const alignHeadingHash = () => {
+      if (!window.location.hash) return;
+
+      let slug = window.location.hash.slice(1);
+      try {
+        slug = decodeURIComponent(slug);
+      } catch (error) {
+        // Keep the encoded hash when it can't be decoded.
+      }
+
+      requestAnimationFrame(() => {
+        document
+          .getElementById(slug)
+          ?.scrollIntoView({ behavior: "auto", block: "start" });
+      });
+    };
+
+    alignHeadingHash();
+    window.addEventListener("hashchange", alignHeadingHash);
+    document.addEventListener("astro:page-load", alignHeadingHash);
+
+    const copyHeadingLink = async (slug) => {
+      const url = `${location.origin}${location.pathname}${location.search}#${slug}`;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        try {
+          await navigator.clipboard.writeText(url);
+          return;
+        } catch (error) {
+          console.warn("Copy to clipboard failed", error);
+        }
+      }
+
+      window.prompt("Copy link", url);
+    };
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const button = target.closest("[data-anchor-id]");
+      if (!button) return;
+
+      const slug = button.getAttribute("data-anchor-id");
+      if (!slug) return;
+
+      event.preventDefault();
+      copyHeadingLink(slug);
+      const heading = document.getElementById(slug);
+      if (heading) {
+        heading.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      history.replaceState(null, "", `#${slug}`);
+    });
+  </script>  <div class="mx-4 sm:mx-8 md:mx-auto md:w-full md:max-w-6xl px-4 md:px-12 xl:px-4"> <div class="grid grid-cols-1 gap-12 xl:grid-cols-[minmax(0,1fr)_200px]"> <nav class="w-full mb-8 px-0"><div class="flex justify-between items-center"><a href="/codex/projects" class="flex items-end gap-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-800 dark:text-gray-200 mb-1 " ><path d="M3 12C3 11.7348 3.10536 11.4804 3.29289 11.2929L10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289C12.0976 4.68342 12.0976 5.31658 11.7071 5.70711L6.41421 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13L6.41422 13L11.7071 18.2929C12.0976 18.6834 12.0976 19.3166 11.7071 19.7071C11.3166 20.0976 10.6834 20.0976 10.2929 19.7071L3.29289 12.7071C3.10536 12.5196 3 12.2652 3 12Z" fill="currentColor"></path></svg><div class="flex flex-col"><div class="text-xs font-bold text-gray-800 dark:text-gray-200">
+Previous
+</div><div class="text-sm text-gray-500 dark:text-gray-400">Projects and chats</div></div></a><a href="/codex/visualizations" class="flex items-end gap-2"><div class="flex flex-col"><div class="text-xs font-bold text-gray-800 dark:text-gray-200">
+Next
+</div><div class="text-sm text-gray-500 dark:text-gray-400">Visualizations</div></div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-800 dark:text-gray-200 mb-1 " ><path d="M21 12C21 12.2652 20.8946 12.5196 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11L17.5858 11L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C20.8946 11.4804 21 11.7348 21 12Z" fill="currentColor"></path></svg></a></div></nav> <div class="hidden xl:block"></div> </div> </div> </main> </div> </div> <script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();</script><astro-island uid="DQ4jb" component-url="/_astro/Analytics.fv2Dvl4A.js" component-export="default" renderer-url="/_astro/client.DZeCTsdm.js" props="{}" ssr client="only" opts="{&quot;name&quot;:&quot;VercelAnalyticsClient&quot;,&quot;value&quot;:&quot;solid-js&quot;}"></astro-island> <vercel-speed-insights data-props="{}" data-params="{&#34;slug&#34;:&#34;sites&#34;}" data-pathname="/codex/sites/"></vercel-speed-insights> <script type="module">var o="@vercel/speed-insights",u="1.3.1",f=()=>{window.si||(window.si=function(...r){(window.siq=window.siq||[]).push(r)})};function l(){return typeof window<"u"}function h(){try{const e="production"}catch{}return"production"}function d(){return h()==="development"}function v(e,r){if(!e||!r)return e;let n=e;try{const t=Object.entries(r);for(const[s,i]of t)if(!Array.isArray(i)){const a=c(i);a.test(n)&&(n=n.replace(a,`/[${s}]`))}for(const[s,i]of t)if(Array.isArray(i)){const a=c(i.join("/"));a.test(n)&&(n=n.replace(a,`/[...${s}]`))}return n}catch{return e}}function c(e){return new RegExp(`/${g(e)}(?=[/?#]|$)`)}function g(e){return e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}function m(e){return e.scriptSrc?e.scriptSrc:d()?"https://va.vercel-scripts.com/v1/speed-insights/script.debug.js":e.dsn?"https://va.vercel-scripts.com/v1/speed-insights/script.js":e.basePath?`${e.basePath}/speed-insights/script.js`:"/_vercel/speed-insights/script.js"}function w(e={}){var r;if(!l()||e.route===null)return null;f();const n=m(e);if(document.head.querySelector(`script[src*="${n}"]`))return null;e.beforeSend&&((r=window.si)==null||r.call(window,"beforeSend",e.beforeSend));const t=document.createElement("script");return t.src=n,t.defer=!0,t.dataset.sdkn=o+(e.framework?`/${e.framework}`:""),t.dataset.sdkv=u,e.sampleRate&&(t.dataset.sampleRate=e.sampleRate.toString()),e.route&&(t.dataset.route=e.route),e.endpoint?t.dataset.endpoint=e.endpoint:e.basePath&&(t.dataset.endpoint=`${e.basePath}/speed-insights/vitals`),e.dsn&&(t.dataset.dsn=e.dsn),d()&&e.debug===!1&&(t.dataset.debug="false"),t.onerror=()=>{console.log(`[Vercel Speed Insights] Failed to load script from ${n}. Please check if any content blockers are enabled and try again.`)},document.head.appendChild(t),{setRoute:s=>{t.dataset.route=s??void 0}}}function p(){try{return}catch{}}customElements.define("vercel-speed-insights",class extends HTMLElement{constructor(){super();try{const r=JSON.parse(this.dataset.props??"{}"),n=JSON.parse(this.dataset.params??"{}"),t=v(this.dataset.pathname??"",n);w({route:t,...r,framework:"astro",basePath:p(),beforeSend:window.speedInsightsBeforeSend})}catch(r){throw new Error(`Failed to parse SpeedInsights properties: ${r}`)}}});</script> <div data-docs-agent-root data-chatkit-api-url="/api/docs-agent/chatkit" data-chatkit-domain-key="domain_pk_69f4ea0d87748194b9ad4d8ba39fc5710f6f8241026056cb" data-docs-agent-site-domain="developers" data-chatkit-greeting="What can I help you with?" data-chatkit-start-prompts-by-route="{&#34;home&#34;:[{&#34;label&#34;:&#34;Ask a question&#34;,&#34;prompt&#34;:&#34;What is the Docs MCP server?&#34;,&#34;icon&#34;:&#34;circle-question&#34;},{&#34;label&#34;:&#34;Find a page&#34;,&#34;prompt&#34;:&#34;Show me OpenAI models&#34;,&#34;icon&#34;:&#34;search&#34;},{&#34;label&#34;:&#34;Build a custom guide&#34;,&#34;prompt&#34;:&#34;I want to build an interactive webapp that has a huge microphone in the center allowing to chat in Realtime&#34;,&#34;icon&#34;:&#34;square-code&#34;}],&#34;api&#34;:[{&#34;label&#34;:&#34;Ask a question&#34;,&#34;prompt&#34;:&#34;What are the recommended prompting best practices for building with the latest model?&#34;,&#34;icon&#34;:&#34;circle-question&#34;},{&#34;label&#34;:&#34;Find a page&#34;,&#34;prompt&#34;:&#34;show me a page to compare models&#34;,&#34;icon&#34;:&#34;search&#34;},{&#34;label&#34;:&#34;Build a custom guide&#34;,&#34;prompt&#34;:&#34;I want to build a customer support app with realtime voice&#34;,&#34;icon&#34;:&#34;square-code&#34;}],&#34;codex&#34;:[{&#34;label&#34;:&#34;Ask a question&#34;,&#34;prompt&#34;:&#34;What's the latest model to use with ChatGPT?&#34;,&#34;icon&#34;:&#34;circle-question&#34;},{&#34;label&#34;:&#34;Find a page&#34;,&#34;prompt&#34;:&#34;Do you have guidance on prompting?&#34;,&#34;icon&#34;:&#34;search&#34;},{&#34;label&#34;:&#34;Build a custom guide&#34;,&#34;prompt&#34;:&#34;I want to build an internal dashboard that gets updated with data from slack and spreadsheets and which allows to visualize weekly progress&#34;,&#34;icon&#34;:&#34;square-code&#34;}],&#34;chatgpt&#34;:[{&#34;label&#34;:&#34;Ask a question&#34;,&#34;prompt&#34;:&#34;What are best practices for building a plugin?&#34;,&#34;icon&#34;:&#34;circle-question&#34;},{&#34;label&#34;:&#34;Find a page&#34;,&#34;prompt&#34;:&#34;Show me the optional UI guidelines for plugins&#34;,&#34;icon&#34;:&#34;search&#34;},{&#34;label&#34;:&#34;Build a custom guide&#34;,&#34;prompt&#34;:&#34;Help me build a plugin that proposes a quiz to find the best match from my list of products&#34;,&#34;icon&#34;:&#34;square-code&#34;}],&#34;resources&#34;:[{&#34;label&#34;:&#34;Ask a question&#34;,&#34;prompt&#34;:&#34;What is the Docs MCP server?&#34;,&#34;icon&#34;:&#34;circle-question&#34;},{&#34;label&#34;:&#34;Find a page&#34;,&#34;prompt&#34;:&#34;Show me the Codex meetups page&#34;,&#34;icon&#34;:&#34;search&#34;},{&#34;label&#34;:&#34;Build a custom guide&#34;,&#34;prompt&#34;:&#34;I want to build an interactive webapp that has a huge microphone in the center allowing to chat in Realtime&#34;,&#34;icon&#34;:&#34;square-code&#34;}]}" data-astro-transition-persist="docs-agent-launcher" class="docs-agent-root"><button type="button" data-docs-agent-open aria-haspopup="dialog" aria-expanded="false" aria-controls="docs-agent-panel" class="fixed bottom-5 right-5 z-50 inline-flex h-11 items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-primary-solid px-4 text-sm font-medium text-primary-solid shadow-[0_16px_48px_-18px_rgba(15,23,42,0.45)] transition-colors hover:bg-primary-solid-hover active:bg-primary-solid-active focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-soft-active focus-visible:ring-offset-2 focus-visible:ring-offset-surface"><span>Ask AI</span></button><div id="docs-agent-panel" data-docs-agent-panel role="dialog" aria-labelledby="docs-agent-title" class="fixed inset-x-0 bottom-0 z-[80] flex h-[var(--docs-agent-drawer-height)] flex-col overflow-hidden rounded-t-2xl border border-subtle bg-surface transition-transform duration-300 ease-out md:inset-y-0 md:left-auto md:right-0 md:h-auto md:w-[var(--docs-agent-panel-width)] md:rounded-none md:border-y-0 md:border-r-0"><header class="flex h-16 shrink-0 items-center justify-between border-b border-subtle px-4"><h2 id="docs-agent-title" class="text-sm font-semibold text-default">
+Docs agent
+</h2><div class="flex items-center gap-1.5"><button type="button" data-docs-agent-new aria-label="Start a new docs agent chat" title="Start a new chat" class="inline-flex h-8 w-8 items-center justify-center rounded-md text-secondary transition-colors hover:bg-primary-soft-alpha hover:text-default"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="h-4 w-4 " ><path fill-rule="evenodd" d="M16.793 2.793a3.121 3.121 0 1 1 4.414 4.414l-8.5 8.5A1 1 0 0 1 12 16H9a1 1 0 0 1-1-1v-3a1 1 0 0 1 .293-.707l8.5-8.5Zm3 1.414a1.121 1.121 0 0 0-1.586 0L10 12.414V14h1.586l8.207-8.207a1.121 1.121 0 0 0 0-1.586ZM6 5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4a1 1 0 1 1 2 0v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h4a1 1 0 1 1 0 2H6Z" clip-rule="evenodd"></path></svg></button><button type="button" data-docs-agent-close aria-label="Close docs agent" class="inline-flex h-8 w-8 items-center justify-center rounded-md text-secondary transition-colors hover:bg-primary-soft-alpha hover:text-default"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 " ><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div></header><div class="relative min-h-0 flex-1"><p data-docs-agent-status class="absolute inset-x-4 top-4 rounded-lg border border-subtle bg-surface-secondary p-3 text-sm text-secondary">
+Loading docs agent...
+</p><openai-chatkit id="docs-agent-chatkit" class="block h-full w-full"></openai-chatkit></div></div></div><script>(() => {
+  const registry = window.customElements;
+  if (!registry || window.__docsAgentChatKitMoveGuardInstalled) return;
+  window.__docsAgentChatKitMoveGuardInstalled = true;
+
+  // Astro preserves the launcher with Element.moveBefore(). Registering this
+  // callback before ChatKit is defined prevents its reconnect hooks from
+  // replacing the live message-bridge iframe during that move.
+  const registryPrototype = Object.getPrototypeOf(registry);
+  const defineDescriptor = Object.getOwnPropertyDescriptor(
+    registryPrototype,
+    "define"
+  );
+  if (!defineDescriptor?.value) return;
+
+  Object.defineProperty(registryPrototype, "define", {
+    ...defineDescriptor,
+    value(name, constructor, options) {
+      if (
+        name === "openai-chatkit" &&
+        !("connectedMoveCallback" in constructor.prototype)
+      ) {
+        Object.defineProperty(
+          constructor.prototype,
+          "connectedMoveCallback",
+          {
+            configurable: true,
+            value() {},
+          }
+        );
+      }
+
+      const result = defineDescriptor.value.call(
+        this,
+        name,
+        constructor,
+        options
+      );
+      if (name === "openai-chatkit") {
+        Object.defineProperty(registryPrototype, "define", defineDescriptor);
+      }
+      return result;
+    },
+  });
+})();</script><script src="https://cdn.platform.openai.com/deployments/chatkit/chatkit.js" async></script><script type="module" src="/_astro/DocsAgentLauncher.astro_astro_type_script_index_0_lang.B_ba8fcZ.js"></script><script>
+  function initializeDocsAgentLauncher() {
+    const root = document.querySelector("[data-docs-agent-root]");
+    if (!root || root.dataset.initialized === "true") return;
+    if (
+      typeof window.__createDocsAgentNavigationQueue !== "function" ||
+      typeof window.__getDocsAgentNavigationTarget !== "function"
+    ) {
+      return;
+    }
+
+    const mobileOpenButton = root.querySelector("button[data-docs-agent-open]");
+    const closeButton = root.querySelector("[data-docs-agent-close]");
+    const newButton = root.querySelector("[data-docs-agent-new]");
+    const panel = root.querySelector("[data-docs-agent-panel]");
+    const status = root.querySelector("[data-docs-agent-status]");
+    let chatkit = root.querySelector("openai-chatkit");
+    const apiURL = root.dataset.chatkitApiUrl;
+    const domainKey = root.dataset.chatkitDomainKey || "local-dev";
+    const siteDomain =
+      root.dataset.docsAgentSiteDomain === "chatgpt" ? "chatgpt" : "developers";
+    const startGreeting =
+      root.dataset.chatkitGreeting || "OpenAI developer docs";
+    const startPromptsByParentRoute = (() => {
+      try {
+        const parsed = JSON.parse(
+          root.dataset.chatkitStartPromptsByRoute || "{}"
+        );
+        return parsed && typeof parsed === "object" && !Array.isArray(parsed)
+          ? parsed
+          : {};
+      } catch {
+        return {};
+      }
+    })();
+    const docsAgentSessionStorageKey = "docs-agent.chatkit-session-id";
+    const uuidPattern =
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+    const randomUuid = () => {
+      if (window.crypto?.randomUUID) {
+        return window.crypto.randomUUID();
+      }
+
+      const bytes = new Uint8Array(16);
+      if (window.crypto?.getRandomValues) {
+        window.crypto.getRandomValues(bytes);
+      } else {
+        for (let index = 0; index < bytes.length; index += 1) {
+          bytes[index] = Math.floor(Math.random() * 256);
+        }
+      }
+      bytes[6] = (bytes[6] & 0x0f) | 0x40;
+      bytes[8] = (bytes[8] & 0x3f) | 0x80;
+
+      const hex = Array.from(bytes, (byte) =>
+        byte.toString(16).padStart(2, "0")
+      );
+      return [
+        hex.slice(0, 4).join(""),
+        hex.slice(4, 6).join(""),
+        hex.slice(6, 8).join(""),
+        hex.slice(8, 10).join(""),
+        hex.slice(10, 16).join(""),
+      ].join("-");
+    };
+
+    let docsAgentSessionIdValue = null;
+
+    const storeDocsAgentSessionId = (sessionId) => {
+      docsAgentSessionIdValue = sessionId;
+      try {
+        window.sessionStorage.setItem(docsAgentSessionStorageKey, sessionId);
+      } catch {
+        // Ignore storage failures.
+      }
+      return sessionId;
+    };
+
+    const resetDocsAgentSessionId = () =>
+      storeDocsAgentSessionId(randomUuid().toLowerCase());
+
+    const docsAgentSessionId = () => {
+      if (
+        docsAgentSessionIdValue &&
+        uuidPattern.test(docsAgentSessionIdValue)
+      ) {
+        return docsAgentSessionIdValue.toLowerCase();
+      }
+      try {
+        const stored = window.sessionStorage.getItem(
+          docsAgentSessionStorageKey
+        );
+        if (stored && uuidPattern.test(stored)) {
+          docsAgentSessionIdValue = stored.toLowerCase();
+          return docsAgentSessionIdValue;
+        }
+      } catch {
+        // Fall through and create an in-memory session id.
+      }
+      return resetDocsAgentSessionId();
+    };
+
+    if (
+      !mobileOpenButton ||
+      !closeButton ||
+      !newButton ||
+      !(panel instanceof HTMLElement) ||
+      !chatkit ||
+      !apiURL
+    ) {
+      return;
+    }
+
+    let chatkitInitialized = false;
+    let chatkitResponseActive = false;
+    let chatkitTurnActive = false;
+    let docsAgentNavigationInProgress = false;
+    let chatkitReplacement = null;
+    let desiredPathname = window.location.pathname || "/";
+    let previousFocus = null;
+    let lastPageSelection = { text: "", capturedAt: 0 };
+    let conversationStartedTracked = false;
+
+    const selectedTextLimit = 3000;
+    const staleSelectionMs = 2 * 60 * 1000;
+    const docsAgentRequestTimeoutMs = 40 * 1000;
+    const docsAgentNavigationTimeoutMs = 8 * 1000;
+    const docsAgentTransitionWaitTimeoutMs = 15 * 1000;
+    const docsAgentInitializationTimeoutMs = 15 * 1000;
+    const docsAgentUnavailableMessage =
+      "The docs agent couldn't complete the request. Please retry.";
+    const chatKitUserTurnTypes = new Set([
+      "threads.create",
+      "threads.add_user_message",
+      "threads.retry_after_item",
+    ]);
+    const desktopPanelMedia = window.matchMedia("(min-width: 768px)");
+
+    const withTimeout = (operation, timeoutMs, message) =>
+      new Promise((resolve, reject) => {
+        const timeout = window.setTimeout(
+          () => reject(new Error(message)),
+          timeoutMs
+        );
+        Promise.resolve(operation).then(
+          (value) => {
+            window.clearTimeout(timeout);
+            resolve(value);
+          },
+          (error) => {
+            window.clearTimeout(timeout);
+            reject(error);
+          }
+        );
+      });
+
+    const requestDeadlineSignal = (existingSignal) => {
+      const controller = new AbortController();
+      const abort = (signal) => controller.abort(signal?.reason);
+      if (existingSignal) {
+        if (existingSignal.aborted) {
+          abort(existingSignal);
+        } else {
+          existingSignal.addEventListener(
+            "abort",
+            () => abort(existingSignal),
+            {
+              once: true,
+            }
+          );
+        }
+      }
+      window.setTimeout(
+        () => controller.abort(new Error("Docs agent request timed out")),
+        docsAgentRequestTimeoutMs
+      );
+      return controller.signal;
+    };
+
+    const chatKitErrorFrame = (message = docsAgentUnavailableMessage) =>
+      new TextEncoder().encode(
+        `data: ${JSON.stringify({
+          type: "error",
+          code: "custom",
+          message,
+          allow_retry: true,
+        })}\n\n`
+      );
+
+    const chatKitErrorResponse = (message = docsAgentUnavailableMessage) =>
+      new Response(chatKitErrorFrame(message), {
+        status: 200,
+        headers: {
+          "content-type": "text/event-stream; charset=utf-8",
+          "cache-control": "no-cache",
+        },
+      });
+
+    const chatKitFrameHasTerminalEvent = (frame) => {
+      const data = frame
+        .split("\n")
+        .filter((line) => line.startsWith("data: "))
+        .map((line) => line.slice("data: ".length))
+        .join("\n");
+      if (!data) return false;
+      try {
+        const payload = JSON.parse(data);
+        if (payload?.type === "error") return true;
+        return (
+          payload?.type === "thread.item.done" &&
+          payload?.item?.type === "assistant_message" &&
+          Array.isArray(payload.item.content) &&
+          payload.item.content.some(
+            (part) =>
+              typeof part?.text === "string" && Boolean(part.text.trim())
+          )
+        );
+      } catch {
+        return false;
+      }
+    };
+
+    const observeChatKitTerminalEvents = (state, chunk, final = false) => {
+      state.buffer += chunk
+        ? state.decoder.decode(chunk, { stream: !final })
+        : state.decoder.decode();
+      state.buffer = state.buffer.replace(/\r\n/g, "\n");
+      const frames = state.buffer.split("\n\n");
+      const trailingFrame = frames.pop() || "";
+      state.buffer = final ? "" : trailingFrame;
+      for (const frame of frames) {
+        if (chatKitFrameHasTerminalEvent(frame)) state.emitted = true;
+      }
+      if (
+        final &&
+        trailingFrame &&
+        chatKitFrameHasTerminalEvent(trailingFrame)
+      ) {
+        state.emitted = true;
+      }
+    };
+
+    const ensureUserTurnTerminalResponse = (response) => {
+      if (!response.body) return chatKitErrorResponse();
+      const reader = response.body.getReader();
+      const state = {
+        decoder: new TextDecoder(),
+        buffer: "",
+        emitted: false,
+      };
+      const body = new ReadableStream({
+        async pull(controller) {
+          try {
+            const result = await reader.read();
+            if (result.done) {
+              observeChatKitTerminalEvents(state, null, true);
+              if (!state.emitted) controller.enqueue(chatKitErrorFrame());
+              controller.close();
+              return;
+            }
+            observeChatKitTerminalEvents(state, result.value);
+            controller.enqueue(result.value);
+          } catch {
+            if (!state.emitted) controller.enqueue(chatKitErrorFrame());
+            controller.close();
+          }
+        },
+        cancel(reason) {
+          void reader.cancel(reason).catch(() => undefined);
+        },
+      });
+      return new Response(body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers: response.headers,
+      });
+    };
+    const syncOpenButtons = (expanded) => {
+      document
+        .querySelectorAll("button[data-docs-agent-open]")
+        .forEach((button) => {
+          button.setAttribute("aria-expanded", expanded);
+        });
+    };
+
+    const syncLayoutTargets = () => {
+      const isOpen = root.dataset.open === "true";
+      const isDesktopPanel = desktopPanelMedia.matches;
+      document.body.classList.toggle("docs-agent-open", isOpen);
+      if (isOpen) {
+        document.body.dataset.docsAgentOpen = "true";
+      } else {
+        delete document.body.dataset.docsAgentOpen;
+      }
+      syncOpenButtons(isOpen ? "true" : "false");
+      document.querySelectorAll("[data-docs-agent-page]").forEach((page) => {
+        if (page instanceof HTMLElement) {
+          page.classList.toggle("is-docs-agent-open", isOpen);
+          page.style.width =
+            isOpen && isDesktopPanel
+              ? "calc(100% - var(--docs-agent-panel-width))"
+              : "";
+          page.style.transform = isOpen
+            ? isDesktopPanel
+              ? "none"
+              : "translateY(calc(-1 * var(--docs-agent-drawer-height)))"
+            : "";
+        }
+      });
+
+      const header = document.getElementById("header");
+      header?.classList.toggle("is-docs-agent-open", isOpen);
+      if (header) {
+        const headerInner = header.firstElementChild;
+        const headerNav = header.querySelector("nav");
+        const headerSearchButton = header.querySelector(
+          "[data-header-search-button]"
+        );
+        header.style.width =
+          isOpen && isDesktopPanel
+            ? "calc(100% - var(--docs-agent-panel-width))"
+            : "";
+        if (headerInner instanceof HTMLElement) {
+          headerInner.style.gridTemplateColumns =
+            isOpen && isDesktopPanel ? "auto minmax(0, 1fr) auto" : "";
+        }
+        if (headerNav instanceof HTMLElement) {
+          headerNav.style.minWidth = isOpen && isDesktopPanel ? "0" : "";
+          headerNav.style.overflow = "";
+        }
+        if (headerSearchButton instanceof HTMLElement) {
+          headerSearchButton.style.display =
+            isOpen && isDesktopPanel ? "none" : "";
+        }
+
+        const leadingControls = headerNav?.previousElementSibling;
+        const trailingControls = headerNav?.nextElementSibling;
+        const marginBoxWidth = (element) => {
+          const styles = window.getComputedStyle(element);
+          const horizontalMargin =
+            (Number.parseFloat(styles.marginLeft) || 0) +
+            (Number.parseFloat(styles.marginRight) || 0);
+          return element.getBoundingClientRect().width + horizontalMargin;
+        };
+        const contextSubnavOffset =
+          isOpen &&
+          isDesktopPanel &&
+          leadingControls instanceof HTMLElement &&
+          trailingControls instanceof HTMLElement
+            ? (marginBoxWidth(leadingControls) -
+                marginBoxWidth(trailingControls)) /
+              2
+            : 0;
+        document.documentElement.style.setProperty(
+          "--docs-agent-context-subnav-offset",
+          `${contextSubnavOffset}px`
+        );
+      }
+
+      panel.classList.toggle("is-open", isOpen);
+      panel.style.transform = isOpen
+        ? isDesktopPanel
+          ? "translateX(0)"
+          : "translateY(0)"
+        : "";
+    };
+
+    const normalizeAnalyticsText = (value) =>
+      typeof value === "string" ? value.replace(/\s+/g, " ").trim() : "";
+
+    const analyticsSlug = (value, fallback) => {
+      const slug = normalizeAnalyticsText(value)
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "_")
+        .replace(/^_+|_+$/g, "");
+      return slug || fallback;
+    };
+
+    const normalizePathname = (pathname) => {
+      if (!pathname || pathname === "/") return "/";
+      return pathname.replace(/\/+$/, "") || "/";
+    };
+
+    const docsAgentParentRoute = (pathname) => {
+      const normalized = normalizePathname(pathname);
+
+      if (normalized === "/") return "home";
+      if (normalized === "/api" || normalized.startsWith("/api/")) {
+        return "api";
+      }
+      if (normalized === "/codex" || normalized.startsWith("/codex/")) {
+        return "codex";
+      }
+      if (
+        normalized === "/docs" ||
+        normalized.startsWith("/docs/") ||
+        normalized === "/use-cases" ||
+        normalized.startsWith("/use-cases/")
+      ) {
+        return "codex";
+      }
+      if (
+        normalized === "/chatgpt" ||
+        normalized.startsWith("/chatgpt/") ||
+        normalized === "/plugins" ||
+        normalized.startsWith("/plugins/") ||
+        normalized === "/commerce" ||
+        normalized.startsWith("/commerce/")
+      ) {
+        return "chatgpt";
+      }
+      if (
+        normalized === "/learn" ||
+        normalized.startsWith("/learn/") ||
+        normalized === "/community" ||
+        normalized.startsWith("/community/") ||
+        normalized === "/cookbook" ||
+        normalized.startsWith("/cookbook/") ||
+        normalized === "/showcase" ||
+        normalized.startsWith("/showcase/") ||
+        normalized === "/tracks" ||
+        normalized.startsWith("/tracks/") ||
+        normalized === "/blog" ||
+        normalized.startsWith("/blog/")
+      ) {
+        return "resources";
+      }
+
+      return "home";
+    };
+
+    const startPromptsForRoute = (
+      pathname = window.location.pathname || "/"
+    ) => {
+      const parentRoute = docsAgentParentRoute(pathname);
+      const prompts = startPromptsByParentRoute[parentRoute];
+
+      if (Array.isArray(prompts)) return prompts;
+      return Array.isArray(startPromptsByParentRoute.home)
+        ? startPromptsByParentRoute.home
+        : [];
+    };
+
+    const startPromptAnalyticsForRoute = (pathname) =>
+      startPromptsForRoute(pathname)
+        .map((prompt, index) => {
+          const promptText = normalizeAnalyticsText(prompt?.prompt);
+          if (!promptText) return null;
+          return {
+            id: analyticsSlug(prompt?.label, `prompt_${index + 1}`),
+            label:
+              normalizeAnalyticsText(prompt?.label) || `Prompt ${index + 1}`,
+            position: index + 1,
+            text: promptText,
+          };
+        })
+        .filter(Boolean);
+
+    const normalizeSelectedText = (value) =>
+      value.replace(/\r\n?/g, "\n").trim().slice(0, selectedTextLimit);
+
+    const nodeIsInDocsAgent = (node) => {
+      if (!node) return false;
+      const element =
+        node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
+      return element instanceof Element && root.contains(element);
+    };
+
+    const currentPageSelectionText = () => {
+      const selection = window.getSelection?.();
+      if (!selection || selection.isCollapsed) return "";
+      if (
+        nodeIsInDocsAgent(selection.anchorNode) ||
+        nodeIsInDocsAgent(selection.focusNode)
+      ) {
+        return "";
+      }
+
+      return normalizeSelectedText(selection.toString());
+    };
+
+    const rememberPageSelection = () => {
+      const text = currentPageSelectionText();
+      if (!text) return;
+      lastPageSelection = {
+        text,
+        capturedAt: Date.now(),
+      };
+    };
+
+    const selectedTextForAgentContext = () => {
+      const text = currentPageSelectionText();
+      if (text) {
+        lastPageSelection = {
+          text,
+          capturedAt: Date.now(),
+        };
+        return text;
+      }
+
+      if (Date.now() - lastPageSelection.capturedAt <= staleSelectionMs) {
+        return lastPageSelection.text;
+      }
+      return "";
+    };
+
+    const docsAgentPageContext = () => {
+      const context = {
+        route: `${window.location.pathname || "/"}${window.location.search}`,
+        siteDomain,
+      };
+      const selectedText = selectedTextForAgentContext();
+      if (selectedText) {
+        context.selectedText = selectedText;
+      }
+      return context;
+    };
+
+    const hasPageSelectionForAnalytics = () => {
+      if (currentPageSelectionText()) return true;
+      return Date.now() - lastPageSelection.capturedAt <= staleSelectionMs
+        ? Boolean(lastPageSelection.text)
+        : false;
+    };
+
+    const chatKitRequestInputText = (body) => {
+      const content = body?.params?.input?.content;
+      if (!Array.isArray(content)) return "";
+
+      return content
+        .map((part) =>
+          part?.type === "input_text" && typeof part.text === "string"
+            ? part.text
+            : ""
+        )
+        .filter(Boolean)
+        .join("\n")
+        .trim();
+    };
+
+    const defaultPromptMatch = (body) => {
+      const text = normalizeAnalyticsText(chatKitRequestInputText(body));
+      if (!text) return null;
+
+      const startPromptByText = new Map(
+        startPromptAnalyticsForRoute(window.location.pathname || "/").map(
+          (prompt) => [prompt.text, prompt]
+        )
+      );
+      return startPromptByText.get(text) || null;
+    };
+
+    const promptAnalyticsData = (prompt) =>
+      prompt
+        ? {
+            prompt_id: prompt.id,
+            prompt_label: prompt.label,
+            prompt_position: prompt.position,
+          }
+        : {};
+
+    const isDocsAgentApiRequest = (input) => {
+      try {
+        const requestUrl =
+          typeof input === "string" || input instanceof URL
+            ? new URL(input, window.location.href)
+            : new URL(input.url);
+        const configuredUrl = new URL(apiURL, window.location.href);
+        return requestUrl.href === configuredUrl.href;
+      } catch {
+        return false;
+      }
+    };
+
+    const docsAgentFetch = async (input, init) => {
+      if (!isDocsAgentApiRequest(input)) {
+        return window.fetch(input, init);
+      }
+
+      const nextInit = init ? { ...init } : {};
+      if (typeof nextInit.body === "string") {
+        try {
+          const body = JSON.parse(nextInit.body);
+          if (body && typeof body === "object" && !Array.isArray(body)) {
+            if (body.type === "threads.create" && !conversationStartedTracked) {
+              const prompt = defaultPromptMatch(body);
+              const promptData = promptAnalyticsData(prompt);
+              conversationStartedTracked = true;
+              trackDocsAgentEvent("docs_agent_conversation_started", {
+                entry_point: prompt ? "default_prompt" : "composer",
+                request_type: body.type,
+                has_page_selection: hasPageSelectionForAnalytics(),
+                ...promptData,
+              });
+              if (prompt) {
+                trackDocsAgentEvent("docs_agent_default_prompt_selected", {
+                  request_type: body.type,
+                  ...promptData,
+                });
+              }
+            }
+
+            const metadata =
+              body.metadata &&
+              typeof body.metadata === "object" &&
+              !Array.isArray(body.metadata)
+                ? body.metadata
+                : {};
+            body.metadata = {
+              ...metadata,
+              pageContext: docsAgentPageContext(),
+            };
+            nextInit.body = JSON.stringify(body);
+          }
+        } catch {
+          // Preserve the original body if it is not JSON.
+        }
+      }
+
+      const headers = new Headers(
+        nextInit.headers ||
+          (input instanceof Request ? input.headers : undefined)
+      );
+      headers.set("x-docs-agent-user", docsAgentSessionId());
+      nextInit.headers = headers;
+      nextInit.signal = requestDeadlineSignal(
+        nextInit.signal || (input instanceof Request ? input.signal : null)
+      );
+
+      let requestType = "";
+      if (typeof nextInit.body === "string") {
+        try {
+          requestType = JSON.parse(nextInit.body)?.type || "";
+        } catch {
+          // The proxy will return the protocol validation error.
+        }
+      }
+      const requireTerminalEvent = chatKitUserTurnTypes.has(requestType);
+      if (requireTerminalEvent) {
+        chatkitTurnActive = true;
+      }
+
+      try {
+        const response = await window.fetch(input, nextInit);
+        return requireTerminalEvent
+          ? ensureUserTurnTerminalResponse(response)
+          : response;
+      } catch (error) {
+        if (requireTerminalEvent) return chatKitErrorResponse();
+        throw error;
+      }
+    };
+
+    const clearLegacyStoredState = () => {
+      try {
+        window.localStorage.removeItem("docs-agent.panel-open");
+        window.localStorage.removeItem("docs-agent.thread-id");
+        window.localStorage.removeItem("docs-agent.user-id");
+      } catch {
+        // Ignore storage failures.
+      }
+    };
+
+    const showStatus = (message) => {
+      if (!status) return;
+      status.textContent = message;
+      status.hidden = false;
+    };
+
+    const hideStatus = () => {
+      if (status) status.hidden = true;
+    };
+
+    const getColorTheme = () => {
+      const html = document.documentElement;
+      return html.dataset.theme === "dark" || html.classList.contains("dark")
+        ? "dark"
+        : "light";
+    };
+
+    const normalizeClientToolArgs = (args) => {
+      if (!args) return {};
+      if (typeof args === "string") {
+        try {
+          return JSON.parse(args);
+        } catch {
+          return {};
+        }
+      }
+      return args;
+    };
+
+    const analyticsViewport = () =>
+      window.matchMedia("(min-width: 768px)").matches ? "desktop" : "mobile";
+
+    const trackDocsAgentEvent = (name, data = {}) => {
+      try {
+        window.__docsAgentTrackEvent?.(name, {
+          surface: "docs_agent",
+          route: window.location.pathname || "/",
+          viewport: analyticsViewport(),
+          ...data,
+        });
+      } catch {
+        // Ignore analytics failures.
+      }
+    };
+
+    const navigationTarget = (href, options) =>
+      window.__getDocsAgentNavigationTarget(
+        href,
+        window.location.href,
+        options
+      );
+
+    const navigateToHref = async (href, { externalNewTab = false } = {}) => {
+      const target = navigationTarget(href);
+      if (!target.ok) return target;
+      const routeHref = target.href;
+
+      if (
+        routeHref.startsWith("/") &&
+        typeof window.__docsAgentNavigate === "function"
+      ) {
+        docsAgentNavigationInProgress = true;
+        try {
+          await withTimeout(
+            window.__docsAgentNavigate(routeHref, { history: "push" }),
+            docsAgentNavigationTimeoutMs,
+            "Docs agent navigation timed out"
+          );
+        } catch (error) {
+          console.error("Docs agent navigation failed", error);
+          return { ok: false, error: "Navigation failed or timed out." };
+        } finally {
+          docsAgentNavigationInProgress = false;
+        }
+      } else if (externalNewTab) {
+        window.open(routeHref, "_blank", "noopener,noreferrer");
+      } else {
+        window.location.assign(routeHref);
+      }
+
+      return { ok: true, href: routeHref };
+    };
+
+    const navigationQueue =
+      window.__createDocsAgentNavigationQueue(navigateToHref);
+
+    const queueNavigationToHref = (href, options) => {
+      const target = navigationTarget(href, options);
+      if (!target.ok) return target;
+      navigationQueue.queue(target.href);
+      return target;
+    };
+
+    const chatKitTurnSettledCallbacks = new Set();
+
+    const chatKitTurnIsActive = () =>
+      chatkitResponseActive ||
+      chatkitTurnActive ||
+      navigationQueue.hasPending();
+
+    const notifyChatKitTurnSettled = () => {
+      if (chatKitTurnIsActive()) return;
+      for (const callback of chatKitTurnSettledCallbacks) {
+        callback();
+      }
+      chatKitTurnSettledCallbacks.clear();
+    };
+
+    const waitForChatKitTurnToSettle = (signal) => {
+      if (signal.aborted) return Promise.resolve("aborted");
+      if (!chatKitTurnIsActive()) return Promise.resolve("settled");
+
+      return new Promise((resolve) => {
+        let timeout;
+        const finish = (result) => {
+          window.clearTimeout(timeout);
+          signal.removeEventListener("abort", onAbort);
+          chatKitTurnSettledCallbacks.delete(onSettled);
+          resolve(result);
+        };
+        const onAbort = () => finish("aborted");
+        const onSettled = () => finish("settled");
+
+        signal.addEventListener("abort", onAbort, { once: true });
+        chatKitTurnSettledCallbacks.add(onSettled);
+        timeout = window.setTimeout(
+          () => finish("timed-out"),
+          docsAgentTransitionWaitTimeoutMs
+        );
+      });
+    };
+
+    const deferPageTransitionDuringChatKitTurn = (event) => {
+      if (docsAgentNavigationInProgress || !chatKitTurnIsActive()) return;
+      const loadPage = event.loader;
+      event.loader = async () => {
+        const result = await waitForChatKitTurnToSettle(event.signal);
+        if (result === "aborted" || event.signal.aborted) return;
+        if (result === "timed-out") {
+          // Asking Astro to cancel here makes it fall back to a full load. That
+          // is safer than moving a ChatKit frame whose turn did not terminate.
+          event.preventDefault();
+          return;
+        }
+        await loadPage();
+      };
+    };
+
+    const bindChatKitLifecycle = () => {
+      if (chatkit.dataset.docsAgentLifecycleBound === "true") return;
+      chatkit.dataset.docsAgentLifecycleBound = "true";
+      chatkit.addEventListener("chatkit.thread.change", (event) => {
+        const threadId = event?.detail?.threadId;
+        if (threadId === null) {
+          conversationStartedTracked = false;
+        }
+      });
+      chatkit.addEventListener("chatkit.response.start", () => {
+        chatkitResponseActive = true;
+        navigationQueue.onResponseStart();
+      });
+      chatkit.addEventListener("chatkit.response.end", () => {
+        chatkitResponseActive = false;
+        void navigationQueue
+          .onResponseEnd()
+          .then(() => {
+            if (!navigationQueue.hasPending()) {
+              chatkitTurnActive = false;
+              notifyChatKitTurnSettled();
+            }
+          })
+          .catch((error) => {
+            console.error("Docs agent navigation failed", error);
+          });
+      });
+      chatkit.addEventListener("chatkit.error", (event) => {
+        chatkitResponseActive = false;
+        chatkitTurnActive = false;
+        navigationQueue.clear();
+        notifyChatKitTurnSettled();
+        if (
+          event?.detail?.error?.name === "IntegrationError" ||
+          event?.detail?.error?.name === "DomainVerificationRequestError"
+        ) {
+          showStatus("Docs agent is unavailable.");
+        }
+      });
+    };
+
+    const buildChatKitOptions = () => ({
+      api: {
+        url: apiURL,
+        domainKey,
+        fetch: docsAgentFetch,
+      },
+      theme: {
+        colorScheme: getColorTheme(),
+      },
+      history: { enabled: false },
+      header: { enabled: false },
+      onClientTool(toolCall) {
+        const args = normalizeClientToolArgs(
+          toolCall?.params || toolCall?.arguments
+        );
+
+        if (toolCall?.name === "navigate_to_page") {
+          return queueNavigationToHref(args.href, { internalOnly: true });
+        }
+
+        if (toolCall?.name === "open_custom_guide") {
+          const guideHref =
+            args.href ||
+            (args.generated_id ? `/custom-guide/${args.generated_id}` : "");
+          trackDocsAgentEvent("docs_agent_custom_guide_opened", {
+            source: "client_tool",
+            guide_id: args.generated_id || "",
+            href: guideHref,
+          });
+          return queueNavigationToHref(guideHref);
+        }
+
+        return {
+          ok: false,
+          error: `Unknown client tool: ${toolCall?.name || "unknown"}.`,
+        };
+      },
+      widgets: {
+        onAction(action) {
+          const payload = normalizeClientToolArgs(action?.payload);
+
+          if (action?.type === "custom_guide.view") {
+            const guideHref =
+              payload.href ||
+              payload.url ||
+              (payload.generated_id
+                ? `/custom-guide/${payload.generated_id}`
+                : "");
+            trackDocsAgentEvent("docs_agent_custom_guide_opened", {
+              source: "widget_action",
+              guide_id: payload.generated_id || "",
+              href: guideHref,
+            });
+
+            return navigateToHref(guideHref);
+          }
+
+          if (action?.type === "docs_agent.navigate") {
+            const href = payload.href || payload.url || "";
+            trackDocsAgentEvent("docs_agent_suggested_page_opened", {
+              source: "widget_action",
+              href,
+              suggestion_title: payload.title || "",
+              suggestion_type: payload.type || "",
+            });
+
+            return navigateToHref(href, { externalNewTab: true });
+          }
+
+          return {
+            ok: false,
+            error: `Unknown widget action: ${action?.type || "unknown"}.`,
+          };
+        },
+      },
+      composer: {
+        placeholder: "Ask about docs or what you want to build",
+      },
+      startScreen: {
+        greeting: startGreeting,
+        prompts: startPromptsForRoute(desiredPathname),
+      },
+    });
+
+    const applyChatKitOptions = () => {
+      chatkit.setOptions(buildChatKitOptions());
+    };
+
+    // Existing ChatKit instances keep the options they were created with.
+    // Route changes only select the prompts for the next explicit new thread.
+    const syncDesiredPathnameForPageLoad = () => {
+      desiredPathname = window.location.pathname || "/";
+    };
+
+    const syncDesiredPathnameBeforeSwap = (event) => {
+      const destination = event?.to;
+      if (destination instanceof URL) {
+        desiredPathname = destination.pathname || "/";
+      } else if (typeof destination === "string") {
+        desiredPathname = new URL(destination, window.location.href).pathname;
+      }
+    };
+
+    const initializeChatKit = async () => {
+      if (chatkitInitialized) return;
+      showStatus("Loading docs agent...");
+
+      try {
+        await withTimeout(
+          customElements.whenDefined("openai-chatkit"),
+          docsAgentInitializationTimeoutMs,
+          "Docs agent initialization timed out"
+        );
+
+        bindChatKitLifecycle();
+        applyChatKitOptions();
+        chatkitInitialized = true;
+        hideStatus();
+      } catch (error) {
+        console.error("Failed to initialize Docs Agent ChatKit", error);
+        showStatus("Docs agent is unavailable.");
+      }
+    };
+
+    const resetChatKit = () => {
+      if (chatkitReplacement) return chatkitReplacement;
+      navigationQueue.clear();
+
+      chatkitReplacement = (async () => {
+        const nextChatKit = document.createElement("openai-chatkit");
+        nextChatKit.id = "docs-agent-chatkit";
+        nextChatKit.className = "block h-full w-full";
+        chatkit.replaceWith(nextChatKit);
+        chatkit = nextChatKit;
+        chatkitInitialized = false;
+        chatkitResponseActive = false;
+        chatkitTurnActive = false;
+        conversationStartedTracked = false;
+        resetDocsAgentSessionId();
+        await initializeChatKit();
+        notifyChatKitTurnSettled();
+      })();
+
+      void chatkitReplacement.then(
+        () => {
+          chatkitReplacement = null;
+        },
+        () => {
+          chatkitReplacement = null;
+        }
+      );
+      return chatkitReplacement;
+    };
+
+    const openPanel = () => {
+      if (root.dataset.open !== "true") {
+        trackDocsAgentEvent("docs_agent_panel_opened", {
+          source: "ask_button",
+          has_page_selection: hasPageSelectionForAnalytics(),
+        });
+      }
+      previousFocus = document.activeElement;
+      document.body.dataset.docsAgentOpen = "true";
+      document.body.classList.add("docs-agent-open");
+      root.dataset.open = "true";
+      root.classList.add("is-open");
+      syncLayoutTargets();
+      initializeChatKit();
+      requestAnimationFrame(() => closeButton.focus());
+    };
+
+    const closePanel = () => {
+      delete document.body.dataset.docsAgentOpen;
+      document.body.classList.remove("docs-agent-open");
+      delete root.dataset.open;
+      root.classList.remove("is-open");
+      syncLayoutTargets();
+      if (previousFocus instanceof HTMLElement) {
+        previousFocus.focus();
+      }
+    };
+
+    clearLegacyStoredState();
+    desktopPanelMedia.addEventListener("change", syncLayoutTargets);
+    document.addEventListener("selectionchange", rememberPageSelection);
+    document.addEventListener(
+      "astro:before-preparation",
+      deferPageTransitionDuringChatKitTurn
+    );
+    document.addEventListener(
+      "astro:before-swap",
+      syncDesiredPathnameBeforeSwap
+    );
+    document.addEventListener("astro:page-load", syncLayoutTargets);
+    document.addEventListener(
+      "astro:page-load",
+      syncDesiredPathnameForPageLoad
+    );
+    document.addEventListener("pointerdown", (event) => {
+      if (
+        event.target instanceof Element &&
+        event.target.closest("button[data-docs-agent-open]")
+      ) {
+        rememberPageSelection();
+      }
+    });
+    document.addEventListener("click", (event) => {
+      if (
+        event.target instanceof Element &&
+        event.target.closest("button[data-docs-agent-open]")
+      ) {
+        openPanel();
+      }
+    });
+    newButton.addEventListener("click", resetChatKit);
+    closeButton.addEventListener("click", closePanel);
+    window.addEventListener("docs-agent:close", closePanel);
+    panel.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closePanel();
+      }
+    });
+
+    root.dataset.initialized = "true";
+    syncLayoutTargets();
+  }
+
+  document.addEventListener("astro:page-load", initializeDocsAgentLauncher);
+  window.addEventListener(
+    "docs-agent:helpers-ready",
+    initializeDocsAgentLauncher
+  );
+  initializeDocsAgentLauncher();
+</script> <script type="module" src="/_astro/WebMcp.astro_astro_type_script_index_0_lang.BsrxwEGl.js"></script> <script type="module" src="/_astro/PageLayout.astro_astro_type_script_index_0_lang.zXTowJGj.js"></script> </body> </html>

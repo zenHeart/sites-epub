@@ -137,6 +137,8 @@ def compile_from_sources(
             )
         page.group = entry.group
         page.route = entry.route
+        if (not page.title or page.title == "Untitled") and entry.title:
+            page.title = entry.title
         pages.append(page)
     if not pages:
         raise ValueError("no pages to pack")
@@ -167,12 +169,39 @@ def compile_from_sources(
     )
 
 
-def fetch_source(entry: IndexEntry) -> str:
-    """Prefer readable HTML when the .md twin is React/MDX runtime source.
+def _has_image_markup(text: str) -> bool:
+    return "![" in text or "<img" in text.lower()
 
-    Mintlify "View as Markdown" / rel=alternate points at the MDX source. Pages
-    like claude-directory.md are `export const` + useMemo, not the rendered
-    article. The live HTML article is what the reader sees.
+
+def _html_body_has_content_images(html: str) -> bool:
+    """渲染页主容器内有正文图且文本量正常时返回 True。"""
+    from bs4 import BeautifulSoup
+
+    try:
+        soup = BeautifulSoup(html, "lxml")
+    except Exception:
+        return False
+    body = soup.find("main") or soup.find("article") or soup.body
+    if body is None:
+        return False
+    if len(body.get_text(" ", strip=True)) < 200:
+        return False
+    for img in body.find_all("img"):
+        src = img.get("src") or img.get("data-src")
+        if src and not src.startswith(("data:",)):
+            return True
+        # 懒加载站点常用空 src + CSS 背景图;保守跳过这类页面。
+    return False
+
+
+def fetch_source(entry: IndexEntry) -> str:
+    """Prefer readable HTML when the .md twin loses content.
+
+    Two known losses on md twins: (1) Mintlify "View as Markdown" / rel=alternate
+    points at MDX runtime source (claude-directory.md is export const + useMemo);
+    (2) some markdown exports strip every illustration (codex quickstart renders
+    7 screenshots the .md simply omits). In both cases the live HTML article is
+    what the reader sees.
     """
     md = ""
     try:
@@ -180,7 +209,9 @@ def fetch_source(entry: IndexEntry) -> str:
     except Exception:
         md = ""
     html = ""
-    need_html = _looks_missing(md) or looks_like_runtime_source(md)
+    need_html = (
+        _looks_missing(md) or looks_like_runtime_source(md) or not _has_image_markup(md)
+    )
     if need_html:
         try:
             html = fetch_text(entry.html_url)
@@ -189,6 +220,9 @@ def fetch_source(entry: IndexEntry) -> str:
     if looks_like_runtime_source(md) and html and not _looks_missing(html):
         return merge_explorer_into_html(html, md, entry.html_url)
     if not _looks_missing(md):
+        # md 本身可读但完全没有图:若 HTML 版正文确有插图,保真优先选 HTML。
+        if html and not _looks_missing(html) and _html_body_has_content_images(html):
+            return html
         return md
     return html
 
@@ -223,6 +257,45 @@ def corpus_dir(vendor: Vendor, root: Path | None = None) -> Path:
 def _origin(url: str) -> str:
     p = urlparse(url)
     return f"{p.scheme}://{p.netloc}"
+
+
+MAX_IMAGE_BYTES = 2_500_000
+
+
+def downscale_image_bytes(data: bytes, *, max_width: int = 1600) -> bytes:
+    """用 macOS 自带 sips 把过大位图等比降到 max_width 宽并压回阈值内。
+
+    抓取只在本地(含 macOS)运行;工具不可用或压缩无效时返回空 bytes,
+    由调用方按「放弃该图」处理。
+    """
+    import shutil
+    import subprocess
+    import tempfile
+
+    sips = shutil.which("sips")
+    if not sips:
+        return b""
+    suffix = ".png"
+    for attempt in (max_width, 1100, 800):
+        try:
+            with tempfile.TemporaryDirectory() as td:
+                src = Path(td) / f"in{suffix}"
+                out = Path(td) / f"out{suffix}"
+                src.write_bytes(data)
+                proc = subprocess.run(
+                    [sips, "--resampleWidth", str(attempt), "-Z", str(attempt * 4),
+                     "-o", str(out), str(src)],
+                    capture_output=True,
+                    timeout=30,
+                )
+                if proc.returncode != 0 or not out.is_file():
+                    continue
+                shrunk = out.read_bytes()
+                if len(shrunk) < MAX_IMAGE_BYTES:
+                    return shrunk
+        except Exception:
+            continue
+    return b""
 
 
 def ensure_vendor_icon(vendor: Vendor, vdir: Path, docs_html: str = "") -> None:
@@ -264,6 +337,7 @@ def fetch_vendor(
     *,
     root: Path | None = None,
     workers: int = 12,
+    refetch: bool = False,
 ) -> FetchResult:
     """Local incremental crawl. Writes corpus/ (pages, images, routes). No EPUB."""
     from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -342,13 +416,15 @@ def fetch_vendor(
         dest = pages_dir / f"{entry.route}.md"
         dest.parent.mkdir(parents=True, exist_ok=True)
         cached = dest.read_text(encoding="utf-8", errors="replace") if dest.is_file() else ""
-        if (
+        if not refetch and (
             cached
             and prev.get(entry.route) == content_hash(cached)
             and not _looks_missing(cached)
             and not looks_like_runtime_source(cached)
         ):
             return entry.route, cached, False
+        # refetch 绕过指纹缓存,让存量页面吃到新的 fetch_source 判定
+        # (如「md 无图回退 HTML」);默认增量模式仍直读缓存。
         text = fetch_source(entry)
         dest.write_text(text, encoding="utf-8")
         return entry.route, text, True
@@ -413,7 +489,11 @@ def fetch_vendor(
         if not data:
             return url, None
         if len(data) > 2_500_000:
-            return url, None
+            # EPUB 全量内嵌:超限大图先降采样压缩,能进阈值的照常入包,
+            # 避免「太大被拒」变成书里缺图。
+            data = downscale_image_bytes(data)
+            if not data or len(data) > 2_500_000:
+                return url, None
         if not Path(name).suffix:
             name = name + guess_ext(ctype, url)
         (image_dir / name).write_bytes(data)
