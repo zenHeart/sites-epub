@@ -8,7 +8,9 @@ Markdown / MDX / HTML 进 EPUB 时，按**站点上的读者体验**映射，而
 | 正文、列表、引用、行内 `code`/`kbd` | 保留，套 EPUB CSS | — |
 | 表格 | 真 `<table>`，有边框表头 | — |
 | 截图 / `<img>` / `<Frame>` | 嵌入 corpus 图；Frame → `<figure>` | 抓不到则删 `<img>`，不留裂图 |
-| SVG 示意图 | 保留 `<svg>` 或 `<img src="*.svg">` | 同上 |
+| SVG 示意图（文件 `<img src="*.svg">`） | 嵌入 corpus 图 | 同上 |
+| **内联** `<svg>` 图标/装饰（w-embed 等） | **剔除**：阅读器丢 `currentColor` 上下文，且 HTML 解析会把 `viewBox` 小写成 `viewbox` 导致错位破图 | — |
+| 彩色卡片容器（站点私有 class 或 inline `background`） | 升级 `.mdx-card`（打包 CSS 提供 padding/圆角），inline 背景色尽力保留 | 降级为灰底卡片 |
 | Mermaid / 画图源码 | `<figure class="mdx-diagram">` + `pre.mdx-mermaid` | 提示去原站看渲染结果 |
 | Note / Tip / Warning / Danger | 左边框 callout | — |
 | Tabs / CodeGroup | 每个面板带标题，全部展开 | — |
