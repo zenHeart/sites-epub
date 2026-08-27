@@ -5,6 +5,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from urllib.parse import urljoin, urlparse
+
 from .epub_pack import pack_epub
 from .fingerprint import content_hash, load_fingerprints, save_fingerprints
 from .http import fetch_bytes, fetch_text
@@ -201,6 +203,45 @@ def corpus_dir(vendor: Vendor, root: Path | None = None) -> Path:
     return base / "vendors" / vendor.id / "corpus"
 
 
+def _origin(url: str) -> str:
+    p = urlparse(url)
+    return f"{p.scheme}://{p.netloc}"
+
+
+def ensure_vendor_icon(vendor: Vendor, vdir: Path, docs_html: str = "") -> None:
+    dest = vdir / "icon.png"
+    if dest.is_file() and dest.stat().st_size > 200:
+        return
+    candidates: list[str] = []
+    if docs_html:
+        from bs4 import BeautifulSoup
+
+        soup = BeautifulSoup(docs_html, "lxml")
+        for tag in soup.find_all("link"):
+            rel = " ".join(tag.get("rel") or []).lower()
+            href = tag.get("href") or ""
+            if href and "icon" in rel and not href.endswith(".ico"):
+                candidates.append(urljoin(vendor.docs_url, href))
+    origin = _origin(vendor.docs_url)
+    host = urlparse(vendor.docs_url).netloc
+    candidates.extend(
+        [
+            f"{origin}/docs-static/icon-192x192.png",
+            f"{origin}/apple-touch-icon.png",
+            f"https://www.google.com/s2/favicons?domain={host}&sz=128",
+        ]
+    )
+    for url in candidates:
+        try:
+            data, _ctype = fetch_bytes(url)
+        except Exception:
+            continue
+        if not data or len(data) < 200 or data[:32].lstrip().lower().startswith(b"<!do"):
+            continue
+        dest.write_bytes(data)
+        return
+
+
 def fetch_vendor(
     vendor: Vendor,
     *,
@@ -243,10 +284,29 @@ def fetch_vendor(
     if vendor.blog_url:
         try:
             blog_html = fetch_text(vendor.blog_url)
+            if "claude.com/blog" in vendor.blog_url:
+                from .blog_listing import extract_pagination, listing_page_url
+
+                pag = extract_pagination(blog_html)
+                parts = [blog_html]
+                if pag.collection_id and pag.total and pag.total > 1:
+                    for page in range(2, min(pag.total, 60) + 1):
+                        page_url = listing_page_url(
+                            page, pag.collection_id, listing=vendor.blog_url.split("?")[0]
+                        )
+                        parts.append(fetch_text(page_url))
+                blog_html = "\n".join(parts)
+            try:
+                sitemap = fetch_text(_origin(vendor.blog_url) + "/sitemap.xml")
+                if sitemap and "<loc>" in sitemap:
+                    blog_html = (blog_html or "") + "\n" + sitemap
+            except Exception:
+                pass
         except Exception:
-            blog_html = ""
+            blog_html = blog_html or ""
         if blog_html:
             (corpus / "blog.html").write_text(blog_html, encoding="utf-8")
+    ensure_vendor_icon(vendor, vdir, docs_html)
 
     entries = discover_entries(
         vendor, docs_html=docs_html, docs_llms=docs_llms, blog_html=blog_html

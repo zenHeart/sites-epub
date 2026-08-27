@@ -1,0 +1,1978 @@
+[
+  {
+    "group": "Cursor: Get Started",
+    "title": "Overview",
+    "md_url": "https://cursor.com/docs.md",
+    "html_url": "https://cursor.com/docs",
+    "route": "docs",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "quickstart",
+    "md_url": "https://cursor.com/docs/get-started/quickstart.md",
+    "html_url": "https://cursor.com/docs/get-started/quickstart",
+    "route": "docs/get-started/quickstart",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "models and pricing",
+    "md_url": "https://cursor.com/docs/models-and-pricing.md",
+    "html_url": "https://cursor.com/docs/models-and-pricing",
+    "route": "docs/models-and-pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "cursor router",
+    "md_url": "https://cursor.com/docs/cursor-router.md",
+    "html_url": "https://cursor.com/docs/cursor-router",
+    "route": "docs/cursor-router",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "claude sonnet 5",
+    "md_url": "https://cursor.com/docs/models/claude-sonnet-5.md",
+    "html_url": "https://cursor.com/docs/models/claude-sonnet-5",
+    "route": "docs/models/claude-sonnet-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "claude opus 5",
+    "md_url": "https://cursor.com/docs/models/claude-opus-5.md",
+    "html_url": "https://cursor.com/docs/models/claude-opus-5",
+    "route": "docs/models/claude-opus-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "claude fable 5",
+    "md_url": "https://cursor.com/docs/models/claude-fable-5.md",
+    "html_url": "https://cursor.com/docs/models/claude-fable-5",
+    "route": "docs/models/claude-fable-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "gemini 3 1 pro",
+    "md_url": "https://cursor.com/docs/models/gemini-3-1-pro.md",
+    "html_url": "https://cursor.com/docs/models/gemini-3-1-pro",
+    "route": "docs/models/gemini-3-1-pro",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "gemini 3 7 flash",
+    "md_url": "https://cursor.com/docs/models/gemini-3-7-flash.md",
+    "html_url": "https://cursor.com/docs/models/gemini-3-7-flash",
+    "route": "docs/models/gemini-3-7-flash",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "gpt 5 6 sol",
+    "md_url": "https://cursor.com/docs/models/gpt-5-6-sol.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-6-sol",
+    "route": "docs/models/gpt-5-6-sol",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "gpt 5 6 terra",
+    "md_url": "https://cursor.com/docs/models/gpt-5-6-terra.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-6-terra",
+    "route": "docs/models/gpt-5-6-terra",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "gpt 5 6 luna",
+    "md_url": "https://cursor.com/docs/models/gpt-5-6-luna.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-6-luna",
+    "route": "docs/models/gpt-5-6-luna",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "grok 4 6",
+    "md_url": "https://cursor.com/docs/models/grok-4-6.md",
+    "html_url": "https://cursor.com/docs/models/grok-4-6",
+    "route": "docs/models/grok-4-6",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "grok 4 5",
+    "md_url": "https://cursor.com/docs/models/grok-4-5.md",
+    "html_url": "https://cursor.com/docs/models/grok-4-5",
+    "route": "docs/models/grok-4-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "cursor composer 2 5",
+    "md_url": "https://cursor.com/docs/models/cursor-composer-2-5.md",
+    "html_url": "https://cursor.com/docs/models/cursor-composer-2-5",
+    "route": "docs/models/cursor-composer-2-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "overview",
+    "md_url": "https://cursor.com/docs/agent/overview.md",
+    "html_url": "https://cursor.com/docs/agent/overview",
+    "route": "docs/agent/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "agents window",
+    "md_url": "https://cursor.com/docs/agent/agents-window.md",
+    "html_url": "https://cursor.com/docs/agent/agents-window",
+    "route": "docs/agent/agents-window",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "agent review",
+    "md_url": "https://cursor.com/docs/agent/agent-review.md",
+    "html_url": "https://cursor.com/docs/agent/agent-review",
+    "route": "docs/agent/agent-review",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "plan mode",
+    "md_url": "https://cursor.com/docs/agent/plan-mode.md",
+    "html_url": "https://cursor.com/docs/agent/plan-mode",
+    "route": "docs/agent/plan-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "prompting",
+    "md_url": "https://cursor.com/docs/agent/prompting.md",
+    "html_url": "https://cursor.com/docs/agent/prompting",
+    "route": "docs/agent/prompting",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "debug mode",
+    "md_url": "https://cursor.com/docs/agent/debug-mode.md",
+    "html_url": "https://cursor.com/docs/agent/debug-mode",
+    "route": "docs/agent/debug-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "design mode",
+    "md_url": "https://cursor.com/docs/agent/design-mode.md",
+    "html_url": "https://cursor.com/docs/agent/design-mode",
+    "route": "docs/agent/design-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "terminal",
+    "md_url": "https://cursor.com/docs/agent/tools/terminal.md",
+    "html_url": "https://cursor.com/docs/agent/tools/terminal",
+    "route": "docs/agent/tools/terminal",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "browser",
+    "md_url": "https://cursor.com/docs/agent/tools/browser.md",
+    "html_url": "https://cursor.com/docs/agent/tools/browser",
+    "route": "docs/agent/tools/browser",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "search",
+    "md_url": "https://cursor.com/docs/agent/tools/search.md",
+    "html_url": "https://cursor.com/docs/agent/tools/search",
+    "route": "docs/agent/tools/search",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "canvas",
+    "md_url": "https://cursor.com/docs/agent/tools/canvas.md",
+    "html_url": "https://cursor.com/docs/agent/tools/canvas",
+    "route": "docs/agent/tools/canvas",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "worktrees",
+    "md_url": "https://cursor.com/docs/configuration/worktrees.md",
+    "html_url": "https://cursor.com/docs/configuration/worktrees",
+    "route": "docs/configuration/worktrees",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "security",
+    "md_url": "https://cursor.com/docs/agent/security.md",
+    "html_url": "https://cursor.com/docs/agent/security",
+    "route": "docs/agent/security",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
+    "title": "run modes",
+    "md_url": "https://cursor.com/docs/agent/security/run-modes.md",
+    "html_url": "https://cursor.com/docs/agent/security/run-modes",
+    "route": "docs/agent/security/run-modes",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: customizing",
+    "title": "customize cursor",
+    "md_url": "https://cursor.com/docs/customize-cursor.md",
+    "html_url": "https://cursor.com/docs/customize-cursor",
+    "route": "docs/customize-cursor",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: customizing",
+    "title": "plugins",
+    "md_url": "https://cursor.com/docs/plugins.md",
+    "html_url": "https://cursor.com/docs/plugins",
+    "route": "docs/plugins",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: customizing",
+    "title": "rules",
+    "md_url": "https://cursor.com/docs/rules.md",
+    "html_url": "https://cursor.com/docs/rules",
+    "route": "docs/rules",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: customizing",
+    "title": "skills",
+    "md_url": "https://cursor.com/docs/skills.md",
+    "html_url": "https://cursor.com/docs/skills",
+    "route": "docs/skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: customizing",
+    "title": "subagents",
+    "md_url": "https://cursor.com/docs/subagents.md",
+    "html_url": "https://cursor.com/docs/subagents",
+    "route": "docs/subagents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: customizing",
+    "title": "hooks",
+    "md_url": "https://cursor.com/docs/hooks.md",
+    "html_url": "https://cursor.com/docs/hooks",
+    "route": "docs/hooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: customizing",
+    "title": "mcp",
+    "md_url": "https://cursor.com/docs/mcp.md",
+    "html_url": "https://cursor.com/docs/mcp",
+    "route": "docs/mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "cloud agent",
+    "md_url": "https://cursor.com/docs/cloud-agent.md",
+    "html_url": "https://cursor.com/docs/cloud-agent",
+    "route": "docs/cloud-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "setup",
+    "md_url": "https://cursor.com/docs/cloud-agent/setup.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/setup",
+    "route": "docs/cloud-agent/setup",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "builds",
+    "md_url": "https://cursor.com/docs/cloud-agent/builds.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/builds",
+    "route": "docs/cloud-agent/builds",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "capabilities",
+    "md_url": "https://cursor.com/docs/cloud-agent/capabilities.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/capabilities",
+    "route": "docs/cloud-agent/capabilities",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "metadata",
+    "md_url": "https://cursor.com/docs/cloud-agent/metadata.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/metadata",
+    "route": "docs/cloud-agent/metadata",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "best practices",
+    "md_url": "https://cursor.com/docs/cloud-agent/best-practices.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/best-practices",
+    "route": "docs/cloud-agent/best-practices",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "automations",
+    "md_url": "https://cursor.com/docs/cloud-agent/automations.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/automations",
+    "route": "docs/cloud-agent/automations",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "bugbot",
+    "md_url": "https://cursor.com/docs/bugbot.md",
+    "html_url": "https://cursor.com/docs/bugbot",
+    "route": "docs/bugbot",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "security agents",
+    "md_url": "https://cursor.com/docs/security-agents.md",
+    "html_url": "https://cursor.com/docs/security-agents",
+    "route": "docs/security-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "approval agents",
+    "md_url": "https://cursor.com/docs/approval-agents.md",
+    "html_url": "https://cursor.com/docs/approval-agents",
+    "route": "docs/approval-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "mobile",
+    "md_url": "https://cursor.com/docs/cloud-agent/mobile.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/mobile",
+    "route": "docs/cloud-agent/mobile",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "security",
+    "md_url": "https://cursor.com/docs/cloud-agent/security.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/security",
+    "route": "docs/cloud-agent/security",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "security network",
+    "md_url": "https://cursor.com/docs/cloud-agent/security-network.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/security-network",
+    "route": "docs/cloud-agent/security-network",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "private connectivity",
+    "md_url": "https://cursor.com/docs/cloud-agent/private-connectivity.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/private-connectivity",
+    "route": "docs/cloud-agent/private-connectivity",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "identity",
+    "md_url": "https://cursor.com/docs/cloud-agent/identity.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/identity",
+    "route": "docs/cloud-agent/identity",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "settings",
+    "md_url": "https://cursor.com/docs/cloud-agent/settings.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/settings",
+    "route": "docs/cloud-agent/settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "endpoints",
+    "md_url": "https://cursor.com/docs/cloud-agent/api/endpoints.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/api/endpoints",
+    "route": "docs/cloud-agent/api/endpoints",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "origin",
+    "md_url": "https://cursor.com/docs/origin.md",
+    "html_url": "https://cursor.com/docs/origin",
+    "route": "docs/origin",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "cli",
+    "md_url": "https://cursor.com/docs/origin/cli.md",
+    "html_url": "https://cursor.com/docs/origin/cli",
+    "route": "docs/origin/cli",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "commands",
+    "md_url": "https://cursor.com/docs/origin/cli/reference/commands.md",
+    "html_url": "https://cursor.com/docs/origin/cli/reference/commands",
+    "route": "docs/origin/cli/reference/commands",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "pull requests",
+    "md_url": "https://cursor.com/docs/origin/cli/reference/pull-requests.md",
+    "html_url": "https://cursor.com/docs/origin/cli/reference/pull-requests",
+    "route": "docs/origin/cli/reference/pull-requests",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "create repository",
+    "md_url": "https://cursor.com/docs/origin/create-repository.md",
+    "html_url": "https://cursor.com/docs/origin/create-repository",
+    "route": "docs/origin/create-repository",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "git",
+    "md_url": "https://cursor.com/docs/origin/git.md",
+    "html_url": "https://cursor.com/docs/origin/git",
+    "route": "docs/origin/git",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "mirror github",
+    "md_url": "https://cursor.com/docs/origin/mirror-github.md",
+    "html_url": "https://cursor.com/docs/origin/mirror-github",
+    "route": "docs/origin/mirror-github",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "pull requests",
+    "md_url": "https://cursor.com/docs/origin/pull-requests.md",
+    "html_url": "https://cursor.com/docs/origin/pull-requests",
+    "route": "docs/origin/pull-requests",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "browse",
+    "md_url": "https://cursor.com/docs/origin/browse.md",
+    "html_url": "https://cursor.com/docs/origin/browse",
+    "route": "docs/origin/browse",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "settings",
+    "md_url": "https://cursor.com/docs/origin/settings.md",
+    "html_url": "https://cursor.com/docs/origin/settings",
+    "route": "docs/origin/settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "codebase settings",
+    "md_url": "https://cursor.com/docs/origin/codebase-settings.md",
+    "html_url": "https://cursor.com/docs/origin/codebase-settings",
+    "route": "docs/origin/codebase-settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "integrations",
+    "md_url": "https://cursor.com/docs/origin/integrations.md",
+    "html_url": "https://cursor.com/docs/origin/integrations",
+    "route": "docs/origin/integrations",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "slack",
+    "md_url": "https://cursor.com/docs/integrations/slack.md",
+    "html_url": "https://cursor.com/docs/integrations/slack",
+    "route": "docs/integrations/slack",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "microsoft teams",
+    "md_url": "https://cursor.com/docs/integrations/microsoft-teams.md",
+    "html_url": "https://cursor.com/docs/integrations/microsoft-teams",
+    "route": "docs/integrations/microsoft-teams",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "jira",
+    "md_url": "https://cursor.com/docs/integrations/jira.md",
+    "html_url": "https://cursor.com/docs/integrations/jira",
+    "route": "docs/integrations/jira",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "linear",
+    "md_url": "https://cursor.com/docs/integrations/linear.md",
+    "html_url": "https://cursor.com/docs/integrations/linear",
+    "route": "docs/integrations/linear",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "notion",
+    "md_url": "https://cursor.com/docs/integrations/notion.md",
+    "html_url": "https://cursor.com/docs/integrations/notion",
+    "route": "docs/integrations/notion",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "github",
+    "md_url": "https://cursor.com/docs/integrations/github.md",
+    "html_url": "https://cursor.com/docs/integrations/github",
+    "route": "docs/integrations/github",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "gitlab",
+    "md_url": "https://cursor.com/docs/integrations/gitlab.md",
+    "html_url": "https://cursor.com/docs/integrations/gitlab",
+    "route": "docs/integrations/gitlab",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "azure devops",
+    "md_url": "https://cursor.com/docs/integrations/azure-devops.md",
+    "html_url": "https://cursor.com/docs/integrations/azure-devops",
+    "route": "docs/integrations/azure-devops",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "bitbucket",
+    "md_url": "https://cursor.com/docs/integrations/bitbucket.md",
+    "html_url": "https://cursor.com/docs/integrations/bitbucket",
+    "route": "docs/integrations/bitbucket",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "jetbrains",
+    "md_url": "https://cursor.com/docs/integrations/jetbrains.md",
+    "html_url": "https://cursor.com/docs/integrations/jetbrains",
+    "route": "docs/integrations/jetbrains",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "xcode",
+    "md_url": "https://cursor.com/docs/integrations/xcode.md",
+    "html_url": "https://cursor.com/docs/integrations/xcode",
+    "route": "docs/integrations/xcode",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "deeplinks",
+    "md_url": "https://cursor.com/docs/reference/deeplinks.md",
+    "html_url": "https://cursor.com/docs/reference/deeplinks",
+    "route": "docs/reference/deeplinks",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: SDK",
+    "title": "typescript",
+    "md_url": "https://cursor.com/docs/sdk/typescript.md",
+    "html_url": "https://cursor.com/docs/sdk/typescript",
+    "route": "docs/sdk/typescript",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: SDK",
+    "title": "python",
+    "md_url": "https://cursor.com/docs/sdk/python.md",
+    "html_url": "https://cursor.com/docs/sdk/python",
+    "route": "docs/sdk/python",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: SDK",
+    "title": "bridge",
+    "md_url": "https://cursor.com/docs/sdk/bridge.md",
+    "html_url": "https://cursor.com/docs/sdk/bridge",
+    "route": "docs/sdk/bridge",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: SDK",
+    "title": "changelog",
+    "md_url": "https://cursor.com/docs/sdk/changelog.md",
+    "html_url": "https://cursor.com/docs/sdk/changelog",
+    "route": "docs/sdk/changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cli",
+    "title": "overview",
+    "md_url": "https://cursor.com/docs/cli/overview.md",
+    "html_url": "https://cursor.com/docs/cli/overview",
+    "route": "docs/cli/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cli",
+    "title": "installation",
+    "md_url": "https://cursor.com/docs/cli/installation.md",
+    "html_url": "https://cursor.com/docs/cli/installation",
+    "route": "docs/cli/installation",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cli",
+    "title": "using",
+    "md_url": "https://cursor.com/docs/cli/using.md",
+    "html_url": "https://cursor.com/docs/cli/using",
+    "route": "docs/cli/using",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cli",
+    "title": "changelog",
+    "md_url": "https://cursor.com/docs/cli/changelog.md",
+    "html_url": "https://cursor.com/docs/cli/changelog",
+    "route": "docs/cli/changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cli",
+    "title": "shell mode",
+    "md_url": "https://cursor.com/docs/cli/shell-mode.md",
+    "html_url": "https://cursor.com/docs/cli/shell-mode",
+    "route": "docs/cli/shell-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cli",
+    "title": "acp",
+    "md_url": "https://cursor.com/docs/cli/acp.md",
+    "html_url": "https://cursor.com/docs/cli/acp",
+    "route": "docs/cli/acp",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cli",
+    "title": "headless",
+    "md_url": "https://cursor.com/docs/cli/headless.md",
+    "html_url": "https://cursor.com/docs/cli/headless",
+    "route": "docs/cli/headless",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cli",
+    "title": "slash commands",
+    "md_url": "https://cursor.com/docs/cli/reference/slash-commands.md",
+    "html_url": "https://cursor.com/docs/cli/reference/slash-commands",
+    "route": "docs/cli/reference/slash-commands",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cli",
+    "title": "parameters",
+    "md_url": "https://cursor.com/docs/cli/reference/parameters.md",
+    "html_url": "https://cursor.com/docs/cli/reference/parameters",
+    "route": "docs/cli/reference/parameters",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cli",
+    "title": "authentication",
+    "md_url": "https://cursor.com/docs/cli/reference/authentication.md",
+    "html_url": "https://cursor.com/docs/cli/reference/authentication",
+    "route": "docs/cli/reference/authentication",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cli",
+    "title": "permissions",
+    "md_url": "https://cursor.com/docs/cli/reference/permissions.md",
+    "html_url": "https://cursor.com/docs/cli/reference/permissions",
+    "route": "docs/cli/reference/permissions",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cli",
+    "title": "configuration",
+    "md_url": "https://cursor.com/docs/cli/reference/configuration.md",
+    "html_url": "https://cursor.com/docs/cli/reference/configuration",
+    "route": "docs/cli/reference/configuration",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "setup",
+    "md_url": "https://cursor.com/docs/account/teams/setup.md",
+    "html_url": "https://cursor.com/docs/account/teams/setup",
+    "route": "docs/account/teams/setup",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "pricing",
+    "md_url": "https://cursor.com/docs/account/teams/pricing.md",
+    "html_url": "https://cursor.com/docs/account/teams/pricing",
+    "route": "docs/account/teams/pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "members",
+    "md_url": "https://cursor.com/docs/account/teams/members.md",
+    "html_url": "https://cursor.com/docs/account/teams/members",
+    "route": "docs/account/teams/members",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "sso",
+    "md_url": "https://cursor.com/docs/account/teams/sso.md",
+    "html_url": "https://cursor.com/docs/account/teams/sso",
+    "route": "docs/account/teams/sso",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "dashboard",
+    "md_url": "https://cursor.com/docs/account/teams/dashboard.md",
+    "html_url": "https://cursor.com/docs/account/teams/dashboard",
+    "route": "docs/account/teams/dashboard",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "analytics",
+    "md_url": "https://cursor.com/docs/account/teams/analytics.md",
+    "html_url": "https://cursor.com/docs/account/teams/analytics",
+    "route": "docs/account/teams/analytics",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "enterprise",
+    "md_url": "https://cursor.com/docs/enterprise.md",
+    "html_url": "https://cursor.com/docs/enterprise",
+    "route": "docs/enterprise",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "admin setup guide",
+    "md_url": "https://cursor.com/docs/enterprise/admin-setup-guide.md",
+    "html_url": "https://cursor.com/docs/enterprise/admin-setup-guide",
+    "route": "docs/enterprise/admin-setup-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "organizations",
+    "md_url": "https://cursor.com/docs/enterprise/organizations.md",
+    "html_url": "https://cursor.com/docs/enterprise/organizations",
+    "route": "docs/enterprise/organizations",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "organization groups",
+    "md_url": "https://cursor.com/docs/enterprise/organization-groups.md",
+    "html_url": "https://cursor.com/docs/enterprise/organization-groups",
+    "route": "docs/enterprise/organization-groups",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "identity and access management",
+    "md_url": "https://cursor.com/docs/enterprise/identity-and-access-management.md",
+    "html_url": "https://cursor.com/docs/enterprise/identity-and-access-management",
+    "route": "docs/enterprise/identity-and-access-management",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "scim",
+    "md_url": "https://cursor.com/docs/account/teams/scim.md",
+    "html_url": "https://cursor.com/docs/account/teams/scim",
+    "route": "docs/account/teams/scim",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "privacy and data governance",
+    "md_url": "https://cursor.com/docs/enterprise/privacy-and-data-governance.md",
+    "html_url": "https://cursor.com/docs/enterprise/privacy-and-data-governance",
+    "route": "docs/enterprise/privacy-and-data-governance",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "network configuration",
+    "md_url": "https://cursor.com/docs/enterprise/network-configuration.md",
+    "html_url": "https://cursor.com/docs/enterprise/network-configuration",
+    "route": "docs/enterprise/network-configuration",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "endpoint security",
+    "md_url": "https://cursor.com/docs/enterprise/endpoint-security.md",
+    "html_url": "https://cursor.com/docs/enterprise/endpoint-security",
+    "route": "docs/enterprise/endpoint-security",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "llm safety and controls",
+    "md_url": "https://cursor.com/docs/enterprise/llm-safety-and-controls.md",
+    "html_url": "https://cursor.com/docs/enterprise/llm-safety-and-controls",
+    "route": "docs/enterprise/llm-safety-and-controls",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "model and integration management",
+    "md_url": "https://cursor.com/docs/enterprise/model-and-integration-management.md",
+    "html_url": "https://cursor.com/docs/enterprise/model-and-integration-management",
+    "route": "docs/enterprise/model-and-integration-management",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "cyber safeguards",
+    "md_url": "https://cursor.com/docs/account/enterprise/cyber-safeguards.md",
+    "html_url": "https://cursor.com/docs/account/enterprise/cyber-safeguards",
+    "route": "docs/account/enterprise/cyber-safeguards",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "pooled usage",
+    "md_url": "https://cursor.com/docs/enterprise/pooled-usage.md",
+    "html_url": "https://cursor.com/docs/enterprise/pooled-usage",
+    "route": "docs/enterprise/pooled-usage",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "compliance and monitoring",
+    "md_url": "https://cursor.com/docs/enterprise/compliance-and-monitoring.md",
+    "html_url": "https://cursor.com/docs/enterprise/compliance-and-monitoring",
+    "route": "docs/enterprise/compliance-and-monitoring",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "opentelemetry export",
+    "md_url": "https://cursor.com/docs/enterprise/opentelemetry-export.md",
+    "html_url": "https://cursor.com/docs/enterprise/opentelemetry-export",
+    "route": "docs/enterprise/opentelemetry-export",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "wire",
+    "md_url": "https://cursor.com/docs/enterprise/opentelemetry-export/wire.md",
+    "html_url": "https://cursor.com/docs/enterprise/opentelemetry-export/wire",
+    "route": "docs/enterprise/opentelemetry-export/wire",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "baa",
+    "md_url": "https://cursor.com/docs/enterprise/baa.md",
+    "html_url": "https://cursor.com/docs/enterprise/baa",
+    "route": "docs/enterprise/baa",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "deployment patterns",
+    "md_url": "https://cursor.com/docs/enterprise/deployment-patterns.md",
+    "html_url": "https://cursor.com/docs/enterprise/deployment-patterns",
+    "route": "docs/enterprise/deployment-patterns",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "service accounts",
+    "md_url": "https://cursor.com/docs/account/enterprise/service-accounts.md",
+    "html_url": "https://cursor.com/docs/account/enterprise/service-accounts",
+    "route": "docs/account/enterprise/service-accounts",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "billing groups",
+    "md_url": "https://cursor.com/docs/account/enterprise/billing-groups.md",
+    "html_url": "https://cursor.com/docs/account/enterprise/billing-groups",
+    "route": "docs/account/enterprise/billing-groups",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "security hardening",
+    "md_url": "https://cursor.com/docs/enterprise/security-hardening.md",
+    "html_url": "https://cursor.com/docs/enterprise/security-hardening",
+    "route": "docs/enterprise/security-hardening",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
+    "title": "cursor blame",
+    "md_url": "https://cursor.com/docs/integrations/cursor-blame.md",
+    "html_url": "https://cursor.com/docs/integrations/cursor-blame",
+    "route": "docs/integrations/cursor-blame",
+    "kind": "doc"
+  },
+  {
+    "group": "CLI: Headless",
+    "title": "github actions",
+    "md_url": "https://cursor.com/docs/cli/github-actions.md",
+    "html_url": "https://cursor.com/docs/cli/github-actions",
+    "route": "docs/cli/github-actions",
+    "kind": "doc"
+  },
+  {
+    "group": "CLI: Reference",
+    "title": "output format",
+    "md_url": "https://cursor.com/docs/cli/reference/output-format.md",
+    "html_url": "https://cursor.com/docs/cli/reference/output-format",
+    "route": "docs/cli/reference/output-format",
+    "kind": "doc"
+  },
+  {
+    "group": "CLI: Reference",
+    "title": "terminal setup",
+    "md_url": "https://cursor.com/docs/cli/reference/terminal-setup.md",
+    "html_url": "https://cursor.com/docs/cli/reference/terminal-setup",
+    "route": "docs/cli/reference/terminal-setup",
+    "kind": "doc"
+  },
+  {
+    "group": "API: API Overview",
+    "title": "api",
+    "md_url": "https://cursor.com/docs/api.md",
+    "html_url": "https://cursor.com/docs/api",
+    "route": "docs/api",
+    "kind": "doc"
+  },
+  {
+    "group": "API: Cloud Agents API",
+    "title": "webhooks",
+    "md_url": "https://cursor.com/docs/cloud-agent/api/webhooks.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/api/webhooks",
+    "route": "docs/cloud-agent/api/webhooks",
+    "kind": "doc"
+  },
+  {
+    "group": "API: Admin API",
+    "title": "admin api",
+    "md_url": "https://cursor.com/docs/account/teams/admin-api.md",
+    "html_url": "https://cursor.com/docs/account/teams/admin-api",
+    "route": "docs/account/teams/admin-api",
+    "kind": "doc"
+  },
+  {
+    "group": "API: Admin API",
+    "title": "organization admin api",
+    "md_url": "https://cursor.com/docs/account/organizations/organization-admin-api.md",
+    "html_url": "https://cursor.com/docs/account/organizations/organization-admin-api",
+    "route": "docs/account/organizations/organization-admin-api",
+    "kind": "doc"
+  },
+  {
+    "group": "API: Analytics API",
+    "title": "analytics api",
+    "md_url": "https://cursor.com/docs/account/teams/analytics-api.md",
+    "html_url": "https://cursor.com/docs/account/teams/analytics-api",
+    "route": "docs/account/teams/analytics-api",
+    "kind": "doc"
+  },
+  {
+    "group": "API: AI Code Tracking API",
+    "title": "ai code tracking api",
+    "md_url": "https://cursor.com/docs/account/teams/ai-code-tracking-api.md",
+    "html_url": "https://cursor.com/docs/account/teams/ai-code-tracking-api",
+    "route": "docs/account/teams/ai-code-tracking-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Blog",
+    "title": "joining spacex",
+    "md_url": "https://cursor.com/blog/joining-spacex.md",
+    "html_url": "https://cursor.com/blog/joining-spacex",
+    "route": "blog/joining-spacex",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "grok 4 6",
+    "md_url": "https://cursor.com/blog/grok-4-6.md",
+    "html_url": "https://cursor.com/blog/grok-4-6",
+    "route": "blog/grok-4-6",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "git at any scale",
+    "md_url": "https://cursor.com/blog/git-at-any-scale.md",
+    "html_url": "https://cursor.com/blog/git-at-any-scale",
+    "route": "blog/git-at-any-scale",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "firetiger",
+    "md_url": "https://cursor.com/blog/firetiger.md",
+    "html_url": "https://cursor.com/blog/firetiger",
+    "route": "blog/firetiger",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "aiuc 1",
+    "md_url": "https://cursor.com/blog/aiuc-1.md",
+    "html_url": "https://cursor.com/blog/aiuc-1",
+    "route": "blog/aiuc-1",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "builds",
+    "md_url": "https://cursor.com/blog/builds.md",
+    "html_url": "https://cursor.com/blog/builds",
+    "route": "blog/builds",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how cursor router works",
+    "md_url": "https://cursor.com/blog/how-cursor-router-works.md",
+    "html_url": "https://cursor.com/blog/how-cursor-router-works",
+    "route": "blog/how-cursor-router-works",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "mixture of kittens",
+    "md_url": "https://cursor.com/blog/mixture-of-kittens.md",
+    "html_url": "https://cursor.com/blog/mixture-of-kittens",
+    "route": "blog/mixture-of-kittens",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cloud agent environment",
+    "md_url": "https://cursor.com/blog/cloud-agent-environment.md",
+    "html_url": "https://cursor.com/blog/cloud-agent-environment",
+    "route": "blog/cloud-agent-environment",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cursor start india",
+    "md_url": "https://cursor.com/blog/cursor-start-india.md",
+    "html_url": "https://cursor.com/blog/cursor-start-india",
+    "route": "blog/cursor-start-india",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "router",
+    "md_url": "https://cursor.com/blog/router.md",
+    "html_url": "https://cursor.com/blog/router",
+    "route": "blog/router",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agent swarm model economics",
+    "md_url": "https://cursor.com/blog/agent-swarm-model-economics.md",
+    "html_url": "https://cursor.com/blog/agent-swarm-model-economics",
+    "route": "blog/agent-swarm-model-economics",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "self driving codebases",
+    "md_url": "https://cursor.com/blog/self-driving-codebases.md",
+    "html_url": "https://cursor.com/blog/self-driving-codebases",
+    "route": "blog/self-driving-codebases",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "imdex",
+    "md_url": "https://cursor.com/blog/imdex.md",
+    "html_url": "https://cursor.com/blog/imdex",
+    "route": "blog/imdex",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "vercel",
+    "md_url": "https://cursor.com/blog/vercel.md",
+    "html_url": "https://cursor.com/blog/vercel",
+    "route": "blog/vercel",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "coinbase",
+    "md_url": "https://cursor.com/blog/coinbase.md",
+    "html_url": "https://cursor.com/blog/coinbase",
+    "route": "blog/coinbase",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "wayfair",
+    "md_url": "https://cursor.com/blog/wayfair.md",
+    "html_url": "https://cursor.com/blog/wayfair",
+    "route": "blog/wayfair",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "grok 4 5 model card",
+    "md_url": "https://cursor.com/blog/grok-4-5-model-card.md",
+    "html_url": "https://cursor.com/blog/grok-4-5-model-card",
+    "route": "blog/grok-4-5-model-card",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "grok 4 5",
+    "md_url": "https://cursor.com/blog/grok-4-5.md",
+    "html_url": "https://cursor.com/blog/grok-4-5",
+    "route": "blog/grok-4-5",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cfo council",
+    "md_url": "https://cursor.com/blog/cfo-council.md",
+    "html_url": "https://cursor.com/blog/cfo-council",
+    "route": "blog/cfo-council",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ios mobile app",
+    "md_url": "https://cursor.com/blog/ios-mobile-app.md",
+    "html_url": "https://cursor.com/blog/ios-mobile-app",
+    "route": "blog/ios-mobile-app",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "notion",
+    "md_url": "https://cursor.com/blog/notion.md",
+    "html_url": "https://cursor.com/blog/notion",
+    "route": "blog/notion",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "reward hacking coding benchmarks",
+    "md_url": "https://cursor.com/blog/reward-hacking-coding-benchmarks.md",
+    "html_url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+    "route": "blog/reward-hacking-coding-benchmarks",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agent autonomy auto review",
+    "md_url": "https://cursor.com/blog/agent-autonomy-auto-review.md",
+    "html_url": "https://cursor.com/blog/agent-autonomy-auto-review",
+    "route": "blog/agent-autonomy-auto-review",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "bugbot updates june 2026",
+    "md_url": "https://cursor.com/blog/bugbot-updates-june-2026.md",
+    "html_url": "https://cursor.com/blog/bugbot-updates-june-2026",
+    "route": "blog/bugbot-updates-june-2026",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "design mode",
+    "md_url": "https://cursor.com/blog/design-mode.md",
+    "html_url": "https://cursor.com/blog/design-mode",
+    "route": "blog/design-mode",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cursor leads gartner mq 2026",
+    "md_url": "https://cursor.com/blog/cursor-leads-gartner-mq-2026.md",
+    "html_url": "https://cursor.com/blog/cursor-leads-gartner-mq-2026",
+    "route": "blog/cursor-leads-gartner-mq-2026",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "teams pricing june 2026",
+    "md_url": "https://cursor.com/blog/teams-pricing-june-2026.md",
+    "html_url": "https://cursor.com/blog/teams-pricing-june-2026",
+    "route": "blog/teams-pricing-june-2026",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "may 2026 bugbot changes",
+    "md_url": "https://cursor.com/blog/may-2026-bugbot-changes.md",
+    "html_url": "https://cursor.com/blog/may-2026-bugbot-changes",
+    "route": "blog/may-2026-bugbot-changes",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cursor 3",
+    "md_url": "https://cursor.com/blog/cursor-3.md",
+    "html_url": "https://cursor.com/blog/cursor-3",
+    "route": "blog/cursor-3",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "composer 2 5",
+    "md_url": "https://cursor.com/blog/composer-2-5.md",
+    "html_url": "https://cursor.com/blog/composer-2-5",
+    "route": "blog/composer-2-5",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "composer 2 technical report",
+    "md_url": "https://cursor.com/blog/composer-2-technical-report.md",
+    "html_url": "https://cursor.com/blog/composer-2-technical-report",
+    "route": "blog/composer-2-technical-report",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "multi agent kernels",
+    "md_url": "https://cursor.com/blog/multi-agent-kernels.md",
+    "html_url": "https://cursor.com/blog/multi-agent-kernels",
+    "route": "blog/multi-agent-kernels",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "real time rl for composer",
+    "md_url": "https://cursor.com/blog/real-time-rl-for-composer.md",
+    "html_url": "https://cursor.com/blog/real-time-rl-for-composer",
+    "route": "blog/real-time-rl-for-composer",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "spacex model training",
+    "md_url": "https://cursor.com/blog/spacex-model-training.md",
+    "html_url": "https://cursor.com/blog/spacex-model-training",
+    "route": "blog/spacex-model-training",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "continually improving agent harness",
+    "md_url": "https://cursor.com/blog/continually-improving-agent-harness.md",
+    "html_url": "https://cursor.com/blog/continually-improving-agent-harness",
+    "route": "blog/continually-improving-agent-harness",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "typescript sdk",
+    "md_url": "https://cursor.com/blog/typescript-sdk.md",
+    "html_url": "https://cursor.com/blog/typescript-sdk",
+    "route": "blog/typescript-sdk",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "warp decode",
+    "md_url": "https://cursor.com/blog/warp-decode.md",
+    "html_url": "https://cursor.com/blog/warp-decode",
+    "route": "blog/warp-decode",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "canvas",
+    "md_url": "https://cursor.com/blog/canvas.md",
+    "html_url": "https://cursor.com/blog/canvas",
+    "route": "blog/canvas",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "organizations",
+    "md_url": "https://cursor.com/blog/organizations.md",
+    "html_url": "https://cursor.com/blog/organizations",
+    "route": "blog/organizations",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cloud agent development environments",
+    "md_url": "https://cursor.com/blog/cloud-agent-development-environments.md",
+    "html_url": "https://cursor.com/blog/cloud-agent-development-environments",
+    "route": "blog/cloud-agent-development-environments",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cloud agent lessons",
+    "md_url": "https://cursor.com/blog/cloud-agent-lessons.md",
+    "html_url": "https://cursor.com/blog/cloud-agent-lessons",
+    "route": "blog/cloud-agent-lessons",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "bugbot learning",
+    "md_url": "https://cursor.com/blog/bugbot-learning.md",
+    "html_url": "https://cursor.com/blog/bugbot-learning",
+    "route": "blog/bugbot-learning",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "bootstrapping composer with autoinstall",
+    "md_url": "https://cursor.com/blog/bootstrapping-composer-with-autoinstall.md",
+    "html_url": "https://cursor.com/blog/bootstrapping-composer-with-autoinstall",
+    "route": "blog/bootstrapping-composer-with-autoinstall",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "app stability",
+    "md_url": "https://cursor.com/blog/app-stability.md",
+    "html_url": "https://cursor.com/blog/app-stability",
+    "route": "blog/app-stability",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "better models ambitious work",
+    "md_url": "https://cursor.com/blog/better-models-ambitious-work.md",
+    "html_url": "https://cursor.com/blog/better-models-ambitious-work",
+    "route": "blog/better-models-ambitious-work",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "faire",
+    "md_url": "https://cursor.com/blog/faire.md",
+    "html_url": "https://cursor.com/blog/faire",
+    "route": "blog/faire",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "paypal",
+    "md_url": "https://cursor.com/blog/paypal.md",
+    "html_url": "https://cursor.com/blog/paypal",
+    "route": "blog/paypal",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "nab",
+    "md_url": "https://cursor.com/blog/nab.md",
+    "html_url": "https://cursor.com/blog/nab",
+    "route": "blog/nab",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "amplitude",
+    "md_url": "https://cursor.com/blog/amplitude.md",
+    "html_url": "https://cursor.com/blog/amplitude",
+    "route": "blog/amplitude",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "self hosted cloud agents",
+    "md_url": "https://cursor.com/blog/self-hosted-cloud-agents.md",
+    "html_url": "https://cursor.com/blog/self-hosted-cloud-agents",
+    "route": "blog/self-hosted-cloud-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "fast regex search",
+    "md_url": "https://cursor.com/blog/fast-regex-search.md",
+    "html_url": "https://cursor.com/blog/fast-regex-search",
+    "route": "blog/fast-regex-search",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "composer 2",
+    "md_url": "https://cursor.com/blog/composer-2.md",
+    "html_url": "https://cursor.com/blog/composer-2",
+    "route": "blog/composer-2",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "money forward",
+    "md_url": "https://cursor.com/blog/money-forward.md",
+    "html_url": "https://cursor.com/blog/money-forward",
+    "route": "blog/money-forward",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "self summarization",
+    "md_url": "https://cursor.com/blog/self-summarization.md",
+    "html_url": "https://cursor.com/blog/self-summarization",
+    "route": "blog/self-summarization",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "security agents",
+    "md_url": "https://cursor.com/blog/security-agents.md",
+    "html_url": "https://cursor.com/blog/security-agents",
+    "route": "blog/security-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cursorbench",
+    "md_url": "https://cursor.com/blog/cursorbench.md",
+    "html_url": "https://cursor.com/blog/cursorbench",
+    "route": "blog/cursorbench",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "new plugins",
+    "md_url": "https://cursor.com/blog/new-plugins.md",
+    "html_url": "https://cursor.com/blog/new-plugins",
+    "route": "blog/new-plugins",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automations",
+    "md_url": "https://cursor.com/blog/automations.md",
+    "html_url": "https://cursor.com/blog/automations",
+    "route": "blog/automations",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "jetbrains acp",
+    "md_url": "https://cursor.com/blog/jetbrains-acp.md",
+    "html_url": "https://cursor.com/blog/jetbrains-acp",
+    "route": "blog/jetbrains-acp",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cursor support",
+    "md_url": "https://cursor.com/blog/cursor-support.md",
+    "html_url": "https://cursor.com/blog/cursor-support",
+    "route": "blog/cursor-support",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "planetscale",
+    "md_url": "https://cursor.com/blog/planetscale.md",
+    "html_url": "https://cursor.com/blog/planetscale",
+    "route": "blog/planetscale",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "third era",
+    "md_url": "https://cursor.com/blog/third-era.md",
+    "html_url": "https://cursor.com/blog/third-era",
+    "route": "blog/third-era",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "bugbot autofix",
+    "md_url": "https://cursor.com/blog/bugbot-autofix.md",
+    "html_url": "https://cursor.com/blog/bugbot-autofix",
+    "route": "blog/bugbot-autofix",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agent computer use",
+    "md_url": "https://cursor.com/blog/agent-computer-use.md",
+    "html_url": "https://cursor.com/blog/agent-computer-use",
+    "route": "blog/agent-computer-use",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agent sandboxing",
+    "md_url": "https://cursor.com/blog/agent-sandboxing.md",
+    "html_url": "https://cursor.com/blog/agent-sandboxing",
+    "route": "blog/agent-sandboxing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "stripe",
+    "md_url": "https://cursor.com/blog/stripe.md",
+    "html_url": "https://cursor.com/blog/stripe",
+    "route": "blog/stripe",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "marketplace",
+    "md_url": "https://cursor.com/blog/marketplace.md",
+    "html_url": "https://cursor.com/blog/marketplace",
+    "route": "blog/marketplace",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "box",
+    "md_url": "https://cursor.com/blog/box.md",
+    "html_url": "https://cursor.com/blog/box",
+    "route": "blog/box",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "long running agents",
+    "md_url": "https://cursor.com/blog/long-running-agents.md",
+    "html_url": "https://cursor.com/blog/long-running-agents",
+    "route": "blog/long-running-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "increased agent usage",
+    "md_url": "https://cursor.com/blog/increased-agent-usage.md",
+    "html_url": "https://cursor.com/blog/increased-agent-usage",
+    "route": "blog/increased-agent-usage",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "composer 1 5",
+    "md_url": "https://cursor.com/blog/composer-1-5.md",
+    "html_url": "https://cursor.com/blog/composer-1-5",
+    "route": "blog/composer-1-5",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "nvidia",
+    "md_url": "https://cursor.com/blog/nvidia.md",
+    "html_url": "https://cursor.com/blog/nvidia",
+    "route": "blog/nvidia",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "secure codebase indexing",
+    "md_url": "https://cursor.com/blog/secure-codebase-indexing.md",
+    "html_url": "https://cursor.com/blog/secure-codebase-indexing",
+    "route": "blog/secure-codebase-indexing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "dropbox",
+    "md_url": "https://cursor.com/blog/dropbox.md",
+    "html_url": "https://cursor.com/blog/dropbox",
+    "route": "blog/dropbox",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "salesforce",
+    "md_url": "https://cursor.com/blog/salesforce.md",
+    "html_url": "https://cursor.com/blog/salesforce",
+    "route": "blog/salesforce",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "building bugbot",
+    "md_url": "https://cursor.com/blog/building-bugbot.md",
+    "html_url": "https://cursor.com/blog/building-bugbot",
+    "route": "blog/building-bugbot",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "scaling agents",
+    "md_url": "https://cursor.com/blog/scaling-agents.md",
+    "html_url": "https://cursor.com/blog/scaling-agents",
+    "route": "blog/scaling-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agent best practices",
+    "md_url": "https://cursor.com/blog/agent-best-practices.md",
+    "html_url": "https://cursor.com/blog/agent-best-practices",
+    "route": "blog/agent-best-practices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "dynamic context discovery",
+    "md_url": "https://cursor.com/blog/dynamic-context-discovery.md",
+    "html_url": "https://cursor.com/blog/dynamic-context-discovery",
+    "route": "blog/dynamic-context-discovery",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "hooks partners",
+    "md_url": "https://cursor.com/blog/hooks-partners.md",
+    "html_url": "https://cursor.com/blog/hooks-partners",
+    "route": "blog/hooks-partners",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "graphite",
+    "md_url": "https://cursor.com/blog/graphite.md",
+    "html_url": "https://cursor.com/blog/graphite",
+    "route": "blog/graphite",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "browser visual editor",
+    "md_url": "https://cursor.com/blog/browser-visual-editor.md",
+    "html_url": "https://cursor.com/blog/browser-visual-editor",
+    "route": "blog/browser-visual-editor",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "debug mode",
+    "md_url": "https://cursor.com/blog/debug-mode.md",
+    "html_url": "https://cursor.com/blog/debug-mode",
+    "route": "blog/debug-mode",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "codex model harness",
+    "md_url": "https://cursor.com/blog/codex-model-harness.md",
+    "html_url": "https://cursor.com/blog/codex-model-harness",
+    "route": "blog/codex-model-harness",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "series d",
+    "md_url": "https://cursor.com/blog/series-d.md",
+    "html_url": "https://cursor.com/blog/series-d",
+    "route": "blog/series-d",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "productivity",
+    "md_url": "https://cursor.com/blog/productivity.md",
+    "html_url": "https://cursor.com/blog/productivity",
+    "route": "blog/productivity",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "semsearch",
+    "md_url": "https://cursor.com/blog/semsearch.md",
+    "html_url": "https://cursor.com/blog/semsearch",
+    "route": "blog/semsearch",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "enterprise",
+    "md_url": "https://cursor.com/blog/enterprise.md",
+    "html_url": "https://cursor.com/blog/enterprise",
+    "route": "blog/enterprise",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cloud agents",
+    "md_url": "https://cursor.com/blog/cloud-agents.md",
+    "html_url": "https://cursor.com/blog/cloud-agents",
+    "route": "blog/cloud-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "composer",
+    "md_url": "https://cursor.com/blog/composer.md",
+    "html_url": "https://cursor.com/blog/composer",
+    "route": "blog/composer",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "2 0",
+    "md_url": "https://cursor.com/blog/2-0.md",
+    "html_url": "https://cursor.com/blog/2-0",
+    "route": "blog/2-0",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "plan mode",
+    "md_url": "https://cursor.com/blog/plan-mode.md",
+    "html_url": "https://cursor.com/blog/plan-mode",
+    "route": "blog/plan-mode",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "java",
+    "md_url": "https://cursor.com/blog/java.md",
+    "html_url": "https://cursor.com/blog/java",
+    "route": "blog/java",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "tab rl",
+    "md_url": "https://cursor.com/blog/tab-rl.md",
+    "html_url": "https://cursor.com/blog/tab-rl",
+    "route": "blog/tab-rl",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "kernels",
+    "md_url": "https://cursor.com/blog/kernels.md",
+    "html_url": "https://cursor.com/blog/kernels",
+    "route": "blog/kernels",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "linear",
+    "md_url": "https://cursor.com/blog/linear.md",
+    "html_url": "https://cursor.com/blog/linear",
+    "route": "blog/linear",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "aug 2025 pricing",
+    "md_url": "https://cursor.com/blog/aug-2025-pricing.md",
+    "html_url": "https://cursor.com/blog/aug-2025-pricing",
+    "route": "blog/aug-2025-pricing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cli",
+    "md_url": "https://cursor.com/blog/cli.md",
+    "html_url": "https://cursor.com/blog/cli",
+    "route": "blog/cli",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gpt 5",
+    "md_url": "https://cursor.com/blog/gpt-5.md",
+    "html_url": "https://cursor.com/blog/gpt-5",
+    "route": "blog/gpt-5",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "bugbot out of beta",
+    "md_url": "https://cursor.com/blog/bugbot-out-of-beta.md",
+    "html_url": "https://cursor.com/blog/bugbot-out-of-beta",
+    "route": "blog/bugbot-out-of-beta",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "june 2025 pricing",
+    "md_url": "https://cursor.com/blog/june-2025-pricing.md",
+    "html_url": "https://cursor.com/blog/june-2025-pricing",
+    "route": "blog/june-2025-pricing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agent web",
+    "md_url": "https://cursor.com/blog/agent-web.md",
+    "html_url": "https://cursor.com/blog/agent-web",
+    "route": "blog/agent-web",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "new tier",
+    "md_url": "https://cursor.com/blog/new-tier.md",
+    "html_url": "https://cursor.com/blog/new-tier",
+    "route": "blog/new-tier",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "series c",
+    "md_url": "https://cursor.com/blog/series-c.md",
+    "html_url": "https://cursor.com/blog/series-c",
+    "route": "blog/series-c",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "team",
+    "md_url": "https://cursor.com/blog/team.md",
+    "html_url": "https://cursor.com/blog/team",
+    "route": "blog/team",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "series b",
+    "md_url": "https://cursor.com/blog/series-b.md",
+    "html_url": "https://cursor.com/blog/series-b",
+    "route": "blog/series-b",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "tab update",
+    "md_url": "https://cursor.com/blog/tab-update.md",
+    "html_url": "https://cursor.com/blog/tab-update",
+    "route": "blog/tab-update",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cpc",
+    "md_url": "https://cursor.com/blog/cpc.md",
+    "html_url": "https://cursor.com/blog/cpc",
+    "route": "blog/cpc",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "supermaven",
+    "md_url": "https://cursor.com/blog/supermaven.md",
+    "html_url": "https://cursor.com/blog/supermaven",
+    "route": "blog/supermaven",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "shadow workspace",
+    "md_url": "https://cursor.com/blog/shadow-workspace.md",
+    "html_url": "https://cursor.com/blog/shadow-workspace",
+    "route": "blog/shadow-workspace",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "series a",
+    "md_url": "https://cursor.com/blog/series-a.md",
+    "html_url": "https://cursor.com/blog/series-a",
+    "route": "blog/series-a",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "problems 2024",
+    "md_url": "https://cursor.com/blog/problems-2024.md",
+    "html_url": "https://cursor.com/blog/problems-2024",
+    "route": "blog/problems-2024",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "instant apply",
+    "md_url": "https://cursor.com/blog/instant-apply.md",
+    "html_url": "https://cursor.com/blog/instant-apply",
+    "route": "blog/instant-apply",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "problems 2023",
+    "md_url": "https://cursor.com/blog/problems-2023.md",
+    "html_url": "https://cursor.com/blog/problems-2023",
+    "route": "blog/problems-2023",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "llama inference",
+    "md_url": "https://cursor.com/blog/llama-inference.md",
+    "html_url": "https://cursor.com/blog/llama-inference",
+    "route": "blog/llama-inference",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "prompt design",
+    "md_url": "https://cursor.com/blog/prompt-design.md",
+    "html_url": "https://cursor.com/blog/prompt-design",
+    "route": "blog/prompt-design",
+    "kind": "blog"
+  }
+]

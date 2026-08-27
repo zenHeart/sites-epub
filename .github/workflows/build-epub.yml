@@ -18,7 +18,9 @@ jobs:
   pack:
     name: Pack EPUBs from committed corpus
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
+    env:
+      SITESEPUB_OFFLINE: "1"
     steps:
       - uses: actions/checkout@v4
 

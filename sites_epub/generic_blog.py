@@ -18,8 +18,10 @@ def parse_blog_html(html: str, blog_url: str) -> list[IndexEntry]:
     soup = BeautifulSoup(html, "lxml")
     seen: set[str] = set()
     out: list[IndexEntry] = []
-    for a in soup.find_all("a", href=True):
-        absolute = urljoin(blog_url, a["href"])
+    hrefs: list[str] = [a["href"] for a in soup.find_all("a", href=True)]
+    hrefs.extend(re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", html, flags=re.I))
+    for href in hrefs:
+        absolute = urljoin(blog_url, href)
         p = urlparse(absolute)
         if p.netloc and p.netloc != parsed.netloc:
             continue
@@ -32,9 +34,7 @@ def parse_blog_html(html: str, blog_url: str) -> list[IndexEntry]:
         route = f"blog/{slug}"
         if route in seen:
             continue
-        title = " ".join(a.get_text(" ", strip=True).split()) or slug
-        if len(title) > 120:
-            title = slug.replace("-", " ")
+        title = slug.replace("-", " ")
         seen.add(route)
         html_url = f"{origin}/blog/{slug}"
         out.append(

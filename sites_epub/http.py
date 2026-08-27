@@ -1,7 +1,8 @@
-"""HTTP fetch used by the live compile entry point."""
+"""HTTP fetch used by the local crawl entry point. Disabled when SITESEPUB_OFFLINE=1."""
 
 from __future__ import annotations
 
+import os
 import time
 import urllib.error
 import urllib.request
@@ -13,6 +14,8 @@ USER_AGENT = (
 
 
 def fetch_bytes(url: str, timeout: int = 60, retries: int = 3) -> tuple[bytes, str | None]:
+    if os.environ.get("SITESEPUB_OFFLINE"):
+        raise RuntimeError(f"offline: live fetch disabled ({url})")
     last_err: Exception | None = None
     req = urllib.request.Request(
         url,

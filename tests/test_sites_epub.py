@@ -15,6 +15,9 @@ if str(ROOT) not in sys.path:
 
 from sites_epub.catalog import upsert_vendor  # noqa: E402
 from sites_epub.compile import compile_from_sources, discover_entries, pack_vendor  # noqa: E402
+from sites_epub.generic_blog import parse_blog_html  # noqa: E402
+from sites_epub.generic_nav import parse_llms_generic  # noqa: E402
+from sites_epub.images import rewrite_body_images  # noqa: E402
 from sites_epub.models import IndexEntry, Vendor  # noqa: E402
 from sites_epub.walk import walk_chapters  # noqa: E402
 
@@ -202,6 +205,78 @@ class TestPackFromCorpus(unittest.TestCase):
                 chapter = _chapter_text(zf)
                 self.assertIn("Blog body phrase unique", chapter)
                 self.assertIn("curl install", chapter)
+
+
+class TestGenericLlmsAndBlog(unittest.TestCase):
+    def test_cursor_llms_nested_bare_urls(self) -> None:
+        text = """# Cursor Documentation
+
+## Get Started
+
+- https://cursor.com/docs.md
+- https://cursor.com/docs/get-started/quickstart.md
+- https://cursor.comhttps://cursor.com/changelog.md
+
+## Agent
+
+- https://cursor.com/docs/agent/overview.md
+  - https://cursor.com/docs/agent/tools/terminal.md
+
+# Help Center
+
+## Getting started
+
+- https://cursor.com/help/getting-started/install.md
+
+# API Documentation
+
+## API Overview
+
+- https://cursor.com/docs/api.md
+- https://cursor.com/docs/api.md#authentication
+"""
+        entries = parse_llms_generic(text, "https://cursor.com/docs")
+        routes = [e.route for e in entries]
+        self.assertEqual(
+            routes,
+            [
+                "docs",
+                "docs/get-started/quickstart",
+                "docs/agent/overview",
+                "docs/agent/tools/terminal",
+                "docs/api",
+            ],
+        )
+        self.assertTrue(entries[0].group.startswith("Cursor"))
+        self.assertTrue(any(e.group.endswith("Agent") for e in entries))
+        self.assertTrue(all(e.kind == "doc" for e in entries))
+
+    def test_blog_html_reads_sitemap_locs(self) -> None:
+        html = (
+            '<a href="/blog/hello">Hello</a>'
+            "<urlset><url><loc>https://cursor.com/blog/second-post</loc></url>"
+            "<url><loc>https://cursor.com/blog/topic/product</loc></url></urlset>"
+        )
+        entries = parse_blog_html(html, "https://cursor.com/blog")
+        routes = [e.route for e in entries]
+        self.assertEqual(routes, ["blog/hello", "blog/second-post"])
+        self.assertTrue(all(e.kind == "blog" for e in entries))
+
+
+class TestRewriteImages(unittest.TestCase):
+    def test_unmapped_remote_images_are_dropped(self) -> None:
+        html = (
+            '<p>x</p><img src="https://cdn.example/kept.png" alt="k">'
+            '<img src="https://cdn.example/skip.png" alt="s">'
+        )
+        out = rewrite_body_images(
+            html,
+            {"https://cdn.example/kept.png": "images/kept.png"},
+            base="https://example.test",
+        )
+        self.assertIn("images/kept.png", out)
+        self.assertNotIn("https://cdn.example/skip.png", out)
+        self.assertNotIn("http://", out)
 
 
 class TestCatalogUpsert(unittest.TestCase):

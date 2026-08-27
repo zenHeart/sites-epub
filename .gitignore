@@ -8,6 +8,8 @@ dist/
 site/*.epub
 *.epub
 !vendors/*/corpus/**
+vendors/*/corpus/docs.html
+vendors/*/corpus/blog.html
 !fixtures/**/*.png
 .env
 .env.*

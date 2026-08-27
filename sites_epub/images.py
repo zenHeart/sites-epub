@@ -117,6 +117,12 @@ def rewrite_body_images(
             rel = url_to_rel[raw]
         if rel:
             img["src"] = rel
+        elif (raw or "").startswith("images/"):
+            img["src"] = raw.split("?")[0]
+        else:
+            # Drop remotes so pandoc cannot fetch during offline pack.
+            img.decompose()
+            continue
         for attr in ("srcset", "data-src", "data-srcset", "sizes"):
             if img.has_attr(attr):
                 del img[attr]

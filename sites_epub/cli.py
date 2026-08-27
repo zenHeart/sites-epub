@@ -60,9 +60,10 @@ def cmd_add(args: argparse.Namespace) -> int:
                 "ok": True,
                 "vendor": vendor.id,
                 "mode": "fetch",
-                "fetched": result.fetched_routes,
-                "skipped": result.skipped_routes,
+                "fetched": len(result.fetched_routes),
+                "skipped": len(result.skipped_routes),
                 "entries": result.entries,
+                "corpus": str(vendor_dir(vendor.id, ROOT) / "corpus"),
             },
             indent=2,
         )

@@ -1,0 +1,9 @@
+{
+  "id": "claude",
+  "name": "Claude",
+  "docs_url": "https://code.claude.com/docs",
+  "blog_url": "https://claude.com/blog",
+  "icon": "vendors/claude/icon.png",
+  "author": "Anthropic",
+  "adapter": "claude"
+}

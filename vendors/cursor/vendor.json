@@ -1,0 +1,9 @@
+{
+  "id": "cursor",
+  "name": "Cursor",
+  "docs_url": "https://cursor.com/docs",
+  "blog_url": "https://cursor.com/blog",
+  "icon": "vendors/cursor/icon.png",
+  "author": "Cursor",
+  "adapter": "generic"
+}

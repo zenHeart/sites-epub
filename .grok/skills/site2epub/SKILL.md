@@ -28,7 +28,7 @@ python3 -m sites_epub pack
 2. If it exists, compare `vendors/<id>/fingerprints.json` to cached `corpus/pages`; **do not refetch unchanged routes**.
 3. Docs nav order first; **Blog is the last TOC parent**.
 4. Commit `catalog.json`, `vendors/<id>/vendor.json`, `fingerprints.json`, `corpus/pages`, `corpus/routes.json`, `corpus/image-map.json`, and compressed images. Never commit cookies, tokens, `.env`, or `work/`.
-5. Push `main`. Actions runs `python3 -m sites_epub pack` only (no live crawl) and publishes `epub.zenheart.site`.
+5. Push `main`. Actions sets `SITESEPUB_OFFLINE=1` and runs `python3 -m sites_epub pack` only (no live crawl) and publishes `epub.zenheart.site`.
 
 ## Output
 
