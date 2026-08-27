@@ -15,7 +15,7 @@ catalog.json          厂商与源码书清单（不含密钥）
 vendors/<id>/         图标与 fingerprints.json（仅内容哈希）
   corpus/             页面、图片、routes.json（CI 打包的输入）
 sites_epub/           抓取 → MDX/HTML 转换 → pandoc EPUB3
-.grok/skills/site2epub
+.agents/skills/site2epub   执行契约（Claude/Cursor 经同名 symlink）
 ```
 
 目录顺序：站点文档导航在前，**Blog 放在最后**。
