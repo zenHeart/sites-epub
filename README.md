@@ -1,6 +1,8 @@
 # sites-epub
 
-Pack official product **docs + blog** into one EPUB per model vendor. Catalog: [epub.zenheart.site](http://epub.zenheart.site/).
+Pack official product **docs + blog** into one EPUB per model vendor. Catalog (ZenShelf): [epub.zenheart.site](http://epub.zenheart.site/).
+
+The shelf shows **语料更新** time (`catalog.json` `updated_at`) so an incremental `fetch` can be judged against the live site. Linked handbooks (Pi, Claude Code 架构分析) open their own sites instead of duplicating the EPUB here.
 
 **Crawl is local** (`add` / `fetch`, including incremental skip). **GitHub Actions only packs** EPUB from the committed `vendors/<id>/corpus` (no live fetch).
 

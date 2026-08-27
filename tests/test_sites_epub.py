@@ -13,7 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from sites_epub.catalog import upsert_vendor  # noqa: E402
+from sites_epub.catalog import load_sites, upsert_vendor  # noqa: E402
+from sites_epub.catalog_html import render_index, shelf_books  # noqa: E402
 from sites_epub.compile import compile_from_sources, discover_entries, pack_vendor  # noqa: E402
 from sites_epub.generic_blog import parse_blog_html  # noqa: E402
 from sites_epub.generic_nav import parse_llms_generic  # noqa: E402
@@ -364,11 +365,42 @@ class TestCatalogUpsert(unittest.TestCase):
                 blog_url="https://cursor.com/blog",
                 icon="vendors/cursor/icon.png",
                 adapter="generic",
+                updated_at="2026-08-27T04:00:00Z",
             )
             upsert_vendor(v, cat)
-            again = upsert_vendor(v, cat)
+            again = upsert_vendor(
+                Vendor(
+                    id="cursor",
+                    name="Cursor",
+                    docs_url="https://cursor.com/docs",
+                    blog_url="https://cursor.com/blog",
+                    icon="vendors/cursor/icon.png",
+                    adapter="generic",
+                ),
+                cat,
+            )
             ids = [x.id for x in again]
             self.assertEqual(ids.count("cursor"), 1)
+            self.assertEqual(again[0].updated_at, "2026-08-27T04:00:00Z")
+
+
+class TestShelf(unittest.TestCase):
+    def test_shelf_lists_vendors_and_linked_sites(self) -> None:
+        html = render_index()
+        self.assertIn("ZenShelf", html)
+        self.assertIn("Codex", html)
+        self.assertIn("Claude", html)
+        self.assertIn("Cursor", html)
+        self.assertIn("Pi Agent", html)
+        self.assertIn("https://blog.zenheart.site/pi/", html)
+        self.assertIn("https://blog.zenheart.site/claude-code-sourcemap/", html)
+        self.assertIn("语料", html)
+        books = shelf_books()
+        kinds = {b["id"]: b["kind"] for b in books}
+        self.assertEqual(kinds["codex"], "vendor")
+        self.assertEqual(kinds["pi-handbook"], "site")
+        sites = load_sites()
+        self.assertTrue(any(s.id == "claude-code-sourcemap" for s in sites))
 
 
 if __name__ == "__main__":

@@ -7,7 +7,16 @@ import json
 import sys
 from pathlib import Path
 
-from .catalog import guess_adapter, guess_vendor_id, load_catalog, upsert_vendor, vendor_dir
+from .catalog import (
+    guess_adapter,
+    guess_vendor_id,
+    load_catalog,
+    now_iso,
+    stamp_vendor,
+    upsert_vendor,
+    vendor_dir,
+    vendor_to_dict,
+)
 from .catalog_html import write_site
 from .compile import fetch_vendor, pack_vendor
 from .models import Vendor
@@ -17,19 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def _write_vendor_json(v: Vendor, vdir: Path) -> None:
     (vdir / "vendor.json").write_text(
-        json.dumps(
-            {
-                "id": v.id,
-                "name": v.name,
-                "docs_url": v.docs_url,
-                "blog_url": v.blog_url,
-                "icon": v.icon,
-                "author": v.author,
-                "adapter": v.adapter,
-            },
-            indent=2,
-        )
-        + "\n",
+        json.dumps(vendor_to_dict(v), indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
 
@@ -54,6 +51,7 @@ def cmd_add(args: argparse.Namespace) -> int:
     upsert_vendor(vendor)
     _write_vendor_json(vendor, vdir)
     result = fetch_vendor(vendor, root=ROOT, workers=args.workers)
+    stamp_vendor(vendor.id, updated_at=now_iso(), chapters=result.entries)
     print(
         json.dumps(
             {
@@ -63,6 +61,7 @@ def cmd_add(args: argparse.Namespace) -> int:
                 "fetched": len(result.fetched_routes),
                 "skipped": len(result.skipped_routes),
                 "entries": result.entries,
+                "updated_at": now_iso(),
                 "corpus": str(vendor_dir(vendor.id, ROOT) / "corpus"),
             },
             indent=2,
@@ -82,6 +81,7 @@ def cmd_fetch(args: argparse.Namespace) -> int:
     for v in vendors:
         try:
             result = fetch_vendor(v, root=ROOT, workers=args.workers)
+            stamped = stamp_vendor(v.id, updated_at=now_iso(), chapters=result.entries)
             print(
                 json.dumps(
                     {
@@ -90,6 +90,7 @@ def cmd_fetch(args: argparse.Namespace) -> int:
                         "fetched": len(result.fetched_routes),
                         "skipped": len(result.skipped_routes),
                         "entries": result.entries,
+                        "updated_at": stamped.updated_at if stamped else now_iso(),
                     }
                 )
             )
@@ -113,6 +114,7 @@ def cmd_pack(args: argparse.Namespace) -> int:
         try:
             out = dest / f"{v.id}.epub"
             result = pack_vendor(v, out, root=ROOT)
+            stamp_vendor(v.id, packed_at=now_iso(), chapters=result.chapters)
             print(
                 json.dumps(
                     {
@@ -120,6 +122,7 @@ def cmd_pack(args: argparse.Namespace) -> int:
                         "vendor": v.id,
                         "output": result.output,
                         "chapters": result.chapters,
+                        "packed_at": now_iso(),
                     }
                 )
             )

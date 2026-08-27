@@ -7,7 +7,12 @@
       "blog_url": "https://learn.chatgpt.com/blog",
       "icon": "vendors/codex/icon.png",
       "author": "OpenAI",
-      "adapter": "codex"
+      "adapter": "codex",
+      "updated_at": "2026-08-27T04:46:16Z",
+      "packed_at": "2026-08-27T04:50:00Z",
+      "summary": "ChatGPT Codex 官方文档六段导航与产品博客，按站点目录打包为一部 EPUB。",
+      "category": "docs",
+      "chapters": 169
     },
     {
       "id": "claude",
@@ -16,7 +21,12 @@
       "blog_url": "https://claude.com/blog",
       "icon": "vendors/claude/icon.png",
       "author": "Anthropic",
-      "adapter": "claude"
+      "adapter": "claude",
+      "updated_at": "2026-08-27T04:28:43Z",
+      "packed_at": "2026-08-27T04:36:00Z",
+      "summary": "Claude Code 文档树与 claude.com/blog 全文，文档导航在前、Blog 在最后。",
+      "category": "docs",
+      "chapters": 420
     },
     {
       "id": "cursor",
@@ -25,7 +35,34 @@
       "blog_url": "https://cursor.com/blog",
       "icon": "vendors/cursor/icon.png",
       "author": "Cursor",
-      "adapter": "generic"
+      "adapter": "generic",
+      "updated_at": "2026-08-27T04:28:15Z",
+      "packed_at": "2026-08-27T04:36:00Z",
+      "summary": "Cursor 文档（llms.txt 导航）与官方博客，增量抓取后离线打包。",
+      "category": "docs",
+      "chapters": 247
+    }
+  ],
+  "sites": [
+    {
+      "id": "pi-handbook",
+      "name": "Pi Agent 复刻指南",
+      "url": "https://blog.zenheart.site/pi/",
+      "author": "ZenHeart",
+      "summary": "从源码边界到可运行 Coding Agent：Pi 的核心概念、用法、原理与复刻设计。",
+      "cover": "covers/pi.svg",
+      "category": "handbook",
+      "updated_at": "2026-08-21T00:55:42Z"
+    },
+    {
+      "id": "claude-code-sourcemap",
+      "name": "Claude Code 架构分析",
+      "url": "https://blog.zenheart.site/claude-code-sourcemap/",
+      "author": "ZenHeart",
+      "summary": "从源码到可复刻 Code Agent Harness，拆解 Loop、Tool、Context、Permission、MCP、Eval 与 Ops。",
+      "cover": "covers/claude-code.png",
+      "category": "handbook",
+      "updated_at": "2026-05-24T13:42:18Z"
     }
   ]
 }

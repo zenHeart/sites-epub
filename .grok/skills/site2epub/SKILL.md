@@ -29,6 +29,7 @@ python3 -m sites_epub pack
 3. Docs nav order first; **Blog is the last TOC parent**.
 4. Commit `catalog.json`, `vendors/<id>/vendor.json`, `fingerprints.json`, `corpus/pages`, `corpus/routes.json`, `corpus/image-map.json`, and compressed images. Never commit cookies, tokens, `.env`, or `work/`.
 5. Push `main`. Actions sets `SITESEPUB_OFFLINE=1` and runs `python3 -m sites_epub pack` only (no live crawl) and publishes `epub.zenheart.site`.
+6. `fetch` writes `updated_at` (语料时间) onto `catalog.json` so the shelf shows how stale the book is versus the live docs/blog. Other EPUB sites live in `catalog.json` → `sites` and the shelf jumps to those URLs.
 
 ## Images
 

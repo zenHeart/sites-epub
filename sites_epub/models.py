@@ -24,6 +24,23 @@ class Vendor:
     icon: str
     author: str = ""
     adapter: str = "generic"
+    updated_at: str = ""
+    packed_at: str = ""
+    summary: str = ""
+    category: str = "docs"
+    chapters: int = 0
+
+
+@dataclass
+class LinkedSite:
+    id: str
+    name: str
+    url: str
+    author: str = ""
+    summary: str = ""
+    cover: str = ""
+    category: str = "handbook"
+    updated_at: str = ""
 
 
 def unique_group_label(group: str, route: str, used: dict[str, str]) -> str:
