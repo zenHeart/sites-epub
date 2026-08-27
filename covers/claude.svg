@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="400" height="560">
+  <rect width="400" height="560" fill="#2b1d16"/>
+  <rect x="26" y="26" width="348" height="508" fill="none" stroke="#e8c9b4" stroke-width="1.2"/>
+  <text x="48" y="68" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" letter-spacing="2.4" fill="#c4a090">SITE EPUB / ANTHROPIC</text>
+  <text x="44" y="210" font-family="ui-serif, Iowan Old Style, Georgia, serif" font-size="68" font-weight="600" fill="#faf6f1">Claude</text>
+  <text x="48" y="258" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="600" fill="#e07755">Code 文档与博客</text>
+  <line x1="48" y1="286" x2="140" y2="286" stroke="#e07755" stroke-width="1"/>
+  <text x="48" y="430" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="13" fill="#d9c4b6">Claude Code 文档树</text>
+  <text x="48" y="452" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="13" fill="#d9c4b6">与 claude.com 官方博客</text>
+  <text x="48" y="508" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#faf6f1">Anthropic</text>
+  <text x="48" y="528" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#c4a090">code.claude.com</text>
+</svg>

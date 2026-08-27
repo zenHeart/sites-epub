@@ -25,7 +25,11 @@ def _vendor_book(v: Vendor, *, dist: Path | None) -> dict:
     epub = (dist or ROOT / "dist") / f"{v.id}.epub"
     packed = v.packed_at or _iso_from_mtime(epub)
     updated = v.updated_at or packed
-    icon_href = f"icons/{v.id}.png"
+    jacket = ROOT / "covers" / f"{v.id}.png"
+    if jacket.is_file():
+        cover_kind, cover, tone = "image", f"covers/{v.id}.png", ""
+    else:
+        cover_kind, cover, tone = "plate", f"icons/{v.id}.png", TONES.get(v.id, "codex")
     return {
         "id": v.id,
         "title": v.name,
@@ -35,9 +39,9 @@ def _vendor_book(v: Vendor, *, dist: Path | None) -> dict:
         "category": v.category or "docs",
         "categoryLabel": "厂商文档",
         "kind": "vendor",
-        "coverKind": "plate",
-        "cover": icon_href,
-        "tone": TONES.get(v.id, "codex"),
+        "coverKind": cover_kind,
+        "cover": cover,
+        "tone": tone,
         "updatedAt": updated,
         "packedAt": packed,
         "chapters": v.chapters,
