@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZenShelf · 站点 EPUB</title>
-  <meta name="description" content="官方文档与博客 EPUB，以及源码级技术书站点。">
+  <meta name="description" content="ZenHeart 的站点藏书：把 Codex / Claude / Cursor 官方文档与博客打成可离线阅读的 EPUB；Pi、Claude Code、DeepSeek Harness 等源码书点封面进入各自落地站。语料日期标记最近一次本地增量抓取。">
   <style>
     :root {
       color-scheme: light dark;
@@ -58,6 +58,17 @@
     }
     .seg button.on { background: var(--card); color: var(--ink); box-shadow: var(--shadow); }
     .icon-btn { padding: .45rem; }
+    .intro { padding: 1.75rem 0 0.4rem; max-width: 44rem; }
+    .intro .lede {
+      margin: 0; font-family: "Iowan Old Style", "Songti SC", "Noto Serif SC", serif;
+      font-size: 1.12rem; line-height: 1.65; font-weight: 400;
+    }
+    .intro-cols { display: flex; flex-wrap: wrap; gap: 1.4rem 2.2rem; margin-top: 1.15rem; }
+    .intro-cols h2 {
+      margin: 0 0 .35rem; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); font-weight: 600; font-family: ui-monospace, Menlo, monospace;
+    }
+    .intro-cols p { margin: 0; max-width: 20rem; font-size: .82rem; line-height: 1.65; color: var(--ink); opacity: .82; }
     .sub { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); font-size: .8rem; }
     .tabs { display: flex; gap: 1.4rem; overflow-x: auto; }
     .tabs button { border: 0; background: none; color: var(--muted); padding: 0 0 .35rem; cursor: pointer; white-space: nowrap; }
@@ -121,7 +132,8 @@
     .thumb .plate .logo { width: 1.1rem; height: 1.1rem; }
     .thumb .plate .kicker, .thumb .plate .cname { display: none; }
     .empty { text-align: center; padding: 6rem 1rem; color: var(--muted); font-family: "Songti SC", serif; }
-    footer { padding: 2rem 0; border-top: 1px solid var(--line); text-align: center; color: var(--muted); font-size: .75rem; font-family: "Songti SC", serif; }
+    footer { padding: 2rem 0 2.4rem; border-top: 1px solid var(--line); text-align: center; color: var(--muted); font-size: .75rem; font-family: "Songti SC", serif; }
+    footer p { margin: .35rem 0 0; font-family: Inter, "PingFang SC", sans-serif; font-size: .7rem; }
     .modal { position: fixed; inset: 0; background: rgba(28,26,25,.42); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; padding: 1.2rem; z-index: 20; }
     .modal.on { display: flex; }
     .sheet { width: min(36rem, 100%); background: var(--paper); color: var(--ink); border-radius: 1.1rem; padding: 1.6rem; box-shadow: var(--shadow-hover); position: relative; }
@@ -156,12 +168,28 @@
         <button class="icon-btn" title="切换主题" onclick="toggleDarkMode()">◐</button>
       </div>
     </header>
+    <section class="intro">
+      <p class="lede">把还在更新的官方文档收成可以离线翻的书，把已经写完的源码书指回它们自己的站点。</p>
+      <div class="intro-cols">
+        <div>
+          <h2>厂商文档</h2>
+          <p>Codex、Claude、Cursor：按站点导航抓取 docs 与 blog，合成一部 EPUB。点封面下载。卡片上的「语料」是最近一次本地增量抓取的日期，用来对照线上是否过期。</p>
+        </div>
+        <div>
+          <h2>源码书</h2>
+          <p>Pi、Claude Code 架构分析、DeepSeek Harness：点封面进入各自落地站阅读或下载，文件不在本站重复托管。</p>
+        </div>
+      </div>
+    </section>
     <div class="sub">
       <nav class="tabs" id="category-tabs"></nav>
       <span class="count" id="book-count-label"></span>
     </div>
     <main id="books-container"></main>
-    <footer>ZenShelf · 文档站 EPUB 与源码书入口</footer>
+    <footer>
+      ZenShelf · zenheart
+      <p>语料在本地增量抓取，EPUB 由 GitHub Actions 离线打包发布。</p>
+    </footer>
   </div>
   <div id="detail-modal" class="modal">
     <div class="sheet" id="detail-card">

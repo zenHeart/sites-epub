@@ -388,6 +388,9 @@ class TestShelf(unittest.TestCase):
     def test_shelf_lists_vendors_and_linked_sites(self) -> None:
         html = render_index()
         self.assertIn("ZenShelf", html)
+        self.assertIn("可以离线翻的书", html)
+        self.assertIn("落地站", html)
+        self.assertIn("增量抓取", html)
         self.assertIn("Codex", html)
         self.assertIn("Claude", html)
         self.assertIn("Cursor", html)
