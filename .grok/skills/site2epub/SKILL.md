@@ -30,6 +30,13 @@ python3 -m sites_epub pack
 4. Commit `catalog.json`, `vendors/<id>/vendor.json`, `fingerprints.json`, `corpus/pages`, `corpus/routes.json`, `corpus/image-map.json`, and compressed images. Never commit cookies, tokens, `.env`, or `work/`.
 5. Push `main`. Actions sets `SITESEPUB_OFFLINE=1` and runs `python3 -m sites_epub pack` only (no live crawl) and publishes `epub.zenheart.site`.
 
+## Images
+
+- Crawl writes every content image into `vendors/<id>/corpus/images` and `image-map.json`.
+- Incremental `fetch` still downloads **missing** images even when page text is unchanged.
+- Pack embeds only files that exist in the corpus. If an image cannot be fetched, **omit the `<img>`** — never leave a remote or chapter-relative `src` that the reader will show as a broken placeholder.
+- After pandoc, the packer strips any leftover `<img>` whose `src` is not a zip member. Walk/`pack` fail on `broken_img_src` / `remote_img_src` / `empty_img_src`.
+
 ## Output
 
 Print vendor id, fetched vs skipped counts, corpus path. After push, the Actions EPUB artifact is the book.

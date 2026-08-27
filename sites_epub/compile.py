@@ -10,7 +10,7 @@ from urllib.parse import urljoin, urlparse
 from .epub_pack import pack_epub
 from .fingerprint import content_hash, load_fingerprints, save_fingerprints
 from .http import fetch_bytes, fetch_text
-from .images import guess_ext, local_name_for_url
+from .images import collect_source_image_urls, guess_ext, local_name_for_url
 from .models import CompileResult, FetchResult, IndexEntry, Vendor
 from .page import DocPage, extract_page
 
@@ -341,28 +341,27 @@ def fetch_vendor(
     new_fp = {route: content_hash(text) for route, text in sources.items()}
     save_fingerprints(fp_path, new_fp)
 
-    # images for changed (and missing) pages
-    from .page import DocPage as DP
-
+    # Images for every route (including skipped pages) so incremental fetch
+    # still backfills missing corpus/images.
     urls: list[str] = []
     seen: set[str] = set()
     for entry in entries:
-        if entry.route in skipped:
-            continue
         text = sources.get(entry.route) or ""
         kind = "html" if text.lstrip().lower().startswith("<!") else "md"
+        img_list: list[str] = []
         try:
             if entry.kind == "blog" and kind == "html":
                 from .blog_article import extract_article
 
-                art = extract_article(text, url=entry.html_url)
-                img_list = art.image_urls
+                img_list = extract_article(text, url=entry.html_url).image_urls
             else:
                 img_list = extract_page(
                     text, route=entry.route, group=entry.group, url=entry.html_url, kind=kind
                 ).image_urls
         except Exception:
             img_list = []
+        if not img_list:
+            img_list = collect_source_image_urls(text, entry.html_url)
         for u in img_list:
             if u not in seen:
                 seen.add(u)
@@ -375,14 +374,15 @@ def fetch_vendor(
 
     def one_img(url: str) -> tuple[str, str | None]:
         name = local_name_for_url(url)
-        cached = image_dir / name
+        mapped = image_map.get(url)
+        cached = image_dir / mapped if mapped else image_dir / name
         if cached.is_file() and cached.stat().st_size > 0:
-            return url, name
+            return url, cached.name
         try:
             data, ctype = fetch_bytes(url)
         except Exception:
             return url, None
-        if not data or len(data) > 800_000:
+        if not data or len(data) > 1_500_000:
             return url, None
         if not Path(name).suffix:
             name = name + guess_ext(ctype, url)
@@ -449,6 +449,17 @@ def pack_vendor(
         cover_image=icon if icon.is_file() else None,
         work_dir=vdir / "work" / "epub-build",
     )
+    from .walk import walk_chapters
+
+    report = walk_chapters(output)
+    broken = [
+        c
+        for c in report.chapters
+        if any(d.startswith(("broken_img", "remote_img", "empty_img")) for d in c.defects)
+    ]
+    if broken:
+        sample = broken[0].defects[:3]
+        raise RuntimeError(f"broken images in {vendor.id} epub: {sample}")
     return result
 
 

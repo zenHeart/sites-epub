@@ -48,6 +48,15 @@ jobs:
               assert p.stat().st_size > 1000
               with zipfile.ZipFile(p) as zf:
                   assert zf.read("mimetype").decode().strip() == "application/epub+zip"
+              from sites_epub.walk import walk_chapters
+              report = walk_chapters(p)
+              broken = [
+                  (c.chapter, d)
+                  for c in report.chapters
+                  for d in c.defects
+                  if d.startswith(("broken_img", "remote_img", "empty_img"))
+              ]
+              assert not broken, broken
               print("ok", p.name, p.stat().st_size)
           PY
 

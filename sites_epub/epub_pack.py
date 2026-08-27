@@ -9,7 +9,7 @@ import tempfile
 from collections import OrderedDict
 from pathlib import Path
 
-from .images import rewrite_body_images
+from .images import repair_epub_images, rewrite_body_images
 from .models import IndexEntry, unique_group_label
 from .page import DocPage, sanitize_body_html
 
@@ -100,6 +100,7 @@ def grouped_html(
                 page.body_html,
                 url_to_rel,
                 base=page.url or "https://learn.chatgpt.com",
+                available=set(url_to_rel.values()),
             )
             rewritten = sanitize_body_html(rewritten)
             rewritten = demote_headings(rewritten)
@@ -194,6 +195,7 @@ def pack_epub(
             raise RuntimeError(
                 f"pandoc failed ({proc.returncode}): {(proc.stderr or proc.stdout).strip()}"
             )
+        repair_epub_images(output)
         return output
     finally:
         if own_tmp is not None:

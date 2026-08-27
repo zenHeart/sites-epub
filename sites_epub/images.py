@@ -8,7 +8,11 @@ import re
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlparse
 
-from bs4 import BeautifulSoup
+import warnings
+
+from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
+
+warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
 IMG_EXT = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".avif"}
 MD_IMG_RE = re.compile(r"!\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
@@ -98,11 +102,26 @@ def guess_ext(content_type: str | None, url: str) -> str:
     return ".img"
 
 
+def collect_source_image_urls(text: str, base: str) -> list[str]:
+    """Markdown + HTML (including site-relative /images/...) from raw page source."""
+    seen: set[str] = set()
+    out: list[str] = []
+    for url in collect_markdown_image_urls(text, base=base) + collect_image_urls(text, base=base):
+        if url not in seen:
+            seen.add(url)
+            out.append(url)
+    return out
+
+
 def rewrite_body_images(
     body_html: str,
     url_to_rel: dict[str, str],
     base: str = "https://learn.chatgpt.com",
+    *,
+    available: set[str] | None = None,
 ) -> str:
+    """Keep <img> only when the local pack file exists. Never leave a dangling src."""
+    available = available if available is not None else set(url_to_rel.values())
     soup = BeautifulSoup(body_html, "lxml")
     for img in soup.find_all("img"):
         raw = img.get("src") or img.get("data-src") or ""
@@ -115,14 +134,12 @@ def rewrite_body_images(
             rel = url_to_rel[url]
         elif raw in url_to_rel:
             rel = url_to_rel[raw]
-        if rel:
-            img["src"] = rel
-        elif (raw or "").startswith("images/"):
-            img["src"] = raw.split("?")[0]
-        else:
-            # Drop remotes so pandoc cannot fetch during offline pack.
+        elif (raw or "").split("?")[0].startswith("images/"):
+            rel = raw.split("?")[0]
+        if not rel or rel not in available:
             img.decompose()
             continue
+        img["src"] = rel
         for attr in ("srcset", "data-src", "data-srcset", "sizes"):
             if img.has_attr(attr):
                 del img[attr]
@@ -130,3 +147,75 @@ def rewrite_body_images(
     if hasattr(root, "decode_contents"):
         return root.decode_contents()
     return str(root)
+
+
+def resolve_epub_img_src(chapter: str, src: str, zip_names: set[str]) -> str | None:
+    """Return the zip member for a chapter-relative img src, or None if missing."""
+    src = (src or "").strip()
+    if not src or src.startswith("data:"):
+        return None
+    if src.startswith(("http://", "https://", "//")):
+        return None
+    from posixpath import dirname, normpath, join
+
+    candidates = [src.lstrip("/"), normpath(join(dirname(chapter), src))]
+    for cand in candidates:
+        if cand in zip_names:
+            return cand
+        if cand.startswith("../"):
+            trimmed = cand
+            while trimmed.startswith("../"):
+                trimmed = trimmed[3:]
+            if trimmed in zip_names:
+                return trimmed
+    base = src.rsplit("/", 1)[-1]
+    if base:
+        hits = [n for n in zip_names if n.endswith("/" + base)]
+        if len(hits) == 1:
+            return hits[0]
+    return None
+
+
+def repair_epub_images(epub_path: Path) -> int:
+    """Strip <img> whose src is not a zip member. Returns how many tags were removed."""
+    import zipfile
+
+    epub_path = Path(epub_path)
+    with zipfile.ZipFile(epub_path, "r") as zf:
+        names = zf.namelist()
+        name_set = set(names)
+        contents = {name: zf.read(name) for name in names}
+        infos = {info.filename: info for info in zf.infolist()}
+
+    removed = 0
+    for name in names:
+        lower = name.lower()
+        if not lower.endswith((".xhtml", ".html")):
+            continue
+        html = contents[name].decode("utf-8", errors="replace")
+        soup = BeautifulSoup(html, "lxml")
+        changed = False
+        for img in list(soup.find_all("img")):
+            src = (img.get("src") or "").strip()
+            if resolve_epub_img_src(name, src, name_set):
+                continue
+            img.decompose()
+            removed += 1
+            changed = True
+        if changed:
+            root = soup
+            contents[name] = str(root).encode("utf-8")
+
+    if removed == 0:
+        return 0
+
+    tmp = epub_path.with_suffix(".epub.tmp")
+    with zipfile.ZipFile(tmp, "w") as out:
+        for name in names:
+            info = infos[name]
+            if name == "mimetype":
+                out.writestr(info, contents[name], compress_type=zipfile.ZIP_STORED)
+            else:
+                out.writestr(info, contents[name])
+    tmp.replace(epub_path)
+    return removed

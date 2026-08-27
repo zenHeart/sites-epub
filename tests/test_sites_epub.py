@@ -17,7 +17,7 @@ from sites_epub.catalog import upsert_vendor  # noqa: E402
 from sites_epub.compile import compile_from_sources, discover_entries, pack_vendor  # noqa: E402
 from sites_epub.generic_blog import parse_blog_html  # noqa: E402
 from sites_epub.generic_nav import parse_llms_generic  # noqa: E402
-from sites_epub.images import rewrite_body_images  # noqa: E402
+from sites_epub.images import repair_epub_images, rewrite_body_images  # noqa: E402
 from sites_epub.models import IndexEntry, Vendor  # noqa: E402
 from sites_epub.walk import walk_chapters  # noqa: E402
 
@@ -268,15 +268,89 @@ class TestRewriteImages(unittest.TestCase):
         html = (
             '<p>x</p><img src="https://cdn.example/kept.png" alt="k">'
             '<img src="https://cdn.example/skip.png" alt="s">'
+            '<img src="/images/blog/side-chat.jpg" alt="broken">'
         )
         out = rewrite_body_images(
             html,
             {"https://cdn.example/kept.png": "images/kept.png"},
-            base="https://example.test",
+            base="https://learn.chatgpt.com/blog/post",
+            available={"images/kept.png"},
         )
         self.assertIn("images/kept.png", out)
         self.assertNotIn("https://cdn.example/skip.png", out)
+        self.assertNotIn("/images/blog/side-chat.jpg", out)
         self.assertNotIn("http://", out)
+
+    def test_site_relative_img_is_embedded_and_unmapped_omitted(self) -> None:
+        entries = [
+            IndexEntry(
+                group="Overview",
+                title="Home",
+                md_url="https://learn.chatgpt.com/docs.md",
+                html_url="https://learn.chatgpt.com/docs",
+                route="docs",
+                kind="doc",
+            )
+        ]
+        src = {
+            "docs": (
+                "# Home\n\nA paragraph before the screenshot.\n\n"
+                '<img src="/images/blog/side-chat.jpg" alt="side chat">\n\n'
+                '<img src="/images/blog/missing.jpg" alt="missing">\n\n'
+                "A paragraph after the screenshot.\n"
+            )
+        }
+        with tempfile.TemporaryDirectory() as td:
+            out = Path(td) / "book.epub"
+            mapped = {
+                "https://learn.chatgpt.com/images/blog/side-chat.jpg": SAMPLE,
+            }
+            compile_from_sources(
+                entries,
+                src,
+                out,
+                image_files=mapped,
+                title="Codex",
+                author="OpenAI",
+                cover_image=SAMPLE,
+            )
+            with zipfile.ZipFile(out) as zf:
+                names = set(zf.namelist())
+                chapter = _chapter_text(zf)
+                self.assertNotIn("/images/blog/missing.jpg", chapter)
+                self.assertNotIn("broken_img", chapter)
+                report = walk_chapters(out)
+                broken = [
+                    d
+                    for c in report.chapters
+                    for d in c.defects
+                    if d.startswith(("broken_img", "remote_img", "empty_img"))
+                ]
+                self.assertEqual(broken, [])
+                media = [n for n in names if n.lower().endswith((".png", ".jpg", ".jpeg", ".gif", ".webp"))]
+                self.assertTrue(media)
+
+    def test_repair_strips_img_missing_from_zip(self) -> None:
+        import io
+        import zipfile as zfmod
+
+        buf = io.BytesIO()
+        html = (
+            '<?xml version="1.0"?><html xmlns="http://www.w3.org/1999/xhtml">'
+            '<body><div class="doc-page" id="p"><p>Hello there screenshot.</p>'
+            '<img src="../media/nope.jpg" alt="x"/></div></body></html>'
+        )
+        with zfmod.ZipFile(buf, "w") as zf:
+            zf.writestr("mimetype", "application/epub+zip", compress_type=zfmod.ZIP_STORED)
+            zf.writestr("EPUB/text/ch001.xhtml", html)
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "book.epub"
+            path.write_bytes(buf.getvalue())
+            removed = repair_epub_images(path)
+            self.assertGreaterEqual(removed, 1)
+            with zfmod.ZipFile(path) as zf:
+                text = zf.read("EPUB/text/ch001.xhtml").decode("utf-8")
+            self.assertNotIn("<img", text.lower())
 
 
 class TestCatalogUpsert(unittest.TestCase):

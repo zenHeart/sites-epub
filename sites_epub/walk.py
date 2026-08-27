@@ -77,7 +77,12 @@ def _page_units(name: str, html: str) -> list[tuple[str, str]]:
     return []
 
 
-def inspect_fragment(html: str) -> tuple[list[str], int, list[str]]:
+def inspect_fragment(
+    html: str,
+    *,
+    chapter: str = "",
+    zip_names: set[str] | None = None,
+) -> tuple[list[str], int, list[str]]:
     soup = BeautifulSoup(html, "html.parser")
     text = re.sub(r"\s+", " ", soup.get_text(" ", strip=True)).strip()
     defects: list[str] = []
@@ -103,13 +108,19 @@ def inspect_fragment(html: str) -> tuple[list[str], int, list[str]]:
     if len(text) < 40:
         defects.append("empty_or_stub_body")
     img_srcs: list[str] = []
+    from .images import resolve_epub_img_src
+
     for img in soup.find_all("img"):
         src = (img.get("src") or "").strip()
-        if not src:
-            continue
         img_srcs.append(src)
+        if not src:
+            defects.append("empty_img_src")
+            continue
         if REMOTE_SRC.search(src) or src.startswith("https://") or src.startswith("http://"):
             defects.append(f"remote_img_src:{src}")
+            continue
+        if zip_names is not None and not resolve_epub_img_src(chapter, src, zip_names):
+            defects.append(f"broken_img_src:{src}")
     return defects, len(text), img_srcs
 
 
@@ -117,10 +128,13 @@ def walk_chapters(epub_path: Path, expected_routes: int | None = None) -> WalkRe
     epub_path = Path(epub_path)
     results: list[ChapterResult] = []
     with zipfile.ZipFile(epub_path) as zf:
+        zip_names = set(zf.namelist())
         for name in _chapter_names(zf):
             html = zf.read(name).decode("utf-8", errors="replace")
             for label, fragment in _page_units(name, html):
-                defects, chars, img_srcs = inspect_fragment(fragment)
+                defects, chars, img_srcs = inspect_fragment(
+                    fragment, chapter=name, zip_names=zip_names
+                )
                 results.append(
                     ChapterResult(
                         chapter=label,
