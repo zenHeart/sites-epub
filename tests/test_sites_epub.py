@@ -830,6 +830,43 @@ class TestChromeImgFilter(unittest.TestCase):
         self.assertIn('src="images/a.png"', out)
 
 
+class TestDecorativeSvgAndCardPadding(unittest.TestCase):
+    def test_inline_svg_and_w_embed_shell_removed(self) -> None:
+        from sites_epub.page import sanitize_body_html
+
+        html = (
+            '<div class="w-embed"><svg viewBox="0 0 44 44" fill="none" stroke="#141413">'
+            "<path d=\"M14 2C6 4 6 4 6 6v6c0 1.1.9 2 2 2h4v4c0 3-4 3-4 6\"/>"
+            "</svg></div>"
+            "<p>Every stage commits an artifact the next stage can read.</p>"
+        )
+        out = sanitize_body_html(html)
+        self.assertNotIn("<svg", out.lower())
+        self.assertNotIn("w-embed", out)
+        self.assertIn("Every stage commits an artifact", out)
+
+    def test_background_div_gets_card_class_with_padding(self) -> None:
+        from sites_epub.page import sanitize_body_html
+
+        html = (
+            '<div style="max-width:2048px;background:#d97757">'
+            "<p>Ideas stop waiting for someone to write them up.</p>"
+            "</div>"
+        )
+        out = sanitize_body_html(html)
+        self.assertIn("mdx-card", out)
+        self.assertIn("Ideas stop waiting", out)
+
+    def test_existing_card_class_not_duplicated(self) -> None:
+        from sites_epub.page import sanitize_body_html
+
+        html = (
+            '<div class="mdx-card" style="background:#eee"><p>x</p></div>'
+        )
+        out = sanitize_body_html(html)
+        self.assertEqual(out.count("mdx-card"), 1)
+
+
 class TestBlogArticleExtract(unittest.TestCase):
     def test_testimonials_between_richtext_blocks_survive(self) -> None:
         from sites_epub.blog_article import extract_article

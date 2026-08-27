@@ -172,6 +172,20 @@ def sanitize_body_html(html: str, page_url: str | None = None) -> str:
     ):
         for el in root.select(sel):
             el.decompose()
+    # 内联 SVG 在 EPUB 阅读器里丢 currentColor 上下文,viewBox 属性还会被
+    # HTML 解析小写成 viewbox 导致错位——装饰性图标一律剔除(w-embed 空壳同删)。
+    for svg in list(root.find_all("svg")):
+        svg.decompose()
+    for embed in list(root.select("div.w-embed")):
+        if not embed.get_text(strip=True):
+            embed.decompose()
+    # 站点私有 class 的彩色卡片在书内没有任何盒模型;有背景色的块容器
+    # 统一升级为 mdx-card,由打包 CSS 提供 padding/圆角(降级为灰底可接受)。
+    for el in root.find_all(["div", "figure"]):
+        style = (el.get("style") or "").lower()
+        classes = el.get("class") or []
+        if "background" in style and "mdx-card" not in classes:
+            el["class"] = classes + ["mdx-card"]
     # Page-local <section>/<main> would close packer wrappers. Keep figure/aside.
     for el in root.find_all(["main", "article", "section"]):
         el.name = "div"

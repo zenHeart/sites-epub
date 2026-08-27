@@ -70,7 +70,9 @@ kbd { font-family: Menlo, Consolas, monospace; font-size: 0.85em; border: 1px so
 a { color: #0f4c81; }
 figure.mdx-frame, figure.mdx-diagram { margin: 1.2em 0; }
 figcaption { font-size: 0.9em; color: #555; margin-top: 0.4em; }
-.mdx-card { border: 1px solid #ddd; border-radius: 6px; padding: 0.75em 1em; margin: 0.6em 0; background: #fafafa; }
+.mdx-card { border: 1px solid #ddd; border-radius: 10px; padding: 0.9em 1.1em; margin: 0.8em 0; background: #fafafa; }
+.mdx-card > :first-child { margin-top: 0; }
+.mdx-card > :last-child { margin-bottom: 0; }
 .mdx-card-title { font-weight: 600; margin: 0 0 0.35em; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 .mdx-card-group { margin: 1em 0; }
 .mdx-mermaid { background: #f4f4f4; }
