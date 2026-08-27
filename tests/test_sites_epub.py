@@ -404,6 +404,11 @@ class TestShelf(unittest.TestCase):
         self.assertEqual(kinds["deepseek-harness"], "site")
         pi = next(b for b in books if b["id"] == "pi-handbook")
         self.assertTrue(pi["cover"].endswith(".png"))
+        self.assertIn("display: flex", html)
+        self.assertIn("flex-wrap: wrap", html)
+        self.assertNotIn("grid-template-columns", html)
+        self.assertIn("book-cover-slot", html)
+        self.assertIn("padding-bottom: 133.333%", html)
         sites = load_sites()
         self.assertTrue(any(s.id == "claude-code-sourcemap" for s in sites))
 
