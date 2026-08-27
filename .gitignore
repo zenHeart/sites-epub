@@ -6,6 +6,8 @@ work/
 vendors/*/work/
 dist/
 site/*.epub
+site/covers/
+site/icons/
 site/pack-hashes.json
 *.epub
 !vendors/*/corpus/**
