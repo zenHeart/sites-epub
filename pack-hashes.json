@@ -1,0 +1,17 @@
+{
+  "codex": {
+    "sha256": "ce8eeb4fcdf51d2bc7e7c25c4013983c15a0de991c20978ee5d9807993c43421",
+    "packed_at": "2026-08-27T07:13:31Z",
+    "chapters": 169
+  },
+  "claude": {
+    "sha256": "1a26aa873af123f8c0d1bd322c0a79cd2f81391ad5000e0b3bff1a0eedcedb1b",
+    "packed_at": "2026-08-27T07:16:44Z",
+    "chapters": 420
+  },
+  "cursor": {
+    "sha256": "32701975f6fa169f73f144a26cdcb5728baa9246505f81fd37574b3c8f79d3a2",
+    "packed_at": "2026-08-27T07:17:46Z",
+    "chapters": 247
+  }
+}
