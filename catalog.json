@@ -1,0 +1,13 @@
+{
+  "vendors": [
+    {
+      "id": "codex",
+      "name": "Codex",
+      "docs_url": "https://learn.chatgpt.com/docs",
+      "blog_url": "https://learn.chatgpt.com/blog",
+      "icon": "vendors/codex/icon.png",
+      "author": "OpenAI",
+      "adapter": "codex"
+    }
+  ]
+}

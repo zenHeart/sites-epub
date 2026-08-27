@@ -1,0 +1,82 @@
+name: Build EPUB
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      vendor:
+        description: Vendor id to build (empty = all)
+        required: false
+        default: ""
+
+concurrency:
+  group: build-epub-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    name: Build vendor EPUBs
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pandoc and python deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends pandoc python3-pip python3-lxml
+          python3 -m pip install --user beautifulsoup4 lxml
+          pandoc --version | head -1
+
+      - name: Cache vendor work
+        uses: actions/cache@v4
+        with:
+          path: vendors/*/work
+          key: vendor-work-${{ github.sha }}
+          restore-keys: vendor-work-
+
+      - name: Compile catalog vendors
+        run: |
+          python3 -m sites_epub build --all --workers 8
+          python3 -m sites_epub catalog --dest site
+          ls -la dist/*.epub site/
+
+      - name: Validate EPUBs
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile
+          dist = Path("dist")
+          epubs = list(dist.glob("*.epub"))
+          assert epubs, "no epub produced"
+          for p in epubs:
+              assert p.stat().st_size > 1000
+              with zipfile.ZipFile(p) as zf:
+                  assert zf.read("mimetype").decode().strip() == "application/epub+zip"
+              print("ok", p.name, p.stat().st_size)
+          PY
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vendor-epubs
+          path: |
+            dist/*.epub
+            site/index.html
+            site/CNAME
+            site/icons/*
+          retention-days: 30
+
+      - name: Publish gh-pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: site
+          cname: epub.zenheart.site
