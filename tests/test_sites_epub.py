@@ -584,6 +584,53 @@ The explorer covers files you author and edit.
         self.assertNotIn("mintcdn.com", out)
 
 
+class TestSceneRestore(unittest.TestCase):
+    def test_frame_becomes_figure_with_image(self) -> None:
+        md = (
+            "# Status line\n\n"
+            "<Frame>\n"
+            '<img src="https://mintcdn.com/claude-code/x/images/statusline.png" alt="status line">\n'
+            "</Frame>\n"
+        )
+        page = extract_from_markdown(
+            md, route="statusline", url="https://code.claude.com/docs/en/statusline"
+        )
+        self.assertIn("mdx-frame", page.body_html)
+        self.assertIn("statusline.png", page.body_html)
+        self.assertTrue(any("statusline.png" in u for u in page.image_urls))
+
+    def test_card_links_to_original_docs(self) -> None:
+        md = (
+            "# Quickstart\n\n"
+            '<Card title="Best practices" href="/docs/en/best-practices">\n'
+            "Get better results.\n"
+            "</Card>\n"
+        )
+        page = extract_from_markdown(
+            md, route="quickstart", url="https://code.claude.com/docs/en/quickstart"
+        )
+        self.assertIn("https://code.claude.com/docs/en/best-practices", page.body_html)
+        self.assertIn("mdx-card", page.body_html)
+        self.assertIn("Get better results", page.body_text)
+
+    def test_mermaid_stays_as_diagram_source(self) -> None:
+        md = "# Flow\n\n```mermaid\ngraph TD\n  A-->B\n```\n"
+        page = extract_from_markdown(
+            md, route="flow", url="https://code.claude.com/docs/en/flow"
+        )
+        self.assertIn("mdx-mermaid", page.body_html)
+        self.assertIn("language-mermaid", page.body_html)
+        self.assertIn("A--", page.body_html)
+        self.assertNotIn("useMemo", page.body_html)
+
+    def test_root_relative_links_become_absolute(self) -> None:
+        md = "# X\n\nSee [hooks](/docs/en/hooks) for details.\n"
+        page = extract_from_markdown(
+            md, route="x", url="https://code.claude.com/docs/en/x"
+        )
+        self.assertIn("https://code.claude.com/docs/en/hooks", page.body_html)
+
+
 class TestSourceTitleLinks(unittest.TestCase):
     def test_grouped_html_title_is_the_original_url(self) -> None:
         pages = [

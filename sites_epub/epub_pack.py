@@ -65,6 +65,16 @@ th { background: #f0f0f0; font-weight: 600; }
 .mdx-file-card { border: 1px solid #ddd; border-radius: 6px; padding: 0.75em 1em; margin: 0.8em 0; background: #fafafa; }
 .mdx-file-card h3 { margin: 0 0 0.35em; font-size: 1.05em; }
 .mdx-when { font-size: 0.92em; color: #444; }
+blockquote { border-left: 3px solid #ccc; margin: 1em 0; padding: 0.15em 0.9em; color: #444; }
+kbd { font-family: Menlo, Consolas, monospace; font-size: 0.85em; border: 1px solid #ccc; border-radius: 3px; padding: 0.05em 0.35em; background: #f6f6f6; }
+a { color: #0f4c81; }
+figure.mdx-frame, figure.mdx-diagram { margin: 1.2em 0; }
+figcaption { font-size: 0.9em; color: #555; margin-top: 0.4em; }
+.mdx-card { border: 1px solid #ddd; border-radius: 6px; padding: 0.75em 1em; margin: 0.6em 0; background: #fafafa; }
+.mdx-card-title { font-weight: 600; margin: 0 0 0.35em; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.mdx-card-group { margin: 1em 0; }
+.mdx-mermaid { background: #f4f4f4; }
+.mdx-danger, .mdx-callout.mdx-danger { border-left-color: #dc2626; background: #fef2f2; }
 """
 
 
@@ -153,7 +163,7 @@ def grouped_html(
                 base=page.url or "https://learn.chatgpt.com",
                 available=set(url_to_rel.values()),
             )
-            rewritten = sanitize_body_html(rewritten)
+            rewritten = sanitize_body_html(rewritten, page_url=page.url)
             rewritten = demote_headings(rewritten)
             page_id = _esc(page.route or page.title)
             source = http_url(page.url)

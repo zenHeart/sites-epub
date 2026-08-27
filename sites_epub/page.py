@@ -8,6 +8,8 @@ import subprocess
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from urllib.parse import urljoin, urlparse
+
 from bs4 import BeautifulSoup, Tag
 
 from .images import collect_image_urls, collect_markdown_image_urls
@@ -83,8 +85,6 @@ def extract_from_markdown(
     soup = BeautifulSoup(html, "lxml")
     root = soup.body if soup.body else soup
     text = _plain(root) if isinstance(root, Tag) else re.sub(r"\s+", " ", str(root))
-    if not text:
-        raise ValueError("doc body is empty")
     image_urls = collect_markdown_image_urls(body_md, base=url or "https://learn.chatgpt.com")
     html_imgs = collect_image_urls(
         root.decode_contents() if hasattr(root, "decode_contents") else html,
@@ -96,8 +96,10 @@ def extract_from_markdown(
         if u not in seen:
             seen.add(u)
             merged.append(u)
+    if not text and not merged:
+        raise ValueError("doc body is empty")
     body_html = root.decode_contents() if hasattr(root, "decode_contents") else html
-    body_html = sanitize_body_html(body_html)
+    body_html = sanitize_body_html(body_html, page_url=url)
     text_soup = BeautifulSoup(body_html, "lxml")
     text_root = text_soup.body if text_soup.body else text_soup
     text = _plain(text_root) if isinstance(text_root, Tag) else re.sub(r"\s+", " ", str(text_root))
@@ -112,22 +114,59 @@ def extract_from_markdown(
     )
 
 
-def sanitize_body_html(html: str) -> str:
+def rewrite_absolute_links(html: str, page_url: str | None) -> str:
+    """Turn site-root links into https URLs so EPUB readers can open the original page."""
+    if not page_url:
+        return html
+    parsed = urlparse(page_url)
+    origin = f"{parsed.scheme}://{parsed.netloc}"
+    soup = BeautifulSoup(html, "lxml")
+    root = soup.body if soup.body else soup
+    for anchor in root.find_all("a", href=True):
+        href = (anchor.get("href") or "").strip()
+        if not href or href.startswith(("#", "mailto:", "http://", "https://")):
+            continue
+        if href.startswith("//"):
+            abs_href = "https:" + href
+        elif href.startswith("/"):
+            abs_href = origin + href
+        else:
+            abs_href = urljoin(page_url, href)
+        anchor["href"] = abs_href
+        anchor["rel"] = "external"
+    serialized = root.decode_contents() if hasattr(root, "decode_contents") else str(root)
+    return serialized
+
+
+def sanitize_body_html(html: str, page_url: str | None = None) -> str:
     """Drop chrome that would hijack pandoc's HTML reader (nested <main>/<section>)."""
     soup = BeautifulSoup(html, "lxml")
     root = soup.body if soup.body else soup
+    for iframe in list(root.find_all("iframe")):
+        src = (iframe.get("src") or "").strip()
+        if src.startswith("//"):
+            src = "https:" + src
+        if src:
+            note = soup.new_tag("p")
+            note["class"] = "mdx-live-widget"
+            link = soup.new_tag("a", href=src, rel="external")
+            link.string = src
+            note.append("Embedded media on the original page: ")
+            note.append(link)
+            iframe.replace_with(note)
+        else:
+            iframe.decompose()
     for sel in (
         "script",
         "style",
-        "iframe",
         "astro-island",
         "noscript",
         "[data-markdown-export='illustration']",
     ):
         for el in root.select(sel):
             el.decompose()
-    # Page-local <section> would close packer doc-group/doc-page wrappers.
-    for el in root.find_all(["main", "article", "aside", "figure", "section"]):
+    # Page-local <section>/<main> would close packer wrappers. Keep figure/aside.
+    for el in root.find_all(["main", "article", "section"]):
         el.name = "div"
         if el.has_attr("role"):
             del el["role"]
@@ -137,7 +176,8 @@ def sanitize_body_html(html: str) -> str:
         if pascal.search(raw) or "&lt;" in raw:
             node.replace_with(strip_leaked_jsx_text(raw))
     serialized = root.decode_contents() if hasattr(root, "decode_contents") else str(root)
-    return strip_leaked_jsx_text(serialized)
+    cleaned = strip_leaked_jsx_text(serialized)
+    return rewrite_absolute_links(cleaned, page_url)
 
 
 def extract_from_html(
@@ -163,7 +203,8 @@ def extract_from_html(
     for logo in article.select('img[src*="mintcdn.com"][src*="logo/"]'):
         logo.decompose()
     body_html = sanitize_body_html(
-        article.decode_contents() if hasattr(article, "decode_contents") else str(article)
+        article.decode_contents() if hasattr(article, "decode_contents") else str(article),
+        page_url=url,
     )
     text_soup = BeautifulSoup(body_html, "lxml")
     text_root = text_soup.body if text_soup.body else text_soup

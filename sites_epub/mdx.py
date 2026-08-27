@@ -571,11 +571,60 @@ def _tab_body_html(body: str) -> str:
 
 def _render_callout(kind: str, _attrs: str, inner: str) -> str:
     label = kind.capitalize()
+    if kind.lower() == "callout":
+        label = _attr(_attrs, "title") or _attr(_attrs, "type") or "Note"
+        kind = _attr(_attrs, "type") or "note"
     body = _md_to_html(inner)
     return (
-        f'\n<aside class="mdx-callout mdx-{kind.lower()}">'
+        f'\n<aside class="mdx-callout mdx-{html.escape(kind.lower(), quote=True)}">'
         f'<p class="mdx-callout-label">{html.escape(label)}</p>\n'
         f"{body}\n</aside>\n"
+    )
+
+
+def _render_frame(attrs: str, inner: str) -> str:
+    caption = _attr(attrs, "caption") or _attr(attrs, "title")
+    parts = ['\n<figure class="mdx-frame">', (inner or "").strip()]
+    if caption:
+        parts.append(f"<figcaption>{html.escape(caption)}</figcaption>")
+    parts.append("</figure>\n")
+    return "\n".join(parts)
+
+
+def _render_card(attrs: str, inner: str, page_url: str | None) -> str:
+    title = _attr(attrs, "title") or "Related"
+    href = _doc_href(_attr(attrs, "href"), page_url)
+    parts = ['\n<div class="mdx-card">']
+    if href:
+        parts.append(
+            f'<p class="mdx-card-title"><a href="{html.escape(href, quote=True)}" rel="external">'
+            f"{html.escape(title)}</a></p>"
+        )
+    else:
+        parts.append(f'<p class="mdx-card-title">{html.escape(title)}</p>')
+    if inner and inner.strip():
+        parts.append(_md_to_html(inner))
+    parts.append("</div>\n")
+    return "\n".join(parts)
+
+
+def _render_card_group(_attrs: str, inner: str) -> str:
+    return f'\n<div class="mdx-card-group">\n{inner.strip()}\n</div>\n'
+
+
+def _render_video(attrs: str, inner: str, page_url: str | None) -> str:
+    src = _attr(attrs, "src") or _attr(attrs, "url") or page_url or ""
+    if src and not src.startswith("http"):
+        src = _doc_href(src, page_url)
+    href = html.escape(src or page_url or "", quote=True)
+    caption = _attr(attrs, "title") or "Video"
+    extra = _md_to_html(inner) if inner and inner.strip() else ""
+    return (
+        f'\n<aside class="mdx-live-widget">'
+        f'<p class="mdx-live-widget-label">{html.escape(caption)}</p>'
+        f'<p>This video cannot play inside an EPUB. Open it here: '
+        f'<a class="source-title" href="{href}" rel="external">{html.escape(src or href)}</a></p>'
+        f"{extra}</aside>\n"
     )
 
 
@@ -1078,7 +1127,6 @@ ISLAND_TAGS = (
     "PermissionModeSelectorDemo",
     "PromptComponent",
     "CodexOverviewLanding",
-    "VideoPlayer",
     "CodexScreenshot",
     "CodexPetsDemo",
     "CodexModelSwitcher",
@@ -1117,7 +1165,15 @@ def convert_remaining_fences(text: str) -> str:
         lang = info.split()[0] if info else ""
         code = textwrap.dedent(body).rstrip("\n")
         cls = f' class="language-{html.escape(lang, quote=True)}"' if lang else ""
-        out.append(f"<pre><code{cls}>{html.escape(code)}</code></pre>")
+        if lang.lower() == "mermaid":
+            out.append(
+                '<figure class="mdx-diagram">'
+                "<figcaption>Diagram (source; interactive render is on the original page)</figcaption>"
+                f'<pre class="mdx-mermaid"><code class="language-mermaid">{html.escape(code)}</code></pre>'
+                "</figure>"
+            )
+        else:
+            out.append(f"<pre><code{cls}>{html.escape(code)}</code></pre>")
         last = end + 1
     out.extend(lines[last:])
     result = "\n".join(out)
@@ -1146,8 +1202,27 @@ def transform_mdx(md: str, page_url: str | None = None) -> str:
     text = _replace_jsx(text, "TableWrapper", _render_table_wrapper)
     text = _replace_innermost(text, "ToggleSection", _render_toggle)
     text = _replace_jsx(text, "ContentSwitcher", _render_content_switcher)
+    text = _replace_innermost(text, "Frame", _render_frame)
+    text = _replace_innermost(
+        text, "Card", lambda attrs, inner: _render_card(attrs, inner, page_url)
+    )
+    text = _replace_innermost(text, "CardGroup", _render_card_group)
+    text = _replace_jsx(
+        text, "VideoPlayer", lambda attrs, inner: _render_video(attrs, inner, page_url)
+    )
     text = strip_islands(text)
-    for kind in ("Info", "Tip", "Warning", "Note", "Check", "WarningTip", "Alert", "CodexCallout"):
+    for kind in (
+        "Info",
+        "Tip",
+        "Warning",
+        "Note",
+        "Check",
+        "Danger",
+        "WarningTip",
+        "Alert",
+        "Callout",
+        "CodexCallout",
+    ):
         text = _replace_innermost(
             text, kind, lambda attrs, inner, k=kind: _render_callout(k, attrs, inner)
         )

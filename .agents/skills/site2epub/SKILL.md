@@ -30,6 +30,7 @@ compatibility: python3 + pandoc + beautifulsoup4 + lxml. Crawl needs network on 
 | 新建/增量/提交/CI | `references/workflow.md` |
 | 图片缺失、破图、远程 src | `references/images.md` |
 | 标题点击原文、TOC、walk 门禁 | `references/epub-rendering.md` |
+| 文本/图/表/组件/画图怎么还原 | `references/scenes.md` |
 | 判断该不该触发本技能 | `references/evals.md` |
 | 标题 HTML 合同 | `assets/page-title.html` |
 
