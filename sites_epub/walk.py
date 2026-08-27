@@ -31,6 +31,15 @@ FENCE_LEAK = re.compile(r"```")
 PRETTIER_LEAK = re.compile(r"\{/\*\s*prettier-ignore\s*\*/\}")
 REMOTE_SRC = re.compile(r"^(https?:)?//", re.I)
 SKIP_XHTML = ("nav.xhtml", "title_page.xhtml", "toc.xhtml")
+BLOCKING_PREFIXES = ("broken_img", "remote_img", "empty_img", "unlinked_page_title")
+
+
+def blocking_defects(defects: list[str]) -> list[str]:
+    return [d for d in defects if d.startswith(BLOCKING_PREFIXES)]
+
+
+def _norm_url(url: str | None) -> str:
+    return (url or "").strip().rstrip("/")
 
 
 @dataclass
@@ -121,6 +130,18 @@ def inspect_fragment(
             continue
         if zip_names is not None and not resolve_epub_img_src(chapter, src, zip_names):
             defects.append(f"broken_img_src:{src}")
+    root = soup.select_one(".doc-page")
+    source = ""
+    if root is not None:
+        source = (root.get("data-source") or "").strip()
+    elif soup.body:
+        source = (soup.body.get("data-source") or "").strip()
+    if source.lower().startswith(("http://", "https://")):
+        heading = root.find("h2") if root is not None else soup.find("h2")
+        link = heading.find("a", href=True) if heading else None
+        href = (link.get("href") or "").strip() if link else ""
+        if _norm_url(href) != _norm_url(source):
+            defects.append(f"unlinked_page_title:{source}")
     return defects, len(text), img_srcs
 
 

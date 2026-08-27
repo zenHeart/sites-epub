@@ -16,11 +16,13 @@ if str(ROOT) not in sys.path:
 from sites_epub.catalog import load_sites, upsert_vendor  # noqa: E402
 from sites_epub.catalog_html import render_index, shelf_books  # noqa: E402
 from sites_epub.compile import compile_from_sources, discover_entries, pack_vendor  # noqa: E402
+from sites_epub.epub_pack import grouped_html  # noqa: E402
 from sites_epub.generic_blog import parse_blog_html  # noqa: E402
 from sites_epub.generic_nav import parse_llms_generic  # noqa: E402
 from sites_epub.images import repair_epub_images, rewrite_body_images  # noqa: E402
 from sites_epub.models import IndexEntry, Vendor  # noqa: E402
-from sites_epub.walk import walk_chapters  # noqa: E402
+from sites_epub.page import DocPage  # noqa: E402
+from sites_epub.walk import blocking_defects, walk_chapters  # noqa: E402
 
 FIXTURES = ROOT / "fixtures"
 NAV = FIXTURES / "nav.html"
@@ -136,6 +138,10 @@ class TestCompileIncremental(unittest.TestCase):
                 self.assertIn("curl install", chapter)
                 self.assertIn("Blog body phrase unique", chapter)
                 self.assertNotIn("<Tabs", chapter)
+                self.assertIn('href="https://example.test/blog/hello"', chapter)
+                self.assertIn("source-title", chapter)
+                self.assertNotIn("page-meta", chapter)
+                self.assertNotIn("https://example.test/blog/hello", nav)
                 report = walk_chapters(out)
                 self.assertTrue(report.ok, [c.defects for c in report.chapters if not c.ok])
 
@@ -324,8 +330,7 @@ class TestRewriteImages(unittest.TestCase):
                 broken = [
                     d
                     for c in report.chapters
-                    for d in c.defects
-                    if d.startswith(("broken_img", "remote_img", "empty_img"))
+                    for d in blocking_defects(c.defects)
                 ]
                 self.assertEqual(broken, [])
                 media = [n for n in names if n.lower().endswith((".png", ".jpg", ".jpeg", ".gif", ".webp"))]
@@ -417,6 +422,60 @@ class TestShelf(unittest.TestCase):
         self.assertIn("padding-bottom: 133.333%", html)
         sites = load_sites()
         self.assertTrue(any(s.id == "claude-code-sourcemap" for s in sites))
+
+
+class TestSourceTitleLinks(unittest.TestCase):
+    def test_grouped_html_title_is_the_original_url(self) -> None:
+        pages = [
+            DocPage(
+                title="Zero Trust for AI agents",
+                body_html="<p>Enough article body for a real chapter.</p>",
+                body_text="Enough article body for a real chapter.",
+                route="blog/zero-trust-for-ai-agents",
+                group="Blog",
+                url="https://claude.com/blog/zero-trust-for-ai-agents",
+            )
+        ]
+        html = grouped_html(pages)
+        self.assertIn(
+            'href="https://claude.com/blog/zero-trust-for-ai-agents"',
+            html,
+        )
+        self.assertIn("class=\"source-title\"", html)
+        self.assertIn("Zero Trust for AI agents", html)
+        self.assertIn('data-source="https://claude.com/blog/zero-trust-for-ai-agents"', html)
+        self.assertNotIn("page-meta", html)
+        self.assertNotRegex(
+            html,
+            r"<p[^>]*>https://claude.com/blog/zero-trust-for-ai-agents</p>",
+        )
+
+    def test_walk_flags_unlinked_page_title(self) -> None:
+        import zipfile as zfmod
+
+        html = (
+            '<?xml version="1.0"?><html xmlns="http://www.w3.org/1999/xhtml">'
+            '<body><div class="doc-page" id="p" '
+            'data-source="https://claude.com/blog/zero-trust-for-ai-agents">'
+            "<h2>Zero Trust for AI agents</h2>"
+            "<p>https://claude.com/blog/zero-trust-for-ai-agents</p>"
+            "<p>Enough body text so the stub check does not fire here.</p>"
+            "</div></body></html>"
+        )
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "book.epub"
+            with zfmod.ZipFile(path, "w") as zf:
+                zf.writestr("mimetype", "application/epub+zip", compress_type=zfmod.ZIP_STORED)
+                zf.writestr("EPUB/text/ch001.xhtml", html)
+            report = walk_chapters(path)
+            flags = [
+                d
+                for c in report.chapters
+                for d in c.defects
+                if d.startswith("unlinked_page_title")
+            ]
+            self.assertTrue(flags)
+            self.assertFalse(report.ok)
 
 
 if __name__ == "__main__":

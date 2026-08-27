@@ -6,7 +6,7 @@
 - **源码书**（Pi、Claude Code 架构分析、DeepSeek Harness）：点封面进入各自落地站，不在本仓库重复托管文件。
 - 卡片上的「语料」对应 `catalog.json` 的 `updated_at`，即最近一次本地增量抓取的时间，用来对照线上是否过期。
 
-抓取只在本地执行（`add` / `fetch`，未变更的页面会跳过）。GitHub Actions 只从已提交的 `vendors/<id>/corpus` 离线打包 EPUB，不访问产品站点。
+抓取只在本地执行（`add` / `fetch`，未变更的页面会跳过）。GitHub Actions 只从已提交的 `vendors/<id>/corpus` 离线打包 EPUB，不访问产品站点。书中每篇教程和文章的标题是指向原文的链接，点击标题即可打开对应页面。
 
 ## 目录
 

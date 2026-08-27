@@ -449,17 +449,13 @@ def pack_vendor(
         cover_image=icon if icon.is_file() else None,
         work_dir=vdir / "work" / "epub-build",
     )
-    from .walk import walk_chapters
+    from .walk import blocking_defects, walk_chapters
 
     report = walk_chapters(output)
-    broken = [
-        c
-        for c in report.chapters
-        if any(d.startswith(("broken_img", "remote_img", "empty_img")) for d in c.defects)
-    ]
+    broken = [c for c in report.chapters if blocking_defects(c.defects)]
     if broken:
-        sample = broken[0].defects[:3]
-        raise RuntimeError(f"broken images in {vendor.id} epub: {sample}")
+        sample = blocking_defects(broken[0].defects)[:3]
+        raise RuntimeError(f"broken images or unlinked titles in {vendor.id} epub: {sample}")
     return result
 
 

@@ -3,21 +3,41 @@
 from __future__ import annotations
 
 import html as html_lib
+import os
+import re
 import shutil
 import subprocess
 import tempfile
+import warnings
+import zipfile
 from collections import OrderedDict
-from pathlib import Path
+from pathlib import Path, PurePosixPath
+
+from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
+
+warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
 from .images import repair_epub_images, rewrite_body_images
 from .models import IndexEntry, unique_group_label
 from .page import DocPage, sanitize_body_html
 
+HTTP_URL_RE = re.compile(r"^https?://", re.I)
+NAV_NAME_HINTS = ("nav.xhtml", "toc.xhtml")
+SKIP_SOURCE_REPAIR = ("title_page.xhtml",)
+
 CSS = """
 body { font-family: Georgia, "Times New Roman", serif; line-height: 1.55; color: #1a1a1a; }
 h1, h2, h3, h4 { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.3; }
 img { max-width: 100%; height: auto; }
-.page-meta { color: #555; font-size: 0.85em; }
+h2.page-title { margin: 1.15em 0 0.45em; }
+h2.page-title a.source-title {
+  color: #0f4c81;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+h2.page-title a.source-title:visited { color: #0f4c81; }
+.source-mark { font-size: 0.62em; margin-left: 0.28em; font-weight: 400; vertical-align: super; }
 pre, pre code { font-family: Menlo, Consolas, "SF Mono", monospace; font-size: 0.85em; }
 pre { background: #f5f5f5; padding: 0.8em 1em; overflow-x: auto; white-space: pre-wrap; word-break: break-word; border-radius: 4px; }
 code { font-family: Menlo, Consolas, monospace; font-size: 0.9em; }
@@ -49,6 +69,32 @@ def _esc(text: str) -> str:
 
 def _yaml_str(text: str) -> str:
     return '"' + text.replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def http_url(url: str | None) -> str | None:
+    if not url:
+        return None
+    text = url.strip()
+    if HTTP_URL_RE.match(text):
+        return text
+    return None
+
+
+def _norm_url(url: str | None) -> str:
+    return (url or "").strip().rstrip("/")
+
+
+def _source_title_html(title: str, url: str | None) -> str:
+    text = _esc(title)
+    src = http_url(url)
+    if not src:
+        return f'<h2 class="page-title">{text}</h2>'
+    href = _esc(src)
+    return (
+        f'<h2 class="page-title">'
+        f'<a class="source-title" href="{href}" rel="external">{text}'
+        f'<span class="source-mark" aria-hidden="true">↗</span></a></h2>'
+    )
 
 
 def demote_headings(body_html: str) -> str:
@@ -104,10 +150,13 @@ def grouped_html(
             )
             rewritten = sanitize_body_html(rewritten)
             rewritten = demote_headings(rewritten)
-            parts.append(f"<div class=\"doc-page\" id=\"{_esc(page.route or page.title)}\">")
-            parts.append(f"<h2>{_esc(page.title)}</h2>")
-            if page.url:
-                parts.append(f'<p class="page-meta">{_esc(page.url)}</p>')
+            page_id = _esc(page.route or page.title)
+            source = http_url(page.url)
+            attrs = [f'class="doc-page"', f'id="{page_id}"']
+            if source:
+                attrs.append(f'data-source="{_esc(source)}"')
+            parts.append(f"<div {' '.join(attrs)}>")
+            parts.append(_source_title_html(page.title, page.url))
             parts.append(rewritten)
             parts.append("</div>")
         parts.append("</div>")
@@ -196,7 +245,122 @@ def pack_epub(
                 f"pandoc failed ({proc.returncode}): {(proc.stderr or proc.stdout).strip()}"
             )
         repair_epub_images(output)
+        repair_epub_source_links(output)
         return output
     finally:
         if own_tmp is not None:
             own_tmp.cleanup()
+
+
+def _is_nav_doc(name: str) -> bool:
+    lower = name.lower()
+    return any(hint in lower for hint in NAV_NAME_HINTS)
+
+
+def _toc_href(nav_name: str, chapter_name: str, fragment: str) -> str:
+    start = str(PurePosixPath(nav_name).parent)
+    rel = os.path.relpath(chapter_name, start=start).replace("\\", "/")
+    if fragment:
+        return f"{rel}#{fragment}"
+    return rel
+
+
+def _ensure_heading_source_link(soup: BeautifulSoup, page, source: str) -> bool:
+    h2 = page.find("h2")
+    if h2 is None:
+        return False
+    changed = False
+    classes = list(h2.get("class") or [])
+    if "page-title" not in classes:
+        classes.append("page-title")
+        h2["class"] = classes
+        changed = True
+    existing = h2.find("a", href=True)
+    if existing is not None and _norm_url(existing.get("href")) == _norm_url(source):
+        link_classes = list(existing.get("class") or [])
+        if "source-title" not in link_classes:
+            link_classes.append("source-title")
+            existing["class"] = link_classes
+            changed = True
+        rel = existing.get("rel")
+        if rel != "external" and rel != ["external"] and "external" not in (rel or []):
+            existing["rel"] = "external"
+            changed = True
+        return changed
+    title = h2.get_text(" ", strip=True).replace("↗", "").strip() or source
+    h2.clear()
+    anchor = soup.new_tag("a", href=source, **{"class": "source-title", "rel": "external"})
+    anchor.append(title)
+    mark = soup.new_tag("span", **{"class": "source-mark", "aria-hidden": "true"})
+    mark.string = "↗"
+    anchor.append(mark)
+    h2.append(anchor)
+    return True
+
+
+def repair_epub_source_links(epub_path: Path) -> int:
+    """Keep page titles as original-URL links; keep nav/TOC pointing inside the book."""
+    epub_path = Path(epub_path)
+    with zipfile.ZipFile(epub_path, "r") as zf:
+        names = zf.namelist()
+        contents = {name: zf.read(name) for name in names}
+        infos = {info.filename: info for info in zf.infolist()}
+
+    soups: dict[str, BeautifulSoup] = {}
+    changed_names: set[str] = set()
+    source_index: dict[str, tuple[str, str]] = {}
+    for name in names:
+        lower = name.lower()
+        if not lower.endswith((".xhtml", ".html")):
+            continue
+        if any(skip in lower for skip in SKIP_SOURCE_REPAIR):
+            continue
+        soup = BeautifulSoup(contents[name].decode("utf-8", errors="replace"), "lxml")
+        soups[name] = soup
+        if _is_nav_doc(name):
+            continue
+        for page in soup.select(".doc-page"):
+            source = http_url(page.get("data-source"))
+            if not source:
+                continue
+            fragment = (page.get("id") or "").strip()
+            h2 = page.find("h2")
+            if h2 and (h2.get("id") or "").strip():
+                fragment = (h2.get("id") or "").strip()
+            source_index[_norm_url(source)] = (name, fragment)
+            if _ensure_heading_source_link(soup, page, source):
+                changed_names.add(name)
+
+    for name, soup in soups.items():
+        if not _is_nav_doc(name):
+            continue
+        nav_changed = False
+        for mark in soup.select("span.source-mark"):
+            mark.decompose()
+            nav_changed = True
+        for anchor in soup.find_all("a", href=True):
+            href = (anchor.get("href") or "").strip()
+            key = _norm_url(href)
+            if key not in source_index:
+                continue
+            chapter, fragment = source_index[key]
+            anchor["href"] = _toc_href(name, chapter, fragment)
+            nav_changed = True
+        if nav_changed:
+            changed_names.add(name)
+
+    if not changed_names:
+        return 0
+
+    for name in changed_names:
+        contents[name] = str(soups[name]).encode("utf-8")
+    tmp = epub_path.with_suffix(".epub.tmp")
+    with zipfile.ZipFile(tmp, "w") as out:
+        for name in names:
+            info = infos[name]
+            if name == "mimetype":
+                out.writestr(info, contents[name], compress_type=zipfile.ZIP_STORED)
+            else:
+                out.writestr(info, contents[name])
+    tmp.replace(epub_path)
+    return len(changed_names)
