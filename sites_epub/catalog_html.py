@@ -25,9 +25,14 @@ def _vendor_book(v: Vendor, *, dist: Path | None) -> dict:
     epub = (dist or ROOT / "dist") / f"{v.id}.epub"
     packed = v.packed_at or _iso_from_mtime(epub)
     updated = v.updated_at or packed
-    jacket = ROOT / "covers" / f"{v.id}.png"
-    if jacket.is_file():
-        cover_kind, cover, tone = "image", f"covers/{v.id}.png", ""
+    declared = (v.cover or "").strip()
+    jacket = ROOT / declared if declared else ROOT / "covers" / f"{v.id}.png"
+    if not jacket.is_file() and declared:
+        jacket = ROOT / "covers" / Path(declared).name
+    if jacket.is_file() or declared:
+        cover_kind = "image"
+        cover = declared if declared.startswith("covers/") else f"covers/{jacket.name if jacket.is_file() else v.id + '.png'}"
+        tone = ""
     else:
         cover_kind, cover, tone = "plate", f"icons/{v.id}.png", TONES.get(v.id, "codex")
     return {

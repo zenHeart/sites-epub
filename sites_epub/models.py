@@ -29,6 +29,7 @@ class Vendor:
     summary: str = ""
     category: str = "docs"
     chapters: int = 0
+    cover: str = ""
 
 
 @dataclass

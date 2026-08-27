@@ -30,6 +30,7 @@ def vendor_to_dict(v: Vendor) -> dict:
         "summary": v.summary,
         "category": v.category,
         "chapters": v.chapters,
+        "cover": v.cover,
     }
 
 
@@ -47,6 +48,7 @@ def _vendor_from_dict(item: dict) -> Vendor:
         summary=item.get("summary") or "",
         category=item.get("category") or "docs",
         chapters=int(item.get("chapters") or 0),
+        cover=item.get("cover") or "",
     )
 
 
@@ -134,6 +136,8 @@ def upsert_vendor(vendor: Vendor, path: Path | None = None) -> list[Vendor]:
             vendor.summary = old.summary
         if not vendor.chapters:
             vendor.chapters = old.chapters
+        if not vendor.cover:
+            vendor.cover = old.cover
         if vendor.category == "docs" and old.category:
             vendor.category = old.category
     by_id[vendor.id] = vendor
