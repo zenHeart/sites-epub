@@ -73,7 +73,10 @@
       box-shadow: var(--shadow); margin-bottom: .9rem; position: relative; transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s;
     }
     .book:hover .cover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
-    .cover img.full { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .cover img.full {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center; display: block;
+    }
     .plate {
       width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
       padding: 1.2rem; text-align: center; gap: .7rem;

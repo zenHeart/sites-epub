@@ -109,8 +109,11 @@ def write_site(dest: Path, vendors: list[Vendor] | None = None, dist: Path | Non
     for v in vendors:
         src = ROOT / v.icon
         if src.is_file():
-            (icons / f"{v.id}{src.suffix}").write_bytes(src.read_bytes())
-            (icons / f"{v.id}.png").write_bytes(src.read_bytes())
+            data = src.read_bytes()
+            (icons / f"{v.id}{src.suffix}").write_bytes(data)
+            # Never publish SVG (or other XML) as .png — browsers show a broken icon.
+            if data[:8] == b"\x89PNG\r\n\x1a\n" or data[:3] == b"\xff\xd8\xff":
+                (icons / f"{v.id}.png").write_bytes(data)
         epub_src = (dist or ROOT / "dist") / f"{v.id}.epub"
         if epub_src.is_file():
             (dest / f"{v.id}.epub").write_bytes(epub_src.read_bytes())

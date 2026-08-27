@@ -394,11 +394,16 @@ class TestShelf(unittest.TestCase):
         self.assertIn("Pi Agent", html)
         self.assertIn("https://blog.zenheart.site/pi/", html)
         self.assertIn("https://blog.zenheart.site/claude-code-sourcemap/", html)
+        self.assertIn("https://dh.zenheart.site/", html)
+        self.assertIn("DeepSeek", html)
         self.assertIn("语料", html)
         books = shelf_books()
         kinds = {b["id"]: b["kind"] for b in books}
         self.assertEqual(kinds["codex"], "vendor")
         self.assertEqual(kinds["pi-handbook"], "site")
+        self.assertEqual(kinds["deepseek-harness"], "site")
+        pi = next(b for b in books if b["id"] == "pi-handbook")
+        self.assertTrue(pi["cover"].endswith(".png"))
         sites = load_sites()
         self.assertTrue(any(s.id == "claude-code-sourcemap" for s in sites))
 

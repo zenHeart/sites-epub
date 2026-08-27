@@ -50,7 +50,7 @@
       "url": "https://blog.zenheart.site/pi/",
       "author": "ZenHeart",
       "summary": "从源码边界到可运行 Coding Agent：Pi 的核心概念、用法、原理与复刻设计。",
-      "cover": "covers/pi.svg",
+      "cover": "covers/pi.png",
       "category": "handbook",
       "updated_at": "2026-08-21T00:55:42Z"
     },
@@ -63,6 +63,16 @@
       "cover": "covers/claude-code.png",
       "category": "handbook",
       "updated_at": "2026-05-24T13:42:18Z"
+    },
+    {
+      "id": "deepseek-harness",
+      "name": "从 Cordis 到 DeepSeek Harness",
+      "url": "https://dh.zenheart.site/",
+      "author": "ZenHeart",
+      "summary": "Agent Harness 源码级深度剖析：时空可组合性 · 一切皆插件 · 从 0 到 1 复刻 DeepSeek Harness。",
+      "cover": "covers/deepseek.png",
+      "category": "handbook",
+      "updated_at": "2026-08-24T10:20:23Z"
     }
   ]
 }
