@@ -173,7 +173,7 @@
       <div class="intro-cols">
         <div>
           <h2>厂商文档</h2>
-          <p>Codex、Claude、Cursor：按站点导航抓取 docs 与 blog，合成一部 EPUB。点封面下载。卡片上的「语料」是最近一次本地增量抓取的日期，用来对照线上是否过期。</p>
+          <p>Codex、Claude、Cursor：按站点导航抓取 docs 与 blog，合成一部 EPUB。点封面下载。卡片下的时间是最近一次本地增量抓取（本地时区 YYYY-MM-DD hh:mm:ss），用来对照线上是否过期。</p>
         </div>
         <div>
           <h2>源码书</h2>
@@ -198,7 +198,7 @@
     </div>
   </div>
   <script>
-    const BOOKS = [{"id": "codex", "title": "Codex", "author": "OpenAI", "summary": "ChatGPT Codex 官方文档六段导航与产品博客，按站点目录打包为一部 EPUB。", "category": "docs", "categoryLabel": "厂商文档", "kind": "vendor", "coverKind": "image", "cover": "covers/codex.png", "tone": "", "updatedAt": "2026-08-27T04:46:16Z", "packedAt": "2026-08-27T08:26:23Z", "chapters": 169, "href": "codex.epub", "docsUrl": "https://learn.chatgpt.com/docs", "blogUrl": "https://learn.chatgpt.com/blog"}, {"id": "claude", "title": "Claude", "author": "Anthropic", "summary": "Claude Code 文档树与 claude.com/blog 全文，文档导航在前、Blog 在最后。", "category": "docs", "categoryLabel": "厂商文档", "kind": "vendor", "coverKind": "image", "cover": "covers/claude.png", "tone": "", "updatedAt": "2026-08-27T04:28:43Z", "packedAt": "2026-08-27T08:29:48Z", "chapters": 420, "href": "claude.epub", "docsUrl": "https://code.claude.com/docs", "blogUrl": "https://claude.com/blog"}, {"id": "cursor", "title": "Cursor", "author": "Cursor", "summary": "Cursor 文档（llms.txt 导航）与官方博客，增量抓取后离线打包。", "category": "docs", "categoryLabel": "厂商文档", "kind": "vendor", "coverKind": "image", "cover": "covers/cursor.png", "tone": "", "updatedAt": "2026-08-27T04:28:15Z", "packedAt": "2026-08-27T08:30:50Z", "chapters": 247, "href": "cursor.epub", "docsUrl": "https://cursor.com/docs", "blogUrl": "https://cursor.com/blog"}, {"id": "pi-handbook", "title": "Pi Agent 复刻指南", "author": "ZenHeart", "summary": "从源码边界到可运行 Coding Agent：Pi 的核心概念、用法、原理与复刻设计。", "category": "handbook", "categoryLabel": "源码书", "kind": "site", "coverKind": "image", "cover": "covers/pi.png", "tone": "", "updatedAt": "2026-08-21T00:55:42Z", "packedAt": "2026-08-21T00:55:42Z", "chapters": 0, "href": "https://blog.zenheart.site/pi/", "docsUrl": "https://blog.zenheart.site/pi/", "blogUrl": ""}, {"id": "claude-code-sourcemap", "title": "Claude Code 架构分析", "author": "ZenHeart", "summary": "从源码到可复刻 Code Agent Harness，拆解 Loop、Tool、Context、Permission、MCP、Eval 与 Ops。", "category": "handbook", "categoryLabel": "源码书", "kind": "site", "coverKind": "image", "cover": "covers/claude-code.png", "tone": "", "updatedAt": "2026-05-24T13:42:18Z", "packedAt": "2026-05-24T13:42:18Z", "chapters": 0, "href": "https://blog.zenheart.site/claude-code-sourcemap/", "docsUrl": "https://blog.zenheart.site/claude-code-sourcemap/", "blogUrl": ""}, {"id": "deepseek-harness", "title": "从 Cordis 到 DeepSeek Harness", "author": "ZenHeart", "summary": "Agent Harness 源码级深度剖析：时空可组合性 · 一切皆插件 · 从 0 到 1 复刻 DeepSeek Harness。", "category": "handbook", "categoryLabel": "源码书", "kind": "site", "coverKind": "image", "cover": "covers/deepseek.png", "tone": "", "updatedAt": "2026-08-24T10:20:23Z", "packedAt": "2026-08-24T10:20:23Z", "chapters": 0, "href": "https://dh.zenheart.site/", "docsUrl": "https://dh.zenheart.site/", "blogUrl": ""}];
+    const BOOKS = [{"id": "codex", "title": "Codex", "author": "OpenAI", "summary": "ChatGPT Codex 官方文档六段导航与产品博客，按站点目录打包为一部 EPUB。", "category": "docs", "categoryLabel": "厂商文档", "kind": "vendor", "coverKind": "image", "cover": "covers/codex.png", "tone": "", "updatedAt": "2026-08-27T10:42:08Z", "packedAt": "2026-08-27T11:17:09Z", "chapters": 169, "href": "codex.epub", "docsUrl": "https://learn.chatgpt.com/docs", "blogUrl": "https://learn.chatgpt.com/blog"}, {"id": "claude", "title": "Claude", "author": "Anthropic", "summary": "Claude Code 文档树与 claude.com/blog 全文，文档导航在前、Blog 在最后。", "category": "docs", "categoryLabel": "厂商文档", "kind": "vendor", "coverKind": "image", "cover": "covers/claude.png", "tone": "", "updatedAt": "2026-08-27T10:33:50Z", "packedAt": "2026-08-27T11:20:48Z", "chapters": 420, "href": "claude.epub", "docsUrl": "https://code.claude.com/docs", "blogUrl": "https://claude.com/blog"}, {"id": "cursor", "title": "Cursor", "author": "Cursor", "summary": "Cursor 文档（llms.txt 导航）与官方博客，增量抓取后离线打包。", "category": "docs", "categoryLabel": "厂商文档", "kind": "vendor", "coverKind": "image", "cover": "covers/cursor.png", "tone": "", "updatedAt": "2026-08-27T10:30:42Z", "packedAt": "2026-08-27T11:21:55Z", "chapters": 247, "href": "cursor.epub", "docsUrl": "https://cursor.com/docs", "blogUrl": "https://cursor.com/blog"}, {"id": "pi-handbook", "title": "Pi Agent 复刻指南", "author": "ZenHeart", "summary": "从源码边界到可运行 Coding Agent：Pi 的核心概念、用法、原理与复刻设计。", "category": "handbook", "categoryLabel": "源码书", "kind": "site", "coverKind": "image", "cover": "covers/pi.png", "tone": "", "updatedAt": "2026-08-21T00:55:42Z", "packedAt": "2026-08-21T00:55:42Z", "chapters": 0, "href": "https://blog.zenheart.site/pi/", "docsUrl": "https://blog.zenheart.site/pi/", "blogUrl": ""}, {"id": "claude-code-sourcemap", "title": "Claude Code 架构分析", "author": "ZenHeart", "summary": "从源码到可复刻 Code Agent Harness，拆解 Loop、Tool、Context、Permission、MCP、Eval 与 Ops。", "category": "handbook", "categoryLabel": "源码书", "kind": "site", "coverKind": "image", "cover": "covers/claude-code.png", "tone": "", "updatedAt": "2026-05-24T13:42:18Z", "packedAt": "2026-05-24T13:42:18Z", "chapters": 0, "href": "https://blog.zenheart.site/claude-code-sourcemap/", "docsUrl": "https://blog.zenheart.site/claude-code-sourcemap/", "blogUrl": ""}, {"id": "deepseek-harness", "title": "从 Cordis 到 DeepSeek Harness", "author": "ZenHeart", "summary": "Agent Harness 源码级深度剖析：时空可组合性 · 一切皆插件 · 从 0 到 1 复刻 DeepSeek Harness。", "category": "handbook", "categoryLabel": "源码书", "kind": "site", "coverKind": "image", "cover": "covers/deepseek.png", "tone": "", "updatedAt": "2026-08-24T10:20:23Z", "packedAt": "2026-08-24T10:20:23Z", "chapters": 0, "href": "https://dh.zenheart.site/", "docsUrl": "https://dh.zenheart.site/", "blogUrl": ""}];
     const CATEGORIES = [
       { id: "all", label: "全部图书" },
       { id: "docs", label: "厂商文档" },
@@ -216,8 +216,12 @@
       return String(s || "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
     }
     function fmtDate(iso) {
+      // 展示完整本地时区时间戳（YYYY-MM-DD hh:mm:ss），便于对照本机时钟判断语料新鲜度。
       if (!iso) return "";
-      return iso.slice(0, 10);
+      const d = new Date(iso);
+      if (isNaN(d.getTime())) return iso.slice(0, 19).replace("T", " ");
+      const p = n => String(n).padStart(2, "0");
+      return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`;
     }
     function getFilteredBooks() {
       const q = state.searchQuery.toLowerCase();
@@ -280,7 +284,7 @@
             <div class="meta">
               <h3>${esc(b.title)}</h3>
               <p>${esc(b.author)}</p>
-              <time>${fmtDate(b.updatedAt) ? "语料 " + fmtDate(b.updatedAt) : (fmtDate(b.packedAt) ? "成书 " + fmtDate(b.packedAt) : "")}</time>
+              <time>${fmtDate(b.updatedAt) || fmtDate(b.packedAt) || ""}</time>
             </div>
           </article>`).join("")}</div>`;
       } else {

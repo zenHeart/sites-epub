@@ -1,17 +1,17 @@
 {
   "codex": {
-    "sha256": "dc5ddadb2f5a7a4006034e4d741b35391c7a3ebc4ce23c79b5d6b5838615654e",
-    "packed_at": "2026-08-27T08:26:23Z",
+    "sha256": "5d671b0d01d2ece22623cf55bbf91e0f488b70a7182c24b74dea735ae4762e09",
+    "packed_at": "2026-08-27T11:17:09Z",
     "chapters": 169
   },
   "claude": {
-    "sha256": "392159b7e057b4354a59589b93f878cf53c1bff337fe34f16cc4deb834efcb2f",
-    "packed_at": "2026-08-27T08:29:48Z",
+    "sha256": "cfaef19ddcb65343a2e79625534d1d3ff02e4f2baa2607c4cad7af2fe8561afd",
+    "packed_at": "2026-08-27T11:20:48Z",
     "chapters": 420
   },
   "cursor": {
-    "sha256": "0fc19adbed10599b0f20f6651daf4885cd2411470d571f745690aed589ab0f12",
-    "packed_at": "2026-08-27T08:30:50Z",
+    "sha256": "5d3735ec623da65e21b9f0574f7abd3cdaad0951123415e58602a1a88999d6bc",
+    "packed_at": "2026-08-27T11:21:55Z",
     "chapters": 247
   }
 }
