@@ -47,6 +47,12 @@ def discover_entries(
         if not docs_llms:
             raise ValueError("claude adapter needs llms.txt")
         docs = parse_llms_txt(docs_llms)
+    elif vendor.adapter == "xai":
+        from .xai_nav import parse_xai_llms
+
+        if not docs_llms:
+            raise ValueError("xai adapter needs llms.txt")
+        docs = parse_xai_llms(docs_llms, vendor.docs_url)
     else:
         from .generic_nav import parse_docs_html, parse_llms_generic
 
@@ -56,7 +62,17 @@ def discover_entries(
             docs = parse_docs_html(docs_html, vendor.docs_url)
     blog: list[IndexEntry] = []
     if vendor.blog_url and blog_html:
-        if "claude.com/blog" in vendor.blog_url:
+        if vendor.adapter == "xai":
+            from .xai_nav import parse_xai_blog, parse_xai_bot_guides
+
+            blog = parse_xai_blog(blog_html, vendor.blog_url)
+            try:
+                guides_html = fetch_text("https://x.ai/bot/guides")
+                extras = parse_xai_bot_guides(guides_html, "https://x.ai/bot/guides")
+                blog = extras + blog
+            except Exception:
+                pass
+        elif "claude.com/blog" in vendor.blog_url:
             from .blog_listing import extract_blog_urls
 
             urls = extract_blog_urls(blog_html, base="https://claude.com")
@@ -361,6 +377,7 @@ def fetch_vendor(
         vendor.docs_url.rsplit("/docs", 1)[0] + "/llms.txt" if "/docs" in vendor.docs_url else "",
         "https://code.claude.com/docs/llms.txt" if vendor.adapter == "claude" else "",
         "https://learn.chatgpt.com/llms.txt" if vendor.adapter == "codex" else "",
+        "https://docs.x.ai/llms.txt" if vendor.adapter == "xai" else "",
     ):
         if not llms:
             continue

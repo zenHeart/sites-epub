@@ -44,6 +44,21 @@
       "category": "docs",
       "chapters": 247,
       "cover": "covers/cursor.png"
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "docs_url": "https://docs.x.ai/overview",
+      "blog_url": "https://x.ai/news",
+      "icon": "vendors/grok/icon.png",
+      "author": "xAI",
+      "adapter": "xai",
+      "updated_at": "2026-08-28T16:54:23Z",
+      "packed_at": "",
+      "summary": "xAI 官方文档（Build / Developers / Grok / Grok Bot / Console / Integrations）与 x.ai/news 全文，按站点目录打包为一部 EPUB，News 排在末尾。",
+      "category": "docs",
+      "chapters": 241,
+      "cover": "covers/grok.png"
     }
   ],
   "sites": [

@@ -1,0 +1,15 @@
+{
+  "id": "grok",
+  "name": "Grok",
+  "docs_url": "https://docs.x.ai/overview",
+  "blog_url": "https://x.ai/news",
+  "icon": "vendors/grok/icon.png",
+  "author": "",
+  "adapter": "xai",
+  "updated_at": "",
+  "packed_at": "",
+  "summary": "",
+  "category": "docs",
+  "chapters": 0,
+  "cover": ""
+}
