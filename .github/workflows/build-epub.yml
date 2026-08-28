@@ -73,6 +73,12 @@ jobs:
               assert not broken, broken
               print("ok", p.name, p.stat().st_size)
           PY
+          # Regression gate: cover.xhtml / OPF / metadata.yaml must not leak
+          # the hardcoded "ChatGPT Codex Docs" title from the original codex pack.
+          for e in dist/*.epub; do
+            python3 .agents/skills/site2epub/scripts/check_epub.py "$e" >/dev/null
+          done
+          echo "all covers ok"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

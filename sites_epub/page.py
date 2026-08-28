@@ -92,10 +92,10 @@ def extract_from_markdown(
     soup = BeautifulSoup(html, "lxml")
     root = soup.body if soup.body else soup
     text = _plain(root) if isinstance(root, Tag) else re.sub(r"\s+", " ", str(root))
-    image_urls = collect_markdown_image_urls(body_md, base=url or "https://learn.chatgpt.com")
+    image_urls = collect_markdown_image_urls(body_md, base=url or "")
     html_imgs = collect_image_urls(
         root.decode_contents() if hasattr(root, "decode_contents") else html,
-        base=url or "https://learn.chatgpt.com",
+        base=url or "",
     )
     seen: set[str] = set()
     merged: list[str] = []
@@ -238,7 +238,7 @@ def extract_from_html(
     text = _plain(text_root) if isinstance(text_root, Tag) else re.sub(r"\s+", " ", str(text_root))
     if not text:
         raise ValueError("doc body is empty")
-    image_urls = collect_image_urls(body_html, base=url or "https://learn.chatgpt.com")
+    image_urls = collect_image_urls(body_html, base=url or "")
     return DocPage(
         title=title,
         body_html=body_html,

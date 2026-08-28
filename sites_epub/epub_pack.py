@@ -132,6 +132,9 @@ def grouped_html(
     pages: list[DocPage],
     entries: list[IndexEntry] | None = None,
     url_to_rel: dict[str, str] | None = None,
+    *,
+    title: str = "",
+    author: str = "",
 ) -> str:
     """Build one HTML book: h1 = section group, h2 = page title."""
     url_to_rel = url_to_rel or {}
@@ -152,9 +155,11 @@ def grouped_html(
         page.group = label
         groups.setdefault(label, []).append(page)
 
+    head_title = title or "Documentation"
+    author_meta = f'<meta name="author" content="{_esc(author)}"/>' if author else ""
     parts = [
         "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\">",
-        "<title>ChatGPT Codex Docs</title></head><body>",
+        f"<title>{_esc(head_title)}</title>{author_meta}</head><body>",
     ]
     for label, grouped in groups.items():
         parts.append(f"<div class=\"doc-group\"><h1>{_esc(label)}</h1>")
@@ -162,7 +167,7 @@ def grouped_html(
             rewritten = rewrite_body_images(
                 page.body_html,
                 url_to_rel,
-                base=page.url or "https://learn.chatgpt.com",
+                base=page.url or "",
                 available=set(url_to_rel.values()),
             )
             rewritten = sanitize_body_html(rewritten, page_url=page.url)
@@ -188,8 +193,8 @@ def pack_epub(
     images: dict[str, Path] | None = None,
     entries: list[IndexEntry] | None = None,
     url_to_rel: dict[str, str] | None = None,
-    title: str = "ChatGPT Codex Docs",
-    author: str = "OpenAI",
+    title: str = "Documentation",
+    author: str = "",
     lang: str = "en",
     work_dir: Path | None = None,
     cover_image: Path | None = None,
@@ -205,7 +210,7 @@ def pack_epub(
 
     own_tmp: tempfile.TemporaryDirectory[str] | None = None
     if work_dir is None:
-        own_tmp = tempfile.TemporaryDirectory(prefix="chatgpt-learn-docs-epub-")
+        own_tmp = tempfile.TemporaryDirectory(prefix="sites-epub-")
         root = Path(own_tmp.name)
     else:
         root = Path(work_dir)
@@ -224,7 +229,13 @@ def pack_epub(
 
         html_path = root / "book.html"
         html_path.write_text(
-            grouped_html(pages, entries=entries, url_to_rel=url_to_rel or {}),
+            grouped_html(
+                pages,
+                entries=entries,
+                url_to_rel=url_to_rel or {},
+                title=title,
+                author=author,
+            ),
             encoding="utf-8",
         )
         css_path = root / "book.css"

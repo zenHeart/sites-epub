@@ -18,7 +18,7 @@ IMG_EXT = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".avif"}
 MD_IMG_RE = re.compile(r"!\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 
 
-def normalize_image_url(src: str, base: str = "https://learn.chatgpt.com") -> str | None:
+def normalize_image_url(src: str, base: str = "") -> str | None:
     if not src:
         return None
     src = src.strip().strip("<>")
@@ -48,7 +48,7 @@ def unwrap_optimizer_image(url: str) -> str | None:
     return None
 
 
-def collect_markdown_image_urls(md: str, base: str = "https://learn.chatgpt.com") -> list[str]:
+def collect_markdown_image_urls(md: str, base: str = "") -> list[str]:
     seen: set[str] = set()
     out: list[str] = []
     for raw in MD_IMG_RE.findall(md):
@@ -59,7 +59,7 @@ def collect_markdown_image_urls(md: str, base: str = "https://learn.chatgpt.com"
     return out
 
 
-def collect_image_urls(html: str, base: str = "https://learn.chatgpt.com") -> list[str]:
+def collect_image_urls(html: str, base: str = "") -> list[str]:
     soup = BeautifulSoup(html, "lxml")
     seen: set[str] = set()
     out: list[str] = []
@@ -182,7 +182,7 @@ def collect_source_image_urls(text: str, base: str) -> list[str]:
 def rewrite_body_images(
     body_html: str,
     url_to_rel: dict[str, str],
-    base: str = "https://learn.chatgpt.com",
+    base: str = "",
     *,
     available: set[str] | None = None,
 ) -> str:
