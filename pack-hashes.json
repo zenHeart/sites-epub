@@ -10,13 +10,13 @@
     "chapters": 420
   },
   "cursor": {
-    "sha256": "86c2377f94edca3b887b8940ccda4a6dc84a5b31d95eec06ab9317e31f3f4c2c",
-    "packed_at": "2026-08-29T00:06:07Z",
+    "sha256": "a73c5ae66af338a1485dc7379baf4b1ceb6f7f3be7946a0120d009524f6fa565",
+    "packed_at": "2026-08-29T14:48:22Z",
     "chapters": 247
   },
   "grok": {
-    "sha256": "6971d388f65f9782d144e90674e1855fa3ad5fb155ea98c6944cb7ab7eca7265",
-    "packed_at": "2026-08-29T00:07:03Z",
+    "sha256": "41dbe749440e4935b7354faca2ed7154eae5b75f55d84fb2d2b6a7aa56ad386b",
+    "packed_at": "2026-08-29T14:48:59Z",
     "chapters": 241
   }
 }
