@@ -21,7 +21,7 @@ compatibility: python3 + pandoc + beautifulsoup4 + lxml. Crawl needs network on 
 2. 未变路由跳过；缺失图片仍要补。Docs 导航在前，**Blog 是最后一个 TOC parent**。
 3. 提交 `catalog.json`、`vendors/<id>/` 的 corpus 与 `fingerprints.json`。禁止 cookie、token、`.env`、`work/`。
 4. 推 `main`。Actions 设 `SITESEPUB_OFFLINE=1` 只 `pack`（语料/封面/打包器未变的书跳过）。本机强制重打：`python3 -m sites_epub pack --force` 或 `--id ID`。
-5. 验收：`python3 .agents/skills/site2epub/scripts/check_epub.py dist/<id>.epub`（破图或标题未链原文即失败）。
+5. 验收：`python3 .agents/skills/site2epub/scripts/check_epub.py dist/<id>.epub`（破图、标题未链原文、封面标题反向串号即失败）。
 
 ## 按需读取
 
@@ -32,6 +32,7 @@ compatibility: python3 + pandoc + beautifulsoup4 + lxml. Crawl needs network on 
 | 标题点击原文、TOC、walk 门禁 | `references/epub-rendering.md` |
 | 文本/图/表/组件/画图怎么还原 | `references/scenes.md` |
 | 判断该不该触发本技能 | `references/evals.md` |
+| 实战踩坑（封面标题串号、icon SVG-as-PNG、Mintlify llms.txt、secret-scan、跨子域多根） | `references/lessons.md` |
 | 标题 HTML 合同 | `assets/page-title.html` |
 
 不要把上述正文再抄进本文件。

@@ -2,7 +2,7 @@
 
 按厂商把官方文档和博客打成一部 EPUB。目录站：[epub.zenheart.site](http://epub.zenheart.site/)（ZenShelf）。
 
-- **厂商文档**（Codex / Claude / Cursor）：点封面下载 EPUB。
+- **厂商文档**（Codex / Claude / Cursor / Grok）：点封面下载 EPUB。
 - **源码书**（Pi、Claude Code 架构分析、DeepSeek Harness）：点封面进入各自落地站，不在本仓库重复托管文件。
 - 卡片上的「语料」对应 `catalog.json` 的 `updated_at`，即最近一次本地增量抓取的时间，用来对照线上是否过期。
 

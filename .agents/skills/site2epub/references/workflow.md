@@ -34,3 +34,30 @@ python3 -m sites_epub catalog
 - `walk` 用 `blocking_defects`：破图或 `unlinked_page_title` 即失败。
 
 不要在 Actions 里跑 `add`/`fetch`。
+
+## 常见踩坑（详见 `lessons.md`）
+
+| 症状 | 一次性原因 | 一次性动作 |
+|---|---|---|
+| 封面写着 "ChatGPT Codex Docs" | `grouped_html()` 硬编码 + `pack_epub` 默认值 | 修 `epub_pack.py`（`grouped_html` 接 `title`/`author`），`images.py` / `page.py` 把 `base` 默认从 `https://learn.chatgpt.com` 改为 `""` |
+| `icon.png` 文件头是 `<svg ...` | `ensure_vendor_icon()` 只看字节数不看魔数 | push 前 `file vendors/<id>/icon.png` 校验，SVG-as-PNG 必须替换 |
+| `add` 后 0 条路由 | 站点用 Mintlify `===/path===` 而非 `[title](url)` 列表 | 写 80 行小适配器（参考 `sites_epub/xai_nav.py`），不要去改 `parse_llms_generic` |
+| `git push` 被 GH secret-scan 拦 | 文档示例里的 API key 形似真 key | `git commit --amend` 就地把真 key 替换成占位符再 push |
+| 跨子域多 docs 根（如 docs.x.ai + x.ai/bot/guides） | `Vendor` 只接 1 个 docs_url | 统一用 `docs.x.ai/llms.txt` 拿索引，bot/guides 在 adapter 分支里额外 `fetch_text` + parse |
+| 新 vendor 封面和 claude/codex/cursor 不对齐 | 没手画 SVG，copy icon 当 cover | `covers/<id>.svg` 用 400×560 模板手画，渲 800×1120 PNG（缺 cairo 时用 PIL fallback） |
+
+## 提交前自检
+
+```bash
+# 1. 封面标题门禁：四本 EPUB cover.xhtml 都不应包含 ChatGPT Codex Docs
+for v in claude codex cursor grok; do
+  curl -ksSL https://epub.zenheart.site/$v.epub -o /tmp/$v.epub
+  python3 .agents/skills/site2epub/scripts/check_epub.py /tmp/$v.epub >/dev/null && echo "$v: PASS" || echo "$v: FAIL"
+done
+
+# 2. icon 真为 PNG
+file vendors/<id>/icon.png
+
+# 3. 没有真 API key 被提交
+git diff --cached | grep -E "xai-[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}" && echo "WARN: 真 key 漏出"
+```
