@@ -45,7 +45,9 @@ python3 -m sites_epub catalog
 | `git push` 被 GH secret-scan 拦 | 文档示例里的 API key 形似真 key | `git commit --amend` 就地把真 key 替换成占位符再 push |
 | 跨子域多 docs 根（如 docs.x.ai + x.ai/bot/guides） | `Vendor` 只接 1 个 docs_url | 统一用 `docs.x.ai/llms.txt` 拿索引，bot/guides 在 adapter 分支里额外 `fetch_text` + parse |
 | 新 vendor 封面和 claude/codex/cursor 不对齐 | 没手画 SVG，copy icon 当 cover | `covers/<id>.svg` 用 400×560 模板手画，渲 800×1120 PNG（缺 cairo 时用 PIL fallback） |
-| 「补齐到最新」但 `skipped=N` 被当无更新证据 | skip 判据=缓存完整性（命中指纹不发网络请求），页面级线上漂移不可见 | 用 `--refetch` 全量重拉；或先证明线上 llms.txt 与 `corpus/llms.txt` md5 一致（详见 `lessons.md` §8） |
+| 「补齐到最新」但 `skipped=N` 被当无更新证据 | skip 判据=缓存完整性（命中指纹不发网络请求），页面级线上漂移不可见 | 用 `--refetch` 全量重拉；或先证明线上 llms.txt 与 `corpus/llms.txt` md5 一致（详见 `lessons.md` §10） |
+| 目录标题乱码（`�`） | 源站强制 gzip，响应体被当 UTF-8 存进语料 | 修 `http.py` 解压（已修，见 `lessons.md` §12），refetch 对应页 |
+| EPUB 超 100MB 在 gh-pages push 才爆 | 门禁只查破图不查体积 | 语料图重压 + CI Validate 已加 98MB 门禁（`lessons.md` §11） |
 
 ## 提交前自检
 
@@ -61,4 +63,22 @@ file vendors/<id>/icon.png
 
 # 3. 没有真 API key 被提交
 git diff --cached | grep -E "xai-[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}" && echo "WARN: 真 key 漏出"
+
+# 4. 语料维护（新增 vendor / 大批 refetch 后必跑；脚本同时报告 secret 命中与乱码页）
+python3 .agents/skills/site2epub/scripts/sanitize_corpus_html.py <id>
+python3 .agents/skills/site2epub/scripts/shrink_corpus_images.py <id>
+# 然后对齐指纹（脚本改动过语料字节时）：
+python3 - <<'PY'
+import sys; sys.path.insert(0, '.')
+from pathlib import Path
+from sites_epub.fingerprint import content_hash, save_fingerprints
+vendor = "<id>"
+corpus = Path(f"vendors/{vendor}/corpus")
+fp = {p.relative_to(corpus / "pages").as_posix()[:-3]: content_hash(p.read_text(encoding="utf-8", errors="replace")) for p in (corpus / "pages").glob("**/*.md")}
+save_fingerprints(corpus.parent / "fingerprints.json", fp)
+print("fingerprints:", len(fp))
+PY
+
+# 5. 本地离线 pack 预演 CI（需 pandoc；Windows 加 PYTHONUTF8=1），看体积 + walk 门禁
+python3 -m sites_epub pack --id <id>
 ```

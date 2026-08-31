@@ -59,7 +59,7 @@
 2. `git commit --amend --no-edit` 重新打包。
 3. 重试 push。
 
-**怎么防止复发**：任何 docs vendor 都可能在示例里给形似真实的 key（OpenAI `sk-...` / Anthropic `sk-ant-...` / xAI `xai-...` / AWS `AKIA...`）。push 前用 `git diff --cached | grep -E "(sk-[A-Za-z0-9]|xai-[A-Za-z0-9]|AKIA[0-9A-Z]{16})"` 自检；CI 端若漏过，本地 push 兜底。
+**怎么防止复发**：任何 docs vendor 都可能在示例里给形似真实的 key（OpenAI `sk-...` / Anthropic `sk-ant-...` / xAI `xai-...` / AWS `AKIA...`）。push 前用 `git diff --cached | grep -E "(sk-[A-Za-z0-9]|xai-[A-Za-z0-9]|AKIA[0-9A-Z]{16})"` 自检；CI 端若漏过，本地 push 兜底。**注意：手工替换语料里的占位 key，下一次 refetch 会被原样抓回来**（gemini 的 `ghp_xxx…` 占位符修了两轮才发现这个规律）——替换后要么把该页路由记进「每次 fetch 后重放」清单，要么接受它并在每轮 fetch 后重跑 `scripts/sanitize_corpus_html.py` 检查。
 
 ---
 
