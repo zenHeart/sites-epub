@@ -159,7 +159,7 @@
     
       "special_hero": "undefined",
     
-    "days_since_published": "13",
+    "days_since_published": "14",
     
       "content_category": "Products - Gemini",
     

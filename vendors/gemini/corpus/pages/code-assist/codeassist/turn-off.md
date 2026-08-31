@@ -772,8 +772,6 @@
     data-label="Site header link: Console"
     
       
-        track-name="console"
-      
         track-metadata-position="nav"
       
         track-type="globalNav"
@@ -781,6 +779,8 @@
         referrerpolicy="no-referrer-when-downgrade"
       
         track-metadata-eventDetail="nav"
+      
+        track-name="console"
       
     >
   Console
@@ -999,13 +999,13 @@
     
     
       
+        track-metadata-eventDetail="nav"
+      
         track-name="gcpCta"
       
         track-metadata-position="nav"
       
         track-type="freeTrial"
-      
-        track-metadata-eventDetail="nav"
       
         referrerpolicy="no-referrer-when-downgrade"
       
@@ -1565,8 +1565,6 @@
 
     
       
-        track-name="console"
-      
         track-metadata-position="nav"
       
         track-type="globalNav"
@@ -1574,6 +1572,8 @@
         referrerpolicy="no-referrer-when-downgrade"
       
         track-metadata-eventDetail="nav"
+      
+        track-name="console"
       
     
      data-category="Site-Wide Custom Events"
@@ -2768,7 +2768,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
 
   
     <devsite-hats-survey class="nocontent" data-nosnippet
-      hats-id="Nd7nTix2o0eU5NUYprb0ThtUc5jf"
+      hats-id="mwETRvWii0eU5NUYprb0Y9z5GVbc"
       listnr-id="83405"></devsite-hats-survey>
   
 
@@ -2872,7 +2872,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/products/"track-metadata-child_headline="products and pricing"track-name="see all products">
+            track-metadata-eventDetail="cloud.google.com/products/"track-metadata-position="footer"track-metadata-child_headline="products and pricing"track-name="see all products"track-metadata-module="footer"track-type="footer link">
             
           
             See all products
@@ -2889,7 +2889,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="products and pricing"track-metadata-eventDetail="cloud.google.com/pricing/"track-type="footer link"track-metadata-module="footer"track-name="google cloud pricing"track-metadata-position="footer">
+            track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="products and pricing"track-metadata-eventDetail="cloud.google.com/pricing/"track-type="footer link"track-name="google cloud pricing">
             
           
             Google Cloud pricing
@@ -2906,7 +2906,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-module="footer"track-metadata-child_headline="resources"track-name="google cloud marketplace"track-type="footer link"track-metadata-position="footer">
+            track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/marketplace/"track-type="footer link"track-name="google cloud marketplace">
             
           
             Google Cloud Marketplace
@@ -2923,7 +2923,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-name="contact sales"track-metadata-child_headline="engage"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/contact/">
+            track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-module="footer"track-name="contact sales"track-metadata-child_headline="engage"track-type="footer link">
             
               
               
@@ -2950,7 +2950,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-name="google cloud community"track-type="footer link"rel="noopener"track-metadata-position="footer"track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-child_headline="engage"target="_blank"track-metadata-module="footer">
+            track-name="google cloud community"track-metadata-position="footer"rel="noopener"track-metadata-module="footer"track-metadata-eventDetail="www.googlecloudcommunity.com"track-type="footer link"track-metadata-child_headline="engage"target="_blank">
             
           
             Community forums
@@ -2967,7 +2967,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-eventDetail="cloud.google.com/support-hub/"track-name="support"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="resources">
+            track-type="footer link"track-metadata-module="footer"track-name="support"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-child_headline="resources">
             
           
             Support
@@ -2984,7 +2984,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-name="release notes"track-metadata-child_headline="resources"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-position="footer">
+            track-name="release notes"track-metadata-child_headline="resources"track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/release-notes/">
             
           
             Release Notes
@@ -3001,7 +3001,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-eventDetail="status.cloud.google.com"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer"track-name="system status"track-type="footer link"target="_blank">
+            track-name="system status"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"target="_blank"track-metadata-eventDetail="status.cloud.google.com"track-metadata-position="footer">
             
               
               
@@ -3028,7 +3028,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-child_headline="resources"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer"track-name="github">
+            track-type="footer link"track-metadata-child_headline="resources"track-name="github"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-module="footer"track-metadata-position="footer">
             
           
             GitHub
@@ -3045,7 +3045,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-type="footer link"track-metadata-module="footer"track-name="google cloud quickstarts"track-metadata-child_headline="resources">
+            track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-name="google cloud quickstarts">
             
           
             Getting Started with Google Cloud
@@ -3062,7 +3062,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/docs/samples"track-type="footer link"track-name="code samples"track-metadata-module="footer">
+            track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="resources"track-name="code samples"track-metadata-eventDetail="cloud.google.com/docs/samples">
             
           
             Code samples
@@ -3079,7 +3079,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-name="cloud architecture center"track-type="footer link"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-position="footer"track-metadata-child_headline="resources">
+            track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-module="footer"track-metadata-position="footer"track-type="footer link"track-name="cloud architecture center">
             
           
             Cloud Architecture Center
@@ -3096,7 +3096,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-position="footer"track-type="footer link"track-name="training"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/learn/training/">
+            track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-position="footer"track-name="training"track-type="footer link">
             
               
               
@@ -3123,7 +3123,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/blog/"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="engage"track-name="blog">
+            track-metadata-position="footer"track-metadata-module="footer"track-name="blog"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-child_headline="engage"track-type="footer link">
             
           
             Blog
@@ -3140,7 +3140,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-name="events"track-metadata-eventDetail="cloud.google.com/events/"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="engage">
+            track-metadata-eventDetail="cloud.google.com/events/"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="engage"track-metadata-position="footer"track-name="events">
             
           
             Events
@@ -3157,7 +3157,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-child_headline="engage"track-metadata-position="footer"target="_blank"track-metadata-module="footer"track-metadata-eventDetail="x.com/googlecloud"rel="noopener"track-name="follow on x"track-type="footer link">
+            track-type="footer link"track-name="follow on x"track-metadata-eventDetail="x.com/googlecloud"target="_blank"track-metadata-child_headline="engage"track-metadata-position="footer"rel="noopener"track-metadata-module="footer">
             
           
             X (Twitter)
@@ -3174,7 +3174,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-position="footer"track-metadata-child_headline="engage"rel="noopener"track-type="footer link"track-metadata-eventDetail="www.youtube.com/googlecloud"track-metadata-module="footer"track-name="google cloud on youtube"target="_blank">
+            track-name="google cloud on youtube"rel="noopener"track-type="footer link"track-metadata-eventDetail="www.youtube.com/googlecloud"target="_blank"track-metadata-child_headline="engage"track-metadata-position="footer"track-metadata-module="footer">
             
           
             Google Cloud on YouTube
@@ -3191,7 +3191,7 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            rel="noopener"track-name="google cloud tech on youtube"track-metadata-child_headline="engage"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-metadata-module="footer"track-type="footer link"target="_blank"track-metadata-position="footer">
+            track-metadata-eventDetail="www.youtube.com/googlecloudplatform"target="_blank"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="engage"track-metadata-position="footer"rel="noopener"track-name="google cloud tech on youtube">
             
               
               
@@ -3233,15 +3233,15 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
+           track-name="about google"
+         
+           target="_blank"
+         
            track-type="footer link"
          
            track-metadata-position="footer"
          
            track-metadata-eventDetail="//about.google/"
-         
-           track-name="about google"
-         
-           target="_blank"
          
            track-metadata-module="utility footer"
          >
@@ -3259,17 +3259,17 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
-           target="_blank"
-         
-           track-metadata-module="utility footer"
-         
-           track-metadata-position="footer"
+           track-name="privacy"
          
            track-type="footer link"
          
-           track-name="privacy"
+           track-metadata-module="utility footer"
+         
+           target="_blank"
          
            track-metadata-eventDetail="//policies.google.com/privacy"
+         
+           track-metadata-position="footer"
          >
           Privacy
         </a>
@@ -3289,13 +3289,13 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
          
            track-type="footer link"
          
-           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
-         
-           track-metadata-position="footer"
+           track-name="site terms"
          
            track-metadata-module="utility footer"
          
-           track-name="site terms"
+           track-metadata-position="footer"
+         
+           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          >
           Site terms
         </a>
@@ -3311,13 +3311,13 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
-           track-metadata-eventDetail="//cloud.google.com/product-terms"
-         
            track-metadata-module="utility footer"
          
-           track-type="footer link"
+           track-metadata-eventDetail="//cloud.google.com/product-terms"
          
            track-metadata-position="footer"
+         
+           track-type="footer link"
          
            track-name="google cloud terms"
          >
@@ -3335,15 +3335,15 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
            data-category="Site-Wide Custom Events"
            data-label="Footer Manage cookies link"
          
-           track-metadata-eventDetail="#"
-         
-           track-metadata-module="utility footer"
-         
-           aria-hidden="true"
-         
            track-name="Manage cookies"
          
            track-type="footer link"
+         
+           track-metadata-module="utility footer"
+         
+           track-metadata-eventDetail="#"
+         
+           aria-hidden="true"
          
            track-metadata-position="footer"
          >
@@ -3363,13 +3363,13 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
          
            track-type="footer link"
          
-           track-name="Our third decade of climate action: join us"
-         
            track-metadata-position="footer"
          
-           track-metadata-module="utility footer"
+           track-name="Our third decade of climate action: join us"
          
            track-metadata-eventDetail="/sustainability/"
+         
+           track-metadata-module="utility footer"
          >
           Our third decade of climate action: join us
         </a>
@@ -3387,15 +3387,15 @@ the <a href="/gemini/docs/turn-off-gemini#companion-api">Gemini for Google Cloud
            data-category="Site-Wide Custom Events"
            data-label="Footer Subscribe link"
          
+           track-metadata-eventDetail="/newsletter/"
+         
            track-metadata-module="utility footer"
          
-           track-type="footer link"
-         
-           track-metadata-eventDetail="/newsletter/"
+           track-name="subscribe"
          
            track-metadata-position="footer"
          
-           track-name="subscribe"
+           track-type="footer link"
          >
           Subscribe
         </a>

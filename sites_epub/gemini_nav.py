@@ -1,17 +1,21 @@
-"""Gemini vendor: multi-root docs (five origins) + blog.google, merged into one book.
+"""Gemini vendor: multi-root docs (six origins) + blog.google, merged into one book.
 
-Sources, discovered by probing each official host (2026-08-31):
+Sources, discovered by probing each official host (2026-08-31, scope 2):
 - ai.google.dev      Gemini API / AI Studio guides  (/gemini-api/*, devsite HTML nav)
 - ai.google.dev      Gemini API reference           (/api/*,       devsite HTML nav)
-- geminicli.com      Gemini CLI docs                (/docs/*,      Astro sidebar, real .md twins)
-- docs.cloud.google.com  Gemini Code Assist         (/gemini/docs/codeassist|code-review/*)
-- antigravity.google Antigravity docs               (llms.txt [title](/docs/*) rows)
+- antigravity.google Antigravity docs incl. agy CLI (llms.txt [title](/docs/*) rows)
 - jules.google       Jules docs + changelog         (llms.txt listing real .md files)
-- firebase.google.com Firebase Studio               (/docs/studio*, devsite HTML nav)
+- docs.cloud.google.com  Gemini Code Assist         (/gemini/docs/codeassist|code-review/*)
+- support.google.com Gemini App help center         (/gemini/answer/*, 88 SSR articles;
+     covers the web app, Canvas, Deep Research, Flow and Whisk usage)
+- support.google.com NotebookLM help center         (/gemininotebook/answer/*, 24 articles)
 - blog.google        Gemini product blog            (en-us sitemap, gemini sections)
 
-Routes are namespaced per source so same-named paths from different origins
-cannot overwrite each other in corpus/pages.
+Gemini CLI (geminicli.com) and Firebase Studio were dropped 2026-08-31: consumer
+Gemini CLI stopped serving AI Pro/Ultra/free accounts on 2026-06-18 (official
+transition to Antigravity CLI, binary `agy`), and Firebase Studio is outside the
+membership-centered scope. Routes are namespaced per source so same-named paths
+from different origins cannot overwrite each other in corpus/pages.
 """
 
 from __future__ import annotations
@@ -115,19 +119,62 @@ def nav_entries(
     return out
 
 
+def help_center_entries(landing: str, product: str, group: str, prefix: str) -> list[IndexEntry]:
+    """support.google.com help center: flat SSR landing links, expand topics once."""
+    html = fetch_text(landing)
+    soup = BeautifulSoup(html, "lxml")
+    answers: dict[str, str] = {}
+    topics: set[str] = set()
+    for a in soup.find_all("a", href=True):
+        absu = urljoin(landing, a["href"]).split("#")[0].split("?")[0]
+        m = re.search(rf"/{product}/(topic|answer)/[A-Za-z0-9]+", absu)
+        if not m:
+            continue
+        if m.group(1) == "topic":
+            topics.add(m.group(0))
+        else:
+            answers.setdefault(m.group(0), " ".join(a.get_text(" ", strip=True).split()))
+    for tp in sorted(topics):
+        try:
+            thtml = fetch_text(tp)
+        except Exception:  # noqa: BLE001
+            continue
+        for a in BeautifulSoup(thtml, "lxml").find_all("a", href=True):
+            absu = urljoin(tp, a["href"]).split("#")[0].split("?")[0]
+            m = re.search(rf"/{product}/answer/[A-Za-z0-9]+", absu)
+            if m:
+                answers.setdefault(
+                    m.group(0), " ".join(a.get_text(" ", strip=True).split())
+                )
+    out: list[IndexEntry] = []
+    for path, title in sorted(answers.items()):
+        clean = f"https://support.google.com{path}"
+        out.append(
+            IndexEntry(
+                group=group,
+                title=title or f"article {path.rsplit('/', 1)[-1]}",
+                md_url=clean,
+                html_url=clean,
+                route=prefix + path.rsplit("/", 1)[-1],
+                kind="doc",
+            )
+        )
+    return out
+
+
 def parse_gemini_docs() -> list[IndexEntry]:
     docs: list[IndexEntry] = []
 
     def fetch(url: str) -> str:
         return fetch_text(url)
 
-    # 1. Gemini API guides (ai.google.dev)
+    # 1. Gemini API guides (ai.google.dev) — includes the AI Studio quickstart tree
     html = fetch("https://ai.google.dev/gemini-api/docs")
     docs += nav_entries(
         html,
         "https://ai.google.dev/gemini-api/docs",
         lambda p: p.startswith("/gemini-api/"),
-        "Gemini API · AI Studio",
+        "Gemini API and AI Studio",
         "gemini-api/",
         "Gemini API overview",
         strip="/gemini-api",
@@ -143,29 +190,7 @@ def parse_gemini_docs() -> list[IndexEntry]:
         "API reference",
         strip="/api",
     )
-    # 3. Gemini CLI (geminicli.com — official site of google-gemini/gemini-cli)
-    html = fetch("https://geminicli.com/docs")
-    docs += nav_entries(
-        html,
-        "https://geminicli.com/docs",
-        lambda p: p.startswith("/docs"),
-        "Gemini CLI",
-        "gemini-cli/",
-        "Gemini CLI",
-        strip="/docs",
-    )
-    # 4. Gemini Code Assist (cloud docs platform; developers.google.com redirects here)
-    html = fetch("https://docs.cloud.google.com/gemini/docs/codeassist/overview")
-    docs += nav_entries(
-        html,
-        "https://docs.cloud.google.com/gemini/docs/codeassist/overview",
-        lambda p: p.startswith(("/gemini/docs/codeassist/", "/gemini/docs/code-review/")),
-        "Gemini Code Assist",
-        "code-assist/",
-        "Gemini Code Assist",
-        strip="/gemini/docs",
-    )
-    # 5. Antigravity (llms.txt; keep only the /docs/ section)
+    # 3. Antigravity incl. the agy CLI (llms.txt; keep only the /docs/ section)
     text = fetch("https://antigravity.google/llms.txt")
     seen: set[str] = set()
     for title, href in LLMS_LINK.findall(text):
@@ -189,7 +214,7 @@ def parse_gemini_docs() -> list[IndexEntry]:
                 kind="doc",
             )
         )
-    # 6. Jules (llms.txt lists real .md files)
+    # 4. Jules (llms.txt lists real .md files)
     text = fetch("https://jules.google/docs/llms.txt")
     seen = set()
     for title, href in LLMS_LINK.findall(text):
@@ -216,16 +241,28 @@ def parse_gemini_docs() -> list[IndexEntry]:
                 kind="doc",
             )
         )
-    # 7. Firebase Studio
-    html = fetch("https://firebase.google.com/docs/studio")
+    # 5. Gemini Code Assist (cloud docs platform; consumer IDE access stopped
+    #    2026-06-18 but the Standard/Enterprise product line is still documented)
+    html = fetch("https://docs.cloud.google.com/gemini/docs/codeassist/overview")
     docs += nav_entries(
         html,
-        "https://firebase.google.com/docs/studio",
-        lambda p: p == "/docs/studio" or p.startswith("/docs/studio/"),
-        "Firebase Studio",
-        "firebase-studio/",
-        "Firebase Studio",
-        strip="/docs/studio",
+        "https://docs.cloud.google.com/gemini/docs/codeassist/overview",
+        lambda p: p.startswith(("/gemini/docs/codeassist/", "/gemini/docs/code-review/")),
+        "Gemini Code Assist",
+        "code-assist/",
+        "Gemini Code Assist",
+        strip="/gemini/docs",
+    )
+    # 6. Gemini App help center — web app, Canvas, Deep Research, Flow, Whisk
+    docs += help_center_entries(
+        "https://support.google.com/gemini/", "gemini", "Gemini App Help", "gemini-app/"
+    )
+    # 7. NotebookLM help center (renamed Gemini Notebook; support path gemininotebook)
+    docs += help_center_entries(
+        "https://support.google.com/notebooklm/",
+        "gemininotebook",
+        "NotebookLM Help",
+        "notebooklm/",
     )
     return docs
 

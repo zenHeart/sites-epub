@@ -2750,7 +2750,7 @@ curl<span class="devsite-syntax-w"> </span>-s<span class="devsite-syntax-w"> </s
                     <span class="devsite-syntax-p">{</span>
                         <span class="devsite-syntax-s2">"domain"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"api.github.com"</span><span class="devsite-syntax-p">,</span>
                         <span class="devsite-syntax-s2">"transform"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-p">{</span>
-                            <span class="devsite-syntax-s2">"Authorization"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"Bearer ghp_YOUR_TOKEN_PLACEHOLDER"</span>
+                            <span class="devsite-syntax-s2">"Authorization"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"Bearer ghp_YOUR_TOKEN_PLACEHOLDERxxxxxxxxxxxxxxxxxxxxxxxxxx"</span>
                         <span class="devsite-syntax-p">},</span>
                     <span class="devsite-syntax-p">},</span>
                     <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"domain"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"github.com"</span><span class="devsite-syntax-p">},</span>
@@ -2784,7 +2784,7 @@ curl<span class="devsite-syntax-w"> </span>-s<span class="devsite-syntax-w"> </s
 <span class="devsite-syntax-w">                    </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">                        </span><span class="devsite-syntax-nx">domain</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"api.github.com"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">                        </span><span class="devsite-syntax-nx">transform</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">                            </span><span class="devsite-syntax-s2">"Authorization"</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Bearer ghp_YOUR_TOKEN_PLACEHOLDER"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">                            </span><span class="devsite-syntax-s2">"Authorization"</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Bearer ghp_YOUR_TOKEN_PLACEHOLDERxxxxxxxxxxxxxxxxxxxxxxxxxx"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">                        </span><span class="devsite-syntax-p">},</span>
 <span class="devsite-syntax-w">                    </span><span class="devsite-syntax-p">},</span>
 <span class="devsite-syntax-w">                    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">domain</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"github.com"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
@@ -2834,7 +2834,7 @@ curl<span class="devsite-syntax-w"> </span>-s<span class="devsite-syntax-w"> </s
 <span class="devsite-syntax-s1">                      {</span>
 <span class="devsite-syntax-s1">                          "domain": "api.github.com",</span>
 <span class="devsite-syntax-s1">                          "transform": {</span>
-<span class="devsite-syntax-s1">                              "Authorization": "Bearer ghp_YOUR_TOKEN_PLACEHOLDER"</span>
+<span class="devsite-syntax-s1">                              "Authorization": "Bearer ghp_YOUR_TOKEN_PLACEHOLDERxxxxxxxxxxxxxxxxxxxxxxxxxx"</span>
 <span class="devsite-syntax-s1">                          }</span>
 <span class="devsite-syntax-s1">                      },</span>
 <span class="devsite-syntax-s1">                      {"domain": "github.com"}</span>

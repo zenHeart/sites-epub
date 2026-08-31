@@ -774,15 +774,15 @@
     data-label="Site header link: Console"
     
       
-        track-metadata-position="nav"
-      
-        track-name="console"
+        track-metadata-eventDetail="nav"
       
         referrerpolicy="no-referrer-when-downgrade"
       
-        track-metadata-eventDetail="nav"
-      
         track-type="globalNav"
+      
+        track-metadata-position="nav"
+      
+        track-name="console"
       
     >
   Console
@@ -1001,15 +1001,15 @@
     
     
       
-        referrerpolicy="no-referrer-when-downgrade"
-      
         track-metadata-position="nav"
       
         track-name="gcpCta"
       
-        track-type="freeTrial"
+        referrerpolicy="no-referrer-when-downgrade"
       
         track-metadata-eventDetail="nav"
+      
+        track-type="freeTrial"
       
     
     >Start free</a>
@@ -1567,15 +1567,15 @@
 
     
       
-        track-metadata-position="nav"
-      
-        track-name="console"
+        track-metadata-eventDetail="nav"
       
         referrerpolicy="no-referrer-when-downgrade"
       
-        track-metadata-eventDetail="nav"
-      
         track-type="globalNav"
+      
+        track-metadata-position="nav"
+      
+        track-name="console"
       
     
      data-category="Site-Wide Custom Events"
@@ -3408,7 +3408,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"track-metadata-child_headline="products and pricing"track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/products/"track-name="see all products">
+            track-type="footer link"track-metadata-child_headline="products and pricing"track-name="see all products"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/products/"track-metadata-position="footer">
             
           
             See all products
@@ -3425,7 +3425,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-eventDetail="cloud.google.com/pricing/"track-name="google cloud pricing"track-metadata-position="footer"track-metadata-child_headline="products and pricing"track-metadata-module="footer">
+            track-metadata-module="footer"track-name="google cloud pricing"track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-child_headline="products and pricing"track-metadata-position="footer"track-type="footer link">
             
           
             Google Cloud pricing
@@ -3442,7 +3442,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-child_headline="resources"track-metadata-module="footer"track-name="google cloud marketplace"track-metadata-eventDetail="cloud.google.com/marketplace/"track-type="footer link"track-metadata-position="footer">
+            track-metadata-child_headline="resources"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-position="footer"track-name="google cloud marketplace">
             
           
             Google Cloud Marketplace
@@ -3459,7 +3459,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-child_headline="engage"track-metadata-position="footer"track-type="footer link"track-name="contact sales"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/contact/">
+            track-type="footer link"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-position="footer"track-metadata-child_headline="engage"track-name="contact sales"track-metadata-module="footer">
             
               
               
@@ -3486,7 +3486,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"target="_blank"track-name="google cloud community"track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="engage"rel="noopener">
+            track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-module="footer"target="_blank"track-type="footer link"rel="noopener"track-metadata-child_headline="engage"track-name="google cloud community"track-metadata-position="footer">
             
           
             Community forums
@@ -3503,7 +3503,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer"track-name="support"track-metadata-eventDetail="cloud.google.com/support-hub/">
+            track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-child_headline="resources"track-name="support"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link">
             
           
             Support
@@ -3520,7 +3520,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-type="footer link"track-name="release notes"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/release-notes/">
+            track-metadata-module="footer"track-name="release notes"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/release-notes/"track-type="footer link"track-metadata-child_headline="resources">
             
           
             Release Notes
@@ -3537,7 +3537,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-metadata-child_headline="resources"track-name="system status"track-metadata-position="footer"track-type="footer link"target="_blank"track-metadata-eventDetail="status.cloud.google.com">
+            track-name="system status"track-metadata-module="footer"target="_blank"track-metadata-child_headline="resources"track-metadata-eventDetail="status.cloud.google.com"track-type="footer link"track-metadata-position="footer">
             
               
               
@@ -3564,7 +3564,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-name="github"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="resources">
+            track-name="github"track-metadata-position="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="resources">
             
           
             GitHub
@@ -3581,7 +3581,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-module="footer"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources"track-name="google cloud quickstarts"track-metadata-eventDetail="cloud.google.com/docs/get-started/">
+            track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="google cloud quickstarts">
             
           
             Getting Started with Google Cloud
@@ -3598,7 +3598,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-child_headline="resources"track-name="code samples"track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-module="footer">
+            track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-position="footer"track-metadata-child_headline="resources"track-name="code samples">
             
           
             Code samples
@@ -3615,7 +3615,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-type="footer link"track-name="cloud architecture center"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-child_headline="resources"track-metadata-position="footer">
+            track-metadata-position="footer"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="resources"track-name="cloud architecture center"track-metadata-eventDetail="cloud.google.com/architecture/">
             
           
             Cloud Architecture Center
@@ -3632,7 +3632,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-type="footer link"track-name="training"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/learn/training/">
+            track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="training">
             
               
               
@@ -3659,7 +3659,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-name="blog"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/blog/">
+            track-name="blog"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/blog/"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer">
             
           
             Blog
@@ -3676,7 +3676,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-eventDetail="cloud.google.com/events/"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="engage"track-name="events"track-metadata-module="footer">
+            track-name="events"track-metadata-module="footer"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/events/">
             
           
             Events
@@ -3693,7 +3693,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-position="footer"track-metadata-eventDetail="x.com/googlecloud"track-type="footer link"track-metadata-child_headline="engage"target="_blank"rel="noopener"track-name="follow on x"track-metadata-module="footer">
+            track-metadata-eventDetail="x.com/googlecloud"track-name="follow on x"rel="noopener"track-metadata-module="footer"track-metadata-child_headline="engage"target="_blank"track-type="footer link"track-metadata-position="footer">
             
           
             X (Twitter)
@@ -3710,7 +3710,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            rel="noopener"track-metadata-module="footer"track-name="google cloud on youtube"target="_blank"track-metadata-child_headline="engage"track-type="footer link"track-metadata-eventDetail="www.youtube.com/googlecloud"track-metadata-position="footer">
+            track-name="google cloud on youtube"track-metadata-module="footer"track-metadata-eventDetail="www.youtube.com/googlecloud"track-metadata-child_headline="engage"track-metadata-position="footer"track-type="footer link"rel="noopener"target="_blank">
             
           
             Google Cloud on YouTube
@@ -3727,7 +3727,7 @@ and other supported JetBrains IDEs.</p></section>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            rel="noopener"track-metadata-position="footer"target="_blank"track-name="google cloud tech on youtube"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="engage"track-metadata-eventDetail="www.youtube.com/googlecloudplatform">
+            target="_blank"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-type="footer link"track-metadata-module="footer"rel="noopener"track-metadata-child_headline="engage"track-name="google cloud tech on youtube"track-metadata-position="footer">
             
               
               
@@ -3771,13 +3771,13 @@ and other supported JetBrains IDEs.</p></section>
          
            track-name="about google"
          
-           target="_blank"
+           track-metadata-module="utility footer"
          
-           track-type="footer link"
+           target="_blank"
          
            track-metadata-position="footer"
          
-           track-metadata-module="utility footer"
+           track-type="footer link"
          
            track-metadata-eventDetail="//about.google/"
          >
@@ -3795,17 +3795,17 @@ and other supported JetBrains IDEs.</p></section>
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
+           track-name="privacy"
+         
            target="_blank"
          
-           track-metadata-module="utility footer"
+           track-metadata-position="footer"
          
            track-metadata-eventDetail="//policies.google.com/privacy"
          
+           track-metadata-module="utility footer"
+         
            track-type="footer link"
-         
-           track-name="privacy"
-         
-           track-metadata-position="footer"
          >
           Privacy
         </a>
@@ -3821,17 +3821,17 @@ and other supported JetBrains IDEs.</p></section>
            data-category="Site-Wide Custom Events"
            data-label="Footer Site terms link"
          
-           target="_blank"
-         
-           track-metadata-module="utility footer"
-         
            track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          
            track-metadata-position="footer"
          
-           track-type="footer link"
-         
            track-name="site terms"
+         
+           target="_blank"
+         
+           track-metadata-module="utility footer"
+         
+           track-type="footer link"
          >
           Site terms
         </a>
@@ -3847,15 +3847,15 @@ and other supported JetBrains IDEs.</p></section>
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
+           track-type="footer link"
+         
            track-metadata-eventDetail="//cloud.google.com/product-terms"
          
            track-metadata-module="utility footer"
          
-           track-name="google cloud terms"
-         
            track-metadata-position="footer"
          
-           track-type="footer link"
+           track-name="google cloud terms"
          >
           Google Cloud terms
         </a>
@@ -3871,17 +3871,17 @@ and other supported JetBrains IDEs.</p></section>
            data-category="Site-Wide Custom Events"
            data-label="Footer Manage cookies link"
          
-           aria-hidden="true"
-         
-           track-metadata-position="footer"
+           track-type="footer link"
          
            track-metadata-eventDetail="#"
          
+           track-metadata-module="utility footer"
+         
+           aria-hidden="true"
+         
            track-name="Manage cookies"
          
-           track-type="footer link"
-         
-           track-metadata-module="utility footer"
+           track-metadata-position="footer"
          >
           Manage cookies
         </a>
@@ -3897,15 +3897,15 @@ and other supported JetBrains IDEs.</p></section>
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
-           track-metadata-module="utility footer"
-         
-           track-name="Our third decade of climate action: join us"
+           track-type="footer link"
          
            track-metadata-position="footer"
          
            track-metadata-eventDetail="/sustainability/"
          
-           track-type="footer link"
+           track-metadata-module="utility footer"
+         
+           track-name="Our third decade of climate action: join us"
          >
           Our third decade of climate action: join us
         </a>
@@ -3923,15 +3923,15 @@ and other supported JetBrains IDEs.</p></section>
            data-category="Site-Wide Custom Events"
            data-label="Footer Subscribe link"
          
-           track-metadata-position="footer"
+           track-metadata-module="utility footer"
          
            track-type="footer link"
          
-           track-metadata-module="utility footer"
-         
-           track-metadata-eventDetail="/newsletter/"
+           track-metadata-position="footer"
          
            track-name="subscribe"
+         
+           track-metadata-eventDetail="/newsletter/"
          >
           Subscribe
         </a>

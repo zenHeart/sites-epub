@@ -121,9 +121,7 @@
     </a>
     <section class="devsite-wrapper">
       <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
-        <cloudx-track userCountry="US"></cloudx-track>
-
-<devsite-header role="banner" keep-tabs-visible>
+        <devsite-header role="banner" keep-tabs-visible>
   
     
 
@@ -747,15 +745,15 @@
     data-label="Site header link: Console"
     
       
-        referrerpolicy="no-referrer-when-downgrade"
-      
-        track-metadata-position="nav"
-      
         track-type="globalNav"
       
         track-name="console"
       
         track-metadata-eventDetail="nav"
+      
+        referrerpolicy="no-referrer-when-downgrade"
+      
+        track-metadata-position="nav"
       
     >
   Console
@@ -944,15 +942,15 @@
     
     
       
-        track-name="gcpCta"
-      
-        track-type="freeTrial"
+        track-metadata-eventDetail="nav"
       
         track-metadata-position="nav"
       
-        referrerpolicy="no-referrer-when-downgrade"
+        track-type="freeTrial"
       
-        track-metadata-eventDetail="nav"
+        track-name="gcpCta"
+      
+        referrerpolicy="no-referrer-when-downgrade"
       
     
     >Start free</a>
@@ -1510,15 +1508,15 @@
 
     
       
-        referrerpolicy="no-referrer-when-downgrade"
-      
-        track-metadata-position="nav"
-      
         track-type="globalNav"
       
         track-name="console"
       
         track-metadata-eventDetail="nav"
+      
+        referrerpolicy="no-referrer-when-downgrade"
+      
+        track-metadata-position="nav"
       
     
      data-category="Site-Wide Custom Events"
@@ -4808,7 +4806,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/products/"track-metadata-module="footer"track-name="see all products"track-metadata-child_headline="products and pricing">
+            track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/products/"track-metadata-child_headline="products and pricing"track-name="see all products"track-metadata-module="footer">
             
           
             See all products
@@ -4825,7 +4823,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-name="google cloud pricing"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-child_headline="products and pricing"track-metadata-module="footer"track-type="footer link">
+            track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-module="footer"track-type="footer link"track-name="google cloud pricing"track-metadata-child_headline="products and pricing"track-metadata-position="footer">
             
           
             Google Cloud pricing
@@ -4842,7 +4840,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-module="footer"track-name="google cloud marketplace"track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-child_headline="resources">
+            track-metadata-eventDetail="cloud.google.com/marketplace/"track-name="google cloud marketplace"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer">
             
           
             Google Cloud Marketplace
@@ -4859,7 +4857,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-type="footer link"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-child_headline="engage"track-metadata-module="footer"track-name="contact sales"track-metadata-position="footer">
+            track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-module="footer"track-name="contact sales"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="engage">
             
               
               
@@ -4886,7 +4884,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            target="_blank"track-metadata-module="footer"rel="noopener"track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-position="footer"track-type="footer link"track-name="google cloud community"track-metadata-child_headline="engage">
+            track-metadata-eventDetail="www.googlecloudcommunity.com"track-name="google cloud community"target="_blank"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-module="footer"track-type="footer link"rel="noopener">
             
           
             Community forums
@@ -4903,7 +4901,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="resources"track-name="support"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-module="footer">
+            track-name="support"track-metadata-child_headline="resources"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-module="footer">
             
           
             Support
@@ -4920,7 +4918,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-name="release notes"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/release-notes/">
+            track-name="release notes"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="resources"track-type="footer link">
             
           
             Release Notes
@@ -4937,7 +4935,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-child_headline="resources"track-name="system status"track-metadata-eventDetail="status.cloud.google.com"track-metadata-position="footer"track-metadata-module="footer"target="_blank"track-type="footer link">
+            track-name="system status"track-metadata-eventDetail="status.cloud.google.com"target="_blank"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="resources">
             
               
               
@@ -4964,7 +4962,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer"track-name="github">
+            track-metadata-module="footer"track-name="github"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-type="footer link"track-metadata-child_headline="resources"track-metadata-position="footer">
             
           
             GitHub
@@ -4981,7 +4979,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-name="google cloud quickstarts"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link">
+            track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-module="footer"track-name="google cloud quickstarts"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-type="footer link">
             
           
             Getting Started with Google Cloud
@@ -4998,7 +4996,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"track-name="code samples">
+            track-type="footer link"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="resources"track-name="code samples">
             
           
             Code samples
@@ -5015,7 +5013,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-child_headline="resources"track-type="footer link"track-name="cloud architecture center"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-position="footer"track-metadata-module="footer">
+            track-name="cloud architecture center"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/architecture/">
             
           
             Cloud Architecture Center
@@ -5032,7 +5030,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-child_headline="resources"track-metadata-module="footer"track-name="training"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-type="footer link">
+            track-name="training"track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="resources">
             
               
               
@@ -5059,7 +5057,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-module="footer"track-metadata-child_headline="engage"track-metadata-position="footer"track-name="blog">
+            track-type="footer link"track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-position="footer"track-name="blog"track-metadata-eventDetail="cloud.google.com/blog/">
             
           
             Blog
@@ -5076,7 +5074,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-name="events"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="engage"track-type="footer link"track-metadata-eventDetail="cloud.google.com/events/">
+            track-metadata-position="footer"track-metadata-module="footer"track-name="events"track-type="footer link"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/events/">
             
           
             Events
@@ -5093,7 +5091,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            rel="noopener"track-type="footer link"track-metadata-position="footer"target="_blank"track-metadata-eventDetail="x.com/googlecloud"track-name="follow on x"track-metadata-module="footer"track-metadata-child_headline="engage">
+            target="_blank"track-type="footer link"track-metadata-child_headline="engage"track-metadata-eventDetail="x.com/googlecloud"track-name="follow on x"track-metadata-module="footer"track-metadata-position="footer"rel="noopener">
             
           
             X (Twitter)
@@ -5110,7 +5108,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-metadata-child_headline="engage"track-name="google cloud on youtube"target="_blank"track-metadata-eventDetail="www.youtube.com/googlecloud"rel="noopener"track-metadata-position="footer"track-type="footer link">
+            track-name="google cloud on youtube"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-eventDetail="www.youtube.com/googlecloud"target="_blank"track-metadata-module="footer"rel="noopener"track-type="footer link">
             
           
             Google Cloud on YouTube
@@ -5127,7 +5125,7 @@ You will also have the option to undo changes to local files in case you want to
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-position="footer"rel="noopener"target="_blank"track-type="footer link"track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-name="google cloud tech on youtube">
+            rel="noopener"track-metadata-module="footer"track-name="google cloud tech on youtube"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"target="_blank"track-metadata-position="footer"track-metadata-child_headline="engage"track-type="footer link">
             
               
               
@@ -5169,17 +5167,17 @@ You will also have the option to undo changes to local files in case you want to
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
-           track-type="footer link"
-         
-           track-metadata-eventDetail="//about.google/"
-         
-           track-metadata-module="utility footer"
-         
-           track-name="about google"
-         
            track-metadata-position="footer"
          
            target="_blank"
+         
+           track-name="about google"
+         
+           track-metadata-module="utility footer"
+         
+           track-metadata-eventDetail="//about.google/"
+         
+           track-type="footer link"
          >
           About Google
         </a>
@@ -5195,17 +5193,17 @@ You will also have the option to undo changes to local files in case you want to
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
-           track-metadata-eventDetail="//policies.google.com/privacy"
-         
            track-name="privacy"
          
            track-metadata-module="utility footer"
          
-           track-type="footer link"
+           track-metadata-eventDetail="//policies.google.com/privacy"
          
            target="_blank"
          
            track-metadata-position="footer"
+         
+           track-type="footer link"
          >
           Privacy
         </a>
@@ -5227,9 +5225,9 @@ You will also have the option to undo changes to local files in case you want to
          
            track-metadata-module="utility footer"
          
-           track-metadata-position="footer"
-         
            target="_blank"
+         
+           track-metadata-position="footer"
          
            track-type="footer link"
          >
@@ -5247,15 +5245,15 @@ You will also have the option to undo changes to local files in case you want to
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
-           track-type="footer link"
-         
-           track-name="google cloud terms"
+           track-metadata-position="footer"
          
            track-metadata-module="utility footer"
          
+           track-type="footer link"
+         
            track-metadata-eventDetail="//cloud.google.com/product-terms"
          
-           track-metadata-position="footer"
+           track-name="google cloud terms"
          >
           Google Cloud terms
         </a>
@@ -5271,17 +5269,17 @@ You will also have the option to undo changes to local files in case you want to
            data-category="Site-Wide Custom Events"
            data-label="Footer Manage cookies link"
          
-           track-metadata-module="utility footer"
-         
-           track-metadata-eventDetail="#"
-         
-           track-type="footer link"
-         
-           track-metadata-position="footer"
-         
            aria-hidden="true"
          
            track-name="Manage cookies"
+         
+           track-metadata-position="footer"
+         
+           track-type="footer link"
+         
+           track-metadata-eventDetail="#"
+         
+           track-metadata-module="utility footer"
          >
           Manage cookies
         </a>
@@ -5297,15 +5295,15 @@ You will also have the option to undo changes to local files in case you want to
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
+           track-name="Our third decade of climate action: join us"
+         
+           track-metadata-eventDetail="/sustainability/"
+         
            track-type="footer link"
          
            track-metadata-module="utility footer"
          
-           track-metadata-eventDetail="/sustainability/"
-         
            track-metadata-position="footer"
-         
-           track-name="Our third decade of climate action: join us"
          >
           Our third decade of climate action: join us
         </a>
@@ -5329,9 +5327,9 @@ You will also have the option to undo changes to local files in case you want to
          
            track-metadata-position="footer"
          
-           track-type="footer link"
-         
            track-metadata-module="utility footer"
+         
+           track-type="footer link"
          >
           Subscribe
         </a>
@@ -5413,15 +5411,6 @@ You will also have the option to undo changes to local files in case you want to
     
     
     
-<cloudx-user></cloudx-user>
-
-
-
-
-  
-    <cloudx-free-trial-eligible-store freeTrialEligible="true"></cloudx-free-trial-eligible-store>
-  
-
     
 
 

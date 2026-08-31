@@ -144,9 +144,7 @@
     </a>
     <section class="devsite-wrapper">
       <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
-        <cloudx-track userCountry="US"></cloudx-track>
-
-<devsite-header role="banner" keep-tabs-visible>
+        <devsite-header role="banner" keep-tabs-visible>
   
     
 
@@ -770,11 +768,11 @@
     data-label="Site header link: Console"
     
       
-        track-metadata-position="nav"
+        track-metadata-eventDetail="nav"
       
         track-type="globalNav"
       
-        track-metadata-eventDetail="nav"
+        track-metadata-position="nav"
       
         track-name="console"
       
@@ -989,13 +987,13 @@
       
         track-metadata-position="nav"
       
-        track-type="freeTrial"
-      
-        referrerpolicy="no-referrer-when-downgrade"
+        track-name="gcpCta"
       
         track-metadata-eventDetail="nav"
       
-        track-name="gcpCta"
+        track-type="freeTrial"
+      
+        referrerpolicy="no-referrer-when-downgrade"
       
     
     >Start free</a>
@@ -1553,11 +1551,11 @@
 
     
       
-        track-metadata-position="nav"
+        track-metadata-eventDetail="nav"
       
         track-type="globalNav"
       
-        track-metadata-eventDetail="nav"
+        track-metadata-position="nav"
       
         track-name="console"
       
@@ -2902,7 +2900,7 @@ for Gemini Code Assist on GitHub.</li>
 
   
     <devsite-hats-survey class="nocontent" data-nosnippet
-      hats-id="mwETRvWii0eU5NUYprb0Y9z5GVbc"
+      hats-id="Nd7nTix2o0eU5NUYprb0ThtUc5jf"
       listnr-id="83405"></devsite-hats-survey>
   
 
@@ -3006,7 +3004,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/products/"track-name="see all products"track-metadata-child_headline="products and pricing">
+            track-metadata-module="footer"track-metadata-child_headline="products and pricing"track-type="footer link"track-metadata-eventDetail="cloud.google.com/products/"track-metadata-position="footer"track-name="see all products">
             
           
             See all products
@@ -3023,7 +3021,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-child_headline="products and pricing"track-metadata-position="footer"track-name="google cloud pricing"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/pricing/">
+            track-metadata-position="footer"track-metadata-child_headline="products and pricing"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/pricing/"track-name="google cloud pricing"track-type="footer link">
             
           
             Google Cloud pricing
@@ -3040,7 +3038,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="google cloud marketplace">
+            track-type="footer link"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-position="footer"track-name="google cloud marketplace"track-metadata-child_headline="resources"track-metadata-module="footer">
             
           
             Google Cloud Marketplace
@@ -3057,7 +3055,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-position="footer"track-name="contact sales"track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-child_headline="engage">
+            track-name="contact sales"track-type="footer link"track-metadata-child_headline="engage"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-module="footer">
             
               
               
@@ -3084,7 +3082,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"target="_blank"track-name="google cloud community"track-metadata-child_headline="engage"track-metadata-eventDetail="www.googlecloudcommunity.com"rel="noopener"track-metadata-position="footer"track-metadata-module="footer">
+            track-metadata-eventDetail="www.googlecloudcommunity.com"target="_blank"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"rel="noopener"track-metadata-child_headline="engage"track-name="google cloud community">
             
           
             Community forums
@@ -3101,7 +3099,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-position="footer"track-metadata-module="footer"track-name="support"track-metadata-child_headline="resources">
+            track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="support"track-type="footer link">
             
           
             Support
@@ -3118,7 +3116,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-name="release notes"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer">
+            track-metadata-module="footer"track-name="release notes"track-metadata-child_headline="resources"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/release-notes/">
             
           
             Release Notes
@@ -3135,7 +3133,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-name="system status"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="status.cloud.google.com"track-type="footer link"target="_blank">
+            track-name="system status"track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="status.cloud.google.com"track-metadata-child_headline="resources"target="_blank">
             
               
               
@@ -3162,7 +3160,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-name="github"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link">
+            track-type="footer link"track-metadata-module="footer"track-name="github"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-child_headline="resources"track-metadata-position="footer">
             
           
             GitHub
@@ -3179,7 +3177,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-name="google cloud quickstarts">
+            track-metadata-child_headline="resources"track-metadata-module="footer"track-name="google cloud quickstarts"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/docs/get-started/">
             
           
             Getting Started with Google Cloud
@@ -3196,7 +3194,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-name="code samples"track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-child_headline="resources"track-type="footer link">
+            track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-position="footer"track-metadata-module="footer"track-name="code samples"track-type="footer link"track-metadata-child_headline="resources">
             
           
             Code samples
@@ -3213,7 +3211,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-name="cloud architecture center"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/architecture/"track-type="footer link"track-metadata-position="footer">
+            track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-module="footer"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources"track-name="cloud architecture center">
             
           
             Cloud Architecture Center
@@ -3230,7 +3228,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-name="training"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-type="footer link"track-metadata-module="footer">
+            track-name="training"track-type="footer link"track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer">
             
               
               
@@ -3257,7 +3255,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-name="blog"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/blog/">
+            track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-child_headline="engage"track-type="footer link"track-metadata-position="footer"track-name="blog"track-metadata-module="footer">
             
           
             Blog
@@ -3274,7 +3272,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/events/"track-name="events"track-metadata-position="footer">
+            track-metadata-module="footer"track-metadata-child_headline="engage"track-name="events"track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/events/">
             
           
             Events
@@ -3291,7 +3289,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-type="footer link"rel="noopener"track-metadata-module="footer"track-metadata-position="footer"target="_blank"track-metadata-eventDetail="x.com/googlecloud"track-name="follow on x"track-metadata-child_headline="engage">
+            track-metadata-module="footer"track-metadata-child_headline="engage"rel="noopener"track-metadata-eventDetail="x.com/googlecloud"target="_blank"track-name="follow on x"track-metadata-position="footer"track-type="footer link">
             
           
             X (Twitter)
@@ -3308,7 +3306,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-position="footer"rel="noopener"track-metadata-module="footer"target="_blank"track-name="google cloud on youtube"track-metadata-eventDetail="www.youtube.com/googlecloud"track-type="footer link"track-metadata-child_headline="engage">
+            track-metadata-module="footer"track-name="google cloud on youtube"target="_blank"track-type="footer link"track-metadata-eventDetail="www.youtube.com/googlecloud"track-metadata-child_headline="engage"rel="noopener"track-metadata-position="footer">
             
           
             Google Cloud on YouTube
@@ -3325,7 +3323,7 @@ for Gemini Code Assist on GitHub.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"target="_blank"track-name="google cloud tech on youtube"track-metadata-position="footer"track-metadata-child_headline="engage"rel="noopener">
+            track-metadata-child_headline="engage"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-name="google cloud tech on youtube"track-metadata-module="footer"target="_blank"track-type="footer link"rel="noopener"track-metadata-position="footer">
             
               
               
@@ -3367,17 +3365,17 @@ for Gemini Code Assist on GitHub.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
+           track-metadata-module="utility footer"
+         
            track-type="footer link"
-         
-           target="_blank"
-         
-           track-metadata-position="footer"
          
            track-metadata-eventDetail="//about.google/"
          
+           track-metadata-position="footer"
+         
            track-name="about google"
          
-           track-metadata-module="utility footer"
+           target="_blank"
          >
           About Google
         </a>
@@ -3393,17 +3391,17 @@ for Gemini Code Assist on GitHub.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
+           track-metadata-eventDetail="//policies.google.com/privacy"
+         
            track-metadata-module="utility footer"
          
-           track-metadata-position="footer"
-         
            track-name="privacy"
+         
+           track-metadata-position="footer"
          
            target="_blank"
          
            track-type="footer link"
-         
-           track-metadata-eventDetail="//policies.google.com/privacy"
          >
           Privacy
         </a>
@@ -3419,17 +3417,17 @@ for Gemini Code Assist on GitHub.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Site terms link"
          
-           track-type="footer link"
-         
            target="_blank"
-         
-           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          
            track-metadata-position="footer"
          
            track-metadata-module="utility footer"
          
            track-name="site terms"
+         
+           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
+         
+           track-type="footer link"
          >
           Site terms
         </a>
@@ -3445,15 +3443,15 @@ for Gemini Code Assist on GitHub.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
-           track-metadata-position="footer"
-         
            track-type="footer link"
+         
+           track-metadata-module="utility footer"
+         
+           track-metadata-position="footer"
          
            track-name="google cloud terms"
          
            track-metadata-eventDetail="//cloud.google.com/product-terms"
-         
-           track-metadata-module="utility footer"
          >
           Google Cloud terms
         </a>
@@ -3471,15 +3469,15 @@ for Gemini Code Assist on GitHub.</li>
          
            track-metadata-eventDetail="#"
          
-           aria-hidden="true"
+           track-metadata-module="utility footer"
          
            track-metadata-position="footer"
          
-           track-type="footer link"
-         
-           track-metadata-module="utility footer"
-         
            track-name="Manage cookies"
+         
+           aria-hidden="true"
+         
+           track-type="footer link"
          >
           Manage cookies
         </a>
@@ -3495,15 +3493,15 @@ for Gemini Code Assist on GitHub.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
-           track-metadata-eventDetail="/sustainability/"
-         
-           track-type="footer link"
-         
            track-metadata-module="utility footer"
+         
+           track-metadata-eventDetail="/sustainability/"
          
            track-metadata-position="footer"
          
            track-name="Our third decade of climate action: join us"
+         
+           track-type="footer link"
          >
           Our third decade of climate action: join us
         </a>
@@ -3521,13 +3519,13 @@ for Gemini Code Assist on GitHub.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Subscribe link"
          
-           track-type="footer link"
+           track-metadata-eventDetail="/newsletter/"
          
            track-metadata-position="footer"
          
-           track-metadata-eventDetail="/newsletter/"
-         
            track-metadata-module="utility footer"
+         
+           track-type="footer link"
          
            track-name="subscribe"
          >
@@ -3631,15 +3629,6 @@ for Gemini Code Assist on GitHub.</li>
     
     
     
-<cloudx-user></cloudx-user>
-
-
-
-
-  
-    <cloudx-free-trial-eligible-store freeTrialEligible="true"></cloudx-free-trial-eligible-store>
-  
-
     
 
 

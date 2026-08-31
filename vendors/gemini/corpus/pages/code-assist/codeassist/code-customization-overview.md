@@ -776,9 +776,9 @@
       
         track-type="globalNav"
       
-        track-name="console"
-      
         track-metadata-position="nav"
+      
+        track-name="console"
       
         referrerpolicy="no-referrer-when-downgrade"
       
@@ -1001,15 +1001,15 @@
     
     
       
-        referrerpolicy="no-referrer-when-downgrade"
-      
         track-metadata-position="nav"
       
-        track-metadata-eventDetail="nav"
+        referrerpolicy="no-referrer-when-downgrade"
       
         track-type="freeTrial"
       
         track-name="gcpCta"
+      
+        track-metadata-eventDetail="nav"
       
     
     >Start free</a>
@@ -1569,9 +1569,9 @@
       
         track-type="globalNav"
       
-        track-name="console"
-      
         track-metadata-position="nav"
+      
+        track-name="console"
       
         referrerpolicy="no-referrer-when-downgrade"
       
@@ -2827,7 +2827,7 @@ and then select <strong>Product feedback</strong>.</p></li>
 
   
     <devsite-hats-survey class="nocontent" data-nosnippet
-      hats-id="mwETRvWii0eU5NUYprb0Y9z5GVbc"
+      hats-id="Nd7nTix2o0eU5NUYprb0ThtUc5jf"
       listnr-id="83405"></devsite-hats-survey>
   
 
@@ -2931,7 +2931,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-eventDetail="cloud.google.com/products/"track-name="see all products"track-metadata-position="footer"track-metadata-child_headline="products and pricing"track-metadata-module="footer">
+            track-metadata-eventDetail="cloud.google.com/products/"track-metadata-child_headline="products and pricing"track-metadata-module="footer"track-metadata-position="footer"track-type="footer link"track-name="see all products">
             
           
             See all products
@@ -2948,7 +2948,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-position="footer"track-metadata-child_headline="products and pricing"track-metadata-module="footer"track-type="footer link"track-name="google cloud pricing"track-metadata-eventDetail="cloud.google.com/pricing/">
+            track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-child_headline="products and pricing"track-metadata-position="footer"track-type="footer link"track-name="google cloud pricing"track-metadata-module="footer">
             
           
             Google Cloud pricing
@@ -2965,7 +2965,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-type="footer link"track-name="google cloud marketplace"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer">
+            track-metadata-child_headline="resources"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/marketplace/"track-name="google cloud marketplace">
             
           
             Google Cloud Marketplace
@@ -2982,7 +2982,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/contact/"track-name="contact sales"track-type="footer link">
+            track-metadata-child_headline="engage"track-name="contact sales"track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/contact/">
             
               
               
@@ -3009,7 +3009,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            target="_blank"track-metadata-position="footer"rel="noopener"track-name="google cloud community"track-type="footer link"track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-child_headline="engage"track-metadata-module="footer">
+            track-metadata-child_headline="engage"track-metadata-position="footer"track-metadata-module="footer"rel="noopener"track-name="google cloud community"track-type="footer link"track-metadata-eventDetail="www.googlecloudcommunity.com"target="_blank">
             
           
             Community forums
@@ -3026,7 +3026,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-module="footer"track-type="footer link"track-name="support"track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-position="footer"track-metadata-child_headline="resources">
+            track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-module="footer"track-type="footer link"track-name="support"track-metadata-position="footer"track-metadata-child_headline="resources">
             
           
             Support
@@ -3043,7 +3043,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-module="footer"track-metadata-child_headline="resources"track-type="footer link"track-name="release notes"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-position="footer">
+            track-type="footer link"track-name="release notes"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-position="footer">
             
           
             Release Notes
@@ -3060,7 +3060,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            target="_blank"track-type="footer link"track-name="system status"track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="status.cloud.google.com"track-metadata-position="footer">
+            track-metadata-child_headline="resources"track-metadata-eventDetail="status.cloud.google.com"track-metadata-position="footer"track-metadata-module="footer"track-name="system status"track-type="footer link"target="_blank">
             
               
               
@@ -3087,7 +3087,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-position="footer"track-metadata-child_headline="resources"track-type="footer link"track-name="github"track-metadata-module="footer">
+            track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-child_headline="resources"track-metadata-position="footer"track-type="footer link"track-name="github"track-metadata-module="footer">
             
           
             GitHub
@@ -3104,7 +3104,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-type="footer link"track-name="google cloud quickstarts"track-metadata-position="footer"track-metadata-child_headline="resources">
+            track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-metadata-position="footer"track-type="footer link"track-name="google cloud quickstarts"track-metadata-child_headline="resources"track-metadata-module="footer">
             
           
             Getting Started with Google Cloud
@@ -3121,7 +3121,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/docs/samples"track-name="code samples"track-type="footer link">
+            track-metadata-module="footer"track-metadata-child_headline="resources"track-type="footer link"track-name="code samples"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/docs/samples">
             
           
             Code samples
@@ -3138,7 +3138,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-metadata-child_headline="resources"track-type="footer link"track-name="cloud architecture center"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/architecture/">
+            track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-child_headline="resources"track-name="cloud architecture center"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer">
             
           
             Cloud Architecture Center
@@ -3155,7 +3155,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-type="footer link"track-name="training"track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/learn/training/">
+            track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-position="footer"track-name="training"track-type="footer link"track-metadata-eventDetail="cloud.google.com/learn/training/">
             
               
               
@@ -3182,7 +3182,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-name="blog"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-child_headline="engage">
+            track-type="footer link"track-name="blog"track-metadata-module="footer"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-position="footer">
             
           
             Blog
@@ -3199,7 +3199,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/events/"track-metadata-position="footer"track-type="footer link"track-name="events"track-metadata-module="footer">
+            track-metadata-child_headline="engage"track-type="footer link"track-metadata-module="footer"track-name="events"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/events/">
             
           
             Events
@@ -3216,7 +3216,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-name="follow on x"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="x.com/googlecloud"track-metadata-position="footer"track-metadata-child_headline="engage"target="_blank"rel="noopener">
+            track-metadata-child_headline="engage"rel="noopener"track-type="footer link"track-name="follow on x"track-metadata-position="footer"target="_blank"track-metadata-eventDetail="x.com/googlecloud"track-metadata-module="footer">
             
           
             X (Twitter)
@@ -3233,7 +3233,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            rel="noopener"track-metadata-child_headline="engage"track-metadata-position="footer"target="_blank"track-metadata-module="footer"track-name="google cloud on youtube"track-type="footer link"track-metadata-eventDetail="www.youtube.com/googlecloud">
+            track-type="footer link"track-name="google cloud on youtube"track-metadata-eventDetail="www.youtube.com/googlecloud"track-metadata-child_headline="engage"target="_blank"track-metadata-position="footer"rel="noopener"track-metadata-module="footer">
             
           
             Google Cloud on YouTube
@@ -3250,7 +3250,7 @@ and then select <strong>Product feedback</strong>.</p></li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            target="_blank"track-metadata-module="footer"track-metadata-child_headline="engage"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"rel="noopener"track-type="footer link"track-name="google cloud tech on youtube"track-metadata-position="footer">
+            track-metadata-eventDetail="www.youtube.com/googlecloudplatform"target="_blank"track-metadata-position="footer"track-name="google cloud tech on youtube"track-type="footer link"track-metadata-module="footer"rel="noopener"track-metadata-child_headline="engage">
             
               
               
@@ -3292,15 +3292,15 @@ and then select <strong>Product feedback</strong>.</p></li>
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
-           track-metadata-position="footer"
-         
-           track-metadata-module="utility footer"
+           track-type="footer link"
          
            track-name="about google"
          
-           track-type="footer link"
+           track-metadata-position="footer"
          
            track-metadata-eventDetail="//about.google/"
+         
+           track-metadata-module="utility footer"
          
            target="_blank"
          >
@@ -3318,17 +3318,17 @@ and then select <strong>Product feedback</strong>.</p></li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
-           target="_blank"
-         
-           track-metadata-module="utility footer"
+           track-metadata-eventDetail="//policies.google.com/privacy"
          
            track-metadata-position="footer"
          
-           track-metadata-eventDetail="//policies.google.com/privacy"
+           target="_blank"
          
            track-name="privacy"
          
            track-type="footer link"
+         
+           track-metadata-module="utility footer"
          >
           Privacy
         </a>
@@ -3344,6 +3344,8 @@ and then select <strong>Product feedback</strong>.</p></li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Site terms link"
          
+           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
+         
            target="_blank"
          
            track-name="site terms"
@@ -3351,8 +3353,6 @@ and then select <strong>Product feedback</strong>.</p></li>
            track-type="footer link"
          
            track-metadata-module="utility footer"
-         
-           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          
            track-metadata-position="footer"
          >
@@ -3372,11 +3372,11 @@ and then select <strong>Product feedback</strong>.</p></li>
          
            track-metadata-position="footer"
          
-           track-name="google cloud terms"
+           track-metadata-eventDetail="//cloud.google.com/product-terms"
          
            track-type="footer link"
          
-           track-metadata-eventDetail="//cloud.google.com/product-terms"
+           track-name="google cloud terms"
          
            track-metadata-module="utility footer"
          >
@@ -3394,17 +3394,17 @@ and then select <strong>Product feedback</strong>.</p></li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Manage cookies link"
          
-           track-metadata-module="utility footer"
-         
            aria-hidden="true"
          
            track-metadata-eventDetail="#"
+         
+           track-metadata-position="footer"
          
            track-type="footer link"
          
            track-name="Manage cookies"
          
-           track-metadata-position="footer"
+           track-metadata-module="utility footer"
          >
           Manage cookies
         </a>
@@ -3420,15 +3420,15 @@ and then select <strong>Product feedback</strong>.</p></li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
-           track-metadata-position="footer"
-         
-           track-metadata-eventDetail="/sustainability/"
-         
-           track-type="footer link"
+           track-metadata-module="utility footer"
          
            track-name="Our third decade of climate action: join us"
          
-           track-metadata-module="utility footer"
+           track-type="footer link"
+         
+           track-metadata-eventDetail="/sustainability/"
+         
+           track-metadata-position="footer"
          >
           Our third decade of climate action: join us
         </a>
@@ -3448,13 +3448,13 @@ and then select <strong>Product feedback</strong>.</p></li>
          
            track-metadata-position="footer"
          
-           track-name="subscribe"
-         
-           track-type="footer link"
+           track-metadata-eventDetail="/newsletter/"
          
            track-metadata-module="utility footer"
          
-           track-metadata-eventDetail="/newsletter/"
+           track-type="footer link"
+         
+           track-name="subscribe"
          >
           Subscribe
         </a>
@@ -3566,6 +3566,15 @@ and then select <strong>Product feedback</strong>.</p></li>
     
     
     
+<cloudx-user></cloudx-user>
+
+
+
+
+  
+    <cloudx-free-trial-eligible-store freeTrialEligible="true"></cloudx-free-trial-eligible-store>
+  
+
     
 
 

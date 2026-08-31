@@ -774,7 +774,7 @@
     data-label="Site header link: Console"
     
       
-        track-metadata-eventDetail="nav"
+        track-metadata-position="nav"
       
         track-type="globalNav"
       
@@ -782,7 +782,7 @@
       
         track-name="console"
       
-        track-metadata-position="nav"
+        track-metadata-eventDetail="nav"
       
     >
   Console
@@ -1001,15 +1001,15 @@
     
     
       
-        track-metadata-position="nav"
-      
         track-name="gcpCta"
       
         track-metadata-eventDetail="nav"
       
-        track-type="freeTrial"
+        track-metadata-position="nav"
       
         referrerpolicy="no-referrer-when-downgrade"
+      
+        track-type="freeTrial"
       
     
     >Start free</a>
@@ -1567,7 +1567,7 @@
 
     
       
-        track-metadata-eventDetail="nav"
+        track-metadata-position="nav"
       
         track-type="globalNav"
       
@@ -1575,7 +1575,7 @@
       
         track-name="console"
       
-        track-metadata-position="nav"
+        track-metadata-eventDetail="nav"
       
     
      data-category="Site-Wide Custom Events"
@@ -2754,7 +2754,7 @@ select <strong>Open User Settings JSON</strong>.</li>
 
   
     <devsite-hats-survey class="nocontent" data-nosnippet
-      hats-id="mwETRvWii0eU5NUYprb0Y9z5GVbc"
+      hats-id="Nd7nTix2o0eU5NUYprb0ThtUc5jf"
       listnr-id="83405"></devsite-hats-survey>
   
 
@@ -2858,7 +2858,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"track-name="see all products"track-metadata-child_headline="products and pricing"track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/products/">
+            track-name="see all products"track-metadata-child_headline="products and pricing"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/products/"track-metadata-position="footer"track-type="footer link">
             
           
             See all products
@@ -2875,7 +2875,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-name="google cloud pricing"track-metadata-module="footer"track-metadata-child_headline="products and pricing"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/pricing/"track-type="footer link">
+            track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="products and pricing"track-metadata-eventDetail="cloud.google.com/pricing/"track-name="google cloud pricing">
             
           
             Google Cloud pricing
@@ -2892,7 +2892,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/marketplace/"track-name="google cloud marketplace"track-metadata-position="footer"track-metadata-child_headline="resources"track-type="footer link">
+            track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-position="footer"track-name="google cloud marketplace"track-metadata-eventDetail="cloud.google.com/marketplace/">
             
           
             Google Cloud Marketplace
@@ -2909,7 +2909,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-module="footer"track-name="contact sales"track-metadata-eventDetail="cloud.google.com/contact/">
+            track-metadata-module="footer"track-metadata-position="footer"track-name="contact sales"track-type="footer link"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-child_headline="engage">
             
               
               
@@ -2936,7 +2936,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-position="footer"rel="noopener"track-name="google cloud community"target="_blank"track-type="footer link"track-metadata-child_headline="engage"track-metadata-module="footer">
+            track-name="google cloud community"track-metadata-eventDetail="www.googlecloudcommunity.com"rel="noopener"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="engage"target="_blank"track-metadata-position="footer">
             
           
             Community forums
@@ -2953,7 +2953,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-module="footer"track-name="support"track-metadata-position="footer"track-metadata-child_headline="resources"track-type="footer link">
+            track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources"track-name="support"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/support-hub/">
             
           
             Support
@@ -2970,7 +2970,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-child_headline="resources"track-name="release notes"track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/release-notes/"track-type="footer link">
+            track-name="release notes"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-child_headline="resources"track-metadata-position="footer">
             
           
             Release Notes
@@ -2987,7 +2987,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="status.cloud.google.com"track-name="system status"track-type="footer link"track-metadata-child_headline="resources"target="_blank">
+            track-name="system status"track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="status.cloud.google.com"target="_blank"track-metadata-module="footer"track-metadata-child_headline="resources">
             
               
               
@@ -3014,7 +3014,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-child_headline="resources"track-name="github"track-metadata-position="footer">
+            track-metadata-position="footer"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-name="github">
             
           
             GitHub
@@ -3031,7 +3031,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="google cloud quickstarts"track-metadata-eventDetail="cloud.google.com/docs/get-started/">
+            track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="google cloud quickstarts"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/docs/get-started/">
             
           
             Getting Started with Google Cloud
@@ -3048,7 +3048,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-name="code samples"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/docs/samples">
+            track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"track-name="code samples"track-metadata-child_headline="resources">
             
           
             Code samples
@@ -3065,7 +3065,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-module="footer"track-name="cloud architecture center"track-metadata-child_headline="resources"track-type="footer link">
+            track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-child_headline="resources"track-name="cloud architecture center"track-metadata-module="footer">
             
           
             Cloud Architecture Center
@@ -3082,7 +3082,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-module="footer"track-name="training"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-type="footer link"track-metadata-child_headline="resources">
+            track-name="training"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="resources"track-type="footer link"track-metadata-eventDetail="cloud.google.com/learn/training/">
             
               
               
@@ -3109,7 +3109,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/blog/"track-name="blog"track-metadata-module="footer">
+            track-name="blog"track-metadata-child_headline="engage"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-module="footer"track-type="footer link">
             
           
             Blog
@@ -3126,7 +3126,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-name="events"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/events/"track-metadata-module="footer"track-metadata-child_headline="engage"track-type="footer link">
+            track-name="events"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/events/"track-metadata-position="footer"track-metadata-child_headline="engage">
             
           
             Events
@@ -3143,7 +3143,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            rel="noopener"track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="x.com/googlecloud"track-metadata-child_headline="engage"track-name="follow on x"track-type="footer link"target="_blank">
+            track-metadata-position="footer"track-name="follow on x"rel="noopener"track-metadata-eventDetail="x.com/googlecloud"target="_blank"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="engage">
             
           
             X (Twitter)
@@ -3160,7 +3160,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            rel="noopener"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="engage"target="_blank"track-metadata-position="footer"track-name="google cloud on youtube"track-metadata-eventDetail="www.youtube.com/googlecloud">
+            track-metadata-module="footer"track-metadata-position="footer"track-type="footer link"rel="noopener"target="_blank"track-metadata-child_headline="engage"track-name="google cloud on youtube"track-metadata-eventDetail="www.youtube.com/googlecloud">
             
           
             Google Cloud on YouTube
@@ -3177,7 +3177,7 @@ select <strong>Open User Settings JSON</strong>.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="engage"target="_blank"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-name="google cloud tech on youtube"rel="noopener">
+            target="_blank"track-metadata-child_headline="engage"rel="noopener"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-name="google cloud tech on youtube"track-metadata-module="footer"track-metadata-position="footer"track-type="footer link">
             
               
               
@@ -3221,13 +3221,13 @@ select <strong>Open User Settings JSON</strong>.</li>
          
            track-name="about google"
          
-           track-metadata-module="utility footer"
-         
-           target="_blank"
-         
            track-metadata-eventDetail="//about.google/"
          
            track-metadata-position="footer"
+         
+           track-metadata-module="utility footer"
+         
+           target="_blank"
          
            track-type="footer link"
          >
@@ -3247,15 +3247,15 @@ select <strong>Open User Settings JSON</strong>.</li>
          
            track-metadata-eventDetail="//policies.google.com/privacy"
          
-           track-metadata-position="footer"
-         
            track-metadata-module="utility footer"
          
-           track-type="footer link"
+           target="_blank"
          
            track-name="privacy"
          
-           target="_blank"
+           track-metadata-position="footer"
+         
+           track-type="footer link"
          >
           Privacy
         </a>
@@ -3273,15 +3273,15 @@ select <strong>Open User Settings JSON</strong>.</li>
          
            track-metadata-module="utility footer"
          
-           track-type="footer link"
-         
            track-metadata-position="footer"
-         
-           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          
            track-name="site terms"
          
            target="_blank"
+         
+           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
+         
+           track-type="footer link"
          >
           Site terms
         </a>
@@ -3297,8 +3297,6 @@ select <strong>Open User Settings JSON</strong>.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
-           track-metadata-module="utility footer"
-         
            track-name="google cloud terms"
          
            track-type="footer link"
@@ -3306,6 +3304,8 @@ select <strong>Open User Settings JSON</strong>.</li>
            track-metadata-position="footer"
          
            track-metadata-eventDetail="//cloud.google.com/product-terms"
+         
+           track-metadata-module="utility footer"
          >
           Google Cloud terms
         </a>
@@ -3321,15 +3321,15 @@ select <strong>Open User Settings JSON</strong>.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Manage cookies link"
          
-           track-name="Manage cookies"
-         
-           aria-hidden="true"
-         
-           track-metadata-eventDetail="#"
+           track-metadata-module="utility footer"
          
            track-metadata-position="footer"
          
-           track-metadata-module="utility footer"
+           aria-hidden="true"
+         
+           track-name="Manage cookies"
+         
+           track-metadata-eventDetail="#"
          
            track-type="footer link"
          >
@@ -3347,15 +3347,15 @@ select <strong>Open User Settings JSON</strong>.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
+           track-type="footer link"
+         
+           track-metadata-module="utility footer"
+         
            track-name="Our third decade of climate action: join us"
          
            track-metadata-eventDetail="/sustainability/"
          
-           track-metadata-module="utility footer"
-         
            track-metadata-position="footer"
-         
-           track-type="footer link"
          >
           Our third decade of climate action: join us
         </a>
@@ -3379,9 +3379,9 @@ select <strong>Open User Settings JSON</strong>.</li>
          
            track-metadata-module="utility footer"
          
-           track-metadata-eventDetail="/newsletter/"
-         
            track-type="footer link"
+         
+           track-metadata-eventDetail="/newsletter/"
          >
           Subscribe
         </a>

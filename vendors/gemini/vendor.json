@@ -6,10 +6,10 @@
   "icon": "vendors/gemini/icon.png",
   "author": "Google",
   "adapter": "gemini",
-  "updated_at": "",
-  "packed_at": "",
-  "summary": "Google Gemini 官方产品文档与博客一书打包:Gemini API 与 AI Studio、API Reference、Gemini CLI、Gemini Code Assist、Antigravity、Jules、Firebase Studio,Blog 排在末尾。",
+  "updated_at": "2026-08-31T09:10:36Z",
+  "packed_at": "2026-08-31T07:57:44Z",
+  "summary": "Google Gemini 会员核心工具一书打包:Gemini 网页版帮助、Gemini API 与 AI Studio、Antigravity(含 agy CLI)、Jules、NotebookLM、Code Assist,Blog 排在末尾。Gemini CLI 已于 2026-06-18 对个人账号停服(官方迁移至 Antigravity CLI),不再收录。",
   "category": "docs",
-  "chapters": 0,
+  "chapters": 600,
   "cover": "covers/gemini.png"
 }

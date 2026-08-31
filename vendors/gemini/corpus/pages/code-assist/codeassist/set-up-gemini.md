@@ -774,15 +774,15 @@
     data-label="Site header link: Console"
     
       
-        referrerpolicy="no-referrer-when-downgrade"
+        track-metadata-eventDetail="nav"
       
         track-name="console"
       
-        track-metadata-eventDetail="nav"
+        track-type="globalNav"
       
         track-metadata-position="nav"
       
-        track-type="globalNav"
+        referrerpolicy="no-referrer-when-downgrade"
       
     >
   Console
@@ -1001,15 +1001,15 @@
     
     
       
-        track-metadata-eventDetail="nav"
-      
         track-metadata-position="nav"
+      
+        track-type="freeTrial"
+      
+        track-metadata-eventDetail="nav"
       
         track-name="gcpCta"
       
         referrerpolicy="no-referrer-when-downgrade"
-      
-        track-type="freeTrial"
       
     
     >Start free</a>
@@ -1567,15 +1567,15 @@
 
     
       
-        referrerpolicy="no-referrer-when-downgrade"
+        track-metadata-eventDetail="nav"
       
         track-name="console"
       
-        track-metadata-eventDetail="nav"
+        track-type="globalNav"
       
         track-metadata-position="nav"
       
-        track-type="globalNav"
+        referrerpolicy="no-referrer-when-downgrade"
       
     
      data-category="Site-Wide Custom Events"
@@ -3374,7 +3374,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
 
   
     <devsite-hats-survey class="nocontent" data-nosnippet
-      hats-id="Nd7nTix2o0eU5NUYprb0ThtUc5jf"
+      hats-id="mwETRvWii0eU5NUYprb0Y9z5GVbc"
       listnr-id="83405"></devsite-hats-survey>
   
 
@@ -3478,7 +3478,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"track-metadata-child_headline="products and pricing"track-metadata-eventDetail="cloud.google.com/products/"track-type="footer link"track-name="see all products"track-metadata-module="footer">
+            track-type="footer link"track-metadata-child_headline="products and pricing"track-metadata-eventDetail="cloud.google.com/products/"track-metadata-module="footer"track-name="see all products"track-metadata-position="footer">
             
           
             See all products
@@ -3495,7 +3495,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="products and pricing"track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-position="footer"track-name="google cloud pricing">
+            track-metadata-child_headline="products and pricing"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/pricing/"track-name="google cloud pricing"track-metadata-position="footer">
             
           
             Google Cloud pricing
@@ -3512,7 +3512,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-name="google cloud marketplace"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/marketplace/">
+            track-type="footer link"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-module="footer"track-metadata-position="footer"track-name="google cloud marketplace"track-metadata-child_headline="resources">
             
           
             Google Cloud Marketplace
@@ -3529,7 +3529,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-eventDetail="cloud.google.com/contact/"track-type="footer link"track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-position="footer"track-name="contact sales">
+            track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"track-name="contact sales"track-metadata-child_headline="engage">
             
               
               
@@ -3556,7 +3556,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            target="_blank"track-metadata-eventDetail="www.googlecloudcommunity.com"track-name="google cloud community"track-metadata-position="footer"rel="noopener"track-metadata-module="footer"track-metadata-child_headline="engage"track-type="footer link">
+            track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="engage"track-name="google cloud community"rel="noopener"track-metadata-eventDetail="www.googlecloudcommunity.com"track-type="footer link"target="_blank">
             
           
             Community forums
@@ -3573,7 +3573,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="resources"track-name="support"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/support-hub/">
+            track-name="support"track-metadata-child_headline="resources"track-metadata-position="footer"track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/support-hub/">
             
           
             Support
@@ -3590,7 +3590,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-module="footer"track-name="release notes"track-metadata-eventDetail="cloud.google.com/release-notes/"track-type="footer link"track-metadata-child_headline="resources"track-metadata-position="footer">
+            track-name="release notes"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-module="footer"track-metadata-child_headline="resources"track-type="footer link">
             
           
             Release Notes
@@ -3607,7 +3607,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-position="footer"track-type="footer link"target="_blank"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="system status"track-metadata-eventDetail="status.cloud.google.com">
+            track-metadata-eventDetail="status.cloud.google.com"track-metadata-position="footer"track-metadata-module="footer"track-name="system status"track-type="footer link"target="_blank"track-metadata-child_headline="resources">
             
               
               
@@ -3634,7 +3634,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="github"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-position="footer">
+            track-name="github"track-metadata-position="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-child_headline="resources"track-metadata-module="footer"track-type="footer link">
             
           
             GitHub
@@ -3651,7 +3651,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-type="footer link"track-name="google cloud quickstarts"track-metadata-child_headline="resources">
+            track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-name="google cloud quickstarts">
             
           
             Getting Started with Google Cloud
@@ -3668,7 +3668,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-type="footer link"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-position="footer"track-metadata-child_headline="resources"track-name="code samples"track-metadata-module="footer">
+            track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-position="footer"track-metadata-child_headline="resources"track-type="footer link"track-metadata-module="footer"track-name="code samples">
             
           
             Code samples
@@ -3685,7 +3685,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-module="footer"track-name="cloud architecture center"track-metadata-child_headline="resources">
+            track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-child_headline="resources"track-name="cloud architecture center">
             
           
             Cloud Architecture Center
@@ -3702,7 +3702,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-position="footer"track-name="training"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/learn/training/">
+            track-metadata-eventDetail="cloud.google.com/learn/training/"track-name="training"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-position="footer">
             
               
               
@@ -3729,7 +3729,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-name="blog"track-metadata-module="footer"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/blog/"track-type="footer link"track-metadata-position="footer">
+            track-name="blog"track-metadata-child_headline="engage"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/blog/"track-type="footer link"track-metadata-module="footer">
             
           
             Blog
@@ -3746,7 +3746,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-position="footer"track-name="events"track-metadata-child_headline="engage"track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/events/">
+            track-type="footer link"track-metadata-child_headline="engage"track-name="events"track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/events/">
             
           
             Events
@@ -3763,7 +3763,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-module="footer"track-metadata-eventDetail="x.com/googlecloud"track-metadata-position="footer"track-type="footer link"rel="noopener"track-metadata-child_headline="engage"track-name="follow on x"target="_blank">
+            track-metadata-eventDetail="x.com/googlecloud"track-name="follow on x"target="_blank"rel="noopener"track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-module="footer">
             
           
             X (Twitter)
@@ -3780,7 +3780,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-name="google cloud on youtube"track-metadata-module="footer"track-metadata-eventDetail="www.youtube.com/googlecloud"target="_blank"track-metadata-position="footer"track-metadata-child_headline="engage"rel="noopener"track-type="footer link">
+            target="_blank"track-type="footer link"rel="noopener"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-eventDetail="www.youtube.com/googlecloud"track-name="google cloud on youtube">
             
           
             Google Cloud on YouTube
@@ -3797,7 +3797,7 @@ to the Preview channel or back to the Generally Available channel at any time.</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-type="footer link"track-metadata-module="footer"rel="noopener"track-metadata-child_headline="engage"track-name="google cloud tech on youtube"target="_blank"track-metadata-position="footer"track-metadata-eventDetail="www.youtube.com/googlecloudplatform">
+            target="_blank"track-metadata-module="footer"rel="noopener"track-type="footer link"track-name="google cloud tech on youtube"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-eventDetail="www.youtube.com/googlecloudplatform">
             
               
               
@@ -3839,15 +3839,15 @@ to the Preview channel or back to the Generally Available channel at any time.</
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
-           track-type="footer link"
-         
            track-metadata-module="utility footer"
+         
+           track-metadata-position="footer"
          
            target="_blank"
          
            track-metadata-eventDetail="//about.google/"
          
-           track-metadata-position="footer"
+           track-type="footer link"
          
            track-name="about google"
          >
@@ -3865,17 +3865,17 @@ to the Preview channel or back to the Generally Available channel at any time.</
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
-           track-metadata-module="utility footer"
-         
-           track-name="privacy"
+           target="_blank"
          
            track-metadata-eventDetail="//policies.google.com/privacy"
          
-           track-type="footer link"
-         
            track-metadata-position="footer"
          
-           target="_blank"
+           track-name="privacy"
+         
+           track-type="footer link"
+         
+           track-metadata-module="utility footer"
          >
           Privacy
         </a>
@@ -3891,17 +3891,17 @@ to the Preview channel or back to the Generally Available channel at any time.</
            data-category="Site-Wide Custom Events"
            data-label="Footer Site terms link"
          
-           track-name="site terms"
+           track-type="footer link"
          
            track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          
-           track-metadata-position="footer"
-         
            target="_blank"
          
-           track-type="footer link"
+           track-metadata-position="footer"
          
            track-metadata-module="utility footer"
+         
+           track-name="site terms"
          >
           Site terms
         </a>
@@ -3917,11 +3917,11 @@ to the Preview channel or back to the Generally Available channel at any time.</
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
-           track-metadata-eventDetail="//cloud.google.com/product-terms"
-         
            track-name="google cloud terms"
          
            track-metadata-module="utility footer"
+         
+           track-metadata-eventDetail="//cloud.google.com/product-terms"
          
            track-metadata-position="footer"
          
@@ -3943,15 +3943,15 @@ to the Preview channel or back to the Generally Available channel at any time.</
          
            track-name="Manage cookies"
          
+           aria-hidden="true"
+         
+           track-metadata-module="utility footer"
+         
            track-metadata-position="footer"
          
            track-metadata-eventDetail="#"
          
-           track-metadata-module="utility footer"
-         
            track-type="footer link"
-         
-           aria-hidden="true"
          >
           Manage cookies
         </a>
@@ -3967,15 +3967,15 @@ to the Preview channel or back to the Generally Available channel at any time.</
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
-           track-metadata-eventDetail="/sustainability/"
-         
            track-type="footer link"
+         
+           track-metadata-position="footer"
+         
+           track-metadata-eventDetail="/sustainability/"
          
            track-metadata-module="utility footer"
          
            track-name="Our third decade of climate action: join us"
-         
-           track-metadata-position="footer"
          >
           Our third decade of climate action: join us
         </a>
@@ -3993,15 +3993,15 @@ to the Preview channel or back to the Generally Available channel at any time.</
            data-category="Site-Wide Custom Events"
            data-label="Footer Subscribe link"
          
-           track-type="footer link"
+           track-name="subscribe"
          
            track-metadata-position="footer"
          
-           track-name="subscribe"
+           track-metadata-eventDetail="/newsletter/"
          
            track-metadata-module="utility footer"
          
-           track-metadata-eventDetail="/newsletter/"
+           track-type="footer link"
          >
           Subscribe
         </a>

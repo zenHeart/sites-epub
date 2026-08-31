@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1026px" height="58px" viewBox="0 0 1026 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" jetway-hooks="{}">
+    <title>bt-numbered-steps-3</title>
+    <defs>
+        <path d="M51.896,37.576 C53.408,37.576 54.794,37.252 56.054,36.604 C57.314,35.956 58.31,35.056 59.042,33.904 C59.774,32.752 60.14,31.456 60.14,30.016 C60.14,28.6 59.744,27.37 58.952,26.326 C58.16,25.282 57.152,24.508 55.928,24.004 L55.928,24.004 L55.928,23.86 C56.888,23.356 57.692,22.66 58.34,21.772 C58.988,20.884 59.312,19.804 59.312,18.532 C59.312,17.26 58.982,16.108 58.322,15.076 C57.662,14.044 56.756,13.24 55.604,12.664 C54.452,12.088 53.156,11.8 51.716,11.8 C49.772,11.8 48.182,12.322 46.946,13.366 C45.71,14.41 44.876,15.58 44.444,16.876 L44.444,16.876 L47.252,18.064 C47.564,17.128 48.074,16.336 48.782,15.688 C49.49,15.04 50.468,14.716 51.716,14.716 C52.988,14.716 54.056,15.064 54.92,15.76 C55.784,16.456 56.216,17.38 56.216,18.532 C56.216,19.78 55.772,20.782 54.884,21.538 C53.996,22.294 52.892,22.672 51.572,22.672 L51.572,22.672 L49.664,22.672 L49.664,25.516 L51.788,25.516 C52.748,25.516 53.63,25.714 54.434,26.11 C55.238,26.506 55.874,27.052 56.342,27.748 C56.81,28.444 57.044,29.212 57.044,30.052 C57.044,30.916 56.81,31.702 56.342,32.41 C55.874,33.118 55.244,33.67 54.452,34.066 C53.66,34.462 52.808,34.66 51.896,34.66 C50.648,34.66 49.562,34.276 48.638,33.508 C47.714,32.74 47.06,31.66 46.676,30.268 L46.676,30.268 L43.904,31.42 C44.288,32.812 44.918,33.97 45.794,34.894 C46.67,35.818 47.648,36.496 48.728,36.928 C49.808,37.36 50.864,37.576 51.896,37.576 Z" id="path-1"></path>
+        <path d="M84.1801221,37 L84.1801221,34.084 L72.5521221,34.084 L79.9321221,26.668 C82.5721221,23.98 83.8921221,21.376 83.8921221,18.856 C83.8921221,17.608 83.5681221,16.444 82.9201221,15.364 C82.2721221,14.284 81.3661221,13.42 80.2021221,12.772 C79.0381221,12.124 77.7001221,11.8 76.1881221,11.8 C74.7481221,11.8 73.5001221,12.094 72.4441221,12.682 C71.3881221,13.27 70.5481221,13.978 69.9241221,14.806 C69.3001221,15.634 68.8801221,16.432 68.6641221,17.2 L68.6641221,17.2 L71.4361221,18.316 C71.6761221,17.428 72.1921221,16.606 72.9841221,15.85 C73.7761221,15.094 74.8201221,14.716 76.1161221,14.716 C77.1001221,14.716 77.9461221,14.914 78.6541221,15.31 C79.3621221,15.706 79.8961221,16.228 80.2561221,16.876 C80.6161221,17.524 80.7961221,18.196 80.7961221,18.892 C80.7961221,19.948 80.5801221,20.848 80.1481221,21.592 C79.7161221,22.336 78.8881221,23.368 77.6641221,24.688 C76.3441221,26.128 73.3321221,29.212 68.6281221,33.94 L68.6281221,33.94 L68.6281221,37 L84.1801221,37 Z" id="path-2"></path>
+        <polygon id="path-3" points="29.885272 37 29.885272 12.376 27.941272 12.376 20.921272 17.416 22.505272 19.756 26.825272 16.66 26.825272 37"></polygon>
+    </defs>
+    <g jetway-hook-id="82DC0AB2-2706-474B-B586-59F5A34E2742" id="bt-numbered-steps-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <line x1="0" y1="29.5" x2="1026" y2="29.5" jetway-hook-id="FB14251B-03AF-4593-9D20-4EA55E476982" id="Line-3" stroke="#9AA0A6" stroke-linecap="square"></line>
+        <g jetway-hook-id="D748A21F-06D0-44F7-93D1-C5C016A89700" id="Group-5" transform="translate(796.500000, 1.000000)">
+            <g jetway-hook-id="3A3F93D2-5175-4723-91FB-158E195778F6" id="Group-4">
+                <circle jetway-hook-id="145FBD83-4F3A-4F70-B17A-6408AEAB1CB1" id="Oval" fill="#3C4043" fill-rule="nonzero" cx="53.5" cy="28" r="28"></circle>
+                <circle jetway-hook-id="AF55221E-AF91-43D6-9AA0-02133506AEC2" id="Oval" stroke="#3C4043" fill="#D2E3FC" fill-rule="nonzero" cx="51" cy="26.5" r="26.5"></circle>
+                <g jetway-hook-id="3EF7FDF6-9B9E-48CD-B19A-AC7956453DD7" id="3" fill-rule="nonzero">
+                    <use fill="#000000" xlink:href="#path-1"></use>
+                    <use fill="#185ABC" xlink:href="#path-1"></use>
+                </g>
+                <g jetway-hook-id="213CE9D3-734E-418E-A149-974442CAEA0A" id="business-tutorial-6" transform="translate(105.646017, 15.477566) scale(-1, 1) translate(-105.646017, -15.477566) translate(84.491878, 2.387287)">
+                    <g jetway-hook-id="82FCAA80-B106-4C82-B753-FDC893D28868" id="business-tutorial-4" transform="translate(0.000000, 0.000000)" fill="#FBBC04" fill-rule="nonzero">
+                        <rect jetway-hook-id="4B367A3A-215C-43D2-82FE-ECE2803EC19C" id="Rectangle" transform="translate(4.008122, 3.612713) rotate(11.000000) translate(-4.008122, -3.612713) " x="0.508122128" y="0.612713034" width="7" height="6"></rect>
+                    </g>
+                    <rect jetway-hook-id="03F32BF9-0260-4855-8F24-6407C3189CA8" id="Rectangle" fill="#D72317" fill-rule="nonzero" transform="translate(17.508122, 18.612713) rotate(11.000000) translate(-17.508122, -18.612713) " x="14.5081221" y="15.612713" width="6" height="6" rx="3"></rect>
+                    <path d="M22.880076,5.54619742 C26.5926735,4.48358453 31.9387647,8.79714846 31.3727464,16.1348781 C30.95367,21.5676874 32.5575786,24.8671298 38.880076,22.7271707" jetway-hook-id="92955DFE-ED77-4880-A7D5-0DA7FF0E59E2" id="Path-2" stroke="#9AA0A6" stroke-linecap="round" transform="translate(30.880076, 14.386330) rotate(-30.000000) translate(-30.880076, -14.386330) "></path>
+                </g>
+                <circle jetway-hook-id="535FFA38-E834-41A2-AC12-04B948922333" id="Oval" fill="#4285F4" fill-rule="nonzero" cx="16.5" cy="42.5" r="2.5"></circle>
+                <circle jetway-hook-id="8259B362-E7C5-4921-B500-D0070E6A4957" id="Oval" fill="#FBBC04" fill-rule="nonzero" cx="3" cy="37" r="3"></circle>
+            </g>
+            <g jetway-hook-id="29F8DD55-F9F5-497B-91E1-1D2B572FBCBC" id="Group" transform="translate(24.500000, 0.000000)"></g>
+        </g>
+        <g jetway-hook-id="8E4736A2-C101-4801-BA5A-5A2518E726B0" id="business-tutorial-2" transform="translate(433.991878, 1.000000)" fill-rule="nonzero">
+            <g jetway-hook-id="61C44AEF-3213-44A8-B19F-E7E56199777C">
+                <g jetway-hook-id="1ED65BAE-2735-4EA9-9A6A-28BF02A46397" id="Group" transform="translate(48.008122, 0.000000)">
+                    <circle jetway-hook-id="AD08B490-E101-4A9A-B9A8-B37FBD822C0C" id="Oval" fill="#3C4043" cx="29" cy="28" r="28"></circle>
+                    <circle jetway-hook-id="48CB5C66-29D6-47EA-BCD7-1596DBDC2DC1" id="Oval" stroke="#3C4043" fill="#D2E3FC" cx="26.5" cy="26.5" r="26.5"></circle>
+                </g>
+                <g jetway-hook-id="53DC8B62-3247-4404-A0AA-26E523F5C60B" id="2">
+                    <use fill="#000000" xlink:href="#path-2"></use>
+                    <use fill="#185ABC" xlink:href="#path-2"></use>
+                </g>
+                <rect jetway-hook-id="49F44CD6-A84A-476C-BFE0-476BE2C99B38" id="Rectangle" fill="#D72317" transform="translate(4.008122, 5.000000) rotate(11.000000) translate(-4.008122, -5.000000) " x="0.508122128" y="2" width="7" height="6"></rect>
+                <rect jetway-hook-id="0830D5B1-D2E0-4B6C-A740-E2E83EE2B2CC" id="Rectangle" fill="#FBBC04" transform="translate(120.008122, 45.000000) rotate(9.000000) translate(-120.008122, -45.000000) " x="115.508122" y="43" width="9" height="4" rx="2"></rect>
+                <circle jetway-hook-id="F4DA4D3C-F3AD-4DF4-9A5F-093E9EB2B9F3" id="Oval" fill="#4285F4" cx="32.5081221" cy="17" r="3"></circle>
+            </g>
+        </g>
+        <g jetway-hook-id="84F5D4CE-4980-46ED-915C-D7E937E49BE3" id="Group-3" transform="translate(77.000000, 1.000000)">
+            <g jetway-hook-id="079CD066-DD20-41A2-BD08-CE81A7335607" id="Group-2" transform="translate(65.744850, 0.000000)" fill-rule="nonzero">
+                <g jetway-hook-id="3026EC6B-AF3A-42CA-A05C-A7AD1254D27C" id="Group">
+                    <circle jetway-hook-id="5CD6383C-EDD8-4227-B746-674F93180AC3" id="Oval" fill="#3C4043" cx="29" cy="28" r="28"></circle>
+                    <circle jetway-hook-id="A96573DF-6B6D-44A8-8243-3236949A79FA" id="Oval" stroke="#3C4043" fill="#D2E3FC" cx="26.5" cy="26.5" r="26.5"></circle>
+                </g>
+                <g jetway-hook-id="904AC4B4-8158-42F0-AE11-23296533BCB2" id="1">
+                    <use fill="#000000" xlink:href="#path-3"></use>
+                    <use fill="#185ABC" xlink:href="#path-3"></use>
+                </g>
+            </g>
+            <path d="M46.2448496,0.5 C55.5781829,-0.833333333 60.2448496,2 60.2448496,9" jetway-hook-id="4DC1C2B6-E5B7-435C-B477-3C348E213546" id="Path-2" stroke="#D72317" stroke-linecap="round"></path>
+            <path d="M0.194529234,37.5856941 C-1.52262197,37.3403868 8.62454623,32.6043205 11.1506812,42.3941343 C11.8400515,45.0657279 31.998684,42.1438935 31.998684,50.2266947" jetway-hook-id="33A44184-50BF-4EEE-B956-28AF932D1AA0" id="Path-2" stroke="#9AA0A6" transform="translate(15.999342, 43.226695) scale(-1, 1) translate(-15.999342, -43.226695) "></path>
+            <rect jetway-hook-id="89894E3E-6A63-4670-9EF6-43B464C61E6C" id="Rectangle" fill="#FBBC04" fill-rule="nonzero" transform="translate(43.744850, 43.000000) rotate(11.000000) translate(-43.744850, -43.000000) " x="40.2448496" y="40" width="7" height="6"></rect>
+            <rect jetway-hook-id="009BAD0A-94E6-4775-B016-3214E775CB8A" id="Rectangle" fill="#4285F4" fill-rule="nonzero" transform="translate(128.744850, 5.500000) rotate(11.000000) translate(-128.744850, -5.500000) " x="125.24485" y="3" width="7" height="5"></rect>
+            <circle jetway-hook-id="012854A7-35C2-4DC4-B7B2-7DFE3565A9EF" id="Oval" fill="#34A853" fill-rule="nonzero" cx="157.24485" cy="16" r="3"></circle>
+        </g>
+        <path d="M406.25515,9.49394004 C406.337418,9.49394004 416.540589,4.51256644 419.622719,14.3023802 C420.463818,16.9739738 445.059305,14.0521394 445.059305,22.1349407" jetway-hook-id="E5766628-D21C-4B6D-83ED-44E0C780037F" id="Path-2" stroke="#9AA0A6" stroke-linecap="round" stroke-linejoin="round" transform="translate(425.657228, 15.180818) rotate(180.000000) translate(-425.657228, -15.180818) "></path>
+        <rect jetway-hook-id="04AF39D7-DB35-48F5-83A0-F7F6BB03D600" id="Rectangle" fill="#34A853" fill-rule="nonzero" transform="translate(768.000000, 18.500000) rotate(11.000000) translate(-768.000000, -18.500000) " x="764.5" y="15" width="7" height="7" rx="3.5"></rect>
+        <rect jetway-hook-id="AD46FA24-1B53-4A18-8BBD-DE0B79AB3FDA" id="Rectangle" fill="#4285F4" fill-rule="nonzero" transform="translate(583.509186, 10.904596) rotate(11.000000) translate(-583.509186, -10.904596) " x="580.509186" y="7.9045955" width="6" height="6"></rect>
+    </g>
+</svg>

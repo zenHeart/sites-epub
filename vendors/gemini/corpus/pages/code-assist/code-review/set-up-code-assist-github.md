@@ -768,13 +768,13 @@
     data-label="Site header link: Console"
     
       
-        track-metadata-eventDetail="nav"
+        track-name="console"
       
-        track-type="globalNav"
+        track-metadata-eventDetail="nav"
       
         track-metadata-position="nav"
       
-        track-name="console"
+        track-type="globalNav"
       
         referrerpolicy="no-referrer-when-downgrade"
       
@@ -985,15 +985,15 @@
     
     
       
-        track-metadata-eventDetail="nav"
+        track-name="gcpCta"
+      
+        track-metadata-position="nav"
       
         referrerpolicy="no-referrer-when-downgrade"
       
         track-type="freeTrial"
       
-        track-name="gcpCta"
-      
-        track-metadata-position="nav"
+        track-metadata-eventDetail="nav"
       
     
     >Start free</a>
@@ -1551,13 +1551,13 @@
 
     
       
-        track-metadata-eventDetail="nav"
+        track-name="console"
       
-        track-type="globalNav"
+        track-metadata-eventDetail="nav"
       
         track-metadata-position="nav"
       
-        track-name="console"
+        track-type="globalNav"
       
         referrerpolicy="no-referrer-when-downgrade"
       
@@ -2918,7 +2918,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"track-name="see all products"track-metadata-eventDetail="cloud.google.com/products/"track-metadata-child_headline="products and pricing"track-type="footer link"track-metadata-module="footer">
+            track-name="see all products"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/products/"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="products and pricing">
             
           
             See all products
@@ -2935,7 +2935,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-eventDetail="cloud.google.com/pricing/"track-type="footer link"track-metadata-position="footer"track-name="google cloud pricing"track-metadata-module="footer"track-metadata-child_headline="products and pricing">
+            track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-child_headline="products and pricing"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-name="google cloud pricing">
             
           
             Google Cloud pricing
@@ -2952,7 +2952,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-type="footer link"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-position="footer"track-name="google cloud marketplace"track-metadata-child_headline="resources"track-metadata-module="footer">
+            track-metadata-module="footer"track-type="footer link"track-name="google cloud marketplace"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-position="footer"track-metadata-child_headline="resources">
             
           
             Google Cloud Marketplace
@@ -2969,7 +2969,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-name="contact sales"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="engage">
+            track-name="contact sales"track-metadata-eventDetail="cloud.google.com/contact/"track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-module="footer">
             
               
               
@@ -2996,7 +2996,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-name="google cloud community"track-metadata-child_headline="engage"target="_blank"track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-module="footer"rel="noopener"track-metadata-position="footer"track-type="footer link">
+            track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="www.googlecloudcommunity.com"target="_blank"track-name="google cloud community"rel="noopener"track-type="footer link"track-metadata-child_headline="engage">
             
           
             Community forums
@@ -3013,7 +3013,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-position="footer"track-metadata-module="footer"track-name="support"track-type="footer link"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/support-hub/">
+            track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/support-hub/"track-name="support"track-metadata-child_headline="resources"track-metadata-position="footer">
             
           
             Support
@@ -3030,7 +3030,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/release-notes/"track-name="release notes"track-type="footer link"track-metadata-position="footer">
+            track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-child_headline="resources"track-name="release notes"track-metadata-position="footer">
             
           
             Release Notes
@@ -3047,7 +3047,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-type="footer link"track-metadata-eventDetail="status.cloud.google.com"track-metadata-module="footer"track-name="system status"track-metadata-position="footer"track-metadata-child_headline="resources"target="_blank">
+            track-metadata-child_headline="resources"track-metadata-module="footer"track-type="footer link"target="_blank"track-metadata-eventDetail="status.cloud.google.com"track-metadata-position="footer"track-name="system status">
             
               
               
@@ -3074,7 +3074,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-type="footer link"track-name="github"track-metadata-position="footer">
+            track-name="github"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-child_headline="resources"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer">
             
           
             GitHub
@@ -3091,7 +3091,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-name="google cloud quickstarts"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/docs/get-started/">
+            track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-type="footer link"track-name="google cloud quickstarts"track-metadata-position="footer"track-metadata-module="footer">
             
           
             Getting Started with Google Cloud
@@ -3108,7 +3108,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer"track-name="code samples"track-type="footer link">
+            track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-position="footer"track-type="footer link"track-metadata-module="footer"track-name="code samples">
             
           
             Code samples
@@ -3125,7 +3125,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-name="cloud architecture center"track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-child_headline="resources"track-type="footer link">
+            track-name="cloud architecture center"track-metadata-position="footer"track-metadata-child_headline="resources"track-type="footer link"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-module="footer">
             
           
             Cloud Architecture Center
@@ -3142,7 +3142,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-module="footer"track-metadata-child_headline="resources"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-name="training">
+            track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-position="footer"track-name="training">
             
               
               
@@ -3169,7 +3169,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-child_headline="engage"track-metadata-position="footer"track-name="blog">
+            track-metadata-child_headline="engage"track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/blog/"track-name="blog"track-metadata-position="footer">
             
           
             Blog
@@ -3186,7 +3186,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="engage"track-metadata-module="footer"track-name="events"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/events/">
+            track-metadata-eventDetail="cloud.google.com/events/"track-name="events"track-metadata-module="footer"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="engage">
             
           
             Events
@@ -3203,7 +3203,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-name="follow on x"rel="noopener"track-metadata-eventDetail="x.com/googlecloud"track-metadata-module="footer"target="_blank"track-metadata-child_headline="engage"track-type="footer link"track-metadata-position="footer">
+            track-metadata-module="footer"track-name="follow on x"track-metadata-position="footer"rel="noopener"track-metadata-eventDetail="x.com/googlecloud"target="_blank"track-metadata-child_headline="engage"track-type="footer link">
             
           
             X (Twitter)
@@ -3220,7 +3220,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-eventDetail="www.youtube.com/googlecloud"track-name="google cloud on youtube"track-metadata-position="footer"track-metadata-module="footer"target="_blank"track-metadata-child_headline="engage"rel="noopener"track-type="footer link">
+            rel="noopener"track-name="google cloud on youtube"track-metadata-eventDetail="www.youtube.com/googlecloud"target="_blank"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="engage"track-type="footer link">
             
           
             Google Cloud on YouTube
@@ -3237,7 +3237,7 @@ requests within your selected repositories.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            rel="noopener"track-metadata-position="footer"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-type="footer link"target="_blank"track-name="google cloud tech on youtube"track-metadata-child_headline="engage"track-metadata-module="footer">
+            track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-metadata-child_headline="engage"track-name="google cloud tech on youtube"track-metadata-module="footer"rel="noopener"track-type="footer link"target="_blank"track-metadata-position="footer">
             
               
               
@@ -3279,17 +3279,17 @@ requests within your selected repositories.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
-           target="_blank"
-         
-           track-type="footer link"
-         
-           track-metadata-module="utility footer"
-         
-           track-metadata-position="footer"
+           track-metadata-eventDetail="//about.google/"
          
            track-name="about google"
          
-           track-metadata-eventDetail="//about.google/"
+           target="_blank"
+         
+           track-metadata-module="utility footer"
+         
+           track-type="footer link"
+         
+           track-metadata-position="footer"
          >
           About Google
         </a>
@@ -3305,17 +3305,17 @@ requests within your selected repositories.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
-           track-metadata-position="footer"
-         
            track-name="privacy"
-         
-           track-metadata-eventDetail="//policies.google.com/privacy"
-         
-           target="_blank"
          
            track-metadata-module="utility footer"
          
+           track-metadata-position="footer"
+         
            track-type="footer link"
+         
+           target="_blank"
+         
+           track-metadata-eventDetail="//policies.google.com/privacy"
          >
           Privacy
         </a>
@@ -3333,15 +3333,15 @@ requests within your selected repositories.</p>
          
            track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          
-           target="_blank"
-         
-           track-metadata-position="footer"
-         
-           track-metadata-module="utility footer"
+           track-name="site terms"
          
            track-type="footer link"
          
-           track-name="site terms"
+           track-metadata-module="utility footer"
+         
+           track-metadata-position="footer"
+         
+           target="_blank"
          >
           Site terms
         </a>
@@ -3357,15 +3357,15 @@ requests within your selected repositories.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
+           track-name="google cloud terms"
+         
            track-metadata-eventDetail="//cloud.google.com/product-terms"
          
-           track-metadata-position="footer"
+           track-metadata-module="utility footer"
          
            track-type="footer link"
          
-           track-name="google cloud terms"
-         
-           track-metadata-module="utility footer"
+           track-metadata-position="footer"
          >
           Google Cloud terms
         </a>
@@ -3381,17 +3381,17 @@ requests within your selected repositories.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Manage cookies link"
          
-           aria-hidden="true"
-         
-           track-metadata-position="footer"
-         
            track-name="Manage cookies"
          
-           track-metadata-module="utility footer"
+           aria-hidden="true"
          
            track-type="footer link"
          
            track-metadata-eventDetail="#"
+         
+           track-metadata-module="utility footer"
+         
+           track-metadata-position="footer"
          >
           Manage cookies
         </a>
@@ -3407,15 +3407,15 @@ requests within your selected repositories.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
-           track-metadata-position="footer"
-         
-           track-type="footer link"
-         
-           track-metadata-module="utility footer"
-         
            track-metadata-eventDetail="/sustainability/"
          
            track-name="Our third decade of climate action: join us"
+         
+           track-metadata-module="utility footer"
+         
+           track-type="footer link"
+         
+           track-metadata-position="footer"
          >
           Our third decade of climate action: join us
         </a>
@@ -3433,15 +3433,15 @@ requests within your selected repositories.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Subscribe link"
          
-           track-metadata-position="footer"
-         
-           track-metadata-eventDetail="/newsletter/"
-         
-           track-name="subscribe"
+           track-metadata-module="utility footer"
          
            track-type="footer link"
          
-           track-metadata-module="utility footer"
+           track-metadata-eventDetail="/newsletter/"
+         
+           track-metadata-position="footer"
+         
+           track-name="subscribe"
          >
           Subscribe
         </a>

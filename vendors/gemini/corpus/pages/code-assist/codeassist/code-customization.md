@@ -773,11 +773,11 @@
       
         track-metadata-position="nav"
       
+        referrerpolicy="no-referrer-when-downgrade"
+      
         track-metadata-eventDetail="nav"
       
         track-type="globalNav"
-      
-        referrerpolicy="no-referrer-when-downgrade"
       
         track-name="console"
       
@@ -998,15 +998,15 @@
     
     
       
-        referrerpolicy="no-referrer-when-downgrade"
-      
-        track-name="gcpCta"
+        track-metadata-position="nav"
       
         track-metadata-eventDetail="nav"
       
+        track-name="gcpCta"
+      
         track-type="freeTrial"
       
-        track-metadata-position="nav"
+        referrerpolicy="no-referrer-when-downgrade"
       
     
     >Start free</a>
@@ -1566,11 +1566,11 @@
       
         track-metadata-position="nav"
       
+        referrerpolicy="no-referrer-when-downgrade"
+      
         track-metadata-eventDetail="nav"
       
         track-type="globalNav"
-      
-        referrerpolicy="no-referrer-when-downgrade"
       
         track-name="console"
       
@@ -3406,7 +3406,7 @@ and best practices.</li>
 
   
     <devsite-hats-survey class="nocontent" data-nosnippet
-      hats-id="Nd7nTix2o0eU5NUYprb0ThtUc5jf"
+      hats-id="mwETRvWii0eU5NUYprb0Y9z5GVbc"
       listnr-id="83405"></devsite-hats-survey>
   
 
@@ -3510,7 +3510,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-eventDetail="cloud.google.com/products/"track-metadata-position="footer"track-metadata-child_headline="products and pricing"track-metadata-module="footer"track-name="see all products"track-type="footer link">
+            track-metadata-eventDetail="cloud.google.com/products/"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="products and pricing"track-name="see all products"track-metadata-position="footer">
             
           
             See all products
@@ -3527,7 +3527,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-position="footer"track-name="google cloud pricing"track-metadata-child_headline="products and pricing"track-metadata-module="footer">
+            track-metadata-child_headline="products and pricing"track-metadata-position="footer"track-metadata-module="footer"track-name="google cloud pricing"track-metadata-eventDetail="cloud.google.com/pricing/"track-type="footer link">
             
           
             Google Cloud pricing
@@ -3544,7 +3544,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-child_headline="resources"track-name="google cloud marketplace"track-metadata-module="footer">
+            track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="google cloud marketplace"track-type="footer link">
             
           
             Google Cloud Marketplace
@@ -3561,7 +3561,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="engage"track-name="contact sales"track-metadata-eventDetail="cloud.google.com/contact/"track-type="footer link">
+            track-metadata-eventDetail="cloud.google.com/contact/"track-name="contact sales"track-type="footer link"track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-position="footer">
             
               
               
@@ -3588,7 +3588,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"rel="noopener"track-metadata-child_headline="engage"track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-module="footer"track-type="footer link"target="_blank"track-name="google cloud community">
+            target="_blank"track-metadata-position="footer"track-metadata-eventDetail="www.googlecloudcommunity.com"rel="noopener"track-metadata-child_headline="engage"track-type="footer link"track-metadata-module="footer"track-name="google cloud community">
             
           
             Community forums
@@ -3605,7 +3605,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="resources"track-name="support"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/support-hub/">
+            track-name="support"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/support-hub/">
             
           
             Support
@@ -3622,7 +3622,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-position="footer"track-name="release notes"track-metadata-child_headline="resources"track-type="footer link"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-module="footer">
+            track-type="footer link"track-name="release notes"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-module="footer"track-metadata-child_headline="resources">
             
           
             Release Notes
@@ -3639,7 +3639,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-position="footer"track-name="system status"track-metadata-eventDetail="status.cloud.google.com"target="_blank">
+            track-metadata-module="footer"track-metadata-eventDetail="status.cloud.google.com"track-metadata-position="footer"target="_blank"track-type="footer link"track-metadata-child_headline="resources"track-name="system status">
             
               
               
@@ -3666,7 +3666,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-name="github"track-metadata-child_headline="resources">
+            track-metadata-eventDetail="github.com/googlecloudPlatform/"track-name="github"track-metadata-position="footer"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="resources">
             
           
             GitHub
@@ -3683,7 +3683,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer"track-type="footer link"track-name="google cloud quickstarts">
+            track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-metadata-child_headline="resources"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-name="google cloud quickstarts">
             
           
             Getting Started with Google Cloud
@@ -3700,7 +3700,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/docs/samples"track-name="code samples"track-type="footer link"track-metadata-module="footer">
+            track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-child_headline="resources"track-name="code samples">
             
           
             Code samples
@@ -3717,7 +3717,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="resources"track-type="footer link"track-name="cloud architecture center">
+            track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-child_headline="resources"track-name="cloud architecture center"track-metadata-position="footer">
             
           
             Cloud Architecture Center
@@ -3734,7 +3734,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-type="footer link"track-metadata-child_headline="resources"track-name="training"track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/learn/training/">
+            track-name="training"track-type="footer link"track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-module="footer">
             
               
               
@@ -3761,7 +3761,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-name="blog"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="engage"track-type="footer link"track-metadata-eventDetail="cloud.google.com/blog/">
+            track-type="footer link"track-metadata-module="footer"track-name="blog"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-position="footer"track-metadata-child_headline="engage">
             
           
             Blog
@@ -3778,7 +3778,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/events/"track-name="events"track-metadata-position="footer"track-metadata-child_headline="engage">
+            track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/events/"track-name="events"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer">
             
           
             Events
@@ -3795,7 +3795,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-name="follow on x"track-metadata-child_headline="engage"rel="noopener"track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="x.com/googlecloud"target="_blank"track-metadata-position="footer">
+            track-metadata-position="footer"track-metadata-eventDetail="x.com/googlecloud"track-metadata-child_headline="engage"track-name="follow on x"target="_blank"track-metadata-module="footer"rel="noopener"track-type="footer link">
             
           
             X (Twitter)
@@ -3812,7 +3812,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-position="footer"rel="noopener"track-metadata-module="footer"target="_blank"track-metadata-eventDetail="www.youtube.com/googlecloud"track-type="footer link"track-metadata-child_headline="engage"track-name="google cloud on youtube">
+            track-metadata-module="footer"track-type="footer link"target="_blank"rel="noopener"track-metadata-child_headline="engage"track-metadata-eventDetail="www.youtube.com/googlecloud"track-name="google cloud on youtube"track-metadata-position="footer">
             
           
             Google Cloud on YouTube
@@ -3829,7 +3829,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-module="footer"track-metadata-child_headline="engage"target="_blank"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-type="footer link"track-metadata-position="footer"track-name="google cloud tech on youtube"rel="noopener">
+            track-metadata-module="footer"target="_blank"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-metadata-child_headline="engage"rel="noopener"track-type="footer link"track-metadata-position="footer"track-name="google cloud tech on youtube">
             
               
               
@@ -3871,17 +3871,17 @@ and best practices.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
-           track-name="about google"
+           track-type="footer link"
          
-           track-metadata-module="utility footer"
+           track-metadata-position="footer"
          
            track-metadata-eventDetail="//about.google/"
          
            target="_blank"
          
-           track-type="footer link"
+           track-metadata-module="utility footer"
          
-           track-metadata-position="footer"
+           track-name="about google"
          >
           About Google
         </a>
@@ -3897,17 +3897,17 @@ and best practices.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
-           track-metadata-position="footer"
+           track-name="privacy"
          
            target="_blank"
+         
+           track-metadata-eventDetail="//policies.google.com/privacy"
          
            track-type="footer link"
          
            track-metadata-module="utility footer"
          
-           track-name="privacy"
-         
-           track-metadata-eventDetail="//policies.google.com/privacy"
+           track-metadata-position="footer"
          >
           Privacy
         </a>
@@ -3923,17 +3923,17 @@ and best practices.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Site terms link"
          
-           track-metadata-module="utility footer"
-         
-           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
-         
            track-metadata-position="footer"
+         
+           track-name="site terms"
          
            target="_blank"
          
            track-type="footer link"
          
-           track-name="site terms"
+           track-metadata-module="utility footer"
+         
+           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          >
           Site terms
         </a>
@@ -3949,15 +3949,15 @@ and best practices.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
+           track-name="google cloud terms"
+         
+           track-type="footer link"
+         
            track-metadata-eventDetail="//cloud.google.com/product-terms"
          
            track-metadata-position="footer"
          
            track-metadata-module="utility footer"
-         
-           track-type="footer link"
-         
-           track-name="google cloud terms"
          >
           Google Cloud terms
         </a>
@@ -3975,13 +3975,13 @@ and best practices.</li>
          
            track-metadata-position="footer"
          
-           track-metadata-eventDetail="#"
+           track-metadata-module="utility footer"
          
            aria-hidden="true"
          
-           track-metadata-module="utility footer"
-         
            track-type="footer link"
+         
+           track-metadata-eventDetail="#"
          
            track-name="Manage cookies"
          >
@@ -4001,13 +4001,13 @@ and best practices.</li>
          
            track-metadata-position="footer"
          
-           track-type="footer link"
-         
            track-metadata-module="utility footer"
+         
+           track-metadata-eventDetail="/sustainability/"
          
            track-name="Our third decade of climate action: join us"
          
-           track-metadata-eventDetail="/sustainability/"
+           track-type="footer link"
          >
           Our third decade of climate action: join us
         </a>
@@ -4025,15 +4025,15 @@ and best practices.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Subscribe link"
          
+           track-metadata-module="utility footer"
+         
+           track-metadata-eventDetail="/newsletter/"
+         
            track-type="footer link"
          
            track-metadata-position="footer"
          
            track-name="subscribe"
-         
-           track-metadata-module="utility footer"
-         
-           track-metadata-eventDetail="/newsletter/"
          >
           Subscribe
         </a>

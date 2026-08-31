@@ -774,15 +774,15 @@
     data-label="Site header link: Console"
     
       
+        track-metadata-position="nav"
+      
         track-metadata-eventDetail="nav"
-      
-        referrerpolicy="no-referrer-when-downgrade"
-      
-        track-name="console"
       
         track-type="globalNav"
       
-        track-metadata-position="nav"
+        track-name="console"
+      
+        referrerpolicy="no-referrer-when-downgrade"
       
     >
   Console
@@ -1001,15 +1001,15 @@
     
     
       
-        track-type="freeTrial"
-      
-        referrerpolicy="no-referrer-when-downgrade"
-      
-        track-name="gcpCta"
-      
         track-metadata-eventDetail="nav"
       
         track-metadata-position="nav"
+      
+        track-type="freeTrial"
+      
+        track-name="gcpCta"
+      
+        referrerpolicy="no-referrer-when-downgrade"
       
     
     >Start free</a>
@@ -1567,15 +1567,15 @@
 
     
       
+        track-metadata-position="nav"
+      
         track-metadata-eventDetail="nav"
-      
-        referrerpolicy="no-referrer-when-downgrade"
-      
-        track-name="console"
       
         track-type="globalNav"
       
-        track-metadata-position="nav"
+        track-name="console"
+      
+        referrerpolicy="no-referrer-when-downgrade"
       
     
      data-category="Site-Wide Custom Events"
@@ -3293,7 +3293,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/products/"track-type="footer link"track-metadata-position="footer"track-name="see all products"track-metadata-child_headline="products and pricing">
+            track-metadata-position="footer"track-metadata-child_headline="products and pricing"track-type="footer link"track-metadata-module="footer"track-name="see all products"track-metadata-eventDetail="cloud.google.com/products/">
             
           
             See all products
@@ -3310,7 +3310,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="products and pricing"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/pricing/"track-type="footer link"track-metadata-position="footer"track-name="google cloud pricing">
+            track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="products and pricing"track-metadata-eventDetail="cloud.google.com/pricing/"track-name="google cloud pricing"track-type="footer link">
             
           
             Google Cloud pricing
@@ -3327,7 +3327,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/marketplace/"track-name="google cloud marketplace"track-type="footer link">
+            track-metadata-position="footer"track-type="footer link"track-name="google cloud marketplace"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-module="footer">
             
           
             Google Cloud Marketplace
@@ -3344,7 +3344,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-eventDetail="cloud.google.com/contact/"track-type="footer link"track-metadata-module="footer"track-name="contact sales"track-metadata-child_headline="engage"track-metadata-position="footer">
+            track-name="contact sales"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="engage"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/contact/">
             
               
               
@@ -3371,7 +3371,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-module="footer"track-name="google cloud community"track-metadata-child_headline="engage"track-metadata-eventDetail="www.googlecloudcommunity.com"track-type="footer link"track-metadata-position="footer"target="_blank"rel="noopener">
+            track-name="google cloud community"track-metadata-child_headline="engage"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="www.googlecloudcommunity.com"rel="noopener"target="_blank">
             
           
             Community forums
@@ -3388,7 +3388,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-eventDetail="cloud.google.com/support-hub/"track-name="support"track-metadata-child_headline="resources"track-metadata-position="footer"track-type="footer link"track-metadata-module="footer">
+            track-type="footer link"track-metadata-eventDetail="cloud.google.com/support-hub/"track-name="support"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-module="footer">
             
           
             Support
@@ -3405,7 +3405,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-child_headline="resources"track-type="footer link"track-metadata-eventDetail="cloud.google.com/release-notes/"track-name="release notes"track-metadata-position="footer"track-metadata-module="footer">
+            track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-child_headline="resources"track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-name="release notes">
             
           
             Release Notes
@@ -3422,7 +3422,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-name="system status"track-metadata-eventDetail="status.cloud.google.com"track-metadata-child_headline="resources"track-type="footer link"target="_blank"track-metadata-module="footer"track-metadata-position="footer">
+            track-metadata-child_headline="resources"target="_blank"track-metadata-module="footer"track-metadata-eventDetail="status.cloud.google.com"track-name="system status"track-type="footer link"track-metadata-position="footer">
             
               
               
@@ -3449,7 +3449,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"track-name="github"track-metadata-module="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-type="footer link"track-metadata-child_headline="resources">
+            track-metadata-module="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-name="github"track-metadata-child_headline="resources"track-metadata-position="footer"track-type="footer link">
             
           
             GitHub
@@ -3466,7 +3466,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-name="google cloud quickstarts"track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="resources">
+            track-type="footer link"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-name="google cloud quickstarts"track-metadata-module="footer"track-metadata-position="footer">
             
           
             Getting Started with Google Cloud
@@ -3483,7 +3483,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/docs/samples"track-name="code samples"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link">
+            track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/docs/samples"track-type="footer link"track-metadata-child_headline="resources"track-name="code samples">
             
           
             Code samples
@@ -3500,7 +3500,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-name="cloud architecture center"track-metadata-eventDetail="cloud.google.com/architecture/"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer">
+            track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-child_headline="resources"track-metadata-position="footer"track-type="footer link"track-metadata-module="footer"track-name="cloud architecture center">
             
           
             Cloud Architecture Center
@@ -3517,7 +3517,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-name="training"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-child_headline="resources"track-metadata-module="footer">
+            track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-child_headline="resources"track-name="training"track-type="footer link">
             
               
               
@@ -3544,7 +3544,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-position="footer"track-metadata-child_headline="engage"track-name="blog"track-metadata-module="footer">
+            track-metadata-position="footer"track-metadata-module="footer"track-name="blog"track-metadata-eventDetail="cloud.google.com/blog/"track-type="footer link"track-metadata-child_headline="engage">
             
           
             Blog
@@ -3561,7 +3561,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="engage"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/events/"track-name="events">
+            track-metadata-child_headline="engage"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/events/"track-metadata-position="footer"track-name="events">
             
           
             Events
@@ -3578,7 +3578,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-position="footer"target="_blank"track-metadata-child_headline="engage"track-metadata-eventDetail="x.com/googlecloud"track-name="follow on x"rel="noopener"track-type="footer link"track-metadata-module="footer">
+            track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="engage"target="_blank"track-type="footer link"track-metadata-eventDetail="x.com/googlecloud"rel="noopener"track-name="follow on x">
             
           
             X (Twitter)
@@ -3595,7 +3595,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            rel="noopener"track-name="google cloud on youtube"track-metadata-child_headline="engage"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="www.youtube.com/googlecloud"target="_blank">
+            track-metadata-eventDetail="www.youtube.com/googlecloud"track-name="google cloud on youtube"track-metadata-child_headline="engage"rel="noopener"track-type="footer link"target="_blank"track-metadata-position="footer"track-metadata-module="footer">
             
           
             Google Cloud on YouTube
@@ -3612,7 +3612,7 @@ Standard and Enterprise in a project, you can do one of the following:</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-module="footer"target="_blank"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-metadata-child_headline="engage"track-name="google cloud tech on youtube"rel="noopener">
+            track-metadata-position="footer"track-name="google cloud tech on youtube"track-metadata-child_headline="engage"track-type="footer link"target="_blank"track-metadata-module="footer"rel="noopener"track-metadata-eventDetail="www.youtube.com/googlecloudplatform">
             
               
               
@@ -3654,17 +3654,17 @@ Standard and Enterprise in a project, you can do one of the following:</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
-           track-metadata-eventDetail="//about.google/"
-         
-           track-metadata-module="utility footer"
+           track-type="footer link"
          
            target="_blank"
          
-           track-name="about google"
-         
            track-metadata-position="footer"
          
-           track-type="footer link"
+           track-name="about google"
+         
+           track-metadata-module="utility footer"
+         
+           track-metadata-eventDetail="//about.google/"
          >
           About Google
         </a>
@@ -3680,17 +3680,17 @@ Standard and Enterprise in a project, you can do one of the following:</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
-           track-metadata-module="utility footer"
-         
            track-metadata-position="footer"
-         
-           target="_blank"
          
            track-name="privacy"
          
-           track-type="footer link"
+           track-metadata-module="utility footer"
          
            track-metadata-eventDetail="//policies.google.com/privacy"
+         
+           target="_blank"
+         
+           track-type="footer link"
          >
           Privacy
         </a>
@@ -3708,15 +3708,15 @@ Standard and Enterprise in a project, you can do one of the following:</p>
          
            track-metadata-position="footer"
          
+           track-name="site terms"
+         
            target="_blank"
-         
-           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
-         
-           track-metadata-module="utility footer"
          
            track-type="footer link"
          
-           track-name="site terms"
+           track-metadata-module="utility footer"
+         
+           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          >
           Site terms
         </a>
@@ -3732,15 +3732,15 @@ Standard and Enterprise in a project, you can do one of the following:</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
-           track-metadata-eventDetail="//cloud.google.com/product-terms"
+           track-metadata-position="footer"
          
-           track-name="google cloud terms"
+           track-metadata-eventDetail="//cloud.google.com/product-terms"
          
            track-metadata-module="utility footer"
          
-           track-metadata-position="footer"
-         
            track-type="footer link"
+         
+           track-name="google cloud terms"
          >
           Google Cloud terms
         </a>
@@ -3758,13 +3758,13 @@ Standard and Enterprise in a project, you can do one of the following:</p>
          
            track-metadata-eventDetail="#"
          
-           aria-hidden="true"
-         
-           track-type="footer link"
+           track-metadata-position="footer"
          
            track-metadata-module="utility footer"
          
-           track-metadata-position="footer"
+           track-type="footer link"
+         
+           aria-hidden="true"
          
            track-name="Manage cookies"
          >
@@ -3782,15 +3782,15 @@ Standard and Enterprise in a project, you can do one of the following:</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
-           track-metadata-position="footer"
-         
-           track-metadata-module="utility footer"
-         
            track-metadata-eventDetail="/sustainability/"
          
            track-type="footer link"
          
+           track-metadata-position="footer"
+         
            track-name="Our third decade of climate action: join us"
+         
+           track-metadata-module="utility footer"
          >
           Our third decade of climate action: join us
         </a>
@@ -3808,15 +3808,15 @@ Standard and Enterprise in a project, you can do one of the following:</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Subscribe link"
          
-           track-type="footer link"
-         
-           track-metadata-position="footer"
-         
-           track-name="subscribe"
-         
            track-metadata-eventDetail="/newsletter/"
          
            track-metadata-module="utility footer"
+         
+           track-name="subscribe"
+         
+           track-type="footer link"
+         
+           track-metadata-position="footer"
          >
           Subscribe
         </a>

@@ -774,15 +774,15 @@
     data-label="Site header link: Console"
     
       
-        track-metadata-position="nav"
+        referrerpolicy="no-referrer-when-downgrade"
       
         track-type="globalNav"
       
-        referrerpolicy="no-referrer-when-downgrade"
+        track-name="console"
+      
+        track-metadata-position="nav"
       
         track-metadata-eventDetail="nav"
-      
-        track-name="console"
       
     >
   Console
@@ -1001,11 +1001,11 @@
     
     
       
+        referrerpolicy="no-referrer-when-downgrade"
+      
         track-metadata-eventDetail="nav"
       
         track-name="gcpCta"
-      
-        referrerpolicy="no-referrer-when-downgrade"
       
         track-type="freeTrial"
       
@@ -1567,15 +1567,15 @@
 
     
       
-        track-metadata-position="nav"
+        referrerpolicy="no-referrer-when-downgrade"
       
         track-type="globalNav"
       
-        referrerpolicy="no-referrer-when-downgrade"
+        track-name="console"
+      
+        track-metadata-position="nav"
       
         track-metadata-eventDetail="nav"
-      
-        track-name="console"
       
     
      data-category="Site-Wide Custom Events"
@@ -2857,7 +2857,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-eventDetail="cloud.google.com/products/"track-name="see all products"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="products and pricing"track-metadata-module="footer">
+            track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/products/"track-name="see all products"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="products and pricing">
             
           
             See all products
@@ -2874,7 +2874,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="products and pricing"track-metadata-module="footer"track-name="google cloud pricing"track-metadata-eventDetail="cloud.google.com/pricing/">
+            track-name="google cloud pricing"track-metadata-child_headline="products and pricing"track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/pricing/"track-type="footer link">
             
           
             Google Cloud pricing
@@ -2891,7 +2891,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-name="google cloud marketplace"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/marketplace/"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer">
+            track-name="google cloud marketplace"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources">
             
           
             Google Cloud Marketplace
@@ -2908,7 +2908,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-type="footer link"track-metadata-module="footer"track-name="contact sales"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-child_headline="engage">
+            track-type="footer link"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="engage"track-name="contact sales">
             
               
               
@@ -2935,7 +2935,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-name="google cloud community"rel="noopener"track-type="footer link"track-metadata-eventDetail="www.googlecloudcommunity.com"target="_blank"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-module="footer">
+            target="_blank"track-metadata-module="footer"track-name="google cloud community"rel="noopener"track-metadata-child_headline="engage"track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="www.googlecloudcommunity.com">
             
           
             Community forums
@@ -2952,7 +2952,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="support"track-metadata-position="footer"track-type="footer link">
+            track-metadata-module="footer"track-name="support"track-metadata-position="footer"track-metadata-child_headline="resources"track-type="footer link"track-metadata-eventDetail="cloud.google.com/support-hub/">
             
           
             Support
@@ -2969,7 +2969,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-module="footer"track-type="footer link"track-name="release notes"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/release-notes/">
+            track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-position="footer"track-metadata-child_headline="resources"track-name="release notes">
             
           
             Release Notes
@@ -2986,7 +2986,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-name="system status"target="_blank"track-metadata-position="footer"track-metadata-eventDetail="status.cloud.google.com"track-metadata-child_headline="resources"track-type="footer link">
+            track-metadata-eventDetail="status.cloud.google.com"target="_blank"track-name="system status"track-type="footer link"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-module="footer">
             
               
               
@@ -3013,7 +3013,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="github"track-metadata-position="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/">
+            track-metadata-child_headline="resources"track-name="github"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/">
             
           
             GitHub
@@ -3030,7 +3030,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-name="google cloud quickstarts"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-metadata-child_headline="resources"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer">
+            track-metadata-child_headline="resources"track-type="footer link"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-metadata-position="footer"track-metadata-module="footer"track-name="google cloud quickstarts">
             
           
             Getting Started with Google Cloud
@@ -3047,7 +3047,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-name="code samples"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/docs/samples">
+            track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-child_headline="resources"track-name="code samples"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer">
             
           
             Code samples
@@ -3064,7 +3064,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-module="footer"track-name="cloud architecture center"track-metadata-child_headline="resources"track-metadata-position="footer"track-type="footer link">
+            track-metadata-eventDetail="cloud.google.com/architecture/"track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="cloud architecture center">
             
           
             Cloud Architecture Center
@@ -3081,7 +3081,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-name="training"track-metadata-child_headline="resources"track-type="footer link"track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-module="footer"track-metadata-position="footer">
+            track-metadata-child_headline="resources"track-metadata-position="footer"track-type="footer link"track-metadata-module="footer"track-name="training"track-metadata-eventDetail="cloud.google.com/learn/training/">
             
               
               
@@ -3108,7 +3108,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-child_headline="engage"track-metadata-module="footer"track-name="blog"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/blog/">
+            track-metadata-eventDetail="cloud.google.com/blog/"track-type="footer link"track-name="blog"track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-position="footer">
             
           
             Blog
@@ -3125,7 +3125,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/events/"track-name="events"track-metadata-position="footer"track-metadata-module="footer">
+            track-name="events"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/events/"track-metadata-child_headline="engage"track-type="footer link"track-metadata-position="footer">
             
           
             Events
@@ -3142,7 +3142,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            target="_blank"track-name="follow on x"track-metadata-eventDetail="x.com/googlecloud"rel="noopener"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="engage"track-type="footer link">
+            track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="engage"target="_blank"track-metadata-module="footer"track-metadata-eventDetail="x.com/googlecloud"rel="noopener"track-name="follow on x">
             
           
             X (Twitter)
@@ -3159,7 +3159,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            target="_blank"track-name="google cloud on youtube"track-metadata-module="footer"track-metadata-eventDetail="www.youtube.com/googlecloud"rel="noopener"track-metadata-child_headline="engage"track-metadata-position="footer"track-type="footer link">
+            track-name="google cloud on youtube"track-metadata-eventDetail="www.youtube.com/googlecloud"rel="noopener"target="_blank"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="engage"track-type="footer link">
             
           
             Google Cloud on YouTube
@@ -3176,7 +3176,7 @@ powered by the Gemini CLI in VS Code.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-name="google cloud tech on youtube"track-metadata-position="footer"track-metadata-module="footer"target="_blank"track-metadata-child_headline="engage"rel="noopener"track-type="footer link"track-metadata-eventDetail="www.youtube.com/googlecloudplatform">
+            track-type="footer link"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"target="_blank"track-metadata-module="footer"rel="noopener"track-metadata-position="footer"track-metadata-child_headline="engage"track-name="google cloud tech on youtube">
             
               
               
@@ -3218,17 +3218,17 @@ powered by the Gemini CLI in VS Code.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
+           track-metadata-eventDetail="//about.google/"
+         
            track-name="about google"
+         
+           track-metadata-module="utility footer"
          
            target="_blank"
          
            track-metadata-position="footer"
          
-           track-metadata-module="utility footer"
-         
            track-type="footer link"
-         
-           track-metadata-eventDetail="//about.google/"
          >
           About Google
         </a>
@@ -3244,15 +3244,15 @@ powered by the Gemini CLI in VS Code.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
-           track-name="privacy"
+           track-metadata-module="utility footer"
          
            track-metadata-position="footer"
-         
-           track-metadata-module="utility footer"
          
            target="_blank"
          
            track-type="footer link"
+         
+           track-name="privacy"
          
            track-metadata-eventDetail="//policies.google.com/privacy"
          >
@@ -3270,17 +3270,17 @@ powered by the Gemini CLI in VS Code.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Site terms link"
          
-           track-metadata-position="footer"
+           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          
            track-type="footer link"
+         
+           track-metadata-position="footer"
          
            target="_blank"
          
            track-metadata-module="utility footer"
          
            track-name="site terms"
-         
-           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          >
           Site terms
         </a>
@@ -3296,15 +3296,15 @@ powered by the Gemini CLI in VS Code.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
+           track-metadata-eventDetail="//cloud.google.com/product-terms"
+         
+           track-name="google cloud terms"
+         
            track-metadata-position="footer"
          
            track-metadata-module="utility footer"
          
-           track-metadata-eventDetail="//cloud.google.com/product-terms"
-         
            track-type="footer link"
-         
-           track-name="google cloud terms"
          >
           Google Cloud terms
         </a>
@@ -3320,17 +3320,17 @@ powered by the Gemini CLI in VS Code.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Manage cookies link"
          
-           track-metadata-position="footer"
-         
-           track-type="footer link"
+           track-name="Manage cookies"
          
            aria-hidden="true"
          
            track-metadata-module="utility footer"
          
-           track-name="Manage cookies"
-         
            track-metadata-eventDetail="#"
+         
+           track-metadata-position="footer"
+         
+           track-type="footer link"
          >
           Manage cookies
         </a>
@@ -3348,11 +3348,11 @@ powered by the Gemini CLI in VS Code.</li>
          
            track-type="footer link"
          
+           track-metadata-position="footer"
+         
            track-metadata-module="utility footer"
          
            track-metadata-eventDetail="/sustainability/"
-         
-           track-metadata-position="footer"
          
            track-name="Our third decade of climate action: join us"
          >
@@ -3376,11 +3376,11 @@ powered by the Gemini CLI in VS Code.</li>
          
            track-metadata-position="footer"
          
-           track-metadata-eventDetail="/newsletter/"
-         
            track-name="subscribe"
          
            track-metadata-module="utility footer"
+         
+           track-metadata-eventDetail="/newsletter/"
          >
           Subscribe
         </a>

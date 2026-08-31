@@ -773,15 +773,15 @@
     data-label="Site header link: Console"
     
       
+        track-name="console"
+      
         referrerpolicy="no-referrer-when-downgrade"
       
-        track-name="console"
+        track-metadata-eventDetail="nav"
       
         track-metadata-position="nav"
       
         track-type="globalNav"
-      
-        track-metadata-eventDetail="nav"
       
     >
   Console
@@ -1000,13 +1000,13 @@
     
     
       
+        track-metadata-eventDetail="nav"
+      
         track-name="gcpCta"
       
         referrerpolicy="no-referrer-when-downgrade"
       
         track-metadata-position="nav"
-      
-        track-metadata-eventDetail="nav"
       
         track-type="freeTrial"
       
@@ -1566,15 +1566,15 @@
 
     
       
+        track-name="console"
+      
         referrerpolicy="no-referrer-when-downgrade"
       
-        track-name="console"
+        track-metadata-eventDetail="nav"
       
         track-metadata-position="nav"
       
         track-type="globalNav"
-      
-        track-metadata-eventDetail="nav"
       
     
      data-category="Site-Wide Custom Events"
@@ -2818,7 +2818,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
 
   
     <devsite-hats-survey class="nocontent" data-nosnippet
-      hats-id="Nd7nTix2o0eU5NUYprb0ThtUc5jf"
+      hats-id="mwETRvWii0eU5NUYprb0Y9z5GVbc"
       listnr-id="83405"></devsite-hats-survey>
   
 
@@ -2922,7 +2922,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/products/"track-metadata-child_headline="products and pricing"track-name="see all products"track-metadata-module="footer">
+            track-metadata-child_headline="products and pricing"track-metadata-position="footer"track-type="footer link"track-metadata-module="footer"track-name="see all products"track-metadata-eventDetail="cloud.google.com/products/">
             
           
             See all products
@@ -2939,7 +2939,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-name="google cloud pricing"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-module="footer"track-metadata-child_headline="products and pricing"track-type="footer link">
+            track-type="footer link"track-metadata-child_headline="products and pricing"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-position="footer"track-name="google cloud pricing">
             
           
             Google Cloud pricing
@@ -2956,7 +2956,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-child_headline="resources"track-name="google cloud marketplace"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-position="footer">
+            track-metadata-position="footer"track-metadata-module="footer"track-name="google cloud marketplace"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/marketplace/"track-type="footer link">
             
           
             Google Cloud Marketplace
@@ -2973,7 +2973,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-position="footer"track-name="contact sales"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="engage">
+            track-name="contact sales"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-position="footer"track-type="footer link"track-metadata-module="footer">
             
               
               
@@ -3000,7 +3000,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-child_headline="engage"track-type="footer link"target="_blank"track-name="google cloud community"rel="noopener"track-metadata-position="footer"track-metadata-module="footer">
+            track-name="google cloud community"track-metadata-position="footer"target="_blank"track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-child_headline="engage"track-metadata-module="footer"rel="noopener"track-type="footer link">
             
           
             Community forums
@@ -3017,7 +3017,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-module="footer"track-name="support">
+            track-type="footer link"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/support-hub/"track-name="support">
             
           
             Support
@@ -3034,7 +3034,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/release-notes/"track-name="release notes"track-metadata-child_headline="resources"track-metadata-module="footer">
+            track-metadata-child_headline="resources"track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/release-notes/"track-name="release notes"track-metadata-module="footer">
             
           
             Release Notes
@@ -3051,7 +3051,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-position="footer"track-metadata-eventDetail="status.cloud.google.com"target="_blank"track-type="footer link"track-name="system status"track-metadata-module="footer"track-metadata-child_headline="resources">
+            track-type="footer link"track-metadata-eventDetail="status.cloud.google.com"track-metadata-child_headline="resources"target="_blank"track-name="system status"track-metadata-position="footer"track-metadata-module="footer">
             
               
               
@@ -3078,7 +3078,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-module="footer"track-type="footer link"track-name="github"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="github.com/googlecloudPlatform/">
+            track-metadata-child_headline="resources"track-name="github"track-metadata-module="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-type="footer link"track-metadata-position="footer">
             
           
             GitHub
@@ -3095,7 +3095,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-metadata-child_headline="resources"track-name="google cloud quickstarts"track-metadata-position="footer">
+            track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="resources"track-name="google cloud quickstarts">
             
           
             Getting Started with Google Cloud
@@ -3112,7 +3112,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-type="footer link"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-module="footer"track-name="code samples"track-metadata-position="footer"track-metadata-child_headline="resources">
+            track-name="code samples"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/docs/samples">
             
           
             Code samples
@@ -3129,7 +3129,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="cloud architecture center"track-metadata-eventDetail="cloud.google.com/architecture/">
+            track-metadata-module="footer"track-name="cloud architecture center"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-position="footer"track-metadata-child_headline="resources"track-type="footer link">
             
           
             Cloud Architecture Center
@@ -3146,7 +3146,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-child_headline="resources"track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-name="training"track-metadata-position="footer">
+            track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-child_headline="resources"track-name="training"track-metadata-position="footer">
             
               
               
@@ -3173,7 +3173,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-module="footer"track-metadata-child_headline="engage"track-type="footer link"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-position="footer"track-name="blog">
+            track-metadata-eventDetail="cloud.google.com/blog/"track-name="blog"track-metadata-child_headline="engage"track-type="footer link"track-metadata-position="footer"track-metadata-module="footer">
             
           
             Blog
@@ -3190,7 +3190,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="engage"track-name="events"track-metadata-eventDetail="cloud.google.com/events/"track-metadata-position="footer"track-type="footer link"track-metadata-module="footer">
+            track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/events/"track-type="footer link"track-name="events"track-metadata-position="footer">
             
           
             Events
@@ -3207,7 +3207,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-module="footer"track-name="follow on x"track-metadata-position="footer"track-metadata-eventDetail="x.com/googlecloud"track-metadata-child_headline="engage"target="_blank"track-type="footer link"rel="noopener">
+            rel="noopener"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"track-name="follow on x"target="_blank"track-metadata-eventDetail="x.com/googlecloud"track-metadata-child_headline="engage">
             
           
             X (Twitter)
@@ -3224,7 +3224,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-metadata-eventDetail="www.youtube.com/googlecloud"track-metadata-child_headline="engage"rel="noopener"track-name="google cloud on youtube"track-metadata-position="footer"target="_blank"track-type="footer link">
+            track-type="footer link"rel="noopener"track-metadata-module="footer"track-metadata-eventDetail="www.youtube.com/googlecloud"target="_blank"track-name="google cloud on youtube"track-metadata-position="footer"track-metadata-child_headline="engage">
             
           
             Google Cloud on YouTube
@@ -3241,7 +3241,7 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            rel="noopener"track-name="google cloud tech on youtube"track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-module="footer"target="_blank"track-metadata-eventDetail="www.youtube.com/googlecloudplatform">
+            track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-metadata-position="footer"target="_blank"track-name="google cloud tech on youtube"track-type="footer link"track-metadata-child_headline="engage"rel="noopener"track-metadata-module="footer">
             
               
               
@@ -3283,17 +3283,17 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
-           track-metadata-eventDetail="//about.google/"
-         
-           track-name="about google"
-         
            track-type="footer link"
-         
-           track-metadata-module="utility footer"
          
            track-metadata-position="footer"
          
            target="_blank"
+         
+           track-metadata-module="utility footer"
+         
+           track-name="about google"
+         
+           track-metadata-eventDetail="//about.google/"
          >
           About Google
         </a>
@@ -3309,17 +3309,17 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
+           track-name="privacy"
+         
            target="_blank"
          
-           track-type="footer link"
+           track-metadata-module="utility footer"
          
            track-metadata-eventDetail="//policies.google.com/privacy"
          
            track-metadata-position="footer"
          
-           track-metadata-module="utility footer"
-         
-           track-name="privacy"
+           track-type="footer link"
          >
           Privacy
         </a>
@@ -3335,17 +3335,17 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Site terms link"
          
-           track-metadata-module="utility footer"
-         
-           target="_blank"
-         
            track-metadata-position="footer"
-         
-           track-type="footer link"
          
            track-name="site terms"
          
+           target="_blank"
+         
+           track-metadata-module="utility footer"
+         
            track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
+         
+           track-type="footer link"
          >
           Site terms
         </a>
@@ -3361,15 +3361,15 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
-           track-type="footer link"
-         
            track-metadata-eventDetail="//cloud.google.com/product-terms"
          
-           track-metadata-module="utility footer"
+           track-name="google cloud terms"
          
            track-metadata-position="footer"
          
-           track-name="google cloud terms"
+           track-metadata-module="utility footer"
+         
+           track-type="footer link"
          >
           Google Cloud terms
         </a>
@@ -3385,17 +3385,17 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Manage cookies link"
          
-           track-metadata-eventDetail="#"
+           track-metadata-position="footer"
          
            track-metadata-module="utility footer"
          
            track-type="footer link"
          
+           track-name="Manage cookies"
+         
            aria-hidden="true"
          
-           track-metadata-position="footer"
-         
-           track-name="Manage cookies"
+           track-metadata-eventDetail="#"
          >
           Manage cookies
         </a>
@@ -3411,13 +3411,13 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
-           track-metadata-position="footer"
+           track-type="footer link"
          
            track-metadata-eventDetail="/sustainability/"
          
-           track-type="footer link"
-         
            track-metadata-module="utility footer"
+         
+           track-metadata-position="footer"
          
            track-name="Our third decade of climate action: join us"
          >
@@ -3437,15 +3437,15 @@ use a stable branch, such as <code translate="no" dir="ltr">main</code>.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Subscribe link"
          
-           track-metadata-eventDetail="/newsletter/"
-         
            track-metadata-position="footer"
          
-           track-name="subscribe"
+           track-metadata-module="utility footer"
+         
+           track-metadata-eventDetail="/newsletter/"
          
            track-type="footer link"
          
-           track-metadata-module="utility footer"
+           track-name="subscribe"
          >
           Subscribe
         </a>

@@ -1,6 +1,6 @@
 [
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Docs",
     "md_url": "https://ai.google.dev/gemini-api/docs.md",
     "html_url": "https://ai.google.dev/gemini-api/docs",
@@ -8,7 +8,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Get started",
     "md_url": "https://ai.google.dev/gemini-api/docs/get-started.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/get-started",
@@ -16,7 +16,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "API keys",
     "md_url": "https://ai.google.dev/gemini-api/docs/api-key.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/api-key",
@@ -24,7 +24,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Pricing",
     "md_url": "https://ai.google.dev/gemini-api/docs/pricing.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -32,7 +32,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Coding agent setup",
     "md_url": "https://ai.google.dev/gemini-api/docs/coding-agents.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/coding-agents",
@@ -40,7 +40,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "All models",
     "md_url": "https://ai.google.dev/gemini-api/docs/models.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/models",
@@ -48,7 +48,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Latest Gemini models",
     "md_url": "https://ai.google.dev/gemini-api/docs/latest-model.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/latest-model",
@@ -56,7 +56,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Nano Banana",
     "md_url": "https://ai.google.dev/gemini-api/docs/image-generation.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/image-generation",
@@ -64,7 +64,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Veo",
     "md_url": "https://ai.google.dev/gemini-api/docs/veo.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/veo",
@@ -72,7 +72,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Gemini Omni Flash",
     "md_url": "https://ai.google.dev/gemini-api/docs/omni.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/omni",
@@ -80,7 +80,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Lyria 3",
     "md_url": "https://ai.google.dev/gemini-api/docs/music-generation.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/music-generation",
@@ -88,7 +88,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Lyria RealTime",
     "md_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
@@ -96,7 +96,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Imagen",
     "md_url": "https://ai.google.dev/gemini-api/docs/imagen.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/imagen",
@@ -104,7 +104,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Text-to-speech",
     "md_url": "https://ai.google.dev/gemini-api/docs/speech-generation.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/speech-generation",
@@ -112,7 +112,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Transcribe",
     "md_url": "https://ai.google.dev/gemini-api/docs/transcribe.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/transcribe",
@@ -120,7 +120,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Live",
     "md_url": "https://ai.google.dev/gemini-api/docs/live-api.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/live-api",
@@ -128,7 +128,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Live translate",
     "md_url": "https://ai.google.dev/gemini-api/docs/live-api/live-translate.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/live-api/live-translate",
@@ -136,7 +136,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Embeddings",
     "md_url": "https://ai.google.dev/gemini-api/docs/embeddings.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/embeddings",
@@ -144,7 +144,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Overview",
     "md_url": "https://ai.google.dev/gemini-api/docs/robotics-overview.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/robotics-overview",
@@ -152,7 +152,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Spatial reasoning",
     "md_url": "https://ai.google.dev/gemini-api/docs/robotics-spatial.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/robotics-spatial",
@@ -160,7 +160,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Agentic vision",
     "md_url": "https://ai.google.dev/gemini-api/docs/robotics-agentic.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/robotics-agentic",
@@ -168,7 +168,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Task orchestration",
     "md_url": "https://ai.google.dev/gemini-api/docs/robotics-orchestration.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/robotics-orchestration",
@@ -176,7 +176,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Robotics with streaming",
     "md_url": "https://ai.google.dev/gemini-api/docs/robotics-streaming.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/robotics-streaming",
@@ -184,7 +184,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Video understanding",
     "md_url": "https://ai.google.dev/gemini-api/docs/robotics-video-progress.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/robotics-video-progress",
@@ -192,7 +192,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Text",
     "md_url": "https://ai.google.dev/gemini-api/docs/text-generation.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/text-generation",
@@ -200,7 +200,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Image understanding",
     "md_url": "https://ai.google.dev/gemini-api/docs/image-understanding.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/image-understanding",
@@ -208,7 +208,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Video overview",
     "md_url": "https://ai.google.dev/gemini-api/docs/video.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/video",
@@ -216,7 +216,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Video understanding",
     "md_url": "https://ai.google.dev/gemini-api/docs/video-understanding.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/video-understanding",
@@ -224,7 +224,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Documents",
     "md_url": "https://ai.google.dev/gemini-api/docs/document-processing.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/document-processing",
@@ -232,7 +232,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Audio understanding",
     "md_url": "https://ai.google.dev/gemini-api/docs/audio.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/audio",
@@ -240,7 +240,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Thinking",
     "md_url": "https://ai.google.dev/gemini-api/docs/thinking.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/thinking",
@@ -248,7 +248,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Thought signatures",
     "md_url": "https://ai.google.dev/gemini-api/docs/thought-signatures.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/thought-signatures",
@@ -256,7 +256,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Structured outputs",
     "md_url": "https://ai.google.dev/gemini-api/docs/structured-output.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/structured-output",
@@ -264,7 +264,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Function calling",
     "md_url": "https://ai.google.dev/gemini-api/docs/function-calling.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/function-calling",
@@ -272,7 +272,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Long context",
     "md_url": "https://ai.google.dev/gemini-api/docs/long-context.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/long-context",
@@ -280,7 +280,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Overview",
     "md_url": "https://ai.google.dev/gemini-api/docs/agents.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/agents",
@@ -288,7 +288,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Quickstart",
     "md_url": "https://ai.google.dev/gemini-api/docs/managed-agents-quickstart.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/managed-agents-quickstart",
@@ -296,7 +296,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Antigravity agent",
     "md_url": "https://ai.google.dev/gemini-api/docs/antigravity-agent.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/antigravity-agent",
@@ -304,7 +304,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Building managed agents",
     "md_url": "https://ai.google.dev/gemini-api/docs/custom-agents.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/custom-agents",
@@ -312,7 +312,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Environments",
     "md_url": "https://ai.google.dev/gemini-api/docs/agent-environment.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/agent-environment",
@@ -320,7 +320,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Hooks",
     "md_url": "https://ai.google.dev/gemini-api/docs/agent-hooks.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/agent-hooks",
@@ -328,7 +328,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Deep Research agent",
     "md_url": "https://ai.google.dev/gemini-api/docs/deep-research.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/deep-research",
@@ -336,7 +336,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Overview",
     "md_url": "https://ai.google.dev/gemini-api/docs/tools.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/tools",
@@ -344,7 +344,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Google Search",
     "md_url": "https://ai.google.dev/gemini-api/docs/google-search.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/google-search",
@@ -352,7 +352,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Google Maps",
     "md_url": "https://ai.google.dev/gemini-api/docs/maps-grounding.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/maps-grounding",
@@ -360,7 +360,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Code execution",
     "md_url": "https://ai.google.dev/gemini-api/docs/code-execution.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/code-execution",
@@ -368,7 +368,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "URL context",
     "md_url": "https://ai.google.dev/gemini-api/docs/url-context.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/url-context",
@@ -376,7 +376,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Computer use",
     "md_url": "https://ai.google.dev/gemini-api/docs/computer-use.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/computer-use",
@@ -384,7 +384,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "File search",
     "md_url": "https://ai.google.dev/gemini-api/docs/file-search.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/file-search",
@@ -392,7 +392,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Combine tools and function calling",
     "md_url": "https://ai.google.dev/gemini-api/docs/tool-combination.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/tool-combination",
@@ -400,7 +400,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Get started using the GenAI SDK",
     "md_url": "https://ai.google.dev/gemini-api/docs/live-api/get-started-sdk.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/live-api/get-started-sdk",
@@ -408,7 +408,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Get started using raw WebSockets",
     "md_url": "https://ai.google.dev/gemini-api/docs/live-api/get-started-websocket.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/live-api/get-started-websocket",
@@ -416,7 +416,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Capabilities",
     "md_url": "https://ai.google.dev/gemini-api/docs/live-api/capabilities.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/live-api/capabilities",
@@ -424,7 +424,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Live transcription",
     "md_url": "https://ai.google.dev/gemini-api/docs/live-api/live-transcribe.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/live-api/live-transcribe",
@@ -432,7 +432,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Tool use",
     "md_url": "https://ai.google.dev/gemini-api/docs/live-api/tools.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/live-api/tools",
@@ -440,7 +440,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Session management",
     "md_url": "https://ai.google.dev/gemini-api/docs/live-api/session-management.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/live-api/session-management",
@@ -448,7 +448,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Ephemeral tokens",
     "md_url": "https://ai.google.dev/gemini-api/docs/live-api/ephemeral-tokens.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/live-api/ephemeral-tokens",
@@ -456,7 +456,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Best practices",
     "md_url": "https://ai.google.dev/gemini-api/docs/live-api/best-practices.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/live-api/best-practices",
@@ -464,7 +464,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Overview",
     "md_url": "https://ai.google.dev/gemini-api/docs/optimization.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/optimization",
@@ -472,7 +472,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Batch API",
     "md_url": "https://ai.google.dev/gemini-api/docs/batch-api.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/batch-api",
@@ -480,7 +480,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Webhooks",
     "md_url": "https://ai.google.dev/gemini-api/docs/webhooks.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/webhooks",
@@ -488,7 +488,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Flex inference",
     "md_url": "https://ai.google.dev/gemini-api/docs/flex-inference.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/flex-inference",
@@ -496,7 +496,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Priority inference",
     "md_url": "https://ai.google.dev/gemini-api/docs/priority-inference.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/priority-inference",
@@ -504,7 +504,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Context caching",
     "md_url": "https://ai.google.dev/gemini-api/docs/caching.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/caching",
@@ -512,7 +512,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Interactions API",
     "md_url": "https://ai.google.dev/gemini-api/docs/interactions-overview.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/interactions-overview",
@@ -520,7 +520,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Streaming",
     "md_url": "https://ai.google.dev/gemini-api/docs/streaming.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/streaming",
@@ -528,7 +528,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Background execution",
     "md_url": "https://ai.google.dev/gemini-api/docs/background-execution.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/background-execution",
@@ -536,7 +536,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Input methods",
     "md_url": "https://ai.google.dev/gemini-api/docs/file-input-methods.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/file-input-methods",
@@ -544,7 +544,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Files API",
     "md_url": "https://ai.google.dev/gemini-api/docs/files.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/files",
@@ -552,7 +552,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "OpenAI compatibility",
     "md_url": "https://ai.google.dev/gemini-api/docs/openai.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/openai",
@@ -560,7 +560,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Media resolution",
     "md_url": "https://ai.google.dev/gemini-api/docs/media-resolution.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/media-resolution",
@@ -568,7 +568,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Token counting",
     "md_url": "https://ai.google.dev/gemini-api/docs/tokens.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/tokens",
@@ -576,7 +576,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Prompt engineering",
     "md_url": "https://ai.google.dev/gemini-api/docs/prompting-strategies.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/prompting-strategies",
@@ -584,7 +584,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Get started with logs",
     "md_url": "https://ai.google.dev/gemini-api/docs/logs-datasets.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/logs-datasets",
@@ -592,7 +592,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Data logging and sharing",
     "md_url": "https://ai.google.dev/gemini-api/docs/logs-policy.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/logs-policy",
@@ -600,7 +600,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Safety settings",
     "md_url": "https://ai.google.dev/gemini-api/docs/safety-settings.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/safety-settings",
@@ -608,7 +608,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Safety guidance",
     "md_url": "https://ai.google.dev/gemini-api/docs/safety-guidance.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/safety-guidance",
@@ -616,7 +616,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "LangChain & LangGraph",
     "md_url": "https://ai.google.dev/gemini-api/docs/langgraph-example.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/langgraph-example",
@@ -624,7 +624,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "CrewAI",
     "md_url": "https://ai.google.dev/gemini-api/docs/crewai-example.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/crewai-example",
@@ -632,7 +632,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "LlamaIndex",
     "md_url": "https://ai.google.dev/gemini-api/docs/llama-index.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/llama-index",
@@ -640,7 +640,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Vercel AI SDK",
     "md_url": "https://ai.google.dev/gemini-api/docs/vercel-ai-sdk-example.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/vercel-ai-sdk-example",
@@ -648,7 +648,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Temporal",
     "md_url": "https://ai.google.dev/gemini-api/docs/temporal-example.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/temporal-example",
@@ -656,7 +656,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Release notes",
     "md_url": "https://ai.google.dev/gemini-api/docs/changelog.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/changelog",
@@ -664,7 +664,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Deprecations",
     "md_url": "https://ai.google.dev/gemini-api/docs/deprecations.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -672,7 +672,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Libraries",
     "md_url": "https://ai.google.dev/gemini-api/docs/libraries.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/libraries",
@@ -680,7 +680,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Migrate to Gen AI SDK",
     "md_url": "https://ai.google.dev/gemini-api/docs/migrate.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/migrate",
@@ -688,7 +688,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Migrate to Interactions API",
     "md_url": "https://ai.google.dev/gemini-api/docs/migrate-to-interactions.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/migrate-to-interactions",
@@ -696,7 +696,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Interactions breaking changes (May 2026)",
     "md_url": "https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026",
@@ -704,7 +704,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Rate limits",
     "md_url": "https://ai.google.dev/gemini-api/docs/rate-limits.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/rate-limits",
@@ -712,7 +712,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Billing info",
     "md_url": "https://ai.google.dev/gemini-api/docs/billing.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/billing",
@@ -720,7 +720,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "API troubleshooting",
     "md_url": "https://ai.google.dev/gemini-api/docs/troubleshooting.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/troubleshooting",
@@ -728,7 +728,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "API errors",
     "md_url": "https://ai.google.dev/gemini-api/docs/api-errors.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/api-errors",
@@ -736,7 +736,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Partner and library integrations",
     "md_url": "https://ai.google.dev/gemini-api/docs/partner-integration.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/partner-integration",
@@ -744,7 +744,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Quickstart",
     "md_url": "https://ai.google.dev/gemini-api/docs/ai-studio-quickstart.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/ai-studio-quickstart",
@@ -752,7 +752,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Google AI plans",
     "md_url": "https://ai.google.dev/gemini-api/docs/google-ai-plans.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/google-ai-plans",
@@ -760,7 +760,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Vibe code in Build mode",
     "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-build-mode.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-build-mode",
@@ -768,7 +768,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Developing full-stack apps",
     "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-fullstack.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-fullstack",
@@ -776,7 +776,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Build Android apps",
     "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-android.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-android",
@@ -784,7 +784,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Deploying your app",
     "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-deploying.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-deploying",
@@ -792,7 +792,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Agents in AI Studio Playground",
     "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-agents.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-agents",
@@ -800,7 +800,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Try out LearnLM",
     "md_url": "https://ai.google.dev/gemini-api/docs/learnlm.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/learnlm",
@@ -808,7 +808,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Troubleshooting",
     "md_url": "https://ai.google.dev/gemini-api/docs/troubleshoot-ai-studio.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/troubleshoot-ai-studio",
@@ -816,7 +816,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Access for Workspace users",
     "md_url": "https://ai.google.dev/gemini-api/docs/workspace.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/workspace",
@@ -824,7 +824,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Gemini Enterprise Agent Platform Gemini API",
     "md_url": "https://ai.google.dev/gemini-api/docs/migrate-to-cloud.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/migrate-to-cloud",
@@ -832,7 +832,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "OAuth authentication",
     "md_url": "https://ai.google.dev/gemini-api/docs/oauth.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/oauth",
@@ -840,7 +840,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Terms of service",
     "md_url": "https://ai.google.dev/gemini-api/terms.md",
     "html_url": "https://ai.google.dev/gemini-api/terms",
@@ -848,7 +848,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Available regions",
     "md_url": "https://ai.google.dev/gemini-api/docs/available-regions.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/available-regions",
@@ -856,7 +856,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Abuse monitoring",
     "md_url": "https://ai.google.dev/gemini-api/docs/usage-policies.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/usage-policies",
@@ -864,7 +864,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Feedback information",
     "md_url": "https://ai.google.dev/gemini-api/docs/feedback-policies.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/feedback-policies",
@@ -872,7 +872,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "Start building",
     "md_url": "https://ai.google.dev/gemini-api/docs/quickstart.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/quickstart",
@@ -880,7 +880,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "spark Gemini 3.7 Flash New Our latest and most capable Flash model, built for complex coding, agentic workflows, and reliable multi-step execution.",
     "md_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
@@ -888,7 +888,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "spark Gemini 3.5 Flash-Lite High-volume, cost-sensitive model optimized for low-latency high throughput subagent tasks.",
     "md_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite",
@@ -896,7 +896,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "auto_awesome Gemini 3.1 Pro Our most intelligent model, the best in the world for multimodal understanding, all built on state-of-the-art reasoning.",
     "md_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview",
@@ -904,7 +904,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "speech_to_text Gemini 3.5 Transcribe New Low-latency speech-to-text model with utterance-based language detection, speaker diarization, and word timestamps.",
     "md_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-transcribe.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-transcribe",
@@ -912,7 +912,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini API \u00b7 AI Studio",
+    "group": "Gemini API and AI Studio",
     "title": "android_recorder Voice Agents with Live API Build real-time voice applications and agents with the Live API.",
     "md_url": "https://ai.google.dev/gemini-api/docs/live.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/live",
@@ -1069,902 +1069,6 @@
     "md_url": "https://ai.google.dev/api/batch-mode.md",
     "html_url": "https://ai.google.dev/api/batch-mode",
     "route": "api-ref/batch-mode",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Docs",
-    "md_url": "https://geminicli.com/docs.md",
-    "html_url": "https://geminicli.com/docs",
-    "route": "gemini-cli/",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Reference",
-    "md_url": "https://geminicli.com/docs/reference/commands.md",
-    "html_url": "https://geminicli.com/docs/reference/commands",
-    "route": "gemini-cli/reference/commands",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Resources",
-    "md_url": "https://geminicli.com/docs/resources/quota-and-pricing.md",
-    "html_url": "https://geminicli.com/docs/resources/quota-and-pricing",
-    "route": "gemini-cli/resources/quota-and-pricing",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Changelog",
-    "md_url": "https://geminicli.com/docs/changelogs.md",
-    "html_url": "https://geminicli.com/docs/changelogs",
-    "route": "gemini-cli/changelogs",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Quickstart",
-    "md_url": "https://geminicli.com/docs/get-started.md",
-    "html_url": "https://geminicli.com/docs/get-started",
-    "route": "gemini-cli/get-started",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Installation",
-    "md_url": "https://geminicli.com/docs/get-started/installation.md",
-    "html_url": "https://geminicli.com/docs/get-started/installation",
-    "route": "gemini-cli/get-started/installation",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Authentication",
-    "md_url": "https://geminicli.com/docs/get-started/authentication.md",
-    "html_url": "https://geminicli.com/docs/get-started/authentication",
-    "route": "gemini-cli/get-started/authentication",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "CLI cheatsheet",
-    "md_url": "https://geminicli.com/docs/cli/cli-reference.md",
-    "html_url": "https://geminicli.com/docs/cli/cli-reference",
-    "route": "gemini-cli/cli/cli-reference",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Gemini 3 on Gemini CLI",
-    "md_url": "https://geminicli.com/docs/get-started/gemini-3.md",
-    "html_url": "https://geminicli.com/docs/get-started/gemini-3",
-    "route": "gemini-cli/get-started/gemini-3",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "File management",
-    "md_url": "https://geminicli.com/docs/cli/tutorials/file-management.md",
-    "html_url": "https://geminicli.com/docs/cli/tutorials/file-management",
-    "route": "gemini-cli/cli/tutorials/file-management",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Get started with Agent Skills",
-    "md_url": "https://geminicli.com/docs/cli/tutorials/skills-getting-started.md",
-    "html_url": "https://geminicli.com/docs/cli/tutorials/skills-getting-started",
-    "route": "gemini-cli/cli/tutorials/skills-getting-started",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Manage context and memory",
-    "md_url": "https://geminicli.com/docs/cli/tutorials/memory-management.md",
-    "html_url": "https://geminicli.com/docs/cli/tutorials/memory-management",
-    "route": "gemini-cli/cli/tutorials/memory-management",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Execute shell commands",
-    "md_url": "https://geminicli.com/docs/cli/tutorials/shell-commands.md",
-    "html_url": "https://geminicli.com/docs/cli/tutorials/shell-commands",
-    "route": "gemini-cli/cli/tutorials/shell-commands",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Manage sessions and history",
-    "md_url": "https://geminicli.com/docs/cli/tutorials/session-management.md",
-    "html_url": "https://geminicli.com/docs/cli/tutorials/session-management",
-    "route": "gemini-cli/cli/tutorials/session-management",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Plan tasks with todos",
-    "md_url": "https://geminicli.com/docs/cli/tutorials/task-planning.md",
-    "html_url": "https://geminicli.com/docs/cli/tutorials/task-planning",
-    "route": "gemini-cli/cli/tutorials/task-planning",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Use Plan Mode with model steering \ud83d\udd2c",
-    "md_url": "https://geminicli.com/docs/cli/tutorials/plan-mode-steering.md",
-    "html_url": "https://geminicli.com/docs/cli/tutorials/plan-mode-steering",
-    "route": "gemini-cli/cli/tutorials/plan-mode-steering",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Web search and fetch",
-    "md_url": "https://geminicli.com/docs/cli/tutorials/web-tools.md",
-    "html_url": "https://geminicli.com/docs/cli/tutorials/web-tools",
-    "route": "gemini-cli/cli/tutorials/web-tools",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Set up an MCP server",
-    "md_url": "https://geminicli.com/docs/cli/tutorials/mcp-setup.md",
-    "html_url": "https://geminicli.com/docs/cli/tutorials/mcp-setup",
-    "route": "gemini-cli/cli/tutorials/mcp-setup",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Automate tasks",
-    "md_url": "https://geminicli.com/docs/cli/tutorials/automation.md",
-    "html_url": "https://geminicli.com/docs/cli/tutorials/automation",
-    "route": "gemini-cli/cli/tutorials/automation",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Overview",
-    "md_url": "https://geminicli.com/docs/extensions.md",
-    "html_url": "https://geminicli.com/docs/extensions",
-    "route": "gemini-cli/extensions",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Developer guide: Build extensions",
-    "md_url": "https://geminicli.com/docs/extensions/writing-extensions.md",
-    "html_url": "https://geminicli.com/docs/extensions/writing-extensions",
-    "route": "gemini-cli/extensions/writing-extensions",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Developer guide: Best practices",
-    "md_url": "https://geminicli.com/docs/extensions/best-practices.md",
-    "html_url": "https://geminicli.com/docs/extensions/best-practices",
-    "route": "gemini-cli/extensions/best-practices",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Developer guide: Releasing",
-    "md_url": "https://geminicli.com/docs/extensions/releasing.md",
-    "html_url": "https://geminicli.com/docs/extensions/releasing",
-    "route": "gemini-cli/extensions/releasing",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Developer guide: Reference",
-    "md_url": "https://geminicli.com/docs/extensions/reference.md",
-    "html_url": "https://geminicli.com/docs/extensions/reference",
-    "route": "gemini-cli/extensions/reference",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Overview",
-    "md_url": "https://geminicli.com/docs/cli/skills.md",
-    "html_url": "https://geminicli.com/docs/cli/skills",
-    "route": "gemini-cli/cli/skills",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Creating Agent Skills",
-    "md_url": "https://geminicli.com/docs/cli/creating-skills.md",
-    "html_url": "https://geminicli.com/docs/cli/creating-skills",
-    "route": "gemini-cli/cli/creating-skills",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Using Agent Skills",
-    "md_url": "https://geminicli.com/docs/cli/using-agent-skills.md",
-    "html_url": "https://geminicli.com/docs/cli/using-agent-skills",
-    "route": "gemini-cli/cli/using-agent-skills",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Developer guide: Best practices",
-    "md_url": "https://geminicli.com/docs/cli/skills-best-practices.md",
-    "html_url": "https://geminicli.com/docs/cli/skills-best-practices",
-    "route": "gemini-cli/cli/skills-best-practices",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Auto Memory \ud83d\udd2c",
-    "md_url": "https://geminicli.com/docs/cli/auto-memory.md",
-    "html_url": "https://geminicli.com/docs/cli/auto-memory",
-    "route": "gemini-cli/cli/auto-memory",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Checkpointing",
-    "md_url": "https://geminicli.com/docs/cli/checkpointing.md",
-    "html_url": "https://geminicli.com/docs/cli/checkpointing",
-    "route": "gemini-cli/cli/checkpointing",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Headless mode",
-    "md_url": "https://geminicli.com/docs/cli/headless.md",
-    "html_url": "https://geminicli.com/docs/cli/headless",
-    "route": "gemini-cli/cli/headless",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Git worktrees \ud83d\udd2c",
-    "md_url": "https://geminicli.com/docs/cli/git-worktrees.md",
-    "html_url": "https://geminicli.com/docs/cli/git-worktrees",
-    "route": "gemini-cli/cli/git-worktrees",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Overview",
-    "md_url": "https://geminicli.com/docs/hooks.md",
-    "html_url": "https://geminicli.com/docs/hooks",
-    "route": "gemini-cli/hooks",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Reference",
-    "md_url": "https://geminicli.com/docs/hooks/reference.md",
-    "html_url": "https://geminicli.com/docs/hooks/reference",
-    "route": "gemini-cli/hooks/reference",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Overview",
-    "md_url": "https://geminicli.com/docs/ide-integration.md",
-    "html_url": "https://geminicli.com/docs/ide-integration",
-    "route": "gemini-cli/ide-integration",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Developer guide: ACP mode",
-    "md_url": "https://geminicli.com/docs/cli/acp-mode.md",
-    "html_url": "https://geminicli.com/docs/cli/acp-mode",
-    "route": "gemini-cli/cli/acp-mode",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Overview",
-    "md_url": "https://geminicli.com/docs/tools/mcp-server.md",
-    "html_url": "https://geminicli.com/docs/tools/mcp-server",
-    "route": "gemini-cli/tools/mcp-server",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Resource tools",
-    "md_url": "https://geminicli.com/docs/tools/mcp-resources.md",
-    "html_url": "https://geminicli.com/docs/tools/mcp-resources",
-    "route": "gemini-cli/tools/mcp-resources",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Model routing",
-    "md_url": "https://geminicli.com/docs/cli/model-routing.md",
-    "html_url": "https://geminicli.com/docs/cli/model-routing",
-    "route": "gemini-cli/cli/model-routing",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Model selection",
-    "md_url": "https://geminicli.com/docs/cli/model.md",
-    "html_url": "https://geminicli.com/docs/cli/model",
-    "route": "gemini-cli/cli/model",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Model steering \ud83d\udd2c",
-    "md_url": "https://geminicli.com/docs/cli/model-steering.md",
-    "html_url": "https://geminicli.com/docs/cli/model-steering",
-    "route": "gemini-cli/cli/model-steering",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Notifications \ud83d\udd2c",
-    "md_url": "https://geminicli.com/docs/cli/notifications.md",
-    "html_url": "https://geminicli.com/docs/cli/notifications",
-    "route": "gemini-cli/cli/notifications",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Plan mode",
-    "md_url": "https://geminicli.com/docs/cli/plan-mode.md",
-    "html_url": "https://geminicli.com/docs/cli/plan-mode",
-    "route": "gemini-cli/cli/plan-mode",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Subagents",
-    "md_url": "https://geminicli.com/docs/core/subagents.md",
-    "html_url": "https://geminicli.com/docs/core/subagents",
-    "route": "gemini-cli/core/subagents",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Remote subagents",
-    "md_url": "https://geminicli.com/docs/core/remote-agents.md",
-    "html_url": "https://geminicli.com/docs/core/remote-agents",
-    "route": "gemini-cli/core/remote-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Rewind",
-    "md_url": "https://geminicli.com/docs/cli/rewind.md",
-    "html_url": "https://geminicli.com/docs/cli/rewind",
-    "route": "gemini-cli/cli/rewind",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Sandboxing",
-    "md_url": "https://geminicli.com/docs/cli/sandbox.md",
-    "html_url": "https://geminicli.com/docs/cli/sandbox",
-    "route": "gemini-cli/cli/sandbox",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Settings",
-    "md_url": "https://geminicli.com/docs/cli/settings.md",
-    "html_url": "https://geminicli.com/docs/cli/settings",
-    "route": "gemini-cli/cli/settings",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Telemetry",
-    "md_url": "https://geminicli.com/docs/cli/telemetry.md",
-    "html_url": "https://geminicli.com/docs/cli/telemetry",
-    "route": "gemini-cli/cli/telemetry",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Token caching",
-    "md_url": "https://geminicli.com/docs/cli/token-caching.md",
-    "html_url": "https://geminicli.com/docs/cli/token-caching",
-    "route": "gemini-cli/cli/token-caching",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Custom commands",
-    "md_url": "https://geminicli.com/docs/cli/custom-commands.md",
-    "html_url": "https://geminicli.com/docs/cli/custom-commands",
-    "route": "gemini-cli/cli/custom-commands",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Enterprise configuration",
-    "md_url": "https://geminicli.com/docs/cli/enterprise.md",
-    "html_url": "https://geminicli.com/docs/cli/enterprise",
-    "route": "gemini-cli/cli/enterprise",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Ignore files (.geminiignore)",
-    "md_url": "https://geminicli.com/docs/cli/gemini-ignore.md",
-    "html_url": "https://geminicli.com/docs/cli/gemini-ignore",
-    "route": "gemini-cli/cli/gemini-ignore",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Model configuration",
-    "md_url": "https://geminicli.com/docs/cli/generation-settings.md",
-    "html_url": "https://geminicli.com/docs/cli/generation-settings",
-    "route": "gemini-cli/cli/generation-settings",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Project context (GEMINI.md)",
-    "md_url": "https://geminicli.com/docs/cli/gemini-md.md",
-    "html_url": "https://geminicli.com/docs/cli/gemini-md",
-    "route": "gemini-cli/cli/gemini-md",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "System prompt override",
-    "md_url": "https://geminicli.com/docs/cli/system-prompt.md",
-    "html_url": "https://geminicli.com/docs/cli/system-prompt",
-    "route": "gemini-cli/cli/system-prompt",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Themes",
-    "md_url": "https://geminicli.com/docs/cli/themes.md",
-    "html_url": "https://geminicli.com/docs/cli/themes",
-    "route": "gemini-cli/cli/themes",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Trusted folders",
-    "md_url": "https://geminicli.com/docs/cli/trusted-folders.md",
-    "html_url": "https://geminicli.com/docs/cli/trusted-folders",
-    "route": "gemini-cli/cli/trusted-folders",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Behavioral evaluations",
-    "md_url": "https://geminicli.com/docs/behavioral-evals.md",
-    "html_url": "https://geminicli.com/docs/behavioral-evals",
-    "route": "gemini-cli/behavioral-evals",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Contribution guide",
-    "md_url": "https://geminicli.com/docs/contributing.md",
-    "html_url": "https://geminicli.com/docs/contributing",
-    "route": "gemini-cli/contributing",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Integration testing",
-    "md_url": "https://geminicli.com/docs/integration-tests.md",
-    "html_url": "https://geminicli.com/docs/integration-tests",
-    "route": "gemini-cli/integration-tests",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Issue and PR automation",
-    "md_url": "https://geminicli.com/docs/issue-and-pr-automation.md",
-    "html_url": "https://geminicli.com/docs/issue-and-pr-automation",
-    "route": "gemini-cli/issue-and-pr-automation",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Local development",
-    "md_url": "https://geminicli.com/docs/local-development.md",
-    "html_url": "https://geminicli.com/docs/local-development",
-    "route": "gemini-cli/local-development",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "NPM package structure",
-    "md_url": "https://geminicli.com/docs/npm.md",
-    "html_url": "https://geminicli.com/docs/npm",
-    "route": "gemini-cli/npm",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Configuration reference",
-    "md_url": "https://geminicli.com/docs/reference/configuration.md",
-    "html_url": "https://geminicli.com/docs/reference/configuration",
-    "route": "gemini-cli/reference/configuration",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Keyboard shortcuts",
-    "md_url": "https://geminicli.com/docs/reference/keyboard-shortcuts.md",
-    "html_url": "https://geminicli.com/docs/reference/keyboard-shortcuts",
-    "route": "gemini-cli/reference/keyboard-shortcuts",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Memory import processor",
-    "md_url": "https://geminicli.com/docs/reference/memport.md",
-    "html_url": "https://geminicli.com/docs/reference/memport",
-    "route": "gemini-cli/reference/memport",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Policy engine",
-    "md_url": "https://geminicli.com/docs/reference/policy-engine.md",
-    "html_url": "https://geminicli.com/docs/reference/policy-engine",
-    "route": "gemini-cli/reference/policy-engine",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Tools reference",
-    "md_url": "https://geminicli.com/docs/reference/tools.md",
-    "html_url": "https://geminicli.com/docs/reference/tools",
-    "route": "gemini-cli/reference/tools",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "FAQ",
-    "md_url": "https://geminicli.com/docs/resources/faq.md",
-    "html_url": "https://geminicli.com/docs/resources/faq",
-    "route": "gemini-cli/resources/faq",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Terms and privacy",
-    "md_url": "https://geminicli.com/docs/resources/tos-privacy.md",
-    "html_url": "https://geminicli.com/docs/resources/tos-privacy",
-    "route": "gemini-cli/resources/tos-privacy",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Troubleshooting",
-    "md_url": "https://geminicli.com/docs/resources/troubleshooting.md",
-    "html_url": "https://geminicli.com/docs/resources/troubleshooting",
-    "route": "gemini-cli/resources/troubleshooting",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Uninstall",
-    "md_url": "https://geminicli.com/docs/resources/uninstall.md",
-    "html_url": "https://geminicli.com/docs/resources/uninstall",
-    "route": "gemini-cli/resources/uninstall",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Stable release",
-    "md_url": "https://geminicli.com/docs/changelogs/latest.md",
-    "html_url": "https://geminicli.com/docs/changelogs/latest",
-    "route": "gemini-cli/changelogs/latest",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini CLI",
-    "title": "Preview release",
-    "md_url": "https://geminicli.com/docs/changelogs/preview.md",
-    "html_url": "https://geminicli.com/docs/changelogs/preview",
-    "route": "gemini-cli/changelogs/preview",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Overview",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/overview.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/overview",
-    "route": "code-assist/codeassist/overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Security and privacy overview",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/security-privacy-compliance.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/security-privacy-compliance",
-    "route": "code-assist/codeassist/security-privacy-compliance",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Gemini CLI",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli",
-    "route": "code-assist/codeassist/gemini-cli",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Gemini 3 with Gemini Code Assist",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-3.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-3",
-    "route": "code-assist/codeassist/gemini-3",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Supported languages, IDEs, and interfaces",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages",
-    "route": "code-assist/codeassist/supported-languages",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Gemini Code Assist release notes",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/release-notes.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/release-notes",
-    "route": "code-assist/codeassist/release-notes",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Set up Gemini Code Assist",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini",
-    "route": "code-assist/codeassist/set-up-gemini",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Configure Gemini Code Assist release channels",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/configure-release-channels.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/configure-release-channels",
-    "route": "code-assist/codeassist/configure-release-channels",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Keyboard shortcuts",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/keyboard-shortcuts.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/keyboard-shortcuts",
-    "route": "code-assist/codeassist/keyboard-shortcuts",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Exclude files from Gemini Code Assist use",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/create-aiexclude-file.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/create-aiexclude-file",
-    "route": "code-assist/codeassist/create-aiexclude-file",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Configure local codebase awareness",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/configure-local-codebase-awareness.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/configure-local-codebase-awareness",
-    "route": "code-assist/codeassist/configure-local-codebase-awareness",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Request a Gemini Code Assist license",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/request-license.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/request-license",
-    "route": "code-assist/codeassist/request-license",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Manage Gemini Code Assist licenses",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/manage-licenses.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/manage-licenses",
-    "route": "code-assist/codeassist/manage-licenses",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Prevent cross-organization license usage",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/cross-org-license-usage.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/cross-org-license-usage",
-    "route": "code-assist/codeassist/cross-org-license-usage",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Use pre-release features in Gemini Code Assist for VS Code",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist",
-    "route": "code-assist/codeassist/use-pre-release-features-gemini-code-assist",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Control Network Access with User Domain Restrictions",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/network-access.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/network-access",
-    "route": "code-assist/codeassist/network-access",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Generate Code Assist metrics",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/generate-metrics.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/generate-metrics",
-    "route": "code-assist/codeassist/generate-metrics",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Code features overview",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-overview.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-overview",
-    "route": "code-assist/codeassist/code-overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Code with Gemini Code Assist",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/write-code-gemini.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/write-code-gemini",
-    "route": "code-assist/codeassist/write-code-gemini",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Chat features overview",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/chat-overview.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/chat-overview",
-    "route": "code-assist/codeassist/chat-overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Use the Gemini Code Assist chat",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-gemini-code-assist-chat.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-gemini-code-assist-chat",
-    "route": "code-assist/codeassist/use-gemini-code-assist-chat",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Chat with Gemini Code Assist",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/chat-gemini.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/chat-gemini",
-    "route": "code-assist/codeassist/chat-gemini",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Agent mode overview",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/agent-mode.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/agent-mode",
-    "route": "code-assist/codeassist/agent-mode",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Use the Gemini Code Assist agent mode",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-agentic-chat-pair-programmer.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-agentic-chat-pair-programmer",
-    "route": "code-assist/codeassist/use-agentic-chat-pair-programmer",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Code customization overview",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-customization-overview.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-customization-overview",
-    "route": "code-assist/codeassist/code-customization-overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Configure code customization",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-customization.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-customization",
-    "route": "code-assist/codeassist/code-customization",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Use code customization",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-code-customization.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-code-customization",
-    "route": "code-assist/codeassist/use-code-customization",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Encrypt data with customer-managed encryption keys",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/encrypt-data-cmek.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/encrypt-data-cmek",
-    "route": "code-assist/codeassist/encrypt-data-cmek",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Turn off Code Assist",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/turn-off.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/turn-off",
-    "route": "code-assist/codeassist/turn-off",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Review GitHub code with Gemini Code Assist",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/review-repo-code.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/review-repo-code",
-    "route": "code-assist/code-review/review-repo-code",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Set up Gemini Code Assist for GitHub",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/set-up-code-assist-github.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/set-up-code-assist-github",
-    "route": "code-assist/code-review/set-up-code-assist-github",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Use Gemini Code Assist for GitHub",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/use-code-assist-github.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/use-code-assist-github",
-    "route": "code-assist/code-review/use-code-assist-github",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Customize Gemini Code Assist behavior in GitHub",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/customize-repo-review.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/customize-repo-review",
-    "route": "code-assist/code-review/customize-repo-review",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Code review style guide",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/style-guide.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/style-guide",
-    "route": "code-assist/code-review/style-guide",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Monitor Gemini Code Assist usage",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/monitor-gemini-code-assist.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/monitor-gemini-code-assist",
-    "route": "code-assist/codeassist/monitor-gemini-code-assist",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Business AI Code audit logging",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/business-audit-logging.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/business-audit-logging",
-    "route": "code-assist/codeassist/business-audit-logging",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Use Gemini Code Assist in your IDE",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-in-ide.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-in-ide",
-    "route": "code-assist/codeassist/use-in-ide",
     "kind": "doc"
   },
   {
@@ -3232,259 +2336,1195 @@
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Firebase Studio",
-    "md_url": "https://firebase.google.com/docs/studio.md",
-    "html_url": "https://firebase.google.com/docs/studio",
-    "route": "firebase-studio/",
+    "group": "Gemini Code Assist",
+    "title": "Overview",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/overview.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/overview",
+    "route": "code-assist/codeassist/overview",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Firebase Studio (deprecated) Build and ship full-stack AI-infused apps right from your browser.",
-    "md_url": "https://firebase.google.com/docs/studio/migrating-project.md",
-    "html_url": "https://firebase.google.com/docs/studio/migrating-project",
-    "route": "firebase-studio/migrating-project",
+    "group": "Gemini Code Assist",
+    "title": "Security and privacy overview",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/security-privacy-compliance.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/security-privacy-compliance",
+    "route": "code-assist/codeassist/security-privacy-compliance",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Get started",
-    "md_url": "https://firebase.google.com/docs/studio/get-started.md",
-    "html_url": "https://firebase.google.com/docs/studio/get-started",
-    "route": "firebase-studio/get-started",
+    "group": "Gemini Code Assist",
+    "title": "Gemini CLI",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli",
+    "route": "code-assist/codeassist/gemini-cli",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Get started with an existing project",
-    "md_url": "https://firebase.google.com/docs/studio/get-started-import.md",
-    "html_url": "https://firebase.google.com/docs/studio/get-started-import",
-    "route": "firebase-studio/get-started-import",
+    "group": "Gemini Code Assist",
+    "title": "Gemini 3 with Gemini Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-3.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-3",
+    "route": "code-assist/codeassist/gemini-3",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Get started with the App Prototyping agent",
-    "md_url": "https://firebase.google.com/docs/studio/get-started-ai.md",
-    "html_url": "https://firebase.google.com/docs/studio/get-started-ai",
-    "route": "firebase-studio/get-started-ai",
+    "group": "Gemini Code Assist",
+    "title": "Supported languages, IDEs, and interfaces",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages",
+    "route": "code-assist/codeassist/supported-languages",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Get started with a template",
-    "md_url": "https://firebase.google.com/docs/studio/get-started-template.md",
-    "html_url": "https://firebase.google.com/docs/studio/get-started-template",
-    "route": "firebase-studio/get-started-template",
+    "group": "Gemini Code Assist",
+    "title": "Gemini Code Assist release notes",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/release-notes.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/release-notes",
+    "route": "code-assist/codeassist/release-notes",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Firebase Studio pricing, quotas, and limits",
-    "md_url": "https://firebase.google.com/docs/studio/pricing.md",
-    "html_url": "https://firebase.google.com/docs/studio/pricing",
-    "route": "firebase-studio/pricing",
+    "group": "Gemini Code Assist",
+    "title": "Set up Gemini Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini",
+    "route": "code-assist/codeassist/set-up-gemini",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Introduction",
-    "md_url": "https://firebase.google.com/docs/studio/ai-assistance.md",
-    "html_url": "https://firebase.google.com/docs/studio/ai-assistance",
-    "route": "firebase-studio/ai-assistance",
+    "group": "Gemini Code Assist",
+    "title": "Configure Gemini Code Assist release channels",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/configure-release-channels.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/configure-release-channels",
+    "route": "code-assist/codeassist/configure-release-channels",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Get assistance from Gemini",
-    "md_url": "https://firebase.google.com/docs/studio/try-gemini.md",
-    "html_url": "https://firebase.google.com/docs/studio/try-gemini",
-    "route": "firebase-studio/try-gemini",
+    "group": "Gemini Code Assist",
+    "title": "Keyboard shortcuts",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/keyboard-shortcuts.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/keyboard-shortcuts",
+    "route": "code-assist/codeassist/keyboard-shortcuts",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Configure Gemini assistance",
-    "md_url": "https://firebase.google.com/docs/studio/set-up-gemini.md",
-    "html_url": "https://firebase.google.com/docs/studio/set-up-gemini",
-    "route": "firebase-studio/set-up-gemini",
+    "group": "Gemini Code Assist",
+    "title": "Exclude files from Gemini Code Assist use",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/create-aiexclude-file.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/create-aiexclude-file",
+    "route": "code-assist/codeassist/create-aiexclude-file",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Effective prompting",
-    "md_url": "https://firebase.google.com/docs/studio/prompting.md",
-    "html_url": "https://firebase.google.com/docs/studio/prompting",
-    "route": "firebase-studio/prompting",
+    "group": "Gemini Code Assist",
+    "title": "Configure local codebase awareness",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/configure-local-codebase-awareness.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/configure-local-codebase-awareness",
+    "route": "code-assist/codeassist/configure-local-codebase-awareness",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Connect to MCP servers",
-    "md_url": "https://firebase.google.com/docs/studio/mcp-servers.md",
-    "html_url": "https://firebase.google.com/docs/studio/mcp-servers",
-    "route": "firebase-studio/mcp-servers",
+    "group": "Gemini Code Assist",
+    "title": "Request a Gemini Code Assist license",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/request-license.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/request-license",
+    "route": "code-assist/codeassist/request-license",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Preview web and Android apps",
-    "md_url": "https://firebase.google.com/docs/studio/preview-apps.md",
-    "html_url": "https://firebase.google.com/docs/studio/preview-apps",
-    "route": "firebase-studio/preview-apps",
+    "group": "Gemini Code Assist",
+    "title": "Manage Gemini Code Assist licenses",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/manage-licenses.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/manage-licenses",
+    "route": "code-assist/codeassist/manage-licenses",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Publish apps",
-    "md_url": "https://firebase.google.com/docs/studio/deploy-app.md",
-    "html_url": "https://firebase.google.com/docs/studio/deploy-app",
-    "route": "firebase-studio/deploy-app",
+    "group": "Gemini Code Assist",
+    "title": "Prevent cross-organization license usage",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/cross-org-license-usage.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/cross-org-license-usage",
+    "route": "code-assist/codeassist/cross-org-license-usage",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Monitor and protect web apps",
-    "md_url": "https://firebase.google.com/docs/studio/monitor.md",
-    "html_url": "https://firebase.google.com/docs/studio/monitor",
-    "route": "firebase-studio/monitor",
+    "group": "Gemini Code Assist",
+    "title": "Use pre-release features in Gemini Code Assist for VS Code",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist",
+    "route": "code-assist/codeassist/use-pre-release-features-gemini-code-assist",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Upload your app to GitHub",
-    "md_url": "https://firebase.google.com/docs/studio/github.md",
-    "html_url": "https://firebase.google.com/docs/studio/github",
-    "route": "firebase-studio/github",
+    "group": "Gemini Code Assist",
+    "title": "Control Network Access with User Domain Restrictions",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/network-access.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/network-access",
+    "route": "code-assist/codeassist/network-access",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "About Firebase Studio workspaces",
-    "md_url": "https://firebase.google.com/docs/studio/get-started-workspace.md",
-    "html_url": "https://firebase.google.com/docs/studio/get-started-workspace",
-    "route": "firebase-studio/get-started-workspace",
+    "group": "Gemini Code Assist",
+    "title": "Generate Code Assist metrics",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/generate-metrics.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/generate-metrics",
+    "route": "code-assist/codeassist/generate-metrics",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Customize your Firebase Studio workspace",
-    "md_url": "https://firebase.google.com/docs/studio/customize-workspace.md",
-    "html_url": "https://firebase.google.com/docs/studio/customize-workspace",
-    "route": "firebase-studio/customize-workspace",
+    "group": "Gemini Code Assist",
+    "title": "Code features overview",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-overview.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-overview",
+    "route": "code-assist/codeassist/code-overview",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Connect to a Firebase project",
-    "md_url": "https://firebase.google.com/docs/studio/firebase-projects.md",
-    "html_url": "https://firebase.google.com/docs/studio/firebase-projects",
-    "route": "firebase-studio/firebase-projects",
+    "group": "Gemini Code Assist",
+    "title": "Code with Gemini Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/write-code-gemini.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/write-code-gemini",
+    "route": "code-assist/codeassist/write-code-gemini",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Integrate with Google and Firebase services",
-    "md_url": "https://firebase.google.com/docs/studio/google-integrations.md",
-    "html_url": "https://firebase.google.com/docs/studio/google-integrations",
-    "route": "firebase-studio/google-integrations",
+    "group": "Gemini Code Assist",
+    "title": "Chat features overview",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/chat-overview.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/chat-overview",
+    "route": "code-assist/codeassist/chat-overview",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Create custom templates",
-    "md_url": "https://firebase.google.com/docs/studio/custom-templates.md",
-    "html_url": "https://firebase.google.com/docs/studio/custom-templates",
-    "route": "firebase-studio/custom-templates",
+    "group": "Gemini Code Assist",
+    "title": "Use the Gemini Code Assist chat",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-gemini-code-assist-chat.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-gemini-code-assist-chat",
+    "route": "code-assist/codeassist/use-gemini-code-assist-chat",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Create a shortcut to a predefined workspace",
-    "md_url": "https://firebase.google.com/docs/studio/open-in-firebase-studio.md",
-    "html_url": "https://firebase.google.com/docs/studio/open-in-firebase-studio",
-    "route": "firebase-studio/open-in-firebase-studio",
+    "group": "Gemini Code Assist",
+    "title": "Chat with Gemini Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/chat-gemini.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/chat-gemini",
+    "route": "code-assist/codeassist/chat-gemini",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Share your workspace",
-    "md_url": "https://firebase.google.com/docs/studio/share-your-workspace.md",
-    "html_url": "https://firebase.google.com/docs/studio/share-your-workspace",
-    "route": "firebase-studio/share-your-workspace",
+    "group": "Gemini Code Assist",
+    "title": "Agent mode overview",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/agent-mode.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/agent-mode",
+    "route": "code-assist/codeassist/agent-mode",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Create a button to import code into Firebase Studio",
-    "md_url": "https://firebase.google.com/docs/studio/import-workspace.md",
-    "html_url": "https://firebase.google.com/docs/studio/import-workspace",
-    "route": "firebase-studio/import-workspace",
+    "group": "Gemini Code Assist",
+    "title": "Use the Gemini Code Assist agent mode",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-agentic-chat-pair-programmer.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-agentic-chat-pair-programmer",
+    "route": "code-assist/codeassist/use-agentic-chat-pair-programmer",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Develop, publish, and monitor a full-stack web app",
-    "md_url": "https://firebase.google.com/docs/studio/solution-build-with-ai.md",
-    "html_url": "https://firebase.google.com/docs/studio/solution-build-with-ai",
-    "route": "firebase-studio/solution-build-with-ai",
+    "group": "Gemini Code Assist",
+    "title": "Code customization overview",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-customization-overview.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-customization-overview",
+    "route": "code-assist/codeassist/code-customization-overview",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Build an app with the Gemini API",
-    "md_url": "https://firebase.google.com/docs/studio/build-gemini-api-app.md",
-    "html_url": "https://firebase.google.com/docs/studio/build-gemini-api-app",
-    "route": "firebase-studio/build-gemini-api-app",
+    "group": "Gemini Code Assist",
+    "title": "Configure code customization",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-customization.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-customization",
+    "route": "code-assist/codeassist/code-customization",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Debug your app",
-    "md_url": "https://firebase.google.com/docs/studio/debug.md",
-    "html_url": "https://firebase.google.com/docs/studio/debug",
-    "route": "firebase-studio/debug",
+    "group": "Gemini Code Assist",
+    "title": "Use code customization",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-code-customization.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-code-customization",
+    "route": "code-assist/codeassist/use-code-customization",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "FAQ and troubleshooting",
-    "md_url": "https://firebase.google.com/docs/studio/troubleshooting.md",
-    "html_url": "https://firebase.google.com/docs/studio/troubleshooting",
-    "route": "firebase-studio/troubleshooting",
+    "group": "Gemini Code Assist",
+    "title": "Encrypt data with customer-managed encryption keys",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/encrypt-data-cmek.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/encrypt-data-cmek",
+    "route": "code-assist/codeassist/encrypt-data-cmek",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "dev.nix Reference",
-    "md_url": "https://firebase.google.com/docs/studio/devnix-reference.md",
-    "html_url": "https://firebase.google.com/docs/studio/devnix-reference",
-    "route": "firebase-studio/devnix-reference",
+    "group": "Gemini Code Assist",
+    "title": "Turn off Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/turn-off.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/turn-off",
+    "route": "code-assist/codeassist/turn-off",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Project IDX is now part of Firebase Studio",
-    "md_url": "https://firebase.google.com/docs/studio/idx-is-firebase-studio.md",
-    "html_url": "https://firebase.google.com/docs/studio/idx-is-firebase-studio",
-    "route": "firebase-studio/idx-is-firebase-studio",
+    "group": "Gemini Code Assist",
+    "title": "Review GitHub code with Gemini Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/review-repo-code.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/review-repo-code",
+    "route": "code-assist/code-review/review-repo-code",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Licensed software",
-    "md_url": "https://firebase.google.com/docs/studio/oss.md",
-    "html_url": "https://firebase.google.com/docs/studio/oss",
-    "route": "firebase-studio/oss",
+    "group": "Gemini Code Assist",
+    "title": "Set up Gemini Code Assist for GitHub",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/set-up-code-assist-github.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/set-up-code-assist-github",
+    "route": "code-assist/code-review/set-up-code-assist-github",
     "kind": "doc"
   },
   {
-    "group": "Firebase Studio",
-    "title": "Connect with us",
-    "md_url": "https://firebase.google.com/docs/studio/connect.md",
-    "html_url": "https://firebase.google.com/docs/studio/connect",
-    "route": "firebase-studio/connect",
+    "group": "Gemini Code Assist",
+    "title": "Use Gemini Code Assist for GitHub",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/use-code-assist-github.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/use-code-assist-github",
+    "route": "code-assist/code-review/use-code-assist-github",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Customize Gemini Code Assist behavior in GitHub",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/customize-repo-review.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/customize-repo-review",
+    "route": "code-assist/code-review/customize-repo-review",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Code review style guide",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/style-guide.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/style-guide",
+    "route": "code-assist/code-review/style-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Monitor Gemini Code Assist usage",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/monitor-gemini-code-assist.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/monitor-gemini-code-assist",
+    "route": "code-assist/codeassist/monitor-gemini-code-assist",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Business AI Code audit logging",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/business-audit-logging.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/business-audit-logging",
+    "route": "code-assist/codeassist/business-audit-logging",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Use Gemini Code Assist in your IDE",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-in-ide.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-in-ide",
+    "route": "code-assist/codeassist/use-in-ide",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/13275745",
+    "html_url": "https://support.google.com/gemini/answer/13275745",
+    "route": "gemini-app/13275745",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Send feedback or report a problem with Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/13275746",
+    "html_url": "https://support.google.com/gemini/answer/13275746",
+    "route": "gemini-app/13275746",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "What you need to sign in to Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/13278668",
+    "html_url": "https://support.google.com/gemini/answer/13278668",
+    "route": "gemini-app/13278668",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Manage & delete your activity in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/13278892",
+    "html_url": "https://support.google.com/gemini/answer/13278892",
+    "route": "gemini-app/13278892",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Dark theme in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/13542227",
+    "html_url": "https://support.google.com/gemini/answer/13542227",
+    "route": "gemini-app/13542227",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Where you can use the Gemini web app",
+    "md_url": "https://support.google.com/gemini/answer/13575153",
+    "html_url": "https://support.google.com/gemini/answer/13575153",
+    "route": "gemini-app/13575153",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Gemini Apps Privacy Hub",
+    "md_url": "https://support.google.com/gemini/answer/13594961",
+    "html_url": "https://support.google.com/gemini/answer/13594961",
+    "route": "gemini-app/13594961",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Find & manage your recent chats in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/13666746",
+    "html_url": "https://support.google.com/gemini/answer/13666746",
+    "route": "gemini-app/13666746",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use & manage Connected Apps in Gemini",
+    "md_url": "https://support.google.com/gemini/answer/13695044",
+    "html_url": "https://support.google.com/gemini/answer/13695044",
+    "route": "gemini-app/13695044",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Share your chats from Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/13743730",
+    "html_url": "https://support.google.com/gemini/answer/13743730",
+    "route": "gemini-app/13743730",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Learn about generative AI",
+    "md_url": "https://support.google.com/gemini/answer/13954172",
+    "html_url": "https://support.google.com/gemini/answer/13954172",
+    "route": "gemini-app/13954172",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "View related sources from Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/14143489",
+    "html_url": "https://support.google.com/gemini/answer/14143489",
+    "route": "gemini-app/14143489",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Export responses from Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/14184041",
+    "html_url": "https://support.google.com/gemini/answer/14184041",
+    "route": "gemini-app/14184041",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Regenerate or modify responses from Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/14262426",
+    "html_url": "https://support.google.com/gemini/answer/14262426",
+    "route": "gemini-app/14262426",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Generate & edit images with Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/14286560",
+    "html_url": "https://support.google.com/gemini/answer/14286560",
+    "route": "gemini-app/14286560",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Manage your Google AI plan from Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/14517446",
+    "html_url": "https://support.google.com/gemini/answer/14517446",
+    "route": "gemini-app/14517446",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Get started with the Gemini mobile app",
+    "md_url": "https://support.google.com/gemini/answer/14554984",
+    "html_url": "https://support.google.com/gemini/answer/14554984",
+    "route": "gemini-app/14554984",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "How your Gemini mobile app can help when your phone is locked",
+    "md_url": "https://support.google.com/gemini/answer/14576209",
+    "html_url": "https://support.google.com/gemini/answer/14576209",
+    "route": "gemini-app/14576209",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Gemini mobile app availability",
+    "md_url": "https://support.google.com/gemini/answer/14579026",
+    "html_url": "https://support.google.com/gemini/answer/14579026",
+    "route": "gemini-app/14579026",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "What you can do with your Gemini mobile app",
+    "md_url": "https://support.google.com/gemini/answer/14579631",
+    "html_url": "https://support.google.com/gemini/answer/14579631",
+    "route": "gemini-app/14579631",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Gemini in Google Messages",
+    "md_url": "https://support.google.com/gemini/answer/14599070",
+    "html_url": "https://support.google.com/gemini/answer/14599070",
+    "route": "gemini-app/14599070",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Gemini Apps with a work or school Google Account",
+    "md_url": "https://support.google.com/gemini/answer/14620100",
+    "html_url": "https://support.google.com/gemini/answer/14620100",
+    "route": "gemini-app/14620100",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use the Gemini web app to get answers in Chrome",
+    "md_url": "https://support.google.com/gemini/answer/14886647",
+    "html_url": "https://support.google.com/gemini/answer/14886647",
+    "route": "gemini-app/14886647",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Upload & analyze files in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/14903178",
+    "html_url": "https://support.google.com/gemini/answer/14903178",
+    "route": "gemini-app/14903178",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use apps connected to Gemini with a work or school Google Account",
+    "md_url": "https://support.google.com/gemini/answer/14959807",
+    "html_url": "https://support.google.com/gemini/answer/14959807",
+    "route": "gemini-app/14959807",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Gems in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/15146780",
+    "html_url": "https://support.google.com/gemini/answer/15146780",
+    "route": "gemini-app/15146780",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Learn in creative ways with generative AI",
+    "md_url": "https://support.google.com/gemini/answer/15216790",
+    "html_url": "https://support.google.com/gemini/answer/15216790",
+    "route": "gemini-app/15216790",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Connect the Google Workspace app to Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/15229592",
+    "html_url": "https://support.google.com/gemini/answer/15229592",
+    "route": "gemini-app/15229592",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Get started with Gems in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/15236321",
+    "html_url": "https://support.google.com/gemini/answer/15236321",
+    "route": "gemini-app/15236321",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Talk naturally with Gemini Live",
+    "md_url": "https://support.google.com/gemini/answer/15274899",
+    "html_url": "https://support.google.com/gemini/answer/15274899",
+    "route": "gemini-app/15274899",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Change Gemini\u2019s voice",
+    "md_url": "https://support.google.com/gemini/answer/15277943",
+    "html_url": "https://support.google.com/gemini/answer/15277943",
+    "route": "gemini-app/15277943",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Create & manage your calendar events with Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/15305236",
+    "html_url": "https://support.google.com/gemini/answer/15305236",
+    "route": "gemini-app/15305236",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Control your smart home devices with the Gemini mobile app",
+    "md_url": "https://support.google.com/gemini/answer/15335456",
+    "html_url": "https://support.google.com/gemini/answer/15335456",
+    "route": "gemini-app/15335456",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Gemini on your headphones",
+    "md_url": "https://support.google.com/gemini/answer/15456140",
+    "html_url": "https://support.google.com/gemini/answer/15456140",
+    "route": "gemini-app/15456140",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Make calls & send messages on WhatsApp with the Gemini mobile app on Android",
+    "md_url": "https://support.google.com/gemini/answer/15574928",
+    "html_url": "https://support.google.com/gemini/answer/15574928",
+    "route": "gemini-app/15574928",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Make calls with the Gemini mobile app on Android",
+    "md_url": "https://support.google.com/gemini/answer/15575143",
+    "html_url": "https://support.google.com/gemini/answer/15575143",
+    "route": "gemini-app/15575143",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Learn about smart features & controls for Google Workspace & other Google products",
+    "md_url": "https://support.google.com/gemini/answer/15604322",
+    "html_url": "https://support.google.com/gemini/answer/15604322",
+    "route": "gemini-app/15604322",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Deep Research in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/15719111",
+    "html_url": "https://support.google.com/gemini/answer/15719111",
+    "route": "gemini-app/15719111",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use screen actions to chat with the Gemini mobile app",
+    "md_url": "https://support.google.com/gemini/answer/15850607",
+    "html_url": "https://support.google.com/gemini/answer/15850607",
+    "route": "gemini-app/15850607",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Change Gemini's language",
+    "md_url": "https://support.google.com/gemini/answer/15984485",
+    "html_url": "https://support.google.com/gemini/answer/15984485",
+    "route": "gemini-app/15984485",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Create docs, apps & more with Canvas",
+    "md_url": "https://support.google.com/gemini/answer/16047321",
+    "html_url": "https://support.google.com/gemini/answer/16047321",
+    "route": "gemini-app/16047321",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Generate Audio Overviews in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16047373",
+    "html_url": "https://support.google.com/gemini/answer/16047373",
+    "route": "gemini-app/16047373",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Guide your child's Gemini Apps experience",
+    "md_url": "https://support.google.com/gemini/answer/16109150",
+    "html_url": "https://support.google.com/gemini/answer/16109150",
+    "route": "gemini-app/16109150",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Generate videos with Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16126339",
+    "html_url": "https://support.google.com/gemini/answer/16126339",
+    "route": "gemini-app/16126339",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Import a GitHub repository & ask about it in the Gemini web app",
+    "md_url": "https://support.google.com/gemini/answer/16176929",
+    "html_url": "https://support.google.com/gemini/answer/16176929",
+    "route": "gemini-app/16176929",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Add & customize your Gemini widget",
+    "md_url": "https://support.google.com/gemini/answer/16179553",
+    "html_url": "https://support.google.com/gemini/answer/16179553",
+    "route": "gemini-app/16179553",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "How Gemini Apps help protect users from malicious content & prompt injection",
+    "md_url": "https://support.google.com/gemini/answer/16188217",
+    "html_url": "https://support.google.com/gemini/answer/16188217",
+    "route": "gemini-app/16188217",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Gemini Apps limits & upgrades for Google AI subscribers",
+    "md_url": "https://support.google.com/gemini/answer/16275805",
+    "html_url": "https://support.google.com/gemini/answer/16275805",
+    "route": "gemini-app/16275805",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Create quizzes, flashcards, practice tests & more in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16275879",
+    "html_url": "https://support.google.com/gemini/answer/16275879",
+    "route": "gemini-app/16275879",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Learn about responses from Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16279220",
+    "html_url": "https://support.google.com/gemini/answer/16279220",
+    "route": "gemini-app/16279220",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Schedule actions in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16316416",
+    "html_url": "https://support.google.com/gemini/answer/16316416",
+    "route": "gemini-app/16316416",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Deep Think in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16345172",
+    "html_url": "https://support.google.com/gemini/answer/16345172",
+    "route": "gemini-app/16345172",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Gemini on your smartwatch",
+    "md_url": "https://support.google.com/gemini/answer/16401122",
+    "html_url": "https://support.google.com/gemini/answer/16401122",
+    "route": "gemini-app/16401122",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Canvas safety & security in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16419134",
+    "html_url": "https://support.google.com/gemini/answer/16419134",
+    "route": "gemini-app/16419134",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Create an illustrated storybook in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16434396",
+    "html_url": "https://support.google.com/gemini/answer/16434396",
+    "route": "gemini-app/16434396",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use learning tools in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16448384",
+    "html_url": "https://support.google.com/gemini/answer/16448384",
+    "route": "gemini-app/16448384",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Share a Gem from Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16504957",
+    "html_url": "https://support.google.com/gemini/answer/16504957",
+    "route": "gemini-app/16504957",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Connect your Google apps to personalize your Gemini experience",
+    "md_url": "https://support.google.com/gemini/answer/16598406",
+    "html_url": "https://support.google.com/gemini/answer/16598406",
+    "route": "gemini-app/16598406",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Get personalization with memory of your past Gemini chats",
+    "md_url": "https://support.google.com/gemini/answer/16598469",
+    "html_url": "https://support.google.com/gemini/answer/16598469",
+    "route": "gemini-app/16598469",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Get personalization in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16598623",
+    "html_url": "https://support.google.com/gemini/answer/16598623",
+    "route": "gemini-app/16598623",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Customize Gemini\u2019s responses with your instructions",
+    "md_url": "https://support.google.com/gemini/answer/16598625",
+    "html_url": "https://support.google.com/gemini/answer/16598625",
+    "route": "gemini-app/16598625",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Generative AI Prohibited Use Policy",
+    "md_url": "https://support.google.com/gemini/answer/16625148",
+    "html_url": "https://support.google.com/gemini/answer/16625148",
+    "route": "gemini-app/16625148",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Gemini Live on Android XR",
+    "md_url": "https://support.google.com/gemini/answer/16665938",
+    "html_url": "https://support.google.com/gemini/answer/16665938",
+    "route": "gemini-app/16665938",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Report Google AI policy violations that involve your likeness",
+    "md_url": "https://support.google.com/gemini/answer/16719589",
+    "html_url": "https://support.google.com/gemini/answer/16719589",
+    "route": "gemini-app/16719589",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Verify AI-generated images, videos, and audio",
+    "md_url": "https://support.google.com/gemini/answer/16722517",
+    "html_url": "https://support.google.com/gemini/answer/16722517",
+    "route": "gemini-app/16722517",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Chat with Gemini in your car",
+    "md_url": "https://support.google.com/gemini/answer/16735982",
+    "html_url": "https://support.google.com/gemini/answer/16735982",
+    "route": "gemini-app/16735982",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Create & manage AI mini-apps or custom workflows as Gems from Google Labs",
+    "md_url": "https://support.google.com/gemini/answer/16802014",
+    "html_url": "https://support.google.com/gemini/answer/16802014",
+    "route": "gemini-app/16802014",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "About personalization with Connected Apps",
+    "md_url": "https://support.google.com/gemini/answer/16836988",
+    "html_url": "https://support.google.com/gemini/answer/16836988",
+    "route": "gemini-app/16836988",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Import from other AI platforms to Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16868299",
+    "html_url": "https://support.google.com/gemini/answer/16868299",
+    "route": "gemini-app/16868299",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Generate music with Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16901237",
+    "html_url": "https://support.google.com/gemini/answer/16901237",
+    "route": "gemini-app/16901237",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Download your Gemini Apps data",
+    "md_url": "https://support.google.com/gemini/answer/16920332",
+    "html_url": "https://support.google.com/gemini/answer/16920332",
+    "route": "gemini-app/16920332",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Manage or delete the Gemini app on your Android device",
+    "md_url": "https://support.google.com/gemini/answer/16938321",
+    "html_url": "https://support.google.com/gemini/answer/16938321",
+    "route": "gemini-app/16938321",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Ask Gemini to handle your multi-step tasks in select Android apps",
+    "md_url": "https://support.google.com/gemini/answer/16940971",
+    "html_url": "https://support.google.com/gemini/answer/16940971",
+    "route": "gemini-app/16940971",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Organize your projects with notebooks in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16972047",
+    "html_url": "https://support.google.com/gemini/answer/16972047",
+    "route": "gemini-app/16972047",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Create and use an avatar in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/16984474",
+    "html_url": "https://support.google.com/gemini/answer/16984474",
+    "route": "gemini-app/16984474",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use the Gemini app on Mac",
+    "md_url": "https://support.google.com/gemini/answer/17011627",
+    "html_url": "https://support.google.com/gemini/answer/17011627",
+    "route": "gemini-app/17011627",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Get started with your daily brief in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/17077455",
+    "html_url": "https://support.google.com/gemini/answer/17077455",
+    "route": "gemini-app/17077455",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Get Started with Gemini Go",
+    "md_url": "https://support.google.com/gemini/answer/17079170",
+    "html_url": "https://support.google.com/gemini/answer/17079170",
+    "route": "gemini-app/17079170",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Find & manage your Gemini Spark tasks",
+    "md_url": "https://support.google.com/gemini/answer/17094196",
+    "html_url": "https://support.google.com/gemini/answer/17094196",
+    "route": "gemini-app/17094196",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Create & manage skills for Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/17094296",
+    "html_url": "https://support.google.com/gemini/answer/17094296",
+    "route": "gemini-app/17094296",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Gemini Spark to manage your tasks & workflows in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/17094507",
+    "html_url": "https://support.google.com/gemini/answer/17094507",
+    "route": "gemini-app/17094507",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Create & manage schedules for tasks in Gemini Spark",
+    "md_url": "https://support.google.com/gemini/answer/17094710",
+    "html_url": "https://support.google.com/gemini/answer/17094710",
+    "route": "gemini-app/17094710",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Write effective skills for Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/17102773",
+    "html_url": "https://support.google.com/gemini/answer/17102773",
+    "route": "gemini-app/17102773",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "What's new for Gemini Spark",
+    "md_url": "https://support.google.com/gemini/answer/17171264",
+    "html_url": "https://support.google.com/gemini/answer/17171264",
+    "route": "gemini-app/17171264",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Gemini Spark with the Gemini app on Mac",
+    "md_url": "https://support.google.com/gemini/answer/17208717",
+    "html_url": "https://support.google.com/gemini/answer/17208717",
+    "route": "gemini-app/17208717",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Connect & manage custom apps for Gemini Spark in the Gemini web app",
+    "md_url": "https://support.google.com/gemini/answer/17209137",
+    "html_url": "https://support.google.com/gemini/answer/17209137",
+    "route": "gemini-app/17209137",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "An overview of the Gemini app",
+    "md_url": "https://support.google.com/gemini/answer/17216260",
+    "html_url": "https://support.google.com/gemini/answer/17216260",
+    "route": "gemini-app/17216260",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Manage watermark settings in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/17405358",
+    "html_url": "https://support.google.com/gemini/answer/17405358",
+    "route": "gemini-app/17405358",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Learn about Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16164461",
+    "html_url": "https://support.google.com/gemininotebook/answer/16164461",
+    "route": "notebooklm/16164461",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Report a problem",
+    "md_url": "https://support.google.com/gemininotebook/answer/16179536",
+    "html_url": "https://support.google.com/gemininotebook/answer/16179536",
+    "route": "notebooklm/16179536",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Use chat in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16179559",
+    "html_url": "https://support.google.com/gemininotebook/answer/16179559",
+    "route": "notebooklm/16179559",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Create a notebook in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16206563",
+    "html_url": "https://support.google.com/gemininotebook/answer/16206563",
+    "route": "notebooklm/16206563",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Use Mind Maps in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16212283",
+    "html_url": "https://support.google.com/gemininotebook/answer/16212283",
+    "route": "notebooklm/16212283",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Generate Audio Overview in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16212820",
+    "html_url": "https://support.google.com/gemininotebook/answer/16212820",
+    "route": "notebooklm/16212820",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Upgrade Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16213268",
+    "html_url": "https://support.google.com/gemininotebook/answer/16213268",
+    "route": "notebooklm/16213268",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Add or discover new sources for your notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16215270",
+    "html_url": "https://support.google.com/gemininotebook/answer/16215270",
+    "route": "notebooklm/16215270",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Change mode in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16225229",
+    "html_url": "https://support.google.com/gemininotebook/answer/16225229",
+    "route": "notebooklm/16225229",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Change output language in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16261963",
+    "html_url": "https://support.google.com/gemininotebook/answer/16261963",
+    "route": "notebooklm/16261963",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Create & add notes in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16262519",
+    "html_url": "https://support.google.com/gemininotebook/answer/16262519",
+    "route": "notebooklm/16262519",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Join the Gemini Notebook community",
+    "md_url": "https://support.google.com/gemininotebook/answer/16268096",
+    "html_url": "https://support.google.com/gemininotebook/answer/16268096",
+    "route": "notebooklm/16268096",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Frequently asked questions",
+    "md_url": "https://support.google.com/gemininotebook/answer/16269187",
+    "html_url": "https://support.google.com/gemininotebook/answer/16269187",
+    "route": "notebooklm/16269187",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Get started with the Gemini Notebook mobile app",
+    "md_url": "https://support.google.com/gemininotebook/answer/16296687",
+    "html_url": "https://support.google.com/gemininotebook/answer/16296687",
+    "route": "notebooklm/16296687",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Use public notebooks and featured notebooks in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16322204",
+    "html_url": "https://support.google.com/gemininotebook/answer/16322204",
+    "route": "notebooklm/16322204",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Use Gemini Notebook with a work or school Google account",
+    "md_url": "https://support.google.com/gemininotebook/answer/16337734",
+    "html_url": "https://support.google.com/gemininotebook/answer/16337734",
+    "route": "notebooklm/16337734",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Generate Video Overviews in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16454555",
+    "html_url": "https://support.google.com/gemininotebook/answer/16454555",
+    "route": "notebooklm/16454555",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Generate a Slide Deck in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16757456",
+    "html_url": "https://support.google.com/gemininotebook/answer/16757456",
+    "route": "notebooklm/16757456",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Generate an Infographic in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16758265",
+    "html_url": "https://support.google.com/gemininotebook/answer/16758265",
+    "route": "notebooklm/16758265",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Generate Flashcards or Quizzes in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/16958963",
+    "html_url": "https://support.google.com/gemininotebook/answer/16958963",
+    "route": "notebooklm/16958963",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Notebooks in Gemini Apps",
+    "md_url": "https://support.google.com/gemininotebook/answer/17003757",
+    "html_url": "https://support.google.com/gemininotebook/answer/17003757",
+    "route": "notebooklm/17003757",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Privacy and Terms of Use in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/17004255",
+    "html_url": "https://support.google.com/gemininotebook/answer/17004255",
+    "route": "notebooklm/17004255",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "About notebooks in AI Mode in Google Search",
+    "md_url": "https://support.google.com/gemininotebook/answer/17513891",
+    "html_url": "https://support.google.com/gemininotebook/answer/17513891",
+    "route": "notebooklm/17513891",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Manage your Gemini Notebook usage limits",
+    "md_url": "https://support.google.com/gemininotebook/answer/17670842",
+    "html_url": "https://support.google.com/gemininotebook/answer/17670842",
+    "route": "notebooklm/17670842",
     "kind": "doc"
   },
   {

@@ -773,15 +773,15 @@
     data-label="Site header link: Console"
     
       
-        referrerpolicy="no-referrer-when-downgrade"
+        track-name="console"
       
         track-metadata-position="nav"
       
-        track-name="console"
+        track-type="globalNav"
+      
+        referrerpolicy="no-referrer-when-downgrade"
       
         track-metadata-eventDetail="nav"
-      
-        track-type="globalNav"
       
     >
   Console
@@ -1000,15 +1000,15 @@
     
     
       
-        track-metadata-eventDetail="nav"
+        track-name="gcpCta"
       
         track-metadata-position="nav"
       
-        track-name="gcpCta"
+        referrerpolicy="no-referrer-when-downgrade"
+      
+        track-metadata-eventDetail="nav"
       
         track-type="freeTrial"
-      
-        referrerpolicy="no-referrer-when-downgrade"
       
     
     >Start free</a>
@@ -1566,15 +1566,15 @@
 
     
       
-        referrerpolicy="no-referrer-when-downgrade"
+        track-name="console"
       
         track-metadata-position="nav"
       
-        track-name="console"
+        track-type="globalNav"
+      
+        referrerpolicy="no-referrer-when-downgrade"
       
         track-metadata-eventDetail="nav"
-      
-        track-type="globalNav"
       
     
      data-category="Site-Wide Custom Events"
@@ -2734,7 +2734,7 @@ Gemini Code Assist from their account. Your billing administrator can
 
   
     <devsite-hats-survey class="nocontent" data-nosnippet
-      hats-id="Nd7nTix2o0eU5NUYprb0ThtUc5jf"
+      hats-id="mwETRvWii0eU5NUYprb0Y9z5GVbc"
       listnr-id="83405"></devsite-hats-survey>
   
 
@@ -2838,7 +2838,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-module="footer"track-metadata-child_headline="products and pricing"track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/products/"track-name="see all products">
+            track-metadata-eventDetail="cloud.google.com/products/"track-type="footer link"track-metadata-position="footer"track-name="see all products"track-metadata-child_headline="products and pricing"track-metadata-module="footer">
             
           
             See all products
@@ -2855,7 +2855,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-child_headline="products and pricing"track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-name="google cloud pricing">
+            track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="products and pricing"track-name="google cloud pricing"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/pricing/">
             
           
             Google Cloud pricing
@@ -2872,7 +2872,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-name="google cloud marketplace"track-metadata-child_headline="resources"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/marketplace/">
+            track-type="footer link"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-module="footer"track-metadata-position="footer"track-name="google cloud marketplace"track-metadata-child_headline="resources">
             
           
             Google Cloud Marketplace
@@ -2889,7 +2889,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-name="contact sales"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="engage">
+            track-metadata-position="footer"track-name="contact sales"track-metadata-module="footer"track-metadata-child_headline="engage"track-type="footer link"track-metadata-eventDetail="cloud.google.com/contact/">
             
               
               
@@ -2916,7 +2916,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-eventDetail="www.googlecloudcommunity.com"target="_blank"track-metadata-position="footer"track-name="google cloud community"track-metadata-module="footer"rel="noopener"track-metadata-child_headline="engage"track-type="footer link">
+            track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="www.googlecloudcommunity.com"track-name="google cloud community"track-metadata-child_headline="engage"target="_blank"rel="noopener"track-type="footer link">
             
           
             Community forums
@@ -2933,7 +2933,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-child_headline="resources"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer"track-name="support">
+            track-name="support"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/support-hub/">
             
           
             Support
@@ -2950,7 +2950,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-eventDetail="cloud.google.com/release-notes/"track-name="release notes"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link">
+            track-metadata-eventDetail="cloud.google.com/release-notes/"track-type="footer link"track-metadata-child_headline="resources"track-name="release notes"track-metadata-module="footer"track-metadata-position="footer">
             
           
             Release Notes
@@ -2967,7 +2967,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-type="footer link"target="_blank"track-name="system status"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="status.cloud.google.com">
+            track-metadata-position="footer"track-name="system status"track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="status.cloud.google.com"track-type="footer link"target="_blank">
             
               
               
@@ -2994,7 +2994,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-module="footer"track-name="github"track-metadata-child_headline="resources"track-type="footer link"track-metadata-position="footer">
+            track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-position="footer"track-metadata-child_headline="resources"track-name="github">
             
           
             GitHub
@@ -3011,7 +3011,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-name="google cloud quickstarts"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="resources">
+            track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="google cloud quickstarts"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-metadata-position="footer">
             
           
             Getting Started with Google Cloud
@@ -3028,7 +3028,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-child_headline="resources"track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/docs/samples"track-name="code samples"track-metadata-position="footer">
+            track-metadata-module="footer"track-name="code samples"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources">
             
           
             Code samples
@@ -3045,7 +3045,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-child_headline="resources"track-type="footer link"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-module="footer"track-metadata-position="footer"track-name="cloud architecture center">
+            track-type="footer link"track-metadata-module="footer"track-name="cloud architecture center"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-position="footer">
             
           
             Cloud Architecture Center
@@ -3062,7 +3062,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-name="training"track-metadata-child_headline="resources"track-type="footer link"track-metadata-position="footer">
+            track-metadata-eventDetail="cloud.google.com/learn/training/"track-name="training"track-metadata-child_headline="resources"track-metadata-position="footer"track-type="footer link"track-metadata-module="footer">
             
               
               
@@ -3089,7 +3089,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/blog/"track-name="blog"track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="engage">
+            track-metadata-position="footer"track-name="blog"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-module="footer"track-type="footer link">
             
           
             Blog
@@ -3106,7 +3106,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/events/"track-name="events"track-metadata-child_headline="engage"track-metadata-position="footer"track-type="footer link">
+            track-name="events"track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/events/">
             
           
             Events
@@ -3123,7 +3123,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            rel="noopener"track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="x.com/googlecloud"track-type="footer link"track-metadata-child_headline="engage"track-name="follow on x"target="_blank">
+            track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"target="_blank"track-metadata-eventDetail="x.com/googlecloud"track-name="follow on x"rel="noopener"track-metadata-child_headline="engage">
             
           
             X (Twitter)
@@ -3140,7 +3140,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            rel="noopener"track-metadata-module="footer"track-name="google cloud on youtube"track-metadata-eventDetail="www.youtube.com/googlecloud"target="_blank"track-metadata-child_headline="engage"track-type="footer link"track-metadata-position="footer">
+            track-metadata-module="footer"track-metadata-child_headline="engage"track-name="google cloud on youtube"rel="noopener"track-metadata-position="footer"target="_blank"track-metadata-eventDetail="www.youtube.com/googlecloud"track-type="footer link">
             
           
             Google Cloud on YouTube
@@ -3157,7 +3157,7 @@ Gemini Code Assist from their account. Your billing administrator can
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-type="footer link"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-metadata-child_headline="engage"rel="noopener"track-metadata-position="footer"target="_blank"track-name="google cloud tech on youtube"track-metadata-module="footer">
+            target="_blank"track-type="footer link"track-metadata-module="footer"rel="noopener"track-name="google cloud tech on youtube"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-eventDetail="www.youtube.com/googlecloudplatform">
             
               
               
@@ -3199,17 +3199,17 @@ Gemini Code Assist from their account. Your billing administrator can
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
+           track-metadata-eventDetail="//about.google/"
+         
+           target="_blank"
+         
            track-type="footer link"
          
            track-metadata-position="footer"
          
-           track-name="about google"
-         
-           track-metadata-eventDetail="//about.google/"
-         
            track-metadata-module="utility footer"
          
-           target="_blank"
+           track-name="about google"
          >
           About Google
         </a>
@@ -3229,13 +3229,13 @@ Gemini Code Assist from their account. Your billing administrator can
          
            target="_blank"
          
+           track-metadata-module="utility footer"
+         
            track-metadata-eventDetail="//policies.google.com/privacy"
          
            track-metadata-position="footer"
          
            track-name="privacy"
-         
-           track-metadata-module="utility footer"
          >
           Privacy
         </a>
@@ -3251,17 +3251,17 @@ Gemini Code Assist from their account. Your billing administrator can
            data-category="Site-Wide Custom Events"
            data-label="Footer Site terms link"
          
-           track-metadata-module="utility footer"
-         
-           target="_blank"
+           track-metadata-position="footer"
          
            track-name="site terms"
          
-           track-metadata-position="footer"
-         
-           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
+           track-metadata-module="utility footer"
          
            track-type="footer link"
+         
+           target="_blank"
+         
+           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          >
           Site terms
         </a>
@@ -3277,15 +3277,15 @@ Gemini Code Assist from their account. Your billing administrator can
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
-           track-name="google cloud terms"
-         
            track-metadata-position="footer"
          
            track-metadata-module="utility footer"
          
-           track-type="footer link"
-         
            track-metadata-eventDetail="//cloud.google.com/product-terms"
+         
+           track-name="google cloud terms"
+         
+           track-type="footer link"
          >
           Google Cloud terms
         </a>
@@ -3303,6 +3303,8 @@ Gemini Code Assist from their account. Your billing administrator can
          
            track-metadata-eventDetail="#"
          
+           track-name="Manage cookies"
+         
            aria-hidden="true"
          
            track-metadata-position="footer"
@@ -3310,8 +3312,6 @@ Gemini Code Assist from their account. Your billing administrator can
            track-metadata-module="utility footer"
          
            track-type="footer link"
-         
-           track-name="Manage cookies"
          >
           Manage cookies
         </a>
@@ -3327,15 +3327,15 @@ Gemini Code Assist from their account. Your billing administrator can
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
-           track-name="Our third decade of climate action: join us"
+           track-type="footer link"
          
            track-metadata-module="utility footer"
-         
-           track-type="footer link"
          
            track-metadata-eventDetail="/sustainability/"
          
            track-metadata-position="footer"
+         
+           track-name="Our third decade of climate action: join us"
          >
           Our third decade of climate action: join us
         </a>
@@ -3353,13 +3353,13 @@ Gemini Code Assist from their account. Your billing administrator can
            data-category="Site-Wide Custom Events"
            data-label="Footer Subscribe link"
          
-           track-type="footer link"
-         
-           track-metadata-module="utility footer"
+           track-metadata-eventDetail="/newsletter/"
          
            track-metadata-position="footer"
          
-           track-metadata-eventDetail="/newsletter/"
+           track-metadata-module="utility footer"
+         
+           track-type="footer link"
          
            track-name="subscribe"
          >

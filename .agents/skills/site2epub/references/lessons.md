@@ -171,3 +171,17 @@ runtime_source 误判**不要修**——它让含 React 示例的页面保持每
 3. workflow "Validate EPUBs" 加体积门禁 `< 98MB`，让超标在 validate 步就爆，不拖到 push。
 
 **怎么防止复发**：新增图片大户（产品文档站带大量截图）后，push 前本地 `pack --id <id>` 看一眼 dist 体积；CI 体积门禁已兜底。
+
+---
+
+## 12. 目录乱码 = gzip 响应体被当 UTF-8 存进语料（2026-08-31 gemini 重写）
+
+**症状**：成品书目录（nav.xhtml/toc.ncx）一批标题是 `�` 垃圾字符，ncx 里还带 `\x08\x00\x00` 二进制前缀；用户报「书籍目录有乱码」。walk 门禁没拦——乱码文本长度超过 `empty_or_stub_body` 的 40 字符阈值。
+
+**根因**：antigravity.google 对不带 `Accept-Encoding` 的 urllib 请求也返回 **gzip 压缩体**（`1f 8b 08` magic）。`http.fetch_text` 直接 `decode("utf-8", errors="replace")`，压缩字节里的非法序列全变成 U+FFFD 存进 corpus/pages——16 个 antigravity 页面（含 CLI 章节）标题与正文全是乱码。
+
+**怎么发现**：对 nav.xhtml 做非 ASCII 字符盘点（`Counter` 出 167 个 U+FFFD 即实锤）；对 corpus 逐文件 `read_bytes().count(b"\xef\xbf\xbd")` + 查文件头定位压缩 magic，不要猜编码。
+
+**怎么修**：`http.fetch_bytes` 请求头显式 `Accept-Encoding: gzip`（明确排除 stdlib 解不了的 brotli），响应按 `Content-Encoding`（或 gzip magic 兜底）用 `gzip.decompress`/`zlib` 解压后再返回。
+
+**怎么防止复发**：任何源站可能强制压缩；新增 vendor 后对语料跑一次 U+FFFD/magic 扫描（`work/find_mojibake.py` 思路）。解压必须在 http 层做，语料层不可能恢复已丢失的字节。

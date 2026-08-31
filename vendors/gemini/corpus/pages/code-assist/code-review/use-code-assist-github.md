@@ -144,7 +144,9 @@
     </a>
     <section class="devsite-wrapper">
       <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
-        <devsite-header role="banner" keep-tabs-visible>
+        <cloudx-track userCountry="US"></cloudx-track>
+
+<devsite-header role="banner" keep-tabs-visible>
   
     
 
@@ -768,15 +770,15 @@
     data-label="Site header link: Console"
     
       
-        track-metadata-eventDetail="nav"
-      
-        referrerpolicy="no-referrer-when-downgrade"
-      
-        track-name="console"
-      
         track-type="globalNav"
       
         track-metadata-position="nav"
+      
+        referrerpolicy="no-referrer-when-downgrade"
+      
+        track-metadata-eventDetail="nav"
+      
+        track-name="console"
       
     >
   Console
@@ -985,15 +987,15 @@
     
     
       
-        track-metadata-eventDetail="nav"
+        track-type="freeTrial"
       
         track-metadata-position="nav"
       
         track-name="gcpCta"
       
-        track-type="freeTrial"
-      
         referrerpolicy="no-referrer-when-downgrade"
+      
+        track-metadata-eventDetail="nav"
       
     
     >Start free</a>
@@ -1551,15 +1553,15 @@
 
     
       
-        track-metadata-eventDetail="nav"
-      
-        referrerpolicy="no-referrer-when-downgrade"
-      
-        track-name="console"
-      
         track-type="globalNav"
       
         track-metadata-position="nav"
+      
+        referrerpolicy="no-referrer-when-downgrade"
+      
+        track-metadata-eventDetail="nav"
+      
+        track-name="console"
       
     
      data-category="Site-Wide Custom Events"
@@ -2912,7 +2914,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/products/"track-name="see all products"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="products and pricing">
+            track-metadata-module="footer"track-name="see all products"track-metadata-child_headline="products and pricing"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/products/">
             
           
             See all products
@@ -2929,7 +2931,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-name="google cloud pricing"track-metadata-module="footer"track-metadata-child_headline="products and pricing"track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-position="footer"track-type="footer link">
+            track-name="google cloud pricing"track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-child_headline="products and pricing"track-metadata-position="footer"track-metadata-module="footer"track-type="footer link">
             
           
             Google Cloud pricing
@@ -2946,7 +2948,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-position="footer"track-name="google cloud marketplace"track-metadata-eventDetail="cloud.google.com/marketplace/"track-type="footer link">
+            track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/marketplace/"track-name="google cloud marketplace"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources">
             
           
             Google Cloud Marketplace
@@ -2963,7 +2965,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-position="footer"track-metadata-child_headline="engage"track-type="footer link"track-metadata-eventDetail="cloud.google.com/contact/"track-metadata-module="footer"track-name="contact sales">
+            track-metadata-child_headline="engage"track-name="contact sales"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/contact/">
             
               
               
@@ -2990,7 +2992,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            target="_blank"track-name="google cloud community"track-metadata-position="footer"track-metadata-eventDetail="www.googlecloudcommunity.com"track-type="footer link"rel="noopener"track-metadata-module="footer"track-metadata-child_headline="engage">
+            track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-child_headline="engage"rel="noopener"track-type="footer link"track-metadata-position="footer"track-name="google cloud community"target="_blank"track-metadata-module="footer">
             
           
             Community forums
@@ -3007,7 +3009,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-position="footer"track-metadata-module="footer"track-name="support"track-metadata-child_headline="resources">
+            track-type="footer link"track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="support">
             
           
             Support
@@ -3024,7 +3026,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-type="footer link"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-position="footer"track-metadata-module="footer"track-name="release notes">
+            track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/release-notes/"track-name="release notes"track-metadata-position="footer">
             
           
             Release Notes
@@ -3041,7 +3043,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            target="_blank"track-metadata-position="footer"track-metadata-eventDetail="status.cloud.google.com"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="system status">
+            track-metadata-position="footer"target="_blank"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="system status"track-metadata-eventDetail="status.cloud.google.com">
             
               
               
@@ -3068,7 +3070,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-name="github"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-type="footer link">
+            track-metadata-eventDetail="github.com/googlecloudPlatform/"track-name="github"track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-position="footer"track-type="footer link">
             
           
             GitHub
@@ -3085,7 +3087,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-type="footer link"track-metadata-module="footer"track-name="google cloud quickstarts"track-metadata-position="footer">
+            track-metadata-child_headline="resources"track-name="google cloud quickstarts"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-type="footer link"track-metadata-position="footer"track-metadata-module="footer">
             
           
             Getting Started with Google Cloud
@@ -3102,7 +3104,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-module="footer"track-metadata-position="footer"track-name="code samples"track-type="footer link"track-metadata-child_headline="resources">
+            track-metadata-module="footer"track-name="code samples"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-position="footer"track-metadata-child_headline="resources"track-type="footer link">
             
           
             Code samples
@@ -3119,7 +3121,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer"track-name="cloud architecture center"track-metadata-eventDetail="cloud.google.com/architecture/">
+            track-name="cloud architecture center"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/architecture/">
             
           
             Cloud Architecture Center
@@ -3136,7 +3138,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-position="footer"track-type="footer link"track-name="training"track-metadata-child_headline="resources">
+            track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-name="training">
             
               
               
@@ -3163,7 +3165,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-position="footer"track-name="blog"track-metadata-child_headline="engage">
+            track-metadata-position="footer"track-metadata-child_headline="engage"track-type="footer link"track-name="blog"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/blog/">
             
           
             Blog
@@ -3180,7 +3182,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-name="events"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/events/"track-metadata-child_headline="engage"track-metadata-position="footer">
+            track-type="footer link"track-metadata-eventDetail="cloud.google.com/events/"track-metadata-child_headline="engage"track-metadata-position="footer"track-name="events"track-metadata-module="footer">
             
           
             Events
@@ -3197,7 +3199,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            rel="noopener"track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"target="_blank"track-metadata-eventDetail="x.com/googlecloud"track-name="follow on x"track-metadata-child_headline="engage">
+            track-metadata-eventDetail="x.com/googlecloud"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="engage"rel="noopener"target="_blank"track-name="follow on x">
             
           
             X (Twitter)
@@ -3214,7 +3216,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-eventDetail="www.youtube.com/googlecloud"track-metadata-position="footer"track-name="google cloud on youtube"track-metadata-child_headline="engage"rel="noopener"track-metadata-module="footer"target="_blank"track-type="footer link">
+            track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="engage"track-metadata-eventDetail="www.youtube.com/googlecloud"rel="noopener"track-name="google cloud on youtube"track-metadata-module="footer"target="_blank">
             
           
             Google Cloud on YouTube
@@ -3231,7 +3233,7 @@ the free tier limits.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-position="footer"rel="noopener"track-type="footer link"target="_blank"track-metadata-child_headline="engage"track-name="google cloud tech on youtube"track-metadata-module="footer"track-metadata-eventDetail="www.youtube.com/googlecloudplatform">
+            target="_blank"rel="noopener"track-metadata-position="footer"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-name="google cloud tech on youtube"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="engage">
             
               
               
@@ -3273,17 +3275,17 @@ the free tier limits.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
-           track-type="footer link"
+           track-metadata-module="utility footer"
          
            track-name="about google"
          
-           track-metadata-position="footer"
-         
-           track-metadata-module="utility footer"
+           track-metadata-eventDetail="//about.google/"
          
            target="_blank"
          
-           track-metadata-eventDetail="//about.google/"
+           track-metadata-position="footer"
+         
+           track-type="footer link"
          >
           About Google
         </a>
@@ -3301,15 +3303,15 @@ the free tier limits.</p>
          
            track-name="privacy"
          
-           track-metadata-position="footer"
+           track-metadata-module="utility footer"
          
-           track-metadata-eventDetail="//policies.google.com/privacy"
+           track-metadata-position="footer"
          
            target="_blank"
          
-           track-metadata-module="utility footer"
-         
            track-type="footer link"
+         
+           track-metadata-eventDetail="//policies.google.com/privacy"
          >
           Privacy
         </a>
@@ -3325,17 +3327,17 @@ the free tier limits.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Site terms link"
          
-           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
-         
-           track-type="footer link"
-         
-           target="_blank"
-         
            track-metadata-position="footer"
          
            track-name="site terms"
          
+           target="_blank"
+         
            track-metadata-module="utility footer"
+         
+           track-type="footer link"
+         
+           track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          >
           Site terms
         </a>
@@ -3351,15 +3353,15 @@ the free tier limits.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
-           track-type="footer link"
-         
            track-metadata-position="footer"
          
            track-metadata-module="utility footer"
          
-           track-metadata-eventDetail="//cloud.google.com/product-terms"
+           track-type="footer link"
          
            track-name="google cloud terms"
+         
+           track-metadata-eventDetail="//cloud.google.com/product-terms"
          >
           Google Cloud terms
         </a>
@@ -3375,17 +3377,17 @@ the free tier limits.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Manage cookies link"
          
-           track-metadata-eventDetail="#"
-         
-           track-name="Manage cookies"
-         
            aria-hidden="true"
          
            track-metadata-module="utility footer"
          
-           track-metadata-position="footer"
+           track-metadata-eventDetail="#"
          
            track-type="footer link"
+         
+           track-name="Manage cookies"
+         
+           track-metadata-position="footer"
          >
           Manage cookies
         </a>
@@ -3401,15 +3403,15 @@ the free tier limits.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
-           track-metadata-module="utility footer"
+           track-metadata-position="footer"
          
            track-type="footer link"
          
            track-metadata-eventDetail="/sustainability/"
          
-           track-name="Our third decade of climate action: join us"
+           track-metadata-module="utility footer"
          
-           track-metadata-position="footer"
+           track-name="Our third decade of climate action: join us"
          >
           Our third decade of climate action: join us
         </a>
@@ -3431,11 +3433,11 @@ the free tier limits.</p>
          
            track-type="footer link"
          
+           track-metadata-module="utility footer"
+         
            track-metadata-eventDetail="/newsletter/"
          
            track-metadata-position="footer"
-         
-           track-metadata-module="utility footer"
          >
           Subscribe
         </a>
@@ -3537,6 +3539,15 @@ the free tier limits.</p>
     
     
     
+<cloudx-user></cloudx-user>
+
+
+
+
+  
+    <cloudx-free-trial-eligible-store freeTrialEligible="true"></cloudx-free-trial-eligible-store>
+  
+
     
 
 
