@@ -59,7 +59,9 @@ def md_url_for(path: str) -> str:
 
 
 def _section_select(soup: BeautifulSoup) -> Tag | None:
-    for sel in soup.select('select[aria-label="Docs section"]'):
+    # 2026-08: site renamed aria-label "Docs section" → "Docs"; several selects
+    # share that label. Locate by option-set instead of the brittle label text.
+    for sel in soup.find_all("select"):
         labels = {_plain(opt) for opt in sel.find_all("option")}
         if {"Overview", "Features", "Administration"} <= labels:
             return sel

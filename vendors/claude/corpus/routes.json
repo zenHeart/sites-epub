@@ -24,7 +24,7 @@
     "kind": "doc"
   },
   {
-    "group": "Core concepts",
+    "group": "Getting started",
     "title": "How Claude Code works",
     "md_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
     "html_url": "https://code.claude.com/docs/en/how-claude-code-works",
@@ -32,7 +32,7 @@
     "kind": "doc"
   },
   {
-    "group": "Core concepts",
+    "group": "Getting started",
     "title": "Extend Claude Code",
     "md_url": "https://code.claude.com/docs/en/features-overview.md",
     "html_url": "https://code.claude.com/docs/en/features-overview",
@@ -40,7 +40,7 @@
     "kind": "doc"
   },
   {
-    "group": "Core concepts",
+    "group": "Getting started",
     "title": "Explore the .claude directory",
     "md_url": "https://code.claude.com/docs/en/claude-directory.md",
     "html_url": "https://code.claude.com/docs/en/claude-directory",
@@ -48,7 +48,7 @@
     "kind": "doc"
   },
   {
-    "group": "Core concepts",
+    "group": "Getting started",
     "title": "Explore the context window",
     "md_url": "https://code.claude.com/docs/en/context-window.md",
     "html_url": "https://code.claude.com/docs/en/context-window",
@@ -56,7 +56,7 @@
     "kind": "doc"
   },
   {
-    "group": "Core concepts",
+    "group": "Getting started",
     "title": "How Claude Code uses prompt caching",
     "md_url": "https://code.claude.com/docs/en/prompt-caching.md",
     "html_url": "https://code.claude.com/docs/en/prompt-caching",
@@ -64,7 +64,7 @@
     "kind": "doc"
   },
   {
-    "group": "Use Claude Code",
+    "group": "Getting started",
     "title": "How Claude remembers your project",
     "md_url": "https://code.claude.com/docs/en/memory.md",
     "html_url": "https://code.claude.com/docs/en/memory",
@@ -72,7 +72,7 @@
     "kind": "doc"
   },
   {
-    "group": "Use Claude Code",
+    "group": "Getting started",
     "title": "Manage sessions",
     "md_url": "https://code.claude.com/docs/en/sessions.md",
     "html_url": "https://code.claude.com/docs/en/sessions",
@@ -80,7 +80,7 @@
     "kind": "doc"
   },
   {
-    "group": "Use Claude Code",
+    "group": "Getting started",
     "title": "Common workflows",
     "md_url": "https://code.claude.com/docs/en/common-workflows.md",
     "html_url": "https://code.claude.com/docs/en/common-workflows",
@@ -88,7 +88,7 @@
     "kind": "doc"
   },
   {
-    "group": "Use Claude Code",
+    "group": "Getting started",
     "title": "Prompt library",
     "md_url": "https://code.claude.com/docs/en/prompt-library.md",
     "html_url": "https://code.claude.com/docs/en/prompt-library",
@@ -96,7 +96,7 @@
     "kind": "doc"
   },
   {
-    "group": "Use Claude Code",
+    "group": "Getting started",
     "title": "Best practices for Claude Code",
     "md_url": "https://code.claude.com/docs/en/best-practices.md",
     "html_url": "https://code.claude.com/docs/en/best-practices",
@@ -104,7 +104,7 @@
     "kind": "doc"
   },
   {
-    "group": "Platforms and integrations",
+    "group": "Getting started",
     "title": "Platforms and integrations",
     "md_url": "https://code.claude.com/docs/en/platforms.md",
     "html_url": "https://code.claude.com/docs/en/platforms",
@@ -112,7 +112,7 @@
     "kind": "doc"
   },
   {
-    "group": "Platforms and integrations",
+    "group": "Getting started",
     "title": "Continue local sessions from any device with Remote Control",
     "md_url": "https://code.claude.com/docs/en/remote-control.md",
     "html_url": "https://code.claude.com/docs/en/remote-control",
@@ -120,87 +120,7 @@
     "kind": "doc"
   },
   {
-    "group": "Claude Code on the web",
-    "title": "Get started with Claude Code on the web",
-    "md_url": "https://code.claude.com/docs/en/web-quickstart.md",
-    "html_url": "https://code.claude.com/docs/en/web-quickstart",
-    "route": "web-quickstart",
-    "kind": "doc"
-  },
-  {
-    "group": "Claude Code on the web",
-    "title": "Use Claude Code on the web",
-    "md_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
-    "html_url": "https://code.claude.com/docs/en/claude-code-on-the-web",
-    "route": "claude-code-on-the-web",
-    "kind": "doc"
-  },
-  {
-    "group": "Claude Code on the web",
-    "title": "Automate work with routines",
-    "md_url": "https://code.claude.com/docs/en/routines.md",
-    "html_url": "https://code.claude.com/docs/en/routines",
-    "route": "routines",
-    "kind": "doc"
-  },
-  {
-    "group": "Claude Code on the web",
-    "title": "Find bugs with ultrareview",
-    "md_url": "https://code.claude.com/docs/en/ultrareview.md",
-    "html_url": "https://code.claude.com/docs/en/ultrareview",
-    "route": "ultrareview",
-    "kind": "doc"
-  },
-  {
-    "group": "Claude Code on desktop",
-    "title": "Get started with the desktop app",
-    "md_url": "https://code.claude.com/docs/en/desktop-quickstart.md",
-    "html_url": "https://code.claude.com/docs/en/desktop-quickstart",
-    "route": "desktop-quickstart",
-    "kind": "doc"
-  },
-  {
-    "group": "Claude Code on desktop",
-    "title": "Desktop application",
-    "md_url": "https://code.claude.com/docs/en/desktop.md",
-    "html_url": "https://code.claude.com/docs/en/desktop",
-    "route": "desktop",
-    "kind": "doc"
-  },
-  {
-    "group": "Claude Code on desktop",
-    "title": "Claude Desktop on Linux (beta)",
-    "md_url": "https://code.claude.com/docs/en/desktop-linux.md",
-    "html_url": "https://code.claude.com/docs/en/desktop-linux",
-    "route": "desktop-linux",
-    "kind": "doc"
-  },
-  {
-    "group": "Claude Code on desktop",
-    "title": "Claude Code Desktop in WSL",
-    "md_url": "https://code.claude.com/docs/en/desktop-wsl.md",
-    "html_url": "https://code.claude.com/docs/en/desktop-wsl",
-    "route": "desktop-wsl",
-    "kind": "doc"
-  },
-  {
-    "group": "Claude Code on desktop",
-    "title": "Schedule recurring tasks in Claude Code Desktop",
-    "md_url": "https://code.claude.com/docs/en/desktop-scheduled-tasks.md",
-    "html_url": "https://code.claude.com/docs/en/desktop-scheduled-tasks",
-    "route": "desktop-scheduled-tasks",
-    "kind": "doc"
-  },
-  {
-    "group": "Claude Code on desktop",
-    "title": "Test iOS apps in the simulator",
-    "md_url": "https://code.claude.com/docs/en/desktop-ios-simulator.md",
-    "html_url": "https://code.claude.com/docs/en/desktop-ios-simulator",
-    "route": "desktop-ios-simulator",
-    "kind": "doc"
-  },
-  {
-    "group": "Platforms and integrations",
+    "group": "Getting started",
     "title": "Claude Code on mobile",
     "md_url": "https://code.claude.com/docs/en/mobile.md",
     "html_url": "https://code.claude.com/docs/en/mobile",
@@ -208,7 +128,7 @@
     "kind": "doc"
   },
   {
-    "group": "Platforms and integrations",
+    "group": "Getting started",
     "title": "Use Claude Code with Chrome",
     "md_url": "https://code.claude.com/docs/en/chrome.md",
     "html_url": "https://code.claude.com/docs/en/chrome",
@@ -216,7 +136,7 @@
     "kind": "doc"
   },
   {
-    "group": "Platforms and integrations",
+    "group": "Getting started",
     "title": "Let Claude use your computer from the CLI",
     "md_url": "https://code.claude.com/docs/en/computer-use.md",
     "html_url": "https://code.claude.com/docs/en/computer-use",
@@ -224,7 +144,7 @@
     "kind": "doc"
   },
   {
-    "group": "Platforms and integrations",
+    "group": "Getting started",
     "title": "Use Claude Code in VS Code",
     "md_url": "https://code.claude.com/docs/en/vs-code.md",
     "html_url": "https://code.claude.com/docs/en/vs-code",
@@ -232,7 +152,7 @@
     "kind": "doc"
   },
   {
-    "group": "Platforms and integrations",
+    "group": "Getting started",
     "title": "JetBrains IDEs",
     "md_url": "https://code.claude.com/docs/en/jetbrains.md",
     "html_url": "https://code.claude.com/docs/en/jetbrains",
@@ -240,63 +160,7 @@
     "kind": "doc"
   },
   {
-    "group": "Code review & CI/CD",
-    "title": "Catch security issues as Claude writes code",
-    "md_url": "https://code.claude.com/docs/en/security-guidance.md",
-    "html_url": "https://code.claude.com/docs/en/security-guidance",
-    "route": "security-guidance",
-    "kind": "doc"
-  },
-  {
-    "group": "Code review & CI/CD",
-    "title": "Scan your codebase for vulnerabilities",
-    "md_url": "https://code.claude.com/docs/en/claude-security.md",
-    "html_url": "https://code.claude.com/docs/en/claude-security",
-    "route": "claude-security",
-    "kind": "doc"
-  },
-  {
-    "group": "Code review & CI/CD",
-    "title": "Code Review",
-    "md_url": "https://code.claude.com/docs/en/code-review.md",
-    "html_url": "https://code.claude.com/docs/en/code-review",
-    "route": "code-review",
-    "kind": "doc"
-  },
-  {
-    "group": "Code review & CI/CD",
-    "title": "Claude Code GitHub Actions",
-    "md_url": "https://code.claude.com/docs/en/github-actions.md",
-    "html_url": "https://code.claude.com/docs/en/github-actions",
-    "route": "github-actions",
-    "kind": "doc"
-  },
-  {
-    "group": "Code review & CI/CD",
-    "title": "Use Claude Code GitHub Actions with cloud providers",
-    "md_url": "https://code.claude.com/docs/en/github-actions-cloud-providers.md",
-    "html_url": "https://code.claude.com/docs/en/github-actions-cloud-providers",
-    "route": "github-actions-cloud-providers",
-    "kind": "doc"
-  },
-  {
-    "group": "Code review & CI/CD",
-    "title": "Claude Code with GitHub Enterprise Server",
-    "md_url": "https://code.claude.com/docs/en/github-enterprise-server.md",
-    "html_url": "https://code.claude.com/docs/en/github-enterprise-server",
-    "route": "github-enterprise-server",
-    "kind": "doc"
-  },
-  {
-    "group": "Code review & CI/CD",
-    "title": "Claude Code GitLab CI/CD",
-    "md_url": "https://code.claude.com/docs/en/gitlab-ci-cd.md",
-    "html_url": "https://code.claude.com/docs/en/gitlab-ci-cd",
-    "route": "gitlab-ci-cd",
-    "kind": "doc"
-  },
-  {
-    "group": "Platforms and integrations",
+    "group": "Getting started",
     "title": "Claude Code in Slack",
     "md_url": "https://code.claude.com/docs/en/slack.md",
     "html_url": "https://code.claude.com/docs/en/slack",
@@ -304,7 +168,7 @@
     "kind": "doc"
   },
   {
-    "group": "Platforms and integrations",
+    "group": "Getting started",
     "title": "Claude Tag",
     "md_url": "https://code.claude.com/docs/en/claude-tag.md",
     "html_url": "https://code.claude.com/docs/en/claude-tag",
@@ -312,7 +176,143 @@
     "kind": "doc"
   },
   {
-    "group": "Agents and parallel work",
+    "group": "Getting started",
+    "title": "Get started with Claude Code on the web",
+    "md_url": "https://code.claude.com/docs/en/web-quickstart.md",
+    "html_url": "https://code.claude.com/docs/en/web-quickstart",
+    "route": "web-quickstart",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Use Claude Code on the web",
+    "md_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
+    "html_url": "https://code.claude.com/docs/en/claude-code-on-the-web",
+    "route": "claude-code-on-the-web",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Automate work with routines",
+    "md_url": "https://code.claude.com/docs/en/routines.md",
+    "html_url": "https://code.claude.com/docs/en/routines",
+    "route": "routines",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Find bugs with ultrareview",
+    "md_url": "https://code.claude.com/docs/en/ultrareview.md",
+    "html_url": "https://code.claude.com/docs/en/ultrareview",
+    "route": "ultrareview",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Get started with the desktop app",
+    "md_url": "https://code.claude.com/docs/en/desktop-quickstart.md",
+    "html_url": "https://code.claude.com/docs/en/desktop-quickstart",
+    "route": "desktop-quickstart",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Desktop application",
+    "md_url": "https://code.claude.com/docs/en/desktop.md",
+    "html_url": "https://code.claude.com/docs/en/desktop",
+    "route": "desktop",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Claude Desktop on Linux (beta)",
+    "md_url": "https://code.claude.com/docs/en/desktop-linux.md",
+    "html_url": "https://code.claude.com/docs/en/desktop-linux",
+    "route": "desktop-linux",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Claude Code Desktop in WSL",
+    "md_url": "https://code.claude.com/docs/en/desktop-wsl.md",
+    "html_url": "https://code.claude.com/docs/en/desktop-wsl",
+    "route": "desktop-wsl",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Schedule recurring tasks in Claude Code Desktop",
+    "md_url": "https://code.claude.com/docs/en/desktop-scheduled-tasks.md",
+    "html_url": "https://code.claude.com/docs/en/desktop-scheduled-tasks",
+    "route": "desktop-scheduled-tasks",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Test iOS apps in the simulator",
+    "md_url": "https://code.claude.com/docs/en/desktop-ios-simulator.md",
+    "html_url": "https://code.claude.com/docs/en/desktop-ios-simulator",
+    "route": "desktop-ios-simulator",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Catch security issues as Claude writes code",
+    "md_url": "https://code.claude.com/docs/en/security-guidance.md",
+    "html_url": "https://code.claude.com/docs/en/security-guidance",
+    "route": "security-guidance",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Scan your codebase for vulnerabilities",
+    "md_url": "https://code.claude.com/docs/en/claude-security.md",
+    "html_url": "https://code.claude.com/docs/en/claude-security",
+    "route": "claude-security",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Code Review",
+    "md_url": "https://code.claude.com/docs/en/code-review.md",
+    "html_url": "https://code.claude.com/docs/en/code-review",
+    "route": "code-review",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Claude Code GitHub Actions",
+    "md_url": "https://code.claude.com/docs/en/github-actions.md",
+    "html_url": "https://code.claude.com/docs/en/github-actions",
+    "route": "github-actions",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Use Claude Code GitHub Actions with cloud providers",
+    "md_url": "https://code.claude.com/docs/en/github-actions-cloud-providers.md",
+    "html_url": "https://code.claude.com/docs/en/github-actions-cloud-providers",
+    "route": "github-actions-cloud-providers",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Claude Code with GitHub Enterprise Server",
+    "md_url": "https://code.claude.com/docs/en/github-enterprise-server.md",
+    "html_url": "https://code.claude.com/docs/en/github-enterprise-server",
+    "route": "github-enterprise-server",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Claude Code GitLab CI/CD",
+    "md_url": "https://code.claude.com/docs/en/gitlab-ci-cd.md",
+    "html_url": "https://code.claude.com/docs/en/gitlab-ci-cd",
+    "route": "gitlab-ci-cd",
+    "kind": "doc"
+  },
+  {
+    "group": "Build with Claude Code",
     "title": "Run agents in parallel",
     "md_url": "https://code.claude.com/docs/en/agents.md",
     "html_url": "https://code.claude.com/docs/en/agents",
@@ -320,7 +320,7 @@
     "kind": "doc"
   },
   {
-    "group": "Agents and parallel work",
+    "group": "Build with Claude Code",
     "title": "Create custom subagents",
     "md_url": "https://code.claude.com/docs/en/sub-agents.md",
     "html_url": "https://code.claude.com/docs/en/sub-agents",
@@ -328,7 +328,7 @@
     "kind": "doc"
   },
   {
-    "group": "Agents and parallel work",
+    "group": "Build with Claude Code",
     "title": "Manage multiple agents with agent view",
     "md_url": "https://code.claude.com/docs/en/agent-view.md",
     "html_url": "https://code.claude.com/docs/en/agent-view",
@@ -336,7 +336,7 @@
     "kind": "doc"
   },
   {
-    "group": "Agents and parallel work",
+    "group": "Build with Claude Code",
     "title": "Orchestrate teams of Claude Code sessions",
     "md_url": "https://code.claude.com/docs/en/agent-teams.md",
     "html_url": "https://code.claude.com/docs/en/agent-teams",
@@ -344,7 +344,7 @@
     "kind": "doc"
   },
   {
-    "group": "Agents and parallel work",
+    "group": "Build with Claude Code",
     "title": "Message your other Claude Code sessions",
     "md_url": "https://code.claude.com/docs/en/cross-session-messaging.md",
     "html_url": "https://code.claude.com/docs/en/cross-session-messaging",
@@ -352,7 +352,7 @@
     "kind": "doc"
   },
   {
-    "group": "Agents and parallel work",
+    "group": "Build with Claude Code",
     "title": "Orchestrate subagents at scale with dynamic workflows",
     "md_url": "https://code.claude.com/docs/en/workflows.md",
     "html_url": "https://code.claude.com/docs/en/workflows",
@@ -360,7 +360,7 @@
     "kind": "doc"
   },
   {
-    "group": "Agents and parallel work",
+    "group": "Build with Claude Code",
     "title": "Run parallel sessions with worktrees",
     "md_url": "https://code.claude.com/docs/en/worktrees.md",
     "html_url": "https://code.claude.com/docs/en/worktrees",
@@ -368,7 +368,7 @@
     "kind": "doc"
   },
   {
-    "group": "MCP",
+    "group": "Build with Claude Code",
     "title": "Connect to MCP servers",
     "md_url": "https://code.claude.com/docs/en/mcp-quickstart.md",
     "html_url": "https://code.claude.com/docs/en/mcp-quickstart",
@@ -376,7 +376,7 @@
     "kind": "doc"
   },
   {
-    "group": "MCP",
+    "group": "Build with Claude Code",
     "title": "Connect Claude Code to tools via MCP",
     "md_url": "https://code.claude.com/docs/en/mcp.md",
     "html_url": "https://code.claude.com/docs/en/mcp",
@@ -384,7 +384,7 @@
     "kind": "doc"
   },
   {
-    "group": "Skills",
+    "group": "Build with Claude Code",
     "title": "Extend Claude with skills",
     "md_url": "https://code.claude.com/docs/en/skills.md",
     "html_url": "https://code.claude.com/docs/en/skills",
@@ -392,7 +392,7 @@
     "kind": "doc"
   },
   {
-    "group": "Plugins",
+    "group": "Build with Claude Code",
     "title": "Discover and install prebuilt plugins through marketplaces",
     "md_url": "https://code.claude.com/docs/en/discover-plugins.md",
     "html_url": "https://code.claude.com/docs/en/discover-plugins",
@@ -400,7 +400,7 @@
     "kind": "doc"
   },
   {
-    "group": "Plugins",
+    "group": "Build with Claude Code",
     "title": "Create plugins",
     "md_url": "https://code.claude.com/docs/en/plugins.md",
     "html_url": "https://code.claude.com/docs/en/plugins",
@@ -408,7 +408,7 @@
     "kind": "doc"
   },
   {
-    "group": "Artifacts",
+    "group": "Build with Claude Code",
     "title": "Share session output as artifacts",
     "md_url": "https://code.claude.com/docs/en/artifacts.md",
     "html_url": "https://code.claude.com/docs/en/artifacts",
@@ -416,7 +416,7 @@
     "kind": "doc"
   },
   {
-    "group": "Automation",
+    "group": "Build with Claude Code",
     "title": "Automate actions with hooks",
     "md_url": "https://code.claude.com/docs/en/hooks-guide.md",
     "html_url": "https://code.claude.com/docs/en/hooks-guide",
@@ -424,7 +424,7 @@
     "kind": "doc"
   },
   {
-    "group": "Automation",
+    "group": "Build with Claude Code",
     "title": "Push events into a running session with channels",
     "md_url": "https://code.claude.com/docs/en/channels.md",
     "html_url": "https://code.claude.com/docs/en/channels",
@@ -432,7 +432,7 @@
     "kind": "doc"
   },
   {
-    "group": "Automation",
+    "group": "Build with Claude Code",
     "title": "Run prompts on a schedule",
     "md_url": "https://code.claude.com/docs/en/scheduled-tasks.md",
     "html_url": "https://code.claude.com/docs/en/scheduled-tasks",
@@ -440,7 +440,7 @@
     "kind": "doc"
   },
   {
-    "group": "Automation",
+    "group": "Build with Claude Code",
     "title": "Keep Claude working toward a goal",
     "md_url": "https://code.claude.com/docs/en/goal.md",
     "html_url": "https://code.claude.com/docs/en/goal",
@@ -448,7 +448,7 @@
     "kind": "doc"
   },
   {
-    "group": "Automation",
+    "group": "Build with Claude Code",
     "title": "Run Claude Code programmatically",
     "md_url": "https://code.claude.com/docs/en/headless.md",
     "html_url": "https://code.claude.com/docs/en/headless",
@@ -456,7 +456,7 @@
     "kind": "doc"
   },
   {
-    "group": "Automation",
+    "group": "Build with Claude Code",
     "title": "Launch sessions from links",
     "md_url": "https://code.claude.com/docs/en/deep-links.md",
     "html_url": "https://code.claude.com/docs/en/deep-links",
@@ -464,7 +464,7 @@
     "kind": "doc"
   },
   {
-    "group": "Guides",
+    "group": "Build with Claude Code",
     "title": "Set up Claude Code in a monorepo or large codebase",
     "md_url": "https://code.claude.com/docs/en/large-codebases.md",
     "html_url": "https://code.claude.com/docs/en/large-codebases",
@@ -472,7 +472,7 @@
     "kind": "doc"
   },
   {
-    "group": "Troubleshooting",
+    "group": "Build with Claude Code",
     "title": "Troubleshoot installation and login",
     "md_url": "https://code.claude.com/docs/en/troubleshoot-install.md",
     "html_url": "https://code.claude.com/docs/en/troubleshoot-install",
@@ -480,7 +480,7 @@
     "kind": "doc"
   },
   {
-    "group": "Troubleshooting",
+    "group": "Build with Claude Code",
     "title": "Troubleshooting",
     "md_url": "https://code.claude.com/docs/en/troubleshooting.md",
     "html_url": "https://code.claude.com/docs/en/troubleshooting",
@@ -488,7 +488,7 @@
     "kind": "doc"
   },
   {
-    "group": "Troubleshooting",
+    "group": "Build with Claude Code",
     "title": "Debug your configuration",
     "md_url": "https://code.claude.com/docs/en/debug-your-config.md",
     "html_url": "https://code.claude.com/docs/en/debug-your-config",
@@ -496,7 +496,7 @@
     "kind": "doc"
   },
   {
-    "group": "Troubleshooting",
+    "group": "Build with Claude Code",
     "title": "Error reference",
     "md_url": "https://code.claude.com/docs/en/errors.md",
     "html_url": "https://code.claude.com/docs/en/errors",
@@ -504,7 +504,7 @@
     "kind": "doc"
   },
   {
-    "group": "Setup and access",
+    "group": "Administration",
     "title": "Set up Claude Code for your organization",
     "md_url": "https://code.claude.com/docs/en/admin-setup.md",
     "html_url": "https://code.claude.com/docs/en/admin-setup",
@@ -512,7 +512,7 @@
     "kind": "doc"
   },
   {
-    "group": "Setup and access",
+    "group": "Administration",
     "title": "Advanced setup",
     "md_url": "https://code.claude.com/docs/en/setup.md",
     "html_url": "https://code.claude.com/docs/en/setup",
@@ -520,7 +520,7 @@
     "kind": "doc"
   },
   {
-    "group": "Setup and access",
+    "group": "Administration",
     "title": "Authentication",
     "md_url": "https://code.claude.com/docs/en/authentication.md",
     "html_url": "https://code.claude.com/docs/en/authentication",
@@ -528,7 +528,7 @@
     "kind": "doc"
   },
   {
-    "group": "Setup and access",
+    "group": "Administration",
     "title": "Deploy managed settings",
     "md_url": "https://code.claude.com/docs/en/managed-settings.md",
     "html_url": "https://code.claude.com/docs/en/managed-settings",
@@ -536,7 +536,7 @@
     "kind": "doc"
   },
   {
-    "group": "Setup and access",
+    "group": "Administration",
     "title": "Configure server-managed settings",
     "md_url": "https://code.claude.com/docs/en/server-managed-settings.md",
     "html_url": "https://code.claude.com/docs/en/server-managed-settings",
@@ -544,7 +544,7 @@
     "kind": "doc"
   },
   {
-    "group": "Setup and access",
+    "group": "Administration",
     "title": "Control MCP server access for your organization",
     "md_url": "https://code.claude.com/docs/en/managed-mcp.md",
     "html_url": "https://code.claude.com/docs/en/managed-mcp",
@@ -552,7 +552,7 @@
     "kind": "doc"
   },
   {
-    "group": "Setup and access",
+    "group": "Administration",
     "title": "Configure auto mode",
     "md_url": "https://code.claude.com/docs/en/auto-mode-config.md",
     "html_url": "https://code.claude.com/docs/en/auto-mode-config",
@@ -560,7 +560,7 @@
     "kind": "doc"
   },
   {
-    "group": "Deployment",
+    "group": "Administration",
     "title": "Enterprise deployment overview",
     "md_url": "https://code.claude.com/docs/en/third-party-integrations.md",
     "html_url": "https://code.claude.com/docs/en/third-party-integrations",
@@ -568,7 +568,7 @@
     "kind": "doc"
   },
   {
-    "group": "Deployment",
+    "group": "Administration",
     "title": "Feature availability",
     "md_url": "https://code.claude.com/docs/en/feature-availability.md",
     "html_url": "https://code.claude.com/docs/en/feature-availability",
@@ -576,7 +576,7 @@
     "kind": "doc"
   },
   {
-    "group": "Deployment",
+    "group": "Administration",
     "title": "Claude Code on Amazon Bedrock",
     "md_url": "https://code.claude.com/docs/en/amazon-bedrock.md",
     "html_url": "https://code.claude.com/docs/en/amazon-bedrock",
@@ -584,7 +584,7 @@
     "kind": "doc"
   },
   {
-    "group": "Deployment",
+    "group": "Administration",
     "title": "Claude Code on Claude Platform on AWS",
     "md_url": "https://code.claude.com/docs/en/claude-platform-on-aws.md",
     "html_url": "https://code.claude.com/docs/en/claude-platform-on-aws",
@@ -592,7 +592,7 @@
     "kind": "doc"
   },
   {
-    "group": "Deployment",
+    "group": "Administration",
     "title": "Claude Code on Google Cloud's Agent Platform",
     "md_url": "https://code.claude.com/docs/en/google-vertex-ai.md",
     "html_url": "https://code.claude.com/docs/en/google-vertex-ai",
@@ -600,7 +600,7 @@
     "kind": "doc"
   },
   {
-    "group": "Deployment",
+    "group": "Administration",
     "title": "Claude Code on Microsoft Foundry",
     "md_url": "https://code.claude.com/docs/en/microsoft-foundry.md",
     "html_url": "https://code.claude.com/docs/en/microsoft-foundry",
@@ -608,7 +608,7 @@
     "kind": "doc"
   },
   {
-    "group": "Deployment",
+    "group": "Administration",
     "title": "Enterprise network configuration",
     "md_url": "https://code.claude.com/docs/en/network-config.md",
     "html_url": "https://code.claude.com/docs/en/network-config",
@@ -616,7 +616,7 @@
     "kind": "doc"
   },
   {
-    "group": "Deployment",
+    "group": "Administration",
     "title": "Run Claude Code behind a corporate launcher",
     "md_url": "https://code.claude.com/docs/en/corporate-launcher.md",
     "html_url": "https://code.claude.com/docs/en/corporate-launcher",
@@ -624,7 +624,7 @@
     "kind": "doc"
   },
   {
-    "group": "Deployment",
+    "group": "Administration",
     "title": "Development containers",
     "md_url": "https://code.claude.com/docs/en/devcontainer.md",
     "html_url": "https://code.claude.com/docs/en/devcontainer",
@@ -632,7 +632,7 @@
     "kind": "doc"
   },
   {
-    "group": "Gateways",
+    "group": "Administration",
     "title": "Run Claude Code through a gateway",
     "md_url": "https://code.claude.com/docs/en/gateways.md",
     "html_url": "https://code.claude.com/docs/en/gateways",
@@ -640,7 +640,7 @@
     "kind": "doc"
   },
   {
-    "group": "Claude apps gateway",
+    "group": "Administration",
     "title": "Claude apps gateway for Amazon Bedrock, Claude Platform on AWS, Google Cloud, and Microsoft Foundry",
     "md_url": "https://code.claude.com/docs/en/claude-apps-gateway.md",
     "html_url": "https://code.claude.com/docs/en/claude-apps-gateway",
@@ -648,7 +648,7 @@
     "kind": "doc"
   },
   {
-    "group": "Claude apps gateway",
+    "group": "Administration",
     "title": "Claude apps gateway configuration",
     "md_url": "https://code.claude.com/docs/en/claude-apps-gateway-config.md",
     "html_url": "https://code.claude.com/docs/en/claude-apps-gateway-config",
@@ -656,7 +656,7 @@
     "kind": "doc"
   },
   {
-    "group": "Claude apps gateway",
+    "group": "Administration",
     "title": "Claude apps gateway spend limits",
     "md_url": "https://code.claude.com/docs/en/claude-apps-gateway-spend-limits.md",
     "html_url": "https://code.claude.com/docs/en/claude-apps-gateway-spend-limits",
@@ -664,7 +664,7 @@
     "kind": "doc"
   },
   {
-    "group": "Claude apps gateway",
+    "group": "Administration",
     "title": "Claude apps gateway deployment and operations",
     "md_url": "https://code.claude.com/docs/en/claude-apps-gateway-deploy.md",
     "html_url": "https://code.claude.com/docs/en/claude-apps-gateway-deploy",
@@ -672,7 +672,7 @@
     "kind": "doc"
   },
   {
-    "group": "Claude apps gateway",
+    "group": "Administration",
     "title": "Deploy Claude apps gateway on AWS",
     "md_url": "https://code.claude.com/docs/en/claude-apps-gateway-on-aws.md",
     "html_url": "https://code.claude.com/docs/en/claude-apps-gateway-on-aws",
@@ -680,7 +680,7 @@
     "kind": "doc"
   },
   {
-    "group": "Claude apps gateway",
+    "group": "Administration",
     "title": "Deploy Claude apps gateway on Google Cloud",
     "md_url": "https://code.claude.com/docs/en/claude-apps-gateway-on-gcp.md",
     "html_url": "https://code.claude.com/docs/en/claude-apps-gateway-on-gcp",
@@ -688,7 +688,7 @@
     "kind": "doc"
   },
   {
-    "group": "Other gateways",
+    "group": "Administration",
     "title": "Other LLM gateways",
     "md_url": "https://code.claude.com/docs/en/llm-gateway.md",
     "html_url": "https://code.claude.com/docs/en/llm-gateway",
@@ -696,7 +696,7 @@
     "kind": "doc"
   },
   {
-    "group": "Other gateways",
+    "group": "Administration",
     "title": "Connect Claude Code to an LLM gateway",
     "md_url": "https://code.claude.com/docs/en/llm-gateway-connect.md",
     "html_url": "https://code.claude.com/docs/en/llm-gateway-connect",
@@ -704,7 +704,7 @@
     "kind": "doc"
   },
   {
-    "group": "Other gateways",
+    "group": "Administration",
     "title": "Roll out an LLM gateway for your organization",
     "md_url": "https://code.claude.com/docs/en/llm-gateway-rollout.md",
     "html_url": "https://code.claude.com/docs/en/llm-gateway-rollout",
@@ -712,7 +712,7 @@
     "kind": "doc"
   },
   {
-    "group": "Other gateways",
+    "group": "Administration",
     "title": "Gateway protocol reference",
     "md_url": "https://code.claude.com/docs/en/llm-gateway-protocol.md",
     "html_url": "https://code.claude.com/docs/en/llm-gateway-protocol",
@@ -720,7 +720,7 @@
     "kind": "doc"
   },
   {
-    "group": "Usage and costs",
+    "group": "Administration",
     "title": "Monitoring",
     "md_url": "https://code.claude.com/docs/en/monitoring-usage.md",
     "html_url": "https://code.claude.com/docs/en/monitoring-usage",
@@ -728,7 +728,7 @@
     "kind": "doc"
   },
   {
-    "group": "Usage and costs",
+    "group": "Administration",
     "title": "Manage costs effectively",
     "md_url": "https://code.claude.com/docs/en/costs.md",
     "html_url": "https://code.claude.com/docs/en/costs",
@@ -736,7 +736,7 @@
     "kind": "doc"
   },
   {
-    "group": "Usage and costs",
+    "group": "Administration",
     "title": "Track team usage with analytics",
     "md_url": "https://code.claude.com/docs/en/analytics.md",
     "html_url": "https://code.claude.com/docs/en/analytics",
@@ -744,7 +744,7 @@
     "kind": "doc"
   },
   {
-    "group": "Plugin distribution",
+    "group": "Administration",
     "title": "Create and distribute a plugin marketplace",
     "md_url": "https://code.claude.com/docs/en/plugin-marketplaces.md",
     "html_url": "https://code.claude.com/docs/en/plugin-marketplaces",
@@ -752,7 +752,7 @@
     "kind": "doc"
   },
   {
-    "group": "Plugin distribution",
+    "group": "Administration",
     "title": "Constrain plugin dependency versions",
     "md_url": "https://code.claude.com/docs/en/plugin-dependencies.md",
     "html_url": "https://code.claude.com/docs/en/plugin-dependencies",
@@ -760,7 +760,7 @@
     "kind": "doc"
   },
   {
-    "group": "Plugin distribution",
+    "group": "Administration",
     "title": "Recommend your plugin from your CLI",
     "md_url": "https://code.claude.com/docs/en/plugin-hints.md",
     "html_url": "https://code.claude.com/docs/en/plugin-hints",
@@ -768,7 +768,7 @@
     "kind": "doc"
   },
   {
-    "group": "Plugin distribution",
+    "group": "Administration",
     "title": "Recommend plugins for your org",
     "md_url": "https://code.claude.com/docs/en/plugin-relevance.md",
     "html_url": "https://code.claude.com/docs/en/plugin-relevance",
@@ -776,7 +776,7 @@
     "kind": "doc"
   },
   {
-    "group": "Security and data",
+    "group": "Administration",
     "title": "Security",
     "md_url": "https://code.claude.com/docs/en/security.md",
     "html_url": "https://code.claude.com/docs/en/security",
@@ -784,7 +784,7 @@
     "kind": "doc"
   },
   {
-    "group": "Security and data",
+    "group": "Administration",
     "title": "Data usage",
     "md_url": "https://code.claude.com/docs/en/data-usage.md",
     "html_url": "https://code.claude.com/docs/en/data-usage",
@@ -792,7 +792,7 @@
     "kind": "doc"
   },
   {
-    "group": "Security and data",
+    "group": "Administration",
     "title": "Zero data retention",
     "md_url": "https://code.claude.com/docs/en/zero-data-retention.md",
     "html_url": "https://code.claude.com/docs/en/zero-data-retention",
@@ -800,7 +800,7 @@
     "kind": "doc"
   },
   {
-    "group": "Adoption",
+    "group": "Administration",
     "title": "Communications kit",
     "md_url": "https://code.claude.com/docs/en/communications-kit.md",
     "html_url": "https://code.claude.com/docs/en/communications-kit",
@@ -808,7 +808,7 @@
     "kind": "doc"
   },
   {
-    "group": "Adoption",
+    "group": "Administration",
     "title": "Champion kit",
     "md_url": "https://code.claude.com/docs/en/champion-kit.md",
     "html_url": "https://code.claude.com/docs/en/champion-kit",
@@ -816,7 +816,7 @@
     "kind": "doc"
   },
   {
-    "group": "Settings",
+    "group": "Configuration",
     "title": "Claude Code settings",
     "md_url": "https://code.claude.com/docs/en/settings.md",
     "html_url": "https://code.claude.com/docs/en/settings",
@@ -824,7 +824,7 @@
     "kind": "doc"
   },
   {
-    "group": "Settings",
+    "group": "Configuration",
     "title": "Claude Code settings reference",
     "md_url": "https://code.claude.com/docs/en/settings-reference.md",
     "html_url": "https://code.claude.com/docs/en/settings-reference",
@@ -832,7 +832,7 @@
     "kind": "doc"
   },
   {
-    "group": "Settings",
+    "group": "Configuration",
     "title": "Example settings files",
     "md_url": "https://code.claude.com/docs/en/settings-example.md",
     "html_url": "https://code.claude.com/docs/en/settings-example",
@@ -840,7 +840,7 @@
     "kind": "doc"
   },
   {
-    "group": "Permissions and sandboxing",
+    "group": "Configuration",
     "title": "Configure permissions",
     "md_url": "https://code.claude.com/docs/en/permissions.md",
     "html_url": "https://code.claude.com/docs/en/permissions",
@@ -848,7 +848,7 @@
     "kind": "doc"
   },
   {
-    "group": "Permissions and sandboxing",
+    "group": "Configuration",
     "title": "Choose a permission mode",
     "md_url": "https://code.claude.com/docs/en/permission-modes.md",
     "html_url": "https://code.claude.com/docs/en/permission-modes",
@@ -856,7 +856,7 @@
     "kind": "doc"
   },
   {
-    "group": "Permissions and sandboxing",
+    "group": "Configuration",
     "title": "Configure the sandboxed Bash tool",
     "md_url": "https://code.claude.com/docs/en/sandboxing.md",
     "html_url": "https://code.claude.com/docs/en/sandboxing",
@@ -864,7 +864,7 @@
     "kind": "doc"
   },
   {
-    "group": "Permissions and sandboxing",
+    "group": "Configuration",
     "title": "Choose a sandbox environment",
     "md_url": "https://code.claude.com/docs/en/sandbox-environments.md",
     "html_url": "https://code.claude.com/docs/en/sandbox-environments",
@@ -872,7 +872,7 @@
     "kind": "doc"
   },
   {
-    "group": "Environments",
+    "group": "Configuration",
     "title": "Configure cloud environments",
     "md_url": "https://code.claude.com/docs/en/cloud-environments.md",
     "html_url": "https://code.claude.com/docs/en/cloud-environments",
@@ -880,7 +880,7 @@
     "kind": "doc"
   },
   {
-    "group": "Self-hosted environments",
+    "group": "Configuration",
     "title": "Self-hosted environments",
     "md_url": "https://code.claude.com/docs/en/self-hosted-environments.md",
     "html_url": "https://code.claude.com/docs/en/self-hosted-environments",
@@ -888,7 +888,7 @@
     "kind": "doc"
   },
   {
-    "group": "Self-hosted environments",
+    "group": "Configuration",
     "title": "Self-hosted environments quickstart",
     "md_url": "https://code.claude.com/docs/en/self-hosted-environments-quickstart.md",
     "html_url": "https://code.claude.com/docs/en/self-hosted-environments-quickstart",
@@ -896,7 +896,7 @@
     "kind": "doc"
   },
   {
-    "group": "Self-hosted environments",
+    "group": "Configuration",
     "title": "Deploy self-hosted environments to production",
     "md_url": "https://code.claude.com/docs/en/self-hosted-environments-deploy.md",
     "html_url": "https://code.claude.com/docs/en/self-hosted-environments-deploy",
@@ -904,7 +904,7 @@
     "kind": "doc"
   },
   {
-    "group": "Self-hosted environments",
+    "group": "Configuration",
     "title": "Customize sessions in self-hosted environments",
     "md_url": "https://code.claude.com/docs/en/self-hosted-environments-configuration.md",
     "html_url": "https://code.claude.com/docs/en/self-hosted-environments-configuration",
@@ -912,7 +912,7 @@
     "kind": "doc"
   },
   {
-    "group": "Self-hosted environments",
+    "group": "Configuration",
     "title": "Test self-hosted environments end to end",
     "md_url": "https://code.claude.com/docs/en/self-hosted-environments-testing.md",
     "html_url": "https://code.claude.com/docs/en/self-hosted-environments-testing",
@@ -920,7 +920,7 @@
     "kind": "doc"
   },
   {
-    "group": "Self-hosted environments",
+    "group": "Configuration",
     "title": "Self-hosted environments reference",
     "md_url": "https://code.claude.com/docs/en/self-hosted-environments-reference.md",
     "html_url": "https://code.claude.com/docs/en/self-hosted-environments-reference",
@@ -928,7 +928,7 @@
     "kind": "doc"
   },
   {
-    "group": "Self-hosted environments",
+    "group": "Configuration",
     "title": "Verify session identity in self-hosted environments",
     "md_url": "https://code.claude.com/docs/en/self-hosted-environments-identity.md",
     "html_url": "https://code.claude.com/docs/en/self-hosted-environments-identity",
@@ -936,7 +936,7 @@
     "kind": "doc"
   },
   {
-    "group": "Model and responses",
+    "group": "Configuration",
     "title": "Model configuration",
     "md_url": "https://code.claude.com/docs/en/model-config.md",
     "html_url": "https://code.claude.com/docs/en/model-config",
@@ -944,7 +944,7 @@
     "kind": "doc"
   },
   {
-    "group": "Model and responses",
+    "group": "Configuration",
     "title": "Speed up responses with fast mode",
     "md_url": "https://code.claude.com/docs/en/fast-mode.md",
     "html_url": "https://code.claude.com/docs/en/fast-mode",
@@ -952,7 +952,7 @@
     "kind": "doc"
   },
   {
-    "group": "Model and responses",
+    "group": "Configuration",
     "title": "Escalate hard decisions with the advisor tool",
     "md_url": "https://code.claude.com/docs/en/advisor.md",
     "html_url": "https://code.claude.com/docs/en/advisor",
@@ -960,7 +960,7 @@
     "kind": "doc"
   },
   {
-    "group": "Model and responses",
+    "group": "Configuration",
     "title": "Output styles",
     "md_url": "https://code.claude.com/docs/en/output-styles.md",
     "html_url": "https://code.claude.com/docs/en/output-styles",
@@ -968,7 +968,7 @@
     "kind": "doc"
   },
   {
-    "group": "Interface",
+    "group": "Configuration",
     "title": "Configure your terminal for Claude Code",
     "md_url": "https://code.claude.com/docs/en/terminal-config.md",
     "html_url": "https://code.claude.com/docs/en/terminal-config",
@@ -976,7 +976,7 @@
     "kind": "doc"
   },
   {
-    "group": "Interface",
+    "group": "Configuration",
     "title": "Fullscreen rendering",
     "md_url": "https://code.claude.com/docs/en/fullscreen.md",
     "html_url": "https://code.claude.com/docs/en/fullscreen",
@@ -984,7 +984,7 @@
     "kind": "doc"
   },
   {
-    "group": "Interface",
+    "group": "Configuration",
     "title": "Use Claude Code with a screen reader",
     "md_url": "https://code.claude.com/docs/en/accessibility.md",
     "html_url": "https://code.claude.com/docs/en/accessibility",
@@ -992,7 +992,7 @@
     "kind": "doc"
   },
   {
-    "group": "Interface",
+    "group": "Configuration",
     "title": "Voice dictation",
     "md_url": "https://code.claude.com/docs/en/voice-dictation.md",
     "html_url": "https://code.claude.com/docs/en/voice-dictation",
@@ -1000,7 +1000,7 @@
     "kind": "doc"
   },
   {
-    "group": "Interface",
+    "group": "Configuration",
     "title": "Customize your status line",
     "md_url": "https://code.claude.com/docs/en/statusline.md",
     "html_url": "https://code.claude.com/docs/en/statusline",
@@ -1008,7 +1008,7 @@
     "kind": "doc"
   },
   {
-    "group": "Interface",
+    "group": "Configuration",
     "title": "Customize keyboard shortcuts",
     "md_url": "https://code.claude.com/docs/en/keybindings.md",
     "html_url": "https://code.claude.com/docs/en/keybindings",
@@ -1088,7 +1088,7 @@
     "kind": "doc"
   },
   {
-    "group": "Glossary",
+    "group": "Reference",
     "title": "Glossary",
     "md_url": "https://code.claude.com/docs/en/glossary.md",
     "html_url": "https://code.claude.com/docs/en/glossary",
@@ -1112,15 +1112,7 @@
     "kind": "doc"
   },
   {
-    "group": "Build agents",
-    "title": "Examples",
-    "md_url": "https://code.claude.com/docs/en/agent-sdk/examples.md",
-    "html_url": "https://code.claude.com/docs/en/agent-sdk/examples",
-    "route": "agent-sdk/examples",
-    "kind": "doc"
-  },
-  {
-    "group": "Build agents",
+    "group": "Agent SDK",
     "title": "Troubleshooting",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/troubleshooting.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/troubleshooting",
@@ -1128,7 +1120,15 @@
     "kind": "doc"
   },
   {
-    "group": "Core concepts",
+    "group": "Agent SDK",
+    "title": "Examples",
+    "md_url": "https://code.claude.com/docs/en/agent-sdk/examples.md",
+    "html_url": "https://code.claude.com/docs/en/agent-sdk/examples",
+    "route": "agent-sdk/examples",
+    "kind": "doc"
+  },
+  {
+    "group": "Agent SDK",
     "title": "How the agent loop works",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop",
@@ -1136,7 +1136,7 @@
     "kind": "doc"
   },
   {
-    "group": "Core concepts",
+    "group": "Agent SDK",
     "title": "Use Claude Code features in the SDK",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/claude-code-features.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/claude-code-features",
@@ -1144,7 +1144,7 @@
     "kind": "doc"
   },
   {
-    "group": "Core concepts",
+    "group": "Agent SDK",
     "title": "Work with sessions",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/sessions.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/sessions",
@@ -1152,7 +1152,7 @@
     "kind": "doc"
   },
   {
-    "group": "Core concepts",
+    "group": "Agent SDK",
     "title": "Persist sessions to external storage",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/session-storage.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/session-storage",
@@ -1160,7 +1160,7 @@
     "kind": "doc"
   },
   {
-    "group": "Input and output",
+    "group": "Agent SDK",
     "title": "Streaming Input",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/streaming-vs-single-mode.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/streaming-vs-single-mode",
@@ -1168,7 +1168,7 @@
     "kind": "doc"
   },
   {
-    "group": "Input and output",
+    "group": "Agent SDK",
     "title": "Handle approvals and user input",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/user-input.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/user-input",
@@ -1176,7 +1176,7 @@
     "kind": "doc"
   },
   {
-    "group": "Input and output",
+    "group": "Agent SDK",
     "title": "Stream responses in real-time",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/streaming-output.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/streaming-output",
@@ -1184,7 +1184,7 @@
     "kind": "doc"
   },
   {
-    "group": "Input and output",
+    "group": "Agent SDK",
     "title": "Get structured output from agents",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/structured-outputs.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/structured-outputs",
@@ -1192,7 +1192,7 @@
     "kind": "doc"
   },
   {
-    "group": "Extend with tools",
+    "group": "Agent SDK",
     "title": "Give Claude custom tools",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/custom-tools.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/custom-tools",
@@ -1200,7 +1200,7 @@
     "kind": "doc"
   },
   {
-    "group": "Extend with tools",
+    "group": "Agent SDK",
     "title": "Connect to external tools with MCP",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/mcp.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/mcp",
@@ -1208,7 +1208,7 @@
     "kind": "doc"
   },
   {
-    "group": "Extend with tools",
+    "group": "Agent SDK",
     "title": "Scale to many tools with tool search",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/tool-search.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/tool-search",
@@ -1216,7 +1216,7 @@
     "kind": "doc"
   },
   {
-    "group": "Extend with tools",
+    "group": "Agent SDK",
     "title": "Subagents in the SDK",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/subagents.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/subagents",
@@ -1224,7 +1224,7 @@
     "kind": "doc"
   },
   {
-    "group": "Customize behavior",
+    "group": "Agent SDK",
     "title": "Modifying system prompts",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/modifying-system-prompts.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/modifying-system-prompts",
@@ -1232,7 +1232,7 @@
     "kind": "doc"
   },
   {
-    "group": "Customize behavior",
+    "group": "Agent SDK",
     "title": "Extend agents with skills",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/skills.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/skills",
@@ -1240,7 +1240,7 @@
     "kind": "doc"
   },
   {
-    "group": "Customize behavior",
+    "group": "Agent SDK",
     "title": "Plugins in the SDK",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/plugins.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/plugins",
@@ -1248,7 +1248,7 @@
     "kind": "doc"
   },
   {
-    "group": "Control and observability",
+    "group": "Agent SDK",
     "title": "Configure permissions",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/permissions.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/permissions",
@@ -1256,7 +1256,7 @@
     "kind": "doc"
   },
   {
-    "group": "Control and observability",
+    "group": "Agent SDK",
     "title": "Intercept and control agent behavior with hooks",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/hooks.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/hooks",
@@ -1264,7 +1264,7 @@
     "kind": "doc"
   },
   {
-    "group": "Control and observability",
+    "group": "Agent SDK",
     "title": "Rewind file changes with checkpointing",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/file-checkpointing.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/file-checkpointing",
@@ -1272,7 +1272,7 @@
     "kind": "doc"
   },
   {
-    "group": "Control and observability",
+    "group": "Agent SDK",
     "title": "Track cost and usage",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/cost-tracking.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/cost-tracking",
@@ -1280,7 +1280,7 @@
     "kind": "doc"
   },
   {
-    "group": "Control and observability",
+    "group": "Agent SDK",
     "title": "Observability with OpenTelemetry",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/observability.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/observability",
@@ -1288,7 +1288,7 @@
     "kind": "doc"
   },
   {
-    "group": "Control and observability",
+    "group": "Agent SDK",
     "title": "Track todos",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/todo-tracking.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/todo-tracking",
@@ -1296,7 +1296,7 @@
     "kind": "doc"
   },
   {
-    "group": "Deployment",
+    "group": "Agent SDK",
     "title": "Hosting the Agent SDK",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/hosting.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/hosting",
@@ -1304,7 +1304,7 @@
     "kind": "doc"
   },
   {
-    "group": "Deployment",
+    "group": "Agent SDK",
     "title": "Securely deploying AI agents",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/secure-deployment.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/secure-deployment",
@@ -1312,7 +1312,7 @@
     "kind": "doc"
   },
   {
-    "group": "SDK references",
+    "group": "Agent SDK",
     "title": "Agent SDK reference - TypeScript",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/typescript.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/typescript",
@@ -1320,7 +1320,7 @@
     "kind": "doc"
   },
   {
-    "group": "SDK references",
+    "group": "Agent SDK",
     "title": "TypeScript SDK V2 session API (removed)",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/typescript-v2-preview.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/typescript-v2-preview",
@@ -1328,7 +1328,7 @@
     "kind": "doc"
   },
   {
-    "group": "SDK references",
+    "group": "Agent SDK",
     "title": "Agent SDK reference - Python",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/python.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/python",
@@ -1336,7 +1336,7 @@
     "kind": "doc"
   },
   {
-    "group": "SDK references",
+    "group": "Agent SDK",
     "title": "Migrate to Claude Agent SDK",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide",
@@ -1605,6 +1605,22 @@
     "md_url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense.md",
     "html_url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense",
     "route": "blog/preparing-your-security-program-for-ai-accelerated-offense",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how anthropic employees use claude tag",
+    "md_url": "https://claude.com/blog/how-anthropic-employees-use-claude-tag.md",
+    "html_url": "https://claude.com/blog/how-anthropic-employees-use-claude-tag",
+    "route": "blog/how-anthropic-employees-use-claude-tag",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude for teachers now available for schools and districts",
+    "md_url": "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts.md",
+    "html_url": "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts",
+    "route": "blog/claude-for-teachers-now-available-for-schools-and-districts",
     "kind": "blog"
   },
   {

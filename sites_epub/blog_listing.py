@@ -45,15 +45,31 @@ def normalize_blog_url(href: str, base: str = "https://claude.com") -> str | Non
 
 
 def extract_blog_urls(html: str, base: str = "https://claude.com") -> list[str]:
-    """De-duplicated https://claude.com/blog/<slug> URLs in first-seen order."""
+    """De-duplicated https://claude.com/blog/<slug> URLs in first-seen order.
+
+    2026-08: claude.com moved off Webflow; the listing is now a React app whose
+    article links live in embedded JSON payloads (and in sitemap.xml <loc>,
+    which fetch_vendor appends to this html). Walk <a> tags first, then sweep
+    the raw text for href="..." and <loc> so payload links are covered.
+    normalize_blog_url still enforces host + EN slug, so i18n (/de/blog/...)
+    and chrome links stay excluded.
+    """
     soup = BeautifulSoup(html, "lxml")
     seen: set[str] = set()
     out: list[str] = []
-    for tag in soup.find_all("a", href=True):
-        url = normalize_blog_url(tag["href"], base=base)
+
+    def _add(href: str) -> None:
+        url = normalize_blog_url(href, base=base)
         if url and url not in seen:
             seen.add(url)
             out.append(url)
+
+    for tag in soup.find_all("a", href=True):
+        _add(tag["href"])
+    for href in re.findall(r'href="([^"]*/blog/[^"]*)"', html):
+        _add(href)
+    for loc in re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", html, flags=re.I):
+        _add(loc)
     return out
 
 

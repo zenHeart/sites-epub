@@ -977,10 +977,26 @@
   },
   {
     "group": "Administration",
+    "title": "ChatGPT Work local security",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/chatgpt-work-local-security.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/chatgpt-work-local-security",
+    "route": "codex/enterprise/chatgpt-work-local-security",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
     "title": "ChatGPT Work admin FAQ",
     "md_url": "https://learn.chatgpt.com/codex/enterprise/work-admin-faq.md",
     "html_url": "https://learn.chatgpt.com/codex/enterprise/work-admin-faq",
     "route": "codex/enterprise/work-admin-faq",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "ChatGPT Work: usage and cost",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/chatgpt-work-usage-and-cost.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/chatgpt-work-usage-and-cost",
+    "route": "codex/enterprise/chatgpt-work-usage-and-cost",
     "kind": "doc"
   },
   {
@@ -1081,6 +1097,14 @@
   },
   {
     "group": "Administration",
+    "title": "Plugin management",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/plugin-management.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/plugin-management",
+    "route": "codex/enterprise/plugin-management",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
     "title": "Skill controls",
     "md_url": "https://learn.chatgpt.com/codex/enterprise/skills.md",
     "html_url": "https://learn.chatgpt.com/codex/enterprise/skills",
@@ -1093,6 +1117,14 @@
     "md_url": "https://learn.chatgpt.com/codex/enterprise/governance.md",
     "html_url": "https://learn.chatgpt.com/codex/enterprise/governance",
     "route": "codex/enterprise/governance",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Admin plugin",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/admin-plugin.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/admin-plugin",
+    "route": "codex/enterprise/admin-plugin",
     "kind": "doc"
   },
   {
@@ -1150,6 +1182,14 @@
     "html_url": "https://learn.chatgpt.com/codex/amazon-bedrock",
     "route": "codex/amazon-bedrock",
     "kind": "doc"
+  },
+  {
+    "group": "Blog",
+    "title": "rosalind workbench",
+    "md_url": "https://learn.chatgpt.com/blog/rosalind-workbench.md",
+    "html_url": "https://learn.chatgpt.com/blog/rosalind-workbench",
+    "route": "blog/rosalind-workbench",
+    "kind": "blog"
   },
   {
     "group": "Blog",

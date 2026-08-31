@@ -1305,7 +1305,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Aug 27, 2026 \u00b7 Engineering How I run multiple teams of Grok Bots Each project gets a channel, a roster, and a Notion board. An experimental pattern for coordinating bots like a human team. 3 min read \u00b7 Eric Zakariasson",
+    "title": "Aug 27, 2026 How I run multiple teams of Grok Bots Aug 27, 2026 How I run multiple teams of Grok Bots Each project gets a channel, a roster, and a Notion board. An experimental pattern for coordinating bots like a human team. Read More",
     "md_url": "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots.md",
     "html_url": "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots",
     "route": "bot-guides/how-i-run-multiple-teams-of-grok-bots",
@@ -1313,7 +1313,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Aug 25, 2026 \u00b7 Engineering Grok Bot for mobile app development Six bots, one mobile game studio. How I use Grok Bot to build, ship, and improve Rank\u2019em. 8 min read \u00b7 Ryan Perry",
+    "title": "Aug 25, 2026 Grok Bot for mobile app development",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-mobile-app-development.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-mobile-app-development",
     "route": "bot-guides/grok-bot-for-mobile-app-development",
@@ -1321,7 +1321,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Aug 24, 2026 \u00b7 Design Designing Grok Bot with Grok Bot How a designer uses always-on Grok Bot agents to explore more ideas, work with real production assets, and keep judgment in the loop. 8 min read \u00b7 John Bai",
+    "title": "Aug 24, 2026 Designing Grok Bot with Grok Bot",
     "md_url": "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot.md",
     "html_url": "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot",
     "route": "bot-guides/designing-grok-bot-with-grok-bot",
@@ -1329,7 +1329,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Aug 16, 2026 \u00b7 GTM Grok Bot for GTM How I use Grok Bot for Enterprise GTM at SpaceXAI: a Chief of Staff, prospecting and account prompts, live slides, and the rest of the team. 12 min read \u00b7 Krista Letz",
+    "title": "Aug 16, 2026 Grok Bot for GTM",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-gtm.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-gtm",
     "route": "bot-guides/grok-bot-for-gtm",
@@ -1337,7 +1337,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Aug 15, 2026 \u00b7 Product Grok Bot for PMs For the first time, a PM can have a team that reports to them. Attention lists, shipping software, and the bots I actually run. 10 min read \u00b7 Kevin Niparko",
+    "title": "Aug 15, 2026 Grok Bot for PMs",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-pms.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-pms",
     "route": "bot-guides/grok-bot-for-pms",
@@ -1345,10 +1345,10 @@
   },
   {
     "group": "News",
-    "title": "Aug 26, 2026 Grok Bot is now included with more plans Aug 26, 2026 Grok Bot is now included with more plans Grok Bot is now available for SuperGrok, Cursor Pro, and all Cursor Teams plans. Read More",
-    "md_url": "https://x.ai/news/grok-bot-more-plans.md",
-    "html_url": "https://x.ai/news/grok-bot-more-plans",
-    "route": "news/grok-bot-more-plans",
+    "title": "Aug 29, 2026 Grok Bot now works with X Aug 29, 2026 Grok Bot now works with X Grok Bot now has a tighter integration with X. Read More",
+    "md_url": "https://x.ai/news/grok-bot-and-x.md",
+    "html_url": "https://x.ai/news/grok-bot-and-x",
+    "route": "news/grok-bot-and-x",
     "kind": "blog"
   },
   {
@@ -1357,6 +1357,14 @@
     "md_url": "https://x.ai/news/grok-4-6-microsoft-foundry.md",
     "html_url": "https://x.ai/news/grok-4-6-microsoft-foundry",
     "route": "news/grok-4-6-microsoft-foundry",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Aug 26, 2026 Grok Bot is now included with more plans",
+    "md_url": "https://x.ai/news/grok-bot-more-plans.md",
+    "html_url": "https://x.ai/news/grok-bot-more-plans",
+    "route": "news/grok-bot-more-plans",
     "kind": "blog"
   },
   {
@@ -1377,7 +1385,7 @@
   },
   {
     "group": "News",
-    "title": "Aug 19, 2026 Grok Build on web and mobile",
+    "title": "Grok Build on web and mobile Grok Build is now available on every plan, on the web and on mobile. Aug 19, 2026",
     "md_url": "https://x.ai/news/grok-build-for-everyone.md",
     "html_url": "https://x.ai/news/grok-build-for-everyone",
     "route": "news/grok-build-for-everyone",
