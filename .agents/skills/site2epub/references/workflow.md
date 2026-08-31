@@ -45,6 +45,7 @@ python3 -m sites_epub catalog
 | `git push` 被 GH secret-scan 拦 | 文档示例里的 API key 形似真 key | `git commit --amend` 就地把真 key 替换成占位符再 push |
 | 跨子域多 docs 根（如 docs.x.ai + x.ai/bot/guides） | `Vendor` 只接 1 个 docs_url | 统一用 `docs.x.ai/llms.txt` 拿索引，bot/guides 在 adapter 分支里额外 `fetch_text` + parse |
 | 新 vendor 封面和 claude/codex/cursor 不对齐 | 没手画 SVG，copy icon 当 cover | `covers/<id>.svg` 用 400×560 模板手画，渲 800×1120 PNG（缺 cairo 时用 PIL fallback） |
+| 「补齐到最新」但 `skipped=N` 被当无更新证据 | skip 判据=缓存完整性（命中指纹不发网络请求），页面级线上漂移不可见 | 用 `--refetch` 全量重拉；或先证明线上 llms.txt 与 `corpus/llms.txt` md5 一致（详见 `lessons.md` §8） |
 
 ## 提交前自检
 

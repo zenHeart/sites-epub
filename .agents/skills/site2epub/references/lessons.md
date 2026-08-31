@@ -129,3 +129,30 @@
 ## 9. blog.google 没有 /blog/<slug> 结构
 
 `generic_blog.parse_blog_html` 只认 `/blog/<slug>` 路径，而 blog.google 的 Gemini 文章分布在 `products-and-platforms/products/gemini/`、`innovation-and-ai/products/gemini-app/`、`innovation-and-ai/models-and-research/gemini-models/` 等分区。做法与 xai bot/guides 同构：适配器自己抓 `https://blog.google/en-us/sitemap.xml`，按分区前缀过滤 `<loc>`（gemini adapter 内 `parse_gemini_blog`）。sitemap 分区清单会随站点 IA 改版漂移，增量抓取时留意 Blog 章数突变。
+
+---
+
+## 10. 增量 skip 是「缓存完整性」不是「线上新鲜度」（2026-08-31 审计）
+
+**症状**：`fetch` 报 `skipped=247`（cursor）容易被读成「站点无更新」。实际只证明本地缓存没坏。
+
+**根因**：`compile.py load_one()` 的 skip 判据是
+`prev[route] == content_hash(cached) and not _looks_missing and not runtime_source`
+—— 命中即**完全不发网络请求**。页面级线上漂移对指纹命中的页不可见；列表级变化靠 llms.txt 重抓才能发现（路由增删），页面内容改了但路由没变时，只有运气好才会被重抓。
+
+**怎么发现**：claude 6 页（settings 等）每轮都 fetched=6。用
+`fingerprint.content_hash` + `mdx.looks_like_runtime_source` 逐项复算，6 页全部
+`fp_match=True, runtime_source=True`——文档里合法的 `export const`/`useMemo`
+示例代码触发了 MDX 运行时源码误判，使这些页**永远不满足 skip**、每轮重抓。
+它们「总是最新」是误判的副产物，不是漂移检测。
+
+**怎么修（语义层）**：「补齐到今天/确保最新」的任务必须二选一：
+
+1. `python3 -m sites_epub fetch --id <id> --refetch`（忽略指纹全量重拉，页面级真最新）；
+2. 或先做证据检查：线上 llms.txt 与 `corpus/llms.txt` md5 一致 + `fetched=0`，
+   才能下「无更新」结论（cursor 8.31 即用此法证明）。
+
+**怎么防止复发**：交付「更新到最新」类任务时，报告里必须写明证据是
+`--refetch` 还是 `llms.txt md5 一致`；两者都没有的 `skipped=N` 不能当新鲜度证据。
+runtime_source 误判**不要修**——它让含 React 示例的页面保持每轮重抓，
+对新鲜度是净收益；修掉反而扩大盲区。
