@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import http.cookiejar
 import os
 import time
 import urllib.error
@@ -10,6 +11,12 @@ import urllib.request
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+)
+
+# Cookie-aware opener: devsite sites (e.g. ai.google.dev) answer plain requests
+# with a Set-Cookie + self-redirect loop that deadlocks urllib's redirect handler.
+_OPENER = urllib.request.build_opener(
+    urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar())
 )
 
 
@@ -23,7 +30,7 @@ def fetch_bytes(url: str, timeout: int = 60, retries: int = 3) -> tuple[bytes, s
     )
     for attempt in range(retries):
         try:
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
+            with _OPENER.open(req, timeout=timeout) as resp:
                 return resp.read(), resp.headers.get("Content-Type")
         except (urllib.error.URLError, TimeoutError, OSError) as exc:
             last_err = exc

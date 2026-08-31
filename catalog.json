@@ -59,6 +59,21 @@
       "category": "docs",
       "chapters": 242,
       "cover": "covers/grok.png"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "docs_url": "https://ai.google.dev/gemini-api/docs",
+      "blog_url": "https://blog.google/products/gemini/",
+      "icon": "vendors/gemini/icon.png",
+      "author": "Google",
+      "adapter": "gemini",
+      "updated_at": "",
+      "packed_at": "",
+      "summary": "Google Gemini 官方产品文档与博客一书打包:Gemini API 与 AI Studio、API Reference、Gemini CLI、Gemini Code Assist、Antigravity、Jules、Firebase Studio,Blog 排在末尾。",
+      "category": "docs",
+      "chapters": 0,
+      "cover": "covers/gemini.png"
     }
   ],
   "sites": [

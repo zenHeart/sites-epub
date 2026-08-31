@@ -10,7 +10,7 @@ from pathlib import Path
 
 from urllib.parse import urljoin, urlparse
 
-from bs4 import BeautifulSoup, Tag
+from bs4 import NavigableString, BeautifulSoup, Tag
 
 from .images import collect_image_urls, collect_markdown_image_urls
 from .mdx import strip_leaked_jsx_text, transform_mdx
@@ -191,14 +191,83 @@ def sanitize_body_html(html: str, page_url: str | None = None) -> str:
         el.name = "div"
         if el.has_attr("role"):
             del el["role"]
+    # Devsite custom containers are inline-unknown to pandoc: a <pre> inside
+    # them gets flattened into <br> prose (and any markdown fences it holds
+    # leak into the chapter text). Unwrap so the inner <pre> stands alone.
+    for _ in range(3):  # nested wrappers (selector > section > code)
+        containers = root.select("devsite-code, devsite-selector")
+        if not containers:
+            break
+        for el in containers:
+            el.unwrap()
+    # Pandoc's html reader parses bare <pre> (no <code> child) into a line
+    # block, i.e. prose. It honors <pre><code> as a CodeBlock; devsite emits
+    # bare pres everywhere, so wrap them.
+    for pre in root.find_all("pre"):
+        if pre.find("code") is None:
+            code = soup.new_tag("code")
+            for child in list(pre.children):
+                child.extract()
+                code.append(child)
+            pre.append(code)
     pascal = re.compile(r"<[A-Z][A-Za-z0-9]*\b")
     for node in list(root.find_all(string=True)):
         raw = str(node)
         if pascal.search(raw) or "&lt;" in raw:
             node.replace_with(strip_leaked_jsx_text(raw))
+    promote_markdown_fences(soup, root)
     serialized = root.decode_contents() if hasattr(root, "decode_contents") else str(root)
     cleaned = strip_leaked_jsx_text(serialized)
     return rewrite_absolute_links(cleaned, page_url)
+
+
+FENCE_LINE_RE = re.compile(r"(?m)^\s*```")
+
+
+def promote_markdown_fences(soup: BeautifulSoup, root: Tag) -> None:
+    """Promote raw markdown fences embedded in prose to <pre><code>.
+
+    Devsite pages (ai.google.dev) ship some examples as raw markdown text
+    inside table cells; rendered client-side on the live site, they would
+    leak literal ``` lines into the EPUB prose and trip the walk gate.
+    """
+    for node in list(root.find_all(string=True)):
+        parent = node.parent
+        if parent is None or parent.name in {"pre", "code", "script", "style", "textarea"}:
+            continue
+        text = str(node)
+        if "```" not in text or not FENCE_LINE_RE.search(text):
+            continue
+        parts = text.split("```")
+        if len(parts) < 3:
+            # Dangling fence (opens or closes across an element boundary):
+            # drop just the fence line; the surrounding text stays prose.
+            cleaned = "\n".join(
+                line for line in text.split("\n") if "```" not in line
+            )
+            node.replace_with(NavigableString(cleaned))
+            continue
+        pieces: list[object] = []
+        pieces: list[object] = []
+        if parts[0]:
+            pieces.append(NavigableString(parts[0]))
+        for i in range(1, len(parts), 2):
+            body = parts[i]
+            first_nl = body.find("\n")
+            if first_nl != -1 and body[:first_nl].strip() and " " not in body[:first_nl].strip():
+                body = body[first_nl + 1 :]
+            pre = soup.new_tag("pre")
+            code = soup.new_tag("code")
+            code.string = body.strip("\n")
+            pre.append(code)
+            pieces.append(pre)
+            if i + 1 < len(parts) and parts[i + 1]:
+                pieces.append(NavigableString(parts[i + 1]))
+        anchor = node
+        for piece in pieces:
+            anchor.insert_after(piece)
+            anchor = piece
+        node.extract()
 
 
 def extract_from_html(

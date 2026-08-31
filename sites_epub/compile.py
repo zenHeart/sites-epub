@@ -53,6 +53,10 @@ def discover_entries(
         if not docs_llms:
             raise ValueError("xai adapter needs llms.txt")
         docs = parse_xai_llms(docs_llms, vendor.docs_url)
+    elif vendor.adapter == "gemini":
+        from .gemini_nav import parse_gemini_docs
+
+        docs = parse_gemini_docs()
     else:
         from .generic_nav import parse_docs_html, parse_llms_generic
 
@@ -62,7 +66,11 @@ def discover_entries(
             docs = parse_docs_html(docs_html, vendor.docs_url)
     blog: list[IndexEntry] = []
     if vendor.blog_url and blog_html:
-        if vendor.adapter == "xai":
+        if vendor.adapter == "gemini":
+            from .gemini_nav import parse_gemini_blog
+
+            blog = parse_gemini_blog()
+        elif vendor.adapter == "xai":
             from .xai_nav import parse_xai_blog, parse_xai_bot_guides
 
             blog = parse_xai_blog(blog_html, vendor.blog_url)

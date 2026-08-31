@@ -49,8 +49,8 @@ python3 -m sites_epub catalog
 ## 提交前自检
 
 ```bash
-# 1. 封面标题门禁：四本 EPUB cover.xhtml 都不应包含 ChatGPT Codex Docs
-for v in claude codex cursor grok; do
+# 1. 封面标题门禁：所有 EPUB cover.xhtml 都不应包含 ChatGPT Codex Docs
+for v in claude codex cursor grok gemini; do
   curl -ksSL https://epub.zenheart.site/$v.epub -o /tmp/$v.epub
   python3 .agents/skills/site2epub/scripts/check_epub.py /tmp/$v.epub >/dev/null && echo "$v: PASS" || echo "$v: FAIL"
 done

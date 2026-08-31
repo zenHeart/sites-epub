@@ -1,0 +1,4762 @@
+[
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Docs",
+    "md_url": "https://ai.google.dev/gemini-api/docs.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs",
+    "route": "gemini-api/docs",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Get started",
+    "md_url": "https://ai.google.dev/gemini-api/docs/get-started.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/get-started",
+    "route": "gemini-api/docs/get-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "API keys",
+    "md_url": "https://ai.google.dev/gemini-api/docs/api-key.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/api-key",
+    "route": "gemini-api/docs/api-key",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Pricing",
+    "md_url": "https://ai.google.dev/gemini-api/docs/pricing.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "route": "gemini-api/docs/pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Coding agent setup",
+    "md_url": "https://ai.google.dev/gemini-api/docs/coding-agents.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/coding-agents",
+    "route": "gemini-api/docs/coding-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "All models",
+    "md_url": "https://ai.google.dev/gemini-api/docs/models.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/models",
+    "route": "gemini-api/docs/models",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Latest Gemini models",
+    "md_url": "https://ai.google.dev/gemini-api/docs/latest-model.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/latest-model",
+    "route": "gemini-api/docs/latest-model",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Nano Banana",
+    "md_url": "https://ai.google.dev/gemini-api/docs/image-generation.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/image-generation",
+    "route": "gemini-api/docs/image-generation",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Veo",
+    "md_url": "https://ai.google.dev/gemini-api/docs/veo.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/veo",
+    "route": "gemini-api/docs/veo",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Gemini Omni Flash",
+    "md_url": "https://ai.google.dev/gemini-api/docs/omni.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/omni",
+    "route": "gemini-api/docs/omni",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Lyria 3",
+    "md_url": "https://ai.google.dev/gemini-api/docs/music-generation.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/music-generation",
+    "route": "gemini-api/docs/music-generation",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Lyria RealTime",
+    "md_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/realtime-music-generation",
+    "route": "gemini-api/docs/realtime-music-generation",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Imagen",
+    "md_url": "https://ai.google.dev/gemini-api/docs/imagen.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/imagen",
+    "route": "gemini-api/docs/imagen",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Text-to-speech",
+    "md_url": "https://ai.google.dev/gemini-api/docs/speech-generation.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/speech-generation",
+    "route": "gemini-api/docs/speech-generation",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Transcribe",
+    "md_url": "https://ai.google.dev/gemini-api/docs/transcribe.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/transcribe",
+    "route": "gemini-api/docs/transcribe",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Live",
+    "md_url": "https://ai.google.dev/gemini-api/docs/live-api.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/live-api",
+    "route": "gemini-api/docs/live-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Live translate",
+    "md_url": "https://ai.google.dev/gemini-api/docs/live-api/live-translate.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/live-api/live-translate",
+    "route": "gemini-api/docs/live-api/live-translate",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Embeddings",
+    "md_url": "https://ai.google.dev/gemini-api/docs/embeddings.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/embeddings",
+    "route": "gemini-api/docs/embeddings",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Overview",
+    "md_url": "https://ai.google.dev/gemini-api/docs/robotics-overview.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/robotics-overview",
+    "route": "gemini-api/docs/robotics-overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Spatial reasoning",
+    "md_url": "https://ai.google.dev/gemini-api/docs/robotics-spatial.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/robotics-spatial",
+    "route": "gemini-api/docs/robotics-spatial",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Agentic vision",
+    "md_url": "https://ai.google.dev/gemini-api/docs/robotics-agentic.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/robotics-agentic",
+    "route": "gemini-api/docs/robotics-agentic",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Task orchestration",
+    "md_url": "https://ai.google.dev/gemini-api/docs/robotics-orchestration.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/robotics-orchestration",
+    "route": "gemini-api/docs/robotics-orchestration",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Robotics with streaming",
+    "md_url": "https://ai.google.dev/gemini-api/docs/robotics-streaming.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/robotics-streaming",
+    "route": "gemini-api/docs/robotics-streaming",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Video understanding",
+    "md_url": "https://ai.google.dev/gemini-api/docs/robotics-video-progress.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/robotics-video-progress",
+    "route": "gemini-api/docs/robotics-video-progress",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Text",
+    "md_url": "https://ai.google.dev/gemini-api/docs/text-generation.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/text-generation",
+    "route": "gemini-api/docs/text-generation",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Image understanding",
+    "md_url": "https://ai.google.dev/gemini-api/docs/image-understanding.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/image-understanding",
+    "route": "gemini-api/docs/image-understanding",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Video overview",
+    "md_url": "https://ai.google.dev/gemini-api/docs/video.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/video",
+    "route": "gemini-api/docs/video",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Video understanding",
+    "md_url": "https://ai.google.dev/gemini-api/docs/video-understanding.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/video-understanding",
+    "route": "gemini-api/docs/video-understanding",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Documents",
+    "md_url": "https://ai.google.dev/gemini-api/docs/document-processing.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/document-processing",
+    "route": "gemini-api/docs/document-processing",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Audio understanding",
+    "md_url": "https://ai.google.dev/gemini-api/docs/audio.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/audio",
+    "route": "gemini-api/docs/audio",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Thinking",
+    "md_url": "https://ai.google.dev/gemini-api/docs/thinking.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/thinking",
+    "route": "gemini-api/docs/thinking",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Thought signatures",
+    "md_url": "https://ai.google.dev/gemini-api/docs/thought-signatures.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/thought-signatures",
+    "route": "gemini-api/docs/thought-signatures",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Structured outputs",
+    "md_url": "https://ai.google.dev/gemini-api/docs/structured-output.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/structured-output",
+    "route": "gemini-api/docs/structured-output",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Function calling",
+    "md_url": "https://ai.google.dev/gemini-api/docs/function-calling.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/function-calling",
+    "route": "gemini-api/docs/function-calling",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Long context",
+    "md_url": "https://ai.google.dev/gemini-api/docs/long-context.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/long-context",
+    "route": "gemini-api/docs/long-context",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Overview",
+    "md_url": "https://ai.google.dev/gemini-api/docs/agents.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/agents",
+    "route": "gemini-api/docs/agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Quickstart",
+    "md_url": "https://ai.google.dev/gemini-api/docs/managed-agents-quickstart.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/managed-agents-quickstart",
+    "route": "gemini-api/docs/managed-agents-quickstart",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Antigravity agent",
+    "md_url": "https://ai.google.dev/gemini-api/docs/antigravity-agent.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/antigravity-agent",
+    "route": "gemini-api/docs/antigravity-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Building managed agents",
+    "md_url": "https://ai.google.dev/gemini-api/docs/custom-agents.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/custom-agents",
+    "route": "gemini-api/docs/custom-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Environments",
+    "md_url": "https://ai.google.dev/gemini-api/docs/agent-environment.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/agent-environment",
+    "route": "gemini-api/docs/agent-environment",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Hooks",
+    "md_url": "https://ai.google.dev/gemini-api/docs/agent-hooks.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/agent-hooks",
+    "route": "gemini-api/docs/agent-hooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Deep Research agent",
+    "md_url": "https://ai.google.dev/gemini-api/docs/deep-research.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/deep-research",
+    "route": "gemini-api/docs/deep-research",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Overview",
+    "md_url": "https://ai.google.dev/gemini-api/docs/tools.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/tools",
+    "route": "gemini-api/docs/tools",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Google Search",
+    "md_url": "https://ai.google.dev/gemini-api/docs/google-search.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/google-search",
+    "route": "gemini-api/docs/google-search",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Google Maps",
+    "md_url": "https://ai.google.dev/gemini-api/docs/maps-grounding.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/maps-grounding",
+    "route": "gemini-api/docs/maps-grounding",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Code execution",
+    "md_url": "https://ai.google.dev/gemini-api/docs/code-execution.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/code-execution",
+    "route": "gemini-api/docs/code-execution",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "URL context",
+    "md_url": "https://ai.google.dev/gemini-api/docs/url-context.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/url-context",
+    "route": "gemini-api/docs/url-context",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Computer use",
+    "md_url": "https://ai.google.dev/gemini-api/docs/computer-use.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/computer-use",
+    "route": "gemini-api/docs/computer-use",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "File search",
+    "md_url": "https://ai.google.dev/gemini-api/docs/file-search.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/file-search",
+    "route": "gemini-api/docs/file-search",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Combine tools and function calling",
+    "md_url": "https://ai.google.dev/gemini-api/docs/tool-combination.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/tool-combination",
+    "route": "gemini-api/docs/tool-combination",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Get started using the GenAI SDK",
+    "md_url": "https://ai.google.dev/gemini-api/docs/live-api/get-started-sdk.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/live-api/get-started-sdk",
+    "route": "gemini-api/docs/live-api/get-started-sdk",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Get started using raw WebSockets",
+    "md_url": "https://ai.google.dev/gemini-api/docs/live-api/get-started-websocket.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/live-api/get-started-websocket",
+    "route": "gemini-api/docs/live-api/get-started-websocket",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Capabilities",
+    "md_url": "https://ai.google.dev/gemini-api/docs/live-api/capabilities.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/live-api/capabilities",
+    "route": "gemini-api/docs/live-api/capabilities",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Live transcription",
+    "md_url": "https://ai.google.dev/gemini-api/docs/live-api/live-transcribe.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/live-api/live-transcribe",
+    "route": "gemini-api/docs/live-api/live-transcribe",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Tool use",
+    "md_url": "https://ai.google.dev/gemini-api/docs/live-api/tools.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/live-api/tools",
+    "route": "gemini-api/docs/live-api/tools",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Session management",
+    "md_url": "https://ai.google.dev/gemini-api/docs/live-api/session-management.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/live-api/session-management",
+    "route": "gemini-api/docs/live-api/session-management",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Ephemeral tokens",
+    "md_url": "https://ai.google.dev/gemini-api/docs/live-api/ephemeral-tokens.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/live-api/ephemeral-tokens",
+    "route": "gemini-api/docs/live-api/ephemeral-tokens",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Best practices",
+    "md_url": "https://ai.google.dev/gemini-api/docs/live-api/best-practices.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/live-api/best-practices",
+    "route": "gemini-api/docs/live-api/best-practices",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Overview",
+    "md_url": "https://ai.google.dev/gemini-api/docs/optimization.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/optimization",
+    "route": "gemini-api/docs/optimization",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Batch API",
+    "md_url": "https://ai.google.dev/gemini-api/docs/batch-api.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/batch-api",
+    "route": "gemini-api/docs/batch-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Webhooks",
+    "md_url": "https://ai.google.dev/gemini-api/docs/webhooks.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/webhooks",
+    "route": "gemini-api/docs/webhooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Flex inference",
+    "md_url": "https://ai.google.dev/gemini-api/docs/flex-inference.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/flex-inference",
+    "route": "gemini-api/docs/flex-inference",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Priority inference",
+    "md_url": "https://ai.google.dev/gemini-api/docs/priority-inference.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/priority-inference",
+    "route": "gemini-api/docs/priority-inference",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Context caching",
+    "md_url": "https://ai.google.dev/gemini-api/docs/caching.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/caching",
+    "route": "gemini-api/docs/caching",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Interactions API",
+    "md_url": "https://ai.google.dev/gemini-api/docs/interactions-overview.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/interactions-overview",
+    "route": "gemini-api/docs/interactions-overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Streaming",
+    "md_url": "https://ai.google.dev/gemini-api/docs/streaming.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/streaming",
+    "route": "gemini-api/docs/streaming",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Background execution",
+    "md_url": "https://ai.google.dev/gemini-api/docs/background-execution.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/background-execution",
+    "route": "gemini-api/docs/background-execution",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Input methods",
+    "md_url": "https://ai.google.dev/gemini-api/docs/file-input-methods.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/file-input-methods",
+    "route": "gemini-api/docs/file-input-methods",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Files API",
+    "md_url": "https://ai.google.dev/gemini-api/docs/files.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/files",
+    "route": "gemini-api/docs/files",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "OpenAI compatibility",
+    "md_url": "https://ai.google.dev/gemini-api/docs/openai.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/openai",
+    "route": "gemini-api/docs/openai",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Media resolution",
+    "md_url": "https://ai.google.dev/gemini-api/docs/media-resolution.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/media-resolution",
+    "route": "gemini-api/docs/media-resolution",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Token counting",
+    "md_url": "https://ai.google.dev/gemini-api/docs/tokens.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/tokens",
+    "route": "gemini-api/docs/tokens",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Prompt engineering",
+    "md_url": "https://ai.google.dev/gemini-api/docs/prompting-strategies.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/prompting-strategies",
+    "route": "gemini-api/docs/prompting-strategies",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Get started with logs",
+    "md_url": "https://ai.google.dev/gemini-api/docs/logs-datasets.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/logs-datasets",
+    "route": "gemini-api/docs/logs-datasets",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Data logging and sharing",
+    "md_url": "https://ai.google.dev/gemini-api/docs/logs-policy.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/logs-policy",
+    "route": "gemini-api/docs/logs-policy",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Safety settings",
+    "md_url": "https://ai.google.dev/gemini-api/docs/safety-settings.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/safety-settings",
+    "route": "gemini-api/docs/safety-settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Safety guidance",
+    "md_url": "https://ai.google.dev/gemini-api/docs/safety-guidance.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/safety-guidance",
+    "route": "gemini-api/docs/safety-guidance",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "LangChain & LangGraph",
+    "md_url": "https://ai.google.dev/gemini-api/docs/langgraph-example.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/langgraph-example",
+    "route": "gemini-api/docs/langgraph-example",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "CrewAI",
+    "md_url": "https://ai.google.dev/gemini-api/docs/crewai-example.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/crewai-example",
+    "route": "gemini-api/docs/crewai-example",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "LlamaIndex",
+    "md_url": "https://ai.google.dev/gemini-api/docs/llama-index.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/llama-index",
+    "route": "gemini-api/docs/llama-index",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Vercel AI SDK",
+    "md_url": "https://ai.google.dev/gemini-api/docs/vercel-ai-sdk-example.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/vercel-ai-sdk-example",
+    "route": "gemini-api/docs/vercel-ai-sdk-example",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Temporal",
+    "md_url": "https://ai.google.dev/gemini-api/docs/temporal-example.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/temporal-example",
+    "route": "gemini-api/docs/temporal-example",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Release notes",
+    "md_url": "https://ai.google.dev/gemini-api/docs/changelog.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/changelog",
+    "route": "gemini-api/docs/changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Deprecations",
+    "md_url": "https://ai.google.dev/gemini-api/docs/deprecations.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "route": "gemini-api/docs/deprecations",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Libraries",
+    "md_url": "https://ai.google.dev/gemini-api/docs/libraries.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/libraries",
+    "route": "gemini-api/docs/libraries",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Migrate to Gen AI SDK",
+    "md_url": "https://ai.google.dev/gemini-api/docs/migrate.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/migrate",
+    "route": "gemini-api/docs/migrate",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Migrate to Interactions API",
+    "md_url": "https://ai.google.dev/gemini-api/docs/migrate-to-interactions.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/migrate-to-interactions",
+    "route": "gemini-api/docs/migrate-to-interactions",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Interactions breaking changes (May 2026)",
+    "md_url": "https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026",
+    "route": "gemini-api/docs/interactions-breaking-changes-may-2026",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Rate limits",
+    "md_url": "https://ai.google.dev/gemini-api/docs/rate-limits.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/rate-limits",
+    "route": "gemini-api/docs/rate-limits",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Billing info",
+    "md_url": "https://ai.google.dev/gemini-api/docs/billing.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/billing",
+    "route": "gemini-api/docs/billing",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "API troubleshooting",
+    "md_url": "https://ai.google.dev/gemini-api/docs/troubleshooting.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/troubleshooting",
+    "route": "gemini-api/docs/troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "API errors",
+    "md_url": "https://ai.google.dev/gemini-api/docs/api-errors.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/api-errors",
+    "route": "gemini-api/docs/api-errors",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Partner and library integrations",
+    "md_url": "https://ai.google.dev/gemini-api/docs/partner-integration.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/partner-integration",
+    "route": "gemini-api/docs/partner-integration",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Quickstart",
+    "md_url": "https://ai.google.dev/gemini-api/docs/ai-studio-quickstart.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/ai-studio-quickstart",
+    "route": "gemini-api/docs/ai-studio-quickstart",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Google AI plans",
+    "md_url": "https://ai.google.dev/gemini-api/docs/google-ai-plans.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/google-ai-plans",
+    "route": "gemini-api/docs/google-ai-plans",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Vibe code in Build mode",
+    "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-build-mode.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-build-mode",
+    "route": "gemini-api/docs/aistudio-build-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Developing full-stack apps",
+    "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-fullstack.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-fullstack",
+    "route": "gemini-api/docs/aistudio-fullstack",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Build Android apps",
+    "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-android.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-android",
+    "route": "gemini-api/docs/aistudio-android",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Deploying your app",
+    "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-deploying.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-deploying",
+    "route": "gemini-api/docs/aistudio-deploying",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Agents in AI Studio Playground",
+    "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-agents.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-agents",
+    "route": "gemini-api/docs/aistudio-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Try out LearnLM",
+    "md_url": "https://ai.google.dev/gemini-api/docs/learnlm.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/learnlm",
+    "route": "gemini-api/docs/learnlm",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Troubleshooting",
+    "md_url": "https://ai.google.dev/gemini-api/docs/troubleshoot-ai-studio.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/troubleshoot-ai-studio",
+    "route": "gemini-api/docs/troubleshoot-ai-studio",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Access for Workspace users",
+    "md_url": "https://ai.google.dev/gemini-api/docs/workspace.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/workspace",
+    "route": "gemini-api/docs/workspace",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Gemini Enterprise Agent Platform Gemini API",
+    "md_url": "https://ai.google.dev/gemini-api/docs/migrate-to-cloud.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/migrate-to-cloud",
+    "route": "gemini-api/docs/migrate-to-cloud",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "OAuth authentication",
+    "md_url": "https://ai.google.dev/gemini-api/docs/oauth.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/oauth",
+    "route": "gemini-api/docs/oauth",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Terms of service",
+    "md_url": "https://ai.google.dev/gemini-api/terms.md",
+    "html_url": "https://ai.google.dev/gemini-api/terms",
+    "route": "gemini-api/terms",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Available regions",
+    "md_url": "https://ai.google.dev/gemini-api/docs/available-regions.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/available-regions",
+    "route": "gemini-api/docs/available-regions",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Abuse monitoring",
+    "md_url": "https://ai.google.dev/gemini-api/docs/usage-policies.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/usage-policies",
+    "route": "gemini-api/docs/usage-policies",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Feedback information",
+    "md_url": "https://ai.google.dev/gemini-api/docs/feedback-policies.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/feedback-policies",
+    "route": "gemini-api/docs/feedback-policies",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "Start building",
+    "md_url": "https://ai.google.dev/gemini-api/docs/quickstart.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/quickstart",
+    "route": "gemini-api/docs/quickstart",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "spark Gemini 3.7 Flash New Our latest and most capable Flash model, built for complex coding, agentic workflows, and reliable multi-step execution.",
+    "md_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
+    "route": "gemini-api/docs/models/gemini-3.7-flash",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "spark Gemini 3.5 Flash-Lite High-volume, cost-sensitive model optimized for low-latency high throughput subagent tasks.",
+    "md_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite",
+    "route": "gemini-api/docs/models/gemini-3.5-flash-lite",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "auto_awesome Gemini 3.1 Pro Our most intelligent model, the best in the world for multimodal understanding, all built on state-of-the-art reasoning.",
+    "md_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview",
+    "route": "gemini-api/docs/models/gemini-3.1-pro-preview",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "speech_to_text Gemini 3.5 Transcribe New Low-latency speech-to-text model with utterance-based language detection, speaker diarization, and word timestamps.",
+    "md_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-transcribe.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-transcribe",
+    "route": "gemini-api/docs/models/gemini-3.5-transcribe",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API \u00b7 AI Studio",
+    "title": "android_recorder Voice Agents with Live API Build real-time voice applications and agents with the Live API.",
+    "md_url": "https://ai.google.dev/gemini-api/docs/live.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/live",
+    "route": "gemini-api/docs/live",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "API reference",
+    "md_url": "https://ai.google.dev/api.md",
+    "html_url": "https://ai.google.dev/api",
+    "route": "api-ref",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Interactions API",
+    "md_url": "https://ai.google.dev/api/interactions-api.md",
+    "html_url": "https://ai.google.dev/api/interactions-api",
+    "route": "api-ref/interactions-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "GenerateContent",
+    "md_url": "https://ai.google.dev/api/generate-content.md",
+    "html_url": "https://ai.google.dev/api/generate-content",
+    "route": "api-ref/generate-content",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Live API",
+    "md_url": "https://ai.google.dev/api/live.md",
+    "html_url": "https://ai.google.dev/api/live",
+    "route": "api-ref/live",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Live Music API",
+    "md_url": "https://ai.google.dev/api/live_music.md",
+    "html_url": "https://ai.google.dev/api/live_music",
+    "route": "api-ref/live_music",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Model API",
+    "md_url": "https://ai.google.dev/api/models.md",
+    "html_url": "https://ai.google.dev/api/models",
+    "route": "api-ref/models",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Agents",
+    "md_url": "https://ai.google.dev/api/agents.md",
+    "html_url": "https://ai.google.dev/api/agents",
+    "route": "api-ref/agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Webhooks",
+    "md_url": "https://ai.google.dev/api/webhooks.md",
+    "html_url": "https://ai.google.dev/api/webhooks",
+    "route": "api-ref/webhooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Triggers",
+    "md_url": "https://ai.google.dev/api/triggers.md",
+    "html_url": "https://ai.google.dev/api/triggers",
+    "route": "api-ref/triggers",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Environments",
+    "md_url": "https://ai.google.dev/api/environments.md",
+    "html_url": "https://ai.google.dev/api/environments",
+    "route": "api-ref/environments",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Batch API",
+    "md_url": "https://ai.google.dev/api/batch-api.md",
+    "html_url": "https://ai.google.dev/api/batch-api",
+    "route": "api-ref/batch-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Files API",
+    "md_url": "https://ai.google.dev/api/files.md",
+    "html_url": "https://ai.google.dev/api/files",
+    "route": "api-ref/files",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Tokens",
+    "md_url": "https://ai.google.dev/api/tokens.md",
+    "html_url": "https://ai.google.dev/api/tokens",
+    "route": "api-ref/tokens",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Caching",
+    "md_url": "https://ai.google.dev/api/caching.md",
+    "html_url": "https://ai.google.dev/api/caching",
+    "route": "api-ref/caching",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Embeddings",
+    "md_url": "https://ai.google.dev/api/embeddings.md",
+    "html_url": "https://ai.google.dev/api/embeddings",
+    "route": "api-ref/embeddings",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "File search stores",
+    "md_url": "https://ai.google.dev/api/file-search/file-search-stores.md",
+    "html_url": "https://ai.google.dev/api/file-search/file-search-stores",
+    "route": "api-ref/file-search/file-search-stores",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "Documents",
+    "md_url": "https://ai.google.dev/api/file-search/documents.md",
+    "html_url": "https://ai.google.dev/api/file-search/documents",
+    "route": "api-ref/file-search/documents",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "All methods",
+    "md_url": "https://ai.google.dev/api/all-methods.md",
+    "html_url": "https://ai.google.dev/api/all-methods",
+    "route": "api-ref/all-methods",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API Reference",
+    "title": "batchGenerateContent",
+    "md_url": "https://ai.google.dev/api/batch-mode.md",
+    "html_url": "https://ai.google.dev/api/batch-mode",
+    "route": "api-ref/batch-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Docs",
+    "md_url": "https://geminicli.com/docs.md",
+    "html_url": "https://geminicli.com/docs",
+    "route": "gemini-cli/",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Reference",
+    "md_url": "https://geminicli.com/docs/reference/commands.md",
+    "html_url": "https://geminicli.com/docs/reference/commands",
+    "route": "gemini-cli/reference/commands",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Resources",
+    "md_url": "https://geminicli.com/docs/resources/quota-and-pricing.md",
+    "html_url": "https://geminicli.com/docs/resources/quota-and-pricing",
+    "route": "gemini-cli/resources/quota-and-pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Changelog",
+    "md_url": "https://geminicli.com/docs/changelogs.md",
+    "html_url": "https://geminicli.com/docs/changelogs",
+    "route": "gemini-cli/changelogs",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Quickstart",
+    "md_url": "https://geminicli.com/docs/get-started.md",
+    "html_url": "https://geminicli.com/docs/get-started",
+    "route": "gemini-cli/get-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Installation",
+    "md_url": "https://geminicli.com/docs/get-started/installation.md",
+    "html_url": "https://geminicli.com/docs/get-started/installation",
+    "route": "gemini-cli/get-started/installation",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Authentication",
+    "md_url": "https://geminicli.com/docs/get-started/authentication.md",
+    "html_url": "https://geminicli.com/docs/get-started/authentication",
+    "route": "gemini-cli/get-started/authentication",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "CLI cheatsheet",
+    "md_url": "https://geminicli.com/docs/cli/cli-reference.md",
+    "html_url": "https://geminicli.com/docs/cli/cli-reference",
+    "route": "gemini-cli/cli/cli-reference",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Gemini 3 on Gemini CLI",
+    "md_url": "https://geminicli.com/docs/get-started/gemini-3.md",
+    "html_url": "https://geminicli.com/docs/get-started/gemini-3",
+    "route": "gemini-cli/get-started/gemini-3",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "File management",
+    "md_url": "https://geminicli.com/docs/cli/tutorials/file-management.md",
+    "html_url": "https://geminicli.com/docs/cli/tutorials/file-management",
+    "route": "gemini-cli/cli/tutorials/file-management",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Get started with Agent Skills",
+    "md_url": "https://geminicli.com/docs/cli/tutorials/skills-getting-started.md",
+    "html_url": "https://geminicli.com/docs/cli/tutorials/skills-getting-started",
+    "route": "gemini-cli/cli/tutorials/skills-getting-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Manage context and memory",
+    "md_url": "https://geminicli.com/docs/cli/tutorials/memory-management.md",
+    "html_url": "https://geminicli.com/docs/cli/tutorials/memory-management",
+    "route": "gemini-cli/cli/tutorials/memory-management",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Execute shell commands",
+    "md_url": "https://geminicli.com/docs/cli/tutorials/shell-commands.md",
+    "html_url": "https://geminicli.com/docs/cli/tutorials/shell-commands",
+    "route": "gemini-cli/cli/tutorials/shell-commands",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Manage sessions and history",
+    "md_url": "https://geminicli.com/docs/cli/tutorials/session-management.md",
+    "html_url": "https://geminicli.com/docs/cli/tutorials/session-management",
+    "route": "gemini-cli/cli/tutorials/session-management",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Plan tasks with todos",
+    "md_url": "https://geminicli.com/docs/cli/tutorials/task-planning.md",
+    "html_url": "https://geminicli.com/docs/cli/tutorials/task-planning",
+    "route": "gemini-cli/cli/tutorials/task-planning",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Use Plan Mode with model steering \ud83d\udd2c",
+    "md_url": "https://geminicli.com/docs/cli/tutorials/plan-mode-steering.md",
+    "html_url": "https://geminicli.com/docs/cli/tutorials/plan-mode-steering",
+    "route": "gemini-cli/cli/tutorials/plan-mode-steering",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Web search and fetch",
+    "md_url": "https://geminicli.com/docs/cli/tutorials/web-tools.md",
+    "html_url": "https://geminicli.com/docs/cli/tutorials/web-tools",
+    "route": "gemini-cli/cli/tutorials/web-tools",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Set up an MCP server",
+    "md_url": "https://geminicli.com/docs/cli/tutorials/mcp-setup.md",
+    "html_url": "https://geminicli.com/docs/cli/tutorials/mcp-setup",
+    "route": "gemini-cli/cli/tutorials/mcp-setup",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Automate tasks",
+    "md_url": "https://geminicli.com/docs/cli/tutorials/automation.md",
+    "html_url": "https://geminicli.com/docs/cli/tutorials/automation",
+    "route": "gemini-cli/cli/tutorials/automation",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Overview",
+    "md_url": "https://geminicli.com/docs/extensions.md",
+    "html_url": "https://geminicli.com/docs/extensions",
+    "route": "gemini-cli/extensions",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Developer guide: Build extensions",
+    "md_url": "https://geminicli.com/docs/extensions/writing-extensions.md",
+    "html_url": "https://geminicli.com/docs/extensions/writing-extensions",
+    "route": "gemini-cli/extensions/writing-extensions",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Developer guide: Best practices",
+    "md_url": "https://geminicli.com/docs/extensions/best-practices.md",
+    "html_url": "https://geminicli.com/docs/extensions/best-practices",
+    "route": "gemini-cli/extensions/best-practices",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Developer guide: Releasing",
+    "md_url": "https://geminicli.com/docs/extensions/releasing.md",
+    "html_url": "https://geminicli.com/docs/extensions/releasing",
+    "route": "gemini-cli/extensions/releasing",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Developer guide: Reference",
+    "md_url": "https://geminicli.com/docs/extensions/reference.md",
+    "html_url": "https://geminicli.com/docs/extensions/reference",
+    "route": "gemini-cli/extensions/reference",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Overview",
+    "md_url": "https://geminicli.com/docs/cli/skills.md",
+    "html_url": "https://geminicli.com/docs/cli/skills",
+    "route": "gemini-cli/cli/skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Creating Agent Skills",
+    "md_url": "https://geminicli.com/docs/cli/creating-skills.md",
+    "html_url": "https://geminicli.com/docs/cli/creating-skills",
+    "route": "gemini-cli/cli/creating-skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Using Agent Skills",
+    "md_url": "https://geminicli.com/docs/cli/using-agent-skills.md",
+    "html_url": "https://geminicli.com/docs/cli/using-agent-skills",
+    "route": "gemini-cli/cli/using-agent-skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Developer guide: Best practices",
+    "md_url": "https://geminicli.com/docs/cli/skills-best-practices.md",
+    "html_url": "https://geminicli.com/docs/cli/skills-best-practices",
+    "route": "gemini-cli/cli/skills-best-practices",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Auto Memory \ud83d\udd2c",
+    "md_url": "https://geminicli.com/docs/cli/auto-memory.md",
+    "html_url": "https://geminicli.com/docs/cli/auto-memory",
+    "route": "gemini-cli/cli/auto-memory",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Checkpointing",
+    "md_url": "https://geminicli.com/docs/cli/checkpointing.md",
+    "html_url": "https://geminicli.com/docs/cli/checkpointing",
+    "route": "gemini-cli/cli/checkpointing",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Headless mode",
+    "md_url": "https://geminicli.com/docs/cli/headless.md",
+    "html_url": "https://geminicli.com/docs/cli/headless",
+    "route": "gemini-cli/cli/headless",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Git worktrees \ud83d\udd2c",
+    "md_url": "https://geminicli.com/docs/cli/git-worktrees.md",
+    "html_url": "https://geminicli.com/docs/cli/git-worktrees",
+    "route": "gemini-cli/cli/git-worktrees",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Overview",
+    "md_url": "https://geminicli.com/docs/hooks.md",
+    "html_url": "https://geminicli.com/docs/hooks",
+    "route": "gemini-cli/hooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Reference",
+    "md_url": "https://geminicli.com/docs/hooks/reference.md",
+    "html_url": "https://geminicli.com/docs/hooks/reference",
+    "route": "gemini-cli/hooks/reference",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Overview",
+    "md_url": "https://geminicli.com/docs/ide-integration.md",
+    "html_url": "https://geminicli.com/docs/ide-integration",
+    "route": "gemini-cli/ide-integration",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Developer guide: ACP mode",
+    "md_url": "https://geminicli.com/docs/cli/acp-mode.md",
+    "html_url": "https://geminicli.com/docs/cli/acp-mode",
+    "route": "gemini-cli/cli/acp-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Overview",
+    "md_url": "https://geminicli.com/docs/tools/mcp-server.md",
+    "html_url": "https://geminicli.com/docs/tools/mcp-server",
+    "route": "gemini-cli/tools/mcp-server",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Resource tools",
+    "md_url": "https://geminicli.com/docs/tools/mcp-resources.md",
+    "html_url": "https://geminicli.com/docs/tools/mcp-resources",
+    "route": "gemini-cli/tools/mcp-resources",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Model routing",
+    "md_url": "https://geminicli.com/docs/cli/model-routing.md",
+    "html_url": "https://geminicli.com/docs/cli/model-routing",
+    "route": "gemini-cli/cli/model-routing",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Model selection",
+    "md_url": "https://geminicli.com/docs/cli/model.md",
+    "html_url": "https://geminicli.com/docs/cli/model",
+    "route": "gemini-cli/cli/model",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Model steering \ud83d\udd2c",
+    "md_url": "https://geminicli.com/docs/cli/model-steering.md",
+    "html_url": "https://geminicli.com/docs/cli/model-steering",
+    "route": "gemini-cli/cli/model-steering",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Notifications \ud83d\udd2c",
+    "md_url": "https://geminicli.com/docs/cli/notifications.md",
+    "html_url": "https://geminicli.com/docs/cli/notifications",
+    "route": "gemini-cli/cli/notifications",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Plan mode",
+    "md_url": "https://geminicli.com/docs/cli/plan-mode.md",
+    "html_url": "https://geminicli.com/docs/cli/plan-mode",
+    "route": "gemini-cli/cli/plan-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Subagents",
+    "md_url": "https://geminicli.com/docs/core/subagents.md",
+    "html_url": "https://geminicli.com/docs/core/subagents",
+    "route": "gemini-cli/core/subagents",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Remote subagents",
+    "md_url": "https://geminicli.com/docs/core/remote-agents.md",
+    "html_url": "https://geminicli.com/docs/core/remote-agents",
+    "route": "gemini-cli/core/remote-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Rewind",
+    "md_url": "https://geminicli.com/docs/cli/rewind.md",
+    "html_url": "https://geminicli.com/docs/cli/rewind",
+    "route": "gemini-cli/cli/rewind",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Sandboxing",
+    "md_url": "https://geminicli.com/docs/cli/sandbox.md",
+    "html_url": "https://geminicli.com/docs/cli/sandbox",
+    "route": "gemini-cli/cli/sandbox",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Settings",
+    "md_url": "https://geminicli.com/docs/cli/settings.md",
+    "html_url": "https://geminicli.com/docs/cli/settings",
+    "route": "gemini-cli/cli/settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Telemetry",
+    "md_url": "https://geminicli.com/docs/cli/telemetry.md",
+    "html_url": "https://geminicli.com/docs/cli/telemetry",
+    "route": "gemini-cli/cli/telemetry",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Token caching",
+    "md_url": "https://geminicli.com/docs/cli/token-caching.md",
+    "html_url": "https://geminicli.com/docs/cli/token-caching",
+    "route": "gemini-cli/cli/token-caching",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Custom commands",
+    "md_url": "https://geminicli.com/docs/cli/custom-commands.md",
+    "html_url": "https://geminicli.com/docs/cli/custom-commands",
+    "route": "gemini-cli/cli/custom-commands",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Enterprise configuration",
+    "md_url": "https://geminicli.com/docs/cli/enterprise.md",
+    "html_url": "https://geminicli.com/docs/cli/enterprise",
+    "route": "gemini-cli/cli/enterprise",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Ignore files (.geminiignore)",
+    "md_url": "https://geminicli.com/docs/cli/gemini-ignore.md",
+    "html_url": "https://geminicli.com/docs/cli/gemini-ignore",
+    "route": "gemini-cli/cli/gemini-ignore",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Model configuration",
+    "md_url": "https://geminicli.com/docs/cli/generation-settings.md",
+    "html_url": "https://geminicli.com/docs/cli/generation-settings",
+    "route": "gemini-cli/cli/generation-settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Project context (GEMINI.md)",
+    "md_url": "https://geminicli.com/docs/cli/gemini-md.md",
+    "html_url": "https://geminicli.com/docs/cli/gemini-md",
+    "route": "gemini-cli/cli/gemini-md",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "System prompt override",
+    "md_url": "https://geminicli.com/docs/cli/system-prompt.md",
+    "html_url": "https://geminicli.com/docs/cli/system-prompt",
+    "route": "gemini-cli/cli/system-prompt",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Themes",
+    "md_url": "https://geminicli.com/docs/cli/themes.md",
+    "html_url": "https://geminicli.com/docs/cli/themes",
+    "route": "gemini-cli/cli/themes",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Trusted folders",
+    "md_url": "https://geminicli.com/docs/cli/trusted-folders.md",
+    "html_url": "https://geminicli.com/docs/cli/trusted-folders",
+    "route": "gemini-cli/cli/trusted-folders",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Behavioral evaluations",
+    "md_url": "https://geminicli.com/docs/behavioral-evals.md",
+    "html_url": "https://geminicli.com/docs/behavioral-evals",
+    "route": "gemini-cli/behavioral-evals",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Contribution guide",
+    "md_url": "https://geminicli.com/docs/contributing.md",
+    "html_url": "https://geminicli.com/docs/contributing",
+    "route": "gemini-cli/contributing",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Integration testing",
+    "md_url": "https://geminicli.com/docs/integration-tests.md",
+    "html_url": "https://geminicli.com/docs/integration-tests",
+    "route": "gemini-cli/integration-tests",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Issue and PR automation",
+    "md_url": "https://geminicli.com/docs/issue-and-pr-automation.md",
+    "html_url": "https://geminicli.com/docs/issue-and-pr-automation",
+    "route": "gemini-cli/issue-and-pr-automation",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Local development",
+    "md_url": "https://geminicli.com/docs/local-development.md",
+    "html_url": "https://geminicli.com/docs/local-development",
+    "route": "gemini-cli/local-development",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "NPM package structure",
+    "md_url": "https://geminicli.com/docs/npm.md",
+    "html_url": "https://geminicli.com/docs/npm",
+    "route": "gemini-cli/npm",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Configuration reference",
+    "md_url": "https://geminicli.com/docs/reference/configuration.md",
+    "html_url": "https://geminicli.com/docs/reference/configuration",
+    "route": "gemini-cli/reference/configuration",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Keyboard shortcuts",
+    "md_url": "https://geminicli.com/docs/reference/keyboard-shortcuts.md",
+    "html_url": "https://geminicli.com/docs/reference/keyboard-shortcuts",
+    "route": "gemini-cli/reference/keyboard-shortcuts",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Memory import processor",
+    "md_url": "https://geminicli.com/docs/reference/memport.md",
+    "html_url": "https://geminicli.com/docs/reference/memport",
+    "route": "gemini-cli/reference/memport",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Policy engine",
+    "md_url": "https://geminicli.com/docs/reference/policy-engine.md",
+    "html_url": "https://geminicli.com/docs/reference/policy-engine",
+    "route": "gemini-cli/reference/policy-engine",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Tools reference",
+    "md_url": "https://geminicli.com/docs/reference/tools.md",
+    "html_url": "https://geminicli.com/docs/reference/tools",
+    "route": "gemini-cli/reference/tools",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "FAQ",
+    "md_url": "https://geminicli.com/docs/resources/faq.md",
+    "html_url": "https://geminicli.com/docs/resources/faq",
+    "route": "gemini-cli/resources/faq",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Terms and privacy",
+    "md_url": "https://geminicli.com/docs/resources/tos-privacy.md",
+    "html_url": "https://geminicli.com/docs/resources/tos-privacy",
+    "route": "gemini-cli/resources/tos-privacy",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Troubleshooting",
+    "md_url": "https://geminicli.com/docs/resources/troubleshooting.md",
+    "html_url": "https://geminicli.com/docs/resources/troubleshooting",
+    "route": "gemini-cli/resources/troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Uninstall",
+    "md_url": "https://geminicli.com/docs/resources/uninstall.md",
+    "html_url": "https://geminicli.com/docs/resources/uninstall",
+    "route": "gemini-cli/resources/uninstall",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Stable release",
+    "md_url": "https://geminicli.com/docs/changelogs/latest.md",
+    "html_url": "https://geminicli.com/docs/changelogs/latest",
+    "route": "gemini-cli/changelogs/latest",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini CLI",
+    "title": "Preview release",
+    "md_url": "https://geminicli.com/docs/changelogs/preview.md",
+    "html_url": "https://geminicli.com/docs/changelogs/preview",
+    "route": "gemini-cli/changelogs/preview",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Overview",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/overview.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/overview",
+    "route": "code-assist/codeassist/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Security and privacy overview",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/security-privacy-compliance.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/security-privacy-compliance",
+    "route": "code-assist/codeassist/security-privacy-compliance",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Gemini CLI",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli",
+    "route": "code-assist/codeassist/gemini-cli",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Gemini 3 with Gemini Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-3.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-3",
+    "route": "code-assist/codeassist/gemini-3",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Supported languages, IDEs, and interfaces",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages",
+    "route": "code-assist/codeassist/supported-languages",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Gemini Code Assist release notes",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/release-notes.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/release-notes",
+    "route": "code-assist/codeassist/release-notes",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Set up Gemini Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini",
+    "route": "code-assist/codeassist/set-up-gemini",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Configure Gemini Code Assist release channels",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/configure-release-channels.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/configure-release-channels",
+    "route": "code-assist/codeassist/configure-release-channels",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Keyboard shortcuts",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/keyboard-shortcuts.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/keyboard-shortcuts",
+    "route": "code-assist/codeassist/keyboard-shortcuts",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Exclude files from Gemini Code Assist use",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/create-aiexclude-file.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/create-aiexclude-file",
+    "route": "code-assist/codeassist/create-aiexclude-file",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Configure local codebase awareness",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/configure-local-codebase-awareness.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/configure-local-codebase-awareness",
+    "route": "code-assist/codeassist/configure-local-codebase-awareness",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Request a Gemini Code Assist license",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/request-license.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/request-license",
+    "route": "code-assist/codeassist/request-license",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Manage Gemini Code Assist licenses",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/manage-licenses.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/manage-licenses",
+    "route": "code-assist/codeassist/manage-licenses",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Prevent cross-organization license usage",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/cross-org-license-usage.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/cross-org-license-usage",
+    "route": "code-assist/codeassist/cross-org-license-usage",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Use pre-release features in Gemini Code Assist for VS Code",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist",
+    "route": "code-assist/codeassist/use-pre-release-features-gemini-code-assist",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Control Network Access with User Domain Restrictions",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/network-access.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/network-access",
+    "route": "code-assist/codeassist/network-access",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Generate Code Assist metrics",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/generate-metrics.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/generate-metrics",
+    "route": "code-assist/codeassist/generate-metrics",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Code features overview",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-overview.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-overview",
+    "route": "code-assist/codeassist/code-overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Code with Gemini Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/write-code-gemini.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/write-code-gemini",
+    "route": "code-assist/codeassist/write-code-gemini",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Chat features overview",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/chat-overview.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/chat-overview",
+    "route": "code-assist/codeassist/chat-overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Use the Gemini Code Assist chat",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-gemini-code-assist-chat.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-gemini-code-assist-chat",
+    "route": "code-assist/codeassist/use-gemini-code-assist-chat",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Chat with Gemini Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/chat-gemini.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/chat-gemini",
+    "route": "code-assist/codeassist/chat-gemini",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Agent mode overview",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/agent-mode.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/agent-mode",
+    "route": "code-assist/codeassist/agent-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Use the Gemini Code Assist agent mode",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-agentic-chat-pair-programmer.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-agentic-chat-pair-programmer",
+    "route": "code-assist/codeassist/use-agentic-chat-pair-programmer",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Code customization overview",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-customization-overview.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-customization-overview",
+    "route": "code-assist/codeassist/code-customization-overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Configure code customization",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-customization.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/code-customization",
+    "route": "code-assist/codeassist/code-customization",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Use code customization",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-code-customization.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-code-customization",
+    "route": "code-assist/codeassist/use-code-customization",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Encrypt data with customer-managed encryption keys",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/encrypt-data-cmek.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/encrypt-data-cmek",
+    "route": "code-assist/codeassist/encrypt-data-cmek",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Turn off Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/turn-off.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/turn-off",
+    "route": "code-assist/codeassist/turn-off",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Review GitHub code with Gemini Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/review-repo-code.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/review-repo-code",
+    "route": "code-assist/code-review/review-repo-code",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Set up Gemini Code Assist for GitHub",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/set-up-code-assist-github.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/set-up-code-assist-github",
+    "route": "code-assist/code-review/set-up-code-assist-github",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Use Gemini Code Assist for GitHub",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/use-code-assist-github.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/use-code-assist-github",
+    "route": "code-assist/code-review/use-code-assist-github",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Customize Gemini Code Assist behavior in GitHub",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/customize-repo-review.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/customize-repo-review",
+    "route": "code-assist/code-review/customize-repo-review",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Code review style guide",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/code-review/style-guide.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/code-review/style-guide",
+    "route": "code-assist/code-review/style-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Monitor Gemini Code Assist usage",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/monitor-gemini-code-assist.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/monitor-gemini-code-assist",
+    "route": "code-assist/codeassist/monitor-gemini-code-assist",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Business AI Code audit logging",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/business-audit-logging.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/business-audit-logging",
+    "route": "code-assist/codeassist/business-audit-logging",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Use Gemini Code Assist in your IDE",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-in-ide.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-in-ide",
+    "route": "code-assist/codeassist/use-in-ide",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "home",
+    "md_url": "https://antigravity.google/docs/home.md",
+    "html_url": "https://antigravity.google/docs/home",
+    "route": "antigravity/home",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "overview",
+    "md_url": "https://antigravity.google/docs/overview.md",
+    "html_url": "https://antigravity.google/docs/overview",
+    "route": "antigravity/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "getting-started",
+    "md_url": "https://antigravity.google/docs/getting-started.md",
+    "html_url": "https://antigravity.google/docs/getting-started",
+    "route": "antigravity/getting-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "build-with-google",
+    "md_url": "https://antigravity.google/docs/build-with-google.md",
+    "html_url": "https://antigravity.google/docs/build-with-google",
+    "route": "antigravity/build-with-google",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "features",
+    "md_url": "https://antigravity.google/docs/features.md",
+    "html_url": "https://antigravity.google/docs/features",
+    "route": "antigravity/features",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "models",
+    "md_url": "https://antigravity.google/docs/models.md",
+    "html_url": "https://antigravity.google/docs/models",
+    "route": "antigravity/models",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "projects",
+    "md_url": "https://antigravity.google/docs/projects.md",
+    "html_url": "https://antigravity.google/docs/projects",
+    "route": "antigravity/projects",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "remote-control",
+    "md_url": "https://antigravity.google/docs/remote-control.md",
+    "html_url": "https://antigravity.google/docs/remote-control",
+    "route": "antigravity/remote-control",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "settings",
+    "md_url": "https://antigravity.google/docs/settings.md",
+    "html_url": "https://antigravity.google/docs/settings",
+    "route": "antigravity/settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "agent-settings",
+    "md_url": "https://antigravity.google/docs/agent-settings.md",
+    "html_url": "https://antigravity.google/docs/agent-settings",
+    "route": "antigravity/agent-settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "artifact-review",
+    "md_url": "https://antigravity.google/docs/artifact-review.md",
+    "html_url": "https://antigravity.google/docs/artifact-review",
+    "route": "antigravity/artifact-review",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "mcp",
+    "md_url": "https://antigravity.google/docs/mcp.md",
+    "html_url": "https://antigravity.google/docs/mcp",
+    "route": "antigravity/mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "skills",
+    "md_url": "https://antigravity.google/docs/skills.md",
+    "html_url": "https://antigravity.google/docs/skills",
+    "route": "antigravity/skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "rules-workflows",
+    "md_url": "https://antigravity.google/docs/rules-workflows.md",
+    "html_url": "https://antigravity.google/docs/rules-workflows",
+    "route": "antigravity/rules-workflows",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "plugins",
+    "md_url": "https://antigravity.google/docs/plugins.md",
+    "html_url": "https://antigravity.google/docs/plugins",
+    "route": "antigravity/plugins",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "hooks",
+    "md_url": "https://antigravity.google/docs/hooks.md",
+    "html_url": "https://antigravity.google/docs/hooks",
+    "route": "antigravity/hooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "sidecars",
+    "md_url": "https://antigravity.google/docs/sidecars.md",
+    "html_url": "https://antigravity.google/docs/sidecars",
+    "route": "antigravity/sidecars",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "permissions",
+    "md_url": "https://antigravity.google/docs/permissions.md",
+    "html_url": "https://antigravity.google/docs/permissions",
+    "route": "antigravity/permissions",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "subagents",
+    "md_url": "https://antigravity.google/docs/subagents.md",
+    "html_url": "https://antigravity.google/docs/subagents",
+    "route": "antigravity/subagents",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "artifacts",
+    "md_url": "https://antigravity.google/docs/artifacts.md",
+    "html_url": "https://antigravity.google/docs/artifacts",
+    "route": "antigravity/artifacts",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "implementation-plan",
+    "md_url": "https://antigravity.google/docs/implementation-plan.md",
+    "html_url": "https://antigravity.google/docs/implementation-plan",
+    "route": "antigravity/implementation-plan",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "walkthrough",
+    "md_url": "https://antigravity.google/docs/walkthrough.md",
+    "html_url": "https://antigravity.google/docs/walkthrough",
+    "route": "antigravity/walkthrough",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "screenshots",
+    "md_url": "https://antigravity.google/docs/screenshots.md",
+    "html_url": "https://antigravity.google/docs/screenshots",
+    "route": "antigravity/screenshots",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-overview",
+    "md_url": "https://antigravity.google/docs/cli/overview.md",
+    "html_url": "https://antigravity.google/docs/cli/overview",
+    "route": "antigravity/cli/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-getting-started",
+    "md_url": "https://antigravity.google/docs/cli/getting-started.md",
+    "html_url": "https://antigravity.google/docs/cli/getting-started",
+    "route": "antigravity/cli/getting-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-install",
+    "md_url": "https://antigravity.google/docs/cli/install.md",
+    "html_url": "https://antigravity.google/docs/cli/install",
+    "route": "antigravity/cli/install",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-tutorial",
+    "md_url": "https://antigravity.google/docs/cli/tutorial.md",
+    "html_url": "https://antigravity.google/docs/cli/tutorial",
+    "route": "antigravity/cli/tutorial",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-using",
+    "md_url": "https://antigravity.google/docs/cli/using.md",
+    "html_url": "https://antigravity.google/docs/cli/using",
+    "route": "antigravity/cli/using",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-features",
+    "md_url": "https://antigravity.google/docs/cli/features.md",
+    "html_url": "https://antigravity.google/docs/cli/features",
+    "route": "antigravity/cli/features",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "gcli-migration",
+    "md_url": "https://antigravity.google/docs/cli/gcli-migration.md",
+    "html_url": "https://antigravity.google/docs/cli/gcli-migration",
+    "route": "antigravity/cli/gcli-migration",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-prompting",
+    "md_url": "https://antigravity.google/docs/cli/prompting.md",
+    "html_url": "https://antigravity.google/docs/cli/prompting",
+    "route": "antigravity/cli/prompting",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-headless",
+    "md_url": "https://antigravity.google/docs/cli/headless.md",
+    "html_url": "https://antigravity.google/docs/cli/headless",
+    "route": "antigravity/cli/headless",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-artifacts",
+    "md_url": "https://antigravity.google/docs/cli/artifacts.md",
+    "html_url": "https://antigravity.google/docs/cli/artifacts",
+    "route": "antigravity/cli/artifacts",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-conversations",
+    "md_url": "https://antigravity.google/docs/cli/conversations.md",
+    "html_url": "https://antigravity.google/docs/cli/conversations",
+    "route": "antigravity/cli/conversations",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-modes",
+    "md_url": "https://antigravity.google/docs/cli/modes.md",
+    "html_url": "https://antigravity.google/docs/cli/modes",
+    "route": "antigravity/cli/modes",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-projects",
+    "md_url": "https://antigravity.google/docs/cli/projects.md",
+    "html_url": "https://antigravity.google/docs/cli/projects",
+    "route": "antigravity/cli/projects",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-subagents",
+    "md_url": "https://antigravity.google/docs/cli/subagents.md",
+    "html_url": "https://antigravity.google/docs/cli/subagents",
+    "route": "antigravity/cli/subagents",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-sandbox",
+    "md_url": "https://antigravity.google/docs/cli/sandbox.md",
+    "html_url": "https://antigravity.google/docs/cli/sandbox",
+    "route": "antigravity/cli/sandbox",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-settings",
+    "md_url": "https://antigravity.google/docs/cli/settings.md",
+    "html_url": "https://antigravity.google/docs/cli/settings",
+    "route": "antigravity/cli/settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-vim-editor-mode",
+    "md_url": "https://antigravity.google/docs/cli/vim-editor-mode.md",
+    "html_url": "https://antigravity.google/docs/cli/vim-editor-mode",
+    "route": "antigravity/cli/vim-editor-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-credits",
+    "md_url": "https://antigravity.google/docs/cli/credits.md",
+    "html_url": "https://antigravity.google/docs/cli/credits",
+    "route": "antigravity/cli/credits",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "mcp",
+    "md_url": "https://antigravity.google/docs/cli/mcp.md",
+    "html_url": "https://antigravity.google/docs/cli/mcp",
+    "route": "antigravity/cli/mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-plugins",
+    "md_url": "https://antigravity.google/docs/cli/plugins.md",
+    "html_url": "https://antigravity.google/docs/cli/plugins",
+    "route": "antigravity/cli/plugins",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-permissions",
+    "md_url": "https://antigravity.google/docs/cli/permissions.md",
+    "html_url": "https://antigravity.google/docs/cli/permissions",
+    "route": "antigravity/cli/permissions",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-statusline",
+    "md_url": "https://antigravity.google/docs/cli/statusline.md",
+    "html_url": "https://antigravity.google/docs/cli/statusline",
+    "route": "antigravity/cli/statusline",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-title",
+    "md_url": "https://antigravity.google/docs/cli/title.md",
+    "html_url": "https://antigravity.google/docs/cli/title",
+    "route": "antigravity/cli/title",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "agents",
+    "md_url": "https://antigravity.google/docs/cli/commands/agents.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/agents",
+    "route": "antigravity/cli/commands/agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "codesearch",
+    "md_url": "https://antigravity.google/docs/cli/commands/codesearch.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/codesearch",
+    "route": "antigravity/cli/commands/codesearch",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "credits",
+    "md_url": "https://antigravity.google/docs/cli/commands/credits.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/credits",
+    "route": "antigravity/cli/commands/credits",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "diff",
+    "md_url": "https://antigravity.google/docs/cli/commands/diff.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/diff",
+    "route": "antigravity/cli/commands/diff",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "permissions",
+    "md_url": "https://antigravity.google/docs/cli/commands/permissions.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/permissions",
+    "route": "antigravity/cli/commands/permissions",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "resume",
+    "md_url": "https://antigravity.google/docs/cli/commands/resume.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/resume",
+    "route": "antigravity/cli/commands/resume",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "statusline",
+    "md_url": "https://antigravity.google/docs/cli/commands/statusline.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/statusline",
+    "route": "antigravity/cli/commands/statusline",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "title",
+    "md_url": "https://antigravity.google/docs/cli/commands/title.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/title",
+    "route": "antigravity/cli/commands/title",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "usage",
+    "md_url": "https://antigravity.google/docs/cli/commands/usage.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/usage",
+    "route": "antigravity/cli/commands/usage",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "voice",
+    "md_url": "https://antigravity.google/docs/cli/commands/voice.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/voice",
+    "route": "antigravity/cli/commands/voice",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-best-practices",
+    "md_url": "https://antigravity.google/docs/cli/best-practices.md",
+    "html_url": "https://antigravity.google/docs/cli/best-practices",
+    "route": "antigravity/cli/best-practices",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-troubleshooting",
+    "md_url": "https://antigravity.google/docs/cli/troubleshooting.md",
+    "html_url": "https://antigravity.google/docs/cli/troubleshooting",
+    "route": "antigravity/cli/troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "cli-reference",
+    "md_url": "https://antigravity.google/docs/cli/reference.md",
+    "html_url": "https://antigravity.google/docs/cli/reference",
+    "route": "antigravity/cli/reference",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "sdk-overview",
+    "md_url": "https://antigravity.google/docs/sdk/overview.md",
+    "html_url": "https://antigravity.google/docs/sdk/overview",
+    "route": "antigravity/sdk/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "sdk-personas",
+    "md_url": "https://antigravity.google/docs/sdk/personas.md",
+    "html_url": "https://antigravity.google/docs/sdk/personas",
+    "route": "antigravity/sdk/personas",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "sdk-tools",
+    "md_url": "https://antigravity.google/docs/sdk/tools.md",
+    "html_url": "https://antigravity.google/docs/sdk/tools",
+    "route": "antigravity/sdk/tools",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "sdk-mcp",
+    "md_url": "https://antigravity.google/docs/sdk/mcp.md",
+    "html_url": "https://antigravity.google/docs/sdk/mcp",
+    "route": "antigravity/sdk/mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "sdk-policies",
+    "md_url": "https://antigravity.google/docs/sdk/policies.md",
+    "html_url": "https://antigravity.google/docs/sdk/policies",
+    "route": "antigravity/sdk/policies",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "sdk-subagents",
+    "md_url": "https://antigravity.google/docs/sdk/subagents.md",
+    "html_url": "https://antigravity.google/docs/sdk/subagents",
+    "route": "antigravity/sdk/subagents",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "sdk-structured-output",
+    "md_url": "https://antigravity.google/docs/sdk/structured-output.md",
+    "html_url": "https://antigravity.google/docs/sdk/structured-output",
+    "route": "antigravity/sdk/structured-output",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "sdk-lifecycle",
+    "md_url": "https://antigravity.google/docs/sdk/lifecycle.md",
+    "html_url": "https://antigravity.google/docs/sdk/lifecycle",
+    "route": "antigravity/sdk/lifecycle",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "ide-overview",
+    "md_url": "https://antigravity.google/docs/ide/overview.md",
+    "html_url": "https://antigravity.google/docs/ide/overview",
+    "route": "antigravity/ide/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "ide-getting-started",
+    "md_url": "https://antigravity.google/docs/ide/getting-started.md",
+    "html_url": "https://antigravity.google/docs/ide/getting-started",
+    "route": "antigravity/ide/getting-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "tab",
+    "md_url": "https://antigravity.google/docs/ide/tab.md",
+    "html_url": "https://antigravity.google/docs/ide/tab",
+    "route": "antigravity/ide/tab",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "agent-side-panel",
+    "md_url": "https://antigravity.google/docs/ide/agent-side-panel.md",
+    "html_url": "https://antigravity.google/docs/ide/agent-side-panel",
+    "route": "antigravity/ide/agent-side-panel",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "review-changes-editor",
+    "md_url": "https://antigravity.google/docs/ide/review-changes-editor.md",
+    "html_url": "https://antigravity.google/docs/ide/review-changes-editor",
+    "route": "antigravity/ide/review-changes-editor",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "ide-implementation-plan",
+    "md_url": "https://antigravity.google/docs/ide/implementation-plan.md",
+    "html_url": "https://antigravity.google/docs/ide/implementation-plan",
+    "route": "antigravity/ide/implementation-plan",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "ide-walkthrough",
+    "md_url": "https://antigravity.google/docs/ide/walkthrough.md",
+    "html_url": "https://antigravity.google/docs/ide/walkthrough",
+    "route": "antigravity/ide/walkthrough",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "ide-screenshots",
+    "md_url": "https://antigravity.google/docs/ide/screenshots.md",
+    "html_url": "https://antigravity.google/docs/ide/screenshots",
+    "route": "antigravity/ide/screenshots",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "ide-browser-recordings",
+    "md_url": "https://antigravity.google/docs/ide/browser-recordings.md",
+    "html_url": "https://antigravity.google/docs/ide/browser-recordings",
+    "route": "antigravity/ide/browser-recordings",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "browser",
+    "md_url": "https://antigravity.google/docs/ide/browser.md",
+    "html_url": "https://antigravity.google/docs/ide/browser",
+    "route": "antigravity/ide/browser",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "allowlist-denylist",
+    "md_url": "https://antigravity.google/docs/ide/allowlist-denylist.md",
+    "html_url": "https://antigravity.google/docs/ide/allowlist-denylist",
+    "route": "antigravity/ide/allowlist-denylist",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "separate-chrome-profile",
+    "md_url": "https://antigravity.google/docs/ide/separate-chrome-profile.md",
+    "html_url": "https://antigravity.google/docs/ide/separate-chrome-profile",
+    "route": "antigravity/ide/separate-chrome-profile",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "mcp",
+    "md_url": "https://antigravity.google/docs/ide/mcp.md",
+    "html_url": "https://antigravity.google/docs/ide/mcp",
+    "route": "antigravity/ide/mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "ide-skills",
+    "md_url": "https://antigravity.google/docs/ide/skills.md",
+    "html_url": "https://antigravity.google/docs/ide/skills",
+    "route": "antigravity/ide/skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "ide-rules",
+    "md_url": "https://antigravity.google/docs/ide/rules.md",
+    "html_url": "https://antigravity.google/docs/ide/rules",
+    "route": "antigravity/ide/rules",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "ide-workflows",
+    "md_url": "https://antigravity.google/docs/ide/workflows.md",
+    "html_url": "https://antigravity.google/docs/ide/workflows",
+    "route": "antigravity/ide/workflows",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "ide-plugins",
+    "md_url": "https://antigravity.google/docs/ide/plugins.md",
+    "html_url": "https://antigravity.google/docs/ide/plugins",
+    "route": "antigravity/ide/plugins",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "ide-hooks",
+    "md_url": "https://antigravity.google/docs/ide/hooks.md",
+    "html_url": "https://antigravity.google/docs/ide/hooks",
+    "route": "antigravity/ide/hooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "ide-settings",
+    "md_url": "https://antigravity.google/docs/ide/settings.md",
+    "html_url": "https://antigravity.google/docs/ide/settings",
+    "route": "antigravity/ide/settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "firebase-studio-migration",
+    "md_url": "https://antigravity.google/docs/firebase-studio-migration.md",
+    "html_url": "https://antigravity.google/docs/firebase-studio-migration",
+    "route": "antigravity/firebase-studio-migration",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "enterprise",
+    "md_url": "https://antigravity.google/docs/enterprise.md",
+    "html_url": "https://antigravity.google/docs/enterprise",
+    "route": "antigravity/enterprise",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "plans",
+    "md_url": "https://antigravity.google/docs/plans.md",
+    "html_url": "https://antigravity.google/docs/plans",
+    "route": "antigravity/plans",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "faq",
+    "md_url": "https://antigravity.google/docs/faq.md",
+    "html_url": "https://antigravity.google/docs/faq",
+    "route": "antigravity/faq",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Getting Started",
+    "md_url": "https://jules.google/docs/index.md",
+    "html_url": "https://jules.google/docs/index",
+    "route": "jules/index",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Environment setup",
+    "md_url": "https://jules.google/docs/environment.md",
+    "html_url": "https://jules.google/docs/environment",
+    "route": "jules/environment",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Running tasks",
+    "md_url": "https://jules.google/docs/running-tasks.md",
+    "html_url": "https://jules.google/docs/running-tasks",
+    "route": "jules/running-tasks",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Scheduled tasks",
+    "md_url": "https://jules.google/docs/scheduled-tasks.md",
+    "html_url": "https://jules.google/docs/scheduled-tasks",
+    "route": "jules/scheduled-tasks",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Suggested tasks",
+    "md_url": "https://jules.google/docs/suggested-tasks.md",
+    "html_url": "https://jules.google/docs/suggested-tasks",
+    "route": "jules/suggested-tasks",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Planning",
+    "md_url": "https://jules.google/docs/review-plan.md",
+    "html_url": "https://jules.google/docs/review-plan",
+    "route": "jules/review-plan",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Reviewing code",
+    "md_url": "https://jules.google/docs/code.md",
+    "html_url": "https://jules.google/docs/code",
+    "route": "jules/code",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Managing tasks and repos",
+    "md_url": "https://jules.google/docs/tasks-repos.md",
+    "html_url": "https://jules.google/docs/tasks-repos",
+    "route": "jules/tasks-repos",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Repo view",
+    "md_url": "https://jules.google/docs/repo.md",
+    "html_url": "https://jules.google/docs/repo",
+    "route": "jules/repo",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Errors and failures",
+    "md_url": "https://jules.google/docs/errors.md",
+    "html_url": "https://jules.google/docs/errors",
+    "route": "jules/errors",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Usage and limits",
+    "md_url": "https://jules.google/docs/usage-limits.md",
+    "html_url": "https://jules.google/docs/usage-limits",
+    "route": "jules/usage-limits",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Feedback and support",
+    "md_url": "https://jules.google/docs/feedback.md",
+    "html_url": "https://jules.google/docs/feedback",
+    "route": "jules/feedback",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "FAQ",
+    "md_url": "https://jules.google/docs/faq.md",
+    "html_url": "https://jules.google/docs/faq",
+    "route": "jules/faq",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Contact",
+    "md_url": "https://jules.google/docs/contact.md",
+    "html_url": "https://jules.google/docs/contact",
+    "route": "jules/contact",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Quickstart",
+    "md_url": "https://jules.google/docs/api/reference.md",
+    "html_url": "https://jules.google/docs/api/reference",
+    "route": "jules/api/reference",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Overview",
+    "md_url": "https://jules.google/docs/api/reference/overview.md",
+    "html_url": "https://jules.google/docs/api/reference/overview",
+    "route": "jules/api/reference/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Authentication",
+    "md_url": "https://jules.google/docs/api/reference/authentication.md",
+    "html_url": "https://jules.google/docs/api/reference/authentication",
+    "route": "jules/api/reference/authentication",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Sessions",
+    "md_url": "https://jules.google/docs/api/reference/sessions.md",
+    "html_url": "https://jules.google/docs/api/reference/sessions",
+    "route": "jules/api/reference/sessions",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Activities",
+    "md_url": "https://jules.google/docs/api/reference/activities.md",
+    "html_url": "https://jules.google/docs/api/reference/activities",
+    "route": "jules/api/reference/activities",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Sources",
+    "md_url": "https://jules.google/docs/api/reference/sources.md",
+    "html_url": "https://jules.google/docs/api/reference/sources",
+    "route": "jules/api/reference/sources",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Types",
+    "md_url": "https://jules.google/docs/api/reference/types.md",
+    "html_url": "https://jules.google/docs/api/reference/types",
+    "route": "jules/api/reference/types",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Reference",
+    "md_url": "https://jules.google/docs/cli/reference.md",
+    "html_url": "https://jules.google/docs/cli/reference",
+    "route": "jules/cli/reference",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Examples",
+    "md_url": "https://jules.google/docs/cli/examples.md",
+    "html_url": "https://jules.google/docs/cli/examples",
+    "route": "jules/cli/examples",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "All Updates",
+    "md_url": "https://jules.google/docs/changelog.md",
+    "html_url": "https://jules.google/docs/changelog",
+    "route": "jules/changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Gemini 3.1 Pro is now available in Jules",
+    "md_url": "https://jules.google/docs/changelog/2026-03-09.md",
+    "html_url": "https://jules.google/docs/changelog/2026-03-09",
+    "route": "jules/changelog/2026-03-09",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Auto-Fixing CI Failures and configure Jules to commit as you",
+    "md_url": "https://jules.google/docs/changelog/2026-02-19.md",
+    "html_url": "https://jules.google/docs/changelog/2026-02-19",
+    "route": "jules/changelog/2026-02-19",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "MCP support comes to Jules",
+    "md_url": "https://jules.google/docs/changelog/2026-02-02.md",
+    "html_url": "https://jules.google/docs/changelog/2026-02-02",
+    "route": "jules/changelog/2026-02-02",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Gemini 3 Flash is now the base model in Jules",
+    "md_url": "https://jules.google/docs/changelog/2026-01-30.md",
+    "html_url": "https://jules.google/docs/changelog/2026-01-30",
+    "route": "jules/changelog/2026-01-30",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Introducing the Planning Critic for Auto-Approved Plans",
+    "md_url": "https://jules.google/docs/changelog/2026-01-26-1.md",
+    "html_url": "https://jules.google/docs/changelog/2026-01-26-1",
+    "route": "jules/changelog/2026-01-26-1",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Jules now finds performance optimizations",
+    "md_url": "https://jules.google/docs/changelog/2026-01-26-3.md",
+    "html_url": "https://jules.google/docs/changelog/2026-01-26-3",
+    "route": "jules/changelog/2026-01-26-3",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "REST API: Repoless, File Outputs, and Activity Filters",
+    "md_url": "https://jules.google/docs/changelog/2026-01-26-4.md",
+    "html_url": "https://jules.google/docs/changelog/2026-01-26-4",
+    "route": "jules/changelog/2026-01-26-4",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Update Scheduled Tasks",
+    "md_url": "https://jules.google/docs/changelog/2026-01-26-5.md",
+    "html_url": "https://jules.google/docs/changelog/2026-01-26-5",
+    "route": "jules/changelog/2026-01-26-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Enable suggested tasks to let Jules find issues proactively",
+    "md_url": "https://jules.google/docs/changelog/2025-12-10.md",
+    "html_url": "https://jules.google/docs/changelog/2025-12-10",
+    "route": "jules/changelog/2025-12-10",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Put routine maintenance on autopilot with Scheduled Tasks",
+    "md_url": "https://jules.google/docs/changelog/2025-12-101.md",
+    "html_url": "https://jules.google/docs/changelog/2025-12-101",
+    "route": "jules/changelog/2025-12-101",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Automated fixes for Render deployments",
+    "md_url": "https://jules.google/docs/changelog/2025-12-102.md",
+    "html_url": "https://jules.google/docs/changelog/2025-12-102",
+    "route": "jules/changelog/2025-12-102",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Start from scratch\u2014instantly",
+    "md_url": "https://jules.google/docs/changelog/2025-11-20.md",
+    "html_url": "https://jules.google/docs/changelog/2025-11-20",
+    "route": "jules/changelog/2025-11-20",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Introducing Gemini 3 Pro",
+    "md_url": "https://jules.google/docs/changelog/2025-11-19.md",
+    "html_url": "https://jules.google/docs/changelog/2025-11-19",
+    "route": "jules/changelog/2025-11-19",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "New Jules Tools CLI Updates: Side-by-Side Diffs, Repo Inference, and More",
+    "md_url": "https://jules.google/docs/changelog/2025-11-10.md",
+    "html_url": "https://jules.google/docs/changelog/2025-11-10",
+    "route": "jules/changelog/2025-11-10",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Introducing the Jules API",
+    "md_url": "https://jules.google/docs/changelog/2025-10-03.md",
+    "html_url": "https://jules.google/docs/changelog/2025-10-03",
+    "route": "jules/changelog/2025-10-03",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Jules in the command line",
+    "md_url": "https://jules.google/docs/changelog/2025-10-02.md",
+    "html_url": "https://jules.google/docs/changelog/2025-10-02",
+    "route": "jules/changelog/2025-10-02",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Use Environment Variables In Jules",
+    "md_url": "https://jules.google/docs/changelog/2025-10-01.md",
+    "html_url": "https://jules.google/docs/changelog/2025-10-01",
+    "route": "jules/changelog/2025-10-01",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Jules gains memory!",
+    "md_url": "https://jules.google/docs/changelog/2025-09-30.md",
+    "html_url": "https://jules.google/docs/changelog/2025-09-30",
+    "route": "jules/changelog/2025-09-30",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Tell Jules exactly what file to work on using file selector",
+    "md_url": "https://jules.google/docs/changelog/2025-09-29.md",
+    "html_url": "https://jules.google/docs/changelog/2025-09-29",
+    "route": "jules/changelog/2025-09-29",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Jules Acts on PR Feedback",
+    "md_url": "https://jules.google/docs/changelog/2025-09-23.md",
+    "html_url": "https://jules.google/docs/changelog/2025-09-23",
+    "route": "jules/changelog/2025-09-23",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "All Hands on Deck!",
+    "md_url": "https://jules.google/docs/changelog/2025-09-19.md",
+    "html_url": "https://jules.google/docs/changelog/2025-09-19",
+    "route": "jules/changelog/2025-09-19",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Image upload",
+    "md_url": "https://jules.google/docs/changelog/2025-09-09.md",
+    "html_url": "https://jules.google/docs/changelog/2025-09-09",
+    "route": "jules/changelog/2025-09-09",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Stacked Diff",
+    "md_url": "https://jules.google/docs/changelog/2025-09-04.md",
+    "html_url": "https://jules.google/docs/changelog/2025-09-04",
+    "route": "jules/changelog/2025-09-04",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Improved Jules Critic",
+    "md_url": "https://jules.google/docs/changelog/2025-09-03.md",
+    "html_url": "https://jules.google/docs/changelog/2025-09-03",
+    "route": "jules/changelog/2025-09-03",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Jules Sample Prompts",
+    "md_url": "https://jules.google/docs/changelog/2025-09-02.md",
+    "html_url": "https://jules.google/docs/changelog/2025-09-02",
+    "route": "jules/changelog/2025-09-02",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Render images in the diff viewer",
+    "md_url": "https://jules.google/docs/changelog/2025-08-22.md",
+    "html_url": "https://jules.google/docs/changelog/2025-08-22",
+    "route": "jules/changelog/2025-08-22",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Export at any time",
+    "md_url": "https://jules.google/docs/changelog/2025-08-15.md",
+    "html_url": "https://jules.google/docs/changelog/2025-08-15",
+    "route": "jules/changelog/2025-08-15",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Increasing the VM Size to 20GB",
+    "md_url": "https://jules.google/docs/changelog/2025-08-151.md",
+    "html_url": "https://jules.google/docs/changelog/2025-08-151",
+    "route": "jules/changelog/2025-08-151",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Jules can surf the web",
+    "md_url": "https://jules.google/docs/changelog/2025-08-081.md",
+    "html_url": "https://jules.google/docs/changelog/2025-08-081",
+    "route": "jules/changelog/2025-08-081",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Interactive Plan",
+    "md_url": "https://jules.google/docs/changelog/2025-08-082.md",
+    "html_url": "https://jules.google/docs/changelog/2025-08-082",
+    "route": "jules/changelog/2025-08-082",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Critic Agent",
+    "md_url": "https://jules.google/docs/changelog/2025-08-083.md",
+    "html_url": "https://jules.google/docs/changelog/2025-08-083",
+    "route": "jules/changelog/2025-08-083",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Jules can test web-apps and show you the results",
+    "md_url": "https://jules.google/docs/changelog/2025-08-07.md",
+    "html_url": "https://jules.google/docs/changelog/2025-08-07",
+    "route": "jules/changelog/2025-08-07",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Jules is out of beta!",
+    "md_url": "https://jules.google/docs/changelog/2025-08-06.md",
+    "html_url": "https://jules.google/docs/changelog/2025-08-06",
+    "route": "jules/changelog/2025-08-06",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Environment snapshots for faster tasks",
+    "md_url": "https://jules.google/docs/changelog/2025-08-05.md",
+    "html_url": "https://jules.google/docs/changelog/2025-08-05",
+    "route": "jules/changelog/2025-08-05",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Open A PR directly from Jules",
+    "md_url": "https://jules.google/docs/changelog/2025-08-04.md",
+    "html_url": "https://jules.google/docs/changelog/2025-08-04",
+    "route": "jules/changelog/2025-08-04",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Added Bun runtime support",
+    "md_url": "https://jules.google/docs/changelog/2025-07-18.md",
+    "html_url": "https://jules.google/docs/changelog/2025-07-18",
+    "route": "jules/changelog/2025-07-18",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Improved task controls and other \ud83d\udc85 UI delight",
+    "md_url": "https://jules.google/docs/changelog/2025-07-03.md",
+    "html_url": "https://jules.google/docs/changelog/2025-07-03",
+    "route": "jules/changelog/2025-07-03",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Jules now listens to GitHub issues",
+    "md_url": "https://jules.google/docs/changelog/2025-06-26.md",
+    "html_url": "https://jules.google/docs/changelog/2025-06-26",
+    "route": "jules/changelog/2025-06-26",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Jules Agent Update: Faster, Smarter, More Reliable",
+    "md_url": "https://jules.google/docs/changelog/2025-06-20.md",
+    "html_url": "https://jules.google/docs/changelog/2025-06-20",
+    "route": "jules/changelog/2025-06-20",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Modernized base environment and updated toolchains",
+    "md_url": "https://jules.google/docs/changelog/2025-06-18.md",
+    "html_url": "https://jules.google/docs/changelog/2025-06-18",
+    "route": "jules/changelog/2025-06-18",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Customization and Efficiency Enhancements",
+    "md_url": "https://jules.google/docs/changelog/2025-06-06.md",
+    "html_url": "https://jules.google/docs/changelog/2025-06-06",
+    "route": "jules/changelog/2025-06-06",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "A faster, smoother and more reliable Jules",
+    "md_url": "https://jules.google/docs/changelog/2025-05-30.md",
+    "html_url": "https://jules.google/docs/changelog/2025-05-30",
+    "route": "jules/changelog/2025-05-30",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Improving Stablity",
+    "md_url": "https://jules.google/docs/changelog/2025-05-22.md",
+    "html_url": "https://jules.google/docs/changelog/2025-05-22",
+    "route": "jules/changelog/2025-05-22",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Jules is here",
+    "md_url": "https://jules.google/docs/changelog/2025-05-19.md",
+    "html_url": "https://jules.google/docs/changelog/2025-05-19",
+    "route": "jules/changelog/2025-05-19",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Firebase Studio",
+    "md_url": "https://firebase.google.com/docs/studio.md",
+    "html_url": "https://firebase.google.com/docs/studio",
+    "route": "firebase-studio/",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Firebase Studio (deprecated) Build and ship full-stack AI-infused apps right from your browser.",
+    "md_url": "https://firebase.google.com/docs/studio/migrating-project.md",
+    "html_url": "https://firebase.google.com/docs/studio/migrating-project",
+    "route": "firebase-studio/migrating-project",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Get started",
+    "md_url": "https://firebase.google.com/docs/studio/get-started.md",
+    "html_url": "https://firebase.google.com/docs/studio/get-started",
+    "route": "firebase-studio/get-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Get started with an existing project",
+    "md_url": "https://firebase.google.com/docs/studio/get-started-import.md",
+    "html_url": "https://firebase.google.com/docs/studio/get-started-import",
+    "route": "firebase-studio/get-started-import",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Get started with the App Prototyping agent",
+    "md_url": "https://firebase.google.com/docs/studio/get-started-ai.md",
+    "html_url": "https://firebase.google.com/docs/studio/get-started-ai",
+    "route": "firebase-studio/get-started-ai",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Get started with a template",
+    "md_url": "https://firebase.google.com/docs/studio/get-started-template.md",
+    "html_url": "https://firebase.google.com/docs/studio/get-started-template",
+    "route": "firebase-studio/get-started-template",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Firebase Studio pricing, quotas, and limits",
+    "md_url": "https://firebase.google.com/docs/studio/pricing.md",
+    "html_url": "https://firebase.google.com/docs/studio/pricing",
+    "route": "firebase-studio/pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Introduction",
+    "md_url": "https://firebase.google.com/docs/studio/ai-assistance.md",
+    "html_url": "https://firebase.google.com/docs/studio/ai-assistance",
+    "route": "firebase-studio/ai-assistance",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Get assistance from Gemini",
+    "md_url": "https://firebase.google.com/docs/studio/try-gemini.md",
+    "html_url": "https://firebase.google.com/docs/studio/try-gemini",
+    "route": "firebase-studio/try-gemini",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Configure Gemini assistance",
+    "md_url": "https://firebase.google.com/docs/studio/set-up-gemini.md",
+    "html_url": "https://firebase.google.com/docs/studio/set-up-gemini",
+    "route": "firebase-studio/set-up-gemini",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Effective prompting",
+    "md_url": "https://firebase.google.com/docs/studio/prompting.md",
+    "html_url": "https://firebase.google.com/docs/studio/prompting",
+    "route": "firebase-studio/prompting",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Connect to MCP servers",
+    "md_url": "https://firebase.google.com/docs/studio/mcp-servers.md",
+    "html_url": "https://firebase.google.com/docs/studio/mcp-servers",
+    "route": "firebase-studio/mcp-servers",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Preview web and Android apps",
+    "md_url": "https://firebase.google.com/docs/studio/preview-apps.md",
+    "html_url": "https://firebase.google.com/docs/studio/preview-apps",
+    "route": "firebase-studio/preview-apps",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Publish apps",
+    "md_url": "https://firebase.google.com/docs/studio/deploy-app.md",
+    "html_url": "https://firebase.google.com/docs/studio/deploy-app",
+    "route": "firebase-studio/deploy-app",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Monitor and protect web apps",
+    "md_url": "https://firebase.google.com/docs/studio/monitor.md",
+    "html_url": "https://firebase.google.com/docs/studio/monitor",
+    "route": "firebase-studio/monitor",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Upload your app to GitHub",
+    "md_url": "https://firebase.google.com/docs/studio/github.md",
+    "html_url": "https://firebase.google.com/docs/studio/github",
+    "route": "firebase-studio/github",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "About Firebase Studio workspaces",
+    "md_url": "https://firebase.google.com/docs/studio/get-started-workspace.md",
+    "html_url": "https://firebase.google.com/docs/studio/get-started-workspace",
+    "route": "firebase-studio/get-started-workspace",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Customize your Firebase Studio workspace",
+    "md_url": "https://firebase.google.com/docs/studio/customize-workspace.md",
+    "html_url": "https://firebase.google.com/docs/studio/customize-workspace",
+    "route": "firebase-studio/customize-workspace",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Connect to a Firebase project",
+    "md_url": "https://firebase.google.com/docs/studio/firebase-projects.md",
+    "html_url": "https://firebase.google.com/docs/studio/firebase-projects",
+    "route": "firebase-studio/firebase-projects",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Integrate with Google and Firebase services",
+    "md_url": "https://firebase.google.com/docs/studio/google-integrations.md",
+    "html_url": "https://firebase.google.com/docs/studio/google-integrations",
+    "route": "firebase-studio/google-integrations",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Create custom templates",
+    "md_url": "https://firebase.google.com/docs/studio/custom-templates.md",
+    "html_url": "https://firebase.google.com/docs/studio/custom-templates",
+    "route": "firebase-studio/custom-templates",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Create a shortcut to a predefined workspace",
+    "md_url": "https://firebase.google.com/docs/studio/open-in-firebase-studio.md",
+    "html_url": "https://firebase.google.com/docs/studio/open-in-firebase-studio",
+    "route": "firebase-studio/open-in-firebase-studio",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Share your workspace",
+    "md_url": "https://firebase.google.com/docs/studio/share-your-workspace.md",
+    "html_url": "https://firebase.google.com/docs/studio/share-your-workspace",
+    "route": "firebase-studio/share-your-workspace",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Create a button to import code into Firebase Studio",
+    "md_url": "https://firebase.google.com/docs/studio/import-workspace.md",
+    "html_url": "https://firebase.google.com/docs/studio/import-workspace",
+    "route": "firebase-studio/import-workspace",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Develop, publish, and monitor a full-stack web app",
+    "md_url": "https://firebase.google.com/docs/studio/solution-build-with-ai.md",
+    "html_url": "https://firebase.google.com/docs/studio/solution-build-with-ai",
+    "route": "firebase-studio/solution-build-with-ai",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Build an app with the Gemini API",
+    "md_url": "https://firebase.google.com/docs/studio/build-gemini-api-app.md",
+    "html_url": "https://firebase.google.com/docs/studio/build-gemini-api-app",
+    "route": "firebase-studio/build-gemini-api-app",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Debug your app",
+    "md_url": "https://firebase.google.com/docs/studio/debug.md",
+    "html_url": "https://firebase.google.com/docs/studio/debug",
+    "route": "firebase-studio/debug",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "FAQ and troubleshooting",
+    "md_url": "https://firebase.google.com/docs/studio/troubleshooting.md",
+    "html_url": "https://firebase.google.com/docs/studio/troubleshooting",
+    "route": "firebase-studio/troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "dev.nix Reference",
+    "md_url": "https://firebase.google.com/docs/studio/devnix-reference.md",
+    "html_url": "https://firebase.google.com/docs/studio/devnix-reference",
+    "route": "firebase-studio/devnix-reference",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Project IDX is now part of Firebase Studio",
+    "md_url": "https://firebase.google.com/docs/studio/idx-is-firebase-studio.md",
+    "html_url": "https://firebase.google.com/docs/studio/idx-is-firebase-studio",
+    "route": "firebase-studio/idx-is-firebase-studio",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Licensed software",
+    "md_url": "https://firebase.google.com/docs/studio/oss.md",
+    "html_url": "https://firebase.google.com/docs/studio/oss",
+    "route": "firebase-studio/oss",
+    "kind": "doc"
+  },
+  {
+    "group": "Firebase Studio",
+    "title": "Connect with us",
+    "md_url": "https://firebase.google.com/docs/studio/connect.md",
+    "html_url": "https://firebase.google.com/docs/studio/connect",
+    "route": "firebase-studio/connect",
+    "kind": "doc"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini app",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app",
+    "route": "blog/innovation-and-ai/products/gemini-app",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "personal intelligence",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence",
+    "route": "blog/innovation-and-ai/products/gemini-app/personal-intelligence",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini drop january 2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-january-2026",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-january-2026",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-drop-january-2026",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini budget planning tips",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-budget-planning-tips",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-budget-planning-tips",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-budget-planning-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "lyria 3",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/lyria-3",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/lyria-3",
+    "route": "blog/innovation-and-ai/products/gemini-app/lyria-3",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "android multi step tasks",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/android-multi-step-tasks",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/android-multi-step-tasks",
+    "route": "blog/innovation-and-ai/products/gemini-app/android-multi-step-tasks",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "lyria 3 year of the fire horse",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/lyria-3-year-of-the-fire-horse",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/lyria-3-year-of-the-fire-horse",
+    "route": "blog/innovation-and-ai/products/gemini-app/lyria-3-year-of-the-fire-horse",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini drop february 2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-february-2026",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-february-2026",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-drop-february-2026",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "switch to gemini app",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/switch-to-gemini-app",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/switch-to-gemini-app",
+    "route": "blog/innovation-and-ai/products/gemini-app/switch-to-gemini-app",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini drop updates march 2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "notebooks gemini notebooklm",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm",
+    "route": "blog/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "3d models charts",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/3d-models-charts",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/3d-models-charts",
+    "route": "blog/innovation-and-ai/products/gemini-app/3d-models-charts",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "personal intelligence nano banana",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana",
+    "route": "blog/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini app now on mac os",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini drop april 2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-april-2026",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-april-2026",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-drop-april-2026",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "generate files in gemini",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/generate-files-in-gemini",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/generate-files-in-gemini",
+    "route": "blog/innovation-and-ai/products/gemini-app/generate-files-in-gemini",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "digitize notes gemini study guide",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/digitize-notes-gemini-study-guide",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/digitize-notes-gemini-study-guide",
+    "route": "blog/innovation-and-ai/products/gemini-app/digitize-notes-gemini-study-guide",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "next evolution gemini app",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app",
+    "route": "blog/innovation-and-ai/products/gemini-app/next-evolution-gemini-app",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini features for businesses",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-features-for-businesses",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-features-for-businesses",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-features-for-businesses",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini study notebooks",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-study-notebooks",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-study-notebooks",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-study-notebooks",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "personal intelligence nano banana us expansion",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana-us-expansion",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana-us-expansion",
+    "route": "blog/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana-us-expansion",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini spark updates june 2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to make gemini study notebooks",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/how-to-make-gemini-study-notebooks",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/how-to-make-gemini-study-notebooks",
+    "route": "blog/innovation-and-ai/products/gemini-app/how-to-make-gemini-study-notebooks",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini southeast asia report 2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-southeast-asia-report-2026",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-southeast-asia-report-2026",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-southeast-asia-report-2026",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "speak naturally gemini app mac os",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/speak-naturally-gemini-app-mac-os",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/speak-naturally-gemini-app-mac-os",
+    "route": "blog/innovation-and-ai/products/gemini-app/speak-naturally-gemini-app-mac-os",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini spark updates july 2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-july-2026",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-july-2026",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-spark-updates-july-2026",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "new connected apps services gemini august 2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026",
+    "route": "blog/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "one billion monthly users",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users",
+    "route": "blog/innovation-and-ai/products/gemini-app/one-billion-monthly-users",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini waymo",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-waymo",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "student offer google ai",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai",
+    "route": "blog/innovation-and-ai/products/gemini-app/student-offer-google-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to take practice sat",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/how-to-take-practice-sat",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/how-to-take-practice-sat",
+    "route": "blog/innovation-and-ai/products/gemini-app/how-to-take-practice-sat",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "four new interactive bts experiences",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/four-new-interactive-bts-experiences",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/four-new-interactive-bts-experiences",
+    "route": "blog/innovation-and-ai/products/gemini-app/four-new-interactive-bts-experiences",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "enable intelligent dictation macos",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos",
+    "route": "blog/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "productivity features gemini live",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live",
+    "route": "blog/innovation-and-ai/products/gemini-app/productivity-features-gemini-live",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini models",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 deep think",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 1 pro",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 1 flash lite",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini embedding 2",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 1 flash live",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 1 flash tts",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "next generation gemini deep research",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini embedding 2 generally available",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2-generally-available",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2-generally-available",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2-generally-available",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 5",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-5",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini omni",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-omni",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini omni 3 5 videos",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini live 3 5 translate",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing computer use gemini 3 5 flash",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini omni flash nano banana 2 lite",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 6 flash 3 5 flash lite 3 5 flash cyber",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "using gemini to manage farm",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/using-gemini-to-manage-farm",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/using-gemini-to-manage-farm",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/using-gemini-to-manage-farm",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "glanceboard gemini flash nano banana",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/glanceboard-gemini-flash-nano-banana",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/glanceboard-gemini-flash-nano-banana",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/glanceboard-gemini-flash-nano-banana",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini omni builders",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-builders",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-builders",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-omni-builders",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing gemini 3 7 flash",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini omni experts roundtable",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-experts-roundtable",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-experts-roundtable",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-omni-experts-roundtable",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "what full stack development means",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/what-full-stack-development-means",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/what-full-stack-development-means",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/what-full-stack-development-means",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 5 transcribe",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini",
+    "route": "blog/products-and-platforms/products/gemini",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google bard new features update july 2023",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023",
+    "route": "blog/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to use google bard",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/how-to-use-google-bard",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/how-to-use-google-bard",
+    "route": "blog/products-and-platforms/products/gemini/how-to-use-google-bard",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google bard new features update sept 2023",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023",
+    "route": "blog/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google bard expansion teens",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-expansion-teens",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-expansion-teens",
+    "route": "blog/products-and-platforms/products/gemini/google-bard-expansion-teens",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google bard try gemini ai",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai",
+    "route": "blog/products-and-platforms/products/gemini/google-bard-try-gemini-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google bard gemini pro image generation",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-gemini-pro-image-generation",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-gemini-pro-image-generation",
+    "route": "blog/products-and-platforms/products/gemini/google-bard-gemini-pro-image-generation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "bard gemini advanced app",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/bard-gemini-advanced-app",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/bard-gemini-advanced-app",
+    "route": "blog/products-and-platforms/products/gemini/bard-gemini-advanced-app",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini image generation issue",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-image-generation-issue",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-image-generation-issue",
+    "route": "blog/products-and-platforms/products/gemini/gemini-image-generation-issue",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google gemini update may 2024",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024",
+    "route": "blog/products-and-platforms/products/gemini/google-gemini-update-may-2024",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google gemini new features july 2024",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-new-features-july-2024",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-new-features-july-2024",
+    "route": "blog/products-and-platforms/products/gemini/google-gemini-new-features-july-2024",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "made by google gemini ai updates",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/made-by-google-gemini-ai-updates",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/made-by-google-gemini-ai-updates",
+    "route": "blog/products-and-platforms/products/gemini/made-by-google-gemini-ai-updates",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google gemini update august 2024",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-august-2024",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-august-2024",
+    "route": "blog/products-and-platforms/products/gemini/google-gemini-update-august-2024",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google gemini learning features",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-learning-features",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-learning-features",
+    "route": "blog/products-and-platforms/products/gemini/google-gemini-learning-features",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google gems tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gems-tips",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gems-tips",
+    "route": "blog/products-and-platforms/products/gemini/google-gems-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini live extensions language expansion",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-extensions-language-expansion",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-extensions-language-expansion",
+    "route": "blog/products-and-platforms/products/gemini/gemini-live-extensions-language-expansion",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini iphone app",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-iphone-app",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-iphone-app",
+    "route": "blog/products-and-platforms/products/gemini/gemini-iphone-app",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google gemini ai holiday planning 2024",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-ai-holiday-planning-2024",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-ai-holiday-planning-2024",
+    "route": "blog/products-and-platforms/products/gemini/google-gemini-ai-holiday-planning-2024",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google gemini anniversary quiz",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-anniversary-quiz",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-anniversary-quiz",
+    "route": "blog/products-and-platforms/products/gemini/google-gemini-anniversary-quiz",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google gemini deep research",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research",
+    "route": "blog/products-and-platforms/products/gemini/google-gemini-deep-research",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google gemini ai collection 2024",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-ai-collection-2024",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-ai-collection-2024",
+    "route": "blog/products-and-platforms/products/gemini/google-gemini-ai-collection-2024",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "new gemini app updates android",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-updates-android",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-updates-android",
+    "route": "blog/products-and-platforms/products/gemini/new-gemini-app-updates-android",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google arts culture gemini orchestra",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-arts-culture-gemini-orchestra",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-arts-culture-gemini-orchestra",
+    "route": "blog/products-and-platforms/products/gemini/google-arts-culture-gemini-orchestra",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini personalization",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-personalization",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-personalization",
+    "route": "blog/products-and-platforms/products/gemini/gemini-personalization",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "new gemini app features march 2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-features-march-2025",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-features-march-2025",
+    "route": "blog/products-and-platforms/products/gemini/new-gemini-app-features-march-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google assistant gemini mobile",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-assistant-gemini-mobile",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-assistant-gemini-mobile",
+    "route": "blog/products-and-platforms/products/gemini/google-assistant-gemini-mobile",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini collaboration features",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features",
+    "route": "blog/products-and-platforms/products/gemini/gemini-collaboration-features",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "tips how to use deep research",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/tips-how-to-use-deep-research",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/tips-how-to-use-deep-research",
+    "route": "blog/products-and-platforms/products/gemini/tips-how-to-use-deep-research",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how we built gemini robotics",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/how-we-built-gemini-robotics",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/how-we-built-gemini-robotics",
+    "route": "blog/products-and-platforms/products/gemini/how-we-built-gemini-robotics",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini cloud media entertainment",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-cloud-media-entertainment",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-cloud-media-entertainment",
+    "route": "blog/products-and-platforms/products/gemini/gemini-cloud-media-entertainment",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini preview model billing update",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-preview-model-billing-update",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-preview-model-billing-update",
+    "route": "blog/products-and-platforms/products/gemini/gemini-preview-model-billing-update",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini live android tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-android-tips",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-android-tips",
+    "route": "blog/products-and-platforms/products/gemini/gemini-live-android-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "deep research gemini 2 5 pro experimental",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/deep-research-gemini-2-5-pro-experimental",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/deep-research-gemini-2-5-pro-experimental",
+    "route": "blog/products-and-platforms/products/gemini/deep-research-gemini-2-5-pro-experimental",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "video generation",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/video-generation",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/video-generation",
+    "route": "blog/products-and-platforms/products/gemini/video-generation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 2 5 flash preview",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-flash-preview",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-flash-preview",
+    "route": "blog/products-and-platforms/products/gemini/gemini-2-5-flash-preview",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google one ai premium students free",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-one-ai-premium-students-free",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-one-ai-premium-students-free",
+    "route": "blog/products-and-platforms/products/gemini/google-one-ai-premium-students-free",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "image editing",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/image-editing",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/image-editing",
+    "route": "blog/products-and-platforms/products/gemini/image-editing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 2 5 pro updates",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-pro-updates",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-pro-updates",
+    "route": "blog/products-and-platforms/products/gemini/gemini-2-5-pro-updates",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini app updates io 2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-app-updates-io-2025",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-app-updates-io-2025",
+    "route": "blog/products-and-platforms/products/gemini/gemini-app-updates-io-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "veo 3 expansion mobile",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/veo-3-expansion-mobile",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/veo-3-expansion-mobile",
+    "route": "blog/products-and-platforms/products/gemini/veo-3-expansion-mobile",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 2 5 pro latest preview",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-pro-latest-preview",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-pro-latest-preview",
+    "route": "blog/products-and-platforms/products/gemini/gemini-2-5-pro-latest-preview",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "scheduled actions gemini app",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/scheduled-actions-gemini-app",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/scheduled-actions-gemini-app",
+    "route": "blog/products-and-platforms/products/gemini/scheduled-actions-gemini-app",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 2 5 model family expands",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-model-family-expands",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-model-family-expands",
+    "route": "blog/products-and-platforms/products/gemini/gemini-2-5-model-family-expands",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "release notes podcast smokejumpers",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/release-notes-podcast-smokejumpers",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/release-notes-podcast-smokejumpers",
+    "route": "blog/products-and-platforms/products/gemini/release-notes-podcast-smokejumpers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "release notes podcast gemini multimodal",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/release-notes-podcast-gemini-multimodal",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/release-notes-podcast-gemini-multimodal",
+    "route": "blog/products-and-platforms/products/gemini/release-notes-podcast-gemini-multimodal",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "photo to video",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/photo-to-video",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/photo-to-video",
+    "route": "blog/products-and-platforms/products/gemini/photo-to-video",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini drop july 2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2025",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2025",
+    "route": "blog/products-and-platforms/products/gemini/gemini-drop-july-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 2 5 deep think",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-deep-think",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-deep-think",
+    "route": "blog/products-and-platforms/products/gemini/gemini-2-5-deep-think",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "storybooks",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/storybooks",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/storybooks",
+    "route": "blog/products-and-platforms/products/gemini/storybooks",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google ai pro students learning",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-ai-pro-students-learning",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-ai-pro-students-learning",
+    "route": "blog/products-and-platforms/products/gemini/google-ai-pro-students-learning",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "new gemini tools students august 2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-tools-students-august-2025",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-tools-students-august-2025",
+    "route": "blog/products-and-platforms/products/gemini/new-gemini-tools-students-august-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "temporary chats privacy controls",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/temporary-chats-privacy-controls",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/temporary-chats-privacy-controls",
+    "route": "blog/products-and-platforms/products/gemini/temporary-chats-privacy-controls",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini drop august 2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-august-2025",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-august-2025",
+    "route": "blog/products-and-platforms/products/gemini/gemini-drop-august-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini live updates august 2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-updates-august-2025",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-updates-august-2025",
+    "route": "blog/products-and-platforms/products/gemini/gemini-live-updates-august-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini nano pixel 10 updates",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-pixel-10-updates",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-pixel-10-updates",
+    "route": "blog/products-and-platforms/products/gemini/gemini-nano-pixel-10-updates",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "updated image editing model",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/updated-image-editing-model",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/updated-image-editing-model",
+    "route": "blog/products-and-platforms/products/gemini/updated-image-editing-model",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "image generation prompting tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/image-generation-prompting-tips",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/image-generation-prompting-tips",
+    "route": "blog/products-and-platforms/products/gemini/image-generation-prompting-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "new gemini app tools to help students in europe the middle east and africa",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-tools-to-help-students-in-europe-the-middle-east-and-africa",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-tools-to-help-students-in-europe-the-middle-east-and-africa",
+    "route": "blog/products-and-platforms/products/gemini/new-gemini-app-tools-to-help-students-in-europe-the-middle-east-and-africa",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini nano banana examples",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-banana-examples",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-banana-examples",
+    "route": "blog/products-and-platforms/products/gemini/gemini-nano-banana-examples",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "sharing gems",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/sharing-gems",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/sharing-gems",
+    "route": "blog/products-and-platforms/products/gemini/sharing-gems",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini photo to video tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-photo-to-video-tips",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-photo-to-video-tips",
+    "route": "blog/products-and-platforms/products/gemini/gemini-photo-to-video-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini drop september 2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-september-2025",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-september-2025",
+    "route": "blog/products-and-platforms/products/gemini/gemini-drop-september-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "guided learning google gemini",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/guided-learning-google-gemini",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/guided-learning-google-gemini",
+    "route": "blog/products-and-platforms/products/gemini/guided-learning-google-gemini",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the global ai film award is now accepting applications",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/the-global-ai-film-award-is-now-accepting-applications",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/the-global-ai-film-award-is-now-accepting-applications",
+    "route": "blog/products-and-platforms/products/gemini/the-global-ai-film-award-is-now-accepting-applications",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "nano banana tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-tips",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-tips",
+    "route": "blog/products-and-platforms/products/gemini/nano-banana-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "bringing the best ai to university students in europe the middle east and africa at no cost",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/bringing-the-best-ai-to-university-students-in-europe-the-middle-east-and-africa-at-no-cost",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/bringing-the-best-ai-to-university-students-in-europe-the-middle-east-and-africa-at-no-cost",
+    "route": "blog/products-and-platforms/products/gemini/bringing-the-best-ai-to-university-students-in-europe-the-middle-east-and-africa-at-no-cost",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "using wear os gemini raise to talk",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/using-wear-os-gemini-raise-to-talk",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/using-wear-os-gemini-raise-to-talk",
+    "route": "blog/products-and-platforms/products/gemini/using-wear-os-gemini-raise-to-talk",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini drop october 2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-october-2025",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-october-2025",
+    "route": "blog/products-and-platforms/products/gemini/gemini-drop-october-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini nano banana veo halloween images",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-banana-veo-halloween-images",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-banana-veo-halloween-images",
+    "route": "blog/products-and-platforms/products/gemini/gemini-nano-banana-veo-halloween-images",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "deep research workspace app integration",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/deep-research-workspace-app-integration",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/deep-research-workspace-app-integration",
+    "route": "blog/products-and-platforms/products/gemini/deep-research-workspace-app-integration",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini live audio updates",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-audio-updates",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-audio-updates",
+    "route": "blog/products-and-platforms/products/gemini/gemini-live-audio-updates",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 collection",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-collection",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-collection",
+    "route": "blog/products-and-platforms/products/gemini/gemini-3-collection",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 gemini app",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-gemini-app",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-gemini-app",
+    "route": "blog/products-and-platforms/products/gemini/gemini-3-gemini-app",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3",
+    "route": "blog/products-and-platforms/products/gemini/gemini-3",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "prompting tips nano banana pro",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/prompting-tips-nano-banana-pro",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/prompting-tips-nano-banana-pro",
+    "route": "blog/products-and-platforms/products/gemini/prompting-tips-nano-banana-pro",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "holiday tips prompts ai tools",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/holiday-tips-prompts-ai-tools",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/holiday-tips-prompts-ai-tools",
+    "route": "blog/products-and-platforms/products/gemini/holiday-tips-prompts-ai-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini drop november 2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-november-2025",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-november-2025",
+    "route": "blog/products-and-platforms/products/gemini/gemini-drop-november-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 deep think",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-deep-think",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-deep-think",
+    "route": "blog/products-and-platforms/products/gemini/gemini-3-deep-think",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 examples demos",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-examples-demos",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-examples-demos",
+    "route": "blog/products-and-platforms/products/gemini/gemini-3-examples-demos",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "meta prompting veo gemini tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/meta-prompting-veo-gemini-tips",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/meta-prompting-veo-gemini-tips",
+    "route": "blog/products-and-platforms/products/gemini/meta-prompting-veo-gemini-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini audio model updates",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-audio-model-updates",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-audio-model-updates",
+    "route": "blog/products-and-platforms/products/gemini/gemini-audio-model-updates",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "visual reports",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/visual-reports",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/visual-reports",
+    "route": "blog/products-and-platforms/products/gemini/visual-reports",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 flash",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash",
+    "route": "blog/products-and-platforms/products/gemini/gemini-3-flash",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 flash gemini app",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app",
+    "route": "blog/products-and-platforms/products/gemini/gemini-3-flash-gemini-app",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini drop december 2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-december-2025",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-december-2025",
+    "route": "blog/products-and-platforms/products/gemini/gemini-drop-december-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google gemini prompts new years resolutions",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-prompts-new-years-resolutions",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-prompts-new-years-resolutions",
+    "route": "blog/products-and-platforms/products/gemini/google-gemini-prompts-new-years-resolutions",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "where to use nano banana pro",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/where-to-use-nano-banana-pro",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/where-to-use-nano-banana-pro",
+    "route": "blog/products-and-platforms/products/gemini/where-to-use-nano-banana-pro",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "nano banana google trends 2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-google-trends-2025",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-google-trends-2025",
+    "route": "blog/products-and-platforms/products/gemini/nano-banana-google-trends-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how nano banana got its name",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/how-nano-banana-got-its-name",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/how-nano-banana-got-its-name",
+    "route": "blog/products-and-platforms/products/gemini/how-nano-banana-got-its-name",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "tips prompting lyria 3",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/tips-prompting-lyria-3",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/tips-prompting-lyria-3",
+    "route": "blog/products-and-platforms/products/gemini/tips-prompting-lyria-3",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google gemini home buying renting tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-home-buying-renting-tips",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-home-buying-renting-tips",
+    "route": "blog/products-and-platforms/products/gemini/google-gemini-home-buying-renting-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini spring cleaning tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-spring-cleaning-tips",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-spring-cleaning-tips",
+    "route": "blog/products-and-platforms/products/gemini/gemini-spring-cleaning-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini tips for parents",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-tips-for-parents",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-tips-for-parents",
+    "route": "blog/products-and-platforms/products/gemini/gemini-tips-for-parents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "find job with google ai tools",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/find-job-with-google-ai-tools",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/find-job-with-google-ai-tools",
+    "route": "blog/products-and-platforms/products/gemini/find-job-with-google-ai-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini help avoid jetlag",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-help-avoid-jetlag",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-help-avoid-jetlag",
+    "route": "blog/products-and-platforms/products/gemini/gemini-help-avoid-jetlag",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "coffee shop gemini features",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/coffee-shop-gemini-features",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/coffee-shop-gemini-features",
+    "route": "blog/products-and-platforms/products/gemini/coffee-shop-gemini-features",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "launch business with gemini",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/launch-business-with-gemini",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/launch-business-with-gemini",
+    "route": "blog/products-and-platforms/products/gemini/launch-business-with-gemini",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini live camera how to",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-camera-how-to",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-camera-how-to",
+    "route": "blog/products-and-platforms/products/gemini/gemini-live-camera-how-to",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini drop july 2026",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026",
+    "route": "blog/products-and-platforms/products/gemini/gemini-drop-july-2026",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how gemini plans trips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/how-gemini-plans-trips",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/how-gemini-plans-trips",
+    "route": "blog/products-and-platforms/products/gemini/how-gemini-plans-trips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "state fair tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/state-fair-tips",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/state-fair-tips",
+    "route": "blog/products-and-platforms/products/gemini/state-fair-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google gemini pixel football club partnerships",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships",
+    "route": "blog/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships",
+    "kind": "blog"
+  }
+]

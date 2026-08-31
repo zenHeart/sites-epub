@@ -105,3 +105,27 @@
 3. **对每个 dist/*.epub 跑一遍 `check_epub.py`**（含 `_check_cover_title()` 反向标题门禁）
 
 任何一步失败即不发布到 gh-pages。第 3 步是新加的——它是封面标题串号事件的回归门禁。`check_epub.py` 本地与 CI 用同一份脚本，不要复制一份到 workflow 内联。
+
+---
+
+## 8. devsite 系站点（ai.google.dev / developers.google.com / firebase / cloud docs）四连坑（gemini vendor，2026-08-31）
+
+**症状**：`add https://ai.google.dev/...` 直接 fetch 失败或 0 路由；抓下来了 EPUB 里 `leftover_markdown_fence` 门禁红。
+
+**根因（三个独立问题，按层各修一处）**：
+
+| 层 | 问题 | 修法 |
+|---|---|---|
+| `http.py` | devsite 用 Set-Cookie + 自重定向（`signin_details` cookie），urllib 无 cookie jar 时 302 无限循环 | `_OPENER = build_opener(HTTPCookieProcessor(CookieJar()))`，fetch 走同一 opener |
+| 语料/适配器 | devsite 的 `.md` 孪生页返回的是**HTML**（不是 markdown），且部分页面（如 `gemini-api/docs/files`）在表格单元格里内嵌**裸 markdown 片段**（线上靠 JS 渲染） | 适配器不依赖 llms.txt，从 HTML 导航收集路由；围栏污染由打包层兜底（见下） |
+| `page.py`（打包层不变量） | ① `<devsite-code>` 自定义元素被 pandoc 当内联元素，内部 `<pre>` 摊平成 `<br>` 段落；② pandoc 3.x 的 html reader 把**裸 `<pre>`（无 `<code>` 子元素）**解析成 LineBlock 而非 CodeBlock——两者都会让 pre 里的 ``` 泄漏进正文，触发 `leftover_markdown_fence` | `sanitize_body_html`：解包 `devsite-code`/`devsite-selector`；裸 `<pre>` 一律补包 `<code>`；散文文本节点里的成对行首围栏提升为 `<pre><code>`，悬挂围栏删围栏行（`promote_markdown_fences`） |
+
+**怎么发现**：`check_epub.py` 的 `leftover_markdown_fence` 只在 pre/code 之外搜 ```——先 grep 成品 xhtml 定位围栏 DOM 位置，再用 pandoc `-t native` 对最小片段看 AST（CodeBlock vs LineBlock），不要猜。
+
+**怎么防止复发**：新 vendor 若是 devsite 系（页面自带 `devsite-*` 标签），先 `curl -c/-b` 验证 cookie 循环；成品跑 `check_epub.py`，fence 红了先查 `<pre>` 是否有 `<code>` 子元素。
+
+---
+
+## 9. blog.google 没有 /blog/<slug> 结构
+
+`generic_blog.parse_blog_html` 只认 `/blog/<slug>` 路径，而 blog.google 的 Gemini 文章分布在 `products-and-platforms/products/gemini/`、`innovation-and-ai/products/gemini-app/`、`innovation-and-ai/models-and-research/gemini-models/` 等分区。做法与 xai bot/guides 同构：适配器自己抓 `https://blog.google/en-us/sitemap.xml`，按分区前缀过滤 `<loc>`（gemini adapter 内 `parse_gemini_blog`）。sitemap 分区清单会随站点 IA 改版漂移，增量抓取时留意 Blog 章数突变。

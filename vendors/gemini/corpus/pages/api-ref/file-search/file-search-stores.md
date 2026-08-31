@@ -1,0 +1,3079 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="Google AI for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1967d2"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/googledevai/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/api/file-search/file-search-stores"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://ai.google.dev/api/file-search/file-search-stores" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/api/file-search/file-search-stores" /><link rel="alternate" hreflang="ar"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=zh-tw" /><link rel="alternate" hreflang="fa"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=vi" /><link rel="alternate" hreflang="sq"
+          href="https://ai.google.dev/api/file-search/file-search-stores?hl=sq" /><title>File Search Stores &nbsp;|&nbsp; Gemini API &nbsp;|&nbsp; Google AI for Developers</title>
+
+<meta property="og:title" content="File Search Stores &nbsp;|&nbsp; Gemini API &nbsp;|&nbsp; Google AI for Developers"><meta property="og:url" content="https://ai.google.dev/api/file-search/file-search-stores"><meta property="og:image" content="https://ai.google.dev/static/site-assets/images/share-gemini-api-2026-07.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image">
+  
+
+
+
+
+
+
+
+
+    </head>
+  <body class="gemini-api docs color-scheme--light"
+        template="page"
+        theme="googledevai-theme"
+        type="reference"
+        
+        appearance
+        
+        layout="docs"
+        
+        
+        
+        
+        
+        display-toc
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      Skip to main content
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+        <devsite-header role="banner" keep-tabs-visible>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="geminiAPI" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://ai.google.dev/_static/googledevai/images/gemini-api-logo-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme">
+    
+    <img src="https://ai.google.dev/_static/googledevai/images/gemini-api-logo.svg" class="devsite-site-logo" alt="Gemini API">
+  </picture>
+  
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="Gemini API"
+    tenant-name="Google AI for Developers"
+    project-scope="/gemini-api"
+    url-scoped="https://ai.google.dev/s/results/gemini-api"
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://ai.google.dev/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          <devsite-appearance-selector></devsite-appearance-selector>
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="sq"
+        >Shqip</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+            <a class="devsite-header-link devsite-top-button button gc-analytics-event "
+    href="https://aistudio.google.com/apikey"
+    data-category="Site-Wide Custom Events"
+    data-label="Site header link: Get API key"
+    
+      
+        target="_blank"
+      
+    >
+  Get API key
+</a>
+          
+            <a class="devsite-header-link devsite-top-button button gc-analytics-event "
+    href="https://github.com/google-gemini/cookbook"
+    data-category="Site-Wide Custom Events"
+    data-label="Site header link: Cookbook"
+    
+      
+        target="_blank"
+      
+    >
+  Cookbook
+</a>
+          
+            <a class="devsite-header-link devsite-top-button button gc-analytics-event "
+    href="https://discuss.ai.google.dev/c/gemini-api/"
+    data-category="Site-Wide Custom Events"
+    data-label="Site header link: Community"
+    
+      
+        target="_blank"
+      
+    >
+  Community
+</a>
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://ai.google.dev/gemini-api/docs"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://ai.google.dev/gemini-api/docs"
+    
+       track-type="nav"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Docs"
+         
+           track-name="docs"
+         
+       >
+    Docs
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://ai.google.dev/api"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://ai.google.dev/api"
+    
+       track-type="nav"
+       track-metadata-position="nav - api reference"
+       track-metadata-module="primary nav"
+       aria-label="API reference, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: API reference"
+         
+           track-name="api reference"
+         
+       >
+    API reference
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+        <devsite-book-nav scrollbars >
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" data-nosnippet
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="geminiAPI" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://ai.google.dev/_static/googledevai/images/gemini-api-logo-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme">
+    
+    <img src="https://ai.google.dev/_static/googledevai/images/gemini-api-logo.svg" class="devsite-site-logo" alt="Gemini API">
+  </picture>
+  
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/gemini-api/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Gemini API"
+      
+        track-name="gemini api"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Gemini API"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Gemini API
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/gemini-api/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/api"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: API reference"
+      
+        track-name="api reference"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: API reference"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      API reference
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+          
+    
+    
+<li class="devsite-nav-item">
+
+  
+  <a href="https://aistudio.google.com/apikey"
+    
+       class="devsite-nav-title gc-analytics-event "
+    
+
+    
+      
+        target="_blank"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Get API key"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Get API key
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+  
+    
+    
+<li class="devsite-nav-item">
+
+  
+  <a href="https://github.com/google-gemini/cookbook"
+    
+       class="devsite-nav-title gc-analytics-event "
+    
+
+    
+      
+        target="_blank"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cookbook"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cookbook
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+  
+    
+    
+<li class="devsite-nav-item">
+
+  
+  <a href="https://discuss.ai.google.dev/c/gemini-api/"
+    
+       class="devsite-nav-title gc-analytics-event "
+    
+
+    
+      
+        target="_blank"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Community"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Community
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+  
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/api"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/api-versions"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>API versions</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Core APIs</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/api/interactions-api"
+        class="devsite-nav-title"
+      
+        alt-paths=" /api/interactions-api-v1 "><span class="devsite-nav-text" tooltip>Interactions API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/api/generate-content"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>GenerateContent</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Real time APIs</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-preview"><a href="/api/live"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Live API</span><span class="devsite-nav-icon material-icons"
+        data-icon="preview"
+        data-title="Preview"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-preview"><a href="/api/live_music"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Live Music API</span><span class="devsite-nav-icon material-icons"
+        data-icon="preview"
+        data-title="Preview"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Platform APIs</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/api/models"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Model API</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-beta"><a href="/api/agents"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Agents</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="Beta"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-beta"><a href="/api/webhooks"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="Beta"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-beta"><a href="/api/triggers"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Triggers</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="Beta"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-beta"><a href="/api/environments"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Environments</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="Beta"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item"><a href="/api/batch-api"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Batch API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/api/files"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Files API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/api/tokens"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Tokens</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/api/caching"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Caching</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/api/embeddings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Embeddings</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>File Search API</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/api/file-search/file-search-stores"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>File search stores</span></a></li><li class="devsite-nav-item"><a href="/api/file-search/documents"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Documents</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item"><a href="/api/all-methods"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>All methods</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>SDK references</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://googleapis.github.io/python-genai/"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Python</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://pkg.go.dev/google.golang.org/genai"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Go</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://googleapis.github.io/js-genai/"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>TypeScript</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://googleapis.github.io/java-genai/javadoc/"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Java</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://googleapis.github.io/dotnet-genai/"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>C#</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+          </ul>
+        
+        
+          
+    
+  
+        
+        
+          
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+          
+        </devsite-book-nav>
+      
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                            data-nosnippet
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav" data-nosnippet>
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+    <div class="devsite-banner devsite-banner-announcement nocontent" data-nosnippet
+      
+        
+    background="google-blue"
+  
+      >
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+        </div>
+      </div>
+    </div>
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation" data-nosnippet>
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://ai.google.dev/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Home
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://ai.google.dev/gemini-api"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Gemini API"
+      
+    >
+    
+          Gemini API
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://ai.google.dev/api"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          API reference
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+    <devsite-gemini-api-switcher class="nocontent"></devsite-gemini-api-switcher>
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="Gemini API"
+  product-id="5292923"
+  bucket="documentation"
+  context=""
+  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+  
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      File Search Stores<devsite-actions hidden data-nosnippet>
+    <devsite-llm-tools></devsite-llm-tools></devsite-actions>
+  
+      
+    </h1>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+    <p>The File Search API provides a hosted question answering service for building Retrieval Augmented Generation (RAG) systems using Google's infrastructure.</p>
+<div itemscope="" itemtype="http://developers.google.com/ReferenceObject"><h2 id="rest-resource:-filesearchstores" data-text="REST Resource: fileSearchStores" tabindex="-1">REST Resource: fileSearchStores</h2><a name="v1beta.fileSearchStores"></a>
+<meta content="fileSearchStores" itemprop="name"/>
+<meta content="/api/rest/v1beta/fileSearchStores" itemprop="path"/>
+<section id="/api/rest/v1beta/fileSearchStores">
+<ul class="toc">
+<li><a href="#FileSearchStore">Resource: FileSearchStore</a>
+<ul>
+<li><a href="#FileSearchStore.SCHEMA_REPRESENTATION">JSON representation</a></li>
+</ul>
+</li><li><a href="#METHODS_SUMMARY">Methods</a></li>
+</ul>
+<section class="prototype" id="FileSearchStore">
+<h2 id="FileSearchStore" data-text="Resource: FileSearchStore" tabindex="-1">Resource: FileSearchStore</h2>
+<div class="column-container">
+<div class="reference">
+<section id="FileSearchStore.description">
+<p>A <code translate="no" dir="ltr">FileSearchStore</code> is a collection of <code translate="no" dir="ltr">Document</code>s.</p>
+</section>
+<section id="FileSearchStore.FIELDS">
+<thead>
+<tr>
+<th colspan="2">Fields</th>
+</tr>
+</thead>
+<section id="FileSearchStore.FIELDS.name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">name</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Output only. Immutable. Identifier. The <code translate="no" dir="ltr">FileSearchStore</code> resource name. It is an ID (name excluding the "fileSearchStores/" prefix) that can contain up to 40 characters that are lowercase alphanumeric or dashes (-). It is output only. The unique name will be derived from <code translate="no" dir="ltr">displayName</code> along with a 12 character random suffix. Example: <code translate="no" dir="ltr">fileSearchStores/my-awesome-file-search-store-123a456b789c</code> If <code translate="no" dir="ltr">displayName</code> is not provided, the name will be randomly generated.</p>
+</div>
+</div>
+</section>
+<section id="FileSearchStore.FIELDS.display_name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">displayName</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. The human-readable display name for the <code translate="no" dir="ltr">FileSearchStore</code>. The display name must be no more than 512 characters in length, including spaces. Example: "Docs on Semantic Retriever"</p>
+</div>
+</div>
+</section>
+<section id="FileSearchStore.FIELDS.create_time">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">createTime</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string (<code translate="no" dir="ltr"><a href="https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp">Timestamp</a></code> format)</code>
+</span>
+</div>
+<div class="field-description">
+<p>Output only. The Timestamp of when the <code translate="no" dir="ltr">FileSearchStore</code> was created.</p><p>Uses RFC 3339, where generated output will always be Z-normalized and use 0, 3, 6 or 9 fractional digits. Offsets other than "Z" are also accepted. Examples: <code translate="no" dir="ltr">"2014-10-02T15:01:23Z"</code>, <code translate="no" dir="ltr">"2014-10-02T15:01:23.045123456Z"</code> or <code translate="no" dir="ltr">"2014-10-02T15:01:23+05:30"</code>.</p>
+</div>
+</div>
+</section>
+<section id="FileSearchStore.FIELDS.update_time">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">updateTime</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string (<code translate="no" dir="ltr"><a href="https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp">Timestamp</a></code> format)</code>
+</span>
+</div>
+<div class="field-description">
+<p>Output only. The Timestamp of when the <code translate="no" dir="ltr">FileSearchStore</code> was last updated.</p><p>Uses RFC 3339, where generated output will always be Z-normalized and use 0, 3, 6 or 9 fractional digits. Offsets other than "Z" are also accepted. Examples: <code translate="no" dir="ltr">"2014-10-02T15:01:23Z"</code>, <code translate="no" dir="ltr">"2014-10-02T15:01:23.045123456Z"</code> or <code translate="no" dir="ltr">"2014-10-02T15:01:23+05:30"</code>.</p>
+</div>
+</div>
+</section>
+<section id="FileSearchStore.FIELDS.active_documents_count">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">activeDocumentsCount</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string (<a href="https://developers.google.com/discovery/v1/type-format">int64</a> format)</code>
+</span>
+</div>
+<div class="field-description">
+<p>Output only. The number of documents in the <code translate="no" dir="ltr">FileSearchStore</code> that are active and ready for retrieval.</p>
+</div>
+</div>
+</section>
+<section id="FileSearchStore.FIELDS.pending_documents_count">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">pendingDocumentsCount</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string (<a href="https://developers.google.com/discovery/v1/type-format">int64</a> format)</code>
+</span>
+</div>
+<div class="field-description">
+<p>Output only. The number of documents in the <code translate="no" dir="ltr">FileSearchStore</code> that are being processed.</p>
+</div>
+</div>
+</section>
+<section id="FileSearchStore.FIELDS.failed_documents_count">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">failedDocumentsCount</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string (<a href="https://developers.google.com/discovery/v1/type-format">int64</a> format)</code>
+</span>
+</div>
+<div class="field-description">
+<p>Output only. The number of documents in the <code translate="no" dir="ltr">FileSearchStore</code> that have failed processing.</p>
+</div>
+</div>
+</section>
+<section id="FileSearchStore.FIELDS.size_bytes">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">sizeBytes</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string (<a href="https://developers.google.com/discovery/v1/type-format">int64</a> format)</code>
+</span>
+</div>
+<div class="field-description">
+<p>Output only. The size of raw bytes ingested into the <code translate="no" dir="ltr">FileSearchStore</code>. This is the total size of all the documents in the <code translate="no" dir="ltr">FileSearchStore</code>.</p>
+</div>
+</div>
+</section>
+<section id="FileSearchStore.FIELDS.embedding_model">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">embeddingModel</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. The embedding model to use for the <code translate="no" dir="ltr">FileSearchStore</code>. The model's resource name. This serves as an ID for the Model to use. Format: <code translate="no" dir="ltr">models/{model}</code>. If not specified, the default embedding model will be used.</p>
+</div>
+</div>
+</section>
+</section>
+</div>
+<div class="second-column">
+<section id="FileSearchStore.SCHEMA_REPRESENTATION">
+<table class="properties responsive fixed">
+<thead>
+<tr>
+<th>JSON representation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="margin:0;padding:0;"><div></div><devsite-code><pre style="border: 0;margin: 0;" translate="no" dir="ltr" is-upgraded><span class="pun">{</span>
+  <span class="str">"name"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+  <span class="str">"displayName"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+  <span class="str">"createTime"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+  <span class="str">"updateTime"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+  <span class="str">"activeDocumentsCount"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+  <span class="str">"pendingDocumentsCount"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+  <span class="str">"failedDocumentsCount"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+  <span class="str">"sizeBytes"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+  <span class="str">"embeddingModel"</span><span class="pun">: </span><span class="kwd">string</span>
+<span class="pun">}</span></pre></devsite-code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</div>
+</section>
+</section>
+</div><div itemscope="" itemtype="http://developers.google.com/ReferenceObject"><h2 id="method:-filesearchstores.create" data-text="Method: fileSearchStores.create" tabindex="-1">Method: fileSearchStores.create</h2><a name="v1beta.fileSearchStores.create"></a>
+<meta content="create" itemprop="name"/>
+<meta content="/api/rest/v1beta/fileSearchStores/create" itemprop="path"/>
+<section class="prototype" id="/api/rest/v1beta/fileSearchStores/create">
+<ul class="toc">
+<li><a href="#body.HTTP_TEMPLATE">Endpoint</a></li><li><a href="#body.request_body">Request body</a></li><li><a href="#body.response_body">Response body</a></li><li><a href="#body.aspect">Authorization scopes</a></li>
+</ul>
+<section id="google.ai.generativelanguage.v1beta.RetrieverService.CreateFileSearchStore">
+</section>
+<section id="description">
+<p>Creates an empty <code translate="no" dir="ltr">FileSearchStore</code>.</p>
+</section>
+<div class="column-container">
+<div class="reference">
+<section id="body.HTTP_TEMPLATE">
+<h3 id="endpoint" data-text="Endpoint" tabindex="-1">Endpoint</h3>
+<span class="endpoint">
+<span class="http-method">
+                post
+              </span>
+<span class="endpoint-url">
+<code translate="no" dir="ltr">https:<wbr/>/<wbr/>/generativelanguage.googleapis.com<wbr/>/v1beta<wbr/>/fileSearchStores</code>
+</span>
+</span>
+<br/>
+<span>
+
+</span>
+</section>
+<section id="body.request_body">
+<h3 id="request-body" data-text="Request body" tabindex="-1">Request body</h3>
+<p>The request body contains an instance of <code translate="no" dir="ltr"><a href="/api/file-search/file-search-stores#FileSearchStore">FileSearchStore</a></code>.</p>
+<section id="FileSearchStore.FIELDS">
+<thead>
+<tr>
+<th colspan="2">Fields</th>
+</tr>
+</thead>
+<section id="FileSearchStore.FIELDS.display_name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">displayName</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. The human-readable display name for the <code translate="no" dir="ltr">FileSearchStore</code>. The display name must be no more than 512 characters in length, including spaces. Example: "Docs on Semantic Retriever"</p>
+</div>
+</div>
+</section>
+<section id="FileSearchStore.FIELDS.embedding_model">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">embeddingModel</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. The embedding model to use for the <code translate="no" dir="ltr">FileSearchStore</code>. The model's resource name. This serves as an ID for the Model to use. Format: <code translate="no" dir="ltr">models/{model}</code>. If not specified, the default embedding model will be used.</p>
+</div>
+</div>
+</section>
+</section></section>
+</div>
+</div>
+<div class="column-container">
+<div class="reference">
+<section id="body.response_body">
+<h3 id="response-body" data-text="Response body" tabindex="-1">Response body</h3>
+<p>If successful, the response body contains a newly created instance of <code translate="no" dir="ltr"><a href="/api/file-search/file-search-stores#FileSearchStore">FileSearchStore</a></code>.</p>
+</section>
+</div>
+</div>
+</section>
+</div><div itemscope="" itemtype="http://developers.google.com/ReferenceObject"><h2 id="method:-filesearchstores.delete" data-text="Method: fileSearchStores.delete" tabindex="-1">Method: fileSearchStores.delete</h2><a name="v1beta.fileSearchStores.delete"></a>
+<meta content="delete" itemprop="name"/>
+<meta content="/api/rest/v1beta/fileSearchStores/delete" itemprop="path"/>
+<section class="prototype" id="/api/rest/v1beta/fileSearchStores/delete">
+<ul class="toc">
+<li><a href="#body.HTTP_TEMPLATE">Endpoint</a></li><li><a href="#body.PATH_PARAMETERS">Path parameters</a></li><li><a href="#body.QUERY_PARAMETERS">Query parameters</a></li><li><a href="#body.request_body">Request body</a></li><li><a href="#body.response_body">Response body</a></li><li><a href="#body.aspect">Authorization scopes</a></li>
+</ul>
+<section id="google.ai.generativelanguage.v1beta.RetrieverService.DeleteFileSearchStore">
+</section>
+<section id="description">
+<p>Deletes a <code translate="no" dir="ltr">FileSearchStore</code>.</p>
+</section>
+<div class="column-container">
+<div class="reference">
+<section id="body.HTTP_TEMPLATE">
+<h3 id="endpoint_1" data-text="Endpoint" tabindex="-1">Endpoint</h3>
+<span class="endpoint">
+<span class="http-method">
+                delete
+              </span>
+<span class="endpoint-url">
+<code translate="no" dir="ltr">https:<wbr/>/<wbr/>/generativelanguage.googleapis.com<wbr/>/v1beta<wbr/>/{name=fileSearchStores<wbr/>/*}</code>
+</span>
+</span>
+<br/>
+<span>
+
+</span>
+</section>
+<section id="body.PATH_PARAMETERS">
+<h3 id="path-parameters" data-text="Path parameters" tabindex="-1">Path parameters</h3>
+<section id="body.PATH_PARAMETERS.name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">name</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Required. The resource name of the <code translate="no" dir="ltr">FileSearchStore</code>. Example: <code translate="no" dir="ltr">fileSearchStores/my-file-search-store-123</code> It takes the form <code translate="no" dir="ltr">fileSearchStores/{filesearchstore}</code>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="body.QUERY_PARAMETERS">
+<h3 id="query-parameters" data-text="Query parameters" tabindex="-1">Query parameters</h3>
+<section id="body.QUERY_PARAMETERS.force">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">force</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">boolean</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. If set to true, any <code translate="no" dir="ltr">Document</code>s and objects related to this <code translate="no" dir="ltr">FileSearchStore</code> will also be deleted.</p><p>If false (the default), a <code translate="no" dir="ltr">FAILED_PRECONDITION</code> error will be returned if <code translate="no" dir="ltr">FileSearchStore</code> contains any <code translate="no" dir="ltr">Document</code>s.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="body.request_body">
+<h3 id="request-body_1" data-text="Request body" tabindex="-1">Request body</h3>
+<p>The request body must be empty.</p>
+</section>
+</div>
+</div>
+<div class="column-container">
+<div class="reference">
+<section id="body.response_body">
+<h3 id="response-body_1" data-text="Response body" tabindex="-1">Response body</h3>
+<p>If successful, the response body is an empty JSON object.</p>
+</section>
+</div>
+</div>
+</section>
+</div><div itemscope="" itemtype="http://developers.google.com/ReferenceObject"><h2 id="method:-filesearchstores.get" data-text="Method: fileSearchStores.get" tabindex="-1">Method: fileSearchStores.get</h2><a name="v1beta.fileSearchStores.get"></a>
+<meta content="get" itemprop="name"/>
+<meta content="/api/rest/v1beta/fileSearchStores/get" itemprop="path"/>
+<section class="prototype" id="/api/rest/v1beta/fileSearchStores/get">
+<ul class="toc">
+<li><a href="#body.HTTP_TEMPLATE">Endpoint</a></li><li><a href="#body.PATH_PARAMETERS">Path parameters</a></li><li><a href="#body.request_body">Request body</a></li><li><a href="#body.response_body">Response body</a></li><li><a href="#body.aspect">Authorization scopes</a></li>
+</ul>
+<section id="google.ai.generativelanguage.v1beta.RetrieverService.GetFileSearchStore">
+</section>
+<section id="description">
+<p>Gets information about a specific <code translate="no" dir="ltr">FileSearchStore</code>.</p>
+</section>
+<div class="column-container">
+<div class="reference">
+<section id="body.HTTP_TEMPLATE">
+<h3 id="endpoint_2" data-text="Endpoint" tabindex="-1">Endpoint</h3>
+<span class="endpoint">
+<span class="http-method">
+                get
+              </span>
+<span class="endpoint-url">
+<code translate="no" dir="ltr">https:<wbr/>/<wbr/>/generativelanguage.googleapis.com<wbr/>/v1beta<wbr/>/{name=fileSearchStores<wbr/>/*}</code>
+</span>
+</span>
+<br/>
+<span>
+
+</span>
+</section>
+<section id="body.PATH_PARAMETERS">
+<h3 id="path-parameters_1" data-text="Path parameters" tabindex="-1">Path parameters</h3>
+<section id="body.PATH_PARAMETERS.name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">name</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Required. The name of the <code translate="no" dir="ltr">FileSearchStore</code>. Example: <code translate="no" dir="ltr">fileSearchStores/my-file-search-store-123</code> It takes the form <code translate="no" dir="ltr">fileSearchStores/{filesearchstore}</code>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="body.request_body">
+<h3 id="request-body_2" data-text="Request body" tabindex="-1">Request body</h3>
+<p>The request body must be empty.</p>
+</section>
+</div>
+</div>
+<div class="column-container">
+<div class="reference">
+<section id="body.response_body">
+<h3 id="response-body_2" data-text="Response body" tabindex="-1">Response body</h3>
+<p>If successful, the response body contains an instance of <code translate="no" dir="ltr"><a href="/api/file-search/file-search-stores#FileSearchStore">FileSearchStore</a></code>.</p>
+</section>
+</div>
+</div>
+</section>
+</div><div itemscope="" itemtype="http://developers.google.com/ReferenceObject"><h2 id="method:-filesearchstores.list" data-text="Method: fileSearchStores.list" tabindex="-1">Method: fileSearchStores.list</h2><a name="v1beta.fileSearchStores.list"></a>
+<meta content="list" itemprop="name"/>
+<meta content="/api/rest/v1beta/fileSearchStores/list" itemprop="path"/>
+<section class="prototype" id="/api/rest/v1beta/fileSearchStores/list">
+<ul class="toc">
+<li><a href="#body.HTTP_TEMPLATE">Endpoint</a></li><li><a href="#body.QUERY_PARAMETERS">Query parameters</a></li><li><a href="#body.request_body">Request body</a></li><li><a href="#body.response_body">Response body</a>
+<ul>
+<li><a href="#body.ListFileSearchStoresResponse.SCHEMA_REPRESENTATION">JSON representation</a></li>
+</ul>
+</li><li><a href="#body.aspect">Authorization scopes</a></li>
+</ul>
+<section id="google.ai.generativelanguage.v1beta.RetrieverService.ListFileSearchStores">
+</section>
+<section id="description">
+<p>Lists all <code translate="no" dir="ltr">FileSearchStores</code> owned by the user.</p>
+</section>
+<div class="column-container">
+<div class="reference">
+<section id="body.HTTP_TEMPLATE">
+<h3 id="endpoint_3" data-text="Endpoint" tabindex="-1">Endpoint</h3>
+<span class="endpoint">
+<span class="http-method">
+                get
+              </span>
+<span class="endpoint-url">
+<code translate="no" dir="ltr">https:<wbr/>/<wbr/>/generativelanguage.googleapis.com<wbr/>/v1beta<wbr/>/fileSearchStores</code>
+</span>
+</span>
+<br/>
+<span>
+
+</span>
+</section>
+<section id="body.QUERY_PARAMETERS">
+<h3 id="query-parameters_1" data-text="Query parameters" tabindex="-1">Query parameters</h3>
+<section id="body.QUERY_PARAMETERS.page_size">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">pageSize</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">integer</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. The maximum number of <code translate="no" dir="ltr">FileSearchStores</code> to return (per page). The service may return fewer <code translate="no" dir="ltr">FileSearchStores</code>.</p><p>If unspecified, at most 10 <code translate="no" dir="ltr">FileSearchStores</code> will be returned. The maximum size limit is 20 <code translate="no" dir="ltr">FileSearchStores</code> per page.</p>
+</div>
+</div>
+</section>
+<section id="body.QUERY_PARAMETERS.page_token">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">pageToken</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. A page token, received from a previous <code translate="no" dir="ltr">fileSearchStores.list</code> call.</p><p>Provide the <code translate="no" dir="ltr">nextPageToken</code> returned in the response as an argument to the next request to retrieve the next page.</p><p>When paginating, all other parameters provided to <code translate="no" dir="ltr">fileSearchStores.list</code> must match the call that provided the page token.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="body.request_body">
+<h3 id="request-body_3" data-text="Request body" tabindex="-1">Request body</h3>
+<p>The request body must be empty.</p>
+</section>
+</div>
+</div>
+<div class="column-container">
+<div class="reference">
+<section id="body.response_body">
+<h3 id="response-body_3" data-text="Response body" tabindex="-1">Response body</h3>
+<section id="body.ListFileSearchStoresResponse.description">
+<p>Response from <code translate="no" dir="ltr">fileSearchStores.list</code> containing a paginated list of <code translate="no" dir="ltr">FileSearchStores</code>. The results are sorted by ascending <code translate="no" dir="ltr">fileSearchStore.create_time</code>.</p>
+<p>If successful, the response body contains data with the following structure:</p>
+</section>
+<section id="body.ListFileSearchStoresResponse.FIELDS">
+<thead>
+<tr>
+<th colspan="2">Fields</th>
+</tr>
+</thead>
+<section id="body.ListFileSearchStoresResponse.FIELDS.file_search_stores">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">fileSearchStores[]</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object (<code translate="no" dir="ltr"><a href="/api/file-search/file-search-stores#FileSearchStore">FileSearchStore</a></code>)</code>
+</span>
+</div>
+<div class="field-description">
+<p>The returned rag_stores.</p>
+</div>
+</div>
+</section>
+<section id="body.ListFileSearchStoresResponse.FIELDS.next_page_token">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">nextPageToken</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>A token, which can be sent as <code translate="no" dir="ltr">pageToken</code> to retrieve the next page. If this field is omitted, there are no more pages.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+</div>
+<div class="second-column">
+<section id="body.ListFileSearchStoresResponse.SCHEMA_REPRESENTATION">
+<table class="properties responsive fixed">
+<thead>
+<tr>
+<th>JSON representation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="margin:0;padding:0;"><div></div><devsite-code><pre style="border: 0;margin: 0;" translate="no" dir="ltr" is-upgraded><span class="pun">{</span>
+  <span class="str">"fileSearchStores"</span><span class="pun">: </span><span class="pun">[</span>
+    <span class="pun">{</span>
+      <span class="kwd">object (<code translate="no" dir="ltr"><a href="/api/file-search/file-search-stores#FileSearchStore">FileSearchStore</a></code>)</span>
+    <span class="pun">}</span>
+  <span class="pun">]</span><span class="pun">,</span>
+  <span class="str">"nextPageToken"</span><span class="pun">: </span><span class="kwd">string</span>
+<span class="pun">}</span></pre></devsite-code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</div>
+</section>
+</div><div itemscope="" itemtype="http://developers.google.com/ReferenceObject"><h2 id="method:-filesearchstores.importfile" data-text="Method: fileSearchStores.importFile" tabindex="-1">Method: fileSearchStores.importFile</h2><a name="v1beta.fileSearchStores.importFile"></a>
+<meta content="importFile" itemprop="name"/>
+<meta content="/api/rest/v1beta/fileSearchStores/importFile" itemprop="path"/>
+<section class="prototype" id="/api/rest/v1beta/fileSearchStores/importFile">
+<ul class="toc">
+<li><a href="#body.HTTP_TEMPLATE">Endpoint</a></li><li><a href="#body.PATH_PARAMETERS">Path parameters</a></li><li><a href="#body.request_body">Request body</a>
+<ul>
+<li><a href="#body.request_body.SCHEMA_REPRESENTATION">JSON representation</a></li>
+</ul>
+</li><li><a href="#body.response_body">Response body</a></li><li><a href="#body.aspect">Authorization scopes</a></li>
+</ul>
+<section id="google.ai.generativelanguage.v1beta.RetrieverService.ImportFile">
+</section>
+<section id="description">
+<p>Imports a <code translate="no" dir="ltr">File</code> from File Service to a <code translate="no" dir="ltr">FileSearchStore</code>.</p>
+</section>
+<div class="column-container">
+<div class="reference">
+<section id="body.HTTP_TEMPLATE">
+<h3 id="endpoint_4" data-text="Endpoint" tabindex="-1">Endpoint</h3>
+<span class="endpoint">
+<span class="http-method">
+                post
+              </span>
+<span class="endpoint-url">
+<code translate="no" dir="ltr">https:<wbr/>/<wbr/>/generativelanguage.googleapis.com<wbr/>/v1beta<wbr/>/{fileSearchStoreName=fileSearchStores<wbr/>/*}:importFile</code>
+</span>
+</span>
+<br/>
+<span>
+
+</span>
+</section>
+<section id="body.PATH_PARAMETERS">
+<h3 id="path-parameters_2" data-text="Path parameters" tabindex="-1">Path parameters</h3>
+<section id="body.PATH_PARAMETERS.file_search_store_name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">fileSearchStoreName</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Required. Immutable. The name of the <code translate="no" dir="ltr">FileSearchStore</code> to import the file into. Example: <code translate="no" dir="ltr">fileSearchStores/my-file-search-store-123</code> It takes the form <code translate="no" dir="ltr">fileSearchStores/{filesearchstore}</code>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="body.request_body">
+<h3 id="request-body_4" data-text="Request body" tabindex="-1">Request body</h3>
+<p>The request body contains data with the following structure:</p>
+<section id="body.request_body.FIELDS">
+<thead>
+<tr>
+<th colspan="2">Fields</th>
+</tr>
+</thead>
+<section id="body.request_body.FIELDS.file_name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">fileName</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Required. The name of the <code translate="no" dir="ltr">File</code> to import. Example: <code translate="no" dir="ltr">files/abc-123</code></p>
+</div>
+</div>
+</section>
+<section id="body.request_body.FIELDS.custom_metadata">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">customMetadata[]</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object (<code translate="no" dir="ltr"><a href="/api/file-search/documents#CustomMetadata">CustomMetadata</a></code>)</code>
+</span>
+</div>
+<div class="field-description">
+<p>Custom metadata to be associated with the file.</p>
+</div>
+</div>
+</section>
+<section id="body.request_body.FIELDS.chunking_config">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">chunkingConfig</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object (<code translate="no" dir="ltr">ChunkingConfig</code>)</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. Config for telling the service how to chunk the file. If not provided, the service will use default parameters.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+</div>
+</div>
+<div class="column-container">
+<div class="reference">
+<section id="body.response_body">
+<h3 id="response-body_4" data-text="Response body" tabindex="-1">Response body</h3>
+<p>If successful, the response body contains an instance of <code translate="no" dir="ltr"><a href="/api/batch-api#Operation">Operation</a></code>.</p>
+</section>
+</div>
+</div>
+</section>
+</div><div itemscope="" itemtype="http://developers.google.com/ReferenceObject"><h2 id="rest-resource:-filesearchstores.operations" data-text="REST Resource: fileSearchStores.operations" tabindex="-1">REST Resource: fileSearchStores.operations</h2><a name="v1beta.fileSearchStores.operations"></a>
+<meta content="fileSearchStores.operations" itemprop="name"/>
+<meta content="/api/rest/v1beta/fileSearchStores.operations" itemprop="path"/>
+<section id="/api/rest/v1beta/fileSearchStores.operations">
+<ul class="toc">
+<li><a href="#Operation">Resource: Operation</a>
+<ul>
+<li><a href="#Operation.SCHEMA_REPRESENTATION">JSON representation</a></li>
+</ul>
+</li><li><a href="#METHODS_SUMMARY">Methods</a></li>
+</ul>
+<section class="prototype" id="Operation">
+<h2 id="Operation" data-text="Resource: Operation" tabindex="-1">Resource: Operation</h2>
+<div class="column-container">
+<div class="reference">
+<section id="Operation.description">
+<p>This resource represents a long-running operation that is the result of a network API call.</p>
+</section>
+<section id="Operation.FIELDS">
+<thead>
+<tr>
+<th colspan="2">Fields</th>
+</tr>
+</thead>
+<section id="Operation.FIELDS.name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">name</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the <code translate="no" dir="ltr">name</code> should be a resource name ending with <code translate="no" dir="ltr">operations/{unique_id}</code>.</p>
+</div>
+</div>
+</section>
+<section id="Operation.FIELDS.metadata">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">metadata</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object</code>
+</span>
+</div>
+<div class="field-description">
+<p>Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.</p><p>An object containing fields of an arbitrary type. An additional field <code translate="no" dir="ltr">"@type"</code> contains a URI identifying the type. Example: <code translate="no" dir="ltr">{ "id": 1234, "@type": "types.example.com/standard/id" }</code>.</p>
+</div>
+</div>
+</section>
+<section id="Operation.FIELDS.done">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">done</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">boolean</code>
+</span>
+</div>
+<div class="field-description">
+<p>If the value is <code translate="no" dir="ltr">false</code>, it means the operation is still in progress. If <code translate="no" dir="ltr">true</code>, the operation is completed, and either <code translate="no" dir="ltr">error</code> or <code translate="no" dir="ltr">response</code> is available.</p>
+</div>
+</div>
+</section>
+<div class="field-entry union-type">
+<div class="signature">
+<tr class="alt" id="Operation.FIELDS.result">
+<span class="field-name">
+<td><code translate="no" dir="ltr">result</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">Union type</code>
+</span>
+</tr>
+<div class="union-type-preamble">
+<div>The operation result, which can be either an <code translate="no" dir="ltr">error</code> or a valid <code translate="no" dir="ltr">response</code>. If <code translate="no" dir="ltr">done</code> == <code translate="no" dir="ltr">false</code>, neither <code translate="no" dir="ltr">error</code> nor <code translate="no" dir="ltr">response</code> is set. If <code translate="no" dir="ltr">done</code> == <code translate="no" dir="ltr">true</code>, exactly one of <code translate="no" dir="ltr">error</code> or <code translate="no" dir="ltr">response</code> can be set. Some services might not provide the result. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:</div>
+<section id="Operation.FIELDS.error">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">error</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object (<code translate="no" dir="ltr"><a href="/api/files#v1beta.Status">Status</a></code>)</code>
+</span>
+</div>
+<div class="field-description">
+<p>The error result of the operation in case of failure or cancellation.</p>
+</div>
+</div>
+</section>
+<section id="Operation.FIELDS.response">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">response</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object</code>
+</span>
+</div>
+<div class="field-description">
+<p>The normal, successful response of the operation. If the original method returns no data on success, such as <code translate="no" dir="ltr">Delete</code>, the response is <code translate="no" dir="ltr">google.protobuf.Empty</code>. If the original method is standard <code translate="no" dir="ltr">Get</code>/<code translate="no" dir="ltr">Create</code>/<code translate="no" dir="ltr">Update</code>, the response should be the resource. For other methods, the response should have the type <code translate="no" dir="ltr">XxxResponse</code>, where <code translate="no" dir="ltr">Xxx</code> is the original method name. For example, if the original method name is <code translate="no" dir="ltr">TakeSnapshot()</code>, the inferred response type is <code translate="no" dir="ltr">TakeSnapshotResponse</code>.</p><p>An object containing fields of an arbitrary type. An additional field <code translate="no" dir="ltr">"@type"</code> contains a URI identifying the type. Example: <code translate="no" dir="ltr">{ "id": 1234, "@type": "types.example.com/standard/id" }</code>.</p>
+</div>
+</div>
+</section>
+<div>End of mutually exclusive fields.</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="second-column">
+<section id="Operation.SCHEMA_REPRESENTATION">
+<table class="properties responsive fixed">
+<thead>
+<tr>
+<th>JSON representation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="margin:0;padding:0;"><div></div><devsite-code><pre style="border: 0;margin: 0;" translate="no" dir="ltr" is-upgraded><span class="pun">{</span>
+  <span class="str">"name"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+  <span class="str">"metadata"</span><span class="pun">: </span><span class="pun">{</span>
+    <span class="str">"@type"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+    <span class="str">field1</span><span class="pun">: </span><span class="kwd">...</span><span class="pun">,</span>
+    <span class="kwd">...</span>
+  <span class="pun">}</span><span class="pun">,</span>
+  <span class="str">"done"</span><span class="pun">: </span><span class="kwd">boolean</span><span class="pun">,</span>
+
+  <span class="com">// result</span>
+  <span class="str">"error"</span><span class="pun">: </span><span class="pun">{</span>
+    <span class="kwd">object (<code translate="no" dir="ltr"><a href="/api/files#v1beta.Status">Status</a></code>)</span>
+  <span class="pun">}</span><span class="pun">,</span>
+  <span class="str">"response"</span><span class="pun">: </span><span class="pun">{</span>
+    <span class="str">"@type"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+    <span class="str">field1</span><span class="pun">: </span><span class="kwd">...</span><span class="pun">,</span>
+    <span class="kwd">...</span>
+  <span class="pun">}</span>
+  <span class="com">// Union type</span>
+<span class="pun">}</span></pre></devsite-code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</div>
+</section>
+</section>
+</div><div itemscope="" itemtype="http://developers.google.com/ReferenceObject"><h2 id="method:-filesearchstores.operations.get" data-text="Method: fileSearchStores.operations.get" tabindex="-1">Method: fileSearchStores.operations.get</h2><a name="v1beta.fileSearchStores.operations.get"></a>
+<meta content="get" itemprop="name"/>
+<meta content="/api/rest/v1beta/fileSearchStores.operations/get" itemprop="path"/>
+<section class="prototype" id="/api/rest/v1beta/fileSearchStores.operations/get">
+<ul class="toc">
+<li><a href="#body.HTTP_TEMPLATE">Endpoint</a></li><li><a href="#body.PATH_PARAMETERS">Path parameters</a></li><li><a href="#body.request_body">Request body</a></li><li><a href="#body.response_body">Response body</a></li><li><a href="#body.aspect">Authorization scopes</a></li>
+</ul>
+<section id="description">
+<p>Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.</p>
+</section>
+<div class="column-container">
+<div class="reference">
+<section id="body.HTTP_TEMPLATE">
+<h3 id="endpoint_5" data-text="Endpoint" tabindex="-1">Endpoint</h3>
+<span class="endpoint">
+<span class="http-method">
+                get
+              </span>
+<span class="endpoint-url">
+<code translate="no" dir="ltr">https:<wbr/>/<wbr/>/generativelanguage.googleapis.com<wbr/>/v1beta<wbr/>/{name=fileSearchStores<wbr/>/*<wbr/>/operations<wbr/>/*}</code>
+</span>
+</span>
+<br/>
+<span>
+
+</span>
+</section>
+<section id="body.PATH_PARAMETERS">
+<h3 id="path-parameters_3" data-text="Path parameters" tabindex="-1">Path parameters</h3>
+<section id="body.PATH_PARAMETERS.name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">name</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>The name of the operation resource. It takes the form <code translate="no" dir="ltr">fileSearchStores/{filesearchstore}/operations/{operation}</code>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="body.request_body">
+<h3 id="request-body_5" data-text="Request body" tabindex="-1">Request body</h3>
+<p>The request body must be empty.</p>
+</section>
+</div>
+</div>
+<div class="column-container">
+<div class="reference">
+<section id="body.response_body">
+<h3 id="response-body_5" data-text="Response body" tabindex="-1">Response body</h3>
+<p>If successful, the response body contains an instance of <code translate="no" dir="ltr"><a href="/api/batch-api#Operation">Operation</a></code>.</p>
+</section>
+</div>
+</div>
+</section>
+</div><div itemscope="" itemtype="http://developers.google.com/ReferenceObject"><h2 id="rest-resource:-filesearchstores.upload.operations" data-text="REST Resource: fileSearchStores.upload.operations" tabindex="-1">REST Resource: fileSearchStores.upload.operations</h2><a name="v1beta.fileSearchStores.upload.operations"></a>
+<meta content="fileSearchStores.upload.operations" itemprop="name"/>
+<meta content="/api/rest/v1beta/fileSearchStores.upload.operations" itemprop="path"/>
+<section id="/api/rest/v1beta/fileSearchStores.upload.operations">
+<ul class="toc">
+<li><a href="#Operation">Resource: Operation</a>
+<ul>
+<li><a href="#Operation.SCHEMA_REPRESENTATION">JSON representation</a></li>
+</ul>
+</li><li><a href="#METHODS_SUMMARY">Methods</a></li>
+</ul>
+<section class="prototype" id="Operation">
+<h2 id="Operation" data-text="Resource: Operation" tabindex="-1">Resource: Operation</h2>
+<div class="column-container">
+<div class="reference">
+<section id="Operation.description">
+<p>This resource represents a long-running operation that is the result of a network API call.</p>
+</section>
+<section id="Operation.FIELDS">
+<thead>
+<tr>
+<th colspan="2">Fields</th>
+</tr>
+</thead>
+<section id="Operation.FIELDS.name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">name</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the <code translate="no" dir="ltr">name</code> should be a resource name ending with <code translate="no" dir="ltr">operations/{unique_id}</code>.</p>
+</div>
+</div>
+</section>
+<section id="Operation.FIELDS.metadata">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">metadata</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object</code>
+</span>
+</div>
+<div class="field-description">
+<p>Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.</p><p>An object containing fields of an arbitrary type. An additional field <code translate="no" dir="ltr">"@type"</code> contains a URI identifying the type. Example: <code translate="no" dir="ltr">{ "id": 1234, "@type": "types.example.com/standard/id" }</code>.</p>
+</div>
+</div>
+</section>
+<section id="Operation.FIELDS.done">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">done</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">boolean</code>
+</span>
+</div>
+<div class="field-description">
+<p>If the value is <code translate="no" dir="ltr">false</code>, it means the operation is still in progress. If <code translate="no" dir="ltr">true</code>, the operation is completed, and either <code translate="no" dir="ltr">error</code> or <code translate="no" dir="ltr">response</code> is available.</p>
+</div>
+</div>
+</section>
+<div class="field-entry union-type">
+<div class="signature">
+<tr class="alt" id="Operation.FIELDS.result">
+<span class="field-name">
+<td><code translate="no" dir="ltr">result</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">Union type</code>
+</span>
+</tr>
+<div class="union-type-preamble">
+<div>The operation result, which can be either an <code translate="no" dir="ltr">error</code> or a valid <code translate="no" dir="ltr">response</code>. If <code translate="no" dir="ltr">done</code> == <code translate="no" dir="ltr">false</code>, neither <code translate="no" dir="ltr">error</code> nor <code translate="no" dir="ltr">response</code> is set. If <code translate="no" dir="ltr">done</code> == <code translate="no" dir="ltr">true</code>, exactly one of <code translate="no" dir="ltr">error</code> or <code translate="no" dir="ltr">response</code> can be set. Some services might not provide the result. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:</div>
+<section id="Operation.FIELDS.error">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">error</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object (<code translate="no" dir="ltr"><a href="/api/files#v1beta.Status">Status</a></code>)</code>
+</span>
+</div>
+<div class="field-description">
+<p>The error result of the operation in case of failure or cancellation.</p>
+</div>
+</div>
+</section>
+<section id="Operation.FIELDS.response">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">response</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object</code>
+</span>
+</div>
+<div class="field-description">
+<p>The normal, successful response of the operation. If the original method returns no data on success, such as <code translate="no" dir="ltr">Delete</code>, the response is <code translate="no" dir="ltr">google.protobuf.Empty</code>. If the original method is standard <code translate="no" dir="ltr">Get</code>/<code translate="no" dir="ltr">Create</code>/<code translate="no" dir="ltr">Update</code>, the response should be the resource. For other methods, the response should have the type <code translate="no" dir="ltr">XxxResponse</code>, where <code translate="no" dir="ltr">Xxx</code> is the original method name. For example, if the original method name is <code translate="no" dir="ltr">TakeSnapshot()</code>, the inferred response type is <code translate="no" dir="ltr">TakeSnapshotResponse</code>.</p><p>An object containing fields of an arbitrary type. An additional field <code translate="no" dir="ltr">"@type"</code> contains a URI identifying the type. Example: <code translate="no" dir="ltr">{ "id": 1234, "@type": "types.example.com/standard/id" }</code>.</p>
+</div>
+</div>
+</section>
+<div>End of mutually exclusive fields.</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="second-column">
+<section id="Operation.SCHEMA_REPRESENTATION">
+<table class="properties responsive fixed">
+<thead>
+<tr>
+<th>JSON representation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="margin:0;padding:0;"><div></div><devsite-code><pre style="border: 0;margin: 0;" translate="no" dir="ltr" is-upgraded><span class="pun">{</span>
+  <span class="str">"name"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+  <span class="str">"metadata"</span><span class="pun">: </span><span class="pun">{</span>
+    <span class="str">"@type"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+    <span class="str">field1</span><span class="pun">: </span><span class="kwd">...</span><span class="pun">,</span>
+    <span class="kwd">...</span>
+  <span class="pun">}</span><span class="pun">,</span>
+  <span class="str">"done"</span><span class="pun">: </span><span class="kwd">boolean</span><span class="pun">,</span>
+
+  <span class="com">// result</span>
+  <span class="str">"error"</span><span class="pun">: </span><span class="pun">{</span>
+    <span class="kwd">object (<code translate="no" dir="ltr"><a href="/api/files#v1beta.Status">Status</a></code>)</span>
+  <span class="pun">}</span><span class="pun">,</span>
+  <span class="str">"response"</span><span class="pun">: </span><span class="pun">{</span>
+    <span class="str">"@type"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+    <span class="str">field1</span><span class="pun">: </span><span class="kwd">...</span><span class="pun">,</span>
+    <span class="kwd">...</span>
+  <span class="pun">}</span>
+  <span class="com">// Union type</span>
+<span class="pun">}</span></pre></devsite-code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</div>
+</section>
+</section>
+</div><div itemscope="" itemtype="http://developers.google.com/ReferenceObject"><h2 id="method:-filesearchstores.upload.operations.get" data-text="Method: fileSearchStores.upload.operations.get" tabindex="-1">Method: fileSearchStores.upload.operations.get</h2><a name="v1beta.fileSearchStores.upload.operations.get"></a>
+<meta content="get" itemprop="name"/>
+<meta content="/api/rest/v1beta/fileSearchStores.upload.operations/get" itemprop="path"/>
+<section class="prototype" id="/api/rest/v1beta/fileSearchStores.upload.operations/get">
+<ul class="toc">
+<li><a href="#body.HTTP_TEMPLATE">Endpoint</a></li><li><a href="#body.PATH_PARAMETERS">Path parameters</a></li><li><a href="#body.request_body">Request body</a></li><li><a href="#body.response_body">Response body</a></li><li><a href="#body.aspect">Authorization scopes</a></li>
+</ul>
+<section id="description">
+<p>Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.</p>
+</section>
+<div class="column-container">
+<div class="reference">
+<section id="body.HTTP_TEMPLATE">
+<h3 id="endpoint_6" data-text="Endpoint" tabindex="-1">Endpoint</h3>
+<span class="endpoint">
+<span class="http-method">
+                get
+              </span>
+<span class="endpoint-url">
+<code translate="no" dir="ltr">https:<wbr/>/<wbr/>/generativelanguage.googleapis.com<wbr/>/v1beta<wbr/>/{name=fileSearchStores<wbr/>/*<wbr/>/upload<wbr/>/operations<wbr/>/*}</code>
+</span>
+</span>
+<br/>
+<span>
+
+</span>
+</section>
+<section id="body.PATH_PARAMETERS">
+<h3 id="path-parameters_4" data-text="Path parameters" tabindex="-1">Path parameters</h3>
+<section id="body.PATH_PARAMETERS.name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">name</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>The name of the operation resource. It takes the form <code translate="no" dir="ltr">fileSearchStores/{filesearchstore}/upload/operations/{operation}</code>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="body.request_body">
+<h3 id="request-body_6" data-text="Request body" tabindex="-1">Request body</h3>
+<p>The request body must be empty.</p>
+</section>
+</div>
+</div>
+<div class="column-container">
+<div class="reference">
+<section id="body.response_body">
+<h3 id="response-body_6" data-text="Response body" tabindex="-1">Response body</h3>
+<p>If successful, the response body contains an instance of <code translate="no" dir="ltr"><a href="/api/batch-api#Operation">Operation</a></code>.</p>
+</section>
+</div>
+</div>
+</section>
+</div><div itemscope="" itemtype="http://developers.google.com/ReferenceObject"><h2 id="method:-media.download" data-text="Method: media.download" tabindex="-1">Method: media.download</h2><a name="v1beta.media.download"></a>
+<meta content="download" itemprop="name"/>
+<meta content="/api/rest/v1beta/media/download" itemprop="path"/>
+<section class="prototype" id="/api/rest/v1beta/media/download">
+<ul class="toc">
+<li><a href="#body.HTTP_TEMPLATE">Endpoint</a></li><li><a href="#body.PATH_PARAMETERS">Path parameters</a></li><li><a href="#body.QUERY_PARAMETERS">Query parameters</a></li><li><a href="#body.request_body">Request body</a></li><li><a href="#body.response_body">Response body</a></li><li><a href="#body.aspect">Authorization scopes</a></li>
+</ul>
+<section id="description">
+<p>Retrieves a file or directory from an environment's snapshot (HTTP endpoint).</p>
+</section>
+<div class="column-container">
+<div class="reference">
+<section id="body.HTTP_TEMPLATE">
+<h3 id="endpoint_7" data-text="Endpoint" tabindex="-1">Endpoint</h3>
+<span class="endpoint">
+<span class="http-method">
+                get
+              </span>
+<span class="endpoint-url">
+<code translate="no" dir="ltr">https:<wbr/>/<wbr/>/generativelanguage.googleapis.com<wbr/>/v1beta<wbr/>/{parent=environments<wbr/>/*}<wbr/>/files</code>
+</span>
+</span>
+<br/>
+<span>
+
+</span>
+</section>
+<section id="body.PATH_PARAMETERS">
+<h3 id="path-parameters_5" data-text="Path parameters" tabindex="-1">Path parameters</h3>
+<section id="body.PATH_PARAMETERS.parent">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">parent</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Required. The resource name of the environment. Format: <code translate="no" dir="ltr">environments/{environmentId}</code> It takes the form <code translate="no" dir="ltr">environments/{environment}</code>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="body.QUERY_PARAMETERS">
+<h3 id="query-parameters_2" data-text="Query parameters" tabindex="-1">Query parameters</h3>
+<section id="body.QUERY_PARAMETERS.path">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">path</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. The path of the file or directory within the environment. If empty, defaults to the root of the workspace. Example: "workspace/src/main.py"</p>
+</div>
+</div>
+</section>
+<section id="body.QUERY_PARAMETERS.recursive">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">recursive</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">boolean</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. If true and the path is a directory, recursively lists all files and subdirectories. Defaults to false (immediate children only).</p>
+</div>
+</div>
+</section>
+<section id="body.QUERY_PARAMETERS.page_size">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">page_size</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">integer</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. Maximum number of entries to return per page (for directory listing). If unspecified, defaults to 100. Maximum is 1000. NOLINT</p>
+</div>
+</div>
+</section>
+<section id="body.QUERY_PARAMETERS.page_token">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">page_token</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. Pagination token for directory listing. NOLINT</p>
+</div>
+</div>
+</section>
+</section>
+<section id="body.request_body">
+<h3 id="request-body_7" data-text="Request body" tabindex="-1">Request body</h3>
+<p>The request body must be empty.</p>
+</section>
+</div>
+</div>
+<div class="column-container">
+<div class="reference">
+<section id="body.response_body">
+<h3 id="response-body_7" data-text="Response body" tabindex="-1">Response body</h3>
+<p>If successful, the response body contains an instance of <code translate="no" dir="ltr">GetEnvironmentFilesResponse</code>.</p>
+</section>
+</div>
+</div>
+</section>
+</div><div itemscope="" itemtype="http://developers.google.com/ReferenceObject"><h2 id="method:-media.uploadtofilesearchstore" data-text="Method: media.uploadToFileSearchStore" tabindex="-1">Method: media.uploadToFileSearchStore</h2><a name="v1beta.media.uploadToFileSearchStore"></a>
+<meta content="uploadToFileSearchStore" itemprop="name"/>
+<meta content="/api/rest/v1beta/media/uploadToFileSearchStore" itemprop="path"/>
+<section class="prototype" id="/api/rest/v1beta/media/uploadToFileSearchStore">
+<ul class="toc">
+<li><a href="#body.HTTP_TEMPLATE">Endpoint</a></li><li><a href="#body.PATH_PARAMETERS">Path parameters</a></li><li><a href="#body.request_body">Request body</a>
+<ul>
+<li><a href="#body.request_body.SCHEMA_REPRESENTATION">JSON representation</a></li>
+</ul>
+</li><li><a href="#body.response_body">Response body</a>
+<ul>
+<li><a href="#body.CustomLongRunningOperation.SCHEMA_REPRESENTATION">JSON representation</a></li>
+</ul>
+</li><li><a href="#body.aspect">Authorization scopes</a></li>
+</ul>
+<section id="google.ai.generativelanguage.v1beta.RetrieverService.UploadToFileSearchStore">
+</section>
+<section id="description">
+<p>Uploads data to a FileSearchStore, preprocesses and chunks before storing it in a FileSearchStore Document.</p>
+</section>
+<div class="column-container">
+<div class="reference">
+<section id="body.HTTP_TEMPLATE">
+<h3 id="endpoint_8" data-text="Endpoint" tabindex="-1">Endpoint</h3>
+<span>
+<ul>
+<li>Upload URI, for media upload requests:<br/></li>
+</ul>
+</span>
+<span class="endpoint">
+<span class="http-method">
+                post
+              </span>
+<span class="endpoint-url">
+<code translate="no" dir="ltr">https:<wbr/>/<wbr/>/generativelanguage.googleapis.com<wbr/>/upload<wbr/>/v1beta<wbr/>/{fileSearchStoreName=fileSearchStores<wbr/>/*}:uploadToFileSearchStore</code>
+</span>
+</span>
+<span>
+<ul>
+<li>Metadata URI, for metadata-only requests:<br/></li>
+</ul>
+</span>
+<span class="endpoint">
+<span class="http-method">
+                post
+              </span>
+<span class="endpoint-url">
+<code translate="no" dir="ltr">https:<wbr/>/<wbr/>/generativelanguage.googleapis.com<wbr/>/v1beta<wbr/>/{fileSearchStoreName=fileSearchStores<wbr/>/*}:uploadToFileSearchStore</code>
+</span>
+</span>
+<span>
+
+</span>
+</section>
+<section id="body.PATH_PARAMETERS">
+<h3 id="path-parameters_6" data-text="Path parameters" tabindex="-1">Path parameters</h3>
+<section id="body.PATH_PARAMETERS.file_search_store_name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">fileSearchStoreName</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Required. Immutable. The name of the <code translate="no" dir="ltr">FileSearchStore</code> to upload the file into. Example: <code translate="no" dir="ltr">fileSearchStores/my-file-search-store-123</code> It takes the form <code translate="no" dir="ltr">fileSearchStores/{filesearchstore}</code>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="body.request_body">
+<h3 id="request-body_8" data-text="Request body" tabindex="-1">Request body</h3>
+<p>The request body contains data with the following structure:</p>
+<section id="body.request_body.FIELDS">
+<thead>
+<tr>
+<th colspan="2">Fields</th>
+</tr>
+</thead>
+<section id="body.request_body.FIELDS.display_name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">displayName</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. Display name of the created document.</p>
+</div>
+</div>
+</section>
+<section id="body.request_body.FIELDS.custom_metadata">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">customMetadata[]</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object (<code translate="no" dir="ltr"><a href="/api/file-search/documents#CustomMetadata">CustomMetadata</a></code>)</code>
+</span>
+</div>
+<div class="field-description">
+<p>Custom metadata to be associated with the data.</p>
+</div>
+</div>
+</section>
+<section id="body.request_body.FIELDS.chunking_config">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">chunkingConfig</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object (<code translate="no" dir="ltr">ChunkingConfig</code>)</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. Config for telling the service how to chunk the data. If not provided, the service will use default parameters.</p>
+</div>
+</div>
+</section>
+<section id="body.request_body.FIELDS.mime_type">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">mimeType</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>Optional. MIME type of the data. If not provided, it will be inferred from the uploaded content.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+</div>
+</div>
+<div class="column-container">
+<div class="reference">
+<section id="body.response_body">
+<h3 id="response-body_8" data-text="Response body" tabindex="-1">Response body</h3>
+<section id="body.CustomLongRunningOperation.description">
+<p>If successful, the response body contains data with the following structure:</p>
+</section>
+<section id="body.CustomLongRunningOperation.FIELDS">
+<thead>
+<tr>
+<th colspan="2">Fields</th>
+</tr>
+</thead>
+<section id="body.CustomLongRunningOperation.FIELDS.name">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">name</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">string</code>
+</span>
+</div>
+<div class="field-description">
+<p>The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the <code translate="no" dir="ltr">name</code> should be a resource name ending with <code translate="no" dir="ltr">operations/{unique_id}</code>.</p>
+</div>
+</div>
+</section>
+<section id="body.CustomLongRunningOperation.FIELDS.metadata">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">metadata</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object</code>
+</span>
+</div>
+<div class="field-description">
+<p>Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.</p><p>An object containing fields of an arbitrary type. An additional field <code translate="no" dir="ltr">"@type"</code> contains a URI identifying the type. Example: <code translate="no" dir="ltr">{ "id": 1234, "@type": "types.example.com/standard/id" }</code>.</p>
+</div>
+</div>
+</section>
+<section id="body.CustomLongRunningOperation.FIELDS.done">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">done</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">boolean</code>
+</span>
+</div>
+<div class="field-description">
+<p>If the value is <code translate="no" dir="ltr">false</code>, it means the operation is still in progress. If <code translate="no" dir="ltr">true</code>, the operation is completed, and either <code translate="no" dir="ltr">error</code> or <code translate="no" dir="ltr">response</code> is available.</p>
+</div>
+</div>
+</section>
+<div class="field-entry union-type">
+<div class="signature">
+<tr class="alt" id="body.CustomLongRunningOperation.FIELDS.result">
+<span class="field-name">
+<td><code translate="no" dir="ltr">result</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">Union type</code>
+</span>
+</tr>
+<div class="union-type-preamble">
+<div>The operation result, which can be either an <code translate="no" dir="ltr">error</code> or a valid <code translate="no" dir="ltr">response</code>. If <code translate="no" dir="ltr">done</code> == <code translate="no" dir="ltr">false</code>, neither <code translate="no" dir="ltr">error</code> nor <code translate="no" dir="ltr">response</code> is set. If <code translate="no" dir="ltr">done</code> == <code translate="no" dir="ltr">true</code>, exactly one of <code translate="no" dir="ltr">error</code> or <code translate="no" dir="ltr">response</code> can be set. Some services might not provide the result. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:</div>
+<section id="body.CustomLongRunningOperation.FIELDS.error">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">error</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object (<code translate="no" dir="ltr"><a href="/api/files#v1beta.Status">Status</a></code>)</code>
+</span>
+</div>
+<div class="field-description">
+<p>The error result of the operation in case of failure or cancellation.</p>
+</div>
+</div>
+</section>
+<section id="body.CustomLongRunningOperation.FIELDS.response">
+<div class="field-entry">
+<div class="signature">
+<span class="field-name">
+<td><code translate="no" dir="ltr">response</code></td>
+</span>
+<span class="field-type">
+<code translate="no" dir="ltr">object</code>
+</span>
+</div>
+<div class="field-description">
+<p>The normal, successful response of the operation. If the original method returns no data on success, such as <code translate="no" dir="ltr">Delete</code>, the response is <code translate="no" dir="ltr">google.protobuf.Empty</code>. If the original method is standard <code translate="no" dir="ltr">Get</code>/<code translate="no" dir="ltr">Create</code>/<code translate="no" dir="ltr">Update</code>, the response should be the resource. For other methods, the response should have the type <code translate="no" dir="ltr">XxxResponse</code>, where <code translate="no" dir="ltr">Xxx</code> is the original method name. For example, if the original method name is <code translate="no" dir="ltr">TakeSnapshot()</code>, the inferred response type is <code translate="no" dir="ltr">TakeSnapshotResponse</code>.</p><p>An object containing fields of an arbitrary type. An additional field <code translate="no" dir="ltr">"@type"</code> contains a URI identifying the type. Example: <code translate="no" dir="ltr">{ "id": 1234, "@type": "types.example.com/standard/id" }</code>.</p>
+</div>
+</div>
+</section>
+<div>End of mutually exclusive fields.</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</div>
+<div class="second-column">
+<section id="body.CustomLongRunningOperation.SCHEMA_REPRESENTATION">
+<table class="properties responsive fixed">
+<thead>
+<tr>
+<th>JSON representation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="margin:0;padding:0;"><div></div><devsite-code><pre style="border: 0;margin: 0;" translate="no" dir="ltr" is-upgraded><span class="pun">{</span>
+  <span class="str">"name"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+  <span class="str">"metadata"</span><span class="pun">: </span><span class="pun">{</span>
+    <span class="str">"@type"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+    <span class="str">field1</span><span class="pun">: </span><span class="kwd">...</span><span class="pun">,</span>
+    <span class="kwd">...</span>
+  <span class="pun">}</span><span class="pun">,</span>
+  <span class="str">"done"</span><span class="pun">: </span><span class="kwd">boolean</span><span class="pun">,</span>
+
+  <span class="com">// result</span>
+  <span class="str">"error"</span><span class="pun">: </span><span class="pun">{</span>
+    <span class="kwd">object (<code translate="no" dir="ltr"><a href="/api/files#v1beta.Status">Status</a></code>)</span>
+  <span class="pun">}</span><span class="pun">,</span>
+  <span class="str">"response"</span><span class="pun">: </span><span class="pun">{</span>
+    <span class="str">"@type"</span><span class="pun">: </span><span class="kwd">string</span><span class="pun">,</span>
+    <span class="str">field1</span><span class="pun">: </span><span class="kwd">...</span><span class="pun">,</span>
+    <span class="kwd">...</span>
+  <span class="pun">}</span>
+  <span class="com">// Union type</span>
+<span class="pun">}</span></pre></devsite-code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</div>
+</section>
+</div>
+  
+
+  
+</div>
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="Gemini API"
+  product-id="5292923"
+  bucket="documentation"
+  context=""
+  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+  
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent" data-nosnippet>
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2026-08-28 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    
+  
+  
+    
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent"
+     aria-label="Footer links"
+     data-nosnippet>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent" data-nosnippet>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="sq"
+        >Shqip</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+      </section>
+      </section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        
+
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>
