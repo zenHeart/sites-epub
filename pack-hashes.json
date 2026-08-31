@@ -1,22 +1,22 @@
 {
   "codex": {
-    "sha256": "ccf27db1c2af618153545dd2e5e1272b1edcf0dffca3a1c2413ef13e5a42b2d9",
-    "packed_at": "2026-08-29T00:01:28Z",
-    "chapters": 169
+    "sha256": "2edfd5ad3a2f3011488f199e7a25b895136acf6bbe4db9d9721b3e7aa60dd0a6",
+    "packed_at": "2026-08-31T05:59:31Z",
+    "chapters": 174
   },
   "claude": {
-    "sha256": "24549bba9c4abe759fe5604a6e97aec4bbddd89b8aa1270314ecbae454877b5b",
-    "packed_at": "2026-08-29T00:05:02Z",
-    "chapters": 420
+    "sha256": "3c39723cc3526dd01b2a064c44b47a29dbdb26ab790c827f1197b33d67f1d620",
+    "packed_at": "2026-08-31T06:03:05Z",
+    "chapters": 422
   },
   "cursor": {
-    "sha256": "a73c5ae66af338a1485dc7379baf4b1ceb6f7f3be7946a0120d009524f6fa565",
-    "packed_at": "2026-08-29T14:48:22Z",
+    "sha256": "c7d1f97ed8b4d90a28ec99b3cd62c91dcd9a9617a566cee94866617adce960c0",
+    "packed_at": "2026-08-31T06:04:10Z",
     "chapters": 247
   },
   "grok": {
-    "sha256": "41dbe749440e4935b7354faca2ed7154eae5b75f55d84fb2d2b6a7aa56ad386b",
-    "packed_at": "2026-08-29T14:48:59Z",
-    "chapters": 241
+    "sha256": "ee3e21bd8cf347092aefca1858a6a00944884f97f7ff12e36cf664417a99619e",
+    "packed_at": "2026-08-31T06:05:05Z",
+    "chapters": 242
   }
 }
