@@ -287,38 +287,63 @@ MAX_IMAGE_BYTES = 2_500_000
 
 
 def downscale_image_bytes(data: bytes, *, max_width: int = 1600) -> bytes:
-    """用 macOS 自带 sips 把过大位图等比降到 max_width 宽并压回阈值内。
+    """把过大位图等比降到 max_width 宽并压回阈值内。
 
-    抓取只在本地(含 macOS)运行;工具不可用或压缩无效时返回空 bytes,
-    由调用方按「放弃该图」处理。
+    优先 macOS 自带 sips;不可用(Windows/Linux)时退回 PIL。
+    工具都不可用或压缩无效时返回空 bytes,由调用方按「放弃该图」处理。
     """
+    import io
     import shutil
     import subprocess
     import tempfile
 
     sips = shutil.which("sips")
-    if not sips:
+    if sips:
+        suffix = ".png"
+        for attempt in (max_width, 1100, 800):
+            try:
+                with tempfile.TemporaryDirectory() as td:
+                    src = Path(td) / f"in{suffix}"
+                    out = Path(td) / f"out{suffix}"
+                    src.write_bytes(data)
+                    proc = subprocess.run(
+                        [sips, "--resampleWidth", str(attempt), "-Z", str(attempt * 4),
+                         "-o", str(out), str(src)],
+                        capture_output=True,
+                        timeout=30,
+                    )
+                    if proc.returncode != 0 or not out.is_file():
+                        continue
+                    shrunk = out.read_bytes()
+                    if len(shrunk) < MAX_IMAGE_BYTES:
+                        return shrunk
+            except Exception:
+                continue
         return b""
-    suffix = ".png"
+    try:
+        from PIL import Image
+    except ImportError:
+        return b""
     for attempt in (max_width, 1100, 800):
         try:
-            with tempfile.TemporaryDirectory() as td:
-                src = Path(td) / f"in{suffix}"
-                out = Path(td) / f"out{suffix}"
-                src.write_bytes(data)
-                proc = subprocess.run(
-                    [sips, "--resampleWidth", str(attempt), "-Z", str(attempt * 4),
-                     "-o", str(out), str(src)],
-                    capture_output=True,
-                    timeout=30,
-                )
-                if proc.returncode != 0 or not out.is_file():
-                    continue
-                shrunk = out.read_bytes()
-                if len(shrunk) < MAX_IMAGE_BYTES:
-                    return shrunk
+            im = Image.open(io.BytesIO(data))
+            im.load()
         except Exception:
-            continue
+            return b""
+        if im.width > attempt:
+            im = im.resize((attempt, round(im.height * attempt / im.width)), Image.LANCZOS)
+        buf = io.BytesIO()
+        if im.mode in ("RGBA", "LA", "P"):
+            im = im.convert("RGBA")
+            base = Image.new("RGB", im.size, (255, 255, 255))
+            base.paste(im, mask=im.split()[-1])
+            im = base
+        elif im.mode != "RGB":
+            im = im.convert("RGB")
+        im.save(buf, "JPEG", quality=80, optimize=True)
+        shrunk = buf.getvalue()
+        if len(shrunk) < MAX_IMAGE_BYTES:
+            return shrunk
     return b""
 
 

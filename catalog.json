@@ -68,11 +68,11 @@
       "icon": "vendors/gemini/icon.png",
       "author": "Google",
       "adapter": "gemini",
-      "updated_at": "",
-      "packed_at": "",
+      "updated_at": "2026-08-31T06:32:12Z",
+      "packed_at": "2026-08-31T07:57:44Z",
       "summary": "Google Gemini 官方产品文档与博客一书打包:Gemini API 与 AI Studio、API Reference、Gemini CLI、Gemini Code Assist、Antigravity、Jules、Firebase Studio,Blog 排在末尾。",
       "category": "docs",
-      "chapters": 0,
+      "chapters": 595,
       "cover": "covers/gemini.png"
     }
   ],

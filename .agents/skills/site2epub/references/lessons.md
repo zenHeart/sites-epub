@@ -156,3 +156,18 @@
 `--refetch` 还是 `llms.txt md5 一致`；两者都没有的 `skipped=N` 不能当新鲜度证据。
 runtime_source 误判**不要修**——它让含 React 示例的页面保持每轮重抓，
 对新鲜度是净收益；修掉反而扩大盲区。
+
+---
+
+## 11. EPUB 超 100MB 在 gh-pages push 才爆
+
+**症状**：CI 的 Pack / Validate 全绿，"Publish gh-pages" 被 remote rejected：`GH001: File gemini.epub is 127.70 MB; this exceeds GitHub's file size limit of 100.00 MB`。
+
+**根因**：Google 文档插图多且大（gemini 语料图 178MB/1761 张），打包门禁只查「破图/未链标题」，不查体积；失败点在最后一刻的 push，浪费整轮 CI。
+
+**怎么修**：
+1. 语料图就地重压：>400KB 的位图（跳过 .gif）转 JPEG q80、宽≤1400，**改名换扩展名并同步 `image-map.json` 的 value**（URL 不变，页面源零改动）——gemini 178.6MB→97.4MB，EPUB 127.7MB→54.9MB。
+2. `downscale_image_bytes` 补 PIL 兜底（原 sips 是 macOS-only，Windows 抓取时 >2.5MB 的图会被静默丢弃）。
+3. workflow "Validate EPUBs" 加体积门禁 `< 98MB`，让超标在 validate 步就爆，不拖到 push。
+
+**怎么防止复发**：新增图片大户（产品文档站带大量截图）后，push 前本地 `pack --id <id>` 看一眼 dist 体积；CI 体积门禁已兜底。

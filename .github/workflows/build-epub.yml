@@ -61,6 +61,10 @@ jobs:
           assert epubs, "no epub produced"
           for p in epubs:
               assert p.stat().st_size > 1000
+              # GitHub rejects pushes with files over 100MB; fail here instead.
+              assert p.stat().st_size < 98 * 1000 * 1000, (
+                  f"{p.name} is {p.stat().st_size/1e6:.1f}MB, over the 98MB gate"
+              )
               with zipfile.ZipFile(p) as zf:
                   assert zf.read("mimetype").decode().strip() == "application/epub+zip"
               from sites_epub.walk import blocking_defects, walk_chapters
