@@ -24,7 +24,7 @@
       "author": "Anthropic",
       "adapter": "claude",
       "updated_at": "2026-08-31T07:42:12Z",
-      "packed_at": "2026-08-31T07:53:12Z",
+      "packed_at": "2026-08-31T08:20:02Z",
       "summary": "Claude Code 文档树与 claude.com/blog 全文，文档导航在前、Blog 在最后。",
       "category": "docs",
       "chapters": 422,
