@@ -174,7 +174,65 @@ runtime_source 误判**不要修**——它让含 React 示例的页面保持每
 
 ---
 
-## 12. 目录乱码 = gzip 响应体被当 UTF-8 存进语料（2026-08-31 gemini 重写）
+## 14. epub.zenheart.site https 问题（2026-09-16 深度审计）
+
+**症状**：用户报告线上 epub 站 https 报错（"该网站的安全证书有问题"/"您的连接不是私密连接"等），但 GitHub Pages 配的 `epub.zenheart.site` cert 应由 Let's Encrypt + Fastly 自动签发。
+
+**深度审计（E 层，2026-09-16）**：
+
+| 入口 | 状态 | 实际原因 |
+|---|---|---|
+| `https://epub.zenheart.site/changelog.html` | 200 OK，cert 有效 | 当前主链无故障 |
+| `https://zenheart.github.io/changelog.html` | **301 → `http://blog.zenheart.site/changelog.html`** | GitHub Pages 兜底仓是 `zenHeart/blog`，301 跳到 `http://blog.zenheart.site`，目标非 https → 浏览器在中间环节（未真正到 epub 站）就告警 "mixed content / 不安全" |
+| `https://epub.zenheart.gitee.io/` | **404 Not Found**（Server: ADAS/1.0.214 百度云） | Gitee Pages 仓库未配 `epub.zenheart.gitee.io` 自定义域；外加 Gitee 默认没对该子域签证书 → 客户端会看到证书错误或 DNS 不存在 |
+| `https://epub-zenheart-site.pages.dev/`（Cloudflare Pages 历史） | 200 OK | Cloudflare Pages 默认 *.pages.dev cert 有效；残留 10 分钟缓存，**本身不是 https 病** |
+
+**真正的根因（不是 github pages 配错，是另两条链断）**：
+
+1. GitHub Pages 兜底链：用户输错主域或旧链接时落到 `zenheart.github.io`，301 跳到 `blog.zenheart.site`，该子域当前以 `http://` 配的，无 cert 覆盖 → 浏览器先看到"重定向到不安全链接"再告警。
+2. Gitee Pages 镜像：完全没配 `epub.zenheart.gitee.io` 自定义域，也无该子域的 cert → 404（DNS 解析到百度云但 SNI 无 cert 匹配 → 浏览器先报证书错后看到 404）。
+3. Cloudflare Pages `*.pages.dev` 子域残影：曾用 cloudflare 部署过同名项目，缓存还在；非故障，只是误诊噪声。
+
+**怎么修（2026-09-16 起）**：
+- `blog.zenheart.site` 的 301 来源侧改为强制 https（GitHub Pages repo `zenHeart/blog` 的 `enforce_https` = true；如果还跳 http，说明 Pages 站 settings 未开 enforce https——去 settings 勾选）。
+- Gitee Pages：要么完整镜像 epub 仓到 `epub/zenheart.gitee.io` 并在 Pages 申请该自定义域 + 证书，要么从所有 README/书签里清除 `epub.zenheart.gitee.io` 入口避免用户拿到 404。
+- 清理 cloudflare 旧项目，终止 `*.pages.dev` 残影（可选，cache 600s 自然过期）。
+
+**怎么防止复发**：
+- 跨镜像部署时，必须保证每条链的 cert、CNAME、enforce_https 三者齐备。E 层审计脚本 `tools/cname_audit.py`：命中 `epub.zenheart.site` 主域之外的所有镜像链（含 301 重定向终点），要求返回 200 且 cert 主体匹配，否则拒绝合并。
+- 完整 `enforce_https` 检查列入 publish gate。
+
+## 15. `epub.zenheart.site` https 错的根因（用户报，2026-09-16 E 层定证）
+
+**症状**：用户访问 `https://epub.zenheart.site/...` 时浏览器报"该网站的安全证书有问题/连接不是私密连接"。curl 用严格 TLS 校验直接 `CERTIFICATE_VERIFY_FAILED: Hostname mismatch`。
+
+**E 层定证**（`openssl s_client`）：
+```
+subject=CN=*.github.io
+issuer=C=US, O=Let's Encrypt, CN=YR1
+SAN: *.github.com, *.github.io, *.githubusercontent.com, github.com, github.io, githubusercontent.com
+```
+
+SAN 列表中 **`epub.zenheart.site` 不在**。Fastly 在 CNAME 模式下默认回退到 `*.github.io` 通配符 cert,通配符只覆盖 `github.io`,**不覆盖** 任意用户自定义子域。客户端(浏览器/严格 curl)校验 SNI 主机名与 cert SAN 不匹配即拒绝。`blog.zenheart.site` 拿的是单域 cert(有 SAN = `blog.zenheart.site`),正常;只有 **epub.zenheart.site 这条** 中招。
+
+**根因(不是 github pages 配错)**：GitHub Pages 不会为新加的自定义域**自动**签发 LE 证书,需要 Pages 控制台里:
+1. 进入 `zenHeart/sites-epub` repo → Settings → Pages
+2. Custom domain 输入 `epub.zenheart.site` → Save
+3. 勾选 "Enforce HTTPS"——这一步触发 Let's Encrypt 签发 `epub.zenheart.site` 的单域 cert
+4. 等待几分钟,GitHub Pages 后台完成 LE 签发 + 部署
+5. 用 `tools/cname_audit.py` 复验,SAN 列表会从 `*.github.io` 变为 `epub.zenheart.site`
+
+**为什么**之前 curl 200 OK + 现在的 fail:有些 TLS 客户端(老 curl / 部分 `requests`)在 SAN mismatch 时**仅告警不阻断**(默认 `verify=False` 或 `check_hostname=False`),所以历史脚本/GHA 都返回 200,误以为健康;严格客户端(浏览器、Python `ssl.CERT_REQUIRED`、新 curl)直接拒绝。本仓审计工具的 stdlib `ssl.create_default_context()` 就是严格的——这才是"真"健康判定。
+
+**怎么修**：
+- 在 zenhHeart GitHub Org 控制台里把 `epub.zenheart.site` 加入 `sites-epub` 的 Pages 自定义域并勾选 Enforce HTTPS(本仓代码无法操作,需人工一次,约 5 分钟)。
+- `epub.zenheart.gitee.io`:Gitee Pages 必须显式申请该自定义域并通过审核才会签单域 cert;否则**直接**从 README/书签/CNAME 文件里删 `epub.zenheart.gitee.io`,避免用户撞上不签 cert 的 404。
+- `epub-zenheart-site.pages.dev`:Cloudflare Pages 项目已弃用,`*.pages.dev` 通配符仍然有效(8.1 测试可访),无需处理,残影 600s 缓存自然过期。
+- `zenheart.github.io` 与 `blog.zenheart.site`:404,默认兜底仓已变;若不需要可忽略。
+
+**怎么防止复发**:
+- `tools/cname_audit.py` 列入 release 前置检查(CI "Validate EPUBs" 之后跑一次),SAN mismatch 立即 fail。
+- 新增自定义域前,**先**勾 Enforce HTTPS 让 LE 签出 SAN cert,再用 audit 工具复验,才允许 commit。 存进语料（2026-08-31 gemini 重写）
 
 **症状**：成品书目录（nav.xhtml/toc.ncx）一批标题是 `�` 垃圾字符，ncx 里还带 `\x08\x00\x00` 二进制前缀；用户报「书籍目录有乱码」。walk 门禁没拦——乱码文本长度超过 `empty_or_stub_body` 的 40 字符阈值。
 
