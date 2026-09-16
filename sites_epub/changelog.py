@@ -38,6 +38,8 @@ class Update:
     short: str
     added: list[Change] = field(default_factory=list)
     removed: list[Change] = field(default_factory=list)
+    added_count: int = 0   # true totals (lists are display-capped)
+    removed_count: int = 0
 
 
 def _git(*args: str) -> str:
@@ -98,6 +100,9 @@ def vendor_updates(vid: str) -> list[Update]:
                 for r in removed_routes[:INITIAL_CAP]
             ],
         )
+        # true totals survive the display cap (initial imports list hundreds)
+        upd.added_count = len(added_routes)
+        upd.removed_count = len(removed_routes)
         updates.append(upd)
     return updates
 
@@ -117,6 +122,8 @@ def changelog_payload() -> dict:
                         "date": u.date,
                         "subject": u.subject,
                         "short": u.short,
+                        "added_count": u.added_count or len(u.added),
+                        "removed_count": u.removed_count or len(u.removed),
                         # short keys match the template's JS (t/u/g/k)
                         "added": [{"t": c.title, "u": c.url, "g": c.group, "k": c.kind} for c in u.added],
                         "removed": [{"t": c.title, "u": c.url, "g": c.group, "k": c.kind} for c in u.removed],

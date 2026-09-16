@@ -12,7 +12,18 @@ python3 -m sites_epub catalog
 python3 -m sites_epub changelog            # 本地：由 routes.json git 历史生成 site/changelog.html
 ```
 
-**changelog**：每次增量 fetch 提交后在本地跑一次并一并提交（CI 是 shallow checkout，跑不了）。数据完全由各厂商 `corpus/routes.json` 的 git 历史推导（相邻版本 diff = 新增/移除页，含标题与原文链接），不做手工登记。书架右上角有「更新日志」入口。
+**changelog**：数据完全由各厂商 `corpus/routes.json` 的 **git 提交历史**推导（相邻版本 diff = 新增/移除页，含标题与原文链接），不做手工登记。CI 是 shallow checkout，只能本地生成。
+
+**⚠️ 时序契约（2026-09-16 教训：日志漏更新就是因为顺序错了）**：changelog 只看**已提交**的 routes.json 历史——必须**先提交语料、再生成日志、日志单独一笔提交**，两笔提交缺一不可：
+
+```bash
+git commit -m "<vendor corpus changes>"     # 第一笔:语料落进 git 历史
+python3 -m sites_epub changelog             # 现在才能看到本次变化
+git add site/changelog.html && git commit -m "Regenerate changelog"  # 第二笔
+git push
+```
+
+页面提供两种聚类：**时间轴**（全局按提交日期倒序）与**按厂商**（每厂商一节，节内按时间轴），厂商 chips 可过滤。初始导入超 400 条时列表截断但计数保真（`added_count`）。
 
 ## 新建 vs 增量
 

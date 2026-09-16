@@ -82,8 +82,11 @@ const DATA = __CHANGELOG_JSON__;
 const list = document.getElementById('list');
 const filters = document.getElementById('filters');
 let active = 'all';
+let mode = 'timeline'; // timeline | vendor
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const aN = u => u.added_count ?? u.added.length;
+const rN = u => u.removed_count ?? u.removed.length;
 function pageList(pages, removed) {
   if (!pages.length) return '';
   return '<ul class="pages' + (removed ? ' rm-list' : '') + '">' + pages.map(p =>
@@ -92,32 +95,47 @@ function pageList(pages, removed) {
     (p.g ? '<span class="grp">' + esc(p.g) + '</span>' : '') + '</li>'
   ).join('') + '</ul>';
 }
-function render() {
-  const evs = [];
-  DATA.vendors.forEach(v => v.updates.forEach(u => evs.push({ v, u })));
-  evs.sort((a, b) => b.u.date.localeCompare(a.u.date));
-  const shown = active === 'all' ? evs : evs.filter(e => e.v.id === active);
-  list.innerHTML = shown.map(({ v, u }) => {
+function card(v, u) {
     const docs = u.added.filter(p => p.k !== 'blog'), blogs = u.added.filter(p => p.k === 'blog');
     const rdocs = u.removed.filter(p => p.k !== 'blog'), rblogs = u.removed.filter(p => p.k === 'blog');
-    const isInitial = u.removed.length === 0 && u.added.length >= 100;
+    const isInitial = rN(u) === 0 && aN(u) >= 100;
+    const capped = aN(u) > u.added.length ? ' · 仅列前 ' + u.added.length : '';
     let body = '';
-    if (u.added.length) body += '<details open><summary>新增 ' + u.added.length + '（文档 ' + docs.length + ' · 博文 ' + blogs.length + '）</summary>' + pageList(docs) + pageList(blogs) + '</details>';
-    if (u.removed.length) body += '<details><summary>移除 ' + u.removed.length + '</summary>' + pageList(rdocs, true) + pageList(rblogs, true) + '</details>';
+    if (u.added.length) body += '<details open><summary>新增 ' + aN(u) + '（文档 ' + docs.length + ' · 博文 ' + blogs.length + capped + '）</summary>' + pageList(docs) + pageList(blogs) + '</details>';
+    if (u.removed.length) body += '<details><summary>移除 ' + rN(u) + '</summary>' + pageList(rdocs, true) + pageList(rblogs, true) + '</details>';
     return '<article class="upd"><div class="upd-head">' +
       '<span class="upd-date">' + esc(u.date) + '</span>' +
-      '<span class="upd-vendor">' + esc(v.name) + '</span>' +
-      '<span class="stat"><span class="add">+' + u.added.length + '</span> <span class="rm">-' + u.removed.length + '</span></span>' +
+      (mode === 'timeline' ? '<span class="upd-vendor">' + esc(v.name) + '</span>' : '') +
+      '<span class="stat"><span class="add">+' + aN(u) + '</span> <span class="rm">-' + rN(u) + '</span></span>' +
       '<div class="upd-subject">' + (isInitial ? 'Initial import · ' : '') + esc(u.subject) + ' <code style="opacity:.55">' + esc(u.short) + '</code></div>' +
       '</div>' + body + '</article>';
-  }).join('') || '<p class="intro">该厂商暂无更新记录。</p>';
+}
+function render() {
+  const vendors = active === 'all' ? DATA.vendors : DATA.vendors.filter(v => v.id === active);
+  if (mode === 'vendor') {
+    // 厂商聚类视图:每厂商一节,节内按提交时间轴倒序
+    list.innerHTML = vendors.map(v =>
+      '<section style="margin-bottom:2.4rem"><div style="display:flex;gap:.8rem;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.5rem;margin-bottom:.9rem;flex-wrap:wrap">' +
+      '<span class="upd-vendor" style="font-size:1.05rem">' + esc(v.name) + '</span>' +
+      '<span class="upd-date">' + v.chapters + ' 章 · ' + v.updates.length + ' 次更新</span></div>' +
+      v.updates.map(u => card(v, u)).join('') + '</section>'
+    ).join('') || '<p class="intro">该厂商暂无更新记录。</p>';
+    return;
+  }
+  const evs = [];
+  vendors.forEach(v => v.updates.forEach(u => evs.push({ v, u })));
+  evs.sort((a, b) => b.u.date.localeCompare(a.u.date) || (b.u.short || '').localeCompare(a.u.short || ''));
+  list.innerHTML = evs.map(({ v, u }) => card(v, u)).join('') || '<p class="intro">该厂商暂无更新记录。</p>';
 }
 function renderFilters() {
+  const seg = '<span style="display:flex;background:var(--chip);border-radius:999px;padding:2px">' +
+    ['timeline','vendor'].map(m => '<button data-m="' + m + '" style="border:0;background:' + (mode === m ? 'var(--card)' : 'transparent') + ';color:' + (mode === m ? 'var(--ink)' : 'var(--muted)') + ';border-radius:999px;padding:.32rem .75rem;cursor:pointer;font-size:.75rem;box-shadow:' + (mode === m ? 'var(--shadow)' : 'none') + '">' + (m === 'timeline' ? '时间轴' : '按厂商') + '</button>').join('') + '</span>';
   const all = [{ id: 'all', name: '全部' }].concat(DATA.vendors.map(v => ({ id: v.id, name: v.name })));
-  filters.innerHTML = all.map(f =>
+  filters.innerHTML = seg + all.map(f =>
     '<button data-id="' + esc(f.id) + '" class="' + (f.id === active ? 'on' : '') + '">' + esc(f.name) + '</button>'
   ).join('');
-  filters.querySelectorAll('button').forEach(b => b.onclick = () => { active = b.dataset.id; renderFilters(); render(); });
+  filters.querySelectorAll('button[data-m]').forEach(b => b.onclick = () => { mode = b.dataset.m; renderFilters(); render(); });
+  filters.querySelectorAll('button[data-id]').forEach(b => b.onclick = () => { active = b.dataset.id; renderFilters(); render(); });
 }
 document.getElementById('foot').textContent = 'generated ' + DATA.generated_at + ' · derived from routes.json git history';
 renderFilters();
