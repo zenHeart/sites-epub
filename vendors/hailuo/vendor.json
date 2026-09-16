@@ -1,0 +1,15 @@
+{
+  "id": "hailuo",
+  "name": "Hailuo AI",
+  "docs_url": "https://hailuoai.com",
+  "blog_url": null,
+  "icon": "vendors/hailuo/icon.png",
+  "author": "MiniMax",
+  "adapter": "generic",
+  "updated_at": "",
+  "packed_at": "",
+  "summary": "MiniMax 海螺 AI 产品文档:视频生成、旗舰工具与创作者功能页。",
+  "category": "docs",
+  "chapters": 16,
+  "cover": "covers/hailuo.png"
+}

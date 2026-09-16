@@ -1,0 +1,78 @@
+# Hailuo AI Video Platform - LLM Index
+
+This document outlines the core generative AI tools, models, and agents available on the Hailuo AI Video platform. It is optimized for semantic search and AI agent discovery.
+
+## Core Generative Engines (Flagship Tools)
+
+> These are the foundational tools powered by Hailuo's most advanced models (Hailuo 2.3 & Nano Banana), offering the highest degree of control and quality.
+
+- [**Text-to-Video Creation (Hailuo 2.3)**](https://hailuoai.video/create/text-to-video)
+  The primary interface for generating high-fidelity video clips from natural language prompts. Powered by the **Hailuo 2.3 model**, it excels in complex physics simulation, cinematic lighting, and high motion consistency. Supports 720p/1080p generation.
+
+- [**Image-to-Video Animation**](https://hailuoai.video/create/image-to-video)
+  Transforms static images into dynamic videos. Features advanced **Subject Reference** technology to maintain character identity and artistic style while adding realistic motion. Ideal for animating photos, artwork, or product shots.
+
+- [**Image Generation (Nano Banana Model)**](https://hailuoai.video/create/image-generation)
+  A state-of-the-art text-to-image generator using the **Nano Banana** model. It specializes in high-adherence prompt following and photorealistic textures, serving as a perfect starting point for video generation workflows.
+
+## Viral Trends & Specialized Character Interactions
+
+> Specialized agents fine-tuned for specific social media trends, emotional interactions, and character dynamics.
+
+- [**AI Hug Generator**](https://hailuoai.video/tools/ai-hug-generator)
+  A specialized tool designed to merge two separate photos into a realistic video of the subjects hugging. Widely used for "reconnecting past memories" trends and emotional content creation.
+
+- [**AI Dance Generator**](https://hailuoai.video/tools/ai-dance-generator)
+  Animate static full-body character images into trending dance routines (e.g., TikTok dances) while preserving body proportions and clothing details.
+
+- [**AI Kiss Generator**](https://hailuoai.video/tools/ai-kiss-generator)
+  Generates romantic or cinematic kissing scenes between characters based on input images or prompts, focusing on facial proximity and interaction realism.
+
+- [**AI Kungfu & Fight Generator**](https://hailuoai.video/tools/ai-kungfu-generator)
+  Creates dynamic combat and martial arts sequences. Optimized for fast-paced action, choreography, and physics-based interactions in fight scenes.
+
+- [**AI Muscle & Body Transformation**](https://hailuoai.video/tools/ai-muscle-generator)
+  An AI morphing tool that visualizes body transformations, specifically focused on muscle growth and fitness progression effects.
+
+## Commercial & Creator Utilities
+
+> Tools optimized for marketing, advertising, and high-volume content production.
+
+- [**AI Ad Generator**](https://hailuoai.video/tools/ai-ad-generator)
+  Automatically generates video advertisements based on product descriptions and brand assets. Includes templates for e-commerce and social media ads.
+
+- [**AI Product Video Maker**](https://hailuoai.video/tools/ai-product-video-maker)
+  Turns static product photography into cinematic commercial videos, adding camera movement, lighting effects, and background context suitable for listings.
+
+- [**AI Shorts & Reels Generator**](https://hailuoai.video/tools/ai-shorts-generator)
+  A bulk creation tool for vertical short-form video content (9:16 aspect ratio), optimized for YouTube Shorts, Instagram Reels, and TikTok algorithm requirements.
+
+## Style Transfer & FX Tools
+
+- [**AI Video Style Transfer**](https://hailuoai.video/ai-video-style-transfer)
+  Applies artistic styles (e.g., Anime, Claymation, Oil Painting) to existing footage without losing the original composition or movement.
+
+- [**AI Gender Swap**](https://hailuoai.video/ai-video-landing/ai-gender-swap)
+  A facial transformation tool that realistically alters the gender presentation of subjects within a video while maintaining expression consistency.
+
+- [**AI Animation Generator**](https://hailuoai.video/tools/ai-animation-generator)
+  Converts real-life footage or text prompts into 2D or 3D animation styles.
+
+## Seasonal & Niche Generators
+
+- [**AI Christmas & Santa Generator**](https://hailuoai.video/tools/ai-santa-video-generator)
+  Generates personalized holiday greetings and videos featuring Santa Claus, Grinch, or festive decorations.
+  
+- [**AI Baby & Pet Video Maker**](https://hailuoai.video/ai-baby-story-video)
+  Specialized tools for creating "future baby" predictions or animating pet photos into cute video narratives.
+
+## Models & Developer Resources
+
+- [**Hailuo 2.3 Model Info**](https://hailuoai.video/tools/hailuo-2-3-model)
+  Technical details and capabilities of the Hailuo 2.3 video generation model.
+  
+- [**Nano Banana Pro Info**](https://hailuoai.video/tools/nano-banana-pro)
+  Details on the Nano Banana Pro image model capabilities and usage.
+
+- [**Hailuo AI Agent Platform**](https://hailuoai.video/agent)
+  Access to the agent-building ecosystem for developers and power users to create custom video workflows.

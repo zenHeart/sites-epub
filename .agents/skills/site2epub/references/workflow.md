@@ -27,6 +27,23 @@ python3 -m sites_epub changelog            # 本地：由 routes.json git 历史
 - 已有书中混入的 API 组/页，增量时剔除路由（gemini 的 `Gemini API Reference` 组与 `gemini-api/docs/*` API 页已剔，仅留 AI Studio 产品页）。
 - 例外：产品自身的开发者文档若就是产品主体（如 Coze 的「搭建 Agent」文档），照收——判据仍是「用产品」而非「调模型 API」。
 
+## 国内厂商产品信源注册表（2026-09-16 E 层实测，重抓前先复测）
+
+**已建**：Coze（docs.coze.cn，763ch）· Kimi（kimi.com+blog，21ch）· 海螺 Hailuo（hailuoai.com llms，16ch；.video 同源勿重复收）。
+**受阻（产品端无可抓文档，证据）**：
+
+| 厂商 | 产品 | 阻断证据 | 复测入口 |
+|---|---|---|---|
+| 智谱 | 清言 / Z.ai chat | chatglm.cn、z.ai 均 SPA 0 链；docs.z.ai 是开发者 API 文档（范围出局） | chatglm.cn/help |
+| 腾讯 | 元宝 / ima / 元器 | 元宝 fetch 失败；ima.qq.com/help 404；元器 docs 2.6KB 壳；混元文档 EdgeOne 反爬挑战 | yuanbao/ima help |
+| 字节 | 豆包 / 即梦 / Trae | 豆包·即梦 SPA；Trae docs Modern.js 客户端路由（1.8MB 0 锚点） | docs.trae.ai 结构变更 |
+| 百度 | 文心 / 秒哒 / 智能体 | yiyan、agents SPA；miaoda 102 链全是 /apps 用户应用展示非文档 | agents.baidu.com |
+| 阿里 | 通义 / 百炼 | tongyi 页面仅 3 链；百炼与灵码正文页为阿里云 WAF `_____tmd_____/punish` 惩罚页（llms.txt 反而静态可读，属诱饵） | help.aliyun.com 对应产品 |
+| 快手 | 可灵 | www.klingai.com llms 12 链但正文页全为同尺寸 SPA 壳（20KB）；hailuoai.video 同 | app 页 SSR 化 |
+| 讯飞/360/阶跃/DeepSeek chat | 星火/纳米/跃问/对话 | 均 SPA 0 链 | 各自 help 域 |
+
+**共性**：国内产品站普遍客户端渲染 + WAF/反爬；`llms.txt 可读 ≠ 正文可抓`（阿里云陷阱）。新增国内 vendor 必须先抽样 3 页正文验证非壳，再全量抓。
+
 ## 提交
 
 提交：`catalog.json`、`vendors/<id>/vendor.json`、`fingerprints.json`、`corpus/pages`、`corpus/routes.json`、`corpus/image-map.json`、压缩后的图片。
