@@ -92,7 +92,7 @@ This example creates a marketplace with one plugin: a `quality-review` skill for
   </Step>
 
   <Step title="Add and install">
-    From the directory that contains `my-marketplace`, start Claude Code and run the following commands. The install command opens a plugin details view where you select an installation scope to confirm the install. Check the install summary: if it reports `Run /reload-plugins to activate.`, run that command.
+    From the directory that contains `my-marketplace`, start Claude Code and run the following commands. The install command opens a plugin details view where you select an installation scope to confirm the install. Check the install summary: if it reports `Run /reload-plugins to activate.`, see [Apply plugin changes without restarting](/docs/en/discover-plugins#apply-plugin-changes-without-restarting).
 
     ```shell theme={null}
     /plugin marketplace add ./my-marketplace
@@ -156,16 +156,16 @@ Each plugin entry needs at minimum a `name` and a `source` that tells Claude Cod
 
 ### Required fields
 
-| Field     | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Example        |
-| :-------- | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------- |
-| `name`    | string | Marketplace identifier in kebab-case, with no spaces, control characters, or bidirectional-formatting characters. This is public-facing: users see it when installing plugins (for example, `/plugin install my-tool@your-marketplace`). Each user can register only one marketplace per name: when they add a second marketplace with the same name, Claude Code replaces the first. To publish multiple plugins under one marketplace name, list them all in a [single `marketplace.json`](#create-the-marketplace-file). | `"acme-tools"` |
-| `owner`   | object | Marketplace maintainer information ([see fields below](#owner-fields))                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                |
-| `plugins` | array  | List of available plugins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | See below      |
+| Field     | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Example                               |
+| :-------- | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------ |
+| `name`    | string | Marketplace identifier in kebab-case, with no spaces, control characters, or bidirectional-formatting characters. This is public-facing: users see it when installing plugins (for example, `/plugin install my-tool@your-marketplace`). Each user can register only one marketplace per name: when they add a second marketplace with the same name, Claude Code replaces the first. To publish multiple plugins under one marketplace name, list them all in a [single `marketplace.json`](#create-the-marketplace-file). | `"acme-tools"`                        |
+| `owner`   | object | Marketplace maintainer information. See [Owner fields](#owner-fields)                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                                       |
+| `plugins` | array  | List of available plugins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | See [Plugin entries](#plugin-entries) |
 
 <Note>
-  **Reserved names**: the following marketplace names are reserved for official Anthropic use and can't be used by third-party marketplaces: `claude-code-marketplace`, `claude-code-plugins`, `claude-plugins-official`, `claude-plugins-community`, `claude-community`, `anthropic-marketplace`, `anthropic-plugins`, `agent-skills`, `anthropic-agent-skills`, `knowledge-work-plugins`, `life-sciences`, `claude-for-legal`, `claude-for-financial-services`, `financial-services-plugins`, `first-party-plugins`, `healthcare`. Names that impersonate official marketplaces, such as `official-claude-plugins` or `anthropic-plugins-v2`, are also blocked. Reserving these names prevents a third-party marketplace from presenting itself as an Anthropic-published source.
+  **Reserved names**: the following marketplace names are reserved for official Anthropic use and can't be used by third-party marketplaces: `claude-code-marketplace`, `claude-code-plugins`, `claude-plugins-official`, `claude-plugins-community`, `claude-community`, `anthropic-marketplace`, `anthropic-plugins`, `agent-skills`, `anthropic-agent-skills`, `knowledge-work-plugins`, `life-sciences`, `claude-for-legal`, `claude-for-financial-services`, `financial-services-plugins`, `first-party-plugins`, `claude-tag-plugins`, `healthcare`. Names that impersonate official marketplaces, such as `official-claude-plugins` or `anthropic-plugins-v2`, are also blocked. Reserving these names prevents a third-party marketplace from presenting itself as an Anthropic-published source.
 
-  Claude Code re-checks reserved names every time it loads a marketplace, not only when you add one. A marketplace that was registered under one of these names before the name became reserved stops loading and reports that it is [registered from an untrusted source](/docs/en/errors#marketplace-is-registered-from-an-untrusted-source). Remove that marketplace and re-add it from the official Anthropic source. A third-party marketplace affected by a newly reserved name loads again as soon as you re-add it under a different name. Before v2.1.205, `first-party-plugins` and `healthcare` weren't reserved, and a marketplace already registered under a reserved name kept loading.
+  Claude Code re-checks reserved names every time it loads a marketplace, not only when you add one. A marketplace that was registered under one of these names before the name became reserved stops loading and reports that it is [registered from an untrusted source](/docs/en/errors#marketplace-is-registered-from-an-untrusted-source). Remove that marketplace and re-add it from the official Anthropic source. A third-party marketplace affected by a newly reserved name loads again as soon as you re-add it under a different name. Before v2.1.205, `first-party-plugins` and `healthcare` weren't reserved, and a marketplace already registered under a reserved name kept loading. Before v2.1.265, `claude-tag-plugins` wasn't reserved.
 </Note>
 
 ### Owner fields
@@ -206,7 +206,7 @@ Each plugin entry in the `plugins` array describes a plugin and where to find it
 
 | Field            | Type    | Description                                                                                                                                                                                                                                                                                                                                                  |
 | :--------------- | :------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `displayName`    | string  | Human-readable name shown in UI surfaces. Falls back to `name` when omitted. May contain spaces and any casing. Not used for namespacing or lookup.                                                                                                                                                                                                          |
+| `displayName`    | string  | Human-readable name shown in UI surfaces. When neither the entry nor the plugin's `plugin.json` sets one, users see the plugin's `name`. May contain spaces and any casing. Not used for namespacing or lookup.                                                                                                                                              |
 | `description`    | string  | Brief plugin description                                                                                                                                                                                                                                                                                                                                     |
 | `version`        | string  | Plugin version. If set (here or in `plugin.json`), the plugin is pinned to this string and users only receive updates when it changes. A plugin with a [`command` source](#command-sources) isn't pinned by either field. If set in neither place, the version comes from the next source in [version management](/docs/en/plugins-reference#version-management). |
 | `author`         | object  | Plugin author information (`name` required; `email` and `url` optional)                                                                                                                                                                                                                                                                                      |
@@ -220,6 +220,13 @@ Each plugin entry in the `plugins` array describes a plugin and where to find it
 | `strict`         | boolean | Controls whether `plugin.json` is the authority for component definitions (default: true). See [Strict mode](#strict-mode) below.                                                                                                                                                                                                                            |
 | `relevance`      | object  | Signals that tell Claude Code when to suggest this plugin to users. Takes effect only for marketplaces an administrator allowlists in managed settings. See [Recommend plugins for your org](/docs/en/plugin-relevance).                                                                                                                                          |
 | `defaultEnabled` | boolean | Whether the plugin is enabled after install (default: true). Set to `false` to install the plugin disabled until the user opts in. Takes precedence over the same field in the plugin's `plugin.json`. See [Default enablement](/docs/en/plugins-reference#default-enablement).                                                                                   |
+
+Both the entry and the plugin's own `plugin.json` can set the display fields `displayName`, `description`, `author`, `homepage`, `repository`, `license`, and `keywords`. In plugin listings and details, before and after install:
+
+* For a field you set on the entry, users see the entry's value, even when `plugin.json` sets a different one.
+* For a field the entry leaves unset, users see the `plugin.json` value.
+
+Before install, Claude Code can read `plugin.json` only for entries with a [relative-path source](#relative-paths), whose plugin files live inside the marketplace itself. For an entry with any other source type, users see only the entry's own fields until they install the plugin.
 
 **Component configuration fields:**
 
@@ -283,7 +290,7 @@ For plugins in the same repository, use a path starting with `./`:
 }
 ```
 
-Paths resolve relative to the marketplace root, which is the directory containing `.claude-plugin/`. In the example above, `./plugins/my-plugin` points to `<repo>/plugins/my-plugin`, even though `marketplace.json` lives at `<repo>/.claude-plugin/marketplace.json`. Don't use `../` to reference paths outside the marketplace root.
+Paths resolve relative to the marketplace root, which is the directory containing `.claude-plugin/`. The source `./plugins/my-plugin` therefore points to `<repo>/plugins/my-plugin`, even though `marketplace.json` lives at `<repo>/.claude-plugin/marketplace.json`. Don't use `../` to reference paths outside the marketplace root. On macOS and Linux, Claude Code refuses an entry path with a backslash anywhere past the leading `./`, so write the separators as `/` on every platform.
 
 A bare name is a single directory name with no `/`, such as `"formatter"`. To write bare names instead of `./` paths, set [`metadata.pluginRoot`](#optional-fields) to the directory they resolve under. With `"pluginRoot": "./plugins"`, Claude Code resolves `"source": "formatter"` to `./plugins/formatter`. Requires Claude Code v2.1.239 or later.
 
@@ -561,7 +568,9 @@ Claude Code doesn't run a `headersHelper` command, or drops headers that came fr
 
 #### How users accept a headersHelper command
 
-A user accepts a plugin entry's command each time they install or update that one plugin by itself, from the plugin's own view in `/plugin` or with `claude plugin install` or `claude plugin update`. Claude Code shows the command and the archive URL, and runs the command only after the user accepts. In a non-interactive shell, pass [`--yes`](/docs/en/plugins-reference#plugin-install) to accept it.
+A user accepts a plugin entry's command each time they install or update that one plugin by itself, from the plugin's own view in `/plugin` or with `claude plugin install` or `claude plugin update`. Claude Code shows the command and the archive URL, and runs the command only after the user accepts.
+
+In a non-interactive shell, pass [`--yes`](/docs/en/plugins-reference#plugin-install) to accept the command. To accept only the command that a previous `--json` run displayed, pass [`--accept-command`](/docs/en/plugins-reference#plugin-install) with the `sha256` the run reported.
 
 Claude Code runs only the command it showed, for the archive URL it showed. If the entry's command or archive URL changed in between, Claude Code refuses the install or update. A change in the query string alone doesn't count.
 
@@ -632,7 +641,8 @@ Claude Code doesn't support link mode on Windows and refuses to install a link-m
 
 Claude Code runs your command on the user's machine, so it binds every run to the user's explicit acceptance:
 
-* When users install the plugin from its details screen in `/plugin`, or install or update it with `claude plugin install` or `claude plugin update` in an interactive terminal, Claude Code shows them the exact command string first and records the accepted command for that installation. A `claude plugin update` that can proceed on the recorded acceptance of the same command shows nothing. In a non-interactive shell, such as a provisioning script, pass `--yes` to `claude plugin install` or `claude plugin update` to accept the command it prints.
+* When users install the plugin from its details screen in `/plugin`, or install or update it with `claude plugin install` or `claude plugin update` in an interactive terminal, Claude Code shows them the exact command string first and records the accepted command for that installation. A `claude plugin update` that can proceed on the recorded acceptance of the same command shows nothing.
+* In a non-interactive shell, such as a provisioning script, pass `--yes` to `claude plugin install` or `claude plugin update` to accept the command it prints. To accept only the command that a previous `--json` run displayed, pass [`--accept-command`](/docs/en/plugins-reference#plugin-install) with the `sha256` the run reported.
 * Every other path runs only the command the user already accepted. This includes updates started from `/plugin` and the background runs described in [When Claude Code re-runs the command](#when-claude-code-re-runs-the-command). When none was accepted, Claude Code refuses to run the command and tells the user how to review it. Claude Code never installs a command-sourced plugin as a dependency of another plugin, so users install it themselves first.
 * If you change the entry's `command`, or switch its `mode`, users keep the version they already have and Claude Code stops re-running the command. In interactive sessions, the `/plugin` Errors tab shows the new command until the user reviews and accepts it by running `claude plugin update <plugin>@<marketplace>`.
 
@@ -761,7 +771,7 @@ Any git hosting service works, such as GitLab, Bitbucket, and self-hosted server
 
 ### Private repositories
 
-Claude Code supports installing plugins from private repositories. If you distribute your marketplace through [**Organization settings > Plugins**](https://claude.ai/admin-settings/plugins) instead, your git credentials aren't involved: organization sync reads the marketplace repository through the Claude GitHub App or your organization's GitHub Enterprise App, and a plugin source it can't authenticate to must be public. See [Distribute through organization settings](#distribute-through-organization-settings) for the full rules.
+Claude Code supports installing plugins from private repositories. If you distribute your marketplace through [**Organization settings > Plugins**](https://claude.ai/admin-settings/plugins) instead, your git credentials aren't involved: organization sync reads the marketplace repository through your organization's GitHub or GitLab connection on claude.ai. See [Distribute through organization settings](#distribute-through-organization-settings) for which plugin sources can be private.
 
 #### Commands you run
 
@@ -804,12 +814,16 @@ The rewrite stores the token in plaintext in your gitconfig, so use a token with
 
 If you distribute plugins through [**Organization settings > Plugins**](https://claude.ai/admin-settings/plugins) on a Team or Enterprise plan, these source rules apply:
 
-* The marketplace repository must be private or internal. Organization sync reads it through the Claude GitHub App or your organization's GitHub Enterprise App.
+* On github.com and gitlab.com, the marketplace repository must be private or internal. Organization sync reads the repository through the connection that matches its host:
+  * **github.com**: the Claude GitHub App
+  * **Your GitHub Enterprise Server host**: your organization's [GitHub Enterprise App](/docs/en/github-enterprise-server#admin-setup)
+  * **gitlab.com or your self-managed GitLab instance**: the access token in your organization's [GitLab configuration](#sync-a-gitlab-hosted-marketplace) for that host
 * Each plugin source must be of type `github`, `url`, or `git-subdir`, or a [relative path](#relative-paths) that starts with `./`. If you list a plugin by bare name under `metadata.pluginRoot`, organization sync rejects it as an unsupported source, so write the path out, such as `./plugins/deploy-tools`.
-* A plugin source can be private in two cases:
+* A plugin source can be private in three cases:
   * A github.com source that shares the marketplace repository's owner
   * A source on your organization's GitHub Enterprise host with the GHE App installed on the repository
-* Organization sync fetches every other source without credentials, so github.com repositories under a different owner and repositories on other hosts, such as GitLab or Bitbucket, must be public.
+  * A `url` or `git-subdir` source on the same GitLab host as the marketplace repository. On gitlab.com, the source must also be under the same top-level group or user namespace as the marketplace repository.
+* Any other plugin source must be a public repository on github.com, gitlab.com, or bitbucket.org, which organization sync fetches without credentials. Organization sync rejects plugin sources on hosts these rules don't cover.
 
 See [Manage plugins for your organization](https://support.claude.com/en/articles/13837433) for the admin workflow.
 
@@ -823,6 +837,12 @@ For example, this `marketplace.json` plugin entry references a plugin you commit
   "source": "./plugins/deploy-tools"
 }
 ```
+
+#### Sync a GitLab-hosted marketplace
+
+To sync a marketplace from gitlab.com or a self-managed GitLab instance, an [Owner](/docs/en/server-managed-settings#access-control) first adds a GitLab configuration for that host at [**Organization settings > Claude Code**](https://claude.ai/admin-settings/claude-code). GitLab configurations are in public beta and apply only to plugin marketplace sync. Adding one doesn't make GitLab repositories available to [cloud sessions](/docs/en/claude-code-on-the-web#limitations). See [Manage plugins for your organization](https://support.claude.com/en/articles/13837433) for the setup steps.
+
+When you add the marketplace, enter the project's HTTPS URL, such as `https://gitlab.example.com/platform/claude-plugins`. Projects in nested subgroups work. Organization sync reads the project's default branch. If you turn on **Sync automatically**, only pushes to the default branch start a sync.
 
 #### Keep executables out of the top-level bin directory
 
@@ -1170,7 +1190,7 @@ Earlier versions of Claude Code ignore the `renames` field and report `plugin-no
 
 ## Validation and testing
 
-Test your marketplace before sharing.
+Test your marketplace before sharing. Validation checks file structure; to test whether a plugin changes what Claude does on realistic prompts, run its eval suite with [`claude plugin eval`](/docs/en/plugin-evals) before you publish a new version.
 
 From your marketplace directory, validate the JSON syntax:
 
@@ -1349,7 +1369,7 @@ From a marketplace directory, Claude Code doesn't open the plugins' skill, agent
 | `No manifest found in directory. Expected .claude-plugin/marketplace.json or .claude-plugin/plugin.json` | The directory you named has no `.claude-plugin/marketplace.json` or `plugin.json`, and no skill, agent, or command files to check   | Run from the marketplace root, or create `.claude-plugin/marketplace.json` with the required fields                                                               |
 | `Invalid JSON syntax: Unexpected token...`                                                               | JSON syntax error in marketplace.json                                                                                               | Check for missing commas, extra commas, or unquoted strings                                                                                                       |
 | `Duplicate plugin name "x" found in marketplace`                                                         | Two plugins share the same name                                                                                                     | Give each plugin a unique `name` value                                                                                                                            |
-| `plugins[0].source: Path contains ".."`                                                                  | Source path contains `..`                                                                                                           | Use paths relative to the marketplace root without `..`. See [Relative paths](#relative-paths)                                                                    |
+| `plugins[0].source: Path contains ".."`                                                                  | A segment of the source path is `..`                                                                                                | Use paths relative to the marketplace root without `..` segments. See [Relative paths](#relative-paths)                                                           |
 | `Marketplace name cannot contain control or bidirectional-formatting characters`                         | The marketplace `name` contains a Unicode bidirectional-formatting character or a control character, such as an escape or a newline | Remove the character from the name. Before v2.1.247, these characters produced the `Marketplace name impersonates an official Anthropic/Claude marketplace` error |
 | `Plugin name cannot contain control or bidirectional-formatting characters`                              | A plugin `name` contains a Unicode bidirectional-formatting character or a control character, such as an escape or a newline        | Remove the character from the name. Before v2.1.247, Claude Code didn't run this check                                                                            |
 
@@ -1473,7 +1493,7 @@ export CLAUDE_CODE_PLUGIN_GIT_TIMEOUT_MS=300000  # 5 minutes
 
 ### Plugins with relative paths fail in URL-based marketplaces
 
-**Symptoms**: Added a marketplace via URL (such as `https://example.com/marketplace.json`), but plugins with relative path sources like `"./plugins/my-plugin"` fail to install with "path not found" errors.
+**Symptoms**: Added a marketplace via a URL such as `https://example.com/marketplace.json`, but plugins with relative path sources like `"./plugins/my-plugin"` fail to install with `its marketplace entry path does not stay inside the marketplace directory`. Already-installed plugins fail to load with `Plugin source path refused`. Both messages have an [error reference entry](/docs/en/errors#marketplace-entry-path-does-not-stay-inside-the-marketplace-directory).
 
 **Cause**: adding a URL-based marketplace downloads only the `marketplace.json` file itself, and Claude Code doesn't fetch plugin files by relative path from that server. Relative paths in the marketplace entry reference files on the remote server that were not downloaded.
 

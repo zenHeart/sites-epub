@@ -96,6 +96,7 @@ For benchmark results and demos, see the [announcement](https://x.ai/news/grok-4
 ## Where it runs
 
 * **xAI API**: get a key from the [console](https://console.x.ai/?utm_source=docs\&utm_medium=referral\&utm_campaign=developers-grok-4-6\&utm_content=console-home)
+* **US regional endpoint**: currently the only model served at `https://us.api.x.ai/v1`, which keeps inference in the United States, with token usage priced at a 10% premium; see [Regional Endpoints](/developers/advanced-api-usage/regions)
 * **Grok Build**: the default model of the [coding agent](/build/overview), on the API and CLI
 * **Cursor**: available on all plans
 * **Model gateways**: OpenRouter, Vercel, and Cloudflare

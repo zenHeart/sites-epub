@@ -25,31 +25,26 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/api/environments"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/api/environments"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
-      <link rel="alternate" hreflang="en"
-          href="https://ai.google.dev/api/environments" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/api/environments" /><link rel="alternate" hreflang="bn"
-          href="https://ai.google.dev/api/environments?hl=bn" /><link rel="alternate" hreflang="fa"
-          href="https://ai.google.dev/api/environments?hl=fa" /><link rel="alternate" hreflang="ru"
-          href="https://ai.google.dev/api/environments?hl=ru" /><link rel="alternate" hreflang="sq"
-          href="https://ai.google.dev/api/environments?hl=sq" /><title>Gemini Environments API &nbsp;|&nbsp; Gemini API &nbsp;|&nbsp; Google AI for Developers</title>
+      <title>Gemini Environments API &nbsp;|&nbsp; Gemini API &nbsp;|&nbsp; Google AI for Developers</title>
 
 <meta property="og:title" content="Gemini Environments API &nbsp;|&nbsp; Gemini API &nbsp;|&nbsp; Google AI for Developers"><meta property="og:url" content="https://ai.google.dev/api/environments"><meta property="og:image" content="https://ai.google.dev/static/site-assets/images/share-gemini-api-2026-07.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image">
   
-
-
-
-
-
-
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet" data-page-link>
+    
+    
+    
+    
+    
+    
+    
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" data-page-link>
 
     </head>
   <body class="gemini-api docs color-scheme--light"
@@ -858,21 +853,13 @@
         <span class="devsite-nav-text" tooltip>Real time APIs</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/api/live"
+  <li class="devsite-nav-item"><a href="/api/live"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Live API</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Live API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/api/live_music"
+  <li class="devsite-nav-item"><a href="/api/live_music"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Live Music API</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Live Music API</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -883,37 +870,21 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Model API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/agents"
+  <li class="devsite-nav-item"><a href="/api/agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Agents</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/webhooks"
+  <li class="devsite-nav-item"><a href="/api/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/triggers"
+  <li class="devsite-nav-item"><a href="/api/triggers"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Triggers</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Triggers</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/environments"
+  <li class="devsite-nav-item"><a href="/api/environments"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Environments</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Environments</span></a></li>
 
   <li class="devsite-nav-item"><a href="/api/batch-api"
         class="devsite-nav-title"
@@ -1059,7 +1030,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1201,7 +1172,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1211,7 +1182,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -1247,1421 +1218,1571 @@
   
     
     
-<p>Environments provide isolated execution contexts for running agent code, tools, and services securely.</p>
-<div class="markdown-actions" style="margin-top: 16px; margin-bottom: 24px;">
-<a class="md-button" href="/static/api/environments.md.txt" target="_blank">View as markdown</a>
-<a class="md-button" href="/static/api/interactions.openapi.json" target="_blank">View the OpenAPI Spec</a>
-</div>
-<aside class="note">
-<p>This API is in Beta. Endpoints are under <code translate="no" dir="ltr">/v1beta/</code>.</p>
-</aside>
+    <p>Environments provide isolated execution contexts for running agent code, tools, and services securely.</p>
+    <div class="markdown-actions" style="margin-top: 16px; margin-bottom: 24px;">
+        <a href="/static/api/environments.md.txt" class="md-button" target="_blank">View as markdown</a>
+        <a href="/static/api/interactions.openapi.json" class="md-button" target="_blank">View the OpenAPI Spec</a>
+    </div>
+    <aside class="note">
+        <p>This API is in Beta. Endpoints are under <code translate="no" dir="ltr">/v1beta/</code>.</p>
+    </aside>
+    
 
-<div class="prototype" itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h2 id="CreateEnvironment" data-text="CreateEnvironment" tabindex="-1">CreateEnvironment</h2>
-<div>
-<span class="endpoint">
-<span class="http-method post">
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject" class="prototype">
+    <h2 id="CreateEnvironment" data-text="CreateEnvironment" tabindex="-1">CreateEnvironment</h2>
+    <div>
+        <span class="endpoint">
+            <span class="http-method post">
                 post
             </span>
-</span>
-<span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
+        </span>
+
+        <span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
             https://generativelanguage.googleapis.com/v1beta/environments
         </span>
+    </div>
+
+    <section id="description">
+        <p>Creates an environment.</p>
+    </section>
+    <section class="prototype">
+        <ul class="toc">
+<li><a href="#CreateEnvironment.request_body">Request body</a></li>            <li><a href="#CreateEnvironment.response">Response</a></li>
+        </ul>
+        <div class="column-container request-section" style="margin-top: 48px;">
+            <div class="reference">
+                <section id="CreateEnvironment.request_body">
+                    <h3 id="request-body" data-text="Request body" tabindex="-1">Request body</h3>
+                    <p>The request body contains data with the following structure:</p>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">from_environment</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The source environment to copy/fork from.
+Format: `environments/{environment_id}` or `{environment_id}`.
+When specified, `sources` and `env` must be empty.</p>
+    </div>
 </div>
-<section id="description">
-<p>Creates an environment.</p>
+
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">network</span>
+        <span class="field-type">EnvironmentNetworkEgressAllowlist or enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>Network configuration for the environment.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >Outbound networking configuration for the sandbox. Accepts an object with an 'allowlist' array to restrict traffic, or the string 'disabled' to turn off all network access. Omit entirely to allow all outbound traffic with no header injection.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-types" data-text="Possible Types" tabindex="-1">Possible Types</h4>
+            <details class="subtype-details">
+                <summary class="subtype-summary">
+                    <span style="font-weight: 500;">object</span>
+                </summary>
+                <div class="subtype-content">
+                    <p>Outbound networking configuration for the sandbox. When specified, restricts which external domains the sandbox can reach. Omit entirely to allow all outbound traffic with no header injection.</p>
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">allowlist</span>
+        <span class="field-type">array (AllowlistEntry)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>List of allowed outbound domains. Only requests to listed domains are permitted. Use [{'domain': '*'}] to allow all domains while still injecting headers on specific ones.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >A single domain allowlist rule with optional header injection.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">domain</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Domain to allow outbound requests to. Supports wildcards (e.g. '*.googleapis.com'). Use '*' to allow all domains.</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">transform</span>
+        <span class="field-type">array (object) or object</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Headers to inject on all outbound requests matching this domain. Accepts a single dict or a list of dicts. The egress proxy injects these automatically.</p>
+    </div>
+</div>
+
+        </div>
+    </div>
 </section>
-<section class="prototype">
-<ul class="toc">
-<li><a href="#CreateEnvironment.request_body">Request body</a></li> <li><a href="#CreateEnvironment.response">Response</a></li>
-</ul>
-<div class="column-container request-section" style="margin-top: 48px;">
-<div class="reference">
-<section id="CreateEnvironment.request_body">
-<h3 id="request-body" data-text="Request body" tabindex="-1">Request body</h3>
-<p>The request body contains data with the following structure:</p>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">network</span>
-<span class="field-type">EnvironmentNetworkEgressAllowlist or enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>Network configuration for the environment.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">Outbound networking configuration for the sandbox. Accepts an object with an 'allowlist' array to restrict traffic, or the string 'disabled' to turn off all network access. Omit entirely to allow all outbound traffic with no header injection.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-types" data-text="Possible Types" tabindex="-1">Possible Types</h4>
-<details class="subtype-details">
-<summary class="subtype-summary">
-<span style="font-weight: 500;">object</span>
-</summary>
-<div class="subtype-content">
-<p>Outbound networking configuration for the sandbox. When specified, restricts which external domains the sandbox can reach. Omit entirely to allow all outbound traffic with no header injection.</p>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">allowlist</span>
-<span class="field-type">array (AllowlistEntry)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>List of allowed outbound domains. Only requests to listed domains are permitted. Use [{'domain': '*'}] to allow all domains while still injecting headers on specific ones.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">A single domain allowlist rule with optional header injection.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">domain</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Domain to allow outbound requests to. Supports wildcards (e.g. '*.googleapis.com'). Use '*' to allow all domains.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">transform</span>
-<span class="field-type">array (object) or object</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Headers to inject on all outbound requests matching this domain. Accepts a single dict or a list of dicts. The egress proxy injects these automatically.</p>
-</div>
-</div>
-</div>
-</div>
+
+    </div>
+</details>
+
+                </div>
+            </details>
+            <details class="subtype-details">
+                <summary class="subtype-summary">
+                    <span style="font-weight: 500;">string</span>
+                </summary>
+                <div class="subtype-content">
+                    <p>Turns all network off.</p>
+                </div>
+            </details>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-values" data-text="Possible values" tabindex="-1">Possible values</h4>
+            <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+                <li style="margin-bottom: 4px;">
+                    <code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
+<p style="margin-left: 16px; font-size: 13px; color: var(--devsite-text-secondary);">Turns all network off.</p>                </li>
+            </ul>
+        </div>
+    </div>
 </section>
-</div>
+
+    </div>
 </details>
+
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">sources</span>
+        <span class="field-type">array (Source)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>Sources to be mounted into the environment.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >A source to be mounted into the environment.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_1" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">content</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>The inline content if `type` is `INLINE`.</p>
+    </div>
 </div>
-</details>
-<details class="subtype-details">
-<summary class="subtype-summary">
-<span style="font-weight: 500;">string</span>
-</summary>
-<div class="subtype-content">
-<p>Turns all network off.</p>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">encoding</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional encoding for inline content (e.g. `base64`).</p>
+    </div>
 </div>
-</details>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-values" data-text="Possible values" tabindex="-1">Possible values</h4>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
-<p style="margin-left: 16px; font-size: 13px; color: var(--devsite-text-secondary);">Turns all network off.</p> </li>
-</ul>
-</div>
-</div>
-</section>
-</div>
-</details>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">sources</span>
-<span class="field-type">array (Source)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>Sources to be mounted into the environment.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">A source to be mounted into the environment.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_1" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">content</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>The inline content if `type` is `INLINE`.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">encoding</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional encoding for inline content (e.g. `base64`).</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">source</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>The source of the environment.
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">source</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>The source of the environment.
 For Cloud Storage, this is the Cloud Storage path.
 For GitHub, this is the GitHub path.</p>
+    </div>
 </div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">target</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Where the source should appear in the environment.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">target</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Where the source should appear in the environment.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">type</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>No description provided.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">type</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>No description provided.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">gcs</code>
-<p style="margin-left: 16px; font-size: 13px;">A Cloud Storage bucket.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">inline</code>
-<p style="margin-left: 16px; font-size: 13px;">Inline content.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">repository</code>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">gcs</code>
+<p style="margin-left: 16px; font-size: 13px;">A Cloud Storage bucket.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">inline</code>
+<p style="margin-left: 16px; font-size: 13px;">Inline content.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">repository</code>
 <p style="margin-left: 16px; font-size: 13px;">A generic repository. The protocol prefix in the source URL
-identifies the provider (e.g., github://, gcs://).</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">skill_registry</code>
-<p style="margin-left: 16px; font-size: 13px;">A skill resource from the Skill Registry Service.
-Skill: projects/{project}/locations/{location}/skills/{skill}
-SkillRevision:
-projects/{project}/locations/{location}/skills/{skill}/revisions/{revision}
-Support mounting all skills under a project:
-projects/{project}/locations/{location}/skills.</p> </li>
-</ul>
+identifies the provider (e.g., github://, gcs://).</p>            </li>
+        </ul>
+    </div>
 </div>
-</div>
-</div>
-</div>
+
+        </div>
+    </div>
 </section>
-</div>
+
+    </div>
 </details>
-</section>
-<section id="CreateEnvironment.response">
-<h3 id="response" data-text="Response" tabindex="-1">Response</h3>
-<p>If successful, the response body contains data with the following structure:</p>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">created</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The time at which the environment was created in ISO 8601 format
+
+                </section>
+                <section id="CreateEnvironment.response">
+                    <h3 id="response" data-text="Response" tabindex="-1">Response</h3>
+                    <p>If successful, the response body contains data with the following structure:</p>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">created</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The time at which the environment was created in ISO 8601 format
 (YYYY-MM-DDThh:mm:ssZ).</p>
+    </div>
 </div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">file_count</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The number of files in the environment, output only.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">file_count</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The number of files in the environment, output only.</p>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">id</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Required. Output only. The ID of the environment.</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">id</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Required. Output only. The ID of the environment.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">last_accessed</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The time at which the environment was last accessed in ISO 8601 format
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">last_accessed</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The time at which the environment was last accessed in ISO 8601 format
 (YYYY-MM-DDThh:mm:ssZ).</p>
+    </div>
 </div>
+
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">network</span>
+        <span class="field-type">EnvironmentNetworkEgressAllowlist or enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>Network configuration for the environment.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >Outbound networking configuration for the sandbox. Accepts an object with an 'allowlist' array to restrict traffic, or the string 'disabled' to turn off all network access. Omit entirely to allow all outbound traffic with no header injection.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-types_1" data-text="Possible Types" tabindex="-1">Possible Types</h4>
+            <details class="subtype-details">
+                <summary class="subtype-summary">
+                    <span style="font-weight: 500;">object</span>
+                </summary>
+                <div class="subtype-content">
+                    <p>Outbound networking configuration for the sandbox. When specified, restricts which external domains the sandbox can reach. Omit entirely to allow all outbound traffic with no header injection.</p>
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">allowlist</span>
+        <span class="field-type">array (AllowlistEntry)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>List of allowed outbound domains. Only requests to listed domains are permitted. Use [{'domain': '*'}] to allow all domains while still injecting headers on specific ones.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >A single domain allowlist rule with optional header injection.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_2" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">domain</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Domain to allow outbound requests to. Supports wildcards (e.g. '*.googleapis.com'). Use '*' to allow all domains.</p>
+    </div>
 </div>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">network</span>
-<span class="field-type">EnvironmentNetworkEgressAllowlist or enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>Network configuration for the environment.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">Outbound networking configuration for the sandbox. Accepts an object with an 'allowlist' array to restrict traffic, or the string 'disabled' to turn off all network access. Omit entirely to allow all outbound traffic with no header injection.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-types_1" data-text="Possible Types" tabindex="-1">Possible Types</h4>
-<details class="subtype-details">
-<summary class="subtype-summary">
-<span style="font-weight: 500;">object</span>
-</summary>
-<div class="subtype-content">
-<p>Outbound networking configuration for the sandbox. When specified, restricts which external domains the sandbox can reach. Omit entirely to allow all outbound traffic with no header injection.</p>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">allowlist</span>
-<span class="field-type">array (AllowlistEntry)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>List of allowed outbound domains. Only requests to listed domains are permitted. Use [{'domain': '*'}] to allow all domains while still injecting headers on specific ones.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">A single domain allowlist rule with optional header injection.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_2" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">domain</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Domain to allow outbound requests to. Supports wildcards (e.g. '*.googleapis.com'). Use '*' to allow all domains.</p>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">transform</span>
+        <span class="field-type">array (object) or object</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Headers to inject on all outbound requests matching this domain. Accepts a single dict or a list of dicts. The egress proxy injects these automatically.</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">transform</span>
-<span class="field-type">array (object) or object</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Headers to inject on all outbound requests matching this domain. Accepts a single dict or a list of dicts. The egress proxy injects these automatically.</p>
-</div>
-</div>
-</div>
-</div>
+
+        </div>
+    </div>
 </section>
-</div>
+
+    </div>
 </details>
-</div>
-</details>
-<details class="subtype-details">
-<summary class="subtype-summary">
-<span style="font-weight: 500;">string</span>
-</summary>
-<div class="subtype-content">
-<p>Turns all network off.</p>
-</div>
-</details>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-values_1" data-text="Possible values" tabindex="-1">Possible values</h4>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
-<p style="margin-left: 16px; font-size: 13px; color: var(--devsite-text-secondary);">Turns all network off.</p> </li>
-</ul>
-</div>
-</div>
+
+                </div>
+            </details>
+            <details class="subtype-details">
+                <summary class="subtype-summary">
+                    <span style="font-weight: 500;">string</span>
+                </summary>
+                <div class="subtype-content">
+                    <p>Turns all network off.</p>
+                </div>
+            </details>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-values_1" data-text="Possible values" tabindex="-1">Possible values</h4>
+            <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+                <li style="margin-bottom: 4px;">
+                    <code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
+<p style="margin-left: 16px; font-size: 13px; color: var(--devsite-text-secondary);">Turns all network off.</p>                </li>
+            </ul>
+        </div>
+    </div>
 </section>
-</div>
+
+    </div>
 </details>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">size_bytes</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The total size of the environment files in bytes, output only.</p>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">size_bytes</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The total size of the environment files in bytes, output only.</p>
+    </div>
 </div>
+
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">sources</span>
+        <span class="field-type">array (Source)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>Sources to be mounted into the environment.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >A source to be mounted into the environment.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_3" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">content</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>The inline content if `type` is `INLINE`.</p>
+    </div>
 </div>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">sources</span>
-<span class="field-type">array (Source)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>Sources to be mounted into the environment.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">A source to be mounted into the environment.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_3" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">content</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>The inline content if `type` is `INLINE`.</p>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">encoding</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional encoding for inline content (e.g. `base64`).</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">encoding</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional encoding for inline content (e.g. `base64`).</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">source</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>The source of the environment.
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">source</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>The source of the environment.
 For Cloud Storage, this is the Cloud Storage path.
 For GitHub, this is the GitHub path.</p>
+    </div>
 </div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">target</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Where the source should appear in the environment.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">target</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Where the source should appear in the environment.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">type</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>No description provided.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">type</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>No description provided.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">gcs</code>
-<p style="margin-left: 16px; font-size: 13px;">A Cloud Storage bucket.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">inline</code>
-<p style="margin-left: 16px; font-size: 13px;">Inline content.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">repository</code>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">gcs</code>
+<p style="margin-left: 16px; font-size: 13px;">A Cloud Storage bucket.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">inline</code>
+<p style="margin-left: 16px; font-size: 13px;">Inline content.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">repository</code>
 <p style="margin-left: 16px; font-size: 13px;">A generic repository. The protocol prefix in the source URL
-identifies the provider (e.g., github://, gcs://).</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">skill_registry</code>
-<p style="margin-left: 16px; font-size: 13px;">A skill resource from the Skill Registry Service.
-Skill: projects/{project}/locations/{location}/skills/{skill}
-SkillRevision:
-projects/{project}/locations/{location}/skills/{skill}/revisions/{revision}
-Support mounting all skills under a project:
-projects/{project}/locations/{location}/skills.</p> </li>
-</ul>
+identifies the provider (e.g., github://, gcs://).</p>            </li>
+        </ul>
+    </div>
 </div>
-</div>
-</div>
-</div>
+
+        </div>
+    </div>
 </section>
-</div>
+
+    </div>
 </details>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">status</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The status of the environment container.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">status</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The status of the environment container.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">active</code>
-<p style="margin-left: 16px; font-size: 13px;">Output only. The status of the environment container.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">expired</code>
-<p style="margin-left: 16px; font-size: 13px;">Output only. The status of the environment container.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">active</code>
+<p style="margin-left: 16px; font-size: 13px;">Output only. The status of the environment container.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">expired</code>
+<p style="margin-left: 16px; font-size: 13px;">Output only. The status of the environment container.</p>            </li>
+        </ul>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">updated</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The time at which the environment was last updated in ISO 8601 format
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">updated</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The time at which the environment was last updated in ISO 8601 format
 (YYYY-MM-DDThh:mm:ssZ).</p>
+    </div>
 </div>
-</div>
-</section>
-</div>
-<div class="second-column">
-<div class="examples">
-<devsite-selector>
-<section>
-<h3 id="CreateEnvironment-default" data-text="Example" tabindex="-1">Example</h3>
-<div class="example-content">
-                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/environments_4db5aa95680895b0c2d2a38b7b70f91e1896f734439bdf141586b0dd5a233e37.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+
+                </section>
+            </div>
+            <div class="second-column">
+                <div class="examples">
+                    <devsite-selector>
+                        <section>
+                            <h3 id="CreateEnvironment-create" data-text="Create Environment" tabindex="-1">Create Environment</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/environments_7cf001fbaa53264e469bbd0321d5fc29e19aebba07f061c8e692b288438e57df.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
                                 <h4 style="margin-top: 24px; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--devsite-text-secondary); text-transform: uppercase;" id="example-response" data-text="                                     Example Response" tabindex="-1">
                                     Example Response</h4>
-<div></div><devsite-code><pre class="devsite-click-to-copy" dir="ltr" translate="no" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"created"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"file_count"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"last_accessed"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"network"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nt">"allowlist"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nt">"domain"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"github.com"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nt">"transform"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">            </span><span class="devsite-syntax-nt">"Authorization"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Bearer your-token"</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">]</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nt">"domain"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"*.googleapis.com"</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">]</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"size_bytes"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+                                <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"created"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"env_abc123"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"last_accessed"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"sources"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"content"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"encoding"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"source"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"target"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gcs"</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"inline"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"content"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"print('Hello, World!')"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"target"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"main.py"</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"status"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"active"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"updated"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"updated"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span>
 <span class="devsite-syntax-p">}</span></pre></devsite-code>
+                            </div>
+                        </section>
+                    </devsite-selector>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-</section>
-</devsite-selector>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="prototype" itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h2 id="ListEnvironments" data-text="ListEnvironments" tabindex="-1">ListEnvironments</h2>
-<div>
-<span class="endpoint">
-<span class="http-method get">
+
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject" class="prototype">
+    <h2 id="ListEnvironments" data-text="ListEnvironments" tabindex="-1">ListEnvironments</h2>
+    <div>
+        <span class="endpoint">
+            <span class="http-method get">
                 get
             </span>
-</span>
-<span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
+        </span>
+
+        <span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
             https://generativelanguage.googleapis.com/v1beta/environments
         </span>
+    </div>
+
+    <section id="description">
+        <p>Lists environments.</p>
+    </section>
+    <section class="prototype">
+        <ul class="toc">
+<li><a href="#ListEnvironments.PATH_PARAMETERS">Path / Query parameters</a></li>            <li><a href="#ListEnvironments.response">Response</a></li>
+        </ul>
+        <div class="column-container request-section" style="margin-top: 48px;">
+            <div class="reference">
+                <section id="ListEnvironments.PATH_PARAMETERS">
+                    <h3 id="path-query-parameters" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">page_size</span>
+        <span class="field-type">integer</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. Maximum number of environments to return.\nIf unspecified, defaults to 50. Maximum is 1000.</p>
+    </div>
 </div>
-<section id="description">
-<p>Lists environments.</p>
-</section>
-<section class="prototype">
-<ul class="toc">
-<li><a href="#ListEnvironments.PATH_PARAMETERS">Path / Query parameters</a></li> <li><a href="#ListEnvironments.response">Response</a></li>
-</ul>
-<div class="column-container request-section" style="margin-top: 48px;">
-<div class="reference">
-<section id="ListEnvironments.PATH_PARAMETERS">
-<h3 id="path-query-parameters" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">page_size</span>
-<span class="field-type">integer</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. Maximum number of environments to return.\nIf unspecified, defaults to 50. Maximum is 1000.</p>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">page_token</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. Pagination token.</p>
+    </div>
 </div>
+
+                </section>
+                <section id="ListEnvironments.response">
+                    <h3 id="response_1" data-text="Response" tabindex="-1">Response</h3>
+                    <p>If successful, the response body contains data with the following structure:</p>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">environments</span>
+        <span class="field-type">array (<a href="#Resource:Environment">Environment</a>)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Environments belonging to the provided project.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">page_token</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. Pagination token.</p>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">next_page_token</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Pagination token.</p>
+    </div>
 </div>
-</div>
-</section>
-<section id="ListEnvironments.response">
-<h3 id="response_1" data-text="Response" tabindex="-1">Response</h3>
-<p>If successful, the response body contains data with the following structure:</p>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">environments</span>
-<span class="field-type">array (<a href="#Resource:Environment">Environment</a>)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Environments belonging to the provided project.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">next_page_token</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Pagination token.</p>
-</div>
-</div>
-</section>
-</div>
-<div class="second-column">
-<div class="examples">
-<devsite-selector>
-<section>
-<h3 id="ListEnvironments-default" data-text="Example" tabindex="-1">Example</h3>
-<div class="example-content">
-                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/environments_f99ca789ee1cf8366fc8bedb853b49cc7ba47903992f0f2b6fa04567f7c4de34.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+
+                </section>
+            </div>
+            <div class="second-column">
+                <div class="examples">
+                    <devsite-selector>
+                        <section>
+                            <h3 id="ListEnvironments-list" data-text="List Environments" tabindex="-1">List Environments</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/environments_1399d208d48776cd0d1bf56b1950516845c0cc22f2e46b830bd536e56542a4b2.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
                                 <h4 style="margin-top: 24px; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--devsite-text-secondary); text-transform: uppercase;" id="example-response_1" data-text="                                     Example Response" tabindex="-1">
                                     Example Response</h4>
-<div></div><devsite-code><pre class="devsite-click-to-copy" dir="ltr" translate="no" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
+                                <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"environments"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"created"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"file_count"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"last_accessed"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"network"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nt">"allowlist"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">            </span><span class="devsite-syntax-nt">"domain"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"github.com"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">            </span><span class="devsite-syntax-nt">"transform"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">              </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">                </span><span class="devsite-syntax-nt">"Authorization"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Bearer your-token"</span>
-<span class="devsite-syntax-w">              </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">            </span><span class="devsite-syntax-p">]</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">            </span><span class="devsite-syntax-nt">"domain"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"*.googleapis.com"</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">]</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"size_bytes"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"sources"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"content"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"encoding"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"source"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"target"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gcs"</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">],</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"created"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"env_abc123"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"last_accessed"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"status"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"active"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"updated"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"updated"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"next_page_token"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">]</span>
 <span class="devsite-syntax-p">}</span></pre></devsite-code>
+                            </div>
+                        </section>
+                    </devsite-selector>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-</section>
-</devsite-selector>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="prototype" itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h2 id="GetEnvironmentFiles" data-text="GetEnvironmentFiles" tabindex="-1">GetEnvironmentFiles</h2>
-<div>
-<span class="endpoint">
-<span class="http-method get">
+
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject" class="prototype">
+    <h2 id="GetEnvironmentFiles" data-text="GetEnvironmentFiles" tabindex="-1">GetEnvironmentFiles</h2>
+    <div>
+        <span class="endpoint">
+            <span class="http-method get">
                 get
             </span>
-</span>
-<span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
+        </span>
+
+        <span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
             https://generativelanguage.googleapis.com/v1beta/environments/{environment}/files/{path}
         </span>
+    </div>
+
+    <section id="description">
+        <p>Retrieves file metadata or directory contents from an environment's snapshot. To download file contents directly, pass ?alt=media or use the files.download helper.</p>
+    </section>
+    <section class="prototype">
+        <ul class="toc">
+<li><a href="#GetEnvironmentFiles.PATH_PARAMETERS">Path / Query parameters</a></li>            <li><a href="#GetEnvironmentFiles.response">Response</a></li>
+        </ul>
+        <div class="column-container request-section" style="margin-top: 48px;">
+            <div class="reference">
+                <section id="GetEnvironmentFiles.PATH_PARAMETERS">
+                    <h3 id="path-query-parameters_1" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">page_size</span>
+        <span class="field-type">integer</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. Maximum number of entries to return per page (for directory listing).</p>
+    </div>
 </div>
-<section id="description">
-<p>Retrieves a file or directory from an environment's snapshot.</p>
-</section>
-<section class="prototype">
-<ul class="toc">
-<li><a href="#GetEnvironmentFiles.PATH_PARAMETERS">Path / Query parameters</a></li> <li><a href="#GetEnvironmentFiles.response">Response</a></li>
-</ul>
-<div class="column-container request-section" style="margin-top: 48px;">
-<div class="reference">
-<section id="GetEnvironmentFiles.PATH_PARAMETERS">
-<h3 id="path-query-parameters_1" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">page_size</span>
-<span class="field-type">integer</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. Maximum number of entries to return per page (for directory listing).</p>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">page_token</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. Pagination token for directory listing.</p>
+    </div>
 </div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">recursive</span>
+        <span class="field-type">boolean</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. If true and the path is a directory, recursively lists all files.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">page_token</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. Pagination token for directory listing.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">recursive</span>
-<span class="field-type">boolean</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. If true and the path is a directory, recursively lists all files.</p>
-</div>
-</div>
-</section>
-<section id="GetEnvironmentFiles.response">
-<h3 id="response_2" data-text="Response" tabindex="-1">Response</h3>
-<p>If successful, the response body contains data with the following structure:</p>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">files</span>
-<span class="field-type">array (EnvironmentFile)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>If the requested path is a directory, this contains its contents.
+
+                </section>
+                <section id="GetEnvironmentFiles.response">
+                    <h3 id="response_2" data-text="Response" tabindex="-1">Response</h3>
+                    <p>If successful, the response body contains data with the following structure:</p>
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">files</span>
+        <span class="field-type">array (EnvironmentFile)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>If the requested path is a directory, this contains its contents.
 If the requested path is a file, this contains a single entry with the
 file's metadata.
 If alt=media was specified, this is empty (content is served via `blob`).</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">Metadata for a file or directory within an environment.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_4" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">created</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The creation time of the file/directory.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >Metadata for a file or directory within an environment.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_4" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">created</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The creation time of the file/directory.</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">mime_type</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The MIME type of the file (e.g., "text/python", "image/png").
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">mime_type</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The MIME type of the file (e.g., "text/python", "image/png").
 Empty for directories.
 NOLINT</p>
+    </div>
 </div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">modified</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The modification time of the file/directory.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">modified</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The modification time of the file/directory.</p>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">name</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The name of the file or directory (e.g., "main.py" or "src").</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">name</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The name of the file or directory (e.g., "main.py" or "src").</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">path</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The full relative path within the environment
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">path</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The full relative path within the environment
 (e.g., "workspace/src/main.py").</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">size_bytes</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The size of the file/directory in bytes.
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">size_bytes</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The size of the file/directory in bytes.
 NOLINT</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">type</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The type of the entry.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">type</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The type of the entry.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">file</code>
-<p style="margin-left: 16px; font-size: 13px;">A regular file.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">directory</code>
-<p style="margin-left: 16px; font-size: 13px;">A directory.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">file</code>
+<p style="margin-left: 16px; font-size: 13px;">A regular file.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">directory</code>
+<p style="margin-left: 16px; font-size: 13px;">A directory.</p>            </li>
+        </ul>
+    </div>
 </div>
-</div>
-</div>
-</div>
+
+        </div>
+    </div>
 </section>
-</div>
+
+    </div>
 </details>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">next_page_token</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Pagination token for directory listing.
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">next_page_token</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Pagination token for directory listing.
 NOLINT</p>
+    </div>
 </div>
-</div>
-</section>
-</div>
-<div class="second-column">
-<div class="examples">
-<devsite-selector>
-<section>
-<h3 id="GetEnvironmentFiles-default" data-text="Example" tabindex="-1">Example</h3>
-<div class="example-content">
-                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/environments_d255bff6cdeb0572e4256132b9f447d05aabd5fdd852cb90caaa8d15dd9df716.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+
+                </section>
+            </div>
+            <div class="second-column">
+                <div class="examples">
+                    <devsite-selector>
+                        <section>
+                            <h3 id="GetEnvironmentFiles-list_files" data-text="List Files in Environment" tabindex="-1">List Files in Environment</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/environments_0b913b2da055a4b75e25b7636c32782776347bcad8ff8cf533f488bb26c7d4cc.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
                                 <h4 style="margin-top: 24px; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--devsite-text-secondary); text-transform: uppercase;" id="example-response_2" data-text="                                     Example Response" tabindex="-1">
                                     Example Response</h4>
-<div></div><devsite-code><pre class="devsite-click-to-copy" dir="ltr" translate="no" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
+                                <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"files"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"created"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"mime_type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"modified"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"path"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"size_bytes"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"file"</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"src"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"directory"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"created"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"modified"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"path"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"src"</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"main.py"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"file"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"created"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"mime_type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text/x-python"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"modified"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"path"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"main.py"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"size_bytes"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"22"</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"next_page_token"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">]</span>
 <span class="devsite-syntax-p">}</span></pre></devsite-code>
-</div>
-</section>
-</devsite-selector>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="prototype" itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h2 id="GetEnvironment" data-text="GetEnvironment" tabindex="-1">GetEnvironment</h2>
-<div>
-<span class="endpoint">
-<span class="http-method get">
-                get
-            </span>
-</span>
-<span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
-            https://generativelanguage.googleapis.com/v1beta/environments/{id}
-        </span>
-</div>
-<section id="description">
-<p>Gets an environment.</p>
-</section>
-<section class="prototype">
-<ul class="toc">
-<li><a href="#GetEnvironment.response">Response</a></li>
-</ul>
-<div class="column-container request-section" style="margin-top: 48px;">
-<div class="reference">
-<section id="GetEnvironment.response">
-<h3 id="response_3" data-text="Response" tabindex="-1">Response</h3>
-<p>If successful, the response body contains data with the following structure:</p>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">created</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The time at which the environment was created in ISO 8601 format
-(YYYY-MM-DDThh:mm:ssZ).</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">file_count</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The number of files in the environment, output only.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">id</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Required. Output only. The ID of the environment.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">last_accessed</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The time at which the environment was last accessed in ISO 8601 format
-(YYYY-MM-DDThh:mm:ssZ).</p>
-</div>
-</div>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">network</span>
-<span class="field-type">EnvironmentNetworkEgressAllowlist or enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>Network configuration for the environment.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">Outbound networking configuration for the sandbox. Accepts an object with an 'allowlist' array to restrict traffic, or the string 'disabled' to turn off all network access. Omit entirely to allow all outbound traffic with no header injection.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-types_2" data-text="Possible Types" tabindex="-1">Possible Types</h4>
-<details class="subtype-details">
-<summary class="subtype-summary">
-<span style="font-weight: 500;">object</span>
-</summary>
-<div class="subtype-content">
-<p>Outbound networking configuration for the sandbox. When specified, restricts which external domains the sandbox can reach. Omit entirely to allow all outbound traffic with no header injection.</p>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">allowlist</span>
-<span class="field-type">array (AllowlistEntry)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>List of allowed outbound domains. Only requests to listed domains are permitted. Use [{'domain': '*'}] to allow all domains while still injecting headers on specific ones.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">A single domain allowlist rule with optional header injection.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_5" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">domain</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Domain to allow outbound requests to. Supports wildcards (e.g. '*.googleapis.com'). Use '*' to allow all domains.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">transform</span>
-<span class="field-type">array (object) or object</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Headers to inject on all outbound requests matching this domain. Accepts a single dict or a list of dicts. The egress proxy injects these automatically.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
-</details>
-</div>
-</details>
-<details class="subtype-details">
-<summary class="subtype-summary">
-<span style="font-weight: 500;">string</span>
-</summary>
-<div class="subtype-content">
-<p>Turns all network off.</p>
-</div>
-</details>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-values_2" data-text="Possible values" tabindex="-1">Possible values</h4>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
-<p style="margin-left: 16px; font-size: 13px; color: var(--devsite-text-secondary);">Turns all network off.</p> </li>
-</ul>
-</div>
-</div>
-</section>
-</div>
-</details>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">size_bytes</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The total size of the environment files in bytes, output only.</p>
-</div>
-</div>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">sources</span>
-<span class="field-type">array (Source)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>Sources to be mounted into the environment.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">A source to be mounted into the environment.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_6" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">content</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>The inline content if `type` is `INLINE`.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">encoding</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional encoding for inline content (e.g. `base64`).</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">source</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>The source of the environment.
-For Cloud Storage, this is the Cloud Storage path.
-For GitHub, this is the GitHub path.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">target</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Where the source should appear in the environment.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">type</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>No description provided.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
-            values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">gcs</code>
-<p style="margin-left: 16px; font-size: 13px;">A Cloud Storage bucket.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">inline</code>
-<p style="margin-left: 16px; font-size: 13px;">Inline content.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">repository</code>
-<p style="margin-left: 16px; font-size: 13px;">A generic repository. The protocol prefix in the source URL
-identifies the provider (e.g., github://, gcs://).</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">skill_registry</code>
-<p style="margin-left: 16px; font-size: 13px;">A skill resource from the Skill Registry Service.
-Skill: projects/{project}/locations/{location}/skills/{skill}
-SkillRevision:
-projects/{project}/locations/{location}/skills/{skill}/revisions/{revision}
-Support mounting all skills under a project:
-projects/{project}/locations/{location}/skills.</p> </li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
-</details>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">status</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The status of the environment container.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
-            values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">active</code>
-<p style="margin-left: 16px; font-size: 13px;">Output only. The status of the environment container.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">expired</code>
-<p style="margin-left: 16px; font-size: 13px;">Output only. The status of the environment container.</p> </li>
-</ul>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">updated</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The time at which the environment was last updated in ISO 8601 format
-(YYYY-MM-DDThh:mm:ssZ).</p>
-</div>
-</div>
-</section>
-</div>
-<div class="second-column">
-<div class="examples">
-<devsite-selector>
-<section>
-<h3 id="GetEnvironment-default" data-text="Example" tabindex="-1">Example</h3>
-<div class="example-content">
-                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/environments_4dd66d0b956fefd22cef277e4f527f086b0fdebc56af7f366f7682686c962ef1.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+                            </div>
+                        </section>
+                        <section>
+                            <h3 id="GetEnvironmentFiles-get_file" data-text="Get File Metadata" tabindex="-1">Get File Metadata</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/environments_005add677a966bafbb36bb7bdeba9b49a02d3a1e811401c0b7d3e243cb03bf73.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
                                 <h4 style="margin-top: 24px; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--devsite-text-secondary); text-transform: uppercase;" id="example-response_3" data-text="                                     Example Response" tabindex="-1">
                                     Example Response</h4>
-<div></div><devsite-code><pre class="devsite-click-to-copy" dir="ltr" translate="no" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"created"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"file_count"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"last_accessed"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"network"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nt">"allowlist"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nt">"domain"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"github.com"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nt">"transform"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">            </span><span class="devsite-syntax-nt">"Authorization"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Bearer your-token"</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">]</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nt">"domain"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"*.googleapis.com"</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">]</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"size_bytes"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+                                <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"files"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"main.py"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"file"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"created"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"mime_type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text/x-python"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"modified"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"path"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"main.py"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"size_bytes"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"22"</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-p">}</span></pre></devsite-code>
+                            </div>
+                        </section>
+                        <section>
+                            <h3 id="GetEnvironmentFiles-download_file" data-text="Download File Content" tabindex="-1">Download File Content</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/environments_3b997c806759e9a74303e8d1f1b0902e96f6e82052553f786472d216d25a52e3.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+                                <h4 style="margin-top: 24px; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--devsite-text-secondary); text-transform: uppercase;" id="example-response_4" data-text="                                     Example Response" tabindex="-1">
+                                    Example Response</h4>
+                                <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"files"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"main.py"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"file"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"mime_type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text/x-python"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"path"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"main.py"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"size_bytes"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"22"</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-p">}</span></pre></devsite-code>
+                            </div>
+                        </section>
+                    </devsite-selector>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject" class="prototype">
+    <h2 id="GetEnvironment" data-text="GetEnvironment" tabindex="-1">GetEnvironment</h2>
+    <div>
+        <span class="endpoint">
+            <span class="http-method get">
+                get
+            </span>
+        </span>
+
+        <span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
+            https://generativelanguage.googleapis.com/v1beta/environments/{id}
+        </span>
+    </div>
+
+    <section id="description">
+        <p>Gets an environment.</p>
+    </section>
+    <section class="prototype">
+        <ul class="toc">
+            <li><a href="#GetEnvironment.response">Response</a></li>
+        </ul>
+        <div class="column-container request-section" style="margin-top: 48px;">
+            <div class="reference">
+                <section id="GetEnvironment.response">
+                    <h3 id="response_3" data-text="Response" tabindex="-1">Response</h3>
+                    <p>If successful, the response body contains data with the following structure:</p>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">created</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The time at which the environment was created in ISO 8601 format
+(YYYY-MM-DDThh:mm:ssZ).</p>
+    </div>
+</div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">file_count</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The number of files in the environment, output only.</p>
+    </div>
+</div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">id</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Required. Output only. The ID of the environment.</p>
+    </div>
+</div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">last_accessed</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The time at which the environment was last accessed in ISO 8601 format
+(YYYY-MM-DDThh:mm:ssZ).</p>
+    </div>
+</div>
+
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">network</span>
+        <span class="field-type">EnvironmentNetworkEgressAllowlist or enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>Network configuration for the environment.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >Outbound networking configuration for the sandbox. Accepts an object with an 'allowlist' array to restrict traffic, or the string 'disabled' to turn off all network access. Omit entirely to allow all outbound traffic with no header injection.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-types_2" data-text="Possible Types" tabindex="-1">Possible Types</h4>
+            <details class="subtype-details">
+                <summary class="subtype-summary">
+                    <span style="font-weight: 500;">object</span>
+                </summary>
+                <div class="subtype-content">
+                    <p>Outbound networking configuration for the sandbox. When specified, restricts which external domains the sandbox can reach. Omit entirely to allow all outbound traffic with no header injection.</p>
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">allowlist</span>
+        <span class="field-type">array (AllowlistEntry)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>List of allowed outbound domains. Only requests to listed domains are permitted. Use [{'domain': '*'}] to allow all domains while still injecting headers on specific ones.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >A single domain allowlist rule with optional header injection.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_5" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">domain</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Domain to allow outbound requests to. Supports wildcards (e.g. '*.googleapis.com'). Use '*' to allow all domains.</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">transform</span>
+        <span class="field-type">array (object) or object</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Headers to inject on all outbound requests matching this domain. Accepts a single dict or a list of dicts. The egress proxy injects these automatically.</p>
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>
+
+    </div>
+</details>
+
+                </div>
+            </details>
+            <details class="subtype-details">
+                <summary class="subtype-summary">
+                    <span style="font-weight: 500;">string</span>
+                </summary>
+                <div class="subtype-content">
+                    <p>Turns all network off.</p>
+                </div>
+            </details>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-values_2" data-text="Possible values" tabindex="-1">Possible values</h4>
+            <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+                <li style="margin-bottom: 4px;">
+                    <code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
+<p style="margin-left: 16px; font-size: 13px; color: var(--devsite-text-secondary);">Turns all network off.</p>                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    </div>
+</details>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">size_bytes</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The total size of the environment files in bytes, output only.</p>
+    </div>
+</div>
+
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">sources</span>
+        <span class="field-type">array (Source)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>Sources to be mounted into the environment.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >A source to be mounted into the environment.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_6" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">content</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>The inline content if `type` is `INLINE`.</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">encoding</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional encoding for inline content (e.g. `base64`).</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">source</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>The source of the environment.
+For Cloud Storage, this is the Cloud Storage path.
+For GitHub, this is the GitHub path.</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">target</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Where the source should appear in the environment.</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">type</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>No description provided.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+            values:</p>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">gcs</code>
+<p style="margin-left: 16px; font-size: 13px;">A Cloud Storage bucket.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">inline</code>
+<p style="margin-left: 16px; font-size: 13px;">Inline content.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">repository</code>
+<p style="margin-left: 16px; font-size: 13px;">A generic repository. The protocol prefix in the source URL
+identifies the provider (e.g., github://, gcs://).</p>            </li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>
+
+    </div>
+</details>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">status</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The status of the environment container.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+            values:</p>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">active</code>
+<p style="margin-left: 16px; font-size: 13px;">Output only. The status of the environment container.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">expired</code>
+<p style="margin-left: 16px; font-size: 13px;">Output only. The status of the environment container.</p>            </li>
+        </ul>
+    </div>
+</div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">updated</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The time at which the environment was last updated in ISO 8601 format
+(YYYY-MM-DDThh:mm:ssZ).</p>
+    </div>
+</div>
+
+                </section>
+            </div>
+            <div class="second-column">
+                <div class="examples">
+                    <devsite-selector>
+                        <section>
+                            <h3 id="GetEnvironment-get" data-text="Get Environment" tabindex="-1">Get Environment</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/environments_066ed4f236071efd0a492c2fa2e6eab60ef986ea783767535d6e03a17b460bcd.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+                                <h4 style="margin-top: 24px; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--devsite-text-secondary); text-transform: uppercase;" id="example-response_5" data-text="                                     Example Response" tabindex="-1">
+                                    Example Response</h4>
+                                <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"created"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"env_abc123"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"last_accessed"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"sources"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"content"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"encoding"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"source"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"target"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gcs"</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"inline"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"content"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"print('Hello, World!')"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"target"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"main.py"</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"status"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"active"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"updated"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"updated"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"2026-08-19T00:00:00Z"</span>
 <span class="devsite-syntax-p">}</span></pre></devsite-code>
+                            </div>
+                        </section>
+                    </devsite-selector>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-</section>
-</devsite-selector>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="prototype" itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h2 id="DeleteEnvironment" data-text="DeleteEnvironment" tabindex="-1">DeleteEnvironment</h2>
-<div>
-<span class="endpoint">
-<span class="http-method delete">
+
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject" class="prototype">
+    <h2 id="DeleteEnvironment" data-text="DeleteEnvironment" tabindex="-1">DeleteEnvironment</h2>
+    <div>
+        <span class="endpoint">
+            <span class="http-method delete">
                 delete
             </span>
-</span>
-<span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
+        </span>
+
+        <span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
             https://generativelanguage.googleapis.com/v1beta/environments/{id}
         </span>
-</div>
-<section id="description">
-<p>Deletes an environment.</p>
-</section>
-<section class="prototype">
-<ul class="toc">
-<li><a href="#DeleteEnvironment.response">Response</a></li>
-</ul>
-<div class="column-container request-section" style="margin-top: 48px;">
-<div class="reference">
-<section id="DeleteEnvironment.response">
-<h3 id="response_4" data-text="Response" tabindex="-1">Response</h3>
-<p>If successful, the response is empty.</p>
-</section>
-</div>
-<div class="second-column">
-<div class="examples">
-<devsite-selector>
-<section>
-<h3 id="DeleteEnvironment-default" data-text="Example" tabindex="-1">Example</h3>
-<div class="example-content">
-                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/environments_8066560a4d8fa671d2db58f8803356422b6b9d9d69a521d7990c1d963958ce10.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+    </div>
+
+    <section id="description">
+        <p>Deletes an environment.</p>
+    </section>
+    <section class="prototype">
+        <ul class="toc">
+            <li><a href="#DeleteEnvironment.response">Response</a></li>
+        </ul>
+        <div class="column-container request-section" style="margin-top: 48px;">
+            <div class="reference">
+                <section id="DeleteEnvironment.response">
+                    <h3 id="response_4" data-text="Response" tabindex="-1">Response</h3>
+                    <p>If successful, the response is empty.</p>
+                </section>
+            </div>
+            <div class="second-column">
+                <div class="examples">
+                    <devsite-selector>
+                        <section>
+                            <h3 id="DeleteEnvironment-delete" data-text="Delete Environment" tabindex="-1">Delete Environment</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/environments_09f63b126a0a4c22c397b70c23994d48f788a177909de036e54de3fa142d88c2.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
                             </div>
-</section>
-</devsite-selector>
+                        </section>
+                    </devsite-selector>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-</div>
-</div>
-</section>
-</div>
-<h2 id="resources" style="margin-top: 64px;" data-text="Resources" tabindex="-1">Resources</h2>
-<div itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h3 id="Resource:Environment" data-text="Environment" tabindex="-1">Environment</h3>
-<section class="prototype">
-<div class="column-container">
-<div class="reference">
-<p>An execution environment for an agent.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_7" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">created</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The time at which the environment was created in ISO 8601 format
+
+
+    <h2 id="resources" style="margin-top: 64px;" data-text="Resources" tabindex="-1">Resources</h2>
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject">
+    <h3 id="Resource:Environment" data-text="Environment" tabindex="-1">Environment</h3>
+    <section class="prototype" >
+    <div class="column-container">
+        <div class="reference">
+            <p >An execution environment for an agent.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_7" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">created</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The time at which the environment was created in ISO 8601 format
 (YYYY-MM-DDThh:mm:ssZ).</p>
+    </div>
 </div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">file_count</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The number of files in the environment, output only.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">file_count</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The number of files in the environment, output only.</p>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">id</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Required. Output only. The ID of the environment.</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">id</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Required. Output only. The ID of the environment.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">last_accessed</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The time at which the environment was last accessed in ISO 8601 format
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">last_accessed</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The time at which the environment was last accessed in ISO 8601 format
 (YYYY-MM-DDThh:mm:ssZ).</p>
+    </div>
 </div>
+
+            <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">network</span>
+        <span class="field-type">EnvironmentNetworkEgressAllowlist or enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>Network configuration for the environment.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >Outbound networking configuration for the sandbox. Accepts an object with an 'allowlist' array to restrict traffic, or the string 'disabled' to turn off all network access. Omit entirely to allow all outbound traffic with no header injection.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-types_3" data-text="Possible Types" tabindex="-1">Possible Types</h4>
+            <details class="subtype-details">
+                <summary class="subtype-summary">
+                    <span style="font-weight: 500;">object</span>
+                </summary>
+                <div class="subtype-content">
+                    <p>Outbound networking configuration for the sandbox. When specified, restricts which external domains the sandbox can reach. Omit entirely to allow all outbound traffic with no header injection.</p>
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">allowlist</span>
+        <span class="field-type">array (AllowlistEntry)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>List of allowed outbound domains. Only requests to listed domains are permitted. Use [{'domain': '*'}] to allow all domains while still injecting headers on specific ones.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >A single domain allowlist rule with optional header injection.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_8" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">domain</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Domain to allow outbound requests to. Supports wildcards (e.g. '*.googleapis.com'). Use '*' to allow all domains.</p>
+    </div>
 </div>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">network</span>
-<span class="field-type">EnvironmentNetworkEgressAllowlist or enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>Network configuration for the environment.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">Outbound networking configuration for the sandbox. Accepts an object with an 'allowlist' array to restrict traffic, or the string 'disabled' to turn off all network access. Omit entirely to allow all outbound traffic with no header injection.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-types_3" data-text="Possible Types" tabindex="-1">Possible Types</h4>
-<details class="subtype-details">
-<summary class="subtype-summary">
-<span style="font-weight: 500;">object</span>
-</summary>
-<div class="subtype-content">
-<p>Outbound networking configuration for the sandbox. When specified, restricts which external domains the sandbox can reach. Omit entirely to allow all outbound traffic with no header injection.</p>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">allowlist</span>
-<span class="field-type">array (AllowlistEntry)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>List of allowed outbound domains. Only requests to listed domains are permitted. Use [{'domain': '*'}] to allow all domains while still injecting headers on specific ones.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">A single domain allowlist rule with optional header injection.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_8" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">domain</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Domain to allow outbound requests to. Supports wildcards (e.g. '*.googleapis.com'). Use '*' to allow all domains.</p>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">transform</span>
+        <span class="field-type">array (object) or object</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Headers to inject on all outbound requests matching this domain. Accepts a single dict or a list of dicts. The egress proxy injects these automatically.</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">transform</span>
-<span class="field-type">array (object) or object</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Headers to inject on all outbound requests matching this domain. Accepts a single dict or a list of dicts. The egress proxy injects these automatically.</p>
-</div>
-</div>
-</div>
-</div>
+
+        </div>
+    </div>
 </section>
-</div>
+
+    </div>
 </details>
-</div>
-</details>
-<details class="subtype-details">
-<summary class="subtype-summary">
-<span style="font-weight: 500;">string</span>
-</summary>
-<div class="subtype-content">
-<p>Turns all network off.</p>
-</div>
-</details>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-values_3" data-text="Possible values" tabindex="-1">Possible values</h4>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
-<p style="margin-left: 16px; font-size: 13px; color: var(--devsite-text-secondary);">Turns all network off.</p> </li>
-</ul>
-</div>
-</div>
+
+                </div>
+            </details>
+            <details class="subtype-details">
+                <summary class="subtype-summary">
+                    <span style="font-weight: 500;">string</span>
+                </summary>
+                <div class="subtype-content">
+                    <p>Turns all network off.</p>
+                </div>
+            </details>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="possible-values_3" data-text="Possible values" tabindex="-1">Possible values</h4>
+            <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+                <li style="margin-bottom: 4px;">
+                    <code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
+<p style="margin-left: 16px; font-size: 13px; color: var(--devsite-text-secondary);">Turns all network off.</p>                </li>
+            </ul>
+        </div>
+    </div>
 </section>
-</div>
+
+    </div>
 </details>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">size_bytes</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The total size of the environment files in bytes, output only.</p>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">size_bytes</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The total size of the environment files in bytes, output only.</p>
+    </div>
 </div>
+
+            <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">sources</span>
+        <span class="field-type">array (Source)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>Sources to be mounted into the environment.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >A source to be mounted into the environment.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_9" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">content</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>The inline content if `type` is `INLINE`.</p>
+    </div>
 </div>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">sources</span>
-<span class="field-type">array (Source)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>Sources to be mounted into the environment.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">A source to be mounted into the environment.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_9" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">content</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>The inline content if `type` is `INLINE`.</p>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">encoding</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional encoding for inline content (e.g. `base64`).</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">encoding</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional encoding for inline content (e.g. `base64`).</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">source</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>The source of the environment.
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">source</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>The source of the environment.
 For Cloud Storage, this is the Cloud Storage path.
 For GitHub, this is the GitHub path.</p>
+    </div>
 </div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">target</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Where the source should appear in the environment.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">target</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Where the source should appear in the environment.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">type</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>No description provided.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">type</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>No description provided.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">gcs</code>
-<p style="margin-left: 16px; font-size: 13px;">A Cloud Storage bucket.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">inline</code>
-<p style="margin-left: 16px; font-size: 13px;">Inline content.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">repository</code>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">gcs</code>
+<p style="margin-left: 16px; font-size: 13px;">A Cloud Storage bucket.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">inline</code>
+<p style="margin-left: 16px; font-size: 13px;">Inline content.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">repository</code>
 <p style="margin-left: 16px; font-size: 13px;">A generic repository. The protocol prefix in the source URL
-identifies the provider (e.g., github://, gcs://).</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">skill_registry</code>
-<p style="margin-left: 16px; font-size: 13px;">A skill resource from the Skill Registry Service.
-Skill: projects/{project}/locations/{location}/skills/{skill}
-SkillRevision:
-projects/{project}/locations/{location}/skills/{skill}/revisions/{revision}
-Support mounting all skills under a project:
-projects/{project}/locations/{location}/skills.</p> </li>
-</ul>
+identifies the provider (e.g., github://, gcs://).</p>            </li>
+        </ul>
+    </div>
 </div>
-</div>
-</div>
-</div>
+
+        </div>
+    </div>
 </section>
-</div>
+
+    </div>
 </details>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">status</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The status of the environment container.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">status</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The status of the environment container.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">active</code>
-<p style="margin-left: 16px; font-size: 13px;">Output only. The status of the environment container.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">expired</code>
-<p style="margin-left: 16px; font-size: 13px;">Output only. The status of the environment container.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">active</code>
+<p style="margin-left: 16px; font-size: 13px;">Output only. The status of the environment container.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">expired</code>
+<p style="margin-left: 16px; font-size: 13px;">Output only. The status of the environment container.</p>            </li>
+        </ul>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">updated</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The time at which the environment was last updated in ISO 8601 format
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">updated</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The time at which the environment was last updated in ISO 8601 format
 (YYYY-MM-DDThh:mm:ssZ).</p>
+    </div>
 </div>
-</div>
-</div>
-<div class="second-column">
-</div>
-</div>
+
+        </div>
+        <div class="second-column">
+        </div>
+    </div>
 </section>
+
 </div>
+
+
+
   
 
   
@@ -2681,7 +2802,7 @@ projects/{project}/locations/{location}/skills.</p> </li>
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -2691,7 +2812,7 @@ projects/{project}/locations/{location}/skills.</p> </li>
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -2714,7 +2835,7 @@ projects/{project}/locations/{location}/skills.</p> </li>
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-08-28 UTC.</p>
+  <p>Last updated 2026-09-14 UTC.</p>
 </devsite-content-footer>
 
 

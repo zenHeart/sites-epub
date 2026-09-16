@@ -99,7 +99,7 @@ If your admin has enabled write access (step 5 above), you can opt in to writes 
 
 ## Privacy and security
 
-**Your data stays yours.** Grok only indexes SharePoint content when needed to answer your questions. xAI does not use your SharePoint data for model training.
+**Your data stays yours.** Grok only indexes SharePoint content when needed to answer your questions. SpaceXAI does not use your SharePoint data for model training.
 
 **Per-user access controls.** Every time you search or request a file, Grok verifies that your Microsoft account has permission to access it. If you cannot see a file in SharePoint, you cannot see it through Grok either. This check happens on every request.
 

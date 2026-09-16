@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/video-understanding"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/video-understanding"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://ai.google.dev/gemini-api/docs/video-understanding" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/gemini-api/docs/video-understanding" /><link rel="alternate" hreflang="ar"
@@ -883,7 +883,7 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/models"
         class="devsite-nav-title"
       
-        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
+        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.8-flash /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.8-live /gemini-api/docs/models/gemini-3.8-live-extended-thinking /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3.5 /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/latest-model"
         class="devsite-nav-title"
@@ -904,7 +904,7 @@
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/music-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Lyria 3</span></a></li>
+      ><span class="devsite-nav-text" tooltip>Lyria 3.5</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/realtime-music-generation"
         class="devsite-nav-title"
@@ -940,37 +940,17 @@
         <span class="devsite-nav-text" tooltip>Robotics</span>
       </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-overview"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-spatial"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-spatial"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-agentic"
+      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-agentic"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agentic vision</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-orchestration"
+      ><span class="devsite-nav-text" tooltip>Agentic vision</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-orchestration"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Task orchestration</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-streaming"
+      ><span class="devsite-nav-text" tooltip>Task orchestration</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-streaming"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-video-progress"
+      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-video-progress"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Video understanding</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Video understanding</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1009,21 +989,13 @@
            devsite-nav-expandable"><div class="devsite-expandable-nav">
       <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
         <span class="devsite-nav-text" tooltip>Speech and audio</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/speech-generation"
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/speech-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Speech generation</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
+      ><span class="devsite-nav-text" tooltip>Speech generation</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/transcribe"
+      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/transcribe"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio transcription</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Audio transcription</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1060,13 +1032,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Quickstart</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/antigravity-agent"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/antigravity-agent"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Antigravity agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Antigravity agent</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/custom-agents"
         class="devsite-nav-title"
@@ -1080,13 +1048,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Hooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/deep-research"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/deep-research"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Deep Research agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Deep Research agent</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1113,38 +1077,26 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>URL context</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/computer-use"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/computer-use"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Computer use</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Computer use</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/file-search"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>File search</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/tool-combination"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/tool-combination"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
         <span class="devsite-nav-text" tooltip>Live API</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1159,6 +1111,14 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/capabilities"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Capabilities</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-preview"><a href="/gemini-api/docs/live-api/thinking"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Thinking</span><span class="devsite-nav-icon material-icons"
+        data-icon="preview"
+        data-title="Preview"
+        aria-hidden="true"></span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/live-transcribe"
         class="devsite-nav-title"
@@ -1176,13 +1136,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Session management</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/best-practices"
         class="devsite-nav-title"
@@ -1201,29 +1157,17 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Batch API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/webhooks"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/flex-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/flex-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Flex inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Flex inference</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/priority-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/priority-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Priority inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Priority inference</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/caching"
         class="devsite-nav-title"
@@ -1383,13 +1327,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Deploying your app</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/aistudio-agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item
-           devsite-nav-experimental"><a href="/gemini-api/docs/learnlm"
+      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/learnlm"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span><span class="devsite-nav-icon material-icons"
-        data-icon="experimental"
-        data-title="Experimental!"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
+      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Troubleshooting</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/workspace"
         class="devsite-nav-title"
@@ -1492,7 +1432,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1634,7 +1574,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1644,7 +1584,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -1688,7 +1628,7 @@
 
 
 <blockquote>
-<p>To learn about video generation, see the <a href="/gemini-api/docs/video">Veo</a> guide.</p>
+<p>To learn about video generation, see the <a href="/gemini-api/docs/omni">Gemini Omni Flash</a> guide.</p>
 </blockquote>
 
 <p>Gemini models can process videos, enabling many frontier developer use cases
@@ -1747,7 +1687,6 @@ waits for it to be processed, and then uses the uploaded file reference to
 summarize the video.</p>
 <div><devsite-selector data-ds-scope="code-sample">
 <section><h3 id="python" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-kn">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">google</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kn">import</span> <span class="devsite-syntax-n">genai</span>
-<span class="devsite-syntax-kn">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">base64</span>
 <span class="devsite-syntax-kn">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">time</span>
 
 <span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
@@ -1760,7 +1699,7 @@ summarize the video.</p>
     <span class="devsite-syntax-n">myfile</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">files</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">get</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">name</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">myfile</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">name</span><span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-n">interaction</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
         <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"video"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"uri"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-n">myfile</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">uri</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"mime_type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-n">myfile</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">mime_type</span><span class="devsite-syntax-p">},</span>
         <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"Summarize this video. Then create a quiz with an answer key based on the information in this video."</span><span class="devsite-syntax-p">}</span>
@@ -1794,7 +1733,7 @@ summarize the video.</p>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
 
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"video"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">uri</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">myfile</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">uri</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">mime_type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">myfile</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">mimeType</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
 <span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">text</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Summarize this video. Then create a quiz with an answer key based on the information in this video."</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
@@ -1831,7 +1770,7 @@ summarize the video.</p>
 
 <span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">builder</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">input</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">InteractionsInput</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">ofContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">contents</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
 
@@ -1895,7 +1834,7 @@ curl<span class="devsite-syntax-w"> </span>-X<span class="devsite-syntax-w"> </s
 <span class="devsite-syntax-w">    </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">    </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Content-Type: application/json'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">    </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">      "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">      "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">      "input": [</span>
 <span class="devsite-syntax-s1">        {"type": "video", "uri": "'</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nv">file_uri</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-s1">'", "mime_type": "'</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nv">MIME_TYPE</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-s1">'"},</span>
 <span class="devsite-syntax-s1">        {"type": "text", "text": "Summarize this video. Then create a quiz with an answer key based on the information in this video."}</span>
@@ -1905,6 +1844,9 @@ curl<span class="devsite-syntax-w"> </span>-X<span class="devsite-syntax-w"> </s
 jq<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">".steps[].content[0].text"</span><span class="devsite-syntax-w"> </span>response.json
 </code></pre></devsite-code></section>
 </devsite-selector></div>
+<p>To optimize token efficiency and performance, consider using
+<a href="#agentic-video-understanding">Agentic video processing</a>.</p>
+
 <p>Always use the Files API when the total request size (including the file, text
 prompt, system instructions, etc.) is larger than 20 MB, the video duration is
 significant, or if you intend to use the same video in multiple prompts.
@@ -1929,7 +1871,7 @@ shorter videos under 20MB total request size.</p>
 
 <span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
 <span class="devsite-syntax-n">interaction</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s1">'gemini-3.7-flash'</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s1">'gemini-3.8-flash'</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
         <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"Please summarize the video in 3 sentences."</span><span class="devsite-syntax-p">},</span>
         <span class="devsite-syntax-p">{</span>
@@ -1950,7 +1892,7 @@ shorter videos under 20MB total request size.</p>
 <span class="devsite-syntax-p">});</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">text</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Please summarize the video in 3 sentences."</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
@@ -1988,7 +1930,7 @@ shorter videos under 20MB total request size.</p>
 
 <span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">builder</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">input</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">InteractionsInput</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">ofContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">contents</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
 
@@ -2011,7 +1953,7 @@ curl<span class="devsite-syntax-w"> </span>-X<span class="devsite-syntax-w"> </s
 <span class="devsite-syntax-w">    </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">    </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Content-Type: application/json'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">    </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">      "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">      "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">      "input": [</span>
 <span class="devsite-syntax-s1">        {"type": "text", "text": "Please summarize the video in 3 sentences."},</span>
 <span class="devsite-syntax-s1">        {</span>
@@ -2032,7 +1974,7 @@ Pricing and rate limits are likely to change.</span></aside>
 
 <span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
 <span class="devsite-syntax-n">interaction</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s1">'gemini-3.7-flash'</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s1">'gemini-3.8-flash'</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
         <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"Please summarize the video in 3 sentences."</span><span class="devsite-syntax-p">},</span>
         <span class="devsite-syntax-p">{</span>
@@ -2048,7 +1990,7 @@ Pricing and rate limits are likely to change.</span></aside>
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-p">({});</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">text</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Please summarize the video in 3 sentences."</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
@@ -2085,7 +2027,7 @@ Pricing and rate limits are likely to change.</span></aside>
 
 <span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">builder</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">input</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">InteractionsInput</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">ofContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">contents</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
 
@@ -2098,7 +2040,7 @@ Pricing and rate limits are likely to change.</span></aside>
 <span class="devsite-syntax-w">    </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">    </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Content-Type: application/json'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">    </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">      "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">      "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">      "input": [</span>
 <span class="devsite-syntax-s1">        {"type": "text", "text": "Please summarize the video in 3 sentences."},</span>
 <span class="devsite-syntax-s1">        {</span>
@@ -2118,14 +2060,325 @@ Pricing and rate limits are likely to change.</span></aside>
 <li>You can only upload public videos (not private or unlisted videos).</li>
 </ul>
 
+<h2 id="agentic-video-understanding" data-text="Agentic video understanding" tabindex="-1">Agentic video understanding</h2>
+
+<p>By default, video inputs use static processing (extracting frames at 1 FPS).
+Gemini 3.8 Flash, 3.7 Flash, 3.6 Flash, and 3.5 Flash Lite models also support
+<strong>agentic video understanding</strong>, where the model dynamically explores the video
+timeline, selectively inspecting transcripts and adaptively adjusting frame
+rates and resolution on the fly based on the prompt.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Mode</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Supported models</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>Static</strong> (default)</td>
+<td>Extracts frames at a fixed rate (1 FPS) and places them into context in a single pass. Works well for short clips.</td>
+<td>All Gemini models</td>
+</tr>
+<tr>
+<td><strong>Agentic</strong></td>
+<td>The model dynamically navigates the video timeline, loading only the content it needs based on the prompt. Up to 88% more token-efficient and ~7% higher quality on long-form content.</td>
+<td>Gemini 3.8 Flash, 3.7 Flash, 3.6 Flash, 3.5 Flash Lite</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="choose_a_processing_mode" data-text="Choose a processing mode" tabindex="-1">Choose a processing mode</h3>
+
+<p>As a general guideline, start with <strong>agentic</strong> mode, especially when optimizing
+for response quality or token efficiency.</p>
+
+<ul>
+<li><strong>Agentic:</strong> Long-form videos or queries targeting specific moments. The
+model dynamically navigates the timeline to target contextually relevant
+information without filling the context window.</li>
+<li><strong>Static:</strong> Latency-sensitive queries on short clips (under 5 minutes), or
+cases where frame-level precision across the entire clip is needed.</li>
+</ul>
+
+<blockquote>
+<p><strong>Note:</strong> For long videos or complex prompts where agentic processing takes
+more time, use streaming (<code translate="no" dir="ltr">stream=True</code>) or background execution
+(<code translate="no" dir="ltr">background=True</code>). This keeps the connection active, surfaces intermediate
+reasoning steps, and avoids connection or authentication timeouts.</p>
+</blockquote>
+
+<h3 id="set_the_processing_mode" data-text="Set the processing mode" tabindex="-1">Set the processing mode</h3>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="python_3" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-kn">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">time</span>
+<span class="devsite-syntax-kn">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">google</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kn">import</span> <span class="devsite-syntax-n">genai</span>
+
+<span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
+
+<span class="devsite-syntax-c1"># Upload a long video</span>
+<span class="devsite-syntax-n">video_file</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">files</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">upload</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">file</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"path/to/lecture.mp4"</span><span class="devsite-syntax-p">)</span>
+
+<span class="devsite-syntax-k">while</span> <span class="devsite-syntax-n">video_file</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">state</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">name</span> <span class="devsite-syntax-o">==</span> <span class="devsite-syntax-s2">"PROCESSING"</span><span class="devsite-syntax-p">:</span>
+    <span class="devsite-syntax-n">time</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">sleep</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-p">)</span>
+    <span class="devsite-syntax-n">video_file</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">files</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">get</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">name</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">video_file</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">name</span><span class="devsite-syntax-p">)</span>
+
+<span class="devsite-syntax-c1"># Use agentic processing</span>
+<span class="devsite-syntax-n">interaction</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
+        <span class="devsite-syntax-p">{</span>
+            <span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"video"</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"uri"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-n">video_file</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">uri</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"mime_type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-n">video_file</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">mime_type</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"processing"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"agentic"</span>
+        <span class="devsite-syntax-p">},</span>
+        <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"What are the three main arguments presented?"</span><span class="devsite-syntax-p">}</span>
+    <span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">interaction</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">output_text</span><span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code></section>
+<section><h3 id="javascript_3" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-k">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kr">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"@google/genai"</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-p">({});</span>
+
+<span class="devsite-syntax-c1">// Upload a long video</span>
+<span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">videoFile</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">files</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">upload</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">file</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"path/to/lecture.mp4"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">config</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">mimeType</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"video/mp4"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">});</span>
+
+<span class="devsite-syntax-k">while</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">videoFile</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">state</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">===</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"PROCESSING"</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">Promise</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">resolve</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">setTimeout</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">resolve</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">2000</span><span class="devsite-syntax-p">));</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">videoFile</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">files</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">get</span><span class="devsite-syntax-p">({</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">name</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">videoFile</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">name</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-c1">// Use agentic processing</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"video"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">uri</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">videoFile</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">uri</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">mime_type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">videoFile</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">mimeType</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">processing</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"agentic"</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">text</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"What are the three main arguments presented?"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">output_text</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code></section>
+<section><h3 id="rest_3" data-text="REST" tabindex="-1">REST</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Bash"><code translate="no" dir="ltr">curl<span class="devsite-syntax-w"> </span>-X<span class="devsite-syntax-w"> </span>POST<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"https://generativelanguage.googleapis.com/v1beta/interactions"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Content-Type: application/json'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
+<span class="devsite-syntax-s1">    "model": "gemini-3.8-flash",</span>
+<span class="devsite-syntax-s1">    "input": [</span>
+<span class="devsite-syntax-s1">      {</span>
+<span class="devsite-syntax-s1">        "type": "video",</span>
+<span class="devsite-syntax-s1">        "uri": "'</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nv">file_uri</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-s1">'",</span>
+<span class="devsite-syntax-s1">        "mime_type": "video/mp4",</span>
+<span class="devsite-syntax-s1">        "processing": "agentic"</span>
+<span class="devsite-syntax-s1">      },</span>
+<span class="devsite-syntax-s1">      {"type": "text", "text": "What are the three main arguments presented?"}</span>
+<span class="devsite-syntax-s1">    ]</span>
+<span class="devsite-syntax-s1">  }'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-m">2</span>&gt;<span class="devsite-syntax-w"> </span>/dev/null
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+<blockquote>
+<p><strong>Note:</strong> To verify that agentic processing was used, inspect <code translate="no" dir="ltr">interaction.steps</code>. The presence of <code translate="no" dir="ltr">processing_call</code> and <code translate="no" dir="ltr">processing_result</code> indicates that the model dynamically navigated the video.</p>
+</blockquote>
+
+<h3 id="response-steps" data-text="Response steps" tabindex="-1">Response steps</h3>
+
+<p>Agentic processing adds two new step types to the <code translate="no" dir="ltr">steps</code> array:</p>
+
+<ul>
+<li><code translate="no" dir="ltr">processing_call</code>: the model requested a video segment or audio transcript, identified by <code translate="no" dir="ltr">id</code>.</li>
+<li><code translate="no" dir="ltr">processing_result</code>: the result of that load, linked by <code translate="no" dir="ltr">call_id</code>.</li>
+</ul>
+
+<p>These appear interleaved with <code translate="no" dir="ltr">thought</code> steps (when summaries are enabled) and precede the final <code translate="no" dir="ltr">model_output</code> step. They can be used to show a progress trace in your UI but do not require a response.</p>
+
+<p>The following example shows the response payload with interleaved processing steps:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"steps"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"thought"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"signature"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"sig_thought_1"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"summary"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"text"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Inspecting transcript for key discussion topics..."</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"processing_call"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"call_01"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"signature"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"sig_call_01"</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"processing_result"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"call_id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"call_01"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"signature"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"sig_result_01"</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"thought"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"signature"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"sig_thought_2"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"summary"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"text"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Loading visual frames to verify slide content..."</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"processing_call"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"call_02"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"signature"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"sig_call_02"</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"processing_result"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"call_id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"call_02"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"signature"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"sig_result_02"</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"thought"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"signature"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"sig_thought_3"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"summary"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"text"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Synthesizing answer from gathered evidence..."</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"model_output"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"content"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"text"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"The three main arguments presented in the lecture are..."</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<h3 id="mix_processing_modes_across_videos" data-text="Mix processing modes across videos" tabindex="-1">Mix processing modes across videos</h3>
+
+<p>You can set different processing modes for each video in the same request:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="python_4" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-kn">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">google</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kn">import</span> <span class="devsite-syntax-n">genai</span>
+
+<span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
+
+<span class="devsite-syntax-n">lecture</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">files</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">upload</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">file</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"path/to/long-lecture.mp4"</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-n">experiment</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">files</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">upload</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">file</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"path/to/short-experiment.mp4"</span><span class="devsite-syntax-p">)</span>
+
+<span class="devsite-syntax-n">interaction</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
+        <span class="devsite-syntax-p">{</span>
+            <span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"video"</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"uri"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-n">lecture</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">uri</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"mime_type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-n">lecture</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">mime_type</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"processing"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"agentic"</span>  <span class="devsite-syntax-c1"># Use agentic video understanding</span>
+        <span class="devsite-syntax-p">},</span>
+        <span class="devsite-syntax-p">{</span>
+            <span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"video"</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"uri"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-n">experiment</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">uri</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"mime_type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-n">experiment</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">mime_type</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"processing"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"static"</span>  <span class="devsite-syntax-c1"># Use static processing</span>
+        <span class="devsite-syntax-p">},</span>
+        <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"Compare the lecture content with the experiment results."</span><span class="devsite-syntax-p">}</span>
+    <span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">interaction</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">output_text</span><span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code></section>
+<section><h3 id="javascript_4" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-k">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kr">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"@google/genai"</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-p">({});</span>
+
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">lecture</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">files</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">upload</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">file</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"path/to/long-lecture.mp4"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">config</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">mimeType</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"video/mp4"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">experiment</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">files</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">upload</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">file</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"path/to/short-experiment.mp4"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">config</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">mimeType</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"video/mp4"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">});</span>
+
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"video"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">uri</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">lecture</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">uri</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">mime_type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">lecture</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">mimeType</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">processing</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"agentic"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-c1">// Use agentic video understanding</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"video"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">uri</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">experiment</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">uri</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">mime_type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">experiment</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">mimeType</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">processing</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"static"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-c1">// Use static processing</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">text</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Compare the lecture content with the experiment results."</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">output_text</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code></section>
+<section><h3 id="rest_4" data-text="REST" tabindex="-1">REST</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Bash"><code translate="no" dir="ltr">curl<span class="devsite-syntax-w"> </span>-X<span class="devsite-syntax-w"> </span>POST<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"https://generativelanguage.googleapis.com/v1beta/interactions"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Content-Type: application/json'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
+<span class="devsite-syntax-s1">    "model": "gemini-3.8-flash",</span>
+<span class="devsite-syntax-s1">    "input": [</span>
+<span class="devsite-syntax-s1">      {</span>
+<span class="devsite-syntax-s1">        "type": "video",</span>
+<span class="devsite-syntax-s1">        "uri": "'</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nv">lecture_uri</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-s1">'",</span>
+<span class="devsite-syntax-s1">        "mime_type": "video/mp4",</span>
+<span class="devsite-syntax-s1">        "processing": "agentic"</span>
+<span class="devsite-syntax-s1">      },</span>
+<span class="devsite-syntax-s1">      {</span>
+<span class="devsite-syntax-s1">        "type": "video",</span>
+<span class="devsite-syntax-s1">        "uri": "'</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nv">experiment_uri</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-s1">'",</span>
+<span class="devsite-syntax-s1">        "mime_type": "video/mp4",</span>
+<span class="devsite-syntax-s1">        "processing": "static"</span>
+<span class="devsite-syntax-s1">      },</span>
+<span class="devsite-syntax-s1">      {"type": "text", "text": "Compare the lecture content with the experiment results."}</span>
+<span class="devsite-syntax-s1">    ]</span>
+<span class="devsite-syntax-s1">  }'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-m">2</span>&gt;<span class="devsite-syntax-w"> </span>/dev/null
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+<h3 id="multi-turn_video_conversations" data-text="Multi-turn video conversations" tabindex="-1">Multi-turn video conversations</h3>
+
+<p>Video context is preserved across turns in a conversation. When using agentic
+processing:</p>
+
+<ul>
+<li><strong>Stateful mode</strong> (using <code translate="no" dir="ltr">previous_interaction_id</code>): The server retains the
+video context. No additional handling is needed.</li>
+<li><strong>Stateless mode</strong> (using <code translate="no" dir="ltr">step_list</code>): In stateless mode, the response
+includes <code translate="no" dir="ltr">processing_call</code> and <code translate="no" dir="ltr">processing_result</code> steps that encode the
+video context. You must include all steps from the response in your next
+request&#39;s <code translate="no" dir="ltr">step_list</code> to preserve video context. While omitting them does not
+currently return an API error, the video context is lost, significantly
+reducing response quality on follow-up questions. Note that returned steps
+sent in subsequent requests contribute to input token counts.</li>
+</ul>
+
 <h2 id="refer-timestamps" data-text="Refer to timestamps in the content" tabindex="-1">Refer to timestamps in the content</h2>
 
 <p>You can ask questions about specific points in time within the video using
 timestamps of the form <code translate="no" dir="ltr">MM:SS</code>.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="python_3" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">prompt</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"What are the examples given at 00:05 and 00:10 supposed to show us?"</span>
+<section><h3 id="python_5" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">prompt</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"What are the examples given at 00:05 and 00:10 supposed to show us?"</span>
 </code></pre></devsite-code></section>
-<section><h3 id="javascript_3" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"What are the examples given at 00:05 and 00:10 supposed to show us?"</span><span class="devsite-syntax-p">;</span>
+<section><h3 id="javascript_5" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"What are the examples given at 00:05 and 00:10 supposed to show us?"</span><span class="devsite-syntax-p">;</span>
 </code></pre></devsite-code></section>
 <section><h3 id="java_3" data-text="Java" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-kn">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">com.google.genai.Client</span><span class="devsite-syntax-p">;</span>
 <span class="devsite-syntax-kn">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">com.google.genai.gaos.models.interactions.Content</span><span class="devsite-syntax-p">;</span>
@@ -2153,7 +2406,7 @@ timestamps of the form <code translate="no" dir="ltr">MM:SS</code>.</p>
 
 <span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">builder</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">input</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">InteractionsInput</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">ofContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">contents</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
 
@@ -2162,7 +2415,7 @@ timestamps of the form <code translate="no" dir="ltr">MM:SS</code>.</p>
 
 <span class="devsite-syntax-n">System</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">out</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">println</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">outputText</span><span class="devsite-syntax-p">().</span><span class="devsite-syntax-na">orElse</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">""</span><span class="devsite-syntax-p">));</span>
 </code></pre></devsite-code></section>
-<section><h3 id="rest_3" data-text="REST" tabindex="-1">REST</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Bash"><code translate="no" dir="ltr"><span class="devsite-syntax-nv">PROMPT</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"What are the examples given at 00:05 and 00:10 supposed to show us?"</span>
+<section><h3 id="rest_5" data-text="REST" tabindex="-1">REST</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Bash"><code translate="no" dir="ltr"><span class="devsite-syntax-nv">PROMPT</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"What are the examples given at 00:05 and 00:10 supposed to show us?"</span>
 </code></pre></devsite-code></section>
 </devsite-selector></div>
 <h2 id="transcribe-video" data-text="Extract detailed insights from video" tabindex="-1">Extract detailed insights from video</h2>
@@ -2176,9 +2429,9 @@ happening in a video and answering questions about its content.</p>
 per second</strong> (FPS). This default sampling rate works well for most content, but
 note that it may miss details in videos with rapid motion or quick scene changes.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="python_4" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">prompt</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"Describe the key events in this video, providing both audio and visual details. Include timestamps for salient moments."</span>
+<section><h3 id="python_6" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">prompt</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"Describe the key events in this video, providing both audio and visual details. Include timestamps for salient moments."</span>
 </code></pre></devsite-code></section>
-<section><h3 id="javascript_4" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Describe the key events in this video, providing both audio and visual details. Include timestamps for salient moments."</span><span class="devsite-syntax-p">;</span>
+<section><h3 id="javascript_6" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Describe the key events in this video, providing both audio and visual details. Include timestamps for salient moments."</span><span class="devsite-syntax-p">;</span>
 </code></pre></devsite-code></section>
 <section><h3 id="java_4" data-text="Java" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-kn">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">com.google.genai.Client</span><span class="devsite-syntax-p">;</span>
 <span class="devsite-syntax-kn">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">com.google.genai.gaos.models.interactions.Content</span><span class="devsite-syntax-p">;</span>
@@ -2206,7 +2459,7 @@ note that it may miss details in videos with rapid motion or quick scene changes
 
 <span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">builder</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">input</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">InteractionsInput</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">ofContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">contents</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
 
@@ -2215,7 +2468,132 @@ note that it may miss details in videos with rapid motion or quick scene changes
 
 <span class="devsite-syntax-n">System</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">out</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">println</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">outputText</span><span class="devsite-syntax-p">().</span><span class="devsite-syntax-na">orElse</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">""</span><span class="devsite-syntax-p">));</span>
 </code></pre></devsite-code></section>
-<section><h3 id="rest_4" data-text="REST" tabindex="-1">REST</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Bash"><code translate="no" dir="ltr"><span class="devsite-syntax-nv">PROMPT</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"Describe the key events in this video, providing both audio and visual details. Include timestamps for salient moments."</span>
+<section><h3 id="rest_6" data-text="REST" tabindex="-1">REST</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Bash"><code translate="no" dir="ltr"><span class="devsite-syntax-nv">PROMPT</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"Describe the key events in this video, providing both audio and visual details. Include timestamps for salient moments."</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+<h2 id="customize-video-processing" data-text="Customize video processing" tabindex="-1">Customize video processing</h2>
+
+<p>You can customize video processing in the Gemini API by setting clipping
+intervals or providing custom frame rate sampling. These customization options
+are only supported when processing the video in <code translate="no" dir="ltr">&quot;static&quot;</code> mode.</p>
+
+<h3 id="clipping-intervals" data-text="Set clipping intervals" tabindex="-1">Set clipping intervals</h3>
+
+<p>You can clip video by specifying <code translate="no" dir="ltr">start_offset</code> and <code translate="no" dir="ltr">end_offset</code> in the <code translate="no" dir="ltr">processing</code> configuration object.</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="python_7" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">interaction</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
+        <span class="devsite-syntax-p">{</span>
+            <span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"video"</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"uri"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-n">video_file</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">uri</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"mime_type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-n">video_file</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">mime_type</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"processing"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-p">{</span>
+                <span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"static"</span><span class="devsite-syntax-p">,</span>
+                <span class="devsite-syntax-s2">"start_offset"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-mi">1200</span><span class="devsite-syntax-p">,</span>
+                <span class="devsite-syntax-s2">"end_offset"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-mi">1500</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-p">},</span>
+        <span class="devsite-syntax-p">},</span>
+        <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"Summarize this section of the video."</span><span class="devsite-syntax-p">},</span>
+    <span class="devsite-syntax-p">],</span>
+<span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">interaction</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">output_text</span><span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code></section>
+<section><h3 id="javascript_7" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"video"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">uri</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">videoFile</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">uri</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">mime_type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">videoFile</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">mimeType</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">processing</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"static"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">start_offset</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">1200</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">end_offset</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">1500</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">text</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Summarize this section of the video."</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
+<span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">output_text</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code></section>
+<section><h3 id="rest_7" data-text="REST" tabindex="-1">REST</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Bash"><code translate="no" dir="ltr">curl<span class="devsite-syntax-w"> </span>-X<span class="devsite-syntax-w"> </span>POST<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"https://generativelanguage.googleapis.com/v1beta/interactions"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Content-Type: application/json'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
+<span class="devsite-syntax-s1">    "model": "gemini-3.8-flash",</span>
+<span class="devsite-syntax-s1">    "input": [</span>
+<span class="devsite-syntax-s1">      {</span>
+<span class="devsite-syntax-s1">        "type": "video",</span>
+<span class="devsite-syntax-s1">        "uri": "'</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nv">file_uri</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-s1">'",</span>
+<span class="devsite-syntax-s1">        "mime_type": "video/mp4",</span>
+<span class="devsite-syntax-s1">        "processing": {</span>
+<span class="devsite-syntax-s1">          "type": "static",</span>
+<span class="devsite-syntax-s1">          "start_offset": 1200,</span>
+<span class="devsite-syntax-s1">          "end_offset": 1500</span>
+<span class="devsite-syntax-s1">        }</span>
+<span class="devsite-syntax-s1">      },</span>
+<span class="devsite-syntax-s1">      {"type": "text", "text": "Summarize this section of the video."}</span>
+<span class="devsite-syntax-s1">    ]</span>
+<span class="devsite-syntax-s1">  }'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-m">2</span>&gt;<span class="devsite-syntax-w"> </span>/dev/null
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+<h3 id="custom-frame-rate" data-text="Set a custom frame rate" tabindex="-1">Set a custom frame rate</h3>
+
+<p>You can set custom frame rate sampling by passing an <code translate="no" dir="ltr">fps</code> argument in the <code translate="no" dir="ltr">processing</code> configuration object.</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="python_8" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">interaction</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
+        <span class="devsite-syntax-p">{</span>
+            <span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"video"</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"uri"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-n">video_file</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">uri</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"mime_type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-n">video_file</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">mime_type</span><span class="devsite-syntax-p">,</span>
+            <span class="devsite-syntax-s2">"processing"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-p">{</span>
+                <span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"static"</span><span class="devsite-syntax-p">,</span>
+                <span class="devsite-syntax-s2">"fps"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-mf">0.5</span><span class="devsite-syntax-p">,</span>  <span class="devsite-syntax-c1"># Sample 1 frame every 2 seconds</span>
+            <span class="devsite-syntax-p">},</span>
+        <span class="devsite-syntax-p">},</span>
+        <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"Describe the scene changes in this video."</span><span class="devsite-syntax-p">},</span>
+    <span class="devsite-syntax-p">],</span>
+<span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">interaction</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">output_text</span><span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code></section>
+<section><h3 id="javascript_8" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"video"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">uri</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">videoFile</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">uri</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">mime_type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">videoFile</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">mimeType</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">processing</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"static"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">fps</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">0.5</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-c1">// Sample 1 frame every 2 seconds</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">text</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Describe the scene changes in this video."</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
+<span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">output_text</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code></section>
+<section><h3 id="rest_8" data-text="REST" tabindex="-1">REST</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Bash"><code translate="no" dir="ltr">curl<span class="devsite-syntax-w"> </span>-X<span class="devsite-syntax-w"> </span>POST<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"https://generativelanguage.googleapis.com/v1beta/interactions"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Content-Type: application/json'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
+<span class="devsite-syntax-s1">    "model": "gemini-3.8-flash",</span>
+<span class="devsite-syntax-s1">    "input": [</span>
+<span class="devsite-syntax-s1">      {</span>
+<span class="devsite-syntax-s1">        "type": "video",</span>
+<span class="devsite-syntax-s1">        "uri": "'</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nv">file_uri</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-s1">'",</span>
+<span class="devsite-syntax-s1">        "mime_type": "video/mp4",</span>
+<span class="devsite-syntax-s1">        "processing": {</span>
+<span class="devsite-syntax-s1">          "type": "static",</span>
+<span class="devsite-syntax-s1">          "fps": 0.5</span>
+<span class="devsite-syntax-s1">        }</span>
+<span class="devsite-syntax-s1">      },</span>
+<span class="devsite-syntax-s1">      {"type": "text", "text": "Describe the scene changes in this video."}</span>
+<span class="devsite-syntax-s1">    ]</span>
+<span class="devsite-syntax-s1">  }'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-m">2</span>&gt;<span class="devsite-syntax-w"> </span>/dev/null
 </code></pre></devsite-code></section>
 </devsite-selector></div>
 <h2 id="supported-formats" data-text="Supported video formats" tabindex="-1">Supported video formats</h2>
@@ -2237,65 +2615,100 @@ note that it may miss details in videos with rapid motion or quick scene changes
 <h2 id="technical-details-video" data-text="Technical details about videos" tabindex="-1">Technical details about videos</h2>
 
 <ul>
-<li><strong>Supported models &amp; context</strong>: All Gemini can process video data.
+<li><strong>Supported models and context</strong>: All Gemini models can process video data.
 <ul>
-<li>Models with a 1M context window can process videos up to 1 hour long at
-default media resolution or 3 hours long at low media resolution.</li>
+<li>Models with a 1M context window can process videos up to 3 hours long by
+default (at low media resolution), or up to 1 hour long at high media
+resolution.</li>
 </ul></li>
-<li><strong>File API processing</strong>: When using the File API, videos are stored at 1
-frame per second (FPS) and audio is processed at 1Kbps (single channel).
-Timestamps are added every second.
+<li><strong>Processing modes</strong>: Gemini 3.8 Flash, 3.7 Flash, 3.6 Flash, 3.5 Flash Lite,
+and later models support two video processing modes:
 <ul>
-<li>These rates are subject to change in the future for improvements in inference.</li>
+<li><strong>Static</strong>: Frames are extracted at 1 FPS and placed into context (default
+for all models). Audio is processed at 1Kbps (single channel).
+Timestamps are added every second. Best for short clips or when every frame
+matters (such as frame-by-frame inspection). Note that fast action sequences
+might lose detail due to the 1 FPS sampling rate.</li>
+<li><strong>Agentic</strong>: The model dynamically navigates the video, loading
+transcript and/or frames and/or audio on demand. This uses up to 88%
+fewer tokens for long-form content, though navigation may slightly
+increase Time to First Token (TTFT) on short clips (&lt;5 minutes) due to
+internal reasoning and tool round-trips before generation begins. Best
+for long-form videos to optimize token costs and response quality.
+Supported on Gemini 3.8 Flash, 3.7 Flash, 3.6 Flash, and 3.5 Flash Lite.
+See <a href="#agentic-video-understanding">Agentic video understanding</a> for details.</li>
 </ul></li>
-<li><strong>Token calculation</strong>: Each second of video is tokenized as follows:
+<li><strong>Token calculation (static mode)</strong>: Each second of video is tokenized as
+follows:
 <ul>
 <li>Individual frames (sampled at 1 FPS):
 <ul>
-<li>If <code translate="no" dir="ltr">media_resolution</code> is set
-to low, frames are tokenized at 66 tokens per frame.</li>
+<li>If <code translate="no" dir="ltr">media_resolution</code> is set to low, frames are tokenized at 66
+tokens per frame.</li>
 <li>Otherwise, frames are tokenized at 258 tokens per frame.</li>
 </ul></li>
 <li>Audio: 32 tokens per second.</li>
 <li>Metadata is also included.</li>
-<li>Total: Approximately 300 tokens per second of video at default media resolution, or 100 tokens per second of video at low media resolution.</li>
+<li>Total: Approximately 100 tokens per second of video at default (low) media
+resolution, or approximately 300 tokens per second of video at high media
+resolution.</li>
 </ul></li>
-<li><p><strong>Medial resolution</strong>: Gemini 3 introduces granular control over multimodal
+<li><strong>Token calculation (agentic mode)</strong>: Token usage varies based on content
+complexity and the model&#39;s navigation strategy. Navigation reasoning tokens
+generated during video exploration are accounted as <strong>thought tokens</strong>
+(<code translate="no" dir="ltr">total_thought_tokens</code>), while frames, audio, and transcript loaded on
+demand are accounted as tool use tokens (<code translate="no" dir="ltr">total_tool_use_tokens</code>).
+Agentic processing typically uses up to 88% fewer total tokens than static
+processing for long-form content because the model loads only the transcript
+and/or frames and/or audio it needs to answer the prompt (see the
+<a href="/gemini-api/docs/tokens#video-token-usage">tokens guide</a>).</li>
+<li><strong>Media resolution</strong>: Gemini 3 introduces granular control over multimodal
 vision processing with the <code translate="no" dir="ltr">media_resolution</code> parameter. The
-<code translate="no" dir="ltr">media_resolution</code> parameter determines the
-<strong>maximum number of tokens allocated per input image or video frame.</strong>
-Higher resolutions improve the model&#39;s ability to read fine text or identify
-small details, but increase token usage and latency.</p>
+<code translate="no" dir="ltr">media_resolution</code> parameter determines the <strong>maximum number of tokens
+allocated per input image or video frame.</strong> Higher resolutions improve the
+model&#39;s ability to read fine text or identify small details, but increase
+token usage and latency. The <code translate="no" dir="ltr">media_resolution</code> and <code translate="no" dir="ltr">processing</code> parameters
+are independent: you can set both on the same video input.</li>
+</ul>
 
-<p>For more details on token calculations, see the <a href="/gemini-api/docs/tokens">tokens</a> guide.</p></li>
-<li><p><strong>Timestamp format</strong>: When referring to specific moments in a video within your prompt, use the <code translate="no" dir="ltr">MM:SS</code> format (e.g., <code translate="no" dir="ltr">01:15</code> for 1 minute and 15 seconds).</p></li>
-<li><p><strong>Best practices</strong>:</p>
+<p>For more details on token calculations, see the
+<a href="/gemini-api/docs/tokens">tokens</a> guide.</p>
 
 <ul>
-<li>Use only one video per prompt request for optimal results.</li>
-<li>If combining text and a single video, place the text prompt <em>after</em> the video part in the <code translate="no" dir="ltr">input</code> array.</li>
-<li>Be aware that fast action sequences might lose detail due to the 1 FPS sampling rate. Consider slowing down such clips if necessary.</li>
-</ul></li>
+<li><strong>Timestamp format</strong>: When referring to specific moments in a video within
+your prompt, use the <code translate="no" dir="ltr">MM:SS</code> format (e.g., <code translate="no" dir="ltr">01:15</code> for 1 minute and 15
+seconds).</li>
+<li><strong>Prompt placement</strong>: If combining text and a single video, place the text prompt
+<em>after</em> the video part in the <code translate="no" dir="ltr">input</code> array.</li>
+<li><strong>Timeouts for long requests</strong>: For videos that require extended
+processing time or complex multi-step reasoning, use streaming
+(<code translate="no" dir="ltr">stream=True</code>) or background execution (<code translate="no" dir="ltr">background=True</code>).
+Synchronous, non-streaming requests that experience backend retries under
+high demand can exceed connection or authentication token validity windows,
+which may surface as unexpected <code translate="no" dir="ltr">401 Unauthorized</code> or timeout errors.
+Streaming keeps the connection active and surfaces intermediate reasoning
+and tool call progress.</li>
 </ul>
 
 <h2 id="whats-next" data-text="What's next" tabindex="-1">What's next</h2>
 
-<p>This guide shows how to upload video files and generate text outputs from video
-inputs. To learn more, see the following resources:</p>
-
 <ul>
+<li><a href="/gemini-api/docs/media-resolution">Media resolution</a>: Control the
+resolution of video frames to balance quality and token usage.</li>
+<li><a href="/gemini-api/docs/tokens">Tokens</a>: Understand how video content is tokenized
+in both static and agentic processing modes.</li>
 <li><a href="/gemini-api/docs/text-generation#system-instructions">System instructions</a>:
 System instructions let you steer the behavior of the model based on your
 specific needs and use cases.</li>
 <li><a href="/gemini-api/docs/files">Files API</a>: Learn more about uploading and managing
 files for use with Gemini.</li>
-<li><a href="/gemini-api/docs/files#prompt-guide">File prompting strategies</a>: The
-Gemini API supports prompting with text, image, audio, and video data, also
-known as multimodal prompting.</li>
-<li><a href="/gemini-api/docs/safety-guidance">Safety guidance</a>: Sometimes generative
- AI models produce unexpected outputs, such as outputs that are inaccurate,
- biased, or offensive. Post-processing and human evaluation are essential to
- limit the risk of harm from such outputs.</li>
+<li><a href="/gemini-api/docs/files#prompt-guide">File prompting strategies</a>: The Gemini
+API supports prompting with text, image, audio, and video data, also known as
+multimodal prompting.</li>
+<li><a href="/gemini-api/docs/safety-guidance">Safety guidance</a>: Sometimes generative AI
+models produce unexpected outputs, such as outputs that are inaccurate,
+biased, or offensive. Post-processing and human evaluation are essential to
+limit the risk of harm from such outputs.</li>
 </ul>
 <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" data-page-link>
   
@@ -2317,7 +2730,7 @@ known as multimodal prompting.</li>
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -2327,7 +2740,7 @@ known as multimodal prompting.</li>
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -2350,7 +2763,7 @@ known as multimodal prompting.</li>
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-08-26 UTC.</p>
+  <p>Last updated 2026-09-10 UTC.</p>
 </devsite-content-footer>
 
 

@@ -10,10 +10,11 @@ common review questions are on the
 [Grok Bot security FAQ](/grok-bot/security-faq).
 
 > Enterprise only on the Grok Bot dashboard: the organization-wide enable
-> switch, Network Controls, Team Setup, Action Recording, and computer
-> management for organization admins. Audit logs, OpenTelemetry Export, the MCP
-> allowlist, and SCIM are also Enterprise only. Self-serve Teams do not see
-> those settings. The full list is under
+> switch, Network Controls, Team Setup, Action Recording, Allow Local Egress,
+> Enforce Auto-review with its team rules, and computer management for
+> organization admins. Audit logs, OpenTelemetry Export, the MCP allowlist, and
+> SCIM are also Enterprise only. Self-serve Teams do not see those settings.
+> The full list is under
 > [admin controls](/grok-bot/teams-and-enterprises#admin-controls).
 
 ## Network policy
@@ -48,19 +49,21 @@ network policy are separate layers, and closing both paths takes both controls.
 
 ## Static egress IPs
 
-Hosted computers reach the internet through shared static egress IP addresses.
-The ranges are shared across Grok Bot customers, and dedicated per-customer IPs
+Hosted computers reach the internet through shared static egress IP addresses
+by default. The ranges are shared across Grok Bot customers, and dedicated per-customer IPs
 are not available, so treat the ranges as identifying Grok Bot traffic rather
 than your team alone. Current ranges are available from your account team, and
 the product control is the destination allowlist rather than a source IP
 editor.
 
-If your company inspects TLS traffic, allow Cursor's published hostnames and
-bypass inspection for them; your account team can provide the current list.
+If member devices sit behind Zscaler or another TLS-inspecting gateway, allow
+Cursor's domains and exempt them from inspection on every profile, including
+off-network. See [Configure TLS-inspecting proxies](/grok-bot/proxies).
 
-Team Setup is Enterprise only. Those teams can install their own networking
-client on every team computer to reach private services, a path that is
-separate from these shared egress ranges. See
+Members can route traffic through their desktop to use its network and IP
+address. Team Setup is Enterprise only. Those teams can also install their own
+networking client on every team computer. Both paths are separate from the
+shared egress ranges. See
 [Connect to private networks](/grok-bot/private-networks).
 
 ## Approvals and Auto Review
@@ -86,23 +89,27 @@ commands, plugin calls, computer use, automation writes (changes to routines
 and event triggers), and delegation such as Cloud Agent and subagent launches.
 It can let an action proceed, require approval, or deny it.
 
-* Enforcement is enabled by Cursor and is currently active for all users. Each
-  member's own Auto Review setting remains the off switch; for
-  security-sensitive deployments, ask members to leave it on. An
-  organization-level lock is not available.
-* Team instructions shape it for everyone. Admins add team-wide block
-  instructions for actions that are never acceptable and allow instructions
-  for routine safe work, in team settings under Security and Automation. Those
-  instructions are not on the Grok Bot page.
+* Team admins can enforce Auto-review. Enterprise only. The switch lives on
+  the Grok Bot page of the Cursor dashboard. When it is on, members cannot
+  turn Auto-review off. See
+  [Enforce Auto-review](/grok-bot/teams-and-enterprises#enforce-auto-review).
+* Admins can add team Auto-review rules. Enterprise only. These live on the
+  Grok Bot page too. They apply to every member's Bots, show up as locked rows
+  in the member settings table, and save automatically when an admin adds,
+  edits, or deletes a rule. If admins turn enforcement off, the team rules stop
+  applying and members go back to their own rules only. See
+  [Auto-review rules](/grok-bot/teams-and-enterprises#auto-review-rules).
 * Members can add personal rules under **Settings → General → Auto-review**.
-  **Require Approval** rules always stop matching actions, **Always Allow**
-  rules let matching actions proceed only when the review finds no other
-  reason to stop, and **Require Approval** wins when both match. Narrow rules
-  around a known action and scope work best, like "require approval before
-  sending any external email" or "always allow running `git status` in
-  `/workspace/reports`"; avoid broad rules like "allow everything in the
-  browser". Personal rules are stored on the current desktop and synced to its
-  Grok Bot computer, so another desktop installation needs its own.
+  **Ask first** rules always stop matching actions, and **Allow
+  automatically** rules let matching actions proceed only when the reviewer
+  finds no other reason to stop. Personal rules sit on top of team rules but
+  only make behavior stricter; **Ask first** wins when rules conflict. Narrow
+  rules around a known action and scope work best, like "ask first before
+  sending any external email" or "allow automatically when running
+  `git status` in `/workspace/reports`"; avoid broad rules like "allow
+  everything in the browser". Personal rules are stored on the current desktop
+  and synced to its Grok Bot computer, so another desktop installation needs
+  its own.
 * It does not review every side effect; memory writes and most settings changes
   are examples. Treat it as a complement to explicit boundaries and least
   privilege, working alongside controls that do not depend on a model's
@@ -142,10 +149,13 @@ A Bot has no identity or credentials of its own:
   one-time codes never belong in ordinary chat. See
   [Enter passwords and verification codes yourself](/grok-bot/approvals-security-and-privacy#enter-passwords-and-verification-codes-yourself).
 
-To revoke access quickly, an organization admin terminates the member's
-computer from the dashboard; that computer management control is Enterprise
-only. The durable disk is kept, and the next session starts a fresh computer.
-Revoke sessions in your identity provider as well. Application sessions persist
+To end a member's current work, an organization admin terminates the member's
+computer from the dashboard; see
+[Manage Grok Bot computers](/grok-bot/computers). That control is Enterprise
+only. It stops running Bots, keeps the durable disk, and the member's next
+session starts a fresh computer. It does not remove access. To remove access,
+remove the member from the team or turn off Grok Bot for their group, and
+revoke their sessions in your identity provider. Application sessions persist
 only on the member's computer.
 
 When a project or login should no longer be available, members clean up
@@ -157,12 +167,15 @@ remove computer files or browser sessions.
 ## Logging and audit
 
 Audit Logs and Action Recording use separate pipelines. Audit Logs cover
-administrative and security events. Action Recording captures Bot actions, and
-OpenTelemetry Export sends those events to your collector when configured.
+administrative and security events, including Grok Bot control-plane actions.
+Action Recording captures Bot actions, and OpenTelemetry Export sends those
+events to your collector when configured, tagged `cursor.surface=grok_bot`.
 
 * Audit logs are Enterprise only. They cover admin, security, and
-  authentication events. View them in the dashboard or stream them to your
-  SIEM. Self-serve Teams do not get this log.
+  authentication events, plus Grok Bot control-plane events: Bot creation,
+  member access changes, Team Setup manifests, MCP authentication, Slack
+  account links, and routines. Filter them by application in the dashboard, or
+  stream them to your SIEM. Self-serve Teams do not get this log.
 * Action Recording is Enterprise only. It is a setting on the Grok Bot page,
   off by default. When a team enables it, Cursor records Bot actions, including
   scrubbed shell commands, in an internal store with a 90-day retention. Action
@@ -203,7 +216,10 @@ of an individual computer are not available.
 
 ## Data residency
 
-Grok Bot computers run in the United States today. If your review needs a
+Grok Bot computers run in the United States today. That is not the same as
+Cursor's
+[US-only data residency](https://cursor.com/docs/enterprise/privacy-and-data-governance#data-residency)
+program, which does not apply to Grok Bot by default. If your review needs a
 written residency commitment, contact your account team.
 
 ## Models and data
@@ -240,20 +256,19 @@ Per-command approval is the default, and the approval card shows the exact
 command. Members choose the policy under
 **Settings → General → Agent → Execution on Local Computer**: ask every time,
 always allow, or never. Recommend **Never** unless a Bot has a specific reason
-to work on local files. Local execution can be disabled entirely, and a
-team-level ceiling is enforced through settings; a dashboard control for the
-ceiling is not available today. For the member-facing steps, see
+to work on local files. Admins can cap the policy for the whole team with
+[Execution on Local Computer](/grok-bot/teams-and-enterprises#execution-on-local-computer)
+on the Grok Bot page; a member's own setting still applies when it is
+stricter. For the member-facing steps, see
 [Control access to your local computer](/grok-bot/approvals-security-and-privacy#control-access-to-your-local-computer).
 
 ## Hosting
 
 Grok Bot runs only on Cursor-hosted cloud computers. On-premises deployment,
 deployment inside your own perimeter, and bring-your-own-image deployment are
-not supported today, and Cursor does not operate a VPN, tunnel, or private link
-into your network for Grok Bot. The supported model is shared static egress
-combined with the destination allowlist. Team Setup is Enterprise only; those
-teams can install their own networking client on every team computer to reach
-private services. See
+not supported today. Hosted computers use shared static egress by default.
+Members can route traffic through their desktop, and Enterprise teams can
+install a networking client with **Team Setup**. See
 [Connect to private networks](/grok-bot/private-networks).
 
 ## Prompt injection
@@ -283,6 +298,8 @@ Certificates and reports are available at
 * [Grok Bot for teams and enterprises](/grok-bot/teams-and-enterprises)
 * [Configure identity and access](/grok-bot/identity-and-access)
 * [Connect to private networks](/grok-bot/private-networks)
+* [Configure TLS-inspecting proxies](/grok-bot/proxies)
+* [Manage Grok Bot computers](/grok-bot/computers)
 * [Approvals, security, and privacy](/grok-bot/approvals-security-and-privacy)
 * [Privacy and Data Governance](https://cursor.com/docs/enterprise/privacy-and-data-governance)
 

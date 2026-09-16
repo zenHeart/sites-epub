@@ -55,6 +55,7 @@ The Antigravity CLI supports a variety of slash commands typed directly into the
 | Command | Category | Purpose |
 | :-- | :-- | :-- |
 | **`/resume`** _(alias `/switch`)_ | Conversation | Open the conversation picker to resume or switch sessions. |
+| **[`/boost <task>`](/docs/boost)** | Reasoning | Multi-agent deep reasoning for complex bugs, race conditions, and algorithms. |
 | **[`/teamwork-preview <task>`](/docs/teamwork)** | Reasoning | Launch [collaborative multi-agent teams](/docs/teamwork) for long-horizon projects (paid plans). |
 | **`/rewind`** _(alias `/undo`)_ | Conversation | Roll back conversation history to a previous checkpoint. |
 | **`/rename <name>`** | Conversation | Rename the active conversation thread for easier tracking. |

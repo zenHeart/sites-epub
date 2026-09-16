@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/api/batch-api"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/api/batch-api"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://ai.google.dev/api/batch-api" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/api/batch-api" /><link rel="alternate" hreflang="ar"
@@ -874,21 +874,13 @@
         <span class="devsite-nav-text" tooltip>Real time APIs</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/api/live"
+  <li class="devsite-nav-item"><a href="/api/live"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Live API</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Live API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/api/live_music"
+  <li class="devsite-nav-item"><a href="/api/live_music"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Live Music API</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Live Music API</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -899,37 +891,21 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Model API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/agents"
+  <li class="devsite-nav-item"><a href="/api/agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Agents</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/webhooks"
+  <li class="devsite-nav-item"><a href="/api/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/triggers"
+  <li class="devsite-nav-item"><a href="/api/triggers"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Triggers</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Triggers</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/environments"
+  <li class="devsite-nav-item"><a href="/api/environments"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Environments</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Environments</span></a></li>
 
   <li class="devsite-nav-item"><a href="/api/batch-api"
         class="devsite-nav-title"
@@ -1075,7 +1051,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1217,7 +1193,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1227,7 +1203,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -3756,7 +3732,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -3766,7 +3742,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   

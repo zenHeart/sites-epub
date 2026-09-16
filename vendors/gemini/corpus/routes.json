@@ -425,6 +425,14 @@
   },
   {
     "group": "Gemini API and AI Studio",
+    "title": "Thinking",
+    "md_url": "https://ai.google.dev/gemini-api/docs/live-api/thinking.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/live-api/thinking",
+    "route": "gemini-api/docs/live-api/thinking",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini API and AI Studio",
     "title": "Live transcription",
     "md_url": "https://ai.google.dev/gemini-api/docs/live-api/live-transcribe.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/live-api/live-transcribe",
@@ -2417,14 +2425,6 @@
   },
   {
     "group": "Gemini Code Assist",
-    "title": "Prevent cross-organization license usage",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/cross-org-license-usage.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/cross-org-license-usage",
-    "route": "code-assist/codeassist/cross-org-license-usage",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
     "title": "Use pre-release features in Gemini Code Assist for VS Code",
     "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist.md",
     "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist",
@@ -3305,7 +3305,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Connect & manage custom apps for Gemini Spark in the Gemini web app",
+    "title": "Connect & manage custom apps for Gemini Apps",
     "md_url": "https://support.google.com/gemini/answer/17209137",
     "html_url": "https://support.google.com/gemini/answer/17209137",
     "route": "gemini-app/17209137",
@@ -3349,6 +3349,14 @@
     "md_url": "https://support.google.com/gemini/answer/18263854",
     "html_url": "https://support.google.com/gemini/answer/18263854",
     "route": "gemini-app/18263854",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Get audio descriptions with Guided Vision in Gemini Live",
+    "md_url": "https://support.google.com/gemini/answer/18365638",
+    "html_url": "https://support.google.com/gemini/answer/18365638",
+    "route": "gemini-app/18365638",
     "kind": "doc"
   },
   {
@@ -3541,6 +3549,14 @@
     "md_url": "https://support.google.com/gemininotebook/answer/17670842",
     "html_url": "https://support.google.com/gemininotebook/answer/17670842",
     "route": "notebooklm/17670842",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Generate reports in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/18323649",
+    "html_url": "https://support.google.com/gemininotebook/answer/18323649",
+    "route": "notebooklm/18323649",
     "kind": "doc"
   },
   {
@@ -3833,6 +3849,14 @@
   },
   {
     "group": "Blog",
+    "title": "household chores tips",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips",
+    "route": "blog/innovation-and-ai/products/gemini-app/household-chores-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "gemini models",
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models",
@@ -4029,6 +4053,14 @@
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 8 live gemini 3 8 live extended thinking",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking",
     "kind": "blog"
   },
   {

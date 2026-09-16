@@ -5,7 +5,7 @@
 
 
 <!DOCTYPE html>
-<html class="no-js glue-flexbox glue-app-ready keyword-blog" lang="en-us" data-locale="en-us" data-version="pr20260820-1820">
+<html class="no-js glue-flexbox glue-app-ready keyword-blog" lang="en-us" data-locale="en-us" data-version="pr20260902-1737">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -71,9 +71,9 @@
 
         
         
-        <link class="deferred-stylesheet" rel="preload" type="text/css" href="/static/keyword/css/blog/index.min.css?version=pr20260820-1820" as="style">
+        <link class="deferred-stylesheet" rel="preload" type="text/css" href="/static/keyword/css/blog/index.min.css?version=pr20260902-1737" as="style">
 <noscript>
-  <link rel="stylesheet" href="/static/keyword/css/blog/index.min.css?version=pr20260820-1820">
+  <link rel="stylesheet" href="/static/keyword/css/blog/index.min.css?version=pr20260902-1737">
 </noscript>
 
         <link class="deferred-stylesheet" rel="preload" type="text/css" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,600,700|Google+Sans+Flex:400,500|Product+Sans:400&amp;display=swap&amp;lang=en" as="style">
@@ -102,8 +102,8 @@
 
 <link rel="canonical" href="https://blog.google/products-and-platforms/products/gemini/gemini-3-collection/"/>
 
-<link href="/favicon.ico" rel="icon">
-<link href="/static/blogv2/images/apple-touch-icon.png?version=pr20260820-1820" rel="apple-touch-icon">
+<link rel="icon" type="image/x-icon" href="/static/blogv2/images/favicon.ico?version=pr20260902-1737">
+<link href="/static/blogv2/images/apple-touch-icon.png?version=pr20260902-1737" rel="apple-touch-icon">
 
 
 
@@ -147,7 +147,7 @@
     
       "special_hero": "undefined",
     
-    "days_since_published": "285",
+    "days_since_published": "301",
     
       "content_category": "undefined",
     
@@ -306,7 +306,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#h-burger"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#h-burger"></use>
 </svg>
 
         </button>
@@ -328,7 +328,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-clear"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-clear"></use>
 </svg>
 
         </button>
@@ -352,11 +352,11 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#news-from-google-logo"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#news-from-google-logo"></use>
 </svg>
 
             <!-- SuperG Logo -->
-            <img class="uni-nav__logo--super-g" src="/static/blogv2/images/super-g-aurora.svg?version=pr20260820-1820" alt="Google" width="30" height="30">
+            <img class="uni-nav__logo--super-g" src="/static/blogv2/images/super-g-aurora.svg?version=pr20260902-1737" alt="Google" width="30" height="30">
           </a>
         
         
@@ -398,7 +398,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -428,7 +428,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -458,7 +458,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -510,7 +510,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -551,7 +551,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -629,7 +629,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -659,7 +659,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -717,7 +717,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -747,7 +747,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -795,7 +795,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -825,7 +825,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -873,7 +873,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -910,7 +910,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -935,7 +935,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -960,7 +960,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -985,7 +985,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1025,7 +1025,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -1066,7 +1066,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1164,7 +1164,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1194,7 +1194,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1252,7 +1252,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1282,7 +1282,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1350,7 +1350,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1387,7 +1387,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1412,7 +1412,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1452,7 +1452,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -1493,7 +1493,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1581,7 +1581,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1611,7 +1611,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1659,7 +1659,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1689,7 +1689,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1737,7 +1737,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1774,7 +1774,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1822,7 +1822,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1914,7 +1914,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -1973,7 +1973,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2023,7 +2023,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2073,7 +2073,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2112,7 +2112,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2137,7 +2137,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2162,7 +2162,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2187,7 +2187,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2229,7 +2229,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -2339,7 +2339,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2398,7 +2398,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2466,7 +2466,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2505,7 +2505,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2530,7 +2530,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2572,7 +2572,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -2673,7 +2673,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2723,7 +2723,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2773,7 +2773,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2812,7 +2812,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2917,7 +2917,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-more-vert"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-more-vert"></use>
 </svg>
 
   </button>
@@ -2949,7 +2949,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#language"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#language"></use>
 </svg>
 
             
@@ -3252,7 +3252,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
     </span>
@@ -3282,7 +3282,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#photo-library"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#photo-library"></use>
 </svg>
 Images</a>
           
@@ -3307,7 +3307,7 @@ Images</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#rss-feed"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#rss-feed"></use>
 </svg>
 RSS feed</a>
         </li>
@@ -3427,7 +3427,7 @@ RSS feed</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
     </button>
@@ -3475,7 +3475,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3512,7 +3512,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3549,7 +3549,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3586,7 +3586,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           <span class="uni-breadcrumb__current-page">
@@ -3615,7 +3615,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
     </button>
@@ -3652,7 +3652,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-share"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-share"></use>
 </svg>
 
     <div class="uni-social-share__button">Share</div>
@@ -3682,7 +3682,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-x"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-x"></use>
 </svg>
 
   <div class="article-share__title">x.com</div>
@@ -3709,7 +3709,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-facebook"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-facebook"></use>
 </svg>
 
   <div class="article-share__title">Facebook</div>
@@ -3736,7 +3736,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-linkedin"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-linkedin"></use>
 </svg>
 
   <div class="article-share__title">LinkedIn</div>
@@ -3765,7 +3765,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-mail"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-mail"></use>
 </svg>
 
   <div class="article-share__title">Mail</div>
@@ -3798,12 +3798,12 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-link"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-link"></use>
 </svg>
 
     <div class="copy-link__title">Copy link</div>
   </button>
-  <div class="copy-link__dialog copy-link__content" uni-options='{"copyTextButton": "COPIED TO CLIPBOARD"}' aria-hidden="true" tabindex="-1">
+  <div class="copy-link__dialog copy-link__content" uni-options='{"copyTextButton": "Copied"}' aria-hidden="true" tabindex="-1">
     <input class="h-c-copy copy-link__url" value="https://blog.google/products-and-platforms/products/gemini/gemini-3-collection/" id="copy-link" readonly="readonly" type="text"/>
     <div class="copy-link__copy-message" role="status"></div>
   </div>
@@ -3908,7 +3908,7 @@ data-ga4-analytics-lead-click='{
   "secondary_tags": "AI Products,Google DeepMind",
   "publish_date": "2025-11-18|16:00",
   "hero_media": "image",
-  "days_since_published": "285",
+  "days_since_published": "301",
   "content_category": "Announcement",
   "content_type": "article page",
   "word_count": "1866",
@@ -4022,7 +4022,7 @@ data-ga4-analytics-lead-click='{
   "secondary_tags": "AI Products,Google DeepMind",
   "publish_date": "2025-11-18|16:00",
   "hero_media": "image",
-  "days_since_published": "285",
+  "days_since_published": "301",
   "content_category": "Announcement",
   "content_type": "article page",
   "word_count": "1866",
@@ -4065,7 +4065,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-arrow-forward-no-bg"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-arrow-forward-no-bg"></use>
 </svg>
 
                       </div>
@@ -4113,7 +4113,7 @@ data-ga4-analytics-lead-click='{
   "secondary_tags": "undefined",
   "publish_date": "2025-11-18|16:00",
   "hero_media": "image",
-  "days_since_published": "285",
+  "days_since_published": "301",
   "content_category": "Announcement",
   "content_type": "article page",
   "word_count": "692",
@@ -4227,7 +4227,7 @@ data-ga4-analytics-lead-click='{
   "secondary_tags": "undefined",
   "publish_date": "2025-11-18|16:00",
   "hero_media": "image",
-  "days_since_published": "285",
+  "days_since_published": "301",
   "content_category": "Announcement",
   "content_type": "article page",
   "word_count": "692",
@@ -4270,7 +4270,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-arrow-forward-no-bg"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-arrow-forward-no-bg"></use>
 </svg>
 
                       </div>
@@ -4318,7 +4318,7 @@ data-ga4-analytics-lead-click='{
   "secondary_tags": "Gemini models,AI Products",
   "publish_date": "2025-11-18|16:00",
   "hero_media": "image",
-  "days_since_published": "285",
+  "days_since_published": "301",
   "content_category": "Announcement",
   "content_type": "article page",
   "word_count": "600",
@@ -4432,7 +4432,7 @@ data-ga4-analytics-lead-click='{
   "secondary_tags": "Gemini models,AI Products",
   "publish_date": "2025-11-18|16:00",
   "hero_media": "image",
-  "days_since_published": "285",
+  "days_since_published": "301",
   "content_category": "Announcement",
   "content_type": "article page",
   "word_count": "600",
@@ -4475,7 +4475,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-arrow-forward-no-bg"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-arrow-forward-no-bg"></use>
 </svg>
 
                       </div>
@@ -4523,7 +4523,7 @@ data-ga4-analytics-lead-click='{
   "secondary_tags": "Gemini models",
   "publish_date": "2025-11-18|16:00",
   "hero_media": "image",
-  "days_since_published": "285",
+  "days_since_published": "301",
   "content_category": "Announcement",
   "content_type": "article page",
   "word_count": "1184",
@@ -4637,7 +4637,7 @@ data-ga4-analytics-lead-click='{
   "secondary_tags": "Gemini models",
   "publish_date": "2025-11-18|16:00",
   "hero_media": "image",
-  "days_since_published": "285",
+  "days_since_published": "301",
   "content_category": "Announcement",
   "content_type": "article page",
   "word_count": "1184",
@@ -4680,7 +4680,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-arrow-forward-no-bg"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-arrow-forward-no-bg"></use>
 </svg>
 
                       </div>
@@ -4859,7 +4859,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-arrow-forward-no-bg"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-arrow-forward-no-bg"></use>
 </svg>
 
                       </div>
@@ -5038,7 +5038,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-arrow-forward-no-bg"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-arrow-forward-no-bg"></use>
 </svg>
 
                       </div>
@@ -5217,7 +5217,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-arrow-forward-no-bg"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-arrow-forward-no-bg"></use>
 </svg>
 
                       </div>
@@ -5396,7 +5396,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-arrow-forward-no-bg"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-arrow-forward-no-bg"></use>
 </svg>
 
                       </div>
@@ -5575,7 +5575,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-arrow-forward-no-bg"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-arrow-forward-no-bg"></use>
 </svg>
 
                       </div>
@@ -5754,7 +5754,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-arrow-forward-no-bg"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-arrow-forward-no-bg"></use>
 </svg>
 
                       </div>
@@ -5933,7 +5933,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-arrow-forward-no-bg"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-arrow-forward-no-bg"></use>
 </svg>
 
                       </div>
@@ -6112,7 +6112,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-arrow-forward-no-bg"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-arrow-forward-no-bg"></use>
 </svg>
 
                       </div>
@@ -6180,7 +6180,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#google-logo"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#google-logo"></use>
 </svg>
 
     </a>
@@ -6255,7 +6255,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
   </span>
@@ -6563,7 +6563,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
     </span>
@@ -6636,13 +6636,13 @@ data-ga4-analytics-lead-click='{
 
         
         <div id="base-scripts" data-scripts='[
-              { "url": "/static/blogv2/js/csp/gtm.js?version=pr20260820-1820",
+              { "url": "/static/blogv2/js/csp/gtm.js?version=pr20260902-1737",
                 "options": {
                   "async": false,
                   "defer": true
                 }
               },
-              { "url": "/static/keyword/js/all/index.js?version=pr20260820-1820",
+              { "url": "/static/keyword/js/all/index.js?version=pr20260902-1737",
                 "options": {
                   "async": false,
                   "defer": false

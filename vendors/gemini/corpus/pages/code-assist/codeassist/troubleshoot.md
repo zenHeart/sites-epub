@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/clouddocs/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/clouddocs/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/clouddocs/images/favicons/onecloud/favicon.ico">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/clouddocs/images/favicons/onecloud/super_cloud.png"><link rel="canonical" href="https://docs.cloud.google.com/gemini/docs/codeassist/troubleshoot"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/favicons/onecloud/favicon.ico">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/favicons/onecloud/super_cloud.png"><link rel="canonical" href="https://docs.cloud.google.com/gemini/docs/codeassist/troubleshoot"><link rel="search" type="application/opensearchdescription+xml"
             title="Google Cloud Documentation" href="https://docs.cloud.google.com/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://docs.cloud.google.com/gemini/docs/codeassist/troubleshoot" /><link rel="alternate" hreflang="x-default" href="https://docs.cloud.google.com/gemini/docs/codeassist/troubleshoot" /><link rel="alternate" hreflang="zh-Hans"
@@ -64,6 +64,8 @@
   
     
     
+
+
 
 
 
@@ -192,11 +194,11 @@
   
   <picture>
     
-    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/clouddocs/images/lockup_dark_theme.svg"
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup_dark_theme.svg"
             media="(prefers-color-scheme: dark)"
             class="devsite-dark-theme">
     
-    <img src="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/clouddocs/images/lockup_full_color.svg" class="devsite-site-logo" alt="Google Cloud Documentation">
+    <img src="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup_full_color.svg" class="devsite-site-logo" alt="Google Cloud Documentation">
   </picture>
   
 </a>
@@ -1291,15 +1293,15 @@
     
     
       
-        track-name="gcpCta"
-      
-        track-type="freeTrial"
-      
         track-metadata-eventDetail="nav"
+      
+        track-metadata-position="nav"
       
         referrerpolicy="no-referrer-when-downgrade"
       
-        track-metadata-position="nav"
+        track-type="freeTrial"
+      
+        track-name="gcpCta"
       
     
     >Start free</a>
@@ -1510,11 +1512,11 @@
   
   <picture>
     
-    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/clouddocs/images/lockup_dark_theme.svg"
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup_dark_theme.svg"
             media="(prefers-color-scheme: dark)"
             class="devsite-dark-theme">
     
-    <img src="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/clouddocs/images/lockup_full_color.svg" class="devsite-site-logo" alt="Google Cloud Documentation">
+    <img src="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup_full_color.svg" class="devsite-site-logo" alt="Google Cloud Documentation">
   </picture>
   
 </a>
@@ -1909,9 +1911,7 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Request a Gemini Code Assist license</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/manage-licenses"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Manage Gemini Code Assist licenses</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/cross-org-license-usage"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Prevent cross-organization license usage</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist"
+      ><span class="devsite-nav-text" tooltip>Manage Gemini Code Assist licenses</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Use pre-release features in Gemini Code Assist for VS Code</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/configure-vpc-service-controls"
         class="devsite-nav-title"
@@ -2023,7 +2023,7 @@
 
   <li class="devsite-nav-item"><a href="/gemini/docs/audit-logging"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Gemini for Google Cloud audit logging</span></a></li>
+      ><span class="devsite-nav-text" tooltip>cloudaicompanion API audit logging</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/business-audit-logging"
         class="devsite-nav-title"
@@ -3340,7 +3340,7 @@
   product-id="5041938"
   bucket="Documentation"
   context=""
-  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  version="t-devsite-webserver-20260908-r00-rc00.480264207338033273"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -3533,7 +3533,7 @@ automatically assign a license.</p>
   product-id="5041938"
   bucket="Documentation"
   context=""
-  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  version="t-devsite-webserver-20260908-r00-rc00.480264207338033273"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -3568,7 +3568,7 @@ automatically assign a license.</p>
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-09-08 UTC.</p>
+  <p>Last updated 2026-09-15 UTC.</p>
 </devsite-content-footer>
 
 
@@ -3616,7 +3616,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-name="see all products"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="products and pricing"track-type="footer link"track-metadata-eventDetail="cloud.google.com/products/">
+            track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/products/"track-metadata-child_headline="products and pricing"track-type="footer link"track-name="see all products"track-metadata-position="footer">
             
           
             See all products
@@ -3633,7 +3633,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-position="footer"track-name="google cloud pricing"track-metadata-child_headline="products and pricing">
+            track-metadata-eventDetail="cloud.google.com/pricing/"track-type="footer link"track-name="google cloud pricing"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="products and pricing">
             
           
             Google Cloud pricing
@@ -3650,7 +3650,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-position="footer"track-metadata-child_headline="resources"track-type="footer link"track-name="google cloud marketplace"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/marketplace/">
+            track-type="footer link"track-metadata-child_headline="resources"track-name="google cloud marketplace"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-position="footer"track-metadata-module="footer">
             
           
             Google Cloud Marketplace
@@ -3667,7 +3667,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-position="footer"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="engage"track-name="contact sales"track-metadata-eventDetail="cloud.google.com/contact/">
+            track-type="footer link"track-metadata-child_headline="engage"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/contact/"track-name="contact sales"track-metadata-module="footer">
             
               
               
@@ -3694,7 +3694,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-name="google cloud community"track-metadata-module="footer"target="_blank"rel="noopener"track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-child_headline="engage"track-metadata-position="footer"track-type="footer link">
+            track-metadata-child_headline="engage"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="www.googlecloudcommunity.com"rel="noopener"track-metadata-module="footer"track-name="google cloud community"target="_blank">
             
           
             Community forums
@@ -3711,7 +3711,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-name="support"track-metadata-child_headline="resources"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/support-hub/">
+            track-metadata-position="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/support-hub/"track-name="support"track-metadata-module="footer"track-metadata-child_headline="resources">
             
           
             Support
@@ -3728,7 +3728,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-child_headline="resources"track-type="footer link"track-metadata-module="footer"track-name="release notes"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-position="footer">
+            track-metadata-eventDetail="cloud.google.com/release-notes/"track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-name="release notes"track-metadata-child_headline="resources">
             
           
             Release Notes
@@ -3745,7 +3745,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-child_headline="resources"track-metadata-eventDetail="status.cloud.google.com"track-name="system status"track-type="footer link"track-metadata-module="footer"target="_blank"track-metadata-position="footer">
+            track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="system status"track-metadata-position="footer"track-metadata-eventDetail="status.cloud.google.com"target="_blank">
             
               
               
@@ -3772,7 +3772,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="github">
+            track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-position="footer"track-name="github">
             
           
             GitHub
@@ -3789,7 +3789,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-name="google cloud quickstarts"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="resources"track-type="footer link">
+            track-metadata-module="footer"track-metadata-child_headline="resources"track-name="google cloud quickstarts"track-type="footer link"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-metadata-position="footer">
             
           
             Getting Started with Google Cloud
@@ -3806,7 +3806,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-name="code samples"track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-child_headline="resources"track-type="footer link">
+            track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/docs/samples"track-name="code samples"track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="resources">
             
           
             Code samples
@@ -3823,7 +3823,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-position="footer"track-name="cloud architecture center"track-metadata-module="footer"track-type="footer link"track-metadata-child_headline="resources">
+            track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-child_headline="resources"track-name="cloud architecture center">
             
           
             Cloud Architecture Center
@@ -3840,7 +3840,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-name="training"track-metadata-child_headline="resources">
+            track-metadata-position="footer"track-name="training"track-metadata-child_headline="resources"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/learn/training/">
             
               
               
@@ -3867,7 +3867,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-position="footer"track-metadata-child_headline="engage"track-name="blog">
+            track-name="blog"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/blog/">
             
           
             Blog
@@ -3884,7 +3884,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-module="footer"track-name="events"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/events/"track-type="footer link"track-metadata-position="footer">
+            track-type="footer link"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="engage"track-name="events"track-metadata-eventDetail="cloud.google.com/events/">
             
           
             Events
@@ -3901,7 +3901,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            target="_blank"track-name="follow on x"track-metadata-position="footer"track-metadata-eventDetail="x.com/googlecloud"track-metadata-module="footer"rel="noopener"track-metadata-child_headline="engage"track-type="footer link">
+            track-name="follow on x"track-metadata-position="footer"track-metadata-module="footer"target="_blank"track-metadata-eventDetail="x.com/googlecloud"rel="noopener"track-metadata-child_headline="engage"track-type="footer link">
             
           
             X (Twitter)
@@ -3918,7 +3918,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            rel="noopener"track-metadata-child_headline="engage"track-name="google cloud on youtube"track-metadata-module="footer"target="_blank"track-metadata-eventDetail="www.youtube.com/googlecloud"track-type="footer link"track-metadata-position="footer">
+            track-type="footer link"track-metadata-child_headline="engage"target="_blank"rel="noopener"track-metadata-position="footer"track-name="google cloud on youtube"track-metadata-module="footer"track-metadata-eventDetail="www.youtube.com/googlecloud">
             
           
             Google Cloud on YouTube
@@ -3935,7 +3935,7 @@ automatically assign a license.</p>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            rel="noopener"track-metadata-child_headline="engage"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-name="google cloud tech on youtube"track-metadata-module="footer"track-type="footer link"target="_blank"track-metadata-position="footer">
+            track-metadata-child_headline="engage"rel="noopener"track-type="footer link"track-name="google cloud tech on youtube"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-metadata-position="footer"track-metadata-module="footer"target="_blank">
             
               
               
@@ -3970,12 +3970,12 @@ automatically assign a license.</p>
        data-label="Footer Google Developers Link">
       <picture>
         
-        <source srcset="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/clouddocs/images/lockup-google-for-developers-dark-theme.svg"
+        <source srcset="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup-google-for-developers-dark-theme.svg"
                 media="(prefers-color-scheme: none)"
                 class="devsite-dark-theme">
         
         <img class="devsite-footer-sites-logo"
-             src="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/clouddocs/images/lockup-google-for-developers.svg"
+             src="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup-google-for-developers.svg"
              loading="lazy"
              alt="Google Developers">
       </picture>
@@ -4052,17 +4052,17 @@ automatically assign a license.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
-           track-metadata-position="footer"
-         
            track-type="footer link"
          
            track-metadata-eventDetail="//about.google/"
          
-           track-metadata-module="utility footer"
+           track-metadata-position="footer"
+         
+           target="_blank"
          
            track-name="about google"
          
-           target="_blank"
+           track-metadata-module="utility footer"
          >
           About Google
         </a>
@@ -4078,17 +4078,17 @@ automatically assign a license.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
-           track-metadata-module="utility footer"
+           track-type="footer link"
          
            track-name="privacy"
          
-           track-metadata-eventDetail="//policies.google.com/privacy"
-         
            target="_blank"
          
-           track-metadata-position="footer"
+           track-metadata-eventDetail="//policies.google.com/privacy"
          
-           track-type="footer link"
+           track-metadata-module="utility footer"
+         
+           track-metadata-position="footer"
          >
           Privacy
         </a>
@@ -4104,17 +4104,17 @@ automatically assign a license.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Site terms link"
          
+           track-metadata-module="utility footer"
+         
            track-type="footer link"
+         
+           target="_blank"
          
            track-metadata-position="footer"
          
            track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          
-           target="_blank"
-         
            track-name="site terms"
-         
-           track-metadata-module="utility footer"
          >
           Site terms
         </a>
@@ -4130,15 +4130,15 @@ automatically assign a license.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
-           track-type="footer link"
-         
            track-metadata-module="utility footer"
-         
-           track-metadata-eventDetail="//cloud.google.com/product-terms"
          
            track-metadata-position="footer"
          
+           track-type="footer link"
+         
            track-name="google cloud terms"
+         
+           track-metadata-eventDetail="//cloud.google.com/product-terms"
          >
           Google Cloud terms
         </a>
@@ -4154,17 +4154,17 @@ automatically assign a license.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Manage cookies link"
          
-           track-type="footer link"
-         
            track-metadata-eventDetail="#"
-         
-           aria-hidden="true"
-         
-           track-metadata-position="footer"
          
            track-name="Manage cookies"
          
            track-metadata-module="utility footer"
+         
+           track-type="footer link"
+         
+           track-metadata-position="footer"
+         
+           aria-hidden="true"
          >
           Manage cookies
         </a>
@@ -4180,15 +4180,15 @@ automatically assign a license.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
-           track-name="Our third decade of climate action: join us"
-         
-           track-metadata-position="footer"
-         
-           track-metadata-eventDetail="/sustainability/"
-         
            track-type="footer link"
          
            track-metadata-module="utility footer"
+         
+           track-metadata-position="footer"
+         
+           track-name="Our third decade of climate action: join us"
+         
+           track-metadata-eventDetail="/sustainability/"
          >
           Our third decade of climate action: join us
         </a>
@@ -4206,13 +4206,13 @@ automatically assign a license.</p>
            data-category="Site-Wide Custom Events"
            data-label="Footer Subscribe link"
          
-           track-metadata-position="footer"
-         
            track-type="footer link"
+         
+           track-metadata-eventDetail="/newsletter/"
          
            track-name="subscribe"
          
-           track-metadata-eventDetail="/newsletter/"
+           track-metadata-position="footer"
          
            track-metadata-module="utility footer"
          >

@@ -39,9 +39,10 @@ These settings apply exclusively within the scope of a specific Project:
     *   **Local**: Select this in the new conversation view to work directly in the existing folders.
     *   **Worktree**: Select this to start a new worktree in the folders. (Note: If a folder does not have Git, the existing local folder is used instead).
 *   **Agent Settings**: Configure project-specific agent behaviors:
-    *   **Terminal Execution Policy**: Control how the agent runs shell commands.
-    *   **Outside of Folder File Access Policy**: Define how the agent accesses files outside the project boundary (Always Allow, Always Ask, or Always Deny).
-    *   **Sandbox Mode**: Toggle the terminal sandbox container on or off within the custom security preset.
+    *   **Permission Settings** (macOS and Linux): Choose the project’s permission preset — **Inherit General**, **Default**, **Request Review**, or **Turbo** — controlling how the agent runs shell commands, accesses files, and uses the [Terminal Sandbox](/docs/sandbox) (see **[Agent Permissions](/docs/permissions)**).
+    *   **Terminal Execution Policy** (Windows): Control how the agent runs shell commands.
+    *   **Outside of Folder File Access Policy** (Windows): Define how the agent accesses files outside the project boundary (Always Allow, Always Ask, or Always Deny).
+    *   **Sandbox Mode** (Windows): Toggle the terminal sandbox container on or off within the custom security preset (see **[Terminal Sandbox](/docs/sandbox)**).
 *   **Project-level Permissions**: Configure permissions at the project level. As you interact with an agent, you will accumulate permission requests that can be automatically added to the project permissions.
 *   **Customizations**: Derived from both global customizations and project-specific ones. You can view all skills originating from each folder added to the project.
 

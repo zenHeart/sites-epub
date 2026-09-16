@@ -165,7 +165,7 @@
     
       "special_hero": "undefined",
     
-    "days_since_published": "8",
+    "days_since_published": "13",
     
       "content_category": "Topics - Gemini models",
     
@@ -6265,10 +6265,101 @@ data-ga4-analytics-landing-lead='{
 
 
 <a
+  href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
+  class="uni-article-card"
+  aria-label="Gemini models - Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking - By Tom Ouyang& Malini Jaganathan - Sep 15, 2026"
+  data-index="1"
+  data-target="card"
+  data-primaryTag="topics - gemini models"
+  data-image="true"
+  data-ga4-analytics-footer-lead-click='{
+    "link_text": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+    "link_url":  "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+    "source_content": "Related stories",
+    "related_index": "1",
+    "related_article_tag": "topics - gemini models",
+    "article_name": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+    "author_name": "Tom Ouyang, Malini Jaganathan",
+    "content_type": "blogv2 | article page"
+  }'
+  data-theme-color="blue"
+>
+  <div class="uni-article-card__shape-container">
+    <div
+      class="uni-article-card__shape"
+      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
+      
+        
+  
+
+
+<img
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_3-8_live___keyword__blog-header.png"
+  alt=""
+
+  
+    class="uni-article-card__img"
+  
+
+  
+
+  
+    loading="lazy"
+  
+  />
+
+
+
+
+      
+    </div>
+  </div>
+
+  <div class="uni-article-card__content">
+    <div class="uni-article-card__text">
+      <span
+        class="uni-article-card__eyebrow font-eyebrow"
+        data-target="eyebrow">
+        Gemini models
+      </span>
+      <h3
+        class="uni-article-card__title font-h5"
+        data-target="title">
+        Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking
+      </h3>
+      
+    </div>
+
+    <div
+      class="uni-article-card__meta"
+      data-target="author">
+      
+        <span class="uni-article-card__author font-author-name">
+          By
+          
+            
+            Tom Ouyang
+          
+            & 
+            Malini Jaganathan
+          
+        </span>
+      
+    </div>
+  </div>
+</a>
+
+        
+          
+
+
+
+
+<a
   href="https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/"
   class="uni-article-card"
   aria-label="Safety &amp; Security - Proactive cyber defense for governments and enterprises - By Four Flynn - Sep 02, 2026"
-  data-index="1"
+  data-index="2"
   data-target="card"
   data-primaryTag="topics - safety &amp; security"
   data-image="true"
@@ -6276,7 +6367,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "Proactive cyber defense for governments and enterprises",
     "link_url":  "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
     "source_content": "Related stories",
-    "related_index": "1",
+    "related_index": "2",
     "related_article_tag": "topics - safety &amp; security",
     "article_name": "Proactive cyber defense for governments and enterprises",
     "author_name": "Four Flynn",
@@ -6359,7 +6450,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/"
   class="uni-article-card"
   aria-label="AI - The latest AI news we announced in August 2026 - By News from Google Team - Sep 01, 2026"
-  data-index="2"
+  data-index="3"
   data-target="card"
   data-primaryTag="topics - ai"
   data-image="true"
@@ -6367,7 +6458,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "The latest AI news we announced in August 2026",
     "link_url":  "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
     "source_content": "Related stories",
-    "related_index": "2",
+    "related_index": "3",
     "related_article_tag": "topics - ai",
     "article_name": "The latest AI news we announced in August 2026",
     "author_name": "News from Google Team",
@@ -6450,7 +6541,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/"
   class="uni-article-card"
   aria-label="Gemini models - Introducing agentic video understanding with Gemini - By Rohan Doshi& Mario Lučić - Sep 01, 2026"
-  data-index="3"
+  data-index="4"
   data-target="card"
   data-primaryTag="topics - gemini models"
   data-image="true"
@@ -6458,7 +6549,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "Introducing agentic video understanding with Gemini",
     "link_url":  "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/",
     "source_content": "Related stories",
-    "related_index": "3",
+    "related_index": "4",
     "related_article_tag": "topics - gemini models",
     "article_name": "Introducing agentic video understanding with Gemini",
     "author_name": "Rohan Doshi, Mario Lučić",
@@ -6544,7 +6635,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/"
   class="uni-article-card"
   aria-label="Developer tools - Gemini Omni 1.1 Flash lets you build with more control - By Anish Nangia& Alisa Fortin - Aug 27, 2026"
-  data-index="4"
+  data-index="5"
   data-target="card"
   data-primaryTag="products - developer tools"
   data-image="true"
@@ -6552,7 +6643,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "Gemini Omni 1.1 Flash lets you build with more control",
     "link_url":  "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
     "source_content": "Related stories",
-    "related_index": "4",
+    "related_index": "5",
     "related_article_tag": "products - developer tools",
     "article_name": "Gemini Omni 1.1 Flash lets you build with more control",
     "author_name": "Anish Nangia, Alisa Fortin",
@@ -6638,7 +6729,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/"
   class="uni-article-card"
   aria-label="Gemini models - Intelligent transcription with Gemini 3.5 Transcribe - By Diego Melendo Casado& Luke Leonhard - Aug 26, 2026"
-  data-index="5"
+  data-index="6"
   data-target="card"
   data-primaryTag="topics - gemini models"
   data-image="true"
@@ -6646,7 +6737,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "Intelligent transcription with Gemini 3.5 Transcribe",
     "link_url":  "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
     "source_content": "Related stories",
-    "related_index": "5",
+    "related_index": "6",
     "related_article_tag": "topics - gemini models",
     "article_name": "Intelligent transcription with Gemini 3.5 Transcribe",
     "author_name": "Diego Melendo Casado, Luke Leonhard",
@@ -6715,97 +6806,6 @@ data-ga4-analytics-landing-lead='{
           
             & 
             Luke Leonhard
-          
-        </span>
-      
-    </div>
-  </div>
-</a>
-
-        
-          
-
-
-
-
-<a
-  href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/what-full-stack-development-means/"
-  class="uni-article-card"
-  aria-label="Gemini models - What does “full\u002Dstack” AI actually mean? - By Lindsey Lanquist - Aug 21, 2026"
-  data-index="6"
-  data-target="card"
-  data-primaryTag="topics - gemini models"
-  data-image="true"
-  data-ga4-analytics-footer-lead-click='{
-    "link_text": "What does “full\u002Dstack” AI actually mean?",
-    "link_url":  "https://blog.google/innovation-and-ai/models-and-research/gemini-models/what-full-stack-development-means/",
-    "source_content": "Related stories",
-    "related_index": "6",
-    "related_article_tag": "topics - gemini models",
-    "article_name": "What does “full\u002Dstack” AI actually mean?",
-    "author_name": "Lindsey Lanquist",
-    "content_type": "blogv2 | Short Post"
-  }'
-  data-theme-color="blue"
->
-  <div class="uni-article-card__shape-container">
-    <div
-      class="uni-article-card__shape"
-      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
-      
-        
-  
-
-
-<img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/thumbnail_BfIj9lP.2e16d0ba.fill-300x300.format-webp.webp"
-  alt=""
-
-  
-    class="uni-article-card__img"
-  
-
-  
-    sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/thumbnail_BfIj9lP.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/thumbnail_BfIj9lP.2e16d0ba.fill-600x600.format-webp.webp 600w"
-  
-
-  
-    loading="lazy"
-  
-  />
-
-
-
-
-      
-    </div>
-  </div>
-
-  <div class="uni-article-card__content">
-    <div class="uni-article-card__text">
-      <span
-        class="uni-article-card__eyebrow font-eyebrow"
-        data-target="eyebrow">
-        Gemini models
-      </span>
-      <h3
-        class="uni-article-card__title font-h5"
-        data-target="title">
-        What does “full-stack” AI actually mean?
-      </h3>
-      
-    </div>
-
-    <div
-      class="uni-article-card__meta"
-      data-target="author">
-      
-        <span class="uni-article-card__author font-author-name">
-          By
-          
-            
-            Lindsey Lanquist
           
         </span>
       

@@ -23,7 +23,7 @@ Connect your repositories through the Cursor dashboard to start using Bugbot.
 - **GitHub** (including GitHub Enterprise Server): See the [GitHub integration page](https://cursor.com/docs/integrations/github.md)
 - **GitLab** (including GitLab Self-Hosted): See the [GitLab integration page](https://cursor.com/docs/integrations/gitlab.md)
 - **Bitbucket** (including Bitbucket Data Center): See the [Bitbucket integration page](https://cursor.com/docs/integrations/bitbucket.md)
-- **Azure DevOps** (Azure DevOps Services, limited availability): See the [Azure DevOps integration page](https://cursor.com/docs/integrations/azure-devops.md#set-up-bugbot)
+- **Azure DevOps** (Azure DevOps Services): See the [Azure DevOps integration page](https://cursor.com/docs/integrations/azure-devops.md#set-up-bugbot)
 
 After connecting, open [Bugbot in Automations](https://cursor.com/automations/from-cursor/bugbot) to enable it on specific repositories.
 
@@ -346,9 +346,10 @@ Effort levels control how much time Bugbot spends reasoning during a review. Hig
 
 Choose from these effort levels:
 
+- **Low**: Optimizes for cost, with quality close to Default. Reviews are cheaper and take longer.
 - **Default**: Optimizes for efficiency and speed. Reviews are less expensive, but Bugbot may find fewer bugs.
 - **High**: Spends more time reasoning. Reviews are more expensive and take longer, but Bugbot may find more bugs.
-- **Custom**: Lets you describe when Bugbot should use longer and deeper reviews. Cursor dynamically sets effort levels based on your instructions.
+- **Smart**: Lets you describe when Bugbot should use Low, Default, or High. Cursor dynamically sets effort levels based on your instructions.
 
 Effort levels are available only for usage-based Bugbot plans.
 

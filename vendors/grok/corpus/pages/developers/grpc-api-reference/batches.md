@@ -1,3 +1,0 @@
-#### gRPC API
-
-# Batch Management

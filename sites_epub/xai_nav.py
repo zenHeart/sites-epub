@@ -123,6 +123,10 @@ def parse_xai_llms(text: str, docs_url: str) -> list[IndexEntry]:
             clean_path = clean_path[:-3]
         if clean_path.endswith((".json", ".xml", ".txt", ".yaml", ".yml")):
             continue
+        # gRPC API reference pages are JS-rendered SPAs: the .md twin is a bare
+        # heading, so they can only pack as empty stubs (walk gate fails).
+        if "grpc-api-reference" in clean_path:
+            continue
         route = clean_path.strip("/")
         if not route or route in seen:
             continue

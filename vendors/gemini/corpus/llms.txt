@@ -123,7 +123,7 @@ Gemini API Docs and API Reference
 - [Gemini 3.1 Flash image](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-image.md.txt): Learn about Gemini 3.1 Flash Image from Google
 - [Gemini 3.1 Flash-Lite](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite.md.txt): Learn about Gemini 3.1 Flash-Lite from Google
 - [Gemini 3.1 Flash-Lite Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite-preview.md.txt): Learn about Gemini 3 Flash Preview from Google
-- [Gemini 3.1 Flash Live Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-live-preview.md.txt): Learn about the Gemini 3.1 Flash Live Preview model from Google
+- [Gemini 3.1 Flash live preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-live-preview.md.txt): Learn about the Gemini 3.1 Flash Live Preview model from Google
 - [Gemini 3.1 Flash TTS (Text-to-Speech) Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-tts-preview.md.txt): Learn about Gemini 3.1 Flash TTS Preview model from Google
 - [Gemini 3.1 Pro Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview.md.txt): Learn about Gemini 3.1 Pro Preview from Google
 - [Gemini 3.5 Flash](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash.md.txt): Learn about Gemini 3.5 Flash from Google
@@ -204,3 +204,6 @@ Gemini API Docs and API Reference
 - [Spatial reasoning](https://ai.google.dev/gemini-api/docs/robotics-spatial.md.txt): Use Gemini Robotics ER for spatial reasoning tasks including object detection, tracking, and trajectory planning.
 - [Lyria 3.5](https://ai.google.dev/gemini-api/docs/models/lyria-3.5.md.txt): Learn about Lyria 3.5 from Google DeepMind
 - [Gemini API](https://ai.google.dev/gemini-api/docs/generate-content.md.txt): Gemini API Docs and API Reference
+- [Gemini 3.8 Live](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live.md.txt): Learn about the Gemini 3.8 Live model from Google
+- [Thinking in the Live API](https://ai.google.dev/gemini-api/docs/live-api/thinking.md.txt): Learn about Thinking in the Gemini Live API, including architectural differences, interaction status tracking, and non-blocking tools.
+- [Gemini 3.8 Live Extended Thinking](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live-extended-thinking.md.txt): Learn about the Gemini 3.8 Live Extended Thinking model from Google

@@ -8,7 +8,7 @@ The xAI REST API is compatible with the OpenAI REST API. This reference is gener
 
 | API | Base URL | Authenticate with |
 | --- | --- | --- |
-| Inference (responses, chat completions, embeddings, images, videos, voice, files, batches, models) | `https://api.x.ai` | `Authorization: Bearer <xAI API key>` |
+| Inference (responses, chat completions, images, videos, voice, files, batches, models) | `https://api.x.ai` | `Authorization: Bearer <xAI API key>` |
 | Collections management | `https://management-api.x.ai` | `Authorization: Bearer <xAI Management API key>` |
 | Collections search | `https://api.x.ai` | `Authorization: Bearer <xAI API key>` |
 | Management (API keys, teams, billing, audit) | `https://management-api.x.ai` | `Authorization: Bearer <xAI Management API key>` |
@@ -19,7 +19,6 @@ API keys are created on the [API Keys page](https://console.x.ai/team/default/ap
 
 * [Responses](/developers/rest-api-reference/inference/responses)
 * [Chat Completions](/developers/rest-api-reference/inference/chat-completions)
-* [Embeddings](/developers/rest-api-reference/inference/embeddings)
 * [Images](/developers/rest-api-reference/inference/images)
 * [Videos](/developers/rest-api-reference/inference/videos)
 * [Voice](/developers/rest-api-reference/inference/voice)

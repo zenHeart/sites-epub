@@ -617,14 +617,6 @@
   },
   {
     "group": "Developers",
-    "title": "MCP Server",
-    "md_url": "https://learn.chatgpt.com/codex/mcp-server.md",
-    "html_url": "https://learn.chatgpt.com/codex/mcp-server",
-    "route": "codex/mcp-server",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
     "title": "GitHub Action",
     "md_url": "https://learn.chatgpt.com/codex/github-action.md",
     "html_url": "https://learn.chatgpt.com/codex/github-action",
@@ -1190,6 +1182,14 @@
     "html_url": "https://learn.chatgpt.com/codex/amazon-bedrock",
     "route": "codex/amazon-bedrock",
     "kind": "doc"
+  },
+  {
+    "group": "Blog",
+    "title": "rethinking skills and prompts for gpt 6 astra",
+    "md_url": "https://learn.chatgpt.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra.md",
+    "html_url": "https://learn.chatgpt.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra",
+    "route": "blog/rethinking-skills-and-prompts-for-gpt-6-astra",
+    "kind": "blog"
   },
   {
     "group": "Blog",

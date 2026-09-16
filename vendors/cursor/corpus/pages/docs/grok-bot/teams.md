@@ -41,12 +41,12 @@ The security model rests on four principles:
 - **Per-user isolation.** Each user's work runs in a dedicated Firecracker microVM, a micro virtual machine with hardware-level separation from other users.
 - **No access by default.** A Bot can use only the accounts and plugins the user or team grants it.
 - **Human approval gates.** Sensitive actions require user approval, evaluated by an independent review model called Auto Review.
-- **Administrative control.** Team admins can set Team Rules, Cloud Agent delegation, template sharing, and the local execution ceiling. Network Controls, Team Setup, Action Recording, Enforce Auto-review, Auto-review rules, and the organization-wide enable switch are Enterprise only.
+- **Administrative control.** Team admins can set Team Rules, Cloud Agent delegation, template sharing, and the local execution ceiling. Network Controls, Team Setup, Allow Local Egress, Action Recording, Enforce Auto-review, Auto-review rules, and the organization-wide enable switch are Enterprise only.
 
 The pieces fit together like this:
 
 1. **Local machine.** Chat, review, and approvals happen on the member's device. Work runs in the hosted computer. Optional [local execution](https://cursor.com/docs/grok-bot/security.md#local-execution) requires per-command approval by default and can be turned off.
-2. **Environment.** One persistent Firecracker microVM per user. Every Bot that user runs shares that computer. Admins manage Grok Bot from the Grok Bot page of the [Cursor dashboard](https://cursor.com/dashboard/bot). Team Rules, Cloud Agent delegation, public template sharing, and Execution on Local Computer are available to team admins. **Enterprise only** on that page: the organization-wide enable switch, Network Controls, Team Setup, Action Recording, Enforce Auto-review, Auto-review rules, and computer management for organization admins. Members never see this page.
+2. **Environment.** One persistent Firecracker microVM per user. Every Bot that user runs shares that computer. Admins manage Grok Bot from the Grok Bot page of the [Cursor dashboard](https://cursor.com/dashboard/bot). Team Rules, Cloud Agent delegation, public template sharing, and Execution on Local Computer are available to team admins. **Enterprise only** on that page: the organization-wide enable switch, Network Controls, Team Setup, Allow Local Egress, Action Recording, Enforce Auto-review, Auto-review rules, and computer management for organization admins. Members never see this page.
 3. **The Bot.** Shell, browser, and computer use inside the hosted computer. A Bot has no access by default and acts only with accounts the member signs it into. It hands login, two-factor authentication, and payment steps to the member.
 4. **Plugins.** Your team's Cursor MCP (Model Context Protocol) policy applies in full, allowing or blocking each connector. OAuth tokens stay on Cursor's connector backend, and Bots invoke tools without receiving them.
 5. **Cloud Agents.** Grok Bot can delegate coding tasks to separate computers under your existing [Cloud Agent](https://cursor.com/docs/cloud-agent.md) controls. Admins can disable spawning.
@@ -98,6 +98,12 @@ Grok Bot inherits your team's Cursor connector policy. There is no separate Grok
 
 Caps what Bots may do on a member's own machine through the desktop app: open files and run tasks. Pick **Always allow**, **Ask every time**, or **Never allow** on the Grok Bot page. **Always allow**, the default, leaves the choice to each member, whose own setting defaults to asking before every task. **Ask every time** makes every local task ask for approval, and **Never allow** turns local execution off for the whole team. A member's own setting still applies when it is stricter than the team's. Pick **Never allow** unless Bots have a specific reason to work on member machines. See [local execution](https://cursor.com/docs/grok-bot/security.md#local-execution).
 
+#### Allow Local Egress
+
+Let members route Grok Bot's web traffic through their own computer. Off disables the option in Grok Bot. The switch is on by default. Turning it off stops active routes within five minutes. Turning it back on restores each member's previous choice. See [Route traffic through your desktop](https://cursor.com/docs/grok-bot/settings.md#route-traffic-through-your-desktop).
+
+*Available on the [Enterprise plan](https://cursor.com/docs/enterprise.md).*
+
 ### Rules and approvals
 
 Guidance Bots follow, and the review layer that stops actions.
@@ -120,7 +126,7 @@ Team-wide "Ask first" and "Allow automatically" rules that apply to every member
 
 ### Computers and network
 
-How team computers are set up, what they can reach, and how you terminate one.
+How team computers are set up, what they can reach, and how you recreate or terminate them.
 
 #### Network Controls
 
@@ -134,9 +140,9 @@ Manifests of install scripts that run on every team computer, so the same toolin
 
 *Available on the [Enterprise plan](https://cursor.com/docs/enterprise.md).*
 
-#### Computer management
+#### Grok Bot Computers
 
-Lets organization admins look up any member's computer, see when it was created and last active, and terminate it. Team admin rights aren't enough, because one computer spans every team the member belongs to. Terminating keeps the durable disk, and the member's next session starts a fresh computer on it. Pair it with a session revoke in your identity provider when you need to cut off access fast.
+Lets organization admins recreate or terminate the computers of many members at once, with a result for each member. Team admin rights aren't enough, because one computer spans every team the member belongs to. Recreate moves members to the latest image and Team Setup while keeping their Bots, files, and logins. Terminate ends the member's current work and keeps the durable disk; the member's next session starts a fresh computer on it. Neither action removes access: to do that, remove the member from the team or turn off Grok Bot for their group, and revoke their sessions in your identity provider. See [Manage Grok Bot computers](https://cursor.com/docs/grok-bot/computers.md).
 
 *Available on the [Enterprise plan](https://cursor.com/docs/enterprise.md).*
 
@@ -146,7 +152,7 @@ What gets recorded, and where it goes.
 
 #### Action Recording
 
-Records Bot actions, including scrubbed shell commands. The switch is on the Grok Bot page and is off by default. Recorded events don't appear on the Audit Log page. To receive them in your own collector, configure [OpenTelemetry Export](https://cursor.com/docs/enterprise/opentelemetry-export.md), which delivers each event tagged `cursor.surface=grok_bot`. Retention details are on [logging and audit](https://cursor.com/docs/grok-bot/security.md#logging-and-audit).
+Records Bot actions: connector (MCP) tool calls, shell commands, browser navigations, and computer use sessions. Events are sanitized before they are stored or exported. Shell commands are secret-scrubbed; browser navigations keep each page as `scheme://host/path` with the title but strip query strings and credentials; computer use sessions record action and screenshot counts and the session duration, without the screenshots, clicks, or typed text. The switch is on the Grok Bot page and is off by default. Recorded events don't appear on the Audit Log page. To receive them in your own collector, configure [OpenTelemetry Export](https://cursor.com/docs/enterprise/opentelemetry-export.md), which delivers each event tagged `cursor.surface=grok_bot`. Retention details are on [logging and audit](https://cursor.com/docs/grok-bot/security.md#logging-and-audit).
 
 *Available on the [Enterprise plan](https://cursor.com/docs/enterprise.md).*
 
@@ -161,6 +167,10 @@ Admin, security, and authentication events, plus Grok Bot control-plane events: 
 Streams Cursor usage metrics and logs, including recorded Grok Bot actions, to a collector you run. It's the customer path for Action Recording events. Configure it under **Team Settings** > **OpenTelemetry Export**. Endpoint requirements and the event schema are on [OpenTelemetry Export](https://cursor.com/docs/enterprise/opentelemetry-export.md).
 
 *Available on the [Enterprise plan](https://cursor.com/docs/enterprise.md).*
+
+## Admin API
+
+Enable Grok Bot and manage capabilities, Enforce Auto-Review, group access, network policy, team rules, and setup scripts through the [Admin API](https://cursor.com/docs/account/teams/admin-api.md#grok-bot).
 
 ## Security
 
@@ -197,6 +207,10 @@ The organization-wide **Enable Grok Bot** switch is Enterprise only. It
 lives on the Grok Bot page of the Cursor dashboard. Self-serve Teams do
 not get this switch. Disabling blocks members without deleting their
 computers.
+
+### Can I manage Grok Bot through the Admin API?
+
+Yes. Use the [Admin API](https://cursor.com/docs/account/teams/admin-api.md#grok-bot).
 
 ### Can I set a Grok Bot spend cap?
 
@@ -236,7 +250,9 @@ Isolation, egress, approvals, logging, and data-handling questions are on [Grok 
 - [Configure identity and access](https://cursor.com/docs/grok-bot/identity.md)
 - [Connect to private networks](https://cursor.com/docs/grok-bot/private-networks.md)
 - [Configure TLS-inspecting proxies](https://cursor.com/docs/grok-bot/proxies.md)
+- [Manage Grok Bot computers](https://cursor.com/docs/grok-bot/computers.md)
 - [Work with Grok Bot](https://cursor.com/docs/grok-bot/work.md)
+- [Admin API](https://cursor.com/docs/account/teams/admin-api.md#grok-bot)
 - [Grok Bot Conversation Insights](https://cursor.com/docs/account/teams/analytics.md#grok-bot-conversation-insights)
 - [Plans and billing](https://cursor.com/help/grok-bot/plans.md)
 - [Privacy and Data Governance](https://cursor.com/docs/enterprise/privacy-and-data-governance.md)

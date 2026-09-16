@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/api/webhooks"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/api/webhooks"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://ai.google.dev/api/webhooks" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/api/webhooks" /><link rel="alternate" hreflang="ar"
@@ -59,14 +59,14 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image">
   
-
-
-
-
-
-
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet" data-page-link>
+    
+    
+    
+    
+    
+    
+    
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" data-page-link>
 
     </head>
   <body class="gemini-api docs color-scheme--light"
@@ -875,21 +875,13 @@
         <span class="devsite-nav-text" tooltip>Real time APIs</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/api/live"
+  <li class="devsite-nav-item"><a href="/api/live"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Live API</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Live API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/api/live_music"
+  <li class="devsite-nav-item"><a href="/api/live_music"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Live Music API</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Live Music API</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -900,37 +892,21 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Model API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/agents"
+  <li class="devsite-nav-item"><a href="/api/agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Agents</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/webhooks"
+  <li class="devsite-nav-item"><a href="/api/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/triggers"
+  <li class="devsite-nav-item"><a href="/api/triggers"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Triggers</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Triggers</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/environments"
+  <li class="devsite-nav-item"><a href="/api/environments"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Environments</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Environments</span></a></li>
 
   <li class="devsite-nav-item"><a href="/api/batch-api"
         class="devsite-nav-title"
@@ -1076,7 +1052,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1218,7 +1194,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1228,7 +1204,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -1264,55 +1240,60 @@
   
     
     
-<p>Webhooks allow the Gemini API to push real-time notifications to your server when asynchronous or Long-Running Operations (LROs) complete. This replaces the need to poll the API for status updates, reducing latency and overhead.</p>
-<div class="markdown-actions" style="margin-top: 16px; margin-bottom: 24px;">
-<a class="md-button" href="/static/api/webhooks.md.txt" target="_blank">View as markdown</a>
-<a class="md-button" href="/static/api/interactions.openapi.json" target="_blank">View the OpenAPI Spec</a>
-</div>
-<aside class="note">
-<p>This API is in Beta. Endpoints are under <code translate="no" dir="ltr">/v1beta/</code>.</p>
-</aside>
+    <p>Webhooks allow the Gemini API to push real-time notifications to your server when asynchronous or Long-Running Operations (LROs) complete. This replaces the need to poll the API for status updates, reducing latency and overhead.</p>
+    <div class="markdown-actions" style="margin-top: 16px; margin-bottom: 24px;">
+        <a href="/static/api/webhooks.md.txt" class="md-button" target="_blank">View as markdown</a>
+        <a href="/static/api/interactions.openapi.json" class="md-button" target="_blank">View the OpenAPI Spec</a>
+    </div>
+    <aside class="note">
+        <p>This API is in Beta. Endpoints are under <code translate="no" dir="ltr">/v1beta/</code>.</p>
+    </aside>
+    
 
-<div class="prototype" itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h2 id="CreateWebhook" data-text="CreateWebhook" tabindex="-1">CreateWebhook</h2>
-<div>
-<span class="endpoint">
-<span class="http-method post">
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject" class="prototype">
+    <h2 id="CreateWebhook" data-text="CreateWebhook" tabindex="-1">CreateWebhook</h2>
+    <div>
+        <span class="endpoint">
+            <span class="http-method post">
                 post
             </span>
-</span>
-<span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
+        </span>
+
+        <span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
             https://generativelanguage.googleapis.com/v1beta/webhooks
         </span>
+    </div>
+
+    <section id="description">
+        <p>Creates a new Webhook.</p>
+    </section>
+    <section class="prototype">
+        <ul class="toc">
+<li><a href="#CreateWebhook.request_body">Request body</a></li>            <li><a href="#CreateWebhook.response">Response</a></li>
+        </ul>
+        <div class="column-container request-section" style="margin-top: 48px;">
+            <div class="reference">
+                <section id="CreateWebhook.request_body">
+                    <h3 id="request-body" data-text="Request body" tabindex="-1">Request body</h3>
+                    <p>The request body contains data with the following structure:</p>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">name</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The user-provided name of the webhook.</p>
+    </div>
 </div>
-<section id="description">
-<p>Creates a new Webhook.</p>
-</section>
-<section class="prototype">
-<ul class="toc">
-<li><a href="#CreateWebhook.request_body">Request body</a></li> <li><a href="#CreateWebhook.response">Response</a></li>
-</ul>
-<div class="column-container request-section" style="margin-top: 48px;">
-<div class="reference">
-<section id="CreateWebhook.request_body">
-<h3 id="request-body" data-text="Request body" tabindex="-1">Request body</h3>
-<p>The request body contains data with the following structure:</p>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">name</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. The user-provided name of the webhook.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">subscribed_events</span>
-<span class="field-type">array (enum (string))</span>
-<span class="field-nessesity required"> (required)</span> </div>
-<div class="field-description">
-<p>Required. The events that the webhook is subscribed to.
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">subscribed_events</span>
+        <span class="field-type">array (enum (string))</span>
+<span class="field-nessesity required">&nbsp;(required)</span>    </div>
+    <div class="field-description">
+        <p>Required. The events that the webhook is subscribed to.
 Available events:
 - batch.succeeded
 - batch.expired
@@ -1321,147 +1302,167 @@ Available events:
 - interaction.completed
 - interaction.failed
 - video.generated</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.succeeded</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch processing finished successfully.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.expired</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch has not been processed within the 48h timeframe.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.failed</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch job failed.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.requires_action</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction requires action (e.g., function calling).</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.completed</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction completed successfully.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.failed</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction failed.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">video.generated</code>
-<p style="margin-left: 16px; font-size: 13px;">Video generation completed.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.succeeded</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch processing finished successfully.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.expired</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch has not been processed within the 48h timeframe.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.failed</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch job failed.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.requires_action</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction requires action (e.g., function calling).</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.completed</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction completed successfully.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.failed</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction failed.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">video.generated</code>
+<p style="margin-left: 16px; font-size: 13px;">Video generation completed.</p>            </li>
+        </ul>
+    </div>
 </div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">uri</span>
+        <span class="field-type">string</span>
+<span class="field-nessesity required">&nbsp;(required)</span>    </div>
+    <div class="field-description">
+        <p>Required. The URI to which webhook events will be sent.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">uri</span>
-<span class="field-type">string</span>
-<span class="field-nessesity required"> (required)</span> </div>
-<div class="field-description">
-<p>Required. The URI to which webhook events will be sent.</p>
+
+                </section>
+                <section id="CreateWebhook.response">
+                    <h3 id="response" data-text="Response" tabindex="-1">Response</h3>
+                    <p>If successful, the response body contains data with the following structure:</p>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">create_time</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The timestamp when the webhook was created.</p>
+    </div>
 </div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">id</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The ID of the webhook.</p>
+    </div>
 </div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">name</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The user-provided name of the webhook.</p>
+    </div>
+</div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">new_signing_secret</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The new signing secret for the webhook. Only populated on create.</p>
+    </div>
+</div>
+
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">signing_secrets</span>
+        <span class="field-type">array (SigningSecret)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>Output only. The signing secrets associated with this webhook.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >Represents a signing secret used to verify webhook payloads.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">expire_time</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The expiration date of the signing secret.</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">truncated_secret</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The truncated version of the signing secret.</p>
+    </div>
+</div>
+
+        </div>
+    </div>
 </section>
-<section id="CreateWebhook.response">
-<h3 id="response" data-text="Response" tabindex="-1">Response</h3>
-<p>If successful, the response body contains data with the following structure:</p>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">create_time</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The timestamp when the webhook was created.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">id</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The ID of the webhook.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">name</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. The user-provided name of the webhook.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">new_signing_secret</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The new signing secret for the webhook. Only populated on create.</p>
-</div>
-</div>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">signing_secrets</span>
-<span class="field-type">array (SigningSecret)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>Output only. The signing secrets associated with this webhook.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">Represents a signing secret used to verify webhook payloads.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">expire_time</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The expiration date of the signing secret.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">truncated_secret</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The truncated version of the signing secret.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
+
+    </div>
 </details>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">state</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The state of the webhook.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">state</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The state of the webhook.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">enabled</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is enabled.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled by the user.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled_due_to_failed_deliveries</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled due to failed deliveries.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">enabled</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is enabled.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled by the user.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">disabled_due_to_failed_deliveries</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled due to failed deliveries.</p>            </li>
+        </ul>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">subscribed_events</span>
-<span class="field-type">array (enum (string))</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Required. The events that the webhook is subscribed to.
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">subscribed_events</span>
+        <span class="field-type">array (enum (string))</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Required. The events that the webhook is subscribed to.
 Available events:
 - batch.succeeded
 - batch.expired
@@ -1470,485 +1471,535 @@ Available events:
 - interaction.completed
 - interaction.failed
 - video.generated</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.succeeded</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch processing finished successfully.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.expired</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch has not been processed within the 48h timeframe.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.failed</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch job failed.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.requires_action</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction requires action (e.g., function calling).</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.completed</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction completed successfully.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.failed</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction failed.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">video.generated</code>
-<p style="margin-left: 16px; font-size: 13px;">Video generation completed.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.succeeded</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch processing finished successfully.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.expired</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch has not been processed within the 48h timeframe.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.failed</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch job failed.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.requires_action</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction requires action (e.g., function calling).</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.completed</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction completed successfully.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.failed</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction failed.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">video.generated</code>
+<p style="margin-left: 16px; font-size: 13px;">Video generation completed.</p>            </li>
+        </ul>
+    </div>
 </div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">update_time</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The timestamp when the webhook was last updated.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">update_time</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The timestamp when the webhook was last updated.</p>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">uri</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Required. The URI to which webhook events will be sent.</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">uri</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Required. The URI to which webhook events will be sent.</p>
-</div>
-</div>
-</section>
-</div>
-<div class="second-column">
-<div class="examples">
-<devsite-selector>
-<section>
-<h3 id="CreateWebhook-default" data-text="Example" tabindex="-1">Example</h3>
-<div class="example-content">
-                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_fcaf618f721d2829fcfbb15f9589e8b7f9116ea4738f7e73c8cc3786a479c090.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+
+                </section>
+            </div>
+            <div class="second-column">
+                <div class="examples">
+                    <devsite-selector>
+                        <section>
+                            <h3 id="CreateWebhook-default" data-text="Example" tabindex="-1">Example</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_69282471c31e5b44a1648752557aa2af4e8dbbbb315209bef07a4181be63e898.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
                                 <h4 style="margin-top: 24px; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--devsite-text-secondary); text-transform: uppercase;" id="example-response" data-text="                                     Example Response" tabindex="-1">
                                     Example Response</h4>
-<div></div><devsite-code><pre class="devsite-click-to-copy" dir="ltr" translate="no" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;create_time&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;id&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;name&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;new_signing_secret&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;signing_secrets&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+                                <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"create_time"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"new_signing_secret"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"signing_secrets"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;expire_time&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;truncated_secret&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"expire_time"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"truncated_secret"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;state&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;enabled&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;subscribed_events&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s2">&quot;batch.succeeded&quot;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"state"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"enabled"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"subscribed_events"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s2">"batch.succeeded"</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;update_time&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;uri&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"update_time"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"uri"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
 <span class="devsite-syntax-p">}</span></pre></devsite-code>
+                            </div>
+                        </section>
+                    </devsite-selector>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-</section>
-</devsite-selector>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="prototype" itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h2 id="PingWebhook" data-text="PingWebhook" tabindex="-1">PingWebhook</h2>
-<div>
-<span class="endpoint">
-<span class="http-method post">
+
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject" class="prototype">
+    <h2 id="PingWebhook" data-text="PingWebhook" tabindex="-1">PingWebhook</h2>
+    <div>
+        <span class="endpoint">
+            <span class="http-method post">
                 post
             </span>
-</span>
-<span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
+        </span>
+
+        <span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
             https://generativelanguage.googleapis.com/v1beta/webhooks/{id}:ping
         </span>
-</div>
-<section id="description">
-<p>Sends a ping event to a Webhook.</p>
-</section>
-<section class="prototype">
-<ul class="toc">
-<li><a href="#PingWebhook.PATH_PARAMETERS">Path / Query parameters</a></li><li><a href="#PingWebhook.request_body">Request body</a></li> <li><a href="#PingWebhook.response">Response</a></li>
-</ul>
-<div class="column-container request-section" style="margin-top: 48px;">
-<div class="reference">
-<section id="PingWebhook.PATH_PARAMETERS">
-<h3 id="path-query-parameters" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">id</span>
-<span class="field-type">string</span>
-<span class="field-nessesity required"> (required)</span> </div>
-<div class="field-description">
-<p>Required. The ID of the webhook to ping.
+    </div>
+
+    <section id="description">
+        <p>Sends a ping event to a Webhook.</p>
+    </section>
+    <section class="prototype">
+        <ul class="toc">
+<li><a href="#PingWebhook.PATH_PARAMETERS">Path / Query parameters</a></li><li><a href="#PingWebhook.request_body">Request body</a></li>            <li><a href="#PingWebhook.response">Response</a></li>
+        </ul>
+        <div class="column-container request-section" style="margin-top: 48px;">
+            <div class="reference">
+                <section id="PingWebhook.PATH_PARAMETERS">
+                    <h3 id="path-query-parameters" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">id</span>
+        <span class="field-type">string</span>
+<span class="field-nessesity required">&nbsp;(required)</span>    </div>
+    <div class="field-description">
+        <p>Required. The ID of the webhook to ping.
 Format: `{webhook_id}`</p>
+    </div>
 </div>
-</div>
-</section>
-<section id="PingWebhook.request_body">
-<h3 id="request-body_1" data-text="Request body" tabindex="-1">Request body</h3>
-<p>The request body contains data with the following structure:</p>
-</section>
-<section id="PingWebhook.response">
-<h3 id="response_1" data-text="Response" tabindex="-1">Response</h3>
-<p>If successful, the response is empty.</p>
-</section>
-</div>
-<div class="second-column">
-<div class="examples">
-<devsite-selector>
-<section>
-<h3 id="PingWebhook-default" data-text="Example" tabindex="-1">Example</h3>
-<div class="example-content">
-                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_d8b02837f8a5700375b4d8d6f4092bc6ab52e37a290170545b503cee58f04609.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+
+                </section>
+                <section id="PingWebhook.request_body">
+                    <h3 id="request-body_1" data-text="Request body" tabindex="-1">Request body</h3>
+                    <p>The request body contains data with the following structure:</p>
+                </section>
+                <section id="PingWebhook.response">
+                    <h3 id="response_1" data-text="Response" tabindex="-1">Response</h3>
+                    <p>If successful, the response is empty.</p>
+                </section>
+            </div>
+            <div class="second-column">
+                <div class="examples">
+                    <devsite-selector>
+                        <section>
+                            <h3 id="PingWebhook-default" data-text="Example" tabindex="-1">Example</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_b95bbd961cbc1f974e712ccae89211dd075b24ac2cc8a650651a22545b5b2124.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
                             </div>
-</section>
-</devsite-selector>
+                        </section>
+                    </devsite-selector>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-</div>
-</div>
-</section>
-</div>
-<div class="prototype" itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h2 id="RotateSigningSecret" data-text="RotateSigningSecret" tabindex="-1">RotateSigningSecret</h2>
-<div>
-<span class="endpoint">
-<span class="http-method post">
+
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject" class="prototype">
+    <h2 id="RotateSigningSecret" data-text="RotateSigningSecret" tabindex="-1">RotateSigningSecret</h2>
+    <div>
+        <span class="endpoint">
+            <span class="http-method post">
                 post
             </span>
-</span>
-<span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
+        </span>
+
+        <span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
             https://generativelanguage.googleapis.com/v1beta/webhooks/{id}:rotateSigningSecret
         </span>
-</div>
-<section id="description">
-<p>Generates a new signing secret for a Webhook.</p>
-</section>
-<section class="prototype">
-<ul class="toc">
-<li><a href="#RotateSigningSecret.PATH_PARAMETERS">Path / Query parameters</a></li><li><a href="#RotateSigningSecret.request_body">Request body</a></li> <li><a href="#RotateSigningSecret.response">Response</a></li>
-</ul>
-<div class="column-container request-section" style="margin-top: 48px;">
-<div class="reference">
-<section id="RotateSigningSecret.PATH_PARAMETERS">
-<h3 id="path-query-parameters_1" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">id</span>
-<span class="field-type">string</span>
-<span class="field-nessesity required"> (required)</span> </div>
-<div class="field-description">
-<p>Required. The ID of the webhook for which to generate a signing secret.
+    </div>
+
+    <section id="description">
+        <p>Generates a new signing secret for a Webhook.</p>
+    </section>
+    <section class="prototype">
+        <ul class="toc">
+<li><a href="#RotateSigningSecret.PATH_PARAMETERS">Path / Query parameters</a></li><li><a href="#RotateSigningSecret.request_body">Request body</a></li>            <li><a href="#RotateSigningSecret.response">Response</a></li>
+        </ul>
+        <div class="column-container request-section" style="margin-top: 48px;">
+            <div class="reference">
+                <section id="RotateSigningSecret.PATH_PARAMETERS">
+                    <h3 id="path-query-parameters_1" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">id</span>
+        <span class="field-type">string</span>
+<span class="field-nessesity required">&nbsp;(required)</span>    </div>
+    <div class="field-description">
+        <p>Required. The ID of the webhook for which to generate a signing secret.
 Format: `{webhook_id}`</p>
+    </div>
 </div>
-</div>
-</section>
-<section id="RotateSigningSecret.request_body">
-<h3 id="request-body_2" data-text="Request body" tabindex="-1">Request body</h3>
-<p>The request body contains data with the following structure:</p>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">revocation_behavior</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. The revocation behavior for previous signing secrets.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+
+                </section>
+                <section id="RotateSigningSecret.request_body">
+                    <h3 id="request-body_2" data-text="Request body" tabindex="-1">Request body</h3>
+                    <p>The request body contains data with the following structure:</p>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">revocation_behavior</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The revocation behavior for previous signing secrets.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">revoke_previous_secrets_after_h24</code>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">revoke_previous_secrets_after_h24</code>
 <p style="margin-left: 16px; font-size: 13px;">Generate a new signing secret and revoke all previous secrets after 24
-hours. Default and safest option for migrations.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">revoke_previous_secrets_immediately</code>
+hours. Default and safest option for migrations.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">revoke_previous_secrets_immediately</code>
 <p style="margin-left: 16px; font-size: 13px;">Revoke all previous secrets immediately. Use with caution as this can
-interrupt ongoing notifications.</p> </li>
-</ul>
+interrupt ongoing notifications.</p>            </li>
+        </ul>
+    </div>
 </div>
+
+                </section>
+                <section id="RotateSigningSecret.response">
+                    <h3 id="response_2" data-text="Response" tabindex="-1">Response</h3>
+                    <p>If successful, the response body contains data with the following structure:</p>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">secret</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The newly generated signing secret.</p>
+    </div>
 </div>
-</section>
-<section id="RotateSigningSecret.response">
-<h3 id="response_2" data-text="Response" tabindex="-1">Response</h3>
-<p>If successful, the response body contains data with the following structure:</p>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">secret</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The newly generated signing secret.</p>
-</div>
-</div>
-</section>
-</div>
-<div class="second-column">
-<div class="examples">
-<devsite-selector>
-<section>
-<h3 id="RotateSigningSecret-default" data-text="Example" tabindex="-1">Example</h3>
-<div class="example-content">
-                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_e87d406bf6f072e714d9a4f9b625055bddda57bae0c0c1ba76f90277592c4b53.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+
+                </section>
+            </div>
+            <div class="second-column">
+                <div class="examples">
+                    <devsite-selector>
+                        <section>
+                            <h3 id="RotateSigningSecret-default" data-text="Example" tabindex="-1">Example</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_818464b835d62e654dacde4866230273564a79efcc41e59e39847788b77694ad.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
                                 <h4 style="margin-top: 24px; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--devsite-text-secondary); text-transform: uppercase;" id="example-response_1" data-text="                                     Example Response" tabindex="-1">
                                     Example Response</h4>
-<div></div><devsite-code><pre class="devsite-click-to-copy" dir="ltr" translate="no" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;secret&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span>
+                                <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"secret"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
 <span class="devsite-syntax-p">}</span></pre></devsite-code>
+                            </div>
+                        </section>
+                    </devsite-selector>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-</section>
-</devsite-selector>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="prototype" itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h2 id="ListWebhooks" data-text="ListWebhooks" tabindex="-1">ListWebhooks</h2>
-<div>
-<span class="endpoint">
-<span class="http-method get">
+
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject" class="prototype">
+    <h2 id="ListWebhooks" data-text="ListWebhooks" tabindex="-1">ListWebhooks</h2>
+    <div>
+        <span class="endpoint">
+            <span class="http-method get">
                 get
             </span>
-</span>
-<span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
+        </span>
+
+        <span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
             https://generativelanguage.googleapis.com/v1beta/webhooks
         </span>
-</div>
-<section id="description">
-<p>Lists all Webhooks.</p>
-</section>
-<section class="prototype">
-<ul class="toc">
-<li><a href="#ListWebhooks.PATH_PARAMETERS">Path / Query parameters</a></li> <li><a href="#ListWebhooks.response">Response</a></li>
-</ul>
-<div class="column-container request-section" style="margin-top: 48px;">
-<div class="reference">
-<section id="ListWebhooks.PATH_PARAMETERS">
-<h3 id="path-query-parameters_2" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">page_size</span>
-<span class="field-type">integer</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. The maximum number of webhooks to return. The service may return fewer than
+    </div>
+
+    <section id="description">
+        <p>Lists all Webhooks.</p>
+    </section>
+    <section class="prototype">
+        <ul class="toc">
+<li><a href="#ListWebhooks.PATH_PARAMETERS">Path / Query parameters</a></li>            <li><a href="#ListWebhooks.response">Response</a></li>
+        </ul>
+        <div class="column-container request-section" style="margin-top: 48px;">
+            <div class="reference">
+                <section id="ListWebhooks.PATH_PARAMETERS">
+                    <h3 id="path-query-parameters_2" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">page_size</span>
+        <span class="field-type">integer</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The maximum number of webhooks to return. The service may return fewer than
 this value. If unspecified, at most 50 webhooks will be returned.
 The maximum value is 1000.</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">page_token</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. A page token, received from a previous `ListWebhooks` call.
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">page_token</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. A page token, received from a previous `ListWebhooks` call.
 Provide this to retrieve the subsequent page.</p>
+    </div>
 </div>
-</div>
-</section>
-<section id="ListWebhooks.response">
-<h3 id="response_3" data-text="Response" tabindex="-1">Response</h3>
-<p>If successful, the response body contains data with the following structure:</p>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">next_page_token</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>A token, which can be sent as `page_token` to retrieve the next page.
+
+                </section>
+                <section id="ListWebhooks.response">
+                    <h3 id="response_3" data-text="Response" tabindex="-1">Response</h3>
+                    <p>If successful, the response body contains data with the following structure:</p>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">next_page_token</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>A token, which can be sent as `page_token` to retrieve the next page.
 If this field is omitted, there are no subsequent pages.</p>
+    </div>
 </div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">webhooks</span>
+        <span class="field-type">array (<a href="#Resource:Webhook">Webhook</a>)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>The webhooks.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">webhooks</span>
-<span class="field-type">array (<a href="#Resource:Webhook">Webhook</a>)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>The webhooks.</p>
-</div>
-</div>
-</section>
-</div>
-<div class="second-column">
-<div class="examples">
-<devsite-selector>
-<section>
-<h3 id="ListWebhooks-default" data-text="Example" tabindex="-1">Example</h3>
-<div class="example-content">
-                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_3d391faf34776ac784ebfe83f467133d788779027d65f912ab9346e51e06ab36.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+
+                </section>
+            </div>
+            <div class="second-column">
+                <div class="examples">
+                    <devsite-selector>
+                        <section>
+                            <h3 id="ListWebhooks-default" data-text="Example" tabindex="-1">Example</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_f6b0311fd35e32ced0fc0f9753399f557424c984e151cd6e4a1f535c81b8cd01.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
                                 <h4 style="margin-top: 24px; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--devsite-text-secondary); text-transform: uppercase;" id="example-response_2" data-text="                                     Example Response" tabindex="-1">
                                     Example Response</h4>
-<div></div><devsite-code><pre class="devsite-click-to-copy" dir="ltr" translate="no" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;next_page_token&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;webhooks&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+                                <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"next_page_token"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"webhooks"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;create_time&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;id&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;name&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;new_signing_secret&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;signing_secrets&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"create_time"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"new_signing_secret"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"signing_secrets"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">&quot;expire_time&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">&quot;truncated_secret&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span>
+<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"expire_time"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nt">"truncated_secret"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">}</span>
 <span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;state&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;enabled&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;subscribed_events&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-s2">&quot;batch.succeeded&quot;</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"state"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"enabled"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"subscribed_events"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-s2">"batch.succeeded"</span>
 <span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;update_time&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;uri&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"update_time"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"uri"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">]</span>
 <span class="devsite-syntax-p">}</span></pre></devsite-code>
+                            </div>
+                        </section>
+                    </devsite-selector>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-</section>
-</devsite-selector>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="prototype" itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h2 id="GetWebhook" data-text="GetWebhook" tabindex="-1">GetWebhook</h2>
-<div>
-<span class="endpoint">
-<span class="http-method get">
+
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject" class="prototype">
+    <h2 id="GetWebhook" data-text="GetWebhook" tabindex="-1">GetWebhook</h2>
+    <div>
+        <span class="endpoint">
+            <span class="http-method get">
                 get
             </span>
-</span>
-<span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
+        </span>
+
+        <span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
             https://generativelanguage.googleapis.com/v1beta/webhooks/{id}
         </span>
+    </div>
+
+    <section id="description">
+        <p>Gets a specific Webhook.</p>
+    </section>
+    <section class="prototype">
+        <ul class="toc">
+<li><a href="#GetWebhook.PATH_PARAMETERS">Path / Query parameters</a></li>            <li><a href="#GetWebhook.response">Response</a></li>
+        </ul>
+        <div class="column-container request-section" style="margin-top: 48px;">
+            <div class="reference">
+                <section id="GetWebhook.PATH_PARAMETERS">
+                    <h3 id="path-query-parameters_3" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">id</span>
+        <span class="field-type">string</span>
+<span class="field-nessesity required">&nbsp;(required)</span>    </div>
+    <div class="field-description">
+        <p>Required. The ID of the webhook to retrieve.</p>
+    </div>
 </div>
-<section id="description">
-<p>Gets a specific Webhook.</p>
+
+                </section>
+                <section id="GetWebhook.response">
+                    <h3 id="response_4" data-text="Response" tabindex="-1">Response</h3>
+                    <p>If successful, the response body contains data with the following structure:</p>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">create_time</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The timestamp when the webhook was created.</p>
+    </div>
+</div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">id</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The ID of the webhook.</p>
+    </div>
+</div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">name</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The user-provided name of the webhook.</p>
+    </div>
+</div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">new_signing_secret</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The new signing secret for the webhook. Only populated on create.</p>
+    </div>
+</div>
+
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">signing_secrets</span>
+        <span class="field-type">array (SigningSecret)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>Output only. The signing secrets associated with this webhook.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >Represents a signing secret used to verify webhook payloads.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_1" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">expire_time</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The expiration date of the signing secret.</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">truncated_secret</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The truncated version of the signing secret.</p>
+    </div>
+</div>
+
+        </div>
+    </div>
 </section>
-<section class="prototype">
-<ul class="toc">
-<li><a href="#GetWebhook.PATH_PARAMETERS">Path / Query parameters</a></li> <li><a href="#GetWebhook.response">Response</a></li>
-</ul>
-<div class="column-container request-section" style="margin-top: 48px;">
-<div class="reference">
-<section id="GetWebhook.PATH_PARAMETERS">
-<h3 id="path-query-parameters_3" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">id</span>
-<span class="field-type">string</span>
-<span class="field-nessesity required"> (required)</span> </div>
-<div class="field-description">
-<p>Required. The ID of the webhook to retrieve.</p>
-</div>
-</div>
-</section>
-<section id="GetWebhook.response">
-<h3 id="response_4" data-text="Response" tabindex="-1">Response</h3>
-<p>If successful, the response body contains data with the following structure:</p>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">create_time</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The timestamp when the webhook was created.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">id</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The ID of the webhook.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">name</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. The user-provided name of the webhook.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">new_signing_secret</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The new signing secret for the webhook. Only populated on create.</p>
-</div>
-</div>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">signing_secrets</span>
-<span class="field-type">array (SigningSecret)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>Output only. The signing secrets associated with this webhook.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">Represents a signing secret used to verify webhook payloads.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_1" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">expire_time</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The expiration date of the signing secret.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">truncated_secret</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The truncated version of the signing secret.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
+
+    </div>
 </details>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">state</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The state of the webhook.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">state</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The state of the webhook.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">enabled</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is enabled.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled by the user.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled_due_to_failed_deliveries</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled due to failed deliveries.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">enabled</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is enabled.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled by the user.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">disabled_due_to_failed_deliveries</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled due to failed deliveries.</p>            </li>
+        </ul>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">subscribed_events</span>
-<span class="field-type">array (enum (string))</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Required. The events that the webhook is subscribed to.
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">subscribed_events</span>
+        <span class="field-type">array (enum (string))</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Required. The events that the webhook is subscribed to.
 Available events:
 - batch.succeeded
 - batch.expired
@@ -1957,171 +2008,187 @@ Available events:
 - interaction.completed
 - interaction.failed
 - video.generated</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.succeeded</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch processing finished successfully.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.expired</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch has not been processed within the 48h timeframe.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.failed</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch job failed.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.requires_action</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction requires action (e.g., function calling).</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.completed</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction completed successfully.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.failed</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction failed.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">video.generated</code>
-<p style="margin-left: 16px; font-size: 13px;">Video generation completed.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.succeeded</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch processing finished successfully.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.expired</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch has not been processed within the 48h timeframe.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.failed</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch job failed.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.requires_action</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction requires action (e.g., function calling).</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.completed</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction completed successfully.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.failed</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction failed.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">video.generated</code>
+<p style="margin-left: 16px; font-size: 13px;">Video generation completed.</p>            </li>
+        </ul>
+    </div>
 </div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">update_time</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The timestamp when the webhook was last updated.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">update_time</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The timestamp when the webhook was last updated.</p>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">uri</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Required. The URI to which webhook events will be sent.</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">uri</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Required. The URI to which webhook events will be sent.</p>
-</div>
-</div>
-</section>
-</div>
-<div class="second-column">
-<div class="examples">
-<devsite-selector>
-<section>
-<h3 id="GetWebhook-default" data-text="Example" tabindex="-1">Example</h3>
-<div class="example-content">
-                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_699de72daec71eba2f4bff9a00116ffe331b19108f548a61fcffba734d5b0584.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+
+                </section>
+            </div>
+            <div class="second-column">
+                <div class="examples">
+                    <devsite-selector>
+                        <section>
+                            <h3 id="GetWebhook-default" data-text="Example" tabindex="-1">Example</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_bf5bb657875d7542a20a71b83fab6c7773c90c0df72740e2d003f2fccdcc5de8.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
                                 <h4 style="margin-top: 24px; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--devsite-text-secondary); text-transform: uppercase;" id="example-response_3" data-text="                                     Example Response" tabindex="-1">
                                     Example Response</h4>
-<div></div><devsite-code><pre class="devsite-click-to-copy" dir="ltr" translate="no" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;create_time&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;id&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;name&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;new_signing_secret&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;signing_secrets&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+                                <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"create_time"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"new_signing_secret"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"signing_secrets"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;expire_time&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;truncated_secret&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"expire_time"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"truncated_secret"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;state&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;enabled&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;subscribed_events&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s2">&quot;batch.succeeded&quot;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"state"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"enabled"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"subscribed_events"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s2">"batch.succeeded"</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;update_time&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;uri&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"update_time"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"uri"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
 <span class="devsite-syntax-p">}</span></pre></devsite-code>
+                            </div>
+                        </section>
+                    </devsite-selector>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-</section>
-</devsite-selector>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="prototype" itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h2 id="UpdateWebhook" data-text="UpdateWebhook" tabindex="-1">UpdateWebhook</h2>
-<div>
-<span class="endpoint">
-<span class="http-method patch">
+
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject" class="prototype">
+    <h2 id="UpdateWebhook" data-text="UpdateWebhook" tabindex="-1">UpdateWebhook</h2>
+    <div>
+        <span class="endpoint">
+            <span class="http-method patch">
                 patch
             </span>
-</span>
-<span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
+        </span>
+
+        <span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
             https://generativelanguage.googleapis.com/v1beta/webhooks/{id}
         </span>
+    </div>
+
+    <section id="description">
+        <p>Updates an existing Webhook.</p>
+    </section>
+    <section class="prototype">
+        <ul class="toc">
+<li><a href="#UpdateWebhook.PATH_PARAMETERS">Path / Query parameters</a></li><li><a href="#UpdateWebhook.request_body">Request body</a></li>            <li><a href="#UpdateWebhook.response">Response</a></li>
+        </ul>
+        <div class="column-container request-section" style="margin-top: 48px;">
+            <div class="reference">
+                <section id="UpdateWebhook.PATH_PARAMETERS">
+                    <h3 id="path-query-parameters_4" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">id</span>
+        <span class="field-type">string</span>
+<span class="field-nessesity required">&nbsp;(required)</span>    </div>
+    <div class="field-description">
+        <p>Required. The ID of the webhook to update.</p>
+    </div>
 </div>
-<section id="description">
-<p>Updates an existing Webhook.</p>
-</section>
-<section class="prototype">
-<ul class="toc">
-<li><a href="#UpdateWebhook.PATH_PARAMETERS">Path / Query parameters</a></li><li><a href="#UpdateWebhook.request_body">Request body</a></li> <li><a href="#UpdateWebhook.response">Response</a></li>
-</ul>
-<div class="column-container request-section" style="margin-top: 48px;">
-<div class="reference">
-<section id="UpdateWebhook.PATH_PARAMETERS">
-<h3 id="path-query-parameters_4" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">id</span>
-<span class="field-type">string</span>
-<span class="field-nessesity required"> (required)</span> </div>
-<div class="field-description">
-<p>Required. The ID of the webhook to update.</p>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">update_mask</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The list of fields to update.</p>
+    </div>
 </div>
+
+                </section>
+                <section id="UpdateWebhook.request_body">
+                    <h3 id="request-body_3" data-text="Request body" tabindex="-1">Request body</h3>
+                    <p>The request body contains data with the following structure:</p>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">name</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The user-provided name of the webhook.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">update_mask</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. The list of fields to update.</p>
-</div>
-</div>
-</section>
-<section id="UpdateWebhook.request_body">
-<h3 id="request-body_3" data-text="Request body" tabindex="-1">Request body</h3>
-<p>The request body contains data with the following structure:</p>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">name</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. The user-provided name of the webhook.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">state</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. The state of the webhook.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">state</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The state of the webhook.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">enabled</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is enabled.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled by the user.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled_due_to_failed_deliveries</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled due to failed deliveries.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">enabled</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is enabled.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled by the user.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">disabled_due_to_failed_deliveries</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled due to failed deliveries.</p>            </li>
+        </ul>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">subscribed_events</span>
-<span class="field-type">array (enum (string))</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. The events that the webhook is subscribed to.
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">subscribed_events</span>
+        <span class="field-type">array (enum (string))</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The events that the webhook is subscribed to.
 Available events:
 - batch.succeeded
 - batch.expired
@@ -2130,147 +2197,168 @@ Available events:
 - interaction.completed
 - interaction.failed
 - video.generated</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.succeeded</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch processing finished successfully.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.expired</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch has not been processed within the 48h timeframe.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.failed</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch job failed.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.requires_action</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction requires action (e.g., function calling).</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.completed</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction completed successfully.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.failed</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction failed.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">video.generated</code>
-<p style="margin-left: 16px; font-size: 13px;">Video generation completed.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.succeeded</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch processing finished successfully.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.expired</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch has not been processed within the 48h timeframe.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.failed</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch job failed.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.requires_action</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction requires action (e.g., function calling).</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.completed</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction completed successfully.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.failed</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction failed.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">video.generated</code>
+<p style="margin-left: 16px; font-size: 13px;">Video generation completed.</p>            </li>
+        </ul>
+    </div>
 </div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">uri</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The URI to which webhook events will be sent.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">uri</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. The URI to which webhook events will be sent.</p>
+
+                </section>
+                <section id="UpdateWebhook.response">
+                    <h3 id="response_5" data-text="Response" tabindex="-1">Response</h3>
+                    <p>If successful, the response body contains data with the following structure:</p>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">create_time</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The timestamp when the webhook was created.</p>
+    </div>
 </div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">id</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The ID of the webhook.</p>
+    </div>
 </div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">name</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The user-provided name of the webhook.</p>
+    </div>
+</div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">new_signing_secret</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The new signing secret for the webhook. Only populated on create.</p>
+    </div>
+</div>
+
+                    <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">signing_secrets</span>
+        <span class="field-type">array (SigningSecret)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>Output only. The signing secrets associated with this webhook.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >Represents a signing secret used to verify webhook payloads.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_2" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">expire_time</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The expiration date of the signing secret.</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">truncated_secret</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The truncated version of the signing secret.</p>
+    </div>
+</div>
+
+        </div>
+    </div>
 </section>
-<section id="UpdateWebhook.response">
-<h3 id="response_5" data-text="Response" tabindex="-1">Response</h3>
-<p>If successful, the response body contains data with the following structure:</p>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">create_time</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The timestamp when the webhook was created.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">id</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The ID of the webhook.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">name</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. The user-provided name of the webhook.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">new_signing_secret</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The new signing secret for the webhook. Only populated on create.</p>
-</div>
-</div>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">signing_secrets</span>
-<span class="field-type">array (SigningSecret)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>Output only. The signing secrets associated with this webhook.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">Represents a signing secret used to verify webhook payloads.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_2" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">expire_time</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The expiration date of the signing secret.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">truncated_secret</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The truncated version of the signing secret.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
+
+    </div>
 </details>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">state</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The state of the webhook.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">state</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The state of the webhook.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">enabled</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is enabled.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled by the user.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled_due_to_failed_deliveries</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled due to failed deliveries.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">enabled</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is enabled.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled by the user.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">disabled_due_to_failed_deliveries</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled due to failed deliveries.</p>            </li>
+        </ul>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">subscribed_events</span>
-<span class="field-type">array (enum (string))</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Required. The events that the webhook is subscribed to.
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">subscribed_events</span>
+        <span class="field-type">array (enum (string))</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Required. The events that the webhook is subscribed to.
 Available events:
 - batch.succeeded
 - batch.expired
@@ -2279,251 +2367,280 @@ Available events:
 - interaction.completed
 - interaction.failed
 - video.generated</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.succeeded</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch processing finished successfully.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.expired</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch has not been processed within the 48h timeframe.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.failed</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch job failed.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.requires_action</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction requires action (e.g., function calling).</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.completed</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction completed successfully.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.failed</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction failed.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">video.generated</code>
-<p style="margin-left: 16px; font-size: 13px;">Video generation completed.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.succeeded</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch processing finished successfully.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.expired</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch has not been processed within the 48h timeframe.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.failed</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch job failed.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.requires_action</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction requires action (e.g., function calling).</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.completed</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction completed successfully.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.failed</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction failed.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">video.generated</code>
+<p style="margin-left: 16px; font-size: 13px;">Video generation completed.</p>            </li>
+        </ul>
+    </div>
 </div>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">update_time</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The timestamp when the webhook was last updated.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">update_time</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The timestamp when the webhook was last updated.</p>
+
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">uri</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Required. The URI to which webhook events will be sent.</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">uri</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Required. The URI to which webhook events will be sent.</p>
-</div>
-</div>
-</section>
-</div>
-<div class="second-column">
-<div class="examples">
-<devsite-selector>
-<section>
-<h3 id="UpdateWebhook-default" data-text="Example" tabindex="-1">Example</h3>
-<div class="example-content">
-                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_16ede0c06bac5ce3e0f8133887af302e6e7f33c3ca5388a64d65fd493af41d85.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+
+                </section>
+            </div>
+            <div class="second-column">
+                <div class="examples">
+                    <devsite-selector>
+                        <section>
+                            <h3 id="UpdateWebhook-default" data-text="Example" tabindex="-1">Example</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_1272af11ea040d47ebd8c7d4c164f72059f21909815dacebbd863fe7ed3e7114.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
                                 <h4 style="margin-top: 24px; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--devsite-text-secondary); text-transform: uppercase;" id="example-response_4" data-text="                                     Example Response" tabindex="-1">
                                     Example Response</h4>
-<div></div><devsite-code><pre class="devsite-click-to-copy" dir="ltr" translate="no" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;create_time&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;id&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;name&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;new_signing_secret&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;signing_secrets&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+                                <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"create_time"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"new_signing_secret"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"signing_secrets"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;expire_time&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">&quot;truncated_secret&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"expire_time"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"truncated_secret"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;state&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;enabled&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;subscribed_events&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s2">&quot;batch.succeeded&quot;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"state"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"enabled"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"subscribed_events"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s2">"batch.succeeded"</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;update_time&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">&quot;uri&quot;</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">&quot;string&quot;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"update_time"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"uri"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string"</span>
 <span class="devsite-syntax-p">}</span></pre></devsite-code>
+                            </div>
+                        </section>
+                    </devsite-selector>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-</section>
-</devsite-selector>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="prototype" itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h2 id="DeleteWebhook" data-text="DeleteWebhook" tabindex="-1">DeleteWebhook</h2>
-<div>
-<span class="endpoint">
-<span class="http-method delete">
+
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject" class="prototype">
+    <h2 id="DeleteWebhook" data-text="DeleteWebhook" tabindex="-1">DeleteWebhook</h2>
+    <div>
+        <span class="endpoint">
+            <span class="http-method delete">
                 delete
             </span>
-</span>
-<span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
+        </span>
+
+        <span class="endpoint-url" style="font-size: 16px; color: var(--devsite-code-color);">
             https://generativelanguage.googleapis.com/v1beta/webhooks/{id}
         </span>
-</div>
-<section id="description">
-<p>Deletes a Webhook.</p>
-</section>
-<section class="prototype">
-<ul class="toc">
-<li><a href="#DeleteWebhook.PATH_PARAMETERS">Path / Query parameters</a></li> <li><a href="#DeleteWebhook.response">Response</a></li>
-</ul>
-<div class="column-container request-section" style="margin-top: 48px;">
-<div class="reference">
-<section id="DeleteWebhook.PATH_PARAMETERS">
-<h3 id="path-query-parameters_5" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">id</span>
-<span class="field-type">string</span>
-<span class="field-nessesity required"> (required)</span> </div>
-<div class="field-description">
-<p>Required. The ID of the webhook to delete.
+    </div>
+
+    <section id="description">
+        <p>Deletes a Webhook.</p>
+    </section>
+    <section class="prototype">
+        <ul class="toc">
+<li><a href="#DeleteWebhook.PATH_PARAMETERS">Path / Query parameters</a></li>            <li><a href="#DeleteWebhook.response">Response</a></li>
+        </ul>
+        <div class="column-container request-section" style="margin-top: 48px;">
+            <div class="reference">
+                <section id="DeleteWebhook.PATH_PARAMETERS">
+                    <h3 id="path-query-parameters_5" data-text="Path / Query Parameters" tabindex="-1">Path / Query Parameters</h3>
+                    <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">id</span>
+        <span class="field-type">string</span>
+<span class="field-nessesity required">&nbsp;(required)</span>    </div>
+    <div class="field-description">
+        <p>Required. The ID of the webhook to delete.
 Format: `{webhook_id}`</p>
+    </div>
 </div>
-</div>
-</section>
-<section id="DeleteWebhook.response">
-<h3 id="response_6" data-text="Response" tabindex="-1">Response</h3>
-<p>If successful, the response is empty.</p>
-</section>
-</div>
-<div class="second-column">
-<div class="examples">
-<devsite-selector>
-<section>
-<h3 id="DeleteWebhook-default" data-text="Example" tabindex="-1">Example</h3>
-<div class="example-content">
-                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_8d4538e92e36c642eff37019e6606e90bb84c16b655d966191a34830c11c028d.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
+
+                </section>
+                <section id="DeleteWebhook.response">
+                    <h3 id="response_6" data-text="Response" tabindex="-1">Response</h3>
+                    <p>If successful, the response is empty.</p>
+                </section>
+            </div>
+            <div class="second-column">
+                <div class="examples">
+                    <devsite-selector>
+                        <section>
+                            <h3 id="DeleteWebhook-default" data-text="Example" tabindex="-1">Example</h3>
+                            <div class="example-content">
+                                <devsite-iframe><iframe src="https://ai.google.dev/frame/api/webhooks_db080921e9420d499a2f8b55744f5d62d5e52eb6c7afd75f3a092750f44a4640.frame" class="framebox inherit-locale " allow="clipboard-write https://googledevai-dot-devsite-v2-prod-3p.appspot.com" allowfullscreen is-upgraded></iframe></devsite-iframe>
                             </div>
+                        </section>
+                    </devsite-selector>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+    <h2 id="resources" style="margin-top: 64px;" data-text="Resources" tabindex="-1">Resources</h2>
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject">
+    <h3 id="Resource:Webhook" data-text="Webhook" tabindex="-1">Webhook</h3>
+    <section class="prototype" >
+    <div class="column-container">
+        <div class="reference">
+            <p >A Webhook resource.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_3" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">create_time</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The timestamp when the webhook was created.</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">id</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The ID of the webhook.</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">name</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Optional. The user-provided name of the webhook.</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">new_signing_secret</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The new signing secret for the webhook. Only populated on create.</p>
+    </div>
+</div>
+
+            <details class="field-entry inline-details">
+    <summary class="signature">
+        <span class="expander-icon"></span>
+        <span class="field-name">signing_secrets</span>
+        <span class="field-type">array (SigningSecret)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </summary>
+    <div class="field-description">
+        <p>Output only. The signing secrets associated with this webhook.</p>
+        <section class="prototype" style="padding-left: 16px;" >
+    <div class="column-container">
+        <div class="reference">
+            <p style="display: none;" >Represents a signing secret used to verify webhook payloads.</p>
+            <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_4" data-text="Fields" tabindex="-1">Fields</h4>
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">expire_time</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The expiration date of the signing secret.</p>
+    </div>
+</div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">truncated_secret</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The truncated version of the signing secret.</p>
+    </div>
+</div>
+
+        </div>
+    </div>
 </section>
-</devsite-selector>
-</div>
-</div>
-</div>
-</section>
-</div>
-<h2 id="resources" style="margin-top: 64px;" data-text="Resources" tabindex="-1">Resources</h2>
-<div itemscope="" itemtype="http://developers.google.com/ReferenceObject">
-<h3 id="Resource:Webhook" data-text="Webhook" tabindex="-1">Webhook</h3>
-<section class="prototype">
-<div class="column-container">
-<div class="reference">
-<p>A Webhook resource.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_3" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">create_time</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The timestamp when the webhook was created.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">id</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The ID of the webhook.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">name</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Optional. The user-provided name of the webhook.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">new_signing_secret</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The new signing secret for the webhook. Only populated on create.</p>
-</div>
-</div>
-<details class="field-entry inline-details">
-<summary class="signature">
-<span class="expander-icon"></span>
-<span class="field-name">signing_secrets</span>
-<span class="field-type">array (SigningSecret)</span>
-<span class="field-nessesity optional"> (optional)</span> </summary>
-<div class="field-description">
-<p>Output only. The signing secrets associated with this webhook.</p>
-<section class="prototype" style="padding-left: 16px;">
-<div class="column-container">
-<div class="reference">
-<p style="display: none;">Represents a signing secret used to verify webhook payloads.</p>
-<h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; font-weight: 500;" id="fields_4" data-text="Fields" tabindex="-1">Fields</h4>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">expire_time</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The expiration date of the signing secret.</p>
-</div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">truncated_secret</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The truncated version of the signing secret.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
+
+    </div>
 </details>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">state</span>
-<span class="field-type">enum (string)</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The state of the webhook.</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">state</span>
+        <span class="field-type">enum (string)</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The state of the webhook.</p>
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">enabled</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is enabled.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled by the user.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">disabled_due_to_failed_deliveries</code>
-<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled due to failed deliveries.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">enabled</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is enabled.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">disabled</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled by the user.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">disabled_due_to_failed_deliveries</code>
+<p style="margin-left: 16px; font-size: 13px;">The webhook is disabled due to failed deliveries.</p>            </li>
+        </ul>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">subscribed_events</span>
-<span class="field-type">array (enum (string))</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Required. The events that the webhook is subscribed to.
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">subscribed_events</span>
+        <span class="field-type">array (enum (string))</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Required. The events that the webhook is subscribed to.
 Available events:
 - batch.succeeded
 - batch.expired
@@ -2532,57 +2649,66 @@ Available events:
 - interaction.completed
 - interaction.failed
 - video.generated</p>
-<p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
+        <p style="margin-top: 8px; font-weight: 500; font-size: 13px; color: var(--devsite-text-secondary);">Possible
             values:</p>
-<ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.succeeded</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch processing finished successfully.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.expired</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch has not been processed within the 48h timeframe.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">batch.failed</code>
-<p style="margin-left: 16px; font-size: 13px;">Batch job failed.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.requires_action</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction requires action (e.g., function calling).</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.completed</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction completed successfully.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">interaction.failed</code>
-<p style="margin-left: 16px; font-size: 13px;">Interaction failed.</p> </li>
-<li style="margin-bottom: 4px;">
-<code style="font-size: 13px;" translate="no" dir="ltr">video.generated</code>
-<p style="margin-left: 16px; font-size: 13px;">Video generation completed.</p> </li>
-</ul>
+        <ul style="margin: 4px 0 0 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.succeeded</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch processing finished successfully.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.expired</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch has not been processed within the 48h timeframe.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">batch.failed</code>
+<p style="margin-left: 16px; font-size: 13px;">Batch job failed.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.requires_action</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction requires action (e.g., function calling).</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.completed</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction completed successfully.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">interaction.failed</code>
+<p style="margin-left: 16px; font-size: 13px;">Interaction failed.</p>            </li>
+            <li style="margin-bottom: 4px;">
+                <code style="font-size: 13px;" translate="no" dir="ltr">video.generated</code>
+<p style="margin-left: 16px; font-size: 13px;">Video generation completed.</p>            </li>
+        </ul>
+    </div>
 </div>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">update_time</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Output only. The timestamp when the webhook was last updated.</p>
+    </div>
 </div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">update_time</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Output only. The timestamp when the webhook was last updated.</p>
+
+            <div class="field-entry">
+    <div class="signature">
+        <span class="field-name">uri</span>
+        <span class="field-type">string</span>
+<span
+            class="field-nessesity optional">&nbsp;(optional)</span>    </div>
+    <div class="field-description">
+        <p>Required. The URI to which webhook events will be sent.</p>
+    </div>
 </div>
-</div>
-<div class="field-entry">
-<div class="signature">
-<span class="field-name">uri</span>
-<span class="field-type">string</span>
-<span class="field-nessesity optional"> (optional)</span> </div>
-<div class="field-description">
-<p>Required. The URI to which webhook events will be sent.</p>
-</div>
-</div>
-</div>
-<div class="second-column">
-</div>
-</div>
+
+        </div>
+        <div class="second-column">
+        </div>
+    </div>
 </section>
+
 </div>
+
+
+
   
 
   
@@ -2602,7 +2728,7 @@ Available events:
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -2612,7 +2738,7 @@ Available events:
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -2635,7 +2761,7 @@ Available events:
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-08-28 UTC.</p>
+  <p>Last updated 2026-08-31 UTC.</p>
 </devsite-content-footer>
 
 

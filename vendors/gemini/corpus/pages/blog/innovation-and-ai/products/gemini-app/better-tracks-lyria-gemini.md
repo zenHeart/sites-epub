@@ -156,7 +156,7 @@
     
       "special_hero": "undefined",
     
-    "days_since_published": "6",
+    "days_since_published": "11",
     
       "content_category": "undefined",
     
@@ -3652,7 +3652,7 @@ data-ga4-analytics-landing-lead='{
             "section_header": "Create your best tracks yet with Lyria 3.5 in Gemini."
           }'>
           <uni-article-paragraph class="uni-article-paragraph__container uni-grid__col--layout-6">
-            <div class="rich-text"><p data-block-key="rsgnv"><a href="https://deepmind.google/models/lyria/">Lyria 3.5</a>, our best-sounding music generation model, is now available in the <a href="https://gemini.google.com/corp/app">Gemini app</a> and the <a href="https://ai.google.dev/gemini-api/docs/music-generation">Gemini API</a>. Lyria 3.5 brings more expressive vocals and richer musical arrangements, allowing you to craft tracks with higher fidelity.</p><p data-block-key="7oor7">In the Gemini app, you can now:</p><ul><li data-block-key="eqij6">Easily select or describe your genre and choose between vocal or instrumental styles</li><li data-block-key="82cqg">Use our new templates to jumpstart your creativity for anything from background music to custom birthday tracks</li><li data-block-key="4sucv">Plus, you’ll now have the flexibility to choose short or longer tracks</li></ul><p data-block-key="aag2m">Whether you need a custom backing track for a video, a unique brand jingle, or just a personalized ringtone, it’s easier than ever to bring your idea to life.</p><p data-block-key="fahhs">Lyria 3.5 is available to all users globally on the <a href="http://gemini.google">web</a> and in the mobile app. It’s also available for artists and AI creatives in <a href="https://www.flowmusic.app/">Google Flow Music</a>, and for developers and technologists through <a href="https://aistudio.google.com/new_music?model=lyria-3.5">Google AI Studio</a>, and Google <a href="https://workspace.google.com/products/vids/">Vids</a>.</p></div>
+            <div class="rich-text"><p data-block-key="rsgnv"><a href="https://deepmind.google/models/lyria/">Lyria 3.5</a>, our best-sounding music generation model, is now available in the <a href="http://gemini.google.com/music">Gemini app</a> and the <a href="https://ai.google.dev/gemini-api/docs/music-generation">Gemini API</a>. Lyria 3.5 brings more expressive vocals and richer musical arrangements, allowing you to craft tracks with higher fidelity.</p><p data-block-key="7oor7">In the Gemini app, you can now:</p><ul><li data-block-key="eqij6">Easily select or describe your genre and choose between vocal or instrumental styles</li><li data-block-key="82cqg">Use our new templates to jumpstart your creativity for anything from background music to custom birthday tracks</li><li data-block-key="4sucv">Plus, you’ll now have the flexibility to choose short or longer tracks</li></ul><p data-block-key="aag2m">Whether you need a custom backing track for a video, a unique brand jingle, or just a personalized ringtone, it’s easier than ever to bring your idea to life.</p><p data-block-key="fahhs">Lyria 3.5 is available to all users globally on the <a href="http://gemini.google">web</a> and in the mobile app. It’s also available for artists and AI creatives in <a href="https://www.flowmusic.app/">Google Flow Music</a>, and for developers and technologists through <a href="https://aistudio.google.com/new_music?model=lyria-3.5">Google AI Studio</a>, and Google <a href="https://workspace.google.com/products/vids/">Vids</a>.</p></div>
           </uni-article-paragraph>
         </section>
 
@@ -3807,10 +3807,98 @@ data-ga4-analytics-landing-lead='{
 
 
 <a
+  href="https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/"
+  class="uni-article-card"
+  aria-label="Gemini App - 4 ways to tackle household chores with Gemini - By Sarah Armstrong - Sep 15, 2026"
+  data-index="1"
+  data-target="card"
+  data-primaryTag="products - gemini app"
+  data-image="true"
+  data-ga4-analytics-footer-lead-click='{
+    "link_text": "4 ways to tackle household chores with Gemini",
+    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/",
+    "source_content": "Related stories",
+    "related_index": "1",
+    "related_article_tag": "products - gemini app",
+    "article_name": "4 ways to tackle household chores with Gemini",
+    "author_name": "Sarah Armstrong",
+    "content_type": "blogv2 | article page"
+  }'
+  data-theme-color="blue"
+>
+  <div class="uni-article-card__shape-container">
+    <div
+      class="uni-article-card__shape"
+      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
+      
+        
+  
+
+
+<img
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Tackle_household_chores_w_Gemini_hero.png"
+  alt=""
+
+  
+    class="uni-article-card__img"
+  
+
+  
+
+  
+    loading="lazy"
+  
+  />
+
+
+
+
+      
+    </div>
+  </div>
+
+  <div class="uni-article-card__content">
+    <div class="uni-article-card__text">
+      <span
+        class="uni-article-card__eyebrow font-eyebrow"
+        data-target="eyebrow">
+        Gemini App
+      </span>
+      <h3
+        class="uni-article-card__title font-h5"
+        data-target="title">
+        4 ways to tackle household chores with Gemini
+      </h3>
+      
+    </div>
+
+    <div
+      class="uni-article-card__meta"
+      data-target="author">
+      
+        <span class="uni-article-card__author font-author-name">
+          By
+          
+            
+            Sarah Armstrong
+          
+        </span>
+      
+    </div>
+  </div>
+</a>
+
+        
+          
+
+
+
+
+<a
   href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/"
   class="uni-article-card"
   aria-label="Gemini App - The Gemini app is now available for Windows - By Erin Pettigrew - Sep 10, 2026"
-  data-index="1"
+  data-index="2"
   data-target="card"
   data-primaryTag="products - gemini app"
   data-image="true"
@@ -3818,7 +3906,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "The Gemini app is now available for Windows",
     "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
     "source_content": "Related stories",
-    "related_index": "1",
+    "related_index": "2",
     "related_article_tag": "products - gemini app",
     "article_name": "The Gemini app is now available for Windows",
     "author_name": "Erin Pettigrew",
@@ -3901,7 +3989,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/"
   class="uni-article-card"
   aria-label="AI - The latest AI news we announced in August 2026 - By News from Google Team - Sep 01, 2026"
-  data-index="2"
+  data-index="3"
   data-target="card"
   data-primaryTag="topics - ai"
   data-image="true"
@@ -3909,7 +3997,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "The latest AI news we announced in August 2026",
     "link_url":  "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
     "source_content": "Related stories",
-    "related_index": "2",
+    "related_index": "3",
     "related_article_tag": "topics - ai",
     "article_name": "The latest AI news we announced in August 2026",
     "author_name": "News from Google Team",
@@ -3992,7 +4080,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/"
   class="uni-article-card"
   aria-label="Gemini App - Turn your voice into action with new productivity features in Gemini Live - By Neel Joshi - Aug 26, 2026"
-  data-index="3"
+  data-index="4"
   data-target="card"
   data-primaryTag="products - gemini app"
   data-image="true"
@@ -4000,7 +4088,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "Turn your voice into action with new productivity features in Gemini Live",
     "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
     "source_content": "Related stories",
-    "related_index": "3",
+    "related_index": "4",
     "related_article_tag": "products - gemini app",
     "article_name": "Turn your voice into action with new productivity features in Gemini Live",
     "author_name": "Neel Joshi",
@@ -4068,89 +4156,6 @@ data-ga4-analytics-landing-lead='{
             Neel Joshi
           
         </span>
-      
-    </div>
-  </div>
-</a>
-
-        
-          
-
-
-
-
-<a
-  href="https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/"
-  class="uni-article-card"
-  aria-label="Gemini App - Here’s how to use intelligent dictation in Gemini for macOS. - By  - Aug 25, 2026"
-  data-index="4"
-  data-target="card"
-  data-primaryTag="products - gemini app"
-  data-image="true"
-  data-ga4-analytics-footer-lead-click='{
-    "link_text": "Here’s how to use intelligent dictation in Gemini for macOS.",
-    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/",
-    "source_content": "Related stories",
-    "related_index": "4",
-    "related_article_tag": "products - gemini app",
-    "article_name": "Here’s how to use intelligent dictation in Gemini for macOS.",
-    "author_name": "",
-    "content_type": "blogv2 | Short Post"
-  }'
-  data-theme-color="blue"
->
-  <div class="uni-article-card__shape-container">
-    <div
-      class="uni-article-card__shape"
-      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
-      
-        
-  
-
-
-<img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_macOS.2e16d0ba.fill-300x300.format-webp.webp"
-  alt=""
-
-  
-    class="uni-article-card__img"
-  
-
-  
-    sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_macOS.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_macOS.2e16d0ba.fill-600x600.format-webp.webp 600w"
-  
-
-  
-    loading="lazy"
-  
-  />
-
-
-
-
-      
-    </div>
-  </div>
-
-  <div class="uni-article-card__content">
-    <div class="uni-article-card__text">
-      <span
-        class="uni-article-card__eyebrow font-eyebrow"
-        data-target="eyebrow">
-        Gemini App
-      </span>
-      <h3
-        class="uni-article-card__title font-h5"
-        data-target="title">
-        Here’s how to use intelligent dictation in Gemini for macOS.
-      </h3>
-      
-    </div>
-
-    <div
-      class="uni-article-card__meta"
-      data-target="author">
       
     </div>
   </div>

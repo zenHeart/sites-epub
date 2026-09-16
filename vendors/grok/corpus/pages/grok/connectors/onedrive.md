@@ -45,7 +45,7 @@ Once your admin has completed the prerequisites above, each team member connects
 
 ## Privacy and security
 
-**Your data stays yours.** Grok only accesses OneDrive content when needed to answer your questions. xAI does not use your OneDrive data for model training.
+**Your data stays yours.** Grok only accesses OneDrive content when needed to answer your questions. SpaceXAI does not use your OneDrive data for model training.
 
 **Scoped to your account.** OneDrive permissions are delegated to the signed-in user. Grok can only see files in your own OneDrive, not files belonging to other users.
 

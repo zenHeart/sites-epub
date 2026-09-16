@@ -52,7 +52,10 @@ Directory-group scope is part of Network Controls, which is Enterprise only.
 Groups can set their own policy, and a lock makes the team policy effective for
 everyone. The organization-wide enable switch is also Enterprise only and
 applies to the whole organization. Cloud Agents, Team Rules, and public
-template sharing apply to the whole team on Teams and Enterprise.
+template sharing apply to the whole team on Teams and Enterprise. Enforce
+Auto-review and Auto-review rules are Enterprise only and also apply to the
+whole team. Allow Local Egress is Enterprise only and applies to the whole
+team.
 
 ### Why do some websites block Bots?
 
@@ -68,11 +71,19 @@ See [static egress IPs](/grok-bot/security#static-egress-ips).
 
 ### Can traffic run through our own network?
 
-Cursor does not operate a VPN, tunnel, or private link into your network for
-Grok Bot. The supported paths are shared static egress with the destination
-allowlist, and installing your own networking client through Team Setup, which
-is Enterprise only. See
+Yes. A member can route a Grok Bot computer's web traffic through their
+desktop, using its network and IP address. Enterprise teams can also install a
+networking client on every hosted computer through Team Setup. See
 [Connect to private networks](/grok-bot/private-networks).
+
+### Grok Bot hangs at computer setup from our network. Why?
+
+A TLS-inspecting gateway such as Zscaler is letting `api2.cursor.sh` through
+and blocking or inspecting the computer's nested `cursorvm.com` hostname. Chat
+may or may not keep working; the computer link fails either way. Allow
+`*.cursorvm.com` and `*.*.cursorvm.com`, exempt them from inspection, and apply
+the change to off-network profiles too. See
+[Configure TLS-inspecting proxies](/grok-bot/proxies).
 
 ## Approvals, logging, and data
 
@@ -82,18 +93,23 @@ With enforcement on, Auto Review evaluates shell commands, plugin calls,
 computer use, automation writes, and delegation such as Cloud Agent and
 subagent launches. It can let an action proceed, require approval, or deny it.
 It does not review every side effect, such as memory writes and most settings
-changes. Each member's own setting remains the off switch; an
-organization-level lock is not available. See
+changes. On Enterprise, team admins can enforce Auto-review from the Grok Bot
+page and add team Auto-review rules that every member inherits. Members can add
+stricter personal rules on top, and **Ask first** wins when rules conflict. If
+an admin turns enforcement off, members go back to their own rules only. See
 [approvals and Auto Review](/grok-bot/security#approvals-and-auto-review).
 
 ### Can I see what Bots did on behalf of my team?
 
 Spend and usage are on the dashboard usage page, broken down by product. Audit
-logs are Enterprise only; they cover admin, security, and authentication events
-and can stream to your SIEM. Action Recording is Enterprise only and is a
-separate setting, off by default; when enabled, it records Bot actions
-internally. OpenTelemetry Export is Enterprise only; configure it to receive
-those events in your own collector. They do not appear on the Audit Log page.
+logs are Enterprise only; they cover admin, security, and authentication
+events, plus Grok Bot control-plane events like Bot creation, access changes,
+Team Setup, and routines, filterable by application, and can stream to your
+SIEM. Action Recording is Enterprise only and is a separate setting, off by
+default; when enabled, it records Bot actions internally. OpenTelemetry Export
+is Enterprise only; configure it to receive those events in your own
+collector, tagged `cursor.surface=grok_bot`. They do not appear on the Audit
+Log page.
 See [logging and audit](/grok-bot/security#logging-and-audit).
 
 ### Can I restrict which models Grok Bot uses?
@@ -106,8 +122,10 @@ See [models and data](/grok-bot/security#models-and-data).
 
 ### Where do Grok Bot computers run?
 
-In the United States today. If your review needs a written residency
-commitment, contact your account team.
+In the United States today. That is not the same as Cursor's US-only data
+residency program, which does not apply to Grok Bot by default. If your review
+needs a written residency commitment, contact your account team. See
+[data residency](/grok-bot/security#data-residency).
 
 ### Can we run Grok Bot on-premises or from our own image?
 
@@ -147,5 +165,6 @@ reports are available at [trust.cursor.com](https://trust.cursor.com).
 * [Grok Bot for teams and enterprises](/grok-bot/teams-and-enterprises)
 * [Configure identity and access](/grok-bot/identity-and-access)
 * [Connect to private networks](/grok-bot/private-networks)
+* [Configure TLS-inspecting proxies](/grok-bot/proxies)
 * [Approvals, security, and privacy](/grok-bot/approvals-security-and-privacy)
 * [Privacy and Data Governance](https://cursor.com/docs/enterprise/privacy-and-data-governance)

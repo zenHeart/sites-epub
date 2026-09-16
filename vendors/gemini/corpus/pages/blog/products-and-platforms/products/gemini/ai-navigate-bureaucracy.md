@@ -159,7 +159,7 @@
     
       "special_hero": "undefined",
     
-    "days_since_published": "1",
+    "days_since_published": "6",
     
       "content_category": "Products - Gemini",
     
@@ -5393,10 +5393,104 @@ data-ga4-analytics-landing-lead='{
 
 
 <a
+  href="https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/"
+  class="uni-article-card"
+  aria-label="Developer tools - DevFest is back - By Justyna Politanska-Pyszko& Natalie McHugh - Sep 14, 2026"
+  data-index="1"
+  data-target="card"
+  data-primaryTag="products - developer tools"
+  data-image="true"
+  data-ga4-analytics-footer-lead-click='{
+    "link_text": "DevFest is back",
+    "link_url":  "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+    "source_content": "Related stories",
+    "related_index": "1",
+    "related_article_tag": "products - developer tools",
+    "article_name": "DevFest is back",
+    "author_name": "Justyna Politanska-Pyszko, Natalie McHugh",
+    "content_type": "blogv2 | article page"
+  }'
+  data-theme-color="green"
+>
+  <div class="uni-article-card__shape-container">
+    <div
+      class="uni-article-card__shape"
+      data-shape-context-consumer='["6-sided-cookie", "8-leaf-clover", "square"]'>
+      
+        
+  
+
+
+<img
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/DevFest.2e16d0ba.fill-300x300.format-webp.webp"
+  alt=""
+
+  
+    class="uni-article-card__img"
+  
+
+  
+    sizes="auto"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/DevFest.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/DevFest.2e16d0ba.fill-600x600.format-webp.webp 600w"
+  
+
+  
+    loading="lazy"
+  
+  />
+
+
+
+
+      
+    </div>
+  </div>
+
+  <div class="uni-article-card__content">
+    <div class="uni-article-card__text">
+      <span
+        class="uni-article-card__eyebrow font-eyebrow"
+        data-target="eyebrow">
+        Developer tools
+      </span>
+      <h3
+        class="uni-article-card__title font-h5"
+        data-target="title">
+        DevFest is back
+      </h3>
+      
+    </div>
+
+    <div
+      class="uni-article-card__meta"
+      data-target="author">
+      
+        <span class="uni-article-card__author font-author-name">
+          By
+          
+            
+            Justyna Politanska-Pyszko
+          
+            & 
+            Natalie McHugh
+          
+        </span>
+      
+    </div>
+  </div>
+</a>
+
+        
+          
+
+
+
+
+<a
   href="https://blog.google/company-news/inside-google/company-announcements/mrbeast-gemini-google-health/"
   class="uni-article-card"
   aria-label="Gemini - MrBeast partners with Gemini to turn impossibly big ideas into reality - By Marvin Chow - Sep 02, 2026"
-  data-index="1"
+  data-index="2"
   data-target="card"
   data-primaryTag="products - gemini"
   data-image="true"
@@ -5404,7 +5498,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "MrBeast partners with Gemini to turn impossibly big ideas into reality",
     "link_url":  "https://blog.google/company-news/inside-google/company-announcements/mrbeast-gemini-google-health/",
     "source_content": "Related stories",
-    "related_index": "1",
+    "related_index": "2",
     "related_article_tag": "products - gemini",
     "article_name": "MrBeast partners with Gemini to turn impossibly big ideas into reality",
     "author_name": "Marvin Chow",
@@ -5487,7 +5581,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/products-and-platforms/products/workspace/gemini-google-workspace-back-to-school/"
   class="uni-article-card"
   aria-label="Google Workspace - 7 ways to kick\u002Dstart back to school using Gemini in Workspace - By Yulie Kwon Kim - Aug 26, 2026"
-  data-index="2"
+  data-index="3"
   data-target="card"
   data-primaryTag="products - google workspace"
   data-image="true"
@@ -5495,7 +5589,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "7 ways to kick\u002Dstart back to school using Gemini in Workspace",
     "link_url":  "https://blog.google/products-and-platforms/products/workspace/gemini-google-workspace-back-to-school/",
     "source_content": "Related stories",
-    "related_index": "2",
+    "related_index": "3",
     "related_article_tag": "products - google workspace",
     "article_name": "7 ways to kick\u002Dstart back to school using Gemini in Workspace",
     "author_name": "Yulie Kwon Kim",
@@ -5578,7 +5672,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/"
   class="uni-article-card"
   aria-label="Gemini - Get closer to the game with Gemini and Pixel - By Eileen Mannion - Aug 17, 2026"
-  data-index="3"
+  data-index="4"
   data-target="card"
   data-primaryTag="products - gemini"
   data-image="true"
@@ -5586,7 +5680,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "Get closer to the game with Gemini and Pixel",
     "link_url":  "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/",
     "source_content": "Related stories",
-    "related_index": "3",
+    "related_index": "4",
     "related_article_tag": "products - gemini",
     "article_name": "Get closer to the game with Gemini and Pixel",
     "author_name": "Eileen Mannion",
@@ -5669,7 +5763,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/products-and-platforms/products/gemini/state-fair-tips/"
   class="uni-article-card"
   aria-label="Gemini - Have more fun at the state fair with these Google tools - By Claire Herrin - Aug 10, 2026"
-  data-index="4"
+  data-index="5"
   data-target="card"
   data-primaryTag="products - gemini"
   data-image="true"
@@ -5677,7 +5771,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "Have more fun at the state fair with these Google tools",
     "link_url":  "https://blog.google/products-and-platforms/products/gemini/state-fair-tips/",
     "source_content": "Related stories",
-    "related_index": "4",
+    "related_index": "5",
     "related_article_tag": "products - gemini",
     "article_name": "Have more fun at the state fair with these Google tools",
     "author_name": "Claire Herrin",
@@ -5760,7 +5854,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/products-and-platforms/products/gemini/how-gemini-plans-trips/"
   class="uni-article-card"
   aria-label="Gemini - How Gemini plans such detailed vacation itineraries for you - By Sarah Armstrong - Aug 06, 2026"
-  data-index="5"
+  data-index="6"
   data-target="card"
   data-primaryTag="products - gemini"
   data-image="true"
@@ -5768,7 +5862,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "How Gemini plans such detailed vacation itineraries for you",
     "link_url":  "https://blog.google/products-and-platforms/products/gemini/how-gemini-plans-trips/",
     "source_content": "Related stories",
-    "related_index": "5",
+    "related_index": "6",
     "related_article_tag": "products - gemini",
     "article_name": "How Gemini plans such detailed vacation itineraries for you",
     "author_name": "Sarah Armstrong",
@@ -5834,97 +5928,6 @@ data-ga4-analytics-landing-lead='{
           
             
             Sarah Armstrong
-          
-        </span>
-      
-    </div>
-  </div>
-</a>
-
-        
-          
-
-
-
-
-<a
-  href="https://blog.google/products-and-platforms/products/gemini/gemini-live-camera-how-to/"
-  class="uni-article-card"
-  aria-label="Gemini - Here’s how to ask Gemini Live for help with anything you see. - By Lindsey Lanquist - Jul 22, 2026"
-  data-index="6"
-  data-target="card"
-  data-primaryTag="products - gemini"
-  data-image="true"
-  data-ga4-analytics-footer-lead-click='{
-    "link_text": "Here’s how to ask Gemini Live for help with anything you see.",
-    "link_url":  "https://blog.google/products-and-platforms/products/gemini/gemini-live-camera-how-to/",
-    "source_content": "Related stories",
-    "related_index": "6",
-    "related_article_tag": "products - gemini",
-    "article_name": "Here’s how to ask Gemini Live for help with anything you see.",
-    "author_name": "Lindsey Lanquist",
-    "content_type": "blogv2 | Short Post"
-  }'
-  data-theme-color="neutral"
->
-  <div class="uni-article-card__shape-container">
-    <div
-      class="uni-article-card__shape"
-      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
-      
-        
-  
-
-
-<img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ask_Gemini_Live_for_h.2e16d0ba.fill-300x300.format-webp.webp"
-  alt=""
-
-  
-    class="uni-article-card__img"
-  
-
-  
-    sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ask_Gemini_Live_for_h.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ask_Gemini_Live_for_h.2e16d0ba.fill-600x600.format-webp.webp 600w"
-  
-
-  
-    loading="lazy"
-  
-  />
-
-
-
-
-      
-    </div>
-  </div>
-
-  <div class="uni-article-card__content">
-    <div class="uni-article-card__text">
-      <span
-        class="uni-article-card__eyebrow font-eyebrow"
-        data-target="eyebrow">
-        Gemini
-      </span>
-      <h3
-        class="uni-article-card__title font-h5"
-        data-target="title">
-        Here’s how to ask Gemini Live for help with anything you see.
-      </h3>
-      
-    </div>
-
-    <div
-      class="uni-article-card__meta"
-      data-target="author">
-      
-        <span class="uni-article-card__author font-author-name">
-          By
-          
-            
-            Lindsey Lanquist
           
         </span>
       

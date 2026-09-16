@@ -132,7 +132,7 @@ If mTLS is enabled as **required** for your team, yes. Requests to `api.x.ai` wi
 
 ### Can I use regional endpoints with mTLS?
 
-mTLS is currently available on the global `mtls.api.x.ai` endpoint. If you need mTLS with regional endpoints, contact [support@x.ai](mailto:support@x.ai).
+mTLS is currently available on the global `mtls.api.x.ai` endpoint. If you need mTLS with [regional endpoints](/developers/advanced-api-usage/regions), contact [support@x.ai](mailto:support@x.ai).
 
 ### What certificate format do I need?
 

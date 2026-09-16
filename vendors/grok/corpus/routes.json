@@ -521,6 +521,14 @@
   },
   {
     "group": "Developers",
+    "title": "Advanced API Usage \u2014 Regional Endpoints",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/regions.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/regions",
+    "route": "developers/advanced-api-usage/regions",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
     "title": "Advanced API Usage \u2014 Cost Tracking",
     "md_url": "https://docs.x.ai/developers/cost-tracking.md",
     "html_url": "https://docs.x.ai/developers/cost-tracking",
@@ -641,14 +649,6 @@
   },
   {
     "group": "Developers",
-    "title": "Inference API \u2014 Embeddings",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/embeddings.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/embeddings",
-    "route": "developers/rest-api-reference/inference/embeddings",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
     "title": "Inference API \u2014 Images",
     "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/images.md",
     "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/images",
@@ -701,14 +701,6 @@
     "md_url": "https://docs.x.ai/developers/rest-api-reference/files/download.md",
     "html_url": "https://docs.x.ai/developers/rest-api-reference/files/download",
     "route": "developers/rest-api-reference/files/download",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Inference API \u2014 Files \u2014 Create a public URL",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/files/public-urls.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/files/public-urls",
-    "route": "developers/rest-api-reference/files/public-urls",
     "kind": "doc"
   },
   {
@@ -805,78 +797,6 @@
     "md_url": "https://docs.x.ai/developers/rest-api-reference/management/audit.md",
     "html_url": "https://docs.x.ai/developers/rest-api-reference/management/audit",
     "route": "developers/rest-api-reference/management/audit",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "gRPC API",
-    "md_url": "https://docs.x.ai/developers/grpc-api-reference.md",
-    "html_url": "https://docs.x.ai/developers/grpc-api-reference",
-    "route": "developers/grpc-api-reference",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "gRPC API \u2014 Chat",
-    "md_url": "https://docs.x.ai/developers/grpc-api-reference/chat.md",
-    "html_url": "https://docs.x.ai/developers/grpc-api-reference/chat",
-    "route": "developers/grpc-api-reference/chat",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "gRPC API \u2014 Image",
-    "md_url": "https://docs.x.ai/developers/grpc-api-reference/image.md",
-    "html_url": "https://docs.x.ai/developers/grpc-api-reference/image",
-    "route": "developers/grpc-api-reference/image",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "gRPC API \u2014 Video",
-    "md_url": "https://docs.x.ai/developers/grpc-api-reference/video.md",
-    "html_url": "https://docs.x.ai/developers/grpc-api-reference/video",
-    "route": "developers/grpc-api-reference/video",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "gRPC API \u2014 Batch Management",
-    "md_url": "https://docs.x.ai/developers/grpc-api-reference/batches.md",
-    "html_url": "https://docs.x.ai/developers/grpc-api-reference/batches",
-    "route": "developers/grpc-api-reference/batches",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "gRPC API \u2014 Models",
-    "md_url": "https://docs.x.ai/developers/grpc-api-reference/models.md",
-    "html_url": "https://docs.x.ai/developers/grpc-api-reference/models",
-    "route": "developers/grpc-api-reference/models",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "gRPC API \u2014 Auth",
-    "md_url": "https://docs.x.ai/developers/grpc-api-reference/auth.md",
-    "html_url": "https://docs.x.ai/developers/grpc-api-reference/auth",
-    "route": "developers/grpc-api-reference/auth",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "gRPC API \u2014 Tokenize",
-    "md_url": "https://docs.x.ai/developers/grpc-api-reference/tokenize.md",
-    "html_url": "https://docs.x.ai/developers/grpc-api-reference/tokenize",
-    "route": "developers/grpc-api-reference/tokenize",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "gRPC API \u2014 Raw Sampling",
-    "md_url": "https://docs.x.ai/developers/grpc-api-reference/sample.md",
-    "html_url": "https://docs.x.ai/developers/grpc-api-reference/sample",
-    "route": "developers/grpc-api-reference/sample",
     "kind": "doc"
   },
   {
@@ -1169,23 +1089,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Grok Bot security",
-    "md_url": "https://docs.x.ai/grok-bot/security.md",
-    "html_url": "https://docs.x.ai/grok-bot/security",
-    "route": "grok-bot/security",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Grok Bot security FAQ",
-    "md_url": "https://docs.x.ai/grok-bot/security-faq.md",
-    "html_url": "https://docs.x.ai/grok-bot/security-faq",
-    "route": "grok-bot/security-faq",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Identity and access",
+    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Identity and access",
     "md_url": "https://docs.x.ai/grok-bot/identity-and-access.md",
     "html_url": "https://docs.x.ai/grok-bot/identity-and-access",
     "route": "grok-bot/identity-and-access",
@@ -1193,10 +1097,42 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Private networks",
+    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Private networks",
     "md_url": "https://docs.x.ai/grok-bot/private-networks.md",
     "html_url": "https://docs.x.ai/grok-bot/private-networks",
     "route": "grok-bot/private-networks",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Manage and protect \u2014 Teams and enterprises \u2014 TLS-inspecting proxies",
+    "md_url": "https://docs.x.ai/grok-bot/proxies.md",
+    "html_url": "https://docs.x.ai/grok-bot/proxies",
+    "route": "grok-bot/proxies",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Manage computers",
+    "md_url": "https://docs.x.ai/grok-bot/computers.md",
+    "html_url": "https://docs.x.ai/grok-bot/computers",
+    "route": "grok-bot/computers",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Grok Bot security",
+    "md_url": "https://docs.x.ai/grok-bot/security.md",
+    "html_url": "https://docs.x.ai/grok-bot/security",
+    "route": "grok-bot/security",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Grok Bot security FAQ",
+    "md_url": "https://docs.x.ai/grok-bot/security-faq.md",
+    "html_url": "https://docs.x.ai/grok-bot/security-faq",
+    "route": "grok-bot/security-faq",
     "kind": "doc"
   },
   {
@@ -1337,7 +1273,39 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Aug 27, 2026 How I run multiple teams of Grok Bots Aug 27, 2026 How I run multiple teams of Grok Bots Each project gets a channel, a roster, and a Notion board. An experimental pattern for coordinating bots like a human team. Read More",
+    "title": "Sep 11, 2026 Grok Bot 101 Grok Bot is an agent with a computer. Learn how to stand one up, chain specialists, and run the workflows I actually use. Read More",
+    "md_url": "https://x.ai/bot/guides/grok-bot-101.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-101",
+    "route": "bot-guides/grok-bot-101",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Engineering \u00b7 Sep 10, 2026 Grok Bot for Engineering",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-engineering.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-engineering",
+    "route": "bot-guides/grok-bot-for-engineering",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Support \u00b7 Sep 9, 2026 Grok Bot for Support",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-support.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-support",
+    "route": "bot-guides/grok-bot-for-support",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Getting started \u00b7 Sep 8, 2026 Templates for Grok Bot",
+    "md_url": "https://x.ai/bot/guides/templates-for-grok-bot.md",
+    "html_url": "https://x.ai/bot/guides/templates-for-grok-bot",
+    "route": "bot-guides/templates-for-grok-bot",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Engineering \u00b7 Aug 27, 2026 How I run multiple teams of Grok Bots",
     "md_url": "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots.md",
     "html_url": "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots",
     "route": "bot-guides/how-i-run-multiple-teams-of-grok-bots",
@@ -1345,7 +1313,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Aug 25, 2026 Grok Bot for mobile app development",
+    "title": "Grok Bot for mobile app development Six bots, one mobile game studio. How I use Grok Bot to build, ship, and improve Rank\u2019em. Aug 25, 2026",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-mobile-app-development.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-mobile-app-development",
     "route": "bot-guides/grok-bot-for-mobile-app-development",
@@ -1353,7 +1321,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Aug 24, 2026 Designing Grok Bot with Grok Bot",
+    "title": "Designing Grok Bot with Grok Bot How a designer uses always-on Grok Bot agents to explore more ideas, work with real production assets, and keep judgment in the loop. Aug 24, 2026",
     "md_url": "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot.md",
     "html_url": "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot",
     "route": "bot-guides/designing-grok-bot-with-grok-bot",
@@ -1361,7 +1329,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Aug 16, 2026 Grok Bot for GTM",
+    "title": "Grok Bot for GTM How I use Grok Bot for Enterprise GTM at SpaceXAI: a Chief of Staff, prospecting and account prompts, live slides, and the rest of the team. Aug 16, 2026",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-gtm.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-gtm",
     "route": "bot-guides/grok-bot-for-gtm",
@@ -1369,7 +1337,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Aug 15, 2026 Grok Bot for PMs",
+    "title": "Grok Bot for PMs For the first time, a PM can have a team that reports to them. Attention lists, shipping software, and the bots I actually run. Aug 15, 2026",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-pms.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-pms",
     "route": "bot-guides/grok-bot-for-pms",
@@ -1377,7 +1345,7 @@
   },
   {
     "group": "News",
-    "title": "Sep 3, 2026 Grok Bot for Enterprise Sep 3, 2026 Grok Bot for Enterprise Grok Bot is now available for enterprises. Grok and Cursor Enterprise customers have free usage for the next two weeks, and can invite their whole organization, including people without an existing seat. Read More",
+    "title": "Sep 3, 2026 Grok Bot for Enterprise Grok Bot is now available for enterprises. Grok and Cursor Enterprise customers have free usage for the next two weeks, and can invite their whole organization, including people without an existing seat. Read More",
     "md_url": "https://x.ai/news/grok-bot-for-enterprise.md",
     "html_url": "https://x.ai/news/grok-bot-for-enterprise",
     "route": "news/grok-bot-for-enterprise",
@@ -1385,7 +1353,7 @@
   },
   {
     "group": "News",
-    "title": "Sep 4, 2026 Setting Grok Bot loose on procurement",
+    "title": "Product \u00b7 Sep 4, 2026 Setting Grok Bot loose on procurement",
     "md_url": "https://x.ai/news/grok-bot-procurement.md",
     "html_url": "https://x.ai/news/grok-bot-procurement",
     "route": "news/grok-bot-procurement",
@@ -1393,7 +1361,7 @@
   },
   {
     "group": "News",
-    "title": "Sep 3, 2026 Designing Grok Bot for a world of persistent agents",
+    "title": "Product \u00b7 Sep 3, 2026 Designing Grok Bot for a world of persistent agents",
     "md_url": "https://x.ai/news/designing-grok-bot.md",
     "html_url": "https://x.ai/news/designing-grok-bot",
     "route": "news/designing-grok-bot",
@@ -1401,7 +1369,7 @@
   },
   {
     "group": "News",
-    "title": "Sep 1, 2026 Biosecurity at the frontier",
+    "title": "Company \u00b7 Sep 1, 2026 Biosecurity at the frontier",
     "md_url": "https://x.ai/news/biosafety-at-the-frontier.md",
     "html_url": "https://x.ai/news/biosafety-at-the-frontier",
     "route": "news/biosafety-at-the-frontier",
@@ -1409,7 +1377,7 @@
   },
   {
     "group": "News",
-    "title": "Aug 29, 2026 Grok Bot now works with X",
+    "title": "Product \u00b7 Aug 29, 2026 Grok Bot now works with X",
     "md_url": "https://x.ai/news/grok-bot-and-x.md",
     "html_url": "https://x.ai/news/grok-bot-and-x",
     "route": "news/grok-bot-and-x",

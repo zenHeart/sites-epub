@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/live-api/capabilities"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/live-api/capabilities"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://ai.google.dev/gemini-api/docs/live-api/capabilities" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/gemini-api/docs/live-api/capabilities" /><link rel="alternate" hreflang="ar"
@@ -878,7 +878,7 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/models"
         class="devsite-nav-title"
       
-        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
+        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.8-flash /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.8-live /gemini-api/docs/models/gemini-3.8-live-extended-thinking /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3.5 /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/latest-model"
         class="devsite-nav-title"
@@ -899,7 +899,7 @@
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/music-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Lyria 3</span></a></li>
+      ><span class="devsite-nav-text" tooltip>Lyria 3.5</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/realtime-music-generation"
         class="devsite-nav-title"
@@ -935,37 +935,17 @@
         <span class="devsite-nav-text" tooltip>Robotics</span>
       </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-overview"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-spatial"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-spatial"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-agentic"
+      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-agentic"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agentic vision</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-orchestration"
+      ><span class="devsite-nav-text" tooltip>Agentic vision</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-orchestration"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Task orchestration</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-streaming"
+      ><span class="devsite-nav-text" tooltip>Task orchestration</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-streaming"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-video-progress"
+      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-video-progress"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Video understanding</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Video understanding</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1004,21 +984,13 @@
            devsite-nav-expandable"><div class="devsite-expandable-nav">
       <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
         <span class="devsite-nav-text" tooltip>Speech and audio</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/speech-generation"
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/speech-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Speech generation</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
+      ><span class="devsite-nav-text" tooltip>Speech generation</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/transcribe"
+      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/transcribe"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio transcription</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Audio transcription</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1055,13 +1027,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Quickstart</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/antigravity-agent"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/antigravity-agent"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Antigravity agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Antigravity agent</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/custom-agents"
         class="devsite-nav-title"
@@ -1075,13 +1043,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Hooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/deep-research"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/deep-research"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Deep Research agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Deep Research agent</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1108,38 +1072,26 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>URL context</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/computer-use"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/computer-use"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Computer use</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Computer use</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/file-search"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>File search</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/tool-combination"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/tool-combination"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
         <span class="devsite-nav-text" tooltip>Live API</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1154,6 +1106,14 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/capabilities"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Capabilities</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-preview"><a href="/gemini-api/docs/live-api/thinking"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Thinking</span><span class="devsite-nav-icon material-icons"
+        data-icon="preview"
+        data-title="Preview"
+        aria-hidden="true"></span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/live-transcribe"
         class="devsite-nav-title"
@@ -1171,13 +1131,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Session management</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/best-practices"
         class="devsite-nav-title"
@@ -1196,29 +1152,17 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Batch API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/webhooks"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/flex-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/flex-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Flex inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Flex inference</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/priority-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/priority-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Priority inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Priority inference</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/caching"
         class="devsite-nav-title"
@@ -1378,13 +1322,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Deploying your app</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/aistudio-agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item
-           devsite-nav-experimental"><a href="/gemini-api/docs/learnlm"
+      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/learnlm"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span><span class="devsite-nav-icon material-icons"
-        data-icon="experimental"
-        data-title="Experimental!"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
+      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Troubleshooting</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/workspace"
         class="devsite-nav-title"
@@ -1487,7 +1427,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1629,7 +1569,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1639,7 +1579,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -1711,6 +1651,7 @@
 
 
 
+
 <aside class="preview"><strong>Preview:</strong><span> The Live API is in preview.</span></aside>
 <p>This is a comprehensive guide that covers capabilities and configurations
 available with the Live API.
@@ -1732,71 +1673,64 @@ Live API in Google AI Studio, select <strong>Stream</strong>.</li>
 <h2 id="model-comparison" data-text="Model comparison" tabindex="-1">Model comparison</h2>
 
 <p>The following table summarizes the key differences between the
-<a href="/gemini-api/docs/models/gemini-3.1-flash-live-preview">Gemini 3.1 Flash Live Preview</a> and the <a href="/gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025">Gemini 2.5 Flash Live Preview</a> models:</p>
+<a href="/gemini-api/docs/models/gemini-3.8-live">Gemini 3.8 Live</a>,
+<a href="/gemini-api/docs/models/gemini-3.8-live-extended-thinking">Gemini 3.8 Live Extended Thinking</a>, and
+<a href="/gemini-api/docs/models/gemini-3.1-flash-live-preview">Gemini 3.1 Flash Live Preview</a> models:</p>
 
 <table class="pricing-table" style="width: 100%; table-layout: fixed;">
   <colgroup>
-    <col class="paid-tier" width="20%">
-    <col width="40%">
-    <col class="paid-tier" width="40%">
+    <col class="paid-tier" width="16%">
+    <col width="28%">
+    <col class="paid-tier" width="28%">
+    <col width="28%">
   </colgroup>
   <thead>
     <tr>
       <th scope="col">Feature</th>
+      <th scope="col">Gemini 3.8 Live</th>
+      <th scope="col">Gemini 3.8 Live Extended Thinking</th>
       <th scope="col">Gemini 3.1 Flash Live Preview</th>
-      <th scope="col">Gemini 2.5 Flash Live Preview</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td><b>Recommended for</b></td>
+      <td>Default option for most low-latency voice agent experiences.</td>
+      <td>Recommended when higher background reasoning is required.</td>
+      <td>Legacy preview model. We recommend updating to <a href="/gemini-api/docs/models/gemini-3.8-live">Gemini 3.8 Live</a>.</td>
+    </tr>
+    <tr>
       <td><b><a href="#native-audio-output-thinking">Thinking</a></b></td>
-      <td>Uses <code translate="no" dir="ltr">thinkingLevel</code> to control thinking depth with settings like <code translate="no" dir="ltr">minimal</code>, <code translate="no" dir="ltr">low</code>, <code translate="no" dir="ltr">medium</code>, and <code translate="no" dir="ltr">high</code>. Defaults to <code translate="no" dir="ltr">minimal</code> to optimize for lowest latency. See <a href="/gemini-api/docs/thinking#levels-budgets">Thinking levels and budgets</a>.</td>
-      <td>Uses <code translate="no" dir="ltr">thinkingBudget</code> to set the number of thinking tokens. Dynamic thinking is enabled by default. Set <code translate="no" dir="ltr">thinkingBudget</code> to <code translate="no" dir="ltr">0</code> to disable. See <a href="/gemini-api/docs/thinking#levels-budgets">Thinking levels and budgets</a>.</td>
+      <td><span class="gemini-api-supported">Supported</span> (interleaved reasoning). <code translate="no" dir="ltr">thinkingLevel</code> is not supported (omit from setup).</td>
+      <td><span class="gemini-api-supported">Supported</span>. Configurable background reasoning (<code translate="no" dir="ltr">thinkingLevel</code>: <code translate="no" dir="ltr">low</code>, <code translate="no" dir="ltr">medium</code>, <code translate="no" dir="ltr">high</code>; <code translate="no" dir="ltr">minimal</code> is not supported).</td>
+      <td>Uses <code translate="no" dir="ltr">thinkingLevel</code> to control thinking depth with settings like <code translate="no" dir="ltr">minimal</code>, <code translate="no" dir="ltr">low</code>, <code translate="no" dir="ltr">medium</code>, and <code translate="no" dir="ltr">high</code>. Defaults to <code translate="no" dir="ltr">minimal</code> to optimize for lowest latency. See <a href="/gemini-api/docs/live-api/thinking">Thinking in the Live API</a>.</td>
     </tr>
     <tr>
       <td><b><a href="/api/live#bidigeneratecontentservercontent">Receiving response</a></b></td>
+      <td>A single server event can contain multiple content parts simultaneously.</td>
+      <td>A single server event can contain multiple content parts simultaneously. When asynchronous reasoning is active, <code translate="no" dir="ltr">turnComplete: true</code> does not indicate an idle session; use <code translate="no" dir="ltr">interaction_status</code> (<code translate="no" dir="ltr">IN_PROGRESS</code> versus <code translate="no" dir="ltr">IDLE</code>).</td>
       <td>A single server event can contain multiple content parts simultaneously (for example, <code translate="no" dir="ltr">inlineData</code> and transcript). Ensure your code processes all parts in each event to avoid missing content.</td>
-      <td>Each server event contains only one content part. Parts are delivered in separate events.</td>
     </tr>
     <tr>
       <td><b><a href="#incremental-updates">Client content</a></b></td>
-      <td><code translate="no" dir="ltr">send_client_content</code> is only supported for seeding initial context history (requires setting <code translate="no" dir="ltr">initial_history_in_client_content</code> in session config). To send text updates during the conversation, use <code translate="no" dir="ltr">send_realtime_input</code> instead.</td>
-      <td><code translate="no" dir="ltr">send_client_content</code> is supported throughout the conversation for sending incremental content updates and establishing context.</td>
-    </tr>
-    <tr>
-      <td><b><a href="/api/live#turncoverage">Turn coverage</a></b></td>
-      <td>Defaults to <code translate="no" dir="ltr">TURN_INCLUDES_AUDIO_ACTIVITY_AND_ALL_VIDEO</code>. The model's turn includes detected audio activity and all video frames.</td>
-      <td>Defaults to <code translate="no" dir="ltr">TURN_INCLUDES_ONLY_ACTIVITY</code>. The model's turn includes only the detected activity.</td>
-    </tr>
-    <tr>
-      <td><b><a href="#disable-automatic-vad">Custom VAD</a></b> (<code translate="no" dir="ltr">activity_start</code>/<code translate="no" dir="ltr">activity_end</code>)</td>
-      <td><span class="gemini-api-supported">Supported</span>. Disable automatic VAD and send <code translate="no" dir="ltr">activityStart</code> and <code translate="no" dir="ltr">activityEnd</code> messages manually to control turn boundaries.</td>
-      <td><span class="gemini-api-supported">Supported</span>. Disable automatic VAD and send <code translate="no" dir="ltr">activityStart</code> and <code translate="no" dir="ltr">activityEnd</code> messages manually to control turn boundaries.</td>
-    </tr>
-    <tr>
-      <td><b><a href="#configure-automatic-vad">Automatic VAD configuration</a></b></td>
-      <td><span class="gemini-api-supported">Supported</span>. Configure parameters such as <code translate="no" dir="ltr">start_of_speech_sensitivity</code>, <code translate="no" dir="ltr">end_of_speech_sensitivity</code>, <code translate="no" dir="ltr">prefix_padding_ms</code>, and <code translate="no" dir="ltr">silence_duration_ms</code>.</td>
-      <td><span class="gemini-api-supported">Supported</span>. Configure parameters such as <code translate="no" dir="ltr">start_of_speech_sensitivity</code>, <code translate="no" dir="ltr">end_of_speech_sensitivity</code>, <code translate="no" dir="ltr">prefix_padding_ms</code>, and <code translate="no" dir="ltr">silence_duration_ms</code>.</td>
+      <td><code translate="no" dir="ltr">send_client_content</code> is supported throughout the entire session lifecycle with explicit roles (<code translate="no" dir="ltr">user</code> or <code translate="no" dir="ltr">model</code>). <code translate="no" dir="ltr">turn_complete=true</code> unconditionally interrupts generation.</td>
+      <td><code translate="no" dir="ltr">send_client_content</code> is supported throughout the entire session lifecycle with explicit roles (<code translate="no" dir="ltr">user</code> or <code translate="no" dir="ltr">model</code>). <code translate="no" dir="ltr">turn_complete=true</code> unconditionally interrupts generation.</td>
+      <td><code translate="no" dir="ltr">send_client_content</code> is supported throughout the entire session lifecycle with explicit roles (<code translate="no" dir="ltr">user</code> or <code translate="no" dir="ltr">model</code>). <code translate="no" dir="ltr">turn_complete=true</code> unconditionally interrupts generation.</td>
     </tr>
     <tr>
       <td><b><a href="/gemini-api/docs/live-tools#async-function-calling">Asynchronous function calling</a></b> (<code translate="no" dir="ltr">behavior: NON_BLOCKING</code>)</td>
+      <td><span class="gemini-api-supported">Supported</span> (default). Set <code translate="no" dir="ltr">behavior: NON_BLOCKING</code> or use backwards-compatible blocking mode with <code translate="no" dir="ltr">behavior: BLOCKING</code>. Function scheduling (<code translate="no" dir="ltr">SILENT</code>, <code translate="no" dir="ltr">WHEN_IDLE</code>, <code translate="no" dir="ltr">INTERRUPTED</code>) is supported.</td>
+      <td><span class="gemini-api-supported">Supported</span> (Async only). Only <code translate="no" dir="ltr">NON_BLOCKING</code> execution is supported. Blocking mode and function scheduling are not supported.</td>
       <td><span class="gemini-api-not-supported">Not supported</span>. Function calling is sequential only. The model will not start responding until you've sent the tool response.</td>
-      <td><span class="gemini-api-supported">Supported</span>. Set <code translate="no" dir="ltr">behavior</code> to <code translate="no" dir="ltr">NON_BLOCKING</code> on a function declaration to let the model continue interacting while the function runs. Control how the model handles responses with the <code translate="no" dir="ltr">scheduling</code> parameter (<code translate="no" dir="ltr">INTERRUPT</code>, <code translate="no" dir="ltr">WHEN_IDLE</code>, or <code translate="no" dir="ltr">SILENT</code>).</td>
-    </tr>
-    <tr>
-      <td><b><a href="#proactive-audio">Proactive audio</a></b></td>
-      <td><span class="gemini-api-not-supported">Not supported</span></td>
-      <td><span class="gemini-api-supported">Supported</span>. When enabled, the model can proactively decide not to respond if the input content is not relevant. Set <code translate="no" dir="ltr">proactive_audio</code> to <code translate="no" dir="ltr">true</code> in the <code translate="no" dir="ltr">proactivity</code> config (requires <code translate="no" dir="ltr">v1beta</code>).</td>
-    </tr>
-    <tr>
-      <td><b><a href="#affective-dialog">Affective dialogue</a></b></td>
-      <td><span class="gemini-api-not-supported">Not supported</span></td>
-      <td><span class="gemini-api-supported">Supported</span>. The model adapts its response style to match the expression and tone of the input. Set <code translate="no" dir="ltr">enable_affective_dialog</code> to <code translate="no" dir="ltr">true</code> in session config (requires <code translate="no" dir="ltr">v1beta</code>).</td>
     </tr>
   </tbody>
 </table>
 
-<p>To migrate from Gemini 2.5 Flash Live to Gemini 3.1 Flash Live, see the <a href="/gemini-api/docs/models/gemini-3.1-flash-live-preview#migrating">migration guide</a>.</p>
+<p>To migrate to Gemini 3.8 Live, see the
+<a href="/gemini-api/docs/models/gemini-3.8-live#migrating">migration guide</a>.
+To learn more about Thinking, see the
+<a href="/gemini-api/docs/live-api/thinking">Thinking guide</a> and the
+<a href="/gemini-api/docs/models/gemini-3.8-live-extended-thinking#upgrading">upgrade guide</a>.</p>
 
 <h2 id="establish-connection" data-text="Establishing a connection" tabindex="-1">Establishing a connection</h2>
 
@@ -1807,7 +1741,7 @@ Live API in Google AI Studio, select <strong>Stream</strong>.</li>
 
 <span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
 
-<span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"gemini-3.1-flash-live-preview"</span>
+<span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"gemini-3.8-live"</span>
 <span class="devsite-syntax-n">config</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"response_modalities"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"AUDIO"</span><span class="devsite-syntax-p">]}</span>
 
 <span class="devsite-syntax-k">async</span> <span class="devsite-syntax-k">def</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nf">main</span><span class="devsite-syntax-p">():</span>
@@ -1821,7 +1755,7 @@ Live API in Google AI Studio, select <strong>Stream</strong>.</li>
 <section><h3 id="javascript" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-k">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">Modality</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kr">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'@google/genai'</span><span class="devsite-syntax-p">;</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-p">({});</span>
-<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3.1-flash-live-preview'</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3.8-live'</span><span class="devsite-syntax-p">;</span>
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">config</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">responseModalities</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">Modality</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AUDIO</span><span class="devsite-syntax-p">]</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">};</span>
 
 <span class="devsite-syntax-k">async</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">main</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
@@ -1949,11 +1883,8 @@ like <code translate="no" dir="ltr">audio/pcm;rate=16000</code>.</p>
 <p>Use incremental updates to send text input, establish session context, or
 restore session context. For short contexts you can send turn-by-turn
 interactions to represent the exact sequence of events:</p>
-<aside class="note"><strong>Note:</strong><span> For <code translate="no" dir="ltr">gemini-3.1-flash-live-preview</code>, <code translate="no" dir="ltr">send_client_content</code> is only
-supported for seeding initial context history. You must set
-<a href="/api/live#HistoryConfig"><code translate="no" dir="ltr">initial_history_in_client_content</code></a> to <code translate="no" dir="ltr">true</code> in the
-session config&#39;s <code translate="no" dir="ltr">history_config</code>. After the first model turn, use
-<code translate="no" dir="ltr">send_realtime_input</code> with the <code translate="no" dir="ltr">text</code> field instead.</span></aside><div><devsite-selector data-ds-scope="code-sample">
+<aside class="note"><strong>Note:</strong><span> The Live API supports <code translate="no" dir="ltr">send_client_content</code> throughout the entire session
+lifecycle with explicit roles (<code translate="no" dir="ltr">user</code> and <code translate="no" dir="ltr">model</code>).</span></aside><div><devsite-selector data-ds-scope="code-sample">
 <section><h3 id="python_5" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">turns</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-p">[</span>
     <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"parts"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-p">[{</span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"What is the capital of France?"</span><span class="devsite-syntax-p">}]},</span>
     <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"model"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"parts"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-p">[{</span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"Paris"</span><span class="devsite-syntax-p">}]},</span>
@@ -1995,7 +1926,7 @@ inferred from the model&#39;s response.</p>
 <span class="devsite-syntax-kn">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">google.genai</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kn">import</span> <span class="devsite-syntax-n">types</span>
 
 <span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"gemini-3.1-flash-live-preview"</span>
+<span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"gemini-3.8-live"</span>
 
 <span class="devsite-syntax-n">config</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-p">{</span>
     <span class="devsite-syntax-s2">"response_modalities"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"AUDIO"</span><span class="devsite-syntax-p">],</span>
@@ -2022,7 +1953,7 @@ inferred from the model&#39;s response.</p>
 <section><h3 id="javascript_6" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-k">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">Modality</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kr">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'@google/genai'</span><span class="devsite-syntax-p">;</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-p">({});</span>
-<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3.1-flash-live-preview'</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3.8-live'</span><span class="devsite-syntax-p">;</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">config</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">responseModalities</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">Modality</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AUDIO</span><span class="devsite-syntax-p">],</span>
@@ -2108,7 +2039,7 @@ inferred from the model&#39;s response.</p>
 <span class="devsite-syntax-kn">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">google.genai</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kn">import</span> <span class="devsite-syntax-n">types</span>
 
 <span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"gemini-3.1-flash-live-preview"</span>
+<span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"gemini-3.8-live"</span>
 
 <span class="devsite-syntax-n">config</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-p">{</span>
     <span class="devsite-syntax-s2">"response_modalities"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"AUDIO"</span><span class="devsite-syntax-p">],</span>
@@ -2136,7 +2067,7 @@ inferred from the model&#39;s response.</p>
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">WaveFile</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">pkg</span><span class="devsite-syntax-p">;</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-p">({});</span>
-<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3.1-flash-live-preview'</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3.8-live'</span><span class="devsite-syntax-p">;</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">config</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">responseModalities</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">Modality</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AUDIO</span><span class="devsite-syntax-p">],</span>
@@ -2269,20 +2200,21 @@ code.</p>
 
 <h2 id="native-audio-output" data-text="Native audio capabilities" tabindex="-1">Native audio capabilities</h2>
 
-<p>Our latest models feature <a href="/gemini-api/docs/models/gemini-3.1-flash-live-preview">native audio output</a>,
+<p>Our latest models feature
+<a href="/gemini-api/docs/models/gemini-3.8-live">native audio output</a>,
 which provides natural, realistic-sounding speech and improved multilingual
 performance. </p>
 
 <h3 id="native-audio-output-thinking" data-text="Thinking" tabindex="-1">Thinking</h3>
 
-<p>Gemini 3.1 models use <code translate="no" dir="ltr">thinkingLevel</code> to control thinking depth, with settings
-like <code translate="no" dir="ltr">minimal</code>, <code translate="no" dir="ltr">low</code>, <code translate="no" dir="ltr">medium</code>, and <code translate="no" dir="ltr">high</code>. The default is <code translate="no" dir="ltr">minimal</code> to
-optimize for lowest latency. Gemini 2.5 models use
-<code translate="no" dir="ltr">thinkingBudget</code> to set the number of thinking tokens instead. For more details
-on levels vs budgets, see
-<a href="/gemini-api/docs/thinking#levels-budgets">Thinking levels and budgets</a>.</p>
+<p>Gemini 3.8 Live Extended Thinking and Gemini 3.1 models use <code translate="no" dir="ltr">thinkingLevel</code> to
+control thinking depth. For <code translate="no" dir="ltr">gemini-3.8-live</code>, <code translate="no" dir="ltr">thinkingLevel</code> is not supported
+and must be omitted in setup. Gemini 3.8 Live Extended Thinking supports <code translate="no" dir="ltr">low</code>,
+<code translate="no" dir="ltr">medium</code>, and <code translate="no" dir="ltr">high</code> (<code translate="no" dir="ltr">minimal</code> is not supported). Gemini 3.1 models support
+<code translate="no" dir="ltr">minimal</code>, <code translate="no" dir="ltr">low</code>, <code translate="no" dir="ltr">medium</code>, and <code translate="no" dir="ltr">high</code>. For more details, see
+<a href="/gemini-api/docs/live-api/thinking">Thinking in the Live API</a>.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="python_9" data-text=" Python " tabindex="-1"> Python </h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"gemini-3.1-flash-live-preview"</span>
+<section><h3 id="python_9" data-text=" Python " tabindex="-1"> Python </h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"gemini-3.8-live-extended-thinking"</span>
 
 <span class="devsite-syntax-n">config</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">types</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">LiveConnectConfig</span><span class="devsite-syntax-p">(</span>
     <span class="devsite-syntax-n">response_modalities</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"AUDIO"</span><span class="devsite-syntax-p">]</span>
@@ -2294,7 +2226,7 @@ on levels vs budgets, see
 <span class="devsite-syntax-k">async</span> <span class="devsite-syntax-k">with</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">aio</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">live</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">connect</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">model</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-n">config</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">config</span><span class="devsite-syntax-p">)</span> <span class="devsite-syntax-k">as</span> <span class="devsite-syntax-n">session</span><span class="devsite-syntax-p">:</span>
     <span class="devsite-syntax-c1"># Send audio input and receive audio</span>
 </code></pre></devsite-code></section>
-<section><h3 id="javascript_9" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3.1-flash-live-preview'</span><span class="devsite-syntax-p">;</span>
+<section><h3 id="javascript_9" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3.8-live-extended-thinking'</span><span class="devsite-syntax-p">;</span>
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">config</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">responseModalities</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">Modality</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AUDIO</span><span class="devsite-syntax-p">],</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">thinkingConfig</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
@@ -2322,7 +2254,7 @@ on levels vs budgets, see
 <code translate="no" dir="ltr">true</code> in your configuration. See <a href="/gemini-api/docs/thinking#summaries">thought summaries</a>
 for more info:</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="python_10" data-text=" Python " tabindex="-1"> Python </h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"gemini-3.1-flash-live-preview"</span>
+<section><h3 id="python_10" data-text=" Python " tabindex="-1"> Python </h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"gemini-3.8-live-extended-thinking"</span>
 
 <span class="devsite-syntax-n">config</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">types</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">LiveConnectConfig</span><span class="devsite-syntax-p">(</span>
     <span class="devsite-syntax-n">response_modalities</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"AUDIO"</span><span class="devsite-syntax-p">]</span>
@@ -2332,7 +2264,7 @@ for more info:</p>
     <span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-p">)</span>
 </code></pre></devsite-code></section>
-<section><h3 id="javascript_10" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3.1-flash-live-preview'</span><span class="devsite-syntax-p">;</span>
+<section><h3 id="javascript_10" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3.8-live-extended-thinking'</span><span class="devsite-syntax-p">;</span>
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">config</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">responseModalities</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">Modality</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AUDIO</span><span class="devsite-syntax-p">],</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">thinkingConfig</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
@@ -2448,7 +2380,7 @@ audio data at any time.</p>
 <span class="devsite-syntax-kn">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">google.genai</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kn">import</span> <span class="devsite-syntax-n">types</span>
 
 <span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"gemini-3.1-flash-live-preview"</span>
+<span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-s2">"gemini-3.8-live"</span>
 
 <span class="devsite-syntax-n">config</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"response_modalities"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"AUDIO"</span><span class="devsite-syntax-p">]}</span>
 
@@ -2477,7 +2409,7 @@ audio data at any time.</p>
 <span class="devsite-syntax-k">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">*</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kr">as</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">fs</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kr">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"node:fs"</span><span class="devsite-syntax-p">;</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-p">({});</span>
-<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3.1-flash-live-preview'</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'gemini-3.8-live'</span><span class="devsite-syntax-p">;</span>
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">config</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">responseModalities</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">Modality</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AUDIO</span><span class="devsite-syntax-p">]</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">};</span>
 
 <span class="devsite-syntax-k">async</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">live</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
@@ -3182,8 +3114,9 @@ it speaks in by specifying it in the system instructions.</span></aside>
 <a href="/gemini-api/docs/live-session">Session Management</a> guides for essential
 information on using the Live API effectively.</li>
 <li>Try the Live API in <a href="https://aistudio.google.com/app/live">Google AI Studio</a>.</li>
-<li>For more info about the Live API models, see <a href="/gemini-api/docs/models#gemini-2.5-flash-native-audio">Gemini 2.5 Flash Native Audio</a>
-on the Models page.</li>
+<li>For more info about the Live API models, see the
+<a href="/gemini-api/docs/models/gemini-3.8-live">Gemini 3.8 Live</a> and
+<a href="/gemini-api/docs/models/gemini-3.8-live-extended-thinking">Gemini 3.8 Live Extended Thinking</a> model pages.</li>
 <li>Try more examples in the <a href="https://colab.research.google.com/github/google-gemini/cookbook/blob/main/quickstarts/Get_started_LiveAPI.ipynb">Live API cookbook</a>,
 the <a href="https://colab.research.google.com/github/google-gemini/cookbook/blob/main/quickstarts/Get_started_LiveAPI_tools.ipynb">Live API Tools cookbook</a>,
 and the <a href="https://github.com/google-gemini/cookbook/blob/main/quickstarts/Get_started_LiveAPI.py">Live API Get Started script</a>.</li>
@@ -3208,7 +3141,7 @@ and the <a href="https://github.com/google-gemini/cookbook/blob/main/quickstarts
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -3218,7 +3151,7 @@ and the <a href="https://github.com/google-gemini/cookbook/blob/main/quickstarts
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -3241,7 +3174,7 @@ and the <a href="https://github.com/google-gemini/cookbook/blob/main/quickstarts
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-08-05 UTC.</p>
+  <p>Last updated 2026-09-15 UTC.</p>
 </devsite-content-footer>
 
 

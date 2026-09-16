@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/migrate-to-cloud"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/migrate-to-cloud"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://ai.google.dev/gemini-api/docs/migrate-to-cloud" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/gemini-api/docs/migrate-to-cloud" /><link rel="alternate" hreflang="ar"
@@ -878,7 +878,7 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/models"
         class="devsite-nav-title"
       
-        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
+        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.8-flash /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.8-live /gemini-api/docs/models/gemini-3.8-live-extended-thinking /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3.5 /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/latest-model"
         class="devsite-nav-title"
@@ -899,7 +899,7 @@
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/music-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Lyria 3</span></a></li>
+      ><span class="devsite-nav-text" tooltip>Lyria 3.5</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/realtime-music-generation"
         class="devsite-nav-title"
@@ -935,37 +935,17 @@
         <span class="devsite-nav-text" tooltip>Robotics</span>
       </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-overview"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-spatial"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-spatial"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-agentic"
+      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-agentic"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agentic vision</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-orchestration"
+      ><span class="devsite-nav-text" tooltip>Agentic vision</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-orchestration"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Task orchestration</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-streaming"
+      ><span class="devsite-nav-text" tooltip>Task orchestration</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-streaming"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-video-progress"
+      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-video-progress"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Video understanding</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Video understanding</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1004,21 +984,13 @@
            devsite-nav-expandable"><div class="devsite-expandable-nav">
       <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
         <span class="devsite-nav-text" tooltip>Speech and audio</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/speech-generation"
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/speech-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Speech generation</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
+      ><span class="devsite-nav-text" tooltip>Speech generation</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/transcribe"
+      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/transcribe"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio transcription</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Audio transcription</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1055,13 +1027,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Quickstart</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/antigravity-agent"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/antigravity-agent"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Antigravity agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Antigravity agent</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/custom-agents"
         class="devsite-nav-title"
@@ -1075,13 +1043,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Hooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/deep-research"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/deep-research"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Deep Research agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Deep Research agent</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1108,38 +1072,26 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>URL context</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/computer-use"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/computer-use"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Computer use</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Computer use</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/file-search"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>File search</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/tool-combination"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/tool-combination"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
         <span class="devsite-nav-text" tooltip>Live API</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1154,6 +1106,14 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/capabilities"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Capabilities</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-preview"><a href="/gemini-api/docs/live-api/thinking"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Thinking</span><span class="devsite-nav-icon material-icons"
+        data-icon="preview"
+        data-title="Preview"
+        aria-hidden="true"></span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/live-transcribe"
         class="devsite-nav-title"
@@ -1171,13 +1131,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Session management</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/best-practices"
         class="devsite-nav-title"
@@ -1196,29 +1152,17 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Batch API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/webhooks"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/flex-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/flex-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Flex inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Flex inference</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/priority-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/priority-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Priority inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Priority inference</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/caching"
         class="devsite-nav-title"
@@ -1378,13 +1322,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Deploying your app</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/aistudio-agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item
-           devsite-nav-experimental"><a href="/gemini-api/docs/learnlm"
+      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/learnlm"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span><span class="devsite-nav-icon material-icons"
-        data-icon="experimental"
-        data-title="Experimental!"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
+      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Troubleshooting</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/workspace"
         class="devsite-nav-title"
@@ -1487,7 +1427,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1629,7 +1569,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1639,7 +1579,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -1738,7 +1678,7 @@ for instructions on how to install <code translate="no" dir="ltr">google-genai</
 <span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
 
 <span class="devsite-syntax-n">response</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">models</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">generate_content</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-n">contents</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"Explain how AI works in a few words"</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-n">contents</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"Explain how AI works in a few words"</span>
 <span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">response</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">text</span><span class="devsite-syntax-p">)</span>
 </code></pre></devsite-code></section>
@@ -1749,7 +1689,7 @@ for instructions on how to install <code translate="no" dir="ltr">google-genai</
 <span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-n">response</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">models</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">generate_content</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-n">contents</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"Explain how AI works in a few words"</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-n">contents</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"Explain how AI works in a few words"</span>
 <span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">response</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">text</span><span class="devsite-syntax-p">)</span>
 </code></pre></devsite-code></section>
@@ -1766,7 +1706,7 @@ to install <code translate="no" dir="ltr">@google/genai</code>.</p>
 
 <span class="devsite-syntax-k">async</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">main</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">generateContent</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">contents</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Explain how AI works in a few words"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">});</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">text</span><span class="devsite-syntax-p">);</span>
@@ -1783,7 +1723,7 @@ to install <code translate="no" dir="ltr">@google/genai</code>.</p>
 
 <span class="devsite-syntax-k">async</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">main</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">generateContent</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">contents</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Explain how AI works in a few words"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">});</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">text</span><span class="devsite-syntax-p">);</span>
@@ -1817,7 +1757,7 @@ to install <code translate="no" dir="ltr">google.golang.org/genai</code>.</p>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
 
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Call the GenerateContent method.</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">:=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">GenerateContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">ctx</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">genai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Text</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Tell me about New York?"</span><span class="devsite-syntax-p">),</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">nil</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">:=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">GenerateContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">ctx</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">genai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Text</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Tell me about New York?"</span><span class="devsite-syntax-p">),</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">nil</span><span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-p">}</span>
 </code></pre></devsite-code></section>
@@ -1845,7 +1785,7 @@ to install <code translate="no" dir="ltr">google.golang.org/genai</code>.</p>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">})</span>
 
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Call the GenerateContent method.</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">:=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">GenerateContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">ctx</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">genai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Text</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Tell me about New York?"</span><span class="devsite-syntax-p">),</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">nil</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">:=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">GenerateContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">ctx</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">genai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Text</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Tell me about New York?"</span><span class="devsite-syntax-p">),</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">nil</span><span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-p">}</span>
 </code></pre></devsite-code></section>
@@ -1918,7 +1858,7 @@ to learn more about generative AI solutions on Gemini Enterprise Agent Platform.
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1928,7 +1868,7 @@ to learn more about generative AI solutions on Gemini Enterprise Agent Platform.
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -1951,7 +1891,7 @@ to learn more about generative AI solutions on Gemini Enterprise Agent Platform.
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-08-17 UTC.</p>
+  <p>Last updated 2026-09-02 UTC.</p>
 </devsite-content-footer>
 
 

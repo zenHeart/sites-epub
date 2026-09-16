@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/veo"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/veo"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://ai.google.dev/gemini-api/docs/veo" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/gemini-api/docs/veo" /><link rel="alternate" hreflang="ar"
@@ -881,7 +881,7 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/models"
         class="devsite-nav-title"
       
-        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
+        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.8-flash /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.8-live /gemini-api/docs/models/gemini-3.8-live-extended-thinking /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3.5 /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/latest-model"
         class="devsite-nav-title"
@@ -902,7 +902,7 @@
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/music-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Lyria 3</span></a></li>
+      ><span class="devsite-nav-text" tooltip>Lyria 3.5</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/realtime-music-generation"
         class="devsite-nav-title"
@@ -938,37 +938,17 @@
         <span class="devsite-nav-text" tooltip>Robotics</span>
       </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-overview"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-spatial"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-spatial"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-agentic"
+      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-agentic"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agentic vision</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-orchestration"
+      ><span class="devsite-nav-text" tooltip>Agentic vision</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-orchestration"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Task orchestration</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-streaming"
+      ><span class="devsite-nav-text" tooltip>Task orchestration</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-streaming"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-video-progress"
+      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-video-progress"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Video understanding</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Video understanding</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1007,21 +987,13 @@
            devsite-nav-expandable"><div class="devsite-expandable-nav">
       <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
         <span class="devsite-nav-text" tooltip>Speech and audio</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/speech-generation"
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/speech-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Speech generation</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
+      ><span class="devsite-nav-text" tooltip>Speech generation</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/transcribe"
+      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/transcribe"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio transcription</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Audio transcription</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1058,13 +1030,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Quickstart</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/antigravity-agent"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/antigravity-agent"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Antigravity agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Antigravity agent</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/custom-agents"
         class="devsite-nav-title"
@@ -1078,13 +1046,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Hooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/deep-research"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/deep-research"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Deep Research agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Deep Research agent</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1111,38 +1075,26 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>URL context</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/computer-use"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/computer-use"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Computer use</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Computer use</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/file-search"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>File search</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/tool-combination"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/tool-combination"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
         <span class="devsite-nav-text" tooltip>Live API</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1157,6 +1109,14 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/capabilities"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Capabilities</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-preview"><a href="/gemini-api/docs/live-api/thinking"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Thinking</span><span class="devsite-nav-icon material-icons"
+        data-icon="preview"
+        data-title="Preview"
+        aria-hidden="true"></span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/live-transcribe"
         class="devsite-nav-title"
@@ -1174,13 +1134,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Session management</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/best-practices"
         class="devsite-nav-title"
@@ -1199,29 +1155,17 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Batch API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/webhooks"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/flex-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/flex-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Flex inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Flex inference</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/priority-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/priority-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Priority inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Priority inference</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/caching"
         class="devsite-nav-title"
@@ -1381,13 +1325,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Deploying your app</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/aistudio-agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item
-           devsite-nav-experimental"><a href="/gemini-api/docs/learnlm"
+      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/learnlm"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span><span class="devsite-nav-icon material-icons"
-        data-icon="experimental"
-        data-title="Experimental!"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
+      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Troubleshooting</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/workspace"
         class="devsite-nav-title"
@@ -1490,7 +1430,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1632,7 +1572,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1642,7 +1582,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -3545,16 +3485,14 @@ generation process.</p>
       <th>Veo 3.1 & Veo 3.1 Fast</th>
       <th>Veo 3.1 Lite</th>
       <th>Veo 3 & Veo 3 Fast</th>
-      <th>Veo 2</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td class="row-gray" colspan="5">Instances</td>
+      <td class="row-gray" colspan="4">Instances</td>
     </tr>
     <tr>
       <td><code translate="no" dir="ltr">prompt</code>:<br>The text description for the video. Supports audio cues.</td>
-      <td><code translate="no" dir="ltr">string</code></td>
       <td><code translate="no" dir="ltr">string</code></td>
       <td><code translate="no" dir="ltr">string</code></td>
       <td><code translate="no" dir="ltr">string</code></td>
@@ -3564,11 +3502,9 @@ generation process.</p>
       <td><code translate="no" dir="ltr">Image</code> object</td>
       <td><code translate="no" dir="ltr">Image</code> object</td>
       <td><code translate="no" dir="ltr">Image</code> object</td>
-      <td><code translate="no" dir="ltr">Image</code> object</td>
     </tr>
     <tr>
       <td><code translate="no" dir="ltr">lastFrame</code>:<br>The final image for an interpolation video to transition. Must be used in combination with the <code translate="no" dir="ltr">image</code> parameter.</td>
-      <td><code translate="no" dir="ltr">Image</code> object</td>
       <td><code translate="no" dir="ltr">Image</code> object</td>
       <td><code translate="no" dir="ltr">Image</code> object</td>
       <td><code translate="no" dir="ltr">Image</code> object</td>
@@ -3578,22 +3514,19 @@ generation process.</p>
       <td><code translate="no" dir="ltr">VideoGenerationReferenceImage</code> object</td>
       <td><code translate="no" dir="ltr">n/a</code> object</td>
       <td>n/a</td>
-      <td>n/a</td>
     </tr>
     <tr>
       <td><code translate="no" dir="ltr">video</code>:<br>Video to be used for video extension.</td>
       <td><code translate="no" dir="ltr">Video</code> object from a previous generation</td>
       <td>n/a</td>
       <td>n/a</td>
-      <td>n/a</td>
     </tr>
     <tr>
-      <td class="row-gray" colspan="5">Parameters</td>
+      <td class="row-gray" colspan="4">Parameters</td>
     </tr>
     <tr>
       <td><code translate="no" dir="ltr">aspectRatio</code>:<br>The video's aspect ratio.</td>
       <td><code translate="no" dir="ltr">"16:9"</code> (default),<br><code translate="no" dir="ltr">"9:16"</code><br><br></td>
-      <td><code translate="no" dir="ltr">"16:9"</code> (default),<br><code translate="no" dir="ltr">"9:16"</code></td>
       <td><code translate="no" dir="ltr">"16:9"</code> (default),<br><code translate="no" dir="ltr">"9:16"</code></td>
       <td><code translate="no" dir="ltr">"16:9"</code> (default),<br><code translate="no" dir="ltr">"9:16"</code></td>
     </tr>
@@ -3602,7 +3535,6 @@ generation process.</p>
       <td><code translate="no" dir="ltr">"4"</code>, <code translate="no" dir="ltr">"6"</code>, <code translate="no" dir="ltr">"8"</code>.<br><br><i> Must be "8" when using extension, reference images or with 1080p and 4k resolutions</i></td>
       <td><code translate="no" dir="ltr">"4"</code>, <code translate="no" dir="ltr">"6"</code>, <code translate="no" dir="ltr">"8"</code>.<br><br><i> Must be "8" when using reference images or with 1080p</i></td>
       <td><code translate="no" dir="ltr">"4"</code>, <code translate="no" dir="ltr">"6"</code>, <code translate="no" dir="ltr">"8"</code>.<br><br><i> Must be "8" when using extension, reference images or with 1080p and 4k resolutions</i></td>
-      <td><code translate="no" dir="ltr">"5"</code>, <code translate="no" dir="ltr">"6"</code>, <code translate="no" dir="ltr">"8"</code></td>
     </tr>
     <tr>
       <td><code translate="no" dir="ltr">personGeneration</code>:<br>Controls the generation of people. 
@@ -3619,10 +3551,6 @@ generation process.</p>
         Text-to-video:<br><code translate="no" dir="ltr">"allow_all"</code> only<br><br>
         Image-to-video:<br><code translate="no" dir="ltr">"allow_adult"</code> only
       </td>
-      <td>
-        Text-to-video: <br><code translate="no" dir="ltr">"allow_all"</code>, <code translate="no" dir="ltr">"allow_adult"</code>, <code translate="no" dir="ltr">"dont_allow"</code><br>
-        <br>Image-to-video: <br><code translate="no" dir="ltr">"allow_adult"</code>, and <code translate="no" dir="ltr">"dont_allow"</code>
-      </td>
     </tr>
     <tr>
       <td><code translate="no" dir="ltr">resolution</code>:<br>The video's resolution.</td>
@@ -3633,7 +3561,6 @@ generation process.</p>
       <td>
         <code translate="no" dir="ltr">"720p"</code> (default), <br><code translate="no" dir="ltr">"1080p"</code> (only supports 8s duration),<br><code translate="no" dir="ltr">"4k"</code> (only supports 8s duration)<br><br><i> <code translate="no" dir="ltr">"720p"</code> only for extension</i>
       </td>
-      <td>Unsupported</td>
     </tr>
   </tbody>
 </table>
@@ -3650,7 +3577,6 @@ It doesn&#39;t guarantee determinism, but slightly improves it.</p>
       <th>Veo 3.1 & Veo 3.1 Fast</th>
       <th>Veo 3.1 Lite</th>
       <th>Veo 3 & Veo 3 Fast</th>
-      <th>Veo 2</th>
     </tr>
   </thead>
   <tbody>
@@ -3659,12 +3585,10 @@ It doesn&#39;t guarantee determinism, but slightly improves it.</p>
       <td>✔️ Always on</td>
       <td>✔️ Always on</td>
       <td>✔️ Always on</td>
-      <td>❌ Silent only</td>
     </tr>
     <tr>
       <td><strong>Input modalities:</strong><br>The type of input used for generation.</td>
       <td>Text-to-Video, Image-to-Video, Video-to-Video</td>
-      <td>Text-to-Video, Image-to-Video</td>
       <td>Text-to-Video, Image-to-Video</td>
       <td>Text-to-Video, Image-to-Video</td>
     </tr>
@@ -3673,11 +3597,9 @@ It doesn&#39;t guarantee determinism, but slightly improves it.</p>
       <td>720p, 1080p (8s length only), 4k (8s length only)<br><br><i>720p only when using video extension.</i></td>
       <td>720p, 1080p (8s length only)<br></td>
       <td>720p & 1080p (16:9 only)</td>
-      <td>720p</td>
     </tr>
     <tr>
       <td><strong>Frame rate:</strong><br>The output frame rate of the video.</td>
-      <td>24fps</td>
       <td>24fps</td>
       <td>24fps</td>
       <td>24fps</td>
@@ -3687,21 +3609,18 @@ It doesn&#39;t guarantee determinism, but slightly improves it.</p>
       <td>8 seconds, 6 seconds, 4 seconds<br><br><i>8 seconds only if 1080p or 4k or using reference images</i></td>
       <td>8 seconds, 6 seconds, 4 seconds<br><br><i>8 seconds only if 1080p or using reference images</i></td>
       <td>8 seconds</td>
-      <td>5-8 seconds</td>
     </tr>
     <tr>
       <td><strong>Videos per request:</strong><br>Number of videos generated per request.</td>
       <td>1</td>
       <td>1</td>
       <td>1</td>
-      <td>1 or 2</td>
     </tr>
      <tr>
       <td><strong>Status:</strong><br>Model availability</td>
       <td><a href="/gemini-api/docs/models#preview">Preview</a></td>
       <td><a href="/gemini-api/docs/models#preview">Preview</a></td>
       <td><a href="/gemini-api/docs/models#stable">Stable</a></td>
-      <td><a href="/gemini-api/docs/models#latest-stable">Stable</a></td>
     </tr>
   </tbody>
 </table>
@@ -3712,12 +3631,8 @@ It doesn&#39;t guarantee determinism, but slightly improves it.</p>
 <li><strong>Multi-video prompting:</strong> Referencing or reasoning across multiple videos is not currently supported. Attempting multi-video prompting may result in degraded model performance or unexpected outputs.</li>
 <li><strong>Language support:</strong> English (EN) is fully supported, but other languages have not been evaluated, so they may work but results can vary.</li>
 <li><strong>Request latency:</strong> Min: 11 seconds; Max: 6 minutes (during peak hours).</li>
-<li><strong>Regional limitations:</strong> In EU, UK, CH, MENA locations, the following
-are the allowed values for <code translate="no" dir="ltr">personGeneration</code>:
-<ul>
-<li>Veo 3 and 3.1: <code translate="no" dir="ltr">allow_adult</code> only.</li>
-<li>Veo 2: <code translate="no" dir="ltr">dont_allow</code> and <code translate="no" dir="ltr">allow_adult</code>. Default is <code translate="no" dir="ltr">dont_allow</code>.</li>
-</ul></li>
+<li><strong>Regional limitations:</strong> In EU, UK, CH, MENA locations, <code translate="no" dir="ltr">allow_adult</code> is
+the only allowed value for <code translate="no" dir="ltr">personGeneration</code>.</li>
 <li><strong>Video retention:</strong> Generated videos are stored on the server for 2 days,
 after which they are removed. To save a local copy, you must download your
 video within 2 days of generation. Extended videos are treated as newly
@@ -4501,110 +4416,6 @@ details.</p>
         </tr>
       </table>
     </section>
-    <section>
-      <h3 id="veo-2-deprecated" data-text="Veo 2 (Deprecated)" tabindex="-1">Veo 2 (Deprecated)</h3>
-      <table class="gemini-api-model-table">
-        <tr>
-          <th scope="col">Property</th>
-          <th scope="col">Description</th>
-        </tr>
-        <tr>
-          <td><span class="google-symbols" aria-hidden="true">id_card</span>Model code</td>
-          <td class="gemini-api-model-table-grid">
-            <section>
-              <p><b>Gemini API</b></p>
-              <p><code translate="no" dir="ltr">veo-2.0-generate-001</code></p>
-            </section>
-          </td>
-        </tr>
-        <tr>
-          <td><span class="google-symbols" aria-hidden="true">save</span>Supported data types</td>
-          <td class="gemini-api-model-table-grid">
-            <section>
-              <p><b>Input</b></p>
-              <p>Text, image</p>
-            </section>
-            <section>
-              <p><b>Output</b></p>
-              <p>Video</p>
-            </section>
-          </td>
-        </tr>
-        <tr>
-          <td><span class="google-symbols" aria-hidden="true">token_auto</span>Limits</td>
-          <td class="gemini-api-model-table-grid">
-            <section>
-              <p><b>Text input</b></p>
-              <p>N/A</p>
-            </section>
-            <section>
-              <p><b>Image input</b></p>
-              <p>Any image resolution and aspect ratio up to 20MB file size</p>
-            </section>
-            <section>
-              <p><b>Output video</b></p>
-              <p>Up to 2</p>
-            </section>
-          </td>
-        </tr>
-        <tr>
-          <td><span class="google-symbols" aria-hidden="true">calendar_month</span>Latest update</td>
-          <td>April 2025</td>
-        </tr>
-      </table>
-    </section>
-    <section>
-      <h3 id="veo-2-deprecated_1" data-text="Veo 2 (Deprecated)" tabindex="-1">Veo 2 (Deprecated)</h3>
-      <table class="gemini-api-model-table">
-        <tr>
-          <th scope="col">Property</th>
-          <th scope="col">Description</th>
-        </tr>
-        <tr>
-          <td><span class="google-symbols" aria-hidden="true">id_card</span>Model code</td>
-          <td class="gemini-api-model-table-grid">
-            <section>
-              <p><b>Gemini API</b></p>
-              <p><code translate="no" dir="ltr">veo-2.0-generate-001</code></p>
-            </section>
-          </td>
-        </tr>
-        <tr>
-          <td><span class="google-symbols" aria-hidden="true">save</span>Supported data types</td>
-          <td class="gemini-api-model-table-grid">
-            <section>
-              <p><b>Input</b></p>
-              <p>Text, image</p>
-            </section>
-            <section>
-              <p><b>Output</b></p>
-              <p>Video</p>
-            </section>
-          </td>
-        </tr>
-        <tr>
-          <td><span class="google-symbols" aria-hidden="true">token_auto</span>Limits</td>
-          <td class="gemini-api-model-table-grid">
-            <section>
-              <p><b>Text input</b></p>
-              <p>N/A</p>
-            </section>
-            <section>
-              <p><b>Image input</b></p>
-              <p>Any image resolution and aspect ratio up to 20MB file size</p>
-            </section>
-            <section>
-              <p><b>Output video</b></p>
-              <p>Up to 2</p>
-            </section>
-          </td>
-        </tr>
-        <tr>
-          <td><span class="google-symbols" aria-hidden="true">calendar_month</span>Latest update</td>
-          <td>April 2025</td>
-        </tr>
-      </table>
-    </section>
   </devsite-selector>
 </div>
 
@@ -4640,7 +4451,7 @@ and the <a href="https://aistudio.google.com/apps/bundled/veo_studio">Veo 3.1 ap
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -4650,7 +4461,7 @@ and the <a href="https://aistudio.google.com/apps/bundled/veo_studio">Veo 3.1 ap
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -4673,7 +4484,7 @@ and the <a href="https://aistudio.google.com/apps/bundled/veo_studio">Veo 3.1 ap
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-08-30 UTC.</p>
+  <p>Last updated 2026-09-09 UTC.</p>
 </devsite-content-footer>
 
 

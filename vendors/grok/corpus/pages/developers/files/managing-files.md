@@ -733,7 +733,7 @@ Every Files API endpoint that returns metadata (Upload, List, Get Metadata) retu
 
 ### File Size Limits
 
-* **Maximum file size**: 48 MB per file
+* **Maximum file size**: 512 MB per file
 * **Processing time**: Larger files may take longer to process
 
 ### File Retention

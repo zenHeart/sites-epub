@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/images/favicons/onecloud/favicon.ico">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/images/favicons/onecloud/super_cloud.png"><link rel="canonical" href="https://docs.cloud.google.com/gemini/docs/codeassist/code-overview"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/favicons/onecloud/favicon.ico">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/favicons/onecloud/super_cloud.png"><link rel="canonical" href="https://docs.cloud.google.com/gemini/docs/codeassist/code-overview"><link rel="search" type="application/opensearchdescription+xml"
             title="Google Cloud Documentation" href="https://docs.cloud.google.com/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://docs.cloud.google.com/gemini/docs/codeassist/code-overview" /><link rel="alternate" hreflang="x-default" href="https://docs.cloud.google.com/gemini/docs/codeassist/code-overview" /><link rel="alternate" hreflang="zh-Hans"
@@ -68,6 +68,8 @@
   
     
     
+
+
 
 
 
@@ -195,11 +197,11 @@
   
   <picture>
     
-    <source srcset="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/images/lockup_dark_theme.svg"
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup_dark_theme.svg"
             media="(prefers-color-scheme: dark)"
             class="devsite-dark-theme">
     
-    <img src="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/images/lockup_full_color.svg" class="devsite-site-logo" alt="Google Cloud Documentation">
+    <img src="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup_full_color.svg" class="devsite-site-logo" alt="Google Cloud Documentation">
   </picture>
   
 </a>
@@ -218,7 +220,7 @@
       
         
           <tab class="devsite-dropdown
-    
+    devsite-dropdown-full
     devsite-active
     devsite-clickable
     ">
@@ -230,26 +232,26 @@
        track-type="nav"
        track-metadata-position="nav - docs-home"
        track-metadata-module="primary nav"
-       aria-label="Technology areas, selected" 
+       aria-label="Documentation, selected" 
        
          
            data-category="Site-Wide Custom Events"
          
-           data-label="Tab: Technology areas"
+           data-label="Tab: Documentation"
          
            track-name="docs-home"
          
            track-link-column-type="single-column"
          
        >
-    Technology areas
+    Documentation
   
     </a>
     
       <button
          aria-haspopup="menu"
          aria-expanded="false"
-         aria-label="Dropdown menu for Technology areas"
+         aria-label="Dropdown menu for Documentation"
          track-type="nav"
          track-metadata-eventdetail="https://docs.cloud.google.com/docs"
          track-metadata-position="nav - docs-home"
@@ -258,7 +260,7 @@
           
             data-category="Site-Wide Custom Events"
           
-            data-label="Tab: Technology areas"
+            data-label="Tab: Documentation"
           
             track-name="docs-home"
           
@@ -288,6 +290,438 @@
             <ul class="devsite-tabs-dropdown-section
                        ">
               
+                <li class="devsite-nav-title" role="heading" tooltip>Get Started</li>
+              
+              
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/docs/get-started"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/get-started"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="get started"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Get Started with Google Cloud
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/docs/product-list"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/product-list"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="get started"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Product List
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/support/docs"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/support/docs"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="get started"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud Customer Care
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Featured Products</li>
+              
+              
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/products/gemini-enterprise-agent-platform"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/products/gemini-enterprise-agent-platform"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Agent Platform
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/apigee"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/apigee"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Apigee API Management
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/bigquery"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/bigquery"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      BigQuery
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/products/compute"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/products/compute"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Compute Engine
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/cdn"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/cdn"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud CDN
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/run"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/run"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud Run
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/storage"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/storage"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud Storage
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/sql"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/sql"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud SQL
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/gemini/enterprise/docs"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/gemini/enterprise/docs"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Gemini Enterprise
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/kubernetes-engine"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/kubernetes-engine"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Kubernetes Engine
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/looker"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/looker"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Looker
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Cross-product Tools</li>
+              
+              
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/docs/access-resources"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/access-resources"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="cross-product tools"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Access and resources management
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/docs/costs-usage"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/costs-usage"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="cross-product tools"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Costs and usage management
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/docs/iac"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/iac"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="cross-product tools"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Infrastructure as code
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/docs/devtools"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/devtools"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="cross-product tools"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      SDK, languages, frameworks, and tools
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Technology Areas</li>
+              
+              
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
               
               
                 <li class="devsite-nav-item">
@@ -297,6 +731,8 @@
                      track-metadata-eventdetail="https://docs.cloud.google.com/docs/ai-ml"
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="technology areas"
                      
                      tooltip
                   >
@@ -316,6 +752,8 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
@@ -333,6 +771,8 @@
                      track-metadata-eventdetail="https://docs.cloud.google.com/docs/application-hosting"
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="technology areas"
                      
                      tooltip
                   >
@@ -352,6 +792,8 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
@@ -369,6 +811,8 @@
                      track-metadata-eventdetail="https://docs.cloud.google.com/docs/data"
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="technology areas"
                      
                      tooltip
                   >
@@ -388,6 +832,8 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
@@ -405,6 +851,8 @@
                      track-metadata-eventdetail="https://docs.cloud.google.com/docs/dhm-cloud"
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="technology areas"
                      
                      tooltip
                   >
@@ -424,6 +872,8 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
@@ -441,6 +891,8 @@
                      track-metadata-eventdetail="https://docs.cloud.google.com/docs/migration"
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="technology areas"
                      
                      tooltip
                   >
@@ -460,6 +912,8 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
@@ -477,6 +931,8 @@
                      track-metadata-eventdetail="https://docs.cloud.google.com/docs/observability"
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="technology areas"
                      
                      tooltip
                   >
@@ -496,6 +952,8 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
@@ -514,166 +972,13 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
                     <div class="devsite-nav-item-title">
                       Storage
-                    </div>
-                    
-                  </a>
-                </li>
-              
-            </ul>
-          
-        </div>
-      
-    </div>
-  </div>
-</tab>
-        
-      
-        
-          <tab class="devsite-dropdown
-    
-    
-    devsite-clickable
-    ">
-  
-    <a href="https://docs.cloud.google.com/docs/cross-product-overviews"
-    class="devsite-tabs-content gc-analytics-event "
-      track-metadata-eventdetail="https://docs.cloud.google.com/docs/cross-product-overviews"
-    
-       track-type="nav"
-       track-metadata-position="nav - crossproduct"
-       track-metadata-module="primary nav"
-       
-       
-         
-           data-category="Site-Wide Custom Events"
-         
-           data-label="Tab: Cross-product tools"
-         
-           track-name="crossproduct"
-         
-           track-link-column-type="single-column"
-         
-       >
-    Cross-product tools
-  
-    </a>
-    
-      <button
-         aria-haspopup="menu"
-         aria-expanded="false"
-         aria-label="Dropdown menu for Cross-product tools"
-         track-type="nav"
-         track-metadata-eventdetail="https://docs.cloud.google.com/docs/cross-product-overviews"
-         track-metadata-position="nav - crossproduct"
-         track-metadata-module="primary nav"
-         
-          
-            data-category="Site-Wide Custom Events"
-          
-            data-label="Tab: Cross-product tools"
-          
-            track-name="crossproduct"
-          
-            track-link-column-type="single-column"
-          
-        
-         class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></button>
-    
-  
-  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
-    <div class="devsite-tabs-dropdown-content">
-      
-        <button class="devsite-tabs-close-button material-icons button-flat gc-analytics-event"
-                data-category="Site-Wide Custom Events"
-                data-label="Close dropdown menu"
-                aria-label="Close dropdown menu"
-                track-type="nav"
-                track-name="close"
-                track-metadata-eventdetail="#"
-                track-metadata-position="nav - crossproduct"
-                track-metadata-module="tertiary nav">close</button>
-      
-      
-        <div class="devsite-tabs-dropdown-column
-                    ">
-          
-            <ul class="devsite-tabs-dropdown-section
-                       ">
-              
-              
-              
-                <li class="devsite-nav-item">
-                  <a href="https://docs.cloud.google.com/docs/access-resources"
-                    
-                     track-type="nav"
-                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/access-resources"
-                     track-metadata-position="nav - crossproduct"
-                     track-metadata-module="tertiary nav"
-                     
-                     tooltip
-                  >
-                    
-                    <div class="devsite-nav-item-title">
-                      Access and resources management
-                    </div>
-                    
-                  </a>
-                </li>
-              
-                <li class="devsite-nav-item">
-                  <a href="https://docs.cloud.google.com/docs/costs-usage"
-                    
-                     track-type="nav"
-                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/costs-usage"
-                     track-metadata-position="nav - crossproduct"
-                     track-metadata-module="tertiary nav"
-                     
-                     tooltip
-                  >
-                    
-                    <div class="devsite-nav-item-title">
-                      Costs and usage management
-                    </div>
-                    
-                  </a>
-                </li>
-              
-                <li class="devsite-nav-item">
-                  <a href="https://docs.cloud.google.com/docs/iac"
-                    
-                     track-type="nav"
-                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/iac"
-                     track-metadata-position="nav - crossproduct"
-                     track-metadata-module="tertiary nav"
-                     
-                     tooltip
-                  >
-                    
-                    <div class="devsite-nav-item-title">
-                      Infrastructure as code
-                    </div>
-                    
-                  </a>
-                </li>
-              
-                <li class="devsite-nav-item">
-                  <a href="https://docs.cloud.google.com/docs/devtools"
-                    
-                     track-type="nav"
-                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/devtools"
-                     track-metadata-position="nav - crossproduct"
-                     track-metadata-module="tertiary nav"
-                     
-                     tooltip
-                  >
-                    
-                    <div class="devsite-nav-item-title">
-                      SDK, languages, frameworks, and tools
                     </div>
                     
                   </a>
@@ -776,13 +1081,13 @@
       
         track-name="console"
       
-        track-type="globalNav"
+        track-metadata-position="nav"
       
-        referrerpolicy="no-referrer-when-downgrade"
+        track-type="globalNav"
       
         track-metadata-eventDetail="nav"
       
-        track-metadata-position="nav"
+        referrerpolicy="no-referrer-when-downgrade"
       
     >
   Console
@@ -1001,15 +1306,15 @@
     
     
       
-        track-type="freeTrial"
-      
-        track-metadata-position="nav"
-      
         track-name="gcpCta"
       
         referrerpolicy="no-referrer-when-downgrade"
       
+        track-type="freeTrial"
+      
         track-metadata-eventDetail="nav"
+      
+        track-metadata-position="nav"
       
     
     >Start free</a>
@@ -1220,11 +1525,11 @@
   
   <picture>
     
-    <source srcset="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/images/lockup_dark_theme.svg"
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup_dark_theme.svg"
             media="(prefers-color-scheme: dark)"
             class="devsite-dark-theme">
     
-    <img src="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/images/lockup_full_color.svg" class="devsite-site-logo" alt="Google Cloud Documentation">
+    <img src="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup_full_color.svg" class="devsite-site-logo" alt="Google Cloud Documentation">
   </picture>
   
 </a>
@@ -1252,7 +1557,7 @@
       
         data-category="Site-Wide Custom Events"
       
-        data-label="Tab: Technology areas"
+        data-label="Tab: Documentation"
       
         track-name="docs-home"
       
@@ -1260,13 +1565,13 @@
       
     
      data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Technology areas"
+     data-label="Responsive Tab: Documentation"
      track-type="globalNav"
      track-metadata-eventDetail="globalMenu"
      track-metadata-position="nav">
   
     <span class="devsite-nav-text" tooltip >
-      Technology areas
+      Documentation
    </span>
     
   
@@ -1289,7 +1594,7 @@
       
         data-category="Site-Wide Custom Events"
       
-        data-label="Tab: Technology areas"
+        data-label="Tab: Documentation"
       
         track-name="docs-home"
       
@@ -1297,12 +1602,12 @@
       
     >
   
-    <span class="devsite-nav-text" tooltip menu="Technology areas">
+    <span class="devsite-nav-text" tooltip menu="Documentation">
       More
    </span>
     
     <span class="devsite-nav-icon material-icons" data-icon="forward"
-          menu="Technology areas">
+          menu="Documentation">
     </span>
     
   
@@ -1476,84 +1781,6 @@
               
             </li>
           
-            <li class="devsite-nav-item">
-              
-  
-  <a href="/docs/cross-product-overviews"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-      
-        data-category="Site-Wide Custom Events"
-      
-        data-label="Tab: Cross-product tools"
-      
-        track-name="crossproduct"
-      
-        track-link-column-type="single-column"
-      
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Cross-product tools"
-     track-type="globalNav"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav">
-  
-    <span class="devsite-nav-text" tooltip >
-      Cross-product tools
-   </span>
-    
-  
-  </a>
-  
-
-  
-    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
-               ">
-      
-<li class="devsite-nav-item">
-
-  
-  <span
-    
-       class="devsite-nav-title"
-       tooltip
-    
-    
-      
-        data-category="Site-Wide Custom Events"
-      
-        data-label="Tab: Cross-product tools"
-      
-        track-name="crossproduct"
-      
-        track-link-column-type="single-column"
-      
-    >
-  
-    <span class="devsite-nav-text" tooltip menu="Cross-product tools">
-      More
-   </span>
-    
-    <span class="devsite-nav-icon material-icons" data-icon="forward"
-          menu="Cross-product tools">
-    </span>
-    
-  
-  </span>
-  
-
-</li>
-
-    </ul>
-  
-              
-            </li>
-          
           
     
     
@@ -1569,13 +1796,13 @@
       
         track-name="console"
       
-        track-type="globalNav"
+        track-metadata-position="nav"
       
-        referrerpolicy="no-referrer-when-downgrade"
+        track-type="globalNav"
       
         track-metadata-eventDetail="nav"
       
-        track-metadata-position="nav"
+        referrerpolicy="no-referrer-when-downgrade"
       
     
      data-category="Site-Wide Custom Events"
@@ -1613,30 +1840,6 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Product overview</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-expandable"><div class="devsite-expandable-nav">
-      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
-        <span class="devsite-nav-text" tooltip>Product offerings</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
-           devsite-nav-expandable"><div class="devsite-expandable-nav">
-      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
-        <span class="devsite-nav-text" tooltip>Gemini Code Assist</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/overview"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/security-privacy-compliance"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Security and privacy overview</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/gemini-cli"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Gemini CLI</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini/docs/codeassist/gemini-3"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Gemini 3 with Gemini Code Assist</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/supported-languages"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Supported languages, IDEs, and interfaces</span></a></li></ul></div></li></ul></div></li>
-
   <li class="devsite-nav-item"><a href="/gemini/docs/discover/works"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>How Gemini works</span></a></li>
@@ -1653,28 +1856,14 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Certifications and security</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-expandable"><div class="devsite-expandable-nav">
-      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
-        <span class="devsite-nav-text" tooltip>Release notes</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini/docs/release-notes"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Gemini for Google Cloud release notes</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/release-notes"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Gemini Code Assist release notes</span></a></li></ul></div></li>
-
   <li class="devsite-nav-item"><a href="/gemini/docs/turn-off-gemini"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Turn off Gemini for Google Cloud products</span></a></li>
+      ><span class="devsite-nav-text" tooltip>Turn off Gemini products in Google Cloud</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
         <span class="devsite-nav-text" tooltip>Get started</span>
       </div></li>
-
-  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/set-up-gemini"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Set up Gemini Code Assist</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini/docs/discover/write-prompts"
         class="devsite-nav-title"
@@ -1684,6 +1873,30 @@
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
         <span class="devsite-nav-text" tooltip>Gemini Code Assist</span>
       </div></li>
+
+  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/overview"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/security-privacy-compliance"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Security and privacy overview</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/set-up-gemini"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Set up Gemini Code Assist</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/gemini-cli"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemini CLI</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-preview"><a href="/gemini/docs/codeassist/gemini-3"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemini 3 with Gemini Code Assist</span><span class="devsite-nav-icon material-icons"
+        data-icon="preview"
+        data-title="Preview"
+        aria-hidden="true"></span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1703,7 +1916,7 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Configure Gemini Code Assist logging</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/admin"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Add or change Gemini Code Assist subscriptions</span></a></li><li class="devsite-nav-item
+      ><span class="devsite-nav-text" tooltip>Modify Gemini Code Assist subscriptions</span></a></li><li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
       <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
         <span class="devsite-nav-text" tooltip>Gemini Code Assist licenses</span>
@@ -1711,9 +1924,7 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Request a Gemini Code Assist license</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/manage-licenses"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Manage Gemini Code Assist licenses</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/cross-org-license-usage"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Prevent cross-organization license usage</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist"
+      ><span class="devsite-nav-text" tooltip>Manage Gemini Code Assist licenses</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Use pre-release features in Gemini Code Assist for VS Code</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/configure-vpc-service-controls"
         class="devsite-nav-title"
@@ -1773,6 +1984,14 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Encrypt data with customer-managed encryption keys</span></a></li></ul></div></li>
 
+  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/supported-languages"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Supported languages, IDEs, and interfaces</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/troubleshoot"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Troubleshoot access to Gemini Code Assist features</span></a></li>
+
   <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/turn-off"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Turn off Code Assist</span></a></li>
@@ -1817,7 +2036,7 @@
 
   <li class="devsite-nav-item"><a href="/gemini/docs/audit-logging"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Gemini for Google Cloud audit logging</span></a></li>
+      ><span class="devsite-nav-text" tooltip>cloudaicompanion API audit logging</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/business-audit-logging"
         class="devsite-nav-title"
@@ -1832,10 +2051,6 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Troubleshoot Gemini issues</span></a></li>
 
-  <li class="devsite-nav-item"><a href="/gemini/docs/support/troubleshoot-code-assist"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Troubleshoot access to Gemini Code Assist features</span></a></li>
-
   <li class="devsite-nav-item"><a href="/gemini/docs/support/feedback"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Provide feedback</span></a></li>
@@ -1845,9 +2060,646 @@
           
     
       
-      <ul class="devsite-nav-list" menu="Technology areas"
+      <ul class="devsite-nav-list" menu="Documentation"
           aria-label="Side menu" hidden>
         
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Get Started
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/get-started"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Get Started with Google Cloud"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Get Started with Google Cloud
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/product-list"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Product List"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Product List
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/support/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cloud Customer Care"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cloud Customer Care
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Featured Products
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/products/gemini-enterprise-agent-platform"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Agent Platform"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Agent Platform
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/apigee"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Apigee API Management"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Apigee API Management
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/bigquery"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: BigQuery"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      BigQuery
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/products/compute"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Compute Engine"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Compute Engine
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/cdn"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cloud CDN"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cloud CDN
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/run"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cloud Run"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cloud Run
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/storage"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cloud Storage"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cloud Storage
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/sql"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cloud SQL"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cloud SQL
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/gemini/enterprise/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Gemini Enterprise"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Gemini Enterprise
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/kubernetes-engine"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Kubernetes Engine"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google Kubernetes Engine
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/looker"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Looker"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Looker
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Cross-product Tools
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/access-resources"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Access and resources management"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Access and resources management
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/costs-usage"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Costs and usage management"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Costs and usage management
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/iac"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Infrastructure as code"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Infrastructure as code
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/devtools"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: SDK, languages, frameworks, and tools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      SDK, languages, frameworks, and tools
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Technology Areas
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
           
             
             
@@ -2233,135 +3085,6 @@
       </ul>
     
   
-    
-      
-      <ul class="devsite-nav-list" menu="Cross-product tools"
-          aria-label="Side menu" hidden>
-        
-          
-            
-            
-              
-<li class="devsite-nav-item">
-
-  
-  <a href="/docs/access-resources"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Access and resources management"
-     track-type="navMenu"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav">
-  
-    <span class="devsite-nav-text" tooltip >
-      Access and resources management
-   </span>
-    
-  
-  </a>
-  
-
-</li>
-
-            
-              
-<li class="devsite-nav-item">
-
-  
-  <a href="/docs/costs-usage"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Costs and usage management"
-     track-type="navMenu"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav">
-  
-    <span class="devsite-nav-text" tooltip >
-      Costs and usage management
-   </span>
-    
-  
-  </a>
-  
-
-</li>
-
-            
-              
-<li class="devsite-nav-item">
-
-  
-  <a href="/docs/iac"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Infrastructure as code"
-     track-type="navMenu"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav">
-  
-    <span class="devsite-nav-text" tooltip >
-      Infrastructure as code
-   </span>
-    
-  
-  </a>
-  
-
-</li>
-
-            
-              
-<li class="devsite-nav-item">
-
-  
-  <a href="/docs/devtools"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: SDK, languages, frameworks, and tools"
-     track-type="navMenu"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav">
-  
-    <span class="devsite-nav-text" tooltip >
-      SDK, languages, frameworks, and tools
-   </span>
-    
-  
-  </a>
-  
-
-</li>
-
-            
-          
-        
-      </ul>
-    
-  
         
         
           
@@ -2630,7 +3353,7 @@
   product-id="5041938"
   bucket="Documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215390653058"
+  version="t-devsite-webserver-20260908-r00-rc00.480264207338033273"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -2708,47 +3431,610 @@
     
     
     
+<aside class="note"><strong>Note:</strong><span> We have unified our tools into a single, multi-agent platform called
+Antigravity, with Antigravity CLI now available. Starting June 18, 2026,
+Gemini Code Assist IDE Extensions and Gemini CLI
+stopped serving requests for the Gemini Code Assist for
+individuals, Google AI Pro, and Google AI Ultra tiers. Affected users
+should migrate to Antigravity and Antigravity CLI. To learn more, see the
+<a href="https://developers.google.com/gemini-code-assist/docs/deprecations/code-assist-individuals">deprecation page</a>.</span></aside>
+<p></p>
 
-<p>This document outlines the coding features that Gemini Code Assist
-supports.</p>
-
-
-
-<p>To help you comply with any license requirements for your code,
-Gemini Code Assist provides source citations when its suggestions
-directly quote at length from a specific source. To learn more about how and
-when Gemini cites sources, see
-<a href="/gemini/docs/discover/works#how-when-gemini-cites-sources">How Gemini helps you generate code and cites sources</a>.</p>
-
-<p>You can perform the following coding actions with
-Gemini Code Assist in any of the
-<a href="/gemini/docs/codeassist/supported-languages#supported_ides">supported IDEs</a>:</p>
+<p>This document describes how you can use <a href="/gemini/docs/codeassist/overview">Gemini Code Assist</a>,
+an AI-powered collaborator in your IDE, to help you do the following in VS Code
+or IntelliJ and other <a href="/gemini/docs/codeassist/supported-languages#supported_ides">supported JetBrains IDEs</a>:</p>
 
 <ul>
-<li><p><a href="/gemini/docs/codeassist/write-code-gemini#generate_code_with_prompts">Generate code with prompts</a>:</p>
-
-<ul>
-<li><a href="/gemini/docs/codeassist/write-code-gemini#prompt_with_code_transformation">Prompt Gemini Code Assist with code transformation</a></li>
-<li><a href="/gemini/docs/codeassist/write-code-gemini#prompt_in_a_code_file_with_a_comment">Prompt Gemini Code Assist in a code file with a comment</a></li>
-</ul></li>
-<li><p><a href="/gemini/docs/codeassist/write-code-gemini#get_code_completions">Get code completions</a></p></li>
-<li><p><a href="/gemini/docs/codeassist/write-code-gemini#finish-changes">Finish changes</a></p></li>
-<li><p><a href="/gemini/docs/codeassist/write-code-gemini#use_smart_actions">Use smart actions</a></p></li>
-<li><p><a href="/gemini/docs/codeassist/write-code-gemini#use_code_transformation_quick_fix">Use code transformation quick fix</a></p></li>
-<li><p><a href="/gemini/docs/codeassist/create-aiexclude-file">Exclude files from your context with an .aiexclude or .gitignore file</a></p></li>
+<li>Generate code for your project with code transformation.</li>
+<li>Receive code completions while you&#39;re coding.</li>
+<li>Use smart actions.</li>
 </ul>
+
+<p>If you&#39;re using <a href="/gemini/docs/codeassist/overview#editions-overview">Gemini Code Assist Enterprise</a>, you
+can use <a href="/gemini/docs/codeassist/code-customization-overview">Code customization</a>,
+which lets you get code suggestions based on your organization&#39;s private
+codebase directly from Gemini Code Assist Enterprise. Learn
+<a href="/gemini/docs/codeassist/code-customization">how to configure code customization</a>.</p>
+
+<p>This document is intended for developers of all skill levels. It assumes you
+have working knowledge of VS Code or IntelliJ and other supported JetBrains
+IDEs, and are familiar with Google Cloud. If you prefer, you can also
+explore Gemini Code Assist in
+<a href="/code/docs/shell/write-code-gemini">Cloud Shell Editor</a>,
+<a href="/workstations/docs/write-code-gemini">Cloud Workstations</a>,
+and <a href="https://developer.android.com/studio/gemini/overview">Android Studio</a>.</p>
+<aside class="note"><strong>Note:</strong><span> The behaviour of code generation, completion, and transformation are
+non-deterministic when used simultaneously with other plugins that either
+implement the same shortcuts and/or use the same platform API to process these
+actions.</span></aside>
+<h2 id="before_you_begin" data-text="Before you begin" tabindex="-1">Before you begin</h2>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="vs-code" data-text=" VS Code " tabindex="-1"> VS Code </h3><ol>
+<li><p><a href="/gemini/docs/codeassist/set-up-gemini">Set up Gemini Code Assist Standard or Enterprise</a>,
+ if you haven&#39;t already.</p></li>
+<li><p>Before testing Gemini Code Assist capabilities in your
+code file, make sure your file&#39;s coding language is supported. For more
+information on supported coding languages, see
+<a href="/gemini/docs/codeassist/supported-languages#coding-languages">Supported coding languages</a>.</p></li>
+<li><p>If you prefer to use your IDE behind a proxy, see
+<a href="https://code.visualstudio.com/docs/setup/network">Network Connections in Visual Studio Code</a>.</p></li>
+</ol></section>
+<section><h3 id="intellij" data-text=" IntelliJ " tabindex="-1"> IntelliJ </h3><ol>
+<li><p><a href="/gemini/docs/codeassist/set-up-gemini">Set up Gemini Code Assist Standard or Enterprise</a>,
+ if you haven&#39;t already.</p></li>
+<li><p>Before testing Gemini Code Assist capabilities in your
+code file, make sure your file&#39;s coding language is supported. For more
+information on supported coding languages, see
+<a href="/gemini/docs/codeassist/supported-languages#coding-languages">Supported coding languages</a>.</p></li>
+<li><p>If you prefer to use your IDE behind a proxy, see
+<a href="https://www.jetbrains.com/help/idea/settings-http-proxy.html">HTTP Proxy</a>.</p></li>
+</ol></section>
+</devsite-selector></div>
+<h2 id="generate_code_with_prompts" data-text="Generate code with prompts" tabindex="-1">Generate code with prompts</h2>
+
+<p>The following sections show you how to use Gemini Code Assist to
+generate code with the example prompt <code translate="no" dir="ltr">Function to create a Cloud Storage
+bucket</code> inside your code file. You can also select a part of your code and then
+prompt Gemini Code Assist for help through the chat feature, and
+receive and accept or reject code suggestions while you code.</p>
+
+<h3 id="prompt_with_code_transformation" data-text="Prompt Gemini Code Assist with code transformation" tabindex="-1">Prompt Gemini Code Assist with code transformation</h3>
+
+<p>Code transformation allows you to use commands or natural language prompts in
+the Quick Pick menu to request modifications to your code, and provides you with
+a diff view to show pending changes to your code. To prompt
+Gemini Code Assist with code transformation, follow these steps:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="vs-code_1" data-text=" VS Code " tabindex="-1"> VS Code </h3><ol>
+<li><p>In your code file, on a new line, press <kbd>Control+I</kbd> (for Windows
+and Linux) or <kbd>Command+I</kbd> (for macOS) to open the
+<strong>Gemini Code Assist Quick Pick</strong> menu.</p></li>
+<li><p>In the menu, using the <code translate="no" dir="ltr">/generate</code> command, enter <code translate="no" dir="ltr">/generate function to
+create a Cloud Storage bucket</code> and then press <kbd>Enter</kbd> (for Windows
+and Linux) or <kbd>Return</kbd> (for macOS).</p>
+
+<p><img src="/static/code/docs/vscode/images/gemini-code-assist-generate-command.png" alt="Gemini Code Assist generates code with the /generate command." class="screenshot"> </p>
+
+<p>Gemini Code Assist generates the code based on your prompt
+in a diff view.</p>
+
+<p><img src="/static/code/docs/vscode/images/gemini-code-assist-diff-view.png" alt="Gemini Code Assist opens a diff view to show generated code." class="screenshot"> </p></li>
+<li><p>Optional: To accept these changes, click <strong>Accept</strong>.</p></li>
+</ol></section>
+<section><h3 id="intellij_1" data-text=" IntelliJ " tabindex="-1"> IntelliJ </h3><ol>
+<li><p>In your code file, on a new line, press <kbd>Alt+\</kbd> (for Windows and
+Linux) or <kbd>Cmd+\</kbd> (for macOS) to open the <strong>Gemini Code Assist
+Quick Pick</strong> menu.</p></li>
+<li><p>In the menu, using the <code translate="no" dir="ltr">/generate</code> command, enter <code translate="no" dir="ltr">/generate function to
+create a Cloud Storage bucket</code> and then press <kbd>Enter</kbd> (for
+Windows and Linux) or <kbd>Return</kbd> (for macOS).</p>
+
+<p><img src="/static/gemini/images/cloud-transformation-generate-function-gca-intellij.png" alt="Code transformation generate function in IntelliJ Gemini Code Assist" class="screenshot"> </p>
+
+<p>Gemini Code Assist generates the code based on your prompt
+in a diff view.</p>
+
+<p><img src="/static/gemini/images/cloud-transformation-diff-view-gca-intellij.png" alt="Code transformation diff view in IntelliJ Gemini Code Assist" class="screenshot"> </p></li>
+<li><p>Optional: To accept these changes, click <strong>Accept Changes</strong>.</p>
+
+<p>You can use the following code transformation commands in your IDE:</p>
+
+<ul>
+<li><code translate="no" dir="ltr">/fix</code>: Fix issues or errors in your code. Example: <code translate="no" dir="ltr">/fix potential
+NullPointerExceptions in my code</code>.</li>
+<li><code translate="no" dir="ltr">/generate</code>: Generate code. Example: <code translate="no" dir="ltr">/generate a function to get the
+current time</code>.</li>
+<li><code translate="no" dir="ltr">/doc</code>: Add documentation to your code. Example: <code translate="no" dir="ltr">/doc this function</code>.</li>
+<li><code translate="no" dir="ltr">/simplify</code>: Simplify your code. Example: <code translate="no" dir="ltr">/simplify if statement in
+this code</code>.</li>
+</ul></li>
+</ol></section>
+</devsite-selector></div>
+<h3 id="prompt_in_a_code_file_with_a_comment" data-text="Prompt Gemini Code Assist in a code file with a comment" tabindex="-1">Prompt Gemini Code Assist in a code file with a comment</h3>
+
+<p>If you prefer, you can also prompt Gemini Code Assist in your
+code file with a comment by following these steps:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="vs-code_2" data-text=" VS Code " tabindex="-1"> VS Code </h3><ol>
+<li><p>On a new line, enter the comment <code translate="no" dir="ltr">Function to create a Cloud Storage
+bucket</code>, and then press <kbd>Enter</kbd> (for Windows and Linux) or
+<kbd>Return</kbd> (for macOS).</p></li>
+<li><p>To generate code, press <kbd>Control+Enter</kbd> (for Windows and Linux)
+or <kbd>Control+Return</kbd> (for macOS).</p>
+
+<p>Next to your prompt text in your code file,
+Gemini Code Assist generates the code in the form of ghost
+text.</p></li>
+<li><p>Optional: To accept the generated code, press <kbd>Tab</kbd>.</p></li>
+</ol></section>
+<section><h3 id="intellij_2" data-text=" IntelliJ " tabindex="-1"> IntelliJ </h3><ol>
+<li><p>In your code file, on a new line, enter the comment <code translate="no" dir="ltr">Function to create a
+Cloud Storage bucket</code>.</p></li>
+<li><p>To generate code, press <kbd>Alt+G</kbd> (for Windows and Linux) or
+<kbd>Option+G</kbd> (for macOS). Alternatively, you can right-click next
+to the comment and select <strong>Generate Code</strong>.</p>
+
+<p>Gemini Code Assist generates the code below your comment in
+the form of ghost text.</p></li>
+<li><p>Optional: To accept the generated code, press <kbd>Tab</kbd>.</p></li>
+</ol></section>
+</devsite-selector></div>
+<h3 id="optional_change_keyboard_shortcut_for_generating_code" data-text="Optional: Change keyboard shortcut for generating code" tabindex="-1">Optional: Change keyboard shortcut for generating code</h3>
+
+<p>If the default keyboard shortcut for generating code isn&#39;t working as outlined
+in the previous section, you can
+<a href="/gemini/docs/codeassist/keyboard-shortcuts#edit_keyboard_shortcuts">change the keyboard shortcut</a>.</p>
+
+<h2 id="get_code_completions" data-text="Get code completions" tabindex="-1">Get code completions</h2>
+
+<p>While you write code, Gemini Code Assist makes inline code
+suggestions, also known as <em>code completions</em>, that you can either accept or
+ignore. To get code completions, follow these steps:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="vs-code_3" data-text=" VS Code " tabindex="-1"> VS Code </h3><ol>
+<li><p>In your code file, on a new line, start writing a function. For example,
+if you&#39;re in a Python file, write <code translate="no" dir="ltr">def</code>.</p>
+
+<p>Gemini Code Assist suggests code in the form of ghost text.</p></li>
+<li><p>To accept the code suggestion from Gemini Code Assist,
+press <kbd>Tab</kbd>. Otherwise, to ignore the suggestion, press
+<kbd>Esc</kbd> or continue writing your code.</p></li>
+</ol></section>
+<section><h3 id="intellij_3" data-text=" IntelliJ " tabindex="-1"> IntelliJ </h3><ol>
+<li><p>In your code file, on a new line, start writing a function. For example,
+if you&#39;re in a Python file, write <code translate="no" dir="ltr">def</code>.</p>
+
+<p>Gemini Code Assist suggests code in the form of an inline
+suggestion.</p></li>
+<li><p>To accept the code suggestion from Gemini Code Assist,
+press <kbd>Tab</kbd>. Otherwise, to ignore the suggestion, press
+<kbd>Esc</kbd> or continue writing your code.</p></li>
+<li><p>Optional: If you prefer to use a different shortcut key to accept the
+inline suggestion, hold your pointer over the inline suggestion and click the
+<strong>Tab</strong> dropdown that appears. Then, select your preferred shortcut or click
+<strong>Custom</strong> to enter your own shortcut.</p>
+
+<p><img src="/static/code/docs/intellij/images/gemini-code-assist-change-inline-completion-shortcut.png" alt="Gemini provides a dropdown menu to change your shortcut to accept an inline suggestion." class="screenshot"> </p></li>
+</ol></section>
+</devsite-selector></div>
+<h3 id="optional_disable_code_completion" data-text="Optional: Disable code completion" tabindex="-1">Optional: Disable code completion</h3>
+
+<p>Code completion is enabled by default. If you want to disable code completion,
+follow these steps:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="vs-code_4" data-text=" VS Code " tabindex="-1"> VS Code </h3><ol>
+<li><p>In your IDE, click <strong>Code</strong> (for macOS) or <strong>File</strong> (for Windows and
+Linux), and then navigate to <strong>Preferences</strong> <span aria-label="and then">></span> <strong>Settings</strong>.</p></li>
+<li><p>On the <strong>User</strong> tab of the <strong>Settings</strong> dialog, navigate to <strong>Extensions</strong>
+<span aria-label="and then">></span> <strong>Gemini Code Assist</strong>.</p></li>
+<li><p>Scroll until you find the <strong>Geminicodeassist &gt; Inline Suggestions: Enable Auto</strong>
+list, and then select <strong>Off</strong>.</p>
+
+<p>This turns off the inline suggestions. You can still press
+<kbd>Control+Enter</kbd> (for Windows and Linux) or
+<kbd>Control+Return</kbd> (for macOS) to manually trigger inline
+suggestions.</p></li>
+</ol></section>
+<section><h3 id="intellij_4" data-text=" IntelliJ " tabindex="-1"> IntelliJ </h3><p>In the status bar of your IDE, click
+<span class="google-symbols" translate="no">spark</span> <strong>Gemini Code
+Assist: Active</strong> and select <strong>Enable AI Code Completion</strong>.</p>
+
+<p><img src="/static/code/docs/intellij/images/gemini-code-assist-code-completion.png" alt="Gemini Code Completion button in IntelliJ status bar." class="screenshot"> </p>
+
+<p>This disables the code completion setting, and
+Gemini Code Assist no longer makes inline suggestions until
+you enable the setting again.</p></section>
+</devsite-selector></div>
+<h2 id="use_next_edit_predictions" data-text="Use Next Edit Predictions" tabindex="-1">Use Next Edit Predictions</h2>
+
+<aside class="preview"><b>Preview</b>
+<p>This product or feature is in preview. Products and features that are
+in preview are available "as is".</p>
+</aside>
+
+<p>While code completion only suggests changes at your cursor in a code file, Next
+Edit Predictions provide predicted code suggestions throughout the file, even in
+locations away from the cursor.</p>
+
+<p>You can enable Next Edit Predictions in the settings of your IDE.</p>
+
+<p>To use Next Edit Predictions in your IDE, follow these steps:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="vs-code_5" data-text=" VS Code " tabindex="-1"> VS Code </h3><p>To begin using Next Edit Predictions, enable the setting:</p>
+
+<ol>
+<li><p>Navigate to <span class="google-symbols">settings</span> <strong>Manage</strong>
+<span aria-label="and then">></span> <strong>Settings</strong>.</p></li>
+<li><p>In the <strong>User</strong> tab of the settings window, navigate to <strong>Extensions</strong>
+<span aria-label="and then">></span> <strong>Gemini Code Assist</strong>.</p></li>
+<li><p>Scroll until you find <strong>Geminicodeassist &gt; Inline Suggestions: Next Edit
+Predictions</strong>.</p></li>
+<li><p>Select the checkbox to enable Next Edit Predictions in VS Code.</p></li>
+</ol>
+
+<p>Now that you&#39;ve enabled the setting, you can start using Next Edit Predictions
+in a code file by performing these steps:</p>
+
+<ol>
+<li><p>In your code file, start writing code. Next Edit Predictions appear when
+you pause or stop typing.</p>
+
+<p class="screenshot"><img src="/static/gemini/images/vscode-next-edits-triggererd.png" alt="User triggers the Next Edit Predictions in VS Code Gemini Code Assist."> </p></li>
+<li><p>Press <kbd>Tab</kbd> to accept the provided Next Edit suggestion.</p>
+
+<p class="screenshot"><img src="/static/gemini/images/vscode-next-edits-entered.png" alt="User enters the Next Edit Prediction in VS Code Gemini Code Assist."> </p></li>
+<li><p>If you want to accept the next suggestion, press <kbd>Tab</kbd> again. A
+further suggestion may appear and the process can again be repeated.
+Otherwise, press <kbd>Esc</kbd> to dismiss, or continue typing to ignore the
+suggestion.</p>
+
+<p>When you press <kbd>Tab</kbd> to enter the suggestion, you can hold your
+pointer over the suggestion to see the other suggestions, if applicable.
+If there are multiple suggestions, you can click the left and right arrows
+to cycle through the other suggestions.</p>
+
+<p class="screenshot"><img src="/static/gemini/images/vscode-next-edits-available.png" alt="Available Next Edit Predictions in VS Code Gemini Code Assist."> </p>
+
+<p>Whenever you press <kbd>Esc</kbd> to dismiss the suggestion,
+Gemini Code Assist stops suggesting Next Edit Predictions
+for that specific code block. You continue to receive suggestions when you
+move to another section of your code.</p>
+<aside class="note"><strong>Note:</strong><span> Gemini Code Assist only provides Next Edit
+Predictions in the file that you&#39;re currently in.
+Gemini Code Assist doesn&#39;t provide Next Edit Predictions in
+other files.</span></aside></li>
+</ol></section>
+<section><h3 id="intellij_5" data-text=" IntelliJ " tabindex="-1"> IntelliJ </h3><p>To begin using Next Edit Predictions, enable the setting:</p>
+
+<ol>
+<li><p>Navigate to <strong>File</strong> <span aria-label="and then">></span> <strong>Settings</strong> <span aria-label="and then">></span> <strong>Tools</strong>
+<span aria-label="and then">></span> <strong>Gemini</strong>.</p></li>
+<li><p>In the <strong>Completion</strong> section, select the <strong>Next Edit Predictions</strong>
+checkbox to enable the feature.</p></li>
+</ol>
+
+<p>Now that you&#39;ve enabled the setting, you can start using Next Edit Predictions
+in a code file by performing these steps:</p>
+
+<ol>
+<li><p>In your code file, start writing code. Next Edit Predictions appear when
+you pause or stop typing.</p>
+
+<p class="screenshot"><img src="/static/gemini/images/intellij-next-edits-triggererd.png" alt="User triggers the Next Edit Predictions in IntelliJ Gemini Code Assist."> </p></li>
+<li><p>Press <kbd>Tab</kbd> to accept the provided Next Edit suggestion.</p>
+
+<p class="screenshot"><img src="/static/gemini/images/intellij-next-edits-entered.png" alt="User enters the Next Edit Prediction in IntelliJ Gemini Code Assist."> </p></li>
+<li><p>If you want to accept the next suggestion, press <kbd>Tab</kbd> again. A
+further suggestion may appear and the process can again be repeated.
+Otherwise, press <kbd>Esc</kbd> to dismiss, or continue typing to ignore the
+suggestion.</p>
+
+<p>Whenever you press <kbd>Esc</kbd> to dismiss the suggestion,
+Gemini Code Assist stops suggesting Next Edit Predictions
+for that specific code block. You continue to receive suggestions when you
+move to another section of your code.</p>
+<aside class="note"><strong>Note:</strong><span> Gemini Code Assist only provides Next Edit
+Predictions in the file that you&#39;re currently in.
+Gemini Code Assist doesn&#39;t provide Next Edit Predictions
+that would impact code in other files.</span></aside></li>
+</ol></section>
+</devsite-selector></div>
+<h2 id="finish-changes" data-text="Finish changes in a file" tabindex="-1">Finish changes in a file</h2>
+
+<p>Gemini Code Assist can generate code suggestion to complete your
+file&#39;s pseudocode, #TODOs, and half-written code.</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="vs-code_6" data-text=" VS Code " tabindex="-1"> VS Code </h3><ol>
+<li><p>In your code file, start writing code until the <code translate="no" dir="ltr">Alt+F</code> or <code translate="no" dir="ltr">Opt+F</code>  hint
+appears.</p></li>
+<li><p>To generate suggested code, press the keyboard shortcut provided
+by the hint, or right-click in the file and select
+<strong>Gemini Code Assist</strong> <span aria-label="and then">></span> <strong>Finish changes</strong>.</p>
+
+<p>You can dismiss the hint or cancel the code generation process by
+pressing <code translate="no" dir="ltr">Esc</code>.</p></li>
+<li><p>Once Gemini Code Assist finishes generating suggested
+code, you can click <strong>Accept</strong>, which applies the suggested code to your
+file, or you can click <strong>Decline</strong>, which leaves your original code
+unchanged.</p></li>
+</ol></section>
+<section><h3 id="intellij_6" data-text=" IntelliJ " tabindex="-1"> IntelliJ </h3><ol>
+<li><p>Check that there are portions of your focused file that have code in need
+of completion, such as pseudocode or #TODOs.</p></li>
+<li><p>In the file window, right-click <span aria-label="and then">></span> <strong>Gemini</strong> <span aria-label="and then">></span>
+<strong>Finish changes</strong>. Alternatively, you can
+<a href="/gemini/docs/codeassist/keyboard-shortcuts#code-shortcuts">use the finish changes keyboard shortcut</a>.</p>
+
+<p>Gemini Code Assist generates code suggestions to finish
+the incomplete portions of your code.</p></li>
+<li><p>For each code suggestion, click 
+<span class="google-symbols">check_small</span> <strong>Accept</strong> or
+<span class="google-symbols">undo</span> <strong>Reject</strong>.</p>
+
+<p>Alternatively, the option to <strong>Accept all</strong> or <strong>Reject all</strong> is
+available at the top of the file.</p></li>
+</ol></section>
+</devsite-selector></div>
+<h2 id="get_more_relevant_suggestions_with_remote_repository_context" data-text="Get more relevant suggestions with remote repository context" tabindex="-1">Get more relevant suggestions with remote repository context</h2>
+
+<p>You can get more contextually aware and relevant code suggestions by directing
+Gemini Code Assist to focus on specific remote repositories.
+This is useful when your task centers on a specific set of microservices,
+libraries, or modules.</p>
+
+<h3 id="before_you_begin_2" data-text="Before you begin" tabindex="-1">Before you begin</h3>
+
+<p>Before you use a remote repository as context, you must first
+<a href="/gemini/docs/codeassist/code-customization">index and configure it for code customization</a>.</p>
+
+<h3 id="use_a_remote_repository_as_context" data-text="Use a remote repository as context" tabindex="-1">Use a remote repository as context</h3>
+
+<p>To direct Gemini Code Assist to use one or more repositories
+as the primary context for your prompts:</p>
+
+<ol>
+<li>In your IDE&#39;s chat, start your prompt with the <kbd>@</kbd> symbol.
+A list of your available indexed remote repositories appears.</li>
+<li>Select the repository (or repositories) you want to use for context from
+the list. You can also start typing the repository name to filter the list.</li>
+<li>After selecting the repositories, write the rest of your prompt.</li>
+</ol>
+
+<p>Gemini Code Assist then prioritizes the selected repositories
+when generating a response.</p>
+
+<h3 id="example_prompts" data-text="Example prompts" tabindex="-1">Example prompts</h3>
+
+<p>This section includes examples of how you can get more relevant suggestions with
+remote repository context.</p>
+
+<ul>
+<li>Understand a repository
+<ul>
+<li><code translate="no" dir="ltr">@REPOSITORY_NAME What is the overall structure of this repository?</code></li>
+<li><code translate="no" dir="ltr">@REPOSITORY_NAME I&#39;m a new team member. Can you give me an overview of
+this repository&#39;s purpose and key modules?</code></li>
+</ul></li>
+<li>Generate and modify code
+<ul>
+<li><code translate="no" dir="ltr">@REPOSITORY_NAME Implement an authentication function similar to the one
+in this repository.</code></li>
+<li><code translate="no" dir="ltr">@REPOSITORY_NAME Refactor the following code to follow the conventions in
+the selected repository.</code></li>
+<li><code translate="no" dir="ltr">Use the library-x in @REPOSITORY_A_NAME-A and implement the function-x</code></li>
+</ul></li>
+<li>Test
+<ul>
+<li><code translate="no" dir="ltr">@UNIT_TEST_FILE_NAME Generate unit tests for module-x based on the examples
+in the selected file.</code></li>
+</ul></li>
+</ul>
+
+<p>By using remote repositories as a focused source of context, you can get more
+accurate and relevant suggestions from Gemini Code Assist, which
+can help you code faster and more efficiently.</p>
+
+<h2 id="use_smart_actions" data-text="Use smart actions" tabindex="-1">Use smart actions</h2>
+
+<p>To help you be more productive while minimizing context switching,
+Gemini Code Assist provides AI-powered smart actions directly in
+your code editor. When you select your code in your code editor, you can view
+and select from a list of actions relevant to your context.</p>
+
+<p>To use smart actions in your code, follow these steps:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="vs-code_7" data-text=" VS Code " tabindex="-1"> VS Code </h3><ol>
+<li><p>In your code file, select a block of code.</p></li>
+<li><p>Next to the selected code block, click
+<span class="google-symbols" translate="no">lightbulb</span> <strong>Show Code
+Actions</strong>.</p>
+
+<p class="screenshot"><img src="/static/code/docs/vscode/images/duet-ai-vsc-code-actions.png" alt="Smart actions lightbulb icon appears after selecting a block of code in VS Code."> </p></li>
+<li><p>Select an action such as <strong>Generate unit tests</strong>.</p>
+
+<p>Gemini Code Assist generates a response that&#39;s based on the
+action you selected.</p></li>
+</ol></section>
+<section><h3 id="intellij_7" data-text=" IntelliJ " tabindex="-1"> IntelliJ </h3><ol>
+<li><p>In your code file, select a line or block of code.</p></li>
+<li><p>Right-click the selected code and select a smart action, like
+<strong>Generate unit tests</strong>.</p>
+
+<p>Selecting the smart action will automatically prompt
+Gemini Code Assist to generate a response to the prompt in
+the <strong>Gemini Code Assist</strong> tool window.</p></li>
+</ol></section>
+</devsite-selector></div>
+<h2 id="use_code_transformation_quick_fix" data-text="Use code transformation quick fix" tabindex="-1">Use code transformation quick fix</h2>
+
+<p>If there&#39;s an error in your code, Gemini Code Assist gives you
+the option to apply a <em>quick fix</em> to the error with code transformation.</p>
+
+<p>To apply a quick fix in your code file, follow these steps:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="vs-code_8" data-text=" VS Code " tabindex="-1"> VS Code </h3><ol>
+<li><p>In your code file, hold your pointer over the squiggly error line and
+select <strong>Quick Fix</strong>, and then select <strong>/fix</strong>.</p>
+
+<p><img src="/static/code/docs/vscode/images/code-transformation-quick-fix.png" alt="Code transformation quick fix in the IDE." class="screenshot"> </p></li>
+<li><p>When the quick fix is applied, a diff view appears. To accept these
+changes, click <strong>Accept</strong>.</p></li>
+</ol></section>
+<section><h3 id="intellij_8" data-text=" IntelliJ " tabindex="-1"> IntelliJ </h3><ol>
+<li><p>In your code file, click the red error bulb icon, which indicates an error
+in your code, and select <strong>Fix with Gemini</strong>.</p>
+
+<p><img src="/static/gemini/images/code-transformation-quick-fix-gca-intellij.png" alt="Code transformation option to fix with Gemini in the IDE." class="screenshot"> </p></li>
+<li><p>When the fix is applied, a diff view appears. To accept these changes,
+click <strong>Accept</strong>.</p></li>
+</ol></section>
+</devsite-selector></div>
+<h2 id="exclude_files_from_local_context" data-text="Exclude files from local context" tabindex="-1">Exclude files from local context</h2>
+
+<p>If files are specified in a <code translate="no" dir="ltr">.aiexclude</code> or <code translate="no" dir="ltr">.gitignore</code> file,
+Gemini Code Assist by default excludes them from local use in the
+context for code completion, code generation, code transformation, and chat.</p>
+
+<p>To learn how to exclude files from local use, see
+<a href="/gemini/docs/codeassist/create-aiexclude-file">Exclude files from Gemini Code Assist use</a>.</p>
+
+<h2 id="disable_code_suggestions_that_match_cited_sources" data-text="Disable code suggestions that match cited sources" tabindex="-1">Disable code suggestions that match cited sources</h2>
+
+<p>Gemini Code Assist provides citation information when it directly
+quotes at length from another source, such as existing open source code. For
+more information, see
+<a href="/gemini/docs/discover/works">How and when Gemini cites sources</a>.</p>
+
+<p>To prevent code that matches cited sources from being suggested to you, do the
+following:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="vs-code_9" data-text="VS Code" tabindex="-1">VS Code</h3><ol>
+<li><p>In the activity bar of your IDE, click <strong>Manage</strong> <span aria-label="and then">></span> <strong>Settings</strong>.</p></li>
+<li><p>In the <strong>User</strong> tab of the settings window, navigate to <strong>Extensions</strong>
+<span aria-label="and then">></span> <strong>Gemini Code Assist</strong>.</p></li>
+<li><p>Scroll until you find <strong>Geminicodeassist &gt; Recitation: Max Cited Length</strong>.</p></li>
+<li><p>Set the value to <code translate="no" dir="ltr">0</code>.</p></li>
+</ol>
+
+<p>Gemini Code Assist no longer suggests code to you that matches
+cited sources.</p></section>
+<section><h3 id="intellij_9" data-text="IntelliJ" tabindex="-1">IntelliJ</h3><ol>
+<li><p>In the status bar of your IDE, click
+<span class="google-symbols" translate="no">spark</span>
+<strong>Gemini Code Assist: Active</strong> and select then select
+<strong>Configure Gemini</strong>.</p></li>
+<li><p>Expand the <strong>Advanced settings</strong> section, and then select
+<strong>Block selections that match external cited sources</strong>.</p></li>
+<li><p>Click <strong>OK</strong>.</p></li>
+</ol>
+
+<p>Gemini Code Assist no longer suggests code to you that matches
+cited sources.</p></section>
+</devsite-selector></div>
+<h2 id="known-issues" data-text="Known issues" tabindex="-1">Known issues</h2>
+
+<p>This section outlines the known issues of Gemini Code Assist:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="vs-code_10" data-text=" VS Code " tabindex="-1"> VS Code </h3><ul>
+<li><p><strong>Chat responses may be truncated when they include an updated version of a
+large open file</strong></p>
+
+<p>To work around this issue, select a smaller section of code and include an
+additional directive in the chat prompt, such as <code translate="no" dir="ltr">only output the selected
+code.</code></p></li>
+<li><p><strong>Vim: Cannot accept or dismiss code generation suggestions unless in
+insert mode</strong></p>
+
+<p>When using the Vim plugin in normal mode, you can&#39;t accept or dismiss code
+suggestions.</p>
+
+<p>To work around this issue, press <kbd>i</kbd> to enter insert mode, and
+then press <kbd>Tab</kbd> to accept the suggestion.</p></li>
+<li><p><strong>Vim: Inconsistent behavior when pressing <kbd>Esc</kbd> to dismiss
+suggestions</strong></p>
+
+<p>When you press <kbd>Esc</kbd>, both the IDE and
+Gemini Code Assist suggestions are dismissed. This behavior
+is different from the non-Vim behavior where pressing <kbd>Esc</kbd>
+re-triggers Gemini Code Assist.</p></li>
+<li><p><strong>Sign-in attempts keep timing out</strong></p>
+
+<p>If your sign-in attempts keep timing out, try adding the
+<code translate="no" dir="ltr">cloudcode.beta.forceOobLogin</code> setting to your <code translate="no" dir="ltr">settings.json</code> file:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"cloudcode.beta.forceOobLogin"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span>
+</code></pre></devsite-code></li>
+<li><p><strong>License recitation warnings don&#39;t persist across sessions</strong></p>
+
+<p>If license recitation warnings don&#39;t persist across sessions, refer to the
+persistent logs:</p>
+
+<ol>
+<li><p>Click <strong>View</strong> <span aria-label="and then">></span> <strong>Output</strong>.</p></li>
+<li><p>Select <strong>Gemini Code Assist - Citations</strong>.</p></li>
+</ol></li>
+<li><p><strong>Connectivity issues in the Gemini Code Assist output
+window</strong></p>
+
+<p>If you see a connection error or other connectivity problems in the
+Gemini Code Assist output window, try the following:</p>
+
+<ul>
+<li><p>Configure your firewall to allow access to <code translate="no" dir="ltr">oauth2.googleapis.com</code> and
+<code translate="no" dir="ltr">cloudaicompanion.googleapis.com</code>.</p></li>
+<li><p>Configure your firewall to allow communication over HTTP/2, which gRPC
+uses.</p></li>
+</ul>
+
+<p>You can use the <code translate="no" dir="ltr">grpc-health-probe</code> tool to test connectivity. A
+successful check results in the following output:</p>
+
+<p><code translate="no" dir="ltr">$ grpc-health-probe -addr cloudaicompanion.googleapis.com:443 -tls
+error: this server does not implement the grpc health protocol
+(grpc.health.v1.Health): GRPC target method can&#39;t be resolved</code></p>
+
+<p>An unsuccessful check results in the following output:</p>
+
+<p><code translate="no" dir="ltr">timeout: failed to connect service &quot;cloudaicompanion.googleapis.com:443&quot; within 1s</code></p>
+
+<p>To obtain more details, run the following before <code translate="no" dir="ltr">grpc-health-probe</code>:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded><code translate="no" dir="ltr">export GRPC_GO_LOG_SEVERITY_LEVEL=info
+</code></pre></devsite-code></li>
+<li><p><strong>&#39;Activate Gemini Code Assist&#39; still appears after
+selecting Gemini Code Assist project</strong></p>
+
+<p>If you <a href="#sign-in-select-gcp-project">selected your project</a> per the
+instructions in this guide, which includes enabling the
+Gemini for Google Cloud API, then there may be an issue with the LS server.</p>
+
+<p>To find out more details about your issue, perform the following actions:</p>
+
+<ol>
+<li><p>In the status bar, click
+<span class="google-symbols" translate="no">spark</span> <strong>Gemini Code
+Assist</strong> and then select <strong>Send feedback</strong>.</p></li>
+<li><p>Click <strong>Show</strong> for any of the log files to see more details and to help
+troubleshoot the issue.</p></li>
+</ol></li>
+</ul></section>
+<section><h3 id="intellij_10" data-text=" IntelliJ " tabindex="-1"> IntelliJ </h3><p>There are no known issues for Gemini Code Assist for IntelliJ
+and other supported JetBrains IDEs.</p></section>
+</devsite-selector></div>
+<h2 id="leave_feedback" data-text="Leave feedback" tabindex="-1">Leave feedback</h2>
+
+<p>To leave feedback of your experience, see
+<a href="/gemini/docs/support/feedback">Provide Gemini Code Assist feedback</a>.</p>
 
 <h2 id="whats_next" data-text="What's next" tabindex="-1">What's next</h2>
 
 <ul>
-<li><p><a href="/gemini/docs/codeassist/set-up-gemini">Set up Gemini Code Assist Standard or Enterprise</a>,
-if you haven&#39;t already.</p></li>
-<li><p>To begin using Gemini Code Assist chat features in your IDE,
-see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</a>.</p></li>
+<li>Learn how to <a href="/gemini/docs/discover/write-prompts">write better prompts</a>.</li>
+<li>Learn <a href="/gemini/docs/discover/data-governance">how Gemini Code Assist uses your data</a>.</li>
+<li>Learn about <a href="https://cloud.google.com/products/gemini/pricing">Gemini Code Assist pricing</a>.</li>
+<li>Learn more about <a href="https://cloud.google.com/compliance">Google Cloud compliance</a>.</li>
 </ul>
 
 
-  
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols" rel="stylesheet" data-page-link>
   
 
   
@@ -2774,7 +4060,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
   product-id="5041938"
   bucket="Documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215390653058"
+  version="t-devsite-webserver-20260908-r00-rc00.480264207338033273"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -2809,7 +4095,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-08-27 UTC.</p>
+  <p>Last updated 2026-09-15 UTC.</p>
 </devsite-content-footer>
 
 
@@ -2857,7 +4143,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-eventDetail="cloud.google.com/products/"track-metadata-child_headline="products and pricing"track-name="see all products"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer">
+            track-type="footer link"track-metadata-eventDetail="cloud.google.com/products/"track-metadata-position="footer"track-name="see all products"track-metadata-child_headline="products and pricing"track-metadata-module="footer">
             
           
             See all products
@@ -2874,7 +4160,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-module="footer"track-metadata-position="footer"track-name="google cloud pricing"track-metadata-child_headline="products and pricing"track-metadata-eventDetail="cloud.google.com/pricing/"track-type="footer link">
+            track-metadata-position="footer"track-type="footer link"track-metadata-module="footer"track-name="google cloud pricing"track-metadata-child_headline="products and pricing"track-metadata-eventDetail="cloud.google.com/pricing/">
             
           
             Google Cloud pricing
@@ -2891,7 +4177,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-child_headline="resources"track-name="google cloud marketplace"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer">
+            track-name="google cloud marketplace"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-position="footer"track-metadata-child_headline="resources">
             
           
             Google Cloud Marketplace
@@ -2908,7 +4194,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-type="footer link"track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/contact/"track-name="contact sales"track-metadata-position="footer">
+            track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="engage"track-name="contact sales"track-type="footer link"track-metadata-eventDetail="cloud.google.com/contact/">
             
               
               
@@ -2935,7 +4221,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-name="google cloud community"track-metadata-module="footer"target="_blank"track-metadata-position="footer"track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-child_headline="engage"track-type="footer link"rel="noopener">
+            track-metadata-position="footer"track-metadata-eventDetail="www.googlecloudcommunity.com"rel="noopener"track-metadata-module="footer"track-metadata-child_headline="engage"track-type="footer link"target="_blank"track-name="google cloud community">
             
           
             Community forums
@@ -2952,7 +4238,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-module="footer"track-name="support"track-metadata-position="footer">
+            track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/support-hub/"track-name="support"track-type="footer link">
             
           
             Support
@@ -2969,7 +4255,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-child_headline="resources"track-type="footer link"track-metadata-module="footer"track-metadata-position="footer"track-name="release notes">
+            track-name="release notes"track-type="footer link"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-module="footer">
             
           
             Release Notes
@@ -2986,7 +4272,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-metadata-eventDetail="status.cloud.google.com"track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="resources"track-name="system status"target="_blank">
+            track-name="system status"track-metadata-eventDetail="status.cloud.google.com"track-metadata-child_headline="resources"track-type="footer link"target="_blank"track-metadata-position="footer"track-metadata-module="footer">
             
               
               
@@ -3013,7 +4299,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-position="footer"track-name="github"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-child_headline="resources"track-metadata-module="footer">
+            track-metadata-position="footer"track-name="github"track-metadata-child_headline="resources"track-type="footer link"track-metadata-module="footer"track-metadata-eventDetail="github.com/googlecloudPlatform/">
             
           
             GitHub
@@ -3030,7 +4316,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-type="footer link"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="resources"track-name="google cloud quickstarts">
+            track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-type="footer link"track-metadata-position="footer"track-name="google cloud quickstarts">
             
           
             Getting Started with Google Cloud
@@ -3047,7 +4333,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-eventDetail="cloud.google.com/docs/samples"track-type="footer link"track-name="code samples"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-module="footer">
+            track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-position="footer"track-name="code samples"track-type="footer link"track-metadata-module="footer">
             
           
             Code samples
@@ -3064,7 +4350,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-name="cloud architecture center">
+            track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/architecture/"track-name="cloud architecture center"track-metadata-module="footer"track-type="footer link">
             
           
             Cloud Architecture Center
@@ -3081,7 +4367,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-position="footer"track-name="training"track-metadata-eventDetail="cloud.google.com/learn/training/"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer">
+            track-type="footer link"track-metadata-module="footer"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/learn/training/"track-name="training">
             
               
               
@@ -3108,7 +4394,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/blog/"track-name="blog"track-metadata-child_headline="engage"track-metadata-module="footer"track-type="footer link">
+            track-metadata-child_headline="engage"track-name="blog"track-metadata-eventDetail="cloud.google.com/blog/"track-type="footer link"track-metadata-position="footer"track-metadata-module="footer">
             
           
             Blog
@@ -3125,7 +4411,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/events/"track-name="events"track-metadata-position="footer">
+            track-metadata-eventDetail="cloud.google.com/events/"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="engage"track-metadata-position="footer"track-name="events">
             
           
             Events
@@ -3142,7 +4428,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-position="footer"rel="noopener"track-type="footer link"track-metadata-eventDetail="x.com/googlecloud"track-metadata-module="footer"track-metadata-child_headline="engage"target="_blank"track-name="follow on x">
+            track-metadata-child_headline="engage"track-type="footer link"track-metadata-eventDetail="x.com/googlecloud"track-name="follow on x"track-metadata-module="footer"track-metadata-position="footer"target="_blank"rel="noopener">
             
           
             X (Twitter)
@@ -3159,7 +4445,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-eventDetail="www.youtube.com/googlecloud"rel="noopener"track-name="google cloud on youtube"track-metadata-module="footer"target="_blank"track-type="footer link"track-metadata-position="footer"track-metadata-child_headline="engage">
+            track-type="footer link"track-name="google cloud on youtube"track-metadata-eventDetail="www.youtube.com/googlecloud"rel="noopener"track-metadata-child_headline="engage"track-metadata-position="footer"track-metadata-module="footer"target="_blank">
             
           
             Google Cloud on YouTube
@@ -3176,7 +4462,7 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            rel="noopener"track-metadata-child_headline="engage"track-type="footer link"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-name="google cloud tech on youtube"track-metadata-position="footer"track-metadata-module="footer"target="_blank">
+            track-name="google cloud tech on youtube"track-type="footer link"track-metadata-position="footer"target="_blank"track-metadata-module="footer"rel="noopener"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-metadata-child_headline="engage">
             
               
               
@@ -3203,6 +4489,81 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
 
 <div class="devsite-footer-utility nocontent" data-nosnippet>
   
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        
+        <source srcset="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup-google-for-developers-dark-theme.svg"
+                media="(prefers-color-scheme: none)"
+                class="devsite-dark-theme">
+        
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup-google-for-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developer.android.com/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+         
+           data-label="Footer Android Developers Link"
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developer.chrome.com/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+         
+           data-label="Footer Chrome Link"
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://firebase.google.com/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+         
+           data-label="Footer Firebase Link"
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://ai.google.com/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+         
+           data-label="Footer Google AI Link"
+         >
+          Google AI
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
 
   
   <nav class="devsite-footer-utility-links" aria-label="Utility links">
@@ -3218,17 +4579,17 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
-           track-type="footer link"
-         
-           track-metadata-eventDetail="//about.google/"
+           track-metadata-position="footer"
          
            track-metadata-module="utility footer"
          
-           track-metadata-position="footer"
+           track-metadata-eventDetail="//about.google/"
          
            track-name="about google"
          
            target="_blank"
+         
+           track-type="footer link"
          >
           About Google
         </a>
@@ -3244,17 +4605,17 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
-           target="_blank"
-         
            track-metadata-module="utility footer"
-         
-           track-metadata-position="footer"
-         
-           track-name="privacy"
          
            track-metadata-eventDetail="//policies.google.com/privacy"
          
+           target="_blank"
+         
            track-type="footer link"
+         
+           track-name="privacy"
+         
+           track-metadata-position="footer"
          >
           Privacy
         </a>
@@ -3270,15 +4631,15 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
            data-category="Site-Wide Custom Events"
            data-label="Footer Site terms link"
          
+           track-type="footer link"
+         
            track-name="site terms"
-         
-           target="_blank"
-         
-           track-metadata-module="utility footer"
          
            track-metadata-position="footer"
          
-           track-type="footer link"
+           track-metadata-module="utility footer"
+         
+           target="_blank"
          
            track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          >
@@ -3296,15 +4657,15 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
-           track-metadata-module="utility footer"
-         
            track-type="footer link"
+         
+           track-name="google cloud terms"
          
            track-metadata-eventDetail="//cloud.google.com/product-terms"
          
-           track-metadata-position="footer"
+           track-metadata-module="utility footer"
          
-           track-name="google cloud terms"
+           track-metadata-position="footer"
          >
           Google Cloud terms
         </a>
@@ -3322,13 +4683,13 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
          
            track-metadata-module="utility footer"
          
+           track-metadata-eventDetail="#"
+         
            aria-hidden="true"
          
            track-metadata-position="footer"
          
            track-name="Manage cookies"
-         
-           track-metadata-eventDetail="#"
          
            track-type="footer link"
          >
@@ -3346,15 +4707,15 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
-           track-name="Our third decade of climate action: join us"
-         
-           track-metadata-position="footer"
-         
-           track-type="footer link"
+           track-metadata-eventDetail="/sustainability/"
          
            track-metadata-module="utility footer"
          
-           track-metadata-eventDetail="/sustainability/"
+           track-type="footer link"
+         
+           track-metadata-position="footer"
+         
+           track-name="Our third decade of climate action: join us"
          >
           Our third decade of climate action: join us
         </a>
@@ -3372,15 +4733,15 @@ see <a href="/gemini/docs/codeassist/chat-gemini">Chat with Gemini Code Assist</
            data-category="Site-Wide Custom Events"
            data-label="Footer Subscribe link"
          
-           track-metadata-eventDetail="/newsletter/"
+           track-name="subscribe"
          
            track-type="footer link"
          
-           track-metadata-position="footer"
-         
            track-metadata-module="utility footer"
          
-           track-name="subscribe"
+           track-metadata-eventDetail="/newsletter/"
+         
+           track-metadata-position="footer"
          >
           Subscribe
         </a>

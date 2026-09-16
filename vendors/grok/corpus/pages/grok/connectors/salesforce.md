@@ -54,9 +54,9 @@ Once connected, just ask Grok anything about your Salesforce data in normal conv
 
 ## Privacy and security
 
-**We do not train on your data.** xAI does not use your Salesforce data for model training.
+**We do not train on your data.** SpaceXAI does not use your Salesforce data for model training.
 
-**Your data never leaves Salesforce.** Grok queries Salesforce in real time and does not copy or store your records on xAI servers.
+**Your data never leaves Salesforce.** Grok queries Salesforce in real time and does not copy or store your records on SpaceXAI servers.
 
 **Your permissions are always enforced.** If you cannot see a record or field in Salesforce, Grok cannot see it either. The same applies to create and update operations.
 

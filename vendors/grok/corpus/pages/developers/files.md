@@ -160,7 +160,7 @@ Combine files with the [code execution tool](/developers/model-capabilities/file
 
 ## Limitations
 
-* **File size**: Maximum 48 MB per file
+* **File size**: Maximum 512 MB per file
 * **No batch requests**: File attachments with document search are agentic requests and do not support batch mode (`n > 1`)
 * **Agentic models only**: Requires models that support agentic tool calling (e.g., `grok-4.20`, `grok-4.5`, `grok-4.6`)
 * **Supported file formats**:

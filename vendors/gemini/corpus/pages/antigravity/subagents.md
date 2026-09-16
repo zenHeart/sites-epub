@@ -129,12 +129,32 @@ Subagents inherit safety configurations from their parent agent to maintain secu
 *   **Workspace Access**: Parent agents retain full access to their subagents’ workspaces, including isolated Git worktrees.
 *   **Permission Bubbling**: If a subagent encounters a tool execution requiring user authorization, the request automatically bubbles up to the main UI/Subagent panel.
 
-## Multi-agent teamwork (`/teamwork-preview`)
+## Multi-agent orchestrators
 
-Antigravity 2.0 introduces multi-agent orchestration for large engineering tasks, complex simulations, and deep research campaigns.
+Antigravity 2.0 provides two advanced multi-agent orchestrators designed for different task scales and execution horizons:
+
+### 1\. Boost deep reasoning (`/boost`)
+
+Note
+
+**Plan availability**: Available on **Google One AI Premium** (Pro and Ultra tiers) and **Enterprise** plans across Antigravity 2.0 and the Antigravity CLI.
+
+Invoking [`/boost`](/docs/boost) launches a three-tier multi-agent reasoning hierarchy (`Orchestrator` -> `DeepCoder` / `DeepInvestigator` coordinators -> isolated execution workers). It tackles tough concurrency bugs, algorithmic challenges, and non-trivial refactoring within interactive coding sessions (seconds to hours) with independent verification loops. Learn more in the [Boost documentation](/docs/boost).
+
+### 2\. Multi-agent teamwork (`/teamwork-preview`)
 
 Note
 
 **Plan availability**: The `/teamwork-preview` command is available on **paid plans** across Google Antigravity 2.0 and the Antigravity CLI.
 
 Using [`/teamwork-preview`](/docs/teamwork) coordinates a team of specialized AI agents designed for large software projects, multi-file refactoring, and complex research. The team handles milestone decomposition, parallel implementation, and independent verification checks, allowing you to define the high-level goals while the platform manages agent coordination. Learn more in the [Teamwork documentation](/docs/teamwork).
+
+* * *
+
+## Next steps
+
+Explore related documentation and guides:
+
+*   [Boost deep reasoning (`/boost`)](/docs/boost): Explore on-demand multi-agent reasoning.
+*   [Teamwork agent teams (`/teamwork-preview`)](/docs/teamwork): Learn how collaborative agent teams execute long-horizon campaigns.
+*   [Slash commands catalog](/docs/slash-commands): Review all available slash commands across Antigravity 2.0 and the CLI.

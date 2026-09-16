@@ -5,7 +5,7 @@
 
 
 <!DOCTYPE html>
-<html class="no-js glue-flexbox glue-app-ready keyword-blog" lang="en-us" data-locale="en-us" data-version="pr20260820-1820">
+<html class="no-js glue-flexbox glue-app-ready keyword-blog" lang="en-us" data-locale="en-us" data-version="pr20260902-1737">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -80,9 +80,9 @@
 
         
         
-        <link class="deferred-stylesheet" rel="preload" type="text/css" href="/static/keyword/css/blog/index.min.css?version=pr20260820-1820" as="style">
+        <link class="deferred-stylesheet" rel="preload" type="text/css" href="/static/keyword/css/blog/index.min.css?version=pr20260902-1737" as="style">
 <noscript>
-  <link rel="stylesheet" href="/static/keyword/css/blog/index.min.css?version=pr20260820-1820">
+  <link rel="stylesheet" href="/static/keyword/css/blog/index.min.css?version=pr20260902-1737">
 </noscript>
 
         <link class="deferred-stylesheet" rel="preload" type="text/css" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,600,700|Google+Sans+Flex:400,500|Product+Sans:400&amp;display=swap&amp;lang=en" as="style">
@@ -111,8 +111,8 @@
 
 <link rel="canonical" href="https://blog.google/innovation-and-ai/products/gemini-app/how-to-take-practice-sat/"/>
 
-<link href="/favicon.ico" rel="icon">
-<link href="/static/blogv2/images/apple-touch-icon.png?version=pr20260820-1820" rel="apple-touch-icon">
+<link rel="icon" type="image/x-icon" href="/static/blogv2/images/favicon.ico?version=pr20260902-1737">
+<link href="/static/blogv2/images/apple-touch-icon.png?version=pr20260902-1737" rel="apple-touch-icon">
 
 
 
@@ -156,7 +156,7 @@
     
       "special_hero": "undefined",
     
-    "days_since_published": "12",
+    "days_since_published": "28",
     
       "content_category": "undefined",
     
@@ -315,7 +315,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#h-burger"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#h-burger"></use>
 </svg>
 
         </button>
@@ -337,7 +337,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-clear"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-clear"></use>
 </svg>
 
         </button>
@@ -361,11 +361,11 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#news-from-google-logo"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#news-from-google-logo"></use>
 </svg>
 
             <!-- SuperG Logo -->
-            <img class="uni-nav__logo--super-g" src="/static/blogv2/images/super-g-aurora.svg?version=pr20260820-1820" alt="Google" width="30" height="30">
+            <img class="uni-nav__logo--super-g" src="/static/blogv2/images/super-g-aurora.svg?version=pr20260902-1737" alt="Google" width="30" height="30">
           </a>
         
         
@@ -407,7 +407,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -437,7 +437,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -467,7 +467,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -519,7 +519,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -560,7 +560,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -638,7 +638,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -668,7 +668,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -726,7 +726,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -756,7 +756,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -804,7 +804,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -834,7 +834,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -882,7 +882,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -919,7 +919,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -944,7 +944,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -969,7 +969,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -994,7 +994,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1034,7 +1034,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -1075,7 +1075,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1173,7 +1173,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1203,7 +1203,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1261,7 +1261,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1291,7 +1291,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1359,7 +1359,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1396,7 +1396,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1421,7 +1421,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1461,7 +1461,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -1502,7 +1502,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1590,7 +1590,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1620,7 +1620,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1668,7 +1668,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1698,7 +1698,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1746,7 +1746,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1783,7 +1783,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1831,7 +1831,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1923,7 +1923,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -1982,7 +1982,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2032,7 +2032,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2082,7 +2082,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2121,7 +2121,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2146,7 +2146,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2171,7 +2171,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2196,7 +2196,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2238,7 +2238,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -2348,7 +2348,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2407,7 +2407,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2475,7 +2475,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2514,7 +2514,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2539,7 +2539,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2581,7 +2581,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -2682,7 +2682,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2732,7 +2732,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2782,7 +2782,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2821,7 +2821,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2926,7 +2926,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-more-vert"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-more-vert"></use>
 </svg>
 
   </button>
@@ -2958,7 +2958,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#language"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#language"></use>
 </svg>
 
             
@@ -3261,7 +3261,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
     </span>
@@ -3291,7 +3291,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#photo-library"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#photo-library"></use>
 </svg>
 Images</a>
           
@@ -3316,7 +3316,7 @@ Images</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#rss-feed"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#rss-feed"></use>
 </svg>
 RSS feed</a>
         </li>
@@ -3436,7 +3436,7 @@ RSS feed</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
     </button>
@@ -3484,7 +3484,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3521,7 +3521,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3558,7 +3558,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3599,7 +3599,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
     </button>
@@ -3846,21 +3846,200 @@ data-ga4-analytics-landing-lead='{
 
 
 <a
-  href="https://blog.google/products-and-platforms/products/education/khan-academy-back-to-school/"
+  href="https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/"
   class="uni-article-card"
-  aria-label="Learning &amp; Education - Partnering with Khan Academy on building AI tools for classrooms - By Jen Carter - Aug 27, 2026"
+  aria-label="Gemini App - 4 ways to tackle household chores with Gemini - By Sarah Armstrong - Sep 15, 2026"
   data-index="1"
+  data-target="card"
+  data-primaryTag="products - gemini app"
+  data-image="true"
+  data-ga4-analytics-footer-lead-click='{
+    "link_text": "4 ways to tackle household chores with Gemini",
+    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/",
+    "source_content": "Related stories",
+    "related_index": "1",
+    "related_article_tag": "products - gemini app",
+    "article_name": "4 ways to tackle household chores with Gemini",
+    "author_name": "Sarah Armstrong",
+    "content_type": "blogv2 | article page"
+  }'
+  data-theme-color="blue"
+>
+  <div class="uni-article-card__shape-container">
+    <div
+      class="uni-article-card__shape"
+      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
+      
+        
+  
+
+
+<img
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Tackle_household_chores_w_Gemini_hero.png"
+  alt=""
+
+  
+    class="uni-article-card__img"
+  
+
+  
+
+  
+    loading="lazy"
+  
+  />
+
+
+
+
+      
+    </div>
+  </div>
+
+  <div class="uni-article-card__content">
+    <div class="uni-article-card__text">
+      <span
+        class="uni-article-card__eyebrow font-eyebrow"
+        data-target="eyebrow">
+        Gemini App
+      </span>
+      <h3
+        class="uni-article-card__title font-h5"
+        data-target="title">
+        4 ways to tackle household chores with Gemini
+      </h3>
+      
+    </div>
+
+    <div
+      class="uni-article-card__meta"
+      data-target="author">
+      
+        <span class="uni-article-card__author font-author-name">
+          By
+          
+            
+            Sarah Armstrong
+          
+        </span>
+      
+    </div>
+  </div>
+</a>
+
+        
+          
+
+
+
+
+<a
+  href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/"
+  class="uni-article-card"
+  aria-label="Gemini App - The Gemini app is now available for Windows - By Erin Pettigrew - Sep 10, 2026"
+  data-index="2"
+  data-target="card"
+  data-primaryTag="products - gemini app"
+  data-image="true"
+  data-ga4-analytics-footer-lead-click='{
+    "link_text": "The Gemini app is now available for Windows",
+    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+    "source_content": "Related stories",
+    "related_index": "2",
+    "related_article_tag": "products - gemini app",
+    "article_name": "The Gemini app is now available for Windows",
+    "author_name": "Erin Pettigrew",
+    "content_type": "blogv2 | article page"
+  }'
+  data-theme-color="blue"
+>
+  <div class="uni-article-card__shape-container">
+    <div
+      class="uni-article-card__shape"
+      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
+      
+        
+  
+
+
+<img
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_for_Desktop_Th.2e16d0ba.fill-300x300.format-webp.webp"
+  alt=""
+
+  
+    class="uni-article-card__img"
+  
+
+  
+    sizes="auto"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_for_Desktop_Th.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_for_Desktop_Th.2e16d0ba.fill-600x600.format-webp.webp 600w"
+  
+
+  
+    loading="lazy"
+  
+  />
+
+
+
+
+      
+    </div>
+  </div>
+
+  <div class="uni-article-card__content">
+    <div class="uni-article-card__text">
+      <span
+        class="uni-article-card__eyebrow font-eyebrow"
+        data-target="eyebrow">
+        Gemini App
+      </span>
+      <h3
+        class="uni-article-card__title font-h5"
+        data-target="title">
+        The Gemini app is now available for Windows
+      </h3>
+      
+    </div>
+
+    <div
+      class="uni-article-card__meta"
+      data-target="author">
+      
+        <span class="uni-article-card__author font-author-name">
+          By
+          
+            
+            Erin Pettigrew
+          
+        </span>
+      
+    </div>
+  </div>
+</a>
+
+        
+          
+
+
+
+
+<a
+  href="https://blog.google/products-and-platforms/products/education/missouri-state-education-partnership/"
+  class="uni-article-card"
+  aria-label="Learning &amp; Education - Missouri and Google partner on AI and career training - By Drew Sidel - Sep 08, 2026"
+  data-index="3"
   data-target="card"
   data-primaryTag="products - learning &amp; education"
   data-image="true"
   data-ga4-analytics-footer-lead-click='{
-    "link_text": "Partnering with Khan Academy on building AI tools for classrooms",
-    "link_url":  "https://blog.google/products-and-platforms/products/education/khan-academy-back-to-school/",
+    "link_text": "Missouri and Google partner on AI and career training",
+    "link_url":  "https://blog.google/products-and-platforms/products/education/missouri-state-education-partnership/",
     "source_content": "Related stories",
-    "related_index": "1",
+    "related_index": "3",
     "related_article_tag": "products - learning &amp; education",
-    "article_name": "Partnering with Khan Academy on building AI tools for classrooms",
-    "author_name": "Jen Carter",
+    "article_name": "Missouri and Google partner on AI and career training",
+    "author_name": "Drew Sidel",
     "content_type": "blogv2 | article page"
   }'
   data-theme-color="aquamarine"
@@ -3875,13 +4054,16 @@ data-ga4-analytics-landing-lead='{
 
 
 <img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Khan_Academy_hero.png"
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Missouri_Google_AI__h.2e16d0ba.fill-300x300.format-webp.webp"
   alt=""
 
   
     class="uni-article-card__img"
   
 
+  
+    sizes="auto"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Missouri_Google_AI__h.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Missouri_Google_AI__h.2e16d0ba.fill-600x600.format-webp.webp 600w"
   
 
   
@@ -3906,7 +4088,7 @@ data-ga4-analytics-landing-lead='{
       <h3
         class="uni-article-card__title font-h5"
         data-target="title">
-        Partnering with Khan Academy on building AI tools for classrooms
+        Missouri and Google partner on AI and career training
       </h3>
       
     </div>
@@ -3919,7 +4101,7 @@ data-ga4-analytics-landing-lead='{
           By
           
             
-            Jen Carter
+            Drew Sidel
           
         </span>
       
@@ -3934,112 +4116,24 @@ data-ga4-analytics-landing-lead='{
 
 
 <a
-  href="https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/"
+  href="https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
   class="uni-article-card"
-  aria-label="Gemini App - Turn your voice into action with new productivity features in Gemini Live - By Neel Joshi - Aug 26, 2026"
-  data-index="2"
+  aria-label="Gemini App - Create your best tracks yet with Lyria 3.5 in Gemini. - By  - Sep 04, 2026"
+  data-index="4"
   data-target="card"
   data-primaryTag="products - gemini app"
   data-image="true"
   data-ga4-analytics-footer-lead-click='{
-    "link_text": "Turn your voice into action with new productivity features in Gemini Live",
-    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
+    "link_text": "Create your best tracks yet with Lyria 3.5 in Gemini.",
+    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
     "source_content": "Related stories",
-    "related_index": "2",
+    "related_index": "4",
     "related_article_tag": "products - gemini app",
-    "article_name": "Turn your voice into action with new productivity features in Gemini Live",
-    "author_name": "Neel Joshi",
-    "content_type": "blogv2 | article page"
-  }'
-  data-theme-color="blue"
->
-  <div class="uni-article-card__shape-container">
-    <div
-      class="uni-article-card__shape"
-      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
-      
-        
-  
-
-
-<img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/STATIC_HEADER_V2.png"
-  alt=""
-
-  
-    class="uni-article-card__img"
-  
-
-  
-
-  
-    loading="lazy"
-  
-  />
-
-
-
-
-      
-    </div>
-  </div>
-
-  <div class="uni-article-card__content">
-    <div class="uni-article-card__text">
-      <span
-        class="uni-article-card__eyebrow font-eyebrow"
-        data-target="eyebrow">
-        Gemini App
-      </span>
-      <h3
-        class="uni-article-card__title font-h5"
-        data-target="title">
-        Turn your voice into action with new productivity features in Gemini Live
-      </h3>
-      
-    </div>
-
-    <div
-      class="uni-article-card__meta"
-      data-target="author">
-      
-        <span class="uni-article-card__author font-author-name">
-          By
-          
-            
-            Neel Joshi
-          
-        </span>
-      
-    </div>
-  </div>
-</a>
-
-        
-          
-
-
-
-
-<a
-  href="https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/"
-  class="uni-article-card"
-  aria-label="Gemini App - Here’s how to use intelligent dictation in Gemini for macOS. - By  - Aug 25, 2026"
-  data-index="3"
-  data-target="card"
-  data-primaryTag="products - gemini app"
-  data-image="true"
-  data-ga4-analytics-footer-lead-click='{
-    "link_text": "Here’s how to use intelligent dictation in Gemini for macOS.",
-    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/",
-    "source_content": "Related stories",
-    "related_index": "3",
-    "related_article_tag": "products - gemini app",
-    "article_name": "Here’s how to use intelligent dictation in Gemini for macOS.",
+    "article_name": "Create your best tracks yet with Lyria 3.5 in Gemini.",
     "author_name": "",
     "content_type": "blogv2 | Short Post"
   }'
-  data-theme-color="blue"
+  data-theme-color="neutral"
 >
   <div class="uni-article-card__shape-container">
     <div
@@ -4051,7 +4145,7 @@ data-ga4-analytics-landing-lead='{
 
 
 <img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_macOS.2e16d0ba.fill-300x300.format-webp.webp"
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lyria_social.2e16d0ba.fill-300x300.format-webp.webp"
   alt=""
 
   
@@ -4060,7 +4154,7 @@ data-ga4-analytics-landing-lead='{
 
   
     sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_macOS.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_macOS.2e16d0ba.fill-600x600.format-webp.webp 600w"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lyria_social.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lyria_social.2e16d0ba.fill-600x600.format-webp.webp 600w"
   
 
   
@@ -4085,7 +4179,7 @@ data-ga4-analytics-landing-lead='{
       <h3
         class="uni-article-card__title font-h5"
         data-target="title">
-        Here’s how to use intelligent dictation in Gemini for macOS.
+        Create your best tracks yet with Lyria 3.5 in Gemini.
       </h3>
       
     </div>
@@ -4093,97 +4187,6 @@ data-ga4-analytics-landing-lead='{
     <div
       class="uni-article-card__meta"
       data-target="author">
-      
-    </div>
-  </div>
-</a>
-
-        
-          
-
-
-
-
-<a
-  href="https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/"
-  class="uni-article-card"
-  aria-label="Search - 5 new ways to level up your learning with Search - By Awaneesh Verma - Aug 19, 2026"
-  data-index="4"
-  data-target="card"
-  data-primaryTag="products - search"
-  data-image="true"
-  data-ga4-analytics-footer-lead-click='{
-    "link_text": "5 new ways to level up your learning with Search",
-    "link_url":  "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
-    "source_content": "Related stories",
-    "related_index": "4",
-    "related_article_tag": "products - search",
-    "article_name": "5 new ways to level up your learning with Search",
-    "author_name": "Awaneesh Verma",
-    "content_type": "blogv2 | article page"
-  }'
-  data-theme-color="aquamarine"
->
-  <div class="uni-article-card__shape-container">
-    <div
-      class="uni-article-card__shape"
-      data-shape-context-consumer='["8-leaf-clover", "ghost-ish", "square"]'>
-      
-        
-  
-
-
-<img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_header_2_JwwDb02.2e16d0ba.fill-300x300.format-webp.webp"
-  alt=""
-
-  
-    class="uni-article-card__img"
-  
-
-  
-    sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_header_2_JwwDb02.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_header_2_JwwDb02.2e16d0ba.fill-600x600.format-webp.webp 600w"
-  
-
-  
-    loading="lazy"
-  
-  />
-
-
-
-
-      
-    </div>
-  </div>
-
-  <div class="uni-article-card__content">
-    <div class="uni-article-card__text">
-      <span
-        class="uni-article-card__eyebrow font-eyebrow"
-        data-target="eyebrow">
-        Search
-      </span>
-      <h3
-        class="uni-article-card__title font-h5"
-        data-target="title">
-        5 new ways to level up your learning with Search
-      </h3>
-      
-    </div>
-
-    <div
-      class="uni-article-card__meta"
-      data-target="author">
-      
-        <span class="uni-article-card__author font-author-name">
-          By
-          
-            
-            Awaneesh Verma
-          
-        </span>
       
     </div>
   </div>
@@ -4258,7 +4261,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#google-logo"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#google-logo"></use>
 </svg>
 
     </a>
@@ -4333,7 +4336,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
   </span>
@@ -4641,7 +4644,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
     </span>
@@ -4714,13 +4717,13 @@ data-ga4-analytics-landing-lead='{
 
         
         <div id="base-scripts" data-scripts='[
-              { "url": "/static/blogv2/js/csp/gtm.js?version=pr20260820-1820",
+              { "url": "/static/blogv2/js/csp/gtm.js?version=pr20260902-1737",
                 "options": {
                   "async": false,
                   "defer": true
                 }
               },
-              { "url": "/static/keyword/js/all/index.js?version=pr20260820-1820",
+              { "url": "/static/keyword/js/all/index.js?version=pr20260902-1737",
                 "options": {
                   "async": false,
                   "defer": false

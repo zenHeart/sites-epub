@@ -145,6 +145,14 @@
   },
   {
     "group": "Cursor: Agent",
+    "title": "projects",
+    "md_url": "https://cursor.com/docs/agent/projects.md",
+    "html_url": "https://cursor.com/docs/agent/projects",
+    "route": "docs/agent/projects",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
     "title": "agent review",
     "md_url": "https://cursor.com/docs/agent/agent-review.md",
     "html_url": "https://cursor.com/docs/agent/agent-review",
@@ -309,6 +317,14 @@
     "md_url": "https://cursor.com/docs/grok-bot/proxies.md",
     "html_url": "https://cursor.com/docs/grok-bot/proxies",
     "route": "docs/grok-bot/proxies",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: grok-bot",
+    "title": "computers",
+    "md_url": "https://cursor.com/docs/grok-bot/computers.md",
+    "html_url": "https://cursor.com/docs/grok-bot/computers",
+    "route": "docs/grok-bot/computers",
     "kind": "doc"
   },
   {
@@ -1181,6 +1197,46 @@
     "md_url": "https://cursor.com/docs/account/teams/ai-code-tracking-api.md",
     "html_url": "https://cursor.com/docs/account/teams/ai-code-tracking-api",
     "route": "docs/account/teams/ai-code-tracking-api",
+    "kind": "doc"
+  },
+  {
+    "group": "API: Origin API",
+    "title": "llms full.txt",
+    "md_url": "https://cursor.com/docs/api/origin/llms-full.txt.md",
+    "html_url": "https://cursor.com/docs/api/origin/llms-full.txt",
+    "route": "docs/api/origin/llms-full.txt",
+    "kind": "doc"
+  },
+  {
+    "group": "API: Origin API",
+    "title": "llms.txt",
+    "md_url": "https://cursor.com/docs/api/origin/llms.txt.md",
+    "html_url": "https://cursor.com/docs/api/origin/llms.txt",
+    "route": "docs/api/origin/llms.txt",
+    "kind": "doc"
+  },
+  {
+    "group": "API: Origin API",
+    "title": "openapi.yaml",
+    "md_url": "https://cursor.com/docs/api/origin/openapi.yaml.md",
+    "html_url": "https://cursor.com/docs/api/origin/openapi.yaml",
+    "route": "docs/api/origin/openapi.yaml",
+    "kind": "doc"
+  },
+  {
+    "group": "API: Origin API",
+    "title": "changelog",
+    "md_url": "https://cursor.com/docs/api/origin/changelog.md",
+    "html_url": "https://cursor.com/docs/api/origin/changelog",
+    "route": "docs/api/origin/changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "API: Origin API",
+    "title": "grants api",
+    "md_url": "https://cursor.com/docs/api/origin/grants-api.md",
+    "html_url": "https://cursor.com/docs/api/origin/grants-api",
+    "route": "docs/api/origin/grants-api",
     "kind": "doc"
   },
   {

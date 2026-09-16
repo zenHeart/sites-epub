@@ -64,9 +64,9 @@ Some organizations require an Azure AD administrator to approve application perm
 
 ## Privacy and security
 
-**We do not train on your data.** xAI does not use your Outlook email or calendar data for model training.
+**We do not train on your data.** SpaceXAI does not use your Outlook email or calendar data for model training.
 
-**Nothing is stored.** Conversations that use your Outlook connectors do not result in any of your email or calendar data being stored on xAI servers. Grok accesses your data in real time when you ask a question, and does not retain it afterward.
+**Nothing is stored.** Conversations that use your Outlook connectors do not result in any of your email or calendar data being stored on SpaceXAI servers. Grok accesses your data in real time when you ask a question, and does not retain it afterward.
 
 **Scoped to your account.** Outlook permissions are delegated to the signed-in user. Grok can only access your own mailbox and calendar, not those belonging to other users.
 

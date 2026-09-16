@@ -35,9 +35,9 @@ Google will show a consent screen listing these permissions. Grok can only acces
 
 ## Privacy and security
 
-**We do not train on your data.** xAI does not use your Google Drive data for model training.
+**We do not train on your data.** SpaceXAI does not use your Google Drive data for model training.
 
-**Nothing is stored.** Conversations that use your Google Drive connector do not result in any of your files or documents being stored on xAI servers. Grok accesses your data in real time when you ask a question, and does not retain it afterward.
+**Nothing is stored.** Conversations that use your Google Drive connector do not result in any of your files or documents being stored on SpaceXAI servers. Grok accesses your data in real time when you ask a question, and does not retain it afterward.
 
 **You control access.** Disconnect at any time to immediately revoke Grok's access to your Google account.
 

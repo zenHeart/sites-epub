@@ -101,7 +101,7 @@ The response body contains raw audio bytes. Save directly to a file or pipe to a
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `text` | string | ✓ | The text to convert to speech. Maximum **15,000 characters**. Supports [speech tags](#speech-tags). |
+| `text` | string | ✓ | The text to convert to speech. Maximum **60,000 characters**. Supports [speech tags](#speech-tags). |
 | `voice_id` | string | | Voice to use for synthesis. Defaults to `eve`. See [Voices](#voices). |
 | `language` | string | ✓ | BCP-47 language code (e.g. `en`, `zh`, `pt-BR`) or `auto` for automatic language detection. See [Supported Languages](#supported-languages). |
 | `output_format` | object | | Output format configuration. Defaults to MP3 at 24 kHz / 128 kbps. See [Output Formats](#output-formats). |
@@ -729,9 +729,9 @@ The map is validated before any audio is generated, so a broken rule fails the r
 | Key characters | letters, digits, apostrophes, spaces | `replace key "C++" may not contain punctuation or symbols` |
 | Keys non-blank | — | `replace keys must not be blank` |
 | Keys distinct as phrases | compared case- and whitespace-insensitively | `replace keys "ACME" and "Acme" are the same phrase; keep one` |
-| Text after substitution | 60,000 characters | `` `replace` expands the text to … characters `` |
+| Text after substitution | 240,000 characters | `` `replace` expands the text to … characters `` |
 
-The last row bounds the **rewritten** text — watch it when a short key maps to a long value across a large body of text. Your 15,000-character input cap and your billing still count what you sent.
+The last row bounds the **rewritten** text — watch it when a short key maps to a long value across a large body of text. Your 60,000-character input cap and your billing still count what you sent.
 
 The same `replace` map is available on the [Speech to Speech API](/developers/model-capabilities/audio/speech-to-speech#pronunciation-replacements) and on the [WebSocket endpoint](#session-configuration).
 
@@ -806,7 +806,7 @@ Tips for getting the highest quality output from the TTS API.
 * **Use natural punctuation.** Commas, periods, and question marks guide pacing and intonation. `"Wait, really?"` sounds more natural than `"Wait really"`.
 * **Add emotional context.** Exclamation marks and question marks influence delivery - `"That's amazing!"` sounds enthusiastic while `"That's amazing."` is matter-of-fact.
 * **Break long content into paragraphs.** Paragraph breaks create natural pauses and help the model maintain consistent quality across longer text.
-* **Keep unary requests under 15,000 characters.** For longer content, use the [bidirectional WebSocket endpoint](#streaming-tts-websocket) which has no text length limit, or split into logical segments (by paragraph or sentence) and concatenate the audio output.
+* **Keep unary requests under 60,000 characters.** For longer content, use the [bidirectional WebSocket endpoint](#streaming-tts-websocket) which has no text length limit, or split into logical segments (by paragraph or sentence) and concatenate the audio output.
 
 ### Integrating with AI coding assistants
 
@@ -916,7 +916,7 @@ setTimeout(() => URL.revokeObjectURL(downloadUrl), 10_000);
 | Status | Meaning | Action |
 |--------|---------|--------|
 | `200` | Success | Audio bytes in the response body |
-| `400` | Bad request | Check: text is non-empty, under 15,000 chars; codec and sample rate are valid |
+| `400` | Bad request | Check: text is non-empty, under 60,000 chars; codec and sample rate are valid |
 | `401` | Unauthorized | API key is missing or invalid |
 | `404` | Not found | Unknown `voice_id` — verify via `GET /v1/tts/voices` (built-in) or `GET /v1/custom-voices` (custom) |
 | `429` | Rate limited | Back off and retry with exponential delay |
@@ -1009,13 +1009,13 @@ The unary/server-streamed endpoints and the bidirectional WebSocket endpoint hav
 
 | | Unary & server-streamed (`POST /v1/tts`) | Bidirectional WebSocket (`wss://api.x.ai/v1/tts`) |
 |---|---:|---|
-| **Max text length** | 15,000 characters per request | No limit — individual `text.delta` messages capped at 15,000 characters each |
+| **Max text length** | 60,000 characters per request | No limit — individual `text.delta` messages capped at 60,000 characters each |
 | **Request timeout** | 15 minutes | No timeout (connection stays open) |
 | **Concurrent sessions** | — | 50 per team |
 | **[`replace`](#map-limits) map** | 200 entries; keys ≤ 100 and values ≤ 128 characters | Same, per `session.update` |
-| **Text after `replace`** | 60,000 characters | 60,000 characters per utterance |
+| **Text after `replace`** | 240,000 characters | 240,000 characters per utterance |
 
-For content exceeding 15,000 characters, use the [bidirectional WebSocket endpoint](#streaming-tts-websocket) which has no text length limit.
+For content exceeding 60,000 characters, use the [bidirectional WebSocket endpoint](#streaming-tts-websocket) which has no text length limit.
 
 ## Streaming TTS (WebSocket)
 
@@ -1063,7 +1063,7 @@ Send text to the server as JSON text frames. Split your text across multiple `te
 
 | Event | Description |
 |-------|-------------|
-| `text.delta` | A chunk of text to synthesize. Individual deltas are capped at **15,000 characters**. |
+| `text.delta` | A chunk of text to synthesize. Individual deltas are capped at **60,000 characters**. |
 | `text.done` | Signals the end of the current utterance. The server will finish generating audio and send `audio.done`. |
 | `text.clear` | Cancel the current utterance. The server stops generating audio, discards any buffered data, and responds with `audio.clear`. |
 | `session.update` | Set or change the [`replace`](#session-configuration) map for the session. Accepted at any point; it takes effect on the next utterance to begin. |
@@ -1107,7 +1107,7 @@ An update landing mid-utterance therefore takes effect on the next one, so a phr
 
 Matching runs across `text.delta` boundaries, so a phrase split over two messages still matches.
 
-The [same map limits](#map-limits) apply. A map that fails validation is answered with an `error` frame, leaves the map in effect unchanged, and keeps the connection open — but a map that expands a turn past 60,000 characters ends the session, since by then the oversized text has already been accepted.
+The [same map limits](#map-limits) apply. A map that fails validation is answered with an `error` frame, leaves the map in effect unchanged, and keeps the connection open — but a map that expands a turn past 240,000 characters ends the session, since by then the oversized text has already been accepted.
 
 ### Multi-Utterance Sessions
 
@@ -1435,10 +1435,10 @@ task.cancel(with: .normalClosure, reason: nil)
 | Property | Value |
 |----------|-------|
 | **Total text length** | No limit — send as many `text.delta` messages as needed |
-| **Delta size** | Individual `text.delta` messages capped at 15,000 characters |
+| **Delta size** | Individual `text.delta` messages capped at 60,000 characters |
 | **Concurrent sessions** | 50 per team |
 | **Session permit TTL** | 600 seconds |
-| **[`replace`](#map-limits) expansion** | An utterance whose text exceeds 60,000 characters after substitution ends the session |
+| **[`replace`](#map-limits) expansion** | An utterance whose text exceeds 240,000 characters after substitution ends the session |
 | **Moderation** | Runs asynchronously on accumulated text after audio is sent (fail-open) |
 | **Billing** | Recorded per session based on total input characters |
 

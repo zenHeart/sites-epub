@@ -5,7 +5,7 @@
 
 
 <!DOCTYPE html>
-<html class="no-js glue-flexbox  keyword-blog" lang="en-us" data-locale="en-us" data-version="pr20260820-1820">
+<html class="no-js glue-flexbox  keyword-blog" lang="en-us" data-locale="en-us" data-version="pr20260902-1737">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,9 +79,9 @@
 
         
         
-        <link class="deferred-stylesheet" rel="preload" type="text/css" href="/static/keyword/css/blog/index.min.css?version=pr20260820-1820" as="style">
+        <link class="deferred-stylesheet" rel="preload" type="text/css" href="/static/keyword/css/blog/index.min.css?version=pr20260902-1737" as="style">
 <noscript>
-  <link rel="stylesheet" href="/static/keyword/css/blog/index.min.css?version=pr20260820-1820">
+  <link rel="stylesheet" href="/static/keyword/css/blog/index.min.css?version=pr20260902-1737">
 </noscript>
 
         <link class="deferred-stylesheet" rel="preload" type="text/css" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,600,700|Google+Sans+Flex:400,500|Product+Sans:400&amp;display=swap&amp;lang=en" as="style">
@@ -107,16 +107,24 @@
             
         
   
-  <link rel="stylesheet" type="text/css" href="/static/keyword/css/print/index.min.css?version=pr20260820-1820" media="print" />
+  <link rel="stylesheet" type="text/css" href="/static/keyword/css/print/index.min.css?version=pr20260902-1737" media="print" />
 
 
         
 
 <link rel="canonical" href="https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/"/>
 
-<link href="/favicon.ico" rel="icon">
-<link href="/static/blogv2/images/apple-touch-icon.png?version=pr20260820-1820" rel="apple-touch-icon">
+<link rel="icon" type="image/x-icon" href="/static/blogv2/images/favicon.ico?version=pr20260902-1737">
+<link href="/static/blogv2/images/apple-touch-icon.png?version=pr20260902-1737" rel="apple-touch-icon">
 
+
+  <link rel="alternate" hreflang="x-default" href="https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/">
+
+  <link rel="alternate" hreflang="en-us" href="https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/">
+
+  <link rel="alternate" hreflang="pl-pl" href="https://blog.google/intl/pl-pl/nowosci-produktowe/sztuczna-inteligencja/student-offer-google-ai/">
+
+  <link rel="alternate" hreflang="cs-cz" href="https://blog.google/intl/cs-cz/produkty-sluzby/objevujte-ziskavejte-odpovedi/studentska-nabidka-2026/">
 
 
         <meta property="gtm-tag" content="GTM-TRV24V">
@@ -159,7 +167,7 @@
     
       "special_hero": "undefined",
     
-    "days_since_published": "11",
+    "days_since_published": "27",
     
       "content_category": "Products - Gemini App",
     
@@ -318,7 +326,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#h-burger"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#h-burger"></use>
 </svg>
 
         </button>
@@ -340,7 +348,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-clear"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-clear"></use>
 </svg>
 
         </button>
@@ -364,11 +372,11 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#news-from-google-logo"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#news-from-google-logo"></use>
 </svg>
 
             <!-- SuperG Logo -->
-            <img class="uni-nav__logo--super-g" src="/static/blogv2/images/super-g-aurora.svg?version=pr20260820-1820" alt="Google" width="30" height="30">
+            <img class="uni-nav__logo--super-g" src="/static/blogv2/images/super-g-aurora.svg?version=pr20260902-1737" alt="Google" width="30" height="30">
           </a>
         
         
@@ -412,7 +420,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -442,7 +450,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -472,7 +480,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -524,7 +532,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -565,7 +573,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -643,7 +651,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -673,7 +681,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -731,7 +739,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -761,7 +769,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -809,7 +817,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -839,7 +847,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -887,7 +895,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -924,7 +932,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -949,7 +957,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -974,7 +982,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -999,7 +1007,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1039,7 +1047,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -1080,7 +1088,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1178,7 +1186,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1208,7 +1216,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1266,7 +1274,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1296,7 +1304,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1364,7 +1372,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1401,7 +1409,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1426,7 +1434,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1466,7 +1474,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -1507,7 +1515,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1595,7 +1603,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1625,7 +1633,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1673,7 +1681,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1703,7 +1711,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1751,7 +1759,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1788,7 +1796,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1836,7 +1844,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1928,7 +1936,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -1987,7 +1995,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2037,7 +2045,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2087,7 +2095,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2126,7 +2134,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2151,7 +2159,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2176,7 +2184,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2201,7 +2209,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2243,7 +2251,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -2353,7 +2361,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2412,7 +2420,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2480,7 +2488,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2519,7 +2527,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2544,7 +2552,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2586,7 +2594,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -2687,7 +2695,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2737,7 +2745,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2787,7 +2795,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2826,7 +2834,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2893,7 +2901,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-share"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-share"></use>
 </svg>
 
     <div class="uni-social-share__button">Share</div>
@@ -2923,7 +2931,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-x"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-x"></use>
 </svg>
 
   <div class="article-share__title">x.com</div>
@@ -2950,7 +2958,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-facebook"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-facebook"></use>
 </svg>
 
   <div class="article-share__title">Facebook</div>
@@ -2977,7 +2985,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-linkedin"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-linkedin"></use>
 </svg>
 
   <div class="article-share__title">LinkedIn</div>
@@ -3006,7 +3014,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-mail"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-mail"></use>
 </svg>
 
   <div class="article-share__title">Mail</div>
@@ -3039,12 +3047,12 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-link"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-link"></use>
 </svg>
 
     <div class="copy-link__title">Copy link</div>
   </button>
-  <div class="copy-link__dialog copy-link__content" uni-options='{"copyTextButton": "COPIED TO CLIPBOARD"}' aria-hidden="true" tabindex="-1">
+  <div class="copy-link__dialog copy-link__content" uni-options='{"copyTextButton": "Copied"}' aria-hidden="true" tabindex="-1">
     <input class="h-c-copy copy-link__url" value="https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/" id="copy-link" readonly="readonly" type="text"/>
     <div class="copy-link__copy-message" role="status"></div>
   </div>
@@ -3129,7 +3137,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-more-vert"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-more-vert"></use>
 </svg>
 
   </button>
@@ -3161,7 +3169,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#language"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#language"></use>
 </svg>
 
             
@@ -3232,7 +3240,7 @@
       
       <option
         label="Česko (Čeština)"
-        value="https://blog.google/intl/cs-cz/"
+        value="https://blog.google/intl/cs-cz/produkty-sluzby/objevujte-ziskavejte-odpovedi/studentska-nabidka-2026/"
         lang="cs-cz"
         class="uni-lang-picker__option"
         >
@@ -3385,7 +3393,7 @@
       
       <option
         label="Polska (Polski)"
-        value="https://blog.google/intl/pl-pl/"
+        value="https://blog.google/intl/pl-pl/nowosci-produktowe/sztuczna-inteligencja/student-offer-google-ai/"
         lang="pl-pl"
         class="uni-lang-picker__option"
         >
@@ -3464,7 +3472,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
     </span>
@@ -3494,7 +3502,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#photo-library"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#photo-library"></use>
 </svg>
 Images</a>
           
@@ -3519,7 +3527,7 @@ Images</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#rss-feed"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#rss-feed"></use>
 </svg>
 RSS feed</a>
         </li>
@@ -3557,7 +3565,7 @@ RSS feed</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#share"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#share"></use>
 </svg>
 
     </button>
@@ -3589,7 +3597,7 @@ RSS feed</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-x"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-x"></use>
 </svg>
 
     <span>x.com</span>
@@ -3618,7 +3626,7 @@ RSS feed</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-facebook"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-facebook"></use>
 </svg>
 
     <span>Facebook</span>
@@ -3647,7 +3655,7 @@ RSS feed</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-linkedin"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-linkedin"></use>
 </svg>
 
     <span>LinkedIn</span>
@@ -3678,7 +3686,7 @@ RSS feed</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-mail"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-mail"></use>
 </svg>
 
     <span>Mail</span>
@@ -3707,7 +3715,7 @@ RSS feed</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-link"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-link"></use>
 </svg>
 
     <span>Copy link</span>
@@ -3801,7 +3809,7 @@ RSS feed</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
     </button>
@@ -3849,7 +3857,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3886,7 +3894,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3923,7 +3931,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3964,7 +3972,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
     </button>
@@ -4033,7 +4041,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-x"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-x"></use>
 </svg>
 
     <span>x.com</span>
@@ -4062,7 +4070,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-facebook"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-facebook"></use>
 </svg>
 
     <span>Facebook</span>
@@ -4091,7 +4099,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-linkedin"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-linkedin"></use>
 </svg>
 
     <span>LinkedIn</span>
@@ -4122,7 +4130,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-mail"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-mail"></use>
 </svg>
 
     <span>Mail</span>
@@ -4151,7 +4159,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-link"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-link"></use>
 </svg>
 
     <span>Copy link</span>
@@ -4248,7 +4256,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-x"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-x"></use>
 </svg>
 
     <span>x.com</span>
@@ -4277,7 +4285,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-facebook"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-facebook"></use>
 </svg>
 
     <span>Facebook</span>
@@ -4306,7 +4314,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-linkedin"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-linkedin"></use>
 </svg>
 
     <span>LinkedIn</span>
@@ -4337,7 +4345,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-mail"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-mail"></use>
 </svg>
 
     <span>Mail</span>
@@ -4366,7 +4374,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-link"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-link"></use>
 </svg>
 
     <span>Copy link</span>
@@ -4435,347 +4443,6 @@ data-ga4-analytics-landing-lead='{
     <div class="uni-page uni-grid article-container__ai-box-container">
       <div class="article-container__ai-box uni-grid__col--layout-6">
         
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Workaround for Safari: Safari fails to resolve linear gradients defined in external SVG sprites when referenced via <use>. Inlining them here makes them available in the DOM for the page. -->
-<svg width="0" height="0" style="position: absolute;" aria-hidden="true">
-  <defs>
-    <linearGradient id="paint0_linear_7609_9483" x1="7.46937" y1="15.5133" x2="18.3261" y2="6.3599" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#346BF1"/>
-      <stop offset="0.371606" stop-color="#3186FF"/>
-      <stop offset="0.776981" stop-color="#4FA0FF"/>
-    </linearGradient>
-    <linearGradient id="paint0_linear_7609_3755" x1="7.46937" y1="15.5133" x2="18.3261" y2="6.3599" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#346BF1"/>
-      <stop offset="0.371606" stop-color="#3186FF"/>
-      <stop offset="0.776981" stop-color="#4FA0FF"/>
-    </linearGradient>
-    <linearGradient id="paint0_linear_7609_9494" x1="-0.439716" y1="13.1229" x2="23.5291" y2="7.60707" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3186FF"/>
-      <stop offset="0.45" stop-color="#346BF1"/>
-      <stop offset="0.95" stop-color="#4FA0FF"/>
-    </linearGradient>
-  </defs>
-</svg>
-
-<div class="audio-player-tts"
-     data-component="uni-audio-player-tts"
-     uni-l10n='{
-       "stop": "Pause article audio description",
-       "play": "Play article audio description",
-       "progress": "Current audio progress minutes with seconds: [[progress]]",
-       "duration": "Duration of the audio minutes with seconds: [[duration]]",
-       "settings": "Click for settings",
-       "timeText": "[[duration]] minutes"
-     }'
-     data-analytics-module='{
-      "module_name": "Audio TTS",
-      "section_header": "Start the semester with one year of Gemini, on us"
-     }'
-     data-tts-audios='[
-      
-        {"voice_name": "Umbriel",
-        "voice_source": "https://storage.googleapis.com/gweb-uniblog-publish-prod/media/tts_audio_85991_umbriel_2026_08_21_21_30_47.mp3",
-        "mimetype": "audio/mpeg"},
-      
-        {"voice_name": "Gacrux",
-        "voice_source": "https://storage.googleapis.com/gweb-uniblog-publish-prod/media/tts_audio_85991_gacrux_2026_08_21_21_30_47.mp3",
-        "mimetype": "audio/mpeg"}
-      ]'>
-  <audio
-    class="audio-player-tts__player"
-    title="Start the semester with one year of Gemini, on us">
-      <source
-        src="https://storage.googleapis.com/gweb-uniblog-publish-prod/media/tts_audio_85991_umbriel_2026_08_21_21_30_47.mp3"
-        type="audio/mpeg" />
-      <p>Your browser does not support the audio element.</p>
-  </audio>
-  <div class="audio-player-tts__container"  aria-label="">
-    <div class="audio-player-tts__content">
-      <button class="audio-player-tts__preview-play" aria-label="Play article audio description">
-        <svg
-  
-  class="audio-player-tts__play-icon"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
->
-  <use
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#play-gd"></use>
-</svg>
-
-      </button>
-      <div class="audio-player-tts__text-content">
-        <span class="audio-player-tts__text-content--title font-ctas">
-          Listen to article
-        </span>
-        <div class="audio-player-tts__duration font-caption">[[duration]] minutes</div>
-        <span class="audio-player-tts__disclaimer" tabindex="0" role="tooltip" aria-label="This content is generated by Google AI. Generative AI is experimental">
-          <div class="audio-player-tts__disclaimer--copy font-body-s">This content is generated by Google AI. Generative AI is experimental</div>
-          <svg
-  
-  class="audio-player-tts__disclaimer--icon"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
->
-  <use
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#ttf-info"></use>
-</svg>
-
-        </span>
-      </div>
-      <button class="audio-player-tts__pause" aria-label="Pause article audio description">
-        <svg
-  
-  class="audio-player-tts__icon-play"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
->
-  <use
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#play-gd"></use>
-</svg>
-
-        <svg
-  
-  class="audio-player-tts__icon-pause audio-player-tts__icon-pause--hidden"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
->
-  <use
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#pause-gd"></use>
-</svg>
-
-      </button>
-      <div class="audio-player-tts__console">
-        <div class="audio-player-tts__time-bar">
-          <span class="audio-player-tts__current-time font-body-s"></span>
-          <div class="audio-player-tts__timeline-slider-container">
-            <input type="range" class="timeline__slider" max="100" value="0" step="5" aria-valuetext="Audio Slider" aria-label="Audio Slider" tabindex="0" role="slider">
-          </div>
-          <span class="audio-player-tts__duration-time font-body-s"></span>
-        </div>
-        <button class="audio-player-tts__audio-settings" aria-label="Click for settings">
-          <svg
-  
-  class="icon audio-player-tts__audio-settings--icon"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
->
-  <use
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#ttf-settings"></use>
-</svg>
-
-        </button>
-        <div class="audio-player-tts__settings-container">
-          <div class="audio-player-tts__settings--main uni-cta-text">
-            <button class="audio-player-tts__settings--current-voice" aria-label="Click to change voice">
-              <span class="audio-player-tts__settings--current-voice-info">
-                <svg
-  
-  class="audio-player-tts__settings--current-voice-icon"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
->
-  <use
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#tts-voice"></use>
-</svg>
-
-                <span>Voice</span>
-              </span>
-              <span class="audio-player-tts__settings--current-voice-next">
-                <span class="audio-player-tts__settings--current-voice-text font-body-s" ></span>
-                <svg
-  
-  class="icon tts-chevron"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
->
-  <use
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#tts-chevron"></use>
-</svg>
-
-              </span>
-            </button>
-            <button class="audio-player-tts__settings--current-speed" aria-label="Click to change speed">
-              <span class="audio-player-tts__settings--current-speed-info">
-                  <svg
-  
-  class="audio-player-tts__settings--current-speed-icon"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
->
-  <use
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#tts-speed"></use>
-</svg>
-
-                  <span>Speed</span>
-                </span>
-                <span class="audio-player-tts__settings--current-speed-next">
-                  <span class="audio-player-tts__settings--current-speed-text font-body-s"></span>
-                  <svg
-  
-  class="icon tts-chevron"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
->
-  <use
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#tts-chevron"></use>
-</svg>
-
-                </span>
-            </button>
-          </div>
-          <div class="audio-player-tts__settings--voices uni-cta-text">
-            <button class="audio-player-tts__settings-back" aria-label="Click to go back"><svg
-  
-  class="icon tts-chevron"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
->
-  <use
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#tts-chevron"></use>
-</svg>
- <span>Voice</span></button>
-          </div>
-          <div class="audio-player-tts__settings--speeds uni-cta-text">
-            <button class="audio-player-tts__settings-back" aria-label="Click to go back"><svg
-  
-  class="icon tts-chevron"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
->
-  <use
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#tts-chevron"></use>
-</svg>
- <span>Speed</span></button>
-            <button class="audio-player-tts__settings-option" data-speed="0.75" aria-label="speed 0.75X"><span>0.75X</span></button>
-            <button class="audio-player-tts__settings-option audio-player-tts__settings-option--selected" data-speed="1" aria-label="speed 1X"><span>1X</span></button>
-            <button class="audio-player-tts__settings-option" data-speed="1.5" aria-label="speed 1.5X"><span>1.5X</span></button>
-            <button class="audio-player-tts__settings-option" data-speed="2" aria-label="speed 2X"><span>2X</span></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
         
           
             
@@ -4808,7 +4475,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#summarize-gd"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#summarize-gd"></use>
 </svg>
 
       </span>
@@ -4831,7 +4498,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         </span>
@@ -4901,7 +4568,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#summarize_auto"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#summarize_auto"></use>
 </svg>
 
                 
@@ -4930,7 +4597,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#format_list_bulleted"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#format_list_bulleted"></use>
 </svg>
 
                 
@@ -4959,7 +4626,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#text_snippet"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#text_snippet"></use>
 </svg>
 
                 
@@ -5007,76 +4674,58 @@ data-ga4-analytics-landing-lead='{
   <uni-article-paragraph class="uni-article-paragraph__container uni-grid__col--layout-6">
     <div class="rich-text"><p data-block-key="279qf">The beginning of a new college year is always filled with anticipation — new classes, professors, and the promise of a fresh start. To help get you started, Google is offering student plans for one year at no cost and launching new and enhanced study tools.</p><p data-block-key="2p1k9">Here are five steps you can take to make the most of this school year with the help of Gemini.</p><h2 data-block-key="2j1qt">1. Sign up for your 12-month student plan, free of charge.</h2><p data-block-key="ahe9j">Starting today, we’re introducing new offers on our Google AI plans so that college students heading back to campus can unlock more of Gemini.</p><p data-block-key="eftdj">For eligible college students in the U.S., we’re offering one year of Google AI Pro for free
 
-
 <a class="superscript"
-  data-ga4-analytics-superscript-click
-  data-tooltip-content-id="footnote-content-1" 
-  data-target="inline text"
-  href="#footnote-1"
-  id="footnote-source-1"
-  aria-label="Jump to link reference 1">
-  <sup>1</sup>
-</a>
+    data-ga4-analytics-superscript-click
+    data-tooltip-content-id="footnote-content-1"
+    data-target="inline text"
+    href="#footnote-1"
+    id="footnote-source-1"
+    aria-label="Jump to link reference 1"><sup>1</sup></a>
  (valued at $19.99/mo). This offer unlocks 4x higher usage limits in Gemini,
 
-
 <a class="superscript"
-  data-ga4-analytics-superscript-click
-  data-tooltip-content-id="footnote-content-2" 
-  data-target="inline text"
-  href="#footnote-2"
-  id="footnote-source-2"
-  aria-label="Jump to link reference 2">
-  <sup>2</sup>
-</a>
+    data-ga4-analytics-superscript-click
+    data-tooltip-content-id="footnote-content-2"
+    data-target="inline text"
+    href="#footnote-2"
+    id="footnote-source-2"
+    aria-label="Jump to link reference 2"><sup>2</sup></a>
  access to <a href="https://gemini.google/overview/agent/spark/">Gemini Spark</a>, Gemini in Google apps like Gmail and Google Docs, 5 TB of storage, Google Health Premium, <a href="https://support.google.com/googleone/answer/14534406?hl=en">and more</a>.</p><p data-block-key="4k74b">For eligible college students outside the U.S., we’re offering one year of Google AI Plus, free of charge.
 
-
 <a class="superscript"
-  data-ga4-analytics-superscript-click
-  data-tooltip-content-id="footnote-content-3" 
-  data-target="inline text"
-  href="#footnote-3"
-  id="footnote-source-3"
-  aria-label="Jump to link reference 3">
-  <sup>3</sup>
-</a>
+    data-ga4-analytics-superscript-click
+    data-tooltip-content-id="footnote-content-3"
+    data-target="inline text"
+    href="#footnote-3"
+    id="footnote-source-3"
+    aria-label="Jump to link reference 3"><sup>3</sup></a>
  This offer provides access to Gemini Omni, 2x higher usage limits in Gemini,
 
-
 <a class="superscript"
-  data-ga4-analytics-superscript-click
-  data-tooltip-content-id="footnote-content-4" 
-  data-target="inline text"
-  href="#footnote-4"
-  id="footnote-source-4"
-  aria-label="Jump to link reference 4">
-  <sup>4</sup>
-</a>
+    data-ga4-analytics-superscript-click
+    data-tooltip-content-id="footnote-content-4"
+    data-target="inline text"
+    href="#footnote-4"
+    id="footnote-source-4"
+    aria-label="Jump to link reference 4"><sup>4</sup></a>
  400 GB of storage, <a href="https://support.google.com/googleone/answer/16882689?hl=en&amp;ref_topic=16548970&amp;sjid=14187655128156557149-NC">and more</a>.</p><p data-block-key="ef1p3">Finally, for students who want ad-free music and video streaming, we’re offering a bundle of Google AI Pro and a YouTube Premium subscription for up to 70% off.
 
-
 <a class="superscript"
-  data-ga4-analytics-superscript-click
-  data-tooltip-content-id="footnote-content-5" 
-  data-target="inline text"
-  href="#footnote-5"
-  id="footnote-source-5"
-  aria-label="Jump to link reference 5">
-  <sup>5</sup>
-</a>
+    data-ga4-analytics-superscript-click
+    data-tooltip-content-id="footnote-content-5"
+    data-target="inline text"
+    href="#footnote-5"
+    id="footnote-source-5"
+    aria-label="Jump to link reference 5"><sup>5</sup></a>
 </p><p data-block-key="dur6q"><a href="https://one.google.com/ai-student">Claim your offer</a> today.</p><h2 data-block-key="5pg53">2. Get organized with the new student hub.</h2><p data-block-key="36iq">New in the Gemini app, we’ve built a dedicated hub
 
-
 <a class="superscript"
-  data-ga4-analytics-superscript-click
-  data-tooltip-content-id="footnote-content-6" 
-  data-target="inline text"
-  href="#footnote-6"
-  id="footnote-source-6"
-  aria-label="Jump to link reference 6">
-  <sup>6</sup>
-</a>
+    data-ga4-analytics-superscript-click
+    data-tooltip-content-id="footnote-content-6"
+    data-target="inline text"
+    href="#footnote-6"
+    id="footnote-source-6"
+    aria-label="Jump to link reference 6"><sup>6</sup></a>
  to get you started with all of Gemini's tools and offers, just for students. The hub helps keep you organized; start a study notebook, create flashcards, take a practice quiz and more. As Gemini creates more learning tools, you’ll find them here in your student hub.</p><p data-block-key="45cnv">Access it at <a href="https://gemini.google.com/signin?continue=https%3A%2F%2Fgemini.google.com%2Fstudents">gemini.google.com/students</a><b>.</b></p></div>
   </uni-article-paragraph>
 </section>
@@ -5151,16 +4800,13 @@ data-ga4-analytics-landing-lead='{
   <uni-article-paragraph class="uni-article-paragraph__container uni-grid__col--layout-6">
     <div class="rich-text"><h2 data-block-key="279qf">3. Set up your study notebooks.</h2><p data-block-key="1uhr9">Studying can feel overwhelming when you don’t know what to tackle first. That’s why we launched <a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-study-notebooks/">study notebooks</a>
 
-
 <a class="superscript"
-  data-ga4-analytics-superscript-click
-  data-tooltip-content-id="footnote-content-7" 
-  data-target="inline text"
-  href="#footnote-7"
-  id="footnote-source-7"
-  aria-label="Jump to link reference 7">
-  <sup>7</sup>
-</a>
+    data-ga4-analytics-superscript-click
+    data-tooltip-content-id="footnote-content-7"
+    data-target="inline text"
+    href="#footnote-7"
+    id="footnote-source-7"
+    aria-label="Jump to link reference 7"><sup>7</sup></a>
  in June to guide you step-by-step through the learning process. Once you’ve uploaded your own class materials like lecture notes, Gemini sets up your study notebook with a gameplan to break down your learning topics. It gives you the option to take a diagnostic quiz to identify your unique knowledge gaps so that it can craft custom, bite-sized lessons and quizzes for you — complete with a real-time progress dashboard to track your milestones.</p><p data-block-key="45fkl">In the coming weeks, study notebooks will be even more helpful with graphs and images as part of your lessons. And so you never miss a deadline, Gemini will even schedule your key dates (like exams and assignment due dates) in Google Calendar from your syllabus — with your permission. And with access to Google AI Plus and Google AI Pro, you can create even more notebooks with even more sources. <a href="https://gemini.google.com/signin?continue=https%3A%2F%2Fgemini.google.com%2Fnotebooks%2Fcreate%3Fsubtype%3Dstudy">Get started here</a> or click “+ New notebook” in the student hub.</p></div>
   </uni-article-paragraph>
 </section>
@@ -5235,16 +4881,13 @@ data-ga4-analytics-landing-lead='{
   <uni-article-paragraph class="uni-article-paragraph__container uni-grid__col--layout-6">
     <div class="rich-text"><h2 data-block-key="279qf">4. Dive deeper with interactive visualizations.</h2><p data-block-key="6qtji">Prefer learning with visuals? With <a href="https://blog.google/innovation-and-ai/products/gemini-app/3d-models-charts/">interactive visualizations</a>,
 
-
 <a class="superscript"
-  data-ga4-analytics-superscript-click
-  data-tooltip-content-id="footnote-content-8" 
-  data-target="inline text"
-  href="#footnote-8"
-  id="footnote-source-8"
-  aria-label="Jump to link reference 8">
-  <sup>8</sup>
-</a>
+    data-ga4-analytics-superscript-click
+    data-tooltip-content-id="footnote-content-8"
+    data-target="inline text"
+    href="#footnote-8"
+    id="footnote-source-8"
+    aria-label="Jump to link reference 8"><sup>8</sup></a>
  Gemini can generate functional 3D simulations to help you better understand the topic you’re asking about. Responses include visual elements — like tables, grids, and simulations — made specifically for your question. For example, ask about a topic that could be explained visually, like “show me how DNA works in 3D,” and you’ll be able to interactively rotate and zoom into a 3D DNA structure. Or ask to watch a pendulum trade energy back and forth, or learn about cash burn rates through an interactive table.</p></div>
   </uni-article-paragraph>
 </section>
@@ -5319,16 +4962,13 @@ data-ga4-analytics-landing-lead='{
   <uni-article-paragraph class="uni-article-paragraph__container uni-grid__col--layout-6">
     <div class="rich-text"><h2 data-block-key="279qf">5. Talk through research with Gemini Live.</h2><p data-block-key="30o76">Gemini Live provides a natural, conversational way to study — especially on the go. You can talk through your problem set or chat through materials from your Drive, and now when you want to explore a topic in more depth, Gemini Live will be ready.</p><p data-block-key="96bjn">Rolling out today, we’re bringing the power of Deep Research into Gemini Live
 
-
 <a class="superscript"
-  data-ga4-analytics-superscript-click
-  data-tooltip-content-id="footnote-content-9" 
-  data-target="inline text"
-  href="#footnote-9"
-  id="footnote-source-9"
-  aria-label="Jump to link reference 9">
-  <sup>9</sup>
-</a>
+    data-ga4-analytics-superscript-click
+    data-tooltip-content-id="footnote-content-9"
+    data-target="inline text"
+    href="#footnote-9"
+    id="footnote-source-9"
+    aria-label="Jump to link reference 9"><sup>9</sup></a>
  so you can launch comprehensive, multi-step research reports and chat with Gemini about them. Just ask Gemini to research a topic, then feel free to close the chat, lock your screen, or keep chatting about other things. Gemini works asynchronously in the background and sends a notification when your report is ready. Once it is, you can chat through the results, ask follow-up questions, or refine the details hands-free.</p><p data-block-key="7s9hs">By seamlessly switching from typing to talking — while keeping the full context of your deep research report front and center — Gemini Live truly becomes the ultimate conversational study partner.</p></div>
   </uni-article-paragraph>
 </section>
@@ -5803,21 +5443,288 @@ data-ga4-analytics-landing-lead='{
 
 
 <a
-  href="https://blog.google/products-and-platforms/products/education/khan-academy-back-to-school/"
+  href="https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/"
   class="uni-article-card"
-  aria-label="Learning &amp; Education - Partnering with Khan Academy on building AI tools for classrooms - By Jen Carter - Aug 27, 2026"
+  aria-label="Gemini App - 4 ways to tackle household chores with Gemini - By Sarah Armstrong - Sep 15, 2026"
   data-index="1"
+  data-target="card"
+  data-primaryTag="products - gemini app"
+  data-image="true"
+  data-ga4-analytics-footer-lead-click='{
+    "link_text": "4 ways to tackle household chores with Gemini",
+    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/",
+    "source_content": "Related stories",
+    "related_index": "1",
+    "related_article_tag": "products - gemini app",
+    "article_name": "4 ways to tackle household chores with Gemini",
+    "author_name": "Sarah Armstrong",
+    "content_type": "blogv2 | article page"
+  }'
+  data-theme-color="blue"
+>
+  <div class="uni-article-card__shape-container">
+    <div
+      class="uni-article-card__shape"
+      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
+      
+        
+  
+
+
+<img
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Tackle_household_chores_w_Gemini_hero.png"
+  alt=""
+
+  
+    class="uni-article-card__img"
+  
+
+  
+
+  
+    loading="lazy"
+  
+  />
+
+
+
+
+      
+    </div>
+  </div>
+
+  <div class="uni-article-card__content">
+    <div class="uni-article-card__text">
+      <span
+        class="uni-article-card__eyebrow font-eyebrow"
+        data-target="eyebrow">
+        Gemini App
+      </span>
+      <h3
+        class="uni-article-card__title font-h5"
+        data-target="title">
+        4 ways to tackle household chores with Gemini
+      </h3>
+      
+    </div>
+
+    <div
+      class="uni-article-card__meta"
+      data-target="author">
+      
+        <span class="uni-article-card__author font-author-name">
+          By
+          
+            
+            Sarah Armstrong
+          
+        </span>
+      
+    </div>
+  </div>
+</a>
+
+        
+          
+
+
+
+
+<a
+  href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/"
+  class="uni-article-card"
+  aria-label="Gemini App - The Gemini app is now available for Windows - By Erin Pettigrew - Sep 10, 2026"
+  data-index="2"
+  data-target="card"
+  data-primaryTag="products - gemini app"
+  data-image="true"
+  data-ga4-analytics-footer-lead-click='{
+    "link_text": "The Gemini app is now available for Windows",
+    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+    "source_content": "Related stories",
+    "related_index": "2",
+    "related_article_tag": "products - gemini app",
+    "article_name": "The Gemini app is now available for Windows",
+    "author_name": "Erin Pettigrew",
+    "content_type": "blogv2 | article page"
+  }'
+  data-theme-color="blue"
+>
+  <div class="uni-article-card__shape-container">
+    <div
+      class="uni-article-card__shape"
+      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
+      
+        
+  
+
+
+<img
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_for_Desktop_Th.2e16d0ba.fill-300x300.format-webp.webp"
+  alt=""
+
+  
+    class="uni-article-card__img"
+  
+
+  
+    sizes="auto"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_for_Desktop_Th.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_for_Desktop_Th.2e16d0ba.fill-600x600.format-webp.webp 600w"
+  
+
+  
+    loading="lazy"
+  
+  />
+
+
+
+
+      
+    </div>
+  </div>
+
+  <div class="uni-article-card__content">
+    <div class="uni-article-card__text">
+      <span
+        class="uni-article-card__eyebrow font-eyebrow"
+        data-target="eyebrow">
+        Gemini App
+      </span>
+      <h3
+        class="uni-article-card__title font-h5"
+        data-target="title">
+        The Gemini app is now available for Windows
+      </h3>
+      
+    </div>
+
+    <div
+      class="uni-article-card__meta"
+      data-target="author">
+      
+        <span class="uni-article-card__author font-author-name">
+          By
+          
+            
+            Erin Pettigrew
+          
+        </span>
+      
+    </div>
+  </div>
+</a>
+
+        
+          
+
+
+
+
+<a
+  href="https://blog.google/products-and-platforms/products/google-one/fall-2026-ai-plan-updates/"
+  class="uni-article-card"
+  aria-label="Google One - Tackle your to\u002Ddo list with new features in our Google AI plans. - By Vikas Kansal - Sep 09, 2026"
+  data-index="3"
+  data-target="card"
+  data-primaryTag="products - google one"
+  data-image="true"
+  data-ga4-analytics-footer-lead-click='{
+    "link_text": "Tackle your to\u002Ddo list with new features in our Google AI plans.",
+    "link_url":  "https://blog.google/products-and-platforms/products/google-one/fall-2026-ai-plan-updates/",
+    "source_content": "Related stories",
+    "related_index": "3",
+    "related_article_tag": "products - google one",
+    "article_name": "Tackle your to\u002Ddo list with new features in our Google AI plans.",
+    "author_name": "Vikas Kansal",
+    "content_type": "blogv2 | Short Post"
+  }'
+  data-theme-color="aquamarine"
+>
+  <div class="uni-article-card__shape-container">
+    <div
+      class="uni-article-card__shape"
+      data-shape-context-consumer='["8-leaf-clover", "ghost-ish", "square"]'>
+      
+        
+  
+
+
+<img
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/AI_Plans_Recap_Blog.jpeg"
+  alt=""
+
+  
+    class="uni-article-card__img"
+  
+
+  
+
+  
+    loading="lazy"
+  
+  />
+
+
+
+
+      
+    </div>
+  </div>
+
+  <div class="uni-article-card__content">
+    <div class="uni-article-card__text">
+      <span
+        class="uni-article-card__eyebrow font-eyebrow"
+        data-target="eyebrow">
+        Google One
+      </span>
+      <h3
+        class="uni-article-card__title font-h5"
+        data-target="title">
+        Tackle your to-do list with new features in our Google AI plans.
+      </h3>
+      
+    </div>
+
+    <div
+      class="uni-article-card__meta"
+      data-target="author">
+      
+        <span class="uni-article-card__author font-author-name">
+          By
+          
+            
+            Vikas Kansal
+          
+        </span>
+      
+    </div>
+  </div>
+</a>
+
+        
+          
+
+
+
+
+<a
+  href="https://blog.google/products-and-platforms/products/education/missouri-state-education-partnership/"
+  class="uni-article-card"
+  aria-label="Learning &amp; Education - Missouri and Google partner on AI and career training - By Drew Sidel - Sep 08, 2026"
+  data-index="4"
   data-target="card"
   data-primaryTag="products - learning &amp; education"
   data-image="true"
   data-ga4-analytics-footer-lead-click='{
-    "link_text": "Partnering with Khan Academy on building AI tools for classrooms",
-    "link_url":  "https://blog.google/products-and-platforms/products/education/khan-academy-back-to-school/",
+    "link_text": "Missouri and Google partner on AI and career training",
+    "link_url":  "https://blog.google/products-and-platforms/products/education/missouri-state-education-partnership/",
     "source_content": "Related stories",
-    "related_index": "1",
+    "related_index": "4",
     "related_article_tag": "products - learning &amp; education",
-    "article_name": "Partnering with Khan Academy on building AI tools for classrooms",
-    "author_name": "Jen Carter",
+    "article_name": "Missouri and Google partner on AI and career training",
+    "author_name": "Drew Sidel",
     "content_type": "blogv2 | article page"
   }'
   data-theme-color="aquamarine"
@@ -5832,13 +5739,16 @@ data-ga4-analytics-landing-lead='{
 
 
 <img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Khan_Academy_hero.png"
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Missouri_Google_AI__h.2e16d0ba.fill-300x300.format-webp.webp"
   alt=""
 
   
     class="uni-article-card__img"
   
 
+  
+    sizes="auto"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Missouri_Google_AI__h.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Missouri_Google_AI__h.2e16d0ba.fill-600x600.format-webp.webp 600w"
   
 
   
@@ -5863,7 +5773,7 @@ data-ga4-analytics-landing-lead='{
       <h3
         class="uni-article-card__title font-h5"
         data-target="title">
-        Partnering with Khan Academy on building AI tools for classrooms
+        Missouri and Google partner on AI and career training
       </h3>
       
     </div>
@@ -5876,7 +5786,7 @@ data-ga4-analytics-landing-lead='{
           By
           
             
-            Jen Carter
+            Drew Sidel
           
         </span>
       
@@ -5891,282 +5801,20 @@ data-ga4-analytics-landing-lead='{
 
 
 <a
-  href="https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/"
+  href="https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
   class="uni-article-card"
-  aria-label="Gemini App - Turn your voice into action with new productivity features in Gemini Live - By Neel Joshi - Aug 26, 2026"
-  data-index="2"
-  data-target="card"
-  data-primaryTag="products - gemini app"
-  data-image="true"
-  data-ga4-analytics-footer-lead-click='{
-    "link_text": "Turn your voice into action with new productivity features in Gemini Live",
-    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
-    "source_content": "Related stories",
-    "related_index": "2",
-    "related_article_tag": "products - gemini app",
-    "article_name": "Turn your voice into action with new productivity features in Gemini Live",
-    "author_name": "Neel Joshi",
-    "content_type": "blogv2 | article page"
-  }'
-  data-theme-color="blue"
->
-  <div class="uni-article-card__shape-container">
-    <div
-      class="uni-article-card__shape"
-      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
-      
-        
-  
-
-
-<img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/STATIC_HEADER_V2.png"
-  alt=""
-
-  
-    class="uni-article-card__img"
-  
-
-  
-
-  
-    loading="lazy"
-  
-  />
-
-
-
-
-      
-    </div>
-  </div>
-
-  <div class="uni-article-card__content">
-    <div class="uni-article-card__text">
-      <span
-        class="uni-article-card__eyebrow font-eyebrow"
-        data-target="eyebrow">
-        Gemini App
-      </span>
-      <h3
-        class="uni-article-card__title font-h5"
-        data-target="title">
-        Turn your voice into action with new productivity features in Gemini Live
-      </h3>
-      
-    </div>
-
-    <div
-      class="uni-article-card__meta"
-      data-target="author">
-      
-        <span class="uni-article-card__author font-author-name">
-          By
-          
-            
-            Neel Joshi
-          
-        </span>
-      
-    </div>
-  </div>
-</a>
-
-        
-          
-
-
-
-
-<a
-  href="https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/"
-  class="uni-article-card"
-  aria-label="Gemini App - Here’s how to use intelligent dictation in Gemini for macOS. - By  - Aug 25, 2026"
-  data-index="3"
-  data-target="card"
-  data-primaryTag="products - gemini app"
-  data-image="true"
-  data-ga4-analytics-footer-lead-click='{
-    "link_text": "Here’s how to use intelligent dictation in Gemini for macOS.",
-    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/",
-    "source_content": "Related stories",
-    "related_index": "3",
-    "related_article_tag": "products - gemini app",
-    "article_name": "Here’s how to use intelligent dictation in Gemini for macOS.",
-    "author_name": "",
-    "content_type": "blogv2 | Short Post"
-  }'
-  data-theme-color="blue"
->
-  <div class="uni-article-card__shape-container">
-    <div
-      class="uni-article-card__shape"
-      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
-      
-        
-  
-
-
-<img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_macOS.2e16d0ba.fill-300x300.format-webp.webp"
-  alt=""
-
-  
-    class="uni-article-card__img"
-  
-
-  
-    sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_macOS.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_macOS.2e16d0ba.fill-600x600.format-webp.webp 600w"
-  
-
-  
-    loading="lazy"
-  
-  />
-
-
-
-
-      
-    </div>
-  </div>
-
-  <div class="uni-article-card__content">
-    <div class="uni-article-card__text">
-      <span
-        class="uni-article-card__eyebrow font-eyebrow"
-        data-target="eyebrow">
-        Gemini App
-      </span>
-      <h3
-        class="uni-article-card__title font-h5"
-        data-target="title">
-        Here’s how to use intelligent dictation in Gemini for macOS.
-      </h3>
-      
-    </div>
-
-    <div
-      class="uni-article-card__meta"
-      data-target="author">
-      
-    </div>
-  </div>
-</a>
-
-        
-          
-
-
-
-
-<a
-  href="https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/"
-  class="uni-article-card"
-  aria-label="Search - 5 new ways to level up your learning with Search - By Awaneesh Verma - Aug 19, 2026"
-  data-index="4"
-  data-target="card"
-  data-primaryTag="products - search"
-  data-image="true"
-  data-ga4-analytics-footer-lead-click='{
-    "link_text": "5 new ways to level up your learning with Search",
-    "link_url":  "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
-    "source_content": "Related stories",
-    "related_index": "4",
-    "related_article_tag": "products - search",
-    "article_name": "5 new ways to level up your learning with Search",
-    "author_name": "Awaneesh Verma",
-    "content_type": "blogv2 | article page"
-  }'
-  data-theme-color="aquamarine"
->
-  <div class="uni-article-card__shape-container">
-    <div
-      class="uni-article-card__shape"
-      data-shape-context-consumer='["8-leaf-clover", "ghost-ish", "square"]'>
-      
-        
-  
-
-
-<img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_header_2_JwwDb02.2e16d0ba.fill-300x300.format-webp.webp"
-  alt=""
-
-  
-    class="uni-article-card__img"
-  
-
-  
-    sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_header_2_JwwDb02.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_header_2_JwwDb02.2e16d0ba.fill-600x600.format-webp.webp 600w"
-  
-
-  
-    loading="lazy"
-  
-  />
-
-
-
-
-      
-    </div>
-  </div>
-
-  <div class="uni-article-card__content">
-    <div class="uni-article-card__text">
-      <span
-        class="uni-article-card__eyebrow font-eyebrow"
-        data-target="eyebrow">
-        Search
-      </span>
-      <h3
-        class="uni-article-card__title font-h5"
-        data-target="title">
-        5 new ways to level up your learning with Search
-      </h3>
-      
-    </div>
-
-    <div
-      class="uni-article-card__meta"
-      data-target="author">
-      
-        <span class="uni-article-card__author font-author-name">
-          By
-          
-            
-            Awaneesh Verma
-          
-        </span>
-      
-    </div>
-  </div>
-</a>
-
-        
-          
-
-
-
-
-<a
-  href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo/"
-  class="uni-article-card"
-  aria-label="Gemini App - Waymo is bringing Gemini into its custom Ojai vehicles. - By  - Aug 19, 2026"
+  aria-label="Gemini App - Create your best tracks yet with Lyria 3.5 in Gemini. - By  - Sep 04, 2026"
   data-index="5"
   data-target="card"
   data-primaryTag="products - gemini app"
   data-image="true"
   data-ga4-analytics-footer-lead-click='{
-    "link_text": "Waymo is bringing Gemini into its custom Ojai vehicles.",
-    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo/",
+    "link_text": "Create your best tracks yet with Lyria 3.5 in Gemini.",
+    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
     "source_content": "Related stories",
     "related_index": "5",
     "related_article_tag": "products - gemini app",
-    "article_name": "Waymo is bringing Gemini into its custom Ojai vehicles.",
+    "article_name": "Create your best tracks yet with Lyria 3.5 in Gemini.",
     "author_name": "",
     "content_type": "blogv2 | Short Post"
   }'
@@ -6182,7 +5830,7 @@ data-ga4-analytics-landing-lead='{
 
 
 <img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Ojai_vehicles_.2e16d0ba.fill-300x300.format-webp.webp"
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lyria_social.2e16d0ba.fill-300x300.format-webp.webp"
   alt=""
 
   
@@ -6191,7 +5839,7 @@ data-ga4-analytics-landing-lead='{
 
   
     sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Ojai_vehicles_.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Ojai_vehicles_.2e16d0ba.fill-600x600.format-webp.webp 600w"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lyria_social.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lyria_social.2e16d0ba.fill-600x600.format-webp.webp 600w"
   
 
   
@@ -6216,7 +5864,7 @@ data-ga4-analytics-landing-lead='{
       <h3
         class="uni-article-card__title font-h5"
         data-target="title">
-        Waymo is bringing Gemini into its custom Ojai vehicles.
+        Create your best tracks yet with Lyria 3.5 in Gemini.
       </h3>
       
     </div>
@@ -6236,36 +5884,36 @@ data-ga4-analytics-landing-lead='{
 
 
 <a
-  href="https://blog.google/innovation-and-ai/products/gemini-app/four-new-interactive-bts-experiences/"
+  href="https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/"
   class="uni-article-card"
-  aria-label="Gemini App - Try 4 new interactive BTS experiences inside the Gemini app - By  - Aug 18, 2026"
+  aria-label="Learning &amp; Education - Start the year AI\u002Dready with the Google AI Educator Series - By Jennie Magiera - Sep 03, 2026"
   data-index="6"
   data-target="card"
-  data-primaryTag="products - gemini app"
+  data-primaryTag="products - learning &amp; education"
   data-image="true"
   data-ga4-analytics-footer-lead-click='{
-    "link_text": "Try 4 new interactive BTS experiences inside the Gemini app",
-    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/four-new-interactive-bts-experiences/",
+    "link_text": "Start the year AI\u002Dready with the Google AI Educator Series",
+    "link_url":  "https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/",
     "source_content": "Related stories",
     "related_index": "6",
-    "related_article_tag": "products - gemini app",
-    "article_name": "Try 4 new interactive BTS experiences inside the Gemini app",
-    "author_name": "",
+    "related_article_tag": "products - learning &amp; education",
+    "article_name": "Start the year AI\u002Dready with the Google AI Educator Series",
+    "author_name": "Jennie Magiera",
     "content_type": "blogv2 | article page"
   }'
-  data-theme-color="blue"
+  data-theme-color="aquamarine"
 >
   <div class="uni-article-card__shape-container">
     <div
       class="uni-article-card__shape"
-      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
+      data-shape-context-consumer='["8-leaf-clover", "ghost-ish", "square"]'>
       
         
   
 
 
 <img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_HeaderImage_mDyRl.2e16d0ba.fill-300x300.format-webp.webp"
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GES_Badgeathon_Articl.2e16d0ba.fill-300x300.format-webp.webp"
   alt=""
 
   
@@ -6274,7 +5922,7 @@ data-ga4-analytics-landing-lead='{
 
   
     sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_HeaderImage_mDyRl.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_HeaderImage_mDyRl.2e16d0ba.fill-600x600.format-webp.webp 600w"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GES_Badgeathon_Articl.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GES_Badgeathon_Articl.2e16d0ba.fill-600x600.format-webp.webp 600w"
   
 
   
@@ -6294,12 +5942,12 @@ data-ga4-analytics-landing-lead='{
       <span
         class="uni-article-card__eyebrow font-eyebrow"
         data-target="eyebrow">
-        Gemini App
+        Learning &amp; Education
       </span>
       <h3
         class="uni-article-card__title font-h5"
         data-target="title">
-        Try 4 new interactive BTS experiences inside the Gemini app
+        Start the year AI-ready with the Google AI Educator Series
       </h3>
       
     </div>
@@ -6307,6 +5955,14 @@ data-ga4-analytics-landing-lead='{
     <div
       class="uni-article-card__meta"
       data-target="author">
+      
+        <span class="uni-article-card__author font-author-name">
+          By
+          
+            
+            Jennie Magiera
+          
+        </span>
       
     </div>
   </div>
@@ -6380,7 +6036,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#google-logo"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#google-logo"></use>
 </svg>
 
     </a>
@@ -6455,7 +6111,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
   </span>
@@ -6531,7 +6187,7 @@ data-ga4-analytics-landing-lead='{
       
       <option
         label="Česko (Čeština)"
-        value="https://blog.google/intl/cs-cz/"
+        value="https://blog.google/intl/cs-cz/produkty-sluzby/objevujte-ziskavejte-odpovedi/studentska-nabidka-2026/"
         lang="cs-cz"
         class="uni-lang-picker__option"
         >
@@ -6684,7 +6340,7 @@ data-ga4-analytics-landing-lead='{
       
       <option
         label="Polska (Polski)"
-        value="https://blog.google/intl/pl-pl/"
+        value="https://blog.google/intl/pl-pl/nowosci-produktowe/sztuczna-inteligencja/student-offer-google-ai/"
         lang="pl-pl"
         class="uni-lang-picker__option"
         >
@@ -6763,7 +6419,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
     </span>
@@ -6836,13 +6492,13 @@ data-ga4-analytics-landing-lead='{
 
         
         <div id="base-scripts" data-scripts='[
-              { "url": "/static/blogv2/js/csp/gtm.js?version=pr20260820-1820",
+              { "url": "/static/blogv2/js/csp/gtm.js?version=pr20260902-1737",
                 "options": {
                   "async": false,
                   "defer": true
                 }
               },
-              { "url": "/static/keyword/js/all/index.js?version=pr20260820-1820",
+              { "url": "/static/keyword/js/all/index.js?version=pr20260902-1737",
                 "options": {
                   "async": false,
                   "defer": false

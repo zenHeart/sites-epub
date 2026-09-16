@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/openai"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/openai"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://ai.google.dev/gemini-api/docs/openai" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/gemini-api/docs/openai" /><link rel="alternate" hreflang="ar"
@@ -878,7 +878,7 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/models"
         class="devsite-nav-title"
       
-        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
+        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.8-flash /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.8-live /gemini-api/docs/models/gemini-3.8-live-extended-thinking /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3.5 /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/latest-model"
         class="devsite-nav-title"
@@ -899,7 +899,7 @@
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/music-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Lyria 3</span></a></li>
+      ><span class="devsite-nav-text" tooltip>Lyria 3.5</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/realtime-music-generation"
         class="devsite-nav-title"
@@ -935,37 +935,17 @@
         <span class="devsite-nav-text" tooltip>Robotics</span>
       </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-overview"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-spatial"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-spatial"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-agentic"
+      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-agentic"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agentic vision</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-orchestration"
+      ><span class="devsite-nav-text" tooltip>Agentic vision</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-orchestration"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Task orchestration</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-streaming"
+      ><span class="devsite-nav-text" tooltip>Task orchestration</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-streaming"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-video-progress"
+      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-video-progress"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Video understanding</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Video understanding</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1004,21 +984,13 @@
            devsite-nav-expandable"><div class="devsite-expandable-nav">
       <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
         <span class="devsite-nav-text" tooltip>Speech and audio</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/speech-generation"
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/speech-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Speech generation</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
+      ><span class="devsite-nav-text" tooltip>Speech generation</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/transcribe"
+      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/transcribe"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio transcription</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Audio transcription</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1055,13 +1027,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Quickstart</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/antigravity-agent"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/antigravity-agent"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Antigravity agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Antigravity agent</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/custom-agents"
         class="devsite-nav-title"
@@ -1075,13 +1043,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Hooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/deep-research"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/deep-research"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Deep Research agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Deep Research agent</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1108,38 +1072,26 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>URL context</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/computer-use"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/computer-use"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Computer use</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Computer use</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/file-search"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>File search</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/tool-combination"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/tool-combination"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
         <span class="devsite-nav-text" tooltip>Live API</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1154,6 +1106,14 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/capabilities"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Capabilities</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-preview"><a href="/gemini-api/docs/live-api/thinking"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Thinking</span><span class="devsite-nav-icon material-icons"
+        data-icon="preview"
+        data-title="Preview"
+        aria-hidden="true"></span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/live-transcribe"
         class="devsite-nav-title"
@@ -1171,13 +1131,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Session management</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/best-practices"
         class="devsite-nav-title"
@@ -1196,29 +1152,17 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Batch API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/webhooks"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/flex-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/flex-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Flex inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Flex inference</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/priority-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/priority-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Priority inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Priority inference</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/caching"
         class="devsite-nav-title"
@@ -1378,13 +1322,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Deploying your app</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/aistudio-agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item
-           devsite-nav-experimental"><a href="/gemini-api/docs/learnlm"
+      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/learnlm"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span><span class="devsite-nav-icon material-icons"
-        data-icon="experimental"
-        data-title="Experimental!"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
+      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Troubleshooting</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/workspace"
         class="devsite-nav-title"
@@ -1487,7 +1427,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1629,7 +1569,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1639,7 +1579,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -1724,7 +1664,7 @@ aren&#39;t already using the OpenAI libraries, we recommend that you call the
 <span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-n">response</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">chat</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">completions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">messages</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
         <span class="devsite-syntax-p">{</span>   <span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"system"</span><span class="devsite-syntax-p">,</span>
             <span class="devsite-syntax-s2">"content"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"You are a helpful assistant."</span>
@@ -1746,7 +1686,7 @@ aren&#39;t already using the OpenAI libraries, we recommend that you call the
 <span class="devsite-syntax-p">});</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">openai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">chat</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">completions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">messages</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w">   </span><span class="devsite-syntax-nx">role</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"system"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">            </span><span class="devsite-syntax-nx">content</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"You are a helpful assistant."</span><span class="devsite-syntax-w"> </span>
@@ -1764,7 +1704,7 @@ aren&#39;t already using the OpenAI libraries, we recommend that you call the
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Authorization: Bearer </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">    "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">    "messages": [</span>
 <span class="devsite-syntax-s1">      {</span>
 <span class="devsite-syntax-s1">        "role": "user",</span>
@@ -1782,7 +1722,7 @@ API key, which you can get in <a href="https://aistudio.google.com">Google AI St
 <li><p><strong><code translate="no" dir="ltr">base_url=&quot;https://generativelanguage.googleapis.com/v1beta/openai/&quot;</code>:</strong> This
 tells the OpenAI library to send requests to the Gemini API endpoint instead of
 the default URL.</p></li>
-<li><p><strong><code translate="no" dir="ltr">model=&quot;gemini-3.7-flash&quot;</code></strong>: Choose a compatible Gemini model</p></li>
+<li><p><strong><code translate="no" dir="ltr">model=&quot;gemini-3.8-flash&quot;</code></strong>: Choose a compatible Gemini model</p></li>
 </ul>
 
 <h2 id="thinking" data-text="Thinking" tabindex="-1">Thinking</h2>
@@ -1851,7 +1791,7 @@ default <a href="/gemini-api/docs/thinking#levels">level</a> or <a href="/gemini
 <span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-n">response</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">chat</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">completions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">reasoning_effort</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"low"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">messages</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
         <span class="devsite-syntax-p">{</span>   <span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"system"</span><span class="devsite-syntax-p">,</span>
@@ -1874,7 +1814,7 @@ default <a href="/gemini-api/docs/thinking#levels">level</a> or <a href="/gemini
 <span class="devsite-syntax-p">});</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">openai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">chat</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">completions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">reasoning_effort</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"low"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">messages</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w">   </span><span class="devsite-syntax-nx">role</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"system"</span><span class="devsite-syntax-p">,</span>
@@ -1893,7 +1833,7 @@ default <a href="/gemini-api/docs/thinking#levels">level</a> or <a href="/gemini
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Authorization: Bearer </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">    "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">    "reasoning_effort": "low",</span>
 <span class="devsite-syntax-s1">    "messages": [</span>
 <span class="devsite-syntax-s1">      {</span>
@@ -1919,7 +1859,7 @@ functionality, so they can&#39;t be used at the same time.</p>
 <span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-n">response</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">chat</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">completions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">messages</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[{</span><span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"content"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"Explain to me how AI works"</span><span class="devsite-syntax-p">}],</span>
     <span class="devsite-syntax-n">extra_body</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">{</span>
       <span class="devsite-syntax-s1">'extra_body'</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-p">{</span>
@@ -1943,7 +1883,7 @@ functionality, so they can&#39;t be used at the same time.</p>
 <span class="devsite-syntax-p">});</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">openai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">chat</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">completions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">messages</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[{</span><span class="devsite-syntax-nx">role</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">content</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Explain to me how AI works"</span><span class="devsite-syntax-p">,}],</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">extra_body</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">      </span><span class="devsite-syntax-s2">"google"</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
@@ -1961,7 +1901,7 @@ functionality, so they can&#39;t be used at the same time.</p>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Authorization: Bearer GEMINI_API_KEY"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">      "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">      "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">        "messages": [{"role": "user", "content": "Explain to me how AI works"}],</span>
 <span class="devsite-syntax-s1">        "extra_body": {</span>
 <span class="devsite-syntax-s1">          "google": {</span>
@@ -1989,7 +1929,7 @@ APIs. You can find the full example on the <a href="/gemini-api/docs/thought-sig
 <span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-n">response</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">chat</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">completions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-  <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+  <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
   <span class="devsite-syntax-n">messages</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
     <span class="devsite-syntax-p">{</span>
         <span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"system"</span><span class="devsite-syntax-p">,</span>
@@ -2014,7 +1954,7 @@ APIs. You can find the full example on the <a href="/gemini-api/docs/thought-sig
 
 <span class="devsite-syntax-k">async</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">main</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">completion</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">openai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">chat</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">completions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">messages</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">          </span><span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"system"</span><span class="devsite-syntax-p">,</span>
@@ -2039,7 +1979,7 @@ APIs. You can find the full example on the <a href="/gemini-api/docs/thought-sig
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Authorization: Bearer GEMINI_API_KEY"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">      "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">      "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">      "messages": [</span>
 <span class="devsite-syntax-s1">          {"role": "user", "content": "Explain to me how AI works"}</span>
 <span class="devsite-syntax-s1">      ],</span>
@@ -2082,7 +2022,7 @@ generative models and is <a href="/gemini-api/docs/function-calling/tutorial">su
 
 <span class="devsite-syntax-n">messages</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-p">[{</span><span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"content"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"What's the weather like in Chicago today?"</span><span class="devsite-syntax-p">}]</span>
 <span class="devsite-syntax-n">response</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">chat</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">completions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-  <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+  <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
   <span class="devsite-syntax-n">messages</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">messages</span><span class="devsite-syntax-p">,</span>
   <span class="devsite-syntax-n">tools</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">tools</span><span class="devsite-syntax-p">,</span>
   <span class="devsite-syntax-n">tool_choice</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"auto"</span>
@@ -2121,7 +2061,7 @@ generative models and is <a href="/gemini-api/docs/function-calling/tutorial">su
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">];</span>
 
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">openai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">chat</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">completions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">messages</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">messages</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">tools</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">tools</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">tool_choice</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"auto"</span><span class="devsite-syntax-p">,</span>
@@ -2136,7 +2076,7 @@ generative models and is <a href="/gemini-api/docs/function-calling/tutorial">su
 -H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 -H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Authorization: Bearer GEMINI_API_KEY"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 -d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">  "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">  "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">  "messages": [</span>
 <span class="devsite-syntax-s1">    {</span>
 <span class="devsite-syntax-s1">      "role": "user",</span>
@@ -2192,7 +2132,7 @@ generative models and is <a href="/gemini-api/docs/function-calling/tutorial">su
 <span class="devsite-syntax-n">base64_image</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">encode_image</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"Path/to/agi/image.jpeg"</span><span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-n">response</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">chat</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">completions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-  <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+  <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
   <span class="devsite-syntax-n">messages</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
     <span class="devsite-syntax-p">{</span>
       <span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span>
@@ -2256,7 +2196,7 @@ generative models and is <a href="/gemini-api/docs/function-calling/tutorial">su
 
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">try</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">openai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">chat</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">completions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">messages</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">messages</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">});</span>
 
@@ -2274,7 +2214,7 @@ generative models and is <a href="/gemini-api/docs/function-calling/tutorial">su
 <span class="devsite-syntax-s1">    -H "Content-Type: application/json" \</span>
 <span class="devsite-syntax-s1">    -H "Authorization: Bearer GEMINI_API_KEY" \</span>
 <span class="devsite-syntax-s1">    -d "{</span>
-<span class="devsite-syntax-s1">      \"model\": \"gemini-3.7-flash\",</span>
+<span class="devsite-syntax-s1">      \"model\": \"gemini-3.8-flash\",</span>
 <span class="devsite-syntax-s1">      \"messages\": [</span>
 <span class="devsite-syntax-s1">        {</span>
 <span class="devsite-syntax-s1">          \"role\": \"user\",</span>
@@ -2478,7 +2418,7 @@ and retrieve the final video URL when complete:</p>
   <span class="devsite-syntax-n">base64_audio</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">base64</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">b64encode</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">audio_file</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">read</span><span class="devsite-syntax-p">())</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">decode</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'utf-8'</span><span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-n">response</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">chat</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">completions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">messages</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
     <span class="devsite-syntax-p">{</span>
       <span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span>
@@ -2514,7 +2454,7 @@ and retrieve the final video URL when complete:</p>
 
 <span class="devsite-syntax-k">async</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">main</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">chat</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">completions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">messages</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">role</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span>
@@ -2547,7 +2487,7 @@ audio file might be too long for curl.</span></aside><div></div><devsite-code><p
 <span class="devsite-syntax-s1">    -H "Content-Type: application/json" \</span>
 <span class="devsite-syntax-s1">    -H "Authorization: Bearer GEMINI_API_KEY" \</span>
 <span class="devsite-syntax-s1">    -d "{</span>
-<span class="devsite-syntax-s1">      \"model\": \"gemini-3.7-flash\",</span>
+<span class="devsite-syntax-s1">      \"model\": \"gemini-3.8-flash\",</span>
 <span class="devsite-syntax-s1">      \"messages\": [</span>
 <span class="devsite-syntax-s1">        {</span>
 <span class="devsite-syntax-s1">          \"role\": \"user\",</span>
@@ -2585,7 +2525,7 @@ audio file might be too long for curl.</span></aside><div></div><devsite-code><p
     <span class="devsite-syntax-n">participants</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-nb">list</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nb">str</span><span class="devsite-syntax-p">]</span>
 
 <span class="devsite-syntax-n">completion</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">beta</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">chat</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">completions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">parse</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">messages</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
         <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"system"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"content"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"Extract the event information."</span><span class="devsite-syntax-p">},</span>
         <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"content"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"John and Susan are going to an AI conference on Friday."</span><span class="devsite-syntax-p">},</span>
@@ -2611,7 +2551,7 @@ audio file might be too long for curl.</span></aside><div></div><devsite-code><p
 <span class="devsite-syntax-p">});</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">completion</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">openai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">chat</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">completions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">parse</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">messages</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">role</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"system"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">content</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Extract the event information."</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">role</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">content</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"John and Susan are going to an AI conference on Friday"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
@@ -2677,8 +2617,8 @@ using the <a href="/gemini-api/docs/embeddings">Gemini API</a>. You can use
 their status using the OpenAI library.</p>
 
 <p>You&#39;ll need to prepare the JSONL file in OpenAI input format. For example:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nt">"custom_id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"request-1"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"method"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"POST"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"url"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"/v1/chat/completions"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"body"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nt">"model"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"messages"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[{</span><span class="devsite-syntax-nt">"role"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"content"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Tell me a one-sentence joke."</span><span class="devsite-syntax-p">}]}}</span>
-<span class="devsite-syntax-p">{</span><span class="devsite-syntax-nt">"custom_id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"request-2"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"method"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"POST"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"url"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"/v1/chat/completions"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"body"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nt">"model"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"messages"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[{</span><span class="devsite-syntax-nt">"role"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"content"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Why is the sky blue?"</span><span class="devsite-syntax-p">}]}}</span>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nt">"custom_id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"request-1"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"method"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"POST"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"url"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"/v1/chat/completions"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"body"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nt">"model"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"messages"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[{</span><span class="devsite-syntax-nt">"role"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"content"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Tell me a one-sentence joke."</span><span class="devsite-syntax-p">}]}}</span>
+<span class="devsite-syntax-p">{</span><span class="devsite-syntax-nt">"custom_id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"request-2"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"method"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"POST"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"url"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"/v1/chat/completions"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"body"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nt">"model"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"messages"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[{</span><span class="devsite-syntax-nt">"role"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">"content"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Why is the sky blue?"</span><span class="devsite-syntax-p">}]}}</span>
 </code></pre></devsite-code>
 <p>OpenAI compatibility for Batch supports creating a batch,
 monitoring job status, and viewing batch results.</p>
@@ -2761,7 +2701,7 @@ inference tiers.</p>
 <span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-n">completion</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">chat</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">completions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-  <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+  <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
   <span class="devsite-syntax-n">messages</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
     <span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"role"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">,</span> <span class="devsite-syntax-s2">"content"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"Write a short poem about clouds."</span><span class="devsite-syntax-p">}</span>
   <span class="devsite-syntax-p">],</span>
@@ -2920,7 +2860,7 @@ models but can be enabled using the <code translate="no" dir="ltr">extra_body</c
 <span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-n">stream</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">chat</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">completions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">n</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">messages</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
         <span class="devsite-syntax-p">{</span>
@@ -2991,7 +2931,7 @@ models but can be enabled using the <code translate="no" dir="ltr">extra_body</c
   <span class="devsite-syntax-n">base_url</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"https://generativelanguage.googleapis.com/v1beta/openai/"</span>
 <span class="devsite-syntax-p">)</span>
 
-<span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">models</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">retrieve</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-n">model</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">models</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">retrieve</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">id</span><span class="devsite-syntax-p">)</span>
 </code></pre></devsite-code></section>
 <section><h3 id="javascript_13" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-k">import</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">OpenAI</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kr">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"openai"</span><span class="devsite-syntax-p">;</span>
@@ -3002,13 +2942,13 @@ models but can be enabled using the <code translate="no" dir="ltr">extra_body</c
 <span class="devsite-syntax-p">});</span>
 
 <span class="devsite-syntax-k">async</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">main</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">openai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">retrieve</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">openai</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">retrieve</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">);</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">id</span><span class="devsite-syntax-p">);</span>
 <span class="devsite-syntax-p">}</span>
 
 <span class="devsite-syntax-nx">main</span><span class="devsite-syntax-p">();</span>
 </code></pre></devsite-code></section>
-<section><h3 id="rest_12" data-text="REST" tabindex="-1">REST</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Bash"><code translate="no" dir="ltr">curl<span class="devsite-syntax-w"> </span>https://generativelanguage.googleapis.com/v1beta/openai/models/gemini-3.7-flash<span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
+<section><h3 id="rest_12" data-text="REST" tabindex="-1">REST</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Bash"><code translate="no" dir="ltr">curl<span class="devsite-syntax-w"> </span>https://generativelanguage.googleapis.com/v1beta/openai/models/gemini-3.8-flash<span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 -H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Authorization: Bearer GEMINI_API_KEY"</span>
 </code></pre></devsite-code></section>
 </devsite-selector></div>
@@ -3043,7 +2983,7 @@ examples.</p>
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -3053,7 +2993,7 @@ examples.</p>
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -3076,7 +3016,7 @@ examples.</p>
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-08-17 UTC.</p>
+  <p>Last updated 2026-09-02 UTC.</p>
 </devsite-content-footer>
 
 

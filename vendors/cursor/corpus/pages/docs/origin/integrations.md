@@ -21,7 +21,9 @@ See [Automations](https://cursor.com/docs/cloud-agent/automations.md) for billin
 
 ## Cloud agents
 
-[Cloud agents](https://cursor.com/docs/cloud-agent.md) can work against Origin repositories: clone, branch, commit, push, and open pull requests.
+[Cloud agents](https://cursor.com/docs/cloud-agent.md) can work against Origin repositories: clone, branch, commit, and push.
+
+On a repository created on Origin, agents can open Origin pull requests. On a repository [mirrored from GitHub](https://cursor.com/docs/origin/mirror-github.md), agents open GitHub pull requests.
 
 Attach a cloud agent to an Origin repo from your team's codebase the same way you attach one to other connected source control. Agents use your Cursor account's Origin access.
 
@@ -33,7 +35,7 @@ A local agent in Cursor can also [create Origin repositories](https://cursor.com
 
 - [Create a repository](https://cursor.com/docs/origin/create-repository.md)
 - [Pull requests](https://cursor.com/docs/origin/pull-requests.md)
-- [Origin API](https://cursor.com/docs/api/origin.md)
+- [Origin API](https://cursor.com/docs/api/origin/llms-full.txt)
 
 
 ---

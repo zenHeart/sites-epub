@@ -4,8 +4,8 @@ Use these controls and deployment details to decide whether Grok Bot is allowed 
 
 **Enterprise only** on the Grok Bot dashboard: the organization-wide enable
 switch, **Network Controls**, **Team Setup**, **Action Recording**,
-**Enforce Auto-review** with its team rules, and computer management for
-organization admins. Audit logs, OpenTelemetry
+**Allow Local Egress**, **Enforce Auto-review** with its team rules, and
+computer management for organization admins. Audit logs, OpenTelemetry
 Export, the MCP allowlist, and SCIM are also Enterprise only. Self-serve
 Teams do not see those settings. The full list is on
 [admin controls](https://cursor.com/docs/grok-bot/teams.md#admin-controls).
@@ -30,11 +30,11 @@ Blocking a plugin doesn't block that service's website. The connector policy and
 
 ## Static egress IPs
 
-Hosted computers reach the internet through shared static egress IP addresses. The ranges are shared across Grok Bot customers, and dedicated per-customer IPs are not available, so treat the ranges as identifying Grok Bot traffic rather than your team alone. Current ranges are available from your account team, and the product control is the destination allowlist rather than a source IP editor.
+Hosted computers reach the internet through shared static egress IP addresses by default. The ranges are shared across Grok Bot customers, and dedicated per-customer IPs are not available, so treat the ranges as identifying Grok Bot traffic rather than your team alone. Current ranges are available from your account team, and the product control is the destination allowlist rather than a source IP editor.
 
 If member devices sit behind Zscaler or another TLS-inspecting gateway, allow Cursor's domains and exempt them from inspection on every profile, including off-network. See [Configure TLS-inspecting proxies](https://cursor.com/docs/grok-bot/proxies.md).
 
-**Team Setup is Enterprise only.** Those teams can install their own networking client on every team computer to reach private services. That path is separate from these shared egress ranges. See [Connect to private networks](https://cursor.com/docs/grok-bot/private-networks.md).
+Members can route traffic through their desktop to use its network and IP address. **Team Setup is Enterprise only.** Those teams can also install their own networking client on every team computer. Both paths are separate from the shared egress ranges. See [Connect to private networks](https://cursor.com/docs/grok-bot/private-networks.md).
 
 ## Approvals and Auto Review
 
@@ -65,7 +65,7 @@ A Bot has no identity or credentials of its own:
 - **Connector tokens stay on Cursor's backend.** Bots invoke tools without receiving OAuth tokens, and tokens are never stored on the computer.
 - **Credentials stay with the member.** For login, two-factor, and payment steps, the Bot hands the computer to the member rather than typing credentials. For supported connections, a secure secret request masks the entered value and keeps it out of the transcript and away from the model; passwords and one-time codes never belong in ordinary chat. See [Store secrets securely](https://cursor.com/help/grok-bot/secrets.md).
 
-To revoke access quickly, an organization admin terminates the member's computer from the dashboard. That computer management control is Enterprise only. The durable disk is kept, and the next session starts a fresh computer. You also revoke sessions in your identity provider. Application sessions persist only on the member's computer.
+To end a member's current work, an organization admin terminates the member's computer from the dashboard; see [Manage Grok Bot computers](https://cursor.com/docs/grok-bot/computers.md). That control is Enterprise only. It stops running Bots, keeps the durable disk, and the member's next session starts a fresh computer. It does not remove access. To remove access, remove the member from the team or turn off Grok Bot for their group, and revoke their sessions in your identity provider. Application sessions persist only on the member's computer.
 
 When a project or login should no longer be available, members clean up directly: pause or delete related routines, sign out of websites on the computer, uninstall plugins and revoke their authorization in the source service, and remove sensitive files from `/workspace`. Deleting a Bot doesn't remove computer files or browser sessions.
 
@@ -112,7 +112,7 @@ Per-command approval is the default, and the approval card shows the exact comma
 
 ## Hosting
 
-Grok Bot runs only on Cursor-hosted cloud computers. On-premises deployment, deployment inside your own perimeter, and bring-your-own-image deployment are not supported today, and Cursor doesn't operate a VPN, tunnel, or private link into your network for Grok Bot. The supported model is shared static egress combined with the destination allowlist. **Team Setup is Enterprise only.** Those teams can install their own networking client on every team computer to reach private services; see [Connect to private networks](https://cursor.com/docs/grok-bot/private-networks.md).
+Grok Bot runs only on Cursor-hosted cloud computers. On-premises deployment, deployment inside your own perimeter, and bring-your-own-image deployment are not supported today. Hosted computers use shared static egress by default. Members can route traffic through their desktop, and Enterprise teams can install a networking client with **Team Setup**. See [Connect to private networks](https://cursor.com/docs/grok-bot/private-networks.md).
 
 ## Prompt injection
 

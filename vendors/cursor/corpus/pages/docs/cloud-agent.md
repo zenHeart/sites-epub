@@ -14,7 +14,7 @@ Cloud agents can also run in multi-repo environments. Use one when a task spans 
 
 ## How to access
 
-Before anyone can start a cloud agent from a repository, a Cursor account admin needs to connect source control for the account. Set up [GitHub (Cloud and Enterprise Server)](https://cursor.com/docs/integrations/github.md), [GitLab (Cloud and Self-Hosted)](https://cursor.com/docs/integrations/gitlab.md), [Bitbucket Cloud](https://cursor.com/docs/integrations/bitbucket.md), or [Azure DevOps](https://cursor.com/docs/integrations/azure-devops.md).
+Before anyone can start a cloud agent from a repository, a Cursor account admin needs to connect source control for the account. Set up [GitHub (Cloud and Enterprise Server)](https://cursor.com/docs/integrations/github.md), [GitLab (Cloud and Self-Hosted)](https://cursor.com/docs/integrations/gitlab.md), [Bitbucket Cloud](https://cursor.com/docs/integrations/bitbucket.md), or [Azure DevOps](https://cursor.com/docs/integrations/azure-devops.md). To start without a repository, use [Start from scratch](https://cursor.com/docs/cloud-agent/setup.md#start-from-scratch).
 
 You can kick off cloud agents from wherever you work:
 
@@ -58,7 +58,7 @@ The Cloud Agents dashboard shows which environment and Build an agent used, alon
 
 Cursor manages VM provisioning, isolation, snapshots, startup, artifacts, and capacity for every Cloud Agent. You can add secrets, restrict outbound domains, connect to private networks with Tailscale or a similar client, and use private connectivity for supported source control paths.
 
-See [Cloud Agent security and network](https://cursor.com/docs/cloud-agent/security-network.md) for the full set of environment and network controls. If you're weighing whether to self-host, see [why most teams start with Cursor Cloud](https://cursor.com/docs/cloud-agent/self-hosted.md).
+See [Cloud Agent security and network](https://cursor.com/docs/cloud-agent/security-network.md) for the full set of environment and network controls. To run tool execution on hardware you manage, see [Self-Hosted Machines](https://cursor.com/docs/cloud-agent/self-hosted.md).
 
 ## Models
 
@@ -125,7 +125,7 @@ Cloud Agents are charged at API pricing for the selected [model](https://cursor.
 
 - Ensure you've added secrets in [cursor.com/dashboard/cloud-agents](https://cursor.com/dashboard/cloud-agents)
 - Secrets are workspace/team-scoped; make sure you're using the correct account
-- Try restarting the cloud agent after adding new secrets
+- Secrets are injected when an agent starts. Agents already running won't pick up new secrets, so start a new agent after adding them
 
 ### Can't find the Secrets tab
 

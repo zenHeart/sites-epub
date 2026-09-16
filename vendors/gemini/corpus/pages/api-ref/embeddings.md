@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/api/embeddings"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/api/embeddings"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://ai.google.dev/api/embeddings" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/api/embeddings" /><link rel="alternate" hreflang="ar"
@@ -874,21 +874,13 @@
         <span class="devsite-nav-text" tooltip>Real time APIs</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/api/live"
+  <li class="devsite-nav-item"><a href="/api/live"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Live API</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Live API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/api/live_music"
+  <li class="devsite-nav-item"><a href="/api/live_music"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Live Music API</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Live Music API</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -899,37 +891,21 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Model API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/agents"
+  <li class="devsite-nav-item"><a href="/api/agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Agents</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/webhooks"
+  <li class="devsite-nav-item"><a href="/api/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/triggers"
+  <li class="devsite-nav-item"><a href="/api/triggers"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Triggers</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Triggers</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/environments"
+  <li class="devsite-nav-item"><a href="/api/environments"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Environments</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Environments</span></a></li>
 
   <li class="devsite-nav-item"><a href="/api/batch-api"
         class="devsite-nav-title"
@@ -1075,7 +1051,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1217,7 +1193,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1227,7 +1203,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -1484,7 +1460,7 @@
     <span class="devsite-syntax-n">contents</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">text</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">config</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">types</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">EmbedContentConfig</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">output_dimensionality</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-mi">10</span><span class="devsite-syntax-p">),</span>
 <span class="devsite-syntax-p">)</span>
-<span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">result</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">embeddings</span><span class="devsite-syntax-p">)</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/51979868abf95d062a149b62af92854b2a24f005/python/embed.py#L22-L32" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/python/embed.py#embed_content" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/python/embed.py" data-indented-block="" data-regexp="" data-region-tag="embed_content"><span class="devsite-syntax-n">embed</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">py</span></a></div></code></pre></devsite-code>
+<span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">result</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">embeddings</span><span class="devsite-syntax-p">)</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/13db4d358757eda215c546f431b372b303f71f3e/python/embed.py#L22-L32" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/python/embed.py#embed_content" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/python/embed.py" data-indented-block="" data-regexp="" data-region-tag="embed_content"><span class="devsite-syntax-n">embed</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">py</span></a></div></code></pre></devsite-code>
 </div>
 
 
@@ -1588,7 +1564,7 @@
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">contents</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">text</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">config</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">outputDimensionality</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">10</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
 <span class="devsite-syntax-p">});</span>
-<span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">embeddings</span><span class="devsite-syntax-p">);</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/51979868abf95d062a149b62af92854b2a24f005/javascript/embed.js#L22-L31" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/javascript/embed.js#embed_content" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/javascript/embed.js" data-indented-block="" data-regexp="" data-region-tag="embed_content"><span class="devsite-syntax-nx">embed</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+<span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">embeddings</span><span class="devsite-syntax-p">);</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/13db4d358757eda215c546f431b372b303f71f3e/javascript/embed.js#L22-L31" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/javascript/embed.js#embed_content" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/javascript/embed.js" data-indented-block="" data-regexp="" data-region-tag="embed_content"><span class="devsite-syntax-nx">embed</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
 </div>
 
 
@@ -1709,7 +1685,7 @@
 <span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">!=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">nil</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">	</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Fatal</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-nx">fmt</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Println</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nb">string</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">embeddings</span><span class="devsite-syntax-p">))</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/51979868abf95d062a149b62af92854b2a24f005/go/embed.go#L15-L41" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/go/embed.go#embed_content" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/go/embed.go" data-indented-block="" data-regexp="" data-region-tag="embed_content"><span class="devsite-syntax-nx">embed</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">go</span></a></div></code></pre></devsite-code>
+<span class="devsite-syntax-nx">fmt</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Println</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nb">string</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">embeddings</span><span class="devsite-syntax-p">))</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/13db4d358757eda215c546f431b372b303f71f3e/go/embed.go#L15-L41" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/go/embed.go#embed_content" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/go/embed.go" data-indented-block="" data-regexp="" data-region-tag="embed_content"><span class="devsite-syntax-nx">embed</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">go</span></a></div></code></pre></devsite-code>
 </div>
 
 
@@ -1811,7 +1787,7 @@
 <span class="devsite-syntax-s1">     "content": {</span>
 <span class="devsite-syntax-s1">     "parts":[{</span>
 <span class="devsite-syntax-s1">     "text": "What is the meaning of life?"}]}</span>
-<span class="devsite-syntax-s1">    }'</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/51979868abf95d062a149b62af92854b2a24f005/rest/embed.sh#L4-L12" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/rest/embed.sh#embed_content" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/rest/embed.sh" data-indented-block="" data-regexp="" data-region-tag="embed_content">embed.sh</a></div></code></pre></devsite-code>
+<span class="devsite-syntax-s1">    }'</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/13db4d358757eda215c546f431b372b303f71f3e/rest/embed.sh#L4-L12" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/rest/embed.sh#embed_content" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/rest/embed.sh" data-indented-block="" data-regexp="" data-region-tag="embed_content">embed.sh</a></div></code></pre></devsite-code>
 </div>
 
 
@@ -2021,7 +1997,7 @@
     <span class="devsite-syntax-n">contents</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">texts</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">config</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">types</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">EmbedContentConfig</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">output_dimensionality</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-mi">10</span><span class="devsite-syntax-p">),</span>
 <span class="devsite-syntax-p">)</span>
-<span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">result</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">embeddings</span><span class="devsite-syntax-p">)</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/51979868abf95d062a149b62af92854b2a24f005/python/embed.py#L37-L51" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/python/embed.py#batch_embed_contents" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/python/embed.py" data-indented-block="" data-regexp="" data-region-tag="batch_embed_contents"><span class="devsite-syntax-n">embed</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">py</span></a></div></code></pre></devsite-code>
+<span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">result</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">embeddings</span><span class="devsite-syntax-p">)</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/13db4d358757eda215c546f431b372b303f71f3e/python/embed.py#L37-L51" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/python/embed.py#batch_embed_contents" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/python/embed.py" data-indented-block="" data-regexp="" data-region-tag="batch_embed_contents"><span class="devsite-syntax-n">embed</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">py</span></a></div></code></pre></devsite-code>
 </div>
 
 
@@ -2129,7 +2105,7 @@
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">contents</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">texts</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">config</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">outputDimensionality</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">10</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
 <span class="devsite-syntax-p">});</span>
-<span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">embeddings</span><span class="devsite-syntax-p">);</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/51979868abf95d062a149b62af92854b2a24f005/javascript/embed.js#L38-L51" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/javascript/embed.js#batch_embed_contents" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/javascript/embed.js" data-indented-block="" data-regexp="" data-region-tag="batch_embed_contents"><span class="devsite-syntax-nx">embed</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+<span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">embeddings</span><span class="devsite-syntax-p">);</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/13db4d358757eda215c546f431b372b303f71f3e/javascript/embed.js#L38-L51" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/javascript/embed.js#batch_embed_contents" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/javascript/embed.js" data-indented-block="" data-regexp="" data-region-tag="batch_embed_contents"><span class="devsite-syntax-nx">embed</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
 </div>
 
 
@@ -2251,7 +2227,7 @@
 <span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">!=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">nil</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">	</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Fatal</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-nx">fmt</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Println</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nb">string</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">embeddings</span><span class="devsite-syntax-p">))</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/51979868abf95d062a149b62af92854b2a24f005/go/embed.go#L48-L75" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/go/embed.go#batch_embed_contents" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/go/embed.go" data-indented-block="" data-regexp="" data-region-tag="batch_embed_contents"><span class="devsite-syntax-nx">embed</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">go</span></a></div></code></pre></devsite-code>
+<span class="devsite-syntax-nx">fmt</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Println</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nb">string</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">embeddings</span><span class="devsite-syntax-p">))</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/13db4d358757eda215c546f431b372b303f71f3e/go/embed.go#L48-L75" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/go/embed.go#batch_embed_contents" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/go/embed.go" data-indented-block="" data-regexp="" data-region-tag="batch_embed_contents"><span class="devsite-syntax-nx">embed</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">go</span></a></div></code></pre></devsite-code>
 </div>
 
 
@@ -2363,7 +2339,7 @@
 <span class="devsite-syntax-s1">      "model": "models/gemini-embedding-001",</span>
 <span class="devsite-syntax-s1">      "content": {</span>
 <span class="devsite-syntax-s1">      "parts":[{</span>
-<span class="devsite-syntax-s1">        "text": "How does the brain work?"}]}, }, ]}'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-m">2</span>&gt;<span class="devsite-syntax-w"> </span>/dev/null<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">|</span><span class="devsite-syntax-w"> </span>grep<span class="devsite-syntax-w"> </span>-C<span class="devsite-syntax-w"> </span><span class="devsite-syntax-m">5</span><span class="devsite-syntax-w"> </span>values<div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/51979868abf95d062a149b62af92854b2a24f005/rest/embed.sh#L16-L34" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/rest/embed.sh#batch_embed_contents" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/rest/embed.sh" data-indented-block="" data-regexp="" data-region-tag="batch_embed_contents">embed.sh</a></div></code></pre></devsite-code>
+<span class="devsite-syntax-s1">        "text": "How does the brain work?"}]}, }, ]}'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-m">2</span>&gt;<span class="devsite-syntax-w"> </span>/dev/null<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">|</span><span class="devsite-syntax-w"> </span>grep<span class="devsite-syntax-w"> </span>-C<span class="devsite-syntax-w"> </span><span class="devsite-syntax-m">5</span><span class="devsite-syntax-w"> </span>values<div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/13db4d358757eda215c546f431b372b303f71f3e/rest/embed.sh#L16-L34" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/rest/embed.sh#batch_embed_contents" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/rest/embed.sh" data-indented-block="" data-regexp="" data-region-tag="batch_embed_contents">embed.sh</a></div></code></pre></devsite-code>
 </div>
 
 
@@ -3943,7 +3919,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -3953,7 +3929,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   

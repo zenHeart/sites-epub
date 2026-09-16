@@ -4,6 +4,8 @@
 
 Every documentation page is available as markdown: append `.md` to its URL, or request the page URL with an `Accept: text/markdown` header.
 
+Add the programming language you want code examples in to the `Accept-Language` header (for example `Accept-Language: en, python`) to receive only that language’s examples. Pin an SDK with a subtag: `python-xai`, `python-openai`, `javascript-ai-sdk`, `javascript-openai`.
+
 ## API
 
 - [Get Started](https://docs.x.ai/developers/quickstart.md)
@@ -71,6 +73,7 @@ Every documentation page is available as markdown: append `.md` to its URL, or r
 - [Advanced API Usage — Async Requests](https://docs.x.ai/developers/advanced-api-usage/async.md)
 - [Advanced API Usage — WebSocket Mode](https://docs.x.ai/developers/advanced-api-usage/websocket-mode.md)
 - [Advanced API Usage — mTLS Authentication](https://docs.x.ai/developers/advanced-api-usage/mtls.md)
+- [Advanced API Usage — Regional Endpoints](https://docs.x.ai/developers/advanced-api-usage/regions.md)
 - [Advanced API Usage — Cost Tracking](https://docs.x.ai/developers/cost-tracking.md)
 - [Advanced API Usage — Debugging Errors](https://docs.x.ai/developers/debugging.md)
 - [Platforms](https://docs.x.ai/developers/community.md)
@@ -89,7 +92,6 @@ Every documentation page is available as markdown: append `.md` to its URL, or r
 - [Inference API](https://docs.x.ai/developers/rest-api-reference/inference.md)
 - [Inference API — Responses](https://docs.x.ai/developers/rest-api-reference/inference/responses.md)
 - [Inference API — Chat Completions](https://docs.x.ai/developers/rest-api-reference/inference/chat-completions.md)
-- [Inference API — Embeddings](https://docs.x.ai/developers/rest-api-reference/inference/embeddings.md)
 - [Inference API — Images](https://docs.x.ai/developers/rest-api-reference/inference/images.md)
 - [Inference API — Videos](https://docs.x.ai/developers/rest-api-reference/inference/videos.md)
 - [Inference API — Voice](https://docs.x.ai/developers/rest-api-reference/inference/voice.md)
@@ -97,7 +99,6 @@ Every documentation page is available as markdown: append `.md` to its URL, or r
 - [Inference API — Files — Upload a file](https://docs.x.ai/developers/rest-api-reference/files/upload.md)
 - [Inference API — Files — List files](https://docs.x.ai/developers/rest-api-reference/files/manage.md)
 - [Inference API — Files — Get file content](https://docs.x.ai/developers/rest-api-reference/files/download.md)
-- [Inference API — Files — Create a public URL](https://docs.x.ai/developers/rest-api-reference/files/public-urls.md)
 - [Inference API — Batches](https://docs.x.ai/developers/rest-api-reference/inference/batches.md)
 - [Inference API — Models](https://docs.x.ai/developers/rest-api-reference/inference/models.md)
 - [Inference API — Account](https://docs.x.ai/developers/rest-api-reference/inference/other.md)
@@ -161,10 +162,12 @@ Every documentation page is available as markdown: append `.md` to its URL, or r
 - [Manage and protect](https://docs.x.ai/grok-bot/settings-and-notifications.md)
 - [Manage and protect — Approvals, security, and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy.md)
 - [Manage and protect — Teams and enterprises](https://docs.x.ai/grok-bot/teams-and-enterprises.md)
-- [Manage and protect — Grok Bot security](https://docs.x.ai/grok-bot/security.md)
-- [Manage and protect — Grok Bot security FAQ](https://docs.x.ai/grok-bot/security-faq.md)
-- [Manage and protect — Identity and access](https://docs.x.ai/grok-bot/identity-and-access.md)
-- [Manage and protect — Private networks](https://docs.x.ai/grok-bot/private-networks.md)
+- [Manage and protect — Teams and enterprises — Identity and access](https://docs.x.ai/grok-bot/identity-and-access.md)
+- [Manage and protect — Teams and enterprises — Private networks](https://docs.x.ai/grok-bot/private-networks.md)
+- [Manage and protect — Teams and enterprises — TLS-inspecting proxies](https://docs.x.ai/grok-bot/proxies.md)
+- [Manage and protect — Teams and enterprises — Manage computers](https://docs.x.ai/grok-bot/computers.md)
+- [Manage and protect — Teams and enterprises — Grok Bot security](https://docs.x.ai/grok-bot/security.md)
+- [Manage and protect — Teams and enterprises — Grok Bot security FAQ](https://docs.x.ai/grok-bot/security-faq.md)
 - [Help](https://docs.x.ai/grok-bot/troubleshooting.md)
 - [Help — FAQ](https://docs.x.ai/grok-bot/faq.md)
 

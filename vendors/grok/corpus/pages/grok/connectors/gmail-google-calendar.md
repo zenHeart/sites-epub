@@ -65,9 +65,9 @@ Like Gmail, Google Calendar uses a tiered permission model.
 
 ## Privacy and security
 
-**We do not train on your data.** xAI does not use your Gmail or Google Calendar data for model training.
+**We do not train on your data.** SpaceXAI does not use your Gmail or Google Calendar data for model training.
 
-**Nothing is stored.** Conversations that use your Google connectors do not result in any of your email or calendar data being stored on xAI servers. Grok accesses your data in real time when you ask a question, and does not retain it afterward.
+**Nothing is stored.** Conversations that use your Google connectors do not result in any of your email or calendar data being stored on SpaceXAI servers. Grok accesses your data in real time when you ask a question, and does not retain it afterward.
 
 **You control access.** Disconnect at any time to immediately revoke Grok's access to your Google account.
 

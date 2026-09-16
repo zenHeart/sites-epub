@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/streaming"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/streaming"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://ai.google.dev/gemini-api/docs/streaming" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/gemini-api/docs/streaming" /><link rel="alternate" hreflang="ar"
@@ -881,7 +881,7 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/models"
         class="devsite-nav-title"
       
-        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
+        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.8-flash /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.8-live /gemini-api/docs/models/gemini-3.8-live-extended-thinking /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3.5 /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/latest-model"
         class="devsite-nav-title"
@@ -902,7 +902,7 @@
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/music-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Lyria 3</span></a></li>
+      ><span class="devsite-nav-text" tooltip>Lyria 3.5</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/realtime-music-generation"
         class="devsite-nav-title"
@@ -938,37 +938,17 @@
         <span class="devsite-nav-text" tooltip>Robotics</span>
       </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-overview"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-spatial"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-spatial"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-agentic"
+      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-agentic"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agentic vision</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-orchestration"
+      ><span class="devsite-nav-text" tooltip>Agentic vision</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-orchestration"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Task orchestration</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-streaming"
+      ><span class="devsite-nav-text" tooltip>Task orchestration</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-streaming"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-video-progress"
+      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-video-progress"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Video understanding</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Video understanding</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1007,21 +987,13 @@
            devsite-nav-expandable"><div class="devsite-expandable-nav">
       <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
         <span class="devsite-nav-text" tooltip>Speech and audio</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/speech-generation"
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/speech-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Speech generation</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
+      ><span class="devsite-nav-text" tooltip>Speech generation</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/transcribe"
+      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/transcribe"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio transcription</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Audio transcription</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1058,13 +1030,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Quickstart</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/antigravity-agent"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/antigravity-agent"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Antigravity agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Antigravity agent</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/custom-agents"
         class="devsite-nav-title"
@@ -1078,13 +1046,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Hooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/deep-research"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/deep-research"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Deep Research agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Deep Research agent</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1111,38 +1075,26 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>URL context</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/computer-use"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/computer-use"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Computer use</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Computer use</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/file-search"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>File search</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/tool-combination"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/tool-combination"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
         <span class="devsite-nav-text" tooltip>Live API</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1157,6 +1109,14 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/capabilities"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Capabilities</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-preview"><a href="/gemini-api/docs/live-api/thinking"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Thinking</span><span class="devsite-nav-icon material-icons"
+        data-icon="preview"
+        data-title="Preview"
+        aria-hidden="true"></span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/live-transcribe"
         class="devsite-nav-title"
@@ -1174,13 +1134,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Session management</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/best-practices"
         class="devsite-nav-title"
@@ -1199,29 +1155,17 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Batch API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/webhooks"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/flex-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/flex-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Flex inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Flex inference</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/priority-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/priority-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Priority inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Priority inference</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/caching"
         class="devsite-nav-title"
@@ -1381,13 +1325,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Deploying your app</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/aistudio-agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item
-           devsite-nav-experimental"><a href="/gemini-api/docs/learnlm"
+      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/learnlm"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span><span class="devsite-nav-icon material-icons"
-        data-icon="experimental"
-        data-title="Experimental!"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
+      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Troubleshooting</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/workspace"
         class="devsite-nav-title"
@@ -1490,7 +1430,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1632,7 +1572,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1642,7 +1582,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -1690,7 +1630,7 @@
 <span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
 
 <span class="devsite-syntax-n">stream</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"Count from 1 to 25."</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">stream</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-kc">True</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-p">)</span>
@@ -1704,7 +1644,7 @@
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-p">({});</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">stream</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Count from 1 to 25."</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">stream</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-p">});</span>
@@ -1733,7 +1673,7 @@
 
 <span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">builder</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">input</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">InteractionsInput</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Count from 1 to 25."</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">stream</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
@@ -1758,13 +1698,13 @@
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>--no-buffer<span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">    "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">    "input": "Count from 1 to 25.",</span>
 <span class="devsite-syntax-s1">    "stream": true</span>
 <span class="devsite-syntax-s1">  }'</span>
 </code></pre></devsite-code></section>
 </devsite-selector></div><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Transact-SQL" syntax-guessed><code translate="no" dir="ltr"><span class="devsite-syntax-nl">event</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">created</span>
-<span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">{</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-err">:{</span><span class="devsite-syntax-ss">"id"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"status"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"in_progress"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"object"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"model"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"gemini-3.7-flash"</span><span class="devsite-syntax-err">}</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"event_type"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction.created"</span><span class="devsite-syntax-err">}</span>
+<span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">{</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-err">:{</span><span class="devsite-syntax-ss">"id"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"status"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"in_progress"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"object"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"model"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"gemini-3.8-flash"</span><span class="devsite-syntax-err">}</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"event_type"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction.created"</span><span class="devsite-syntax-err">}</span>
 
 <span class="devsite-syntax-nl">event</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">status_update</span>
 <span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">{</span><span class="devsite-syntax-ss">"interaction_id"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"status"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"in_progress"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"event_type"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction.status_update"</span><span class="devsite-syntax-err">}</span>
@@ -1793,7 +1733,7 @@
 <span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">{</span><span class="devsite-syntax-ss">"index"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"event_type"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"step.stop"</span><span class="devsite-syntax-err">}</span>
 
 <span class="devsite-syntax-nl">event</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">completed</span>
-<span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">{</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-err">:{</span><span class="devsite-syntax-ss">"id"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"status"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"completed"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"usage"</span><span class="devsite-syntax-err">:{</span><span class="devsite-syntax-ss">"total_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">346</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_input_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">11</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"input_tokens_by_modality"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-o">[</span><span class="devsite-syntax-n">{"modality":"text","tokens":11}</span><span class="devsite-syntax-o">]</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_cached_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_output_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">90</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_tool_use_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_thought_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">245</span><span class="devsite-syntax-err">}</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"created"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"2026-05-12T18:44:51Z"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"updated"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"2026-05-12T18:44:51Z"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"service_tier"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"standard"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"object"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"model"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"gemini-3.7-flash"</span><span class="devsite-syntax-err">}</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"event_type"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction.completed"</span><span class="devsite-syntax-err">}</span>
+<span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">{</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-err">:{</span><span class="devsite-syntax-ss">"id"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"status"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"completed"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"usage"</span><span class="devsite-syntax-err">:{</span><span class="devsite-syntax-ss">"total_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">346</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_input_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">11</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"input_tokens_by_modality"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-o">[</span><span class="devsite-syntax-n">{"modality":"text","tokens":11}</span><span class="devsite-syntax-o">]</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_cached_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_output_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">90</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_tool_use_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_thought_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">245</span><span class="devsite-syntax-err">}</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"created"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"2026-05-12T18:44:51Z"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"updated"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"2026-05-12T18:44:51Z"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"service_tier"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"standard"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"object"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"model"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"gemini-3.8-flash"</span><span class="devsite-syntax-err">}</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"event_type"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction.completed"</span><span class="devsite-syntax-err">}</span>
 
 <span class="devsite-syntax-nl">event</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">done</span>
 <span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">[</span><span class="devsite-syntax-n">DONE</span><span class="devsite-syntax-o">]</span>
@@ -1821,7 +1761,7 @@
 
 <p>Sent when the interaction is first created. Contains the interaction ID, model, and initial status.</p>
 <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Carbon" syntax-guessed><code translate="no" dir="ltr"><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">created</span>
-<span class="devsite-syntax-nx">data</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-s">"interaction"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-s">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"model"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"status"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"in_progress"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"object"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"interaction"</span><span class="devsite-syntax-p">},</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"event_type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"interaction.created"</span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-nx">data</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-s">"interaction"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-s">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"model"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"status"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"in_progress"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"object"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"interaction"</span><span class="devsite-syntax-p">},</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"event_type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"interaction.created"</span><span class="devsite-syntax-p">}</span>
 </code></pre></devsite-code>
 <h3 id="event-interaction-status-update" data-text="interaction.status_update" tabindex="-1"><code translate="no" dir="ltr">interaction.status_update</code></h3>
 
@@ -1979,7 +1919,7 @@ stream, allowing the model to generate its final response.</li>
 
 <span class="devsite-syntax-c1"># Turn 1: Request function call</span>
 <span class="devsite-syntax-n">stream</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">tools</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-n">weather_tool</span><span class="devsite-syntax-p">],</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"What is the weather in Paris right now?"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">stream</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-kc">True</span><span class="devsite-syntax-p">,</span>
@@ -2010,7 +1950,7 @@ stream, allowing the model to generate its final response.</li>
     <span class="devsite-syntax-p">}</span>
 
     <span class="devsite-syntax-n">stream2</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-        <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+        <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
         <span class="devsite-syntax-n">previous_interaction_id</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">first_interaction_id</span><span class="devsite-syntax-p">,</span>
         <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[{</span>
             <span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"function_result"</span><span class="devsite-syntax-p">,</span>
@@ -2048,7 +1988,7 @@ stream, allowing the model to generate its final response.</li>
 
 <span class="devsite-syntax-c1">// Turn 1: Request function call</span>
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">stream</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">tools</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">weatherTool</span><span class="devsite-syntax-p">],</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"What is the weather in Paris right now?"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">stream</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">,</span>
@@ -2082,7 +2022,7 @@ stream, allowing the model to generate its final response.</li>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">};</span>
 
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">stream2</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">previous_interaction_id</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">firstInteractionId</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[{</span>
 <span class="devsite-syntax-w">            </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"function_result"</span><span class="devsite-syntax-p">,</span>
@@ -2119,7 +2059,7 @@ stream, allowing the model to generate its final response.</li>
 
 <span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">builder</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">input</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">InteractionsInput</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Count from 1 to 25."</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">stream</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
@@ -2145,7 +2085,7 @@ stream, allowing the model to generate its final response.</li>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>--no-buffer<span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">    "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">    "input": "What is the weather in Paris right now?",</span>
 <span class="devsite-syntax-s1">    "stream": true,</span>
 <span class="devsite-syntax-s1">    "tools": [</span>
@@ -2173,7 +2113,7 @@ stream, allowing the model to generate its final response.</li>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>--no-buffer<span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">    "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">    "previous_interaction_id": "v1_ChdGUVFJYXBXVUdLVEF4TjhQ...",</span>
 <span class="devsite-syntax-s1">    "stream": true,</span>
 <span class="devsite-syntax-s1">    "input": [</span>
@@ -2222,7 +2162,7 @@ stream, allowing the model to generate its final response.</li>
 <span class="devsite-syntax-p">]</span>
 
 <span class="devsite-syntax-n">stream</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">tools</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">tools</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"Search what is the largest mountain in Europe and what the weather is there right now?"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">stream</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-kc">True</span><span class="devsite-syntax-p">,</span>
@@ -2274,7 +2214,7 @@ stream, allowing the model to generate its final response.</li>
 <span class="devsite-syntax-p">];</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">stream</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">tools</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">tools</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Search what is the largest mountain in Europe and what the weather is there right now?"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">stream</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">,</span>
@@ -2324,7 +2264,7 @@ stream, allowing the model to generate its final response.</li>
 
 <span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">builder</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">input</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">InteractionsInput</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Count from 1 to 25."</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">stream</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
@@ -2349,7 +2289,7 @@ stream, allowing the model to generate its final response.</li>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>--no-buffer<span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">    "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">    "input": "Search what is the largest mountain in Europe and what the weather is there right now?",</span>
 <span class="devsite-syntax-s1">    "stream": true,</span>
 <span class="devsite-syntax-s1">    "tools": [</span>
@@ -2373,7 +2313,7 @@ stream, allowing the model to generate its final response.</li>
 <span class="devsite-syntax-s1">  }'</span>
 </code></pre></devsite-code></section>
 </devsite-selector></div><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Transact-SQL" syntax-guessed><code translate="no" dir="ltr"><span class="devsite-syntax-nl">event</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">created</span>
-<span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">{</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-err">:{</span><span class="devsite-syntax-ss">"id"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"status"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"in_progress"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"object"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"model"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"gemini-3.7-flash"</span><span class="devsite-syntax-err">}</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"event_type"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction.created"</span><span class="devsite-syntax-err">}</span>
+<span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">{</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-err">:{</span><span class="devsite-syntax-ss">"id"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"status"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"in_progress"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"object"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"model"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"gemini-3.8-flash"</span><span class="devsite-syntax-err">}</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"event_type"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction.created"</span><span class="devsite-syntax-err">}</span>
 
 <span class="devsite-syntax-nl">event</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">status_update</span>
 <span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">{</span><span class="devsite-syntax-ss">"interaction_id"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"status"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"in_progress"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"event_type"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction.status_update"</span><span class="devsite-syntax-err">}</span>
@@ -2415,7 +2355,7 @@ stream, allowing the model to generate its final response.</li>
 <span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">{</span><span class="devsite-syntax-ss">"index"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">3</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"event_type"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"step.stop"</span><span class="devsite-syntax-err">}</span>
 
 <span class="devsite-syntax-nl">event</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">completed</span>
-<span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">{</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-err">:{</span><span class="devsite-syntax-ss">"id"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"status"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"requires_action"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"usage"</span><span class="devsite-syntax-err">:{</span><span class="devsite-syntax-ss">"total_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">299</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_input_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">138</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"input_tokens_by_modality"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-o">[</span><span class="devsite-syntax-n">{"modality":"text","tokens":138}</span><span class="devsite-syntax-o">]</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_cached_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_output_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">20</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_tool_use_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_thought_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">141</span><span class="devsite-syntax-err">}</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"created"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"2026-05-12T17:24:26Z"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"updated"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"2026-05-12T17:24:26Z"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"service_tier"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"standard"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"object"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"model"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"gemini-3.7-flash"</span><span class="devsite-syntax-err">}</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"event_type"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction.completed"</span><span class="devsite-syntax-err">}</span>
+<span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">{</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-err">:{</span><span class="devsite-syntax-ss">"id"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"status"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"requires_action"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"usage"</span><span class="devsite-syntax-err">:{</span><span class="devsite-syntax-ss">"total_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">299</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_input_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">138</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"input_tokens_by_modality"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-o">[</span><span class="devsite-syntax-n">{"modality":"text","tokens":138}</span><span class="devsite-syntax-o">]</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_cached_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_output_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">20</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_tool_use_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"total_thought_tokens"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-mi">141</span><span class="devsite-syntax-err">}</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"created"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"2026-05-12T17:24:26Z"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"updated"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"2026-05-12T17:24:26Z"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"service_tier"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"standard"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"object"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"model"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"gemini-3.8-flash"</span><span class="devsite-syntax-err">}</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-ss">"event_type"</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-ss">"interaction.completed"</span><span class="devsite-syntax-err">}</span>
 
 <span class="devsite-syntax-nl">event</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">done</span>
 <span class="devsite-syntax-k">data</span><span class="devsite-syntax-err">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">[</span><span class="devsite-syntax-n">DONE</span><span class="devsite-syntax-o">]</span>
@@ -2429,7 +2369,7 @@ stream, allowing the model to generate its final response.</li>
 <span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
 
 <span class="devsite-syntax-n">stream</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"What is the greatest common divisor of 1071 and 462?"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">generation_config</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">{</span>
         <span class="devsite-syntax-s2">"thinking_summaries"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"auto"</span>
@@ -2451,7 +2391,7 @@ stream, allowing the model to generate its final response.</li>
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">GoogleGenAI</span><span class="devsite-syntax-p">({});</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">stream</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"What is the greatest common divisor of 1071 and 462?"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">generation_config</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">thinking_summaries</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"auto"</span><span class="devsite-syntax-p">,</span>
@@ -2489,7 +2429,7 @@ stream, allowing the model to generate its final response.</li>
 
 <span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">builder</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">input</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">InteractionsInput</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Count from 1 to 25."</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">stream</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
@@ -2514,7 +2454,7 @@ stream, allowing the model to generate its final response.</li>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>--no-buffer<span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "gemini-3.7-flash",</span>
+<span class="devsite-syntax-s1">    "model": "gemini-3.8-flash",</span>
 <span class="devsite-syntax-s1">    "input": "What is the greatest common divisor of 1071 and 462?",</span>
 <span class="devsite-syntax-s1">    "stream": true,</span>
 <span class="devsite-syntax-s1">    "generation_config": {</span>
@@ -2523,7 +2463,7 @@ stream, allowing the model to generate its final response.</li>
 <span class="devsite-syntax-s1">  }'</span>
 </code></pre></devsite-code></section>
 </devsite-selector></div><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Carbon" syntax-guessed><code translate="no" dir="ltr"><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">created</span>
-<span class="devsite-syntax-nx">data</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-s">"interaction"</span><span class="devsite-syntax-p">:{</span><span class="devsite-syntax-s">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-s">"status"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"in_progress"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-s">"object"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"interaction"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-s">"model"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">},</span><span class="devsite-syntax-s">"event_type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"interaction.created"</span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-nx">data</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-s">"interaction"</span><span class="devsite-syntax-p">:{</span><span class="devsite-syntax-s">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-s">"status"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"in_progress"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-s">"object"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"interaction"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-s">"model"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">},</span><span class="devsite-syntax-s">"event_type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"interaction.created"</span><span class="devsite-syntax-p">}</span>
 
 <span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">status_update</span>
 <span class="devsite-syntax-nx">data</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-s">"interaction_id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"v1_..."</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-s">"status"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"in_progress"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-s">"event_type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-s">"interaction.status_update"</span><span class="devsite-syntax-p">}</span>
@@ -2622,7 +2562,7 @@ stream, allowing the model to generate its final response.</li>
 
 <span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">builder</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">input</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">InteractionsInput</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Count from 1 to 25."</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">stream</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
@@ -2759,7 +2699,7 @@ stream, allowing the model to generate its final response.</li>
 
 <span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">CreateModelInteraction</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">builder</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">model</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Model</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">input</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">InteractionsInput</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">of</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Count from 1 to 25."</span><span class="devsite-syntax-p">))</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">stream</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
@@ -2902,7 +2842,7 @@ stream, allowing the model to generate its final response.</li>
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -2912,7 +2852,7 @@ stream, allowing the model to generate its final response.</li>
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -2935,7 +2875,7 @@ stream, allowing the model to generate its final response.</li>
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-08-26 UTC.</p>
+  <p>Last updated 2026-09-02 UTC.</p>
 </devsite-content-footer>
 
 

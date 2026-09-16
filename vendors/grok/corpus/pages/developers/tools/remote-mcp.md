@@ -38,7 +38,7 @@ client = Client(api_key=os.getenv("XAI_API_KEY"))
 chat = client.chat.create(
     model="grok-4.6",
     tools=[
-        mcp(server_url="https://mcp.deepwiki.com/mcp"),
+        mcp(server_url="https://mcp.deepwiki.com/mcp", server_label="deepwiki"),
     ],
     include=["verbose_streaming"],
 )

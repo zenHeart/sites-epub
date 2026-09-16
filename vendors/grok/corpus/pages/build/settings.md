@@ -45,7 +45,7 @@ api_backend = "responses"                    # chat_completions | responses | me
 temperature = 0.7
 top_p = 0.95
 max_completion_tokens = 8192
-context_window = 1000000
+context_window = 500000
 extra_headers = { "x-api-key" = "xai-..." }
 supports_backend_search = true               # if the endpoint supports Grok-hosted server-side search tools
 

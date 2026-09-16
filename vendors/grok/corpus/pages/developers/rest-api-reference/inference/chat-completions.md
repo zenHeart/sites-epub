@@ -38,7 +38,7 @@ Create a chat response from text/image chat prompts. This is the endpoint for ma
   across requests sharing a prompt prefix. Plumbed to \`x-grok-conv-id\`,
   same as on \`/v1/responses\`.
 
-* `reasoning_effort` (string | null) — Constrains how hard a reasoning model thinks before responding. Supported by some models; models that do not support it reject the request with an error. Possible values are \`none\` (disables reasoning completely), \`low\`, \`medium\`, \`high\` (uses the most reasoning tokens) and \`xhigh\`. The accepted values and the default used when unspecified vary per model. See the model's documentation page for details.
+* `reasoning_effort` (string | null) — Constrains how hard a reasoning model thinks before responding. Higher efforts use more reasoning tokens for deeper thinking. The supported values and the default depend on the model.
 
 * `response_format` (object | object | object)
 

@@ -11,7 +11,9 @@ Use the SDK when you need to:
 - Build Codex into your own internal tools and workflows
 - Integrate Codex within your own application
 
-Use the Codex SDK for coding-focused Codex threads. If Codex is one specialist inside a broader orchestrated workflow, [run Codex CLI as an MCP server and orchestrate it with the Agents SDK](https://learn.chatgpt.com/docs/mcp-server).
+Use the Codex SDK to automate coding tasks, including jobs in CI. Use the [Codex app server](https://learn.chatgpt.com/docs/app-server) to build custom clients that handle authentication, conversation history, approvals, and streamed agent events.
+
+The `codex mcp-server` command and standalone `codex-mcp-server` binary have been removed. Use the [Codex app server](https://learn.chatgpt.com/docs/app-server) for existing integrations.
 
 If you have beta access and need repository or change scans with structured
 security findings and coverage, use the [Codex Security TypeScript

@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/api/models"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/api/models"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://ai.google.dev/api/models" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/api/models" /><link rel="alternate" hreflang="ar"
@@ -874,21 +874,13 @@
         <span class="devsite-nav-text" tooltip>Real time APIs</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/api/live"
+  <li class="devsite-nav-item"><a href="/api/live"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Live API</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Live API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/api/live_music"
+  <li class="devsite-nav-item"><a href="/api/live_music"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Live Music API</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Live Music API</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -899,37 +891,21 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Model API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/agents"
+  <li class="devsite-nav-item"><a href="/api/agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Agents</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/webhooks"
+  <li class="devsite-nav-item"><a href="/api/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/triggers"
+  <li class="devsite-nav-item"><a href="/api/triggers"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Triggers</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Triggers</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-beta"><a href="/api/environments"
+  <li class="devsite-nav-item"><a href="/api/environments"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Environments</span><span class="devsite-nav-icon material-icons"
-        data-icon="beta"
-        data-title="Beta"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Environments</span></a></li>
 
   <li class="devsite-nav-item"><a href="/api/batch-api"
         class="devsite-nav-title"
@@ -1075,7 +1051,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1217,7 +1193,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1227,7 +1203,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -1390,8 +1366,8 @@
   <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="google-gemini/api-examples/python/models.py/HEAD/models_get" data-code-snippet="true" data-github-includecode-link="https://github.com/google-gemini/api-examples/blob/HEAD/python/models.py" track-metadata-snippet-file-url="https://github.com/google-gemini/api-examples/blob/HEAD/python/models.py" language="PYTHON" data-github-path="google-gemini/api-examples/python/models.py" data-git-revision="HEAD" data-region-tag="models_get" track-metadata-region-tag="models_get" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-kn">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nn">google</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kn">import</span> <span class="devsite-syntax-n">genai</span>
 
 <span class="devsite-syntax-n">client</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">genai</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">Client</span><span class="devsite-syntax-p">()</span>
-<span class="devsite-syntax-n">model_info</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">models</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">get</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.7-flash"</span><span class="devsite-syntax-p">)</span>
-<span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">model_info</span><span class="devsite-syntax-p">)</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/51979868abf95d062a149b62af92854b2a24f005/python/models.py#L41-L45" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/python/models.py#models_get" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/python/models.py" data-indented-block="" data-regexp="" data-region-tag="models_get"><span class="devsite-syntax-n">models</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">py</span></a></div></code></pre></devsite-code>
+<span class="devsite-syntax-n">model_info</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">models</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">get</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"gemini-3.8-flash"</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">model_info</span><span class="devsite-syntax-p">)</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/13db4d358757eda215c546f431b372b303f71f3e/python/models.py#L41-L45" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/python/models.py#models_get" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/python/models.py" data-indented-block="" data-regexp="" data-region-tag="models_get"><span class="devsite-syntax-n">models</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">py</span></a></div></code></pre></devsite-code>
 </div>
 
 
@@ -1495,12 +1471,12 @@
 <span class="devsite-syntax-w">	</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Fatal</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-p">}</span>
 
-<span class="devsite-syntax-nx">modelInfo</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">:=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Get</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">ctx</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"gemini-3.7-flash"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">nil</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-nx">modelInfo</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">:=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Get</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">ctx</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"gemini-3.8-flash"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">nil</span><span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">!=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">nil</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">	</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Fatal</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">err</span><span class="devsite-syntax-p">)</span>
 <span class="devsite-syntax-p">}</span>
 
-<span class="devsite-syntax-nx">fmt</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Println</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">modelInfo</span><span class="devsite-syntax-p">)</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/51979868abf95d062a149b62af92854b2a24f005/go/models.go#L55-L69" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/go/models.go#models_get" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/go/models.go" data-indented-block="" data-regexp="" data-region-tag="models_get"><span class="devsite-syntax-nx">models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">go</span></a></div></code></pre></devsite-code>
+<span class="devsite-syntax-nx">fmt</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Println</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">modelInfo</span><span class="devsite-syntax-p">)</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/13db4d358757eda215c546f431b372b303f71f3e/go/models.go#L55-L69" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/go/models.go#models_get" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/go/models.go" data-indented-block="" data-regexp="" data-region-tag="models_get"><span class="devsite-syntax-nx">models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">go</span></a></div></code></pre></devsite-code>
 </div>
 
 
@@ -1794,7 +1770,7 @@
 <span class="devsite-syntax-k">for</span> <span class="devsite-syntax-n">m</span> <span class="devsite-syntax-ow">in</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">models</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">list</span><span class="devsite-syntax-p">():</span>
     <span class="devsite-syntax-k">for</span> <span class="devsite-syntax-n">action</span> <span class="devsite-syntax-ow">in</span> <span class="devsite-syntax-n">m</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">supported_actions</span><span class="devsite-syntax-p">:</span>
         <span class="devsite-syntax-k">if</span> <span class="devsite-syntax-n">action</span> <span class="devsite-syntax-o">==</span> <span class="devsite-syntax-s2">"embedContent"</span><span class="devsite-syntax-p">:</span>
-            <span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">m</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">name</span><span class="devsite-syntax-p">)</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/51979868abf95d062a149b62af92854b2a24f005/python/models.py#L22-L36" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/python/models.py#models_list" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/python/models.py" data-indented-block="" data-regexp="" data-region-tag="models_list"><span class="devsite-syntax-n">models</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">py</span></a></div></code></pre></devsite-code>
+            <span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">m</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">name</span><span class="devsite-syntax-p">)</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/13db4d358757eda215c546f431b372b303f71f3e/python/models.py#L22-L36" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/python/models.py#models_list" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/python/models.py" data-indented-block="" data-regexp="" data-region-tag="models_list"><span class="devsite-syntax-n">models</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">py</span></a></div></code></pre></devsite-code>
 </div>
 
 
@@ -1923,7 +1899,7 @@
 <span class="devsite-syntax-w">			</span><span class="devsite-syntax-k">break</span>
 <span class="devsite-syntax-w">		</span><span class="devsite-syntax-p">}</span>
 <span class="devsite-syntax-w">	</span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">}</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/51979868abf95d062a149b62af92854b2a24f005/go/models.go#L14-L48" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/go/models.go#models_list" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/go/models.go" data-indented-block="" data-regexp="" data-region-tag="models_list"><span class="devsite-syntax-nx">models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">go</span></a></div></code></pre></devsite-code>
+<span class="devsite-syntax-p">}</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/google-gemini/api-examples/blob/13db4d358757eda215c546f431b372b303f71f3e/go/models.go#L14-L48" class="gc-analytics-event" data-category="github_link" data-label="google-gemini/api-examples/go/models.go#models_list" data-code-snippet="true" data-git-revision="HEAD" data-github-path="google-gemini/api-examples/go/models.go" data-indented-block="" data-regexp="" data-region-tag="models_list"><span class="devsite-syntax-nx">models</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-k">go</span></a></div></code></pre></devsite-code>
 </div>
 
 
@@ -2678,7 +2654,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -2688,7 +2664,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   

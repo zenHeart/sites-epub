@@ -177,7 +177,7 @@
   },
   {
     "group": "Getting started",
-    "title": "Get started with Claude Code on the web",
+    "title": "Get started with Claude Code in the cloud",
     "md_url": "https://code.claude.com/docs/en/web-quickstart.md",
     "html_url": "https://code.claude.com/docs/en/web-quickstart",
     "route": "web-quickstart",
@@ -185,7 +185,7 @@
   },
   {
     "group": "Getting started",
-    "title": "Use Claude Code on the web",
+    "title": "Use Claude Code in the cloud",
     "md_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
     "html_url": "https://code.claude.com/docs/en/claude-code-on-the-web",
     "route": "claude-code-on-the-web",
@@ -405,6 +405,14 @@
     "md_url": "https://code.claude.com/docs/en/plugins.md",
     "html_url": "https://code.claude.com/docs/en/plugins",
     "route": "plugins",
+    "kind": "doc"
+  },
+  {
+    "group": "Build with Claude Code",
+    "title": "Test plugins with evals",
+    "md_url": "https://code.claude.com/docs/en/plugin-evals.md",
+    "html_url": "https://code.claude.com/docs/en/plugin-evals",
+    "route": "plugin-evals",
     "kind": "doc"
   },
   {
@@ -1129,6 +1137,14 @@
   },
   {
     "group": "Agent SDK",
+    "title": "Configure your agent",
+    "md_url": "https://code.claude.com/docs/en/agent-sdk/configuration.md",
+    "html_url": "https://code.claude.com/docs/en/agent-sdk/configuration",
+    "route": "agent-sdk/configuration",
+    "kind": "doc"
+  },
+  {
+    "group": "Agent SDK",
     "title": "Examples",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/examples.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/examples",
@@ -1353,6 +1369,30 @@
   },
   {
     "group": "What's New",
+    "title": "Week 37 \u00b7 September 7\u201311, 2026",
+    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w37.md",
+    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w37",
+    "route": "whats-new/2026-w37",
+    "kind": "doc"
+  },
+  {
+    "group": "What's New",
+    "title": "Week 36 \u00b7 August 31 \u2013 September 4, 2026",
+    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w36.md",
+    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w36",
+    "route": "whats-new/2026-w36",
+    "kind": "doc"
+  },
+  {
+    "group": "What's New",
+    "title": "Week 35 \u00b7 August 24\u201328, 2026",
+    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w35.md",
+    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w35",
+    "route": "whats-new/2026-w35",
+    "kind": "doc"
+  },
+  {
+    "group": "What's New",
     "title": "Week 34 \u00b7 August 17\u201321, 2026",
     "md_url": "https://code.claude.com/docs/en/whats-new/2026-w34.md",
     "html_url": "https://code.claude.com/docs/en/whats-new/2026-w34",
@@ -1529,6 +1569,14 @@
   },
   {
     "group": "Blog",
+    "title": "claude for small business launches new workflows integrations and training programs",
+    "md_url": "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs.md",
+    "html_url": "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs",
+    "route": "blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "claude in chrome generally available",
     "md_url": "https://claude.com/blog/claude-in-chrome-generally-available.md",
     "html_url": "https://claude.com/blog/claude-in-chrome-generally-available",
@@ -1601,10 +1649,50 @@
   },
   {
     "group": "Blog",
-    "title": "preparing your security program for ai accelerated offense",
-    "md_url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense.md",
-    "html_url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense",
-    "route": "blog/preparing-your-security-program-for-ai-accelerated-offense",
+    "title": "salesforce in claude",
+    "md_url": "https://claude.com/blog/salesforce-in-claude.md",
+    "html_url": "https://claude.com/blog/salesforce-in-claude",
+    "route": "blog/salesforce-in-claude",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "building an ai native revenue organization",
+    "md_url": "https://claude.com/blog/building-an-ai-native-revenue-organization.md",
+    "html_url": "https://claude.com/blog/building-an-ai-native-revenue-organization",
+    "route": "blog/building-an-ai-native-revenue-organization",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agentic coding is straining ci heres how we scaled test impact analysis at anthropic",
+    "md_url": "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic.md",
+    "html_url": "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic",
+    "route": "blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude for financial advisors",
+    "md_url": "https://claude.com/blog/claude-for-financial-advisors.md",
+    "html_url": "https://claude.com/blog/claude-for-financial-advisors",
+    "route": "blog/claude-for-financial-advisors",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how healthcare organizations use claude tag",
+    "md_url": "https://claude.com/blog/how-healthcare-organizations-use-claude-tag.md",
+    "html_url": "https://claude.com/blog/how-healthcare-organizations-use-claude-tag",
+    "route": "blog/how-healthcare-organizations-use-claude-tag",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "deploying ai from pilot to production",
+    "md_url": "https://claude.com/blog/deploying-ai-from-pilot-to-production.md",
+    "html_url": "https://claude.com/blog/deploying-ai-from-pilot-to-production",
+    "route": "blog/deploying-ai-from-pilot-to-production",
     "kind": "blog"
   },
   {
@@ -1673,6 +1761,14 @@
   },
   {
     "group": "Blog",
+    "title": "the ai native sdlc playbook",
+    "md_url": "https://claude.com/blog/the-ai-native-sdlc-playbook.md",
+    "html_url": "https://claude.com/blog/the-ai-native-sdlc-playbook",
+    "route": "blog/the-ai-native-sdlc-playbook",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "bain company joins the claude partner network as a global premier partner",
     "md_url": "https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner.md",
     "html_url": "https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner",
@@ -1701,14 +1797,6 @@
     "md_url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders.md",
     "html_url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
     "route": "blog/bringing-claude-mythos-5-to-more-defenders",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "the ai native sdlc playbook",
-    "md_url": "https://claude.com/blog/the-ai-native-sdlc-playbook.md",
-    "html_url": "https://claude.com/blog/the-ai-native-sdlc-playbook",
-    "route": "blog/the-ai-native-sdlc-playbook",
     "kind": "blog"
   },
   {
@@ -2533,6 +2621,14 @@
     "md_url": "https://claude.com/blog/introducing-routines-in-claude-code.md",
     "html_url": "https://claude.com/blog/introducing-routines-in-claude-code",
     "route": "blog/introducing-routines-in-claude-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "preparing your security program for ai accelerated offense",
+    "md_url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense.md",
+    "html_url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense",
+    "route": "blog/preparing-your-security-program-for-ai-accelerated-offense",
     "kind": "blog"
   },
   {

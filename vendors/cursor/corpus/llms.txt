@@ -24,6 +24,7 @@
 
 - https://cursor.com/docs/agent/overview.md
 - https://cursor.com/docs/agent/agents-window.md
+- https://cursor.com/docs/agent/projects.md
 - https://cursor.com/docs/agent/agent-review.md
 - https://cursor.com/docs/agent/plan-mode.md
 - https://cursor.com/docs/agent/prompting.md
@@ -48,6 +49,7 @@
   - https://cursor.com/docs/grok-bot/identity.md
   - https://cursor.com/docs/grok-bot/private-networks.md
   - https://cursor.com/docs/grok-bot/proxies.md
+  - https://cursor.com/docs/grok-bot/computers.md
   - https://cursor.com/docs/grok-bot/security.md
     - https://cursor.com/docs/grok-bot/security-faq.md
 
@@ -260,6 +262,15 @@
 - https://cursor.com/docs/account/teams/admin-api.md#get-team-repo-blocklists
 - https://cursor.com/docs/account/teams/admin-api.md#upsert-repo-blocklists
 - https://cursor.com/docs/account/teams/admin-api.md#delete-repo-blocklist
+- https://cursor.com/docs/account/teams/admin-api.md#team-directory-groups
+- https://cursor.com/docs/account/teams/admin-api.md#list-team-directory-groups
+- https://cursor.com/docs/account/teams/admin-api.md#get-team-directory-group
+- https://cursor.com/docs/account/teams/admin-api.md#create-team-directory-group
+- https://cursor.com/docs/account/teams/admin-api.md#update-team-directory-group
+- https://cursor.com/docs/account/teams/admin-api.md#delete-team-directory-group
+- https://cursor.com/docs/account/teams/admin-api.md#list-team-directory-group-members
+- https://cursor.com/docs/account/teams/admin-api.md#add-team-directory-group-members
+- https://cursor.com/docs/account/teams/admin-api.md#remove-team-directory-group-members
 - https://cursor.com/docs/account/teams/admin-api.md#billing-groups
 - https://cursor.com/docs/account/teams/admin-api.md#list-groups
 - https://cursor.com/docs/account/teams/admin-api.md#get-group
@@ -269,6 +280,7 @@
 - https://cursor.com/docs/account/teams/admin-api.md#add-members-to-group
 - https://cursor.com/docs/account/teams/admin-api.md#remove-members-from-group
 - https://cursor.com/docs/account/teams/admin-api.md#model-access
+- https://cursor.com/docs/account/teams/admin-api.md#grok-bot
 
 ## Analytics API
 
@@ -296,6 +308,14 @@
 - https://cursor.com/docs/account/teams/ai-code-tracking-api.md#download-ai-commit-metrics-csv-streaming
 - https://cursor.com/docs/account/teams/ai-code-tracking-api.md#get-ai-code-change-metrics-json-paginated
 - https://cursor.com/docs/account/teams/ai-code-tracking-api.md#download-ai-code-change-metrics-csv-streaming
+
+## Origin API
+
+- https://cursor.com/docs/api/origin/llms-full.txt
+- https://cursor.com/docs/api/origin/llms.txt
+- https://cursor.com/docs/api/origin/openapi.yaml
+- https://cursor.com/docs/api/origin/changelog
+- https://cursor.com/docs/api/origin/grants-api
 
 # Help Center
 
@@ -399,7 +419,8 @@
 
 ## Grok Bot
 
-- https://cursor.com/help/grok-bot/getting-started.md
+- https://cursor.com/help/grok-bot/onboarding.md
+- https://cursor.com/help/grok-bot/how-to.md
 - https://cursor.com/help/grok-bot/sign-in.md
 - https://cursor.com/help/grok-bot/mobile.md
 - https://cursor.com/help/grok-bot/plans.md

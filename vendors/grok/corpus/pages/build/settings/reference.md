@@ -52,7 +52,7 @@
 | `GROK_SCROLL_LINES` | use config if unset | Lines per scroll tick (`1`–`10`). |
 | `GROK_INVERT_SCROLL` | `0` | Reverse vertical scroll direction (`1`/`0`). |
 | `GROK_DEFAULT_SELECTED_PERMISSION` | `always_allow_all_sessions` | Preselected row on the first permission prompt. |
-| `GROK_REMEMBER_TOOL_APPROVALS` | `0` | Show per-tool "Always allow …" options (`1`/`0`). |
+| `GROK_REMEMBER_TOOL_APPROVALS` | `1` | Show per-tool "Always allow …" options (`1`/`0`). |
 | `GROK_MOUSE_REPORTING_TOGGLE` | `0` | `Ctrl+R` in scrollback toggles terminal mouse capture (`1`/`0`). |
 | `GROK_DISPLAY_REFRESH_AUTO_CADENCE` | `0` | Match stream/scroll cadence to display refresh rate (`1`/`0`). |
 

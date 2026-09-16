@@ -28,6 +28,13 @@
           href: "/codex/enterprise/admin-setup",
           icon: "users",
         },
+      ],
+    },
+    {
+      title: "ChatGPT Work",
+      description:
+        "Review the ChatGPT Work overview and administration reference.",
+      pages: [
         {
           title: "ChatGPT Work Overview",
           description:
@@ -110,6 +117,13 @@
             "Manage manual and SCIM groups, provisioning, and rollout cohorts.",
           href: "/codex/enterprise/groups-and-provisioning",
           icon: "users",
+        },
+        {
+          title: "User lifecycle management",
+          description:
+            "Provision employees, update group access, and revoke departing users' credentials.",
+          href: "/codex/enterprise/user-lifecycle",
+          icon: "userLock",
         },
         {
           title: "Roles and workspace permissions",

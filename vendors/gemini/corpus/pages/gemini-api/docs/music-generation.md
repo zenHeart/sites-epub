@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/music-generation"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/music-generation"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://ai.google.dev/gemini-api/docs/music-generation" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/gemini-api/docs/music-generation" /><link rel="alternate" hreflang="ar"
@@ -53,10 +53,10 @@
           href="https://ai.google.dev/gemini-api/docs/music-generation?hl=th" /><link rel="alternate" hreflang="tr"
           href="https://ai.google.dev/gemini-api/docs/music-generation?hl=tr" /><link rel="alternate" hreflang="vi"
           href="https://ai.google.dev/gemini-api/docs/music-generation?hl=vi" /><link rel="alternate" hreflang="sq"
-          href="https://ai.google.dev/gemini-api/docs/music-generation?hl=sq" /><title>Generate music with Lyria 3 &nbsp;|&nbsp; Gemini API &nbsp;|&nbsp; Google AI for Developers</title>
+          href="https://ai.google.dev/gemini-api/docs/music-generation?hl=sq" /><title>Generate music with Lyria 3.5 &nbsp;|&nbsp; Gemini API &nbsp;|&nbsp; Google AI for Developers</title>
 
-<meta property="og:title" content="Generate music with Lyria 3 &nbsp;|&nbsp; Gemini API &nbsp;|&nbsp; Google AI for Developers"><meta name="description" content="Generate music with the Gemini API using Lyria 3 Clip and Lyria 3 Pro.">
-  <meta property="og:description" content="Generate music with the Gemini API using Lyria 3 Clip and Lyria 3 Pro."><meta property="og:url" content="https://ai.google.dev/gemini-api/docs/music-generation"><meta property="og:image" content="https://ai.google.dev/static/site-assets/images/share-gemini-api-2026-07.png">
+<meta property="og:title" content="Generate music with Lyria 3.5 &nbsp;|&nbsp; Gemini API &nbsp;|&nbsp; Google AI for Developers"><meta name="description" content="Generate music with the Gemini API using Lyria 3 Clip and Lyria 3.5.">
+  <meta property="og:description" content="Generate music with the Gemini API using Lyria 3 Clip and Lyria 3.5."><meta property="og:url" content="https://ai.google.dev/gemini-api/docs/music-generation"><meta property="og:image" content="https://ai.google.dev/static/site-assets/images/share-gemini-api-2026-07.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image">
   
@@ -881,7 +881,7 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/models"
         class="devsite-nav-title"
       
-        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
+        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.8-flash /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.8-live /gemini-api/docs/models/gemini-3.8-live-extended-thinking /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3.5 /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/latest-model"
         class="devsite-nav-title"
@@ -902,7 +902,7 @@
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/music-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Lyria 3</span></a></li>
+      ><span class="devsite-nav-text" tooltip>Lyria 3.5</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/realtime-music-generation"
         class="devsite-nav-title"
@@ -938,37 +938,17 @@
         <span class="devsite-nav-text" tooltip>Robotics</span>
       </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-overview"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-spatial"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-spatial"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-agentic"
+      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-agentic"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agentic vision</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-orchestration"
+      ><span class="devsite-nav-text" tooltip>Agentic vision</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-orchestration"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Task orchestration</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-streaming"
+      ><span class="devsite-nav-text" tooltip>Task orchestration</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-streaming"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-video-progress"
+      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-video-progress"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Video understanding</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Video understanding</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1007,21 +987,13 @@
            devsite-nav-expandable"><div class="devsite-expandable-nav">
       <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
         <span class="devsite-nav-text" tooltip>Speech and audio</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/speech-generation"
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/speech-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Speech generation</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
+      ><span class="devsite-nav-text" tooltip>Speech generation</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/transcribe"
+      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/transcribe"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio transcription</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Audio transcription</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1058,13 +1030,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Quickstart</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/antigravity-agent"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/antigravity-agent"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Antigravity agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Antigravity agent</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/custom-agents"
         class="devsite-nav-title"
@@ -1078,13 +1046,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Hooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/deep-research"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/deep-research"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Deep Research agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Deep Research agent</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1111,38 +1075,26 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>URL context</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/computer-use"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/computer-use"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Computer use</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Computer use</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/file-search"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>File search</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/tool-combination"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/tool-combination"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
         <span class="devsite-nav-text" tooltip>Live API</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1157,6 +1109,14 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/capabilities"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Capabilities</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-preview"><a href="/gemini-api/docs/live-api/thinking"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Thinking</span><span class="devsite-nav-icon material-icons"
+        data-icon="preview"
+        data-title="Preview"
+        aria-hidden="true"></span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/live-transcribe"
         class="devsite-nav-title"
@@ -1174,13 +1134,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Session management</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/best-practices"
         class="devsite-nav-title"
@@ -1199,29 +1155,17 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Batch API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/webhooks"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/flex-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/flex-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Flex inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Flex inference</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/priority-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/priority-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Priority inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Priority inference</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/caching"
         class="devsite-nav-title"
@@ -1381,13 +1325,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Deploying your app</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/aistudio-agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item
-           devsite-nav-experimental"><a href="/gemini-api/docs/learnlm"
+      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/learnlm"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span><span class="devsite-nav-icon material-icons"
-        data-icon="experimental"
-        data-title="Experimental!"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
+      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Troubleshooting</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/workspace"
         class="devsite-nav-title"
@@ -1490,7 +1430,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1632,7 +1572,7 @@
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -1642,7 +1582,7 @@
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -1657,7 +1597,7 @@
 </devsite-feedback>
   
     <h1 class="devsite-page-title" tabindex="-1">
-      Generate music with Lyria 3<devsite-actions hidden data-nosnippet>
+      Generate music with Lyria 3.5<devsite-actions hidden data-nosnippet>
     <devsite-llm-tools></devsite-llm-tools></devsite-actions>
   
       
@@ -1741,13 +1681,14 @@
 
 
 
-<p>Lyria 3 is Google&#39;s family of music generation models, available
-through the Gemini API. With Lyria 3, you can generate
+
+<p>Lyria 3.5 is Google&#39;s family of music generation models, available
+through the Gemini API. With Lyria 3.5, you can generate
 high-quality, 44.1 kHz stereo audio from text prompts or from images. These
 models deliver structural coherence, including vocals, timed lyrics, and full
 instrumental arrangements.</p>
 
-<p>The Lyria 3 family includes two models:</p>
+<p>The Lyria family includes models:</p>
 
 <table>
 <thead>
@@ -1769,8 +1710,8 @@ instrumental arrangements.</p>
 <td>MP3</td>
 </tr>
 <tr>
-<td><strong>Lyria 3 Pro</strong></td>
-<td><code translate="no" dir="ltr">lyria-3-pro-preview</code></td>
+<td><strong>Lyria 3.5</strong></td>
+<td><code translate="no" dir="ltr">lyria-3.5</code></td>
 <td>Full-length songs with verses, choruses, bridges</td>
 <td>A couple of minutes (controllable using prompt)</td>
 <td>MP3</td>
@@ -1873,19 +1814,19 @@ not capture all parts. You must manually iterate over the steps instead—see
 <a href="#interleaved-output">Interleaved lyrics and music</a> for an example.</span></aside>
 <h2 id="full-song" data-text="Generate a full-length song" tabindex="-1">Generate a full-length song</h2>
 
-<p>Use the <code translate="no" dir="ltr">lyria-3-pro-preview</code> model to generate full-length songs that last a
+<p>Use the <code translate="no" dir="ltr">lyria-3.5</code> model to generate full-length songs that last a
 couple of minutes. The Pro model understands musical structure and can create
 compositions with distinct verses, choruses, and bridges. You can influence the
 duration by specifying it in your prompt (e.g., &quot;create a 2-minute song&quot;) or by
 using <a href="#timing">timestamps</a> to define the structure.</p>
 <div><devsite-selector data-ds-scope="code-sample">
 <section><h3 id="python_1" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">interaction</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"lyria-3-pro-preview"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"lyria-3.5"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"An epic cinematic orchestral piece about a journey home. Starts with a solo piano intro, builds through sweeping strings, and climaxes with a massive wall of sound."</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-p">)</span>
 </code></pre></devsite-code></section>
 <section><h3 id="javascript_1" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'lyria-3-pro-preview'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'lyria-3.5'</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'A beautiful piano melody.'</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-p">});</span>
 </code></pre></devsite-code></section>
@@ -1916,25 +1857,25 @@ using <a href="#timing">timestamps</a> to define the structure.</p>
 -H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 -H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 -d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "lyria-3-pro-preview",</span>
+<span class="devsite-syntax-s1">    "model": "lyria-3.5",</span>
 <span class="devsite-syntax-s1">    "input": "A beautiful piano melody."</span>
 <span class="devsite-syntax-s1">}'</span>
 </code></pre></devsite-code></section>
 </devsite-selector></div>
 <h2 id="output-format" data-text="Select output format" tabindex="-1">Select output format</h2>
 
-<p>By default, the Lyria 3 models generate audio in <strong>MP3</strong> format. For
-Lyria 3 Pro, you can also request the output in <strong>WAV</strong> format by setting
+<p>By default, the Lyria 3.5 models generate audio in <strong>MP3</strong> format. For
+Lyria 3.5, you can also request the output in <strong>WAV</strong> format by setting
 the <code translate="no" dir="ltr">response_format</code>.</p>
 <div><devsite-selector data-ds-scope="code-sample">
 <section><h3 id="python_2" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">interaction</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"lyria-3-pro-preview"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"lyria-3.5"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"A beautiful piano melody."</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-n">response_format</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"audio"</span><span class="devsite-syntax-p">},</span>
 <span class="devsite-syntax-p">)</span>
 </code></pre></devsite-code></section>
 <section><h3 id="javascript_2" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'lyria-3-pro-preview'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'lyria-3.5'</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'A beautiful piano melody.'</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">response_format</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'audio'</span><span class="devsite-syntax-p">,</span>
@@ -1968,7 +1909,7 @@ the <code translate="no" dir="ltr">response_format</code>.</p>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "lyria-3-pro-preview",</span>
+<span class="devsite-syntax-s1">    "model": "lyria-3.5",</span>
 <span class="devsite-syntax-s1">    "input": "A beautiful piano melody.",</span>
 <span class="devsite-syntax-s1">    "response_format": {</span>
 <span class="devsite-syntax-s1">        "type": "audio"</span>
@@ -1978,7 +1919,7 @@ the <code translate="no" dir="ltr">response_format</code>.</p>
 </devsite-selector></div>
 <h2 id="parse-response" data-text="Parse the response" tabindex="-1">Parse the response</h2>
 
-<p>The response from Lyria 3 contains multiple content blocks within the <code translate="no" dir="ltr">steps</code> schema.
+<p>The response from Lyria 3.5 contains multiple content blocks within the <code translate="no" dir="ltr">steps</code> schema.
 Interactions return a sequence of steps, where <code translate="no" dir="ltr">model_output</code> steps contain the
 generated content.
 Text content blocks contain the generated lyrics or a JSON description of the song
@@ -2041,7 +1982,7 @@ curl<span class="devsite-syntax-w"> </span>...<span class="devsite-syntax-w"> </
 </devsite-selector></div>
 <h4 id="interleaved-output" data-text="Interleaved lyrics and music" tabindex="-1">Interleaved lyrics and music</h4>
 
-<p>Because the output from Lyria 3 is complex—containing separate steps and
+<p>Because the output from Lyria 3.5 is complex—containing separate steps and
 blocks for generated lyrics (text) and the song itself (audio)—convenience
 properties offer a fast and recommended shortcut.</p>
 
@@ -2116,7 +2057,7 @@ received), you can manually iterate over <code translate="no" dir="ltr">steps</c
 </devsite-selector></div>
 <h2 id="image-to-music" data-text="Generate music from images" tabindex="-1">Generate music from images</h2>
 
-<p>Lyria 3 supports multimodal inputs — you can provide up to <strong>10 images</strong>
+<p>Lyria 3.5 supports multimodal inputs — you can provide up to <strong>10 images</strong>
 alongside your text prompt in the <code translate="no" dir="ltr">input</code> list and the model will compose music
 inspired by the visual content.</p>
 <div><devsite-selector data-ds-scope="code-sample">
@@ -2127,7 +2068,7 @@ inspired by the visual content.</p>
     <span class="devsite-syntax-n">image_b64</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">base64</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">b64encode</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">image_bytes</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">decode</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"utf-8"</span><span class="devsite-syntax-p">)</span>
 
 <span class="devsite-syntax-n">response</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"lyria-3-pro-preview"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"lyria-3.5"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-p">[</span>
         <span class="devsite-syntax-p">{</span>
             <span class="devsite-syntax-s2">"type"</span><span class="devsite-syntax-p">:</span> <span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span>
@@ -2146,7 +2087,7 @@ inspired by the visual content.</p>
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">imageBytes</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">fs</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">readFileSync</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"desert_sunset.jpg"</span><span class="devsite-syntax-p">).</span><span class="devsite-syntax-nx">toString</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"base64"</span><span class="devsite-syntax-p">);</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"lyria-3-pro-preview"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"lyria-3.5"</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
 <span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">{</span>
 <span class="devsite-syntax-w">            </span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-p">,</span>
@@ -2188,7 +2129,7 @@ curl<span class="devsite-syntax-w"> </span>-X<span class="devsite-syntax-w"> </s
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Content-Type: application/json'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "lyria-3-pro-preview",</span>
+<span class="devsite-syntax-s1">    "model": "lyria-3.5",</span>
 <span class="devsite-syntax-s1">    "input": [</span>
 <span class="devsite-syntax-s1">      {"type": "text", "text": "An atmospheric ambient track inspired by the mood and colors in this image."},</span>
 <span class="devsite-syntax-s1">      {"type": "image", "mime_type": "image/jpeg", "data": "/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////wgALCAABAAEBAREA/8QAFBABAAAAAAAAAAAAAAAAAAAAAP/aAAgBAQABPxA="}</span>
@@ -2225,7 +2166,7 @@ song structure:</p>
 <span class="devsite-syntax-s2">"""</span>
 
 <span class="devsite-syntax-n">interaction</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"lyria-3-pro-preview"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"lyria-3.5"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">prompt</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-p">)</span>
 </code></pre></devsite-code></section>
@@ -2252,7 +2193,7 @@ song structure:</p>
 <span class="devsite-syntax-sb">`</span><span class="devsite-syntax-p">;</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'lyria-3-pro-preview'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'lyria-3.5'</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-p">});</span>
 </code></pre></devsite-code></section>
@@ -2283,7 +2224,7 @@ song structure:</p>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "lyria-3-pro-preview",</span>
+<span class="devsite-syntax-s1">    "model": "lyria-3.5",</span>
 <span class="devsite-syntax-s1">    "input": "Create a dreamy indie pop song with the following lyrics: ..."</span>
 <span class="devsite-syntax-s1">  }'</span>
 </code></pre></devsite-code></section>
@@ -2305,7 +2246,7 @@ are delivered, and how the song progresses:</p>
 <span class="devsite-syntax-s2">"""</span>
 
 <span class="devsite-syntax-n">interaction</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"lyria-3-pro-preview"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"lyria-3.5"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-n">prompt</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-p">)</span>
 </code></pre></devsite-code></section>
@@ -2320,7 +2261,7 @@ are delivered, and how the song progresses:</p>
 <span class="devsite-syntax-sb">`</span><span class="devsite-syntax-p">;</span>
 
 <span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'lyria-3-pro-preview'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'lyria-3.5'</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-p">});</span>
 </code></pre></devsite-code></section>
@@ -2351,7 +2292,7 @@ are delivered, and how the song progresses:</p>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "lyria-3-pro-preview",</span>
+<span class="devsite-syntax-s1">    "model": "lyria-3.5",</span>
 <span class="devsite-syntax-s1">    "input": "[0:00 - 0:10] Intro: ..."</span>
 <span class="devsite-syntax-s1">  }'</span>
 </code></pre></devsite-code></section>
@@ -2405,17 +2346,17 @@ required, you can prompt the model to produce instrumental-only tracks:</p>
 </devsite-selector></div>
 <h2 id="languages" data-text="Generate music in different languages" tabindex="-1">Generate music in different languages</h2>
 
-<p>Lyria 3 generates lyrics in the language of your prompt. To generate a song
+<p>Lyria 3.5 generates lyrics in the language of your prompt. To generate a song
 with French lyrics, write your prompt in French. The model adapts its vocal
 style and pronunciation to match the language.</p>
 <div><devsite-selector data-ds-scope="code-sample">
 <section><h3 id="python_9" data-text="Python" tabindex="-1">Python</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Python"><code translate="no" dir="ltr"><span class="devsite-syntax-n">interaction</span> <span class="devsite-syntax-o">=</span> <span class="devsite-syntax-n">client</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">interactions</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">create</span><span class="devsite-syntax-p">(</span>
-    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"lyria-3-pro-preview"</span><span class="devsite-syntax-p">,</span>
+    <span class="devsite-syntax-n">model</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"lyria-3.5"</span><span class="devsite-syntax-p">,</span>
     <span class="devsite-syntax-nb">input</span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-s2">"Crée une chanson pop romantique en français sur un coucher de soleil à Paris. Utilise du piano et de la guitare acoustique."</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-p">)</span>
 </code></pre></devsite-code></section>
 <section><h3 id="javascript_9" data-text="JavaScript" tabindex="-1">JavaScript</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">interaction</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">client</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">interactions</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'lyria-3-pro-preview'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">model</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'lyria-3.5'</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Crée une chanson pop romantique en français sur un coucher de soleil à Paris. Utilise du piano et de la guitare acoustique.'</span><span class="devsite-syntax-p">,</span>
 <span class="devsite-syntax-p">});</span>
 </code></pre></devsite-code></section>
@@ -2446,43 +2387,225 @@ style and pronunciation to match the language.</p>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"x-goog-api-key: </span><span class="devsite-syntax-nv">$GEMINI_API_KEY</span><span class="devsite-syntax-s2">"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-H<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Content-Type: application/json"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-se">\</span>
 <span class="devsite-syntax-w">  </span>-d<span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'{</span>
-<span class="devsite-syntax-s1">    "model": "lyria-3-pro-preview",</span>
+<span class="devsite-syntax-s1">    "model": "lyria-3.5",</span>
 <span class="devsite-syntax-s1">    "input": "Crée une chanson pop romantique en français sur un coucher de soleil à Paris. Utilise du piano et de la guitare acoustique."</span>
 <span class="devsite-syntax-s1">  }'</span>
 </code></pre></devsite-code></section>
 </devsite-selector></div>
 <h2 id="intelligence" data-text="Model intelligence" tabindex="-1">Model intelligence</h2>
 
-<p>Lyria 3 analyzes your prompt process where the
+<p>Lyria 3.5 analyzes your prompt process where the
 model reasons through musical structure (intro, verse, chorus, bridge, etc.)
 based on your prompt.
 This happens before the audio is generated and ensures structural coherence and
 musicality.</p>
-<aside class="special"><strong>Important:</strong><span> While Lyria 3 uses a prompt rewriter internally to interpret
+<aside class="special"><strong>Important:</strong><span> While Lyria 3.5 uses a prompt rewriter internally to interpret
 natural language instructions, it does <strong>not</strong> expose intermediate
 &quot;thought&quot; blocks or thought signatures to the user.</span></aside>
 <h2 id="prompt-guide" data-text="Prompting guide" tabindex="-1">Prompting guide</h2>
 
-<p>The more specific your prompt, the better the results. Here&#39;s what you can
-include to guide the generation:</p>
+<p>Your prompt can be as simple as &quot;a folk song about cute cats avoiding puddles,
+female vocals and the noise of rain&quot;, or something detailed and structured
+like:</p>
+
+<blockquote>
+<p>A 1980s-style synth-pop track with a driving beat, shimmering synthesizers,
+and a catchy, anthemic chorus. The song should have a retro-futuristic feel,
+reminiscent of classic 80s pop hits, with a modern production polish. The
+tempo should be upbeat and danceable, around 120 BPM, with a clear
+verse-chorus structure and a memorable instrumental hook. The lyrics are about
+the feeling of getting ready for a party.</p>
+</blockquote>
+
+<p>Both simple and complex prompts can give you good outputs. Experiment with
+these tips to find what works best for you.</p>
+
+<h3 id="prompt-genre" data-text="Genre" tabindex="-1">Genre</h3>
+
+<p>Lead your prompt with the genre of music you want, such as hip hop, rock, and
+rap. You can specify a mix of genres:</p>
 
 <ul>
-<li><strong>Genre</strong>: Specify a genre or blend of genres (e.g., &quot;lo-fi hip hop&quot;,
-&quot;jazz fusion&quot;, &quot;cinematic orchestral&quot;).</li>
-<li><strong>Instruments</strong>: Name specific instruments (e.g., &quot;Fender Rhodes piano&quot;,
-&quot;slide guitar&quot;, &quot;TR-808 drum machine&quot;).</li>
+<li>A fusion of metal and rap</li>
+<li>A combination of death metal and opera</li>
+<li>A classical piece with electronic drone elements</li>
+<li>Modern electronic dance music (EDM) mixed with Europop</li>
+</ul>
+
+<p>You can also incorporate an era:</p>
+
+<ul>
+<li>Early 90s hip-hop</li>
+<li>60s French ye-ye pop</li>
+<li>80s electronic experimentation</li>
+<li>2000s mainstream pop</li>
+</ul>
+
+<p>If you prompt for bespoke genres or regional variants, like &quot;Berlin techno&quot; or
+&quot;Bay area hyphy&quot;, the model will attempt to capture that essence, but it may
+not always get it right.</p>
+
+<h3 id="prompt-instruments" data-text="Instruments" tabindex="-1">Instruments</h3>
+
+<p>By default Lyria 3.5 will make songs with the instruments and tools you&#39;d
+expect for the genre. You don&#39;t need to be prescriptive.</p>
+
+<p>However, a dance track isn&#39;t going to include a saxophone unless you ask for
+it. So if you want a saxophone solo, you need to prompt it:</p>
+
+<blockquote>
+<p>A dance track with a driving beat, shimmering synthesizers, and a catchy,
+anthemic chorus. A saxophone solo should come in during the bridge.</p>
+</blockquote>
+
+<p>Your prompt can include specific instruments, how they sound, and how they
+interact with each other. You can use this combination to create certain moods
+or textures:</p>
+
+<ul>
+<li>A dirty, distorted bassline fighting against clean, crisp hi-hats</li>
+<li>Warm, analog synthesizer pads swelling underneath a dry, intimate acoustic
+guitar</li>
+<li>A wall of sound created by multiple layers of fuzzy guitars, with buried,
+distant vocals</li>
+</ul>
+
+<h3 id="prompt-structure" data-text="Song structure" tabindex="-1">Song structure</h3>
+
+<p>You can outline the progression of a song in your prompt. Use arrows or a list
+to define the flow:</p>
+
+<ul>
+<li><code translate="no" dir="ltr">[Intro]</code> -&gt; <code translate="no" dir="ltr">[Verse 1]</code> -&gt; <code translate="no" dir="ltr">[Chorus]</code> -&gt; <code translate="no" dir="ltr">[Verse 2]</code> -&gt; <code translate="no" dir="ltr">[Chorus]</code> -&gt;
+<code translate="no" dir="ltr">[Bridge]</code> -&gt; <code translate="no" dir="ltr">[Outro]</code></li>
+<li>Start with a quiet piano intro, build into a loud verse, drop into a
+silence, then explode into the chorus.</li>
+</ul>
+
+<p>You can also specify how energy levels change between these sections:</p>
+
+<ul>
+<li>Build tension in the pre-chorus, then drop to silence before a massive,
+explosive chorus</li>
+<li>Gradual crescendo throughout the song, adding one instrument at a time
+until a chaotic wall of sound</li>
+<li>Sudden stop after the bridge, followed by an acapella chorus</li>
+</ul>
+
+<p>You can also prompt the exact time you want something to happen:</p>
+
+<ul>
+<li>Build to a drop at 12s</li>
+<li>Someone says &quot;what&quot; every 2 seconds</li>
+<li>The chorus kicks in at 22s</li>
+</ul>
+
+<h3 id="prompt-lyrics" data-text="Lyrics" tabindex="-1">Lyrics</h3>
+
+<p>Vocals and lyrics are generated by default. You can provide your own lyrics,
+ask for no lyrics (or an instrumental), or steer the lyric generation in the
+direction you want.</p>
+
+<p>Your lyrics will be in the language you write your prompt in. You can also ask
+for lyrics to be in another language, like &quot;Write the lyrics in French&quot;.</p>
+
+<h4 id="own-lyrics" data-text="Using your own lyrics" tabindex="-1">Using your own lyrics</h4>
+
+<p>To give the model your own lyrics, include them in the prompt with a &quot;Lyrics:&quot;
+prefix:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded><code translate="no" dir="ltr">Lyrics:
+
+[Intro]
+Oooh, oooh
+
+[Verse 1]
+Let&#39;s go
+Let&#39;s go
+Go with the flow
+
+[Chorus]
+...
+</code></pre></devsite-code>
+<p>You can prefix parts of the song with section titles like <code translate="no" dir="ltr">[Intro]</code>,
+<code translate="no" dir="ltr">[Verse 1]</code>, <code translate="no" dir="ltr">[Pre-chorus]</code>, <code translate="no" dir="ltr">[Chorus]</code> and <code translate="no" dir="ltr">[Outro]</code>.</p>
+
+<p>If you want a word or line to be repeated, like an echo or by backing singers,
+you can include it in parentheses: &quot;Let&#39;s go (go)&quot;.</p>
+
+<h4 id="generated-lyrics" data-text="Prompting the model to write lyrics" tabindex="-1">Prompting the model to write lyrics</h4>
+
+<p>If you want Lyria 3.5 to make lyrics for you, it&#39;s best to include details
+of what the lyrics will be about in your prompt. Otherwise the model needs to
+infer a subject from your music prompt, and it may not be what you want.</p>
+
+<blockquote>
+<p>The lyrics are about lost love and the pain of heartbreak. The singer is
+reminiscing about a past relationship and the memories that come flooding
+back.</p>
+</blockquote>
+
+<p>If you want a repeating chorus, it helps to ask for one in your prompt:</p>
+
+<blockquote>
+<p>The lyrics are about lost love and the pain of heartbreak. The singer is
+reminiscing about a past relationship and the memories that come flooding
+back. A powerful chorus focuses on getting over the pain and moving on.</p>
+</blockquote>
+
+<p>Lyria 3.5 will automatically steer the structure of the lyrics towards the
+type of music you&#39;re requesting, but you can re-emphasize this in your prompt
+too. For example:</p>
+
+<blockquote>
+<p>An EDM track that repeats the same energetic phrase over and over again.</p>
+</blockquote>
+
+<p>You can also prompt for vocal effects that aren&#39;t strictly lyrics, for example:</p>
+
+<ul>
+<li>A repeating sample from a movie says &quot;I can&#39;t believe this!&quot; throughout
+the song</li>
+<li>A high energy techno track, right before the drop the sound all stops and a
+little voice says &quot;I don&#39;t know what I&#39;m doing here&quot;, then the music drops.</li>
+<li>The track opens with a conversation about the movies in the 90s being
+better than today. Then the track segues into a pop song.</li>
+</ul>
+
+<h3 id="prompt-vocals" data-text="Vocals" tabindex="-1">Vocals</h3>
+
+<p>You can prompt for how you want the lyrics to be delivered. For the best
+results, specify a detailed singer profile covering gender, timbre, and vocal
+range.</p>
+
+<ul>
+<li><strong>Female Soprano</strong>: Clear, crystalline timbre with an agile, soaring
+quality. Capable of hitting whistly high notes with an airy, breathy
+texture.</li>
+<li><strong>Female Alto</strong>: Rich, warm, and husky lower range. Smoky timbre with a
+touch of vocal fry, soulful and resonant.</li>
+<li><strong>Male Tenor</strong>: Bright, piercing, and energetic. Youthful timbre with a
+slight nasal edge, cutting through the mix with high belting power.</li>
+<li><strong>Male Baritone</strong>: Deep, chocolatey, and velvet-smooth. Resonant chest
+voice with a soothing, crooning delivery.</li>
+<li><strong>Weathered Rocker (Male)</strong>: Raspy and textured with a gravelly timbre,
+reminiscent of 90s grunge. Strained upper range for emotional intensity.</li>
+</ul>
+
+<h3 id="prompt-other" data-text="Other prompt parameters" tabindex="-1">Other prompt parameters</h3>
+
+<p>You can also include these parameters to further refine your prompt:</p>
+
+<ul>
 <li><strong>BPM</strong>: Set the tempo (e.g., &quot;120 BPM&quot;, &quot;slow tempo around 70 BPM&quot;).</li>
 <li><strong>Key/Scale</strong>: Specify a musical key (e.g., &quot;in G major&quot;, &quot;D minor&quot;).</li>
 <li><strong>Mood and atmosphere</strong>: Use descriptive adjectives (e.g., &quot;nostalgic&quot;,
 &quot;aggressive&quot;, &quot;ethereal&quot;, &quot;dreamy&quot;).</li>
-<li><strong>Structure</strong>: Use tags like <code translate="no" dir="ltr">[Verse]</code>, <code translate="no" dir="ltr">[Chorus]</code>, <code translate="no" dir="ltr">[Bridge]</code>, <code translate="no" dir="ltr">[Intro]</code>,
-<code translate="no" dir="ltr">[Outro]</code> or timestamps to control the song&#39;s progression.</li>
 <li><strong>Duration</strong>: The Clip model always produces 30-second clips. For the Pro
-model, specify the intended length in your prompt (e.g., &quot;create a 2-minute
+model, specify the desired length in your prompt (e.g., &quot;create a 2-minute
 song&quot;) or use timestamps to control duration.</li>
 </ul>
 
-<h3 id="example_prompts" data-text="Example prompts" tabindex="-1">Example prompts</h3>
+<h3 id="example-prompts" data-text="Example prompts" tabindex="-1">Example prompts</h3>
 
 <p>Here are some examples of effective prompts:</p>
 
@@ -2502,7 +2625,7 @@ pads, sharp hi-hats, and a haunting vocal sample. In D minor.&quot;</code></li>
 <ul>
 <li><strong>Iterate with Clip first.</strong> Use the faster <code translate="no" dir="ltr">lyria-3-clip-preview</code> model to
 experiment with prompts before committing to a full-length generation with
-<code translate="no" dir="ltr">lyria-3-pro-preview</code>.</li>
+<code translate="no" dir="ltr">lyria-3.5</code>.</li>
 <li><strong>Be specific.</strong> Vague prompts produce generic results. Mention instruments,
 BPM, key, mood, and structure for the best output.</li>
 <li><strong>Match your language.</strong> Prompt in the language you want the lyrics in.</li>
@@ -2524,7 +2647,7 @@ identification. This watermark is imperceptible to the human ear and
 does not affect the listening experience.</li>
 <li><strong>Multi-turn editing</strong>: Music generation is a single-turn process.
 Iterative editing or refining a generated clip through multiple prompts is
-not supported in the current version of Lyria 3.</li>
+not supported in the current version of Lyria 3.5.</li>
 <li><strong>Length</strong>: The Clip model always generates 30-second clips. The Pro model
 generates songs that last a couple of minutes; exact duration can be
 influenced through your prompt.</li>
@@ -2534,7 +2657,7 @@ influenced through your prompt.</li>
 <h2 id="next-steps" data-text="What's next" tabindex="-1">What's next</h2>
 
 <ul>
-<li>Check <a href="https://ai.google.dev/gemini-api/docs/pricing">pricing</a> for Lyria 3 models.</li>
+<li>Check <a href="https://ai.google.dev/gemini-api/docs/pricing">pricing</a> for Lyria 3.5 models.</li>
 <li>Try <a href="https://ai.google.dev/gemini-api/docs/realtime-music-generation">real-time, streaming music generation</a>
 with Lyria RealTime.</li>
 <li>Generate multi-speaker conversations with the
@@ -2564,7 +2687,7 @@ with Lyria RealTime.</li>
   product-id="5292923"
   bucket="documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215664864412"
+  version="t-devsite-webserver-20260908-r00-rc00.480264206796223289"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -2574,7 +2697,7 @@ with Lyria RealTime.</li>
   
   
   
-    project-icon="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"
   
   
   
@@ -2597,7 +2720,7 @@ with Lyria RealTime.</li>
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-08-26 UTC.</p>
+  <p>Last updated 2026-09-08 UTC.</p>
 </devsite-content-footer>
 
 

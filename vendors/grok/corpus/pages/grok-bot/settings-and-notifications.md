@@ -35,16 +35,39 @@ Cursor manages model selection, so there is no model picker.
 
 ### Auto-review
 
-Manage your personal Auto Review rules.
+Manage your personal Auto Review rules, plus any team rules your admin
+requires.
 
 Two settings in **General** deserve care. **Execution on Local Computer**
 controls whether Bots can run commands on the desktop in front of you;
 per-command approval is the default, and the setting applies to that desktop
-alone. Auto Review rules shape which actions stop for your approval, and they
-are stored on the current desktop and synced to its Grok Bot computer. Either
-way, do not assume another desktop installation carries the same configuration.
-Read [Approvals, security, and privacy](/grok-bot/approvals-security-and-privacy)
+alone. Auto Review rules shape which actions stop for your approval. When your
+admin enforces Auto Review for the team, the same table also shows locked team
+rules with `Required by your admin. You can't edit or delete this rule.` You
+can add your own rules on top, but they only make behavior stricter; **Ask
+first** wins when rules conflict. If your admin turns enforcement off, you only
+see and use your own rules. Your personal rules are stored on the current
+desktop and synced to its Grok Bot computer. Either way, do not assume another
+desktop installation carries the same configuration. Read
+[Approvals, security, and privacy](/grok-bot/approvals-security-and-privacy)
 before changing either.
+
+## Computer
+
+### Route traffic through your desktop
+
+Turn on **Route egress through this desktop** to send your Grok Bot computer's
+web traffic through the current desktop. Destinations see your desktop's IP
+address, and the Bot can reach networks available from that device.
+
+The setting applies to one desktop. If your Enterprise admin turns off **Allow
+Local Egress**, the toggle turns off and locks with
+`Your team's admin has turned off local egress.` Any active route stops within
+five minutes. Your choice is preserved and takes effect again if the admin
+re-allows local egress.
+
+For private network options and their tradeoffs, see
+[Connect to private networks](/grok-bot/private-networks).
 
 ## Plugins
 
@@ -70,10 +93,10 @@ For how plans, weekly usage, and on-demand spend work, see
 
 ## Team Setup
 
-On the Teams plan and the Enterprise plan, **Team Setup** shows the managed
-setup your admin provides for team computers. You can review or reinstall the
-current setup. Admins configure it from the dashboard; see
-[Grok Bot for teams and enterprises](/grok-bot/teams-and-enterprises#set-up-your-team).
+Team Setup is Enterprise only. When an Enterprise admin provides a managed
+setup, **Team Setup** shows it here so you can review or reinstall the current
+setup. Admins configure manifests from the dashboard; see
+[Grok Bot for teams and enterprises](/grok-bot/teams-and-enterprises#team-setup).
 
 Do not place secret values directly in managed setup instructions.
 

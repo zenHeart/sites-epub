@@ -5,7 +5,7 @@
 
 
 <!DOCTYPE html>
-<html class="no-js glue-flexbox glue-app-ready keyword-blog" lang="en-us" data-locale="en-us" data-version="pr20260820-1820">
+<html class="no-js glue-flexbox glue-app-ready keyword-blog" lang="en-us" data-locale="en-us" data-version="pr20260902-1737">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -69,9 +69,9 @@
 
         
         
-        <link class="deferred-stylesheet" rel="preload" type="text/css" href="/static/keyword/css/blog/index.min.css?version=pr20260820-1820" as="style">
+        <link class="deferred-stylesheet" rel="preload" type="text/css" href="/static/keyword/css/blog/index.min.css?version=pr20260902-1737" as="style">
 <noscript>
-  <link rel="stylesheet" href="/static/keyword/css/blog/index.min.css?version=pr20260820-1820">
+  <link rel="stylesheet" href="/static/keyword/css/blog/index.min.css?version=pr20260902-1737">
 </noscript>
 
         <link class="deferred-stylesheet" rel="preload" type="text/css" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,600,700|Google+Sans+Flex:400,500|Product+Sans:400&amp;display=swap&amp;lang=en" as="style">
@@ -100,8 +100,8 @@
 
 <link rel="canonical" href="https://blog.google/products-and-platforms/products/gemini/"/>
 
-<link href="/favicon.ico" rel="icon">
-<link href="/static/blogv2/images/apple-touch-icon.png?version=pr20260820-1820" rel="apple-touch-icon">
+<link rel="icon" type="image/x-icon" href="/static/blogv2/images/favicon.ico?version=pr20260902-1737">
+<link href="/static/blogv2/images/apple-touch-icon.png?version=pr20260902-1737" rel="apple-touch-icon">
 
 
 
@@ -145,7 +145,7 @@
     
       "special_hero": "undefined",
     
-    "days_since_published": "1158",
+    "days_since_published": "1174",
     
       "content_category": "Gemini",
     
@@ -304,7 +304,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#h-burger"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#h-burger"></use>
 </svg>
 
         </button>
@@ -326,7 +326,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-clear"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-clear"></use>
 </svg>
 
         </button>
@@ -350,11 +350,11 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#news-from-google-logo"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#news-from-google-logo"></use>
 </svg>
 
             <!-- SuperG Logo -->
-            <img class="uni-nav__logo--super-g" src="/static/blogv2/images/super-g-aurora.svg?version=pr20260820-1820" alt="Google" width="30" height="30">
+            <img class="uni-nav__logo--super-g" src="/static/blogv2/images/super-g-aurora.svg?version=pr20260902-1737" alt="Google" width="30" height="30">
           </a>
         
         
@@ -396,7 +396,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -426,7 +426,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -456,7 +456,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -508,7 +508,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -549,7 +549,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -627,7 +627,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -657,7 +657,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -715,7 +715,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -745,7 +745,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -793,7 +793,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -823,7 +823,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -871,7 +871,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -908,7 +908,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -933,7 +933,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -958,7 +958,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -983,7 +983,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1023,7 +1023,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -1064,7 +1064,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1162,7 +1162,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1192,7 +1192,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1250,7 +1250,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1280,7 +1280,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1348,7 +1348,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1385,7 +1385,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1410,7 +1410,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1450,7 +1450,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -1491,7 +1491,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1579,7 +1579,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1609,7 +1609,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1657,7 +1657,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1687,7 +1687,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1735,7 +1735,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1772,7 +1772,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1820,7 +1820,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1912,7 +1912,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -1971,7 +1971,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2021,7 +2021,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2071,7 +2071,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2110,7 +2110,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2135,7 +2135,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2160,7 +2160,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2185,7 +2185,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2227,7 +2227,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -2337,7 +2337,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2396,7 +2396,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2464,7 +2464,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2503,7 +2503,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2528,7 +2528,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2570,7 +2570,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -2671,7 +2671,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2721,7 +2721,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2771,7 +2771,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2810,7 +2810,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2915,7 +2915,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-more-vert"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-more-vert"></use>
 </svg>
 
   </button>
@@ -2947,7 +2947,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#language"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#language"></use>
 </svg>
 
             
@@ -3250,7 +3250,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
     </span>
@@ -3280,7 +3280,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#photo-library"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#photo-library"></use>
 </svg>
 Images</a>
           
@@ -3305,7 +3305,7 @@ Images</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#rss-feed"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#rss-feed"></use>
 </svg>
 RSS feed</a>
         </li>
@@ -3381,7 +3381,7 @@ RSS feed</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
     </button>
@@ -3429,7 +3429,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3466,7 +3466,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3507,7 +3507,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
     </button>
@@ -3554,7 +3554,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-rss-feed"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-rss-feed"></use>
 </svg>
 
                                 </a>
@@ -3585,7 +3585,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#social-instagram"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#social-instagram"></use>
 </svg>
 
                                     </a>
@@ -3649,7 +3649,7 @@ data-ga4-analytics-landing-lead='{
             
               
             
-            <a href="https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/" class="uni-nup__article "
+            <a href="https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/" class="uni-nup__article "
               
 
 
@@ -3666,22 +3666,22 @@ data-ga4-analytics-landing-lead='{
 
 data-ga4-analytics-lead-click='{
   "event": "article_lead_click",
-  "link_text": "Turn your voice into action with new productivity features in Gemini Live",
+  "link_text": "4 ways to tackle household chores with Gemini",
   "link_type": "internal",
-  "link_url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
-  "article_name": "Turn your voice into action with new productivity features in Gemini Live",
-  "author_name" : "Neel Joshi",
-  "page_name": "productivity-features-gemini-live",
+  "link_url": "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/",
+  "article_name": "4 ways to tackle household chores with Gemini",
+  "author_name" : "Sarah Armstrong",
+  "page_name": "household-chores-tips",
   "position": "1",
   "click_location": "undefined",
   "primary_tag": "Products \u002D Gemini App",
   "secondary_tags": "undefined",
-  "publish_date": "2026-08-26|17:00",
+  "publish_date": "2026-09-15|16:00",
   "hero_media": "image",
-  "days_since_published": "4",
+  "days_since_published": "0",
   "content_category": "Announcement",
   "content_type": "article page",
-  "word_count": "625",
+  "word_count": "415",
   "has_audio": "no",
   "has_cta": "no",
   "has_video": "yes",
@@ -3692,7 +3692,7 @@ data-ga4-analytics-lead-click='{
 
               >
               <h3 class="uni-nup__header uni-title-1">
-                Turn your voice into action with new productivity features in Gemini Live
+                4 ways to tackle household chores with Gemini
               </h3>
               
                 <div class="uni-nup__image-container">
@@ -3702,7 +3702,96 @@ data-ga4-analytics-lead-click='{
 
 
 <img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/STATIC_HEADER_V2.png"
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Tackle_household_chores_w_Gemini_hero.png"
+  alt=""
+
+  
+    class="uni-nup__image"
+  
+
+  
+    sizes="(min-width: 1440px) 402px, (min-width: 1040px) 30vw, 126px"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Tackle_household_chores_w_Gemini_hero.png 150w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Tackle_household_chores_w_Gemini_hero.png 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tackle_household_chores_w_Gemini_.width-400.format-webp.webp 400w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Tackle_household_chores_w_Gemini_hero.png 600w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tackle_household_chores_w_Gemini_.width-800.format-webp.webp 800w"
+  
+
+  
+    loading="lazy"
+  
+  />
+
+
+
+
+                  
+                </div>
+              
+            </a>
+          </div>
+          
+        
+      
+      
+      
+      
+          <div class="uni-nup__card">
+            
+            
+              
+            
+            <a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/" class="uni-nup__article "
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+data-ga4-analytics-lead-click='{
+  "event": "article_lead_click",
+  "link_text": "The Gemini app is now available for Windows",
+  "link_type": "internal",
+  "link_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+  "article_name": "The Gemini app is now available for Windows",
+  "author_name" : "Erin Pettigrew",
+  "page_name": "gemini-app-now-on-windows",
+  "position": "2",
+  "click_location": "undefined",
+  "primary_tag": "Products \u002D Gemini App",
+  "secondary_tags": "undefined",
+  "publish_date": "2026-09-10|16:00",
+  "hero_media": "mp4",
+  "days_since_published": "5",
+  "content_category": "Announcement",
+  "content_type": "article page",
+  "word_count": "240",
+  "has_audio": "no",
+  "has_cta": "no",
+  "has_video": "yes",
+  "has_image": "no",
+  "has_carousel": "no",
+  "position_maximum": "3"
+}'
+
+              >
+              <h3 class="uni-nup__header uni-title-1">
+                The Gemini app is now available for Windows
+              </h3>
+              
+                <div class="uni-nup__image-container">
+                  
+                    
+  
+
+
+<img
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Gemini_for_Desktop_Thumbnail_2096x1182.png"
   alt=""
 
   
@@ -3735,7 +3824,7 @@ data-ga4-analytics-lead-click='{
             
               
             
-            <a href="https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/" class="uni-nup__article "
+            <a href="https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/" class="uni-nup__article "
               
 
 
@@ -3752,114 +3841,25 @@ data-ga4-analytics-lead-click='{
 
 data-ga4-analytics-lead-click='{
   "event": "article_lead_click",
-  "link_text": "Here’s how to use intelligent dictation in Gemini for macOS.",
+  "link_text": "Create your best tracks yet with Lyria 3.5 in Gemini.",
   "link_type": "internal",
-  "link_url": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/",
-  "article_name": "Here’s how to use intelligent dictation in Gemini for macOS.",
+  "link_url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
+  "article_name": "Create your best tracks yet with Lyria 3.5 in Gemini.",
   "author_name" : "undefined",
-  "page_name": "enable-intelligent-dictation-macos",
-  "position": "2",
+  "page_name": "better-tracks-lyria-gemini",
+  "position": "3",
   "click_location": "undefined",
   "primary_tag": "Products \u002D Gemini App",
   "secondary_tags": "undefined",
-  "publish_date": "2026-08-25|16:00",
+  "publish_date": "2026-09-04|16:00",
   "hero_media": "none",
-  "days_since_published": "5",
+  "days_since_published": "11",
   "content_category": "undefined",
   "content_type": "Short Post",
   "word_count": "0",
   "has_audio": "no",
   "has_cta": "no",
   "has_video": "yes",
-  "has_image": "yes",
-  "has_carousel": "no",
-  "position_maximum": "3"
-}'
-
-              >
-              <h3 class="uni-nup__header uni-title-1">
-                Here’s how to use intelligent dictation in Gemini for macOS.
-              </h3>
-              
-                <div class="uni-nup__image-container">
-                  
-                    
-  
-
-
-<img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Gemini_app_macOS.jpg"
-  alt=""
-
-  
-    class="uni-nup__image"
-  
-
-  
-    sizes="(min-width: 1440px) 402px, (min-width: 1040px) 30vw, 126px"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Gemini_app_macOS.jpg 150w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Gemini_app_macOS.jpg 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_macOS.width-400.format-webp.webp 400w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Gemini_app_macOS.jpg 600w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_macOS.width-800.format-webp.webp 800w"
-  
-
-  
-    loading="lazy"
-  
-  />
-
-
-
-
-                  
-                </div>
-              
-            </a>
-          </div>
-          
-        
-      
-      
-      
-      
-          <div class="uni-nup__card">
-            
-            
-              
-            
-            <a href="https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/" class="uni-nup__article "
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-data-ga4-analytics-lead-click='{
-  "event": "article_lead_click",
-  "link_text": "Start the semester with one year of Gemini, on us",
-  "link_type": "internal",
-  "link_url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/",
-  "article_name": "Start the semester with one year of Gemini, on us",
-  "author_name" : "Jennifer Shen",
-  "page_name": "student-offer-google-ai",
-  "position": "3",
-  "click_location": "undefined",
-  "primary_tag": "Products \u002D Gemini App",
-  "secondary_tags": "Learning &amp; Education,Google One",
-  "publish_date": "2026-08-19|19:00",
-  "hero_media": "image",
-  "days_since_published": "11",
-  "content_category": "Announcement",
-  "content_type": "article page",
-  "word_count": "797",
-  "has_audio": "no",
-  "has_cta": "no",
-  "has_video": "yes",
   "has_image": "no",
   "has_carousel": "no",
   "position_maximum": "3"
@@ -3867,7 +3867,7 @@ data-ga4-analytics-lead-click='{
 
               >
               <h3 class="uni-nup__header uni-title-1">
-                Start the semester with one year of Gemini, on us
+                Create your best tracks yet with Lyria 3.5 in Gemini.
               </h3>
               
                 <div class="uni-nup__image-container">
@@ -3877,7 +3877,7 @@ data-ga4-analytics-lead-click='{
 
 
 <img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-150.format-webp.webp"
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Lyria_social.png"
   alt=""
 
   
@@ -3886,7 +3886,7 @@ data-ga4-analytics-lead-click='{
 
   
     sizes="(min-width: 1440px) 402px, (min-width: 1040px) 30vw, 126px"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-150.format-webp.webp 150w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-400.format-webp.webp 400w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-600.format-webp.webp 600w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-800.format-webp.webp 800w"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Lyria_social.png 150w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Lyria_social.png 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lyria_social.width-400.format-webp.webp 400w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Lyria_social.png 600w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lyria_social.width-800.format-webp.webp 800w"
   
 
   
@@ -3939,7 +3939,7 @@ data-ga4-analytics-lead-click='{
             
               
             
-            <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/" class="uni-nup__article "
+            <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" class="uni-nup__article "
               
 
 
@@ -3956,22 +3956,22 @@ data-ga4-analytics-lead-click='{
 
 data-ga4-analytics-lead-click='{
   "event": "article_lead_click",
-  "link_text": "Intelligent transcription with Gemini 3.5 Transcribe",
+  "link_text": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
   "link_type": "internal",
-  "link_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
-  "article_name": "Intelligent transcription with Gemini 3.5 Transcribe",
-  "author_name" : "Diego Melendo Casado, Luke Leonhard",
-  "page_name": "gemini-3-5-transcribe",
+  "link_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+  "article_name": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+  "author_name" : "Tom Ouyang, Malini Jaganathan",
+  "page_name": "gemini-3-8-live-gemini-3-8-live-extended-thinking",
   "position": "1",
   "click_location": "undefined",
   "primary_tag": "Topics \u002D Gemini models",
   "secondary_tags": "undefined",
-  "publish_date": "2026-08-26|17:00",
+  "publish_date": "2026-09-15|17:00",
   "hero_media": "image",
-  "days_since_published": "4",
+  "days_since_published": "0",
   "content_category": "Announcement",
   "content_type": "article page",
-  "word_count": "805",
+  "word_count": "603",
   "has_audio": "no",
   "has_cta": "no",
   "has_video": "yes",
@@ -3982,7 +3982,7 @@ data-ga4-analytics-lead-click='{
 
               >
               <h3 class="uni-nup__header uni-title-1">
-                Intelligent transcription with Gemini 3.5 Transcribe
+                Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking
               </h3>
               
                 <div class="uni-nup__image-container">
@@ -3992,7 +3992,93 @@ data-ga4-analytics-lead-click='{
 
 
 <img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_3-5_transcribe.jpg"
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_3-8_live___keyword__blog-header.png"
+  alt=""
+
+  
+    class="uni-nup__image"
+  
+
+  
+
+  
+    loading="lazy"
+  
+  />
+
+
+
+
+                  
+                </div>
+              
+            </a>
+          </div>
+          
+        
+      
+      
+      
+      
+          <div class="uni-nup__card">
+            
+            
+              
+            
+            <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/" class="uni-nup__article "
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+data-ga4-analytics-lead-click='{
+  "event": "article_lead_click",
+  "link_text": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+  "link_type": "internal",
+  "link_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+  "article_name": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+  "author_name" : "Tulsee Doshi, Raluca Ada Popa",
+  "page_name": "3-8-flash-and-3-8-flash-cyber",
+  "position": "2",
+  "click_location": "undefined",
+  "primary_tag": "Topics \u002D Gemini models",
+  "secondary_tags": "undefined",
+  "publish_date": "2026-09-02|15:00",
+  "hero_media": "image",
+  "days_since_published": "13",
+  "content_category": "Announcement",
+  "content_type": "article page",
+  "word_count": "914",
+  "has_audio": "no",
+  "has_cta": "no",
+  "has_video": "yes",
+  "has_image": "yes",
+  "has_carousel": "yes",
+  "position_maximum": "3"
+}'
+
+              >
+              <h3 class="uni-nup__header uni-title-1">
+                Introducing Gemini 3.8 Flash and 3.8 Flash Cyber
+              </h3>
+              
+                <div class="uni-nup__image-container">
+                  
+                    
+  
+
+
+<img
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini-3-8_flash__blog__header__16-9__light.png"
   alt=""
 
   
@@ -4001,7 +4087,7 @@ data-ga4-analytics-lead-click='{
 
   
     sizes="(min-width: 1440px) 402px, (min-width: 1040px) 30vw, 126px"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_3-5_transcribe.jpg 150w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_3-5_transcribe.jpg 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_3-5_transcribe.width-400.format-webp.webp 400w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_3-5_transcribe.jpg 600w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_3-5_transcribe.width-800.format-webp.webp 800w"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini-3-8_flash__blog__header__16-9__light.png 150w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini-3-8_flash__blog__header__16-9__light.png 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini-3-8_flash__blog__header__16-9__light.png 400w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8_flash__blog__header__1.width-600.format-webp.webp 600w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini-3-8_flash__blog__header__16-9__light.png 800w"
   
 
   
@@ -4028,7 +4114,7 @@ data-ga4-analytics-lead-click='{
             
               
             
-            <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/what-full-stack-development-means/" class="uni-nup__article "
+            <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/" class="uni-nup__article "
               
 
 
@@ -4045,108 +4131,22 @@ data-ga4-analytics-lead-click='{
 
 data-ga4-analytics-lead-click='{
   "event": "article_lead_click",
-  "link_text": "What does “full\u002Dstack” AI actually mean?",
+  "link_text": "Introducing agentic video understanding with Gemini",
   "link_type": "internal",
-  "link_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/what-full-stack-development-means/",
-  "article_name": "What does “full\u002Dstack” AI actually mean?",
-  "author_name" : "Lindsey Lanquist",
-  "page_name": "what-full-stack-development-means",
-  "position": "2",
-  "click_location": "undefined",
-  "primary_tag": "Topics \u002D Gemini models",
-  "secondary_tags": "Google DeepMind",
-  "publish_date": "2026-08-21|16:00",
-  "hero_media": "none",
-  "days_since_published": "9",
-  "content_category": "undefined",
-  "content_type": "Short Post",
-  "word_count": "0",
-  "has_audio": "no",
-  "has_cta": "no",
-  "has_video": "yes",
-  "has_image": "no",
-  "has_carousel": "no",
-  "position_maximum": "3"
-}'
-
-              >
-              <h3 class="uni-nup__header uni-title-1">
-                What does “full-stack” AI actually mean?
-              </h3>
-              
-                <div class="uni-nup__image-container">
-                  
-                    
-  
-
-
-<img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/thumbnail_BfIj9lP.jpg"
-  alt=""
-
-  
-    class="uni-nup__image"
-  
-
-  
-
-  
-    loading="lazy"
-  
-  />
-
-
-
-
-                  
-                </div>
-              
-            </a>
-          </div>
-          
-        
-      
-      
-      
-      
-          <div class="uni-nup__card">
-            
-            
-              
-            
-            <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/" class="uni-nup__article "
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-data-ga4-analytics-lead-click='{
-  "event": "article_lead_click",
-  "link_text": "Introducing Gemini 3.7 Flash",
-  "link_type": "internal",
-  "link_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
-  "article_name": "Introducing Gemini 3.7 Flash",
-  "author_name" : "Tulsee Doshi",
-  "page_name": "introducing-gemini-3-7-flash",
+  "link_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/",
+  "article_name": "Introducing agentic video understanding with Gemini",
+  "author_name" : "Rohan Doshi, Mario Lučić",
+  "page_name": "introducing-agentic-video-in-gemini",
   "position": "3",
   "click_location": "undefined",
   "primary_tag": "Topics \u002D Gemini models",
   "secondary_tags": "undefined",
-  "publish_date": "2026-08-13|17:00",
+  "publish_date": "2026-09-01|17:00",
   "hero_media": "image",
-  "days_since_published": "17",
+  "days_since_published": "14",
   "content_category": "Announcement",
   "content_type": "article page",
-  "word_count": "573",
+  "word_count": "606",
   "has_audio": "no",
   "has_cta": "no",
   "has_video": "yes",
@@ -4157,7 +4157,7 @@ data-ga4-analytics-lead-click='{
 
               >
               <h3 class="uni-nup__header uni-title-1">
-                Introducing Gemini 3.7 Flash
+                Introducing agentic video understanding with Gemini
               </h3>
               
                 <div class="uni-nup__image-container">
@@ -4167,7 +4167,7 @@ data-ga4-analytics-lead-click='{
 
 
 <img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-7-flash.width-150.format-webp.webp"
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/agentic-video___keyword__blog-header.png"
   alt=""
 
   
@@ -4176,7 +4176,7 @@ data-ga4-analytics-lead-click='{
 
   
     sizes="(min-width: 1440px) 402px, (min-width: 1040px) 30vw, 126px"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-7-flash.width-150.format-webp.webp 150w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-7-flash.width-300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-7-flash.width-400.format-webp.webp 400w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-7-flash.width-600.format-webp.webp 600w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-7-flash.width-800.format-webp.webp 800w"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/agentic-video___keyword__blog-header.png 150w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/agentic-video___keyword__blog-header.png 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/agentic-video___keyword__blog-hea.width-400.format-webp.webp 400w, https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/agentic-video___keyword__blog-header.png 600w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/agentic-video___keyword__blog-hea.width-800.format-webp.webp 800w"
   
 
   
@@ -4258,7 +4258,7 @@ data-ga4-analytics-lead-click='{
   "secondary_tags": "Gemini Features",
   "publish_date": "2026-06-16|18:00",
   "hero_media": "video",
-  "days_since_published": "75",
+  "days_since_published": "91",
   "content_category": "Announcement",
   "content_type": "article page",
   "word_count": "880",
@@ -4347,7 +4347,7 @@ data-ga4-analytics-lead-click='{
   "secondary_tags": "Gemini Features",
   "publish_date": "2026-05-12|17:00",
   "hero_media": "image",
-  "days_since_published": "110",
+  "days_since_published": "126",
   "content_category": "Announcement",
   "content_type": "article page",
   "word_count": "911",
@@ -4436,7 +4436,7 @@ data-ga4-analytics-lead-click='{
   "secondary_tags": "Gemini Features",
   "publish_date": "2026-03-03|19:00",
   "hero_media": "video",
-  "days_since_published": "180",
+  "days_since_published": "196",
   "content_category": "Announcement",
   "content_type": "article page",
   "word_count": "937",
@@ -4697,7 +4697,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#google-logo"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#google-logo"></use>
 </svg>
 
     </a>
@@ -4772,7 +4772,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
   </span>
@@ -5080,7 +5080,7 @@ data-ga4-analytics-lead-click='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
     </span>
@@ -5153,13 +5153,13 @@ data-ga4-analytics-lead-click='{
 
         
         <div id="base-scripts" data-scripts='[
-              { "url": "/static/blogv2/js/csp/gtm.js?version=pr20260820-1820",
+              { "url": "/static/blogv2/js/csp/gtm.js?version=pr20260902-1737",
                 "options": {
                   "async": false,
                   "defer": true
                 }
               },
-              { "url": "/static/keyword/js/all/index.js?version=pr20260820-1820",
+              { "url": "/static/keyword/js/all/index.js?version=pr20260902-1737",
                 "options": {
                   "async": false,
                   "defer": false

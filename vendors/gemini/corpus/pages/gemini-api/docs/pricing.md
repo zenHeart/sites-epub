@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Inter:400,500|Inter+Tight:300,500,600&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/favicon-new.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/pricing"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/googledevai/images/touchicon-180-new.png"><link rel="canonical" href="https://ai.google.dev/gemini-api/docs/pricing"><link rel="search" type="application/opensearchdescription+xml"
             title="Google AI for Developers" href="https://ai.google.dev/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://ai.google.dev/gemini-api/docs/pricing" /><link rel="alternate" hreflang="x-default" href="https://ai.google.dev/gemini-api/docs/pricing" /><link rel="alternate" hreflang="ar"
@@ -885,7 +885,7 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/models"
         class="devsite-nav-title"
       
-        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
+        alt-paths=" /gemini-api/docs/models/gemini-3.1-flash-image /gemini-api/docs/models/gemini-3.1-flash-lite-image /gemini-api/docs/models/gemini-3.1-pro-preview /gemini-api/docs/models/gemini-3-pro-preview /gemini-api/docs/models/gemini-3-pro-image /gemini-api/docs/models/gemini-3.8-flash /gemini-api/docs/models/gemini-3.7-flash /gemini-api/docs/models/gemini-3.6-flash /gemini-api/docs/models/gemini-3.5-flash /gemini-api/docs/models/gemini-3.8-live /gemini-api/docs/models/gemini-3.8-live-extended-thinking /gemini-api/docs/models/gemini-3.5-live-translate-preview /gemini-api/docs/models/gemini-3-flash-preview /gemini-api/docs/models/gemini-3.1-flash-tts-preview /gemini-api/docs/models/veo-3.1-lite-generate-preview /gemini-api/docs/models/gemini-3.1-flash-live-preview /gemini-api/docs/models/gemini-3.5-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite /gemini-api/docs/models/gemini-3.1-flash-lite-preview /gemini-api/docs/models/gemini-2.5-flash /gemini-api/docs/models/gemini-2.5-flash-preview-09-2025 /gemini-api/docs/models/gemini-2.5-flash-image /gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025 /gemini-api/docs/models/gemini-2.5-flash-preview-tts /gemini-api/docs/models/gemini-2.5-flash-lite /gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 /gemini-api/docs/models/gemini-2.5-pro /gemini-api/docs/models/gemini-2.5-pro-preview-tts /gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025 /gemini-api/docs/models/gemini-2.0-flash /gemini-api/docs/models/gemini-2.0-flash-lite /gemini-api/docs/models/imagen /gemini-api/docs/models/veo-3.1-generate-preview /gemini-api/docs/models/veo-2.0-generate-001 /gemini-api/docs/models/gemini-embedding-001 /gemini-api/docs/models/gemini-embedding-2 /gemini-api/docs/models/gemini-robotics-er-1.5-preview /gemini-api/docs/models/gemini-robotics-er-2-preview /gemini-api/docs/models/gemini-robotics-er-2-streaming-preview /gemini-api/docs/models/gemini-robotics-er-1.6-preview /gemini-api/docs/models/deep-research-pro-preview-12-2025 /gemini-api/docs/models/deep-research-preview-04-2026 /gemini-api/docs/models/deep-research-max-preview-04-2026 /gemini-api/docs/models/antigravity-preview-05-2026 /gemini-api/docs/models/lyria-realtime-exp /gemini-api/docs/models/lyria-3.5 /gemini-api/docs/models/lyria-3-clip-preview /gemini-api/docs/models/lyria-3-pro-preview /gemini-api/docs/models/gemini-omni-flash /gemini-api/docs/models/gemini-3.5-transcribe "><span class="devsite-nav-text" tooltip>All models</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/latest-model"
         class="devsite-nav-title"
@@ -906,7 +906,7 @@
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/music-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Lyria 3</span></a></li>
+      ><span class="devsite-nav-text" tooltip>Lyria 3.5</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/realtime-music-generation"
         class="devsite-nav-title"
@@ -942,37 +942,17 @@
         <span class="devsite-nav-text" tooltip>Robotics</span>
       </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-overview"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-spatial"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-spatial"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-agentic"
+      ><span class="devsite-nav-text" tooltip>Spatial reasoning</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-agentic"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agentic vision</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-orchestration"
+      ><span class="devsite-nav-text" tooltip>Agentic vision</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-orchestration"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Task orchestration</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-streaming"
+      ><span class="devsite-nav-text" tooltip>Task orchestration</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-streaming"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/robotics-video-progress"
+      ><span class="devsite-nav-text" tooltip>Robotics with streaming</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/robotics-video-progress"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Video understanding</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Video understanding</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1011,21 +991,13 @@
            devsite-nav-expandable"><div class="devsite-expandable-nav">
       <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
         <span class="devsite-nav-text" tooltip>Speech and audio</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/speech-generation"
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini-api/docs/speech-generation"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Speech generation</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
+      ><span class="devsite-nav-text" tooltip>Speech generation</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/audio"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/transcribe"
+      ><span class="devsite-nav-text" tooltip>Audio understanding</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/transcribe"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Audio transcription</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li></ul></div></li>
+      ><span class="devsite-nav-text" tooltip>Audio transcription</span></a></li></ul></div></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1062,13 +1034,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Quickstart</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/antigravity-agent"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/antigravity-agent"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Antigravity agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Antigravity agent</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/custom-agents"
         class="devsite-nav-title"
@@ -1082,13 +1050,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Hooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/deep-research"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/deep-research"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Deep Research agent</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Deep Research agent</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
@@ -1115,38 +1079,26 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>URL context</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/computer-use"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/computer-use"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Computer use</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Computer use</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/file-search"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>File search</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/tool-combination"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/tool-combination"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Combine tools and function calling</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
         <span class="devsite-nav-text" tooltip>Live API</span>
       </div></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1161,6 +1113,14 @@
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/capabilities"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Capabilities</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-preview"><a href="/gemini-api/docs/live-api/thinking"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Thinking</span><span class="devsite-nav-icon material-icons"
+        data-icon="preview"
+        data-title="Preview"
+        aria-hidden="true"></span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/live-transcribe"
         class="devsite-nav-title"
@@ -1178,13 +1138,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Session management</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/ephemeral-tokens"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Ephemeral tokens</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/live-api/best-practices"
         class="devsite-nav-title"
@@ -1203,29 +1159,17 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Batch API</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/webhooks"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/webhooks"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Webhooks</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Webhooks</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/flex-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/flex-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Flex inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Flex inference</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini-api/docs/priority-inference"
+  <li class="devsite-nav-item"><a href="/gemini-api/docs/priority-inference"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Priority inference</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li>
+      ><span class="devsite-nav-text" tooltip>Priority inference</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini-api/docs/caching"
         class="devsite-nav-title"
@@ -1385,13 +1329,9 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Deploying your app</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/aistudio-agents"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item
-           devsite-nav-experimental"><a href="/gemini-api/docs/learnlm"
+      ><span class="devsite-nav-text" tooltip>Agents in AI Studio Playground</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/learnlm"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span><span class="devsite-nav-icon material-icons"
-        data-icon="experimental"
-        data-title="Experimental!"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
+      ><span class="devsite-nav-text" tooltip>Try out LearnLM</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/troubleshoot-ai-studio"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Troubleshooting</span></a></li><li class="devsite-nav-item"><a href="/gemini-api/docs/workspace"
         class="devsite-nav-title"
@@ -1494,7 +1434,7 @@
       >
       <div class="devsite-banner-message">
         <div class="devsite-banner-message-text">
-          Gemini 3.7 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" style="color: black;">Try it out</a>.
+          Gemini 3.8 Flash is now available. <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" style="color: black;">Try it out</a>.
         </div>
       </div>
     </div>
@@ -1712,6 +1652,7 @@
 
 
 
+
 <p>Start building free of charge with generous limits, then scale up with
 prepaid then pay-as-you-go pricing for your production ready applications.</p>
 
@@ -1742,7 +1683,7 @@ prepaid then pay-as-you-go pricing for your production ready applications.</p>
       </div>
       <div class="pricing-card">
           <h3 class="plan-name hide-from-toc" id="enterprise" data-text="Enterprise" tabindex="-1">Enterprise</h3>
-          <p class="plan-description">For large-scale deployments with custom needs for security, support, and compliance, powered by <a href="https://cloud.google.com/gemini-enterprise-agent-platform">Gemini Enterprise Agent Platform</a>.</p>
+          <p class="plan-description">For enterprise deployments, powered by <a href="https://cloud.google.com/gemini-enterprise-agent-platform">Gemini Enterprise Agent Platform</a>.</p>
           <ul class="features">
               <li><span class="material-symbols-outlined">check_circle</span>All features in Paid, plus optional access to:</li>
               <li><span class="material-symbols-outlined">check_circle</span>Dedicated support channels</li>
@@ -1758,16 +1699,16 @@ prepaid then pay-as-you-go pricing for your production ready applications.</p>
 
 <div class="models-section">
     <div class="heading-group">
-        <h2 id="gemini-3.7-flash" data-text="Gemini 3.7 Flash" tabindex="-1">Gemini 3.7 Flash</h2>
-        <em><a href="/gemini-api/docs/models/gemini-3.7-flash"><code translate="no" dir="ltr">gemini-3.7-flash</code></a></em>
+        <h2 id="gemini-3.8-flash" data-text="Gemini 3.8 Flash" tabindex="-1">Gemini 3.8 Flash</h2>
+        <em><a href="/gemini-api/docs/models/gemini-3.8-flash"><code translate="no" dir="ltr">gemini-3.8-flash</code></a></em>
     
     </div>
     <p>
-        <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" class="button button-primary ais">Try it in Google AI Studio</a>
+        <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash" class="button button-primary ais">Try it in Google AI Studio</a>
     </p>
 </div>
 
-<p>Our most capable Flash model for agentic workflows and multimodal reasoning.</p>
+<p>Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.</p>
 <div><devsite-selector data-ds-scope="code-sample">
 <section><h3 id="standard" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
@@ -1936,6 +1877,184 @@ prepaid then pay-as-you-go pricing for your production ready applications.</p>
 </devsite-selector></div>
 <div class="models-section">
     <div class="heading-group">
+        <h2 id="gemini-3.7-flash" data-text="Gemini 3.7 Flash" tabindex="-1">Gemini 3.7 Flash</h2>
+        <em><a href="/gemini-api/docs/models/gemini-3.7-flash"><code translate="no" dir="ltr">gemini-3.7-flash</code></a></em>
+    
+    </div>
+    <p>
+        <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash" class="button button-primary ais">Try it in Google AI Studio</a>
+    </p>
+</div>
+
+<p>Our high-speed, efficient Flash model built for everyday coding, agentic tool use, and reliable multi-step execution.</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="standard_1" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+  <colgroup>
+    <col>
+    <col class="free-tier">
+    <col class="paid-tier">
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      <th scope="col">Free Tier</th>
+      <th scope="col">Paid Tier, per 1M tokens in USD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Input price</td>
+      <td>Free of charge</td>
+      <td>$0.75 through December 31, 2026.<br>$1.50 starting January 1, 2027.</td>
+    </tr>
+    <tr>
+      <td>Output price (including thinking tokens)</td>
+      <td>Free of charge</td>
+      <td>$3.75 through December 31, 2026.<br>$7.50 starting January 1, 2027.</td>
+    </tr>
+    <tr>
+      <td>Context caching price</td>
+      <td>Free of charge</td>
+      <td>$0.075 through December 31, 2026.<br>$0.15 starting January 1, 2027.<br>$0.50 / 1,000,000 tokens per hour (storage price) through December 31, 2026.<br>$1.00 / 1,000,000 tokens per hour (storage price) starting January 1, 2027.</td>
+    </tr>
+    <tr>
+      <td>Grounding with Google Search<sup>*</sup></td>
+      <td>Not available</td>
+      <td>5,000 free search requests per month (shared across all Gemini 3.x models), then $14 per 1,000 requests.</td>
+    </tr>
+    <tr>
+      <td>Grounding with Google Maps</td>
+      <td>Not available</td>
+      <td>5,000 prompts per month (free, shared across Gemini 3), then $14 / 1,000 search queries</td>
+    </tr>
+    <tr>
+      <td>Used to improve our products</td>
+      <td><a href="/gemini-api/terms">Yes</a></td>
+      <td><a href="/gemini-api/terms">No</a></td>
+    </tr>
+  </tbody>
+</table></section>
+<section><h3 id="batch_1" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+  <colgroup>
+    <col>
+    <col class="free-tier">
+    <col class="paid-tier">
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      <th scope="col">Free Tier</th>
+      <th scope="col">Paid Tier, per 1M tokens in USD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Input price</td>
+      <td>Not available</td>
+      <td>$0.375 through December 31, 2026.<br>$0.75 starting January 1, 2027.</td>
+    </tr>
+    <tr>
+      <td>Output price (including thinking tokens)</td>
+      <td>Not available</td>
+      <td>$1.875 through December 31, 2026.<br>$3.75 starting January 1, 2027.</td>
+    </tr>
+    <tr>
+      <td>Context caching price</td>
+      <td>Not available</td>
+      <td>$0.0375 through December 31, 2026.<br>$0.075 starting January 1, 2027.<br>$0.50 / 1,000,000 tokens per hour (storage price) through December 31, 2026.<br>$1.00 / 1,000,000 tokens per hour (storage price) starting January 1, 2027.</td>
+    </tr>
+    <tr>
+      <td>Used to improve our products</td>
+      <td><a href="/gemini-api/terms">Yes</a></td>
+      <td><a href="/gemini-api/terms">No</a></td>
+    </tr>
+  </tbody>
+</table></section>
+<section><h3 id="flex_1" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
+  <colgroup>
+    <col>
+    <col class="free-tier">
+    <col class="paid-tier">
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      <th scope="col">Free Tier</th>
+      <th scope="col">Paid Tier, per 1M tokens in USD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Input price</td>
+      <td>Not available</td>
+      <td>$0.375 through December 31, 2026.<br>$0.75 starting January 1, 2027.</td>
+    </tr>
+    <tr>
+      <td>Output price (including thinking tokens)</td>
+      <td>Not available</td>
+      <td>$1.875 through December 31, 2026.<br>$3.75 starting January 1, 2027.</td>
+    </tr>
+    <tr>
+      <td>Context caching price</td>
+      <td>Not available</td>
+      <td>$0.0375 through December 31, 2026.<br>$0.075 starting January 1, 2027.<br>$0.50 / 1,000,000 tokens per hour (storage price) through December 31, 2026.<br>$1.00 / 1,000,000 tokens per hour (storage price) starting January 1, 2027.</td>
+    </tr>
+    <tr>
+      <td>Used to improve our products</td>
+      <td><a href="/gemini-api/terms">Yes</a></td>
+      <td><a href="/gemini-api/terms">No</a></td>
+    </tr>
+  </tbody>
+</table></section>
+<section><h3 id="priority_1" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
+  <colgroup>
+    <col>
+    <col class="free-tier">
+    <col class="paid-tier">
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      <th scope="col">Free Tier</th>
+      <th scope="col">Paid Tier, per 1M tokens in USD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Input price</td>
+      <td>Free of charge</td>
+      <td>$1.35 through December 31, 2026.<br>$2.70 starting January 1, 2027.</td>
+    </tr>
+    <tr>
+      <td>Output price (including thinking tokens)</td>
+      <td>Free of charge</td>
+      <td>$6.75 through December 31, 2026.<br>$13.50 starting January 1, 2027.</td>
+    </tr>
+    <tr>
+      <td>Context caching price</td>
+      <td>Free of charge</td>
+      <td>$0.135 through December 31, 2026.<br>$0.27 starting January 1, 2027.<br>$0.50 / 1,000,000 tokens per hour (storage price) through December 31, 2026.<br>$1.00 / 1,000,000 tokens per hour (storage price) starting January 1, 2027.</td>
+    </tr>
+    <tr>
+      <td>Grounding with Google Search<sup>*</sup></td>
+      <td>Not available<sup>**</sup></td>
+      <td>5,000 free search requests per month (shared across all Gemini 3.x models), then $14 per 1,000 requests.</td>
+    </tr>
+    <tr>
+      <td>Grounding with Google Maps</td>
+      <td>Not available<sup>**</sup></td>
+      <td>5,000 prompts per month (free, shared across Gemini 3), then $14 / 1,000 search queries</td>
+    </tr>
+    <tr>
+      <td>Used to improve our products</td>
+      <td><a href="/gemini-api/terms">Yes</a></td>
+      <td><a href="/gemini-api/terms">No</a></td>
+    </tr>
+  </tbody>
+</table></section>
+</devsite-selector></div>
+<div class="models-section">
+    <div class="heading-group">
         <h2 id="gemini-3.6-flash" data-text="Gemini 3.6 Flash" tabindex="-1">Gemini 3.6 Flash</h2>
         <em><a href="/gemini-api/docs/models/gemini-3.6-flash"><code translate="no" dir="ltr">gemini-3.6-flash</code></a></em>
     
@@ -1945,10 +2064,9 @@ prepaid then pay-as-you-go pricing for your production ready applications.</p>
     </p>
 </div>
 
-<p>A Flash model built for speed, combining frontier intelligence with
-superior search and grounding.</p>
+<p>Our previous generation Flash model, balancing speed and multimodal capabilities across general agentic and everyday tasks.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_1" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_2" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -1994,7 +2112,7 @@ superior search and grounding.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_1" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_2" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2040,7 +2158,7 @@ superior search and grounding.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="flex_1" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
+<section><h3 id="flex_2" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2086,7 +2204,7 @@ superior search and grounding.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="priority_1" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
+<section><h3 id="priority_2" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2150,10 +2268,10 @@ performed.</p>
     </p>
 </div>
 
-<p>A Flash model built for speed, combining frontier intelligence with
-superior search and grounding.</p>
+<p>Our earlier Flash model, built for speed and foundational performance across
+routine, high-throughput workloads.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_2" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_3" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2199,7 +2317,7 @@ superior search and grounding.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_2" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_3" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2245,7 +2363,7 @@ superior search and grounding.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="flex_2" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
+<section><h3 id="flex_3" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2291,7 +2409,7 @@ superior search and grounding.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="priority_2" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
+<section><h3 id="priority_3" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2346,6 +2464,62 @@ performed.</p>
 
 <div class="models-section">
     <div class="heading-group">
+        <span id="gemini-3.8-live-extended-thinking"></span>
+        <span id="gemini-3.1-flash-live-preview"></span>
+        <h2 id="gemini-3.8-live" data-text="Gemini 3.8 Live, Gemini 3.8 Live Extended Thinking, and Gemini 3.1 Flash Live Preview" tabindex="-1">Gemini 3.8 Live, Gemini 3.8 Live Extended Thinking, and Gemini 3.1 Flash Live Preview</h2>
+        <em><a href="/gemini-api/docs/models/gemini-3.8-live"><code translate="no" dir="ltr">gemini-3.8-live</code></a>, <a href="/gemini-api/docs/models/gemini-3.8-live-extended-thinking"><code translate="no" dir="ltr">gemini-3.8-live-extended-thinking</code></a>, and <a href="/gemini-api/docs/models/gemini-3.1-flash-live-preview"><code translate="no" dir="ltr">gemini-3.1-flash-live-preview</code></a></em>
+    </div>
+    <p>
+        <a href="https://aistudio.google.com/live?model=gemini-3.8-live" class="button button-primary ais">Try it in Google AI Studio</a>
+    </p>
+</div>
+
+<p>Our low-latency, audio-to-audio models optimized for real-time voice agents and
+live dialogue, including background reasoning support with Extended Thinking.</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="standard_4" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+  <colgroup>
+    <col>
+    <col class="free-tier">
+    <col class="paid-tier">
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      <th scope="col">Free Tier</th>
+      <th scope="col">Paid Tier, per 1M tokens in USD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Input price</td>
+      <td>Free of charge</td>
+      <td>$0.75 (text)<br>$3.00 or $0.005/min (audio)<br>$1.00 or $0.002/min (image/video)</td>
+    </tr>
+    <tr>
+      <td>Output price (including thinking tokens)</td>
+      <td>Free of charge</td>
+      <td>$4.50 (text)<br>$12.00 or $0.018/min (audio)</td>
+    </tr>
+    <tr>
+      <td>Grounding with Google Search<sup>*</sup></td>
+      <td>Supported</td>
+      <td>5,000 free search requests per month (shared across all Gemini 3.x models), then $14 per 1,000 requests.</td>
+    </tr>
+    <tr>
+      <td>Used to improve our products</td>
+      <td><a href="/gemini-api/terms">Yes</a></td>
+      <td><a href="/gemini-api/terms">No</a></td>
+    </tr>
+  </tbody>
+</table></section>
+</devsite-selector></div>
+<p><sup>*</sup> A customer-submitted request to Gemini may result in one or more
+queries to Google Search. You will be charged for each individual search query
+performed.</p>
+
+<div class="models-section">
+    <div class="heading-group">
         <h2 id="gemini-3.5-live-translate-preview" data-text="Gemini 3.5 Live Translate" tabindex="-1">Gemini 3.5 Live Translate</h2>
         <em><a href="/gemini-api/docs/models/gemini-3.5-live-translate-preview"><code translate="no" dir="ltr">gemini-3.5-live-translate-preview</code></a></em>
     
@@ -2357,7 +2531,7 @@ performed.</p>
 
 <p>Our low-latency, real-time speech to speech translation model that supports 70+ languages.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_3" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_5" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2404,7 +2578,7 @@ performed.</p>
 
 <p>Our low-latency, real-time speech-to-text model for bidirectional streaming audio transcription over WebSockets.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_4" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_6" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2458,7 +2632,7 @@ and 175 text tokens per minute for output, for an effective blended rate of
 
 <p>Our speech-to-text model with automatic language detection, speaker diarization, word-level timestamps, and custom vocabulary biasing.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_5" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_7" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2513,7 +2687,7 @@ and 175 text tokens per minute for output, for an effective blended rate of
 <p>A cost-efficient model, optimized for high-volume agentic tasks,
 translation, and simple data processing.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_6" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_8" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2559,7 +2733,7 @@ translation, and simple data processing.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_3" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_4" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2605,7 +2779,7 @@ translation, and simple data processing.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="flex_3" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
+<section><h3 id="flex_4" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2651,7 +2825,7 @@ translation, and simple data processing.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="priority_3" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
+<section><h3 id="priority_4" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2720,7 +2894,7 @@ performed.</p>
 <p>A cost-efficient model, optimized for high-volume agentic tasks,
 translation, and simple data processing.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_7" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_9" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2766,7 +2940,7 @@ translation, and simple data processing.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_4" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_5" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2812,7 +2986,7 @@ translation, and simple data processing.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="flex_4" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
+<section><h3 id="flex_5" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2858,7 +3032,7 @@ translation, and simple data processing.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="priority_4" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
+<section><h3 id="priority_5" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2925,7 +3099,7 @@ performed.</p>
 <p>Our next-generation video generation and editing model, now generally available
 to developers on the paid tier of the Gemini API.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_8" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_10" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -2974,7 +3148,7 @@ equates to an effective price of approximately $0.10 per second.</p>
 
 <p>Our next-generation video generation and editing model.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_9" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_11" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3022,7 +3196,7 @@ equates to an effective price of approximately $0.10 per second.</p>
 <p>Our 3rd generation Pro model, built for multimodal understanding,
 agentic capabilities, and vibe-coding.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_10" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_12" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3068,7 +3242,7 @@ agentic capabilities, and vibe-coding.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_5" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_6" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3116,7 +3290,7 @@ agentic capabilities, and vibe-coding.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="flex_5" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
+<section><h3 id="flex_6" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3164,7 +3338,7 @@ agentic capabilities, and vibe-coding.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="priority_5" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
+<section><h3 id="priority_6" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3219,61 +3393,6 @@ performed.</p>
 
 <div class="models-section">
     <div class="heading-group">
-        <h2 id="gemini-3.1-flash-live-preview" data-text="Gemini 3.1 Flash Live Preview" tabindex="-1">Gemini 3.1 Flash Live Preview</h2>
-        <em><a href="/gemini-api/docs/models/gemini-3.1-flash-live-preview"><code translate="no" dir="ltr">gemini-3.1-flash-live-preview</code></a></em>
-    
-    </div>
-    <p>
-        <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.1-flash-live-preview" class="button button-primary ais">Try it in Google AI Studio</a>
-    </p>
-</div>
-
-<p>Our low-latency, audio-to-audio model optimized for real-time dialogue with
-acoustic nuance detection, numeric precision, and multimodal awareness.</p>
-
-<table class="pricing-table">
-  <colgroup>
-    <col>
-    <col class="free-tier">
-    <col class="paid-tier">
-  </colgroup>
-  <thead>
-    <tr>
-      <th></th>
-      <th scope="col">Free Tier</th>
-      <th scope="col">Paid Tier, per 1M tokens in USD</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Input price</td>
-      <td>Free of charge</td>
-      <td>$0.75 (text)<br>$3.00 or $0.005/min (audio)<br>$1.00 or $0.002/min (image/video)</td>
-    </tr>
-    <tr>
-      <td>Output price (including thinking tokens)</td>
-      <td>Free of charge</td>
-      <td>$4.50 (text)<br>$12.00 or $0.018/min (audio)</td>
-    </tr>
-    <tr>
-      <td>Grounding with Google Search<sup>*</sup></td>
-      <td>Supported</td>
-      <td>5,000 free search requests per month (shared across all Gemini 3.x models), then $14 per 1,000 requests.</td>
-    </tr>
-    <tr>
-      <td>Used to improve our products</td>
-      <td><a href="/gemini-api/terms">Yes</a></td>
-      <td><a href="/gemini-api/terms">No</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<p><sup>*</sup> A customer-submitted request to Gemini may result in one or more
-queries to Google Search. You will be charged for each individual search query
-performed.</p>
-
-<div class="models-section">
-    <div class="heading-group">
         <h2 id="gemini-3.1-flash-image" data-text="Gemini 3.1 Flash Image (Nano Banana 2) 🍌" tabindex="-1">Gemini 3.1 Flash Image (Nano Banana 2) 🍌</h2>
         <em><a href="/gemini-api/docs/models/gemini-3.1-flash-image"><code translate="no" dir="ltr">gemini-3.1-flash-image</code></a></em>
     
@@ -3286,7 +3405,7 @@ performed.</p>
 <p>Designed for speed and efficiency, the Gemini 3.1 Flash Image generation model is
 effective for quick, interactive responses and high throughput.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_11" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_13" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3328,7 +3447,7 @@ effective for quick, interactive responses and high throughput.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_6" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_7" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3395,7 +3514,7 @@ Search is not charged as input tokens.</p>
 Flash Lite Image model is designed for ultra-low latency and cost-effective image
 generation and editing.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_12" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_14" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3429,7 +3548,7 @@ generation and editing.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_7" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_8" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3480,7 +3599,7 @@ generation and editing.</p>
 <p>Our 3.1 Flash Text-to-Speech audio model optimized for price-performant,
 low-latency, controllable speech generation.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_13" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_15" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3511,7 +3630,7 @@ low-latency, controllable speech generation.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_8" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_9" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3556,10 +3675,9 @@ low-latency, controllable speech generation.</p>
     </p>
 </div>
 
-<p>An intelligent model built for speed, combining intelligence with search and
-grounding.</p>
+<p>Our legacy Flash model, providing baseline speed and intelligence.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_14" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_16" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3605,7 +3723,7 @@ grounding.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_9" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_10" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3655,7 +3773,7 @@ grounding.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="flex_6" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
+<section><h3 id="flex_7" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3705,7 +3823,7 @@ grounding.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="priority_6" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
+<section><h3 id="priority_7" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3773,7 +3891,7 @@ performed.</p>
 contextual understanding. <strong>Text input and output</strong> is priced the same as
 <a href="#gemini-3.1-pro-preview">Gemini 3.1 Pro</a>.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_15" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_17" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3814,7 +3932,7 @@ contextual understanding. <strong>Text input and output</strong> is priced the s
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_10" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_11" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3848,7 +3966,7 @@ contextual understanding. <strong>Text input and output</strong> is priced the s
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="flex_7" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
+<section><h3 id="flex_8" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3882,7 +4000,7 @@ contextual understanding. <strong>Text input and output</strong> is priced the s
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="priority_7" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
+<section><h3 id="priority_8" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3947,7 +4065,7 @@ performed.</p>
 
 <p>A Pro model which excels at coding and complex reasoning tasks.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_16" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_18" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -3993,7 +4111,7 @@ performed.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_11" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_12" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4039,7 +4157,7 @@ performed.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="flex_8" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
+<section><h3 id="flex_9" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4085,7 +4203,7 @@ performed.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="priority_8" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
+<section><h3 id="priority_9" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4146,7 +4264,7 @@ performed.</p>
 <p>Our first hybrid reasoning model which supports a 1M token context window and
 has thinking budgets.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_17" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_19" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4192,7 +4310,7 @@ has thinking budgets.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_12" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_13" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4238,7 +4356,7 @@ has thinking budgets.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="flex_9" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
+<section><h3 id="flex_10" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4284,7 +4402,7 @@ has thinking budgets.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="priority_9" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
+<section><h3 id="priority_10" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4344,7 +4462,7 @@ has thinking budgets.</p>
 
 <p>A small and cost effective model, built for at scale usage.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_18" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_20" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4390,7 +4508,7 @@ has thinking budgets.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_13" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_14" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4436,7 +4554,7 @@ has thinking budgets.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="flex_10" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
+<section><h3 id="flex_11" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4482,7 +4600,7 @@ has thinking budgets.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="priority_10" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
+<section><h3 id="priority_11" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4587,11 +4705,15 @@ mood.</p>
     </p>
 </div>
 
+<aside class="warning">
+  <b>Warning:</b> Gemini 2.5 Flash Image (<code translate="no" dir="ltr">gemini-2.5-flash-image</code>) is <a href="/gemini-api/docs/deprecations">deprecated</a> and will be shut down on October 2, 2026; migrate to <a href="/gemini-api/docs/models/gemini-3.1-flash-image">Gemini 3.1 Flash Image</a> or <a href="/gemini-api/docs/models/gemini-3.1-flash-lite-image">Gemini 3.1 Flash Lite Image</a> to avoid service disruption.
+</aside>
+
 <p>A native image generation model, optimized for speed, flexibility, and
 contextual understanding. Text input and output is priced the same as
 <a href="#gemini-2.5-flash">2.5 Flash</a>.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_19" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_21" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4622,7 +4744,7 @@ contextual understanding. Text input and output is priced the same as
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_14" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_15" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4653,7 +4775,7 @@ contextual understanding. Text input and output is priced the same as
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="flex_11" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
+<section><h3 id="flex_12" data-text="Flex" tabindex="-1">Flex</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4684,7 +4806,7 @@ contextual understanding. Text input and output is priced the same as
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="priority_11" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
+<section><h3 id="priority_12" data-text="Priority" tabindex="-1">Priority</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4733,7 +4855,7 @@ contextual understanding. Text input and output is priced the same as
 <p>Our 2.5 Flash text-to-speech audio model optimized for price-performant,
 low-latency, controllable speech generation.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_20" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_22" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4764,7 +4886,7 @@ low-latency, controllable speech generation.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_15" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_16" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4810,7 +4932,7 @@ low-latency, controllable speech generation.</p>
 <p>Our 2.5 Pro text-to-speech audio model optimized for powerful, low-latency
 speech generation for more natural outputs and easier to steer prompts.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_21" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_23" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4841,7 +4963,7 @@ speech generation for more natural outputs and easier to steer prompts.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_16" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_17" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -4926,13 +5048,49 @@ speech generation for more natural outputs and easier to steer prompts.</p>
 generated. You will only be charged if your video is successfully generated.</span></aside>
 <div class="models-section">
     <div class="heading-group">
+        <h2 id="lyria-3-5" data-text="Lyria 3.5" tabindex="-1">Lyria 3.5</h2>
+        <em><a href="/gemini-api/docs/models/lyria-3.5"><code translate="no" dir="ltr">lyria-3.5</code></a></em>
+    </div>
+</div>
+
+<p>Google&#39;s music generation model.</p>
+
+<table class="pricing-table">
+  <colgroup>
+    <col>
+    <col class="free-tier">
+    <col class="paid-tier">
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      <th scope="col">Free Tier</th>
+      <th scope="col">Paid Tier, per request in USD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lyria 3.5 (Full Song)</td>
+      <td>Not available</td>
+      <td>$0.08 per song</td>
+    </tr>
+    <tr>
+      <td>Used to improve our products</td>
+      <td><a href="/gemini-api/terms">Yes</a></td>
+      <td><a href="/gemini-api/terms">No</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="models-section">
+    <div class="heading-group">
         <h2 id="lyria-3" data-text="Lyria 3" tabindex="-1">Lyria 3</h2>
         <em><a href="/gemini-api/docs/models/lyria-3-clip-preview"><code translate="no" dir="ltr">lyria-3-clip-preview</code></a> and <a href="/gemini-api/docs/models/lyria-3-pro-preview"><code translate="no" dir="ltr">lyria-3-pro-preview</code></a></em>
     
     </div>
 </div>
 
-<p>Google&#39;s family of music generation models.</p>
+<p>Google&#39;s family of legacy music generation models.</p>
 
 <table class="pricing-table">
   <colgroup>
@@ -4980,7 +5138,7 @@ generated. You will only be charged if your video is successfully generated.</sp
 <p>Our first multimodal embedding model, mapping text, images, video, audio, and
 PDFs into a unified embedding space.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_22" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_24" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -5021,7 +5179,7 @@ PDFs into a unified embedding space.</p>
     </tr>
   </tbody>
 </table></section>
-<section><h3 id="batch_17" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
+<section><h3 id="batch_18" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -5065,72 +5223,6 @@ PDFs into a unified embedding space.</p>
 </devsite-selector></div>
 <div class="models-section">
     <div class="heading-group">
-        <h2 id="gemini-embedding" data-text="Gemini Embedding" tabindex="-1">Gemini Embedding</h2>
-        <em><a href="/gemini-api/docs/models/gemini-embedding-001"><code translate="no" dir="ltr">gemini-embedding-001</code></a></em>
-    
-    </div>
-    <p>
-        <a href="/gemini-api/docs/embeddings" class="button button-primary ais">Try the API</a>
-    </p>
-</div>
-
-<p>Our first Gemini Embeddings model for text-only use cases.</p>
-<div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_23" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
-  <colgroup>
-    <col>
-    <col class="free-tier">
-    <col class="paid-tier">
-  </colgroup>
-  <thead>
-    <tr>
-      <th></th>
-      <th scope="col">Free Tier</th>
-      <th scope="col">Paid Tier, per 1M tokens in USD</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Input price</td>
-      <td>Free of charge</td>
-      <td>$0.15</td>
-    </tr>
-    <tr>
-      <td>Used to improve our products</td>
-      <td><a href="/gemini-api/terms">Yes</a></td>
-      <td><a href="/gemini-api/terms">No</a></td>
-    </tr>
-  </tbody>
-</table></section>
-<section><h3 id="batch_18" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
-  <colgroup>
-    <col>
-    <col class="free-tier">
-    <col class="paid-tier">
-  </colgroup>
-  <thead>
-    <tr>
-      <th></th>
-      <th scope="col">Free Tier</th>
-      <th scope="col">Paid Tier, per 1M tokens in USD</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Input price</td>
-      <td>Not available</td>
-      <td>$0.075</td>
-    </tr>
-    <tr>
-      <td>Used to improve our products</td>
-      <td><a href="/gemini-api/terms">Yes</a></td>
-      <td><a href="/gemini-api/terms">No</a></td>
-    </tr>
-  </tbody>
-</table></section>
-</devsite-selector></div>
-<div class="models-section">
-    <div class="heading-group">
         <h2 id="gemini-robotics-er-2" data-text="Gemini Robotics ER 2 Preview" tabindex="-1">Gemini Robotics ER 2 Preview</h2>
         <em><a href="/gemini-api/docs/models/gemini-robotics-er-2-preview"><code translate="no" dir="ltr">gemini-robotics-er-2-preview</code></a></em>
     
@@ -5145,7 +5237,7 @@ vision-language model endpoint that enables robots to understand their environme
 precisely, supporting agentic orchestration of robots, video progress
 understanding, multi-robot collaboration, and advanced spatial reasoning.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_24" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_25" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -5162,17 +5254,17 @@ understanding, multi-robot collaboration, and advanced spatial reasoning.</p>
     <tr>
       <td>Input price</td>
       <td>Free of charge</td>
-      <td>$2.00 (text / image / video / audio)</td>
+      <td>$1.00 (text / image / video / audio) through December 31, 2026.<br>$2.00 (text / image / video / audio) starting January 1, 2027.</td>
     </tr>
     <tr>
       <td>Output price (including thinking tokens)</td>
       <td>Free of charge</td>
-      <td>$10.00</td>
+      <td>$5.00 through December 31, 2026.<br>$10.00 starting January 1, 2027.</td>
     </tr>
     <tr>
       <td>Context caching price</td>
       <td>Not available</td>
-      <td>$0.20<br>$1.00 / 1,000,000 tokens per hour (storage price)</td>
+      <td>$0.10 through December 31, 2026.<br>$0.20 starting January 1, 2027.<br>$0.50 / 1,000,000 tokens per hour (storage price) through December 31, 2026.<br>$1.00 / 1,000,000 tokens per hour (storage price) starting January 1, 2027.</td>
     </tr>
     <tr>
       <td>Grounding with Google Search</td>
@@ -5203,17 +5295,17 @@ understanding, multi-robot collaboration, and advanced spatial reasoning.</p>
     <tr>
       <td>Input price</td>
       <td>Not available</td>
-      <td>$1.00 (text / image / video / audio)</td>
+      <td>$0.50 (text / image / video / audio) through December 31, 2026.<br>$1.00 (text / image / video / audio) starting January 1, 2027.</td>
     </tr>
     <tr>
       <td>Output price (including thinking tokens)</td>
       <td>Not available</td>
-      <td>$5.00</td>
+      <td>$2.50 through December 31, 2026.<br>$5.00 starting January 1, 2027.</td>
     </tr>
     <tr>
       <td>Context caching price</td>
       <td>Not available</td>
-      <td>$0.10<br>$1.00 / 1,000,000 tokens per hour (storage price)</td>
+      <td>$0.05 through December 31, 2026.<br>$0.10 starting January 1, 2027.<br>$0.50 / 1,000,000 tokens per hour (storage price) through December 31, 2026.<br>$1.00 / 1,000,000 tokens per hour (storage price) starting January 1, 2027.</td>
     </tr>
     <tr>
       <td>Grounding with Google Search</td>
@@ -5244,7 +5336,7 @@ optimized for real-time text streaming using the Live API. It accepts text,
 image, video, and audio input and supports bidirectional streaming with
 function calling.</p>
 <div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_25" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
+<section><h3 id="standard_26" data-text="Standard" tabindex="-1">Standard</h3><p><table class="pricing-table">
   <colgroup>
     <col>
     <col class="free-tier">
@@ -5261,12 +5353,12 @@ function calling.</p>
     <tr>
       <td>Input price</td>
       <td>Free of charge</td>
-      <td>$2.00 (text / image / video / audio)</td>
+      <td>$1.00 (text / image / video / audio) through December 31, 2026.<br>$2.00 (text / image / video / audio) starting January 1, 2027.</td>
     </tr>
     <tr>
       <td>Output price</td>
       <td>Free of charge</td>
-      <td>$10.00</td>
+      <td>$5.00 through December 31, 2026.<br>$10.00 starting January 1, 2027.</td>
     </tr>
     <tr>
       <td>Grounding with Google Search</td>
@@ -5279,104 +5371,14 @@ function calling.</p>
       <td><a href="/gemini-api/terms">No</a></td>
     </tr>
   </tbody>
-</table></section>
-</devsite-selector></div>
 <div class="models-section">
-    <div class="heading-group">
-        <h2 id="gemini-robotics-er" data-text="Gemini Robotics ER 1.6 Preview" tabindex="-1">Gemini Robotics ER 1.6 Preview</h2>
-        <em><a href="/gemini-api/docs/models/gemini-robotics-er-1.6-preview"><code translate="no" dir="ltr">gemini-robotics-er-1.6-preview</code></a></em>
-    
-    </div>
-    <p>
-        <a href="https://aistudio.google.com?model=gemini-robotics-er-1.6-preview" class="button button-primary ais">Try it in Google AI Studio</a>
-    </p>
-</div>
+<div class="heading-group">
+    <h2 id="gemini-2.5-computer-use-preview-10-2025" data-text="Gemini 2.5 Computer Use Preview" tabindex="-1">Gemini 2.5 Computer Use Preview</h2>
+    <em><a href="/gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025"><code translate="no" dir="ltr">gemini-2.5-computer-use-preview-10-2025</code></a></em></p>
 
-<p>Gemini Robotics ER, short for Gemini Robotics-Embodied Reasoning, is a thinking
-model that enhances robots&#39; abilities to understand and interact with the
-physical world.</p>
-<div><devsite-selector data-ds-scope="code-sample">
-<section><h3 id="standard_26" data-text="Standard" tabindex="-1">Standard</h3><table class="pricing-table">
-  <colgroup>
-    <col>
-    <col class="free-tier">
-    <col class="paid-tier">
-  </colgroup>
-  <thead>
-    <tr>
-      <th></th>
-      <th scope="col">Free Tier</th>
-      <th scope="col">Paid Tier, per 1M tokens in USD</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Input price</td>
-      <td>Free of charge</td>
-      <td>$1.00 (text / image / video)<br>$2.00 (audio)</td>
-    </tr>
-    <tr>
-      <td>Output price (including thinking tokens)</td>
-      <td>Free of charge</td>
-      <td>$5.00</td>
-    </tr>
-    <tr>
-      <td>Grounding with Google Search</td>
-      <td>Not available</td>
-      <td>5,000 free search requests per month (shared across all Gemini 3.x models), then $14 per 1,000 requests.</td>
-    </tr>
-    <tr>
-      <td>Used to improve our products</td>
-      <td><a href="/gemini-api/terms">Yes</a></td>
-      <td><a href="/gemini-api/terms">No</a></td>
-    </tr>
-  </tbody>
-</table></section>
-<section><h3 id="batch_20" data-text="Batch" tabindex="-1">Batch</h3><table class="pricing-table">
-  <colgroup>
-    <col>
-    <col class="free-tier">
-    <col class="paid-tier">
-  </colgroup>
-  <thead>
-    <tr>
-      <th></th>
-      <th scope="col">Free Tier</th>
-      <th scope="col">Paid Tier, per 1M tokens in USD</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Input price</td>
-      <td>Not available</td>
-      <td>$0.50 (text / image / video)<br>$1.00 (audio)</td>
-    </tr>
-    <tr>
-      <td>Output price (including thinking tokens)</td>
-      <td>Not available</td>
-      <td>$2.50</td>
-    </tr>
-    <tr>
-      <td>Grounding with Google Search</td>
-      <td>Not available</td>
-      <td>5,000 free search requests per month (shared across all Gemini 3.x models), then $14 per 1,000 requests.</td>
-    </tr>
-    <tr>
-      <td>Used to improve our products</td>
-      <td><a href="/gemini-api/terms">Yes</a></td>
-      <td><a href="/gemini-api/terms">No</a></td>
-    </tr>
-  </tbody>
-</table></section>
+<p></div>
+</div></p></section>
 </devsite-selector></div>
-<div class="models-section">
-    <div class="heading-group">
-        <h2 id="gemini-2.5-computer-use-preview-10-2025" data-text="Gemini 2.5 Computer Use Preview" tabindex="-1">Gemini 2.5 Computer Use Preview</h2>
-        <em><a href="/gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025"><code translate="no" dir="ltr">gemini-2.5-computer-use-preview-10-2025</code></a></em>
-    
-    </div>
-</div>
-
 <p>Our Computer Use model optimized for building browser control agents that
 automate tasks.</p>
 
@@ -5529,7 +5531,7 @@ to each model.</p>
     <tr>
       <td><a href="/gemini-api/docs/file-search#pricing">File search</a></td>
       <td>Free of charge</td>
-      <td>Charged for <a href="#gemini-embedding">embeddings</a> at $0.15 / 1M tokens.<br>Retrieved document tokens charged as regular tokens per model pricing.</td>
+      <td>Charged for <a href="#gemini-embedding-2">embeddings</a> at $0.15 / 1M tokens.<br>Retrieved document tokens charged as regular tokens per model pricing.</td>
     </tr>
     <tr>
       <td><a href="/gemini-api/docs/models/gemini-3.1-pro-preview">Custom Tools endpoint (Gemini 3.1 Pro Preview)</a></td>
@@ -5594,6 +5596,12 @@ consumption and usage of the tools.</p>
 <h2 id="notes" data-text="Notes" tabindex="-1">Notes</h2>
 
 <ul>
+<li><strong>Agentic video understanding:</strong> When using agentic video understanding,
+token usage is variable based on the content loaded by the model rather than
+full video length. This typically results in up to 88% fewer input tokens for
+long-form video, though token counts depend on query complexity and dynamic
+sampling depth (which may exceed 1 FPS for detailed visual segments). See
+<a href="/gemini-api/docs/video-understanding#agentic-video-understanding">Agentic video understanding</a>.</li>
 <li><strong>Document token billing:</strong> Tokens for the <code translate="no" dir="ltr">DOCUMENT</code> modality (for example, PDFs) are billed at the image token rate. In API responses, these tokens appear under the <code translate="no" dir="ltr">DOCUMENT</code> modality within <code translate="no" dir="ltr">promptTokensDetails</code>.</li>
 <li>Google AI Studio usage is free of charge in all <a href="/gemini-api/docs/available-regions">available regions</a>. See <a href="/gemini-api/docs/billing">Billing FAQs</a> for details.</li>
 <li>Prices may differ from the prices listed here and the prices offered on
@@ -5620,7 +5628,7 @@ Costs for Gemini always apply. Rate limits are subject to change.</li>
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-08-28 UTC.</p>
+  <p>Last updated 2026-09-15 UTC.</p>
 </devsite-content-footer>
 
 

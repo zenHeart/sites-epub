@@ -384,7 +384,7 @@ Disable with `parallel_tool_calls: false` in your request.
 
 | Field | Required | Description |
 |-------|----------|-------------|
-| `name` | Yes | Unique identifier (max 200 tools per request) |
+| `name` | Yes | Unique identifier (max 350 tools per request) |
 | `description` | Yes | What the tool does — helps the model decide when to use it |
 | `parameters` | Yes | JSON Schema defining function inputs |
 

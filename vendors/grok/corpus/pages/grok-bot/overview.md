@@ -2,89 +2,112 @@
 
 # Grok Bot
 
-Bots are AI teammates you can give real work to. Bots can sign and use apps and
-websites just like you do on a persistent cloud computer. They can collaborate
-independently, passing context between each other and handing off tasks, and
-understand the nuances of how you like work done over time. They finish jobs
-end to end, and only come back when something needs your approval.
+Grok Bot gives you Bots you can keep around: AI teammates with names, jobs, and
+context that compounds over time. Each Bot works on a persistent cloud computer
+with a browser, filesystem, and terminal, so tasks finish in your real tools
+instead of as chat drafts. [Get started](/grok-bot/get-started) with your first
+Bot, or read [how teams roll it out](/grok-bot/teams-and-enterprises).
 
-You work with a Bot by messaging it like a teammate. Give it a task or function,
-relevant context, and access to any tools or files needed to do the work. Bots
-take on ambitious projects, work across multiple tools and systems, and keep you
-updated of their actions in the conversation.
+You work with a Bot by messaging it. Give it a task, the relevant context, and
+access to the tools it needs. It takes on multi-step work across apps and
+websites, keeps you updated in the conversation, and comes back when something
+needs your approval.
 
-> In the Docs and in the Grok Bot app, a Bot = a single persistent, named agent
-> or one AI teammate.
+Grok Bot runs on macOS, Windows, Linux, iOS, and Android, and is included with
+every paid individual Cursor plan and with the Cursor Teams plan. You can also
+link an individual SuperGrok, SuperGrok Plus, or SuperGrok Heavy subscription.
+See [Plans and billing](https://cursor.com/help/grok-bot/plans) for the full
+matrix.
 
 ## What makes Grok Bot different
 
-* **It has a computer of its own.** Each Bot runs on a persistent cloud VM with
-  a browser, filesystem, and terminal. It can use connectors/MCP where
-  available, and computer use for apps and websites without a clean API, so work
-  finishes in the real tools rather than as chat drafts.
-* **It is very easy to get started.** Create a Bot, message it, and grant access
-  as needed. No workflow builder or prior Bot setup required. The same Bot is
-  reachable from the desktop and mobile apps.
-* **It coordinates independently with other Bots.** Multiple Bots share one
-  user-scoped computer and can run in parallel. They can message each other,
-  share context in threads or group chats, and pass ownership so you are not the
-  router between tools.
-* **It can learn workflows from live demonstration.** Ask a Bot to follow along
-  once through a multi-step or multi-system path. It persists that path as a
-  routine and can re-run it on a schedule or on demand.
-* **It is a persistent, named teammate with a durable state.** Named Bots keep
-  memory, files, browser sessions, and preferences across turns. Context
-  compounds instead of resetting to a fresh environment on every task.
+* **Each Bot has a computer.** Your Bots run on a persistent cloud computer with
+  a browser, filesystem, and terminal. They use
+  [connectors](/grok-bot/computer-and-apps#connect-an-app) where available and
+  computer use for everything else, and work continues while your laptop is
+  closed.
+* **Setup is a message, not a workflow builder.** Create a Bot, describe the
+  job, and grant access as it asks. The same Bot is reachable from the desktop
+  app and the [mobile app](/grok-bot/mobile).
+* **Bots coordinate with each other.** Your Bots can run in parallel, message
+  each other, share context in
+  [group chats](/grok-bot/chat-and-collaboration#start-a-group-chat), and pass
+  ownership of a task, so you aren't the router between tools.
+* **Bots learn workflows from demonstration.** Walk a Bot through a multi-step
+  path once, and it can save the path as a
+  [skill](/grok-bot/skills-routines-and-automations) and rerun it on a schedule.
+* **Context compounds.** A named Bot keeps its memory, files, browser sessions,
+  and preferences across sessions instead of resetting on every task.
 
-## Bots share one computer
+## Your Bots share one computer
 
-All of your Bots use the same persistent cloud computer. They share files,
-browser sessions, and app logins, which makes handoffs possible without
-repeating setup.
-
-The computer is isolated to your account, not to an individual Bot. Treat a
-login or file placed on the computer as available to all of your Bots. Each Bot
-gets its own screen on that computer, so several Bots can use browser and
-desktop tools in parallel without getting separate security boundaries.
+All of your Bots use the same cloud computer, sharing its files, browser
+sessions, and app logins, which makes handoffs work without repeating setup. The
+computer belongs to your account, not to an individual Bot, so treat anything
+placed on it as available to every Bot you run; between users, isolation is
+strict. [The computer and apps](/grok-bot/computer-and-apps) covers the full
+model.
 
 ## A good first handoff
 
-Start with a real task that involves multiple tools and has a clear result:
+Start with a real task that spans a few tools and has a clear finish line:
 
-> Pull this week's Strategic Prospects PG List from Salesforce. Skip anyone
-> already in a sequence. Research the top 5 accounts across the web, Slack,
-> Databricks, and Sumble, pull contacts, and draft LinkedIn and email in my
-> voice, and leave me drafts to approve by tomorrow morning
+> Pull this week's pipeline review list from our CRM. Skip anyone already in an
+> active sequence. Research the top five accounts across the web and Slack,
+> pull the right contacts, draft outreach in my voice, and leave me drafts to
+> approve by tomorrow morning.
 
-This tells the Bot what to do, where to work, what context to pull in, what
-you'd like to see as a finished deliverable.
+This tells the Bot what to do, where to work, what context to pull in, and what
+finished work looks like. Review the result, correct it, and turn the stable
+process into a [skill or routine](/grok-bot/skills-routines-and-automations).
 
-You can review a Bot's work, provide corrections, and turn the process into a
-reusable skill or proactive routine.
+## FAQ
 
-## What to explore next
+### Does Grok Bot keep working when my laptop is closed?
 
-* [Get started](/grok-bot/get-started) with the desktop app and your first Bot.
-* Discover more [use cases](/grok-bot/use-cases) for Bots.
-* Make recurring work repeatable with [skills and routines](/grok-bot/skills-routines-and-automations).
-* Learn how to [use the computer and apps](/grok-bot/computer-and-apps).
-* Review [approvals, security, and privacy](/grok-bot/approvals-security-and-privacy)
-  before granting access to sensitive systems.
+Yes. Work runs on the cloud computer. Closing the app, your laptop, or your
+phone doesn't stop a background turn or a routine.
 
-## For team admins and security reviewers
+### Can several Bots work at the same time?
 
-The pages below cover rolling Grok Bot out for a team or organization:
+Yes. Bots can reason, use connectors, work with files, and coordinate in
+parallel. Each Bot gets its own screen on the shared computer, and one Bot runs
+one computer-use task on its screen at a time.
 
-* [Grok Bot for teams and enterprises](/grok-bot/teams-and-enterprises) covers
-  the architecture, rollout steps, the admin controls and which plans include
-  them, and the configuration Cursor recommends.
-* [Grok Bot security](/grok-bot/security) and the
-  [Grok Bot security FAQ](/grok-bot/security-faq) cover network policy, egress,
-  approvals and Auto Review, identity, logging, data retention, hosting, and
-  certifications for security reviewers.
-* [Configure identity and access](/grok-bot/identity-and-access) walks through
-  Okta and Microsoft Entra ID: widening the Cursor app assignment beyond
-  engineering and letting members sign in to IdP apps from the Bot's computer.
-* [Connect to private networks](/grok-bot/private-networks) shows how to reach
-  internal services from team computers with Tailscale or Cloudflare Tunnel
-  through Team Setup.
+### What does a Bot remember?
+
+Stable preferences, role context, and summaries of prior work. Conversations
+and learned context stay separate per Bot, while shared files, browser
+sessions, and direct handoffs move context between them. For consequential
+decisions, ask the Bot to check the current source instead of relying on
+memory.
+
+### Can a Bot use any website?
+
+Bots can use many browser-based tools, including services without a connector.
+A site can still block automation, expire a session, or require a human step.
+The Bot hands those steps to you rather than working around them.
+
+### Which platforms are supported?
+
+The desktop app runs on macOS (Apple silicon and Intel), Windows (x64 and
+Arm64), and Linux (x64 and Arm64), and the mobile app runs on iPhone and
+Android. The computers Bots work on run in Cursor's cloud.
+
+### How much does Grok Bot cost?
+
+Access is included with every paid individual Cursor plan and with the Cursor
+Teams plan, or through an individual SuperGrok account link. Usage resets
+weekly. See [Plans and billing](https://cursor.com/help/grok-bot/plans).
+
+## Next steps
+
+* [Get started](/grok-bot/get-started) — Install the app, create your first Bot, and hand it a useful task.
+
+* [Use cases](/grok-bot/use-cases) — Roles that work well, with starter prompts you can adapt.
+
+* [Work with Grok Bot](/grok-bot/bots) — Bots, messaging, the shared computer, and skills and routines, one page each.
+
+* [Teams and Enterprise](/grok-bot/teams-and-enterprises) — Admin controls, identity, private networks, and the recommended rollout baseline.
+
+* [Security](/grok-bot/security) — Network policy, approvals and Auto Review, logging, and data handling.

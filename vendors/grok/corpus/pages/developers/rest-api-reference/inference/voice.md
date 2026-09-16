@@ -14,7 +14,7 @@ Create an ephemeral client secret for authenticating browser-side Realtime API c
 
 * `session` (object | null) — Optional initial session configuration to bind to the client secret. This JSON value is stored alongside the secret and applied when the WebSocket connection opens.
 
-  * `model` ("grok-voice-latest" | "grok-voice-think-fast-2.0" | "grok-voice-think-fast-1.0") — Model to use for the session. Use grok-voice-latest for the best experience.
+  * `model` ("grok-voice-latest" | "grok-voice-think-fast-2.0") — Model to use for the session. Use grok-voice-latest for the best experience.
 
   * `reasoning` (object) — Reasoning settings for models that support them.
 
@@ -393,7 +393,7 @@ Convert text into speech audio.
 
 ### Request Body
 
-* `text` (string, required) — The text to convert to speech. Maximum 15,000 characters. Supports inline speech tags for expressive output: \`\[pause]\`, \`\[long-pause]\`, \`\[hum-tune]\`, \`\[laugh]\`, \`\[chuckle]\`, \`\[giggle]\`, \`\[cry]\`, \`\[tsk]\`, \`\[tongue-click]\`, \`\[lip-smack]\`, \`\[breath]\`, \`\[inhale]\`, \`\[exhale]\`, \`\[sigh]\`. Also supports wrapping tags for style control: \`\<soft>\`, \`\<whisper>\`, \`\<loud>\`, \`\<build-intensity>\`, \`\<decrease-intensity>\`, \`\<higher-pitch>\`, \`\<lower-pitch>\`, \`\<slow>\`, \`\<fast>\`, \`\<sing-song>\`, \`\<singing>\`, \`\<emphasis>\`.
+* `text` (string, required) — The text to convert to speech. Maximum 60,000 characters. Supports inline speech tags for expressive output: \`\[pause]\`, \`\[long-pause]\`, \`\[hum-tune]\`, \`\[laugh]\`, \`\[chuckle]\`, \`\[giggle]\`, \`\[cry]\`, \`\[tsk]\`, \`\[tongue-click]\`, \`\[lip-smack]\`, \`\[breath]\`, \`\[inhale]\`, \`\[exhale]\`, \`\[sigh]\`. Also supports wrapping tags for style control: \`\<soft>\`, \`\<whisper>\`, \`\<loud>\`, \`\<build-intensity>\`, \`\<decrease-intensity>\`, \`\<higher-pitch>\`, \`\<lower-pitch>\`, \`\<slow>\`, \`\<fast>\`, \`\<sing-song>\`, \`\<singing>\`, \`\<emphasis>\`.
 
 * `voice_id` (string) — Voice identifier. Use a built-in voice from \`GET /v1/tts/voices\` (e.g. \`eve\`, \`ara\`) or a custom voice ID. Defaults to \`eve\` when omitted.
 
@@ -637,7 +637,7 @@ Full schemas and examples: [`/tts-streaming.ws.json`](/tts-streaming.ws.json)
 
 ### Client Messages
 
-* `text.delta` — Send a chunk of text to be synthesized. Text is processed incrementally — audio generation begins as soon as enough text is buffered. Individual deltas are capped at 15,000 characters.
+* `text.delta` — Send a chunk of text to be synthesized. Text is processed incrementally — audio generation begins as soon as enough text is buffered. Individual deltas are capped at 60,000 characters.
 
 * `text.done` — Signal that all text for this utterance has been sent. The server will finish generating audio and send \`audio.done\`. After receiving \`audio.done\`, you can start a new utterance with another \`text.delta\`.
 

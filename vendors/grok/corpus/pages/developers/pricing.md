@@ -30,17 +30,16 @@ All prices are in USD. For per-model details, see the [models page](/developers/
 | Model | Cost |
 | --- | --- |
 | grok-imagine-image | $0.02 / image |
-| grok-imagine-image-quality | $0.05 / image |
 | grok-imagine-image-2.0 | $0.04 / image |
-| grok-imagine-video | $0.050 / sec |
+| grok-imagine-image-quality | $0.05 / image |
 | grok-imagine-video-1.5 | $0.080 / sec |
+| grok-imagine-video | $0.050 / sec |
 
 ### Voice Pricing
 
 | Mode | Cost |
 | --- | --- |
 | Speech to Speech (grok-voice-think-fast-2.0) | $0.08 / min ($4.80 / hr) audio<br />$0.004 / text input |
-| Speech to Speech (grok-voice-think-fast-1.0) — Deprecated | $0.05 / min ($3.00 / hr) audio<br />$0.004 / text input |
 | Speech to Text | $0.10 / hr (REST), $0.20 / hr (Streaming) |
 | Text to Speech | $15.00 / 1M chars |
 
@@ -130,6 +129,18 @@ You are only billed at the priority rate when the response confirms `"service_ti
 > [!NOTE]
 >
 > Priority Processing is available for Chat Completions and Responses endpoints only. It is not supported for image generation, video generation, or [Batch API](/developers/advanced-api-usage/batch-api) requests. See [Priority Processing documentation](/developers/advanced-api-usage/priority-processing) for full details.
+
+## US Regional Endpoint Pricing
+
+Requests sent to the [US regional endpoint](/developers/advanced-api-usage/regions), `https://us.api.x.ai/v1`, run inference in the United States; their token usage is billed at **1.1x** the global token rates, a 10% premium.
+
+| | Global endpoint | US regional endpoint |
+|---|---|---|
+| Base URL | `https://api.x.ai/v1` | `https://us.api.x.ai/v1` |
+| Token pricing | Standard rates | **1.1x** standard rates |
+| Models | All models available to your team | Currently `grok-4.6` only |
+
+The 1.1x multiplier applies to input, output, and cached input tokens, including long-context rates. [Prompt caching](/developers/advanced-api-usage/prompt-caching) discounts are applied before the multiplier. See the [Regional Endpoints documentation](/developers/advanced-api-usage/regions) for the scope of the US processing and storage guarantee.
 
 ## Files and Collections Pricing
 

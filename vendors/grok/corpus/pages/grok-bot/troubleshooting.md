@@ -131,8 +131,9 @@ Read the proposed target and arguments. If the card is no longer actionable:
 3. Ask it to regenerate the action with the corrected scope
 
 If an action keeps requiring approval, check **Settings → General →
-Auto-review** for a matching **Require Approval** rule. Require rules take
-precedence over allow rules.
+Auto-review** for a matching **Ask first** rule, including team rules your
+admin requires. **Ask first** rules take precedence over **Allow
+automatically** rules.
 
 ## Local computer work is refused
 

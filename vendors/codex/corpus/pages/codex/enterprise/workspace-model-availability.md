@@ -44,6 +44,46 @@ enforced `features.fast_mode` setting in
 This setting can pin Fast mode on or off for managed local Codex clients; it
 isn't a starting default and can't override workspace or product availability.
 
+## GPT-6 Astra in Enterprise
+
+During the initial rollout, your organization must have Daybreak access before
+an administrator can enable Astra. Astra is off by default for ChatGPT
+Enterprise for the first two weeks after launch. Administrators in eligible
+workspaces can enable Astra for users or groups
+across Chat, Work, and Codex. Existing product eligibility still applies. Review your
+[workspace model settings](https://help.openai.com/en/articles/8411955) and
+confirm availability on each client used by your pilot group.
+
+Enabling access and choosing a starting model are separate decisions. Check the
+applicable seat, role, and billing arrangement before setting Astra as a default.
+See [pricing](https://learn.chatgpt.com/docs/pricing) for allowance and billing
+guidance and [safety monitoring](https://learn.chatgpt.com/docs/agent-approvals-security#safety-monitoring-and-paused-tasks)
+for tasks that pause for review.
+
+For API-key sign-in, Astra access follows the API organization and project
+associated with the key. Enabling Astra in a ChatGPT workspace doesn't grant
+API access. Early access with an API key also requires client configuration;
+ask your OpenAI account team for setup instructions. Selecting a
+model or changing local configuration doesn't grant access by itself.
+
+## Prepare for the GPT-5.5 retirement
+
+On October 14, 2026, GPT-5.5 will retire from ChatGPT, ChatGPT Work, and Codex
+on all plans, including consumer, Business, Enterprise, and Edu plans. This
+retirement does not apply to the OpenAI API.
+
+Before October 14, review workspace defaults for ChatGPT, ChatGPT Work, and
+Codex and choose an available replacement. For Codex with ChatGPT sign-in,
+replace `gpt-5.5` with `gpt-5.6-sol` (GPT-5.6 Sol) in workspace defaults,
+saved model settings, managed configurations, custom agents, and scheduled
+tasks. Check scripts and commands that explicitly select `gpt-5.5` too.
+
+Changing a default doesn't grant model access. Confirm that the replacement
+is available to the affected users on each client. See
+[Codex models](https://learn.chatgpt.com/docs/models#gpt-55-retirement) and
+[managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration)
+for migration guidance.
+
 ## Prepare for the GPT-5.4 retirement
 
 On August 31, 2026, GPT-5.4 and GPT-5.4 mini retire from Codex for users signed

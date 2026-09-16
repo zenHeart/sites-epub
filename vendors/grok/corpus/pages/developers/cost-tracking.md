@@ -14,7 +14,7 @@ The cost is expressed in **ticks**, where 1 USD = 10,000,000,000 ticks (10^10). 
 cost_usd = cost_in_usd_ticks / 10,000,000,000
 ```
 
-For example, a response with `"cost_in_usd_ticks": 37756000` cost $0.0038. An image generation with `"cost_in_usd_ticks": 200000000` cost $0.02.
+For example, a response with `"cost_in_usd_ticks": 37756000` cost $0.0038. An image generation with `"cost_in_usd_ticks": 400000000` cost $0.04.
 
 Ticks exist for precision: they represent costs down to fractions of a cent without floating-point rounding, which matters when you're processing thousands of requests and need the totals to add up.
 
@@ -303,7 +303,7 @@ curl https://api.x.ai/v1/images/generations \
     "model": "grok-imagine-image-2.0",
     "prompt": "A cat on a rocket"
   }' | jq '.usage.cost_in_usd_ticks'
-# => 200000000 ($0.02)
+# => 400000000 ($0.04)
 ```
 
 ```python customLanguage="pythonXAI"

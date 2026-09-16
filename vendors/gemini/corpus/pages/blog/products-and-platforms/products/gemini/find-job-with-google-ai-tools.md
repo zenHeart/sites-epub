@@ -5,7 +5,7 @@
 
 
 <!DOCTYPE html>
-<html class="no-js glue-flexbox glue-app-ready keyword-blog" lang="en-us" data-locale="en-us" data-version="pr20260820-1820">
+<html class="no-js glue-flexbox glue-app-ready keyword-blog" lang="en-us" data-locale="en-us" data-version="pr20260902-1737">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -80,9 +80,9 @@
 
         
         
-        <link class="deferred-stylesheet" rel="preload" type="text/css" href="/static/keyword/css/blog/index.min.css?version=pr20260820-1820" as="style">
+        <link class="deferred-stylesheet" rel="preload" type="text/css" href="/static/keyword/css/blog/index.min.css?version=pr20260902-1737" as="style">
 <noscript>
-  <link rel="stylesheet" href="/static/keyword/css/blog/index.min.css?version=pr20260820-1820">
+  <link rel="stylesheet" href="/static/keyword/css/blog/index.min.css?version=pr20260902-1737">
 </noscript>
 
         <link class="deferred-stylesheet" rel="preload" type="text/css" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,600,700|Google+Sans+Flex:400,500|Product+Sans:400&amp;display=swap&amp;lang=en" as="style">
@@ -111,8 +111,8 @@
 
 <link rel="canonical" href="https://blog.google/products-and-platforms/products/gemini/find-job-with-google-ai-tools/"/>
 
-<link href="/favicon.ico" rel="icon">
-<link href="/static/blogv2/images/apple-touch-icon.png?version=pr20260820-1820" rel="apple-touch-icon">
+<link rel="icon" type="image/x-icon" href="/static/blogv2/images/favicon.ico?version=pr20260902-1737">
+<link href="/static/blogv2/images/apple-touch-icon.png?version=pr20260902-1737" rel="apple-touch-icon">
 
 
 
@@ -156,7 +156,7 @@
     
       "special_hero": "undefined",
     
-    "days_since_published": "66",
+    "days_since_published": "82",
     
       "content_category": "undefined",
     
@@ -315,7 +315,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#h-burger"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#h-burger"></use>
 </svg>
 
         </button>
@@ -337,7 +337,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-clear"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-clear"></use>
 </svg>
 
         </button>
@@ -361,11 +361,11 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#news-from-google-logo"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#news-from-google-logo"></use>
 </svg>
 
             <!-- SuperG Logo -->
-            <img class="uni-nav__logo--super-g" src="/static/blogv2/images/super-g-aurora.svg?version=pr20260820-1820" alt="Google" width="30" height="30">
+            <img class="uni-nav__logo--super-g" src="/static/blogv2/images/super-g-aurora.svg?version=pr20260902-1737" alt="Google" width="30" height="30">
           </a>
         
         
@@ -407,7 +407,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -437,7 +437,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -467,7 +467,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
               </button>
@@ -519,7 +519,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -560,7 +560,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -638,7 +638,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -668,7 +668,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -726,7 +726,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -756,7 +756,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -804,7 +804,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -834,7 +834,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -882,7 +882,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -919,7 +919,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -944,7 +944,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -969,7 +969,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -994,7 +994,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1034,7 +1034,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -1075,7 +1075,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1173,7 +1173,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1203,7 +1203,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1261,7 +1261,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1291,7 +1291,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1359,7 +1359,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1396,7 +1396,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1421,7 +1421,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1461,7 +1461,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
         Back
@@ -1502,7 +1502,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1590,7 +1590,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1620,7 +1620,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1668,7 +1668,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1698,7 +1698,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1746,7 +1746,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 
                   </a>
@@ -1783,7 +1783,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 </span>
             </a>
@@ -1831,7 +1831,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -1923,7 +1923,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -1982,7 +1982,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2032,7 +2032,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2082,7 +2082,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2121,7 +2121,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2146,7 +2146,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2171,7 +2171,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2196,7 +2196,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2238,7 +2238,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -2348,7 +2348,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2407,7 +2407,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2475,7 +2475,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2514,7 +2514,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2539,7 +2539,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2581,7 +2581,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-expand"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-expand"></use>
 </svg>
 
             </button>
@@ -2682,7 +2682,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2732,7 +2732,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2782,7 +2782,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow-forward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow-forward"></use>
 </svg>
 </a>
                     </li>
@@ -2821,7 +2821,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#arrow_outward"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#arrow_outward"></use>
 </svg>
 
                   </span>
@@ -2926,7 +2926,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#mi-more-vert"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#mi-more-vert"></use>
 </svg>
 
   </button>
@@ -2958,7 +2958,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#language"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#language"></use>
 </svg>
 
             
@@ -3261,7 +3261,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
     </span>
@@ -3291,7 +3291,7 @@
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#photo-library"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#photo-library"></use>
 </svg>
 Images</a>
           
@@ -3316,7 +3316,7 @@ Images</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#rss-feed"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#rss-feed"></use>
 </svg>
 RSS feed</a>
         </li>
@@ -3439,7 +3439,7 @@ RSS feed</a>
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
     </button>
@@ -3487,7 +3487,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3524,7 +3524,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3561,7 +3561,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
           
@@ -3602,7 +3602,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#uni-icon-chevron-right"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#uni-icon-chevron-right"></use>
 </svg>
 
     </button>
@@ -3904,36 +3904,36 @@ data-ga4-analytics-landing-lead='{
 
 
 <a
-  href="https://blog.google/products-and-platforms/products/workspace/gemini-google-workspace-back-to-school/"
+  href="https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/"
   class="uni-article-card"
-  aria-label="Google Workspace - 7 ways to kick\u002Dstart back to school using Gemini in Workspace - By Yulie Kwon Kim - Aug 26, 2026"
+  aria-label="Developer tools - DevFest is back - By Justyna Politanska-Pyszko& Natalie McHugh - Sep 14, 2026"
   data-index="1"
   data-target="card"
-  data-primaryTag="products - google workspace"
+  data-primaryTag="products - developer tools"
   data-image="true"
   data-ga4-analytics-footer-lead-click='{
-    "link_text": "7 ways to kick\u002Dstart back to school using Gemini in Workspace",
-    "link_url":  "https://blog.google/products-and-platforms/products/workspace/gemini-google-workspace-back-to-school/",
+    "link_text": "DevFest is back",
+    "link_url":  "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
     "source_content": "Related stories",
     "related_index": "1",
-    "related_article_tag": "products - google workspace",
-    "article_name": "7 ways to kick\u002Dstart back to school using Gemini in Workspace",
-    "author_name": "Yulie Kwon Kim",
+    "related_article_tag": "products - developer tools",
+    "article_name": "DevFest is back",
+    "author_name": "Justyna Politanska-Pyszko, Natalie McHugh",
     "content_type": "blogv2 | article page"
   }'
-  data-theme-color="aquamarine"
+  data-theme-color="green"
 >
   <div class="uni-article-card__shape-container">
     <div
       class="uni-article-card__shape"
-      data-shape-context-consumer='["8-leaf-clover", "ghost-ish", "square"]'>
+      data-shape-context-consumer='["6-sided-cookie", "8-leaf-clover", "square"]'>
       
         
   
 
 
 <img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Student-blog-header.2e16d0ba.fill-300x300.format-webp.webp"
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/DevFest.2e16d0ba.fill-300x300.format-webp.webp"
   alt=""
 
   
@@ -3942,7 +3942,7 @@ data-ga4-analytics-landing-lead='{
 
   
     sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Student-blog-header.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Student-blog-header.2e16d0ba.fill-600x600.format-webp.webp 600w"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/DevFest.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/DevFest.2e16d0ba.fill-600x600.format-webp.webp 600w"
   
 
   
@@ -3962,12 +3962,12 @@ data-ga4-analytics-landing-lead='{
       <span
         class="uni-article-card__eyebrow font-eyebrow"
         data-target="eyebrow">
-        Google Workspace
+        Developer tools
       </span>
       <h3
         class="uni-article-card__title font-h5"
         data-target="title">
-        7 ways to kick-start back to school using Gemini in Workspace
+        DevFest is back
       </h3>
       
     </div>
@@ -3980,7 +3980,10 @@ data-ga4-analytics-landing-lead='{
           By
           
             
-            Yulie Kwon Kim
+            Justyna Politanska-Pyszko
+          
+            & 
+            Natalie McHugh
           
         </span>
       
@@ -3995,101 +3998,21 @@ data-ga4-analytics-landing-lead='{
 
 
 <a
-  href="https://blog.google/company-news/outreach-and-initiatives/grow-with-google/free-ai-training-delaware/"
+  href="https://blog.google/products-and-platforms/products/gemini/ai-navigate-bureaucracy/"
   class="uni-article-card"
-  aria-label="Grow with Google - We’re partnering with the State of Delaware to provide free AI and career training. - By  - Aug 25, 2026"
+  aria-label="Gemini - 4 ways Gemini makes administrative chores quick and easy - By Sarah Armstrong - Sep 09, 2026"
   data-index="2"
-  data-target="card"
-  data-primaryTag="topics - grow with google"
-  data-image="true"
-  data-ga4-analytics-footer-lead-click='{
-    "link_text": "We’re partnering with the State of Delaware to provide free AI and career training.",
-    "link_url":  "https://blog.google/company-news/outreach-and-initiatives/grow-with-google/free-ai-training-delaware/",
-    "source_content": "Related stories",
-    "related_index": "2",
-    "related_article_tag": "topics - grow with google",
-    "article_name": "We’re partnering with the State of Delaware to provide free AI and career training.",
-    "author_name": "",
-    "content_type": "blogv2 | Short Post"
-  }'
-  data-theme-color="yellow"
->
-  <div class="uni-article-card__shape-container">
-    <div
-      class="uni-article-card__shape"
-      data-shape-context-consumer='["4-leaf-clover", "circle", "square"]'>
-      
-        
-  
-
-
-<img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/GwG_Institutions_LinkedIn_Delaware_Tpb3p79.png"
-  alt=""
-
-  
-    class="uni-article-card__img"
-  
-
-  
-
-  
-    loading="lazy"
-  
-  />
-
-
-
-
-      
-    </div>
-  </div>
-
-  <div class="uni-article-card__content">
-    <div class="uni-article-card__text">
-      <span
-        class="uni-article-card__eyebrow font-eyebrow"
-        data-target="eyebrow">
-        Grow with Google
-      </span>
-      <h3
-        class="uni-article-card__title font-h5"
-        data-target="title">
-        We’re partnering with the State of Delaware to provide free AI and career training.
-      </h3>
-      
-    </div>
-
-    <div
-      class="uni-article-card__meta"
-      data-target="author">
-      
-    </div>
-  </div>
-</a>
-
-        
-          
-
-
-
-
-<a
-  href="https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/"
-  class="uni-article-card"
-  aria-label="Gemini - Get closer to the game with Gemini and Pixel - By Eileen Mannion - Aug 17, 2026"
-  data-index="3"
   data-target="card"
   data-primaryTag="products - gemini"
   data-image="true"
   data-ga4-analytics-footer-lead-click='{
-    "link_text": "Get closer to the game with Gemini and Pixel",
-    "link_url":  "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/",
+    "link_text": "4 ways Gemini makes administrative chores quick and easy",
+    "link_url":  "https://blog.google/products-and-platforms/products/gemini/ai-navigate-bureaucracy/",
     "source_content": "Related stories",
-    "related_index": "3",
+    "related_index": "2",
     "related_article_tag": "products - gemini",
-    "article_name": "Get closer to the game with Gemini and Pixel",
-    "author_name": "Eileen Mannion",
+    "article_name": "4 ways Gemini makes administrative chores quick and easy",
+    "author_name": "Sarah Armstrong",
     "content_type": "blogv2 | article page"
   }'
   data-theme-color="blue"
@@ -4104,7 +4027,7 @@ data-ga4-analytics-landing-lead='{
 
 
 <img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/football_multi-club_h.2e16d0ba.fill-300x300.format-webp.webp"
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/4_ways_Gemini_makes_a.2e16d0ba.fill-300x300.format-webp.webp"
   alt=""
 
   
@@ -4113,7 +4036,7 @@ data-ga4-analytics-landing-lead='{
 
   
     sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/football_multi-club_h.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/football_multi-club_h.2e16d0ba.fill-600x600.format-webp.webp 600w"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/4_ways_Gemini_makes_a.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/4_ways_Gemini_makes_a.2e16d0ba.fill-600x600.format-webp.webp 600w"
   
 
   
@@ -4138,7 +4061,7 @@ data-ga4-analytics-landing-lead='{
       <h3
         class="uni-article-card__title font-h5"
         data-target="title">
-        Get closer to the game with Gemini and Pixel
+        4 ways Gemini makes administrative chores quick and easy
       </h3>
       
     </div>
@@ -4151,7 +4074,7 @@ data-ga4-analytics-landing-lead='{
           By
           
             
-            Eileen Mannion
+            Sarah Armstrong
           
         </span>
       
@@ -4166,20 +4089,20 @@ data-ga4-analytics-landing-lead='{
 
 
 <a
-  href="https://blog.google/company-news/outreach-and-initiatives/grow-with-google/vibe-coding-course/"
+  href="https://blog.google/company-news/outreach-and-initiatives/grow-with-google/route-66-small-businesses/"
   class="uni-article-card"
-  aria-label="Grow with Google - Expanding the Google AI Professional Certificate with vibe coding - By Lisa Gevelber - Aug 11, 2026"
-  data-index="4"
+  aria-label="Grow with Google - Helping small businesses win with AI - By Lisa Gevelber - Sep 08, 2026"
+  data-index="3"
   data-target="card"
   data-primaryTag="topics - grow with google"
   data-image="true"
   data-ga4-analytics-footer-lead-click='{
-    "link_text": "Expanding the Google AI Professional Certificate with vibe coding",
-    "link_url":  "https://blog.google/company-news/outreach-and-initiatives/grow-with-google/vibe-coding-course/",
+    "link_text": "Helping small businesses win with AI",
+    "link_url":  "https://blog.google/company-news/outreach-and-initiatives/grow-with-google/route-66-small-businesses/",
     "source_content": "Related stories",
-    "related_index": "4",
+    "related_index": "3",
     "related_article_tag": "topics - grow with google",
-    "article_name": "Expanding the Google AI Professional Certificate with vibe coding",
+    "article_name": "Helping small businesses win with AI",
     "author_name": "Lisa Gevelber",
     "content_type": "blogv2 | article page"
   }'
@@ -4195,7 +4118,7 @@ data-ga4-analytics-landing-lead='{
 
 
 <img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ammaar_Trailer_Thumbn.2e16d0ba.fill-300x300.format-webp.webp"
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Helping_Small_Busines.2e16d0ba.fill-300x300.format-webp.webp"
   alt=""
 
   
@@ -4204,7 +4127,7 @@ data-ga4-analytics-landing-lead='{
 
   
     sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ammaar_Trailer_Thumbn.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ammaar_Trailer_Thumbn.2e16d0ba.fill-600x600.format-webp.webp 600w"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Helping_Small_Busines.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Helping_Small_Busines.2e16d0ba.fill-600x600.format-webp.webp 600w"
   
 
   
@@ -4229,7 +4152,7 @@ data-ga4-analytics-landing-lead='{
       <h3
         class="uni-article-card__title font-h5"
         data-target="title">
-        Expanding the Google AI Professional Certificate with vibe coding
+        Helping small businesses win with AI
       </h3>
       
     </div>
@@ -4243,6 +4166,97 @@ data-ga4-analytics-landing-lead='{
           
             
             Lisa Gevelber
+          
+        </span>
+      
+    </div>
+  </div>
+</a>
+
+        
+          
+
+
+
+
+<a
+  href="https://blog.google/company-news/inside-google/company-announcements/mrbeast-gemini-google-health/"
+  class="uni-article-card"
+  aria-label="Gemini - MrBeast partners with Gemini to turn impossibly big ideas into reality - By Marvin Chow - Sep 02, 2026"
+  data-index="4"
+  data-target="card"
+  data-primaryTag="products - gemini"
+  data-image="true"
+  data-ga4-analytics-footer-lead-click='{
+    "link_text": "MrBeast partners with Gemini to turn impossibly big ideas into reality",
+    "link_url":  "https://blog.google/company-news/inside-google/company-announcements/mrbeast-gemini-google-health/",
+    "source_content": "Related stories",
+    "related_index": "4",
+    "related_article_tag": "products - gemini",
+    "article_name": "MrBeast partners with Gemini to turn impossibly big ideas into reality",
+    "author_name": "Marvin Chow",
+    "content_type": "blogv2 | article page"
+  }'
+  data-theme-color="blue"
+>
+  <div class="uni-article-card__shape-container">
+    <div
+      class="uni-article-card__shape"
+      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
+      
+        
+  
+
+
+<img
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/MR.BEAST_Resize_16x9.2e16d0ba.fill-300x300.format-webp.webp"
+  alt=""
+
+  
+    class="uni-article-card__img"
+  
+
+  
+    sizes="auto"
+    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/MR.BEAST_Resize_16x9.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/MR.BEAST_Resize_16x9.2e16d0ba.fill-600x600.format-webp.webp 600w"
+  
+
+  
+    loading="lazy"
+  
+  />
+
+
+
+
+      
+    </div>
+  </div>
+
+  <div class="uni-article-card__content">
+    <div class="uni-article-card__text">
+      <span
+        class="uni-article-card__eyebrow font-eyebrow"
+        data-target="eyebrow">
+        Gemini
+      </span>
+      <h3
+        class="uni-article-card__title font-h5"
+        data-target="title">
+        MrBeast partners with Gemini to turn impossibly big ideas into reality
+      </h3>
+      
+    </div>
+
+    <div
+      class="uni-article-card__meta"
+      data-target="author">
+      
+        <span class="uni-article-card__author font-author-name">
+          By
+          
+            
+            Marvin Chow
           
         </span>
       
@@ -4319,7 +4333,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#google-logo"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#google-logo"></use>
 </svg>
 
     </a>
@@ -4394,7 +4408,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
   </span>
@@ -4702,7 +4716,7 @@ data-ga4-analytics-landing-lead='{
 >
   <use
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    href="/static/blogv2/images/icons.svg?version=pr20260820-1820#expand_more"></use>
+    href="/static/blogv2/images/icons.svg?version=pr20260902-1737#expand_more"></use>
 </svg>
 
     </span>
@@ -4775,13 +4789,13 @@ data-ga4-analytics-landing-lead='{
 
         
         <div id="base-scripts" data-scripts='[
-              { "url": "/static/blogv2/js/csp/gtm.js?version=pr20260820-1820",
+              { "url": "/static/blogv2/js/csp/gtm.js?version=pr20260902-1737",
                 "options": {
                   "async": false,
                   "defer": true
                 }
               },
-              { "url": "/static/keyword/js/all/index.js?version=pr20260820-1820",
+              { "url": "/static/keyword/js/all/index.js?version=pr20260902-1737",
                 "options": {
                   "async": false,
                   "defer": false

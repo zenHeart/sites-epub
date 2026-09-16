@@ -232,8 +232,11 @@ curl -s "https://api.x.ai/v1/files?filter=public_url%20!%3D%20null" \\
 * **Maximum file size: 50 MiB.** Larger files remain available through the authenticated Files API but cannot be made public.
 * **Restricted content types.** Only the following are eligible:
   * `image/png` (`.png`)
-  * `image/jpeg` (`.jpg`)
+  * `image/jpeg` (`.jpg`, `.jpeg`)
+  * `image/gif` (`.gif`)
+  * `image/webp` (`.webp`)
   * `video/mp4` (`.mp4`)
+  * `video/webm` (`.webm`)
   * `application/pdf` (`.pdf`)
 * **Expiry must be between 1 hour and 30 days**, and a public URL can never outlive its file.
 * **Deleting the file revokes the public URL** automatically. You cannot keep a public URL alive after the file is deleted (manually or by expiration).

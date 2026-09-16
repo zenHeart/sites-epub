@@ -159,7 +159,7 @@
     
       "special_hero": "undefined",
     
-    "days_since_published": "undefined",
+    "days_since_published": "5",
     
       "content_category": "Products - Gemini App",
     
@@ -5308,10 +5308,98 @@ data-ga4-analytics-landing-lead='{
 
 
 <a
+  href="https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/"
+  class="uni-article-card"
+  aria-label="Gemini App - 4 ways to tackle household chores with Gemini - By Sarah Armstrong - Sep 15, 2026"
+  data-index="1"
+  data-target="card"
+  data-primaryTag="products - gemini app"
+  data-image="true"
+  data-ga4-analytics-footer-lead-click='{
+    "link_text": "4 ways to tackle household chores with Gemini",
+    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/",
+    "source_content": "Related stories",
+    "related_index": "1",
+    "related_article_tag": "products - gemini app",
+    "article_name": "4 ways to tackle household chores with Gemini",
+    "author_name": "Sarah Armstrong",
+    "content_type": "blogv2 | article page"
+  }'
+  data-theme-color="blue"
+>
+  <div class="uni-article-card__shape-container">
+    <div
+      class="uni-article-card__shape"
+      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
+      
+        
+  
+
+
+<img
+  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Tackle_household_chores_w_Gemini_hero.png"
+  alt=""
+
+  
+    class="uni-article-card__img"
+  
+
+  
+
+  
+    loading="lazy"
+  
+  />
+
+
+
+
+      
+    </div>
+  </div>
+
+  <div class="uni-article-card__content">
+    <div class="uni-article-card__text">
+      <span
+        class="uni-article-card__eyebrow font-eyebrow"
+        data-target="eyebrow">
+        Gemini App
+      </span>
+      <h3
+        class="uni-article-card__title font-h5"
+        data-target="title">
+        4 ways to tackle household chores with Gemini
+      </h3>
+      
+    </div>
+
+    <div
+      class="uni-article-card__meta"
+      data-target="author">
+      
+        <span class="uni-article-card__author font-author-name">
+          By
+          
+            
+            Sarah Armstrong
+          
+        </span>
+      
+    </div>
+  </div>
+</a>
+
+        
+          
+
+
+
+
+<a
   href="https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
   class="uni-article-card"
   aria-label="Gemini App - Create your best tracks yet with Lyria 3.5 in Gemini. - By  - Sep 04, 2026"
-  data-index="1"
+  data-index="2"
   data-target="card"
   data-primaryTag="products - gemini app"
   data-image="true"
@@ -5319,7 +5407,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "Create your best tracks yet with Lyria 3.5 in Gemini.",
     "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
     "source_content": "Related stories",
-    "related_index": "1",
+    "related_index": "2",
     "related_article_tag": "products - gemini app",
     "article_name": "Create your best tracks yet with Lyria 3.5 in Gemini.",
     "author_name": "",
@@ -5394,7 +5482,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/"
   class="uni-article-card"
   aria-label="AI - The latest AI news we announced in August 2026 - By News from Google Team - Sep 01, 2026"
-  data-index="2"
+  data-index="3"
   data-target="card"
   data-primaryTag="topics - ai"
   data-image="true"
@@ -5402,7 +5490,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "The latest AI news we announced in August 2026",
     "link_url":  "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
     "source_content": "Related stories",
-    "related_index": "2",
+    "related_index": "3",
     "related_article_tag": "topics - ai",
     "article_name": "The latest AI news we announced in August 2026",
     "author_name": "News from Google Team",
@@ -5485,7 +5573,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/"
   class="uni-article-card"
   aria-label="Gemini App - Turn your voice into action with new productivity features in Gemini Live - By Neel Joshi - Aug 26, 2026"
-  data-index="3"
+  data-index="4"
   data-target="card"
   data-primaryTag="products - gemini app"
   data-image="true"
@@ -5493,7 +5581,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "Turn your voice into action with new productivity features in Gemini Live",
     "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
     "source_content": "Related stories",
-    "related_index": "3",
+    "related_index": "4",
     "related_article_tag": "products - gemini app",
     "article_name": "Turn your voice into action with new productivity features in Gemini Live",
     "author_name": "Neel Joshi",
@@ -5576,7 +5664,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/"
   class="uni-article-card"
   aria-label="Gemini App - Here’s how to use intelligent dictation in Gemini for macOS. - By  - Aug 25, 2026"
-  data-index="4"
+  data-index="5"
   data-target="card"
   data-primaryTag="products - gemini app"
   data-image="true"
@@ -5584,7 +5672,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "Here’s how to use intelligent dictation in Gemini for macOS.",
     "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/",
     "source_content": "Related stories",
-    "related_index": "4",
+    "related_index": "5",
     "related_article_tag": "products - gemini app",
     "article_name": "Here’s how to use intelligent dictation in Gemini for macOS.",
     "author_name": "",
@@ -5659,7 +5747,7 @@ data-ga4-analytics-landing-lead='{
   href="https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/"
   class="uni-article-card"
   aria-label="Gemini App - Start the semester with one year of Gemini, on us - By Jennifer Shen - Aug 19, 2026"
-  data-index="5"
+  data-index="6"
   data-target="card"
   data-primaryTag="products - gemini app"
   data-image="true"
@@ -5667,7 +5755,7 @@ data-ga4-analytics-landing-lead='{
     "link_text": "Start the semester with one year of Gemini, on us",
     "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/",
     "source_content": "Related stories",
-    "related_index": "5",
+    "related_index": "6",
     "related_article_tag": "products - gemini app",
     "article_name": "Start the semester with one year of Gemini, on us",
     "author_name": "Jennifer Shen",
@@ -5735,89 +5823,6 @@ data-ga4-analytics-landing-lead='{
             Jennifer Shen
           
         </span>
-      
-    </div>
-  </div>
-</a>
-
-        
-          
-
-
-
-
-<a
-  href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo/"
-  class="uni-article-card"
-  aria-label="Gemini App - Waymo is bringing Gemini into its custom Ojai vehicles. - By  - Aug 19, 2026"
-  data-index="6"
-  data-target="card"
-  data-primaryTag="products - gemini app"
-  data-image="true"
-  data-ga4-analytics-footer-lead-click='{
-    "link_text": "Waymo is bringing Gemini into its custom Ojai vehicles.",
-    "link_url":  "https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo/",
-    "source_content": "Related stories",
-    "related_index": "6",
-    "related_article_tag": "products - gemini app",
-    "article_name": "Waymo is bringing Gemini into its custom Ojai vehicles.",
-    "author_name": "",
-    "content_type": "blogv2 | Short Post"
-  }'
-  data-theme-color="neutral"
->
-  <div class="uni-article-card__shape-container">
-    <div
-      class="uni-article-card__shape"
-      data-shape-context-consumer='["4-sided-cookie", "bun", "square"]'>
-      
-        
-  
-
-
-<img
-  src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Ojai_vehicles_.2e16d0ba.fill-300x300.format-webp.webp"
-  alt=""
-
-  
-    class="uni-article-card__img"
-  
-
-  
-    sizes="auto"
-    srcset="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Ojai_vehicles_.2e16d0ba.fill-300x300.format-webp.webp 300w, https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Ojai_vehicles_.2e16d0ba.fill-600x600.format-webp.webp 600w"
-  
-
-  
-    loading="lazy"
-  
-  />
-
-
-
-
-      
-    </div>
-  </div>
-
-  <div class="uni-article-card__content">
-    <div class="uni-article-card__text">
-      <span
-        class="uni-article-card__eyebrow font-eyebrow"
-        data-target="eyebrow">
-        Gemini App
-      </span>
-      <h3
-        class="uni-article-card__title font-h5"
-        data-target="title">
-        Waymo is bringing Gemini into its custom Ojai vehicles.
-      </h3>
-      
-    </div>
-
-    <div
-      class="uni-article-card__meta"
-      data-target="author">
       
     </div>
   </div>

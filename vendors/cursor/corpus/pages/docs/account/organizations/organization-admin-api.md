@@ -11,7 +11,7 @@ Organization API keys are organization-scoped credentials. Team API keys are tea
 
 Use an **Organization API key** when calling organization-level endpoints like `/organizations/team-memberships/sync`, `/organizations/pooled-usage`, and `/organizations/groups`.
 
-Use a **Team API key** when calling team-level endpoints under `/teams/*` (for example, `/teams/members` and `/teams/spend`).
+Use a **Team API key** when calling endpoints under `/teams/*` (for example, `/teams/members` and `/teams/spend`).
 
 ### Key differences
 
@@ -1333,30 +1333,70 @@ Bulk org routes (`PUT .../providers/:provider`, `PUT .../providers/:provider/mod
 
 ## Organization Groups
 
-Organization groups organize members across teams linked to the same organization. For dashboard setup and group-level controls, see [Organization Groups](https://cursor.com/docs/enterprise/organization-groups.md).
+Organization groups organize members across teams linked to the same organization. For dashboard setup and group-level controls, see [Organization Groups](https://cursor.com/docs/enterprise/organization-groups.md). Team directory groups use the Team Admin API at [`/teams/directory-groups`](https://cursor.com/docs/account/teams/admin-api.md#team-directory-groups) and `team_group_…` ids. Those routes do not accept Organization Group `id` (`g_`) or `publicId` (`grp_`) values.
 
-- **Authentication**: Organization API key (Basic auth). Read routes require the **`members:*`** scope. Write routes also require **`members:*`**. Keys with **`admin:*`** also work because admin implies members.
-- **Group IDs**: Organization group IDs use the `g_` prefix.
+- **Availability**: Enterprise only
+- **Authentication**: Organization API key (Basic auth). Every group route, read or write, requires the **`members:*`** scope. Keys with **`admin:*`** also work because admin implies members.
+- **Group IDs**: Each group has two IDs. `id` (`g_` prefix) is the Organization API group ID; use it wherever a route takes `:groupId`. `publicId` (`grp_` prefix) is the group's public ID.
+- **Name lookup**: To find a group's IDs from its name, call [List Organization Groups](https://cursor.com/docs/account/organizations/organization-admin-api.md#list-organization-groups) with the `name` query parameter. No route accepts a name in place of `:groupId`.
 - **Pagination**: List routes accept `page` and `pageSize`. Both values must be positive integers.
+- **Rate limit**: Each route allows 20 requests per minute per organization. See [rate limits and best practices](https://cursor.com/docs/api.md#rate-limits).
+- **SCIM-synced groups**: Manage membership in your identity provider. Member add and remove requests return `400` for SCIM-synced groups.
+
+Group routes share these error responses:
+
+| Status | When                                                                        |
+| ------ | --------------------------------------------------------------------------- |
+| `400`  | Malformed group ID, pagination value, or request body                       |
+| `401`  | Invalid API key, or the key is missing the `members:*` (or `admin:*`) scope |
+| `404`  | Group does not exist in the organization                                    |
+| `429`  | Rate limit exceeded. The response includes a `Retry-After: 60` header       |
 
 ### List Organization Groups
 
 /organizations/groups
 
-Retrieve organization groups for the organization attached to your API key.
+Retrieve organization groups for the organization attached to your API key. Pass `name` to look up one group by its exact name.
 
 #### Query parameters
 
 `page` number
 
-Page number. Defaults to the first page.
+Page number. Defaults to `1`.
 
 `pageSize` number
 
-Number of groups per page.
+Number of groups per page. Defaults to `50`. Capped at 200; values above 200 are clamped to 200.
+
+`name` string
+
+Exact name of one group, URL-encoded (for example `Platform%20Engineering`). Group names are unique within an organization, so the response is the normal list payload with one group or none. A name with no match returns `200` with an empty `groups` array, not `404`. Omit `name`, or send it blank, to list every group.
+
+#### Response Fields
+
+Each object in `groups` contains:
+
+- `id` string - Organization group ID with the `g_` prefix
+- `publicId` string - Public group ID with the `grp_` prefix
+- `name` string - Group name
+- `memberCount` number - Number of members in the group
+- `monthlySpendingLimitDollars` number | null - Monthly spending limit in whole dollars for each group member. `null` means the group has no limit.
+- `createdAt` string - Creation time in ISO 8601 format
+- `updatedAt` string - Last update time in ISO 8601 format
+
+`pagination` object
+
+Pagination metadata: `page`, `pageSize`, `totalCount`, `totalPages`, `hasNextPage`, and `hasPreviousPage`.
 
 ```bash
 curl -X GET "https://api.cursor.com/organizations/groups?page=1&pageSize=50" \
+  -u YOUR_ORGANIZATION_API_KEY:
+```
+
+Look up one group by name:
+
+```bash
+curl -X GET "https://api.cursor.com/organizations/groups?name=Engineering" \
   -u YOUR_ORGANIZATION_API_KEY:
 ```
 
@@ -1367,13 +1407,19 @@ curl -X GET "https://api.cursor.com/organizations/groups?page=1&pageSize=50" \
   "groups": [
     {
       "id": "g_PDSPmvukpYgZEDXsoNirw3CFhy",
+      "publicId": "grp_01k2ja2000e0080000000000n2",
       "name": "Engineering",
+      "memberCount": 12,
+      "monthlySpendingLimitDollars": 500,
       "createdAt": "2026-01-15T10:30:00.000Z",
       "updatedAt": "2026-01-20T14:22:00.000Z"
     },
     {
       "id": "g_kljUvI0ASZORvSEXf9hV0ydcso",
+      "publicId": "grp_01k2jb4000e0080000000000p7",
       "name": "Design",
+      "memberCount": 8,
+      "monthlySpendingLimitDollars": null,
       "createdAt": "2026-01-16T09:00:00.000Z",
       "updatedAt": "2026-01-16T09:00:00.000Z"
     }
@@ -1382,6 +1428,32 @@ curl -X GET "https://api.cursor.com/organizations/groups?page=1&pageSize=50" \
     "page": 1,
     "pageSize": 50,
     "totalCount": 2,
+    "totalPages": 1,
+    "hasNextPage": false,
+    "hasPreviousPage": false
+  }
+}
+```
+
+**Response (name lookup):**
+
+```json
+{
+  "groups": [
+    {
+      "id": "g_PDSPmvukpYgZEDXsoNirw3CFhy",
+      "publicId": "grp_01k2ja2000e0080000000000n2",
+      "name": "Engineering",
+      "memberCount": 12,
+      "monthlySpendingLimitDollars": 500,
+      "createdAt": "2026-01-15T10:30:00.000Z",
+      "updatedAt": "2026-01-20T14:22:00.000Z"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "pageSize": 50,
+    "totalCount": 1,
     "totalPages": 1,
     "hasNextPage": false,
     "hasPreviousPage": false
@@ -1401,6 +1473,10 @@ Retrieve one organization group.
 
 Organization group ID with the `g_` prefix.
 
+#### Response Fields
+
+The `group` object contains `id`, `publicId`, `name`, `memberCount`, `monthlySpendingLimitDollars`, `createdAt`, and `updatedAt`. These fields match the [List Organization Groups](https://cursor.com/docs/account/organizations/organization-admin-api.md#list-organization-groups) response.
+
 ```bash
 curl -X GET https://api.cursor.com/organizations/groups/g_PDSPmvukpYgZEDXsoNirw3CFhy \
   -u YOUR_ORGANIZATION_API_KEY:
@@ -1412,12 +1488,151 @@ curl -X GET https://api.cursor.com/organizations/groups/g_PDSPmvukpYgZEDXsoNirw3
 {
   "group": {
     "id": "g_PDSPmvukpYgZEDXsoNirw3CFhy",
+    "publicId": "grp_01k2ja2000e0080000000000n2",
     "name": "Engineering",
+    "memberCount": 12,
+    "monthlySpendingLimitDollars": 500,
     "createdAt": "2026-01-15T10:30:00.000Z",
     "updatedAt": "2026-01-20T14:22:00.000Z"
   }
 }
 ```
+
+### Create Organization Group
+
+/organizations/groups
+
+Create an organization group with manually managed membership. To create a SCIM-synced group, sync it from your identity provider in the [dashboard](https://cursor.com/docs/enterprise/organization-groups.md#set-up-scim-synced-groups) instead.
+
+#### Request body
+
+`name` string Required
+
+Group name. Must be unique among the organization's active groups. Cursor removes leading and trailing whitespace.
+
+#### Response Fields
+
+Returns `201 Created` with the new `group` object. The object contains `id`, `publicId`, `name`, `memberCount`, `monthlySpendingLimitDollars`, `createdAt`, and `updatedAt`.
+
+#### Errors
+
+- `400` - The group name is missing, empty, or already used by another active group.
+
+```bash
+curl -X POST https://api.cursor.com/organizations/groups \
+  -u YOUR_ORGANIZATION_API_KEY: \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Engineering"
+  }'
+```
+
+**Response:**
+
+```json
+{
+  "group": {
+    "id": "g_PDSPmvukpYgZEDXsoNirw3CFhy",
+    "publicId": "grp_01k2ja2000e0080000000000n2",
+    "name": "Engineering",
+    "memberCount": 0,
+    "monthlySpendingLimitDollars": null,
+    "createdAt": "2026-01-15T10:30:00.000Z",
+    "updatedAt": "2026-01-15T10:30:00.000Z"
+  }
+}
+```
+
+### Update Organization Group
+
+/organizations/groups/:groupId
+
+Update a group's name or monthly spending limit. Updates are partial: include at least one field, and any field you omit keeps its current value.
+
+#### Parameters
+
+`groupId` string Required
+
+Organization group ID with the `g_` prefix.
+
+#### Request body
+
+`name` string
+
+New group name. Must be unique among the organization's active groups. Cursor removes leading and trailing whitespace.
+
+`monthlySpendingLimitDollars` number
+
+Monthly spending limit in whole dollars for each group member, between `0` and `2147483647`.
+
+`clearMonthlySpendingLimitDollars` boolean
+
+Set to `true` to remove the group spending limit. Do not include `monthlySpendingLimitDollars` in the same request.
+
+#### Response Fields
+
+Returns the updated `group` object with `id`, `publicId`, `name`, `memberCount`, `monthlySpendingLimitDollars`, `createdAt`, and `updatedAt`.
+
+#### Errors
+
+- `400` - The request has no update fields, contains an invalid value, uses another active group's name, or sets and clears the spending limit in the same request.
+
+```bash
+curl -X PATCH https://api.cursor.com/organizations/groups/g_PDSPmvukpYgZEDXsoNirw3CFhy \
+  -u YOUR_ORGANIZATION_API_KEY: \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Platform Engineering",
+    "monthlySpendingLimitDollars": 500
+  }'
+```
+
+**Response:**
+
+```json
+{
+  "group": {
+    "id": "g_PDSPmvukpYgZEDXsoNirw3CFhy",
+    "publicId": "grp_01k2ja2000e0080000000000n2",
+    "name": "Platform Engineering",
+    "memberCount": 12,
+    "monthlySpendingLimitDollars": 500,
+    "createdAt": "2026-01-15T10:30:00.000Z",
+    "updatedAt": "2026-01-20T14:22:00.000Z"
+  }
+}
+```
+
+### Delete Organization Group
+
+/organizations/groups/:groupId
+
+Delete an organization group. The group must be empty: remove every member before deleting it.
+
+#### Parameters
+
+`groupId` string Required
+
+Organization group ID with the `g_` prefix.
+
+#### Response
+
+Returns `204 No Content` after deleting the group.
+
+#### Errors
+
+- `400` - The group still has members, or the group has an active SCIM mapping.
+
+You can't delete a group with an active SCIM mapping through this endpoint.
+Remove the mapping in the dashboard, remove every member, then delete the
+group.
+
+```bash
+curl -X DELETE https://api.cursor.com/organizations/groups/g_PDSPmvukpYgZEDXsoNirw3CFhy \
+  -u YOUR_ORGANIZATION_API_KEY:
+```
+
+**Response:** `204 No Content`
 
 ### List Organization Group Members
 
@@ -1435,11 +1650,24 @@ Organization group ID with the `g_` prefix.
 
 `page` number
 
-Page number. Defaults to the first page.
+Page number. Defaults to `1`.
 
 `pageSize` number
 
-Number of members per page.
+Number of members per page. Defaults to `50`. Capped at 200; values above 200 are clamped to 200.
+
+#### Response Fields
+
+Each object in `members` contains:
+
+- `userId` string - Public user ID with the `user_` prefix
+- `name` string - Display name of the member
+- `email` string - Email address of the member
+- `joinedAt` string - Time the member was added to the group in ISO 8601 format
+
+`pagination` object
+
+Pagination metadata: `page`, `pageSize`, `totalCount`, `totalPages`, `hasNextPage`, and `hasPreviousPage`.
 
 ```bash
 curl -X GET "https://api.cursor.com/organizations/groups/g_PDSPmvukpYgZEDXsoNirw3CFhy/members?page=1&pageSize=50" \
@@ -1479,7 +1707,7 @@ curl -X GET "https://api.cursor.com/organizations/groups/g_PDSPmvukpYgZEDXsoNirw
 
 /organizations/groups/:groupId/members/bulk-add
 
-Add members to an organization group.
+Add members to a manual organization group.
 
 #### Parameters
 
@@ -1492,6 +1720,15 @@ Organization group ID with the `g_` prefix.
 `userIds` string\[] Required
 
 Array of public user IDs with the `user_` prefix. A single request may include up to 100 users.
+
+#### Response Fields
+
+`addedCount` number
+
+Number of memberships this request created. Cursor ignores users outside the organization and users who already belong to the group, so they don't count toward this total.
+
+SCIM-synced groups reject manual membership changes with a `400` response.
+Manage their membership in your identity provider.
 
 ```bash
 curl -X POST https://api.cursor.com/organizations/groups/g_PDSPmvukpYgZEDXsoNirw3CFhy/members/bulk-add \
@@ -1514,7 +1751,7 @@ curl -X POST https://api.cursor.com/organizations/groups/g_PDSPmvukpYgZEDXsoNirw
 
 /organizations/groups/:groupId/members/bulk-remove
 
-Remove members from an organization group.
+Remove members from a manual organization group.
 
 #### Parameters
 
@@ -1527,6 +1764,15 @@ Organization group ID with the `g_` prefix.
 `userIds` string\[] Required
 
 Array of public user IDs with the `user_` prefix. A single request may include up to 100 users.
+
+#### Response Fields
+
+`removedCount` number
+
+Number of memberships this request removed. Cursor ignores users who don't belong to the group, so they don't count toward this total.
+
+SCIM-synced groups reject manual membership changes with a `400` response.
+Manage their membership in your identity provider.
 
 ```bash
 curl -X POST https://api.cursor.com/organizations/groups/g_PDSPmvukpYgZEDXsoNirw3CFhy/members/bulk-remove \

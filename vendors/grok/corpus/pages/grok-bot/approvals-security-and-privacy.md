@@ -42,20 +42,24 @@ to explain it in plain language or produce a draft first.
 
 ## Configure Auto Review
 
-When Auto Review enforcement is available, Grok Bot evaluates tool calls and
-computer actions before they run. Open **Settings → General → Auto-review** to
-add rules.
+With Auto Review on, Grok Bot evaluates tool calls and computer actions before
+they run. Open **Settings → General → Auto-review** to add rules.
 
-* **Require Approval** rules always stop matching actions for you.
-* **Always Allow** rules let matching actions proceed only when the automated
-  review does not identify another reason to stop.
-* If both kinds of rule match, **Require Approval** wins.
+* **Ask first** rules always stop matching actions for you.
+* **Allow automatically** rules let matching actions proceed only when the
+  automated review does not identify another reason to stop.
+* If both kinds of rule match, **Ask first** wins.
+
+If your team admin enforces Auto Review, the same table also shows locked team
+rules that you cannot edit or delete. Your own rules apply on top and can only
+make behavior stricter. See
+[Auto-review rules](/grok-bot/teams-and-enterprises#auto-review-rules).
 
 Write narrow rules around a known action and scope:
 
-* Require approval before sending any external email.
-* Require approval before changing a production dashboard.
-* Always allow running `git status` in `/workspace/reports`.
+* Ask first before sending any external email.
+* Ask first before changing a production dashboard.
+* Allow automatically when running `git status` in `/workspace/reports`.
 
 Avoid broad rules such as “allow everything in the browser.” Websites and tool
 behavior change over time. Auto Review is model-based and should complement,
@@ -93,8 +97,10 @@ local commands:
 * Are never allowed
 
 The default is **Ask every time**. Use **Never allowed** unless a Bot has a
-specific reason to work on your local files. These settings do not prevent the
-Bot from using its cloud computer.
+specific reason to work on your local files. Your team admin can cap this
+setting for the whole team; when the team's policy is stricter than yours, the
+team's applies. These settings do not prevent the Bot from using its cloud
+computer.
 
 ## Understand the shared-computer boundary
 

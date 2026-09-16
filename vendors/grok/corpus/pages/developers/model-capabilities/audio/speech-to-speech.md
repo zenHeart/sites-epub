@@ -135,7 +135,6 @@ const url = `wss://api.x.ai/v1/realtime?model=${MODEL}`;
 |-------|-------------|
 | `grok-voice-latest` | Alias for `grok-voice-think-fast-2.0` |
 | `grok-voice-think-fast-2.0` | Flagship voice model |
-| `grok-voice-think-fast-1.0`  | Previous-generation voice model |
 
 ## Session Parameters
 

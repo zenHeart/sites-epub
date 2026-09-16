@@ -33,7 +33,7 @@ When starting a new conversation in a Project, you choose how the agent should i
 **3\. Scoped Settings and Permissions**  
 Settings and permissions are both scoped at the project level:
 
-*   **Settings**: When a Project is created, it always starts with the default security preset where it has read and write access to all of your project’s folders and will ask for permission to run all terminal commands. These settings can be modified and apply to all agents within this project.
+*   **Settings**: When a Project is created, it starts with the **Inherit General** permission preset, following your global permission settings, with read and write access to all of your project’s folders. On macOS and Linux under the **Default** preset, terminal commands run without prompting inside the [Terminal Sandbox](/docs/sandbox) and require approval to run outside it; on Windows, the agent asks for permission to run terminal commands. These settings can be modified and apply to all agents within this project.
 *   **Permissions**: Projects inherit global permissions but allow you to augment them at the Project level, ensuring agents only have the exact access required for that specific project’s tasks.
 
 ### Workflows Using Projects

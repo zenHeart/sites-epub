@@ -25,11 +25,11 @@
     <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
       <link rel="stylesheet"
-            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/css/app.css">
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/css/app.css">
       
-        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/css/dark-theme.css" disabled>
-      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/images/favicons/onecloud/favicon.ico">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/images/favicons/onecloud/super_cloud.png"><link rel="canonical" href="https://docs.cloud.google.com/gemini/docs/codeassist/code-customization"><link rel="search" type="application/opensearchdescription+xml"
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/favicons/onecloud/favicon.ico">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/favicons/onecloud/super_cloud.png"><link rel="canonical" href="https://docs.cloud.google.com/gemini/docs/codeassist/code-customization"><link rel="search" type="application/opensearchdescription+xml"
             title="Google Cloud Documentation" href="https://docs.cloud.google.com/s/opensearch.xml">
       <link rel="alternate" hreflang="en"
           href="https://docs.cloud.google.com/gemini/docs/codeassist/code-customization" /><link rel="alternate" hreflang="x-default" href="https://docs.cloud.google.com/gemini/docs/codeassist/code-customization" /><link rel="alternate" hreflang="zh-Hans"
@@ -68,6 +68,8 @@
   
     
     
+
+
 
 
 
@@ -147,7 +149,9 @@
     </a>
     <section class="devsite-wrapper">
       <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
-        <devsite-header role="banner" keep-tabs-visible>
+        <cloudx-track userCountry="US"></cloudx-track>
+
+<devsite-header role="banner" keep-tabs-visible>
   
     
 
@@ -192,11 +196,11 @@
   
   <picture>
     
-    <source srcset="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/images/lockup_dark_theme.svg"
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup_dark_theme.svg"
             media="(prefers-color-scheme: dark)"
             class="devsite-dark-theme">
     
-    <img src="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/images/lockup_full_color.svg" class="devsite-site-logo" alt="Google Cloud Documentation">
+    <img src="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup_full_color.svg" class="devsite-site-logo" alt="Google Cloud Documentation">
   </picture>
   
 </a>
@@ -215,7 +219,7 @@
       
         
           <tab class="devsite-dropdown
-    
+    devsite-dropdown-full
     devsite-active
     devsite-clickable
     ">
@@ -227,26 +231,26 @@
        track-type="nav"
        track-metadata-position="nav - docs-home"
        track-metadata-module="primary nav"
-       aria-label="Technology areas, selected" 
+       aria-label="Documentation, selected" 
        
          
            data-category="Site-Wide Custom Events"
          
-           data-label="Tab: Technology areas"
+           data-label="Tab: Documentation"
          
            track-name="docs-home"
          
            track-link-column-type="single-column"
          
        >
-    Technology areas
+    Documentation
   
     </a>
     
       <button
          aria-haspopup="menu"
          aria-expanded="false"
-         aria-label="Dropdown menu for Technology areas"
+         aria-label="Dropdown menu for Documentation"
          track-type="nav"
          track-metadata-eventdetail="https://docs.cloud.google.com/docs"
          track-metadata-position="nav - docs-home"
@@ -255,7 +259,7 @@
           
             data-category="Site-Wide Custom Events"
           
-            data-label="Tab: Technology areas"
+            data-label="Tab: Documentation"
           
             track-name="docs-home"
           
@@ -285,6 +289,438 @@
             <ul class="devsite-tabs-dropdown-section
                        ">
               
+                <li class="devsite-nav-title" role="heading" tooltip>Get Started</li>
+              
+              
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/docs/get-started"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/get-started"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="get started"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Get Started with Google Cloud
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/docs/product-list"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/product-list"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="get started"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Product List
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/support/docs"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/support/docs"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="get started"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud Customer Care
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Featured Products</li>
+              
+              
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/products/gemini-enterprise-agent-platform"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/products/gemini-enterprise-agent-platform"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Agent Platform
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/apigee"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/apigee"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Apigee API Management
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/bigquery"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/bigquery"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      BigQuery
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/products/compute"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/products/compute"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Compute Engine
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/cdn"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/cdn"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud CDN
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/run"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/run"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud Run
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/storage"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/storage"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud Storage
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/sql"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/sql"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Cloud SQL
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/gemini/enterprise/docs"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/gemini/enterprise/docs"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Gemini Enterprise
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/kubernetes-engine"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/kubernetes-engine"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Google Kubernetes Engine
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/looker"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/looker"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="featured products"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Looker
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Cross-product Tools</li>
+              
+              
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/docs/access-resources"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/access-resources"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="cross-product tools"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Access and resources management
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/docs/costs-usage"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/costs-usage"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="cross-product tools"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Costs and usage management
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/docs/iac"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/iac"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="cross-product tools"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Infrastructure as code
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://docs.cloud.google.com/docs/devtools"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/devtools"
+                     track-metadata-position="nav - docs-home"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="cross-product tools"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      SDK, languages, frameworks, and tools
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Technology Areas</li>
+              
+              
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
               
               
                 <li class="devsite-nav-item">
@@ -294,6 +730,8 @@
                      track-metadata-eventdetail="https://docs.cloud.google.com/docs/ai-ml"
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="technology areas"
                      
                      tooltip
                   >
@@ -313,6 +751,8 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
@@ -330,6 +770,8 @@
                      track-metadata-eventdetail="https://docs.cloud.google.com/docs/application-hosting"
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="technology areas"
                      
                      tooltip
                   >
@@ -349,6 +791,8 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
@@ -366,6 +810,8 @@
                      track-metadata-eventdetail="https://docs.cloud.google.com/docs/data"
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="technology areas"
                      
                      tooltip
                   >
@@ -385,6 +831,8 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
@@ -402,6 +850,8 @@
                      track-metadata-eventdetail="https://docs.cloud.google.com/docs/dhm-cloud"
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="technology areas"
                      
                      tooltip
                   >
@@ -421,6 +871,8 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
@@ -438,6 +890,8 @@
                      track-metadata-eventdetail="https://docs.cloud.google.com/docs/migration"
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="technology areas"
                      
                      tooltip
                   >
@@ -457,6 +911,8 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
@@ -474,6 +930,8 @@
                      track-metadata-eventdetail="https://docs.cloud.google.com/docs/observability"
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="technology areas"
                      
                      tooltip
                   >
@@ -493,6 +951,8 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
@@ -511,166 +971,13 @@
                      track-metadata-position="nav - docs-home"
                      track-metadata-module="tertiary nav"
                      
+                       track-metadata-module_headline="technology areas"
+                     
                      tooltip
                   >
                     
                     <div class="devsite-nav-item-title">
                       Storage
-                    </div>
-                    
-                  </a>
-                </li>
-              
-            </ul>
-          
-        </div>
-      
-    </div>
-  </div>
-</tab>
-        
-      
-        
-          <tab class="devsite-dropdown
-    
-    
-    devsite-clickable
-    ">
-  
-    <a href="https://docs.cloud.google.com/docs/cross-product-overviews"
-    class="devsite-tabs-content gc-analytics-event "
-      track-metadata-eventdetail="https://docs.cloud.google.com/docs/cross-product-overviews"
-    
-       track-type="nav"
-       track-metadata-position="nav - crossproduct"
-       track-metadata-module="primary nav"
-       
-       
-         
-           data-category="Site-Wide Custom Events"
-         
-           data-label="Tab: Cross-product tools"
-         
-           track-name="crossproduct"
-         
-           track-link-column-type="single-column"
-         
-       >
-    Cross-product tools
-  
-    </a>
-    
-      <button
-         aria-haspopup="menu"
-         aria-expanded="false"
-         aria-label="Dropdown menu for Cross-product tools"
-         track-type="nav"
-         track-metadata-eventdetail="https://docs.cloud.google.com/docs/cross-product-overviews"
-         track-metadata-position="nav - crossproduct"
-         track-metadata-module="primary nav"
-         
-          
-            data-category="Site-Wide Custom Events"
-          
-            data-label="Tab: Cross-product tools"
-          
-            track-name="crossproduct"
-          
-            track-link-column-type="single-column"
-          
-        
-         class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></button>
-    
-  
-  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
-    <div class="devsite-tabs-dropdown-content">
-      
-        <button class="devsite-tabs-close-button material-icons button-flat gc-analytics-event"
-                data-category="Site-Wide Custom Events"
-                data-label="Close dropdown menu"
-                aria-label="Close dropdown menu"
-                track-type="nav"
-                track-name="close"
-                track-metadata-eventdetail="#"
-                track-metadata-position="nav - crossproduct"
-                track-metadata-module="tertiary nav">close</button>
-      
-      
-        <div class="devsite-tabs-dropdown-column
-                    ">
-          
-            <ul class="devsite-tabs-dropdown-section
-                       ">
-              
-              
-              
-                <li class="devsite-nav-item">
-                  <a href="https://docs.cloud.google.com/docs/access-resources"
-                    
-                     track-type="nav"
-                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/access-resources"
-                     track-metadata-position="nav - crossproduct"
-                     track-metadata-module="tertiary nav"
-                     
-                     tooltip
-                  >
-                    
-                    <div class="devsite-nav-item-title">
-                      Access and resources management
-                    </div>
-                    
-                  </a>
-                </li>
-              
-                <li class="devsite-nav-item">
-                  <a href="https://docs.cloud.google.com/docs/costs-usage"
-                    
-                     track-type="nav"
-                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/costs-usage"
-                     track-metadata-position="nav - crossproduct"
-                     track-metadata-module="tertiary nav"
-                     
-                     tooltip
-                  >
-                    
-                    <div class="devsite-nav-item-title">
-                      Costs and usage management
-                    </div>
-                    
-                  </a>
-                </li>
-              
-                <li class="devsite-nav-item">
-                  <a href="https://docs.cloud.google.com/docs/iac"
-                    
-                     track-type="nav"
-                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/iac"
-                     track-metadata-position="nav - crossproduct"
-                     track-metadata-module="tertiary nav"
-                     
-                     tooltip
-                  >
-                    
-                    <div class="devsite-nav-item-title">
-                      Infrastructure as code
-                    </div>
-                    
-                  </a>
-                </li>
-              
-                <li class="devsite-nav-item">
-                  <a href="https://docs.cloud.google.com/docs/devtools"
-                    
-                     track-type="nav"
-                     track-metadata-eventdetail="https://docs.cloud.google.com/docs/devtools"
-                     track-metadata-position="nav - crossproduct"
-                     track-metadata-module="tertiary nav"
-                     
-                     tooltip
-                  >
-                    
-                    <div class="devsite-nav-item-title">
-                      SDK, languages, frameworks, and tools
                     </div>
                     
                   </a>
@@ -773,11 +1080,11 @@
       
         track-metadata-position="nav"
       
-        referrerpolicy="no-referrer-when-downgrade"
-      
         track-metadata-eventDetail="nav"
       
         track-type="globalNav"
+      
+        referrerpolicy="no-referrer-when-downgrade"
       
         track-name="console"
       
@@ -998,15 +1305,15 @@
     
     
       
-        track-metadata-position="nav"
-      
         track-metadata-eventDetail="nav"
       
         track-name="gcpCta"
       
+        referrerpolicy="no-referrer-when-downgrade"
+      
         track-type="freeTrial"
       
-        referrerpolicy="no-referrer-when-downgrade"
+        track-metadata-position="nav"
       
     
     >Start free</a>
@@ -1217,11 +1524,11 @@
   
   <picture>
     
-    <source srcset="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/images/lockup_dark_theme.svg"
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup_dark_theme.svg"
             media="(prefers-color-scheme: dark)"
             class="devsite-dark-theme">
     
-    <img src="https://www.gstatic.com/devrel-devsite/prod/vdc800838fb8be04a9a7685606311d18c65800504bccf261551968ac74bffd42e/clouddocs/images/lockup_full_color.svg" class="devsite-site-logo" alt="Google Cloud Documentation">
+    <img src="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup_full_color.svg" class="devsite-site-logo" alt="Google Cloud Documentation">
   </picture>
   
 </a>
@@ -1249,7 +1556,7 @@
       
         data-category="Site-Wide Custom Events"
       
-        data-label="Tab: Technology areas"
+        data-label="Tab: Documentation"
       
         track-name="docs-home"
       
@@ -1257,13 +1564,13 @@
       
     
      data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Technology areas"
+     data-label="Responsive Tab: Documentation"
      track-type="globalNav"
      track-metadata-eventDetail="globalMenu"
      track-metadata-position="nav">
   
     <span class="devsite-nav-text" tooltip >
-      Technology areas
+      Documentation
    </span>
     
   
@@ -1286,7 +1593,7 @@
       
         data-category="Site-Wide Custom Events"
       
-        data-label="Tab: Technology areas"
+        data-label="Tab: Documentation"
       
         track-name="docs-home"
       
@@ -1294,12 +1601,12 @@
       
     >
   
-    <span class="devsite-nav-text" tooltip menu="Technology areas">
+    <span class="devsite-nav-text" tooltip menu="Documentation">
       More
    </span>
     
     <span class="devsite-nav-icon material-icons" data-icon="forward"
-          menu="Technology areas">
+          menu="Documentation">
     </span>
     
   
@@ -1473,84 +1780,6 @@
               
             </li>
           
-            <li class="devsite-nav-item">
-              
-  
-  <a href="/docs/cross-product-overviews"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-      
-        data-category="Site-Wide Custom Events"
-      
-        data-label="Tab: Cross-product tools"
-      
-        track-name="crossproduct"
-      
-        track-link-column-type="single-column"
-      
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Cross-product tools"
-     track-type="globalNav"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav">
-  
-    <span class="devsite-nav-text" tooltip >
-      Cross-product tools
-   </span>
-    
-  
-  </a>
-  
-
-  
-    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
-               ">
-      
-<li class="devsite-nav-item">
-
-  
-  <span
-    
-       class="devsite-nav-title"
-       tooltip
-    
-    
-      
-        data-category="Site-Wide Custom Events"
-      
-        data-label="Tab: Cross-product tools"
-      
-        track-name="crossproduct"
-      
-        track-link-column-type="single-column"
-      
-    >
-  
-    <span class="devsite-nav-text" tooltip menu="Cross-product tools">
-      More
-   </span>
-    
-    <span class="devsite-nav-icon material-icons" data-icon="forward"
-          menu="Cross-product tools">
-    </span>
-    
-  
-  </span>
-  
-
-</li>
-
-    </ul>
-  
-              
-            </li>
-          
           
     
     
@@ -1566,11 +1795,11 @@
       
         track-metadata-position="nav"
       
-        referrerpolicy="no-referrer-when-downgrade"
-      
         track-metadata-eventDetail="nav"
       
         track-type="globalNav"
+      
+        referrerpolicy="no-referrer-when-downgrade"
       
         track-name="console"
       
@@ -1610,30 +1839,6 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Product overview</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-expandable"><div class="devsite-expandable-nav">
-      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
-        <span class="devsite-nav-text" tooltip>Product offerings</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
-           devsite-nav-expandable"><div class="devsite-expandable-nav">
-      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
-        <span class="devsite-nav-text" tooltip>Gemini Code Assist</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/overview"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/security-privacy-compliance"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Security and privacy overview</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/gemini-cli"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Gemini CLI</span></a></li><li class="devsite-nav-item
-           devsite-nav-preview"><a href="/gemini/docs/codeassist/gemini-3"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Gemini 3 with Gemini Code Assist</span><span class="devsite-nav-icon material-icons"
-        data-icon="preview"
-        data-title="Preview"
-        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/supported-languages"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Supported languages, IDEs, and interfaces</span></a></li></ul></div></li></ul></div></li>
-
   <li class="devsite-nav-item"><a href="/gemini/docs/discover/works"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>How Gemini works</span></a></li>
@@ -1650,28 +1855,14 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Certifications and security</span></a></li>
 
-  <li class="devsite-nav-item
-           devsite-nav-expandable"><div class="devsite-expandable-nav">
-      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
-        <span class="devsite-nav-text" tooltip>Release notes</span>
-      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/gemini/docs/release-notes"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Gemini for Google Cloud release notes</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/release-notes"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Gemini Code Assist release notes</span></a></li></ul></div></li>
-
   <li class="devsite-nav-item"><a href="/gemini/docs/turn-off-gemini"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Turn off Gemini for Google Cloud products</span></a></li>
+      ><span class="devsite-nav-text" tooltip>Turn off Gemini products in Google Cloud</span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
         <span class="devsite-nav-text" tooltip>Get started</span>
       </div></li>
-
-  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/set-up-gemini"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Set up Gemini Code Assist</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini/docs/discover/write-prompts"
         class="devsite-nav-title"
@@ -1681,6 +1872,30 @@
            devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
         <span class="devsite-nav-text" tooltip>Gemini Code Assist</span>
       </div></li>
+
+  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/overview"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/security-privacy-compliance"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Security and privacy overview</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/set-up-gemini"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Set up Gemini Code Assist</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/gemini-cli"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemini CLI</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-preview"><a href="/gemini/docs/codeassist/gemini-3"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Gemini 3 with Gemini Code Assist</span><span class="devsite-nav-icon material-icons"
+        data-icon="preview"
+        data-title="Preview"
+        aria-hidden="true"></span></a></li>
 
   <li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
@@ -1700,7 +1915,7 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Configure Gemini Code Assist logging</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/admin"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Add or change Gemini Code Assist subscriptions</span></a></li><li class="devsite-nav-item
+      ><span class="devsite-nav-text" tooltip>Modify Gemini Code Assist subscriptions</span></a></li><li class="devsite-nav-item
            devsite-nav-expandable"><div class="devsite-expandable-nav">
       <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
         <span class="devsite-nav-text" tooltip>Gemini Code Assist licenses</span>
@@ -1708,9 +1923,7 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Request a Gemini Code Assist license</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/manage-licenses"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Manage Gemini Code Assist licenses</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/cross-org-license-usage"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Prevent cross-organization license usage</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist"
+      ><span class="devsite-nav-text" tooltip>Manage Gemini Code Assist licenses</span></a></li></ul></div></li><li class="devsite-nav-item"><a href="/gemini/docs/codeassist/use-pre-release-features-gemini-code-assist"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Use pre-release features in Gemini Code Assist for VS Code</span></a></li><li class="devsite-nav-item"><a href="/gemini/docs/configure-vpc-service-controls"
         class="devsite-nav-title"
@@ -1770,6 +1983,14 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Encrypt data with customer-managed encryption keys</span></a></li></ul></div></li>
 
+  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/supported-languages"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Supported languages, IDEs, and interfaces</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/troubleshoot"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Troubleshoot access to Gemini Code Assist features</span></a></li>
+
   <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/turn-off"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Turn off Code Assist</span></a></li>
@@ -1814,7 +2035,7 @@
 
   <li class="devsite-nav-item"><a href="/gemini/docs/audit-logging"
         class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Gemini for Google Cloud audit logging</span></a></li>
+      ><span class="devsite-nav-text" tooltip>cloudaicompanion API audit logging</span></a></li>
 
   <li class="devsite-nav-item"><a href="/gemini/docs/codeassist/business-audit-logging"
         class="devsite-nav-title"
@@ -1829,10 +2050,6 @@
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Troubleshoot Gemini issues</span></a></li>
 
-  <li class="devsite-nav-item"><a href="/gemini/docs/support/troubleshoot-code-assist"
-        class="devsite-nav-title"
-      ><span class="devsite-nav-text" tooltip>Troubleshoot access to Gemini Code Assist features</span></a></li>
-
   <li class="devsite-nav-item"><a href="/gemini/docs/support/feedback"
         class="devsite-nav-title"
       ><span class="devsite-nav-text" tooltip>Provide feedback</span></a></li>
@@ -1842,9 +2059,646 @@
           
     
       
-      <ul class="devsite-nav-list" menu="Technology areas"
+      <ul class="devsite-nav-list" menu="Documentation"
           aria-label="Side menu" hidden>
         
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Get Started
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/get-started"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Get Started with Google Cloud"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Get Started with Google Cloud
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/product-list"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Product List"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Product List
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/support/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cloud Customer Care"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cloud Customer Care
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Featured Products
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/products/gemini-enterprise-agent-platform"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Agent Platform"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Agent Platform
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/apigee"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Apigee API Management"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Apigee API Management
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/bigquery"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: BigQuery"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      BigQuery
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/products/compute"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Compute Engine"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Compute Engine
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/cdn"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cloud CDN"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cloud CDN
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/run"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cloud Run"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cloud Run
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/storage"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cloud Storage"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cloud Storage
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/sql"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Cloud SQL"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Cloud SQL
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/gemini/enterprise/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Gemini Enterprise"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Gemini Enterprise
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/kubernetes-engine"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Kubernetes Engine"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Google Kubernetes Engine
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/looker"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Looker"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Looker
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Cross-product Tools
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/access-resources"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Access and resources management"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Access and resources management
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/costs-usage"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Costs and usage management"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Costs and usage management
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/iac"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Infrastructure as code"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Infrastructure as code
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/devtools"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: SDK, languages, frameworks, and tools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      SDK, languages, frameworks, and tools
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Technology Areas
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
           
             
             
@@ -2230,135 +3084,6 @@
       </ul>
     
   
-    
-      
-      <ul class="devsite-nav-list" menu="Cross-product tools"
-          aria-label="Side menu" hidden>
-        
-          
-            
-            
-              
-<li class="devsite-nav-item">
-
-  
-  <a href="/docs/access-resources"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Access and resources management"
-     track-type="navMenu"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav">
-  
-    <span class="devsite-nav-text" tooltip >
-      Access and resources management
-   </span>
-    
-  
-  </a>
-  
-
-</li>
-
-            
-              
-<li class="devsite-nav-item">
-
-  
-  <a href="/docs/costs-usage"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Costs and usage management"
-     track-type="navMenu"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav">
-  
-    <span class="devsite-nav-text" tooltip >
-      Costs and usage management
-   </span>
-    
-  
-  </a>
-  
-
-</li>
-
-            
-              
-<li class="devsite-nav-item">
-
-  
-  <a href="/docs/iac"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Infrastructure as code"
-     track-type="navMenu"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav">
-  
-    <span class="devsite-nav-text" tooltip >
-      Infrastructure as code
-   </span>
-    
-  
-  </a>
-  
-
-</li>
-
-            
-              
-<li class="devsite-nav-item">
-
-  
-  <a href="/docs/devtools"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: SDK, languages, frameworks, and tools"
-     track-type="navMenu"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav">
-  
-    <span class="devsite-nav-text" tooltip >
-      SDK, languages, frameworks, and tools
-   </span>
-    
-  
-  </a>
-  
-
-</li>
-
-            
-          
-        
-      </ul>
-    
-  
         
         
           
@@ -2627,7 +3352,7 @@
   product-id="5041938"
   bucket="Documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215390653058"
+  version="t-devsite-webserver-20260908-r00-rc00.480264207338033273"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -3406,7 +4131,7 @@ and best practices.</li>
 
   
     <devsite-hats-survey class="nocontent" data-nosnippet
-      hats-id="mwETRvWii0eU5NUYprb0Y9z5GVbc"
+      hats-id="Nd7nTix2o0eU5NUYprb0ThtUc5jf"
       listnr-id="83405"></devsite-hats-survey>
   
 
@@ -3427,7 +4152,7 @@ and best practices.</li>
   product-id="5041938"
   bucket="Documentation"
   context=""
-  version="t-devsite-webserver-20260825-r00-rc00.479916215390653058"
+  version="t-devsite-webserver-20260908-r00-rc00.480264207338033273"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -3462,7 +4187,7 @@ and best practices.</li>
 
 <devsite-content-footer class="nocontent" data-nosnippet>
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2026-08-26 UTC.</p>
+  <p>Last updated 2026-09-15 UTC.</p>
 </devsite-content-footer>
 
 
@@ -3510,7 +4235,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-eventDetail="cloud.google.com/products/"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="products and pricing"track-name="see all products"track-metadata-position="footer">
+            track-metadata-eventDetail="cloud.google.com/products/"track-type="footer link"track-name="see all products"track-metadata-position="footer"track-metadata-module="footer"track-metadata-child_headline="products and pricing">
             
           
             See all products
@@ -3527,7 +4252,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="products and pricing"track-metadata-position="footer"track-metadata-module="footer"track-name="google cloud pricing"track-metadata-eventDetail="cloud.google.com/pricing/"track-type="footer link">
+            track-metadata-child_headline="products and pricing"track-name="google cloud pricing"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/pricing/"track-metadata-position="footer">
             
           
             Google Cloud pricing
@@ -3544,7 +4269,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/marketplace/"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="google cloud marketplace"track-type="footer link">
+            track-type="footer link"track-name="google cloud marketplace"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/marketplace/">
             
           
             Google Cloud Marketplace
@@ -3561,7 +4286,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-eventDetail="cloud.google.com/contact/"track-name="contact sales"track-type="footer link"track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-position="footer">
+            track-type="footer link"track-metadata-child_headline="engage"track-metadata-position="footer"track-name="contact sales"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/contact/">
             
               
               
@@ -3588,7 +4313,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            target="_blank"track-metadata-position="footer"track-metadata-eventDetail="www.googlecloudcommunity.com"rel="noopener"track-metadata-child_headline="engage"track-type="footer link"track-metadata-module="footer"track-name="google cloud community">
+            track-type="footer link"rel="noopener"track-metadata-module="footer"track-name="google cloud community"track-metadata-position="footer"track-metadata-eventDetail="www.googlecloudcommunity.com"track-metadata-child_headline="engage"target="_blank">
             
           
             Community forums
@@ -3605,7 +4330,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-name="support"track-metadata-position="footer"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/support-hub/">
+            track-type="footer link"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/support-hub/"track-metadata-module="footer"track-name="support">
             
           
             Support
@@ -3622,7 +4347,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-type="footer link"track-name="release notes"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-module="footer"track-metadata-child_headline="resources">
+            track-name="release notes"track-type="footer link"track-metadata-child_headline="resources"track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/release-notes/"track-metadata-module="footer">
             
           
             Release Notes
@@ -3639,7 +4364,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-metadata-eventDetail="status.cloud.google.com"track-metadata-position="footer"target="_blank"track-type="footer link"track-metadata-child_headline="resources"track-name="system status">
+            track-name="system status"track-type="footer link"track-metadata-eventDetail="status.cloud.google.com"track-metadata-module="footer"track-metadata-child_headline="resources"track-metadata-position="footer"target="_blank">
             
               
               
@@ -3666,7 +4391,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-metadata-eventDetail="github.com/googlecloudPlatform/"track-name="github"track-metadata-position="footer"track-type="footer link"track-metadata-module="footer"track-metadata-child_headline="resources">
+            track-metadata-module="footer"track-metadata-position="footer"track-name="github"track-metadata-eventDetail="github.com/googlecloudPlatform/"track-metadata-child_headline="resources"track-type="footer link">
             
           
             GitHub
@@ -3683,7 +4408,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-metadata-child_headline="resources"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer"track-name="google cloud quickstarts">
+            track-metadata-eventDetail="cloud.google.com/docs/get-started/"track-type="footer link"track-metadata-child_headline="resources"track-metadata-module="footer"track-name="google cloud quickstarts"track-metadata-position="footer">
             
           
             Getting Started with Google Cloud
@@ -3700,7 +4425,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-position="footer"track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/docs/samples"track-metadata-child_headline="resources"track-name="code samples">
+            track-metadata-child_headline="resources"track-metadata-eventDetail="cloud.google.com/docs/samples"track-type="footer link"track-name="code samples"track-metadata-position="footer"track-metadata-module="footer">
             
           
             Code samples
@@ -3717,7 +4442,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-type="footer link"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-child_headline="resources"track-name="cloud architecture center"track-metadata-position="footer">
+            track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/architecture/"track-metadata-child_headline="resources"track-name="cloud architecture center"track-metadata-module="footer"track-type="footer link">
             
           
             Cloud Architecture Center
@@ -3734,7 +4459,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-name="training"track-type="footer link"track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-position="footer"track-metadata-child_headline="resources"track-metadata-module="footer">
+            track-type="footer link"track-name="training"track-metadata-position="footer"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/learn/training/"track-metadata-child_headline="resources">
             
               
               
@@ -3761,7 +4486,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 1)"
-            track-type="footer link"track-metadata-module="footer"track-name="blog"track-metadata-eventDetail="cloud.google.com/blog/"track-metadata-position="footer"track-metadata-child_headline="engage">
+            track-metadata-position="footer"track-name="blog"track-type="footer link"track-metadata-child_headline="engage"track-metadata-module="footer"track-metadata-eventDetail="cloud.google.com/blog/">
             
           
             Blog
@@ -3778,7 +4503,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 2)"
-            track-metadata-child_headline="engage"track-metadata-eventDetail="cloud.google.com/events/"track-name="events"track-metadata-module="footer"track-type="footer link"track-metadata-position="footer">
+            track-metadata-position="footer"track-metadata-eventDetail="cloud.google.com/events/"track-metadata-child_headline="engage"track-name="events"track-type="footer link"track-metadata-module="footer">
             
           
             Events
@@ -3795,7 +4520,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 3)"
-            track-metadata-position="footer"track-metadata-eventDetail="x.com/googlecloud"track-metadata-child_headline="engage"track-name="follow on x"target="_blank"track-metadata-module="footer"rel="noopener"track-type="footer link">
+            track-name="follow on x"track-metadata-module="footer"rel="noopener"track-type="footer link"target="_blank"track-metadata-eventDetail="x.com/googlecloud"track-metadata-child_headline="engage"track-metadata-position="footer">
             
           
             X (Twitter)
@@ -3812,7 +4537,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 4)"
-            track-metadata-module="footer"track-type="footer link"target="_blank"rel="noopener"track-metadata-child_headline="engage"track-metadata-eventDetail="www.youtube.com/googlecloud"track-name="google cloud on youtube"track-metadata-position="footer">
+            track-metadata-position="footer"rel="noopener"target="_blank"track-metadata-child_headline="engage"track-metadata-eventDetail="www.youtube.com/googlecloud"track-metadata-module="footer"track-type="footer link"track-name="google cloud on youtube">
             
           
             Google Cloud on YouTube
@@ -3829,7 +4554,7 @@ and best practices.</li>
              data-category="Site-Wide Custom Events"
             
              data-label="Footer Link (index 5)"
-            track-metadata-module="footer"target="_blank"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-metadata-child_headline="engage"rel="noopener"track-type="footer link"track-metadata-position="footer"track-name="google cloud tech on youtube">
+            rel="noopener"track-metadata-eventDetail="www.youtube.com/googlecloudplatform"track-metadata-child_headline="engage"track-metadata-position="footer"track-metadata-module="footer"track-name="google cloud tech on youtube"track-type="footer link"target="_blank">
             
               
               
@@ -3856,6 +4581,81 @@ and best practices.</li>
 
 <div class="devsite-footer-utility nocontent" data-nosnippet>
   
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        
+        <source srcset="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup-google-for-developers-dark-theme.svg"
+                media="(prefers-color-scheme: none)"
+                class="devsite-dark-theme">
+        
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/veec7311b6c5f99ef32994eb65aab7022195f72bfa4f3d934bdc7556da7fa7c3b/clouddocs/images/lockup-google-for-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developer.android.com/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+         
+           data-label="Footer Android Developers Link"
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developer.chrome.com/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+         
+           data-label="Footer Chrome Link"
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://firebase.google.com/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+         
+           data-label="Footer Firebase Link"
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://ai.google.com/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+         
+           data-label="Footer Google AI Link"
+         >
+          Google AI
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
 
   
   <nav class="devsite-footer-utility-links" aria-label="Utility links">
@@ -3871,17 +4671,17 @@ and best practices.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer About Google link"
          
+           track-name="about google"
+         
            track-type="footer link"
          
            track-metadata-position="footer"
          
-           track-metadata-eventDetail="//about.google/"
-         
            target="_blank"
          
-           track-metadata-module="utility footer"
+           track-metadata-eventDetail="//about.google/"
          
-           track-name="about google"
+           track-metadata-module="utility footer"
          >
           About Google
         </a>
@@ -3897,15 +4697,15 @@ and best practices.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Privacy link"
          
-           track-name="privacy"
+           track-metadata-eventDetail="//policies.google.com/privacy"
          
            target="_blank"
          
-           track-metadata-eventDetail="//policies.google.com/privacy"
+           track-metadata-module="utility footer"
          
            track-type="footer link"
          
-           track-metadata-module="utility footer"
+           track-name="privacy"
          
            track-metadata-position="footer"
          >
@@ -3923,15 +4723,15 @@ and best practices.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Site terms link"
          
-           track-metadata-position="footer"
+           track-type="footer link"
          
            track-name="site terms"
          
            target="_blank"
          
-           track-type="footer link"
-         
            track-metadata-module="utility footer"
+         
+           track-metadata-position="footer"
          
            track-metadata-eventDetail="//www.google.com/intl/en/policies/terms/regional.html"
          >
@@ -3949,15 +4749,15 @@ and best practices.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Google Cloud terms link"
          
-           track-name="google cloud terms"
-         
-           track-type="footer link"
+           track-metadata-position="footer"
          
            track-metadata-eventDetail="//cloud.google.com/product-terms"
          
-           track-metadata-position="footer"
-         
            track-metadata-module="utility footer"
+         
+           track-name="google cloud terms"
+         
+           track-type="footer link"
          >
           Google Cloud terms
         </a>
@@ -3973,17 +4773,17 @@ and best practices.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Manage cookies link"
          
-           track-metadata-position="footer"
+           track-metadata-eventDetail="#"
          
            track-metadata-module="utility footer"
          
-           aria-hidden="true"
-         
            track-type="footer link"
          
-           track-metadata-eventDetail="#"
-         
            track-name="Manage cookies"
+         
+           track-metadata-position="footer"
+         
+           aria-hidden="true"
          >
           Manage cookies
         </a>
@@ -3999,15 +4799,15 @@ and best practices.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Our third decade of climate action: join us link"
          
-           track-metadata-position="footer"
-         
-           track-metadata-module="utility footer"
-         
            track-metadata-eventDetail="/sustainability/"
+         
+           track-type="footer link"
          
            track-name="Our third decade of climate action: join us"
          
-           track-type="footer link"
+           track-metadata-module="utility footer"
+         
+           track-metadata-position="footer"
          >
           Our third decade of climate action: join us
         </a>
@@ -4025,15 +4825,15 @@ and best practices.</li>
            data-category="Site-Wide Custom Events"
            data-label="Footer Subscribe link"
          
+           track-metadata-position="footer"
+         
            track-metadata-module="utility footer"
          
-           track-metadata-eventDetail="/newsletter/"
+           track-name="subscribe"
          
            track-type="footer link"
          
-           track-metadata-position="footer"
-         
-           track-name="subscribe"
+           track-metadata-eventDetail="/newsletter/"
          >
           Subscribe
         </a>
@@ -4145,6 +4945,15 @@ and best practices.</li>
     
     
     
+<cloudx-user></cloudx-user>
+
+
+
+
+  
+    <cloudx-free-trial-eligible-store freeTrialEligible="true"></cloudx-free-trial-eligible-store>
+  
+
     
 
 

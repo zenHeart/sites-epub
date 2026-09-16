@@ -4,7 +4,7 @@
 
 Under Zero Data Retention (ZDR), generated videos must be stored in user-supplied storage. Until storage is configured, the video tools in Grok Build will return an error.
 
-To set this up, configure an S3-compatible bucket and set the following in `~/.grok/managed_config.toml`. Grok Build presigns an upload URL for each generation and passes it to the API, so the video lands directly in your bucket and is never stored by xAI:
+To set this up, configure an S3-compatible bucket and set the following in `~/.grok/managed_config.toml`. Grok Build presigns an upload URL for each generation and passes it to the API, so the video lands directly in your bucket and is never stored by SpaceXAI:
 
 ```toml
 [tools.zdr_video_output_s3]

@@ -25,6 +25,7 @@ These work with any command:
 | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------- |
 | `auth`                                                                | Sign in, sign out, and configure git authentication                                | `origin auth login`                |
 | `repo`                                                                | Create, list, view, clone, and delete repositories                                 | `origin repo create my-project`    |
+| `push`                                                                | Push `origin/*` workspace branches on a GitHub-mirrored repo                       | `origin push local`                |
 | [`pr`](https://cursor.com/docs/origin/cli/reference/pull-requests.md) | Create, review, and merge pull requests                                            | `origin pr create`                 |
 | `ruleset`                                                             | View Origin rulesets (merge-time and push-time). Alias: `rs`                       | `origin ruleset list`              |
 | `ssh-key`                                                             | Manage SSH keys registered with your Origin account                                | `origin ssh-key list`              |
@@ -84,6 +85,26 @@ Pass `org/name` to target a repository. `origin repo create <name>` without a sl
 | `view`            | `--json <fields>`               | Output JSON with the fields you list, for example `org,name,defaultBranch` |
 | `delete`          | `-y, --yes`                     | Skip the confirmation prompt. Required in a non-interactive shell          |
 
+## Push local
+
+On a repository [mirrored from GitHub](https://cursor.com/docs/origin/mirror-github.md), `origin push local` sets up the `origin-local` remote at `https://origin.cursor.com/{owner}/{repo}.git/local` and pushes local `origin/*` branches there. Use this to keep working when GitHub is unavailable, or to store any other git state you want only on the Origin copy. After the first run, that remote looks like:
+
+```text
+origin-local    https://origin.cursor.com/{owner}/{repo}.git/local (fetch)
+origin-local    https://origin.cursor.com/{owner}/{repo}.git/local (push)
+```
+
+Other branches still go to GitHub with `git push origin`. See [forge-local branches](https://cursor.com/docs/origin/git.md#forge-local-branches-on-mirrored-repos).
+
+| Subcommand | Description                                                   | Usage               |
+| ---------- | ------------------------------------------------------------- | ------------------- |
+| `local`    | Set up the `origin-local` remote and push `origin/*` branches | `origin push local` |
+
+| Option            | Description                                                                              |
+| ----------------- | ---------------------------------------------------------------------------------------- |
+| `--remote <name>` | Git remote to create or update (default: `origin-local`). Cannot be `origin` or `github` |
+| `--dry-run`       | Show what would be pushed without pushing                                                |
+
 ## Rulesets
 
 View the merge-time and push-time rulesets configured for a repository:
@@ -105,7 +126,7 @@ Manage the SSH public keys on your Origin account:
 
 ## API requests
 
-`origin api` makes an authenticated request to the Origin REST API at `api.cursor.com/v1/origin` for anything without a first-class command. It supports request flags similar to `gh api`: `-X, --method`, `-H, --header`, `-F, --field`, `-f, --raw-field`, `--input`, and `-q, --jq`. `{owner}`, `{repo}`, and `{branch}` placeholders expand from `-R, --repo`, the `ORIGIN_REPO` environment variable, or the `origin` git remote. See the [Origin API](https://cursor.com/docs/api/origin.md) docs for endpoints, authentication, and examples.
+`origin api` makes an authenticated request to the Origin REST API at `api.cursor.com/v1/origin` for anything without a first-class command. It supports request flags similar to `gh api`: `-X, --method`, `-H, --header`, `-F, --field`, `-f, --raw-field`, `--input`, and `-q, --jq`. `{owner}`, `{repo}`, and `{branch}` placeholders expand from `-R, --repo`, the `ORIGIN_REPO` environment variable, or the `origin` git remote. See the [Origin API](https://cursor.com/docs/api/origin/llms-full.txt) docs for endpoints, authentication, and examples.
 
 ## Updates
 

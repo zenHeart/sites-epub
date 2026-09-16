@@ -46,7 +46,7 @@ Generates a response based on text or image prompts. The response ID can be used
 
 * `reasoning` (object)
 
-  * `effort` (string | null) — Constrains how hard a reasoning model thinks before responding. Supported by some models; models that do not support it reject the request with an error. Possible values are \`none\` (disables reasoning completely), \`low\`, \`medium\`, \`high\` (uses the most reasoning tokens) and \`xhigh\`. The accepted values and the default used when unspecified vary per model. See the model's documentation page for details.
+  * `effort` (string | null) — Constrains how hard a reasoning model thinks before responding. Higher efforts use more reasoning tokens for deeper thinking. The supported values and the default depend on the model.
 
   * `generate_summary` (string | null) — Only included for compatibility.
 
@@ -141,7 +141,7 @@ Generates a response based on text or image prompts. The response ID can be used
 
 * `reasoning` (object)
 
-  * `effort` (string | null) — Constrains how hard a reasoning model thinks before responding. Supported by some models; models that do not support it reject the request with an error. Possible values are \`none\` (disables reasoning completely), \`low\`, \`medium\`, \`high\` (uses the most reasoning tokens) and \`xhigh\`. The accepted values and the default used when unspecified vary per model. See the model's documentation page for details.
+  * `effort` (string | null) — Constrains how hard a reasoning model thinks before responding. Higher efforts use more reasoning tokens for deeper thinking. The supported values and the default depend on the model.
 
   * `generate_summary` (string | null) — Only included for compatibility.
 
@@ -394,7 +394,7 @@ Retrieve a previously generated response.
 
 * `reasoning` (object)
 
-  * `effort` (string | null) — Constrains how hard a reasoning model thinks before responding. Supported by some models; models that do not support it reject the request with an error. Possible values are \`none\` (disables reasoning completely), \`low\`, \`medium\`, \`high\` (uses the most reasoning tokens) and \`xhigh\`. The accepted values and the default used when unspecified vary per model. See the model's documentation page for details.
+  * `effort` (string | null) — Constrains how hard a reasoning model thinks before responding. Higher efforts use more reasoning tokens for deeper thinking. The supported values and the default depend on the model.
 
   * `generate_summary` (string | null) — Only included for compatibility.
 
@@ -551,42 +551,6 @@ Retrieve a previously generated response.
   "status": "completed",
   "store": true
 }
-```
-
-***
-
-## GET /v1/responses/\{response\_id}/input\_items
-
-List input items for a previously generated response.
-
-### Path Parameters
-
-* `response_id` (string, required) — The response id returned by a previous create response request.
-
-### Query Parameters
-
-* `limit` (integer) — Maximum number of items to return (1-100, default 20).
-
-* `order` ("asc" | "desc") — Sort order: asc or desc. Default asc.
-
-* `after` (string) — Cursor for pagination. Returns items after this item ID.
-
-### Response Body
-
-* `data` (array\<object>, required) — The list of input items.
-
-* `first_id` (string | null) — The ID of the first item in the list.
-
-* `has_more` (boolean, required) — Whether there are more items beyond this page.
-
-* `last_id` (string | null) — The ID of the last item in the list.
-
-* `object` (string, required) — The object type, always \`list\`.
-
-\*\*Response example:\*\*
-
-```json
-{}
 ```
 
 ***

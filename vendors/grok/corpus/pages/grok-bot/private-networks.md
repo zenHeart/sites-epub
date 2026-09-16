@@ -5,21 +5,24 @@
 Grok Bot computers run in Cursor's cloud and reach the internet through
 [shared static egress IP addresses](/grok-bot/security#static-egress-ips).
 If the systems your Bots need, such as internal APIs, source control, databases,
-or staging environments, live on a private network, you can connect by
-installing your organization's networking client on every team computer through
-**Team Setup**. Tailscale and Cloudflare Tunnel are common choices, and this
-page has a worked example for each. Other VPN, zero-trust, or mesh clients that
-run on Linux follow the same pattern. Your services stay off the public
-internet, and access is governed by the access controls and identity provider
-you already use.
+or staging environments, live on a private network, route traffic through a
+member's desktop or install your organization's networking client on every team
+computer through **Team Setup**. Tailscale and Cloudflare Tunnel are common
+client choices, and this page has a worked example for each. Other VPN,
+zero-trust, or mesh clients that run on Linux follow the same pattern. Your
+services stay off the public internet, and access is governed by the access
+controls and identity provider you already use.
 
-> Team Setup is available on the Enterprise plan. The Grok Bot
+> Team Setup is Enterprise only. It does not appear on other plans. Network
+> Controls is also Enterprise only. That
 > [network policy](/grok-bot/security#network-policy) is a separate layer that
 > still applies; private network reach does not replace your destination
 > allowlist.
 
 ## What you can do
 
+* Route one member's traffic through their desktop, so Bots can reach services
+  available from that device and destinations see its IP address.
 * Install your networking client on every team computer automatically, from one
   admin-managed manifest, with no per-computer setup.
 * Let Bots reach services on your private network without exposing those
@@ -27,7 +30,26 @@ you already use.
 * Keep control on your side: your network, your access rules, and your identity
   provider. You can revoke a computer from your own admin console at any time.
 
-## A pattern you operate
+## Choose a connection method
+
+| Method | Use it when |
+| --- | --- |
+| Route egress through a desktop | One member needs access through a network already available from their device |
+| Install a networking client with Team Setup | Your Enterprise team needs a consistent connection on every hosted computer |
+
+### Route through a member's desktop
+
+In the Grok Bot desktop app, open **Settings → Computer** and turn on **Route
+egress through this desktop**. The route uses the current device's network and
+IP address. It stops when the setting is turned off or an Enterprise admin
+disables **Allow Local Egress**.
+
+Each member controls their own desktop route. Enterprise admins can remove this
+option for the whole team from
+[Grok Bot in the Cursor dashboard](https://cursor.com/dashboard/bot). See
+[Route traffic through your desktop](/grok-bot/settings-and-notifications#route-traffic-through-your-desktop).
+
+### Install a networking client with Team Setup
 
 This is a pattern you run, not a Cursor-managed network mode. Cursor provides
 the hook: Team Setup runs your install scripts on every team computer. You own
@@ -292,8 +314,9 @@ your own gateway or connector, as described on this page.
 
 ### Which plans include Team Setup?
 
-Enterprise. Team admins manage manifests. If you do not see Team Setup on the
-Grok Bot page of the dashboard, contact your account team.
+Team Setup is Enterprise only. Team admins manage manifests. If you do not see
+it on the Grok Bot page of the dashboard, you are not on Enterprise, or you
+need your account team to enable Grok Bot for the organization.
 
 ### What happens if the setup script fails on some computers?
 
@@ -306,5 +329,7 @@ install.
 * [Grok Bot for teams and enterprises](/grok-bot/teams-and-enterprises)
 * [Grok Bot security](/grok-bot/security)
 * [Configure identity and access](/grok-bot/identity-and-access)
+* [Configure TLS-inspecting proxies](/grok-bot/proxies), for the path from
+  member devices to Cursor
 * [Cloud Agents: Running Tailscale](https://cursor.com/docs/cloud-agent/setup#running-tailscale)
   and [Running Cloudflare Tunnel](https://cursor.com/docs/cloud-agent/setup#running-cloudflare-tunnel)
