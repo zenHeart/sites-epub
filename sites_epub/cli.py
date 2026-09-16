@@ -141,6 +141,15 @@ def cmd_catalog(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_changelog(args: argparse.Namespace) -> int:
+    from .changelog import write_changelog
+
+    dest = Path(args.dest) if args.dest else ROOT / "site"
+    out = write_changelog(dest)
+    print(json.dumps({"ok": True, "dest": str(out)}))
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="site2epub")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -175,6 +184,10 @@ def main(argv: list[str] | None = None) -> int:
     cat = sub.add_parser("catalog", help="write static catalog HTML")
     cat.add_argument("--dest")
     cat.set_defaults(func=cmd_catalog)
+
+    log = sub.add_parser("changelog", help="write per-vendor changelog page from routes.json git history (local)")
+    log.add_argument("--dest")
+    log.set_defaults(func=cmd_changelog)
 
     args = p.parse_args(argv)
     return args.func(args)

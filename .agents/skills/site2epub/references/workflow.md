@@ -9,7 +9,10 @@ python3 -m sites_epub pack                 # CI：按书跳过未变厂商
 python3 -m sites_epub pack --force         # 全量重打
 python3 -m sites_epub pack --id claude     # 只打一本
 python3 -m sites_epub catalog
+python3 -m sites_epub changelog            # 本地：由 routes.json git 历史生成 site/changelog.html
 ```
+
+**changelog**：每次增量 fetch 提交后在本地跑一次并一并提交（CI 是 shallow checkout，跑不了）。数据完全由各厂商 `corpus/routes.json` 的 git 历史推导（相邻版本 diff = 新增/移除页，含标题与原文链接），不做手工登记。书架右上角有「更新日志」入口。
 
 ## 新建 vs 增量
 

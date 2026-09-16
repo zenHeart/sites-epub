@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>更新日志 · ZenShelf</title>
+  <meta name="description" content="每部站点 EPUB 的增量更新记录：按厂商罗列每次同步新增与移除的文档页和博文，条目链回原文。数据由 routes.json 的 git 历史推导。">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --paper: #fcfbf9; --paper-2: #f6f5f0; --ink: #1c1a19; --muted: #8a8478;
+      --line: rgba(44,42,41,.12); --card: #fff; --chip: #f1eee6;
+      --shadow: 0 8px 24px -6px rgba(0,0,0,.08), 0 2px 6px -1px rgba(0,0,0,.04);
+    }
+    html.dark {
+      --paper: #121110; --paper-2: #1c1a19; --ink: #f4f0ea; --muted: #9a9488;
+      --line: rgba(244,240,234,.12); --card: #1c1a19; --chip: #2a2724;
+      --shadow: 0 10px 30px -8px rgba(0,0,0,.5);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: var(--paper); color: var(--ink);
+      font-family: Inter, "PingFang SC", "Noto Sans SC", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 52rem; margin: 0 auto; padding: 0 1.5rem; min-height: 100vh; display: flex; flex-direction: column; }
+    header { padding: 2.2rem 0 1.4rem; display: flex; gap: 1.25rem; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; border-bottom: 1px solid var(--line); }
+    .brand h1 { margin: 0; font-family: "Iowan Old Style", "Songti SC", "Noto Serif SC", serif; font-weight: 400; letter-spacing: .06em; font-size: 1.7rem; }
+    .brand p { margin: .35rem 0 0; font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .back { font-size: .78rem; color: var(--muted); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: .4rem .9rem; white-space: nowrap; }
+    .back:hover { color: var(--ink); }
+    .intro { padding: 1.5rem 0 .2rem; font-size: .84rem; line-height: 1.7; color: var(--muted); max-width: 40rem; }
+    .filters { display: flex; gap: .5rem; flex-wrap: wrap; padding: 1.1rem 0 0; }
+    .filters button {
+      border: 0; background: var(--chip); color: var(--muted); border-radius: 999px;
+      padding: .38rem .85rem; cursor: pointer; font-size: .75rem;
+    }
+    .filters button.on { background: var(--ink); color: var(--paper); }
+    main { flex: 1; padding: 1.6rem 0 3rem; }
+    .upd { background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 1.15rem 1.3rem 1.05rem; margin-bottom: 1.1rem; }
+    .upd-head { display: flex; gap: .8rem; align-items: baseline; flex-wrap: wrap; }
+    .upd-date { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .78rem; color: var(--muted); }
+    .upd-vendor { font-weight: 600; font-size: .95rem; }
+    .upd-subject { font-size: .78rem; color: var(--muted); flex-basis: 100%; margin-top: .3rem; line-height: 1.55; overflow-wrap: anywhere; }
+    .stat { font-family: ui-monospace, Menlo, monospace; font-size: .7rem; margin-left: auto; white-space: nowrap; }
+    .stat .add { color: #3e7d4f; } html.dark .stat .add { color: #7fc08d; }
+    .stat .rm { color: #a05656; } html.dark .stat .rm { color: #d99a9a; }
+    details { margin-top: .8rem; }
+    summary { cursor: pointer; font-size: .78rem; color: var(--muted); letter-spacing: .05em; user-select: none; }
+    summary:hover { color: var(--ink); }
+    ul.pages { margin: .6rem 0 0; padding: 0 0 0 0; list-style: none; }
+    ul.pages li { font-size: .82rem; line-height: 1.9; border-bottom: 1px dashed var(--line); }
+    ul.pages li:last-child { border-bottom: 0; }
+    ul.pages a { text-decoration: none; }
+    ul.pages a:hover { text-decoration: underline; }
+    .tag { display: inline-block; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 .35rem; margin-right: .5rem; font-family: ui-monospace, Menlo, monospace; vertical-align: .08em; }
+    .tag.blog { color: #8a6d3b; border-color: rgba(138,109,59,.35); } html.dark .tag.blog { color: #cfa96a; }
+    .grp { color: var(--muted); font-size: .72rem; margin-left: .5rem; }
+    .rm-list a { color: var(--muted); text-decoration: line-through; }
+    footer { padding: 1.4rem 0 2.2rem; font-size: .7rem; color: var(--muted); font-family: ui-monospace, Menlo, monospace; border-top: 1px solid var(--line); }
+    @media (max-width: 520px) { .upd { padding: .95rem 1rem .9rem; } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <h1>更新日志</h1>
+      <p>CHANGELOG · BY VENDOR</p>
+    </div>
+    <a class="back" href="index.html">← 返回书架</a>
+  </header>
+  <p class="intro">每部 EPUB 的增量更新记录：每次同步新增 / 移除的文档页与博文，条目点击回到原文。数据由各厂商 routes.json 的 git 历史自动推导，无需手工登记。</p>
+  <div class="filters" id="filters"></div>
+  <main id="list"></main>
+  <footer id="foot"></footer>
+</div>
+<script>
+const DATA = __CHANGELOG_JSON__;
+const list = document.getElementById('list');
+const filters = document.getElementById('filters');
+let active = 'all';
+
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function pageList(pages, removed) {
+  if (!pages.length) return '';
+  return '<ul class="pages' + (removed ? ' rm-list' : '') + '">' + pages.map(p =>
+    '<li><span class="tag ' + (p.k === 'blog' ? 'blog' : '') + '">' + (p.k === 'blog' ? 'blog' : 'doc') + '</span>' +
+    (p.u ? '<a href="' + esc(p.u) + '" target="_blank" rel="noopener">' + esc(p.t) + '</a>' : esc(p.t)) +
+    (p.g ? '<span class="grp">' + esc(p.g) + '</span>' : '') + '</li>'
+  ).join('') + '</ul>';
+}
+function render() {
+  const evs = [];
+  DATA.vendors.forEach(v => v.updates.forEach(u => evs.push({ v, u })));
+  evs.sort((a, b) => b.u.date.localeCompare(a.u.date));
+  const shown = active === 'all' ? evs : evs.filter(e => e.v.id === active);
+  list.innerHTML = shown.map(({ v, u }) => {
+    const docs = u.added.filter(p => p.k !== 'blog'), blogs = u.added.filter(p => p.k === 'blog');
+    const rdocs = u.removed.filter(p => p.k !== 'blog'), rblogs = u.removed.filter(p => p.k === 'blog');
+    const isInitial = u.removed.length === 0 && u.added.length >= 100;
+    let body = '';
+    if (u.added.length) body += '<details open><summary>新增 ' + u.added.length + '（文档 ' + docs.length + ' · 博文 ' + blogs.length + '）</summary>' + pageList(docs) + pageList(blogs) + '</details>';
+    if (u.removed.length) body += '<details><summary>移除 ' + u.removed.length + '</summary>' + pageList(rdocs, true) + pageList(rblogs, true) + '</details>';
+    return '<article class="upd"><div class="upd-head">' +
+      '<span class="upd-date">' + esc(u.date) + '</span>' +
+      '<span class="upd-vendor">' + esc(v.name) + '</span>' +
+      '<span class="stat"><span class="add">+' + u.added.length + '</span> <span class="rm">-' + u.removed.length + '</span></span>' +
+      '<div class="upd-subject">' + (isInitial ? 'Initial import · ' : '') + esc(u.subject) + ' <code style="opacity:.55">' + esc(u.short) + '</code></div>' +
+      '</div>' + body + '</article>';
+  }).join('') || '<p class="intro">该厂商暂无更新记录。</p>';
+}
+function renderFilters() {
+  const all = [{ id: 'all', name: '全部' }].concat(DATA.vendors.map(v => ({ id: v.id, name: v.name })));
+  filters.innerHTML = all.map(f =>
+    '<button data-id="' + esc(f.id) + '" class="' + (f.id === active ? 'on' : '') + '">' + esc(f.name) + '</button>'
+  ).join('');
+  filters.querySelectorAll('button').forEach(b => b.onclick = () => { active = b.dataset.id; renderFilters(); render(); });
+}
+document.getElementById('foot').textContent = 'generated ' + DATA.generated_at + ' · derived from routes.json git history';
+renderFilters();
+render();
+</script>
+</body>
+</html>
