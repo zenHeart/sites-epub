@@ -1,27 +1,57 @@
 {
   "codex": {
-    "sha256": "65a51d13446442725da28b8a096ff103714c2313de59a55d812a5929f66e37bd",
-    "packed_at": "2026-09-16T04:50:06Z",
+    "sha256": "c30433cb899c8a44f961cc4cc0fc9fc20187329394c124e3176707a1db873b23",
+    "packed_at": "2026-09-16T07:36:35Z",
     "chapters": 177
   },
   "claude": {
-    "sha256": "3d2405355215e113b3bf651dfb2bf2db7b192c9a4212dc6500f84af2714ca519",
-    "packed_at": "2026-09-16T04:53:48Z",
+    "sha256": "b6460cd369c3f52d41178420b1927f71769c92fd0c7dfa1886e9f095cd1b6130",
+    "packed_at": "2026-09-16T07:39:11Z",
     "chapters": 439
   },
   "cursor": {
-    "sha256": "2329d8229092731966543baaf83cb8e68bd588e6c3a97ca4229126930020c8a2",
-    "packed_at": "2026-09-16T04:55:12Z",
+    "sha256": "3d12f1242a9acc19d83b663f98781cf86caff8d6aa3f2bf0e791bfc68d38c64f",
+    "packed_at": "2026-09-16T07:40:08Z",
     "chapters": 276
   },
   "grok": {
-    "sha256": "c4df72b1466bcf4826214a31eeaf243652981c1f7683cf97db3d1ae8176adebe",
-    "packed_at": "2026-09-16T04:56:05Z",
+    "sha256": "7139a8d760607c401a29b9cf21c472f0764d708531f6a45cc49a9b1149d9f88e",
+    "packed_at": "2026-09-16T07:40:46Z",
     "chapters": 242
   },
   "gemini": {
-    "sha256": "605e987a58fccb1865300cff7d04409860f98a653cb5876f25757194f148b75b",
-    "packed_at": "2026-09-16T04:59:47Z",
+    "sha256": "0ccfc16de4300731035d554c4bd6f46e5a458a59a50c10bb3d8182b444721843",
+    "packed_at": "2026-09-16T07:43:22Z",
     "chapters": 611
+  },
+  "manus": {
+    "sha256": "8673227b106fec6ada84f029c646322bca40dff83906f5409c67a871a74e2c21",
+    "packed_at": "2026-09-16T07:44:18Z",
+    "chapters": 160
+  },
+  "minimax": {
+    "sha256": "a62cd080ab24434ad55add0bd45416f74760b305a34a6d6d1e098b5dcebb287b",
+    "packed_at": "2026-09-16T07:47:56Z",
+    "chapters": 124
+  },
+  "kimi": {
+    "sha256": "caebe4ce54092dda7afed335ec5c870b2f2cd36df93d6e0650c556a318df8590",
+    "packed_at": "2026-09-16T07:48:20Z",
+    "chapters": 106
+  },
+  "zhipu": {
+    "sha256": "b3f53ad444df69a1c9a83dd9ac45c206d6a62963a84213641e4877972fe075e4",
+    "packed_at": "2026-09-16T07:48:49Z",
+    "chapters": 106
+  },
+  "stepfun": {
+    "sha256": "d85a580a59df63b6262345d0eb2953c747e21fd483707f0e6cfbdf1b425c19e4",
+    "packed_at": "2026-09-16T07:49:10Z",
+    "chapters": 120
+  },
+  "deepseek": {
+    "sha256": "af1fb61de298be31a2faf75f53fa673e1d182e0ee6fb22af3e7e04d48ec1751d",
+    "packed_at": "2026-09-16T07:49:12Z",
+    "chapters": 21
   }
 }

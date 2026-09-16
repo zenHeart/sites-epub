@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 560" width="420" height="560">
+  <rect width="420" height="560" fill="#0d1117"/>
+  <rect x="26" y="26" width="368" height="508" fill="none" stroke="#e9eef5" stroke-width="1.2"/>
+  <text x="48" y="66" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="9.5" font-weight="700" letter-spacing="2.4" fill="#a3aeb9">SITE EPUB / MOONSHOT AI</text>
+  <text x="43" y="180" font-family="ui-serif, Iowan Old Style, Georgia, serif" font-size="40" font-weight="600" fill="#e9eef5">Kimi</text>
+  <text x="48" y="233" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="600" fill="#62b6cb">开放平台文档</text>
+  <line x1="48" y1="267" x2="134" y2="267" stroke="#62b6cb" stroke-width="1"/>
+  <text x="48" y="417" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="12.5" fill="#a3aeb9">API · 模型 · 操作指南</text>
+  <text x="48" y="438" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="12.5" fill="#a3aeb9">文档导航在前 · 博客在后</text>
+  <text x="48" y="492" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#e9eef5">Moonshot Ai</text>
+  <text x="48" y="514" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="10.5" fill="#a3aeb9">platform.kimi.com</text>
+</svg>
