@@ -24,7 +24,7 @@ HTTP requests with the same `previous_response_id` chaining.
 
 After the WebSocket upgrade succeeds, every turn is initiated by the client sending a
 `response.create` message. The body is the same shape as the
-[Responses create body](/developers/rest-api-reference/inference/chat#create-new-response), minus
+[Responses create body](/developers/rest-api-reference/inference/responses#create-new-response), minus
 transport-only fields like `stream` and `background` (responses are always streamed back as
 events on the socket).
 
@@ -236,4 +236,4 @@ Open a fresh WebSocket and reconnect using one of the patterns above.
 
 * [Streaming](/developers/model-capabilities/text/streaming)
 * [Function Calling](/developers/tools/function-calling)
-* [Responses API Reference](/developers/rest-api-reference/inference/chat#create-new-response)
+* [Responses API Reference](/developers/rest-api-reference/inference/responses#create-new-response)

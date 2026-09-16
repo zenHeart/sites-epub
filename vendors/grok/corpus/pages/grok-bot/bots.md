@@ -39,8 +39,6 @@ Your existing Bots can also suggest or create a focused Bot when a job should
 have a long-lived owner. Ask before creating several Bots if you want to keep
 the roster small.
 
-An account can have up to 50 Bots and group chats combined.
-
 ## Edit a Bot
 
 Open the Bot menu to change its name or description. Update the description

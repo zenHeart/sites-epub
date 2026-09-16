@@ -26,7 +26,7 @@ from sites_epub.images import (  # noqa: E402
     rewrite_body_images,
 )
 from sites_epub.mdx import looks_like_runtime_source, transform_mdx  # noqa: E402
-from sites_epub.page import extract_from_html, extract_from_markdown  # noqa: E402
+from sites_epub.page import extract_from_html, extract_from_markdown, extract_page  # noqa: E402
 from sites_epub.models import IndexEntry, Vendor  # noqa: E402
 from sites_epub.page import DocPage  # noqa: E402
 from sites_epub.walk import blocking_defects, walk_chapters  # noqa: E402
@@ -635,7 +635,7 @@ class TestSceneRestore(unittest.TestCase):
         self.assertIn("https://code.claude.com/docs/en/hooks", page.body_html)
 
     def test_missing_atx_title_uses_first_sentence(self) -> None:
-        page = extract_from_markdown(
+        page = extract_page(
             Path("vendors/cursor/corpus/pages/docs/models/grok-4-6.md").read_text(
                 encoding="utf-8"
             ),

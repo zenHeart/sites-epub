@@ -10,11 +10,10 @@ You need:
 
 * An eligible plan: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra,
   or Cursor Teams Standard or Premium (sign in with your Cursor account)
-* The Grok Bot desktop app for macOS or Windows
+* The Grok Bot desktop app for macOS, Windows, or Linux
 * An app or website where your first Bot can do useful work
 
-Grok Bot is not currently available as a Linux desktop app. You can also
-[set up and use Grok Bot for iOS](/grok-bot/mobile).
+You can also [set up and use Grok Bot on mobile](/grok-bot/mobile).
 
 > Grok Bot requires cloud data storage. Accounts using Legacy Privacy Mode
 > must move to a supported Cursor data setting before Grok Bot can start. Open
@@ -23,8 +22,8 @@ Grok Bot is not currently available as a Linux desktop app. You can also
 
 ## 1. Install the desktop app
 
-Open the [Grok Bot access page](https://cursor.com/bot/onboarding) and choose
-the download for your computer.
+Open the [Grok Bot downloads page](https://x.ai/bot) and choose the download
+for your computer.
 
 ### macOS
 
@@ -43,6 +42,21 @@ To check which download you need, open **Apple menu → About This Mac**. A
 3. Open Grok Bot from the Start menu.
 
 To check the architecture, open **Settings → System → About → System type**.
+
+### Linux
+
+Linux builds publish with every stable release. Get them under
+**More downloads** on [x.ai/bot](https://x.ai/bot).
+
+1. Choose the x64 or Arm64 download in the format your distribution uses: a
+   `.deb` package for Debian and Ubuntu, an `.rpm` package for Fedora and
+   RHEL, or an AppImage for other distributions.
+2. Install the `.deb` or `.rpm` with your package manager, or make the
+   AppImage executable and run it.
+3. Open Grok Bot from your application launcher.
+
+To check the architecture, run `uname -m` in a terminal: `x86_64` means x64
+and `aarch64` means Arm64.
 
 Grok Bot checks for updates automatically. You can also use **Check for
 Updates** from **Settings → Beta**.

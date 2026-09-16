@@ -129,7 +129,7 @@ Use the page that matches the kind of video output you want to create:
 
 * [Image-to-Video](/developers/model-capabilities/video/image-to-video) — Animate a still image.
 * [Video Editing](/developers/model-capabilities/video/editing) — Modify an existing video.
-* [Reference-to-Video](/developers/model-capabilities/video/reference-to-video) — Guide a generated video with one or more reference images.
+* [Reference-to-Video](/developers/model-capabilities/video/reference-to-video) — Guide a generated video with reference images, and on `grok-imagine-video-1.5` pin exact first or last frames.
 * [Video Extension](/developers/model-capabilities/video/extension) — Continue an existing video from its last frame.
 
 ## How it works
@@ -381,22 +381,22 @@ done
 
 ### Request Modes
 
-The video generation endpoint supports multiple modes, determined by which fields are set. Only one mode can be active per request:
+The video generation endpoint supports multiple modes, determined by which fields are set. Edit and extend use dedicated endpoints; generation modes share `/v1/videos/generations`:
 
 | Mode | REST API fields | AI SDK shape | Description |
 |------|-----------------|--------------|-------------|
 | Text-to-video | `prompt` only | `prompt: "..."` | Generates video from a text prompt alone. |
 | Image-to-video | `prompt` + `image` | `prompt: { image, text }` | Generates video with the provided image as the starting frame. |
 | Reference-to-video | `prompt` + `reference_images` or `reference_audios` | `prompt: "..."` + `providerOptions.xai.{ mode: "reference-to-video", referenceImageUrls }` | Generates video guided by reference images and/or a preset voice on `grok-imagine-video-1.5`. |
+| First & Last frame | `last_frame`, optionally with `image` and/or `prompt` | REST body `last_frame` (no dedicated AI SDK field) | On `grok-imagine-video-1.5`, pins the exact last frame. Add `image` to also pin the first frame and interpolate between the two. `prompt` is optional whenever a frame is pinned. Can be combined with `reference_images` / `reference_audios`. |
 | Edit-video | `/v1/videos/edits` + `video` | `prompt: "..."` + `providerOptions.xai.{ mode: "edit-video", videoUrl }` | Modifies an existing video based on the prompt. |
 | Extend-video | `/v1/videos/extensions` + `video` | `prompt: "..."` + `providerOptions.xai.{ mode: "extend-video", videoUrl }` | Extends an existing video from its last frame. |
 
-The following combination is **not allowed** and will return a `400 Bad Request` error:
+On `grok-imagine-video-1.5`, `image` combined with `reference_images`, `reference_audios`, or `last_frame` is reference-to-video with a pinned first frame. The clip starts on that image rather than treating it as a style reference. `last_frame` on its own (no `image`, no references) is valid: the model generates the opening and lands on the pinned frame. `prompt` is optional for any request that includes `image`, `reference_images`, or `last_frame`; it is required only for text-to-video. Classic `grok-imagine-video` still rejects `last_frame` and rejects combining `image` with reference inputs.
 
-* `image` + `reference_images` — use one or the other
-* Mixing `mode` values in the AI SDK — each request supports exactly one of `"edit-video"`, `"extend-video"`, or `"reference-to-video"`
+Do not mix AI SDK `mode` values. Each request supports exactly one of `"edit-video"`, `"extend-video"`, or `"reference-to-video"`. When you omit `mode`, the AI SDK uses standard generation.
 
-When you omit `mode`, the AI SDK uses standard generation.
+See [First & Last frame](/developers/model-capabilities/video/reference-to-video#first--last-frame) for `last_frame` examples.
 
 ## Customize Polling Behavior
 
@@ -754,7 +754,7 @@ asyncio.run(generate_concurrently())
 
 * [Models](/developers/models) — Available video models and pricing
 * [Image-to-Video](/developers/model-capabilities/video/image-to-video) — Animate a still image
-* [Reference-to-Video](/developers/model-capabilities/video/reference-to-video) — Guide a video with reference images
+* [Reference-to-Video](/developers/model-capabilities/video/reference-to-video) — Guide a video with reference images, or pin the first & last frame
 * [Video Editing](/developers/model-capabilities/video/editing) — Edit existing videos
 * [Video Extension](/developers/model-capabilities/video/extension) — Extend existing videos
 * [Image Generation](/developers/model-capabilities/images/generation) — Generate still images from text

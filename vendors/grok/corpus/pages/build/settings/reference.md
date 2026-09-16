@@ -214,7 +214,7 @@ A non-empty `deny` list is enforced at the kernel level when the sandbox can be 
 | `new_session_worktree_mode` | `[hints]` | `ask` | `always` | `never` (default `never`) | Whether `/new` offers a [worktree](/build/features/worktrees). |
 | `fork_worktree_mode` | `[hints]` | `ask` | `always` | `never` (default `ask`) | Whether `/fork` offers a worktree. |
 
-### `[ui]`, `[ui.display_refresh]`, and `[ui.contextual_hints]`
+### `[ui]`, `[ui.status_line]`, `[ui.display_refresh]`, and `[ui.contextual_hints]`
 
 | Setting | Section | Values / default | Description |
 | --- | --- | --- | --- |
@@ -251,6 +251,7 @@ A non-empty `deny` list is enforced at the kernel level when the sandbox can be 
 | `voice_keybind_enabled` | `[ui]` | `true` / `false` (default `true`) | Enable Ctrl+Space / F8 for voice dictation (`/voice` still works when off). |
 | `voice_capture_mode` | `[ui]` | `hold` (default) | `toggle` | Hold-to-talk or press-to-toggle voice capture. |
 | `voice_stt_language` | `[ui]` | language code or `auto` (default `en` / `[voice].language`) | Speech-to-text language for dictation. |
+| `status_line` | `[ui.status_line]` | `builtin` | `command` | `disabled` (default) | Live session values, or the output of your own script, in a row at the bottom. Sub-keys: `type`, `items`, `command`, `padding`, `refresh_interval`. See [Status line](/build/features/status-line). |
 | `auto_cadence_enabled` | `[ui.display_refresh]` | `true` / `false` (default `false`) | Match stream/scroll cadence to display refresh rate. Restart required. |
 | `undo` | `[ui.contextual_hints]` | `true` / `false` (default `true`) | Ctrl+Z restores a wiped prompt draft. |
 | `plan_mode` | `[ui.contextual_hints]` | `true` / `false` (default `true`) | Suggest plan mode (Shift+Tab) for planning-style prompts. |

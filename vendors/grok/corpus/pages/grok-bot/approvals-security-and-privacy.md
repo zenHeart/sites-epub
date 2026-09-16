@@ -34,7 +34,8 @@ and its inputs. Review the target, scope, and values before approving.
 
 * On desktop, **Allow once** lets the Bot continue with that action and
   **Deny** blocks it. **Always allow** can save a matching rule.
-* On iPhone, the equivalent controls are **Approve once** and **Deny**.
+* On iPhone and Android, the equivalent controls are **Approve once** and
+  **Deny**.
 
 Do not approve an action whose target or effect you cannot identify. Ask the Bot
 to explain it in plain language or produce a draft first.

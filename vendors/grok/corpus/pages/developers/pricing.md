@@ -29,9 +29,9 @@ All prices are in USD. For per-model details, see the [models page](/developers/
 
 | Model | Cost |
 | --- | --- |
-| grok-imagine-image-2.0 | $0.04 / image |
-| grok-imagine-image-quality | $0.05 / image |
 | grok-imagine-image | $0.02 / image |
+| grok-imagine-image-quality | $0.05 / image |
+| grok-imagine-image-2.0 | $0.04 / image |
 | grok-imagine-video | $0.050 / sec |
 | grok-imagine-video-1.5 | $0.080 / sec |
 
@@ -60,10 +60,14 @@ All standard token types are billed for the model used in the request:
 
 ### Tool Invocation Costs
 
+> [!WARNING]
+>
+> Starting September 21, 2026 at 12:00 PM PT, X Search is billed at $5 per 1k posts fetched and $10 per 1k user profiles fetched, replacing the current $5 per 1k calls. Every post returned by a search or thread fetch, including parent and quoted posts, counts; every profile returned by a user search counts.
+
 | Tool | Tool Name | Description | Cost / 1k Calls |
 | --- | --- | --- | --- |
 | Web Search | `web_search` | Search the internet and browse web pages | $5 |
-| X Search | `x_search` | Search X posts, user profiles, and threads | $5 |
+| X Search | `x_search` | Search X posts, user profiles, and threads‡ | $5 |
 | Code Execution | `code_execution`, `code_interpreter`† | Run Python code in a sandboxed environment | $5 |
 | Image Generation | `image_generation` | Generate and edit images | [Imagine API rates](/developers/pricing#imagine-api-pricing) |
 | File Attachments | `attachment_search` | Search through files attached to messages | $10 |
@@ -73,6 +77,7 @@ All standard token types are billed for the model used in the request:
 | Remote MCP Tools | Set by MCP server | Connect and use custom MCP tool servers | Token-based |
 † All tool names work in the Responses API. In the gRPC API (Python xAI SDK), `code_interpreter` and `file_search` are not supported.
 \* Only applies to images and videos found by search tools — not to images passed directly in messages.
+‡ Starting September 21, 2026 at 12:00 PM PT, X Search is billed at $5 per 1k posts fetched and $10 per 1k user profiles fetched instead of $5 per 1k calls.
 
 For the view image and view x video tools, you will not be charged for the tool invocation itself but will be charged for the image tokens used to process the image or video.
 

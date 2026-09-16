@@ -1,159 +1,895 @@
 [
   {
+    "group": "Developers",
+    "title": "Get Started",
+    "md_url": "https://docs.x.ai/developers/quickstart.md",
+    "html_url": "https://docs.x.ai/developers/quickstart",
+    "route": "developers/quickstart",
+    "kind": "doc"
+  },
+  {
     "group": "Overview",
-    "title": "Get started",
+    "title": "Get Started \u2014 Overview",
     "md_url": "https://docs.x.ai/overview.md",
     "html_url": "https://docs.x.ai/overview",
     "route": "overview",
     "kind": "doc"
   },
   {
-    "group": "Build",
-    "title": "Headless & Scripting",
-    "md_url": "https://docs.x.ai/build/cli/headless-scripting.md",
-    "html_url": "https://docs.x.ai/build/cli/headless-scripting",
-    "route": "build/cli/headless-scripting",
+    "group": "Developers",
+    "title": "Get Started \u2014 Grok 4.6",
+    "md_url": "https://docs.x.ai/developers/grok-4-6.md",
+    "html_url": "https://docs.x.ai/developers/grok-4-6",
+    "route": "developers/grok-4-6",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Get Started \u2014 Models",
+    "md_url": "https://docs.x.ai/developers/models.md",
+    "html_url": "https://docs.x.ai/developers/models",
+    "route": "developers/models",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Get Started \u2014 Pricing",
+    "md_url": "https://docs.x.ai/developers/pricing.md",
+    "html_url": "https://docs.x.ai/developers/pricing",
+    "route": "developers/pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Get Started \u2014 Release Notes",
+    "md_url": "https://docs.x.ai/developers/release-notes.md",
+    "html_url": "https://docs.x.ai/developers/release-notes",
+    "route": "developers/release-notes",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Text",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/text/generate-text.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/text/generate-text",
+    "route": "developers/model-capabilities/text/generate-text",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Text \u2014 Streaming",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/text/streaming.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/text/streaming",
+    "route": "developers/model-capabilities/text/streaming",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Text \u2014 Reasoning",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/text/reasoning.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/text/reasoning",
+    "route": "developers/model-capabilities/text/reasoning",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Text \u2014 Structured Outputs",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/text/structured-outputs.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/text/structured-outputs",
+    "route": "developers/model-capabilities/text/structured-outputs",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Text \u2014 Image Understanding",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/images/understanding.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/images/understanding",
+    "route": "developers/model-capabilities/images/understanding",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Text \u2014 Multi Agent",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/text/multi-agent.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/text/multi-agent",
+    "route": "developers/model-capabilities/text/multi-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Imagine",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/imagine.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/imagine",
+    "route": "developers/model-capabilities/imagine",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Imagine \u2014 Image Generation",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/images/generation.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/images/generation",
+    "route": "developers/model-capabilities/images/generation",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Imagine \u2014 Image Editing",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/images/editing.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/images/editing",
+    "route": "developers/model-capabilities/images/editing",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Imagine \u2014 Multi-Image Editing",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/images/multi-image-editing.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/images/multi-image-editing",
+    "route": "developers/model-capabilities/images/multi-image-editing",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Imagine \u2014 Video Generation",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/video/generation.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/video/generation",
+    "route": "developers/model-capabilities/video/generation",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Imagine \u2014 Image-to-Video",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/video/image-to-video.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/video/image-to-video",
+    "route": "developers/model-capabilities/video/image-to-video",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Imagine \u2014 Reference-to-Video",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/video/reference-to-video.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/video/reference-to-video",
+    "route": "developers/model-capabilities/video/reference-to-video",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Imagine \u2014 Video Editing",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/video/editing.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/video/editing",
+    "route": "developers/model-capabilities/video/editing",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Imagine \u2014 Video Extension",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/video/extension.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/video/extension",
+    "route": "developers/model-capabilities/video/extension",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Voice",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/voice.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/voice",
+    "route": "developers/model-capabilities/audio/voice",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Voice \u2014 Speech to Speech",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech",
+    "route": "developers/model-capabilities/audio/speech-to-speech",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Voice \u2014 Speech to Speech \u2014 SIP Phone Calls",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech/sip.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech/sip",
+    "route": "developers/model-capabilities/audio/speech-to-speech/sip",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Voice \u2014 Speech to Speech \u2014 Prompting Guide",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech/prompting-guide.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech/prompting-guide",
+    "route": "developers/model-capabilities/audio/speech-to-speech/prompting-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Voice \u2014 Text to Speech",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/text-to-speech.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/text-to-speech",
+    "route": "developers/model-capabilities/audio/text-to-speech",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Voice \u2014 Speech to Text",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text",
+    "route": "developers/model-capabilities/audio/speech-to-text",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Voice \u2014 Custom Voices",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/custom-voices.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/custom-voices",
+    "route": "developers/model-capabilities/audio/custom-voices",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Voice \u2014 Ephemeral Tokens",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/ephemeral-tokens.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/ephemeral-tokens",
+    "route": "developers/model-capabilities/audio/ephemeral-tokens",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Files & Collections",
+    "md_url": "https://docs.x.ai/developers/files.md",
+    "html_url": "https://docs.x.ai/developers/files",
+    "route": "developers/files",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Files & Collections \u2014 Managing Files",
+    "md_url": "https://docs.x.ai/developers/files/managing-files.md",
+    "html_url": "https://docs.x.ai/developers/files/managing-files",
+    "route": "developers/files/managing-files",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Files & Collections \u2014 Public URLs",
+    "md_url": "https://docs.x.ai/developers/files/public-urls.md",
+    "html_url": "https://docs.x.ai/developers/files/public-urls",
+    "route": "developers/files/public-urls",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Files & Collections \u2014 Chat with Files",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/files/chat-with-files.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/files/chat-with-files",
+    "route": "developers/model-capabilities/files/chat-with-files",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Files & Collections \u2014 Collections",
+    "md_url": "https://docs.x.ai/developers/files/collections.md",
+    "html_url": "https://docs.x.ai/developers/files/collections",
+    "route": "developers/files/collections",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Files & Collections \u2014 Collections via API",
+    "md_url": "https://docs.x.ai/developers/files/collections/api.md",
+    "html_url": "https://docs.x.ai/developers/files/collections/api",
+    "route": "developers/files/collections/api",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Files & Collections \u2014 Collection Metadata",
+    "md_url": "https://docs.x.ai/developers/files/collections/metadata.md",
+    "html_url": "https://docs.x.ai/developers/files/collections/metadata",
+    "route": "developers/files/collections/metadata",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Files & Collections \u2014 Generated Media",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/imagine/files.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/imagine/files",
+    "route": "developers/model-capabilities/imagine/files",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Files & Collections \u2014 Generated Media \u2014 Referencing Files as Input",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/imagine/files/inputs.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/imagine/files/inputs",
+    "route": "developers/model-capabilities/imagine/files/inputs",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Files & Collections \u2014 Generated Media \u2014 Persisting Generated Output",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/imagine/files/outputs.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/imagine/files/outputs",
+    "route": "developers/model-capabilities/imagine/files/outputs",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Tools",
+    "md_url": "https://docs.x.ai/developers/tools/overview.md",
+    "html_url": "https://docs.x.ai/developers/tools/overview",
+    "route": "developers/tools/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Tools \u2014 Function Calling",
+    "md_url": "https://docs.x.ai/developers/tools/function-calling.md",
+    "html_url": "https://docs.x.ai/developers/tools/function-calling",
+    "route": "developers/tools/function-calling",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Tools \u2014 Web Search",
+    "md_url": "https://docs.x.ai/developers/tools/web-search.md",
+    "html_url": "https://docs.x.ai/developers/tools/web-search",
+    "route": "developers/tools/web-search",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Tools \u2014 X Search",
+    "md_url": "https://docs.x.ai/developers/tools/x-search.md",
+    "html_url": "https://docs.x.ai/developers/tools/x-search",
+    "route": "developers/tools/x-search",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Tools \u2014 Code Execution",
+    "md_url": "https://docs.x.ai/developers/tools/code-execution.md",
+    "html_url": "https://docs.x.ai/developers/tools/code-execution",
+    "route": "developers/tools/code-execution",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Tools \u2014 Image Generation",
+    "md_url": "https://docs.x.ai/developers/tools/image-generation.md",
+    "html_url": "https://docs.x.ai/developers/tools/image-generation",
+    "route": "developers/tools/image-generation",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Tools \u2014 Collections Search (RAG)",
+    "md_url": "https://docs.x.ai/developers/tools/collections-search.md",
+    "html_url": "https://docs.x.ai/developers/tools/collections-search",
+    "route": "developers/tools/collections-search",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Tools \u2014 Remote MCP Tools",
+    "md_url": "https://docs.x.ai/developers/tools/remote-mcp.md",
+    "html_url": "https://docs.x.ai/developers/tools/remote-mcp",
+    "route": "developers/tools/remote-mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Tools \u2014 In Depth",
+    "md_url": "https://docs.x.ai/developers/tools/citations.md",
+    "html_url": "https://docs.x.ai/developers/tools/citations",
+    "route": "developers/tools/citations",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Tools \u2014 In Depth \u2014 Streaming & Sync",
+    "md_url": "https://docs.x.ai/developers/tools/streaming-and-sync.md",
+    "html_url": "https://docs.x.ai/developers/tools/streaming-and-sync",
+    "route": "developers/tools/streaming-and-sync",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Tools \u2014 In Depth \u2014 Tool Usage Details",
+    "md_url": "https://docs.x.ai/developers/tools/tool-usage-details.md",
+    "html_url": "https://docs.x.ai/developers/tools/tool-usage-details",
+    "route": "developers/tools/tool-usage-details",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Tools \u2014 In Depth \u2014 Advanced Usage",
+    "md_url": "https://docs.x.ai/developers/tools/advanced-usage.md",
+    "html_url": "https://docs.x.ai/developers/tools/advanced-usage",
+    "route": "developers/tools/advanced-usage",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage",
+    "md_url": "https://docs.x.ai/developers/rate-limits.md",
+    "html_url": "https://docs.x.ai/developers/rate-limits",
+    "route": "developers/rate-limits",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Prompt Caching",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching",
+    "route": "developers/advanced-api-usage/prompt-caching",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Prompt Caching \u2014 How It Works",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/how-it-works.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/how-it-works",
+    "route": "developers/advanced-api-usage/prompt-caching/how-it-works",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Prompt Caching \u2014 Maximizing Cache Hits",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/maximizing-cache-hits.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/maximizing-cache-hits",
+    "route": "developers/advanced-api-usage/prompt-caching/maximizing-cache-hits",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Prompt Caching \u2014 What Breaks Caching",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/multi-turn.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/multi-turn",
+    "route": "developers/advanced-api-usage/prompt-caching/multi-turn",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Prompt Caching \u2014 Usage & Pricing",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/usage-and-pricing.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/usage-and-pricing",
+    "route": "developers/advanced-api-usage/prompt-caching/usage-and-pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Prompt Caching \u2014 Best Practices & FAQ",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/best-practices.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/best-practices",
+    "route": "developers/advanced-api-usage/prompt-caching/best-practices",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Context Compaction",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/context-compaction.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/context-compaction",
+    "route": "developers/advanced-api-usage/context-compaction",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Priority Processing",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/priority-processing.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/priority-processing",
+    "route": "developers/advanced-api-usage/priority-processing",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Batch API",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/batch-api.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/batch-api",
+    "route": "developers/advanced-api-usage/batch-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Deferred Completions",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/deferred-chat-completions.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/deferred-chat-completions",
+    "route": "developers/advanced-api-usage/deferred-chat-completions",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Async Requests",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/async.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/async",
+    "route": "developers/advanced-api-usage/async",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 WebSocket Mode",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/websocket-mode.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/websocket-mode",
+    "route": "developers/advanced-api-usage/websocket-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 mTLS Authentication",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/mtls.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/mtls",
+    "route": "developers/advanced-api-usage/mtls",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Cost Tracking",
+    "md_url": "https://docs.x.ai/developers/cost-tracking.md",
+    "html_url": "https://docs.x.ai/developers/cost-tracking",
+    "route": "developers/cost-tracking",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Debugging Errors",
+    "md_url": "https://docs.x.ai/developers/debugging.md",
+    "html_url": "https://docs.x.ai/developers/debugging",
+    "route": "developers/debugging",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Platforms",
+    "md_url": "https://docs.x.ai/developers/community.md",
+    "html_url": "https://docs.x.ai/developers/community",
+    "route": "developers/community",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Platforms \u2014 Google Cloud Vertex AI",
+    "md_url": "https://docs.x.ai/developers/community/google-cloud-vertex-ai.md",
+    "html_url": "https://docs.x.ai/developers/community/google-cloud-vertex-ai",
+    "route": "developers/community/google-cloud-vertex-ai",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Platforms \u2014 Microsoft Foundry",
+    "md_url": "https://docs.x.ai/developers/community/microsoft-foundry.md",
+    "html_url": "https://docs.x.ai/developers/community/microsoft-foundry",
+    "route": "developers/community/microsoft-foundry",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Platforms \u2014 Docs MCP",
+    "md_url": "https://docs.x.ai/developers/docs-mcp.md",
+    "html_url": "https://docs.x.ai/developers/docs-mcp",
+    "route": "developers/docs-mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Migration Guides",
+    "md_url": "https://docs.x.ai/developers/migration/imagine-image-quality-nov-2.md",
+    "html_url": "https://docs.x.ai/developers/migration/imagine-image-quality-nov-2",
+    "route": "developers/migration/imagine-image-quality-nov-2",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Migration Guides \u2014 Model Retirement (May 15, 2026)",
+    "md_url": "https://docs.x.ai/developers/migration/may-15-retirement.md",
+    "html_url": "https://docs.x.ai/developers/migration/may-15-retirement",
+    "route": "developers/migration/may-15-retirement",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Migration Guides \u2014 Migrating to Responses API",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/text/comparison.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/text/comparison",
+    "route": "developers/model-capabilities/text/comparison",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Migration Guides \u2014 Chat Completions (Legacy)",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/legacy/chat-completions.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/legacy/chat-completions",
+    "route": "developers/model-capabilities/legacy/chat-completions",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "FAQ",
+    "md_url": "https://docs.x.ai/developers/faq/security.md",
+    "html_url": "https://docs.x.ai/developers/faq/security",
+    "route": "developers/faq/security",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "FAQ \u2014 General",
+    "md_url": "https://docs.x.ai/developers/faq/general.md",
+    "html_url": "https://docs.x.ai/developers/faq/general",
+    "route": "developers/faq/general",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference",
+    "route": "developers/rest-api-reference/inference",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Responses",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/responses.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/responses",
+    "route": "developers/rest-api-reference/inference/responses",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Chat Completions",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/chat-completions.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/chat-completions",
+    "route": "developers/rest-api-reference/inference/chat-completions",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Embeddings",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/embeddings.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/embeddings",
+    "route": "developers/rest-api-reference/inference/embeddings",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Images",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/images.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/images",
+    "route": "developers/rest-api-reference/inference/images",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Videos",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/videos.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/videos",
+    "route": "developers/rest-api-reference/inference/videos",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Voice",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/voice.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/voice",
+    "route": "developers/rest-api-reference/inference/voice",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Files",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/files.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/files",
+    "route": "developers/rest-api-reference/files",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Files \u2014 Upload a file",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/files/upload.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/files/upload",
+    "route": "developers/rest-api-reference/files/upload",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Files \u2014 List files",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/files/manage.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/files/manage",
+    "route": "developers/rest-api-reference/files/manage",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Files \u2014 Get file content",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/files/download.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/files/download",
+    "route": "developers/rest-api-reference/files/download",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Files \u2014 Create a public URL",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/files/public-urls.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/files/public-urls",
+    "route": "developers/rest-api-reference/files/public-urls",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Batches",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/batches.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/batches",
+    "route": "developers/rest-api-reference/inference/batches",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Models",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/models.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/models",
+    "route": "developers/rest-api-reference/inference/models",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Account",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/other.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/other",
+    "route": "developers/rest-api-reference/inference/other",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Inference API \u2014 Legacy & Deprecated",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/legacy.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/legacy",
+    "route": "developers/rest-api-reference/inference/legacy",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Collections API",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/collections.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/collections",
+    "route": "developers/rest-api-reference/collections",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Collections API \u2014 Collection Management",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/collections/collection.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/collections/collection",
+    "route": "developers/rest-api-reference/collections/collection",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Collections API \u2014 Search in Collections",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/collections/search.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/collections/search",
+    "route": "developers/rest-api-reference/collections/search",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Management API",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/management.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/management",
+    "route": "developers/rest-api-reference/management",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Management API \u2014 Using Management API",
+    "md_url": "https://docs.x.ai/developers/management-api-guide.md",
+    "html_url": "https://docs.x.ai/developers/management-api-guide",
+    "route": "developers/management-api-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Management API \u2014 Accounts and Authorization",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/management/auth.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/management/auth",
+    "route": "developers/rest-api-reference/management/auth",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Management API \u2014 Billing Management",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/management/billing.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/management/billing",
+    "route": "developers/rest-api-reference/management/billing",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Management API \u2014 Audit Logs",
+    "md_url": "https://docs.x.ai/developers/rest-api-reference/management/audit.md",
+    "html_url": "https://docs.x.ai/developers/rest-api-reference/management/audit",
+    "route": "developers/rest-api-reference/management/audit",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "gRPC API",
+    "md_url": "https://docs.x.ai/developers/grpc-api-reference.md",
+    "html_url": "https://docs.x.ai/developers/grpc-api-reference",
+    "route": "developers/grpc-api-reference",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "gRPC API \u2014 Chat",
+    "md_url": "https://docs.x.ai/developers/grpc-api-reference/chat.md",
+    "html_url": "https://docs.x.ai/developers/grpc-api-reference/chat",
+    "route": "developers/grpc-api-reference/chat",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "gRPC API \u2014 Image",
+    "md_url": "https://docs.x.ai/developers/grpc-api-reference/image.md",
+    "html_url": "https://docs.x.ai/developers/grpc-api-reference/image",
+    "route": "developers/grpc-api-reference/image",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "gRPC API \u2014 Video",
+    "md_url": "https://docs.x.ai/developers/grpc-api-reference/video.md",
+    "html_url": "https://docs.x.ai/developers/grpc-api-reference/video",
+    "route": "developers/grpc-api-reference/video",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "gRPC API \u2014 Batch Management",
+    "md_url": "https://docs.x.ai/developers/grpc-api-reference/batches.md",
+    "html_url": "https://docs.x.ai/developers/grpc-api-reference/batches",
+    "route": "developers/grpc-api-reference/batches",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "gRPC API \u2014 Models",
+    "md_url": "https://docs.x.ai/developers/grpc-api-reference/models.md",
+    "html_url": "https://docs.x.ai/developers/grpc-api-reference/models",
+    "route": "developers/grpc-api-reference/models",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "gRPC API \u2014 Auth",
+    "md_url": "https://docs.x.ai/developers/grpc-api-reference/auth.md",
+    "html_url": "https://docs.x.ai/developers/grpc-api-reference/auth",
+    "route": "developers/grpc-api-reference/auth",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "gRPC API \u2014 Tokenize",
+    "md_url": "https://docs.x.ai/developers/grpc-api-reference/tokenize.md",
+    "html_url": "https://docs.x.ai/developers/grpc-api-reference/tokenize",
+    "route": "developers/grpc-api-reference/tokenize",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "gRPC API \u2014 Raw Sampling",
+    "md_url": "https://docs.x.ai/developers/grpc-api-reference/sample.md",
+    "html_url": "https://docs.x.ai/developers/grpc-api-reference/sample",
+    "route": "developers/grpc-api-reference/sample",
     "kind": "doc"
   },
   {
     "group": "Build",
-    "title": "CLI Reference",
-    "md_url": "https://docs.x.ai/build/cli/reference.md",
-    "html_url": "https://docs.x.ai/build/cli/reference",
-    "route": "build/cli/reference",
+    "title": "Get Started",
+    "md_url": "https://docs.x.ai/build/overview.md",
+    "html_url": "https://docs.x.ai/build/overview",
+    "route": "build/overview",
     "kind": "doc"
   },
   {
     "group": "Build",
-    "title": "Terminal Support",
-    "md_url": "https://docs.x.ai/build/cli/terminal-support.md",
-    "html_url": "https://docs.x.ai/build/cli/terminal-support",
-    "route": "build/cli/terminal-support",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Enterprise Deployments",
-    "md_url": "https://docs.x.ai/build/enterprise.md",
-    "html_url": "https://docs.x.ai/build/enterprise",
-    "route": "build/enterprise",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Background Tasks",
-    "md_url": "https://docs.x.ai/build/features/background-tasks.md",
-    "html_url": "https://docs.x.ai/build/features/background-tasks",
-    "route": "build/features/background-tasks",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Agent Dashboard",
-    "md_url": "https://docs.x.ai/build/features/dashboard.md",
-    "html_url": "https://docs.x.ai/build/features/dashboard",
-    "route": "build/features/dashboard",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Hooks",
-    "md_url": "https://docs.x.ai/build/features/hooks.md",
-    "html_url": "https://docs.x.ai/build/features/hooks",
-    "route": "build/features/hooks",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "MCP Servers",
-    "md_url": "https://docs.x.ai/build/features/mcp-servers.md",
-    "html_url": "https://docs.x.ai/build/features/mcp-servers",
-    "route": "build/features/mcp-servers",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Permissions",
-    "md_url": "https://docs.x.ai/build/features/permissions.md",
-    "html_url": "https://docs.x.ai/build/features/permissions",
-    "route": "build/features/permissions",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Plan Mode",
-    "md_url": "https://docs.x.ai/build/features/plan-mode.md",
-    "html_url": "https://docs.x.ai/build/features/plan-mode",
-    "route": "build/features/plan-mode",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "AGENTS.md",
-    "md_url": "https://docs.x.ai/build/features/project-rules.md",
-    "html_url": "https://docs.x.ai/build/features/project-rules",
-    "route": "build/features/project-rules",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Sandbox",
-    "md_url": "https://docs.x.ai/build/features/sandbox.md",
-    "html_url": "https://docs.x.ai/build/features/sandbox",
-    "route": "build/features/sandbox",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Sessions",
-    "md_url": "https://docs.x.ai/build/features/sessions.md",
-    "html_url": "https://docs.x.ai/build/features/sessions",
-    "route": "build/features/sessions",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Skills, Plugins & Marketplaces",
-    "md_url": "https://docs.x.ai/build/features/skills-plugins-marketplaces.md",
-    "html_url": "https://docs.x.ai/build/features/skills-plugins-marketplaces",
-    "route": "build/features/skills-plugins-marketplaces",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Subagents",
-    "md_url": "https://docs.x.ai/build/features/subagents.md",
-    "html_url": "https://docs.x.ai/build/features/subagents",
-    "route": "build/features/subagents",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Theming",
-    "md_url": "https://docs.x.ai/build/features/theming.md",
-    "html_url": "https://docs.x.ai/build/features/theming",
-    "route": "build/features/theming",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Worktrees",
-    "md_url": "https://docs.x.ai/build/features/worktrees.md",
-    "html_url": "https://docs.x.ai/build/features/worktrees",
-    "route": "build/features/worktrees",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Keyboard Shortcuts",
-    "md_url": "https://docs.x.ai/build/keyboard-shortcuts.md",
-    "html_url": "https://docs.x.ai/build/keyboard-shortcuts",
-    "route": "build/keyboard-shortcuts",
-    "kind": "doc"
-  },
-  {
-    "group": "Build",
-    "title": "Modes and Commands",
+    "title": "Get Started \u2014 Modes and Commands",
     "md_url": "https://docs.x.ai/build/modes-and-commands.md",
     "html_url": "https://docs.x.ai/build/modes-and-commands",
     "route": "build/modes-and-commands",
@@ -161,10 +897,122 @@
   },
   {
     "group": "Build",
-    "title": "Grok Build",
-    "md_url": "https://docs.x.ai/build/overview.md",
-    "html_url": "https://docs.x.ai/build/overview",
-    "route": "build/overview",
+    "title": "Get Started \u2014 Keyboard Shortcuts",
+    "md_url": "https://docs.x.ai/build/keyboard-shortcuts.md",
+    "html_url": "https://docs.x.ai/build/keyboard-shortcuts",
+    "route": "build/keyboard-shortcuts",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features",
+    "md_url": "https://docs.x.ai/build/features/skills-plugins-marketplaces.md",
+    "html_url": "https://docs.x.ai/build/features/skills-plugins-marketplaces",
+    "route": "build/features/skills-plugins-marketplaces",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 AGENTS.md",
+    "md_url": "https://docs.x.ai/build/features/project-rules.md",
+    "html_url": "https://docs.x.ai/build/features/project-rules",
+    "route": "build/features/project-rules",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 MCP Servers",
+    "md_url": "https://docs.x.ai/build/features/mcp-servers.md",
+    "html_url": "https://docs.x.ai/build/features/mcp-servers",
+    "route": "build/features/mcp-servers",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 Hooks",
+    "md_url": "https://docs.x.ai/build/features/hooks.md",
+    "html_url": "https://docs.x.ai/build/features/hooks",
+    "route": "build/features/hooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 Sessions",
+    "md_url": "https://docs.x.ai/build/features/sessions.md",
+    "html_url": "https://docs.x.ai/build/features/sessions",
+    "route": "build/features/sessions",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 Plan Mode",
+    "md_url": "https://docs.x.ai/build/features/plan-mode.md",
+    "html_url": "https://docs.x.ai/build/features/plan-mode",
+    "route": "build/features/plan-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 Permissions",
+    "md_url": "https://docs.x.ai/build/features/permissions.md",
+    "html_url": "https://docs.x.ai/build/features/permissions",
+    "route": "build/features/permissions",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 Sandbox",
+    "md_url": "https://docs.x.ai/build/features/sandbox.md",
+    "html_url": "https://docs.x.ai/build/features/sandbox",
+    "route": "build/features/sandbox",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 Subagents",
+    "md_url": "https://docs.x.ai/build/features/subagents.md",
+    "html_url": "https://docs.x.ai/build/features/subagents",
+    "route": "build/features/subagents",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 Worktrees",
+    "md_url": "https://docs.x.ai/build/features/worktrees.md",
+    "html_url": "https://docs.x.ai/build/features/worktrees",
+    "route": "build/features/worktrees",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 Background Tasks",
+    "md_url": "https://docs.x.ai/build/features/background-tasks.md",
+    "html_url": "https://docs.x.ai/build/features/background-tasks",
+    "route": "build/features/background-tasks",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 Agent Dashboard",
+    "md_url": "https://docs.x.ai/build/features/dashboard.md",
+    "html_url": "https://docs.x.ai/build/features/dashboard",
+    "route": "build/features/dashboard",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 Status Line",
+    "md_url": "https://docs.x.ai/build/features/status-line.md",
+    "html_url": "https://docs.x.ai/build/features/status-line",
+    "route": "build/features/status-line",
+    "kind": "doc"
+  },
+  {
+    "group": "Build",
+    "title": "Features \u2014 Theming",
+    "md_url": "https://docs.x.ai/build/features/theming.md",
+    "html_url": "https://docs.x.ai/build/features/theming",
+    "route": "build/features/theming",
     "kind": "doc"
   },
   {
@@ -177,7 +1025,7 @@
   },
   {
     "group": "Build",
-    "title": "Reference",
+    "title": "Settings \u2014 Reference",
     "md_url": "https://docs.x.ai/build/settings/reference.md",
     "html_url": "https://docs.x.ai/build/settings/reference",
     "route": "build/settings/reference",
@@ -185,959 +1033,47 @@
   },
   {
     "group": "Build",
-    "title": "Video Output Storage under ZDR",
+    "title": "Settings \u2014 ZDR Video Storage",
     "md_url": "https://docs.x.ai/build/settings/zdr-video-storage.md",
     "html_url": "https://docs.x.ai/build/settings/zdr-video-storage",
     "route": "build/settings/zdr-video-storage",
     "kind": "doc"
   },
   {
-    "group": "Console",
-    "title": "Manage Billing",
-    "md_url": "https://docs.x.ai/console/billing.md",
-    "html_url": "https://docs.x.ai/console/billing",
-    "route": "console/billing",
+    "group": "Build",
+    "title": "CLI",
+    "md_url": "https://docs.x.ai/build/cli/headless-scripting.md",
+    "html_url": "https://docs.x.ai/build/cli/headless-scripting",
+    "route": "build/cli/headless-scripting",
     "kind": "doc"
   },
   {
-    "group": "Console",
-    "title": "Using Collections in Console",
-    "md_url": "https://docs.x.ai/console/collections.md",
-    "html_url": "https://docs.x.ai/console/collections",
-    "route": "console/collections",
+    "group": "Build",
+    "title": "CLI \u2014 Reference",
+    "md_url": "https://docs.x.ai/build/cli/reference.md",
+    "html_url": "https://docs.x.ai/build/cli/reference",
+    "route": "build/cli/reference",
     "kind": "doc"
   },
   {
-    "group": "Console",
-    "title": "Accounts",
-    "md_url": "https://docs.x.ai/console/faq/accounts.md",
-    "html_url": "https://docs.x.ai/console/faq/accounts",
-    "route": "console/faq/accounts",
+    "group": "Build",
+    "title": "CLI \u2014 Terminal Support",
+    "md_url": "https://docs.x.ai/build/cli/terminal-support.md",
+    "html_url": "https://docs.x.ai/build/cli/terminal-support",
+    "route": "build/cli/terminal-support",
     "kind": "doc"
   },
   {
-    "group": "Console",
-    "title": "Billing",
-    "md_url": "https://docs.x.ai/console/faq/billing.md",
-    "html_url": "https://docs.x.ai/console/faq/billing",
-    "route": "console/faq/billing",
-    "kind": "doc"
-  },
-  {
-    "group": "Console",
-    "title": "Security",
-    "md_url": "https://docs.x.ai/console/faq/security.md",
-    "html_url": "https://docs.x.ai/console/faq/security",
-    "route": "console/faq/security",
-    "kind": "doc"
-  },
-  {
-    "group": "Console",
-    "title": "Usage Explorer",
-    "md_url": "https://docs.x.ai/console/usage.md",
-    "html_url": "https://docs.x.ai/console/usage",
-    "route": "console/usage",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Asynchronous Requests",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/async.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/async",
-    "route": "developers/advanced-api-usage/async",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Batch API",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/batch-api.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/batch-api",
-    "route": "developers/advanced-api-usage/batch-api",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Context Compaction",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/context-compaction.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/context-compaction",
-    "route": "developers/advanced-api-usage/context-compaction",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Deferred Chat Completions",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/deferred-chat-completions.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/deferred-chat-completions",
-    "route": "developers/advanced-api-usage/deferred-chat-completions",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "mTLS Authentication",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/mtls.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/mtls",
-    "route": "developers/advanced-api-usage/mtls",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Priority Processing",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/priority-processing.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/priority-processing",
-    "route": "developers/advanced-api-usage/priority-processing",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Best Practices & FAQ",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/best-practices.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/best-practices",
-    "route": "developers/advanced-api-usage/prompt-caching/best-practices",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "How It Works",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/how-it-works.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/how-it-works",
-    "route": "developers/advanced-api-usage/prompt-caching/how-it-works",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Maximizing Cache Hits",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/maximizing-cache-hits.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/maximizing-cache-hits",
-    "route": "developers/advanced-api-usage/prompt-caching/maximizing-cache-hits",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "What Breaks Caching",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/multi-turn.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/multi-turn",
-    "route": "developers/advanced-api-usage/prompt-caching/multi-turn",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Prompt Caching",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching",
-    "route": "developers/advanced-api-usage/prompt-caching",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Usage & Pricing",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/usage-and-pricing.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/usage-and-pricing",
-    "route": "developers/advanced-api-usage/prompt-caching/usage-and-pricing",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "WebSocket Mode",
-    "md_url": "https://docs.x.ai/developers/advanced-api-usage/websocket-mode.md",
-    "html_url": "https://docs.x.ai/developers/advanced-api-usage/websocket-mode",
-    "route": "developers/advanced-api-usage/websocket-mode",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Google Cloud Vertex AI",
-    "md_url": "https://docs.x.ai/developers/community/google-cloud-vertex-ai.md",
-    "html_url": "https://docs.x.ai/developers/community/google-cloud-vertex-ai",
-    "route": "developers/community/google-cloud-vertex-ai",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Microsoft Foundry",
-    "md_url": "https://docs.x.ai/developers/community/microsoft-foundry.md",
-    "html_url": "https://docs.x.ai/developers/community/microsoft-foundry",
-    "route": "developers/community/microsoft-foundry",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Community Integrations",
-    "md_url": "https://docs.x.ai/developers/community.md",
-    "html_url": "https://docs.x.ai/developers/community",
-    "route": "developers/community",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Cost Tracking",
-    "md_url": "https://docs.x.ai/developers/cost-tracking.md",
-    "html_url": "https://docs.x.ai/developers/cost-tracking",
-    "route": "developers/cost-tracking",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Debugging Errors",
-    "md_url": "https://docs.x.ai/developers/debugging.md",
-    "html_url": "https://docs.x.ai/developers/debugging",
-    "route": "developers/debugging",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Docs MCP Server",
-    "md_url": "https://docs.x.ai/developers/docs-mcp.md",
-    "html_url": "https://docs.x.ai/developers/docs-mcp",
-    "route": "developers/docs-mcp",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Accounts",
-    "md_url": "https://docs.x.ai/developers/faq/accounts.md",
-    "html_url": "https://docs.x.ai/developers/faq/accounts",
-    "route": "developers/faq/accounts",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Billing",
-    "md_url": "https://docs.x.ai/developers/faq/billing.md",
-    "html_url": "https://docs.x.ai/developers/faq/billing",
-    "route": "developers/faq/billing",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Frequently Asked Questions - General",
-    "md_url": "https://docs.x.ai/developers/faq/general.md",
-    "html_url": "https://docs.x.ai/developers/faq/general",
-    "route": "developers/faq/general",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Security",
-    "md_url": "https://docs.x.ai/developers/faq/security.md",
-    "html_url": "https://docs.x.ai/developers/faq/security",
-    "route": "developers/faq/security",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Team Management",
-    "md_url": "https://docs.x.ai/developers/faq/team-management.md",
-    "html_url": "https://docs.x.ai/developers/faq/team-management",
-    "route": "developers/faq/team-management",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Using Collections via API",
-    "md_url": "https://docs.x.ai/developers/files/collections/api.md",
-    "html_url": "https://docs.x.ai/developers/files/collections/api",
-    "route": "developers/files/collections/api",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Metadata Fields",
-    "md_url": "https://docs.x.ai/developers/files/collections/metadata.md",
-    "html_url": "https://docs.x.ai/developers/files/collections/metadata",
-    "route": "developers/files/collections/metadata",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Collections",
-    "md_url": "https://docs.x.ai/developers/files/collections.md",
-    "html_url": "https://docs.x.ai/developers/files/collections",
-    "route": "developers/files/collections",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Managing Files",
-    "md_url": "https://docs.x.ai/developers/files/managing-files.md",
-    "html_url": "https://docs.x.ai/developers/files/managing-files",
-    "route": "developers/files/managing-files",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Files",
-    "md_url": "https://docs.x.ai/developers/files.md",
-    "html_url": "https://docs.x.ai/developers/files",
-    "route": "developers/files",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Public URLs",
-    "md_url": "https://docs.x.ai/developers/files/public-urls.md",
-    "html_url": "https://docs.x.ai/developers/files/public-urls",
-    "route": "developers/files/public-urls",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Grok 4.6",
-    "md_url": "https://docs.x.ai/developers/grok-4-6.md",
-    "html_url": "https://docs.x.ai/developers/grok-4-6",
-    "route": "developers/grok-4-6",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "gRPC API Reference",
-    "md_url": "https://docs.x.ai/developers/grpc-api-reference.md",
-    "html_url": "https://docs.x.ai/developers/grpc-api-reference",
-    "route": "developers/grpc-api-reference",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Using Management API",
-    "md_url": "https://docs.x.ai/developers/management-api-guide.md",
-    "html_url": "https://docs.x.ai/developers/management-api-guide",
-    "route": "developers/management-api-guide",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Grok Model Retirement on May 15, 2026",
-    "md_url": "https://docs.x.ai/developers/migration/may-15-retirement.md",
-    "html_url": "https://docs.x.ai/developers/migration/may-15-retirement",
-    "route": "developers/migration/may-15-retirement",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Custom Voices",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/custom-voices.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/custom-voices",
-    "route": "developers/model-capabilities/audio/custom-voices",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Ephemeral Tokens",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/ephemeral-tokens.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/ephemeral-tokens",
-    "route": "developers/model-capabilities/audio/ephemeral-tokens",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Speech to Speech",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech",
-    "route": "developers/model-capabilities/audio/speech-to-speech",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Prompting Guide",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech/prompting-guide.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech/prompting-guide",
-    "route": "developers/model-capabilities/audio/speech-to-speech/prompting-guide",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "SIP Phone Calls",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech/sip.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech/sip",
-    "route": "developers/model-capabilities/audio/speech-to-speech/sip",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Speech to Text",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text",
-    "route": "developers/model-capabilities/audio/speech-to-text",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Text to Speech",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/text-to-speech.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/text-to-speech",
-    "route": "developers/model-capabilities/audio/text-to-speech",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Voice Overview",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/audio/voice.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/audio/voice",
-    "route": "developers/model-capabilities/audio/voice",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Chat with Files",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/files/chat-with-files.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/files/chat-with-files",
-    "route": "developers/model-capabilities/files/chat-with-files",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Image Editing",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/images/editing.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/images/editing",
-    "route": "developers/model-capabilities/images/editing",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Image Generation",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/images/generation.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/images/generation",
-    "route": "developers/model-capabilities/images/generation",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Multi-Image Editing",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/images/multi-image-editing.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/images/multi-image-editing",
-    "route": "developers/model-capabilities/images/multi-image-editing",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Image Understanding",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/images/understanding.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/images/understanding",
-    "route": "developers/model-capabilities/images/understanding",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Referencing Files as Input",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/imagine/files/inputs.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/imagine/files/inputs",
-    "route": "developers/model-capabilities/imagine/files/inputs",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Persisting Generated Output",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/imagine/files/outputs.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/imagine/files/outputs",
-    "route": "developers/model-capabilities/imagine/files/outputs",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Files API Integration",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/imagine/files.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/imagine/files",
-    "route": "developers/model-capabilities/imagine/files",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Imagine Overview",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/imagine.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/imagine",
-    "route": "developers/model-capabilities/imagine",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Chat Completions",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/legacy/chat-completions.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/legacy/chat-completions",
-    "route": "developers/model-capabilities/legacy/chat-completions",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Comparison with Chat Completions API",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/text/comparison.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/text/comparison",
-    "route": "developers/model-capabilities/text/comparison",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Generate Text",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/text/generate-text.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/text/generate-text",
-    "route": "developers/model-capabilities/text/generate-text",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Multi Agent",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/text/multi-agent.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/text/multi-agent",
-    "route": "developers/model-capabilities/text/multi-agent",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Reasoning",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/text/reasoning.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/text/reasoning",
-    "route": "developers/model-capabilities/text/reasoning",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Streaming",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/text/streaming.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/text/streaming",
-    "route": "developers/model-capabilities/text/streaming",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Structured Outputs",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/text/structured-outputs.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/text/structured-outputs",
-    "route": "developers/model-capabilities/text/structured-outputs",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Video Editing",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/video/editing.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/video/editing",
-    "route": "developers/model-capabilities/video/editing",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Video Extension",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/video/extension.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/video/extension",
-    "route": "developers/model-capabilities/video/extension",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Video Generation",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/video/generation.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/video/generation",
-    "route": "developers/model-capabilities/video/generation",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Image-to-Video",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/video/image-to-video.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/video/image-to-video",
-    "route": "developers/model-capabilities/video/image-to-video",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Reference-to-Video",
-    "md_url": "https://docs.x.ai/developers/model-capabilities/video/reference-to-video.md",
-    "html_url": "https://docs.x.ai/developers/model-capabilities/video/reference-to-video",
-    "route": "developers/model-capabilities/video/reference-to-video",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Models",
-    "md_url": "https://docs.x.ai/developers/models.md",
-    "html_url": "https://docs.x.ai/developers/models",
-    "route": "developers/models",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Speech to Speech",
-    "md_url": "https://docs.x.ai/developers/models/speech-to-speech.md",
-    "html_url": "https://docs.x.ai/developers/models/speech-to-speech",
-    "route": "developers/models/speech-to-speech",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Speech to Text",
-    "md_url": "https://docs.x.ai/developers/models/speech-to-text.md",
-    "html_url": "https://docs.x.ai/developers/models/speech-to-text",
-    "route": "developers/models/speech-to-text",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Text to Speech",
-    "md_url": "https://docs.x.ai/developers/models/text-to-speech.md",
-    "html_url": "https://docs.x.ai/developers/models/text-to-speech",
-    "route": "developers/models/text-to-speech",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Pricing",
-    "md_url": "https://docs.x.ai/developers/pricing.md",
-    "html_url": "https://docs.x.ai/developers/pricing",
-    "route": "developers/pricing",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Quickstart",
-    "md_url": "https://docs.x.ai/developers/quickstart.md",
-    "html_url": "https://docs.x.ai/developers/quickstart",
-    "route": "developers/quickstart",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Rate Limits",
-    "md_url": "https://docs.x.ai/developers/rate-limits.md",
-    "html_url": "https://docs.x.ai/developers/rate-limits",
-    "route": "developers/rate-limits",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Release Notes",
-    "md_url": "https://docs.x.ai/developers/release-notes.md",
-    "html_url": "https://docs.x.ai/developers/release-notes",
-    "route": "developers/release-notes",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Collection Management",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/collections/collection.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/collections/collection",
-    "route": "developers/rest-api-reference/collections/collection",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Collections REST API Overview",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/collections.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/collections",
-    "route": "developers/rest-api-reference/collections",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Search in Collections",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/collections/search.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/collections/search",
-    "route": "developers/rest-api-reference/collections/search",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Download",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/files/download.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/files/download",
-    "route": "developers/rest-api-reference/files/download",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Manage",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/files/manage.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/files/manage",
-    "route": "developers/rest-api-reference/files/manage",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Files REST API Overview",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/files.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/files",
-    "route": "developers/rest-api-reference/files",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Upload",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/files/upload.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/files/upload",
-    "route": "developers/rest-api-reference/files/upload",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Batches",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/batches.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/batches",
-    "route": "developers/rest-api-reference/inference/batches",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Chat",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/chat.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/chat",
-    "route": "developers/rest-api-reference/inference/chat",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Images",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/images.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/images",
-    "route": "developers/rest-api-reference/inference/images",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Legacy & Deprecated",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/legacy.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/legacy",
-    "route": "developers/rest-api-reference/inference/legacy",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Models",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/models.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/models",
-    "route": "developers/rest-api-reference/inference/models",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Other",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/other.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/other",
-    "route": "developers/rest-api-reference/inference/other",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Inference REST API Overview",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference",
-    "route": "developers/rest-api-reference/inference",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Voice",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/speech-to-text.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/speech-to-text",
-    "route": "developers/rest-api-reference/inference/speech-to-text",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Videos",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/videos.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/videos",
-    "route": "developers/rest-api-reference/inference/videos",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Voice",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/inference/voice.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/inference/voice",
-    "route": "developers/rest-api-reference/inference/voice",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Audit Logs",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/management/audit.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/management/audit",
-    "route": "developers/rest-api-reference/management/audit",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Accounts and Authorization",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/management/auth.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/management/auth",
-    "route": "developers/rest-api-reference/management/auth",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Billing Management",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/management/billing.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/management/billing",
-    "route": "developers/rest-api-reference/management/billing",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Management REST API Overview",
-    "md_url": "https://docs.x.ai/developers/rest-api-reference/management.md",
-    "html_url": "https://docs.x.ai/developers/rest-api-reference/management",
-    "route": "developers/rest-api-reference/management",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Advanced Usage",
-    "md_url": "https://docs.x.ai/developers/tools/advanced-usage.md",
-    "html_url": "https://docs.x.ai/developers/tools/advanced-usage",
-    "route": "developers/tools/advanced-usage",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Citations",
-    "md_url": "https://docs.x.ai/developers/tools/citations.md",
-    "html_url": "https://docs.x.ai/developers/tools/citations",
-    "route": "developers/tools/citations",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Code Execution Tool",
-    "md_url": "https://docs.x.ai/developers/tools/code-execution.md",
-    "html_url": "https://docs.x.ai/developers/tools/code-execution",
-    "route": "developers/tools/code-execution",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Collections Search Tool",
-    "md_url": "https://docs.x.ai/developers/tools/collections-search.md",
-    "html_url": "https://docs.x.ai/developers/tools/collections-search",
-    "route": "developers/tools/collections-search",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Function Calling",
-    "md_url": "https://docs.x.ai/developers/tools/function-calling.md",
-    "html_url": "https://docs.x.ai/developers/tools/function-calling",
-    "route": "developers/tools/function-calling",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Image Generation Tool",
-    "md_url": "https://docs.x.ai/developers/tools/image-generation.md",
-    "html_url": "https://docs.x.ai/developers/tools/image-generation",
-    "route": "developers/tools/image-generation",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Overview",
-    "md_url": "https://docs.x.ai/developers/tools/overview.md",
-    "html_url": "https://docs.x.ai/developers/tools/overview",
-    "route": "developers/tools/overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Remote MCP Tools",
-    "md_url": "https://docs.x.ai/developers/tools/remote-mcp.md",
-    "html_url": "https://docs.x.ai/developers/tools/remote-mcp",
-    "route": "developers/tools/remote-mcp",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Streaming & Synchronous Requests",
-    "md_url": "https://docs.x.ai/developers/tools/streaming-and-sync.md",
-    "html_url": "https://docs.x.ai/developers/tools/streaming-and-sync",
-    "route": "developers/tools/streaming-and-sync",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Tool Usage Details",
-    "md_url": "https://docs.x.ai/developers/tools/tool-usage-details.md",
-    "html_url": "https://docs.x.ai/developers/tools/tool-usage-details",
-    "route": "developers/tools/tool-usage-details",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "Web Search",
-    "md_url": "https://docs.x.ai/developers/tools/web-search.md",
-    "html_url": "https://docs.x.ai/developers/tools/web-search",
-    "route": "developers/tools/web-search",
-    "kind": "doc"
-  },
-  {
-    "group": "Developers",
-    "title": "X Search",
-    "md_url": "https://docs.x.ai/developers/tools/x-search.md",
-    "html_url": "https://docs.x.ai/developers/tools/x-search",
-    "route": "developers/tools/x-search",
+    "group": "Build",
+    "title": "Enterprise",
+    "md_url": "https://docs.x.ai/build/enterprise.md",
+    "html_url": "https://docs.x.ai/build/enterprise",
+    "route": "build/enterprise",
     "kind": "doc"
   },
   {
     "group": "Grok Bot",
-    "title": "Approvals, security, and privacy",
-    "md_url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy.md",
-    "html_url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
-    "route": "grok-bot/approvals-security-and-privacy",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Create and manage Bots",
-    "md_url": "https://docs.x.ai/grok-bot/bots.md",
-    "html_url": "https://docs.x.ai/grok-bot/bots",
-    "route": "grok-bot/bots",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Message and collaborate",
-    "md_url": "https://docs.x.ai/grok-bot/chat-and-collaboration.md",
-    "html_url": "https://docs.x.ai/grok-bot/chat-and-collaboration",
-    "route": "grok-bot/chat-and-collaboration",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Use the computer and apps",
-    "md_url": "https://docs.x.ai/grok-bot/computer-and-apps.md",
-    "html_url": "https://docs.x.ai/grok-bot/computer-and-apps",
-    "route": "grok-bot/computer-and-apps",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Frequently asked questions",
-    "md_url": "https://docs.x.ai/grok-bot/faq.md",
-    "html_url": "https://docs.x.ai/grok-bot/faq",
-    "route": "grok-bot/faq",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Files and results",
-    "md_url": "https://docs.x.ai/grok-bot/files-and-results.md",
-    "html_url": "https://docs.x.ai/grok-bot/files-and-results",
-    "route": "grok-bot/files-and-results",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Get started",
-    "md_url": "https://docs.x.ai/grok-bot/get-started.md",
-    "html_url": "https://docs.x.ai/grok-bot/get-started",
-    "route": "grok-bot/get-started",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Grok Bot for iOS",
-    "md_url": "https://docs.x.ai/grok-bot/mobile.md",
-    "html_url": "https://docs.x.ai/grok-bot/mobile",
-    "route": "grok-bot/mobile",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Grok Bot",
+    "title": "Get Started",
     "md_url": "https://docs.x.ai/grok-bot/overview.md",
     "html_url": "https://docs.x.ai/grok-bot/overview",
     "route": "grok-bot/overview",
@@ -1145,15 +1081,63 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Settings and notifications",
-    "md_url": "https://docs.x.ai/grok-bot/settings-and-notifications.md",
-    "html_url": "https://docs.x.ai/grok-bot/settings-and-notifications",
-    "route": "grok-bot/settings-and-notifications",
+    "title": "Get Started \u2014 Get started",
+    "md_url": "https://docs.x.ai/grok-bot/get-started.md",
+    "html_url": "https://docs.x.ai/grok-bot/get-started",
+    "route": "grok-bot/get-started",
     "kind": "doc"
   },
   {
     "group": "Grok Bot",
-    "title": "Skills and routines",
+    "title": "Get Started \u2014 Use cases",
+    "md_url": "https://docs.x.ai/grok-bot/use-cases.md",
+    "html_url": "https://docs.x.ai/grok-bot/use-cases",
+    "route": "grok-bot/use-cases",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Get Started \u2014 Grok Bot for Mobile",
+    "md_url": "https://docs.x.ai/grok-bot/mobile.md",
+    "html_url": "https://docs.x.ai/grok-bot/mobile",
+    "route": "grok-bot/mobile",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Work with Grok Bot",
+    "md_url": "https://docs.x.ai/grok-bot/bots.md",
+    "html_url": "https://docs.x.ai/grok-bot/bots",
+    "route": "grok-bot/bots",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Work with Grok Bot \u2014 Message and collaborate",
+    "md_url": "https://docs.x.ai/grok-bot/chat-and-collaboration.md",
+    "html_url": "https://docs.x.ai/grok-bot/chat-and-collaboration",
+    "route": "grok-bot/chat-and-collaboration",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Work with Grok Bot \u2014 Files and results",
+    "md_url": "https://docs.x.ai/grok-bot/files-and-results.md",
+    "html_url": "https://docs.x.ai/grok-bot/files-and-results",
+    "route": "grok-bot/files-and-results",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Work with Grok Bot \u2014 Use the computer and apps",
+    "md_url": "https://docs.x.ai/grok-bot/computer-and-apps.md",
+    "html_url": "https://docs.x.ai/grok-bot/computer-and-apps",
+    "route": "grok-bot/computer-and-apps",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Work with Grok Bot \u2014 Skills and routines",
     "md_url": "https://docs.x.ai/grok-bot/skills-routines-and-automations.md",
     "html_url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
     "route": "grok-bot/skills-routines-and-automations",
@@ -1161,7 +1145,23 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Grok Bot for teams and enterprises",
+    "title": "Manage and protect",
+    "md_url": "https://docs.x.ai/grok-bot/settings-and-notifications.md",
+    "html_url": "https://docs.x.ai/grok-bot/settings-and-notifications",
+    "route": "grok-bot/settings-and-notifications",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Manage and protect \u2014 Approvals, security, and privacy",
+    "md_url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy.md",
+    "html_url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+    "route": "grok-bot/approvals-security-and-privacy",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Manage and protect \u2014 Teams and enterprises",
     "md_url": "https://docs.x.ai/grok-bot/teams-and-enterprises.md",
     "html_url": "https://docs.x.ai/grok-bot/teams-and-enterprises",
     "route": "grok-bot/teams-and-enterprises",
@@ -1169,7 +1169,39 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Troubleshooting",
+    "title": "Manage and protect \u2014 Grok Bot security",
+    "md_url": "https://docs.x.ai/grok-bot/security.md",
+    "html_url": "https://docs.x.ai/grok-bot/security",
+    "route": "grok-bot/security",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Manage and protect \u2014 Grok Bot security FAQ",
+    "md_url": "https://docs.x.ai/grok-bot/security-faq.md",
+    "html_url": "https://docs.x.ai/grok-bot/security-faq",
+    "route": "grok-bot/security-faq",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Manage and protect \u2014 Identity and access",
+    "md_url": "https://docs.x.ai/grok-bot/identity-and-access.md",
+    "html_url": "https://docs.x.ai/grok-bot/identity-and-access",
+    "route": "grok-bot/identity-and-access",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Manage and protect \u2014 Private networks",
+    "md_url": "https://docs.x.ai/grok-bot/private-networks.md",
+    "html_url": "https://docs.x.ai/grok-bot/private-networks",
+    "route": "grok-bot/private-networks",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Help",
     "md_url": "https://docs.x.ai/grok-bot/troubleshooting.md",
     "html_url": "https://docs.x.ai/grok-bot/troubleshooting",
     "route": "grok-bot/troubleshooting",
@@ -1177,66 +1209,26 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Use cases",
-    "md_url": "https://docs.x.ai/grok-bot/use-cases.md",
-    "html_url": "https://docs.x.ai/grok-bot/use-cases",
-    "route": "grok-bot/use-cases",
+    "title": "Help \u2014 FAQ",
+    "md_url": "https://docs.x.ai/grok-bot/faq.md",
+    "html_url": "https://docs.x.ai/grok-bot/faq",
+    "route": "grok-bot/faq",
     "kind": "doc"
   },
   {
     "group": "Grok",
-    "title": "Connector Management",
-    "md_url": "https://docs.x.ai/grok/connector-management.md",
-    "html_url": "https://docs.x.ai/grok/connector-management",
-    "route": "grok/connector-management",
+    "title": "Get Started",
+    "md_url": "https://docs.x.ai/grok/overview.md",
+    "html_url": "https://docs.x.ai/grok/overview",
+    "route": "grok/overview",
     "kind": "doc"
   },
   {
     "group": "Grok",
-    "title": "Custom MCP Server Tunneling",
-    "md_url": "https://docs.x.ai/grok/connectors/custom-mcp-tunneling.md",
-    "html_url": "https://docs.x.ai/grok/connectors/custom-mcp-tunneling",
-    "route": "grok/connectors/custom-mcp-tunneling",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok",
-    "title": "Gmail & Google Calendar",
-    "md_url": "https://docs.x.ai/grok/connectors/gmail-google-calendar.md",
-    "html_url": "https://docs.x.ai/grok/connectors/gmail-google-calendar",
-    "route": "grok/connectors/gmail-google-calendar",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok",
-    "title": "Google Drive",
-    "md_url": "https://docs.x.ai/grok/connectors/google-drive.md",
-    "html_url": "https://docs.x.ai/grok/connectors/google-drive",
-    "route": "grok/connectors/google-drive",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok",
-    "title": "Microsoft Teams",
-    "md_url": "https://docs.x.ai/grok/connectors/microsoft-teams.md",
-    "html_url": "https://docs.x.ai/grok/connectors/microsoft-teams",
-    "route": "grok/connectors/microsoft-teams",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok",
-    "title": "OneDrive",
-    "md_url": "https://docs.x.ai/grok/connectors/onedrive.md",
-    "html_url": "https://docs.x.ai/grok/connectors/onedrive",
-    "route": "grok/connectors/onedrive",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok",
-    "title": "Outlook Mail & Calendar",
-    "md_url": "https://docs.x.ai/grok/connectors/outlook.md",
-    "html_url": "https://docs.x.ai/grok/connectors/outlook",
-    "route": "grok/connectors/outlook",
+    "title": "Help & FAQ",
+    "md_url": "https://docs.x.ai/grok/faq.md",
+    "html_url": "https://docs.x.ai/grok/faq",
+    "route": "grok/faq",
     "kind": "doc"
   },
   {
@@ -1249,15 +1241,31 @@
   },
   {
     "group": "Grok",
-    "title": "Salesforce",
-    "md_url": "https://docs.x.ai/grok/connectors/salesforce.md",
-    "html_url": "https://docs.x.ai/grok/connectors/salesforce",
-    "route": "grok/connectors/salesforce",
+    "title": "Connectors \u2014 Google Drive",
+    "md_url": "https://docs.x.ai/grok/connectors/google-drive.md",
+    "html_url": "https://docs.x.ai/grok/connectors/google-drive",
+    "route": "grok/connectors/google-drive",
     "kind": "doc"
   },
   {
     "group": "Grok",
-    "title": "SharePoint",
+    "title": "Connectors \u2014 Gmail & Google Calendar",
+    "md_url": "https://docs.x.ai/grok/connectors/gmail-google-calendar.md",
+    "html_url": "https://docs.x.ai/grok/connectors/gmail-google-calendar",
+    "route": "grok/connectors/gmail-google-calendar",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok",
+    "title": "Connectors \u2014 Outlook Mail & Calendar",
+    "md_url": "https://docs.x.ai/grok/connectors/outlook.md",
+    "html_url": "https://docs.x.ai/grok/connectors/outlook",
+    "route": "grok/connectors/outlook",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok",
+    "title": "Connectors \u2014 SharePoint",
     "md_url": "https://docs.x.ai/grok/connectors/sharepoint.md",
     "html_url": "https://docs.x.ai/grok/connectors/sharepoint",
     "route": "grok/connectors/sharepoint",
@@ -1265,15 +1273,47 @@
   },
   {
     "group": "Grok",
-    "title": "FAQ - Grok Website / Apps",
-    "md_url": "https://docs.x.ai/grok/faq.md",
-    "html_url": "https://docs.x.ai/grok/faq",
-    "route": "grok/faq",
+    "title": "Connectors \u2014 OneDrive",
+    "md_url": "https://docs.x.ai/grok/connectors/onedrive.md",
+    "html_url": "https://docs.x.ai/grok/connectors/onedrive",
+    "route": "grok/connectors/onedrive",
     "kind": "doc"
   },
   {
     "group": "Grok",
-    "title": "License & User Management",
+    "title": "Connectors \u2014 Microsoft Teams",
+    "md_url": "https://docs.x.ai/grok/connectors/microsoft-teams.md",
+    "html_url": "https://docs.x.ai/grok/connectors/microsoft-teams",
+    "route": "grok/connectors/microsoft-teams",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok",
+    "title": "Connectors \u2014 Salesforce",
+    "md_url": "https://docs.x.ai/grok/connectors/salesforce.md",
+    "html_url": "https://docs.x.ai/grok/connectors/salesforce",
+    "route": "grok/connectors/salesforce",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok",
+    "title": "Connectors \u2014 Custom MCP Tunneling",
+    "md_url": "https://docs.x.ai/grok/connectors/custom-mcp-tunneling.md",
+    "html_url": "https://docs.x.ai/grok/connectors/custom-mcp-tunneling",
+    "route": "grok/connectors/custom-mcp-tunneling",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok",
+    "title": "Business & Enterprise",
+    "md_url": "https://docs.x.ai/grok/user-guide.md",
+    "html_url": "https://docs.x.ai/grok/user-guide",
+    "route": "grok/user-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok",
+    "title": "Business & Enterprise \u2014 License & User Management",
     "md_url": "https://docs.x.ai/grok/management.md",
     "html_url": "https://docs.x.ai/grok/management",
     "route": "grok/management",
@@ -1281,26 +1321,18 @@
   },
   {
     "group": "Grok",
-    "title": "Organization Management",
+    "title": "Business & Enterprise \u2014 Connector Management",
+    "md_url": "https://docs.x.ai/grok/connector-management.md",
+    "html_url": "https://docs.x.ai/grok/connector-management",
+    "route": "grok/connector-management",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok",
+    "title": "Business & Enterprise \u2014 Organization Management",
     "md_url": "https://docs.x.ai/grok/organization.md",
     "html_url": "https://docs.x.ai/grok/organization",
     "route": "grok/organization",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok",
-    "title": "Welcome to Grok",
-    "md_url": "https://docs.x.ai/grok/overview.md",
-    "html_url": "https://docs.x.ai/grok/overview",
-    "route": "grok/overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok",
-    "title": "Grok.com User Guide",
-    "md_url": "https://docs.x.ai/grok/user-guide.md",
-    "html_url": "https://docs.x.ai/grok/user-guide",
-    "route": "grok/user-guide",
     "kind": "doc"
   },
   {
@@ -1345,7 +1377,39 @@
   },
   {
     "group": "News",
-    "title": "Aug 29, 2026 Grok Bot now works with X Aug 29, 2026 Grok Bot now works with X Grok Bot now has a tighter integration with X. Read More",
+    "title": "Sep 3, 2026 Grok Bot for Enterprise Sep 3, 2026 Grok Bot for Enterprise Grok Bot is now available for enterprises. Grok and Cursor Enterprise customers have free usage for the next two weeks, and can invite their whole organization, including people without an existing seat. Read More",
+    "md_url": "https://x.ai/news/grok-bot-for-enterprise.md",
+    "html_url": "https://x.ai/news/grok-bot-for-enterprise",
+    "route": "news/grok-bot-for-enterprise",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Sep 4, 2026 Setting Grok Bot loose on procurement",
+    "md_url": "https://x.ai/news/grok-bot-procurement.md",
+    "html_url": "https://x.ai/news/grok-bot-procurement",
+    "route": "news/grok-bot-procurement",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Sep 3, 2026 Designing Grok Bot for a world of persistent agents",
+    "md_url": "https://x.ai/news/designing-grok-bot.md",
+    "html_url": "https://x.ai/news/designing-grok-bot",
+    "route": "news/designing-grok-bot",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Sep 1, 2026 Biosecurity at the frontier",
+    "md_url": "https://x.ai/news/biosafety-at-the-frontier.md",
+    "html_url": "https://x.ai/news/biosafety-at-the-frontier",
+    "route": "news/biosafety-at-the-frontier",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Aug 29, 2026 Grok Bot now works with X",
     "md_url": "https://x.ai/news/grok-bot-and-x.md",
     "html_url": "https://x.ai/news/grok-bot-and-x",
     "route": "news/grok-bot-and-x",
@@ -1353,7 +1417,7 @@
   },
   {
     "group": "News",
-    "title": "Aug 26, 2026 Grok 4.6 on Microsoft Foundry",
+    "title": "Grok 4.6 on Microsoft Foundry Grok 4.6 is now available via Microsoft Foundry. Aug 26, 2026",
     "md_url": "https://x.ai/news/grok-4-6-microsoft-foundry.md",
     "html_url": "https://x.ai/news/grok-4-6-microsoft-foundry",
     "route": "news/grok-4-6-microsoft-foundry",
@@ -1361,7 +1425,7 @@
   },
   {
     "group": "News",
-    "title": "Aug 26, 2026 Grok Bot is now included with more plans",
+    "title": "Grok Bot is now included with more plans Grok Bot is now available for SuperGrok, Cursor Pro, and all Cursor Teams plans. Aug 26, 2026",
     "md_url": "https://x.ai/news/grok-bot-more-plans.md",
     "html_url": "https://x.ai/news/grok-bot-more-plans",
     "route": "news/grok-bot-more-plans",
@@ -1369,7 +1433,7 @@
   },
   {
     "group": "News",
-    "title": "Aug 21, 2026 Grok 4.6 on Gemini Enterprise Agent Platform",
+    "title": "Grok 4.6 on Gemini Enterprise Agent Platform Grok 4.6 is now available via Gemini Enterprise Agent Platform. Aug 21, 2026",
     "md_url": "https://x.ai/news/grok-4-6-vertex-ai.md",
     "html_url": "https://x.ai/news/grok-4-6-vertex-ai",
     "route": "news/grok-4-6-vertex-ai",
@@ -1377,7 +1441,7 @@
   },
   {
     "group": "News",
-    "title": "Aug 19, 2026 Grok 4.6 on Amazon Bedrock",
+    "title": "Grok 4.6 on Amazon Bedrock Grok 4.6 is now available via Amazon Bedrock. Aug 19, 2026",
     "md_url": "https://x.ai/news/grok-4-6-amazon-bedrock.md",
     "html_url": "https://x.ai/news/grok-4-6-amazon-bedrock",
     "route": "news/grok-4-6-amazon-bedrock",
@@ -1529,14 +1593,6 @@
   },
   {
     "group": "News",
-    "title": "Explore the markets with Interactive Brokers and Grok Interactive Brokers now integrates with Grok, bringing powerful AI directly into your trading experience \u2014 portfolio analysis, scenario modeling, research, and order instructions. Jun 25, 2026",
-    "md_url": "https://x.ai/news/grok-interactive-brokers.md",
-    "html_url": "https://x.ai/news/grok-interactive-brokers",
-    "route": "news/grok-interactive-brokers",
-    "kind": "blog"
-  },
-  {
-    "group": "News",
     "title": "Introducing /goal Use /goal for long-running autonomous task execution in Grok Build. Jun 22, 2026",
     "md_url": "https://x.ai/news/introducing-goal.md",
     "html_url": "https://x.ai/news/introducing-goal",
@@ -1609,34 +1665,10 @@
   },
   {
     "group": "News",
-    "title": "Bringing real-time market sentiment to Tori, from eToro Tori, eToro\u2019s AI agent, uses models from SpaceXAI to embed real-time market sentiment directly into Tori\u2019s investing workflow. Jun 10, 2026",
-    "md_url": "https://x.ai/news/grok-etoro.md",
-    "html_url": "https://x.ai/news/grok-etoro",
-    "route": "news/grok-etoro",
-    "kind": "blog"
-  },
-  {
-    "group": "News",
-    "title": "Powering Gopuff's Go agent Gopuff and SpaceXAI launched Go, an AI-powered shopping assistant built into the Gopuff app and powered by Grok text, audio, and image models. Jun 9, 2026",
-    "md_url": "https://x.ai/news/grok-gopuff.md",
-    "html_url": "https://x.ai/news/grok-gopuff",
-    "route": "news/grok-gopuff",
-    "kind": "blog"
-  },
-  {
-    "group": "News",
     "title": "Grok Imagine 1.5 Preview grok-imagine-video-1.5-preview, our latest image-to-video model, is now available via the xAI API in preview. Jun 3, 2026",
     "md_url": "https://x.ai/news/grok-imagine-1-5.md",
     "html_url": "https://x.ai/news/grok-imagine-1-5",
     "route": "news/grok-imagine-1-5",
-    "kind": "blog"
-  },
-  {
-    "group": "News",
-    "title": "Grok Becomes the Voice of Vapi Bringing frontier voice quality to millions of Vapi agents. Jun 3, 2026",
-    "md_url": "https://x.ai/news/grok-vapi.md",
-    "html_url": "https://x.ai/news/grok-vapi",
-    "route": "news/grok-vapi",
     "kind": "blog"
   },
   {

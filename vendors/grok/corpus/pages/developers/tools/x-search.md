@@ -4,6 +4,11 @@
 
 The X Search tool enables Grok to perform keyword search, semantic search, user search, and thread fetch on X (formerly Twitter). This powerful tool allows the model to access real-time social media content, analyze posts, and gather insights from X's vast data.
 
+> [!WARNING]
+> Pricing changes on September 21, 2026
+>
+> Starting September 21, 2026 at 12:00 PM PT, X Search is billed at $5 per 1k posts fetched and $10 per 1k user profiles fetched, replacing the current $5 per 1k calls. Every post returned by a search or thread fetch, including parent and quoted posts, counts; every profile returned by a user search counts.
+
 ## SDK Support
 
 | SDK/API | Tool Name |

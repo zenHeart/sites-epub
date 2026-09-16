@@ -9,3 +9,4 @@ The base URL for all file operations is `https://api.x.ai`. You have to authenti
 * [Upload](/developers/rest-api-reference/files/upload)
 * [Manage](/developers/rest-api-reference/files/manage)
 * [Download](/developers/rest-api-reference/files/download)
+* [Public URLs](/developers/rest-api-reference/files/public-urls)

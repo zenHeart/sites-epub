@@ -3,7 +3,7 @@
 # Troubleshooting
 
 Start with the least destructive step. A Bot's cloud work can continue even
-when the desktop or iPhone app is disconnected.
+when the desktop or mobile app is disconnected.
 
 ## Sign-in does not complete
 

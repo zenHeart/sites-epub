@@ -17,7 +17,8 @@ rollout. Some options described below may not appear.
 ### Account
 
 Sign in or out of the Cursor account used by Grok Bot. The account menu also
-shows **About**, the installed Grok Bot version, and a link to the iOS app.
+shows **About**, the installed Grok Bot version, and a link to the iOS or
+Android app.
 
 ### Appearance
 
@@ -27,59 +28,69 @@ Choose **Follow System**, **Light**, or **Dark**.
 
 Configure shared and local Bot behavior:
 
-* **Default Model**, when model selection is available
 * **Timezone**, which routines use for schedules
 * **Execution on Local Computer**
-* **Auto-review** and personal approval rules
 
-See [Approvals, security, and privacy](/grok-bot/approvals-security-and-privacy) before
-allowing commands on your local computer.
+Cursor manages model selection, so there is no model picker.
 
-**Execution on Local Computer** applies to the desktop in front of you.
-Auto-review rules are stored on the current desktop and synced to its Grok Bot
-computer; do not assume another desktop installation has the same rules.
+### Auto-review
+
+Manage your personal Auto Review rules.
+
+Two settings in **General** deserve care. **Execution on Local Computer**
+controls whether Bots can run commands on the desktop in front of you;
+per-command approval is the default, and the setting applies to that desktop
+alone. Auto Review rules shape which actions stop for your approval, and they
+are stored on the current desktop and synced to its Grok Bot computer. Either
+way, do not assume another desktop installation carries the same configuration.
+Read [Approvals, security, and privacy](/grok-bot/approvals-security-and-privacy)
+before changing either.
 
 ## Plugins
 
-Use **Marketplace** to discover connectors and packaged skills. Use **Yours** to
+Use **Marketplace** to discover plugins and packaged skills. Use **Yours** to
 review installed plugins and private skills.
 
-An installed connector may still need browser authentication. Connector tools
-can be enabled or disabled individually. Team-provided plugins may be required
-or restricted by an administrator.
+An installed plugin may still need browser authentication. Individual plugin
+tools can be enabled or disabled. On the Teams plan and the Enterprise plan,
+team-provided plugins may be required or restricted by an admin.
 
-See [Use the computer and apps](/grok-bot/computer-and-apps) for the connection flow.
+See [Connect plugins](/grok-bot/computer-and-apps#connect-an-app) for the
+connection flow.
 
 ## Usage and billing
 
-When **Usage & Billing** is available, it shows weekly included usage and
-on-demand usage for eligible non-enterprise accounts.
+**Usage & Billing** shows weekly included usage and on-demand usage for eligible
+accounts, and the account menu can show **Weekly usage** at a glance. If neither
+surface appears, review usage from the Cursor account page or contact your
+organization's admin.
 
-The account menu may also show **Weekly usage**. If neither surface appears,
-review usage from the Cursor account page or contact the organization
-administrator.
+For how plans, weekly usage, and on-demand spend work, see
+[Plans and billing](https://cursor.com/help/grok-bot/plans).
 
 ## Team Setup
 
-Team members may see **Team Setup**. Administrators can provide managed setup
-that runs on assigned Grok Bot computers; members can review or reinstall the
-current setup.
+On the Teams plan and the Enterprise plan, **Team Setup** shows the managed
+setup your admin provides for team computers. You can review or reinstall the
+current setup. Admins configure it from the dashboard; see
+[Grok Bot for teams and enterprises](/grok-bot/teams-and-enterprises#set-up-your-team).
 
 Do not place secret values directly in managed setup instructions.
 
 ## Beta and updates
 
-Use **Beta** for:
+The update controls live in the **Beta** section of settings, alongside
+security-key or egress-routing options when those are available. The Grok Bot
+app and the Agent Computer update separately:
 
-* **Check for Updates** or **Restart to Update** for the Grok Bot app
-* **Update Agent Computer** to rebuild the shared computer while preserving
-  durable state
-* **Reset Agent Computer** as a last-resort recovery that may lose recent
-  unsynced work
-* Security-key or egress-routing options when available
+* **Check for Updates** and **Restart to Update** update the desktop app.
+* **Update Agent Computer** rebuilds the cloud computer on the latest image
+  while preserving durable state.
+* **Reset Agent Computer** is a last resort that returns the computer to its
+  synced durable state; unsynced recent work does not come back.
 
-The app update and Agent Computer update are separate. See
-[Troubleshooting](/grok-bot/troubleshooting) for the safest recovery order.
+See [Troubleshooting](/grok-bot/troubleshooting) for the least destructive
+recovery order.
 
 ## Edit one Bot
 
@@ -95,7 +106,7 @@ an account-synchronized policy across every device.
 
 ## Understand attention states
 
-The Bot list distinguishes:
+The sidebar distinguishes:
 
 * **Needs attention** for a question, approval, or handoff
 * **Unread activity** for a new result
@@ -113,16 +124,25 @@ have the same per-Bot notification switch.
 Notifications are normally suppressed while Grok Bot is focused. The sidebar
 and dock badge still show unread activity.
 
-The iPhone app also asks for notification permission during first run. Both
-device permission and the Bot's notification setting must allow the
+The iPhone and Android apps also ask for notification permission during first
+run. Both device permission and the Bot's notification setting must allow the
 notification. Mobile push delivery is rolling out and may not yet be enabled
 for every account.
 
 ## Handle in-app errors
 
-Errors appear above the composer in **Notifications**. You can dismiss one
+Errors appear above the composer under **Notifications**. You can dismiss one
 notice or clear the list. Some notices include **Copy request ID** for support;
-copy and share the complete ID.
+copy and share the complete ID with
+[support](/grok-bot/troubleshooting#before-contacting-support).
 
 Clearing a notice removes the notification, not the underlying external action
 or Bot history.
+
+## Related pages
+
+* [Use the computer and apps](/grok-bot/computer-and-apps)
+* [Approvals, security, and privacy](/grok-bot/approvals-security-and-privacy)
+* [Grok Bot for teams and enterprises](/grok-bot/teams-and-enterprises)
+* [Plans and billing](https://cursor.com/help/grok-bot/plans)
+* [Remove access and working data](/grok-bot/approvals-security-and-privacy#remove-access-and-working-data)

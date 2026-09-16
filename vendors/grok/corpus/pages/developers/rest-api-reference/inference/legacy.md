@@ -150,7 +150,7 @@
 
 > [!WARNING]
 >
-> **Deprecated**: The Anthropic SDK compatibility is fully deprecated. Please migrate to the [Responses API](/developers/rest-api-reference/inference/chat#create-new-response) or [gRPC](/developers/grpc-api-reference).
+> **Deprecated**: The Anthropic SDK compatibility is fully deprecated. Please migrate to the [Responses API](/developers/rest-api-reference/inference/responses#create-new-response) or [gRPC](/developers/grpc-api-reference).
 
 ## POST /v1/messages
 
@@ -182,7 +182,7 @@ Create a messages response. This endpoint is compatible with the Anthropic API.
 
 * `tool_choice` (object | object | object)
 
-* `tools` (array | null) — A list of tools the model may call in JSON-schema. Currently, only functions are supported as a tool. Use this to provide a list of functions the model may generate JSON inputs for. A max of 128 functions are supported.
+* `tools` (array | null) — A list of tools the model may call in JSON-schema. Currently, only functions are supported as a tool. Use this to provide a list of functions the model may generate JSON inputs for. A max of 350 functions are supported.
 
 * `top_k` (integer | null) — (Unsupported) When generating next tokens, randomly selecting the next token from the k most likely options.
 
@@ -210,7 +210,7 @@ Create a messages response. This endpoint is compatible with the Anthropic API.
 
   * `cache_read_input_tokens` (integer, required) — Number of tokens retrieved from the cache for this request.
 
-  * `input_tokens` (integer, required) — Number of input tokens used
+  * `input_tokens` (integer, required) — Number of input tokens not served from cache (Anthropic semantics).
 
   * `output_tokens` (integer, required) — Number of output tokens used
 
@@ -258,7 +258,7 @@ Create a messages response. This endpoint is compatible with the Anthropic API.
 
 > [!WARNING]
 >
-> **Deprecated**: The Anthropic SDK compatibility is fully deprecated. Please migrate to the [Responses API](/developers/rest-api-reference/inference/chat#create-new-response) or [gRPC](/developers/grpc-api-reference).
+> **Deprecated**: The Anthropic SDK compatibility is fully deprecated. Please migrate to the [Responses API](/developers/rest-api-reference/inference/responses#create-new-response) or [gRPC](/developers/grpc-api-reference).
 
 ## POST /v1/complete
 

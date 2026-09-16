@@ -77,7 +77,7 @@ const completion = await client.chat.completions.create({
     messages: [
         {
             role: "system",
-            content: "You are Grok, a helpful and maximally truthful AI built by xAI."
+            content: "You are Grok, a helpful and useful AI built by xAI."
         },
         {
             role: "user",
@@ -96,7 +96,7 @@ import { generateText } from 'ai';
 const result = await generateText({
   model: xai('grok-4.6'),
   system:
-    "You are Grok, a helpful and maximally truthful AI built by xAI.",
+    "You are Grok, a helpful and useful AI built by xAI.",
   prompt: 'Explain how neural networks learn in two sentences.',
 });
 
@@ -112,7 +112,7 @@ curl https://api.x.ai/v1/chat/completions \
     "messages": [
         {
             "role": "system",
-            "content": "You are Grok, a helpful and maximally truthful AI built by xAI."
+            "content": "You are Grok, a helpful and useful AI built by xAI."
         },
         {
             "role": "user",

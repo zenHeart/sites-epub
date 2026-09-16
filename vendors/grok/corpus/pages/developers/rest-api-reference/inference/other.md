@@ -1,6 +1,56 @@
 #### Inference API
 
-# Other
+# Account
+
+***
+
+## GET /v1/me
+
+Get information about the currently authenticated caller.
+Works with both API keys and OAuth tokens. Returns identity, team, and ZDR status.
+
+### Response Body
+
+* `api_key` (object)
+
+  * `api_key_id` (string, required) — The API key ID.
+
+  * `blocked` (boolean, required) — Whether the API key is blocked.
+
+  * `disabled` (boolean, required) — Whether the API key is disabled.
+
+  * `redacted_api_key` (string, required) — The redacted API key.
+
+* `oauth` (object)
+
+  * `client_id` (string, required) — The OAuth client\_id of the application.
+
+* `team_blocked` (boolean, required) — Whether the team is blocked from making API requests.
+
+* `team_id` (string, required) — Team ID associated with the credentials.
+
+* `user_id` (string, required) — User ID associated with the credentials.
+
+* `zdr_status` ("no\_zdr" | "zdr" | "pii\_scrubbing", required) — Zero Data Retention status for a team.
+
+\*\*Response example:\*\*
+
+```json
+{
+  "user_id": "59fbe5f2-040b-46d5-8325-868bb8f23eb2",
+  "team_id": "5ea6f6bd-7815-4b8a-9135-28b2d7ba6722",
+  "zdr_status": "no_zdr",
+  "team_blocked": false,
+  "api_key": {
+    "redacted_api_key": "xai-...b14o",
+    "api_key_id": "ae1e1841-4326-4b36-a8a9-8a1a7237db11",
+    "blocked": false,
+    "disabled": false
+  }
+}
+```
+
+***
 
 ## GET /v1/api-key
 

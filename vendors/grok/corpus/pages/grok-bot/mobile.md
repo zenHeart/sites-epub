@@ -1,25 +1,27 @@
 #### Start
 
-# Grok Bot for iOS
+# Grok Bot for Mobile
 
-Use Grok Bot for iOS to start work, answer questions, approve steps, and
-review results away from your desk.
+Use Grok Bot on iPhone or Android to start work, answer questions, approve
+steps, and review results away from your desk.
 
-The iPhone app connects to the same Bots, conversations, routines, connectors,
+The mobile app connects to the same Bots, conversations, routines, connectors,
 and shared cloud computer as the desktop app. Work continues in the cloud when
 the app is closed.
 
 ## Requirements
 
-* iPhone with iOS 18 or later
+* iPhone with iOS 18 or later, or a phone with Android 9 or later
 * An eligible plan: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra,
   or Cursor Teams Standard or Premium (sign in with your Cursor account)
 * Internet connection
 
-Grok Bot is currently designed for iOS on iPhone, not iPad or Android.
+Grok Bot is currently designed for phones, not iPad.
 
 Download Grok Bot from the
-[App Store](https://apps.apple.com/us/app/grok-bot/id6794501026).
+[App Store](https://apps.apple.com/app/id6794501026) on iPhone or
+[Google Play](https://play.google.com/store/apps/details?id=ai.x.grok.bot) on
+Android.
 
 ## Sign in and set up
 
@@ -78,8 +80,8 @@ a routine currently require the desktop app.
 ## Search and review prior work
 
 Use search from the home screen to find conversations and available message,
-file, link, or routine results. Swipe actions provide quick access to common
-conversation controls such as pin and hide.
+file, link, or routine results. Conversation actions provide quick access to
+common controls such as pin and hide.
 
 ## Settings
 
@@ -90,11 +92,11 @@ From **Settings**, you can:
 * Edit Bot settings
 * Configure Auto Review when available
 * Choose an appearance
-* Review usage or manage an eligible iOS subscription
+* Review usage or manage an eligible App Store or Google Play subscription
 * Sign out or delete your account
 
 Some advanced desktop controls and teach-by-demonstration workflows are not
-available on iPhone. Use the desktop app when a flow requires them.
+available on mobile. Use the desktop app when a flow requires them.
 
 See [Message and collaborate](/grok-bot/chat-and-collaboration) for group behavior and
 [Troubleshooting](/grok-bot/troubleshooting) for computer recovery.

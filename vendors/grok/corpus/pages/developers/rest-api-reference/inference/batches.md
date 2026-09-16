@@ -303,7 +303,7 @@ Add multiple requests to an existing batch.
 
       * `presence_penalty` (number | null) — (Not supported by \`grok-3\` and reasoning models) Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
 
-      * `reasoning_effort` (string | null) — Constrains how hard a reasoning model thinks before responding. Not supported by \`grok-4\` and will result in error if used with \`grok-4\`. Possible values are \`low\` (uses fewer reasoning tokens) and \`high\` (uses more reasoning tokens).
+      * `reasoning_effort` (string | null) — Constrains how hard a reasoning model thinks before responding. Supported by some models; models that do not support it reject the request with an error. Possible values are \`none\` (disables reasoning completely), \`low\`, \`medium\`, \`high\` (uses the most reasoning tokens) and \`xhigh\`. The accepted values and the default used when unspecified vary per model. See the model's documentation page for details.
 
       * `response_format` (object | object | object)
 

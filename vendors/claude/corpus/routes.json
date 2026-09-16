@@ -713,7 +713,7 @@
   },
   {
     "group": "Administration",
-    "title": "Gateway protocol reference",
+    "title": "Claude Code gateway compatibility guide",
     "md_url": "https://code.claude.com/docs/en/llm-gateway-protocol.md",
     "html_url": "https://code.claude.com/docs/en/llm-gateway-protocol",
     "route": "llm-gateway-protocol",
@@ -817,7 +817,7 @@
   },
   {
     "group": "Configuration",
-    "title": "Claude Code settings",
+    "title": "Settings files and precedence",
     "md_url": "https://code.claude.com/docs/en/settings.md",
     "html_url": "https://code.claude.com/docs/en/settings",
     "route": "settings",
@@ -825,7 +825,7 @@
   },
   {
     "group": "Configuration",
-    "title": "Claude Code settings reference",
+    "title": "All settings",
     "md_url": "https://code.claude.com/docs/en/settings-reference.md",
     "html_url": "https://code.claude.com/docs/en/settings-reference",
     "route": "settings-reference",
@@ -1113,7 +1113,15 @@
   },
   {
     "group": "Agent SDK",
-    "title": "Troubleshooting",
+    "title": "Migrate to Claude Agent SDK",
+    "md_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide.md",
+    "html_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide",
+    "route": "agent-sdk/migration-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "Agent SDK",
+    "title": "Troubleshoot the Agent SDK",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/troubleshooting.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/troubleshooting",
     "route": "agent-sdk/troubleshooting",
@@ -1333,14 +1341,6 @@
     "md_url": "https://code.claude.com/docs/en/agent-sdk/python.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/python",
     "route": "agent-sdk/python",
-    "kind": "doc"
-  },
-  {
-    "group": "Agent SDK",
-    "title": "Migrate to Claude Agent SDK",
-    "md_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide.md",
-    "html_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide",
-    "route": "agent-sdk/migration-guide",
     "kind": "doc"
   },
   {
@@ -1605,6 +1605,46 @@
     "md_url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense.md",
     "html_url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense",
     "route": "blog/preparing-your-security-program-for-ai-accelerated-offense",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "t rowe price brings more of claude to its investment process",
+    "md_url": "https://claude.com/blog/t-rowe-price-brings-more-of-claude-to-its-investment-process.md",
+    "html_url": "https://claude.com/blog/t-rowe-price-brings-more-of-claude-to-its-investment-process",
+    "route": "blog/t-rowe-price-brings-more-of-claude-to-its-investment-process",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "what 1 000 small business owners taught us about ai",
+    "md_url": "https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai.md",
+    "html_url": "https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai",
+    "route": "blog/what-1-000-small-business-owners-taught-us-about-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "reducing cost and improving performance with claude platform",
+    "md_url": "https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform.md",
+    "html_url": "https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform",
+    "route": "blog/reducing-cost-and-improving-performance-with-claude-platform",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the anatomy of effective commerce agents",
+    "md_url": "https://claude.com/blog/the-anatomy-of-effective-commerce-agents.md",
+    "html_url": "https://claude.com/blog/the-anatomy-of-effective-commerce-agents",
+    "route": "blog/the-anatomy-of-effective-commerce-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude for commerce agents",
+    "md_url": "https://claude.com/blog/claude-for-commerce-agents.md",
+    "html_url": "https://claude.com/blog/claude-for-commerce-agents",
+    "route": "blog/claude-for-commerce-agents",
     "kind": "blog"
   },
   {

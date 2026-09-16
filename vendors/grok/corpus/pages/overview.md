@@ -8,7 +8,7 @@ We offer a range of models supporting multiple use cases and modalities.
 
 ### [Code API](/build/overview)
 
-Agentic coding with Grok Build (\{\{LATEST\_CODE\_MODEL\_NAME}}), our coding model, on the API and CLI.
+Agentic coding with Grok Build (grok-4.6), our coding model, on the API and CLI.
 
 * Agentic coding workflows
 * Powers Grok Build

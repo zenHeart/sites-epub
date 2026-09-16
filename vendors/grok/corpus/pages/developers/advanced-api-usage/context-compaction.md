@@ -267,4 +267,4 @@ The same method is available on `AsyncClient` as `await chat.compact()`.
 
 * [Generate Text — Responses API](/developers/model-capabilities/text/generate-text) — the primary endpoint that compaction feeds into.
 * [Prompt Caching](/developers/advanced-api-usage/prompt-caching) — a complementary cost-reduction lever for unchanged prompt prefixes.
-* [Chat API Reference](/developers/rest-api-reference/inference/chat) — full request/response schema for the Compaction API.
+* [Responses API Reference](/developers/rest-api-reference/inference/responses#compact-a-conversation) — full request/response schema for the Compaction API.

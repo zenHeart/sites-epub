@@ -16,6 +16,23 @@ The server uses the **Streamable HTTP** transport and runs in stateless mode —
 
 ## Quickstart
 
+### Grok Build
+
+In Grok Build, add the server from the terminal:
+
+```bash customLanguage="bash"
+grok mcp add --transport http xai-docs https://docs.x.ai/api/mcp
+```
+
+Or declare it directly in `~/.grok/config.toml`:
+
+```toml customLanguage="toml"
+[mcp_servers.xai-docs]
+url = "https://docs.x.ai/api/mcp"
+```
+
+Run `grok mcp doctor xai-docs` to verify the connection. See [MCP Servers](/build/features/mcp-servers) for project-scoped configuration and troubleshooting.
+
 ### Cursor
 
 In Cursor, go to **Settings → MCP** and add a new server:

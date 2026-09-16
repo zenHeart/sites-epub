@@ -81,7 +81,7 @@
   },
   {
     "group": "Gemini API and AI Studio",
-    "title": "Lyria 3",
+    "title": "Lyria 3.5",
     "md_url": "https://ai.google.dev/gemini-api/docs/music-generation.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/music-generation",
     "route": "gemini-api/docs/music-generation",
@@ -873,18 +873,10 @@
   },
   {
     "group": "Gemini API and AI Studio",
-    "title": "Start building",
-    "md_url": "https://ai.google.dev/gemini-api/docs/quickstart.md",
-    "html_url": "https://ai.google.dev/gemini-api/docs/quickstart",
-    "route": "gemini-api/docs/quickstart",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini API and AI Studio",
-    "title": "spark Gemini 3.7 Flash New Our latest and most capable Flash model, built for complex coding, agentic workflows, and reliable multi-step execution.",
-    "md_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash.md",
-    "html_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
-    "route": "gemini-api/docs/models/gemini-3.7-flash",
+    "title": "spark Gemini 3.8 Flash New Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.",
+    "md_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash",
+    "route": "gemini-api/docs/models/gemini-3.8-flash",
     "kind": "doc"
   },
   {
@@ -2353,6 +2345,14 @@
   },
   {
     "group": "Gemini Code Assist",
+    "title": "Set up Gemini Code Assist",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini",
+    "route": "code-assist/codeassist/set-up-gemini",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
     "title": "Gemini CLI",
     "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli.md",
     "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli",
@@ -2365,30 +2365,6 @@
     "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-3.md",
     "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-3",
     "route": "code-assist/codeassist/gemini-3",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Supported languages, IDEs, and interfaces",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages",
-    "route": "code-assist/codeassist/supported-languages",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Gemini Code Assist release notes",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/release-notes.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/release-notes",
-    "route": "code-assist/codeassist/release-notes",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Set up Gemini Code Assist",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini",
-    "route": "code-assist/codeassist/set-up-gemini",
     "kind": "doc"
   },
   {
@@ -2557,6 +2533,22 @@
     "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/encrypt-data-cmek.md",
     "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/encrypt-data-cmek",
     "route": "code-assist/codeassist/encrypt-data-cmek",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Supported languages, IDEs, and interfaces",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages",
+    "route": "code-assist/codeassist/supported-languages",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini Code Assist",
+    "title": "Troubleshoot access to Gemini Code Assist features",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/troubleshoot.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/troubleshoot",
+    "route": "code-assist/codeassist/troubleshoot",
     "kind": "doc"
   },
   {
@@ -3336,6 +3328,30 @@
     "kind": "doc"
   },
   {
+    "group": "Gemini App Help",
+    "title": "How Ask Google Help uses and protects your data",
+    "md_url": "https://support.google.com/gemini/answer/18072786",
+    "html_url": "https://support.google.com/gemini/answer/18072786",
+    "route": "gemini-app/18072786",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Streamline your Google Photos workflows with Gemini Spark",
+    "md_url": "https://support.google.com/gemini/answer/18116629",
+    "html_url": "https://support.google.com/gemini/answer/18116629",
+    "route": "gemini-app/18116629",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use the Gemini app for Windows",
+    "md_url": "https://support.google.com/gemini/answer/18263854",
+    "html_url": "https://support.google.com/gemini/answer/18263854",
+    "route": "gemini-app/18263854",
+    "kind": "doc"
+  },
+  {
     "group": "NotebookLM Help",
     "title": "Learn about Gemini Notebook",
     "md_url": "https://support.google.com/gemininotebook/answer/16164461",
@@ -3801,6 +3817,22 @@
   },
   {
     "group": "Blog",
+    "title": "better tracks lyria gemini",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini",
+    "route": "blog/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini app now on windows",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "gemini models",
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models",
@@ -3981,6 +4013,22 @@
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing agentic video in gemini",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "3 8 flash and 3 8 flash cyber",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber",
     "kind": "blog"
   },
   {
@@ -4797,6 +4845,14 @@
     "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships",
     "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships",
     "route": "blog/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai navigate bureaucracy",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/ai-navigate-bureaucracy",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/ai-navigate-bureaucracy",
+    "route": "blog/products-and-platforms/products/gemini/ai-navigate-bureaucracy",
     "kind": "blog"
   }
 ]

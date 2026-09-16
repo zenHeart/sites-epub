@@ -75,13 +75,13 @@ New to the xAI API? Follow the [Quickstart](/developers/quickstart) to create an
 |----------|-------|
 | Model name | `grok-4.6` |
 | Context window | 500,000 tokens |
-| Knowledge cutoff | January 2026 |
+| Knowledge cutoff | February 1, 2026 |
 | Modalities | Text and image input; text output |
 | Output limit | No text output limit |
 | Input price | $2.00 / 1M tokens |
 | Output price | $6.00 / 1M tokens |
 | Reasoning | Low, medium, high (default), or xhigh  |
-| APIs | [Responses API](/developers/rest-api-reference/inference/chat#create-new-response), [Chat Completions](/developers/rest-api-reference/inference/chat#chat-completions) |
+| APIs | [Responses API](/developers/rest-api-reference/inference/responses#create-new-response), [Chat Completions](/developers/rest-api-reference/inference/chat-completions#chat-completions) |
 | Tools | [Function calling](/developers/tools/function-calling), [web search](/developers/tools/web-search), [X search](/developers/tools/x-search), [code execution](/developers/tools/code-execution) |
 
 Rate limits and live pricing for your team are on the [model detail page](/developers/models/grok-4.6) and [Pricing](/developers/pricing).

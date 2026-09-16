@@ -1,18 +1,41 @@
-#### Inference API
+#### API Reference
 
-# Inference REST API Overview
+# Overview
 
-The xAI Inference REST API is a robust, high-performance RESTful interface designed for seamless integration into existing systems.
-It offers advanced AI capabilities with full compatibility with the OpenAI REST API.
+The xAI REST API is compatible with the OpenAI REST API. This reference is generated from the OpenAPI specification and organised by resource.
 
-The base for all routes is at `https://api.x.ai`. For all routes, you have to authenticate with the header `Authorization: Bearer <your xAI API key>`.
+## Base URLs and authentication
 
-* [Chat](/developers/rest-api-reference/inference/chat)
+| API | Base URL | Authenticate with |
+| --- | --- | --- |
+| Inference (responses, chat completions, embeddings, images, videos, voice, files, batches, models) | `https://api.x.ai` | `Authorization: Bearer <xAI API key>` |
+| Collections management | `https://management-api.x.ai` | `Authorization: Bearer <xAI Management API key>` |
+| Collections search | `https://api.x.ai` | `Authorization: Bearer <xAI API key>` |
+| Management (API keys, teams, billing, audit) | `https://management-api.x.ai` | `Authorization: Bearer <xAI Management API key>` |
+
+API keys are created on the [API Keys page](https://console.x.ai/team/default/api-keys?utm_source=docs\&utm_medium=referral\&utm_campaign=developers-rest-api-reference-inference\&utm_content=api-keys) of the xAI Console. Management keys are created on the [Management Keys page](https://console.x.ai/team/default/management-keys?utm_source=docs\&utm_medium=referral\&utm_campaign=developers-rest-api-reference-inference\&utm_content=management-keys); see [Using Management API](/developers/management-api-guide).
+
+## Inference API
+
+* [Responses](/developers/rest-api-reference/inference/responses)
+* [Chat Completions](/developers/rest-api-reference/inference/chat-completions)
+* [Embeddings](/developers/rest-api-reference/inference/embeddings)
 * [Images](/developers/rest-api-reference/inference/images)
 * [Videos](/developers/rest-api-reference/inference/videos)
 * [Voice](/developers/rest-api-reference/inference/voice)
-* [Models](/developers/rest-api-reference/inference/models)
 * [Files](/developers/rest-api-reference/files)
 * [Batches](/developers/rest-api-reference/inference/batches)
-* [Other](/developers/rest-api-reference/inference/other)
+* [Models](/developers/rest-api-reference/inference/models)
+* [Account](/developers/rest-api-reference/inference/other)
 * [Legacy & Deprecated](/developers/rest-api-reference/inference/legacy)
+
+## Management-key APIs
+
+* [Collections API](/developers/rest-api-reference/collections)
+* [Management API](/developers/rest-api-reference/management)
+
+## Other protocols
+
+* [gRPC API](/developers/grpc-api-reference)
+
+For status codes and their likely causes, see [Debugging Errors](/developers/debugging).

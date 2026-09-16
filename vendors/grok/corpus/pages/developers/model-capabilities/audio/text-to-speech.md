@@ -817,7 +817,6 @@ The [Cloud Console playground](https://console.x.ai/team/default/voice/text-to-s
 * **Proxy requests server-side.** Never expose your API key in client-side code. Route TTS requests through your backend.
 * **Cache generated audio.** If the same text is requested repeatedly, cache the audio bytes to save API calls and reduce latency.
 * **Match the format to the use case.** Use `mulaw` or `alaw` at 8 kHz for telephony; `mp3` at 24 kHz for web; `wav` at 44.1+ kHz for post-production.
-* **Respect concurrent session limits.** The streaming WebSocket endpoint allows up to **50 concurrent sessions per team**. For high-throughput services, pool connections or queue requests to stay within this limit.
 
 ## Browser Playback
 

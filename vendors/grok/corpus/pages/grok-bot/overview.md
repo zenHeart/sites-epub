@@ -24,7 +24,7 @@ updated of their actions in the conversation.
   finishes in the real tools rather than as chat drafts.
 * **It is very easy to get started.** Create a Bot, message it, and grant access
   as needed. No workflow builder or prior Bot setup required. The same Bot is
-  reachable from the desktop app and iOS.
+  reachable from the desktop and mobile apps.
 * **It coordinates independently with other Bots.** Multiple Bots share one
   user-scoped computer and can run in parallel. They can message each other,
   share context in threads or group chats, and pass ownership so you are not the
@@ -70,3 +70,21 @@ reusable skill or proactive routine.
 * Learn how to [use the computer and apps](/grok-bot/computer-and-apps).
 * Review [approvals, security, and privacy](/grok-bot/approvals-security-and-privacy)
   before granting access to sensitive systems.
+
+## For team admins and security reviewers
+
+The pages below cover rolling Grok Bot out for a team or organization:
+
+* [Grok Bot for teams and enterprises](/grok-bot/teams-and-enterprises) covers
+  the architecture, rollout steps, the admin controls and which plans include
+  them, and the configuration Cursor recommends.
+* [Grok Bot security](/grok-bot/security) and the
+  [Grok Bot security FAQ](/grok-bot/security-faq) cover network policy, egress,
+  approvals and Auto Review, identity, logging, data retention, hosting, and
+  certifications for security reviewers.
+* [Configure identity and access](/grok-bot/identity-and-access) walks through
+  Okta and Microsoft Entra ID: widening the Cursor app assignment beyond
+  engineering and letting members sign in to IdP apps from the Bot's computer.
+* [Connect to private networks](/grok-bot/private-networks) shows how to reach
+  internal services from team computers with Tailscale or Cloudflare Tunnel
+  through Team Setup.

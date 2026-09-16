@@ -2,7 +2,7 @@
 
 # Reference-to-Video
 
-Provide reference images, a preset voice, or both to guide the generated video. Images incorporate specific people, objects, clothing, or other visual elements without locking the first frame (unlike [image-to-video](/developers/model-capabilities/video/image-to-video)). This is useful for virtual try-on, product placement, character-consistent storytelling, and voice identity. On `grok-imagine-video-1.5`, you can also pick the voice your subject speaks in (see [Reference audio](#reference-audio)).
+Provide reference images, a preset voice, or both to guide the generated video. Images incorporate specific people, objects, clothing, or other visual elements without locking the first frame (unlike [image-to-video](/developers/model-capabilities/video/image-to-video)). This is useful for virtual try-on, product placement, character-consistent storytelling, and voice identity. On `grok-imagine-video-1.5`, you can also pick the voice your subject speaks in (see [Reference audio](#reference-audio)), and pin the exact first or last frame (see [First & Last frame](#first--last-frame)).
 
 Each reference image can be provided as a public HTTPS URL, a base64-encoded data URI, or a `file_id` from the [Files API](/developers/files) — and you can mix kinds within a single request. See [Imagine → Files API Integration](/developers/model-capabilities/imagine/files/inputs) for `file_id` details and examples.
 
@@ -239,6 +239,92 @@ REQUEST_ID=$(curl -s -X POST https://api.x.ai/v1/videos/generations \
     ],
     "duration": 8,
     "aspect_ratio": "9:16",
+    "resolution": "720p"
+  }' | jq -r '.request_id')
+
+while true; do
+  RESULT=$(curl -s https://api.x.ai/v1/videos/$REQUEST_ID \
+    -H "Authorization: Bearer $XAI_API_KEY")
+  STATUS=$(echo "$RESULT" | jq -r '.status')
+  if [ "$STATUS" = "done" ]; then
+    echo "$RESULT" | jq -r '.video.url'
+    break
+  elif [ "$STATUS" = "failed" ] || [ "$STATUS" = "expired" ]; then
+    echo "Request $STATUS"; echo "$RESULT" | jq .
+    break
+  fi
+  sleep 5
+done
+```
+
+## First & Last frame
+
+On `grok-imagine-video-1.5`, `last_frame` pins the exact last frame of the clip. The video ends arriving on that image rather than re-rendering it as a reference. `image` combined with `reference_images`, `reference_audios`, or `last_frame` is the matching first-frame pin.
+
+| Request shape | Result |
+|---------------|--------|
+| `image` + `last_frame` | Pinned first and last frame. The model interpolates between the two. |
+| `last_frame` only | Pinned last frame. The model generates the opening and lands on the pinned image. |
+| `last_frame` + `reference_images` / `reference_audios` | Pinned last frame with reference guidance. Add `image` to pin the first frame as well. |
+
+`prompt` is optional in every first & last frame request. Include one to steer motion and camera work between the frames; omit it to let the frames alone drive the clip.
+
+`last_frame` uses the same URL, data-URI, and `file_id` shapes as [image-to-video](/developers/model-capabilities/video/image-to-video). The Python SDK and Vercel AI SDK do not yet expose a dedicated `last_frame` parameter; send it on the REST body.
+
+Classic `grok-imagine-video` rejects `last_frame` and rejects combining `image` with reference inputs.
+
+```python customLanguage="pythonRequests"
+import os
+import time
+import requests
+
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": f"Bearer {os.environ['XAI_API_KEY']}",
+}
+
+response = requests.post(
+    "https://api.x.ai/v1/videos/generations",
+    headers=headers,
+    json={
+        "model": "grok-imagine-video-1.5",
+        "prompt": "The camera dollies from the sunlit doorway to the window, settling on the closing frame.",
+        "image": {"url": "<FIRST_FRAME_URL>"},
+        "last_frame": {"url": "<LAST_FRAME_URL>"},
+        "duration": 8,
+        "aspect_ratio": "16:9",
+        "resolution": "720p",
+    },
+)
+
+request_id = response.json()["request_id"]
+
+while True:
+    result = requests.get(
+        f"https://api.x.ai/v1/videos/{request_id}",
+        headers={"Authorization": headers["Authorization"]},
+    )
+    data = result.json()
+    if data["status"] == "done":
+        print(data["video"]["url"])
+        break
+    elif data["status"] == "expired":
+        print("Request expired")
+        break
+    time.sleep(5)
+```
+
+```bash
+REQUEST_ID=$(curl -s -X POST https://api.x.ai/v1/videos/generations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -d '{
+    "model": "grok-imagine-video-1.5",
+    "prompt": "The camera dollies from the sunlit doorway to the window, settling on the closing frame.",
+    "image": {"url": "<FIRST_FRAME_URL>"},
+    "last_frame": {"url": "<LAST_FRAME_URL>"},
+    "duration": 8,
+    "aspect_ratio": "16:9",
     "resolution": "720p"
   }' | jq -r '.request_id')
 

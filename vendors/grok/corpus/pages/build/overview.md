@@ -125,10 +125,14 @@ const { text } = await generateText({
 console.log(text);
 ```
 
-## Next
+## Features
 
+* [Status Line](/build/features/status-line). Live session context in a row at the bottom of the TUI.
 * [Skills, Plugins & Marketplaces](/build/features/skills-plugins-marketplaces)
 * [Modes and Commands](/build/modes-and-commands)
+
+## Next
+
 * [Headless & Scripting](/build/cli/headless-scripting)
 * [Enterprise Deployments](/build/enterprise)
 * [Grok Bot](/grok-bot/overview) — AI teammates on a cloud computer

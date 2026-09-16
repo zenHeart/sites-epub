@@ -10,12 +10,13 @@ background, keep role-specific context, and coordinate with other Bots.
 
 ## Where do I talk to Grok Bot?
 
-Use the Grok Bot desktop app on macOS or Windows, or the companion app on
-iOS. The same Bots and conversations sync across your signed-in devices.
+Use the Grok Bot desktop app on macOS, Windows, or Linux, or the companion
+app on iOS or Android. The same Bots and conversations sync across your
+signed-in devices.
 
 ## Does Grok Bot keep working when my laptop is closed?
 
-Yes. Bot work runs on the cloud computer. Closing the app, laptop, or iPhone
+Yes. Bot work runs on the cloud computer. Closing the app, laptop, or phone
 does not stop a background turn or routine.
 
 ## Do my Bots share one computer?
@@ -95,9 +96,12 @@ access.
 
 * macOS on Apple silicon and Intel
 * Windows on x64 and Arm64
+* Linux on x64 and Arm64, as a `.deb` package, an `.rpm` package, or an
+  AppImage
 * iPhone on iOS 18 or later
+* Android 9 or later
 
-Linux desktop, Android, and iPad are not supported at initial launch.
+iPad is not supported at initial launch.
 
 ## What is the difference between a skill and a routine?
 

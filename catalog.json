@@ -8,11 +8,11 @@
       "icon": "vendors/codex/icon.png",
       "author": "OpenAI",
       "adapter": "codex",
-      "updated_at": "2026-08-31T07:37:25Z",
-      "packed_at": "2026-08-31T07:53:12Z",
+      "updated_at": "2026-09-11T03:12:01Z",
+      "packed_at": "2026-09-11T03:13:55Z",
       "summary": "ChatGPT Codex 官方文档六段导航与产品博客，按站点目录打包为一部 EPUB。",
       "category": "docs",
-      "chapters": 174,
+      "chapters": 177,
       "cover": "covers/codex.png"
     },
     {
@@ -23,11 +23,11 @@
       "icon": "vendors/claude/icon.png",
       "author": "Anthropic",
       "adapter": "claude",
-      "updated_at": "2026-08-31T07:42:12Z",
-      "packed_at": "2026-08-31T08:20:02Z",
+      "updated_at": "2026-09-11T03:15:44Z",
+      "packed_at": "2026-09-11T03:20:50Z",
       "summary": "Claude Code 文档树与 claude.com/blog 全文，文档导航在前、Blog 在最后。",
       "category": "docs",
-      "chapters": 422,
+      "chapters": 427,
       "cover": "covers/claude.png"
     },
     {
@@ -38,11 +38,11 @@
       "icon": "vendors/cursor/icon.png",
       "author": "Cursor",
       "adapter": "generic",
-      "updated_at": "2026-08-31T07:39:22Z",
-      "packed_at": "2026-08-31T07:53:12Z",
+      "updated_at": "2026-09-11T03:22:36Z",
+      "packed_at": "2026-09-11T03:24:10Z",
       "summary": "Cursor 文档（llms.txt 导航）与官方博客，增量抓取后离线打包。",
       "category": "docs",
-      "chapters": 247,
+      "chapters": 269,
       "cover": "covers/cursor.png"
     },
     {
@@ -53,11 +53,11 @@
       "icon": "vendors/grok/icon.png",
       "author": "xAI",
       "adapter": "xai",
-      "updated_at": "2026-08-31T07:48:17Z",
-      "packed_at": "2026-08-31T07:53:12Z",
+      "updated_at": "2026-09-11T03:43:33Z",
+      "packed_at": "2026-09-11T03:45:11Z",
       "summary": "xAI 官方文档（Build / Developers / Grok / Grok Bot / Console / Integrations）与 x.ai/news 全文，按站点目录打包为一部 EPUB，News 排在末尾。",
       "category": "docs",
-      "chapters": 242,
+      "chapters": 246,
       "cover": "covers/grok.png"
     },
     {
@@ -68,11 +68,11 @@
       "icon": "vendors/gemini/icon.png",
       "author": "Google",
       "adapter": "gemini",
-      "updated_at": "2026-08-31T09:10:36Z",
-      "packed_at": "2026-08-31T09:29:03Z",
+      "updated_at": "2026-09-11T03:48:38Z",
+      "packed_at": "2026-09-11T03:52:40Z",
       "summary": "Google Gemini 会员核心工具一书打包:Gemini 网页版帮助、Gemini API 与 AI Studio、Antigravity(含 agy CLI)、Jules、NotebookLM、Code Assist,Blog 排在末尾。Gemini CLI 已于 2026-06-18 对个人账号停服(官方迁移至 Antigravity CLI),不再收录。",
       "category": "docs",
-      "chapters": 600,
+      "chapters": 607,
       "cover": "covers/gemini.png"
     }
   ],

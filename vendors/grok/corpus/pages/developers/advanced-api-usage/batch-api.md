@@ -970,7 +970,7 @@ File-based batches are sealed after creation — you cannot add more requests vi
 
 **Batch Requests**
 
-* A batch can contain an **unlimited** number of requests in theory, but extremely large batches (>1,000,000 requests) may be throttled for processing stability.
+* A batch can contain an **unlimited** number of requests in theory, but extremely large batches (>100,000 requests) may be throttled for processing stability.
 * Each individual request that can be added to a batch has a maximum payload size of **25MB**.
 * A team can send up to **1000** add-batch-requests API calls every **30 seconds** (this is a rolling limit shared across all batches in the team).
 * Image and video results contain signed URLs that expire after **1 hour**. Download the media promptly after retrieving results.
@@ -985,6 +985,6 @@ Both [server-side tools](/developers/tools/overview) and client-side function to
 ## Related
 
 * [API Reference: Batch endpoints](/developers/rest-api-reference/inference/batches#create-a-new-batch)
-* [gRPC Reference: Batch management](/developers/grpc-api-reference#batch-management)
+* [gRPC Reference: Batch Management](/developers/grpc-api-reference/batches)
 * [Pricing — Batch API Pricing](/developers/pricing#batch-api-pricing)
 * [xAI Python SDK](https://github.com/xai-org/xai-sdk-python)

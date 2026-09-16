@@ -49,10 +49,10 @@
   },
   {
     "group": "Cursor: Get Started",
-    "title": "claude fable 5",
-    "md_url": "https://cursor.com/docs/models/claude-fable-5.md",
-    "html_url": "https://cursor.com/docs/models/claude-fable-5",
-    "route": "docs/models/claude-fable-5",
+    "title": "claude fable 5 1",
+    "md_url": "https://cursor.com/docs/models/claude-fable-5-1.md",
+    "html_url": "https://cursor.com/docs/models/claude-fable-5-1",
+    "route": "docs/models/claude-fable-5-1",
     "kind": "doc"
   },
   {
@@ -65,10 +65,18 @@
   },
   {
     "group": "Cursor: Get Started",
-    "title": "gemini 3 7 flash",
-    "md_url": "https://cursor.com/docs/models/gemini-3-7-flash.md",
-    "html_url": "https://cursor.com/docs/models/gemini-3-7-flash",
-    "route": "docs/models/gemini-3-7-flash",
+    "title": "gemini 3 8 flash",
+    "md_url": "https://cursor.com/docs/models/gemini-3-8-flash.md",
+    "html_url": "https://cursor.com/docs/models/gemini-3-8-flash",
+    "route": "docs/models/gemini-3-8-flash",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "muse spark 1 3",
+    "md_url": "https://cursor.com/docs/models/muse-spark-1-3.md",
+    "html_url": "https://cursor.com/docs/models/muse-spark-1-3",
+    "route": "docs/models/muse-spark-1-3",
     "kind": "doc"
   },
   {
@@ -232,6 +240,94 @@
     "kind": "doc"
   },
   {
+    "group": "Cursor: grok-bot",
+    "title": "grok bot",
+    "md_url": "https://cursor.com/docs/grok-bot.md",
+    "html_url": "https://cursor.com/docs/grok-bot",
+    "route": "docs/grok-bot",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: grok-bot",
+    "title": "get started",
+    "md_url": "https://cursor.com/docs/grok-bot/get-started.md",
+    "html_url": "https://cursor.com/docs/grok-bot/get-started",
+    "route": "docs/grok-bot/get-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: grok-bot",
+    "title": "use cases",
+    "md_url": "https://cursor.com/docs/grok-bot/use-cases.md",
+    "html_url": "https://cursor.com/docs/grok-bot/use-cases",
+    "route": "docs/grok-bot/use-cases",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: grok-bot",
+    "title": "work",
+    "md_url": "https://cursor.com/docs/grok-bot/work.md",
+    "html_url": "https://cursor.com/docs/grok-bot/work",
+    "route": "docs/grok-bot/work",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: grok-bot",
+    "title": "settings",
+    "md_url": "https://cursor.com/docs/grok-bot/settings.md",
+    "html_url": "https://cursor.com/docs/grok-bot/settings",
+    "route": "docs/grok-bot/settings",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: grok-bot",
+    "title": "teams",
+    "md_url": "https://cursor.com/docs/grok-bot/teams.md",
+    "html_url": "https://cursor.com/docs/grok-bot/teams",
+    "route": "docs/grok-bot/teams",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: grok-bot",
+    "title": "identity",
+    "md_url": "https://cursor.com/docs/grok-bot/identity.md",
+    "html_url": "https://cursor.com/docs/grok-bot/identity",
+    "route": "docs/grok-bot/identity",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: grok-bot",
+    "title": "private networks",
+    "md_url": "https://cursor.com/docs/grok-bot/private-networks.md",
+    "html_url": "https://cursor.com/docs/grok-bot/private-networks",
+    "route": "docs/grok-bot/private-networks",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: grok-bot",
+    "title": "proxies",
+    "md_url": "https://cursor.com/docs/grok-bot/proxies.md",
+    "html_url": "https://cursor.com/docs/grok-bot/proxies",
+    "route": "docs/grok-bot/proxies",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: grok-bot",
+    "title": "security",
+    "md_url": "https://cursor.com/docs/grok-bot/security.md",
+    "html_url": "https://cursor.com/docs/grok-bot/security",
+    "route": "docs/grok-bot/security",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: grok-bot",
+    "title": "security faq",
+    "md_url": "https://cursor.com/docs/grok-bot/security-faq.md",
+    "html_url": "https://cursor.com/docs/grok-bot/security-faq",
+    "route": "docs/grok-bot/security-faq",
+    "kind": "doc"
+  },
+  {
     "group": "Cursor: customizing",
     "title": "customize cursor",
     "md_url": "https://cursor.com/docs/customize-cursor.md",
@@ -337,6 +433,14 @@
   },
   {
     "group": "Cursor: cloud-agents",
+    "title": "choose runtime",
+    "md_url": "https://cursor.com/docs/cloud-agent/self-hosted/choose-runtime.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/self-hosted/choose-runtime",
+    "route": "docs/cloud-agent/self-hosted/choose-runtime",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
     "title": "automations",
     "md_url": "https://cursor.com/docs/cloud-agent/automations.md",
     "html_url": "https://cursor.com/docs/cloud-agent/automations",
@@ -409,10 +513,42 @@
   },
   {
     "group": "Cursor: cloud-agents",
-    "title": "settings",
-    "md_url": "https://cursor.com/docs/cloud-agent/settings.md",
-    "html_url": "https://cursor.com/docs/cloud-agent/settings",
-    "route": "docs/cloud-agent/settings",
+    "title": "self hosted",
+    "md_url": "https://cursor.com/docs/cloud-agent/self-hosted.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/self-hosted",
+    "route": "docs/cloud-agent/self-hosted",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "pool",
+    "md_url": "https://cursor.com/docs/cloud-agent/self-hosted/pool.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/self-hosted/pool",
+    "route": "docs/cloud-agent/self-hosted/pool",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "my machines",
+    "md_url": "https://cursor.com/docs/cloud-agent/self-hosted/my-machines.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/self-hosted/my-machines",
+    "route": "docs/cloud-agent/self-hosted/my-machines",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "computer use",
+    "md_url": "https://cursor.com/docs/cloud-agent/self-hosted/computer-use.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/self-hosted/computer-use",
+    "route": "docs/cloud-agent/self-hosted/computer-use",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "integrations",
+    "md_url": "https://cursor.com/docs/cloud-agent/self-hosted/integrations.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/self-hosted/integrations",
+    "route": "docs/cloud-agent/self-hosted/integrations",
     "kind": "doc"
   },
   {
@@ -421,6 +557,14 @@
     "md_url": "https://cursor.com/docs/cloud-agent/api/endpoints.md",
     "html_url": "https://cursor.com/docs/cloud-agent/api/endpoints",
     "route": "docs/cloud-agent/api/endpoints",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "settings",
+    "md_url": "https://cursor.com/docs/cloud-agent/settings.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/settings",
+    "route": "docs/cloud-agent/settings",
     "kind": "doc"
   },
   {
@@ -1065,6 +1209,22 @@
   },
   {
     "group": "Blog",
+    "title": "projects",
+    "md_url": "https://cursor.com/blog/projects.md",
+    "html_url": "https://cursor.com/blog/projects",
+    "route": "blog/projects",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "self hosted machines",
+    "md_url": "https://cursor.com/blog/self-hosted-machines.md",
+    "html_url": "https://cursor.com/blog/self-hosted-machines",
+    "route": "blog/self-hosted-machines",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "firetiger",
     "md_url": "https://cursor.com/blog/firetiger.md",
     "html_url": "https://cursor.com/blog/firetiger",
@@ -1121,26 +1281,26 @@
   },
   {
     "group": "Blog",
-    "title": "router",
-    "md_url": "https://cursor.com/blog/router.md",
-    "html_url": "https://cursor.com/blog/router",
-    "route": "blog/router",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "agent swarm model economics",
-    "md_url": "https://cursor.com/blog/agent-swarm-model-economics.md",
-    "html_url": "https://cursor.com/blog/agent-swarm-model-economics",
-    "route": "blog/agent-swarm-model-economics",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "self driving codebases",
     "md_url": "https://cursor.com/blog/self-driving-codebases.md",
     "html_url": "https://cursor.com/blog/self-driving-codebases",
     "route": "blog/self-driving-codebases",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "basis",
+    "md_url": "https://cursor.com/blog/basis.md",
+    "html_url": "https://cursor.com/blog/basis",
+    "route": "blog/basis",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "nokia",
+    "md_url": "https://cursor.com/blog/nokia.md",
+    "html_url": "https://cursor.com/blog/nokia",
+    "route": "blog/nokia",
     "kind": "blog"
   },
   {
@@ -1161,18 +1321,18 @@
   },
   {
     "group": "Blog",
-    "title": "coinbase",
-    "md_url": "https://cursor.com/blog/coinbase.md",
-    "html_url": "https://cursor.com/blog/coinbase",
-    "route": "blog/coinbase",
+    "title": "router",
+    "md_url": "https://cursor.com/blog/router.md",
+    "html_url": "https://cursor.com/blog/router",
+    "route": "blog/router",
     "kind": "blog"
   },
   {
     "group": "Blog",
-    "title": "wayfair",
-    "md_url": "https://cursor.com/blog/wayfair.md",
-    "html_url": "https://cursor.com/blog/wayfair",
-    "route": "blog/wayfair",
+    "title": "agent swarm model economics",
+    "md_url": "https://cursor.com/blog/agent-swarm-model-economics.md",
+    "html_url": "https://cursor.com/blog/agent-swarm-model-economics",
+    "route": "blog/agent-swarm-model-economics",
     "kind": "blog"
   },
   {
@@ -1221,6 +1381,22 @@
     "md_url": "https://cursor.com/blog/reward-hacking-coding-benchmarks.md",
     "html_url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
     "route": "blog/reward-hacking-coding-benchmarks",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "coinbase",
+    "md_url": "https://cursor.com/blog/coinbase.md",
+    "html_url": "https://cursor.com/blog/coinbase",
+    "route": "blog/coinbase",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "wayfair",
+    "md_url": "https://cursor.com/blog/wayfair.md",
+    "html_url": "https://cursor.com/blog/wayfair",
+    "route": "blog/wayfair",
     "kind": "blog"
   },
   {

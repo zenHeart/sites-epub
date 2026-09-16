@@ -1041,6 +1041,14 @@
   },
   {
     "group": "Administration",
+    "title": "User lifecycle management",
+    "md_url": "https://learn.chatgpt.com/codex/enterprise/user-lifecycle.md",
+    "html_url": "https://learn.chatgpt.com/codex/enterprise/user-lifecycle",
+    "route": "codex/enterprise/user-lifecycle",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
     "title": "Roles and workspace permissions",
     "md_url": "https://learn.chatgpt.com/codex/enterprise/roles-and-workspace-permissions.md",
     "html_url": "https://learn.chatgpt.com/codex/enterprise/roles-and-workspace-permissions",
@@ -1182,6 +1190,22 @@
     "html_url": "https://learn.chatgpt.com/codex/amazon-bedrock",
     "route": "codex/amazon-bedrock",
     "kind": "doc"
+  },
+  {
+    "group": "Blog",
+    "title": "architectural visualization with astra",
+    "md_url": "https://learn.chatgpt.com/blog/architectural-visualization-with-astra.md",
+    "html_url": "https://learn.chatgpt.com/blog/architectural-visualization-with-astra",
+    "route": "blog/architectural-visualization-with-astra",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to build games with astra",
+    "md_url": "https://learn.chatgpt.com/blog/how-to-build-games-with-astra.md",
+    "html_url": "https://learn.chatgpt.com/blog/how-to-build-games-with-astra",
+    "route": "blog/how-to-build-games-with-astra",
+    "kind": "blog"
   },
   {
     "group": "Blog",

@@ -37,7 +37,8 @@ Use a group when several Bots need one shared outcome and visible handoffs.
 3. Open the group, then edit its generated name if needed.
 4. Describe the shared outcome and who owns the next step.
 
-On iPhone, use **+ → New Group Chat**. Group membership can be edited later.
+On iPhone or Android, use **+ → New Group Chat**. Group membership can be
+edited later.
 
 ### Direct a message
 

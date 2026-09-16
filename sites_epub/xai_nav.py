@@ -51,47 +51,94 @@ def _route_url(origin: str, route: str) -> tuple[str, str]:
     return html_url, html_url + ".md"
 
 
+LINK_RE = re.compile(
+    r"^\s*-\s+\[([^\]]+)\]\((https?://docs\.x\.ai/([^)\s]+)|/([^)\s]+))\)",
+)
+
+
 def parse_xai_llms(text: str, docs_url: str) -> list[IndexEntry]:
-    """Parse Mintlify `===/path===` sections into one entry per page."""
+    """Parse docs.x.ai/llms.txt into IndexEntry list.
+
+    Supports both:
+    1. Legacy Mintlify `===/path===` section slices.
+    2. Standard markdown link index (`- [Title](url.md)`).
+    """
     parsed = urlparse(docs_url)
     origin = f"{parsed.scheme}://{parsed.netloc}"
 
     out: list[IndexEntry] = []
     seen: set[str] = set()
-    route = ""
-    title = ""
 
-    def flush() -> None:
-        nonlocal route, title
-        if not route or route in seen:
+    if SECTION_RE.search(text):
+        route = ""
+        title = ""
+
+        def flush() -> None:
+            nonlocal route, title
+            if not route or route in seen:
+                route, title = "", ""
+                return
+            seen.add(route)
+            html_url, md_url = _route_url(origin, route)
+            slug = route.strip("/").rsplit("/", 1)[-1] or "index"
+            out.append(
+                IndexEntry(
+                    group=_group_from_route(route),
+                    title=title or _title_from_slug(slug),
+                    md_url=md_url,
+                    html_url=html_url,
+                    route=route.strip("/") or "index",
+                    kind="doc",
+                )
+            )
             route, title = "", ""
-            return
+
+        for line in text.splitlines():
+            sm = SECTION_RE.match(line)
+            if sm:
+                flush()
+                route = sm.group(1)
+                continue
+            if not route or title:
+                continue
+            hm = H1_RE.match(line)
+            if hm:
+                title = hm.group(1).strip()
+        return out
+
+    current_heading = ""
+    for line in text.splitlines():
+        if line.startswith("## "):
+            current_heading = line[3:].strip()
+            continue
+        if current_heading in ("Machine-readable resources", "Optional"):
+            continue
+        m = LINK_RE.match(line)
+        if not m:
+            continue
+        link_title = m.group(1).strip()
+        path = m.group(3) or m.group(4)
+        clean_path = path.split("#", 1)[0].split("?", 1)[0].rstrip("/")
+        if clean_path.endswith(".md"):
+            clean_path = clean_path[:-3]
+        if clean_path.endswith((".json", ".xml", ".txt", ".yaml", ".yml")):
+            continue
+        route = clean_path.strip("/")
+        if not route or route in seen:
+            continue
         seen.add(route)
         html_url, md_url = _route_url(origin, route)
         slug = route.strip("/").rsplit("/", 1)[-1] or "index"
         out.append(
             IndexEntry(
                 group=_group_from_route(route),
-                title=title or _title_from_slug(slug),
+                title=link_title or _title_from_slug(slug),
                 md_url=md_url,
                 html_url=html_url,
-                route=route.strip("/") or "index",
+                route=route,
                 kind="doc",
             )
         )
-        route, title = "", ""
-
-    for line in text.splitlines():
-        sm = SECTION_RE.match(line)
-        if sm:
-            flush()
-            route = sm.group(1)
-            continue
-        if not route or title:
-            continue
-        hm = H1_RE.match(line)
-        if hm:
-            title = hm.group(1).strip()
     return out
 
 
