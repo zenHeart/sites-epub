@@ -1,0 +1,327 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.coze.cn/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+随着人工智能技术的不断进步，大模型在翻译质量、效率、上下文理解和多语言支持等方面表现出色。因此，越来越多的人开始使用大模型进行文本翻译，以提升效率，降低成本。
+
+本教程详细指导你如何在扣子开发平台上完成一个网页端 AI 翻译应用的开发。
+
+:::tip 说明
+* 由于产品方向调整，扣子开发平台（低代码）不再向新注册用户开放。如需开发智能体、工作流、应用等，请前往[扣子编程](https://code.coze.cn/?surl_token=FJvCs&zlink_code=FFKdE&utm_medium=docs&utm_source=docs&utm_content=landingpage&utm_id=&utm_campaign=&utm_term=docs&utm_source_platform=)，如需使用 Agent 请前往[扣子](https://www.coze.cn/?surl_token=FJvCs&zlink_code=FFKdE&utm_medium=docs&utm_source=docs&utm_content=landingpage&utm_id=&utm_campaign=&utm_term=docs&utm_source_platform=)。更多信息，请参考[为什么新注册账号无法使用低代码开发平台？](https://topic.bytedance.net/guides_FAQ#hvpDm6aMl)。
+* 在团队版和企业版中，企业超级管理员可以通过**功能访问控制**，控制功能的可见范围。如果你未看到预期的功能，请联系企业超级管理员确认。更多信息，请参考[功能访问控制](/guides_team_config#hnd1HfjfQ)。
+:::
+
+## AI 翻译应用介绍 {#eb5cd435}
+
+这个 AI 翻译应用支持用户选择目标翻译语言，在输入文本内容后，点击**开始翻译**就可以获得到大模型的翻译结果了。
+
+![Image=614x285](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/3fbbfc46746a435aa94ea5b97562f371~tplv-goo7wpa0wc-topic.webp)
+
+## 步骤一：设计你的应用功能 {#73e9ed95}
+
+首先，你需要进行应用设计，规划应用的主体功能和用户界面。
+
+这个 AI 翻译应用的核心功能是能够满足用户的文本翻译需求，并支持用户选择指定翻译的语言。翻译功能可以通过创建一个包含大模型节点的工作流来实现。
+
+基于以上功能规划，这个应用的用户界面会包含以下组件：
+
+* 一个让用户可以输入翻译内容的区域
+* 一个让用户选择翻译语言的列表
+* 一个翻译按钮来触发翻译操作
+* 一个展示翻译结果的内容区域
+
+完成主体功能设计和规划后，就可以开始 AI 应用搭建了。
+
+## 步骤二：创建 AI 应用项目 {#6d3f6692}
+
+首先，你需要创建一个 AI 应用项目。
+
+AI 应用项目支持使用工作流来完成复杂的业务逻辑编排，也支持使用数据库、知识库、插件等资源实现与本地数据或线上数据的交互。此外，AI 应用项目支持通过拖拉拽的方式搭建用户界面，并且能够实现与业务逻辑的联动。
+
+参考以下操作，创建 AI 应用项目。
+
+1. 登录[扣子开发平台](https://www.coze.cn/home?surl_token=FJvCs&zlink_code=FFKdE&utm_medium=docs&utm_source=docs&utm_content=landingpage&utm_id=&utm_campaign=&utm_term=docs&utm_source_platform=)。
+   扣子开发平台是扣子编程的旧版本，你也可以在[扣子编程首页](https://code.coze.cn/home?surl_token=FJvCs&zlink_code=FFKdE&utm_medium=docs&utm_source=docs&utm_content=landingpage&utm_id=&utm_campaign=&utm_term=docs&utm_source_platform=)右上角单击**回到旧版**，进入低代码项目的管理入口。
+2. 在页面顶部选择目标工作空间，然后在左侧导航栏中单击**创建** > **创建应用**。
+3. 在**应用模板**页面，单击**空白应用**。
+4. 输入应用名称，并单击图标旁的 AI 图标使用 AI 自动生成一个图标。然后单击**确定**。
+   应用创建成功后，你会直接进入到应用的集成开发环境 (IDE)。   
+
+
+## 步骤三：编排业务逻辑 {#b13970d6}
+
+创建完 AI 应用项目后，你可以开始进行业务逻辑编排了。扣子 提供了大模型、代码、意图识别、知识库写入与检索等丰富的工作流节点，以满足复杂的业务场景需求。此外，你还可以通过使用变量、插件、知识库等方式与你的本地数据和线上数据进行集成。
+
+本教程中的 AI 翻译应用，主要是使用大模型实现多语言翻译，所以只需要创建一个包含大模型节点的工作流即可。
+
+参考以下步骤，创建一个实现翻译功能的工作流。
+
+1. 在**业务逻辑**页面，找到**工作流**，然后单击 **+** > **新建工作流**。
+   ![Image=682x100](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/f7604c796dea4a98b14cba0a18a679fe~tplv-goo7wpa0wc-topic.webp)
+2. 输入工作流名称和描述，然后单击**确认**。
+   :::tip 说明
+   工作流名称只支持字母、数字和下划线，且必须以字母开头。
+   :::
+   ![Image=332x328](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/ef0b2ef81d334856a193577bddc40d9a~tplv-goo7wpa0wc-topic.webp)
+3. 在工作流画布，单击**开始**节点的连接线或画布下方的**添加节点**按钮，然后选择**大模型**节点，并完成连线。
+   ![Image=578x361](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/53f472b01a35414f809204c8f358ed93~tplv-goo7wpa0wc-topic.webp)
+4. 单击**开始**节点进行配置。开始节点用于设定启动工作流需要的信息。
+   本场景中，用户需要提供要翻译的内容和目标语言，所以需要配置两个对应的输入参数。
+   1. 在输入区域，单击 **+** 图标，配置第一个变量 (content) 用于传入用户要翻译的内容。
+   2. 再次单击 **+** 图标。输入第二个变量 (lang) 用来指定目标语言。
+      ![Image=348x217](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/3852cd48b7e24988b25a7709fb0c0c16~tplv-goo7wpa0wc-topic.webp)
+5. 单击**大模型**节点进行配置。
+   1. 在**模型**区域，展开模型列表，选择用来执行翻译任务的大模型。本教程中选择**豆包 工具调用** 模型，并使用模型默认配置。
+      如果你想调整模型配置，单击配置图标。
+      ![Image=461x100](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/1822ca156fa643f4a8730ce59c2b245b~tplv-goo7wpa0wc-topic.webp)
+   2. 配置输入参数，这些输入参数可以在模型提示词中使用。
+      本教程中需要将用户输入的译文内容和目标语言添加到提示词中，让模型按照用户选择的语言进行翻译。所以需要配置两个输入参数。
+      1. 单击**输入**区域的+​图标，然后点击对应的设置图标，选择开始节点中配置的变量。
+         ![Image=454x209](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/84ab6d82c69e452d8cb17bb07dcf8dd6~tplv-goo7wpa0wc-topic.webp)
+      2. 重复上述操作，再添加目标语言的这个变量。
+         删除不需要的输入信息，确保输入中只包含下图中的这两个参数。
+         ![Image=342x138](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/5d412297111e445fb62108377ba24a91~tplv-goo7wpa0wc-topic.webp)
+   3. 在**系统提示词**区域，输入以下内容作为系统提示词。
+      系统提示词是一组指示模型行为和功能范围的指令，可以包括如何提问、如何提供信息、如何请求特定功能等。系统提示词也用于设定对话的边界，比如告知用户哪些类型的问题或请求是不被接受的。
+      ```Plain Text
+      # 角色
+      你是一个专业的翻译官，能够准确地将用户输入的内容翻译成目标语言，不进行随意扩写。
+      
+      ## 技能
+      ### 技能 1：翻译文本
+      1. 当用户提供一段文本时，迅速将其翻译成目标语言。
+      2. 确保翻译的准确性和流畅性。
+      
+      ## 限制：
+      - 只进行翻译工作，不回答与翻译无关的问题。
+      - 严格按照用户要求的目标语言进行翻译，不得擅自更改。
+      ```
+      ![Image=326x362](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/4423c778b3924377bad2c130febfc142~tplv-goo7wpa0wc-topic.webp)
+   4. 在**用户提示词**区域，输入用户提示词。
+      用户提示词通常是直接的命令，告诉模型要执行的任务或意图。例如“帮我翻译下这段内容”，指令越清晰，模型的输出也更贴近你的实际需求。
+      1. 首先输入以下内容。
+         ```Plain Text
+         将用户输入的内容翻译成目标语言。
+         ```
+         因为不同用户提供的翻译内容，选择的目标语言都不同，所以需要将译文内容和目标语言使用输入变量来指代，这样就可以在运行时替换成真实的用户需求。
+      2. 在“内容”文字后输入`{`，然后选择指代翻译内容的变量。
+         ![Image=436x210](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/f81ba4c039e3495683fc4f410e2b3bf4~tplv-goo7wpa0wc-topic.webp)
+         :::tip 说明
+         如果你没有可用的变量，请检查是否按照教程配置了模型节点的输入变量。
+         :::
+      3. 重复上述方法，添加目标语言变量。
+         ![Image=201x206](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/261d7739b0304ac1995e91093943db4f~tplv-goo7wpa0wc-topic.webp)
+5. 在**输出**区域，将**输出格式**配置为**文本**，使用默认配置的**output**变量。
+   ![Image=379x111](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/e15056e34ddb4ad090ae5ddbd287bd7a~tplv-goo7wpa0wc-topic.webp)
+6. 连接大模型节点与结束节点，然后选择**结束**节点进行配置。
+   1. 单击**结束**节点，然后选择**返回文本**。
+   2. 选择大模型节点的输出结果作为输出参数。
+      ![Image=532x327](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/963d436f4ad2442aa9296cc14bba74de~tplv-goo7wpa0wc-topic.webp)
+   3. 在**回答内容**文本框中输入`{{output}}`，使用大模型的翻译内容作为最终的回复。
+   4. 开启**流式输出**，实现打字机一样的输出效果。
+      ![Image=340x332](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/44cae0b5c77e40968a302f8ea8f99dee~tplv-goo7wpa0wc-topic.webp)
+      至此，你已经完成整个工作流的搭建。
+7. 为了保证业务逻辑实现符合预期，单击**试运行**测试工作流的执行。
+   ![Image=508x133](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/c0f8b432c3124ac49dc1b858cf9dbf8b~tplv-goo7wpa0wc-topic.webp)
+8. 在**试运行**页面，输入要翻译的内容和目标语言，然后单击**试运行**。
+   ![Image=216x371](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/81652b710f3441b2b435011de01be9cb~tplv-goo7wpa0wc-topic.webp)
+9. 查看运行结果是否符合预期。
+   如果不符合预期，你可以逐一检查每个节点的输出结果。
+   ![Image=229x337](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/b227b1274ee34cafac7ac6f99aad7794~tplv-goo7wpa0wc-topic.webp)   
+
+
+在完成业务逻辑搭建并通过测试后，你就可以开始用户界面搭建了。
+
+## 步骤四：搭建用户界面 {#4236a857}
+
+扣子提供了可视化的用户界面搭建能力，你可以通过拖拉拽的方式搭建一个用户界面，无需写一行代码。
+
+参考以下操作，搭建网页端翻译应用的用户界面。
+
+1. 在应用 IDE，单击页面上方的**用户界面**页签。
+2. 选择**桌面网页**，然后单击**开始搭建**。
+   ![Image=391x289](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/4eed38a702614651a37052cd38ecea2f~tplv-goo7wpa0wc-topic.webp)
+3. 添加页面组件，完成页面搭建。
+   翻译页面由3个块级组成，具体使用的组件和配置请参考下述步骤。
+   ![Image=499x225](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/df734e7c2ecf4029a70a47b18289e091~tplv-goo7wpa0wc-topic.webp)   
+
+
+### 1 搭建页面结构 {#07bb8a84}
+
+整体上 AI 翻译应用的用户界面由上下两个部分组成。
+
+* 上面是标题区域。
+* 下面是功能区域。功能区域又分为左右两个区域。
+
+想要实现这样的页面结构就需要使用容器组件。容器组件是用来进行页面布局的，可以把页面划分成不同的区域和排列顺序。容器组件中可以添加其他各种组件例如文本组件、按钮组件等。
+
+参考以下操作，完成页面布局：
+
+1. 确认画布的**排列方向**为**纵向**。
+   ![Image=625x354](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/64f745e3a671499d9d30f32005189637~tplv-goo7wpa0wc-topic.webp)
+2. 在**组件**面板中，找到**布局组件 > 容器**组件，然后将容器组件拖入到中间的画布中。
+3. 在画布中，选中拖入的**容器**组件。组件名称为`Div1`。
+   ![Image=628x197](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/bf999c15891f47619fbc1a638a5b2ef9~tplv-goo7wpa0wc-topic.webp)
+4. 参考以下配置，修改容器组件`Div1`的属性。
+   <!-- @cols-width: 384,435 -->
+   | **Div1的属性设置**  | **示例**  |
+   | --- | --- |
+   | 设置尺寸和布局。 | ![Image=2366x659](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/7fa6c411e444470bac63657320df4c1f~tplv-goo7wpa0wc-topic.webp)  | \
+   | | | \
+   | * 将**宽度**设置为**填充容器**（即100%）。 | | \
+   | * 将**高度**设置为60 px。 | | \
+   | * 将**排列方向**设置为**横向**。  | |
+   | 设置样式。 | ![Image=1926x1073](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/65b4bb3958a0414d943a9bde537d2d5d~tplv-goo7wpa0wc-topic.webp)  | \
+   | | | \
+   | * 找到**填充**属性，然后单击删除图标去掉背景色。 | | \
+   | * 将边框设置为灰色。  | |
+5. 再拖入一个**容器**组件用来组织功能区，并在画布中选中该组件。组件名称为`Div2`。然后选中该组件，参考下表中的属性配置进行修改。
+   ![Image=674x210](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/a6fb3b1b2b7748d192a2e937c446dcf0~tplv-goo7wpa0wc-topic.webp)
+   <!-- @cols-width: 384,460 -->
+   | **Div2的属性设置**  | **示例**  |
+   | --- | --- |
+   | * 设置尺寸，将**宽度**和**高度**都设置为**填充容器**（即100%）。 | ![Image=1958x1000](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/9881e8b68b67492d9cc209f3bfcd2080~tplv-goo7wpa0wc-topic.webp)  | \
+   | * 排列方向设置为**横向**。 | | \
+   | * 设置样式。找到**填充**属性，然后单击删除图标去掉背景色。  | |
+6. 向画布的容器组件`Div2`的左侧区域中，拖入一个容器组件`Div3`，用来组织左侧的内容翻译区域。然后选中该组件，参考下表中的属性配置进行修改。
+   ![Image=585x228](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/744b0fd95164418ba4667fbbb3c19f40~tplv-goo7wpa0wc-topic.webp)
+   <!-- @cols-width: 301,540 -->
+   | **Div3的属性设置**  | **示例**  |
+   | --- | --- |
+   | * 将**宽度**设置为50%。 | ![Image=1950x935](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/fc1500f9a8cb4e2aab27c2711e3d1db5~tplv-goo7wpa0wc-topic.webp)  | \
+   | * 将**高度**设置为固定值550px。 | | \
+   | * 删除背景色。  | |
+7. 向画布中容器组件`Div2`的**右侧**区域中，拖入一个容器组件`Div4`，用来组织右侧的翻译结果区域。然后选中该组件，参考下表中的属性配置进行修改。
+   ![Image=630x272](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/817508c7e3504d97bc0ddf2e212e8d19~tplv-goo7wpa0wc-topic.webp)
+   <!-- @cols-width: 303,535 -->
+   | **Div4的属性设置**  | **示例**  |
+   | --- | --- |
+   | * 将**宽度**设置为50%。 | ![Image=1993x886](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/4b8affa97aeb4523a8fe126039ef5c37~tplv-goo7wpa0wc-topic.webp)  | \
+   | * 将**高度**设置为固定值550px。 | | \
+   | * 删除背景色。  | |   
+
+
+至此，我们就完成了这个翻译应用的页面结构搭建。
+
+![Image=444x337](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/a1de244728114490b385e64f9ef01fbf~tplv-goo7wpa0wc-topic.webp)
+
+### 2 搭建页面标题 {#44ad1f90}
+
+参考以下操作，搭建页面的标题区域。
+
+1. 在**组件**面板中，找到**推荐组件 > 文本**组件，然后将文本组件拖入到顶部的容器组件`Div1`上。
+   ![Image=680x127](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/4d75b344ba8d4eeb91a4ddd65ec4754b~tplv-goo7wpa0wc-topic.webp)
+2. 在画布中，选中拖入的**文本**组件，然后在右侧的**属性**面板中设置文本内容，字号大小等。
+   ![Image=287x214](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/d57632d455a146cabdba6796611918b8~tplv-goo7wpa0wc-topic.webp)   
+
+
+至此，你已经完成了标题区域的搭建。
+
+![Image=541x118](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/1578e477f1d54407bb0a86224b034534~tplv-goo7wpa0wc-topic.webp)
+
+### 3 搭建左侧翻译内容区 {#e03b262d}
+
+参考以下操作，搭建翻译内容区域。
+
+1. 在**组件**面板中，将表单组件拖入到画布的容器组件`Div3`中，然后选中不需要的组件并按下 **Backspace** 键进行删除，只保留文本组件、选择组件和按钮组件。
+   ![Image=537x336](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/de19dc2083ae4bbcb146edd6867dc99a~tplv-goo7wpa0wc-topic.webp)
+2. 选中表单组件，参考下表修改它的属性。
+   <!-- @cols-width: 303,530 -->
+   | **Form表单组件的属性设置**  | **示例**  |
+   | --- | --- |
+   | * 将**宽度**和**高度**都设置为填充容器。 | ![Image=1950x1189](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/14a339652df64071b6843871e81573c7~tplv-goo7wpa0wc-topic.webp)  | \
+   | * 删除边框。  | |
+3. 选中表单内的文本输入框，然后将其拉伸它的大小，再修改属性配置。
+   * **标签内容**和**占位文案**都修改为：请输入翻译内容。
+   * **宽度**设置百分比 100%。
+      ![Image=606x306](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/a90854e0f5cc4093b26506a6a32b3051~tplv-goo7wpa0wc-topic.webp)
+4. 选中表单组件中的**选择**组件，然后修改它的属性配置。
+   * 标签内容修改为：目标语言。
+   * 选项设置：保留两个选项，分别为英语和日语。确保名称和选项值正确。
+      ![Image=613x330](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/54d4a3b890934255a4d3ea4bbfcb4bb2~tplv-goo7wpa0wc-topic.webp)
+5. 选中表单组件中的**按钮**组件，将**内容**修改为**开始翻译**。
+   ![Image=521x262](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/8b0a6e6cca374e759098bb1728dbd72f~tplv-goo7wpa0wc-topic.webp)   
+
+
+至此，我们就完成了左侧的翻译内容区域的页面功能搭建。
+
+![Image=400x303](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/2d5ceb7831cf43248abfc5b4412dbd70~tplv-goo7wpa0wc-topic.webp)
+
+### 4 搭建右侧翻译结果区 {#f3bdbc99}
+
+参考以下操作，搭建翻译结果区域。
+
+1. 在**组件**面板中，将 Markdown 组件拖入到画布的容器组件`Div4`中。
+   ![Image=635x370](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/e57cd6e8f05d42a6ac247faa45430b22~tplv-goo7wpa0wc-topic.webp)
+2. 选中新拖入的组件，配置以下属性。
+   * **内容**：删除已有内容，输入 Markdown 格式内容：`###### 翻译结果`。
+      ![Image=471x177](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/3f4504b5e7ae42bda02a8c4475c17cab~tplv-goo7wpa0wc-topic.webp)
+   * **高度和宽度**：设置为**填充容器**。
+   * **圆角**：设置为**10。**
+   * **内边距**：设置为**20。**
+   * **外边距**：设置为**0**。
+   * **边框**：设置为**灰色。**
+      ![Image=428x266](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/b081929f11d74906a1d533b29e28824c~tplv-goo7wpa0wc-topic.webp)      
+
+
+至此，我们就完成了翻译应用的用户界面搭建，可单击**属性**面板上方的**预览**选项进行页面预览。
+
+![Image=682x322](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/0b5e702d9285421b8f3b537b24ba6694~tplv-goo7wpa0wc-topic.webp)
+
+### 5 添加事件 {#4e80a289}
+
+搭建好页面后，就可以通过配置事件和添加数据实现业务逻辑与用户页面的联动了。
+
+本场景中，预期是希望用户点击开始翻译时，触发翻译工作流，并且将用户输入的译文和目标语言作为输入传入给工作流。所以，需要为**开始翻译**按钮组件添加一个点击事件。
+
+1. 在**用户页面**页签下，单击已添加的**开始翻译**按钮组件，然后在配置面板中选择**事件**，最后单击**新建。**
+   ![Image=512x314](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/bbf3b970925448a6b1266c54efbd8fdc~tplv-goo7wpa0wc-topic.webp)
+2. 事件类型选择**点击时**。
+3. 执行动作选择**调用工作流**，然后选择已经创建的工作流。选择工作流后，会自动展示所选工作流配置的输入参数。
+4. 将鼠标悬浮至content参数的文本框上，然后单击右侧的配置图标。
+   ![Image=209x333](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/30b1ad49ea4a458ab7c1c83cdd8c54d4~tplv-goo7wpa0wc-topic.webp)
+5. 在展开的配置面板中，找到用户输入翻译内容的组件 (Textarea)，选择表单值作为工作流中content参数的值。配置完成后关闭参数配置面板。
+   ![Image=689x281](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/e23327e3d44c4a698de408aec9d4858b~tplv-goo7wpa0wc-topic.webp)
+6. 重复上述操作，将目标语言组件的值作为工作流lang参数的值。
+   ![Image=697x300](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/619801ce7cdf44efbee79cc8815477dc~tplv-goo7wpa0wc-topic.webp)
+7. 单击**确认**完成工作流的调用。
+8. 配置翻译结果数据。
+   最后需要将工作流返回的翻译内容展示在用户页面中。
+   1. 在画布中，选中最后添加的Markdown组件。
+   2. 在右侧的**属性**面板中，将鼠标悬浮至内容文本框内，然后单击出现的配置图标。
+      ![Image=573x360](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/be9e6ab9e40a45fabcd6ee0f0436a84e~tplv-goo7wpa0wc-topic.webp)
+   3. 在展开的面板中，首先在翻译结果下增加一行，然后选择工作流的返回数据作为翻译结果展示给用户。配置完成后，关闭配置面板。
+      ![Image=597x276](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/aed9f7538eb54bfbaf4c824d8d0e6fc5~tplv-goo7wpa0wc-topic.webp)      
+
+
+## 步骤五：效果测试 {#I5JXMePDnw}
+
+完成上述所有配置后，单击**预览**，查看整体功能并进行体验。
+
+![Image=277x196](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/60165dadec35445ca438f955bec83792~tplv-goo7wpa0wc-topic.webp)
+
+你可以在打开的预览页面中，输入一段文字，然后选择一个翻译语言，单击**开始翻译**。查看是否在翻译结果区域有出现翻译后的内容。
+
+![Image=614x285](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/3fbbfc46746a435aa94ea5b97562f371~tplv-goo7wpa0wc-topic.webp)
+
+## 步骤六：发布应用 {#U6O37lcErK}
+
+完成应用测试后，你就可以将应用发布到商店或模板，或发布成 API 服务与其他应用集成。
+
+本教程中以商店为例。
+
+1. 在应用 IDE 中，单击右上角的**发布**按钮。
+2. 在**发布**页面，输入版本号和发布描述。
+3. 选择扣子商店，然后选择应用分类。
+   ![Image=479x349](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/eecaa969d22a475f8226be7691b8b6e3~tplv-goo7wpa0wc-topic.webp)
+4. 单击页面上的**发布**按钮，完成应用发布。
+   发布完成后，你就可以在扣子商店上使用这个应用了。   
+
+
+## 相关文档 {#RcErdD5WWw}
+
+
+* [编排业务逻辑](/guides/build_project_in_projectide)
+* [用户界面编辑器概述](/guides/ui_builder_overview)
+* [低代码工作流介绍](/guides/workflow)
+* [了解项目发布](/guides/publish_overview)

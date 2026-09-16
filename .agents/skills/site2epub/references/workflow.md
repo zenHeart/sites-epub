@@ -21,6 +21,12 @@ python3 -m sites_epub changelog            # 本地：由 routes.json git 历史
 3. 站点文档导航在前；**Blog 必须是最后一个 TOC parent**。
 4. `fetch` 把 `updated_at`（语料时间）写进 `catalog.json`，书架用来对照线上是否过期。其他 EPUB 站点在 `catalog.json` → `sites`，封面点击跳到那些 URL。
 
+## 范围铁律：产品书不是 API 书（SKILL.md「范围铁律」的操作化）
+
+- 新建 vendor 前先画**产品家族表**：该厂商面向用户的产品各是什么（网页版/IDE/Agent/创作工具…），每产品一个独立大章节；开放平台 API 文档站整个跳过（zhipu/stepfun/deepseek 平台书 2026-09-16 已按此移除）。
+- 已有书中混入的 API 组/页，增量时剔除路由（gemini 的 `Gemini API Reference` 组与 `gemini-api/docs/*` API 页已剔，仅留 AI Studio 产品页）。
+- 例外：产品自身的开发者文档若就是产品主体（如 Coze 的「搭建 Agent」文档），照收——判据仍是「用产品」而非「调模型 API」。
+
 ## 提交
 
 提交：`catalog.json`、`vendors/<id>/vendor.json`、`fingerprints.json`、`corpus/pages`、`corpus/routes.json`、`corpus/image-map.json`、压缩后的图片。

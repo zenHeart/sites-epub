@@ -12,8 +12,14 @@ compatibility: python3 + pandoc + beautifulsoup4 + lxml. Crawl needs network on 
 
 ## 何时用 / 何时不用
 
-- 用：把官方文档树 + 博客编成一书；`/site2epub`；增量更新已有厂商。
+- 用：把**厂商产品**文档树 + 高质量博客 + 使用经验编成一书；`/site2epub`；增量更新已有厂商。
 - 不用：本地 Word/HTML 成品 → `book` 模式 C；源码级写书/课程书 → `book` A/B；只调研文档树不打包 → `deep-research`。
+
+## 范围铁律:产品书,不是 API 书(用户 2026-09-16 定调)
+
+对标 codex / claude code / cursor / gemini / manus 五本:收的都是**模型厂商面向用户的产品**——产品文档、官方 blog、教程与使用经验沉淀。**开放平台 API 使用文档(API key / 鉴权 / 端点参考 / SDK 接入)不属于本书系范畴**,发现即剔出路由。判断法:这页内容是「用这个产品」还是「调这个厂商的 API」——后者出局。
+
+**章节组织**:每个独立产品、知识域(如厂商经验/教程)或 blog 各占一个顶层大章节(group),按产品逐个组织,绝不按 API 域混排;Blog 恒为最后一个大章节。每章标题必须链回原文(打包器既有不变量)。
 
 ## 快流程
 

@@ -77,7 +77,11 @@ def discover_entries(
                 docs = parse_docs_html(docs_html, vendor.docs_url)
     blog: list[IndexEntry] = []
     if vendor.blog_url and blog_html:
-        if vendor.adapter == "gemini":
+        if vendor.adapter == "kimi":
+            from .kimi_nav import parse_kimi_blog
+
+            blog = parse_kimi_blog(blog_html, vendor.blog_url)
+        elif vendor.adapter == "gemini":
             from .gemini_nav import parse_gemini_blog
 
             blog = parse_gemini_blog()

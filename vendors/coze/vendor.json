@@ -1,0 +1,15 @@
+{
+  "id": "coze",
+  "name": "Coze",
+  "docs_url": "https://docs.coze.cn",
+  "blog_url": null,
+  "icon": "vendors/coze/icon.png",
+  "author": "ByteDance",
+  "adapter": "generic",
+  "updated_at": "",
+  "packed_at": "",
+  "summary": "字节跳动扣子(Coze)Agent 产品文档:低代码搭建、工作流、扣子编程、扣子罗盘、教程与客户案例;不含开放平台 API 文档。",
+  "category": "docs",
+  "chapters": 763,
+  "cover": "covers/coze.png"
+}

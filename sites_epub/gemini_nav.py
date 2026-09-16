@@ -168,29 +168,21 @@ def parse_gemini_docs() -> list[IndexEntry]:
     def fetch(url: str) -> str:
         return fetch_text(url)
 
-    # 1. Gemini API guides (ai.google.dev) — includes the AI Studio quickstart tree
+    # 1. AI Studio product pages (ai.google.dev devsite nav). Scope rule
+    #    (SKILL.md 范围铁律): product pages only — Gemini API usage docs
+    #    (api keys, endpoints, models, pricing) and the API reference are
+    #    OUT of scope for this product-book series.
     html = fetch("https://ai.google.dev/gemini-api/docs")
     docs += nav_entries(
         html,
         "https://ai.google.dev/gemini-api/docs",
-        lambda p: p.startswith("/gemini-api/"),
-        "Gemini API and AI Studio",
+        lambda p: "/aistudio" in p or "/ai-studio" in p,
+        "AI Studio",
         "gemini-api/",
-        "Gemini API overview",
+        "AI Studio",
         strip="/gemini-api",
     )
-    # 2. Gemini API reference
-    html = fetch("https://ai.google.dev/api")
-    docs += nav_entries(
-        html,
-        "https://ai.google.dev/api",
-        lambda p: p.startswith("/api/"),
-        "Gemini API Reference",
-        "api-ref/",
-        "API reference",
-        strip="/api",
-    )
-    # 3. Antigravity incl. the agy CLI (llms.txt; keep only the /docs/ section)
+    # 2. Antigravity incl. the agy CLI (llms.txt; keep only the /docs/ section)
     text = fetch("https://antigravity.google/llms.txt")
     seen: set[str] = set()
     for title, href in LLMS_LINK.findall(text):

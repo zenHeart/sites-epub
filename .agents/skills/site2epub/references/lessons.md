@@ -185,3 +185,15 @@ runtime_source 误判**不要修**——它让含 React 示例的页面保持每
 **怎么修**：`http.fetch_bytes` 请求头显式 `Accept-Encoding: gzip`（明确排除 stdlib 解不了的 brotli），响应按 `Content-Encoding`（或 gzip magic 兜底）用 `gzip.decompress`/`zlib` 解压后再返回。
 
 **怎么防止复发**：任何源站可能强制压缩；新增 vendor 后对语料跑一次 U+FFFD/magic 扫描（`work/find_mojibake.py` 思路）。解压必须在 http 层做，语料层不可能恢复已丢失的字节。
+
+---
+
+## 13. markdown 表格行内压扁的围栏（coze，2026-09-16）
+
+**症状**：check_epub 报某章 `leftover_markdown_fence`，但源页围栏不在独立行——`| ...正文... |```JSON |\`，围栏标记被压进**转义管道表的行内**。
+
+**根因**：站点导出的 .md 把表格 + 单元格内代码块折叠成单行；pandoc 管道表逐格渲染，格内围栏变成字面 ``` 泄漏进正文。行级「裸围栏」正则（§8 的 `promote_markdown_fences`）匹配不到行内形态。
+
+**怎么修**：对以 `|` 开头且含 ``` 的行，行内剔除 ```` ```lang ```` 标记（保留格内代码文本）——coze `cozeloop_create-dataset` 即此修法。手工语料修会被 refetch 带回（§4 规律），重抓后需重放。
+
+**怎么防止复发**：新 vendor 门禁红 `leftover_markdown_fence` 时，先 repr 打印围栏行确认形态（独立行 vs 行内压扁），再选对应修法，不要盲改正则。

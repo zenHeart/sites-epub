@@ -1,850 +1,170 @@
 [
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5feb\u901f\u5f00\u59cb",
-    "md_url": "https://platform.kimi.com/docs/get-api-key.md",
-    "html_url": "https://platform.kimi.com/docs/get-api-key",
-    "route": "docs/get-api-key",
+    "group": "Docs",
+    "title": "index",
+    "md_url": "https://www.kimi.com/.md",
+    "html_url": "https://www.kimi.com/",
+    "route": "index",
     "kind": "doc"
   },
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u6a21\u578b\u5217\u8868",
-    "md_url": "https://platform.kimi.com/docs/models.md",
-    "html_url": "https://platform.kimi.com/docs/models",
-    "route": "docs/models",
+    "group": "Docs",
+    "title": "\u6211\u7684 Kimi",
+    "md_url": "https://www.kimi.com/mykimi.md",
+    "html_url": "https://www.kimi.com/mykimi",
+    "route": "mykimi",
     "kind": "doc"
   },
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Kimi K3",
-    "md_url": "https://platform.kimi.com/docs/guide/kimi-k3-quickstart.md",
-    "html_url": "https://platform.kimi.com/docs/guide/kimi-k3-quickstart",
-    "route": "docs/guide/kimi-k3-quickstart",
+    "group": "Docs",
+    "title": "\u5b9a\u65f6\u4efb\u52a1",
+    "md_url": "https://www.kimi.com/tasks.md",
+    "html_url": "https://www.kimi.com/tasks",
+    "route": "tasks",
     "kind": "doc"
   },
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Kimi K2.7 Code",
-    "md_url": "https://platform.kimi.com/docs/guide/kimi-k2-7-code-quickstart.md",
-    "html_url": "https://platform.kimi.com/docs/guide/kimi-k2-7-code-quickstart",
-    "route": "docs/guide/kimi-k2-7-code-quickstart",
+    "group": "Docs",
+    "title": "PPT",
+    "md_url": "https://www.kimi.com/slides.md",
+    "html_url": "https://www.kimi.com/slides",
+    "route": "slides",
     "kind": "doc"
   },
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Kimi K2.6",
-    "md_url": "https://platform.kimi.com/docs/guide/kimi-k2-6-quickstart.md",
-    "html_url": "https://platform.kimi.com/docs/guide/kimi-k2-6-quickstart",
-    "route": "docs/guide/kimi-k2-6-quickstart",
+    "group": "Docs",
+    "title": "\u96c6\u7fa4",
+    "md_url": "https://www.kimi.com/agent-swarm.md",
+    "html_url": "https://www.kimi.com/agent-swarm",
+    "route": "agent-swarm",
     "kind": "doc"
   },
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u601d\u8003\u6a21\u578b",
-    "md_url": "https://platform.kimi.com/docs/guide/use-thinking-models.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-thinking-models",
-    "route": "docs/guide/use-thinking-models",
+    "group": "Docs",
+    "title": "\u6df1\u5ea6\u7814\u7a76",
+    "md_url": "https://www.kimi.com/deep-research.md",
+    "html_url": "https://www.kimi.com/deep-research",
+    "route": "deep-research",
     "kind": "doc"
   },
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u63a8\u7406\u5f3a\u5ea6",
-    "md_url": "https://platform.kimi.com/docs/guide/use-reasoning-effort.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-reasoning-effort",
-    "route": "docs/guide/use-reasoning-effort",
+    "group": "Docs",
+    "title": "\u6587\u6863",
+    "md_url": "https://www.kimi.com/docs.md",
+    "html_url": "https://www.kimi.com/docs",
+    "route": "docs",
     "kind": "doc"
   },
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u914d\u7f6e\u591a\u8f6e\u5bf9\u8bdd\u53c2\u6570",
-    "md_url": "https://platform.kimi.com/docs/guide/engage-in-multi-turn-conversations-using-kimi-api.md",
-    "html_url": "https://platform.kimi.com/docs/guide/engage-in-multi-turn-conversations-using-kimi-api",
-    "route": "docs/guide/engage-in-multi-turn-conversations-using-kimi-api",
+    "group": "Docs",
+    "title": "\u7f51\u7ad9",
+    "md_url": "https://www.kimi.com/websites.md",
+    "html_url": "https://www.kimi.com/websites",
+    "route": "websites",
     "kind": "doc"
   },
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f7f\u7528 Kimi API \u7684\u6d41\u5f0f\u8f93\u51fa\u529f\u80fd",
-    "md_url": "https://platform.kimi.com/docs/guide/utilize-the-streaming-output-feature-of-kimi-api.md",
-    "html_url": "https://platform.kimi.com/docs/guide/utilize-the-streaming-output-feature-of-kimi-api",
-    "route": "docs/guide/utilize-the-streaming-output-feature-of-kimi-api",
+    "group": "Docs",
+    "title": "\u8868\u683c",
+    "md_url": "https://www.kimi.com/sheets.md",
+    "html_url": "https://www.kimi.com/sheets",
+    "route": "sheets",
     "kind": "doc"
   },
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f7f\u7528 Kimi API \u7684 JSON Mode",
-    "md_url": "https://platform.kimi.com/docs/guide/use-json-mode-feature-of-kimi-api.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-json-mode-feature-of-kimi-api",
-    "route": "docs/guide/use-json-mode-feature-of-kimi-api",
+    "group": "Docs",
+    "title": "\u8bbe\u8ba1",
+    "md_url": "https://www.kimi.com/design.md",
+    "html_url": "https://www.kimi.com/design",
+    "route": "design",
     "kind": "doc"
   },
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f7f\u7528 Kimi API \u7684 Partial Mode",
-    "md_url": "https://platform.kimi.com/docs/guide/use-partial-mode-feature-of-kimi-api.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-partial-mode-feature-of-kimi-api",
-    "route": "docs/guide/use-partial-mode-feature-of-kimi-api",
+    "group": "Docs",
+    "title": "Kimi Work",
+    "md_url": "https://www.kimi.com/products/kimi-work.md",
+    "html_url": "https://www.kimi.com/products/kimi-work",
+    "route": "products/kimi-work",
     "kind": "doc"
   },
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u914d\u7f6e Kimi \u89c6\u89c9\u6a21\u578b",
-    "md_url": "https://platform.kimi.com/docs/guide/use-kimi-vision-model.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-kimi-vision-model",
-    "route": "docs/guide/use-kimi-vision-model",
+    "group": "Docs",
+    "title": "Kimi Code",
+    "md_url": "https://www.kimi.com/code.md",
+    "html_url": "https://www.kimi.com/code",
+    "route": "code",
     "kind": "doc"
   },
   {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f7f\u7528 Kimi API \u7684 Context Caching \u529f\u80fd",
-    "md_url": "https://platform.kimi.com/docs/guide/use-context-caching-feature-of-kimi-api.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-context-caching-feature-of-kimi-api",
-    "route": "docs/guide/use-context-caching-feature-of-kimi-api",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u52a8\u6001\u52a0\u8f7d\u5de5\u5177",
-    "md_url": "https://platform.kimi.com/docs/guide/use-dynamic-tool-loading.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-dynamic-tool-loading",
-    "route": "docs/guide/use-dynamic-tool-loading",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f7f\u7528 Kimi API \u5b8c\u6210\u5de5\u5177\u8c03\u7528\uff08tool_calls\uff09",
-    "md_url": "https://platform.kimi.com/docs/guide/use-kimi-api-to-complete-tool-calls.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-kimi-api-to-complete-tool-calls",
-    "route": "docs/guide/use-kimi-api-to-complete-tool-calls",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u8054\u7f51\u641c\u7d22\u6700\u4f73\u5b9e\u8df5",
-    "md_url": "https://platform.kimi.com/docs/guide/web-search-best-practice.md",
-    "html_url": "https://platform.kimi.com/docs/guide/web-search-best-practice",
-    "route": "docs/guide/web-search-best-practice",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f7f\u7528 $web_search \u5185\u7f6e\u5de5\u5177\u8054\u7f51\u641c\u7d22",
-    "md_url": "https://platform.kimi.com/docs/guide/use-web-search.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-web-search",
-    "route": "docs/guide/use-web-search",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5982\u4f55\u5728 Kimi API \u4e2d\u4f7f\u7528\u5b98\u65b9\u5de5\u5177",
-    "md_url": "https://platform.kimi.com/docs/guide/use-official-tools.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-official-tools",
-    "route": "docs/guide/use-official-tools",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5de5\u5177\u8c03\u7528\u7ea6\u675f",
-    "md_url": "https://platform.kimi.com/docs/guide/use-tool-choice.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-tool-choice",
-    "route": "docs/guide/use-tool-choice",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Kimi K3 API \u5de5\u5177\u8c03\u7528\u6700\u4f73\u5b9e\u8df5",
-    "md_url": "https://platform.kimi.com/docs/guide/kimi-k3-tool-calling-best-practice.md",
-    "html_url": "https://platform.kimi.com/docs/guide/kimi-k3-tool-calling-best-practice",
-    "route": "docs/guide/kimi-k3-tool-calling-best-practice",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f7f\u7528 response_format \u63a7\u5236\u6a21\u578b\u8f93\u51fa\u683c\u5f0f",
-    "md_url": "https://platform.kimi.com/docs/guide/response_format.md",
-    "html_url": "https://platform.kimi.com/docs/guide/response_format",
-    "route": "docs/guide/response_format",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u81ea\u52a8\u65ad\u7ebf\u91cd\u8fde",
-    "md_url": "https://platform.kimi.com/docs/guide/auto-reconnect.md",
-    "html_url": "https://platform.kimi.com/docs/guide/auto-reconnect",
-    "route": "docs/guide/auto-reconnect",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f7f\u7528 Kimi API \u8fdb\u884c\u6587\u4ef6\u95ee\u7b54",
-    "md_url": "https://platform.kimi.com/docs/guide/use-kimi-api-for-file-based-qa.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-kimi-api-for-file-based-qa",
-    "route": "docs/guide/use-kimi-api-for-file-based-qa",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f7f\u7528 Batch API \u6279\u91cf\u5904\u7406\u4efb\u52a1",
-    "md_url": "https://platform.kimi.com/docs/guide/use-batch-api.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-batch-api",
-    "route": "docs/guide/use-batch-api",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5728 Kimi Code CLI \u4e2d\u4f7f\u7528 Kimi API Platform",
-    "md_url": "https://platform.kimi.com/docs/guide/kimi-code-cli.md",
-    "html_url": "https://platform.kimi.com/docs/guide/kimi-code-cli",
-    "route": "docs/guide/kimi-code-cli",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5728 Codex \u4e2d\u4f7f\u7528 Kimi K3",
-    "md_url": "https://platform.kimi.com/docs/guide/codex-kimi.md",
-    "html_url": "https://platform.kimi.com/docs/guide/codex-kimi",
-    "route": "docs/guide/codex-kimi",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5728 OpenClaw \u4e2d\u8fde\u63a5 Kimi",
-    "md_url": "https://platform.kimi.com/docs/guide/use-kimi-in-openclaw.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-kimi-in-openclaw",
-    "route": "docs/guide/use-kimi-in-openclaw",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5728 Claude Code \u4e2d\u4f7f\u7528 Kimi",
-    "md_url": "https://platform.kimi.com/docs/guide/claude-code-kimi.md",
-    "html_url": "https://platform.kimi.com/docs/guide/claude-code-kimi",
-    "route": "docs/guide/claude-code-kimi",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5728 OpenCode \u4e2d\u4f7f\u7528 Kimi \u6a21\u578b",
-    "md_url": "https://platform.kimi.com/docs/guide/open-code.md",
-    "html_url": "https://platform.kimi.com/docs/guide/open-code",
-    "route": "docs/guide/open-code",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5728 Hermes Agent \u4e2d\u4f7f\u7528 Kimi K3",
-    "md_url": "https://platform.kimi.com/docs/guide/use-kimi-in-hermes-agent.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-kimi-in-hermes-agent",
-    "route": "docs/guide/use-kimi-in-hermes-agent",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5728 Playground \u4e2d\u914d\u7f6e ModelScope MCP \u670d\u52a1\u5668",
-    "md_url": "https://platform.kimi.com/docs/guide/configure-the-modelscope-mcp-server.md",
-    "html_url": "https://platform.kimi.com/docs/guide/configure-the-modelscope-mcp-server",
-    "route": "docs/guide/configure-the-modelscope-mcp-server",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "MoonPalace - Moonshot AI \u6708\u4e4b\u6697\u9762 Kimi API \u8c03\u8bd5\u5de5\u5177",
-    "md_url": "https://platform.kimi.com/docs/guide/use-moonpalace.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-moonpalace",
-    "route": "docs/guide/use-moonpalace",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f7f\u7528 Playground \u8c03\u8bd5\u6a21\u578b",
-    "md_url": "https://platform.kimi.com/docs/guide/use-playground-to-debug-the-model.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-playground-to-debug-the-model",
-    "route": "docs/guide/use-playground-to-debug-the-model",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5efa\u7acb\u5e76\u8ba4\u8bc1\u4f60\u7684\u7ec4\u7ec7",
-    "md_url": "https://platform.kimi.com/docs/guide/org-best-practice.md",
-    "html_url": "https://platform.kimi.com/docs/guide/org-best-practice",
-    "route": "docs/guide/org-best-practice",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5feb\u901f\u5f00\u59cb",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/quickstart.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/quickstart",
-    "route": "docs/hosted-agents/quickstart",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f7f\u7528\u63a7\u5236\u53f0",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/console.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/console",
-    "route": "docs/hosted-agents/console",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u901a\u8fc7 hakimi \u521b\u5efa\u6258\u7ba1\u667a\u80fd\u4f53",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/hakimi.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/hakimi",
-    "route": "docs/hosted-agents/hakimi",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u8fc1\u79fb\u5230\u6258\u7ba1\u667a\u80fd\u4f53",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/migration.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/migration",
-    "route": "docs/hosted-agents/migration",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u521b\u5efa\u4e0e\u7ba1\u7406\u667a\u80fd\u4f53",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/agents.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/agents",
-    "route": "docs/hosted-agents/agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u6743\u9650\u7b56\u7565",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/permissions.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/permissions",
-    "route": "docs/hosted-agents/permissions",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u6280\u80fd",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/skills.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/skills",
-    "route": "docs/hosted-agents/skills",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u63a5\u5165 MCP",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/mcp.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/mcp",
-    "route": "docs/hosted-agents/mcp",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u63d2\u4ef6",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/plugins.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/plugins",
-    "route": "docs/hosted-agents/plugins",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5de5\u5177",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/tools.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/tools",
-    "route": "docs/hosted-agents/tools",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u6267\u884c\u73af\u5883",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/environments.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/environments",
-    "route": "docs/hosted-agents/environments",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u6c99\u7bb1\u89c4\u683c\u53c2\u8003",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/sandbox-reference.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/sandbox-reference",
-    "route": "docs/hosted-agents/sandbox-reference",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u542f\u52a8\u4f1a\u8bdd",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/sessions.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/sessions",
-    "route": "docs/hosted-agents/sessions",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f1a\u8bdd\u7ba1\u7406",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/session-operations.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/session-operations",
-    "route": "docs/hosted-agents/session-operations",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4e8b\u4ef6\u6d41",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/event-stream.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/event-stream",
-    "route": "docs/hosted-agents/event-stream",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u51ed\u636e\u5e93",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/vaults.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/vaults",
-    "route": "docs/hosted-agents/vaults",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u6587\u4ef6",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/files.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/files",
-    "route": "docs/hosted-agents/files",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u8bb0\u5fc6",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/memory.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/memory",
-    "route": "docs/hosted-agents/memory",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u68a6\u5883",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/dreams.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/dreams",
-    "route": "docs/hosted-agents/dreams",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u591a\u667a\u80fd\u4f53\u7f16\u6392",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/multiagent-orchestration.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/multiagent-orchestration",
-    "route": "docs/hosted-agents/multiagent-orchestration",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5b9a\u65f6\u8fd0\u884c\u667a\u80fd\u4f53",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/triggers.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/triggers",
-    "route": "docs/hosted-agents/triggers",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "PPT \u751f\u6210\u667a\u80fd\u4f53\u8bbe\u8ba1",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/official-ppt-agent.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/official-ppt-agent",
-    "route": "docs/hosted-agents/official-ppt-agent",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u91d1\u878d\u6295\u7814\u667a\u80fd\u4f53\u8bbe\u8ba1",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/official-investment-research-agent.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/official-investment-research-agent",
-    "route": "docs/hosted-agents/official-investment-research-agent",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5e38\u89c1\u95ee\u9898",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/faq.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/faq",
-    "route": "docs/hosted-agents/faq",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u66f4\u65b0\u65e5\u5fd7",
-    "md_url": "https://platform.kimi.com/docs/hosted-agents/changelog.md",
-    "html_url": "https://platform.kimi.com/docs/hosted-agents/changelog",
-    "route": "docs/hosted-agents/changelog",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "API \u6982\u8ff0",
-    "md_url": "https://platform.kimi.com/docs/api/overview.md",
-    "html_url": "https://platform.kimi.com/docs/api/overview",
-    "route": "docs/api/overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u6a21\u578b\u53c2\u6570\u53c2\u8003",
-    "md_url": "https://platform.kimi.com/docs/api/models-overview.md",
-    "html_url": "https://platform.kimi.com/docs/api/models-overview",
-    "route": "docs/api/models-overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5e38\u89c1\u9519\u8bef\u7801\u8bf4\u660e",
-    "md_url": "https://platform.kimi.com/docs/api/errors.md",
-    "html_url": "https://platform.kimi.com/docs/api/errors",
-    "route": "docs/api/errors",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Chat Completions API",
-    "md_url": "https://platform.kimi.com/docs/api/chat.md",
-    "html_url": "https://platform.kimi.com/docs/api/chat",
-    "route": "docs/api/chat",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Responses API",
-    "md_url": "https://platform.kimi.com/docs/api/responses.md",
-    "html_url": "https://platform.kimi.com/docs/api/responses",
-    "route": "docs/api/responses",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Messages API",
-    "md_url": "https://platform.kimi.com/docs/api/messages.md",
-    "html_url": "https://platform.kimi.com/docs/api/messages",
-    "route": "docs/api/messages",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5217\u51fa\u6a21\u578b",
-    "md_url": "https://platform.kimi.com/docs/api/list-models.md",
-    "html_url": "https://platform.kimi.com/docs/api/list-models",
-    "route": "docs/api/list-models",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u8ba1\u7b97 Token",
-    "md_url": "https://platform.kimi.com/docs/api/estimate.md",
-    "html_url": "https://platform.kimi.com/docs/api/estimate",
-    "route": "docs/api/estimate",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u67e5\u8be2\u4f59\u989d",
-    "md_url": "https://platform.kimi.com/docs/api/balance.md",
-    "html_url": "https://platform.kimi.com/docs/api/balance",
-    "route": "docs/api/balance",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u6821\u9a8c\u8bf7\u6c42\u7b7e\u540d",
-    "md_url": "https://platform.kimi.com/docs/api/signatures-verify.md",
-    "html_url": "https://platform.kimi.com/docs/api/signatures-verify",
-    "route": "docs/api/signatures-verify",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u8054\u7f51\u641c\u7d22 Basic",
-    "md_url": "https://platform.kimi.com/docs/api/tools-search.md",
-    "html_url": "https://platform.kimi.com/docs/api/tools-search",
-    "route": "docs/api/tools-search",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u8054\u7f51\u641c\u7d22 Pro",
-    "md_url": "https://platform.kimi.com/docs/api/tools-search-pro.md",
-    "html_url": "https://platform.kimi.com/docs/api/tools-search-pro",
-    "route": "docs/api/tools-search-pro",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u7f51\u9875\u6293\u53d6",
-    "md_url": "https://platform.kimi.com/docs/api/tools-fetch.md",
-    "html_url": "https://platform.kimi.com/docs/api/tools-fetch",
-    "route": "docs/api/tools-fetch",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4e0a\u4f20\u6587\u4ef6",
-    "md_url": "https://platform.kimi.com/docs/api/files-upload.md",
-    "html_url": "https://platform.kimi.com/docs/api/files-upload",
-    "route": "docs/api/files-upload",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5217\u51fa\u6587\u4ef6",
-    "md_url": "https://platform.kimi.com/docs/api/files-list.md",
-    "html_url": "https://platform.kimi.com/docs/api/files-list",
-    "route": "docs/api/files-list",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u83b7\u53d6\u6587\u4ef6\u4fe1\u606f",
-    "md_url": "https://platform.kimi.com/docs/api/files-retrieve.md",
-    "html_url": "https://platform.kimi.com/docs/api/files-retrieve",
-    "route": "docs/api/files-retrieve",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5220\u9664\u6587\u4ef6",
-    "md_url": "https://platform.kimi.com/docs/api/files-delete.md",
-    "html_url": "https://platform.kimi.com/docs/api/files-delete",
-    "route": "docs/api/files-delete",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u83b7\u53d6\u6587\u4ef6\u5185\u5bb9",
-    "md_url": "https://platform.kimi.com/docs/api/files-content.md",
-    "html_url": "https://platform.kimi.com/docs/api/files-content",
-    "route": "docs/api/files-content",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u521b\u5efa\u6279\u5904\u7406\u4efb\u52a1",
-    "md_url": "https://platform.kimi.com/docs/api/batch-create.md",
-    "html_url": "https://platform.kimi.com/docs/api/batch-create",
-    "route": "docs/api/batch-create",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5217\u51fa\u6279\u5904\u7406\u4efb\u52a1",
-    "md_url": "https://platform.kimi.com/docs/api/batch-list.md",
-    "html_url": "https://platform.kimi.com/docs/api/batch-list",
-    "route": "docs/api/batch-list",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u83b7\u53d6\u6279\u5904\u7406\u4efb\u52a1\u8be6\u60c5",
-    "md_url": "https://platform.kimi.com/docs/api/batch-retrieve.md",
-    "html_url": "https://platform.kimi.com/docs/api/batch-retrieve",
-    "route": "docs/api/batch-retrieve",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u53d6\u6d88\u6279\u5904\u7406\u4efb\u52a1",
-    "md_url": "https://platform.kimi.com/docs/api/batch-cancel.md",
-    "html_url": "https://platform.kimi.com/docs/api/batch-cancel",
-    "route": "docs/api/batch-cancel",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u6a21\u578b\u63a8\u7406\u4ef7\u683c\u8bf4\u660e",
-    "md_url": "https://platform.kimi.com/docs/pricing/chat.md",
-    "html_url": "https://platform.kimi.com/docs/pricing/chat",
-    "route": "docs/pricing/chat",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u6279\u91cf\u63a8\u7406\u5b9a\u4ef7",
-    "md_url": "https://platform.kimi.com/docs/pricing/batch.md",
-    "html_url": "https://platform.kimi.com/docs/pricing/batch",
-    "route": "docs/pricing/batch",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u8054\u7f51\u641c\u7d22\u5b9a\u4ef7",
-    "md_url": "https://platform.kimi.com/docs/pricing/websearch.md",
-    "html_url": "https://platform.kimi.com/docs/pricing/websearch",
-    "route": "docs/pricing/websearch",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u6258\u7ba1\u667a\u80fd\u4f53\u5b9a\u4ef7",
-    "md_url": "https://platform.kimi.com/docs/pricing/hosted-agents.md",
-    "html_url": "https://platform.kimi.com/docs/pricing/hosted-agents",
-    "route": "docs/pricing/hosted-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5145\u503c\u4e0e\u9650\u901f",
-    "md_url": "https://platform.kimi.com/docs/pricing/limits.md",
-    "html_url": "https://platform.kimi.com/docs/pricing/limits",
-    "route": "docs/pricing/limits",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u52a0\u5165\u5f00\u53d1\u8005\u53cd\u9988\u793e\u7fa4\uff01",
-    "md_url": "https://platform.kimi.com/docs/api/join-the-community.md",
-    "html_url": "https://platform.kimi.com/docs/api/join-the-community",
-    "route": "docs/api/join-the-community",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u8d26\u53f7\u4e0e\u8d22\u52a1",
-    "md_url": "https://platform.kimi.com/docs/guide/account-and-payments.md",
-    "html_url": "https://platform.kimi.com/docs/guide/account-and-payments",
-    "route": "docs/guide/account-and-payments",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u95ee\u9898\u6392\u67e5",
-    "md_url": "https://platform.kimi.com/docs/guide/troubleshooting.md",
-    "html_url": "https://platform.kimi.com/docs/guide/troubleshooting",
-    "route": "docs/guide/troubleshooting",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5982\u4f55\u89e3\u51b3\u91cd\u590d\u8c03\u7528\u95ee\u9898",
-    "md_url": "https://platform.kimi.com/docs/guide/tool-call-repeat.md",
-    "html_url": "https://platform.kimi.com/docs/guide/tool-call-repeat",
-    "route": "docs/guide/tool-call-repeat",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4e3b\u8981\u6982\u5ff5",
-    "md_url": "https://platform.kimi.com/docs/introduction.md",
-    "html_url": "https://platform.kimi.com/docs/introduction",
-    "route": "docs/introduction",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4e0e Kimi \u5176\u4ed6\u4ea7\u54c1\u5bf9\u6bd4",
-    "md_url": "https://platform.kimi.com/docs/guide/product-plans.md",
-    "html_url": "https://platform.kimi.com/docs/guide/product-plans",
-    "route": "docs/guide/product-plans",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4ec0\u4e48\u662f\u96f6\u6570\u636e\u4fdd\u7559\uff08ZDR\uff09\uff1f",
-    "md_url": "https://platform.kimi.com/docs/guide/zero-data-retention.md",
-    "html_url": "https://platform.kimi.com/docs/guide/zero-data-retention",
-    "route": "docs/guide/zero-data-retention",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u57fa\u4e8e PDF \u5185\u5bb9\u8fdb\u884c\u95ee\u7b54",
-    "md_url": "https://platform.kimi.com/docs/guide/ask-questions-about-pdf-content.md",
-    "html_url": "https://platform.kimi.com/docs/guide/ask-questions-about-pdf-content",
-    "route": "docs/guide/ask-questions-about-pdf-content",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "AI \u53ef\u8bfb\u6587\u6863",
-    "md_url": "https://platform.kimi.com/docs/guide/ai-readable-docs.md",
-    "html_url": "https://platform.kimi.com/docs/guide/ai-readable-docs",
-    "route": "docs/guide/ai-readable-docs",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Prompt \u6700\u4f73\u5b9e\u8df5",
-    "md_url": "https://platform.kimi.com/docs/guide/prompt-best-practice.md",
-    "html_url": "https://platform.kimi.com/docs/guide/prompt-best-practice",
-    "route": "docs/guide/prompt-best-practice",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u57fa\u51c6\u6d4b\u8bd5\u6700\u4f73\u5b9e\u8df5",
-    "md_url": "https://platform.kimi.com/docs/guide/benchmark-best-practice.md",
-    "html_url": "https://platform.kimi.com/docs/guide/benchmark-best-practice",
-    "route": "docs/guide/benchmark-best-practice",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u4f7f\u7528\u63a7\u5236\u53f0\u8fdb\u884c\u6279\u91cf\u63a8\u7406",
-    "md_url": "https://platform.kimi.com/docs/guide/use-batch-inference.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-batch-inference",
-    "route": "docs/guide/use-batch-inference",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u7528 Kimi K3 \u642d\u5efa Agent",
-    "md_url": "https://platform.kimi.com/docs/guide/use-kimi-k3-to-setup-agent.md",
-    "html_url": "https://platform.kimi.com/docs/guide/use-kimi-k3-to-setup-agent",
-    "route": "docs/guide/use-kimi-k3-to-setup-agent",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Muon \u4f18\u5316\u5668\u7684\u9996\u6b21\u5927\u89c4\u6a21\u8bad\u7ec3\u5b9e\u8df5",
-    "md_url": "https://platform.kimi.com/docs/changelog/moonlight.md",
-    "html_url": "https://platform.kimi.com/docs/changelog/moonlight",
-    "route": "docs/changelog/moonlight",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "MoBA\uff1a\u9762\u5411\u957f\u6587\u672c\u5927\u6a21\u578b\u7684\u6df7\u5408\u5757\u6ce8\u610f\u529b\u673a\u5236",
-    "md_url": "https://platform.kimi.com/docs/changelog/moba.md",
-    "html_url": "https://platform.kimi.com/docs/changelog/moba",
-    "route": "docs/changelog/moba",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Kimi \u5f00\u653e\u5e73\u53f0\u670d\u52a1\u534f\u8bae",
-    "md_url": "https://platform.kimi.com/docs/agreement/modeluse.md",
-    "html_url": "https://platform.kimi.com/docs/agreement/modeluse",
-    "route": "docs/agreement/modeluse",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Kimi \u5f00\u653e\u5e73\u53f0\u9690\u79c1\u653f\u7b56",
-    "md_url": "https://platform.kimi.com/docs/agreement/userprivacy.md",
-    "html_url": "https://platform.kimi.com/docs/agreement/userprivacy",
-    "route": "docs/agreement/userprivacy",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Kimi \u7528\u6237\u670d\u52a1\u534f\u8bae",
-    "md_url": "https://platform.kimi.com/docs/agreement/userservice.md",
-    "html_url": "https://platform.kimi.com/docs/agreement/userservice",
-    "route": "docs/agreement/userservice",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "Kimi \u5f00\u653e\u5e73\u53f0\u5145\u503c\u534f\u8bae",
-    "md_url": "https://platform.kimi.com/docs/agreement/payment.md",
-    "html_url": "https://platform.kimi.com/docs/agreement/payment",
-    "route": "docs/agreement/payment",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi API \u5f00\u653e\u5e73\u53f0",
-    "title": "\u5e73\u53f0\u65b0\u529f\u80fd\u53d1\u5e03\u8bb0\u5f55",
-    "md_url": "https://platform.kimi.com/docs/changelog/index.md",
-    "html_url": "https://platform.kimi.com/docs/changelog/index",
-    "route": "docs/changelog/index",
-    "kind": "doc"
+    "group": "Blog",
+    "title": "kimi k3",
+    "md_url": "https://www.kimi.com/blog/kimi-k3",
+    "html_url": "https://www.kimi.com/blog/kimi-k3",
+    "route": "blog/kimi-k3",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "perception bench",
+    "md_url": "https://www.kimi.com/blog/perception-bench",
+    "html_url": "https://www.kimi.com/blog/perception-bench",
+    "route": "blog/perception-bench",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "kimi k2 6",
+    "md_url": "https://www.kimi.com/blog/kimi-k2-6",
+    "html_url": "https://www.kimi.com/blog/kimi-k2-6",
+    "route": "blog/kimi-k2-6",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agent swarm",
+    "md_url": "https://www.kimi.com/blog/agent-swarm",
+    "html_url": "https://www.kimi.com/blog/agent-swarm",
+    "route": "blog/agent-swarm",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "worldvqa",
+    "md_url": "https://www.kimi.com/blog/worldvqa",
+    "html_url": "https://www.kimi.com/blog/worldvqa",
+    "route": "blog/worldvqa",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "kimi k2 5",
+    "md_url": "https://www.kimi.com/blog/kimi-k2-5",
+    "html_url": "https://www.kimi.com/blog/kimi-k2-5",
+    "route": "blog/kimi-k2-5",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "kimi vendor verifier",
+    "md_url": "https://www.kimi.com/blog/kimi-vendor-verifier",
+    "html_url": "https://www.kimi.com/blog/kimi-vendor-verifier",
+    "route": "blog/kimi-vendor-verifier",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "kimi k2 thinking",
+    "md_url": "https://www.kimi.com/blog/kimi-k2-thinking",
+    "html_url": "https://www.kimi.com/blog/kimi-k2-thinking",
+    "route": "blog/kimi-k2-thinking",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "kimi k2",
+    "md_url": "https://www.kimi.com/blog/kimi-k2",
+    "html_url": "https://www.kimi.com/blog/kimi-k2",
+    "route": "blog/kimi-k2",
+    "kind": "blog"
   }
 ]

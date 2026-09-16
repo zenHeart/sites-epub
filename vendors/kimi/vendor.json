@@ -1,15 +1,15 @@
 {
   "id": "kimi",
   "name": "Kimi",
-  "docs_url": "https://platform.kimi.com/docs",
-  "blog_url": null,
+  "docs_url": "https://www.kimi.com",
+  "blog_url": "https://www.kimi.com/blog",
   "icon": "vendors/kimi/icon.png",
   "author": "Moonshot AI",
-  "adapter": "generic",
-  "updated_at": "",
-  "packed_at": "",
-  "summary": "",
+  "adapter": "kimi",
+  "updated_at": "2026-09-16T08:07:45Z",
+  "packed_at": "2026-09-16T07:25:27Z",
+  "summary": "Kimi 产品书(Moonshot AI):kimi.com 网页版产品页与官方 Blog(K 系列模型与 agent 工程文)。",
   "category": "docs",
-  "chapters": 106,
-  "cover": ""
+  "chapters": 21,
+  "cover": "covers/kimi.png"
 }
