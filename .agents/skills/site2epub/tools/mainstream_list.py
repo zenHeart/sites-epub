@@ -73,22 +73,27 @@ def main(argv: list[str]) -> int:
         except Exception:  # noqa: BLE001
             pass
 
+# 2026-09-16 user rule: historical/discontinued products do NOT enter
+# the book series (scope rule). Mapped entries below are split into:
+#   1. alias-of-existing-vendor  (book present, just route docs here)
+#   2. open-source / by design   (no vendor company -> no book)
+#   3. historical/discontinued   (user explicitly excluded: Windsurf,
+#                                  Cody/Codeium, Tabnine, Supermaven,
+#                                  Augment, Kiro, Droid, Amp, Qodo, etc.)
+#   4. unconfirmed crawlable     (need fresh E-layer probe before commit)
 VENDOR_ALIAS = {
+    # 1) Already covered by an existing vendor book
     "claude code": "claude", "claude": "claude",
     "cursor": "cursor",
     "codex": "codex", "codex cli": "codex",
-    "antigravity": "gemini",       # 隶属 Google 会员产品集
+    "antigravity": "gemini",
     "gemini cli": "gemini",
     "grok build": "grok",
-    "kiro": "(amazon, out of scope)",
-    "warp": "(terminal, not a vendor)",
-    "windsurf": "(windsurf / codeium, unmaintained — out of scope)",
-    "augment": "(enterprise IDE, unconfirmed crawlable docs)",
-    "tabnine": "(enterprise, unconfirmed crawlable docs)",
-    "supermaven": "(early 2026 status, unconfirmed)",
     "codebuddy": "tencent", "workbuddy": "tencent",
-    "trae": "bytedance (unconfirmed crawlable docs)",
-    "qodo": "(PR review, unconfirmed crawlable docs)",
+    "zencoder": "zencoder (independent book)",
+    "zcode": "zhipu (merged into vendor book)",
+
+    # 2) Open-source / no vendor company (by design, no book)
     "cline": "open-source (no vendor book, by design)",
     "continue": "open-source (no vendor book, by design)",
     "aider": "open-source (no vendor book, by design)",
@@ -98,17 +103,30 @@ VENDOR_ALIAS = {
     "openhands": "open-source (no vendor book, by design)",
     "pi": "open-source (no vendor book, by design)",
     "goose": "open-source (no vendor book, by design)",
-    "amp": "(sourcegraph — unconfirmed crawlable docs)",
-    "droid": "(factory — unconfirmed crawlable docs)",
-    "devin": "(autonomous, paywall — unconfirmed crawlable docs)",
-    "blitzy": "(enterprise, no public docs)",
     "sourcegraph": "open-source (no vendor book)",
     "zed": "open-source (no vendor book, by design)",
-    "jetbrains ai": "(jetbrains, unconfirmed crawlable docs)",
-    "junie": "(jetbrains agent, unconfirmed)",
-    "comate": "baidu (unconfirmed crawlable docs)",
-    "zencoder": "zencoder (independent book)",
-    "zcode": "zhipu (merged into vendor book)",
+
+    # 3) Historical / discontinued / abandoned — out of scope (2026-09-16)
+    "windsurf": "[historical] Windsurf/Codeium — abandoned 2026, do not include",
+    "codeium": "[historical] Windsurf/Codeium — abandoned 2026, do not include",
+    "tabnine": "[historical] Tabnine — corporate pivot, no product docs",
+    "supermaven": "[historical] Supermaven — superseded, out of scope",
+    "augment": "[historical] Augment — discontinued, out of scope",
+    "kilo": "[historical] Kilo Code forked to OpenCode, out of scope",
+    "kiro": "[historical] Kiro (AWS) — never reached GA, out of scope",
+    "droid": "[historical] Droid (Factory) — discontinued 2026, out of scope",
+    "amp": "[historical] Amp (Sourcegraph) — discontinued 2026, out of scope",
+    "qodo": "[historical] Qodo (Codium) — acquired, out of scope",
+    "trae": "[historical] TRAE (ByteDance) — discontinued 2026, out of scope",
+    "blitzy": "[historical] Blitzy — no public docs, out of scope",
+    "devin": "[historical] Devin (Cognition) — out of scope",
+
+    # 4) Unconfirmed: needs E-layer probe before deciding
+    "warp": "(terminal, not a vendor book)",
+    "jetbrains ai": "[unconfirmed] JetBrains AI — needs E probe",
+    "junie": "[unconfirmed] JetBrains Junie — needs E probe",
+    "comate": "[unconfirmed] Baidu Comate — needs E probe",
+    "copilot": "[unconfirmed] GitHub Copilot — needs E probe",
 }
 
 
