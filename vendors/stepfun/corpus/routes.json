@@ -1,0 +1,962 @@
+[
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "md_url": "https://platform.stepfun.com/docs/zh/welcome.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/welcome",
+    "route": "docs/zh/welcome",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u57fa\u672c\u4ecb\u7ecd",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/basic-concepts.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/basic-concepts",
+    "route": "docs/zh/guides/basic-concepts",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5feb\u901f\u5f00\u59cb",
+    "md_url": "https://platform.stepfun.com/docs/zh/quickstart/overview.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/quickstart/overview",
+    "route": "docs/zh/quickstart/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5e38\u89c1\u95ee\u9898",
+    "md_url": "https://platform.stepfun.com/docs/zh/faq/common-questions.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/faq/common-questions",
+    "route": "docs/zh/faq/common-questions",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u8054\u7cfb\u6211\u4eec",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/contact-us.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/contact-us",
+    "route": "docs/zh/guides/contact-us",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u6a21\u578b\u8fc1\u79fb",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/model-migration.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/model-migration",
+    "route": "docs/zh/guides/model-migration",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u56fe\u50cf\u6a21\u578b\u4e0b\u7ebf\u516c\u544a",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/image-offline-notice.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/image-offline-notice",
+    "route": "docs/zh/guides/image-offline-notice",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u9759\u6001\u6258\u7ba1",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/page-hosting.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/page-hosting",
+    "route": "docs/zh/guides/page-hosting",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u6a21\u578b\u80fd\u529b\u603b\u89c8",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/overview.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/overview",
+    "route": "docs/zh/guides/models/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u63a8\u7406\u6a21\u578b\u603b\u89c8",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/reasoning.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/reasoning",
+    "route": "docs/zh/guides/models/reasoning",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u6982\u89c8",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/step-3.7-flash.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/step-3.7-flash",
+    "route": "docs/zh/guides/models/step-3.7-flash",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5feb\u901f\u4e0a\u624b",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/step-3.7-flash-quickstart.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/step-3.7-flash-quickstart",
+    "route": "docs/zh/guides/models/step-3.7-flash-quickstart",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u573a\u666f\u793a\u4f8b",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/step-3.7-flash-cookbook.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/step-3.7-flash-cookbook",
+    "route": "docs/zh/guides/models/step-3.7-flash-cookbook",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u624b\u673a\u64cd\u4f5c Agent",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/step-3.7-flash-mobile-agent.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/step-3.7-flash-mobile-agent",
+    "route": "docs/zh/guides/models/step-3.7-flash-mobile-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Step 3.5 Flash",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/step-3.5-flash.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/step-3.5-flash",
+    "route": "docs/zh/guides/models/step-3.5-flash",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Step Router V1 \u667a\u80fd\u8def\u7531",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/step-router.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/step-router",
+    "route": "docs/zh/guides/models/step-router",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u8bed\u97f3\u6a21\u578b\u5217\u8868",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/audio.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/audio",
+    "route": "docs/zh/guides/models/audio",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "StepAudio 3 Realtime",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-realtime.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-realtime",
+    "route": "docs/zh/guides/models/stepaudio-3-realtime",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "StepAudio 3 TTS",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-tts.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-tts",
+    "route": "docs/zh/guides/models/stepaudio-3-tts",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "StepAudio 3 Gen",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-gen.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-gen",
+    "route": "docs/zh/guides/models/stepaudio-3-gen",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "StepAudio 3 Music",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-music.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-music",
+    "route": "docs/zh/guides/models/stepaudio-3-music",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "StepAudio 3 ASR",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-asr.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-asr",
+    "route": "docs/zh/guides/models/stepaudio-3-asr",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u89c6\u89c9\u7406\u89e3\u5927\u6a21\u578b",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/vision.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/vision",
+    "route": "docs/zh/guides/models/vision",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u751f\u56fe\u6539\u56fe\u6a21\u578b\u5217\u8868",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/image.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/image",
+    "route": "docs/zh/guides/models/image",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Step Image Edit 2",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/step-image-edit-2.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/step-image-edit-2",
+    "route": "docs/zh/guides/models/step-image-edit-2",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Model Lab",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/models/model-lab.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/models/model-lab",
+    "route": "docs/zh/guides/models/model-lab",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u8ba1\u8d39\u4ecb\u7ecd",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/pricing/intro.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/pricing/intro",
+    "route": "docs/zh/guides/pricing/intro",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5b9a\u4ef7\u4e0e\u9650\u901f",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/pricing/details.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+    "route": "docs/zh/guides/pricing/details",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u7ec4\u7ec7\u4e0e\u9879\u76ee",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/organization/overview.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/organization/overview",
+    "route": "docs/zh/guides/organization/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5f00\u901a\u4f01\u4e1a\u5957\u9910",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/organization/subscribe.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/organization/subscribe",
+    "route": "docs/zh/guides/organization/subscribe",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u7ba1\u7406\u6210\u5458\u4e0e\u9879\u76ee",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/organization/manage.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/organization/manage",
+    "route": "docs/zh/guides/organization/manage",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u521b\u5efa\u5e76\u4f7f\u7528\u9879\u76ee API Key",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/organization/api-keys.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/organization/api-keys",
+    "route": "docs/zh/guides/organization/api-keys",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Credit \u989d\u5ea6\u89c4\u5219",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/organization/credits.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/organization/credits",
+    "route": "docs/zh/guides/organization/credits",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "StepFun \u5f00\u653e\u5e73\u53f0\u9690\u79c1\u653f\u7b56",
+    "md_url": "https://platform.stepfun.com/docs/zh/agreement/userprivacy.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/agreement/userprivacy",
+    "route": "docs/zh/agreement/userprivacy",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "StepFun \u5f00\u653e\u5e73\u53f0\u7528\u6237\u534f\u8bae",
+    "md_url": "https://platform.stepfun.com/docs/zh/agreement/userservice.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/agreement/userservice",
+    "route": "docs/zh/agreement/userservice",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5f00\u653e\u5e73\u53f0\u7ba1\u7406\u89c4\u5219\u53ca\u516c\u7ea6",
+    "md_url": "https://platform.stepfun.com/docs/zh/agreement/management-rules-and-conventions.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/agreement/management-rules-and-conventions",
+    "route": "docs/zh/agreement/management-rules-and-conventions",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Credit \u5305\u8ba2\u8d2d\u53ca\u4f7f\u7528\u534f\u8bae",
+    "md_url": "https://platform.stepfun.com/docs/zh/agreement/enterprise-credit-agreement.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/agreement/enterprise-credit-agreement",
+    "route": "docs/zh/agreement/enterprise-credit-agreement",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Step Plan \u6982\u8ff0",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/overview.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/overview",
+    "route": "docs/zh/step-plan/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Step Plan \u5347\u7ea7\u516c\u544a",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/upgrade-notice.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/upgrade-notice",
+    "route": "docs/zh/step-plan/upgrade-notice",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Step Plan \u4ed8\u8d39\u670d\u52a1\u534f\u8bae",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/paid-service-agreement.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/paid-service-agreement",
+    "route": "docs/zh/step-plan/paid-service-agreement",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5feb\u901f\u5f00\u59cb",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/quick-start.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/quick-start",
+    "route": "docs/zh/step-plan/quick-start",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u63a8\u7406\u6a21\u578b\u63a5\u5165",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/reasoning-api.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/reasoning-api",
+    "route": "docs/zh/step-plan/integrations/reasoning-api",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u8bed\u97f3\u6a21\u578b\u63a5\u5165",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/audio-api.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/audio-api",
+    "route": "docs/zh/step-plan/integrations/audio-api",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u56fe\u50cf\u6a21\u578b\u63a5\u5165",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/image-api.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/image-api",
+    "route": "docs/zh/step-plan/integrations/image-api",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "OpenClaw \u63a5\u5165\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/openclaw.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/openclaw",
+    "route": "docs/zh/step-plan/integrations/openclaw",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Claude Code \u63a5\u5165\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/claude-code.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/claude-code",
+    "route": "docs/zh/step-plan/integrations/claude-code",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Hermes Agent \u63a5\u5165\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/hermes-agent.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/hermes-agent",
+    "route": "docs/zh/step-plan/integrations/hermes-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Open Code \u63a5\u5165\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/open-code.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/open-code",
+    "route": "docs/zh/step-plan/integrations/open-code",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Cherry Studio \u63a5\u5165\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/cherry-studio.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/cherry-studio",
+    "route": "docs/zh/step-plan/integrations/cherry-studio",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Cline \u63a5\u5165\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/cline.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/cline",
+    "route": "docs/zh/step-plan/integrations/cline",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Kilo Code \u63a5\u5165\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/kilo-code.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/kilo-code",
+    "route": "docs/zh/step-plan/integrations/kilo-code",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Roo Code \u63a5\u5165\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/roo-code.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/roo-code",
+    "route": "docs/zh/step-plan/integrations/roo-code",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Goose \u63a5\u5165\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/goose.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/goose",
+    "route": "docs/zh/step-plan/integrations/goose",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Zed \u63a5\u5165\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/zed.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/zed",
+    "route": "docs/zh/step-plan/integrations/zed",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "StepSearch",
+    "md_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/search-mcp.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/step-plan/integrations/search-mcp",
+    "route": "docs/zh/step-plan/integrations/search-mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Chat Completions API",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/chat/chat-completion-create.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/chat/chat-completion-create",
+    "route": "docs/zh/api-reference/chat/chat-completion-create",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Messages API",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/chat/messages-create.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/chat/messages-create",
+    "route": "docs/zh/api-reference/chat/messages-create",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Responses API",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/responses/responses-create.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/responses/responses-create",
+    "route": "docs/zh/api-reference/responses/responses-create",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u53cc\u5411\u5b9e\u65f6\u8bed\u97f3",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/realtime/chat.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/realtime/chat",
+    "route": "docs/zh/api-reference/realtime/chat",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u751f\u6210\u56fe\u7247",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/images/image.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/images/image",
+    "route": "docs/zh/api-reference/images/image",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u56fe\u751f\u56fe",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/images/image2image.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/images/image2image",
+    "route": "docs/zh/api-reference/images/image2image",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u56fe\u7247\u7f16\u8f91",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/images/edits.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/images/edits",
+    "route": "docs/zh/api-reference/images/edits",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u8bed\u97f3\u5408\u6210",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/create-audio.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/create-audio",
+    "route": "docs/zh/api-reference/audio/create-audio",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u6d41\u5f0f\u8bed\u97f3\u5408\u6210",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/ws-audio.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/ws-audio",
+    "route": "docs/zh/api-reference/audio/ws-audio",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u83b7\u53d6\u5b98\u65b9\u97f3\u8272\u8be6\u60c5",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/system-voices.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/system-voices",
+    "route": "docs/zh/api-reference/audio/system-voices",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u67e5\u8be2\u5df2\u590d\u523b\u97f3\u8272",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/list-voice.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/list-voice",
+    "route": "docs/zh/api-reference/audio/list-voice",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u97f3\u9891\u751f\u6210",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/generate.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/generate",
+    "route": "docs/zh/api-reference/audio/generate",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u97f3\u4e50\u751f\u6210",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/music.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/music",
+    "route": "docs/zh/api-reference/audio/music",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u590d\u523b\u8bd5\u542c",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/voices-preview.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/voices-preview",
+    "route": "docs/zh/api-reference/audio/voices-preview",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u590d\u523b\u97f3\u8272",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/create-voice.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/create-voice",
+    "route": "docs/zh/api-reference/audio/create-voice",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u8bed\u97f3\u8bc6\u522b\uff08\u6d41\u5f0f\u8fd4\u56de\u6587\u672c\uff09",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/asr-sse.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/asr-sse",
+    "route": "docs/zh/api-reference/audio/asr-sse",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u6d41\u5f0f\u8bed\u97f3\u8bc6\u522b\uff08\u53cc\u5411\u6d41\u5f0f\uff09",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/asr-stream.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/asr-stream",
+    "route": "docs/zh/api-reference/audio/asr-stream",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u97f3\u9891\u6587\u4ef6\u8bc6\u522b",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/asr.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/asr",
+    "route": "docs/zh/api-reference/audio/asr",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u97f3\u9891\u8f6c\u5199",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/transcriptions.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/audio/transcriptions",
+    "route": "docs/zh/api-reference/audio/transcriptions",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u67e5\u8be2 Model \u5217\u8868",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/models/list.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/models/list",
+    "route": "docs/zh/api-reference/models/list",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u67e5\u8be2\u5355\u4e2a Model \u4fe1\u606f",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/models/retrieve.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/models/retrieve",
+    "route": "docs/zh/api-reference/models/retrieve",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "model \u5bf9\u8c61",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/models/object.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/models/object",
+    "route": "docs/zh/api-reference/models/object",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u4e0a\u4f20\u6587\u4ef6",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/files/create.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/files/create",
+    "route": "docs/zh/api-reference/files/create",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u83b7\u53d6\u6587\u4ef6\u5217\u8868",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/files/list.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/files/list",
+    "route": "docs/zh/api-reference/files/list",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u67e5\u8be2\u5355\u4e2a\u6587\u4ef6\u7684\u4fe1\u606f",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/files/retrieve.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/files/retrieve",
+    "route": "docs/zh/api-reference/files/retrieve",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u83b7\u53d6\u6587\u4ef6\u5185\u5bb9",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/files/retrieve-content.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/files/retrieve-content",
+    "route": "docs/zh/api-reference/files/retrieve-content",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5220\u9664\u5355\u4e2a\u6587\u4ef6",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/files/delete.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/files/delete",
+    "route": "docs/zh/api-reference/files/delete",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "File \u5bf9\u8c61",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/files/object.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/files/object",
+    "route": "docs/zh/api-reference/files/object",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u521b\u5efa\u77e5\u8bc6\u5e93",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/create.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/create",
+    "route": "docs/zh/api-reference/vector-stores/create",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u67e5\u770b\u77e5\u8bc6\u5e93\u5217\u8868",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/list.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/list",
+    "route": "docs/zh/api-reference/vector-stores/list",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u83b7\u53d6\u77e5\u8bc6\u5e93\u8be6\u60c5",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/retrieve.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/retrieve",
+    "route": "docs/zh/api-reference/vector-stores/retrieve",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5220\u9664\u77e5\u8bc6\u5e93",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/delete.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/delete",
+    "route": "docs/zh/api-reference/vector-stores/delete",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5c06\u6587\u4ef6\u6dfb\u52a0\u5230\u77e5\u8bc6\u5e93",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/create-file.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/create-file",
+    "route": "docs/zh/api-reference/vector-stores/create-file",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u67e5\u770b\u77e5\u8bc6\u5e93\u4e2d\u6587\u4ef6\u5217\u8868",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/list-file.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/list-file",
+    "route": "docs/zh/api-reference/vector-stores/list-file",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5c06\u6587\u4ef6\u4ece\u77e5\u8bc6\u5e93\u4e2d\u79fb\u9664",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/delete-file.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/delete-file",
+    "route": "docs/zh/api-reference/vector-stores/delete-file",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Vector Store \u5bf9\u8c61",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/object.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/object",
+    "route": "docs/zh/api-reference/vector-stores/object",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Vector Store File \u5bf9\u8c61",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/vector-store-file-object.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/vector-stores/vector-store-file-object",
+    "route": "docs/zh/api-reference/vector-stores/vector-store-file-object",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u83b7\u53d6\u8d26\u6237\u4fe1\u606f",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/accounts/get.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/accounts/get",
+    "route": "docs/zh/api-reference/accounts/get",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5de5\u5177\u8c03\u7528",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/tool-call.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/tool-call",
+    "route": "docs/zh/api-reference/tool-call",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Token Count",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/token-count.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/token-count",
+    "route": "docs/zh/api-reference/token-count",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u9519\u8bef\u7801",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/error-codes.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/error-codes",
+    "route": "docs/zh/api-reference/error-codes",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u7f51\u9875\u641c\u7d22",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/search/search.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/search/search",
+    "route": "docs/zh/api-reference/search/search",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u6587\u641c\u56fe",
+    "md_url": "https://platform.stepfun.com/docs/zh/api-reference/search/search-image.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/api-reference/search/search-image",
+    "route": "docs/zh/api-reference/search/search-image",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u4ece OpenAI \u8fc1\u79fb\u81f3\u9636\u8dc3\u661f\u8fb0",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/openai.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/openai",
+    "route": "docs/zh/guides/developer/openai",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u63a8\u7406\u6a21\u578b\u6700\u4f73\u5b9e\u8df5",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/reasoning.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/reasoning",
+    "route": "docs/zh/guides/developer/reasoning",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Step Router V1 \u667a\u80fd\u8def\u7531\u5f00\u53d1\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/step-router.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/step-router",
+    "route": "docs/zh/guides/developer/step-router",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5b9e\u65f6\u5bf9\u8bdd\u5f00\u53d1\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/realtime.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/realtime",
+    "route": "docs/zh/guides/developer/realtime",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u56fe\u7247\u7406\u89e3\u6700\u4f73\u5b9e\u8df5",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/image-chat.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/image-chat",
+    "route": "docs/zh/guides/developer/image-chat",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u89c6\u9891\u7406\u89e3\u6700\u4f73\u5b9e\u8df5",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/video-chat.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/video-chat",
+    "route": "docs/zh/guides/developer/video-chat",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u56fe\u7247\u751f\u6210\u6700\u4f73\u5b9e\u8df5",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/image-generate.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/image-generate",
+    "route": "docs/zh/guides/developer/image-generate",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u56fe\u50cf\u7f16\u8f91\u6700\u4f73\u5b9e\u8df5",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/image-edit.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/image-edit",
+    "route": "docs/zh/guides/developer/image-edit",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u97f3\u9891\u5408\u6210\u6700\u4f73\u5b9e\u8df5",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/tts.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/tts",
+    "route": "docs/zh/guides/developer/tts",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u591a\u8f6e\u5bf9\u8bdd\u4e0a\u4e0b\u6587\u7ba1\u7406",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/multiple-round.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/multiple-round",
+    "route": "docs/zh/guides/developer/multiple-round",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u6587\u4ef6\u89e3\u6790\u6700\u4f73\u5b9e\u8df5",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/doc-parser.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/doc-parser",
+    "route": "docs/zh/guides/developer/doc-parser",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "JSON Mode \u4f7f\u7528\u5efa\u8bae",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/json-mode.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/json-mode",
+    "route": "docs/zh/guides/developer/json-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u6d41\u5f0f\u8f93\u51fa\u66f4\u4e1d\u6ed1",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/stream.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/stream",
+    "route": "docs/zh/guides/developer/stream",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Prompt \u7f13\u5b58\u6700\u4f73\u5b9e\u8df5",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/prompt-cache.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/prompt-cache",
+    "route": "docs/zh/guides/developer/prompt-cache",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Prompt \u4f18\u5316\u5b9e\u8df5",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/prompt.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/prompt",
+    "route": "docs/zh/guides/developer/prompt",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u9759\u6001\u6258\u7ba1 CLI \u4e0e MCP",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/page-hosting-cli-mcp.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/page-hosting-cli-mcp",
+    "route": "docs/zh/guides/developer/page-hosting-cli-mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "Tool Call \u4f7f\u7528\u5efa\u8bae",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/tool-call.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/tool-call",
+    "route": "docs/zh/guides/developer/tool-call",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u7f51\u7edc\u641c\u7d22\u4f7f\u7528\u5efa\u8bae",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/web-search.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/web-search",
+    "route": "docs/zh/guides/developer/web-search",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u77e5\u8bc6\u5e93\u4f7f\u7528\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/retrieval.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/retrieval",
+    "route": "docs/zh/guides/developer/retrieval",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u5f02\u5e38\u4e8b\u4ef6\u5904\u7406\u5efa\u8bae",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/exception.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/exception",
+    "route": "docs/zh/guides/developer/exception",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u6545\u969c\u6392\u67e5\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/troubleshooting.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/troubleshooting",
+    "route": "docs/zh/guides/developer/troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "StepFun \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+    "title": "\u8bed\u97f3\u5bf9\u8bdd\u5f00\u53d1\u6307\u5357",
+    "md_url": "https://platform.stepfun.com/docs/zh/guides/developer/audio-chat.md",
+    "html_url": "https://platform.stepfun.com/docs/zh/guides/developer/audio-chat",
+    "route": "docs/zh/guides/developer/audio-chat",
+    "kind": "doc"
+  }
+]

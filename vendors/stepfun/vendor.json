@@ -1,0 +1,15 @@
+{
+  "id": "stepfun",
+  "name": "Step Fun",
+  "docs_url": "https://platform.stepfun.com/docs",
+  "blog_url": null,
+  "icon": "vendors/stepfun/icon.png",
+  "author": "StepFun",
+  "adapter": "generic",
+  "updated_at": "",
+  "packed_at": "",
+  "summary": "",
+  "category": "docs",
+  "chapters": 0,
+  "cover": ""
+}

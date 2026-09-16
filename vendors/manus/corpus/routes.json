@@ -1,0 +1,1282 @@
+[
+  {
+    "group": "Manus: Docs",
+    "title": "Welcome",
+    "md_url": "https://manus.im/docs/introduction/welcome.md",
+    "html_url": "https://manus.im/docs/introduction/welcome",
+    "route": "docs/introduction/welcome",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Plans and Pricing",
+    "md_url": "https://manus.im/docs/introduction/plans.md",
+    "html_url": "https://manus.im/docs/introduction/plans",
+    "route": "docs/introduction/plans",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Projects",
+    "md_url": "https://manus.im/docs/features/projects.md",
+    "html_url": "https://manus.im/docs/features/projects",
+    "route": "docs/features/projects",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Manus Skills",
+    "md_url": "https://manus.im/docs/features/skills.md",
+    "html_url": "https://manus.im/docs/features/skills",
+    "route": "docs/features/skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Design View",
+    "md_url": "https://manus.im/docs/features/design-view.md",
+    "html_url": "https://manus.im/docs/features/design-view",
+    "route": "docs/features/design-view",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Wide Research",
+    "md_url": "https://manus.im/docs/features/wide-research.md",
+    "html_url": "https://manus.im/docs/features/wide-research",
+    "route": "docs/features/wide-research",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Manus Slides",
+    "md_url": "https://manus.im/docs/features/slides.md",
+    "html_url": "https://manus.im/docs/features/slides",
+    "route": "docs/features/slides",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Scheduled Tasks",
+    "md_url": "https://manus.im/docs/features/scheduled-tasks.md",
+    "html_url": "https://manus.im/docs/features/scheduled-tasks",
+    "route": "docs/features/scheduled-tasks",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Data Analysis & Visualization",
+    "md_url": "https://manus.im/docs/features/data-visualization.md",
+    "html_url": "https://manus.im/docs/features/data-visualization",
+    "route": "docs/features/data-visualization",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Multimedia Processing",
+    "md_url": "https://manus.im/docs/features/multi-modal.md",
+    "html_url": "https://manus.im/docs/features/multi-modal",
+    "route": "docs/features/multi-modal",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Mail Manus",
+    "md_url": "https://manus.im/docs/features/mail-manus.md",
+    "html_url": "https://manus.im/docs/features/mail-manus",
+    "route": "docs/features/mail-manus",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Manus Collab",
+    "md_url": "https://manus.im/docs/features/collab.md",
+    "html_url": "https://manus.im/docs/features/collab",
+    "route": "docs/features/collab",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Cloud browser",
+    "md_url": "https://manus.im/docs/features/cloud-browser.md",
+    "html_url": "https://manus.im/docs/features/cloud-browser",
+    "route": "docs/features/cloud-browser",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Browser Operator",
+    "md_url": "https://manus.im/docs/features/browser-operator.md",
+    "html_url": "https://manus.im/docs/features/browser-operator",
+    "route": "docs/features/browser-operator",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Desktop",
+    "md_url": "https://manus.im/docs/features/desktop.md",
+    "html_url": "https://manus.im/docs/features/desktop",
+    "route": "docs/features/desktop",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Meeting minutes",
+    "md_url": "https://manus.im/docs/features/meeting-minutes.md",
+    "html_url": "https://manus.im/docs/features/meeting-minutes",
+    "route": "docs/features/meeting-minutes",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Getting started",
+    "md_url": "https://manus.im/docs/website-builder/getting-started.md",
+    "html_url": "https://manus.im/docs/website-builder/getting-started",
+    "route": "docs/website-builder/getting-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Editing and Previewing",
+    "md_url": "https://manus.im/docs/website-builder/editing-and-previewing.md",
+    "html_url": "https://manus.im/docs/website-builder/editing-and-previewing",
+    "route": "docs/website-builder/editing-and-previewing",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Publishing",
+    "md_url": "https://manus.im/docs/website-builder/publishing.md",
+    "html_url": "https://manus.im/docs/website-builder/publishing",
+    "route": "docs/website-builder/publishing",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Usage and Pricing",
+    "md_url": "https://manus.im/docs/website-builder/getting-started/usage-and-pricing.md",
+    "html_url": "https://manus.im/docs/website-builder/getting-started/usage-and-pricing",
+    "route": "docs/website-builder/getting-started/usage-and-pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Built-in AI Capabilities",
+    "md_url": "https://manus.im/docs/website-builder/ai-capabilities.md",
+    "html_url": "https://manus.im/docs/website-builder/ai-capabilities",
+    "route": "docs/website-builder/ai-capabilities",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Cloud Infrastructure",
+    "md_url": "https://manus.im/docs/website-builder/cloud-infrastructure.md",
+    "html_url": "https://manus.im/docs/website-builder/cloud-infrastructure",
+    "route": "docs/website-builder/cloud-infrastructure",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Access Control",
+    "md_url": "https://manus.im/docs/website-builder/access-control.md",
+    "html_url": "https://manus.im/docs/website-builder/access-control",
+    "route": "docs/website-builder/access-control",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Notifications",
+    "md_url": "https://manus.im/docs/website-builder/notifications.md",
+    "html_url": "https://manus.im/docs/website-builder/notifications",
+    "route": "docs/website-builder/notifications",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Payments",
+    "md_url": "https://manus.im/docs/website-builder/payments.md",
+    "html_url": "https://manus.im/docs/website-builder/payments",
+    "route": "docs/website-builder/payments",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Project Analytics ",
+    "md_url": "https://manus.im/docs/website-builder/project-analytics.md",
+    "html_url": "https://manus.im/docs/website-builder/project-analytics",
+    "route": "docs/website-builder/project-analytics",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Custom Domains: Professionalize Your Brand",
+    "md_url": "https://manus.im/docs/website-builder/custom-domains.md",
+    "html_url": "https://manus.im/docs/website-builder/custom-domains",
+    "route": "docs/website-builder/custom-domains",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Search Engine Optimization",
+    "md_url": "https://manus.im/docs/website-builder/seo.md",
+    "html_url": "https://manus.im/docs/website-builder/seo",
+    "route": "docs/website-builder/seo",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Code Control",
+    "md_url": "https://manus.im/docs/website-builder/code-control.md",
+    "html_url": "https://manus.im/docs/website-builder/code-control",
+    "route": "docs/website-builder/code-control",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Make a Copy",
+    "md_url": "https://manus.im/docs/website-builder/make-a-copy.md",
+    "html_url": "https://manus.im/docs/website-builder/make-a-copy",
+    "route": "docs/website-builder/make-a-copy",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Import from Figma: From Design to App in One Step",
+    "md_url": "https://manus.im/docs/website-builder/import-figma.md",
+    "html_url": "https://manus.im/docs/website-builder/import-figma",
+    "route": "docs/website-builder/import-figma",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Third-Party Integrations",
+    "md_url": "https://manus.im/docs/website-builder/third-party-integrations.md",
+    "html_url": "https://manus.im/docs/website-builder/third-party-integrations",
+    "route": "docs/website-builder/third-party-integrations",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "GitHub Integration",
+    "md_url": "https://manus.im/docs/website-builder/github-integration.md",
+    "html_url": "https://manus.im/docs/website-builder/github-integration",
+    "route": "docs/website-builder/github-integration",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "App Publishing (mobile)",
+    "md_url": "https://manus.im/docs/website-builder/app-publishing.md",
+    "html_url": "https://manus.im/docs/website-builder/app-publishing",
+    "route": "docs/website-builder/app-publishing",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Schedules",
+    "md_url": "https://manus.im/docs/website-builder/schedules.md",
+    "html_url": "https://manus.im/docs/website-builder/schedules",
+    "route": "docs/website-builder/schedules",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Integrate Manus with Your Existing Tools",
+    "md_url": "https://manus.im/docs/integrations/integrations.md",
+    "html_url": "https://manus.im/docs/integrations/integrations",
+    "route": "docs/integrations/integrations",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "MCP Connectors",
+    "md_url": "https://manus.im/docs/integrations/mcp-connectors.md",
+    "html_url": "https://manus.im/docs/integrations/mcp-connectors",
+    "route": "docs/integrations/mcp-connectors",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Custom MCP Servers",
+    "md_url": "https://manus.im/docs/integrations/custom-mcp.md",
+    "html_url": "https://manus.im/docs/integrations/custom-mcp",
+    "route": "docs/integrations/custom-mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Manus Browser Operator ",
+    "md_url": "https://manus.im/docs/integrations/manus-browser-operator.md",
+    "html_url": "https://manus.im/docs/integrations/manus-browser-operator",
+    "route": "docs/integrations/manus-browser-operator",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Slack Integration",
+    "md_url": "https://manus.im/docs/integrations/slack-integration.md",
+    "html_url": "https://manus.im/docs/integrations/slack-integration",
+    "route": "docs/integrations/slack-integration",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Zapier ",
+    "md_url": "https://manus.im/docs/integrations/zapier.md",
+    "html_url": "https://manus.im/docs/integrations/zapier",
+    "route": "docs/integrations/zapier",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Manus API",
+    "md_url": "https://manus.im/docs/integrations/manus-api.md",
+    "html_url": "https://manus.im/docs/integrations/manus-api",
+    "route": "docs/integrations/manus-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Nano Banana Pro",
+    "md_url": "https://manus.im/docs/integrations/nano-banana-pro.md",
+    "html_url": "https://manus.im/docs/integrations/nano-banana-pro",
+    "route": "docs/integrations/nano-banana-pro",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Docs",
+    "title": "Data Sources",
+    "md_url": "https://manus.im/docs/integrations/data-sources.md",
+    "html_url": "https://manus.im/docs/integrations/data-sources",
+    "route": "docs/integrations/data-sources",
+    "kind": "doc"
+  },
+  {
+    "group": "Blog",
+    "title": "manus resumes independent operations",
+    "md_url": "https://manus.im/blog/manus-resumes-independent-operations.md",
+    "html_url": "https://manus.im/blog/manus-resumes-independent-operations",
+    "route": "blog/manus-resumes-independent-operations",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "wally",
+    "md_url": "https://manus.im/blog/wally.md",
+    "html_url": "https://manus.im/blog/wally",
+    "route": "blog/wally",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "a note to our users",
+    "md_url": "https://manus.im/blog/a-note-to-our-users.md",
+    "html_url": "https://manus.im/blog/a-note-to-our-users",
+    "route": "blog/a-note-to-our-users",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "elevenlabs connector",
+    "md_url": "https://manus.im/blog/elevenlabs-connector.md",
+    "html_url": "https://manus.im/blog/elevenlabs-connector",
+    "route": "blog/elevenlabs-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus supabase connector",
+    "md_url": "https://manus.im/blog/manus-supabase-connector.md",
+    "html_url": "https://manus.im/blog/manus-supabase-connector",
+    "route": "blog/manus-supabase-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus plan mode",
+    "md_url": "https://manus.im/blog/manus-plan-mode.md",
+    "html_url": "https://manus.im/blog/manus-plan-mode",
+    "route": "blog/manus-plan-mode",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "Ascendea James Customer Story",
+    "md_url": "https://manus.im/blog/Ascendea-James-Customer-Story.md",
+    "html_url": "https://manus.im/blog/Ascendea-James-Customer-Story",
+    "route": "blog/Ascendea-James-Customer-Story",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus ppt slides",
+    "md_url": "https://manus.im/blog/manus-ppt-slides.md",
+    "html_url": "https://manus.im/blog/manus-ppt-slides",
+    "route": "blog/manus-ppt-slides",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus auto publish",
+    "md_url": "https://manus.im/blog/manus-auto-publish.md",
+    "html_url": "https://manus.im/blog/manus-auto-publish",
+    "route": "blog/manus-auto-publish",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus branch",
+    "md_url": "https://manus.im/blog/manus-branch.md",
+    "html_url": "https://manus.im/blog/manus-branch",
+    "route": "blog/manus-branch",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus mobbin connector",
+    "md_url": "https://manus.im/blog/manus-mobbin-connector.md",
+    "html_url": "https://manus.im/blog/manus-mobbin-connector",
+    "route": "blog/manus-mobbin-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus hosting web builder",
+    "md_url": "https://manus.im/blog/manus-hosting-web-builder.md",
+    "html_url": "https://manus.im/blog/manus-hosting-web-builder",
+    "route": "blog/manus-hosting-web-builder",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "build a course business with manus web builder",
+    "md_url": "https://manus.im/blog/build-a-course-business-with-manus-web-builder.md",
+    "html_url": "https://manus.im/blog/build-a-course-business-with-manus-web-builder",
+    "route": "blog/build-a-course-business-with-manus-web-builder",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "deep dive canva connector",
+    "md_url": "https://manus.im/blog/deep-dive-canva-connector.md",
+    "html_url": "https://manus.im/blog/deep-dive-canva-connector",
+    "route": "blog/deep-dive-canva-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "heicoders academy",
+    "md_url": "https://manus.im/blog/heicoders-academy.md",
+    "html_url": "https://manus.im/blog/heicoders-academy",
+    "route": "blog/heicoders-academy",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus zoom",
+    "md_url": "https://manus.im/blog/manus-zoom.md",
+    "html_url": "https://manus.im/blog/manus-zoom",
+    "route": "blog/manus-zoom",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus google multi account",
+    "md_url": "https://manus.im/blog/manus-google-multi-account.md",
+    "html_url": "https://manus.im/blog/manus-google-multi-account",
+    "route": "blog/manus-google-multi-account",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "deep dive airtable connector",
+    "md_url": "https://manus.im/blog/deep-dive-airtable-connector.md",
+    "html_url": "https://manus.im/blog/deep-dive-airtable-connector",
+    "route": "blog/deep-dive-airtable-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "alyak tv",
+    "md_url": "https://manus.im/blog/alyak-tv.md",
+    "html_url": "https://manus.im/blog/alyak-tv",
+    "route": "blog/alyak-tv",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus hubspot",
+    "md_url": "https://manus.im/blog/manus-hubspot.md",
+    "html_url": "https://manus.im/blog/manus-hubspot",
+    "route": "blog/manus-hubspot",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "k id manus use case",
+    "md_url": "https://manus.im/blog/k-id-manus-use-case.md",
+    "html_url": "https://manus.im/blog/k-id-manus-use-case",
+    "route": "blog/k-id-manus-use-case",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "k id customer story",
+    "md_url": "https://manus.im/blog/k-id-customer-story.md",
+    "html_url": "https://manus.im/blog/k-id-customer-story",
+    "route": "blog/k-id-customer-story",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "deep dive notion connector",
+    "md_url": "https://manus.im/blog/deep-dive-notion-connector.md",
+    "html_url": "https://manus.im/blog/deep-dive-notion-connector",
+    "route": "blog/deep-dive-notion-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus shopify connector",
+    "md_url": "https://manus.im/blog/manus-shopify-connector.md",
+    "html_url": "https://manus.im/blog/manus-shopify-connector",
+    "route": "blog/manus-shopify-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus higgsfield connector",
+    "md_url": "https://manus.im/blog/manus-higgsfield-connector.md",
+    "html_url": "https://manus.im/blog/manus-higgsfield-connector",
+    "route": "blog/manus-higgsfield-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus schedules",
+    "md_url": "https://manus.im/blog/manus-schedules.md",
+    "html_url": "https://manus.im/blog/manus-schedules",
+    "route": "blog/manus-schedules",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "deep dive similarweb connector",
+    "md_url": "https://manus.im/blog/deep-dive-similarweb-connector.md",
+    "html_url": "https://manus.im/blog/deep-dive-similarweb-connector",
+    "route": "blog/deep-dive-similarweb-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "deep dive google drive connector",
+    "md_url": "https://manus.im/blog/deep-dive-google-drive-connector.md",
+    "html_url": "https://manus.im/blog/deep-dive-google-drive-connector",
+    "route": "blog/deep-dive-google-drive-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus similarweb upgrade",
+    "md_url": "https://manus.im/blog/manus-similarweb-upgrade.md",
+    "html_url": "https://manus.im/blog/manus-similarweb-upgrade",
+    "route": "blog/manus-similarweb-upgrade",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "mirimim",
+    "md_url": "https://manus.im/blog/mirimim.md",
+    "html_url": "https://manus.im/blog/mirimim",
+    "route": "blog/mirimim",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus preferred browser",
+    "md_url": "https://manus.im/blog/manus-preferred-browser.md",
+    "html_url": "https://manus.im/blog/manus-preferred-browser",
+    "route": "blog/manus-preferred-browser",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "mandai smokehouse",
+    "md_url": "https://manus.im/blog/mandai-smokehouse.md",
+    "html_url": "https://manus.im/blog/mandai-smokehouse",
+    "route": "blog/mandai-smokehouse",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus make a copy webdev",
+    "md_url": "https://manus.im/blog/manus-make-a-copy-webdev.md",
+    "html_url": "https://manus.im/blog/manus-make-a-copy-webdev",
+    "route": "blog/manus-make-a-copy-webdev",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus projects self updating",
+    "md_url": "https://manus.im/blog/manus-projects-self-updating.md",
+    "html_url": "https://manus.im/blog/manus-projects-self-updating",
+    "route": "blog/manus-projects-self-updating",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "deep dive browser operator connector",
+    "md_url": "https://manus.im/blog/deep-dive-browser-operator-connector.md",
+    "html_url": "https://manus.im/blog/deep-dive-browser-operator-connector",
+    "route": "blog/deep-dive-browser-operator-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus recommended connectors",
+    "md_url": "https://manus.im/blog/manus-recommended-connectors.md",
+    "html_url": "https://manus.im/blog/manus-recommended-connectors",
+    "route": "blog/manus-recommended-connectors",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus cloud computer",
+    "md_url": "https://manus.im/blog/manus-cloud-computer.md",
+    "html_url": "https://manus.im/blog/manus-cloud-computer",
+    "route": "blog/manus-cloud-computer",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "deep dive gmail gcal connector",
+    "md_url": "https://manus.im/blog/deep-dive-gmail-gcal-connector.md",
+    "html_url": "https://manus.im/blog/deep-dive-gmail-gcal-connector",
+    "route": "blog/deep-dive-gmail-gcal-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus gpt image 2",
+    "md_url": "https://manus.im/blog/manus-gpt-image-2.md",
+    "html_url": "https://manus.im/blog/manus-gpt-image-2",
+    "route": "blog/manus-gpt-image-2",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "prompts for brands",
+    "md_url": "https://manus.im/blog/prompts-for-brands.md",
+    "html_url": "https://manus.im/blog/prompts-for-brands",
+    "route": "blog/prompts-for-brands",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus your partner on slack",
+    "md_url": "https://manus.im/blog/manus-your-partner-on-slack.md",
+    "html_url": "https://manus.im/blog/manus-your-partner-on-slack",
+    "route": "blog/manus-your-partner-on-slack",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus meta ads manager connector",
+    "md_url": "https://manus.im/blog/manus-meta-ads-manager-connector.md",
+    "html_url": "https://manus.im/blog/manus-meta-ads-manager-connector",
+    "route": "blog/manus-meta-ads-manager-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus instagram connector",
+    "md_url": "https://manus.im/blog/manus-instagram-connector.md",
+    "html_url": "https://manus.im/blog/manus-instagram-connector",
+    "route": "blog/manus-instagram-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus instagram creator marketplace",
+    "md_url": "https://manus.im/blog/manus-instagram-creator-marketplace.md",
+    "html_url": "https://manus.im/blog/manus-instagram-creator-marketplace",
+    "route": "blog/manus-instagram-creator-marketplace",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus google drive connector update cli",
+    "md_url": "https://manus.im/blog/manus-google-drive-connector-update-cli.md",
+    "html_url": "https://manus.im/blog/manus-google-drive-connector-update-cli",
+    "route": "blog/manus-google-drive-connector-update-cli",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus my computer desktop",
+    "md_url": "https://manus.im/blog/manus-my-computer-desktop.md",
+    "html_url": "https://manus.im/blog/manus-my-computer-desktop",
+    "route": "blog/manus-my-computer-desktop",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "year one",
+    "md_url": "https://manus.im/blog/year-one.md",
+    "html_url": "https://manus.im/blog/year-one",
+    "route": "blog/year-one",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "email agent tutorial",
+    "md_url": "https://manus.im/blog/email-agent-tutorial.md",
+    "html_url": "https://manus.im/blog/email-agent-tutorial",
+    "route": "blog/email-agent-tutorial",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus agents telegram",
+    "md_url": "https://manus.im/blog/manus-agents-telegram.md",
+    "html_url": "https://manus.im/blog/manus-agents-telegram",
+    "route": "blog/manus-agents-telegram",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus project skills",
+    "md_url": "https://manus.im/blog/manus-project-skills.md",
+    "html_url": "https://manus.im/blog/manus-project-skills",
+    "route": "blog/manus-project-skills",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus beginner prompts",
+    "md_url": "https://manus.im/blog/manus-beginner-prompts.md",
+    "html_url": "https://manus.im/blog/manus-beginner-prompts",
+    "route": "blog/manus-beginner-prompts",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus skills",
+    "md_url": "https://manus.im/blog/manus-skills.md",
+    "html_url": "https://manus.im/blog/manus-skills",
+    "route": "blog/manus-skills",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus app publishing",
+    "md_url": "https://manus.im/blog/manus-app-publishing.md",
+    "html_url": "https://manus.im/blog/manus-app-publishing",
+    "route": "blog/manus-app-publishing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus sandbox",
+    "md_url": "https://manus.im/blog/manus-sandbox.md",
+    "html_url": "https://manus.im/blog/manus-sandbox",
+    "route": "blog/manus-sandbox",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "similarweb manus",
+    "md_url": "https://manus.im/blog/similarweb-manus.md",
+    "html_url": "https://manus.im/blog/similarweb-manus",
+    "route": "blog/similarweb-manus",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus meeting minutes",
+    "md_url": "https://manus.im/blog/manus-meeting-minutes.md",
+    "html_url": "https://manus.im/blog/manus-meeting-minutes",
+    "route": "blog/manus-meeting-minutes",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus slack connector",
+    "md_url": "https://manus.im/blog/manus-slack-connector.md",
+    "html_url": "https://manus.im/blog/manus-slack-connector",
+    "route": "blog/manus-slack-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus joins meta for next era of innovation",
+    "md_url": "https://manus.im/blog/manus-joins-meta-for-next-era-of-innovation.md",
+    "html_url": "https://manus.im/blog/manus-joins-meta-for-next-era-of-innovation",
+    "route": "blog/manus-joins-meta-for-next-era-of-innovation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus design view",
+    "md_url": "https://manus.im/blog/manus-design-view.md",
+    "html_url": "https://manus.im/blog/manus-design-view",
+    "route": "blog/manus-design-view",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus academy launch",
+    "md_url": "https://manus.im/blog/manus-academy-launch.md",
+    "html_url": "https://manus.im/blog/manus-academy-launch",
+    "route": "blog/manus-academy-launch",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "projects connectors",
+    "md_url": "https://manus.im/blog/projects-connectors.md",
+    "html_url": "https://manus.im/blog/projects-connectors",
+    "route": "blog/projects-connectors",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "edit slides created on manus with nano banana pro",
+    "md_url": "https://manus.im/blog/edit-slides-created-on-manus-with-nano-banana-pro.md",
+    "html_url": "https://manus.im/blog/edit-slides-created-on-manus-with-nano-banana-pro",
+    "route": "blog/edit-slides-created-on-manus-with-nano-banana-pro",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus 100m arr",
+    "md_url": "https://manus.im/blog/manus-100m-arr.md",
+    "html_url": "https://manus.im/blog/manus-100m-arr",
+    "route": "blog/manus-100m-arr",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus max release",
+    "md_url": "https://manus.im/blog/manus-max-release.md",
+    "html_url": "https://manus.im/blog/manus-max-release",
+    "route": "blog/manus-max-release",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus advanced seo",
+    "md_url": "https://manus.im/blog/manus-advanced-seo.md",
+    "html_url": "https://manus.im/blog/manus-advanced-seo",
+    "route": "blog/manus-advanced-seo",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus google drive connector",
+    "md_url": "https://manus.im/blog/manus-google-drive-connector.md",
+    "html_url": "https://manus.im/blog/manus-google-drive-connector",
+    "route": "blog/manus-google-drive-connector",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus custom domains",
+    "md_url": "https://manus.im/blog/manus-custom-domains.md",
+    "html_url": "https://manus.im/blog/manus-custom-domains",
+    "route": "blog/manus-custom-domains",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus slides nano banana pro",
+    "md_url": "https://manus.im/blog/manus-slides-nano-banana-pro.md",
+    "html_url": "https://manus.im/blog/manus-slides-nano-banana-pro",
+    "route": "blog/manus-slides-nano-banana-pro",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus projects",
+    "md_url": "https://manus.im/blog/manus-projects.md",
+    "html_url": "https://manus.im/blog/manus-projects",
+    "route": "blog/manus-projects",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus user story noelle fleur",
+    "md_url": "https://manus.im/blog/manus-user-story-noelle-fleur.md",
+    "html_url": "https://manus.im/blog/manus-user-story-noelle-fleur",
+    "route": "blog/manus-user-story-noelle-fleur",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus microsoft agent365",
+    "md_url": "https://manus.im/blog/manus-microsoft-agent365.md",
+    "html_url": "https://manus.im/blog/manus-microsoft-agent365",
+    "route": "blog/manus-microsoft-agent365",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus browser operator",
+    "md_url": "https://manus.im/blog/manus-browser-operator.md",
+    "html_url": "https://manus.im/blog/manus-browser-operator",
+    "route": "blog/manus-browser-operator",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus notion mcp use cases",
+    "md_url": "https://manus.im/blog/manus-notion-mcp-use-cases.md",
+    "html_url": "https://manus.im/blog/manus-notion-mcp-use-cases",
+    "route": "blog/manus-notion-mcp-use-cases",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus stripe",
+    "md_url": "https://manus.im/blog/manus-stripe.md",
+    "html_url": "https://manus.im/blog/manus-stripe",
+    "route": "blog/manus-stripe",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus slack integration",
+    "md_url": "https://manus.im/blog/manus-slack-integration.md",
+    "html_url": "https://manus.im/blog/manus-slack-integration",
+    "route": "blog/manus-slack-integration",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus wide research solve context problem",
+    "md_url": "https://manus.im/blog/manus-wide-research-solve-context-problem.md",
+    "html_url": "https://manus.im/blog/manus-wide-research-solve-context-problem",
+    "route": "blog/manus-wide-research-solve-context-problem",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing wide research",
+    "md_url": "https://manus.im/blog/introducing-wide-research.md",
+    "html_url": "https://manus.im/blog/introducing-wide-research",
+    "route": "blog/introducing-wide-research",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "Context Engineering for AI Agents Lessons from Building Manus",
+    "md_url": "https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus.md",
+    "html_url": "https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus",
+    "route": "blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "what we saw in the past three months and what we see in the future",
+    "md_url": "https://manus.im/blog/what-we-saw-in-the-past-three-months-and-what-we-see-in-the-future.md",
+    "html_url": "https://manus.im/blog/what-we-saw-in-the-past-three-months-and-what-we-see-in-the-future",
+    "route": "blog/what-we-saw-in-the-past-three-months-and-what-we-see-in-the-future",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai agents customer service",
+    "md_url": "https://manus.im/blog/best-ai-agents-customer-service.md",
+    "html_url": "https://manus.im/blog/best-ai-agents-customer-service",
+    "route": "blog/best-ai-agents-customer-service",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai agents enterprise",
+    "md_url": "https://manus.im/blog/best-ai-agents-enterprise.md",
+    "html_url": "https://manus.im/blog/best-ai-agents-enterprise",
+    "route": "blog/best-ai-agents-enterprise",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai agents",
+    "md_url": "https://manus.im/blog/best-ai-agents.md",
+    "html_url": "https://manus.im/blog/best-ai-agents",
+    "route": "blog/best-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best replit alternatives",
+    "md_url": "https://manus.im/blog/best-replit-alternatives.md",
+    "html_url": "https://manus.im/blog/best-replit-alternatives",
+    "route": "blog/best-replit-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai agents for small business",
+    "md_url": "https://manus.im/blog/best-ai-agents-for-small-business.md",
+    "html_url": "https://manus.im/blog/best-ai-agents-for-small-business",
+    "route": "blog/best-ai-agents-for-small-business",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai agents for desktop",
+    "md_url": "https://manus.im/blog/best-ai-agents-for-desktop.md",
+    "html_url": "https://manus.im/blog/best-ai-agents-for-desktop",
+    "route": "blog/best-ai-agents-for-desktop",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "openclaw vs manus desktop",
+    "md_url": "https://manus.im/blog/openclaw-vs-manus-desktop.md",
+    "html_url": "https://manus.im/blog/openclaw-vs-manus-desktop",
+    "route": "blog/openclaw-vs-manus-desktop",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai ecommerce website builders",
+    "md_url": "https://manus.im/blog/best-ai-ecommerce-website-builders.md",
+    "html_url": "https://manus.im/blog/best-ai-ecommerce-website-builders",
+    "route": "blog/best-ai-ecommerce-website-builders",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai app builders",
+    "md_url": "https://manus.im/blog/best-ai-app-builders.md",
+    "html_url": "https://manus.im/blog/best-ai-app-builders",
+    "route": "blog/best-ai-app-builders",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai video editing software",
+    "md_url": "https://manus.im/blog/best-ai-video-editing-software.md",
+    "html_url": "https://manus.im/blog/best-ai-video-editing-software",
+    "route": "blog/best-ai-video-editing-software",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai portfolio makers",
+    "md_url": "https://manus.im/blog/best-ai-portfolio-makers.md",
+    "html_url": "https://manus.im/blog/best-ai-portfolio-makers",
+    "route": "blog/best-ai-portfolio-makers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best text to video ai",
+    "md_url": "https://manus.im/blog/best-text-to-video-ai.md",
+    "html_url": "https://manus.im/blog/best-text-to-video-ai",
+    "route": "blog/best-text-to-video-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "veo3 video review",
+    "md_url": "https://manus.im/blog/veo3-video-review.md",
+    "html_url": "https://manus.im/blog/veo3-video-review",
+    "route": "blog/veo3-video-review",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "free pdf to ppt converters",
+    "md_url": "https://manus.im/blog/free-pdf-to-ppt-converters.md",
+    "html_url": "https://manus.im/blog/free-pdf-to-ppt-converters",
+    "route": "blog/free-pdf-to-ppt-converters",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai productivity tools",
+    "md_url": "https://manus.im/blog/best-ai-productivity-tools.md",
+    "html_url": "https://manus.im/blog/best-ai-productivity-tools",
+    "route": "blog/best-ai-productivity-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai tools for code review",
+    "md_url": "https://manus.im/blog/best-ai-tools-for-code-review.md",
+    "html_url": "https://manus.im/blog/best-ai-tools-for-code-review",
+    "route": "blog/best-ai-tools-for-code-review",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus vs synthesia",
+    "md_url": "https://manus.im/blog/manus-vs-synthesia.md",
+    "html_url": "https://manus.im/blog/manus-vs-synthesia",
+    "route": "blog/manus-vs-synthesia",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best landing page generator",
+    "md_url": "https://manus.im/blog/best-landing-page-generator.md",
+    "html_url": "https://manus.im/blog/best-landing-page-generator",
+    "route": "blog/best-landing-page-generator",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best b2b sales presentations tools",
+    "md_url": "https://manus.im/blog/best-b2b-sales-presentations-tools.md",
+    "html_url": "https://manus.im/blog/best-b2b-sales-presentations-tools",
+    "route": "blog/best-b2b-sales-presentations-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai presentation makers",
+    "md_url": "https://manus.im/blog/best-ai-presentation-makers.md",
+    "html_url": "https://manus.im/blog/best-ai-presentation-makers",
+    "route": "blog/best-ai-presentation-makers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai image generator",
+    "md_url": "https://manus.im/blog/best-ai-image-generator.md",
+    "html_url": "https://manus.im/blog/best-ai-image-generator",
+    "route": "blog/best-ai-image-generator",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best vibe coding tools",
+    "md_url": "https://manus.im/blog/best-vibe-coding-tools.md",
+    "html_url": "https://manus.im/blog/best-vibe-coding-tools",
+    "route": "blog/best-vibe-coding-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "email automation ai writing tools",
+    "md_url": "https://manus.im/blog/email-automation-ai-writing-tools.md",
+    "html_url": "https://manus.im/blog/email-automation-ai-writing-tools",
+    "route": "blog/email-automation-ai-writing-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "vibe coding tools non coder review",
+    "md_url": "https://manus.im/blog/vibe-coding-tools-non-coder-review.md",
+    "html_url": "https://manus.im/blog/vibe-coding-tools-non-coder-review",
+    "route": "blog/vibe-coding-tools-non-coder-review",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai website builders professional sites",
+    "md_url": "https://manus.im/blog/ai-website-builders-professional-sites.md",
+    "html_url": "https://manus.im/blog/ai-website-builders-professional-sites",
+    "route": "blog/ai-website-builders-professional-sites",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai video generator",
+    "md_url": "https://manus.im/blog/best-ai-video-generator.md",
+    "html_url": "https://manus.im/blog/best-ai-video-generator",
+    "route": "blog/best-ai-video-generator",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai text generator",
+    "md_url": "https://manus.im/blog/best-ai-text-generator.md",
+    "html_url": "https://manus.im/blog/best-ai-text-generator",
+    "route": "blog/best-ai-text-generator",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai coding assistant tools",
+    "md_url": "https://manus.im/blog/best-ai-coding-assistant-tools.md",
+    "html_url": "https://manus.im/blog/best-ai-coding-assistant-tools",
+    "route": "blog/best-ai-coding-assistant-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best chatgpt alternatives",
+    "md_url": "https://manus.im/blog/best-chatgpt-alternatives.md",
+    "html_url": "https://manus.im/blog/best-chatgpt-alternatives",
+    "route": "blog/best-chatgpt-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best website builder",
+    "md_url": "https://manus.im/blog/best-website-builder.md",
+    "html_url": "https://manus.im/blog/best-website-builder",
+    "route": "blog/best-website-builder",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "lovable vs replit vs manus",
+    "md_url": "https://manus.im/blog/lovable-vs-replit-vs-manus.md",
+    "html_url": "https://manus.im/blog/lovable-vs-replit-vs-manus",
+    "route": "blog/lovable-vs-replit-vs-manus",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "can manus create slides",
+    "md_url": "https://manus.im/blog/can-manus-create-slides.md",
+    "html_url": "https://manus.im/blog/can-manus-create-slides",
+    "route": "blog/can-manus-create-slides",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "presentation tools for education",
+    "md_url": "https://manus.im/blog/presentation-tools-for-education.md",
+    "html_url": "https://manus.im/blog/presentation-tools-for-education",
+    "route": "blog/presentation-tools-for-education",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "vs gamma",
+    "md_url": "https://manus.im/blog/vs-gamma.md",
+    "html_url": "https://manus.im/blog/vs-gamma",
+    "route": "blog/vs-gamma",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "vs canva",
+    "md_url": "https://manus.im/blog/vs-canva.md",
+    "html_url": "https://manus.im/blog/vs-canva",
+    "route": "blog/vs-canva",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "customer stories",
+    "md_url": "https://manus.im/blog/customer-stories.md",
+    "html_url": "https://manus.im/blog/customer-stories",
+    "route": "blog/customer-stories",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "product",
+    "md_url": "https://manus.im/blog/product.md",
+    "html_url": "https://manus.im/blog/product",
+    "route": "blog/product",
+    "kind": "blog"
+  }
+]

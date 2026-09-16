@@ -1,0 +1,15 @@
+{
+  "id": "manus",
+  "name": "Manus",
+  "docs_url": "https://manus.im/docs",
+  "blog_url": "https://manus.im/blog",
+  "icon": "vendors/manus/icon.png",
+  "author": "Manus",
+  "adapter": "generic",
+  "updated_at": "",
+  "packed_at": "",
+  "summary": "",
+  "category": "docs",
+  "chapters": 160,
+  "cover": ""
+}

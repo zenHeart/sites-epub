@@ -1,0 +1,15 @@
+{
+  "id": "kimi",
+  "name": "Kimi",
+  "docs_url": "https://platform.kimi.com/docs",
+  "blog_url": null,
+  "icon": "vendors/kimi/icon.png",
+  "author": "Moonshot AI",
+  "adapter": "generic",
+  "updated_at": "",
+  "packed_at": "",
+  "summary": "",
+  "category": "docs",
+  "chapters": 106,
+  "cover": ""
+}

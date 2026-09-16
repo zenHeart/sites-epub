@@ -1,0 +1,170 @@
+[
+  {
+    "group": "Docs",
+    "title": "Skip to main content",
+    "md_url": "https://api-docs.deepseek.com/.md",
+    "html_url": "https://api-docs.deepseek.com/",
+    "route": "index",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "\u4e2d\u6587\uff08\u4e2d\u56fd\uff09",
+    "md_url": "https://api-docs.deepseek.com/zh-cn.md",
+    "html_url": "https://api-docs.deepseek.com/zh-cn",
+    "route": "zh-cn",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Models & Pricing",
+    "md_url": "https://api-docs.deepseek.com/quick_start/pricing.md",
+    "html_url": "https://api-docs.deepseek.com/quick_start/pricing",
+    "route": "quick_start/pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Token & Token Usage",
+    "md_url": "https://api-docs.deepseek.com/quick_start/token_usage.md",
+    "html_url": "https://api-docs.deepseek.com/quick_start/token_usage",
+    "route": "quick_start/token_usage",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Rate Limit & Isolation",
+    "md_url": "https://api-docs.deepseek.com/quick_start/rate_limit.md",
+    "html_url": "https://api-docs.deepseek.com/quick_start/rate_limit",
+    "route": "quick_start/rate_limit",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Error Codes",
+    "md_url": "https://api-docs.deepseek.com/quick_start/error_codes.md",
+    "html_url": "https://api-docs.deepseek.com/quick_start/error_codes",
+    "route": "quick_start/error_codes",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "API Guides",
+    "md_url": "https://api-docs.deepseek.com/guides/vision.md",
+    "html_url": "https://api-docs.deepseek.com/guides/vision",
+    "route": "guides/vision",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Thinking Mode",
+    "md_url": "https://api-docs.deepseek.com/guides/thinking_mode.md",
+    "html_url": "https://api-docs.deepseek.com/guides/thinking_mode",
+    "route": "guides/thinking_mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Multi-round Conversation",
+    "md_url": "https://api-docs.deepseek.com/guides/multi_round_chat.md",
+    "html_url": "https://api-docs.deepseek.com/guides/multi_round_chat",
+    "route": "guides/multi_round_chat",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Chat Prefix Completion (Beta)",
+    "md_url": "https://api-docs.deepseek.com/guides/chat_prefix_completion.md",
+    "html_url": "https://api-docs.deepseek.com/guides/chat_prefix_completion",
+    "route": "guides/chat_prefix_completion",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "FIM Completion (Beta)",
+    "md_url": "https://api-docs.deepseek.com/guides/fim_completion.md",
+    "html_url": "https://api-docs.deepseek.com/guides/fim_completion",
+    "route": "guides/fim_completion",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "JSON Output",
+    "md_url": "https://api-docs.deepseek.com/guides/json_mode.md",
+    "html_url": "https://api-docs.deepseek.com/guides/json_mode",
+    "route": "guides/json_mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Tool Calls",
+    "md_url": "https://api-docs.deepseek.com/guides/tool_calls.md",
+    "html_url": "https://api-docs.deepseek.com/guides/tool_calls",
+    "route": "guides/tool_calls",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Files API",
+    "md_url": "https://api-docs.deepseek.com/guides/files_api.md",
+    "html_url": "https://api-docs.deepseek.com/guides/files_api",
+    "route": "guides/files_api",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Context Caching",
+    "md_url": "https://api-docs.deepseek.com/guides/kv_cache.md",
+    "html_url": "https://api-docs.deepseek.com/guides/kv_cache",
+    "route": "guides/kv_cache",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Using the Responses API",
+    "md_url": "https://api-docs.deepseek.com/guides/responses_api.md",
+    "html_url": "https://api-docs.deepseek.com/guides/responses_api",
+    "route": "guides/responses_api",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Using the Anthropic API",
+    "md_url": "https://api-docs.deepseek.com/guides/anthropic_api.md",
+    "html_url": "https://api-docs.deepseek.com/guides/anthropic_api",
+    "route": "guides/anthropic_api",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "API Reference",
+    "md_url": "https://api-docs.deepseek.com/api/create-chat-completion.md",
+    "html_url": "https://api-docs.deepseek.com/api/create-chat-completion",
+    "route": "api/create-chat-completion",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "News",
+    "md_url": "https://api-docs.deepseek.com/news/news260910.md",
+    "html_url": "https://api-docs.deepseek.com/news/news260910",
+    "route": "news/news260910",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Change Log",
+    "md_url": "https://api-docs.deepseek.com/updates.md",
+    "html_url": "https://api-docs.deepseek.com/updates",
+    "route": "updates",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
+    "title": "Agent Integrations Guide",
+    "md_url": "https://api-docs.deepseek.com/quick_start/agent_integrations/claude_code.md",
+    "html_url": "https://api-docs.deepseek.com/quick_start/agent_integrations/claude_code",
+    "route": "quick_start/agent_integrations/claude_code",
+    "kind": "doc"
+  }
+]

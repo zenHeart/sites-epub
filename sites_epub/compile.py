@@ -60,10 +60,21 @@ def discover_entries(
     else:
         from .generic_nav import parse_docs_html, parse_llms_generic
 
-        if docs_llms:
-            docs = parse_llms_generic(docs_llms, vendor.docs_url)
-        if not docs and docs_html:
-            docs = parse_docs_html(docs_html, vendor.docs_url)
+        if vendor.adapter == "generic_i18n":
+            # Locale-prefixed primary tree (help.aliyun.com/zh/lingma,
+            # docs.bigmodel.cn/cn): keep the locale, scope to docs_url's path.
+            scope = urlparse(vendor.docs_url).path.rstrip("/")
+            if docs_llms:
+                docs = parse_llms_generic(
+                    docs_llms, vendor.docs_url, keep_i18n=True, scope_path=scope
+                )
+            if not docs and docs_html:
+                docs = parse_docs_html(docs_html, vendor.docs_url)
+        else:
+            if docs_llms:
+                docs = parse_llms_generic(docs_llms, vendor.docs_url)
+            if not docs and docs_html:
+                docs = parse_docs_html(docs_html, vendor.docs_url)
     blog: list[IndexEntry] = []
     if vendor.blog_url and blog_html:
         if vendor.adapter == "gemini":
@@ -408,6 +419,7 @@ def fetch_vendor(
     for llms in (
         vendor.docs_url.rstrip("/") + "/llms.txt",
         vendor.docs_url.rsplit("/docs", 1)[0] + "/llms.txt" if "/docs" in vendor.docs_url else "",
+        _origin(vendor.docs_url) + "/llms.txt" if vendor.adapter == "generic_i18n" else "",
         "https://code.claude.com/docs/llms.txt" if vendor.adapter == "claude" else "",
         "https://learn.chatgpt.com/llms.txt" if vendor.adapter == "codex" else "",
         "https://docs.x.ai/llms.txt" if vendor.adapter == "xai" else "",

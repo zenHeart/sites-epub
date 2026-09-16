@@ -25,8 +25,20 @@ def _title_from_path(path: str) -> str:
     return slug.replace("-", " ")
 
 
-def parse_llms_generic(text: str, docs_url: str) -> list[IndexEntry]:
-    """Parse Mintlify-style [title](url) and Cursor-style nested bare URLs."""
+def parse_llms_generic(
+    text: str,
+    docs_url: str,
+    *,
+    keep_i18n: bool = False,
+    scope_path: str = "",
+) -> list[IndexEntry]:
+    """Parse Mintlify-style [title](url) and Cursor-style nested bare URLs.
+
+    keep_i18n: sites whose PRIMARY tree lives under a locale prefix
+    (e.g. help.aliyun.com/zh/lingma) — the i18n filter would drop the
+    actual content. scope_path: when set, keep only links under this
+    path prefix (e.g. "/cn" for docs.bigmodel.cn's Chinese tree).
+    """
     parsed = urlparse(docs_url)
     origin = f"{parsed.scheme}://{parsed.netloc}"
     section = ""
@@ -67,7 +79,10 @@ def parse_llms_generic(text: str, docs_url: str) -> list[IndexEntry]:
         if p.netloc and p.netloc != parsed.netloc:
             continue
         path = p.path or "/"
-        if I18N_PREFIX.match(path):
+        if scope_path:
+            if not (path == scope_path or path.startswith(scope_path + "/")):
+                continue
+        elif not keep_i18n and I18N_PREFIX.match(path):
             continue
         if path == "/help" or path.startswith("/help/"):
             continue
@@ -80,6 +95,8 @@ def parse_llms_generic(text: str, docs_url: str) -> list[IndexEntry]:
             md_url = html_url + ".md"
             route = path.strip("/") or "index"
         if not route or route in seen:
+            continue
+        if "@" in route:  # mailto/anchor junk from llms lists (deepseek)
             continue
         seen.add(route)
         out.append(
@@ -97,7 +114,9 @@ def parse_llms_generic(text: str, docs_url: str) -> list[IndexEntry]:
 
 def parse_docs_html(html: str, docs_url: str) -> list[IndexEntry]:
     parsed = urlparse(docs_url)
-    prefix = parsed.path.rstrip("/") or "/docs"
+    # Root docs sites (e.g. api-docs.deepseek.com) keep every in-site link;
+    # "/docs" was a cursor-era fallback that silently zeroed root-URL vendors.
+    prefix = parsed.path.rstrip("/") or "/"
     soup = BeautifulSoup(html, "lxml")
     seen: set[str] = set()
     out: list[IndexEntry] = []

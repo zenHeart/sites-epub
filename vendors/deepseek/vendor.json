@@ -1,0 +1,15 @@
+{
+  "id": "deepseek",
+  "name": "DeepSeek",
+  "docs_url": "https://api-docs.deepseek.com/",
+  "blog_url": null,
+  "icon": "vendors/deepseek/icon.png",
+  "author": "DeepSeek",
+  "adapter": "generic",
+  "updated_at": "",
+  "packed_at": "",
+  "summary": "",
+  "category": "docs",
+  "chapters": 21,
+  "cover": ""
+}
