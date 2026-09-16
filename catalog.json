@@ -91,21 +91,6 @@
       "cover": "covers/manus.png"
     },
     {
-      "id": "kimi",
-      "name": "Kimi",
-      "docs_url": "https://www.kimi.com",
-      "blog_url": "https://www.kimi.com/blog",
-      "icon": "vendors/kimi/icon.png",
-      "author": "Moonshot AI",
-      "adapter": "kimi",
-      "updated_at": "2026-09-16T08:09:56Z",
-      "packed_at": "2026-09-16T08:22:26Z",
-      "summary": "Kimi 产品书(Moonshot AI):kimi.com 网页版产品页与官方 Blog(K 系列模型与 agent 工程文)。",
-      "category": "docs",
-      "chapters": 21,
-      "cover": "covers/kimi.png"
-    },
-    {
       "id": "coze",
       "name": "Coze",
       "docs_url": "https://docs.coze.cn",
@@ -121,19 +106,34 @@
       "cover": "covers/coze.png"
     },
     {
-      "id": "hailuo",
-      "name": "Hailuo AI",
-      "docs_url": "https://hailuoai.com",
-      "blog_url": null,
-      "icon": "vendors/hailuo/icon.png",
-      "author": "MiniMax",
-      "adapter": "generic",
-      "updated_at": "2026-09-16T09:13:52Z",
-      "packed_at": "2026-09-16T09:15:27Z",
-      "summary": "MiniMax 海螺 AI 产品文档:视频生成、旗舰工具与创作者功能页。",
+      "id": "kimi",
+      "name": "Kimi",
+      "docs_url": "https://www.kimi.com",
+      "blog_url": "https://www.kimi.com/blog",
+      "icon": "vendors/kimi/icon.png",
+      "author": "Moonshot AI",
+      "adapter": "kimi",
+      "updated_at": "2026-09-16T09:21:56Z",
+      "packed_at": "2026-09-16T09:22:23Z",
+      "summary": "Kimi 产品书(Moonshot AI):kimi.com 产品页(含 Kimi Work/WebBridge)与官方 Blog。",
       "category": "docs",
-      "chapters": 16,
-      "cover": "covers/hailuo.png"
+      "chapters": 21,
+      "cover": "covers/kimi.png"
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "docs_url": "https://www.minimax.io/models",
+      "blog_url": null,
+      "icon": "vendors/minimax/icon.png",
+      "author": "MiniMax",
+      "adapter": "minimax",
+      "updated_at": "2026-09-16T09:20:59Z",
+      "packed_at": "2026-09-16T09:23:10Z",
+      "summary": "MiniMax 模型与产品书:minimax.io 模型目录(M2.5/M2.7/M3)+ 海螺 Hailuo 产品页(视频生成/创作者工具)。",
+      "category": "docs",
+      "chapters": 21,
+      "cover": "covers/minimax.png"
     }
   ],
   "sites": [

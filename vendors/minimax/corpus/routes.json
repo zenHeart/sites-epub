@@ -1,0 +1,170 @@
+[
+  {
+    "group": "MiniMax Models",
+    "title": "MiniMax M3",
+    "md_url": "https://www.minimax.io/models/text/m3.md",
+    "html_url": "https://www.minimax.io/models/text/m3",
+    "route": "minimax-iomodels-text-m3",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Models",
+    "title": "MiniMax M2.7",
+    "md_url": "https://www.minimax.io/models/text/m27.md",
+    "html_url": "https://www.minimax.io/models/text/m27",
+    "route": "minimax-iomodels-text-m27",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**Text-to-Video Creation (Hailuo 2.3)**",
+    "md_url": "https://hailuoai.video/create/text-to-video",
+    "html_url": "https://hailuoai.video/create/text-to-video",
+    "route": "hailuo-create-text-to-video",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**Image-to-Video Animation**",
+    "md_url": "https://hailuoai.video/create/image-to-video",
+    "html_url": "https://hailuoai.video/create/image-to-video",
+    "route": "hailuo-create-image-to-video",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**Image Generation (Nano Banana Model)**",
+    "md_url": "https://hailuoai.video/create/image-generation",
+    "html_url": "https://hailuoai.video/create/image-generation",
+    "route": "hailuo-create-image-generation",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Hug Generator**",
+    "md_url": "https://hailuoai.video/tools/ai-hug-generator",
+    "html_url": "https://hailuoai.video/tools/ai-hug-generator",
+    "route": "hailuo-tools-ai-hug-generator",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Dance Generator**",
+    "md_url": "https://hailuoai.video/tools/ai-dance-generator",
+    "html_url": "https://hailuoai.video/tools/ai-dance-generator",
+    "route": "hailuo-tools-ai-dance-generator",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Kiss Generator**",
+    "md_url": "https://hailuoai.video/tools/ai-kiss-generator",
+    "html_url": "https://hailuoai.video/tools/ai-kiss-generator",
+    "route": "hailuo-tools-ai-kiss-generator",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Kungfu & Fight Generator**",
+    "md_url": "https://hailuoai.video/tools/ai-kungfu-generator",
+    "html_url": "https://hailuoai.video/tools/ai-kungfu-generator",
+    "route": "hailuo-tools-ai-kungfu-generator",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Muscle & Body Transformation**",
+    "md_url": "https://hailuoai.video/tools/ai-muscle-generator",
+    "html_url": "https://hailuoai.video/tools/ai-muscle-generator",
+    "route": "hailuo-tools-ai-muscle-generator",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Ad Generator**",
+    "md_url": "https://hailuoai.video/tools/ai-ad-generator",
+    "html_url": "https://hailuoai.video/tools/ai-ad-generator",
+    "route": "hailuo-tools-ai-ad-generator",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Product Video Maker**",
+    "md_url": "https://hailuoai.video/tools/ai-product-video-maker",
+    "html_url": "https://hailuoai.video/tools/ai-product-video-maker",
+    "route": "hailuo-tools-ai-product-video-maker",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Shorts & Reels Generator**",
+    "md_url": "https://hailuoai.video/tools/ai-shorts-generator",
+    "html_url": "https://hailuoai.video/tools/ai-shorts-generator",
+    "route": "hailuo-tools-ai-shorts-generator",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Video Style Transfer**",
+    "md_url": "https://hailuoai.video/ai-video-style-transfer",
+    "html_url": "https://hailuoai.video/ai-video-style-transfer",
+    "route": "hailuo-ai-video-style-transfer",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Gender Swap**",
+    "md_url": "https://hailuoai.video/ai-video-landing/ai-gender-swap",
+    "html_url": "https://hailuoai.video/ai-video-landing/ai-gender-swap",
+    "route": "hailuo-ai-video-landing-ai-gender-swap",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Animation Generator**",
+    "md_url": "https://hailuoai.video/tools/ai-animation-generator",
+    "html_url": "https://hailuoai.video/tools/ai-animation-generator",
+    "route": "hailuo-tools-ai-animation-generator",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Christmas & Santa Generator**",
+    "md_url": "https://hailuoai.video/tools/ai-santa-video-generator",
+    "html_url": "https://hailuoai.video/tools/ai-santa-video-generator",
+    "route": "hailuo-tools-ai-santa-video-generator",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**AI Baby & Pet Video Maker**",
+    "md_url": "https://hailuoai.video/ai-baby-story-video",
+    "html_url": "https://hailuoai.video/ai-baby-story-video",
+    "route": "hailuo-ai-baby-story-video",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**Hailuo 2.3 Model Info**",
+    "md_url": "https://hailuoai.video/tools/hailuo-2-3-model",
+    "html_url": "https://hailuoai.video/tools/hailuo-2-3-model",
+    "route": "hailuo-tools-hailuo-2-3-model",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**Nano Banana Pro Info**",
+    "md_url": "https://hailuoai.video/tools/nano-banana-pro",
+    "html_url": "https://hailuoai.video/tools/nano-banana-pro",
+    "route": "hailuo-tools-nano-banana-pro",
+    "kind": "doc"
+  },
+  {
+    "group": "Hailuo \u4ea7\u54c1",
+    "title": "**Hailuo AI Agent Platform**",
+    "md_url": "https://hailuoai.video/agent",
+    "html_url": "https://hailuoai.video/agent",
+    "route": "hailuo-agent",
+    "kind": "doc"
+  }
+]

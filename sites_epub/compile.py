@@ -53,6 +53,10 @@ def discover_entries(
         if not docs_llms:
             raise ValueError("xai adapter needs llms.txt")
         docs = parse_xai_llms(docs_llms, vendor.docs_url)
+    elif vendor.adapter == "minimax":
+        from .minimax_nav import parse_minimax_docs
+
+        docs = parse_minimax_docs()
     elif vendor.adapter == "gemini":
         from .gemini_nav import parse_gemini_docs
 

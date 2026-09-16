@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 560" width="420" height="560">
+  <rect width="420" height="560" fill="#120e14"/>
+  <rect x="26" y="26" width="368" height="508" fill="none" stroke="#f4ecf6" stroke-width="1.2"/>
+  <text x="48" y="66" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="9.5" font-weight="700" letter-spacing="2.4" fill="#aca0b0">SITE EPUB / MINIMAX</text>
+  <text x="43" y="185" font-family="ui-serif, Iowan Old Style, Georgia, serif" font-size="65" font-weight="600" fill="#f4ecf6">MiniMax</text>
+  <text x="48" y="233" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="600" fill="#e87aa8">模型与产品全家桶</text>
+  <line x1="48" y1="267" x2="134" y2="267" stroke="#e87aa8" stroke-width="1"/>
+  <text x="48" y="417" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="11.5" fill="#aca0b0">模型目录 · 海螺视频 · 创作者工具</text>
+  <text x="48" y="438" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="12.5" fill="#aca0b0">产品文档在前 · 博客在后</text>
+  <text x="48" y="492" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#f4ecf6">Minimax</text>
+  <text x="48" y="514" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="10.5" fill="#aca0b0">minimax.io</text>
+</svg>

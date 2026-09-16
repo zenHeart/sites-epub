@@ -1,0 +1,15 @@
+{
+  "id": "minimax",
+  "name": "MiniMax",
+  "docs_url": "https://www.minimax.io/models",
+  "blog_url": null,
+  "icon": "vendors/minimax/icon.png",
+  "author": "MiniMax",
+  "adapter": "minimax",
+  "updated_at": "",
+  "packed_at": "",
+  "summary": "MiniMax 模型与产品书:minimax.io 模型目录(M2.5/M2.7/M3)+ 海螺 Hailuo 产品页(视频生成/创作者工具)。",
+  "category": "docs",
+  "chapters": 21,
+  "cover": "covers/minimax.png"
+}

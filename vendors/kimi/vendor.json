@@ -6,9 +6,9 @@
   "icon": "vendors/kimi/icon.png",
   "author": "Moonshot AI",
   "adapter": "kimi",
-  "updated_at": "2026-09-16T08:07:45Z",
-  "packed_at": "2026-09-16T07:25:27Z",
-  "summary": "Kimi 产品书(Moonshot AI):kimi.com 网页版产品页与官方 Blog(K 系列模型与 agent 工程文)。",
+  "updated_at": "2026-09-16T09:19:14Z",
+  "packed_at": "",
+  "summary": "Kimi 产品书(Moonshot AI):kimi.com 产品页(含 Kimi Work/WebBridge)与官方 Blog。",
   "category": "docs",
   "chapters": 21,
   "cover": "covers/kimi.png"

@@ -29,7 +29,9 @@ python3 -m sites_epub changelog            # 本地：由 routes.json git 历史
 
 ## 国内厂商产品信源注册表（2026-09-16 E 层实测，重抓前先复测）
 
-**已建**：Coze（docs.coze.cn，763ch）· Kimi（kimi.com+blog，21ch）· 海螺 Hailuo（hailuoai.com llms，16ch；.video 同源勿重复收）。
+**获取逻辑（用户定调，2026-09-16）**：每厂商聚合为**一本书**（gemini 模式）。入口从厂商官网的 `/products`（或 `/models`）产品家族页开始：`厂商根 /products → 枚举产品/模型 → 每个产品或模型域一个大章节 → 官方 blog 恒为末章`。多入口域用多根适配器聚合（参考 `gemini_nav.py` / `minimax_nav.py`：minimax.io 模型目录 + hailuoai 产品页同书）。`/products` 本身常为 SPA 时退回 llms.txt/help/sitemap，并在下表登记证据。
+
+**已建**：Coze（docs.coze.cn，763ch）· Kimi（kimi.com 产品页+官方 Blog，21ch）· MiniMax（minimax.io 模型目录 + 海螺产品页聚合，21ch）。
 **受阻（产品端无可抓文档，证据）**：
 
 | 厂商 | 产品 | 阻断证据 | 复测入口 |
