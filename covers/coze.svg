@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 560" width="420" height="560">
+  <rect width="420" height="560" fill="#0c1018"/>
+  <rect x="26" y="26" width="368" height="508" fill="none" stroke="#e8f0fa" stroke-width="1.2"/>
+  <text x="48" y="66" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="9.5" font-weight="700" letter-spacing="2.4" fill="#98a8bc">SITE EPUB / BYTEDANCE</text>
+  <text x="43" y="185" font-family="ui-serif, Iowan Old Style, Georgia, serif" font-size="58" font-weight="600" fill="#e8f0fa">Coze</text>
+  <text x="48" y="233" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="600" fill="#4caef9">扣子 · Agent 产品文档</text>
+  <line x1="48" y1="267" x2="134" y2="267" stroke="#4caef9" stroke-width="1"/>
+  <text x="48" y="417" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="11.5" fill="#98a8bc">低代码搭建 · 工作流 · 扣子编程 · 教程与案例</text>
+  <text x="48" y="438" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="12.5" fill="#98a8bc">产品文档在前 · 博客在后</text>
+  <text x="48" y="492" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#e8f0fa">ByteDance</text>
+  <text x="48" y="514" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="10.5" fill="#98a8bc">docs.coze.cn</text>
+</svg>
