@@ -1,0 +1,650 @@
+[
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Skip to content",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Overview",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Overview",
+    "route": "wb-workbuddy-overview",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5feb\u901f\u5f00\u59cb",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Quickstart",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Quickstart",
+    "route": "wb-workbuddy-quickstart",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\ud83d\udccb \u66f4\u65b0\u65e5\u5fd7",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Changelog",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Changelog",
+    "route": "wb-workbuddy-changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5386\u53f2\u7248\u672c\u4e0b\u8f7d",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Download-History",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Download-History",
+    "route": "wb-workbuddy-download-history",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u521b\u5efa\u4efb\u52a1",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Create-Task",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Create-Task",
+    "route": "wb-workbuddy-create-task",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u4efb\u52a1\u7ba1\u7406",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Task-Management",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Task-Management",
+    "route": "wb-workbuddy-task-management",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u4efb\u52a1\u5bf9\u8bdd",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Conversation",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Conversation",
+    "route": "wb-workbuddy-conversation",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u7ed3\u679c\u67e5\u770b",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Results",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Results",
+    "route": "wb-workbuddy-results",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5f00\u542f\u4f60\u7684\u7b2c\u4e00\u4e2a\u4efb\u52a1",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/FirstTask",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/FirstTask",
+    "route": "wb-workbuddy-firsttask",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Windows \u7cfb\u7edf\u5b89\u88c5\u6307\u5357",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-installation-win-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Mac \u7cfb\u7edf\u5b89\u88c5\u6307\u5357",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Mac-Guide",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Mac-Guide",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-installation-mac-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u65b0\u5efa\u4efb\u52a1\u680f",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Task-Bar",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Task-Bar",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-task-bar",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u8bbe\u8ba1\u521b\u610f",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Design-Idea",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Design-Idea",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-design-idea",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u52a9\u7406",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Assistant",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Assistant",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-assistant",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u9879\u76ee",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Project",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Project",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-project",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Buddy \u5e94\u7528",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Buddy-App",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Buddy-App",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-buddy-app",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Git \u96c6\u6210\u548c\u5e76\u884c\u5f00\u53d1",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Worktree-Task",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Worktree-Task",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-worktree-task",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u4e13\u5bb6",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Expert-Center",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Expert-Center",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-expert-center",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u6280\u80fd",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-skills-market",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u7075\u611f",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Ispiration",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Ispiration",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-ispiration",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u6211\u7684\u90ae\u7bb1",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Mailbox",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Mailbox",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-mailbox",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u8fde\u63a5\u5668",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Connector",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Connector",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-connector",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u8d44\u6599\u5e93",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Library",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Library",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-library",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5185\u5bb9\u7ba1\u7406",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Library/Content-Management",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Library/Content-Management",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-library-content-management",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u591a\u4eba\u591a Agent \u534f\u4f5c",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Library/Collaboration",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Library/Collaboration",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-library-collaboration",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u8f7b\u91cf\u53d1\u5e03",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Library/Lightweight-Publish",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Library/Lightweight-Publish",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-library-lightweight-publish",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u817e\u8baf\u6587\u6863",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/Tencent-Doc",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/Tencent-Doc",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-knowledge-base-tencent-doc",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u529f\u80fd\u6307\u5f15",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/IMA%20Knowledge%20Base/01-Workbuddy-IMA-Basic-Guide",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/IMA%20Knowledge%20Base/01-Workbuddy-IMA-Basic-Guide",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-knowledge-base-ima%20knowledge%20base-01-workbuddy-ima-basic-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u77e5\u8bc6\u590d\u5229\u6280\u5de7",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/IMA%20Knowledge%20Base/02-Build-Knowledge-Base",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/IMA%20Knowledge%20Base/02-Build-Knowledge-Base",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-knowledge-base-ima%20knowledge%20base-02-build-knowledge-base",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "OPC\u653b\u7565",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/IMA%20Knowledge%20Base/03-OPC-One-Day",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/IMA%20Knowledge%20Base/03-OPC-One-Day",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-knowledge-base-ima%20knowledge%20base-03-opc-one-day",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u521b\u4f5c\u8005\u653b\u7565",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/IMA%20Knowledge%20Base/04-Creator-Strategy",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/IMA%20Knowledge%20Base/04-Creator-Strategy",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-knowledge-base-ima%20knowledge%20base-04-creator-strategy",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b66\u4e1a\u52a9\u624b\u653b\u7565",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/IMA%20Knowledge%20Base/05-Study-Assistant",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/IMA%20Knowledge%20Base/05-Study-Assistant",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-knowledge-base-ima%20knowledge%20base-05-study-assistant",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u6c42\u804c\u5c55\u793a\u653b\u7565",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/IMA%20Knowledge%20Base/06-Job-Hunting-Showcase",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/IMA%20Knowledge%20Base/06-Job-Hunting-Showcase",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-knowledge-base-ima%20knowledge%20base-06-job-hunting-showcase",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u4e50\u4eab\u77e5\u8bc6\u5e93",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/Lexiang",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/Lexiang",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-knowledge-base-lexiang",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u4eba\u673a\u53cc\u5199",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/Cowriting",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Knowledge-Base/Cowriting",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-knowledge-base-cowriting",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u81ea\u52a8\u5316",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Automation-Guide",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Automation-Guide",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-automation-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u53f3\u4fa7\u8fb9\u680f",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Right-Sidebar",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Right-Sidebar",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-right-sidebar",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u7cfb\u7edf\u8bbe\u7f6e",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Setting",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Setting",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-setting",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u9ed8\u8ba4\u6743\u9650\u4e0e\u5b89\u5168\u6c99\u7bb1",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Permission-Modes",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Permission-Modes",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-permission-modes",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u8bb0\u5fc6",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Memory",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Memory",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-memory",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u6a21\u578b\u914d\u7f6e",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Model",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Model",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-model",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u6570\u636e\u7ba1\u7406",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Data",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Data",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-data",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5e2e\u52a9\u4e0e\u53cd\u9988",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Feedback",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Feedback",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-feedback",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b9e\u8df5\u4e00\uff1a\u6587\u4ef6\u5185\u5bb9\u8bc6\u522b\u4e0e\u5904\u7406",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-One",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-One",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-practice-cases-practice-one",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b9e\u8df5\u4e8c\uff1a\u6587\u6863\u751f\u6210\u4e0e\u7f16\u8f91",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Two",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Two",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-practice-cases-practice-two",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b9e\u8df5\u4e09\uff1a\u6570\u636e\u5206\u6790\u5e76\u53ef\u89c6\u5316",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Three",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Three",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-practice-cases-practice-three",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b9e\u8df5\u56db\uff1a\u81ea\u5a92\u4f53\u8fd0\u8425",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Four",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Four",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-practice-cases-practice-four",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b9e\u8df5\u4e94\uff1a\u6bcf\u65e5\u81ea\u52a8\u63a8\u9001\u8d44\u8baf\u7b80\u62a5",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Five",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Five",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-practice-cases-practice-five",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b9e\u8df5\u516d\uff1a\u8fdc\u7a0b\u9065\u63a7 WorkBuddy",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Six",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Six",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-practice-cases-practice-six",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b9e\u8df5\u4e03\uff1a\u96f6\u4ee3\u7801\u5236\u4f5c\u672c\u5730\u5e94\u7528",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Seven",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Seven",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-practice-cases-practice-seven",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b9e\u8df5\u516b\uff1a\u81ea\u6211\u8fdb\u5316\u2014\u521b\u5efa\u81ea\u5df1\u7684Skills\uff08\u6280\u80fd\uff09",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Eight",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Eight",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-practice-cases-practice-eight",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b9e\u8df5\u4e5d\uff1aAI\u81ea\u9a71\u52a8",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Nine",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Nine",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-practice-cases-practice-nine",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b9e\u8df5\u5341\uff1a\u4e00\u53e5\u8bdd\uff0c\u7ba1\u7406\u4f60\u7684\u6240\u6709\u4f1a\u8bae",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Ten",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Ten",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-practice-cases-practice-ten",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b9e\u8df5\u5341\u4e00\uff1a\u4e00\u53e5\u8bdd\uff0c\u7ba1\u7406\u4f60\u7684\u817e\u8baf\u6587\u6863",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Eleven",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Eleven",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-practice-cases-practice-eleven",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u9ad8\u6548\u4f7f\u7528\u5c0f\u6280\u5de7",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Efficient-Tips",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Efficient-Tips",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-efficient-tips",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Agent Browser",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Agent-Browser",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Agent-Browser",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-workbuddy-zero-cost-skill-top-10-agent-browser",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u529e\u516c\u6587\u6863\u56db\u4ef6\u5957",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Office-Document-Suite",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Office-Document-Suite",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-workbuddy-zero-cost-skill-top-10-office-document-suite",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Local Whisper",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Local-Whisper",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Local-Whisper",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-workbuddy-zero-cost-skill-top-10-local-whisper",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "tl_video_downloader",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/tl_video_downloader",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/tl_video_downloader",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-workbuddy-zero-cost-skill-top-10-tl_video_downloader",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Web Search",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Web-Search",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Web-Search",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-workbuddy-zero-cost-skill-top-10-web-search",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Obsidian",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Obsidian",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Obsidian",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-workbuddy-zero-cost-skill-top-10-obsidian",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Skill Scanner",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Skill-Scanner",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Skill-Scanner",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-workbuddy-zero-cost-skill-top-10-skill-scanner",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "self-improvement",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/self-improvement",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/self-improvement",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-workbuddy-zero-cost-skill-top-10-self-improvement",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Find Skills",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Find-Skills",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Find-Skills",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-workbuddy-zero-cost-skill-top-10-find-skills",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Frontend Design",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Frontend-Design",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/WorkBuddy-Zero-Cost-Skill-Top-10/Frontend-Design",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-workbuddy-zero-cost-skill-top-10-frontend-design",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5e38\u89c1\u95ee\u9898",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/FAQ",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/FAQ",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-faq",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u9519\u8bef\u7801\u8bf4\u660e",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Error-Code",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Error-Code",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-error-code",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5fae\u4fe1\u52a9\u7406\u63a5\u5165\u6307\u5357\uff08\u63a8\u8350\uff09",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/WeixinBot-Guide",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/WeixinBot-Guide",
+    "route": "wb-workbuddy-weixinbot-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5fae\u4fe1\u5ba2\u670d\u53f7\u63a5\u5165\u6307\u5357",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Wechat-Guide",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Wechat-Guide",
+    "route": "wb-workbuddy-wechat-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u4f01\u5fae\u52a9\u7406\u63a5\u5165\u6307\u5357",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Wecom-Guide",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Wecom-Guide",
+    "route": "wb-workbuddy-wecom-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "QQ \u673a\u5668\u4eba\u63a5\u5165\u6307\u5357",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/QQ-Guide",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/QQ-Guide",
+    "route": "wb-workbuddy-qq-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u98de\u4e66\u63a5\u5165\u6307\u5357",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Feishu-Guide",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Feishu-Guide",
+    "route": "wb-workbuddy-feishu-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u9489\u9489\u673a\u5668\u4eba\u63a5\u5165\u6307\u5357",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Dingtalk-Guide",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Dingtalk-Guide",
+    "route": "wb-workbuddy-dingtalk-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5b9a\u4ef7\u8be6\u60c5",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Pricing",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Pricing",
+    "route": "wb-workbuddy-pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u79ef\u5206\u8bf4\u660e",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Credits",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Credits",
+    "route": "wb-workbuddy-credits",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u5957\u9910\u7ba1\u7406",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Plan",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Plan",
+    "route": "wb-workbuddy-plan",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u7528\u91cf\u67e5\u770b",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Usage",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Usage",
+    "route": "wb-workbuddy-usage",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u8d26\u5355\u67e5\u770b",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Billing",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Billing",
+    "route": "wb-workbuddy-billing",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u53d1\u7968\u5f00\u5177",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Invoice",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Invoice",
+    "route": "wb-workbuddy-invoice",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u8d26\u53f7\u6ce8\u9500",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Account-Cancellation",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Account-Cancellation",
+    "route": "wb-workbuddy-account-cancellation",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u8054\u7cfb\u6211\u4eec",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Contact",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Contact",
+    "route": "wb-workbuddy-contact",
+    "kind": "doc"
+  }
+]

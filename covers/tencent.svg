@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 560" width="420" height="560">
+  <rect width="420" height="560" fill="#0c1016"/>
+  <rect x="26" y="26" width="368" height="508" fill="none" stroke="#e6eef8" stroke-width="1.2"/>
+  <text x="48" y="66" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="9.5" font-weight="700" letter-spacing="2.4" fill="#98a8bc">SITE EPUB / TENCENT</text>
+  <text x="43" y="190" font-family="ui-serif, Iowan Old Style, Georgia, serif" font-size="40" font-weight="600" fill="#e6eef8">WorkBuddy</text>
+  <text x="48" y="233" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="600" fill="#4d9ffb">腾讯 WorkBuddy 产品文档</text>
+  <line x1="48" y1="267" x2="134" y2="267" stroke="#4d9ffb" stroke-width="1"/>
+  <text x="48" y="417" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="11.5" fill="#98a8bc">AI Agent 工作台 · CLI · IDE 插件 · 企业版</text>
+  <text x="48" y="438" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="12.5" fill="#98a8bc">产品文档在前 · 博客在后</text>
+  <text x="48" y="492" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#e6eef8">Tencent</text>
+  <text x="48" y="514" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="10.5" fill="#98a8bc">workbuddy.cn/docs</text>
+</svg>

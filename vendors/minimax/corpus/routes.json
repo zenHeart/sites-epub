@@ -16,6 +16,62 @@
     "kind": "doc"
   },
   {
+    "group": "MiniMax Design",
+    "title": "Tools",
+    "md_url": "https://design.minimax.io/tools",
+    "html_url": "https://design.minimax.io/tools",
+    "route": "mm-design-tools",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "AI Image Generator",
+    "md_url": "https://design.minimax.io/tools/ai-image-generator",
+    "html_url": "https://design.minimax.io/tools/ai-image-generator",
+    "route": "mm-design-tools-ai-image-generator",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "AI Video Generator",
+    "md_url": "https://design.minimax.io/tools/ai-video-generator",
+    "html_url": "https://design.minimax.io/tools/ai-video-generator",
+    "route": "mm-design-tools-ai-video-generator",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "AI Design Generator",
+    "md_url": "https://design.minimax.io/tools/ai-design",
+    "html_url": "https://design.minimax.io/tools/ai-design",
+    "route": "mm-design-tools-ai-design",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "Image to Video",
+    "md_url": "https://design.minimax.io/tools/image-to-video",
+    "html_url": "https://design.minimax.io/tools/image-to-video",
+    "route": "mm-design-tools-image-to-video",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "AI Anime Generator",
+    "md_url": "https://design.minimax.io/tools/ai-anime-generator",
+    "html_url": "https://design.minimax.io/tools/ai-anime-generator",
+    "route": "mm-design-tools-ai-anime-generator",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "H3 Open",
+    "md_url": "https://design.minimax.io/h3",
+    "html_url": "https://design.minimax.io/h3",
+    "route": "mm-design-h3",
+    "kind": "doc"
+  },
+  {
     "group": "Hailuo \u4ea7\u54c1",
     "title": "**Text-to-Video Creation (Hailuo 2.3)**",
     "md_url": "https://hailuoai.video/create/text-to-video",

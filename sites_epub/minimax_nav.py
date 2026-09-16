@@ -71,7 +71,55 @@ def parse_minimax_docs() -> list[IndexEntry]:
             )
         )
 
-    # 2. Hailuo consumer product pages (llms.txt; .video mirrors it)
+    # 2. MiniMax Code (code.minimax.io — "MiniMax Agent" coding product)
+    for u in ("https://code.minimax.io/", "https://code.minimax.io/download"):
+        try:
+            chtml = fetch_text(u)
+        except Exception:  # noqa: BLE001
+            continue
+        csoup = BeautifulSoup(chtml, "lxml")
+        ctitle = csoup.title.get_text(" ", strip=True).split(":")[0].strip() if csoup.title else "MiniMax Code"
+        docs.append(
+            IndexEntry(
+                group="MiniMax Code",
+                title=ctitle + (" · Download" if u.endswith("/download") else ""),
+                md_url=u,
+                html_url=u,
+                route="mm-code" + ("-download" if u.endswith("/download") else ""),
+                kind="doc",
+            )
+        )
+
+    # 3. MiniMax Design (design.minimax.io — SSR creative tools product)
+    dhtml = fetch_text("https://design.minimax.io/")
+    dsoup = BeautifulSoup(dhtml, "lxml")
+    dseen: set[str] = set()
+    for a in dsoup.find_all("a", href=True):
+        clean = _clean(a["href"], "https://design.minimax.io/")
+        if not clean or "design.minimax.io" not in clean:
+            continue
+        p = urlparse(clean)
+        if not p.path or p.path == "/":
+            continue
+        route = "mm-design-" + re.sub(r"[^a-z0-9-]+", "-", p.path.strip("/").lower()).strip("-")
+        if route in dseen:
+            continue
+        dseen.add(route)
+        title = " ".join(a.get_text(" ", strip=True).split()) or p.path.strip("/")
+        if not title:
+            continue
+        docs.append(
+            IndexEntry(
+                group="MiniMax Design",
+                title=title,
+                md_url=clean,
+                html_url=clean,
+                route=route,
+                kind="doc",
+            )
+        )
+
+    # 4. Hailuo consumer product pages (llms.txt; .video mirrors it)
     text = fetch_text("https://hailuoai.com/llms.txt")
     seen2: set[str] = set()
     for title, href in LLMS_LINK.findall(text):

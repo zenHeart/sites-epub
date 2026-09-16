@@ -57,6 +57,10 @@ def discover_entries(
         from .minimax_nav import parse_minimax_docs
 
         docs = parse_minimax_docs()
+    elif vendor.adapter == "tencent":
+        from .tencent_nav import parse_tencent_docs
+
+        docs = parse_tencent_docs()
     elif vendor.adapter == "gemini":
         from .gemini_nav import parse_gemini_docs
 

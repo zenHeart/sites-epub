@@ -1,0 +1,15 @@
+{
+  "id": "tencent",
+  "name": "Tencent WorkBuddy",
+  "docs_url": "https://www.workbuddy.cn/docs/workbuddy/Overview",
+  "blog_url": null,
+  "icon": "vendors/tencent/icon.png",
+  "author": "Tencent",
+  "adapter": "tencent",
+  "updated_at": "",
+  "packed_at": "",
+  "summary": "腾讯 WorkBuddy(腾讯云 CodeBuddy 团队 AI Agent 工作台)产品文档:工作台、CLI、IDE 插件、企业版。",
+  "category": "docs",
+  "chapters": 81,
+  "cover": "covers/tencent.png"
+}
