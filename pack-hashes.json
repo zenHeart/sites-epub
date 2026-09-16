@@ -58,5 +58,10 @@
     "sha256": "b291ea06a0b86f1d1ba47d39d7d25e10aa689930ef41e94df0da7163963a9421",
     "packed_at": "2026-09-16T08:54:10Z",
     "chapters": 763
+  },
+  "hailuo": {
+    "sha256": "632b808626f0dfae8ffdd9a3d665634eb8792d1d64cdb82636983208427eecea",
+    "packed_at": "2026-09-16T09:17:59Z",
+    "chapters": 16
   }
 }
