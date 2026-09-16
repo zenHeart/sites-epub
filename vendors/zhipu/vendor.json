@@ -1,0 +1,15 @@
+{
+  "id": "zhipu",
+  "name": "智谱 GLM",
+  "docs_url": "https://zcode.z.ai/cn/docs/welcome",
+  "blog_url": null,
+  "icon": "vendors/zhipu/icon.png",
+  "author": "Zhipu AI",
+  "adapter": "zhipu",
+  "updated_at": "",
+  "packed_at": "",
+  "summary": "智谱 GLM 厂商书:模型 + 产品聚合(ZCode Agentic IDE + Z.ai Chat 与其他智谱产品);不含开放平台 API 使用文档(范围铁律)。",
+  "category": "docs",
+  "chapters": 27,
+  "cover": ""
+}

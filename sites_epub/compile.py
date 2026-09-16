@@ -61,6 +61,14 @@ def discover_entries(
         from .tencent_nav import parse_tencent_docs
 
         docs = parse_tencent_docs()
+    elif vendor.adapter == "zencoder":
+        from .zencoder_nav import parse_zencoder_docs
+
+        docs = parse_zencoder_docs()
+    elif vendor.adapter == "zhipu":
+        from .zhipu_nav import parse_zhipu_docs
+
+        docs = parse_zhipu_docs()
     elif vendor.adapter == "gemini":
         from .gemini_nav import parse_gemini_docs
 

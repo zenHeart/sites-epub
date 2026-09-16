@@ -21,6 +21,15 @@ compatibility: python3 + pandoc + beautifulsoup4 + lxml. Crawl needs network on 
 
 **章节组织**:每个独立产品、知识域(如厂商经验/教程)或 blog 各占一个顶层大章节(group),按产品逐个组织,绝不按 API 域混排;Blog 恒为最后一个大章节。每章标题必须链回原文(打包器既有不变量)。
 
+## 穷尽主流门禁(用户 2026-09-16 增:避免漏抓热门产品)
+
+**每本书开工前必须跑 `tools/mainstream_list.py` 域级探测**,对照当前领域「Top N 主流 AI 工具榜单」(至少 3 个独立来源,如 Pinggy / skills-hub / automationswitch / capitalandcompute 等 2026 横评),把可能遗漏的产品先走一遍 E 层探测(`llms.txt` / `sitemap.xml` / 关键产品域名),再决定建书/并入/放弃。**禁止** 仅凭用户提到或上一会话探到的站点就开工——2026-09-16 zcode.z.ai 漏抓就是这一缺陷的直接结果。
+
+判定规则:
+- **独立公司产品**(如 Zencoder、Manus): 独立成书。
+- **厂商自有产品**且同公司已有书(如 ZCode 属智谱): 并入该厂商书,新增一个「产品」大章节。
+- **API 平台、跨厂商 orchestration 工具**(openapi/RPC/sdk 接入类): 不建书,出报告进注册表。
+
 ## 快流程
 
 1. 在仓库根执行。新站：`python3 -m sites_epub add <docs-url> [blog-url] --name NAME`。已有厂商：`python3 -m sites_epub fetch --id ID`。

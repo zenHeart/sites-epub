@@ -1,0 +1,3210 @@
+[
+  {
+    "group": "Blog",
+    "title": "vibe coding risks",
+    "md_url": "https://zencoder.ai/blog/vibe-coding-risks",
+    "html_url": "https://zencoder.ai/blog/vibe-coding-risks",
+    "route": "blog/vibe-coding-risks",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai code generation trends 2024",
+    "md_url": "https://zencoder.ai/blog/ai-code-generation-trends-2024",
+    "html_url": "https://zencoder.ai/blog/ai-code-generation-trends-2024",
+    "route": "blog/ai-code-generation-trends-2024",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "autonomous coding vs cac coding",
+    "md_url": "https://zencoder.ai/blog/autonomous-coding-vs-cac-coding",
+    "html_url": "https://zencoder.ai/blog/autonomous-coding-vs-cac-coding",
+    "route": "blog/autonomous-coding-vs-cac-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how unit test generation works",
+    "md_url": "https://zencoder.ai/blog/how-unit-test-generation-works",
+    "html_url": "https://zencoder.ai/blog/how-unit-test-generation-works",
+    "route": "blog/how-unit-test-generation-works",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "use ai for developer productivity",
+    "md_url": "https://zencoder.ai/blog/use-ai-for-developer-productivity",
+    "html_url": "https://zencoder.ai/blog/use-ai-for-developer-productivity",
+    "route": "blog/use-ai-for-developer-productivity",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "debugging in r common errors",
+    "md_url": "https://zencoder.ai/blog/debugging-in-r-common-errors",
+    "html_url": "https://zencoder.ai/blog/debugging-in-r-common-errors",
+    "route": "blog/debugging-in-r-common-errors",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to create software engineer portfolio",
+    "md_url": "https://zencoder.ai/blog/how-to-create-software-engineer-portfolio",
+    "html_url": "https://zencoder.ai/blog/how-to-create-software-engineer-portfolio",
+    "route": "blog/how-to-create-software-engineer-portfolio",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "will ai replace software engineers",
+    "md_url": "https://zencoder.ai/blog/will-ai-replace-software-engineers",
+    "html_url": "https://zencoder.ai/blog/will-ai-replace-software-engineers",
+    "route": "blog/will-ai-replace-software-engineers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "difference between bugs defects",
+    "md_url": "https://zencoder.ai/blog/difference-between-bugs-defects",
+    "html_url": "https://zencoder.ai/blog/difference-between-bugs-defects",
+    "route": "blog/difference-between-bugs-defects",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zero drift engineering why enterprises need verification loops",
+    "md_url": "https://zencoder.ai/blog/zero-drift-engineering-why-enterprises-need-verification-loops",
+    "html_url": "https://zencoder.ai/blog/zero-drift-engineering-why-enterprises-need-verification-loops",
+    "route": "blog/zero-drift-engineering-why-enterprises-need-verification-loops",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zen agents marketplace discover share agents tools",
+    "md_url": "https://zencoder.ai/blog/zen-agents-marketplace-discover-share-agents-tools",
+    "html_url": "https://zencoder.ai/blog/zen-agents-marketplace-discover-share-agents-tools",
+    "route": "blog/zen-agents-marketplace-discover-share-agents-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "unit test code coverage tools",
+    "md_url": "https://zencoder.ai/blog/unit-test-code-coverage-tools",
+    "html_url": "https://zencoder.ai/blog/unit-test-code-coverage-tools",
+    "route": "blog/unit-test-code-coverage-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "securing multi agent orchestration keyring isolated jwt deployments zenflow",
+    "md_url": "https://zencoder.ai/blog/securing-multi-agent-orchestration-keyring-isolated-jwt-deployments-zenflow",
+    "html_url": "https://zencoder.ai/blog/securing-multi-agent-orchestration-keyring-isolated-jwt-deployments-zenflow",
+    "route": "blog/securing-multi-agent-orchestration-keyring-isolated-jwt-deployments-zenflow",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "overcoming bottlenecks in ai augmented software engineering an mit csail perspective",
+    "md_url": "https://zencoder.ai/blog/overcoming-bottlenecks-in-ai-augmented-software-engineering-an-mit-csail-perspective",
+    "html_url": "https://zencoder.ai/blog/overcoming-bottlenecks-in-ai-augmented-software-engineering-an-mit-csail-perspective",
+    "route": "blog/overcoming-bottlenecks-in-ai-augmented-software-engineering-an-mit-csail-perspective",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "tabnine alternatives",
+    "md_url": "https://zencoder.ai/blog/tabnine-alternatives",
+    "html_url": "https://zencoder.ai/blog/tabnine-alternatives",
+    "route": "blog/tabnine-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "a developers guide to end to end testing from theory to practice",
+    "md_url": "https://zencoder.ai/blog/a-developers-guide-to-end-to-end-testing-from-theory-to-practice",
+    "html_url": "https://zencoder.ai/blog/a-developers-guide-to-end-to-end-testing-from-theory-to-practice",
+    "route": "blog/a-developers-guide-to-end-to-end-testing-from-theory-to-practice",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "streamlining salesforce development zenflow custom workflows",
+    "md_url": "https://zencoder.ai/blog/streamlining-salesforce-development-zenflow-custom-workflows",
+    "html_url": "https://zencoder.ai/blog/streamlining-salesforce-development-zenflow-custom-workflows",
+    "route": "blog/streamlining-salesforce-development-zenflow-custom-workflows",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai agent survival guide part 2 chasing the nine tailed fox",
+    "md_url": "https://zencoder.ai/blog/ai-agent-survival-guide-part-2-chasing-the-nine-tailed-fox",
+    "html_url": "https://zencoder.ai/blog/ai-agent-survival-guide-part-2-chasing-the-nine-tailed-fox",
+    "route": "blog/ai-agent-survival-guide-part-2-chasing-the-nine-tailed-fox",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "jetbrains ai vs github copilot",
+    "md_url": "https://zencoder.ai/blog/jetbrains-ai-vs-github-copilot",
+    "html_url": "https://zencoder.ai/blog/jetbrains-ai-vs-github-copilot",
+    "route": "blog/jetbrains-ai-vs-github-copilot",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "remote agents",
+    "md_url": "https://zencoder.ai/blog/remote-agents",
+    "html_url": "https://zencoder.ai/blog/remote-agents",
+    "route": "blog/remote-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai automation reduce costs saas",
+    "md_url": "https://zencoder.ai/blog/ai-automation-reduce-costs-saas",
+    "html_url": "https://zencoder.ai/blog/ai-automation-reduce-costs-saas",
+    "route": "blog/ai-automation-reduce-costs-saas",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "will ai take over medical coding",
+    "md_url": "https://zencoder.ai/blog/will-ai-take-over-medical-coding",
+    "html_url": "https://zencoder.ai/blog/will-ai-take-over-medical-coding",
+    "route": "blog/will-ai-take-over-medical-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zencoder acquires machinet",
+    "md_url": "https://zencoder.ai/blog/zencoder-acquires-machinet",
+    "html_url": "https://zencoder.ai/blog/zencoder-acquires-machinet",
+    "route": "blog/zencoder-acquires-machinet",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "asynchronous vs synchronous programming",
+    "md_url": "https://zencoder.ai/blog/asynchronous-vs-synchronous-programming",
+    "html_url": "https://zencoder.ai/blog/asynchronous-vs-synchronous-programming",
+    "route": "blog/asynchronous-vs-synchronous-programming",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "types of debugging explained",
+    "md_url": "https://zencoder.ai/blog/types-of-debugging-explained",
+    "html_url": "https://zencoder.ai/blog/types-of-debugging-explained",
+    "route": "blog/types-of-debugging-explained",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai vs automation",
+    "md_url": "https://zencoder.ai/blog/ai-vs-automation",
+    "html_url": "https://zencoder.ai/blog/ai-vs-automation",
+    "route": "blog/ai-vs-automation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "autonomous agents vs assistive agents",
+    "md_url": "https://zencoder.ai/blog/autonomous-agents-vs-assistive-agents",
+    "html_url": "https://zencoder.ai/blog/autonomous-agents-vs-assistive-agents",
+    "route": "blog/autonomous-agents-vs-assistive-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how can generative ai tools assist developers",
+    "md_url": "https://zencoder.ai/blog/how-can-generative-ai-tools-assist-developers",
+    "html_url": "https://zencoder.ai/blog/how-can-generative-ai-tools-assist-developers",
+    "route": "blog/how-can-generative-ai-tools-assist-developers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "pandas pivot tables guide",
+    "md_url": "https://zencoder.ai/blog/pandas-pivot-tables-guide",
+    "html_url": "https://zencoder.ai/blog/pandas-pivot-tables-guide",
+    "route": "blog/pandas-pivot-tables-guide",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agentic ai vs traditional automation",
+    "md_url": "https://zencoder.ai/blog/agentic-ai-vs-traditional-automation",
+    "html_url": "https://zencoder.ai/blog/agentic-ai-vs-traditional-automation",
+    "route": "blog/agentic-ai-vs-traditional-automation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "optimizing java enterprise systems",
+    "md_url": "https://zencoder.ai/blog/optimizing-java-enterprise-systems",
+    "html_url": "https://zencoder.ai/blog/optimizing-java-enterprise-systems",
+    "route": "blog/optimizing-java-enterprise-systems",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "death of context window task isolation beats massive prompts zenflow",
+    "md_url": "https://zencoder.ai/blog/death-of-context-window-task-isolation-beats-massive-prompts-zenflow",
+    "html_url": "https://zencoder.ai/blog/death-of-context-window-task-isolation-beats-massive-prompts-zenflow",
+    "route": "blog/death-of-context-window-task-isolation-beats-massive-prompts-zenflow",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "coding best practices",
+    "md_url": "https://zencoder.ai/blog/coding-best-practices",
+    "html_url": "https://zencoder.ai/blog/coding-best-practices",
+    "route": "blog/coding-best-practices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the vibe coding spectrum the rise of ai directed developmen",
+    "md_url": "https://zencoder.ai/blog/the-vibe-coding-spectrum-the-rise-of-ai-directed-developmen",
+    "html_url": "https://zencoder.ai/blog/the-vibe-coding-spectrum-the-rise-of-ai-directed-developmen",
+    "route": "blog/the-vibe-coding-spectrum-the-rise-of-ai-directed-developmen",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "multi repo intelligence why your ai can finally understand microservices",
+    "md_url": "https://zencoder.ai/blog/multi-repo-intelligence-why-your-ai-can-finally-understand-microservices",
+    "html_url": "https://zencoder.ai/blog/multi-repo-intelligence-why-your-ai-can-finally-understand-microservices",
+    "route": "blog/multi-repo-intelligence-why-your-ai-can-finally-understand-microservices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to write python code",
+    "md_url": "https://zencoder.ai/blog/how-to-write-python-code",
+    "html_url": "https://zencoder.ai/blog/how-to-write-python-code",
+    "route": "blog/how-to-write-python-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "parallel agents why orchestration not bigger models is the real ai productivity multiplier",
+    "md_url": "https://zencoder.ai/blog/parallel-agents-why-orchestration-not-bigger-models-is-the-real-ai-productivity-multiplier",
+    "html_url": "https://zencoder.ai/blog/parallel-agents-why-orchestration-not-bigger-models-is-the-real-ai-productivity-multiplier",
+    "route": "blog/parallel-agents-why-orchestration-not-bigger-models-is-the-real-ai-productivity-multiplier",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai coding agents generating context aware code",
+    "md_url": "https://zencoder.ai/blog/ai-coding-agents-generating-context-aware-code",
+    "html_url": "https://zencoder.ai/blog/ai-coding-agents-generating-context-aware-code",
+    "route": "blog/ai-coding-agents-generating-context-aware-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how ai is transforming erp development and maintenance",
+    "md_url": "https://zencoder.ai/blog/how-ai-is-transforming-erp-development-and-maintenance",
+    "html_url": "https://zencoder.ai/blog/how-ai-is-transforming-erp-development-and-maintenance",
+    "route": "blog/how-ai-is-transforming-erp-development-and-maintenance",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gitlab duo vs github copilot",
+    "md_url": "https://zencoder.ai/blog/gitlab-duo-vs-github-copilot",
+    "html_url": "https://zencoder.ai/blog/gitlab-duo-vs-github-copilot",
+    "route": "blog/gitlab-duo-vs-github-copilot",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to use zencoder to solve tasks in wrike",
+    "md_url": "https://zencoder.ai/blog/how-to-use-zencoder-to-solve-tasks-in-wrike",
+    "html_url": "https://zencoder.ai/blog/how-to-use-zencoder-to-solve-tasks-in-wrike",
+    "route": "blog/how-to-use-zencoder-to-solve-tasks-in-wrike",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai driven code quality assurance",
+    "md_url": "https://zencoder.ai/blog/ai-driven-code-quality-assurance",
+    "html_url": "https://zencoder.ai/blog/ai-driven-code-quality-assurance",
+    "route": "blog/ai-driven-code-quality-assurance",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "right model right phase zenflow multi model workflow",
+    "md_url": "https://zencoder.ai/blog/right-model-right-phase-zenflow-multi-model-workflow",
+    "html_url": "https://zencoder.ai/blog/right-model-right-phase-zenflow-multi-model-workflow",
+    "route": "blog/right-model-right-phase-zenflow-multi-model-workflow",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "static code analysis vs unit testing",
+    "md_url": "https://zencoder.ai/blog/static-code-analysis-vs-unit-testing",
+    "html_url": "https://zencoder.ai/blog/static-code-analysis-vs-unit-testing",
+    "route": "blog/static-code-analysis-vs-unit-testing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "multi agent ai workflows",
+    "md_url": "https://zencoder.ai/blog/multi-agent-ai-workflows",
+    "html_url": "https://zencoder.ai/blog/multi-agent-ai-workflows",
+    "route": "blog/multi-agent-ai-workflows",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gitlab copilot review",
+    "md_url": "https://zencoder.ai/blog/gitlab-copilot-review",
+    "html_url": "https://zencoder.ai/blog/gitlab-copilot-review",
+    "route": "blog/gitlab-copilot-review",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the ai engineering maturity model where does your team rank",
+    "md_url": "https://zencoder.ai/blog/the-ai-engineering-maturity-model-where-does-your-team-rank",
+    "html_url": "https://zencoder.ai/blog/the-ai-engineering-maturity-model-where-does-your-team-rank",
+    "route": "blog/the-ai-engineering-maturity-model-where-does-your-team-rank",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "choose right docstring format",
+    "md_url": "https://zencoder.ai/blog/choose-right-docstring-format",
+    "html_url": "https://zencoder.ai/blog/choose-right-docstring-format",
+    "route": "blog/choose-right-docstring-format",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai agent reduce debugging time",
+    "md_url": "https://zencoder.ai/blog/ai-agent-reduce-debugging-time",
+    "html_url": "https://zencoder.ai/blog/ai-agent-reduce-debugging-time",
+    "route": "blog/ai-agent-reduce-debugging-time",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai prompt engineering best practices",
+    "md_url": "https://zencoder.ai/blog/ai-prompt-engineering-best-practices",
+    "html_url": "https://zencoder.ai/blog/ai-prompt-engineering-best-practices",
+    "route": "blog/ai-prompt-engineering-best-practices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how running 5 agents beats any single llm",
+    "md_url": "https://zencoder.ai/blog/how-running-5-agents-beats-any-single-llm",
+    "html_url": "https://zencoder.ai/blog/how-running-5-agents-beats-any-single-llm",
+    "route": "blog/how-running-5-agents-beats-any-single-llm",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "c docstring guide",
+    "md_url": "https://zencoder.ai/blog/c-docstring-guide",
+    "html_url": "https://zencoder.ai/blog/c-docstring-guide",
+    "route": "blog/c-docstring-guide",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to write java code basics",
+    "md_url": "https://zencoder.ai/blog/how-to-write-java-code-basics",
+    "html_url": "https://zencoder.ai/blog/how-to-write-java-code-basics",
+    "route": "blog/how-to-write-java-code-basics",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai for php",
+    "md_url": "https://zencoder.ai/blog/best-ai-for-php",
+    "html_url": "https://zencoder.ai/blog/best-ai-for-php",
+    "route": "blog/best-ai-for-php",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "semantic analysis ai code generation",
+    "md_url": "https://zencoder.ai/blog/semantic-analysis-ai-code-generation",
+    "html_url": "https://zencoder.ai/blog/semantic-analysis-ai-code-generation",
+    "route": "blog/semantic-analysis-ai-code-generation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best free ai for code generation",
+    "md_url": "https://zencoder.ai/blog/best-free-ai-for-code-generation",
+    "html_url": "https://zencoder.ai/blog/best-free-ai-for-code-generation",
+    "route": "blog/best-free-ai-for-code-generation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "code refactoring techniques",
+    "md_url": "https://zencoder.ai/blog/code-refactoring-techniques",
+    "html_url": "https://zencoder.ai/blog/code-refactoring-techniques",
+    "route": "blog/code-refactoring-techniques",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "javascript debugging guide",
+    "md_url": "https://zencoder.ai/blog/javascript-debugging-guide",
+    "html_url": "https://zencoder.ai/blog/javascript-debugging-guide",
+    "route": "blog/javascript-debugging-guide",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cursor vs copilot",
+    "md_url": "https://zencoder.ai/blog/cursor-vs-copilot",
+    "html_url": "https://zencoder.ai/blog/cursor-vs-copilot",
+    "route": "blog/cursor-vs-copilot",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agentic ai for full cycle software development the ctos guide",
+    "md_url": "https://zencoder.ai/blog/agentic-ai-for-full-cycle-software-development-the-ctos-guide",
+    "html_url": "https://zencoder.ai/blog/agentic-ai-for-full-cycle-software-development-the-ctos-guide",
+    "route": "blog/agentic-ai-for-full-cycle-software-development-the-ctos-guide",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "what are software agents",
+    "md_url": "https://zencoder.ai/blog/what-are-software-agents",
+    "html_url": "https://zencoder.ai/blog/what-are-software-agents",
+    "route": "blog/what-are-software-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "save 90 on ai costs using claude codex gemini 2025 guide",
+    "md_url": "https://zencoder.ai/blog/save-90-on-ai-costs-using-claude-codex-gemini-2025-guide",
+    "html_url": "https://zencoder.ai/blog/save-90-on-ai-costs-using-claude-codex-gemini-2025-guide",
+    "route": "blog/save-90-on-ai-costs-using-claude-codex-gemini-2025-guide",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "spec driven development will define the next generation of elite engineers",
+    "md_url": "https://zencoder.ai/blog/spec-driven-development-will-define-the-next-generation-of-elite-engineers",
+    "html_url": "https://zencoder.ai/blog/spec-driven-development-will-define-the-next-generation-of-elite-engineers",
+    "route": "blog/spec-driven-development-will-define-the-next-generation-of-elite-engineers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best tools to automate ai workflows",
+    "md_url": "https://zencoder.ai/blog/best-tools-to-automate-ai-workflows",
+    "html_url": "https://zencoder.ai/blog/best-tools-to-automate-ai-workflows",
+    "route": "blog/best-tools-to-automate-ai-workflows",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automated code review tools",
+    "md_url": "https://zencoder.ai/blog/automated-code-review-tools",
+    "html_url": "https://zencoder.ai/blog/automated-code-review-tools",
+    "route": "blog/automated-code-review-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "fixing gh cli in claude codes sandbox",
+    "md_url": "https://zencoder.ai/blog/fixing-gh-cli-in-claude-codes-sandbox",
+    "html_url": "https://zencoder.ai/blog/fixing-gh-cli-in-claude-codes-sandbox",
+    "route": "blog/fixing-gh-cli-in-claude-codes-sandbox",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai reliability checklist how to keep ai output stable across iterations",
+    "md_url": "https://zencoder.ai/blog/ai-reliability-checklist-how-to-keep-ai-output-stable-across-iterations",
+    "html_url": "https://zencoder.ai/blog/ai-reliability-checklist-how-to-keep-ai-output-stable-across-iterations",
+    "route": "blog/ai-reliability-checklist-how-to-keep-ai-output-stable-across-iterations",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "coding errors and how ai helps",
+    "md_url": "https://zencoder.ai/blog/coding-errors-and-how-ai-helps",
+    "html_url": "https://zencoder.ai/blog/coding-errors-and-how-ai-helps",
+    "route": "blog/coding-errors-and-how-ai-helps",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai code generators future software development",
+    "md_url": "https://zencoder.ai/blog/ai-code-generators-future-software-development",
+    "html_url": "https://zencoder.ai/blog/ai-code-generators-future-software-development",
+    "route": "blog/ai-code-generators-future-software-development",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "docstring tools ide compatibility",
+    "md_url": "https://zencoder.ai/blog/docstring-tools-ide-compatibility",
+    "html_url": "https://zencoder.ai/blog/docstring-tools-ide-compatibility",
+    "route": "blog/docstring-tools-ide-compatibility",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai code generation vs. traditional ide workflows pros pitfalls and best practices",
+    "md_url": "https://zencoder.ai/blog/ai-code-generation-vs.-traditional-ide-workflows-pros-pitfalls-and-best-practices",
+    "html_url": "https://zencoder.ai/blog/ai-code-generation-vs.-traditional-ide-workflows-pros-pitfalls-and-best-practices",
+    "route": "blog/ai-code-generation-vs.-traditional-ide-workflows-pros-pitfalls-and-best-practices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to improve programming logic",
+    "md_url": "https://zencoder.ai/blog/how-to-improve-programming-logic",
+    "html_url": "https://zencoder.ai/blog/how-to-improve-programming-logic",
+    "route": "blog/how-to-improve-programming-logic",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "maximize freelance income ai",
+    "md_url": "https://zencoder.ai/blog/maximize-freelance-income-ai",
+    "html_url": "https://zencoder.ai/blog/maximize-freelance-income-ai",
+    "route": "blog/maximize-freelance-income-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to automate developer workflows with ai",
+    "md_url": "https://zencoder.ai/blog/how-to-automate-developer-workflows-with-ai",
+    "html_url": "https://zencoder.ai/blog/how-to-automate-developer-workflows-with-ai",
+    "route": "blog/how-to-automate-developer-workflows-with-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "what is agentic ai architecture",
+    "md_url": "https://zencoder.ai/blog/what-is-agentic-ai-architecture",
+    "html_url": "https://zencoder.ai/blog/what-is-agentic-ai-architecture",
+    "route": "blog/what-is-agentic-ai-architecture",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "spec driven development for technology companies",
+    "md_url": "https://zencoder.ai/blog/spec-driven-development-for-technology-companies",
+    "html_url": "https://zencoder.ai/blog/spec-driven-development-for-technology-companies",
+    "route": "blog/spec-driven-development-for-technology-companies",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best practices in ai model workflows",
+    "md_url": "https://zencoder.ai/blog/best-practices-in-ai-model-workflows",
+    "html_url": "https://zencoder.ai/blog/best-practices-in-ai-model-workflows",
+    "route": "blog/best-practices-in-ai-model-workflows",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "python data manipulation code snippets",
+    "md_url": "https://zencoder.ai/blog/python-data-manipulation-code-snippets",
+    "html_url": "https://zencoder.ai/blog/python-data-manipulation-code-snippets",
+    "route": "blog/python-data-manipulation-code-snippets",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best python code checker",
+    "md_url": "https://zencoder.ai/blog/best-python-code-checker",
+    "html_url": "https://zencoder.ai/blog/best-python-code-checker",
+    "route": "blog/best-python-code-checker",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "2026 developer velocity index costs context switching multi platform engineering",
+    "md_url": "https://zencoder.ai/blog/2026-developer-velocity-index-costs-context-switching-multi-platform-engineering",
+    "html_url": "https://zencoder.ai/blog/2026-developer-velocity-index-costs-context-switching-multi-platform-engineering",
+    "route": "blog/2026-developer-velocity-index-costs-context-switching-multi-platform-engineering",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "types of prompt engineering methods ai",
+    "md_url": "https://zencoder.ai/blog/types-of-prompt-engineering-methods-ai",
+    "html_url": "https://zencoder.ai/blog/types-of-prompt-engineering-methods-ai",
+    "route": "blog/types-of-prompt-engineering-methods-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the great unification how we made chatgpt claude and gemini play nice together",
+    "md_url": "https://zencoder.ai/blog/the-great-unification-how-we-made-chatgpt-claude-and-gemini-play-nice-together",
+    "html_url": "https://zencoder.ai/blog/the-great-unification-how-we-made-chatgpt-claude-and-gemini-play-nice-together",
+    "route": "blog/the-great-unification-how-we-made-chatgpt-claude-and-gemini-play-nice-together",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "limitations of ai coding assistants",
+    "md_url": "https://zencoder.ai/blog/limitations-of-ai-coding-assistants",
+    "html_url": "https://zencoder.ai/blog/limitations-of-ai-coding-assistants",
+    "route": "blog/limitations-of-ai-coding-assistants",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to use ai code generators to automate python script creation",
+    "md_url": "https://zencoder.ai/blog/how-to-use-ai-code-generators-to-automate-python-script-creation",
+    "html_url": "https://zencoder.ai/blog/how-to-use-ai-code-generators-to-automate-python-script-creation",
+    "route": "blog/how-to-use-ai-code-generators-to-automate-python-script-creation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cve vs cwe",
+    "md_url": "https://zencoder.ai/blog/cve-vs-cwe",
+    "html_url": "https://zencoder.ai/blog/cve-vs-cwe",
+    "route": "blog/cve-vs-cwe",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to build an ai agent",
+    "md_url": "https://zencoder.ai/blog/how-to-build-an-ai-agent",
+    "html_url": "https://zencoder.ai/blog/how-to-build-an-ai-agent",
+    "route": "blog/how-to-build-an-ai-agent",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "navigating the three generations of ai coding tools from copilot to sdlc automation",
+    "md_url": "https://zencoder.ai/blog/navigating-the-three-generations-of-ai-coding-tools-from-copilot-to-sdlc-automation",
+    "html_url": "https://zencoder.ai/blog/navigating-the-three-generations-of-ai-coding-tools-from-copilot-to-sdlc-automation",
+    "route": "blog/navigating-the-three-generations-of-ai-coding-tools-from-copilot-to-sdlc-automation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zencoder selected for techcrunch disrupt",
+    "md_url": "https://zencoder.ai/blog/zencoder-selected-for-techcrunch-disrupt",
+    "html_url": "https://zencoder.ai/blog/zencoder-selected-for-techcrunch-disrupt",
+    "route": "blog/zencoder-selected-for-techcrunch-disrupt",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zenflow sentry integration automated bug resolution",
+    "md_url": "https://zencoder.ai/blog/zenflow-sentry-integration-automated-bug-resolution",
+    "html_url": "https://zencoder.ai/blog/zenflow-sentry-integration-automated-bug-resolution",
+    "route": "blog/zenflow-sentry-integration-automated-bug-resolution",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "unit test generation key features",
+    "md_url": "https://zencoder.ai/blog/unit-test-generation-key-features",
+    "html_url": "https://zencoder.ai/blog/unit-test-generation-key-features",
+    "route": "blog/unit-test-generation-key-features",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "accelerating blockchain development with ai assisted coding",
+    "md_url": "https://zencoder.ai/blog/accelerating-blockchain-development-with-ai-assisted-coding",
+    "html_url": "https://zencoder.ai/blog/accelerating-blockchain-development-with-ai-assisted-coding",
+    "route": "blog/accelerating-blockchain-development-with-ai-assisted-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "importance of docstrings software development",
+    "md_url": "https://zencoder.ai/blog/importance-of-docstrings-software-development",
+    "html_url": "https://zencoder.ai/blog/importance-of-docstrings-software-development",
+    "route": "blog/importance-of-docstrings-software-development",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "autonomous zen agents for ci",
+    "md_url": "https://zencoder.ai/blog/autonomous-zen-agents-for-ci",
+    "html_url": "https://zencoder.ai/blog/autonomous-zen-agents-for-ci",
+    "route": "blog/autonomous-zen-agents-for-ci",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai for javascript",
+    "md_url": "https://zencoder.ai/blog/best-ai-for-javascript",
+    "html_url": "https://zencoder.ai/blog/best-ai-for-javascript",
+    "route": "blog/best-ai-for-javascript",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "unit testing best practices 3 practices to improve unit tests",
+    "md_url": "https://zencoder.ai/blog/unit-testing-best-practices-3-practices-to-improve-unit-tests",
+    "html_url": "https://zencoder.ai/blog/unit-testing-best-practices-3-practices-to-improve-unit-tests",
+    "route": "blog/unit-testing-best-practices-3-practices-to-improve-unit-tests",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "laravel unit testing",
+    "md_url": "https://zencoder.ai/blog/laravel-unit-testing",
+    "html_url": "https://zencoder.ai/blog/laravel-unit-testing",
+    "route": "blog/laravel-unit-testing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai for python",
+    "md_url": "https://zencoder.ai/blog/best-ai-for-python",
+    "html_url": "https://zencoder.ai/blog/best-ai-for-python",
+    "route": "blog/best-ai-for-python",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to write ai ready specs that produce high quality output",
+    "md_url": "https://zencoder.ai/blog/how-to-write-ai-ready-specs-that-produce-high-quality-output",
+    "html_url": "https://zencoder.ai/blog/how-to-write-ai-ready-specs-that-produce-high-quality-output",
+    "route": "blog/how-to-write-ai-ready-specs-that-produce-high-quality-output",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "managing technical debt",
+    "md_url": "https://zencoder.ai/blog/managing-technical-debt",
+    "html_url": "https://zencoder.ai/blog/managing-technical-debt",
+    "route": "blog/managing-technical-debt",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "python unit testing frameworks",
+    "md_url": "https://zencoder.ai/blog/python-unit-testing-frameworks",
+    "html_url": "https://zencoder.ai/blog/python-unit-testing-frameworks",
+    "route": "blog/python-unit-testing-frameworks",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "multi agent orchestration patterns",
+    "md_url": "https://zencoder.ai/blog/multi-agent-orchestration-patterns",
+    "html_url": "https://zencoder.ai/blog/multi-agent-orchestration-patterns",
+    "route": "blog/multi-agent-orchestration-patterns",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to use zencoder to solve jira epics",
+    "md_url": "https://zencoder.ai/blog/how-to-use-zencoder-to-solve-jira-epics",
+    "html_url": "https://zencoder.ai/blog/how-to-use-zencoder-to-solve-jira-epics",
+    "route": "blog/how-to-use-zencoder-to-solve-jira-epics",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai agent orchestration",
+    "md_url": "https://zencoder.ai/blog/ai-agent-orchestration",
+    "html_url": "https://zencoder.ai/blog/ai-agent-orchestration",
+    "route": "blog/ai-agent-orchestration",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai in gaming automating physics engines and asset integration",
+    "md_url": "https://zencoder.ai/blog/ai-in-gaming-automating-physics-engines-and-asset-integration",
+    "html_url": "https://zencoder.ai/blog/ai-in-gaming-automating-physics-engines-and-asset-integration",
+    "route": "blog/ai-in-gaming-automating-physics-engines-and-asset-integration",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to write high quality code",
+    "md_url": "https://zencoder.ai/blog/how-to-write-high-quality-code",
+    "html_url": "https://zencoder.ai/blog/how-to-write-high-quality-code",
+    "route": "blog/how-to-write-high-quality-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zencoder ai review",
+    "md_url": "https://zencoder.ai/blog/zencoder-ai-review",
+    "html_url": "https://zencoder.ai/blog/zencoder-ai-review",
+    "route": "blog/zencoder-ai-review",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai orchestration explained the system behind high quality ai output",
+    "md_url": "https://zencoder.ai/blog/ai-orchestration-explained-the-system-behind-high-quality-ai-output",
+    "html_url": "https://zencoder.ai/blog/ai-orchestration-explained-the-system-behind-high-quality-ai-output",
+    "route": "blog/ai-orchestration-explained-the-system-behind-high-quality-ai-output",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "windsurf vs cursor",
+    "md_url": "https://zencoder.ai/blog/windsurf-vs-cursor",
+    "html_url": "https://zencoder.ai/blog/windsurf-vs-cursor",
+    "route": "blog/windsurf-vs-cursor",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "python flask web development snippets",
+    "md_url": "https://zencoder.ai/blog/python-flask-web-development-snippets",
+    "html_url": "https://zencoder.ai/blog/python-flask-web-development-snippets",
+    "route": "blog/python-flask-web-development-snippets",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zenflow cisco webex integration enterprise automation",
+    "md_url": "https://zencoder.ai/blog/zenflow-cisco-webex-integration-enterprise-automation",
+    "html_url": "https://zencoder.ai/blog/zenflow-cisco-webex-integration-enterprise-automation",
+    "route": "blog/zenflow-cisco-webex-integration-enterprise-automation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how does zenflow handle testing a full comparison",
+    "md_url": "https://zencoder.ai/blog/how-does-zenflow-handle-testing-a-full-comparison",
+    "html_url": "https://zencoder.ai/blog/how-does-zenflow-handle-testing-a-full-comparison",
+    "route": "blog/how-does-zenflow-handle-testing-a-full-comparison",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agentic ai vs generative ai",
+    "md_url": "https://zencoder.ai/blog/agentic-ai-vs-generative-ai",
+    "html_url": "https://zencoder.ai/blog/agentic-ai-vs-generative-ai",
+    "route": "blog/agentic-ai-vs-generative-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "integrate ai code generators vscode",
+    "md_url": "https://zencoder.ai/blog/integrate-ai-code-generators-vscode",
+    "html_url": "https://zencoder.ai/blog/integrate-ai-code-generators-vscode",
+    "route": "blog/integrate-ai-code-generators-vscode",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai python script automation",
+    "md_url": "https://zencoder.ai/blog/ai-python-script-automation",
+    "html_url": "https://zencoder.ai/blog/ai-python-script-automation",
+    "route": "blog/ai-python-script-automation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "one ai model for everything is costing you",
+    "md_url": "https://zencoder.ai/blog/one-ai-model-for-everything-is-costing-you",
+    "html_url": "https://zencoder.ai/blog/one-ai-model-for-everything-is-costing-you",
+    "route": "blog/one-ai-model-for-everything-is-costing-you",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai tools for r",
+    "md_url": "https://zencoder.ai/blog/best-ai-tools-for-r",
+    "html_url": "https://zencoder.ai/blog/best-ai-tools-for-r",
+    "route": "blog/best-ai-tools-for-r",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "repo grokking importance software development",
+    "md_url": "https://zencoder.ai/blog/repo-grokking-importance-software-development",
+    "html_url": "https://zencoder.ai/blog/repo-grokking-importance-software-development",
+    "route": "blog/repo-grokking-importance-software-development",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "improving docstring generation accuracy",
+    "md_url": "https://zencoder.ai/blog/improving-docstring-generation-accuracy",
+    "html_url": "https://zencoder.ai/blog/improving-docstring-generation-accuracy",
+    "route": "blog/improving-docstring-generation-accuracy",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how ai generates accurate code suggestions for low code platforms",
+    "md_url": "https://zencoder.ai/blog/how-ai-generates-accurate-code-suggestions-for-low-code-platforms",
+    "html_url": "https://zencoder.ai/blog/how-ai-generates-accurate-code-suggestions-for-low-code-platforms",
+    "route": "blog/how-ai-generates-accurate-code-suggestions-for-low-code-platforms",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "create api in python",
+    "md_url": "https://zencoder.ai/blog/create-api-in-python",
+    "html_url": "https://zencoder.ai/blog/create-api-in-python",
+    "route": "blog/create-api-in-python",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "open source test management tools",
+    "md_url": "https://zencoder.ai/blog/open-source-test-management-tools",
+    "html_url": "https://zencoder.ai/blog/open-source-test-management-tools",
+    "route": "blog/open-source-test-management-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "from zero to production building your first saas app using only chatgpt zencoder",
+    "md_url": "https://zencoder.ai/blog/from-zero-to-production-building-your-first-saas-app-using-only-chatgpt-zencoder",
+    "html_url": "https://zencoder.ai/blog/from-zero-to-production-building-your-first-saas-app-using-only-chatgpt-zencoder",
+    "route": "blog/from-zero-to-production-building-your-first-saas-app-using-only-chatgpt-zencoder",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "augment code vs cursor",
+    "md_url": "https://zencoder.ai/blog/augment-code-vs-cursor",
+    "html_url": "https://zencoder.ai/blog/augment-code-vs-cursor",
+    "route": "blog/augment-code-vs-cursor",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best llm for coding",
+    "md_url": "https://zencoder.ai/blog/best-llm-for-coding",
+    "html_url": "https://zencoder.ai/blog/best-llm-for-coding",
+    "route": "blog/best-llm-for-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai code checker",
+    "md_url": "https://zencoder.ai/blog/best-ai-code-checker",
+    "html_url": "https://zencoder.ai/blog/best-ai-code-checker",
+    "route": "blog/best-ai-code-checker",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "software testing basics",
+    "md_url": "https://zencoder.ai/blog/software-testing-basics",
+    "html_url": "https://zencoder.ai/blog/software-testing-basics",
+    "route": "blog/software-testing-basics",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "practical model experimentation with parallel execution",
+    "md_url": "https://zencoder.ai/blog/practical-model-experimentation-with-parallel-execution",
+    "html_url": "https://zencoder.ai/blog/practical-model-experimentation-with-parallel-execution",
+    "route": "blog/practical-model-experimentation-with-parallel-execution",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude code skills vs subagents",
+    "md_url": "https://zencoder.ai/blog/claude-code-skills-vs-subagents",
+    "html_url": "https://zencoder.ai/blog/claude-code-skills-vs-subagents",
+    "route": "blog/claude-code-skills-vs-subagents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai agent routing",
+    "md_url": "https://zencoder.ai/blog/ai-agent-routing",
+    "html_url": "https://zencoder.ai/blog/ai-agent-routing",
+    "route": "blog/ai-agent-routing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "roi of ai code generation in 2025 metrics budgets and time saved",
+    "md_url": "https://zencoder.ai/blog/roi-of-ai-code-generation-in-2025-metrics-budgets-and-time-saved",
+    "html_url": "https://zencoder.ai/blog/roi-of-ai-code-generation-in-2025-metrics-budgets-and-time-saved",
+    "route": "blog/roi-of-ai-code-generation-in-2025-metrics-budgets-and-time-saved",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "20k bug that changed evals",
+    "md_url": "https://zencoder.ai/blog/20k-bug-that-changed-evals",
+    "html_url": "https://zencoder.ai/blog/20k-bug-that-changed-evals",
+    "route": "blog/20k-bug-that-changed-evals",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "code analysis tools",
+    "md_url": "https://zencoder.ai/blog/code-analysis-tools",
+    "html_url": "https://zencoder.ai/blog/code-analysis-tools",
+    "route": "blog/code-analysis-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai coding agents assist in code refactoring",
+    "md_url": "https://zencoder.ai/blog/ai-coding-agents-assist-in-code-refactoring",
+    "html_url": "https://zencoder.ai/blog/ai-coding-agents-assist-in-code-refactoring",
+    "route": "blog/ai-coding-agents-assist-in-code-refactoring",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai code generation use cases",
+    "md_url": "https://zencoder.ai/blog/ai-code-generation-use-cases",
+    "html_url": "https://zencoder.ai/blog/ai-code-generation-use-cases",
+    "route": "blog/ai-code-generation-use-cases",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best zencoder alternatives",
+    "md_url": "https://zencoder.ai/blog/best-zencoder-alternatives",
+    "html_url": "https://zencoder.ai/blog/best-zencoder-alternatives",
+    "route": "blog/best-zencoder-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "autonomous ai agents examples",
+    "md_url": "https://zencoder.ai/blog/autonomous-ai-agents-examples",
+    "html_url": "https://zencoder.ai/blog/autonomous-ai-agents-examples",
+    "route": "blog/autonomous-ai-agents-examples",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the next great disruptor the birth of the ai first worker",
+    "md_url": "https://zencoder.ai/blog/the-next-great-disruptor-the-birth-of-the-ai-first-worker",
+    "html_url": "https://zencoder.ai/blog/the-next-great-disruptor-the-birth-of-the-ai-first-worker",
+    "route": "blog/the-next-great-disruptor-the-birth-of-the-ai-first-worker",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to start vibe coding",
+    "md_url": "https://zencoder.ai/blog/how-to-start-vibe-coding",
+    "html_url": "https://zencoder.ai/blog/how-to-start-vibe-coding",
+    "route": "blog/how-to-start-vibe-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai cinematic ui design",
+    "md_url": "https://zencoder.ai/blog/ai-cinematic-ui-design",
+    "html_url": "https://zencoder.ai/blog/ai-cinematic-ui-design",
+    "route": "blog/ai-cinematic-ui-design",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "idea spec workflow production the modern ai engineering cycle",
+    "md_url": "https://zencoder.ai/blog/idea-spec-workflow-production-the-modern-ai-engineering-cycle",
+    "html_url": "https://zencoder.ai/blog/idea-spec-workflow-production-the-modern-ai-engineering-cycle",
+    "route": "blog/idea-spec-workflow-production-the-modern-ai-engineering-cycle",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude ai vs chatgpt for coding",
+    "md_url": "https://zencoder.ai/blog/claude-ai-vs-chatgpt-for-coding",
+    "html_url": "https://zencoder.ai/blog/claude-ai-vs-chatgpt-for-coding",
+    "route": "blog/claude-ai-vs-chatgpt-for-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "python database sqlite sqlalchemy snippets",
+    "md_url": "https://zencoder.ai/blog/python-database-sqlite-sqlalchemy-snippets",
+    "html_url": "https://zencoder.ai/blog/python-database-sqlite-sqlalchemy-snippets",
+    "route": "blog/python-database-sqlite-sqlalchemy-snippets",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agentic ai vs ai agents",
+    "md_url": "https://zencoder.ai/blog/agentic-ai-vs-ai-agents",
+    "html_url": "https://zencoder.ai/blog/agentic-ai-vs-ai-agents",
+    "route": "blog/agentic-ai-vs-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "tabnine vs amazon codewhisperer",
+    "md_url": "https://zencoder.ai/blog/tabnine-vs-amazon-codewhisperer",
+    "html_url": "https://zencoder.ai/blog/tabnine-vs-amazon-codewhisperer",
+    "route": "blog/tabnine-vs-amazon-codewhisperer",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "conductor alternatives",
+    "md_url": "https://zencoder.ai/blog/conductor-alternatives",
+    "html_url": "https://zencoder.ai/blog/conductor-alternatives",
+    "route": "blog/conductor-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai for secure coding leveraging genai to fortify software security",
+    "md_url": "https://zencoder.ai/blog/ai-for-secure-coding-leveraging-genai-to-fortify-software-security",
+    "html_url": "https://zencoder.ai/blog/ai-for-secure-coding-leveraging-genai-to-fortify-software-security",
+    "route": "blog/ai-for-secure-coding-leveraging-genai-to-fortify-software-security",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "python debugging tips code snippets",
+    "md_url": "https://zencoder.ai/blog/python-debugging-tips-code-snippets",
+    "html_url": "https://zencoder.ai/blog/python-debugging-tips-code-snippets",
+    "route": "blog/python-debugging-tips-code-snippets",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "qodo alternatives",
+    "md_url": "https://zencoder.ai/blog/qodo-alternatives",
+    "html_url": "https://zencoder.ai/blog/qodo-alternatives",
+    "route": "blog/qodo-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "effective unit tests mocking stubbing",
+    "md_url": "https://zencoder.ai/blog/effective-unit-tests-mocking-stubbing",
+    "html_url": "https://zencoder.ai/blog/effective-unit-tests-mocking-stubbing",
+    "route": "blog/effective-unit-tests-mocking-stubbing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gitpod alternatives",
+    "md_url": "https://zencoder.ai/blog/gitpod-alternatives",
+    "html_url": "https://zencoder.ai/blog/gitpod-alternatives",
+    "route": "blog/gitpod-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "onboarding efficiency ai",
+    "md_url": "https://zencoder.ai/blog/onboarding-efficiency-ai",
+    "html_url": "https://zencoder.ai/blog/onboarding-efficiency-ai",
+    "route": "blog/onboarding-efficiency-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai tools for java",
+    "md_url": "https://zencoder.ai/blog/best-ai-tools-for-java",
+    "html_url": "https://zencoder.ai/blog/best-ai-tools-for-java",
+    "route": "blog/best-ai-tools-for-java",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai workflows examples",
+    "md_url": "https://zencoder.ai/blog/ai-workflows-examples",
+    "html_url": "https://zencoder.ai/blog/ai-workflows-examples",
+    "route": "blog/ai-workflows-examples",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automated unit testing",
+    "md_url": "https://zencoder.ai/blog/automated-unit-testing",
+    "html_url": "https://zencoder.ai/blog/automated-unit-testing",
+    "route": "blog/automated-unit-testing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "vibe coding prompts",
+    "md_url": "https://zencoder.ai/blog/vibe-coding-prompts",
+    "html_url": "https://zencoder.ai/blog/vibe-coding-prompts",
+    "route": "blog/vibe-coding-prompts",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "vibe coding vs ai coding",
+    "md_url": "https://zencoder.ai/blog/vibe-coding-vs-ai-coding",
+    "html_url": "https://zencoder.ai/blog/vibe-coding-vs-ai-coding",
+    "route": "blog/vibe-coding-vs-ai-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best free ai agents for coding",
+    "md_url": "https://zencoder.ai/blog/best-free-ai-agents-for-coding",
+    "html_url": "https://zencoder.ai/blog/best-free-ai-agents-for-coding",
+    "route": "blog/best-free-ai-agents-for-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zenflow slack integration enterprise engineering",
+    "md_url": "https://zencoder.ai/blog/zenflow-slack-integration-enterprise-engineering",
+    "html_url": "https://zencoder.ai/blog/zenflow-slack-integration-enterprise-engineering",
+    "route": "blog/zenflow-slack-integration-enterprise-engineering",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai driven development enhancing code quality and speed in saas",
+    "md_url": "https://zencoder.ai/blog/ai-driven-development-enhancing-code-quality-and-speed-in-saas",
+    "html_url": "https://zencoder.ai/blog/ai-driven-development-enhancing-code-quality-and-speed-in-saas",
+    "route": "blog/ai-driven-development-enhancing-code-quality-and-speed-in-saas",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how ai can bridge the gap between business goals and developer output",
+    "md_url": "https://zencoder.ai/blog/how-ai-can-bridge-the-gap-between-business-goals-and-developer-output",
+    "html_url": "https://zencoder.ai/blog/how-ai-can-bridge-the-gap-between-business-goals-and-developer-output",
+    "route": "blog/how-ai-can-bridge-the-gap-between-business-goals-and-developer-output",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to improve coding skills",
+    "md_url": "https://zencoder.ai/blog/how-to-improve-coding-skills",
+    "html_url": "https://zencoder.ai/blog/how-to-improve-coding-skills",
+    "route": "blog/how-to-improve-coding-skills",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai powered end to end testing",
+    "md_url": "https://zencoder.ai/blog/ai-powered-end-to-end-testing",
+    "html_url": "https://zencoder.ai/blog/ai-powered-end-to-end-testing",
+    "route": "blog/ai-powered-end-to-end-testing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "superbase integration mcp",
+    "md_url": "https://zencoder.ai/blog/superbase-integration-mcp",
+    "html_url": "https://zencoder.ai/blog/superbase-integration-mcp",
+    "route": "blog/superbase-integration-mcp",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai coding assistant transforming workflows",
+    "md_url": "https://zencoder.ai/blog/ai-coding-assistant-transforming-workflows",
+    "html_url": "https://zencoder.ai/blog/ai-coding-assistant-transforming-workflows",
+    "route": "blog/ai-coding-assistant-transforming-workflows",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zenflow confluence integration spec to code",
+    "md_url": "https://zencoder.ai/blog/zenflow-confluence-integration-spec-to-code",
+    "html_url": "https://zencoder.ai/blog/zenflow-confluence-integration-spec-to-code",
+    "route": "blog/zenflow-confluence-integration-spec-to-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to implement ai in business using workflows ai agents",
+    "md_url": "https://zencoder.ai/blog/how-to-implement-ai-in-business-using-workflows-ai-agents",
+    "html_url": "https://zencoder.ai/blog/how-to-implement-ai-in-business-using-workflows-ai-agents",
+    "route": "blog/how-to-implement-ai-in-business-using-workflows-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "enhancing code quality automated docstring generation",
+    "md_url": "https://zencoder.ai/blog/enhancing-code-quality-automated-docstring-generation",
+    "html_url": "https://zencoder.ai/blog/enhancing-code-quality-automated-docstring-generation",
+    "route": "blog/enhancing-code-quality-automated-docstring-generation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "about ai code generation",
+    "md_url": "https://zencoder.ai/blog/about-ai-code-generation",
+    "html_url": "https://zencoder.ai/blog/about-ai-code-generation",
+    "route": "blog/about-ai-code-generation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "openclaw and the rise of ai agents power promise and peril",
+    "md_url": "https://zencoder.ai/blog/openclaw-and-the-rise-of-ai-agents-power-promise-and-peril",
+    "html_url": "https://zencoder.ai/blog/openclaw-and-the-rise-of-ai-agents-power-promise-and-peril",
+    "route": "blog/openclaw-and-the-rise-of-ai-agents-power-promise-and-peril",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "open source vs commercial llms",
+    "md_url": "https://zencoder.ai/blog/open-source-vs-commercial-llms",
+    "html_url": "https://zencoder.ai/blog/open-source-vs-commercial-llms",
+    "route": "blog/open-source-vs-commercial-llms",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "enterprise security how ai protects your codebase",
+    "md_url": "https://zencoder.ai/blog/enterprise-security-how-ai-protects-your-codebase",
+    "html_url": "https://zencoder.ai/blog/enterprise-security-how-ai-protects-your-codebase",
+    "route": "blog/enterprise-security-how-ai-protects-your-codebase",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "addressing legacy system challenges with ai driven refactoring",
+    "md_url": "https://zencoder.ai/blog/addressing-legacy-system-challenges-with-ai-driven-refactoring",
+    "html_url": "https://zencoder.ai/blog/addressing-legacy-system-challenges-with-ai-driven-refactoring",
+    "route": "blog/addressing-legacy-system-challenges-with-ai-driven-refactoring",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how ai code generation supports polyglot programming",
+    "md_url": "https://zencoder.ai/blog/how-ai-code-generation-supports-polyglot-programming",
+    "html_url": "https://zencoder.ai/blog/how-ai-code-generation-supports-polyglot-programming",
+    "route": "blog/how-ai-code-generation-supports-polyglot-programming",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "importance of inline comments",
+    "md_url": "https://zencoder.ai/blog/importance-of-inline-comments",
+    "html_url": "https://zencoder.ai/blog/importance-of-inline-comments",
+    "route": "blog/importance-of-inline-comments",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agile coding practices",
+    "md_url": "https://zencoder.ai/blog/agile-coding-practices",
+    "html_url": "https://zencoder.ai/blog/agile-coding-practices",
+    "route": "blog/agile-coding-practices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ide shortcuts to boost productivity",
+    "md_url": "https://zencoder.ai/blog/ide-shortcuts-to-boost-productivity",
+    "html_url": "https://zencoder.ai/blog/ide-shortcuts-to-boost-productivity",
+    "route": "blog/ide-shortcuts-to-boost-productivity",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "code review best practices",
+    "md_url": "https://zencoder.ai/blog/code-review-best-practices",
+    "html_url": "https://zencoder.ai/blog/code-review-best-practices",
+    "route": "blog/code-review-best-practices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best dynamic code analysis tools",
+    "md_url": "https://zencoder.ai/blog/best-dynamic-code-analysis-tools",
+    "html_url": "https://zencoder.ai/blog/best-dynamic-code-analysis-tools",
+    "route": "blog/best-dynamic-code-analysis-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ensuring transparency and safety in ai generated code for large teams",
+    "md_url": "https://zencoder.ai/blog/ensuring-transparency-and-safety-in-ai-generated-code-for-large-teams",
+    "html_url": "https://zencoder.ai/blog/ensuring-transparency-and-safety-in-ai-generated-code-for-large-teams",
+    "route": "blog/ensuring-transparency-and-safety-in-ai-generated-code-for-large-teams",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai workflow automation",
+    "md_url": "https://zencoder.ai/blog/ai-workflow-automation",
+    "html_url": "https://zencoder.ai/blog/ai-workflow-automation",
+    "route": "blog/ai-workflow-automation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how ai streamlines compliance for enterprise software development",
+    "md_url": "https://zencoder.ai/blog/how-ai-streamlines-compliance-for-enterprise-software-development",
+    "html_url": "https://zencoder.ai/blog/how-ai-streamlines-compliance-for-enterprise-software-development",
+    "route": "blog/how-ai-streamlines-compliance-for-enterprise-software-development",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai coding languages",
+    "md_url": "https://zencoder.ai/blog/ai-coding-languages",
+    "html_url": "https://zencoder.ai/blog/ai-coding-languages",
+    "route": "blog/ai-coding-languages",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the sdd playbook build reliable features with ai",
+    "md_url": "https://zencoder.ai/blog/the-sdd-playbook-build-reliable-features-with-ai",
+    "html_url": "https://zencoder.ai/blog/the-sdd-playbook-build-reliable-features-with-ai",
+    "route": "blog/the-sdd-playbook-build-reliable-features-with-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "java debugging common mistakes",
+    "md_url": "https://zencoder.ai/blog/java-debugging-common-mistakes",
+    "html_url": "https://zencoder.ai/blog/java-debugging-common-mistakes",
+    "route": "blog/java-debugging-common-mistakes",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automated docstring generation issues",
+    "md_url": "https://zencoder.ai/blog/automated-docstring-generation-issues",
+    "html_url": "https://zencoder.ai/blog/automated-docstring-generation-issues",
+    "route": "blog/automated-docstring-generation-issues",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "next js debugging tips",
+    "md_url": "https://zencoder.ai/blog/next-js-debugging-tips",
+    "html_url": "https://zencoder.ai/blog/next-js-debugging-tips",
+    "route": "blog/next-js-debugging-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "rpa vs agentic ai",
+    "md_url": "https://zencoder.ai/blog/rpa-vs-agentic-ai",
+    "html_url": "https://zencoder.ai/blog/rpa-vs-agentic-ai",
+    "route": "blog/rpa-vs-agentic-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "customizing ai code generators for industry specific applications",
+    "md_url": "https://zencoder.ai/blog/customizing-ai-code-generators-for-industry-specific-applications",
+    "html_url": "https://zencoder.ai/blog/customizing-ai-code-generators-for-industry-specific-applications",
+    "route": "blog/customizing-ai-code-generators-for-industry-specific-applications",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "about docstring generation",
+    "md_url": "https://zencoder.ai/blog/about-docstring-generation",
+    "html_url": "https://zencoder.ai/blog/about-docstring-generation",
+    "route": "blog/about-docstring-generation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "python secure password generator",
+    "md_url": "https://zencoder.ai/blog/python-secure-password-generator",
+    "html_url": "https://zencoder.ai/blog/python-secure-password-generator",
+    "route": "blog/python-secure-password-generator",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "software development lifecycle automation",
+    "md_url": "https://zencoder.ai/blog/software-development-lifecycle-automation",
+    "html_url": "https://zencoder.ai/blog/software-development-lifecycle-automation",
+    "route": "blog/software-development-lifecycle-automation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "future generative ai software development",
+    "md_url": "https://zencoder.ai/blog/future-generative-ai-software-development",
+    "html_url": "https://zencoder.ai/blog/future-generative-ai-software-development",
+    "route": "blog/future-generative-ai-software-development",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to code faster",
+    "md_url": "https://zencoder.ai/blog/how-to-code-faster",
+    "html_url": "https://zencoder.ai/blog/how-to-code-faster",
+    "route": "blog/how-to-code-faster",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "top free ides beginner developers",
+    "md_url": "https://zencoder.ai/blog/top-free-ides-beginner-developers",
+    "html_url": "https://zencoder.ai/blog/top-free-ides-beginner-developers",
+    "route": "blog/top-free-ides-beginner-developers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "php debugging guide",
+    "md_url": "https://zencoder.ai/blog/php-debugging-guide",
+    "html_url": "https://zencoder.ai/blog/php-debugging-guide",
+    "route": "blog/php-debugging-guide",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai agent survival guide part 1 the repo you didnt scan",
+    "md_url": "https://zencoder.ai/blog/ai-agent-survival-guide-part-1-the-repo-you-didnt-scan",
+    "html_url": "https://zencoder.ai/blog/ai-agent-survival-guide-part-1-the-repo-you-didnt-scan",
+    "route": "blog/ai-agent-survival-guide-part-1-the-repo-you-didnt-scan",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zencoder welcomes machinet to our family",
+    "md_url": "https://zencoder.ai/blog/zencoder-welcomes-machinet-to-our-family",
+    "html_url": "https://zencoder.ai/blog/zencoder-welcomes-machinet-to-our-family",
+    "route": "blog/zencoder-welcomes-machinet-to-our-family",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "software development lifecycle",
+    "md_url": "https://zencoder.ai/blog/software-development-lifecycle",
+    "html_url": "https://zencoder.ai/blog/software-development-lifecycle",
+    "route": "blog/software-development-lifecycle",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "code refactoring tools",
+    "md_url": "https://zencoder.ai/blog/code-refactoring-tools",
+    "html_url": "https://zencoder.ai/blog/code-refactoring-tools",
+    "route": "blog/code-refactoring-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai for code governance",
+    "md_url": "https://zencoder.ai/blog/ai-for-code-governance",
+    "html_url": "https://zencoder.ai/blog/ai-for-code-governance",
+    "route": "blog/ai-for-code-governance",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai agent orchestration best practices",
+    "md_url": "https://zencoder.ai/blog/ai-agent-orchestration-best-practices",
+    "html_url": "https://zencoder.ai/blog/ai-agent-orchestration-best-practices",
+    "route": "blog/ai-agent-orchestration-best-practices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to resolve github issues faster with zencoder",
+    "md_url": "https://zencoder.ai/blog/how-to-resolve-github-issues-faster-with-zencoder",
+    "html_url": "https://zencoder.ai/blog/how-to-resolve-github-issues-faster-with-zencoder",
+    "route": "blog/how-to-resolve-github-issues-faster-with-zencoder",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "building ai enhanced ci cd pipelines for enterprise applications",
+    "md_url": "https://zencoder.ai/blog/building-ai-enhanced-ci-cd-pipelines-for-enterprise-applications",
+    "html_url": "https://zencoder.ai/blog/building-ai-enhanced-ci-cd-pipelines-for-enterprise-applications",
+    "route": "blog/building-ai-enhanced-ci-cd-pipelines-for-enterprise-applications",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to make python code run faster",
+    "md_url": "https://zencoder.ai/blog/how-to-make-python-code-run-faster",
+    "html_url": "https://zencoder.ai/blog/how-to-make-python-code-run-faster",
+    "route": "blog/how-to-make-python-code-run-faster",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai code generators syntax semantics explained",
+    "md_url": "https://zencoder.ai/blog/ai-code-generators-syntax-semantics-explained",
+    "html_url": "https://zencoder.ai/blog/ai-code-generators-syntax-semantics-explained",
+    "route": "blog/ai-code-generators-syntax-semantics-explained",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cody vs copilot",
+    "md_url": "https://zencoder.ai/blog/cody-vs-copilot",
+    "html_url": "https://zencoder.ai/blog/cody-vs-copilot",
+    "route": "blog/cody-vs-copilot",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "types of ai agents from reactive to self learning systems",
+    "md_url": "https://zencoder.ai/blog/types-of-ai-agents-from-reactive-to-self-learning-systems",
+    "html_url": "https://zencoder.ai/blog/types-of-ai-agents-from-reactive-to-self-learning-systems",
+    "route": "blog/types-of-ai-agents-from-reactive-to-self-learning-systems",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "integrating ai code generators ides",
+    "md_url": "https://zencoder.ai/blog/integrating-ai-code-generators-ides",
+    "html_url": "https://zencoder.ai/blog/integrating-ai-code-generators-ides",
+    "route": "blog/integrating-ai-code-generators-ides",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best java code analysis tools for developers",
+    "md_url": "https://zencoder.ai/blog/best-java-code-analysis-tools-for-developers",
+    "html_url": "https://zencoder.ai/blog/best-java-code-analysis-tools-for-developers",
+    "route": "blog/best-java-code-analysis-tools-for-developers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "reasons to integrate ai code generators",
+    "md_url": "https://zencoder.ai/blog/reasons-to-integrate-ai-code-generators",
+    "html_url": "https://zencoder.ai/blog/reasons-to-integrate-ai-code-generators",
+    "route": "blog/reasons-to-integrate-ai-code-generators",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "spec driven development for software services firms",
+    "md_url": "https://zencoder.ai/blog/spec-driven-development-for-software-services-firms",
+    "html_url": "https://zencoder.ai/blog/spec-driven-development-for-software-services-firms",
+    "route": "blog/spec-driven-development-for-software-services-firms",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "reduce bugs in code",
+    "md_url": "https://zencoder.ai/blog/reduce-bugs-in-code",
+    "html_url": "https://zencoder.ai/blog/reduce-bugs-in-code",
+    "route": "blog/reduce-bugs-in-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best practices for coding with ai agent platforms",
+    "md_url": "https://zencoder.ai/blog/best-practices-for-coding-with-ai-agent-platforms",
+    "html_url": "https://zencoder.ai/blog/best-practices-for-coding-with-ai-agent-platforms",
+    "route": "blog/best-practices-for-coding-with-ai-agent-platforms",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the future of engineering teams in saas with context aware ai agents",
+    "md_url": "https://zencoder.ai/blog/the-future-of-engineering-teams-in-saas-with-context-aware-ai-agents",
+    "html_url": "https://zencoder.ai/blog/the-future-of-engineering-teams-in-saas-with-context-aware-ai-agents",
+    "route": "blog/the-future-of-engineering-teams-in-saas-with-context-aware-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "simplifying refactoring for large codebases with ai",
+    "md_url": "https://zencoder.ai/blog/simplifying-refactoring-for-large-codebases-with-ai",
+    "html_url": "https://zencoder.ai/blog/simplifying-refactoring-for-large-codebases-with-ai",
+    "route": "blog/simplifying-refactoring-for-large-codebases-with-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zenflow servicenow integration enterprise itsm automation",
+    "md_url": "https://zencoder.ai/blog/zenflow-servicenow-integration-enterprise-itsm-automation",
+    "html_url": "https://zencoder.ai/blog/zenflow-servicenow-integration-enterprise-itsm-automation",
+    "route": "blog/zenflow-servicenow-integration-enterprise-itsm-automation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zenflow miro integration ai board analysis",
+    "md_url": "https://zencoder.ai/blog/zenflow-miro-integration-ai-board-analysis",
+    "html_url": "https://zencoder.ai/blog/zenflow-miro-integration-ai-board-analysis",
+    "route": "blog/zenflow-miro-integration-ai-board-analysis",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai for c plus plus",
+    "md_url": "https://zencoder.ai/blog/best-ai-for-c-plus-plus",
+    "html_url": "https://zencoder.ai/blog/best-ai-for-c-plus-plus",
+    "route": "blog/best-ai-for-c-plus-plus",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai multi repo search",
+    "md_url": "https://zencoder.ai/blog/ai-multi-repo-search",
+    "html_url": "https://zencoder.ai/blog/ai-multi-repo-search",
+    "route": "blog/ai-multi-repo-search",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "python random number generator",
+    "md_url": "https://zencoder.ai/blog/python-random-number-generator",
+    "html_url": "https://zencoder.ai/blog/python-random-number-generator",
+    "route": "blog/python-random-number-generator",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zencoder next gen ai agents",
+    "md_url": "https://zencoder.ai/blog/zencoder-next-gen-ai-agents",
+    "html_url": "https://zencoder.ai/blog/zencoder-next-gen-ai-agents",
+    "route": "blog/zencoder-next-gen-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "human ai partnership redefining developer roles",
+    "md_url": "https://zencoder.ai/blog/human-ai-partnership-redefining-developer-roles",
+    "html_url": "https://zencoder.ai/blog/human-ai-partnership-redefining-developer-roles",
+    "route": "blog/human-ai-partnership-redefining-developer-roles",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "java unit testing best practices",
+    "md_url": "https://zencoder.ai/blog/java-unit-testing-best-practices",
+    "html_url": "https://zencoder.ai/blog/java-unit-testing-best-practices",
+    "route": "blog/java-unit-testing-best-practices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "autonomous agents vs regular ai agents difference",
+    "md_url": "https://zencoder.ai/blog/autonomous-agents-vs-regular-ai-agents-difference",
+    "html_url": "https://zencoder.ai/blog/autonomous-agents-vs-regular-ai-agents-difference",
+    "route": "blog/autonomous-agents-vs-regular-ai-agents-difference",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best chatgpt alternatives for coding",
+    "md_url": "https://zencoder.ai/blog/best-chatgpt-alternatives-for-coding",
+    "html_url": "https://zencoder.ai/blog/best-chatgpt-alternatives-for-coding",
+    "route": "blog/best-chatgpt-alternatives-for-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "single agent vs multi agent",
+    "md_url": "https://zencoder.ai/blog/single-agent-vs-multi-agent",
+    "html_url": "https://zencoder.ai/blog/single-agent-vs-multi-agent",
+    "route": "blog/single-agent-vs-multi-agent",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "what is vibe coding",
+    "md_url": "https://zencoder.ai/blog/what-is-vibe-coding",
+    "html_url": "https://zencoder.ai/blog/what-is-vibe-coding",
+    "route": "blog/what-is-vibe-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai orchestration vs traditional automation",
+    "md_url": "https://zencoder.ai/blog/ai-orchestration-vs-traditional-automation",
+    "html_url": "https://zencoder.ai/blog/ai-orchestration-vs-traditional-automation",
+    "route": "blog/ai-orchestration-vs-traditional-automation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "tabnine vs codeium",
+    "md_url": "https://zencoder.ai/blog/tabnine-vs-codeium",
+    "html_url": "https://zencoder.ai/blog/tabnine-vs-codeium",
+    "route": "blog/tabnine-vs-codeium",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai for coding",
+    "md_url": "https://zencoder.ai/blog/best-ai-for-coding",
+    "html_url": "https://zencoder.ai/blog/best-ai-for-coding",
+    "route": "blog/best-ai-for-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the reality of self hosting llms performance cost and control with glm 4.5 fp8 white paper",
+    "md_url": "https://zencoder.ai/blog/the-reality-of-self-hosting-llms-performance-cost-and-control-with-glm-4.5-fp8-white-paper",
+    "html_url": "https://zencoder.ai/blog/the-reality-of-self-hosting-llms-performance-cost-and-control-with-glm-4.5-fp8-white-paper",
+    "route": "blog/the-reality-of-self-hosting-llms-performance-cost-and-control-with-glm-4.5-fp8-white-paper",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "python file directory code snippets",
+    "md_url": "https://zencoder.ai/blog/python-file-directory-code-snippets",
+    "html_url": "https://zencoder.ai/blog/python-file-directory-code-snippets",
+    "route": "blog/python-file-directory-code-snippets",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "github copilot alternatives",
+    "md_url": "https://zencoder.ai/blog/github-copilot-alternatives",
+    "html_url": "https://zencoder.ai/blog/github-copilot-alternatives",
+    "route": "blog/github-copilot-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "mastering ai driven continuous deployment for scalable apps",
+    "md_url": "https://zencoder.ai/blog/mastering-ai-driven-continuous-deployment-for-scalable-apps",
+    "html_url": "https://zencoder.ai/blog/mastering-ai-driven-continuous-deployment-for-scalable-apps",
+    "route": "blog/mastering-ai-driven-continuous-deployment-for-scalable-apps",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ethically sourced ai code generation what developers need to know",
+    "md_url": "https://zencoder.ai/blog/ethically-sourced-ai-code-generation-what-developers-need-to-know",
+    "html_url": "https://zencoder.ai/blog/ethically-sourced-ai-code-generation-what-developers-need-to-know",
+    "route": "blog/ethically-sourced-ai-code-generation-what-developers-need-to-know",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "static code analysis",
+    "md_url": "https://zencoder.ai/blog/static-code-analysis",
+    "html_url": "https://zencoder.ai/blog/static-code-analysis",
+    "route": "blog/static-code-analysis",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to solve linear programming problems",
+    "md_url": "https://zencoder.ai/blog/how-to-solve-linear-programming-problems",
+    "html_url": "https://zencoder.ai/blog/how-to-solve-linear-programming-problems",
+    "route": "blog/how-to-solve-linear-programming-problems",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the impact of ai on cross platform development tools",
+    "md_url": "https://zencoder.ai/blog/the-impact-of-ai-on-cross-platform-development-tools",
+    "html_url": "https://zencoder.ai/blog/the-impact-of-ai-on-cross-platform-development-tools",
+    "route": "blog/the-impact-of-ai-on-cross-platform-development-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "build gui in python",
+    "md_url": "https://zencoder.ai/blog/build-gui-in-python",
+    "html_url": "https://zencoder.ai/blog/build-gui-in-python",
+    "route": "blog/build-gui-in-python",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "readability maintainability in quality code",
+    "md_url": "https://zencoder.ai/blog/readability-maintainability-in-quality-code",
+    "html_url": "https://zencoder.ai/blog/readability-maintainability-in-quality-code",
+    "route": "blog/readability-maintainability-in-quality-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "code review checklist",
+    "md_url": "https://zencoder.ai/blog/code-review-checklist",
+    "html_url": "https://zencoder.ai/blog/code-review-checklist",
+    "route": "blog/code-review-checklist",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "generative ai code generation tools",
+    "md_url": "https://zencoder.ai/blog/generative-ai-code-generation-tools",
+    "html_url": "https://zencoder.ai/blog/generative-ai-code-generation-tools",
+    "route": "blog/generative-ai-code-generation-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "augment code alternatives",
+    "md_url": "https://zencoder.ai/blog/augment-code-alternatives",
+    "html_url": "https://zencoder.ai/blog/augment-code-alternatives",
+    "route": "blog/augment-code-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zenflow stripe integration ai payment data",
+    "md_url": "https://zencoder.ai/blog/zenflow-stripe-integration-ai-payment-data",
+    "html_url": "https://zencoder.ai/blog/zenflow-stripe-integration-ai-payment-data",
+    "route": "blog/zenflow-stripe-integration-ai-payment-data",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "bridging ai adoption gap zen agents",
+    "md_url": "https://zencoder.ai/blog/bridging-ai-adoption-gap-zen-agents",
+    "html_url": "https://zencoder.ai/blog/bridging-ai-adoption-gap-zen-agents",
+    "route": "blog/bridging-ai-adoption-gap-zen-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "500b stargate ai data center boom",
+    "md_url": "https://zencoder.ai/blog/500b-stargate-ai-data-center-boom",
+    "html_url": "https://zencoder.ai/blog/500b-stargate-ai-data-center-boom",
+    "route": "blog/500b-stargate-ai-data-center-boom",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai agents for coding",
+    "md_url": "https://zencoder.ai/blog/best-ai-agents-for-coding",
+    "html_url": "https://zencoder.ai/blog/best-ai-agents-for-coding",
+    "route": "blog/best-ai-agents-for-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best autonomous coding solutions",
+    "md_url": "https://zencoder.ai/blog/best-autonomous-coding-solutions",
+    "html_url": "https://zencoder.ai/blog/best-autonomous-coding-solutions",
+    "route": "blog/best-autonomous-coding-solutions",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "tabnine vs copilot",
+    "md_url": "https://zencoder.ai/blog/tabnine-vs-copilot",
+    "html_url": "https://zencoder.ai/blog/tabnine-vs-copilot",
+    "route": "blog/tabnine-vs-copilot",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "learn automated docstring techniques",
+    "md_url": "https://zencoder.ai/blog/learn-automated-docstring-techniques",
+    "html_url": "https://zencoder.ai/blog/learn-automated-docstring-techniques",
+    "route": "blog/learn-automated-docstring-techniques",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai enhanced docstring comment generation",
+    "md_url": "https://zencoder.ai/blog/ai-enhanced-docstring-comment-generation",
+    "html_url": "https://zencoder.ai/blog/ai-enhanced-docstring-comment-generation",
+    "route": "blog/ai-enhanced-docstring-comment-generation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "creating a python microservice architecture with ai code generators",
+    "md_url": "https://zencoder.ai/blog/creating-a-python-microservice-architecture-with-ai-code-generators",
+    "html_url": "https://zencoder.ai/blog/creating-a-python-microservice-architecture-with-ai-code-generators",
+    "route": "blog/creating-a-python-microservice-architecture-with-ai-code-generators",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai code review tools",
+    "md_url": "https://zencoder.ai/blog/ai-code-review-tools",
+    "html_url": "https://zencoder.ai/blog/ai-code-review-tools",
+    "route": "blog/ai-code-review-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zencoder sonnet 4 5",
+    "md_url": "https://zencoder.ai/blog/zencoder-sonnet-4-5",
+    "html_url": "https://zencoder.ai/blog/zencoder-sonnet-4-5",
+    "route": "blog/zencoder-sonnet-4-5",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai for sql",
+    "md_url": "https://zencoder.ai/blog/best-ai-for-sql",
+    "html_url": "https://zencoder.ai/blog/best-ai-for-sql",
+    "route": "blog/best-ai-for-sql",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "about repo grokking",
+    "md_url": "https://zencoder.ai/blog/about-repo-grokking",
+    "html_url": "https://zencoder.ai/blog/about-repo-grokking",
+    "route": "blog/about-repo-grokking",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai for css",
+    "md_url": "https://zencoder.ai/blog/best-ai-for-css",
+    "html_url": "https://zencoder.ai/blog/best-ai-for-css",
+    "route": "blog/best-ai-for-css",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "python one liners code snippets",
+    "md_url": "https://zencoder.ai/blog/python-one-liners-code-snippets",
+    "html_url": "https://zencoder.ai/blog/python-one-liners-code-snippets",
+    "route": "blog/python-one-liners-code-snippets",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best practices for pair programming with ai coding agents",
+    "md_url": "https://zencoder.ai/blog/best-practices-for-pair-programming-with-ai-coding-agents",
+    "html_url": "https://zencoder.ai/blog/best-practices-for-pair-programming-with-ai-coding-agents",
+    "route": "blog/best-practices-for-pair-programming-with-ai-coding-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "debugging tools",
+    "md_url": "https://zencoder.ai/blog/debugging-tools",
+    "html_url": "https://zencoder.ai/blog/debugging-tools",
+    "route": "blog/debugging-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "debugging in c",
+    "md_url": "https://zencoder.ai/blog/debugging-in-c",
+    "html_url": "https://zencoder.ai/blog/debugging-in-c",
+    "route": "blog/debugging-in-c",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "multi agent collaboration how agents catch each others mistakes",
+    "md_url": "https://zencoder.ai/blog/multi-agent-collaboration-how-agents-catch-each-others-mistakes",
+    "html_url": "https://zencoder.ai/blog/multi-agent-collaboration-how-agents-catch-each-others-mistakes",
+    "route": "blog/multi-agent-collaboration-how-agents-catch-each-others-mistakes",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automated test case creation",
+    "md_url": "https://zencoder.ai/blog/automated-test-case-creation",
+    "html_url": "https://zencoder.ai/blog/automated-test-case-creation",
+    "route": "blog/automated-test-case-creation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "what is autonomous coding",
+    "md_url": "https://zencoder.ai/blog/what-is-autonomous-coding",
+    "html_url": "https://zencoder.ai/blog/what-is-autonomous-coding",
+    "route": "blog/what-is-autonomous-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai agent vs chatbot",
+    "md_url": "https://zencoder.ai/blog/ai-agent-vs-chatbot",
+    "html_url": "https://zencoder.ai/blog/ai-agent-vs-chatbot",
+    "route": "blog/ai-agent-vs-chatbot",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "wigging out controlled autonomous loops in zenflow",
+    "md_url": "https://zencoder.ai/blog/wigging-out-controlled-autonomous-loops-in-zenflow",
+    "html_url": "https://zencoder.ai/blog/wigging-out-controlled-autonomous-loops-in-zenflow",
+    "route": "blog/wigging-out-controlled-autonomous-loops-in-zenflow",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai coding agents",
+    "md_url": "https://zencoder.ai/blog/best-ai-coding-agents",
+    "html_url": "https://zencoder.ai/blog/best-ai-coding-agents",
+    "route": "blog/best-ai-coding-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai agent survival guide part 3 that mcp server you just installed",
+    "md_url": "https://zencoder.ai/blog/ai-agent-survival-guide-part-3-that-mcp-server-you-just-installed",
+    "html_url": "https://zencoder.ai/blog/ai-agent-survival-guide-part-3-that-mcp-server-you-just-installed",
+    "route": "blog/ai-agent-survival-guide-part-3-that-mcp-server-you-just-installed",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "pythons unit testing",
+    "md_url": "https://zencoder.ai/blog/pythons-unit-testing",
+    "html_url": "https://zencoder.ai/blog/pythons-unit-testing",
+    "route": "blog/pythons-unit-testing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "software development productivity tools",
+    "md_url": "https://zencoder.ai/blog/software-development-productivity-tools",
+    "html_url": "https://zencoder.ai/blog/software-development-productivity-tools",
+    "route": "blog/software-development-productivity-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai agent survival guide part 4 your agent army awaits",
+    "md_url": "https://zencoder.ai/blog/ai-agent-survival-guide-part-4-your-agent-army-awaits",
+    "html_url": "https://zencoder.ai/blog/ai-agent-survival-guide-part-4-your-agent-army-awaits",
+    "route": "blog/ai-agent-survival-guide-part-4-your-agent-army-awaits",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the data behind ai coding agents sources and quality",
+    "md_url": "https://zencoder.ai/blog/the-data-behind-ai-coding-agents-sources-and-quality",
+    "html_url": "https://zencoder.ai/blog/the-data-behind-ai-coding-agents-sources-and-quality",
+    "route": "blog/the-data-behind-ai-coding-agents-sources-and-quality",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "reducing time to market using ai code generators",
+    "md_url": "https://zencoder.ai/blog/reducing-time-to-market-using-ai-code-generators",
+    "html_url": "https://zencoder.ai/blog/reducing-time-to-market-using-ai-code-generators",
+    "route": "blog/reducing-time-to-market-using-ai-code-generators",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "types of errors in c programming",
+    "md_url": "https://zencoder.ai/blog/types-of-errors-in-c-programming",
+    "html_url": "https://zencoder.ai/blog/types-of-errors-in-c-programming",
+    "route": "blog/types-of-errors-in-c-programming",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai coding assistants",
+    "md_url": "https://zencoder.ai/blog/best-ai-coding-assistants",
+    "html_url": "https://zencoder.ai/blog/best-ai-coding-assistants",
+    "route": "blog/best-ai-coding-assistants",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to use ai in coding",
+    "md_url": "https://zencoder.ai/blog/how-to-use-ai-in-coding",
+    "html_url": "https://zencoder.ai/blog/how-to-use-ai-in-coding",
+    "route": "blog/how-to-use-ai-in-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "codebase navigation ai",
+    "md_url": "https://zencoder.ai/blog/codebase-navigation-ai",
+    "html_url": "https://zencoder.ai/blog/codebase-navigation-ai",
+    "route": "blog/codebase-navigation-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "alphaevolve and the rise of algorithmic evolution with ai agents",
+    "md_url": "https://zencoder.ai/blog/alphaevolve-and-the-rise-of-algorithmic-evolution-with-ai-agents",
+    "html_url": "https://zencoder.ai/blog/alphaevolve-and-the-rise-of-algorithmic-evolution-with-ai-agents",
+    "route": "blog/alphaevolve-and-the-rise-of-algorithmic-evolution-with-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "productive developer environment saas",
+    "md_url": "https://zencoder.ai/blog/productive-developer-environment-saas",
+    "html_url": "https://zencoder.ai/blog/productive-developer-environment-saas",
+    "route": "blog/productive-developer-environment-saas",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "mintlify alternatives",
+    "md_url": "https://zencoder.ai/blog/mintlify-alternatives",
+    "html_url": "https://zencoder.ai/blog/mintlify-alternatives",
+    "route": "blog/mintlify-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai for different programming languages",
+    "md_url": "https://zencoder.ai/blog/ai-for-different-programming-languages",
+    "html_url": "https://zencoder.ai/blog/ai-for-different-programming-languages",
+    "route": "blog/ai-for-different-programming-languages",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai vs manual unit testing",
+    "md_url": "https://zencoder.ai/blog/ai-vs-manual-unit-testing",
+    "html_url": "https://zencoder.ai/blog/ai-vs-manual-unit-testing",
+    "route": "blog/ai-vs-manual-unit-testing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to use ai to migrate your codebase to a new framework",
+    "md_url": "https://zencoder.ai/blog/how-to-use-ai-to-migrate-your-codebase-to-a-new-framework",
+    "html_url": "https://zencoder.ai/blog/how-to-use-ai-to-migrate-your-codebase-to-a-new-framework",
+    "route": "blog/how-to-use-ai-to-migrate-your-codebase-to-a-new-framework",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "perplexity ai vs chatgpt for coding",
+    "md_url": "https://zencoder.ai/blog/perplexity-ai-vs-chatgpt-for-coding",
+    "html_url": "https://zencoder.ai/blog/perplexity-ai-vs-chatgpt-for-coding",
+    "route": "blog/perplexity-ai-vs-chatgpt-for-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "software engineering best practices",
+    "md_url": "https://zencoder.ai/blog/software-engineering-best-practices",
+    "html_url": "https://zencoder.ai/blog/software-engineering-best-practices",
+    "route": "blog/software-engineering-best-practices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "prompt roulette why your ai breaks after iteration three",
+    "md_url": "https://zencoder.ai/blog/prompt-roulette-why-your-ai-breaks-after-iteration-three",
+    "html_url": "https://zencoder.ai/blog/prompt-roulette-why-your-ai-breaks-after-iteration-three",
+    "route": "blog/prompt-roulette-why-your-ai-breaks-after-iteration-three",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "rpa vs ai agents",
+    "md_url": "https://zencoder.ai/blog/rpa-vs-ai-agents",
+    "html_url": "https://zencoder.ai/blog/rpa-vs-ai-agents",
+    "route": "blog/rpa-vs-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to write clean code",
+    "md_url": "https://zencoder.ai/blog/how-to-write-clean-code",
+    "html_url": "https://zencoder.ai/blog/how-to-write-clean-code",
+    "route": "blog/how-to-write-clean-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "sonnet 4 5 review first spec driven model",
+    "md_url": "https://zencoder.ai/blog/sonnet-4-5-review-first-spec-driven-model",
+    "html_url": "https://zencoder.ai/blog/sonnet-4-5-review-first-spec-driven-model",
+    "route": "blog/sonnet-4-5-review-first-spec-driven-model",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai coding agent for neovim",
+    "md_url": "https://zencoder.ai/blog/ai-coding-agent-for-neovim",
+    "html_url": "https://zencoder.ai/blog/ai-coding-agent-for-neovim",
+    "route": "blog/ai-coding-agent-for-neovim",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai help legacy python code",
+    "md_url": "https://zencoder.ai/blog/ai-help-legacy-python-code",
+    "html_url": "https://zencoder.ai/blog/ai-help-legacy-python-code",
+    "route": "blog/ai-help-legacy-python-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai blogs for developers engineers",
+    "md_url": "https://zencoder.ai/blog/ai-blogs-for-developers-engineers",
+    "html_url": "https://zencoder.ai/blog/ai-blogs-for-developers-engineers",
+    "route": "blog/ai-blogs-for-developers-engineers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to build a news aggregator with python",
+    "md_url": "https://zencoder.ai/blog/how-to-build-a-news-aggregator-with-python",
+    "html_url": "https://zencoder.ai/blog/how-to-build-a-news-aggregator-with-python",
+    "route": "blog/how-to-build-a-news-aggregator-with-python",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai advancements in code review",
+    "md_url": "https://zencoder.ai/blog/ai-advancements-in-code-review",
+    "html_url": "https://zencoder.ai/blog/ai-advancements-in-code-review",
+    "route": "blog/ai-advancements-in-code-review",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cody vs github copilot",
+    "md_url": "https://zencoder.ai/blog/cody-vs-github-copilot",
+    "html_url": "https://zencoder.ai/blog/cody-vs-github-copilot",
+    "route": "blog/cody-vs-github-copilot",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to use zencoder to solve tasks in asana",
+    "md_url": "https://zencoder.ai/blog/how-to-use-zencoder-to-solve-tasks-in-asana",
+    "html_url": "https://zencoder.ai/blog/how-to-use-zencoder-to-solve-tasks-in-asana",
+    "route": "blog/how-to-use-zencoder-to-solve-tasks-in-asana",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "deepcode ai alternatives",
+    "md_url": "https://zencoder.ai/blog/deepcode-ai-alternatives",
+    "html_url": "https://zencoder.ai/blog/deepcode-ai-alternatives",
+    "route": "blog/deepcode-ai-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai for html",
+    "md_url": "https://zencoder.ai/blog/best-ai-for-html",
+    "html_url": "https://zencoder.ai/blog/best-ai-for-html",
+    "route": "blog/best-ai-for-html",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "testing vs debugging",
+    "md_url": "https://zencoder.ai/blog/testing-vs-debugging",
+    "html_url": "https://zencoder.ai/blog/testing-vs-debugging",
+    "route": "blog/testing-vs-debugging",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "spec driven development why vibe coding will fail the next generation of ai engineers",
+    "md_url": "https://zencoder.ai/blog/spec-driven-development-why-vibe-coding-will-fail-the-next-generation-of-ai-engineers",
+    "html_url": "https://zencoder.ai/blog/spec-driven-development-why-vibe-coding-will-fail-the-next-generation-of-ai-engineers",
+    "route": "blog/spec-driven-development-why-vibe-coding-will-fail-the-next-generation-of-ai-engineers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "model context protocol",
+    "md_url": "https://zencoder.ai/blog/model-context-protocol",
+    "html_url": "https://zencoder.ai/blog/model-context-protocol",
+    "route": "blog/model-context-protocol",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to make c code faster",
+    "md_url": "https://zencoder.ai/blog/how-to-make-c-code-faster",
+    "html_url": "https://zencoder.ai/blog/how-to-make-c-code-faster",
+    "route": "blog/how-to-make-c-code-faster",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "autonomous coding agents",
+    "md_url": "https://zencoder.ai/blog/autonomous-coding-agents",
+    "html_url": "https://zencoder.ai/blog/autonomous-coding-agents",
+    "route": "blog/autonomous-coding-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "demystifying swe bench",
+    "md_url": "https://zencoder.ai/blog/demystifying-swe-bench",
+    "html_url": "https://zencoder.ai/blog/demystifying-swe-bench",
+    "route": "blog/demystifying-swe-bench",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "multi agent verification the new standard for ai code quality",
+    "md_url": "https://zencoder.ai/blog/multi-agent-verification-the-new-standard-for-ai-code-quality",
+    "html_url": "https://zencoder.ai/blog/multi-agent-verification-the-new-standard-for-ai-code-quality",
+    "route": "blog/multi-agent-verification-the-new-standard-for-ai-code-quality",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best vibe coding tools",
+    "md_url": "https://zencoder.ai/blog/best-vibe-coding-tools",
+    "html_url": "https://zencoder.ai/blog/best-vibe-coding-tools",
+    "route": "blog/best-vibe-coding-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing zenflow work",
+    "md_url": "https://zencoder.ai/blog/introducing-zenflow-work",
+    "html_url": "https://zencoder.ai/blog/introducing-zenflow-work",
+    "route": "blog/introducing-zenflow-work",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "slack mcp ai integration",
+    "md_url": "https://zencoder.ai/blog/slack-mcp-ai-integration",
+    "html_url": "https://zencoder.ai/blog/slack-mcp-ai-integration",
+    "route": "blog/slack-mcp-ai-integration",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automated docstrings industry use",
+    "md_url": "https://zencoder.ai/blog/automated-docstrings-industry-use",
+    "html_url": "https://zencoder.ai/blog/automated-docstrings-industry-use",
+    "route": "blog/automated-docstrings-industry-use",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai for c",
+    "md_url": "https://zencoder.ai/blog/best-ai-for-c",
+    "html_url": "https://zencoder.ai/blog/best-ai-for-c",
+    "route": "blog/best-ai-for-c",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automated unit testing advantages",
+    "md_url": "https://zencoder.ai/blog/automated-unit-testing-advantages",
+    "html_url": "https://zencoder.ai/blog/automated-unit-testing-advantages",
+    "route": "blog/automated-unit-testing-advantages",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to write html code",
+    "md_url": "https://zencoder.ai/blog/how-to-write-html-code",
+    "html_url": "https://zencoder.ai/blog/how-to-write-html-code",
+    "route": "blog/how-to-write-html-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "universal platform",
+    "md_url": "https://zencoder.ai/blog/universal-platform",
+    "html_url": "https://zencoder.ai/blog/universal-platform",
+    "route": "blog/universal-platform",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "improve coding skills with ai",
+    "md_url": "https://zencoder.ai/blog/improve-coding-skills-with-ai",
+    "html_url": "https://zencoder.ai/blog/improve-coding-skills-with-ai",
+    "route": "blog/improve-coding-skills-with-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to improve developer productivity",
+    "md_url": "https://zencoder.ai/blog/how-to-improve-developer-productivity",
+    "html_url": "https://zencoder.ai/blog/how-to-improve-developer-productivity",
+    "route": "blog/how-to-improve-developer-productivity",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai coding agents modern devops",
+    "md_url": "https://zencoder.ai/blog/ai-coding-agents-modern-devops",
+    "html_url": "https://zencoder.ai/blog/ai-coding-agents-modern-devops",
+    "route": "blog/ai-coding-agents-modern-devops",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "docstring generation tools 2024",
+    "md_url": "https://zencoder.ai/blog/docstring-generation-tools-2024",
+    "html_url": "https://zencoder.ai/blog/docstring-generation-tools-2024",
+    "route": "blog/docstring-generation-tools-2024",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "tabnine vs cursor",
+    "md_url": "https://zencoder.ai/blog/tabnine-vs-cursor",
+    "html_url": "https://zencoder.ai/blog/tabnine-vs-cursor",
+    "route": "blog/tabnine-vs-cursor",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "code documentation best practices",
+    "md_url": "https://zencoder.ai/blog/code-documentation-best-practices",
+    "html_url": "https://zencoder.ai/blog/code-documentation-best-practices",
+    "route": "blog/code-documentation-best-practices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing zentester agent",
+    "md_url": "https://zencoder.ai/blog/introducing-zentester-agent",
+    "html_url": "https://zencoder.ai/blog/introducing-zentester-agent",
+    "route": "blog/introducing-zentester-agent",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how does repo grokking work a deep dive into zencoders game changing technology",
+    "md_url": "https://zencoder.ai/blog/how-does-repo-grokking-work-a-deep-dive-into-zencoders-game-changing-technology",
+    "html_url": "https://zencoder.ai/blog/how-does-repo-grokking-work-a-deep-dive-into-zencoders-game-changing-technology",
+    "route": "blog/how-does-repo-grokking-work-a-deep-dive-into-zencoders-game-changing-technology",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "multi agent orchestration",
+    "md_url": "https://zencoder.ai/blog/multi-agent-orchestration",
+    "html_url": "https://zencoder.ai/blog/multi-agent-orchestration",
+    "route": "blog/multi-agent-orchestration",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zenflow work hubspot jira slack integration guide",
+    "md_url": "https://zencoder.ai/blog/zenflow-work-hubspot-jira-slack-integration-guide",
+    "html_url": "https://zencoder.ai/blog/zenflow-work-hubspot-jira-slack-integration-guide",
+    "route": "blog/zenflow-work-hubspot-jira-slack-integration-guide",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "stackblitz alternatives",
+    "md_url": "https://zencoder.ai/blog/stackblitz-alternatives",
+    "html_url": "https://zencoder.ai/blog/stackblitz-alternatives",
+    "route": "blog/stackblitz-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude code parallel agents",
+    "md_url": "https://zencoder.ai/blog/claude-code-parallel-agents",
+    "html_url": "https://zencoder.ai/blog/claude-code-parallel-agents",
+    "route": "blog/claude-code-parallel-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "vibe vs traditional coding",
+    "md_url": "https://zencoder.ai/blog/vibe-vs-traditional-coding",
+    "html_url": "https://zencoder.ai/blog/vibe-vs-traditional-coding",
+    "route": "blog/vibe-vs-traditional-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "linear issue sync ai",
+    "md_url": "https://zencoder.ai/blog/linear-issue-sync-ai",
+    "html_url": "https://zencoder.ai/blog/linear-issue-sync-ai",
+    "route": "blog/linear-issue-sync-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "spec driven development vs vibe coding",
+    "md_url": "https://zencoder.ai/blog/spec-driven-development-vs-vibe-coding",
+    "html_url": "https://zencoder.ai/blog/spec-driven-development-vs-vibe-coding",
+    "route": "blog/spec-driven-development-vs-vibe-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "replit vs cursor",
+    "md_url": "https://zencoder.ai/blog/replit-vs-cursor",
+    "html_url": "https://zencoder.ai/blog/replit-vs-cursor",
+    "route": "blog/replit-vs-cursor",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "future of software engineering with ai",
+    "md_url": "https://zencoder.ai/blog/future-of-software-engineering-with-ai",
+    "html_url": "https://zencoder.ai/blog/future-of-software-engineering-with-ai",
+    "route": "blog/future-of-software-engineering-with-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "repo grokking use cases real world",
+    "md_url": "https://zencoder.ai/blog/repo-grokking-use-cases-real-world",
+    "html_url": "https://zencoder.ai/blog/repo-grokking-use-cases-real-world",
+    "route": "blog/repo-grokking-use-cases-real-world",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai code generation the critical role of human validation",
+    "md_url": "https://zencoder.ai/blog/ai-code-generation-the-critical-role-of-human-validation",
+    "html_url": "https://zencoder.ai/blog/ai-code-generation-the-critical-role-of-human-validation",
+    "route": "blog/ai-code-generation-the-critical-role-of-human-validation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "bringing openai codex to every developer",
+    "md_url": "https://zencoder.ai/blog/bringing-openai-codex-to-every-developer",
+    "html_url": "https://zencoder.ai/blog/bringing-openai-codex-to-every-developer",
+    "route": "blog/bringing-openai-codex-to-every-developer",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "refactoring in java",
+    "md_url": "https://zencoder.ai/blog/refactoring-in-java",
+    "html_url": "https://zencoder.ai/blog/refactoring-in-java",
+    "route": "blog/refactoring-in-java",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how ai helps ctos address talent gaps in engineering teams",
+    "md_url": "https://zencoder.ai/blog/how-ai-helps-ctos-address-talent-gaps-in-engineering-teams",
+    "html_url": "https://zencoder.ai/blog/how-ai-helps-ctos-address-talent-gaps-in-engineering-teams",
+    "route": "blog/how-ai-helps-ctos-address-talent-gaps-in-engineering-teams",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "augment code vs github copilot",
+    "md_url": "https://zencoder.ai/blog/augment-code-vs-github-copilot",
+    "html_url": "https://zencoder.ai/blog/augment-code-vs-github-copilot",
+    "route": "blog/augment-code-vs-github-copilot",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "tabnine vs windsurf",
+    "md_url": "https://zencoder.ai/blog/tabnine-vs-windsurf",
+    "html_url": "https://zencoder.ai/blog/tabnine-vs-windsurf",
+    "route": "blog/tabnine-vs-windsurf",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "vibe coding best practices",
+    "md_url": "https://zencoder.ai/blog/vibe-coding-best-practices",
+    "html_url": "https://zencoder.ai/blog/vibe-coding-best-practices",
+    "route": "blog/vibe-coding-best-practices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best code documentation tools",
+    "md_url": "https://zencoder.ai/blog/best-code-documentation-tools",
+    "html_url": "https://zencoder.ai/blog/best-code-documentation-tools",
+    "route": "blog/best-code-documentation-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automating software performance testing with ai",
+    "md_url": "https://zencoder.ai/blog/automating-software-performance-testing-with-ai",
+    "html_url": "https://zencoder.ai/blog/automating-software-performance-testing-with-ai",
+    "route": "blog/automating-software-performance-testing-with-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai coding benefits",
+    "md_url": "https://zencoder.ai/blog/ai-coding-benefits",
+    "html_url": "https://zencoder.ai/blog/ai-coding-benefits",
+    "route": "blog/ai-coding-benefits",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "myth of fully autonomous ai collaboration in the loop zenflow",
+    "md_url": "https://zencoder.ai/blog/myth-of-fully-autonomous-ai-collaboration-in-the-loop-zenflow",
+    "html_url": "https://zencoder.ai/blog/myth-of-fully-autonomous-ai-collaboration-in-the-loop-zenflow",
+    "route": "blog/myth-of-fully-autonomous-ai-collaboration-in-the-loop-zenflow",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "future unit testing ai trends",
+    "md_url": "https://zencoder.ai/blog/future-unit-testing-ai-trends",
+    "html_url": "https://zencoder.ai/blog/future-unit-testing-ai-trends",
+    "route": "blog/future-unit-testing-ai-trends",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cody ai alternatives",
+    "md_url": "https://zencoder.ai/blog/cody-ai-alternatives",
+    "html_url": "https://zencoder.ai/blog/cody-ai-alternatives",
+    "route": "blog/cody-ai-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai workflow automation for developers 10 proven patterns to ship faster",
+    "md_url": "https://zencoder.ai/blog/ai-workflow-automation-for-developers-10-proven-patterns-to-ship-faster",
+    "html_url": "https://zencoder.ai/blog/ai-workflow-automation-for-developers-10-proven-patterns-to-ship-faster",
+    "route": "blog/ai-workflow-automation-for-developers-10-proven-patterns-to-ship-faster",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "customize ide for efficiency",
+    "md_url": "https://zencoder.ai/blog/customize-ide-for-efficiency",
+    "html_url": "https://zencoder.ai/blog/customize-ide-for-efficiency",
+    "route": "blog/customize-ide-for-efficiency",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "codeium vs copilot",
+    "md_url": "https://zencoder.ai/blog/codeium-vs-copilot",
+    "html_url": "https://zencoder.ai/blog/codeium-vs-copilot",
+    "route": "blog/codeium-vs-copilot",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "prompt engineering is not enough why ai needs systems not prompts",
+    "md_url": "https://zencoder.ai/blog/prompt-engineering-is-not-enough-why-ai-needs-systems-not-prompts",
+    "html_url": "https://zencoder.ai/blog/prompt-engineering-is-not-enough-why-ai-needs-systems-not-prompts",
+    "route": "blog/prompt-engineering-is-not-enough-why-ai-needs-systems-not-prompts",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "about ai coding agents",
+    "md_url": "https://zencoder.ai/blog/about-ai-coding-agents",
+    "html_url": "https://zencoder.ai/blog/about-ai-coding-agents",
+    "route": "blog/about-ai-coding-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "sdlc tools",
+    "md_url": "https://zencoder.ai/blog/sdlc-tools",
+    "html_url": "https://zencoder.ai/blog/sdlc-tools",
+    "route": "blog/sdlc-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "spec driven development for financial services",
+    "md_url": "https://zencoder.ai/blog/spec-driven-development-for-financial-services",
+    "html_url": "https://zencoder.ai/blog/spec-driven-development-for-financial-services",
+    "route": "blog/spec-driven-development-for-financial-services",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automation tools for developers",
+    "md_url": "https://zencoder.ai/blog/automation-tools-for-developers",
+    "html_url": "https://zencoder.ai/blog/automation-tools-for-developers",
+    "route": "blog/automation-tools-for-developers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "codeium alternatives",
+    "md_url": "https://zencoder.ai/blog/codeium-alternatives",
+    "html_url": "https://zencoder.ai/blog/codeium-alternatives",
+    "route": "blog/codeium-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "creating ai powered chatbots for internal enterprise tools",
+    "md_url": "https://zencoder.ai/blog/creating-ai-powered-chatbots-for-internal-enterprise-tools",
+    "html_url": "https://zencoder.ai/blog/creating-ai-powered-chatbots-for-internal-enterprise-tools",
+    "route": "blog/creating-ai-powered-chatbots-for-internal-enterprise-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "github copilot enterprise",
+    "md_url": "https://zencoder.ai/blog/github-copilot-enterprise",
+    "html_url": "https://zencoder.ai/blog/github-copilot-enterprise",
+    "route": "blog/github-copilot-enterprise",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "software engineering challenges",
+    "md_url": "https://zencoder.ai/blog/software-engineering-challenges",
+    "html_url": "https://zencoder.ai/blog/software-engineering-challenges",
+    "route": "blog/software-engineering-challenges",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "coderabbit alternatives",
+    "md_url": "https://zencoder.ai/blog/coderabbit-alternatives",
+    "html_url": "https://zencoder.ai/blog/coderabbit-alternatives",
+    "route": "blog/coderabbit-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "software design patterns with ai future trends",
+    "md_url": "https://zencoder.ai/blog/software-design-patterns-with-ai-future-trends",
+    "html_url": "https://zencoder.ai/blog/software-design-patterns-with-ai-future-trends",
+    "route": "blog/software-design-patterns-with-ai-future-trends",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "nlp in ai code generation",
+    "md_url": "https://zencoder.ai/blog/nlp-in-ai-code-generation",
+    "html_url": "https://zencoder.ai/blog/nlp-in-ai-code-generation",
+    "route": "blog/nlp-in-ai-code-generation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cursor alternatives",
+    "md_url": "https://zencoder.ai/blog/cursor-alternatives",
+    "html_url": "https://zencoder.ai/blog/cursor-alternatives",
+    "route": "blog/cursor-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai coding assistants open source",
+    "md_url": "https://zencoder.ai/blog/ai-coding-assistants-open-source",
+    "html_url": "https://zencoder.ai/blog/ai-coding-assistants-open-source",
+    "route": "blog/ai-coding-assistants-open-source",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "context aware ai coding challenges",
+    "md_url": "https://zencoder.ai/blog/context-aware-ai-coding-challenges",
+    "html_url": "https://zencoder.ai/blog/context-aware-ai-coding-challenges",
+    "route": "blog/context-aware-ai-coding-challenges",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "beyond the copilot autonomous workspace engineering zenflow",
+    "md_url": "https://zencoder.ai/blog/beyond-the-copilot-autonomous-workspace-engineering-zenflow",
+    "html_url": "https://zencoder.ai/blog/beyond-the-copilot-autonomous-workspace-engineering-zenflow",
+    "route": "blog/beyond-the-copilot-autonomous-workspace-engineering-zenflow",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "building ai workflows",
+    "md_url": "https://zencoder.ai/blog/building-ai-workflows",
+    "html_url": "https://zencoder.ai/blog/building-ai-workflows",
+    "route": "blog/building-ai-workflows",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "context aware code completion ai",
+    "md_url": "https://zencoder.ai/blog/context-aware-code-completion-ai",
+    "html_url": "https://zencoder.ai/blog/context-aware-code-completion-ai",
+    "route": "blog/context-aware-code-completion-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how ai code generators work",
+    "md_url": "https://zencoder.ai/blog/how-ai-code-generators-work",
+    "html_url": "https://zencoder.ai/blog/how-ai-code-generators-work",
+    "route": "blog/how-ai-code-generators-work",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "codewhisperer vs copilot",
+    "md_url": "https://zencoder.ai/blog/codewhisperer-vs-copilot",
+    "html_url": "https://zencoder.ai/blog/codewhisperer-vs-copilot",
+    "route": "blog/codewhisperer-vs-copilot",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai coding assistant tools",
+    "md_url": "https://zencoder.ai/blog/best-ai-coding-assistant-tools",
+    "html_url": "https://zencoder.ai/blog/best-ai-coding-assistant-tools",
+    "route": "blog/best-ai-coding-assistant-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "orchestrating servicenow it workflows zenflow custom workflows",
+    "md_url": "https://zencoder.ai/blog/orchestrating-servicenow-it-workflows-zenflow-custom-workflows",
+    "html_url": "https://zencoder.ai/blog/orchestrating-servicenow-it-workflows-zenflow-custom-workflows",
+    "route": "blog/orchestrating-servicenow-it-workflows-zenflow-custom-workflows",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "5 tips on how to use ai in coding in 2025",
+    "md_url": "https://zencoder.ai/blog/5-tips-on-how-to-use-ai-in-coding-in-2025",
+    "html_url": "https://zencoder.ai/blog/5-tips-on-how-to-use-ai-in-coding-in-2025",
+    "route": "blog/5-tips-on-how-to-use-ai-in-coding-in-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automatic unit test generation java",
+    "md_url": "https://zencoder.ai/blog/automatic-unit-test-generation-java",
+    "html_url": "https://zencoder.ai/blog/automatic-unit-test-generation-java",
+    "route": "blog/automatic-unit-test-generation-java",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "spec driven development sdd the engineering method ai needed",
+    "md_url": "https://zencoder.ai/blog/spec-driven-development-sdd-the-engineering-method-ai-needed",
+    "html_url": "https://zencoder.ai/blog/spec-driven-development-sdd-the-engineering-method-ai-needed",
+    "route": "blog/spec-driven-development-sdd-the-engineering-method-ai-needed",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai code generation benchmarks",
+    "md_url": "https://zencoder.ai/blog/ai-code-generation-benchmarks",
+    "html_url": "https://zencoder.ai/blog/ai-code-generation-benchmarks",
+    "route": "blog/ai-code-generation-benchmarks",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai code generation for debugging how developers can reduce time spent on fixes",
+    "md_url": "https://zencoder.ai/blog/ai-code-generation-for-debugging-how-developers-can-reduce-time-spent-on-fixes",
+    "html_url": "https://zencoder.ai/blog/ai-code-generation-for-debugging-how-developers-can-reduce-time-spent-on-fixes",
+    "route": "blog/ai-code-generation-for-debugging-how-developers-can-reduce-time-spent-on-fixes",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "devin review",
+    "md_url": "https://zencoder.ai/blog/devin-review",
+    "html_url": "https://zencoder.ai/blog/devin-review",
+    "route": "blog/devin-review",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai first software engineering how the discipline is being reshaped",
+    "md_url": "https://zencoder.ai/blog/ai-first-software-engineering-how-the-discipline-is-being-reshaped",
+    "html_url": "https://zencoder.ai/blog/ai-first-software-engineering-how-the-discipline-is-being-reshaped",
+    "route": "blog/ai-first-software-engineering-how-the-discipline-is-being-reshaped",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agentic ai examples",
+    "md_url": "https://zencoder.ai/blog/agentic-ai-examples",
+    "html_url": "https://zencoder.ai/blog/agentic-ai-examples",
+    "route": "blog/agentic-ai-examples",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automated unit tests adapt to growing codebases",
+    "md_url": "https://zencoder.ai/blog/automated-unit-tests-adapt-to-growing-codebases",
+    "html_url": "https://zencoder.ai/blog/automated-unit-tests-adapt-to-growing-codebases",
+    "route": "blog/automated-unit-tests-adapt-to-growing-codebases",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "empowering engineers with ai code generation",
+    "md_url": "https://zencoder.ai/blog/empowering-engineers-with-ai-code-generation",
+    "html_url": "https://zencoder.ai/blog/empowering-engineers-with-ai-code-generation",
+    "route": "blog/empowering-engineers-with-ai-code-generation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing zen agents mcp library and marketplace",
+    "md_url": "https://zencoder.ai/blog/introducing-zen-agents-mcp-library-and-marketplace",
+    "html_url": "https://zencoder.ai/blog/introducing-zen-agents-mcp-library-and-marketplace",
+    "route": "blog/introducing-zen-agents-mcp-library-and-marketplace",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "paradox codes",
+    "md_url": "https://zencoder.ai/blog/paradox-codes",
+    "html_url": "https://zencoder.ai/blog/paradox-codes",
+    "route": "blog/paradox-codes",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zencoder vs claude code",
+    "md_url": "https://zencoder.ai/blog/zencoder-vs-claude-code",
+    "html_url": "https://zencoder.ai/blog/zencoder-vs-claude-code",
+    "route": "blog/zencoder-vs-claude-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ci cd pipelines with ai",
+    "md_url": "https://zencoder.ai/blog/ci-cd-pipelines-with-ai",
+    "html_url": "https://zencoder.ai/blog/ci-cd-pipelines-with-ai",
+    "route": "blog/ci-cd-pipelines-with-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to improve python coding skills",
+    "md_url": "https://zencoder.ai/blog/how-to-improve-python-coding-skills",
+    "html_url": "https://zencoder.ai/blog/how-to-improve-python-coding-skills",
+    "route": "blog/how-to-improve-python-coding-skills",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai tools for developers",
+    "md_url": "https://zencoder.ai/blog/ai-tools-for-developers",
+    "html_url": "https://zencoder.ai/blog/ai-tools-for-developers",
+    "route": "blog/ai-tools-for-developers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai autonomous agents",
+    "md_url": "https://zencoder.ai/blog/ai-autonomous-agents",
+    "html_url": "https://zencoder.ai/blog/ai-autonomous-agents",
+    "route": "blog/ai-autonomous-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "evaluating ai code generation platforms key metrics ctos should measure",
+    "md_url": "https://zencoder.ai/blog/evaluating-ai-code-generation-platforms-key-metrics-ctos-should-measure",
+    "html_url": "https://zencoder.ai/blog/evaluating-ai-code-generation-platforms-key-metrics-ctos-should-measure",
+    "route": "blog/evaluating-ai-code-generation-platforms-key-metrics-ctos-should-measure",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "using ai for database optimization in enterprise systems",
+    "md_url": "https://zencoder.ai/blog/using-ai-for-database-optimization-in-enterprise-systems",
+    "html_url": "https://zencoder.ai/blog/using-ai-for-database-optimization-in-enterprise-systems",
+    "route": "blog/using-ai-for-database-optimization-in-enterprise-systems",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "devops testing tools",
+    "md_url": "https://zencoder.ai/blog/devops-testing-tools",
+    "html_url": "https://zencoder.ai/blog/devops-testing-tools",
+    "route": "blog/devops-testing-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "spec driven development",
+    "md_url": "https://zencoder.ai/blog/spec-driven-development",
+    "html_url": "https://zencoder.ai/blog/spec-driven-development",
+    "route": "blog/spec-driven-development",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "replit alternatives",
+    "md_url": "https://zencoder.ai/blog/replit-alternatives",
+    "html_url": "https://zencoder.ai/blog/replit-alternatives",
+    "route": "blog/replit-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "scalable ai workflows vs agents",
+    "md_url": "https://zencoder.ai/blog/scalable-ai-workflows-vs-agents",
+    "html_url": "https://zencoder.ai/blog/scalable-ai-workflows-vs-agents",
+    "route": "blog/scalable-ai-workflows-vs-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "poor code quality",
+    "md_url": "https://zencoder.ai/blog/poor-code-quality",
+    "html_url": "https://zencoder.ai/blog/poor-code-quality",
+    "route": "blog/poor-code-quality",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zenflow snowflake integration ai data warehouse tutorial",
+    "md_url": "https://zencoder.ai/blog/zenflow-snowflake-integration-ai-data-warehouse-tutorial",
+    "html_url": "https://zencoder.ai/blog/zenflow-snowflake-integration-ai-data-warehouse-tutorial",
+    "route": "blog/zenflow-snowflake-integration-ai-data-warehouse-tutorial",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "free ai tools for developers",
+    "md_url": "https://zencoder.ai/blog/free-ai-tools-for-developers",
+    "html_url": "https://zencoder.ai/blog/free-ai-tools-for-developers",
+    "route": "blog/free-ai-tools-for-developers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "why ai first teams are abandoning prompts for spec driven engineering",
+    "md_url": "https://zencoder.ai/blog/why-ai-first-teams-are-abandoning-prompts-for-spec-driven-engineering",
+    "html_url": "https://zencoder.ai/blog/why-ai-first-teams-are-abandoning-prompts-for-spec-driven-engineering",
+    "route": "blog/why-ai-first-teams-are-abandoning-prompts-for-spec-driven-engineering",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to use zencoder to solve tasks in clickup",
+    "md_url": "https://zencoder.ai/blog/how-to-use-zencoder-to-solve-tasks-in-clickup",
+    "html_url": "https://zencoder.ai/blog/how-to-use-zencoder-to-solve-tasks-in-clickup",
+    "route": "blog/how-to-use-zencoder-to-solve-tasks-in-clickup",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai automation business opportunities",
+    "md_url": "https://zencoder.ai/blog/ai-automation-business-opportunities",
+    "html_url": "https://zencoder.ai/blog/ai-automation-business-opportunities",
+    "route": "blog/ai-automation-business-opportunities",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zencoder emerges leader swe bench 70 percent success rate",
+    "md_url": "https://zencoder.ai/blog/zencoder-emerges-leader-swe-bench-70-percent-success-rate",
+    "html_url": "https://zencoder.ai/blog/zencoder-emerges-leader-swe-bench-70-percent-success-rate",
+    "route": "blog/zencoder-emerges-leader-swe-bench-70-percent-success-rate",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zenflow pagerduty integration ai incident management",
+    "md_url": "https://zencoder.ai/blog/zenflow-pagerduty-integration-ai-incident-management",
+    "html_url": "https://zencoder.ai/blog/zenflow-pagerduty-integration-ai-incident-management",
+    "route": "blog/zenflow-pagerduty-integration-ai-incident-management",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "autonomous agents ci cd",
+    "md_url": "https://zencoder.ai/blog/autonomous-agents-ci-cd",
+    "html_url": "https://zencoder.ai/blog/autonomous-agents-ci-cd",
+    "route": "blog/autonomous-agents-ci-cd",
+    "kind": "blog"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "id": "zencoder",
+  "name": "Zencoder",
+  "docs_url": "https://zencoder.ai/",
+  "blog_url": null,
+  "icon": "vendors/zencoder/icon.png",
+  "author": "Zencoder",
+  "adapter": "zencoder",
+  "updated_at": "",
+  "packed_at": "",
+  "summary": "",
+  "category": "docs",
+  "chapters": 401,
+  "cover": ""
+}
