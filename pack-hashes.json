@@ -1,42 +1,42 @@
 {
   "codex": {
-    "sha256": "8551179f7dae340d00c36f03b5200d665d277a47fa74b6c50a9eb95a2fb47418",
-    "packed_at": "2026-09-16T09:26:50Z",
+    "sha256": "956a70bfc6e811b8ddaa6605d8a71662344f7bad35e0fa145ee60ca09461fc0b",
+    "packed_at": "2026-09-16T10:00:41Z",
     "chapters": 177
   },
   "claude": {
-    "sha256": "c66d0f981a0ef416e6d903cceb55e838f0838f6e02c9cebb1141e5744d0a8004",
-    "packed_at": "2026-09-16T09:30:36Z",
+    "sha256": "433d7f927c0c76436041d0b0c3dc11c7442f0c6331e0b5b76e34acd43dcffc0b",
+    "packed_at": "2026-09-16T10:04:42Z",
     "chapters": 439
   },
   "cursor": {
-    "sha256": "4d048fd08324fd3997492345a7db6368b5e1a0e052c88237c9f04e75764d5b3d",
-    "packed_at": "2026-09-16T09:32:03Z",
+    "sha256": "ecd93f49d954e0b37c0f28f18d0461571fd7cb7fd401b13b4afa54c526064dbf",
+    "packed_at": "2026-09-16T10:06:15Z",
     "chapters": 276
   },
   "grok": {
-    "sha256": "c809217cd2c14d2bdc02a071d0de81fb393d84517661b31a8e5e04f4b08ebae8",
-    "packed_at": "2026-09-16T09:32:59Z",
+    "sha256": "31264e41f0c813478a85ac8e0990c115be09b7f45a13726ce9effe9d0fe5a5de",
+    "packed_at": "2026-09-16T10:07:16Z",
     "chapters": 242
   },
   "gemini": {
-    "sha256": "fa928d7df34d822ceb9695ab42ff6f2a33d8029b3bd2ce461e67a288c58d6078",
-    "packed_at": "2026-09-16T09:34:21Z",
+    "sha256": "2b7494a44283b0250a8afa372fd6697bb4a1bbd2b3dd83a9ddfbd7c13c087b7b",
+    "packed_at": "2026-09-16T10:08:43Z",
     "chapters": 484
   },
   "manus": {
-    "sha256": "aaf592e33f0561194a5d4831a02e5faf1a614b5bbc56e91757e8b7b5692e5177",
-    "packed_at": "2026-09-16T09:35:32Z",
+    "sha256": "0a93446146f0c35c7c0b2c5887aa6e63eb68284233658065ddd4605674cf2ef3",
+    "packed_at": "2026-09-16T10:10:00Z",
     "chapters": 160
   },
   "minimax": {
-    "sha256": "6e1f5a470c0a6e188e3d254c782fd7f38bde0afb82d585fbaa34130d5a951845",
-    "packed_at": "2026-09-16T09:38:06Z",
-    "chapters": 21
+    "sha256": "cb7613512a9d9601cabb6438e9abb6a90f96fb8a6b0eaa24bc08bd6d2c0a6bf2",
+    "packed_at": "2026-09-16T10:12:47Z",
+    "chapters": 28
   },
   "kimi": {
-    "sha256": "bc5ccd8372708a549ac8c2764ff917b544f4a01a9bbdeb2f4ab33fe3f9a5ad0a",
-    "packed_at": "2026-09-16T09:38:03Z",
+    "sha256": "1c4fdb46094f74b68627f6a8ff284f7f06766fc028ef25fb792041947adead8e",
+    "packed_at": "2026-09-16T10:12:44Z",
     "chapters": 21
   },
   "zhipu": {
@@ -55,13 +55,18 @@
     "chapters": 21
   },
   "coze": {
-    "sha256": "ad2eaf57eb9c61ae3c86c97c16cfdb5092e3f329d3279386bc5bb0293d799ec4",
-    "packed_at": "2026-09-16T09:37:57Z",
+    "sha256": "ca158b1bbfafd46c92226b6964ca8477e5342a77e7ddcc211e98100f55ab1d70",
+    "packed_at": "2026-09-16T10:12:37Z",
     "chapters": 763
   },
   "hailuo": {
     "sha256": "632b808626f0dfae8ffdd9a3d665634eb8792d1d64cdb82636983208427eecea",
     "packed_at": "2026-09-16T09:17:59Z",
     "chapters": 16
+  },
+  "tencent": {
+    "sha256": "ae1ad08f837351b0780fb0ab6585963eaba6df78b32833a3aa75c283be68b4ff",
+    "packed_at": "2026-09-16T10:13:01Z",
+    "chapters": 81
   }
 }
