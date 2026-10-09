@@ -1,47 +1,47 @@
 {
   "codex": {
-    "sha256": "e4d50f5fe2db0111909ff656fa7b4e5ef09907e3ea51a071cbc1dc76deb2125d",
-    "packed_at": "2026-10-09T04:46:32Z",
-    "chapters": 204
+    "sha256": "ea3e2071bb70220fc592d89d90f069dd5cc2dd7ab7d8ec803da83fb49b3f6119",
+    "packed_at": "2026-10-09T14:19:45Z",
+    "chapters": 209
   },
   "claude": {
-    "sha256": "6eee379f66ed92662227edf44a2ef307e315728d15d06ecb2bc419009b1409fa",
-    "packed_at": "2026-10-09T04:50:37Z",
-    "chapters": 464
+    "sha256": "74582ef97795189a39aea97eceb48c4b7da98e485c0bd9e787f1a744b292b0af",
+    "packed_at": "2026-10-09T14:22:36Z",
+    "chapters": 478
   },
   "cursor": {
-    "sha256": "0a79f7acb4a82e65bcff979f79861b175ede7dfad180fea99892235e91b8a1ce",
-    "packed_at": "2026-10-09T04:52:13Z",
-    "chapters": 290
+    "sha256": "38c09166879fa5bf1dc02287a30b7701f6ac6a2e21156cf07e5210d661905830",
+    "packed_at": "2026-10-09T14:24:06Z",
+    "chapters": 490
   },
   "grok": {
-    "sha256": "1c0120b80713b80bd769ec8ec41172b6159c7dbabcf4e63ff83c4e32bf9fc4c9",
-    "packed_at": "2026-10-09T04:53:14Z",
-    "chapters": 268
+    "sha256": "2173652a8b9e83485c2bd233219befb650639a2db9ea8562f820f376d6ebd36e",
+    "packed_at": "2026-10-09T14:24:53Z",
+    "chapters": 306
   },
   "gemini": {
-    "sha256": "ed90ef1bea59b8c90a36e7fbde19573665ff8cccc7674197f0f4bf27d0515522",
-    "packed_at": "2026-10-09T04:54:41Z",
-    "chapters": 485
+    "sha256": "a995f9b8308ea149b551f31ebefa0d846c07d3bf1f1652df56cbd5aa2bd5ad5b",
+    "packed_at": "2026-10-09T14:25:50Z",
+    "chapters": 483
   },
   "manus": {
-    "sha256": "1905b38efeba27e49b45ba06d6d8e29a51ac92451bc2316fc6764f366f563778",
-    "packed_at": "2026-10-09T04:55:56Z",
-    "chapters": 179
+    "sha256": "543c4c946662dfd21ba69c70ac11a0d684d4c38763ef567ef0456b31ab145b7d",
+    "packed_at": "2026-10-09T14:26:42Z",
+    "chapters": 174
   },
   "minimax": {
-    "sha256": "2f2243e07a11ced923dacca505ad1f53e7d49ab22121407971c3bd3d6c1dfc74",
-    "packed_at": "2026-10-09T04:59:58Z",
+    "sha256": "a7ac15e8479843bab72c082c3f55711d5f05c8db16999ff08acf31bc50fd4350",
+    "packed_at": "2026-10-09T14:29:29Z",
     "chapters": 41
   },
   "kimi": {
-    "sha256": "2080196183d2c1879acad8a735c085b3a8dc2c93e32bbd458ccba2023542a1a1",
-    "packed_at": "2026-10-09T04:59:54Z",
-    "chapters": 17
+    "sha256": "2696c6b77f39a3e0c4eef93ffa6036422cbe1110ffa1966e2e82d99444617dcc",
+    "packed_at": "2026-10-09T14:29:27Z",
+    "chapters": 41
   },
   "zhipu": {
-    "sha256": "eefbebe8654e26adb2ad0231232b6e7e305f4e3c476dee3849b58f743133bb46",
-    "packed_at": "2026-10-09T05:02:08Z",
+    "sha256": "de1957900f929a85c538c36a8bae3b31b2dc00f4accbe407fb1b75bb04a464e0",
+    "packed_at": "2026-10-09T14:31:29Z",
     "chapters": 27
   },
   "stepfun": {
@@ -55,8 +55,8 @@
     "chapters": 21
   },
   "coze": {
-    "sha256": "09ca2ae516b537fa0af1d6b87004b2edee24fff8586463bc351cb78f865f0485",
-    "packed_at": "2026-10-09T04:59:49Z",
+    "sha256": "db6b6499eb188ecac6b9616ca6d466b5f7b2d1ef8a4eff046bcbce8bac920c0b",
+    "packed_at": "2026-10-09T14:29:24Z",
     "chapters": 957
   },
   "hailuo": {
@@ -65,13 +65,13 @@
     "chapters": 16
   },
   "tencent": {
-    "sha256": "d91d179384a7f942b150c30268b95f5c5bbd5c693d85e6856d7ad2d81fe7de5e",
-    "packed_at": "2026-10-09T05:00:12Z",
+    "sha256": "4df403eaa1c5e41b81014bf430ee004905c06fbe07b6f17ce7646d09a895db54",
+    "packed_at": "2026-10-09T14:29:39Z",
     "chapters": 85
   },
   "zencoder": {
-    "sha256": "160a2936adb2766ac20026a02a11f8b97ebe2297a3c4b03f4eb2e1b2f81ff597",
-    "packed_at": "2026-10-09T05:02:03Z",
-    "chapters": 424
+    "sha256": "f4120b7a17b12cc90500537037693fbdc080210dc3a1ab0ae969c4a87a6d4490",
+    "packed_at": "2026-10-09T14:31:25Z",
+    "chapters": 557
   }
 }
