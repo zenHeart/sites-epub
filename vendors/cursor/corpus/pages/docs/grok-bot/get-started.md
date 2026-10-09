@@ -3,7 +3,8 @@
 This guide takes you from install to your first finished task. You'll set up the desktop app, create a Bot with a clear job, and review its work. For a shorter help-center checklist, follow [Onboarding](https://cursor.com/help/grok-bot/onboarding.md).
 
 Grok Bot access is included with every paid individual Cursor plan and with
-the Cursor Teams plan, or through an individual SuperGrok link. See [Plans and
+the Cursor Teams plan, through an individual SuperGrok link, or with a seat
+on a self-serve Grok Business plan. See [Plans and
 billing](https://cursor.com/help/grok-bot/plans.md). Grok Bot needs cloud data storage, so
 accounts on Privacy Mode (Legacy) are prompted to switch to Privacy Mode
 before starting.
@@ -21,18 +22,23 @@ install Grok Bot from the App Store; see
 
 ### Sign in with your Cursor account
 
-Choose **Get started** on the welcome screen and finish authentication in
+Choose **Sign in** on the welcome screen and finish authentication in
 your browser. Grok Bot uses your Cursor account, and there is no separate
 Grok Bot login. If your organization uses single sign-on, sign in through
 your normal company flow; your existing Cursor SSO configuration applies.
 For sign-in problems, see [Sign in to Grok Bot](https://cursor.com/help/grok-bot/sign-in.md).
 
-### Create your first Bot
+### Meet your first Bot
 
-Pick a suggested teammate, or choose **Create your own** and give the Bot
-a short name, one primary job, and a description of how it should work. A
-focused Bot builds more useful context than one catch-all helper. For
-example:
+After you sign in, click through a short intro. Grok Bot then sets up
+your first Bot, named **Grok Bot**, and opens a chat with it.
+
+To add more Bots, choose **New** in the sidebar, then **Create new Bot**.
+On a Cursor team, **Create new Team Bot** makes a Bot your whole team can
+chat with; see [Team Bots](https://cursor.com/help/grok-bot/team-bots.md).
+Then open the Bot's **Bot settings** and give it a short name, one primary
+job, and a description of how it should work. A focused Bot builds more
+useful context than one catch-all helper. For example:
 
 > Name: Piper
 > Job: Product performance
@@ -54,7 +60,7 @@ a five-minute first result, attach a document and try:
 ### Sign in to the tools it needs
 
 When the Bot reaches an app that requires authentication, it hands you
-the computer. Open **Agent Computer**, take over, enter the password or
+the computer. Click **Open computer**, take over, enter the password or
 two-factor code yourself, and return control. The Bot doesn't see your
 password, and the signed-in session persists on your computer for future
 tasks. For supported services, you can also [connect a
@@ -72,7 +78,7 @@ Before you let a Bot change external systems, read [Approvals and Auto Review](h
 
 The iPhone app (iOS 18 or later) connects to the same Bots, conversations, routines, and cloud computer as desktop. Install Grok Bot from the App Store and sign in with the same Cursor account; access from your plan or SuperGrok link carries over without a second purchase. From your phone you can message Bots, watch and take over the computer, approve actions, and pause or resume routines.
 
-Some flows stay on desktop: teaching a workflow by demonstration, editing a routine's schedule or instructions, viewing run history, testing or deleting routines, and updating the computer. See [Grok Bot on mobile](https://cursor.com/help/grok-bot/mobile.md) for setup details and [Subscribe from the mobile app](https://cursor.com/help/grok-bot/mobile-purchase.md) if your account doesn't include access.
+Some flows stay on desktop: teaching a workflow by demonstration, testing routines, and updating the computer. See [Grok Bot on mobile](https://cursor.com/help/grok-bot/mobile.md) for setup details and [Subscribe from the mobile app](https://cursor.com/help/grok-bot/mobile-purchase.md) if your account doesn't include access.
 
 ## If something doesn't work
 
@@ -82,6 +88,7 @@ Most setup problems clear after you fully quit and reopen the app. For symptom-b
 
 - [Work with Grok Bot](https://cursor.com/docs/grok-bot/work.md)
 - [Grok Bot use cases](https://cursor.com/docs/grok-bot/use-cases.md)
+- [Deploy Grok Bot to your organization](https://cursor.com/docs/grok-bot/deployment.md)
 - [Plans and billing](https://cursor.com/help/grok-bot/plans.md)
 
 

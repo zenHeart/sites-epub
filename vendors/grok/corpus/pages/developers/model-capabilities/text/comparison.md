@@ -2,7 +2,7 @@
 
 # Comparison with Chat Completions API
 
-The Responses API is the recommended way to interact with xAI models. Here's how it compares to the legacy Chat Completions API:
+The Responses API is the recommended way to interact with SpaceXAI models. Here's how it compares to the legacy Chat Completions API:
 
 | Feature | Responses API | Chat Completions API (Deprecated) |
 |---------|---------------|-----------------------------------|

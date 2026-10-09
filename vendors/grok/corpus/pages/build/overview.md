@@ -70,31 +70,20 @@ grok -p "Hello" -m my-model
 
 You can also switch inside the TUI with `/model <name>`.
 
-## Use Grok 4.6 on the API
+## Use Grok 4.7 on the API
 
-The same model that powers Grok Build, [`grok-4.6`](/developers/models/grok-4.6), is also available directly on the xAI API. Drop it into your own agent loop, IDE integration, or coding tool.
+[`grok-4.7`](/developers/models/grok-4.7), SpaceXAI's latest model, is available directly on the xAI API. Drop it into your own agent loop, IDE integration, or coding tool.
 
-```bash customLanguage="bash"
-curl https://api.x.ai/v1/responses \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "grok-4.6",
-    "input": "Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}"
-  }'
-```
+```javascript customLanguage="javascriptAISDK"
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
 
-```python customLanguage="pythonXAI"
-import os
-from xai_sdk import Client
-from xai_sdk.chat import user
+const { text } = await generateText({
+  model: xai.responses('grok-4.7'),
+  prompt: 'Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}',
+});
 
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-chat = client.chat.create(model="grok-4.6")
-chat.append(user("Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}"))
-
-print(chat.sample().content)
+console.log(text);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -106,23 +95,34 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input="Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}",
 )
 
 print(response.output_text)
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
+```bash customLanguage="bash"
+curl https://api.x.ai/v1/responses \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "grok-4.7",
+    "input": "Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}"
+  }'
+```
 
-const { text } = await generateText({
-  model: xai.responses('grok-4.6'),
-  prompt: 'Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}',
-});
+```python customLanguage="pythonXAI"
+import os
+from xai_sdk import Client
+from xai_sdk.chat import user
 
-console.log(text);
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+chat = client.chat.create(model="grok-4.7")
+chat.append(user("Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}"))
+
+print(chat.sample().content)
 ```
 
 ## Features

@@ -57,10 +57,10 @@ marketplace.
 
 [Contact sales](https://cursor.com/contact-sales?source=docs-plugins) for unlimited team marketplaces and Enterprise admin controls.
 
-Open **Dashboard -> Plugins** to manage Team Marketplaces.
+Open **Dashboard -> Plugins & MCPs** to manage Team Marketplaces.
 
 On Enterprise plans, only admins can add team marketplaces from **Dashboard
--> Plugins**.
+-> Plugins & MCPs**.
 
 ### Default team marketplace
 
@@ -72,10 +72,10 @@ Adding a Team MCP server to the Default marketplace does not install or enable i
 
 Admins can link standalone Team MCP servers to the Default marketplace:
 
-1. Open **Dashboard -> Integrations & MCP**.
+1. Open **Dashboard -> Plugins & MCPs**.
 2. Find **Team MCP Servers**.
 3. Select **Add to Team Marketplace** in the migration prompt.
-4. Open **Dashboard -> Plugins** to review the Default marketplace, its access, and plugin installation modes.
+4. Review the Default marketplace, its access, and plugin installation modes on the same page.
 
 Cursor creates the Default marketplace if needed and links the existing MCP servers to it. The servers remain available to Cloud Agents while teammates gain the option to install and configure them locally.
 
@@ -105,7 +105,7 @@ After setting marketplace access, choose how each plugin is distributed to that 
 
 On the **Default** marketplace, admins control whether members can publish personal skills:
 
-1. Open [Dashboard → Plugins](https://cursor.com/dashboard/plugins).
+1. Open [Dashboard → Plugins & MCPs](https://cursor.com/dashboard/plugins).
 2. Open the **Default** team marketplace, then **Marketplace Settings**.
 3. Turn **Allow Members to Publish** on or off.
 
@@ -113,13 +113,21 @@ The setting is on by default. When it is off, only team admins can publish new s
 
 See [Publish a skill to your team](https://cursor.com/docs/plugins.md#publish-a-skill-to-your-team).
 
+### Serve marketplace from Cursor
+
+On a GitHub-imported team marketplace, admins can turn on **Serve marketplace from Cursor** under **Marketplace Settings**. Cursor keeps a synced copy of this repository and serves plugins from it, so team members can use the marketplace without GitHub access to the source repo. Access is controlled by [Marketplace access](https://cursor.com/docs/plugins.md#marketplace-access).
+
+While the first sync is in progress, the setting shows **Syncing** and stays locked. If repo sync cannot complete, access continues being served from GitHub.
+
+This setting applies to GitHub-imported marketplaces. Imports from GitLab, Bitbucket, or Azure DevOps keep serving from the source repository.
+
 ## Add a team marketplace
 
-Use this flow to import a GitHub repository as a team marketplace:
+Use this flow to import a repository as a team marketplace. **Import from Repo** accepts GitHub, GitLab, Bitbucket, and Azure DevOps URLs. Connect that provider if Cursor asks.
 
-1. Go to **Dashboard -> Plugins**.
+1. Go to **Dashboard -> Plugins & MCPs**.
 2. In **Team Marketplaces**, click **Add Marketplace**.
-3. Follow the instructions to create a marketplace from scratch, or use "Import from Repo" if importing from GitHub.
+3. Follow the instructions to create a marketplace from scratch, or use **Import from Repo** and paste the repository URL.
 4. Add and review plugins using "Add to Marketplace".
 5. Under **Marketplace Settings**, set **Marketplace Access**, optionally enable Auto Refresh, then save.
 
@@ -129,10 +137,10 @@ Example repository to try:
 
 ## Keep plugins up to date
 
-When importing from GitHub, plugins are indexed when you first import the repository. You can refresh plugins in two ways:
+Plugins are indexed when you first import the repository. You can refresh them in two ways:
 
-- **Automatically**: Turn on **Enable Auto Refresh** to update plugins automatically whenever changes are pushed to the branch the marketplace tracks. This requires the [Cursor GitHub App](https://cursor.com/docs/integrations/github.md) installed on the repository. Cursor re-indexes a marketplace at most once every 10 minutes, batching rapid pushes to the latest commit.
-- **Manually**: Click "Refresh" to manually update.
+- **Automatically**: On GitHub imports, turn on **Enable Auto Refresh** to update plugins whenever changes are pushed to the branch the marketplace tracks. This requires the [Cursor GitHub App](https://cursor.com/docs/integrations/github.md) installed on the repository. Cursor re-indexes a marketplace at most once every 10 minutes, batching rapid pushes to the latest commit.
+- **Manually**: Click **Refresh** to update from the repository.
 
 For marketplaces created with "Import from Repo", Auto Refresh re-reads the full manifest on each push, so new plugins added to the repository are picked up automatically.
 

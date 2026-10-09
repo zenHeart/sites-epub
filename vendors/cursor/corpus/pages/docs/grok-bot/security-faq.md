@@ -11,7 +11,8 @@ memory, and virtual devices. One user cannot reach another user's
 computer. Within one user, every Bot shares that computer. Treat a login
 or file on the computer as available to every Bot that user runs. When a
 workload needs its own computer and credential set, give it its own
-Cursor user.
+Cursor user. A teammate's [Team Bot](https://cursor.com/help/grok-bot/team-bots.md) usually
+works on a user's computer during that user's own chat with it.
 
 ### What can a Bot access?
 
@@ -52,7 +53,10 @@ Enterprise only and applies to the whole organization. Cloud Agents, Team
 Rules, and public template sharing apply to the whole team on Teams and
 Enterprise. Enforce Auto-review and Auto-review rules are Enterprise only
 and also apply to the whole team. Allow Local Egress is Enterprise only
-and applies to the whole team.
+and applies to the whole team. On Enterprise, a group's Grok Bot tab can
+widen Cloud Agents, local execution, local egress, Auto-review, rules,
+and setup scripts for that group's members, never tighten them. See
+[Group settings](https://cursor.com/docs/grok-bot/teams.md#group-settings).
 
 ### Why do some websites block Bots?
 
@@ -111,11 +115,14 @@ receive those events in your own collector, tagged
 
 ### Can I restrict which models Grok Bot uses?
 
-The team model allowlist is Enterprise only, and enforcement is not
-guaranteed. Onboarding presents an acknowledgement that Grok Bot may not
-follow the list. Cursor manages model selection, and there is no
+No. The team model allowlist does not govern Grok Bot. It uses xAI
+first-party models and may use third-party models from providers on the
+[sub-processor list](https://trust.cursor.com/subprocessors) regardless
+of that setting. Teams with a model allowlist see this acknowledgement
+when they enable Grok Bot. Grok Bot manages model selection, and there is no
 customer-facing model picker. If your contract restricts subprocessors,
-contact your account team.
+contact your account team. See
+[Which AI models power Grok Bot?](https://cursor.com/help/grok-bot/models.md).
 
 ### Where do Grok Bot computers run?
 
@@ -140,8 +147,9 @@ customer-facing EDR feed.
 ### Why do members have to sign in to company tools again?
 
 Sign-in sessions inside the computer can drop when the computer is
-recreated, for example after an image update or a policy change. Sessions
-ride your identity provider, so your session policies also apply.
+recreated, for example after an image update or when an admin recreates
+it. Sessions ride your identity provider, so your session policies also
+apply.
 
 ### What happens to data when an admin terminates a computer?
 

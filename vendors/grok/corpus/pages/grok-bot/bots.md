@@ -29,10 +29,11 @@ Describe the role in operational terms:
 ## Create a Bot
 
 1. Choose **New** in the sidebar or press `Cmd/Ctrl+N`.
-2. In **New chat**, select **Create new agent**.
-3. Grok Bot creates and opens a Bot named **New Agent**.
-4. Open **Bot actions → Edit Profile** to set its name, title, description,
-   and avatar.
+2. In **New chat**, select **Create new Bot**, or type a name and choose
+   **Create “name” Bot**.
+3. Grok Bot creates and opens a Bot named **New Bot**.
+4. Open the Bot menu or choose **Edit Profile** to set its name, label,
+   description, and avatar.
 5. Start a conversation with a concrete task.
 
 Your existing Bots can also suggest or create a focused Bot when a job should
@@ -56,8 +57,9 @@ rules that should remain true:
 * **Pin** active Bots to keep them at the top of the sidebar.
 * **Hide from sidebar** removes a Bot from the main list without deleting its
   work.
-* Open **Show hidden chats** at the bottom of the sidebar, then choose
-  **Unhide**, to restore a hidden Bot.
+* Open **Hidden Bots** at the bottom of the sidebar (when every Bot is hidden,
+  the sidebar shows **Show Hidden Bots** instead), then choose **Unhide** to
+  restore a hidden Bot.
 
 Hiding does not pause the Bot or its routines.
 
@@ -73,23 +75,36 @@ assigning work.
 
 ## Share a Bot
 
-Share a public link when someone else should start from the same Bot.
+Share a template when someone else should start from the same Bot.
 
-1. Open the Bot and copy its share link.
-2. Send the link. The recipient opens a preview on
-   [x.ai](https://x.ai) and can choose **Add to Grok Bot**.
-3. They need the Grok Bot app to finish adding it.
+1. Open the **Share menu** and choose **Create template**. The Bot builds
+   the template; when it is ready, **Copy link**, **View template details**,
+   and **Update template** appear.
+2. Choose who can open the link: **Public link** or **Team-only**. Accounts on
+   an Enterprise plan default to **Team-only**; other accounts default to a
+   public link.
+3. Send the link. The recipient opens a preview on
+   [x.ai](https://x.ai) and can choose **Add to Grok Bot**. They need the Grok
+   Bot app to finish adding it.
 
-The link is public. Anyone who has it can view the Bot's shared configuration,
-including its identity, description, skills, and routines. Remove API keys,
-internal URLs, customer data, and anything else you would not put in a public
-document before you share.
+A public link can be opened by anyone who has it and shows the Bot's shared
+configuration, including its identity, description, skills, and routines; a
+Team-only link opens only for members of your team. Remove API keys, internal
+URLs, customer data, and anything else you would not put in a public document
+before you share.
 
 Adding a shared Bot creates a copy on the recipient's account. It does not give
-them your computer, logins, or conversation history.
+them your computer, logins, or conversation history. To give the team one Bot
+they all talk to, publish a [Team Bot](/grok-bot/team-bots).
 
 Shared Bots are created by other users, not by SpaceXAI. Adding one accepts the
 [third-party bot terms](https://x.ai/legal/bot-sharing-terms).
+
+## Add a Bot from Marketplace
+
+**Marketplace** in the sidebar also lists Bots that you can add. Choose **Add**
+on a Bot, or open it and choose **Import Bot**, to create your own copy from
+its template.
 
 ## Delete a Bot
 

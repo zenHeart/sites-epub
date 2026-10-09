@@ -9,7 +9,7 @@ This is an asynchronous operation that returns a request\_id for polling.
 
 ### Request Body
 
-* `aspect_ratio` ("1:1" | "16:9" | "9:16" | "4:3" | "3:4" | "3:2" | "2:3")
+* `aspect_ratio` ("1:1" | "16:9" | "9:16" | "4:3" | "3:4" | "3:2" | "2:3" | "21:9" | "5:2")
 
 * `duration` (integer | null) — Video duration in seconds. Range: \[1, 15]. Default: 8.
   Also accepts \`seconds\` for OpenAI API compatibility.
@@ -23,6 +23,23 @@ This is an asynchronous operation that returns a request\_id for polling.
   * `url` (string) — Public URL or base64-encoded data URL of the image (JPEG, PNG, or WebP).
     Also accepts \`image\_url\` for compatibility.
     Required when \`file\_id\` is not set.
+
+* `keyframes` (array\<object>) — Optional mid-video keyframe anchors, strictly between the endpoint
+  pins (\`image\` as the first frame, \`last\_frame\` as the last). Each
+  entry pins an image to appear literally at its timestamp. Only
+  supported by select video models; at most 4 entries.
+
+  * `image` (object, required) — Image input for generation and editing requests.
+    Accepts a public URL, a base64-encoded data URL, or a file\_id from the xAI Files API.
+
+    * `file_id` (string | null) — File ID from the xAI Files API. Mutually exclusive with \`url\`.
+      The file must be an image (JPEG, PNG, or WebP) and fully uploaded.
+
+    * `url` (string) — Public URL or base64-encoded data URL of the image (JPEG, PNG, or WebP).
+      Also accepts \`image\_url\` for compatibility.
+      Required when \`file\_id\` is not set.
+
+  * `timestamp_s` (number, required) — Anchor time in seconds, strictly inside the clip (0 \< t \< duration).
 
 * `model` (string | null) — Model to be used.
 

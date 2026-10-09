@@ -17,6 +17,8 @@ Open an environment to review:
 
 Use **Update with Agent** when you want Cursor to inspect the current environment and propose a new setup. Use **New Setup Run** when you want Cursor to start setting up the environment fresh. Use **Restore** from version history to make a prior environment version active again.
 
+To manage environments from a script, use the [environment endpoints](https://cursor.com/docs/cloud-agent/api/endpoints.md#environments) in the Cloud Agents API.
+
 The **Builds** tab shows the prepared environment versions available to Cloud Agents. You can inspect logs, trigger a Build, choose or pin the active Build, and start an agent from a specific Build. See [Cloud Agent Builds](https://cursor.com/docs/cloud-agent/builds.md) for details.
 
 ## Default settings
@@ -42,6 +44,7 @@ All security options require admin privileges.
 - **Display agent summary** – controls whether Cursor shows the agent's file-diff images and code snippets. Disable this if you prefer not to expose file paths or code in the sidebar.
 - **Display agent summary in external channels** – extends the previous toggle to Slack or any external channel you've connected.
 - **Team follow-ups** – controls whether team members can send follow-up messages to cloud agents created by other users on the team. See [team follow-ups](https://cursor.com/docs/cloud-agent/settings.md#team-follow-ups) below.
+- **Automatically allow Projects to place their work** – lets agents in a [Project](https://cursor.com/docs/agent/projects.md) start work on any [self-hosted](https://cursor.com/docs/cloud-agent/self-hosted.md) machine or pool the Project owner can reach, without asking first. When it's off, the agent asks for approval in the Project's chat before it uses a new machine or pool. It starts off for Enterprise teams and on for other teams.
 
 ## Team feature settings
 

@@ -23,3 +23,6 @@ Most AI APIs provide narrow capabilities: text generation, image analysis, or sp
 This transforms how you can integrate AI into your applications—from simple text generation to autonomous task completion.
 
 **Next steps**: [View the complete API reference](https://open.manus.im/docs)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

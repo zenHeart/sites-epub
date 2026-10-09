@@ -72,3 +72,6 @@ When you make a copy of a project, it is important to understand what is transfe
     Currently, you can only make copies of your own projects. However, the ability to copy team projects and public community templates is coming down the road!
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

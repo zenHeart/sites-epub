@@ -193,6 +193,86 @@ Create a phone number for API-controlled SIP calls.
 
 ***
 
+## GET /v2/phone-numbers
+
+List phone numbers for the authenticated team.
+
+### Query Parameters
+
+* `limit` (integer) — Page size. Defaults to 20. Values above 100 are clamped to 100.
+
+* `pagination_token` (string) — \`phone\_number\_id\` of the last number on the previous page. Omit for the first page.
+
+* `agent_id` (string) — When set, only numbers routed to this agent are returned.
+
+### Response Body
+
+* `phone_numbers` (array\<object>)
+
+  * `phone_number_id` (string)
+
+  * `team_id` (string)
+
+  * `phone_number` (string) — Phone number in E.164 format.
+
+  * `name` (string)
+
+  * `agent_id` (string) — Agent this number routes to.
+
+  * `webhook_id` (string) — Webhook endpoint this number dispatches \`realtime.call.incoming\` events to.
+
+  * `origin` ("xai\_provisioned" | "byo\_trunk")
+
+  * `sip_host` (string) — SIP host your carrier or PBX should route calls to.
+
+  * `inbound_trunk_id` (string) — Read-only SIP trunk identifier.
+
+  * `sip_auth` (object)
+
+    * `auth_username` (string) — SIP digest username. Present only when digest auth is configured.
+
+    * `allowed_addresses` (array\<string>) — Source CIDR ranges permitted to send INVITEs.
+
+  * `created_at` (string)
+
+  * `updated_at` (string)
+
+  * `agent_name` (string)
+
+* `pagination_token` (string) — Present when another page exists. Pass it back as the pagination\_token query parameter.
+
+\*\*Response example:\*\*
+
+```json
+{
+  "phone_numbers": [
+    {
+      "phone_number_id": "phone_abc123",
+      "team_id": "00000000-0000-0000-0000-000000000000",
+      "phone_number": "+18005550199",
+      "name": "Support SIP trunk",
+      "webhook_id": "webhook_abc123",
+      "origin": "byo_trunk",
+      "sip_host": "sip.voice.x.ai",
+      "created_at": "2026-06-19T00:00:00Z",
+      "updated_at": "2026-06-19T00:00:00Z"
+    }
+  ]
+}
+```
+
+***
+
+## DELETE /v2/phone-numbers/\{phone\_number\_id}
+
+Remove a Direct SIP or Twilio-imported phone number.
+
+### Path Parameters
+
+* `phone_number_id` (string, required) — ID of the phone number to remove. Returned as \`phone\_number.phone\_number\_id\` on create, and as \`phone\_numbers\[].phone\_number\_id\` from \`GET /v2/phone-numbers\`.
+
+***
+
 ## Realtime
 
 WebSocket endpoint: `wss://api.x.ai/v1/realtime`
@@ -936,7 +1016,7 @@ Transcribe an audio file to text.
 
 * `sample_rate` ("8000" | "16000" | "22050" | "24000" | "44100" | "48000") — Audio sample rate in Hz. \*\*Required when \`audio\_format\` is a raw format\*\* (\`pcm\`, \`mulaw\`, \`alaw\`). Ignored for container formats. Either \`sample\_rate\` or \`sample\_rate\_hertz\` may be used.
 
-* `language` (string) — Language code for the audio (e.g. \`en\`, \`fr\`, \`de\`, \`ja\`). When set together with \`format=true\`, enables Inverse Text Normalization — spoken-form numbers, currencies, and units are converted to their written form.
+* `language` (string) — Language code for the audio (e.g. \`en\`, \`fr\`, \`de\`, \`ja\`). Biases transcription toward that language. When set together with \`format=true\`, enables Inverse Text Normalization — spoken-form numbers, currencies, and units are converted to their written form. Formatting is available for \`ar\`, \`de\`, \`en\`, \`es\`, \`fr\`, \`ja\`, \`pt\`, \`ru\`, \`sv\`, \`vi\`, and \`zh\`.
 
 * `format` ("true" | "false") — When \`true\`, enables text formatting. Requires \`language\` to be set.
 
@@ -1058,7 +1138,7 @@ Transcribe an audio file to text.
 
 WebSocket endpoint: `wss://api.x.ai/v1/stt`
 
-Real-time streaming speech-to-text via WebSocket. Stream raw audio as binary frames and receive JSON transcript events as the audio is processed. Configuration is done via query parameters at connection time.
+Real-time streaming speech-to-text via WebSocket. Stream raw audio as binary frames and receive JSON transcript events as the audio is processed. Configuration is done via query parameters at connection time. The default is grok-voice-transcribe-2.0.
 
 Full schemas and examples: [`/stt-streaming.ws.json`](/stt-streaming.ws.json)
 
@@ -1072,7 +1152,11 @@ Full schemas and examples: [`/stt-streaming.ws.json`](/stt-streaming.ws.json)
 
 * `endpointing` (integer, optional, default: 400) — Silence duration in milliseconds before the server fires a \`speech\_final=true\` event, indicating the speaker stopped talking. Range: 0–5000. Set to \`0\` for no delay (fire on any VAD silence boundary). Default: 400ms.
 
-* `language` (string, optional, default: ) — Language code (e.g. \`en\`, \`fr\`, \`de\`, \`ja\`). When set, enables Inverse Text Normalization — spoken-form numbers, currencies, and units are converted to their written form.
+* `language` (string, optional, default: ) — Language code (e.g. \`en\`, \`fr\`, \`de\`, \`ja\`). Biases transcription toward that language and selects the formatting rules for \`format=true\`. See Supported Languages on the Speech to Text page.
+
+* `format` (boolean, optional, default: false) — When \`true\`, enables Inverse Text Normalization — spoken-form numbers, currencies, and units are converted to their written form. Requires \`language\`; available for \`ar\`, \`de\`, \`en\`, \`es\`, \`fr\`, \`ja\`, \`pt\`, \`ru\`, \`sv\`, \`vi\`, and \`zh\`.
+
+* `model` (string, optional, default: grok-voice-transcribe-2.0) — \`grok-voice-transcribe-2.0\` (default).
 
 * `multichannel` (boolean, optional, default: false) — When \`true\`, enables per-channel transcription for interleaved multichannel audio. Requires \`channels\` to be set to ≥ 2. Not supported with \`encoding=opus\`.
 

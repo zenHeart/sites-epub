@@ -7,7 +7,10 @@ details for one Bot's profile and notifications.
 
 ## Open Grok Bot settings
 
-Open the account menu and choose **Settings**, or press `Cmd/Ctrl+,`.
+Open the account menu and choose **Settings**, or press `Cmd/Ctrl+,`. For
+other desktop shortcuts, including Bot settings (`Cmd/Ctrl+Shift+,`) and
+conversation details, see
+[Keyboard shortcuts](/grok-bot/chat-and-collaboration#keyboard-shortcuts).
 
 The **Grok Bot settings** dialog contains sections based on your account and
 rollout. Some options described below may not appear.
@@ -17,14 +20,24 @@ rollout. Some options described below may not appear.
 ### Account
 
 Sign in or out of the Cursor account used by Grok Bot. The account menu also
-shows **About**, the installed Grok Bot version, and a link to the iOS or
-Android app.
+shows **About**, the installed Grok Bot version, and **Get Grok Bot for
+mobile**, which opens the App Store listing.
+
+When more than one account is saved on the desktop, the account menu includes
+**Switch account**. Choose **Add account** to save another. Settings lists
+the same accounts; inactive rows include **Remove**.
 
 ### Appearance
 
 Choose **Follow System**, **Light**, or **Dark**.
 
-### Agent
+Use **Language** to choose **Follow System** or one of more than 20 app
+languages, including English, Spanish, French, German, Japanese, Korean,
+Simplified Chinese, and Traditional Chinese. On iPhone and Android the
+follow-device option is labeled **System**, and the list is shorter. See
+[Grok Bot for Mobile](/grok-bot/mobile).
+
+### Bot
 
 Configure shared and local Bot behavior:
 
@@ -47,8 +60,8 @@ rules with `Required by your admin. You can't edit or delete this rule.` You
 can add your own rules on top, but they only make behavior stricter; **Ask
 first** wins when rules conflict. If your admin turns enforcement off, you only
 see and use your own rules. Your personal rules are stored on the current
-desktop and synced to its Grok Bot computer. Either way, do not assume another
-desktop installation carries the same configuration. Read
+desktop and synced to its Grok Bot computer, so another desktop installation
+needs its own. Read
 [Approvals, security, and privacy](/grok-bot/approvals-security-and-privacy)
 before changing either.
 
@@ -71,8 +84,10 @@ For private network options and their tradeoffs, see
 
 ## Plugins
 
-Use **Marketplace** to discover plugins and packaged skills. Use **Yours** to
-review installed plugins and private skills.
+Plugins are not a settings section. Open **Marketplace** from the sidebar to
+discover plugins and packaged skills. To review what you have installed, choose
+**Your plugins** in Marketplace; **Manage plugins and skills** lists your
+**Installed** plugins and your **Private skills**.
 
 An installed plugin may still need browser authentication. Individual plugin
 tools can be enabled or disabled. On the Teams plan and the Enterprise plan,
@@ -94,38 +109,35 @@ For how plans, weekly usage, and on-demand spend work, see
 ## Team Setup
 
 Team Setup is Enterprise only. When an Enterprise admin provides a managed
-setup, **Team Setup** shows it here so you can review or reinstall the current
-setup. Admins configure manifests from the dashboard; see
-[Grok Bot for teams and enterprises](/grok-bot/teams-and-enterprises#team-setup).
+setup for your team's computers, **Team Setup** shows it here so you can review
+or reinstall it. Admins configure the manifests from the Cursor dashboard; see
+[Grok Bot for teams and enterprises](/grok-bot/teams-and-enterprises#admin-controls).
 
-Do not place secret values directly in managed setup instructions.
+## Updates
 
-## Beta and updates
+The update controls live in **Settings → Updates**. The Grok Bot app and Grok
+Bot's computer update separately:
 
-The update controls live in the **Beta** section of settings, alongside
-security-key or egress-routing options when those are available. The Grok Bot
-app and the Agent Computer update separately:
-
-* **Check for Updates** and **Restart to Update** update the desktop app.
-* **Update Agent Computer** rebuilds the cloud computer on the latest image
-  while preserving durable state.
-* **Reset Agent Computer** is a last resort that returns the computer to its
-  synced durable state; unsynced recent work does not come back.
+* **Grok Bot Updates** shows the installed version. **Check for Updates** and
+  **Restart to Update** update the desktop app.
+* Under **Grok Bot's Computer**, **Update** installs the latest software on the
+  cloud computer and keeps your files in place.
+* **Reset** wipes the computer and rebuilds it from your last saved snapshot, so
+  very recent changes may be lost. Use it as a last resort.
 
 See [Troubleshooting](/grok-bot/troubleshooting) for the least destructive
 recovery order.
 
 ## Edit one Bot
 
-Open **View conversation details**, then **Agent settings**, to edit that Bot's:
+Open **View conversation details**, then **Bot settings**, to edit that Bot's:
 
-* Name, title, and description
+* **Name**, **Label (optional)**, and **Description**
 * Avatar
 * **Notifications** preference
 
-These settings belong to one Bot. **Execution on Local Computer** and
-Auto-review settings are shared across Bots using the current setup, but are not
-an account-synchronized policy across every device.
+These settings belong to one Bot. **Execution on Local Computer** is set per
+computer, and your personal Auto-review rules are stored on each desktop.
 
 ## Understand attention states
 
@@ -149,8 +161,7 @@ and dock badge still show unread activity.
 
 The iPhone and Android apps also ask for notification permission during first
 run. Both device permission and the Bot's notification setting must allow the
-notification. Mobile push delivery is rolling out and may not yet be enabled
-for every account.
+notification.
 
 ## Handle in-app errors
 
@@ -164,6 +175,7 @@ or Bot history.
 
 ## Related pages
 
+* [Keyboard shortcuts](/grok-bot/chat-and-collaboration#keyboard-shortcuts)
 * [Use the computer and apps](/grok-bot/computer-and-apps)
 * [Approvals, security, and privacy](/grok-bot/approvals-security-and-privacy)
 * [Grok Bot for teams and enterprises](/grok-bot/teams-and-enterprises)

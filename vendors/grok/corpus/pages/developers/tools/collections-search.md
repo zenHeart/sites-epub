@@ -50,6 +50,118 @@ This comprehensive example demonstrates analyzing Tesla's SEC filings using the 
 
 This pattern is applicable to any document analysis workflow where you need to search through and reason over multiple documents.
 
+```javascriptAISDK
+import { createOpenAI } from '@ai-sdk/openai';
+import { streamText } from 'ai';
+
+const openai = createOpenAI({
+  baseURL: 'https://api.x.ai/v1',
+  apiKey: process.env.XAI_API_KEY,
+});
+
+const result = streamText({
+  model: openai('grok-4.7'),
+  prompt: 'What documents do you have access to?',
+  tools: {
+    file_search: openai.tools.fileSearch({
+      vectorStoreIds: ['your-vector-store-id'],
+      maxNumResults: 5,
+    }),
+  },
+});
+```
+
+```pythonOpenAISDK
+import os
+from openai import OpenAI
+
+# Using OpenAI SDK with xAI API (requires pre-created collection)
+api_key = os.getenv("XAI_API_KEY")
+client = OpenAI(
+    api_key=api_key,
+    base_url="https://api.x.ai/v1",
+)
+
+# Note: You must create the collection and upload documents first using either the xAI console (console.x.ai) or the xAI SDK
+# The collection_id below should be replaced with your actual collection ID
+response = client.responses.create(
+    model="grok-4.7",
+    input=[
+        {
+            "role": "user",
+            "content": "How many consumer vehicles did Tesla produce in total in 2024 and 2025? Show your working and cite your sources.",
+        },
+    ],
+    tools=[
+        {
+            "type": "file_search",
+            "vector_store_ids": ["your_collection_id_here"],  # Replace with actual collection ID
+            "max_num_results": 10
+        },
+        {"type": "code_interpreter"},  # Enable code execution for calculations
+    ],
+)
+
+print(response)
+```
+
+```pythonRequests
+import os
+import requests
+
+# Using raw requests (requires pre-created collection)
+url = "https://api.x.ai/v1/responses"
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": f"Bearer {os.getenv('XAI_API_KEY')}"
+}
+payload = {
+    "model": "grok-4.7",
+    "input": [
+        {
+            "role": "user",
+            "content": "How many consumer vehicles did Tesla produce in total in 2024 and 2025? Show your working and cite your sources."
+        }
+    ],
+    "tools": [
+        {
+            "type": "file_search",
+            "vector_store_ids": ["your_collection_id_here"],  # Replace with actual collection ID
+            "max_num_results": 10,
+        },
+        {"type": "code_interpreter"}  # Enable code execution for calculations
+    ]
+}
+response = requests.post(url, headers=headers, json=payload)
+print(response.json())
+```
+
+```bash
+# Using curl (requires pre-created collection)
+curl https://api.x.ai/v1/responses \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer $XAI_API_KEY" \\
+  -d '{
+  "model": "grok-4.7",
+  "input": [
+    {
+      "role": "user",
+      "content": "How many consumer vehicles did Tesla produce in total in 2024 and 2025? Show your working and cite your sources."
+    }
+  ],
+  "tools": [
+    {
+      "type": "file_search",
+      "vector_store_ids": ["your_collection_id_here"],
+      "max_num_results": 10
+    },
+    {
+      "type": "code_interpreter"
+    }
+  ]
+}'
+```
+
 ```pythonXAI
 import asyncio
 import os
@@ -102,7 +214,7 @@ async def main():
 
     # Step 3: Create a chat with collections search enabled
     chat = client.chat.create(
-        model="grok-4.6",  # Use a reasoning model for better analysis
+        model="grok-4.7",  # Use a reasoning model for better analysis
         tools=[
             collections_search(
                 collection_ids=[response.collection_id],
@@ -145,118 +257,6 @@ async def main():
     print(latest_response.tool_calls)
 if __name__ == "__main__":
     asyncio.run(main())
-```
-
-```pythonOpenAISDK
-import os
-from openai import OpenAI
-
-# Using OpenAI SDK with xAI API (requires pre-created collection)
-api_key = os.getenv("XAI_API_KEY")
-client = OpenAI(
-    api_key=api_key,
-    base_url="https://api.x.ai/v1",
-)
-
-# Note: You must create the collection and upload documents first using either the xAI console (console.x.ai) or the xAI SDK
-# The collection_id below should be replaced with your actual collection ID
-response = client.responses.create(
-    model="grok-4.6",
-    input=[
-        {
-            "role": "user",
-            "content": "How many consumer vehicles did Tesla produce in total in 2024 and 2025? Show your working and cite your sources.",
-        },
-    ],
-    tools=[
-        {
-            "type": "file_search",
-            "vector_store_ids": ["your_collection_id_here"],  # Replace with actual collection ID
-            "max_num_results": 10
-        },
-        {"type": "code_interpreter"},  # Enable code execution for calculations
-    ],
-)
-
-print(response)
-```
-
-```javascriptAISDK
-import { createOpenAI } from '@ai-sdk/openai';
-import { streamText } from 'ai';
-
-const openai = createOpenAI({
-  baseURL: 'https://api.x.ai/v1',
-  apiKey: process.env.XAI_API_KEY,
-});
-
-const result = streamText({
-  model: openai('grok-4.6'),
-  prompt: 'What documents do you have access to?',
-  tools: {
-    file_search: openai.tools.fileSearch({
-      vectorStoreIds: ['your-vector-store-id'],
-      maxNumResults: 5,
-    }),
-  },
-});
-```
-
-```pythonRequests
-import os
-import requests
-
-# Using raw requests (requires pre-created collection)
-url = "https://api.x.ai/v1/responses"
-headers = {
-    "Content-Type": "application/json",
-    "Authorization": f"Bearer {os.getenv('XAI_API_KEY')}"
-}
-payload = {
-    "model": "grok-4.6",
-    "input": [
-        {
-            "role": "user",
-            "content": "How many consumer vehicles did Tesla produce in total in 2024 and 2025? Show your working and cite your sources."
-        }
-    ],
-    "tools": [
-        {
-            "type": "file_search",
-            "vector_store_ids": ["your_collection_id_here"],  # Replace with actual collection ID
-            "max_num_results": 10,
-        },
-        {"type": "code_interpreter"}  # Enable code execution for calculations
-    ]
-}
-response = requests.post(url, headers=headers, json=payload)
-print(response.json())
-```
-
-```bash
-# Using curl (requires pre-created collection)
-curl https://api.x.ai/v1/responses \\
-  -H "Content-Type: application/json" \\
-  -H "Authorization: Bearer $XAI_API_KEY" \\
-  -d '{
-  "model": "grok-4.6",
-  "input": [
-    {
-      "role": "user",
-      "content": "How many consumer vehicles did Tesla produce in total in 2024 and 2025? Show your working and cite your sources."
-    }
-  ],
-  "tools": [
-    {
-      "type": "file_search",
-      "vector_store_ids": ["your_collection_id_here"],
-      "max_num_results": 10
-    },
-    {
-      "type": "code_interpreter"
-    }
-  ]
-}'
 ```
 
 ## Example Output

@@ -8,7 +8,7 @@ Access the organization dashboard by visiting [console.x.ai/organization](https:
 
 > [!NOTE]
 >
-> &#x20;Organizations are exclusive to the Enterprise tier. Contact xAI
+> &#x20;Organizations are exclusive to the Enterprise tier. Contact SpaceXAI
 > sales to upgrade if needed.
 
 ## Understanding Organizations
@@ -75,7 +75,7 @@ Automate user provisioning and deprovisioning by integrating System for Cross-do
 
 1. On the `/organization` page, click "Setup SCIM".
 2. Follow the IdP-specific steps provided to connect your directory.
-3. Create groups in your IdP that correspond to how you want to organize access in xAI—for example, `xai-engineering`, `xai-data-science`, or whatever fits your organizational structure.
+3. Create groups in your IdP that correspond to how you want to organize access in SpaceXAI—for example, `xai-engineering`, `xai-data-science`, or whatever fits your organizational structure.
 
 This step ensures your directory is synced and your groups are ready for mapping.
 
@@ -96,9 +96,9 @@ Map your IdP groups to the roles you created in the previous step.
 
 1. On this step, click **"Assign Groups"** to open the management portal at **sso.x.ai**.
 2. Click **"Configure role assignment"** to set up group-to-role mappings.
-3. For each IdP group, select the corresponding xAI role.
+3. For each IdP group, select the corresponding SpaceXAI role.
 
-This mapping aligns your IdP groups with xAI's role-based access controls so that users are automatically assigned the correct role when provisioned.
+This mapping aligns your IdP groups with SpaceXAI's role-based access controls so that users are automatically assigned the correct role when provisioned.
 
 ### Step 4: Configure roles with teams, permissions, and licenses
 
@@ -136,4 +136,4 @@ After SCIM is activated, you can continue to manage roles from the **Provisionin
 
 ## Need Help?
 
-For assistance with organization setup, SSO troubleshooting, or Enterprise features, contact xAI sales at [x.ai/grok/business/enquire](https://x.ai/grok/business/enquire).
+For assistance with organization setup, SSO troubleshooting, or Enterprise features, contact SpaceXAI sales at [x.ai/grok/business/enquire](https://x.ai/grok/business/enquire).

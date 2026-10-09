@@ -153,3 +153,6 @@ These combined workflows create presentations that are both visually stunning an
 </AccordionGroup>
 
 Next steps: Try your first [Nano Banana Pro presentation](https://manus.im/tools/nano-banana-pro-slides). Open Manus Slides, select a Nano Banana template, and describe your vision.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

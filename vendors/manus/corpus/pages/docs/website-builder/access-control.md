@@ -28,12 +28,15 @@ The built-in system includes:
 
 You can restrict access to your entire application or specific pages to certain individuals or teams. This is perfect for building internal tools, client portals, or staging environments.
 
-| Use Case                 | Description                                                                                                                    |
-| :----------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
-| **Internal Tools**       | Build applications that are only accessible to your team, such as an internal dashboard or a knowledge base.                   |
-| **Client Portals**       | Create private, secure areas for your clients to view their project status, access exclusive content, or manage their account. |
-| **Staging Environments** | Share a preview of your application with stakeholders for feedback before making it public.                                    |
+| Use Case | Description |
+| :- | :- |
+| **Internal Tools** | Build applications that are only accessible to your team, such as an internal dashboard or a knowledge base. |
+| **Client Portals** | Create private, secure areas for your clients to view their project status, access exclusive content, or manage their account. |
+| **Staging Environments** | Share a preview of your application with stakeholders for feedback before making it public. |
 
 **Example Prompt:**
 
 > "Make the ‘/admin’ section of this site accessible only to users with the ‘Admin’ role. All other users should be redirected to the homepage."
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

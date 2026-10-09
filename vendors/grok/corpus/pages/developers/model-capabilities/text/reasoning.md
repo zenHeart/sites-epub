@@ -12,13 +12,18 @@
 
 The reasoning content is encrypted by us and can be returned if you pass `include: ["reasoning.encrypted_content"]` to the Responses API. You can send the encrypted content back to provide more context to a previous conversation. See [Adding encrypted thinking content](/developers/model-capabilities/text/generate-text#adding-encrypted-thinking-content) for more details on how to use the content.
 
+> [!NOTE]
+> Always returned for grok-4.7
+>
+> On the Responses API, `grok-4.7` returns `reasoning.encrypted_content` on every response, whether or not `include` lists it, together with the encrypted outputs of any server-side tools. Reasoning items in the output carry an `encrypted_content` field; pass them back unchanged in the next request's `input` so the model keeps its reasoning across turns even when you manage conversation history yourself. Unlike an explicit `include`, this default does not stop SpaceXAI from storing the thinking trace server-side for rehydration, so clients that ignore the field keep working as before; whether the response itself is stored for `previous_response_id` is governed by `store`, not by this setting. Chat Completions is unaffected; it has no field for the ciphertext.
+
 > [!TIP]
 >
 > When using the Vercel AI SDK, encrypted reasoning content is automatically included under the hood as long as `store: false` is not specified. No additional configuration is needed.
 
 ## The `reasoning_effort` parameter
 
-`grok-4.6` and `grok-4.5` support the `reasoning_effort` parameter, which controls how much effort the model spends thinking before responding.
+`grok-4.7`, `grok-4.6`, and `grok-4.5` support the `reasoning_effort` parameter, which controls how much effort the model spends thinking before responding.
 
 If not specified, `reasoning_effort` defaults to `"high"`. Reasoning cannot be disabled.
 
@@ -41,28 +46,20 @@ If not specified, `reasoning_effort` defaults to `"high"`. Reasoning cannot be d
 
 The following example sets `reasoning_effort` to `"high"` for a challenging math proof. You can substitute `"low"`, `"medium"`, or (on supported models) `"xhigh"` as needed.
 
-```python customLanguage="pythonXAI" highlightedLines="13"
-import os
+```typescript customLanguage="javascriptAISDK" highlightedLines="9"
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
 
-from xai_sdk import Client
-from xai_sdk.chat import system, user
+const result = await generateText({
+  model: xai.responses('grok-4.7'),
+  system: 'You are a highly intelligent AI assistant.',
+  prompt: 'Find all prime numbers p such that p^2 + 2 is also prime. Prove your answer.',
+  providerOptions: {
+    xai: { reasoningEffort: 'high' },
+  },
+});
 
-client = Client(
-    api_key=os.getenv("XAI_API_KEY"),
-    timeout=3600,
-)
-
-chat = client.chat.create(
-    model="grok-4.6",
-    reasoning_effort="high",
-    messages=[system("You are a highly intelligent AI assistant.")],
-)
-chat.append(user("Find all prime numbers p such that p^2 + 2 is also prime. Prove your answer."))
-
-response = chat.sample()
-
-print("Final Response:")
-print(response.content)
+console.log('Final Response:', result.text);
 ```
 
 ```python customLanguage="pythonOpenAISDK" highlightedLines="13"
@@ -77,7 +74,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     reasoning={"effort": "high"},
     input=[
         {"role": "system", "content": "You are a highly intelligent AI assistant."},
@@ -92,29 +89,13 @@ print("Final Response:")
 print(text)
 ```
 
-```typescript customLanguage="javascriptAISDK" highlightedLines="9"
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
-const result = await generateText({
-  model: xai.responses('grok-4.6'),
-  system: 'You are a highly intelligent AI assistant.',
-  prompt: 'Find all prime numbers p such that p^2 + 2 is also prime. Prove your answer.',
-  providerOptions: {
-    xai: { reasoningEffort: 'high' },
-  },
-});
-
-console.log('Final Response:', result.text);
-```
-
 ```bash customLanguage="bash" highlightedLines="7"
 curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -m 3600 \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "reasoning": {"effort": "high"},
     "input": [
         {
@@ -129,6 +110,30 @@ curl https://api.x.ai/v1/responses \
 }'
 ```
 
+```python customLanguage="pythonXAI" highlightedLines="13"
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import system, user
+
+client = Client(
+    api_key=os.getenv("XAI_API_KEY"),
+    timeout=3600,
+)
+
+chat = client.chat.create(
+    model="grok-4.7",
+    reasoning_effort="high",
+    messages=[system("You are a highly intelligent AI assistant.")],
+)
+chat.append(user("Find all prime numbers p such that p^2 + 2 is also prime. Prove your answer."))
+
+response = chat.sample()
+
+print("Final Response:")
+print(response.content)
+```
+
 ### Multi-agent model
 
 For `grok-4.20-multi-agent`, the `reasoning.effort` parameter controls **how many agents** collaborate on a request rather than reasoning depth. See the [Multi Agent](/developers/model-capabilities/text/multi-agent) documentation for details.
@@ -137,39 +142,32 @@ For `grok-4.20-multi-agent`, the `reasoning.effort` parameter controls **how man
 
 | Model | `reasoning` parameter | Behavior |
 |---|---|---|
+| `grok-4.7` | `reasoning.effort`: `"low"` / `"medium"` / `"high"` (default) / `"xhigh"` | Controls reasoning depth (cannot be disabled) |
 | `grok-4.6` | `reasoning.effort`: `"low"` / `"medium"` / `"high"` (default) / `"xhigh"` | Controls reasoning depth (cannot be disabled) |
 | `grok-4.5` | `reasoning.effort`: `"low"` / `"medium"` / `"high"` (default) | Controls reasoning depth (cannot be disabled) |
 | `grok-4.20-multi-agent` | `reasoning.effort`: `"low"` / `"medium"` / `"high"` / `"xhigh"` | Controls agent count (4 or 16) |
 
 ## Summarized Reasoning Content
 
-For `grok-4.6`, we expose summarizations of the model's internal reasoning. Here's an example of how to stream the reasoning summary deltas alongside the final response:
+For `grok-4.7`, we expose summarizations of the model's internal reasoning. Here's an example of how to stream the reasoning summary deltas alongside the final response:
 
-```python customLanguage="pythonXAI"
-import os
+```typescript customLanguage="javascriptAISDK"
+import { xai } from '@ai-sdk/xai';
+import { streamText } from 'ai';
 
-from xai_sdk import Client
-from xai_sdk.chat import system, user
+const result = streamText({
+  model: xai.responses('grok-4.7'),
+  system: 'You are a highly intelligent AI assistant.',
+  prompt: 'A projectile is launched at 30 m/s at 37° above horizontal from a 45 m cliff. Find its speed on impact. (g=10 m/s²)'
+});
 
-client = Client(
-    api_key=os.getenv("XAI_API_KEY"),
-    timeout=3600, # Override default timeout with longer timeout for reasoning models
-)
+console.log("\n\n--------- Reasoning ---------")
 
-chat = client.chat.create(
-    model="grok-4.6",
-    messages=[system("You are a highly intelligent AI assistant.")],
-)
-chat.append(user("A projectile is launched at 30 m/s at 37° above horizontal from a 45 m cliff. Find its speed on impact. (g=10 m/s²)"))
-
-content_started = False
-
-print("\n\n--------- Reasoning ---------", flush=True)
-
-latest_response = None
-for response, chunk in chat.stream():
-    if chunk.reasoning_content:
-        print(chunk.reasoning_content, end="", flush=True)
+for await (const part of result.fullStream) {
+  if (part.type === 'reasoning-delta') {
+    process.stdout.write(part.text);
+  } 
+}
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -184,7 +182,7 @@ client = OpenAI(
 )
 
 stream = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {"role": "system", "content": "You are a highly intelligent AI assistant."},
         {"role": "user", "content": "A projectile is launched at 30 m/s at 37° above horizontal from a 45 m cliff. Find its speed on impact. (g=10 m/s²)"},
@@ -196,25 +194,6 @@ print("\n\n--------- Reasoning ---------", flush=True)
 for event in stream:
     if event.type in ("response.reasoning_text.delta", "response.reasoning_summary_text.delta"):
         print(event.delta, end="", flush=True)
-```
-
-```typescript customLanguage="javascriptAISDK"
-import { xai } from '@ai-sdk/xai';
-import { streamText } from 'ai';
-
-const result = streamText({
-  model: xai.responses('grok-4.6'),
-  system: 'You are a highly intelligent AI assistant.',
-  prompt: 'A projectile is launched at 30 m/s at 37° above horizontal from a 45 m cliff. Find its speed on impact. (g=10 m/s²)'
-});
-
-console.log("\n\n--------- Reasoning ---------")
-
-for await (const part of result.fullStream) {
-  if (part.type === 'reasoning-delta') {
-    process.stdout.write(part.text);
-  } 
-}
 ```
 
 ```bash customLanguage="bash"
@@ -233,9 +212,36 @@ curl https://api.x.ai/v1/responses \
             "content": "A ball is thrown upward at 25 m/s from the top of a 60 m building. Find the maximum height above the ground. (g=10 m/s²)"
         }
     ],
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "stream": true
 }'
+```
+
+```python customLanguage="pythonXAI"
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import system, user
+
+client = Client(
+    api_key=os.getenv("XAI_API_KEY"),
+    timeout=3600, # Override default timeout with longer timeout for reasoning models
+)
+
+chat = client.chat.create(
+    model="grok-4.7",
+    messages=[system("You are a highly intelligent AI assistant.")],
+)
+chat.append(user("A projectile is launched at 30 m/s at 37° above horizontal from a 45 m cliff. Find its speed on impact. (g=10 m/s²)"))
+
+content_started = False
+
+print("\n\n--------- Reasoning ---------", flush=True)
+
+latest_response = None
+for response, chunk in chat.stream():
+    if chunk.reasoning_content:
+        print(chunk.reasoning_content, end="", flush=True)
 ```
 
 ### Sample Output

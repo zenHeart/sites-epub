@@ -31,11 +31,17 @@ completed.
 
 When an action needs approval, the conversation shows the proposed operation
 and its inputs. Review the target, scope, and values before approving.
+**Allow once** lets the Bot continue with that action, **Always allow** can
+save a matching rule, and **Deny** blocks it. The controls are the same on
+iPhone.
 
-* On desktop, **Allow once** lets the Bot continue with that action and
-  **Deny** blocks it. **Always allow** can save a matching rule.
-* On iPhone and Android, the equivalent controls are **Approve once** and
-  **Deny**.
+An Auto Review approval from a chat you are in waits for your answer. An
+approval from work that started without you, such as a routine, a trigger, or a
+message from another Bot, expires after about 10 minutes; the card then shows
+**Expired**, and the action does not run. An expired card may offer **Always allow this in
+the future**, which adds the proposed rule to your **Allow automatically** rules
+without running the expired action. To finish the task, ask the Bot to try
+again.
 
 Do not approve an action whose target or effect you cannot identify. Ask the Bot
 to explain it in plain language or produce a draft first.
@@ -66,7 +72,7 @@ behavior change over time. Auto Review is model-based and should complement,
 not replace, least privilege and explicit approval boundaries.
 
 Personal Auto-review rules are stored on the current desktop and synced to its
-Grok Bot computer. Verify them separately on another desktop installation.
+Grok Bot computer, so another desktop installation needs its own.
 
 ## Enter passwords and verification codes yourself
 
@@ -84,23 +90,38 @@ If the Bot presents a secure secret request for a supported connection, enter
 the value in that request. It is not a general-purpose password manager. The
 value is masked, excluded from the transcript, and not shown to the model.
 
+When a web page needs you to type something yourself, such as a login, a
+checkout address, or a phone number, the Bot can show a form in the chat, one
+form per step, and fill your answers into the page for you.
+
+If you sign in with a hardware security key, such as a YubiKey, the Bot's
+browser can use a key plugged into your desktop while **Use hardware security
+keys** is on under **Settings → General → Security Key**. The setting is on by
+default on macOS and Windows and is not yet supported on Linux; every use asks
+you to approve it first.
+
 ## Control access to your local computer
 
 The shared Grok Bot computer runs in the cloud. Access to the Mac or Windows
 computer in front of you is a separate capability.
 
-In **Settings → General → Agent → Execution on Local Computer**, choose whether
-local commands:
+In **Settings → General → Bot → Execution on Local Computer**, choose
+**Ask every time**, **Always allow**, or **Never allow**. Once your account has
+registered computers, the choice moves to **Settings → Computer → Computers**,
+where each computer has its own **Execution on this computer** setting.
 
-* Always require approval
-* Are always allowed
-* Are never allowed
-
-The default is **Ask every time**. Use **Never allowed** unless a Bot has a
+The default is **Ask every time**. Use **Never allow** unless a Bot has a
 specific reason to work on your local files. Your team admin can cap this
 setting for the whole team; when the team's policy is stricter than yours, the
 team's applies. These settings do not prevent the Bot from using its cloud
 computer.
+
+The first time a Bot asks to run a command on your computer, the conversation
+shows **Allow Grok Bot and all Bots to run commands on your local computer?**
+with **Always allow**, **Allow once**, **Never**, and **Deny once** (Esc).
+**Always allow** and **Never** set **Execution on Local Computer** for every
+Bot, and you can change the setting later in Settings. If your team's admin has
+set a stricter ceiling, **Always allow** is unavailable.
 
 ## Understand the shared-computer boundary
 

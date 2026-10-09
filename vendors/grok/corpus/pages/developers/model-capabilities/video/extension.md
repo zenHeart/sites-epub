@@ -6,24 +6,50 @@ Extend an existing video by providing a source video and a text prompt describin
 
 You can provide the source video as a public URL, a base64-encoded data URI, or a `file_id` from the [Files API](/developers/files). See [Imagine → Files API Integration](/developers/model-capabilities/imagine/files/inputs) for using `file_id` inputs.
 
-> [!WARNING]
+| Requirement | Value |
+|-------------|-------|
+| Model | `grok-imagine-video` |
+| Source video | `.mp4` with a supported codec such as H.264, H.265, or AV1 |
+| Source length | **2–15 seconds** |
+| Extension length (`duration`) | **2–10 seconds**; default 6 |
+| Output | Same aspect ratio and resolution as the source, capped at **720p** |
+| `aspect_ratio`, `resolution` | Not supported |
 
 The `duration` parameter controls the length of the **extended portion only**, not the total output. For example, if your input video is 10 seconds and you set `duration` to 5, the returned video will be 15 seconds long (10s original + 5s extension).
 
-```python customLanguage="pythonXAI"
-import os
-import xai_sdk
+```javascript customLanguage="javascriptAISDK"
+import { xai } from "@ai-sdk/xai";
+import { experimental_generateVideo as generateVideo } from "ai";
 
-client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+const source = await generateVideo({
+    model: xai.video("grok-imagine-video-1.5"),
+    prompt: "A cat sitting on a sunlit windowsill, tail gently swishing.",
+    duration: 5,
+    aspectRatio: "16:9",
+    providerOptions: {
+        xai: {
+            pollTimeoutMs: 600000,
+        },
+    },
+});
 
-response = client.video.extend(
-    prompt="The shot pans to an over the shoulder perspective. Calm controlled scene.",
-    model="grok-imagine-video",
-    video_url="<VIDEO_URL>",
-    duration=10,
-)
+const sourceUrl = source.providerMetadata?.xai?.videoUrl;
 
-print(response.url)
+const extended = await generateVideo({
+    model: xai.video("grok-imagine-video"),
+    prompt: "The cat turns its head, notices a butterfly, and leaps off.",
+    duration: 6,
+    providerOptions: {
+        xai: {
+            mode: "extend-video",
+            videoUrl: sourceUrl,
+            pollTimeoutMs: 600000,
+        },
+    },
+});
+
+const extendedVideoUrl = extended.providerMetadata?.xai?.videoUrl;
+console.log(extendedVideoUrl);
 ```
 
 ```python customLanguage="pythonRequests"
@@ -64,41 +90,6 @@ while True:
     time.sleep(5)
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from "@ai-sdk/xai";
-import { experimental_generateVideo as generateVideo } from "ai";
-
-const source = await generateVideo({
-    model: xai.video("grok-imagine-video-1.5"),
-    prompt: "A cat sitting on a sunlit windowsill, tail gently swishing.",
-    duration: 5,
-    aspectRatio: "16:9",
-    providerOptions: {
-        xai: {
-            pollTimeoutMs: 600000,
-        },
-    },
-});
-
-const sourceUrl = source.providerMetadata?.xai?.videoUrl;
-
-const extended = await generateVideo({
-    model: xai.video("grok-imagine-video"),
-    prompt: "The cat turns its head, notices a butterfly, and leaps off.",
-    duration: 6,
-    providerOptions: {
-        xai: {
-            mode: "extend-video",
-            videoUrl: sourceUrl,
-            pollTimeoutMs: 600000,
-        },
-    },
-});
-
-const extendedVideoUrl = extended.providerMetadata?.xai?.videoUrl;
-console.log(extendedVideoUrl);
-```
-
 ```bash
 # Start the video extension request
 REQUEST_ID=$(curl -s -X POST https://api.x.ai/v1/videos/extensions \
@@ -127,7 +118,23 @@ while true; do
 done
 ```
 
-Video editing uses the `/v1/videos/edits` endpoint and `client.video.generate(video_url=...)` in the Python SDK. In the AI SDK, set `providerOptions.xai.mode` to `"edit-video"` or `"extend-video"` and pass `providerOptions.xai.videoUrl`. The same asynchronous polling pattern applies to both flows, and the AI SDK returns the xAI-hosted output URL in `providerMetadata.xai.videoUrl`.
+```python customLanguage="pythonXAI"
+import os
+import xai_sdk
+
+client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+
+response = client.video.extend(
+    prompt="The shot pans to an over the shoulder perspective. Calm controlled scene.",
+    model="grok-imagine-video",
+    video_url="<VIDEO_URL>",
+    duration=10,
+)
+
+print(response.url)
+```
+
+Video editing uses the `/v1/videos/edits` endpoint and `client.video.generate(video_url=...)` in the Python SDK. In the AI SDK, set `providerOptions.xai.mode` to `"edit-video"` or `"extend-video"` and pass `providerOptions.xai.videoUrl`. The same asynchronous polling pattern applies to both flows, and the AI SDK returns the SpaceXAI-hosted output URL in `providerMetadata.xai.videoUrl`.
 
 ## Related
 

@@ -16,12 +16,12 @@ Configuring notifications is done conversationally. You simply tell Manus what e
 
 Here are some common examples:
 
-| Notification Trigger    | Example Prompt                                                                                  |
-| :---------------------- | :---------------------------------------------------------------------------------------------- |
-| **New Form Submission** | `"My website collects user data through a form. Notify me whenever a new form is submitted."`   |
-| **New Product Sale**    | `"My website sells products. Send me a notification every time a new product is sold."`         |
-| **New Review**          | `"My website has a review feature. Alert me immediately when a user leaves a negative review."` |
-| **User Sign-up**        | `"Send me a notification each time a new user creates an account on my site."`                  |
+| Notification Trigger | Example Prompt |
+| :- | :- |
+| **New Form Submission** | `"My website collects user data through a form. Notify me whenever a new form is submitted."` |
+| **New Product Sale** | `"My website sells products. Send me a notification every time a new product is sold."` |
+| **New Review** | `"My website has a review feature. Alert me immediately when a user leaves a negative review."` |
+| **User Sign-up** | `"Send me a notification each time a new user creates an account on my site."` |
 
 ## Notification Preferences
 
@@ -33,3 +33,6 @@ Under **Notification Sending Preferences**, you can use the toggles to:
 * **Receive in-app notifications**: See alerts within the Manus application interface.
 
 You can also download the Manus mobile app to receive push notifications directly on your phone, ensuring you stay connected even when you're on the go.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

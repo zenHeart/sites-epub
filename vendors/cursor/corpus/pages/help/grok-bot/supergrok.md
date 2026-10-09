@@ -1,0 +1,126 @@
+# Link SuperGrok for Grok Bot
+
+Link your Grok or X account to grant Grok Bot usage on your Cursor account. Individual SuperGrok, SuperGrok Plus, SuperGrok Heavy, and X Premium+ qualify. An assigned seat on a self-serve Grok Business plan also includes Grok Bot. See [How do I use a Grok Business seat with Grok Bot?](https://cursor.com/help/grok-bot/supergrok.md#how-do-i-use-a-grok-business-seat-with-grok-bot).
+
+## What do I need before linking SuperGrok?
+
+You need an active **individual SuperGrok**, **SuperGrok Plus**, **SuperGrok Heavy**, or **X Premium+** subscription on the Grok or X account you will link, and a Cursor or Grok Bot account to receive the usage grant.
+
+Linking pairs one Cursor account with one Grok or X account. The link itself is not a Cursor payment. Sign in with the Cursor account that should hold the usage grant, because a SuperGrok or X Premium+ link **can't be unlinked or moved** to a different Cursor account once created.
+
+## What do I get after linking SuperGrok?
+
+Linking is a **usage grant**, not a Cursor plan. It grants Grok Bot usage on the linked Cursor account while your SuperGrok or X Premium+ subscription stays active.
+
+- **SuperGrok Heavy** grants the highest linked Grok Bot usage.
+- **SuperGrok Plus** grants generous linked Grok Bot usage, below the Heavy tier.
+- **SuperGrok** grants linked Grok Bot usage, below the Plus tier.
+- **X Premium+** grants linked Grok Bot usage, below SuperGrok Plus.
+
+Cursor re-checks your SuperGrok or X Premium+ status at each renewal.
+
+Upgrading or downgrading SuperGrok after you have already linked can take up to 24 hours to show on **Weekly usage**. You do not need to link again. See [What if I upgrade SuperGrok after I already linked?](https://cursor.com/help/grok-bot/plans.md#what-if-i-upgrade-supergrok-after-i-already-linked).
+
+The grant does not stack with a Cursor plan. If you are on **Pro+**, linking **SuperGrok Plus** does not add usage. Linking **SuperGrok**, **SuperGrok Plus**, **SuperGrok Heavy**, or **X Premium+** on top of Pro, Pro+, Ultra, or a self-serve Teams plan does not add usage either. You can still upgrade within Cursor plans, such as **Pro+** to **Ultra**. See [Do Cursor and SuperGrok plans stack?](https://cursor.com/help/grok-bot/plans.md#do-cursor-and-supergrok-plans-stack).
+
+## Does linking SuperGrok change my Cursor plan?
+
+No. Your existing Cursor plan stays in place. Linking SuperGrok or X Premium+ doesn't cancel a Pro, Pro+, Ultra, or Teams subscription, and it doesn't replace them with another Cursor plan. If you had no Cursor plan before linking, you still don't, and Grok Bot usage comes from the SuperGrok or X Premium+ grant alone.
+
+If you have both a paid Cursor plan that includes Grok Bot and a SuperGrok or X Premium+ link, both stay on the same Cursor account, but they do not stack. Linking **SuperGrok Plus** while you are on **Pro+** does not add Grok Bot usage. Purchasing **Cursor Ultra** while **SuperGrok Heavy** is linked does not grant more included usage either. You can still move from **Pro+** to **Ultra** on the Cursor plan itself. That upgrade changes the Cursor grant. It does not combine with SuperGrok.
+
+Your Cursor plan continues to bill and renew independently of the link. Neither subscription cancels the other. Linking SuperGrok or X Premium+ does not swap you to Ultra, cancel a Cursor plan, or add a second Grok Bot meter.
+
+If you need more usage after the included grant runs out, enable [on-demand usage](https://cursor.com/help/account-and-billing/overages.md). That is the path for extra usage. Linking SuperGrok or X Premium+ on top of a Cursor plan is not. You can still upgrade the Cursor plan, such as **Pro+** to **Ultra**.
+
+## How do I link my Grok account?
+
+1. On the Grok Bot plan screen, click **Link Grok Account**.
+2. Sign into the **Grok account with individual SuperGrok, SuperGrok Plus, or SuperGrok Heavy**.
+3. Return to Grok Bot and confirm you have access.
+
+## How do I link my X Premium+ account?
+
+1. On the Grok Bot plan screen, click **Link X Account**.
+2. Sign into the **X account with X Premium+**.
+3. Return to Grok Bot and confirm you have access.
+
+## How do I use a Grok Business seat with Grok Bot?
+
+If your company has a self-serve **Grok Business** plan (sometimes called SuperGrok Business) and an admin has assigned you a seat, your seat includes Grok Bot. You don't need to buy anything or link from the plan screen.
+
+1. Sign out of Grok Bot. On desktop, open **Settings** > **General** and choose **Sign Out**. On the phone, open **Settings** and choose **Sign Out**.
+2. Sign back in. On the sign-in page, choose **Sign in with Grok**.
+3. Sign in with the Grok account that holds your Grok Business seat.
+
+Grok Bot usage matches the license on your seat. A **SuperGrok** license gets SuperGrok usage, and a **SuperGrok Heavy** license gets SuperGrok Heavy usage. If an admin removes your seat, Grok Bot access from the seat ends.
+
+This works only for self-serve Grok Business. If your company is on **Grok Enterprise**, contact your account manager about Grok Bot access.
+
+If you see an error that the Grok account is already linked to another Cursor account, or you still don't have access after signing in with the right Grok account, [contact support](https://cursor.com/help/grok-bot/get-help.md). Include your Cursor account email and the Grok account email.
+
+## Which SuperGrok tiers grant Grok Bot?
+
+**Individual SuperGrok**, **individual SuperGrok Plus**, **individual SuperGrok Heavy**, and **X Premium+** grant Grok Bot usage when you link them. An assigned seat on a self-serve **Grok Business** plan grants Grok Bot usage when you sign in with Grok. See [How do I use a Grok Business seat with Grok Bot?](https://cursor.com/help/grok-bot/supergrok.md#how-do-i-use-a-grok-business-seat-with-grok-bot).
+
+These do not qualify:
+
+- **SuperGrok Lite**
+- **Grok Enterprise**. Contact your account manager about Grok Bot access.
+
+## Can I unlink or move a SuperGrok link to a different Cursor account?
+
+No. A SuperGrok or X Premium+ link is permanent once created. You can't unlink a Grok or X account from a Cursor account, and you can't move a link to a different Cursor account. Support can't unlink or move it either.
+
+Sign in with the correct Cursor account before you select **Link Grok Account** or **Link X Account**. To use the grant, sign into Grok Bot with the Cursor account that holds the link.
+
+## Why am I still on the plan screen after linking?
+
+Confirm you're signed in with the same Cursor account you linked.
+
+## Why don't I see a Link Grok Account option after I've already logged in?
+
+The **Link Grok Account** and **Link X Account** options appear on the **Get Started** paywall screen before you sign in. Once you're past the paywall and inside the main app, Settings does not show a Grok, X, or xAI account link option.
+
+To return to the paywall screen:
+
+1. Fully quit Grok Bot (on Mac, choose **Quit** from the menu bar).
+2. Relaunch the app.
+
+If you still don't see **Link Grok Account** or **Link X Account**, confirm you're not already signed in through another path.
+
+## What if my SuperGrok access, email, or usage looks wrong after linking?
+
+If linking didn't grant Grok Bot usage, applied to the wrong account, or your usage didn't reset, work through these checks.
+
+**Confirm the basics:**
+
+- You linked the **Grok account with an active SuperGrok, SuperGrok Plus, or SuperGrok Heavy subscription**, or the **X account with X Premium+**. The grant is tied to that specific account.
+- You're signed into Grok Bot with the **same Cursor account** you linked.
+- Your SuperGrok, SuperGrok Plus, SuperGrok Heavy, or X Premium+ subscription is still active at renewal.
+
+**Common failure modes:**
+
+| What you're seeing                                                         | What to try                                                                                                                                                                                  |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Linking fails partway through sign-in                                      | Fully quit Grok Bot (on Mac, choose **Quit** from the menu bar), reopen, and link again from the **Get Started** screen.                                                                     |
+| Access applied to the wrong Cursor account                                 | A SuperGrok or X Premium+ link is permanent. Neither you nor support can unlink it or move it to a different Cursor account. Sign into Grok Bot with the Cursor account that holds the link. |
+| Usage didn't reset after linking                                           | Confirm your SuperGrok, SuperGrok Plus, SuperGrok Heavy, or X Premium+ subscription is active, then allow up to 24 hours after a successful link for usage to refresh.                       |
+| Still on the old SuperGrok tier after upgrading                            | Allow up to 24 hours for **Weekly usage** to move to the new tier. Do not link again.                                                                                                        |
+| You have a Grok Business seat but still see the plan screen                | Sign out, then sign back in with **Sign in with Grok** using the Grok account that holds the seat. Check with your Grok Business admin that the seat is assigned to that account.            |
+| An error says the Grok account is already linked to another Cursor account | [Contact support](https://cursor.com/help/grok-bot/get-help.md) with your Cursor account email and the Grok account email.                                                                   |
+
+## Related
+
+- [Plans and billing](https://cursor.com/help/grok-bot/plans.md)
+- [Usage-based charges](https://cursor.com/help/account-and-billing/overages.md)
+- [Sign in to Grok Bot](https://cursor.com/help/grok-bot/sign-in.md)
+- [Grok Bot on mobile](https://cursor.com/help/grok-bot/mobile.md)
+- [Get help](https://cursor.com/help/grok-bot/get-help.md)
+
+
+---
+
+## Sitemap
+
+[Overview of all docs pages](/llms.txt)

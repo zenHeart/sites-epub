@@ -13,3 +13,6 @@ Manus AI is an autonomous general AI agent designed to complete tasks and delive
 ## What Makes Manus AI Different?
 
 Traditional AI tools require constant supervision and manual intervention. You guide them step by step, then piece together the results yourself. **Manus AI works differently**. It operates in a complete sandbox environment—a virtual computer with internet access, a persistent file system, and the ability to install software and create custom tools. This means Manus AI can work independently, remember context across long tasks, and deliver production-ready results without you managing every detail.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -1328,6 +1328,1606 @@
     "kind": "doc"
   },
   {
+    "group": "Cursor: Docs",
+    "title": "request based legacy",
+    "md_url": "https://cursor.com/docs/account/pricing/request-based-legacy.md",
+    "html_url": "https://cursor.com/docs/account/pricing/request-based-legacy",
+    "route": "docs/account/pricing/request-based-legacy",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "regions",
+    "md_url": "https://cursor.com/docs/account/regions.md",
+    "html_url": "https://cursor.com/docs/account/regions",
+    "route": "docs/account/regions",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "update access",
+    "md_url": "https://cursor.com/docs/account/update-access.md",
+    "html_url": "https://cursor.com/docs/account/update-access",
+    "route": "docs/account/update-access",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "origin",
+    "md_url": "https://cursor.com/docs/api/origin.md",
+    "html_url": "https://cursor.com/docs/api/origin",
+    "route": "docs/api/origin",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "mcp",
+    "md_url": "https://cursor.com/docs/cli/mcp.md",
+    "html_url": "https://cursor.com/docs/cli/mcp",
+    "route": "docs/cli/mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "vscode",
+    "md_url": "https://cursor.com/docs/configuration/migrations/vscode.md",
+    "html_url": "https://cursor.com/docs/configuration/migrations/vscode",
+    "route": "docs/configuration/migrations/vscode",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "aws bedrock",
+    "md_url": "https://cursor.com/docs/customizing/aws-bedrock.md",
+    "html_url": "https://cursor.com/docs/customizing/aws-bedrock",
+    "route": "docs/customizing/aws-bedrock",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "evals",
+    "md_url": "https://cursor.com/docs/evals.md",
+    "html_url": "https://cursor.com/docs/evals",
+    "route": "docs/evals",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "extension api",
+    "md_url": "https://cursor.com/docs/extension-api.md",
+    "html_url": "https://cursor.com/docs/extension-api",
+    "route": "docs/extension-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "install links",
+    "md_url": "https://cursor.com/docs/mcp/install-links.md",
+    "html_url": "https://cursor.com/docs/mcp/install-links",
+    "route": "docs/mcp/install-links",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude 4 5 haiku",
+    "md_url": "https://cursor.com/docs/models/claude-4-5-haiku.md",
+    "html_url": "https://cursor.com/docs/models/claude-4-5-haiku",
+    "route": "docs/models/claude-4-5-haiku",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude 4 5 sonnet",
+    "md_url": "https://cursor.com/docs/models/claude-4-5-sonnet.md",
+    "html_url": "https://cursor.com/docs/models/claude-4-5-sonnet",
+    "route": "docs/models/claude-4-5-sonnet",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude 4 6 sonnet",
+    "md_url": "https://cursor.com/docs/models/claude-4-6-sonnet.md",
+    "html_url": "https://cursor.com/docs/models/claude-4-6-sonnet",
+    "route": "docs/models/claude-4-6-sonnet",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude 4 sonnet",
+    "md_url": "https://cursor.com/docs/models/claude-4-sonnet.md",
+    "html_url": "https://cursor.com/docs/models/claude-4-sonnet",
+    "route": "docs/models/claude-4-sonnet",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude 4 sonnet 1m",
+    "md_url": "https://cursor.com/docs/models/claude-4-sonnet-1m.md",
+    "html_url": "https://cursor.com/docs/models/claude-4-sonnet-1m",
+    "route": "docs/models/claude-4-sonnet-1m",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude fable 5",
+    "md_url": "https://cursor.com/docs/models/claude-fable-5.md",
+    "html_url": "https://cursor.com/docs/models/claude-fable-5",
+    "route": "docs/models/claude-fable-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude opus 4 5",
+    "md_url": "https://cursor.com/docs/models/claude-opus-4-5.md",
+    "html_url": "https://cursor.com/docs/models/claude-opus-4-5",
+    "route": "docs/models/claude-opus-4-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude opus 4 6",
+    "md_url": "https://cursor.com/docs/models/claude-opus-4-6.md",
+    "html_url": "https://cursor.com/docs/models/claude-opus-4-6",
+    "route": "docs/models/claude-opus-4-6",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude opus 4 7",
+    "md_url": "https://cursor.com/docs/models/claude-opus-4-7.md",
+    "html_url": "https://cursor.com/docs/models/claude-opus-4-7",
+    "route": "docs/models/claude-opus-4-7",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude opus 4 7 fast",
+    "md_url": "https://cursor.com/docs/models/claude-opus-4-7-fast.md",
+    "html_url": "https://cursor.com/docs/models/claude-opus-4-7-fast",
+    "route": "docs/models/claude-opus-4-7-fast",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude opus 4 8",
+    "md_url": "https://cursor.com/docs/models/claude-opus-4-8.md",
+    "html_url": "https://cursor.com/docs/models/claude-opus-4-8",
+    "route": "docs/models/claude-opus-4-8",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude opus 5",
+    "md_url": "https://cursor.com/docs/models/claude-opus-5.md",
+    "html_url": "https://cursor.com/docs/models/claude-opus-5",
+    "route": "docs/models/claude-opus-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "claude sonnet 5",
+    "md_url": "https://cursor.com/docs/models/claude-sonnet-5.md",
+    "html_url": "https://cursor.com/docs/models/claude-sonnet-5",
+    "route": "docs/models/claude-sonnet-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "cursor composer 1",
+    "md_url": "https://cursor.com/docs/models/cursor-composer-1.md",
+    "html_url": "https://cursor.com/docs/models/cursor-composer-1",
+    "route": "docs/models/cursor-composer-1",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gemini 2 5 flash",
+    "md_url": "https://cursor.com/docs/models/gemini-2-5-flash.md",
+    "html_url": "https://cursor.com/docs/models/gemini-2-5-flash",
+    "route": "docs/models/gemini-2-5-flash",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gemini 3 5 flash",
+    "md_url": "https://cursor.com/docs/models/gemini-3-5-flash.md",
+    "html_url": "https://cursor.com/docs/models/gemini-3-5-flash",
+    "route": "docs/models/gemini-3-5-flash",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gemini 3 6 flash",
+    "md_url": "https://cursor.com/docs/models/gemini-3-6-flash.md",
+    "html_url": "https://cursor.com/docs/models/gemini-3-6-flash",
+    "route": "docs/models/gemini-3-6-flash",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gemini 3 7 flash",
+    "md_url": "https://cursor.com/docs/models/gemini-3-7-flash.md",
+    "html_url": "https://cursor.com/docs/models/gemini-3-7-flash",
+    "route": "docs/models/gemini-3-7-flash",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gemini 3 flash",
+    "md_url": "https://cursor.com/docs/models/gemini-3-flash.md",
+    "html_url": "https://cursor.com/docs/models/gemini-3-flash",
+    "route": "docs/models/gemini-3-flash",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gemini 3 pro",
+    "md_url": "https://cursor.com/docs/models/gemini-3-pro.md",
+    "html_url": "https://cursor.com/docs/models/gemini-3-pro",
+    "route": "docs/models/gemini-3-pro",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gemini 3 pro image preview",
+    "md_url": "https://cursor.com/docs/models/gemini-3-pro-image-preview.md",
+    "html_url": "https://cursor.com/docs/models/gemini-3-pro-image-preview",
+    "route": "docs/models/gemini-3-pro-image-preview",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "glm 5 2",
+    "md_url": "https://cursor.com/docs/models/glm-5-2.md",
+    "html_url": "https://cursor.com/docs/models/glm-5-2",
+    "route": "docs/models/glm-5-2",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "glm 5 3",
+    "md_url": "https://cursor.com/docs/models/glm-5-3.md",
+    "html_url": "https://cursor.com/docs/models/glm-5-3",
+    "route": "docs/models/glm-5-3",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "glm 5 3 flash",
+    "md_url": "https://cursor.com/docs/models/glm-5-3-flash.md",
+    "html_url": "https://cursor.com/docs/models/glm-5-3-flash",
+    "route": "docs/models/glm-5-3-flash",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5",
+    "md_url": "https://cursor.com/docs/models/gpt-5.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5",
+    "route": "docs/models/gpt-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 1 codex",
+    "md_url": "https://cursor.com/docs/models/gpt-5-1-codex.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-1-codex",
+    "route": "docs/models/gpt-5-1-codex",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 1 codex max",
+    "md_url": "https://cursor.com/docs/models/gpt-5-1-codex-max.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-1-codex-max",
+    "route": "docs/models/gpt-5-1-codex-max",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 1 codex mini",
+    "md_url": "https://cursor.com/docs/models/gpt-5-1-codex-mini.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-1-codex-mini",
+    "route": "docs/models/gpt-5-1-codex-mini",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 2",
+    "md_url": "https://cursor.com/docs/models/gpt-5-2.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-2",
+    "route": "docs/models/gpt-5-2",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 2 codex",
+    "md_url": "https://cursor.com/docs/models/gpt-5-2-codex.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-2-codex",
+    "route": "docs/models/gpt-5-2-codex",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 3 codex",
+    "md_url": "https://cursor.com/docs/models/gpt-5-3-codex.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-3-codex",
+    "route": "docs/models/gpt-5-3-codex",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 4",
+    "md_url": "https://cursor.com/docs/models/gpt-5-4.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-4",
+    "route": "docs/models/gpt-5-4",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 4 mini",
+    "md_url": "https://cursor.com/docs/models/gpt-5-4-mini.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-4-mini",
+    "route": "docs/models/gpt-5-4-mini",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 4 nano",
+    "md_url": "https://cursor.com/docs/models/gpt-5-4-nano.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-4-nano",
+    "route": "docs/models/gpt-5-4-nano",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 5",
+    "md_url": "https://cursor.com/docs/models/gpt-5-5.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-5",
+    "route": "docs/models/gpt-5-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 codex",
+    "md_url": "https://cursor.com/docs/models/gpt-5-codex.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-codex",
+    "route": "docs/models/gpt-5-codex",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 fast",
+    "md_url": "https://cursor.com/docs/models/gpt-5-fast.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-fast",
+    "route": "docs/models/gpt-5-fast",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "gpt 5 mini",
+    "md_url": "https://cursor.com/docs/models/gpt-5-mini.md",
+    "html_url": "https://cursor.com/docs/models/gpt-5-mini",
+    "route": "docs/models/gpt-5-mini",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "kimi k2 7 code",
+    "md_url": "https://cursor.com/docs/models/kimi-k2-7-code.md",
+    "html_url": "https://cursor.com/docs/models/kimi-k2-7-code",
+    "route": "docs/models/kimi-k2-7-code",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "kimi k3",
+    "md_url": "https://cursor.com/docs/models/kimi-k3.md",
+    "html_url": "https://cursor.com/docs/models/kimi-k3",
+    "route": "docs/models/kimi-k3",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "ignore file",
+    "md_url": "https://cursor.com/docs/reference/ignore-file.md",
+    "html_url": "https://cursor.com/docs/reference/ignore-file",
+    "route": "docs/reference/ignore-file",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "keyboard shortcuts",
+    "md_url": "https://cursor.com/docs/reference/keyboard-shortcuts.md",
+    "html_url": "https://cursor.com/docs/reference/keyboard-shortcuts",
+    "route": "docs/reference/keyboard-shortcuts",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "permissions",
+    "md_url": "https://cursor.com/docs/reference/permissions.md",
+    "html_url": "https://cursor.com/docs/reference/permissions",
+    "route": "docs/reference/permissions",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "plugins",
+    "md_url": "https://cursor.com/docs/reference/plugins.md",
+    "html_url": "https://cursor.com/docs/reference/plugins",
+    "route": "docs/reference/plugins",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "sandbox",
+    "md_url": "https://cursor.com/docs/reference/sandbox.md",
+    "html_url": "https://cursor.com/docs/reference/sandbox",
+    "route": "docs/reference/sandbox",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "third party hooks",
+    "md_url": "https://cursor.com/docs/reference/third-party-hooks.md",
+    "html_url": "https://cursor.com/docs/reference/third-party-hooks",
+    "route": "docs/reference/third-party-hooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Release Notes",
+    "title": "agents window",
+    "md_url": "https://cursor.com/docs/release-notes/agents-window.md",
+    "html_url": "https://cursor.com/docs/release-notes/agents-window",
+    "route": "docs/release-notes/agents-window",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Release Notes",
+    "title": "bugbot",
+    "md_url": "https://cursor.com/docs/release-notes/bugbot.md",
+    "html_url": "https://cursor.com/docs/release-notes/bugbot",
+    "route": "docs/release-notes/bugbot",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Release Notes",
+    "title": "cloud agents",
+    "md_url": "https://cursor.com/docs/release-notes/cloud-agents.md",
+    "html_url": "https://cursor.com/docs/release-notes/cloud-agents",
+    "route": "docs/release-notes/cloud-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Release Notes",
+    "title": "ide",
+    "md_url": "https://cursor.com/docs/release-notes/ide.md",
+    "html_url": "https://cursor.com/docs/release-notes/ide",
+    "route": "docs/release-notes/ide",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Release Notes",
+    "title": "mobile",
+    "md_url": "https://cursor.com/docs/release-notes/mobile.md",
+    "html_url": "https://cursor.com/docs/release-notes/mobile",
+    "route": "docs/release-notes/mobile",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Release Notes",
+    "title": "origin",
+    "md_url": "https://cursor.com/docs/release-notes/origin.md",
+    "html_url": "https://cursor.com/docs/release-notes/origin",
+    "route": "docs/release-notes/origin",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Release Notes",
+    "title": "origin cli",
+    "md_url": "https://cursor.com/docs/release-notes/origin-cli.md",
+    "html_url": "https://cursor.com/docs/release-notes/origin-cli",
+    "route": "docs/release-notes/origin-cli",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Release Notes",
+    "title": "web",
+    "md_url": "https://cursor.com/docs/release-notes/web.md",
+    "html_url": "https://cursor.com/docs/release-notes/web",
+    "route": "docs/release-notes/web",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "app store subscription",
+    "md_url": "https://cursor.com/help/account-and-billing/app-store-subscription.md",
+    "html_url": "https://cursor.com/help/account-and-billing/app-store-subscription",
+    "route": "help/account-and-billing/app-store-subscription",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "billing",
+    "md_url": "https://cursor.com/help/account-and-billing/billing.md",
+    "html_url": "https://cursor.com/help/account-and-billing/billing",
+    "route": "help/account-and-billing/billing",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "cancel",
+    "md_url": "https://cursor.com/help/account-and-billing/cancel.md",
+    "html_url": "https://cursor.com/help/account-and-billing/cancel",
+    "route": "help/account-and-billing/cancel",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "change email",
+    "md_url": "https://cursor.com/help/account-and-billing/change-email.md",
+    "html_url": "https://cursor.com/help/account-and-billing/change-email",
+    "route": "help/account-and-billing/change-email",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "cursor start",
+    "md_url": "https://cursor.com/help/account-and-billing/cursor-start.md",
+    "html_url": "https://cursor.com/help/account-and-billing/cursor-start",
+    "route": "help/account-and-billing/cursor-start",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "delete account",
+    "md_url": "https://cursor.com/help/account-and-billing/delete-account.md",
+    "html_url": "https://cursor.com/help/account-and-billing/delete-account",
+    "route": "help/account-and-billing/delete-account",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "enterprise",
+    "md_url": "https://cursor.com/help/account-and-billing/enterprise.md",
+    "html_url": "https://cursor.com/help/account-and-billing/enterprise",
+    "route": "help/account-and-billing/enterprise",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "google play subscription",
+    "md_url": "https://cursor.com/help/account-and-billing/google-play-subscription.md",
+    "html_url": "https://cursor.com/help/account-and-billing/google-play-subscription",
+    "route": "help/account-and-billing/google-play-subscription",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "invoices",
+    "md_url": "https://cursor.com/help/account-and-billing/invoices.md",
+    "html_url": "https://cursor.com/help/account-and-billing/invoices",
+    "route": "help/account-and-billing/invoices",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "on demand usage for mobile subscriptions",
+    "md_url": "https://cursor.com/help/account-and-billing/on-demand-usage-for-mobile-subscriptions.md",
+    "html_url": "https://cursor.com/help/account-and-billing/on-demand-usage-for-mobile-subscriptions",
+    "route": "help/account-and-billing/on-demand-usage-for-mobile-subscriptions",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "overages",
+    "md_url": "https://cursor.com/help/account-and-billing/overages.md",
+    "html_url": "https://cursor.com/help/account-and-billing/overages",
+    "route": "help/account-and-billing/overages",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "payment issues",
+    "md_url": "https://cursor.com/help/account-and-billing/payment-issues.md",
+    "html_url": "https://cursor.com/help/account-and-billing/payment-issues",
+    "route": "help/account-and-billing/payment-issues",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "payment not applied",
+    "md_url": "https://cursor.com/help/account-and-billing/payment-not-applied.md",
+    "html_url": "https://cursor.com/help/account-and-billing/payment-not-applied",
+    "route": "help/account-and-billing/payment-not-applied",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "pricing",
+    "md_url": "https://cursor.com/help/account-and-billing/pricing.md",
+    "html_url": "https://cursor.com/help/account-and-billing/pricing",
+    "route": "help/account-and-billing/pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "profiles",
+    "md_url": "https://cursor.com/help/account-and-billing/profiles.md",
+    "html_url": "https://cursor.com/help/account-and-billing/profiles",
+    "route": "help/account-and-billing/profiles",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "referral program",
+    "md_url": "https://cursor.com/help/account-and-billing/referral-program.md",
+    "html_url": "https://cursor.com/help/account-and-billing/referral-program",
+    "route": "help/account-and-billing/referral-program",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "refunds",
+    "md_url": "https://cursor.com/help/account-and-billing/refunds.md",
+    "html_url": "https://cursor.com/help/account-and-billing/refunds",
+    "route": "help/account-and-billing/refunds",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "spend alerts",
+    "md_url": "https://cursor.com/help/account-and-billing/spend-alerts.md",
+    "html_url": "https://cursor.com/help/account-and-billing/spend-alerts",
+    "route": "help/account-and-billing/spend-alerts",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "spend limits",
+    "md_url": "https://cursor.com/help/account-and-billing/spend-limits.md",
+    "html_url": "https://cursor.com/help/account-and-billing/spend-limits",
+    "route": "help/account-and-billing/spend-limits",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "student discount",
+    "md_url": "https://cursor.com/help/account-and-billing/student-discount.md",
+    "html_url": "https://cursor.com/help/account-and-billing/student-discount",
+    "route": "help/account-and-billing/student-discount",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "teams management",
+    "md_url": "https://cursor.com/help/account-and-billing/teams-management.md",
+    "html_url": "https://cursor.com/help/account-and-billing/teams-management",
+    "route": "help/account-and-billing/teams-management",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "teams setup",
+    "md_url": "https://cursor.com/help/account-and-billing/teams-setup.md",
+    "html_url": "https://cursor.com/help/account-and-billing/teams-setup",
+    "route": "help/account-and-billing/teams-setup",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "agent",
+    "md_url": "https://cursor.com/help/ai-features/agent.md",
+    "html_url": "https://cursor.com/help/ai-features/agent",
+    "route": "help/ai-features/agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "agentic coding",
+    "md_url": "https://cursor.com/help/ai-features/agentic-coding.md",
+    "html_url": "https://cursor.com/help/ai-features/agentic-coding",
+    "route": "help/ai-features/agentic-coding",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "ai pair programming",
+    "md_url": "https://cursor.com/help/ai-features/ai-pair-programming.md",
+    "html_url": "https://cursor.com/help/ai-features/ai-pair-programming",
+    "route": "help/ai-features/ai-pair-programming",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "ask mode",
+    "md_url": "https://cursor.com/help/ai-features/ask-mode.md",
+    "html_url": "https://cursor.com/help/ai-features/ask-mode",
+    "route": "help/ai-features/ask-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "automations",
+    "md_url": "https://cursor.com/help/ai-features/automations.md",
+    "html_url": "https://cursor.com/help/ai-features/automations",
+    "route": "help/ai-features/automations",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "background agents",
+    "md_url": "https://cursor.com/help/ai-features/background-agents.md",
+    "html_url": "https://cursor.com/help/ai-features/background-agents",
+    "route": "help/ai-features/background-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "browser",
+    "md_url": "https://cursor.com/help/ai-features/browser.md",
+    "html_url": "https://cursor.com/help/ai-features/browser",
+    "route": "help/ai-features/browser",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "bugbot",
+    "md_url": "https://cursor.com/help/ai-features/bugbot.md",
+    "html_url": "https://cursor.com/help/ai-features/bugbot",
+    "route": "help/ai-features/bugbot",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "cloud agents",
+    "md_url": "https://cursor.com/help/ai-features/cloud-agents.md",
+    "html_url": "https://cursor.com/help/ai-features/cloud-agents",
+    "route": "help/ai-features/cloud-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "coding agents",
+    "md_url": "https://cursor.com/help/ai-features/coding-agents.md",
+    "html_url": "https://cursor.com/help/ai-features/coding-agents",
+    "route": "help/ai-features/coding-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "conversation search",
+    "md_url": "https://cursor.com/help/ai-features/conversation-search.md",
+    "html_url": "https://cursor.com/help/ai-features/conversation-search",
+    "route": "help/ai-features/conversation-search",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "debug mode",
+    "md_url": "https://cursor.com/help/ai-features/debug-mode.md",
+    "html_url": "https://cursor.com/help/ai-features/debug-mode",
+    "route": "help/ai-features/debug-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "inline edit",
+    "md_url": "https://cursor.com/help/ai-features/inline-edit.md",
+    "html_url": "https://cursor.com/help/ai-features/inline-edit",
+    "route": "help/ai-features/inline-edit",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "max mode",
+    "md_url": "https://cursor.com/help/ai-features/max-mode.md",
+    "html_url": "https://cursor.com/help/ai-features/max-mode",
+    "route": "help/ai-features/max-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "mobile app",
+    "md_url": "https://cursor.com/help/ai-features/mobile-app.md",
+    "html_url": "https://cursor.com/help/ai-features/mobile-app",
+    "route": "help/ai-features/mobile-app",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "multi agent",
+    "md_url": "https://cursor.com/help/ai-features/multi-agent.md",
+    "html_url": "https://cursor.com/help/ai-features/multi-agent",
+    "route": "help/ai-features/multi-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "plan mode",
+    "md_url": "https://cursor.com/help/ai-features/plan-mode.md",
+    "html_url": "https://cursor.com/help/ai-features/plan-mode",
+    "route": "help/ai-features/plan-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "self hosted machines",
+    "md_url": "https://cursor.com/help/ai-features/self-hosted-machines.md",
+    "html_url": "https://cursor.com/help/ai-features/self-hosted-machines",
+    "route": "help/ai-features/self-hosted-machines",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "shared transcripts",
+    "md_url": "https://cursor.com/help/ai-features/shared-transcripts.md",
+    "html_url": "https://cursor.com/help/ai-features/shared-transcripts",
+    "route": "help/ai-features/shared-transcripts",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "side chats",
+    "md_url": "https://cursor.com/help/ai-features/side-chats.md",
+    "html_url": "https://cursor.com/help/ai-features/side-chats",
+    "route": "help/ai-features/side-chats",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "tab",
+    "md_url": "https://cursor.com/help/ai-features/tab.md",
+    "html_url": "https://cursor.com/help/ai-features/tab",
+    "route": "help/ai-features/tab",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "terminal",
+    "md_url": "https://cursor.com/help/ai-features/terminal.md",
+    "html_url": "https://cursor.com/help/ai-features/terminal",
+    "route": "help/ai-features/terminal",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "vibe coding",
+    "md_url": "https://cursor.com/help/ai-features/vibe-coding.md",
+    "html_url": "https://cursor.com/help/ai-features/vibe-coding",
+    "route": "help/ai-features/vibe-coding",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "context",
+    "md_url": "https://cursor.com/help/customization/context.md",
+    "html_url": "https://cursor.com/help/customization/context",
+    "route": "help/customization/context",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "extensions",
+    "md_url": "https://cursor.com/help/customization/extensions.md",
+    "html_url": "https://cursor.com/help/customization/extensions",
+    "route": "help/customization/extensions",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "ignore files",
+    "md_url": "https://cursor.com/help/customization/ignore-files.md",
+    "html_url": "https://cursor.com/help/customization/ignore-files",
+    "route": "help/customization/ignore-files",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "keyboard shortcuts",
+    "md_url": "https://cursor.com/help/customization/keyboard-shortcuts.md",
+    "html_url": "https://cursor.com/help/customization/keyboard-shortcuts",
+    "route": "help/customization/keyboard-shortcuts",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "mcp",
+    "md_url": "https://cursor.com/help/customization/mcp.md",
+    "html_url": "https://cursor.com/help/customization/mcp",
+    "route": "help/customization/mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "plugins",
+    "md_url": "https://cursor.com/help/customization/plugins.md",
+    "html_url": "https://cursor.com/help/customization/plugins",
+    "route": "help/customization/plugins",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "rules",
+    "md_url": "https://cursor.com/help/customization/rules.md",
+    "html_url": "https://cursor.com/help/customization/rules",
+    "route": "help/customization/rules",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "skills",
+    "md_url": "https://cursor.com/help/customization/skills.md",
+    "html_url": "https://cursor.com/help/customization/skills",
+    "route": "help/customization/skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "themes",
+    "md_url": "https://cursor.com/help/customization/themes.md",
+    "html_url": "https://cursor.com/help/customization/themes",
+    "route": "help/customization/themes",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "build ai coding agent",
+    "md_url": "https://cursor.com/help/getting-started/build-ai-coding-agent.md",
+    "html_url": "https://cursor.com/help/getting-started/build-ai-coding-agent",
+    "route": "help/getting-started/build-ai-coding-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "first project",
+    "md_url": "https://cursor.com/help/getting-started/first-project.md",
+    "html_url": "https://cursor.com/help/getting-started/first-project",
+    "route": "help/getting-started/first-project",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "install",
+    "md_url": "https://cursor.com/help/getting-started/install.md",
+    "html_url": "https://cursor.com/help/getting-started/install",
+    "route": "help/getting-started/install",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "migrate jetbrains",
+    "md_url": "https://cursor.com/help/getting-started/migrate-jetbrains.md",
+    "html_url": "https://cursor.com/help/getting-started/migrate-jetbrains",
+    "route": "help/getting-started/migrate-jetbrains",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "migrate vscode",
+    "md_url": "https://cursor.com/help/getting-started/migrate-vscode.md",
+    "html_url": "https://cursor.com/help/getting-started/migrate-vscode",
+    "route": "help/getting-started/migrate-vscode",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "computer recovery",
+    "md_url": "https://cursor.com/help/grok-bot/computer-recovery.md",
+    "html_url": "https://cursor.com/help/grok-bot/computer-recovery",
+    "route": "help/grok-bot/computer-recovery",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "connect plugins",
+    "md_url": "https://cursor.com/help/grok-bot/connect-plugins.md",
+    "html_url": "https://cursor.com/help/grok-bot/connect-plugins",
+    "route": "help/grok-bot/connect-plugins",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "delete account",
+    "md_url": "https://cursor.com/help/grok-bot/delete-account.md",
+    "html_url": "https://cursor.com/help/grok-bot/delete-account",
+    "route": "help/grok-bot/delete-account",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "edit bot",
+    "md_url": "https://cursor.com/help/grok-bot/edit-bot.md",
+    "html_url": "https://cursor.com/help/grok-bot/edit-bot",
+    "route": "help/grok-bot/edit-bot",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "faqs",
+    "md_url": "https://cursor.com/help/grok-bot/faqs.md",
+    "html_url": "https://cursor.com/help/grok-bot/faqs",
+    "route": "help/grok-bot/faqs",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "get help",
+    "md_url": "https://cursor.com/help/grok-bot/get-help.md",
+    "html_url": "https://cursor.com/help/grok-bot/get-help",
+    "route": "help/grok-bot/get-help",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "group chats",
+    "md_url": "https://cursor.com/help/grok-bot/group-chats.md",
+    "html_url": "https://cursor.com/help/grok-bot/group-chats",
+    "route": "help/grok-bot/group-chats",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "how to",
+    "md_url": "https://cursor.com/help/grok-bot/how-to.md",
+    "html_url": "https://cursor.com/help/grok-bot/how-to",
+    "route": "help/grok-bot/how-to",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "mobile",
+    "md_url": "https://cursor.com/help/grok-bot/mobile.md",
+    "html_url": "https://cursor.com/help/grok-bot/mobile",
+    "route": "help/grok-bot/mobile",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "mobile purchase",
+    "md_url": "https://cursor.com/help/grok-bot/mobile-purchase.md",
+    "html_url": "https://cursor.com/help/grok-bot/mobile-purchase",
+    "route": "help/grok-bot/mobile-purchase",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "models",
+    "md_url": "https://cursor.com/help/grok-bot/models.md",
+    "html_url": "https://cursor.com/help/grok-bot/models",
+    "route": "help/grok-bot/models",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "onboarding",
+    "md_url": "https://cursor.com/help/grok-bot/onboarding.md",
+    "html_url": "https://cursor.com/help/grok-bot/onboarding",
+    "route": "help/grok-bot/onboarding",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "plans",
+    "md_url": "https://cursor.com/help/grok-bot/plans.md",
+    "html_url": "https://cursor.com/help/grok-bot/plans",
+    "route": "help/grok-bot/plans",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "routines",
+    "md_url": "https://cursor.com/help/grok-bot/routines.md",
+    "html_url": "https://cursor.com/help/grok-bot/routines",
+    "route": "help/grok-bot/routines",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "secrets",
+    "md_url": "https://cursor.com/help/grok-bot/secrets.md",
+    "html_url": "https://cursor.com/help/grok-bot/secrets",
+    "route": "help/grok-bot/secrets",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "sign in",
+    "md_url": "https://cursor.com/help/grok-bot/sign-in.md",
+    "html_url": "https://cursor.com/help/grok-bot/sign-in",
+    "route": "help/grok-bot/sign-in",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "supergrok",
+    "md_url": "https://cursor.com/help/grok-bot/supergrok.md",
+    "html_url": "https://cursor.com/help/grok-bot/supergrok",
+    "route": "help/grok-bot/supergrok",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "team bots",
+    "md_url": "https://cursor.com/help/grok-bot/team-bots.md",
+    "html_url": "https://cursor.com/help/grok-bot/team-bots",
+    "route": "help/grok-bot/team-bots",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "voice chat",
+    "md_url": "https://cursor.com/help/grok-bot/voice-chat.md",
+    "html_url": "https://cursor.com/help/grok-bot/voice-chat",
+    "route": "help/grok-bot/voice-chat",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "cli",
+    "md_url": "https://cursor.com/help/integrations/cli.md",
+    "html_url": "https://cursor.com/help/integrations/cli",
+    "route": "help/integrations/cli",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "git",
+    "md_url": "https://cursor.com/help/integrations/git.md",
+    "html_url": "https://cursor.com/help/integrations/git",
+    "route": "help/integrations/git",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "github gitlab",
+    "md_url": "https://cursor.com/help/integrations/github-gitlab.md",
+    "html_url": "https://cursor.com/help/integrations/github-gitlab",
+    "route": "help/integrations/github-gitlab",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "third party",
+    "md_url": "https://cursor.com/help/integrations/third-party.md",
+    "html_url": "https://cursor.com/help/integrations/third-party",
+    "route": "help/integrations/third-party",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "api keys",
+    "md_url": "https://cursor.com/help/models-and-usage/api-keys.md",
+    "html_url": "https://cursor.com/help/models-and-usage/api-keys",
+    "route": "help/models-and-usage/api-keys",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "available models",
+    "md_url": "https://cursor.com/help/models-and-usage/available-models.md",
+    "html_url": "https://cursor.com/help/models-and-usage/available-models",
+    "route": "help/models-and-usage/available-models",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "cursor router",
+    "md_url": "https://cursor.com/help/models-and-usage/cursor-router.md",
+    "html_url": "https://cursor.com/help/models-and-usage/cursor-router",
+    "route": "help/models-and-usage/cursor-router",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "grok 4 5",
+    "md_url": "https://cursor.com/help/models-and-usage/grok-4-5.md",
+    "html_url": "https://cursor.com/help/models-and-usage/grok-4-5",
+    "route": "help/models-and-usage/grok-4-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "grok 4 6",
+    "md_url": "https://cursor.com/help/models-and-usage/grok-4-6.md",
+    "html_url": "https://cursor.com/help/models-and-usage/grok-4-6",
+    "route": "help/models-and-usage/grok-4-6",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "grok 4 7",
+    "md_url": "https://cursor.com/help/models-and-usage/grok-4-7.md",
+    "html_url": "https://cursor.com/help/models-and-usage/grok-4-7",
+    "route": "help/models-and-usage/grok-4-7",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "token rate",
+    "md_url": "https://cursor.com/help/models-and-usage/token-rate.md",
+    "html_url": "https://cursor.com/help/models-and-usage/token-rate",
+    "route": "help/models-and-usage/token-rate",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "usage limits",
+    "md_url": "https://cursor.com/help/models-and-usage/usage-limits.md",
+    "html_url": "https://cursor.com/help/models-and-usage/usage-limits",
+    "route": "help/models-and-usage/usage-limits",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "account compromised",
+    "md_url": "https://cursor.com/help/security-and-privacy/account-compromised.md",
+    "html_url": "https://cursor.com/help/security-and-privacy/account-compromised",
+    "route": "help/security-and-privacy/account-compromised",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "compliance",
+    "md_url": "https://cursor.com/help/security-and-privacy/compliance.md",
+    "html_url": "https://cursor.com/help/security-and-privacy/compliance",
+    "route": "help/security-and-privacy/compliance",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "marketplace security",
+    "md_url": "https://cursor.com/help/security-and-privacy/marketplace-security.md",
+    "html_url": "https://cursor.com/help/security-and-privacy/marketplace-security",
+    "route": "help/security-and-privacy/marketplace-security",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "privacy",
+    "md_url": "https://cursor.com/help/security-and-privacy/privacy.md",
+    "html_url": "https://cursor.com/help/security-and-privacy/privacy",
+    "route": "help/security-and-privacy/privacy",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "regions",
+    "md_url": "https://cursor.com/help/security-and-privacy/regions.md",
+    "html_url": "https://cursor.com/help/security-and-privacy/regions",
+    "route": "help/security-and-privacy/regions",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "sso",
+    "md_url": "https://cursor.com/help/security-and-privacy/sso.md",
+    "html_url": "https://cursor.com/help/security-and-privacy/sso",
+    "route": "help/security-and-privacy/sso",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "agent issues",
+    "md_url": "https://cursor.com/help/troubleshooting/agent-issues.md",
+    "html_url": "https://cursor.com/help/troubleshooting/agent-issues",
+    "route": "help/troubleshooting/agent-issues",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "extensions",
+    "md_url": "https://cursor.com/help/troubleshooting/extensions.md",
+    "html_url": "https://cursor.com/help/troubleshooting/extensions",
+    "route": "help/troubleshooting/extensions",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "install issues",
+    "md_url": "https://cursor.com/help/troubleshooting/install-issues.md",
+    "html_url": "https://cursor.com/help/troubleshooting/install-issues",
+    "route": "help/troubleshooting/install-issues",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "network",
+    "md_url": "https://cursor.com/help/troubleshooting/network.md",
+    "html_url": "https://cursor.com/help/troubleshooting/network",
+    "route": "help/troubleshooting/network",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "performance",
+    "md_url": "https://cursor.com/help/troubleshooting/performance.md",
+    "html_url": "https://cursor.com/help/troubleshooting/performance",
+    "route": "help/troubleshooting/performance",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "reporting bugs",
+    "md_url": "https://cursor.com/help/troubleshooting/reporting-bugs.md",
+    "html_url": "https://cursor.com/help/troubleshooting/reporting-bugs",
+    "route": "help/troubleshooting/reporting-bugs",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "sign in domains",
+    "md_url": "https://cursor.com/help/troubleshooting/sign-in-domains.md",
+    "html_url": "https://cursor.com/help/troubleshooting/sign-in-domains",
+    "route": "help/troubleshooting/sign-in-domains",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "tab issues",
+    "md_url": "https://cursor.com/help/troubleshooting/tab-issues.md",
+    "html_url": "https://cursor.com/help/troubleshooting/tab-issues",
+    "route": "help/troubleshooting/tab-issues",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "agents",
+    "md_url": "https://cursor.com/learn/agents.md",
+    "html_url": "https://cursor.com/learn/agents",
+    "route": "learn/agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "context",
+    "md_url": "https://cursor.com/learn/context.md",
+    "html_url": "https://cursor.com/learn/context",
+    "route": "learn/context",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "creating features",
+    "md_url": "https://cursor.com/learn/creating-features.md",
+    "html_url": "https://cursor.com/learn/creating-features",
+    "route": "learn/creating-features",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "customizing agents",
+    "md_url": "https://cursor.com/learn/customizing-agents.md",
+    "html_url": "https://cursor.com/learn/customizing-agents",
+    "route": "learn/customizing-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "finding fixing bugs",
+    "md_url": "https://cursor.com/learn/finding-fixing-bugs.md",
+    "html_url": "https://cursor.com/learn/finding-fixing-bugs",
+    "route": "learn/finding-fixing-bugs",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "hallucination limitations",
+    "md_url": "https://cursor.com/learn/hallucination-limitations.md",
+    "html_url": "https://cursor.com/learn/hallucination-limitations",
+    "route": "learn/hallucination-limitations",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "how ai models work",
+    "md_url": "https://cursor.com/learn/how-ai-models-work.md",
+    "html_url": "https://cursor.com/learn/how-ai-models-work",
+    "route": "learn/how-ai-models-work",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "putting it together",
+    "md_url": "https://cursor.com/learn/putting-it-together.md",
+    "html_url": "https://cursor.com/learn/putting-it-together",
+    "route": "learn/putting-it-together",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "reviewing testing",
+    "md_url": "https://cursor.com/learn/reviewing-testing.md",
+    "html_url": "https://cursor.com/learn/reviewing-testing",
+    "route": "learn/reviewing-testing",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "tokens pricing",
+    "md_url": "https://cursor.com/learn/tokens-pricing.md",
+    "html_url": "https://cursor.com/learn/tokens-pricing",
+    "route": "learn/tokens-pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "tool calling",
+    "md_url": "https://cursor.com/learn/tool-calling.md",
+    "html_url": "https://cursor.com/learn/tool-calling",
+    "route": "learn/tool-calling",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "understanding your codebase",
+    "md_url": "https://cursor.com/learn/understanding-your-codebase.md",
+    "html_url": "https://cursor.com/learn/understanding-your-codebase",
+    "route": "learn/understanding-your-codebase",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Learn",
+    "title": "working with agents",
+    "md_url": "https://cursor.com/learn/working-with-agents.md",
+    "html_url": "https://cursor.com/learn/working-with-agents",
+    "route": "learn/working-with-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Guides",
+    "title": "ai code review",
+    "md_url": "https://cursor.com/guides/ai-code-review.md",
+    "html_url": "https://cursor.com/guides/ai-code-review",
+    "route": "guides/ai-code-review",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Guides",
+    "title": "coding agent mcp",
+    "md_url": "https://cursor.com/guides/coding-agent-mcp.md",
+    "html_url": "https://cursor.com/guides/coding-agent-mcp",
+    "route": "guides/coding-agent-mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Guides",
+    "title": "model routing",
+    "md_url": "https://cursor.com/guides/model-routing.md",
+    "html_url": "https://cursor.com/guides/model-routing",
+    "route": "guides/model-routing",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Guides",
+    "title": "return on intelligence",
+    "md_url": "https://cursor.com/guides/return-on-intelligence.md",
+    "html_url": "https://cursor.com/guides/return-on-intelligence",
+    "route": "guides/return-on-intelligence",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "add test coverage",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/add-test-coverage.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/add-test-coverage",
+    "route": "workflows/autonomous-agents/add-test-coverage",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "assign pr reviewers",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/assign-pr-reviewers.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/assign-pr-reviewers",
+    "route": "workflows/autonomous-agents/assign-pr-reviewers",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "autofix pr review comments",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/autofix-pr-review-comments.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/autofix-pr-review-comments",
+    "route": "workflows/autonomous-agents/autofix-pr-review-comments",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "ci autofix",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/ci-autofix.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/ci-autofix",
+    "route": "workflows/autonomous-agents/ci-autofix",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "daily digest",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/daily-digest.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/daily-digest",
+    "route": "workflows/autonomous-agents/daily-digest",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "find vulnerabilities",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/find-vulnerabilities.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/find-vulnerabilities",
+    "route": "workflows/autonomous-agents/find-vulnerabilities",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "fix slack bugs",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/fix-slack-bugs.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/fix-slack-bugs",
+    "route": "workflows/autonomous-agents/fix-slack-bugs",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "generate docs",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/generate-docs.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/generate-docs",
+    "route": "workflows/autonomous-agents/generate-docs",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "investigate datadog errors",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/investigate-datadog-errors.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/investigate-datadog-errors",
+    "route": "workflows/autonomous-agents/investigate-datadog-errors",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "investigate sentry issues",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/investigate-sentry-issues.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/investigate-sentry-issues",
+    "route": "workflows/autonomous-agents/investigate-sentry-issues",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "linear issue triage",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/linear-issue-triage.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/linear-issue-triage",
+    "route": "workflows/autonomous-agents/linear-issue-triage",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "pagerduty incident investigation",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/pagerduty-incident-investigation.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/pagerduty-incident-investigation",
+    "route": "workflows/autonomous-agents/pagerduty-incident-investigation",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "remediate dependency vulnerabilities",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/remediate-dependency-vulnerabilities.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/remediate-dependency-vulnerabilities",
+    "route": "workflows/autonomous-agents/remediate-dependency-vulnerabilities",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "scan codebase vulnerabilities",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/scan-codebase-vulnerabilities.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/scan-codebase-vulnerabilities",
+    "route": "workflows/autonomous-agents/scan-codebase-vulnerabilities",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Workflows",
+    "title": "triage github workflow failures",
+    "md_url": "https://cursor.com/workflows/autonomous-agents/triage-github-workflow-failures.md",
+    "html_url": "https://cursor.com/workflows/autonomous-agents/triage-github-workflow-failures",
+    "route": "workflows/autonomous-agents/triage-github-workflow-failures",
+    "kind": "doc"
+  },
+  {
     "group": "Blog",
     "title": "joining spacex",
     "md_url": "https://cursor.com/blog/joining-spacex.md",

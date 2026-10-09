@@ -71,3 +71,6 @@ My Computer is not a standalone tool; it integrates deeply with your existing Ma
     Manus can use any tool that is accessible from your computer's command line (CLI). This includes programming languages (Python, Node.js), compilers (Swift, Xcode), and any other CLI-based applications you have installed.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

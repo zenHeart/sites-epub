@@ -61,3 +61,6 @@ Getting your mobile app ready for testers is a straightforward process within Ma
     After Manus uploads your build, you will receive an email from TestFlight. You can then log in to App Store Connect to manage your tester lists and send out invitations.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -18,10 +18,10 @@ Manus uses two distinct systems for billing:
 Every Manus account includes free monthly allowances to cover the initial costs of hosting your website. These allowances are designed to be sufficient for most projects until they experience significant user traffic.
 
 | Resource Type | Free Monthly Allowance |
-| :------------ | :--------------------- |
-| Cloud         | \$10                   |
-| AI            | \$1                    |
-| API           | \$1                    |
+| :- | :- |
+| Cloud | \$10 |
+| AI | \$1 |
+| API | \$1 |
 
 These allowances reset at the beginning of each billing cycle.
 
@@ -29,12 +29,12 @@ These allowances reset at the beginning of each billing cycle.
 
 The table below provides estimated monthly costs for different types of websites based on typical traffic and workload patterns.
 
-| App Type                               | Traffic & Workload (typical month)                                                                       | Cloud   | AI     | Integrations (APIs) | Estimated Total      |
-| :------------------------------------- | :------------------------------------------------------------------------------------------------------- | :------ | :----- | :------------------ | :------------------- |
-| Creator landing page                   | 1k–5k visits/mo, mostly pages + images, occasional form submissions, AI used sometimes                   | \~\$6   | \~\$1  | \~\$0               | Subscription only    |
-| Marketing site + lead capture          | 10k–50k visits/mo, regular updates, lead capture + email sends, light AI assistant/FAQ                   | \~\$25  | \~\$10 | \~\$0               | Subscription + \$24  |
-| Content + search (docs/knowledge base) | 50k–200k visits/mo, lots of reads, site search, AI Q\&A over docs, social media APIs                     | \~\$90  | \~\$30 | \~\$20              | Subscription + \$128 |
-| E-commerce / marketplace               | 100k–300k visits/mo, media-heavy catalog, search + checkout, AI support, Google Maps embed for locations | \~\$150 | \~\$80 | \~\$30              | Subscription + \$248 |
+| App Type | Traffic & Workload (typical month) | Cloud | AI | Integrations (APIs) | Estimated Total |
+| :- | :- | :- | :- | :- | :- |
+| Creator landing page | 1k–5k visits/mo, mostly pages + images, occasional form submissions, AI used sometimes | \~\$6 | \~\$1 | \~\$0 | Subscription only |
+| Marketing site + lead capture | 10k–50k visits/mo, regular updates, lead capture + email sends, light AI assistant/FAQ | \~\$25 | \~\$10 | \~\$0 | Subscription + \$24 |
+| Content + search (docs/knowledge base) | 50k–200k visits/mo, lots of reads, site search, AI Q\&A over docs, social media APIs | \~\$90 | \~\$30 | \~\$20 | Subscription + \$128 |
+| E-commerce / marketplace | 100k–300k visits/mo, media-heavy catalog, search + checkout, AI support, Google Maps embed for locations | \~\$150 | \~\$80 | \~\$30 | Subscription + \$248 |
 
 ## Managing Your Billing
 
@@ -79,3 +79,6 @@ From this dashboard, you can:
     If you  encounter an error message related to usage or billing, please visit the [Manus Help Center](https://help.manus.im).
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

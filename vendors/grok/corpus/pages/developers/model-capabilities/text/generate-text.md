@@ -3,7 +3,7 @@
 # Generate Text
 
 The Responses API is the preferred way of interacting with our models via API. It allows optional **stateful interactions** with our models,
-where **previous input prompts, reasoning content, and model responses are saved and stored on xAI's servers**. You can continue the interaction by appending new
+where **previous input prompts, reasoning content, and model responses are saved and stored on SpaceXAI's servers**. You can continue the interaction by appending new
 prompt messages instead of resending the full conversation. This behavior is on by default. If you would like to store your request/response locally, please see [Disable storing previous request/response on server](#disable-storing-previous-requestresponse-on-server).
 
 **The responses will be stored for 30 days, after which they will be removed. This means you can use the response ID to retrieve or continue a conversation within 30 days of sending the request.**
@@ -23,27 +23,20 @@ export XAI_API_KEY="your_api_key"
 
 Start by creating a response:
 
-```python customLanguage="pythonXAI"
-import os
-from xai_sdk import Client
-from xai_sdk.chat import user, system
+```javascript customLanguage="javascriptAISDK"
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
 
-client = Client(
-    api_key=os.getenv("XAI_API_KEY"),
-    management_api_key=os.getenv("XAI_MANAGEMENT_API_KEY"),
-    timeout=3600,
-)
+const { text, response } = await generateText({
+  model: xai.responses('grok-4.7'),
+  system: "You are Grok, an AI agent built to answer helpful questions.",
+  prompt: "How big is the universe?",
+});
 
-chat = client.chat.create(model="grok-4.6")
-chat.append(system("You are Grok, an AI agent built to answer helpful questions."))
-chat.append(user("How big is the universe?"))
-response = chat.sample()
+console.log(text);
 
-print(response)
-
-# The response ID that can be used to continue the conversation later
-
-print(response.id)
+// The response ID can be used to continue the conversation
+console.log(response.id);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -58,7 +51,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {"role": "system", "content": "You are Grok, an AI agent built to answer helpful questions."},
         {"role": "user", "content": "How big is the universe?"},
@@ -82,7 +75,7 @@ const client = new OpenAI({
 });
 
 const response = await client.responses.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     input: [
         {
             role: "system",
@@ -101,29 +94,13 @@ console.log(response);
 console.log(response.id);
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
-const { text, response } = await generateText({
-  model: xai.responses('grok-4.6'),
-  system: "You are Grok, an AI agent built to answer helpful questions.",
-  prompt: "How big is the universe?",
-});
-
-console.log(text);
-
-// The response ID can be used to continue the conversation
-console.log(response.id);
-```
-
 ```bash
 curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -m 3600 \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "input": [
         {
             "role": "system",
@@ -137,10 +114,6 @@ curl https://api.x.ai/v1/responses \
 }'
 ```
 
-### Disable storing previous request/response on server
-
-If you do not want to store your previous request/response on the server, you can set `store: false` on the request.
-
 ```python customLanguage="pythonXAI"
 import os
 from xai_sdk import Client
@@ -152,13 +125,21 @@ client = Client(
     timeout=3600,
 )
 
-chat = client.chat.create(model="grok-4.6", store_messages=False)
+chat = client.chat.create(model="grok-4.7")
 chat.append(system("You are Grok, an AI agent built to answer helpful questions."))
 chat.append(user("How big is the universe?"))
 response = chat.sample()
 
 print(response)
+
+# The response ID that can be used to continue the conversation later
+
+print(response.id)
 ```
+
+### Disable storing previous request/response on server
+
+If you do not want to store your previous request/response on the server, you can set `store: false` on the request.
 
 ```python customLanguage="pythonOpenAISDK"
 import os
@@ -172,7 +153,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {"role": "system", "content": "You are Grok, an AI agent built to answer helpful questions."},
         {"role": "user", "content": "How big is the universe?"},
@@ -193,7 +174,7 @@ const client = new OpenAI({
 });
 
 const response = await client.responses.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     input: [
         {
             role: "system",
@@ -216,7 +197,7 @@ curl https://api.x.ai/v1/responses \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -m 3600 \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "input": [
         {
             "role": "system",
@@ -231,6 +212,25 @@ curl https://api.x.ai/v1/responses \
 }'
 ```
 
+```python customLanguage="pythonXAI"
+import os
+from xai_sdk import Client
+from xai_sdk.chat import user, system
+
+client = Client(
+    api_key=os.getenv("XAI_API_KEY"),
+    management_api_key=os.getenv("XAI_MANAGEMENT_API_KEY"),
+    timeout=3600,
+)
+
+chat = client.chat.create(model="grok-4.7", store_messages=False)
+chat.append(system("You are Grok, an AI agent built to answer helpful questions."))
+chat.append(user("How big is the universe?"))
+response = chat.sample()
+
+print(response)
+```
+
 ### Returning encrypted thinking content
 
 If you want to return the encrypted thinking traces, you need to specify `use_encrypted_content=True` in xAI SDK or gRPC request message, or `include: ["reasoning.encrypted_content"]` in the request body.
@@ -239,16 +239,31 @@ If you want to return the encrypted thinking traces, you need to specify `use_en
 >
 > Make sure to use a reasoning model when working with encrypted thinking content.
 
+> [!NOTE]
+>
+> `grok-4.7` always returns `reasoning.encrypted_content` on the Responses API, whether or not `include` lists it. See [Encrypted reasoning content](/developers/model-capabilities/text/reasoning#encrypted-reasoning-content).
+
 Modify the steps to create a chat client (xAI SDK) or change the request body as following:
 
-```python customLanguage="pythonXAI"
-chat = client.chat.create(model="grok-4.6",
-        use_encrypted_content=True)
+```javascript customLanguage="javascriptAISDK"
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
+
+// Encrypted reasoning content is included automatically by the AI SDK
+// as long as `store: false` is not set. No extra configuration is needed.
+const { text, reasoning } = await generateText({
+  model: xai.responses('grok-4.7'),
+  system: "You are Grok, an AI agent built to answer helpful questions.",
+  prompt: "How big is the universe?",
+});
+
+console.log(text);
+console.log(reasoning); // Contains encrypted reasoning content
 ```
 
 ```python customLanguage="pythonOpenAISDK"
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {"role": "system", "content": "You are Grok, an AI agent built to answer helpful questions."},
         {"role": "user", "content": "How big is the universe?"},
@@ -259,7 +274,7 @@ response = client.responses.create(
 
 ```javascript customLanguage="javascriptWithoutSDK"
 const response = await client.responses.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     input: [
         {"role": "system", "content": "You are Grok, an AI agent built to answer helpful questions."},
         {"role": "user", "content": "How big is the universe?"},
@@ -269,29 +284,13 @@ const response = await client.responses.create({
 
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
-// Encrypted reasoning content is included automatically by the AI SDK
-// as long as `store: false` is not set. No extra configuration is needed.
-const { text, reasoning } = await generateText({
-  model: xai.responses('grok-4.6'),
-  system: "You are Grok, an AI agent built to answer helpful questions.",
-  prompt: "How big is the universe?",
-});
-
-console.log(text);
-console.log(reasoning); // Contains encrypted reasoning content
-```
-
 ```bash
 curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -m 3600 \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "input": [
         {
             "role": "system",
@@ -306,6 +305,11 @@ curl https://api.x.ai/v1/responses \
 }'
 ```
 
+```python customLanguage="pythonXAI"
+chat = client.chat.create(model="grok-4.7",
+        use_encrypted_content=True)
+```
+
 See [Adding encrypted thinking content](#adding-encrypted-thinking-content) on how to use the returned encrypted thinking content when making a new request.
 
 ## Chaining the conversation
@@ -314,43 +318,34 @@ We now have the `id` of the first response. With Chat Completions API, we typica
 
 With Responses API, we can send the `id` of the previous response, and the new messages to append to it.
 
-```python customLanguage="pythonXAI"
-import os
-from xai_sdk import Client
-from xai_sdk.chat import user, system
+```javascript customLanguage="javascriptAISDK"
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
 
-client = Client(
-    api_key=os.getenv("XAI_API_KEY"),
-    management_api_key=os.getenv("XAI_MANAGEMENT_API_KEY"),
-    timeout=3600,
-)
+// First request
+const result = await generateText({
+  model: xai.responses('grok-4.7'),
+  system: "You are Grok, an AI agent built to answer helpful questions.",
+  prompt: "How big is the universe?",
+});
 
-chat = client.chat.create(model="grok-4.6", store_messages=True)
-chat.append(system("You are Grok, an AI agent built to answer helpful questions."))
-chat.append(user("How big is the universe?"))
-response = chat.sample()
+console.log(result.text);
 
-print(response)
+// Get the response ID from the response object
+const responseId = result.response.id;
 
-# The response ID that can be used to continue the conversation later
+// Continue the conversation using previousResponseId
+const { text: secondResponse } = await generateText({
+  model: xai.responses('grok-4.7'),
+  prompt: "How do stars form?",
+  providerOptions: {
+    xai: {
+      previousResponseId: responseId,
+    },
+  },
+});
 
-print(response.id)
-
-# New steps
-
-chat = client.chat.create(
-    model="grok-4.6",
-    previous_response_id=response.id,
-    store_messages=True,
-)
-chat.append(user("How do stars form?"))
-second_response = chat.sample()
-
-print(second_response)
-
-# The response ID that can be used to continue the conversation later
-
-print(second_response.id)
+console.log(secondResponse);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -366,7 +361,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {"role": "system", "content": "You are Grok, an AI agent built to answer helpful questions."},
         {"role": "user", "content": "How big is the universe?"},
@@ -382,7 +377,7 @@ print(response.id)
 # New steps
 
 second_response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     previous_response_id=response.id,
     input=[
         {"role": "user", "content": "How do stars form?"},
@@ -407,7 +402,7 @@ const client = new OpenAI({
 });
 
 const response = await client.responses.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     input: [
         {
             role: "system",
@@ -426,7 +421,7 @@ console.log(response);
 console.log(response.id);
 
 const secondResponse = await client.responses.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     previous_response_id: response.id,
     input: [
         {"role": "user", "content": "How do stars form?"},
@@ -439,43 +434,13 @@ console.log(secondResponse);
 console.log(secondResponse.id);
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
-// First request
-const result = await generateText({
-  model: xai.responses('grok-4.6'),
-  system: "You are Grok, an AI agent built to answer helpful questions.",
-  prompt: "How big is the universe?",
-});
-
-console.log(result.text);
-
-// Get the response ID from the response object
-const responseId = result.response.id;
-
-// Continue the conversation using previousResponseId
-const { text: secondResponse } = await generateText({
-  model: xai.responses('grok-4.6'),
-  prompt: "How do stars form?",
-  providerOptions: {
-    xai: {
-      previousResponseId: responseId,
-    },
-  },
-});
-
-console.log(secondResponse);
-```
-
 ```bash
 curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -m 3600 \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "previous_response_id": "The previous response ID",
     "input": [
         {
@@ -485,14 +450,6 @@ curl https://api.x.ai/v1/responses \
     ]
 }'
 ```
-
-### Adding encrypted thinking content
-
-After returning the encrypted thinking content, you can also add it to a new response's input.
-
-> [!NOTE]
->
-> Make sure to use a reasoning model when working with encrypted thinking content.
 
 ```python customLanguage="pythonXAI"
 import os
@@ -505,7 +462,7 @@ client = Client(
     timeout=3600,
 )
 
-chat = client.chat.create(model="grok-4.6", store_messages=True, use_encrypted_content=True)
+chat = client.chat.create(model="grok-4.7", store_messages=True)
 chat.append(system("You are Grok, an AI agent built to answer helpful questions."))
 chat.append(user("How big is the universe?"))
 response = chat.sample()
@@ -518,8 +475,11 @@ print(response.id)
 
 # New steps
 
-chat.append(response)  ## Append the response and the SDK will automatically add the outputs from response to message history
-
+chat = client.chat.create(
+    model="grok-4.7",
+    previous_response_id=response.id,
+    store_messages=True,
+)
 chat.append(user("How do stars form?"))
 second_response = chat.sample()
 
@@ -528,6 +488,43 @@ print(second_response)
 # The response ID that can be used to continue the conversation later
 
 print(second_response.id)
+```
+
+### Adding encrypted thinking content
+
+After returning the encrypted thinking content, you can also add it to a new response's input.
+
+> [!NOTE]
+>
+> Make sure to use a reasoning model when working with encrypted thinking content.
+
+```javascript customLanguage="javascriptAISDK"
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
+
+// First request. Encrypted reasoning content is included automatically
+// by the AI SDK as long as `store: false` is not set.
+const result = await generateText({
+  model: xai.responses('grok-4.7'),
+  system: "You are Grok, an AI agent built to answer helpful questions.",
+  prompt: "How big is the universe?",
+});
+
+console.log(result.text);
+
+// Continue the conversation using previousResponseId
+// The encrypted content is automatically included when using previousResponseId
+const { text: secondResponse } = await generateText({
+  model: xai.responses('grok-4.7'),
+  prompt: "How do stars form?",
+  providerOptions: {
+    xai: {
+      previousResponseId: result.response.id,
+    },
+  },
+});
+
+console.log(secondResponse);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -543,7 +540,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {"role": "system", "content": "You are Grok, an AI agent built to answer helpful questions."},
         {"role": "user", "content": "How big is the universe?"},
@@ -560,7 +557,7 @@ print(response.id)
 # New steps
 
 second_response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         *response.output,  # Use response.output instead of the stored response
         {"role": "user", "content": "How do stars form?"},
@@ -585,7 +582,7 @@ const client = new OpenAI({
 });
 
 const response = await client.responses.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     input: [
         {
             role: "system",
@@ -605,7 +602,7 @@ console.log(response);
 console.log(response.id);
 
 const secondResponse = await client.responses.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     input: [
         ...response.output,  // Use response.output instead of the stored response
         {"role": "user", "content": "How do stars form?"},
@@ -618,42 +615,13 @@ console.log(secondResponse);
 console.log(secondResponse.id);
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
-// First request. Encrypted reasoning content is included automatically
-// by the AI SDK as long as `store: false` is not set.
-const result = await generateText({
-  model: xai.responses('grok-4.6'),
-  system: "You are Grok, an AI agent built to answer helpful questions.",
-  prompt: "How big is the universe?",
-});
-
-console.log(result.text);
-
-// Continue the conversation using previousResponseId
-// The encrypted content is automatically included when using previousResponseId
-const { text: secondResponse } = await generateText({
-  model: xai.responses('grok-4.6'),
-  prompt: "How do stars form?",
-  providerOptions: {
-    xai: {
-      previousResponseId: result.response.id,
-    },
-  },
-});
-
-console.log(secondResponse);
-```
-
 ```bash
 curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -m 3600 \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "input": [
         {
             "role": "system",
@@ -695,10 +663,6 @@ curl https://api.x.ai/v1/responses \
 }'
 ```
 
-## Retrieving a previous model response
-
-If you have a previous response's ID, you can retrieve the content of the response.
-
 ```python customLanguage="pythonXAI"
 import os
 from xai_sdk import Client
@@ -710,9 +674,50 @@ client = Client(
     timeout=3600,
 )
 
-response = client.chat.get_stored_completion("<The previous response's id>")
+chat = client.chat.create(model="grok-4.7", store_messages=True, use_encrypted_content=True)
+chat.append(system("You are Grok, an AI agent built to answer helpful questions."))
+chat.append(user("How big is the universe?"))
+response = chat.sample()
 
 print(response)
+
+# The response ID that can be used to continue the conversation later
+
+print(response.id)
+
+# New steps
+
+chat.append(response)  ## Append the response and the SDK will automatically add the outputs from response to message history
+
+chat.append(user("How do stars form?"))
+second_response = chat.sample()
+
+print(second_response)
+
+# The response ID that can be used to continue the conversation later
+
+print(second_response.id)
+```
+
+## Retrieving a previous model response
+
+If you have a previous response's ID, you can retrieve the content of the response.
+
+```javascript customLanguage="javascriptAISDK"
+// Note: The Vercel AI SDK does not provide a method to retrieve previous responses.
+// Use the OpenAI SDK as shown above for this functionality.
+
+import OpenAI from "openai";
+
+const client = new OpenAI({
+    apiKey: "<api key>",
+    baseURL: "https://api.x.ai/v1",
+    timeout: 360000,
+});
+
+const response = await client.responses.retrieve("<The previous response's id>");
+
+console.log(response);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -745,33 +750,12 @@ const response = await client.responses.retrieve("<The previous response's id>")
 console.log(response);
 ```
 
-```javascript customLanguage="javascriptAISDK"
-// Note: The Vercel AI SDK does not provide a method to retrieve previous responses.
-// Use the OpenAI SDK as shown above for this functionality.
-
-import OpenAI from "openai";
-
-const client = new OpenAI({
-    apiKey: "<api key>",
-    baseURL: "https://api.x.ai/v1",
-    timeout: 360000,
-});
-
-const response = await client.responses.retrieve("<The previous response's id>");
-
-console.log(response);
-```
-
 ```bash
 curl https://api.x.ai/v1/responses/{response_id} \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -m 3600
 ```
-
-## Delete a model response
-
-If you no longer want to store the previous model response, you can delete it.
 
 ```python customLanguage="pythonXAI"
 import os
@@ -784,8 +768,30 @@ client = Client(
     timeout=3600,
 )
 
-response = client.chat.delete_stored_completion("<The previous response's id>")
+response = client.chat.get_stored_completion("<The previous response's id>")
+
 print(response)
+```
+
+## Delete a model response
+
+If you no longer want to store the previous model response, you can delete it.
+
+```javascript customLanguage="javascriptAISDK"
+// Note: The Vercel AI SDK does not provide a method to delete previous responses.
+// Use the OpenAI SDK as shown above for this functionality.
+
+import OpenAI from "openai";
+
+const client = new OpenAI({
+    apiKey: "<api key>",
+    baseURL: "https://api.x.ai/v1",
+    timeout: 360000,
+});
+
+const response = await client.responses.delete("<The previous response's id>");
+
+console.log(response);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -818,26 +824,24 @@ const response = await client.responses.delete("<The previous response's id>");
 console.log(response);
 ```
 
-```javascript customLanguage="javascriptAISDK"
-// Note: The Vercel AI SDK does not provide a method to delete previous responses.
-// Use the OpenAI SDK as shown above for this functionality.
-
-import OpenAI from "openai";
-
-const client = new OpenAI({
-    apiKey: "<api key>",
-    baseURL: "https://api.x.ai/v1",
-    timeout: 360000,
-});
-
-const response = await client.responses.delete("<The previous response's id>");
-
-console.log(response);
-```
-
 ```bash
 curl -X DELETE https://api.x.ai/v1/responses/{response_id} \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -m 3600
+```
+
+```python customLanguage="pythonXAI"
+import os
+from xai_sdk import Client
+from xai_sdk.chat import user, system
+
+client = Client(
+    api_key=os.getenv("XAI_API_KEY"),
+    management_api_key=os.getenv("XAI_MANAGEMENT_API_KEY"),
+    timeout=3600,
+)
+
+response = client.chat.delete_stored_completion("<The previous response's id>")
+print(response)
 ```

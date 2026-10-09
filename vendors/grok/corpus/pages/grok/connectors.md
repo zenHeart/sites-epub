@@ -10,7 +10,7 @@ There are three kinds of connectors:
 
 ## Built-in connectors
 
-Built-in connectors are maintained by xAI and integrate natively with Grok. Each one authenticates via OAuth, so you connect once and Grok can access your data on demand. No configuration beyond the initial sign-in is required.
+Built-in connectors are maintained by SpaceXAI and integrate natively with Grok. Each one authenticates via OAuth, so you connect once and Grok can access your data on demand. No configuration beyond the initial sign-in is required.
 
 The following built in connectors are available:
 

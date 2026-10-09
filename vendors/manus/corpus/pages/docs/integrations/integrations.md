@@ -104,3 +104,6 @@ All integrations use secure authentication methods (OAuth 2.0 or API keys) and r
 ***
 
 **Next steps**: Explore [MCP Connectors](/docs/integrations/mcp-connectors) to see available integrations, or learn how to build [Custom MCP Servers](/docs/integrations/custom-mcp) for specialized needs.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

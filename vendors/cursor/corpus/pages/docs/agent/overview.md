@@ -113,6 +113,18 @@ This is available on [cursor.com/agents](https://cursor.com/agents) now and roll
 
 In the [CLI](https://cursor.com/docs/cli/overview.md), pressing Enter while the agent works steers the active run at a safe boundary, and pressing Enter again interrupts the turn.
 
+## Side chats
+
+Open a [side chat](https://cursor.com/help/ai-features/side-chats.md) to ask a question or investigate a tangent without interrupting the main conversation. Type `/side` or `/btw` in the chat input, optionally followed by your question, or use the plus button at the top of the chat panel.
+
+A side chat is a durable agent conversation. It uses the parent thread as hidden reference context and keeps its own transcript. @-mention the side chat in the main thread to pull that context back.
+
+## Conversation search
+
+Search past agent transcripts from the [Agents Window](https://cursor.com/docs/agent/agents-window.md). Press Cmd+K on Mac or Ctrl+K on Windows and Linux to open the command palette, then search across conversations. Cursor builds a local search index.
+
+To find text in the open conversation, press Cmd+F on Mac or Ctrl+F on Windows and Linux.
+
 ## Goals with /goal
 
 Agent reads each message as a new job. Use `/goal` to give the agent a long-lived objective to work towards until it's fully complete:
@@ -121,7 +133,7 @@ Agent reads each message as a new job. Use `/goal` to give the agent a long-live
 /goal fix all flaky tests and make CI green
 ```
 
-In the [CLI](https://cursor.com/docs/cli/overview.md), Ctrl+C pauses the goal. Pair a goal with a [Custom Mode](https://cursor.com/docs/agent/prompting.md#custom-modes) when you want the agent to follow a playbook, or with the built-in [`/loop`](https://cursor.com/docs/skills.md#built-in-cursor-skills) skill for recurring check-ins while it pursues the objective.
+In the [CLI](https://cursor.com/docs/cli/overview.md), Ctrl+C pauses the goal. Pair a goal with a [Custom Mode](https://cursor.com/docs/agent/prompting.md#custom-modes) when you want the agent to follow a playbook, or with the built-in [`/loop`](https://cursor.com/docs/skills.md#built-in-cursor-skills) skill to run a prompt or skill on a recurring or variable interval. If you don't specify a fixed interval, the agent chooses when to wake. Stop the loop when you want it to end.
 
 `/goal` is rolling out. If you don't see it, try it in a new chat.
 

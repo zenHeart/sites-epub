@@ -22,7 +22,7 @@ Several tunneling services work well with MCP servers. Below are two popular opt
 
 ### ngrok
 
-[ngrok](https://ngrok.com) provides stable URLs and a dashboard for inspecting traffic. ngrok is a third-party service and is not affiliated with xAI or Grok.
+[ngrok](https://ngrok.com) provides stable URLs and a dashboard for inspecting traffic. ngrok is a third-party service and is not affiliated with SpaceXAI or Grok.
 
 1. Install ngrok and authenticate:
 

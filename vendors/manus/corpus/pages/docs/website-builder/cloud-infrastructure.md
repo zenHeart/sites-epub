@@ -10,12 +10,12 @@ Every web application you build with Manus is powered by a robust and scalable c
 
 Here’s a breakdown of the core components and what they enable you to do:
 
-| Component        | What It Is                                                         | Example Use Cases                                                           |
-| :--------------- | :----------------------------------------------------------------- | :-------------------------------------------------------------------------- |
-| **Backend**      | The "brain" of your application that works behind the scenes.      | User logins, processing forms, connecting to APIs, custom business logic.   |
-| **Database**     | The "memory" of your application where data is stored permanently. | User profiles, product lists, blog posts, saved settings, form submissions. |
-| **File Storage** | The "filing cabinet" for your application's media and documents.   | User-uploaded images, downloadable PDFs, video files, portfolios.           |
-| **Deployment**   | The process of making your application live on the internet.       | Publishing your site to a custom domain with a single command.              |
+| Component | What It Is | Example Use Cases |
+| :- | :- | :- |
+| **Backend** | The "brain" of your application that works behind the scenes. | User logins, processing forms, connecting to APIs, custom business logic. |
+| **Database** | The "memory" of your application where data is stored permanently. | User profiles, product lists, blog posts, saved settings, form submissions. |
+| **File Storage** | The "filing cabinet" for your application's media and documents. | User-uploaded images, downloadable PDFs, video files, portfolios. |
+| **Deployment** | The process of making your application live on the internet. | Publishing your site to a custom domain with a single command. |
 
 ***
 
@@ -54,3 +54,6 @@ This feature is perfect for a wide range of uses. For example:
 With Manus, deploying your application is as simple as giving a command. There are no servers to provision, no deployment scripts to write, and no separate hosting accounts to manage. Manus handles the entire process, ensuring your application is live and accessible to your users in minutes.
 
 This unified process means you don't need to worry about services like AWS, Vercel, or Netlify. It's all included. For more details on making your site public, see the **Publishing and Collaboration** section.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

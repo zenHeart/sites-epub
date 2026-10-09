@@ -205,14 +205,14 @@ That's it. No complex configuration or setup.
 
 ## Benefits of Manus for Slack
 
-| Benefit                     | Description                                                        |
-| :-------------------------- | :----------------------------------------------------------------- |
-| **Shared Context**          | Manus sees the entire thread, understanding your team's discussion |
-| **Real-Time Collaboration** | Everyone sees Manus working and can contribute                     |
-| **No App Switching**        | Stay in Slack—no copying, pasting, or context switching            |
-| **Version Control**         | One thread, one version, zero "final\_v3" chaos                    |
-| **Transparent AI**          | See what Manus is doing at every step                              |
-| **Team Alignment**          | Everyone reviews and approves together                             |
+| Benefit | Description |
+| :- | :- |
+| **Shared Context** | Manus sees the entire thread, understanding your team's discussion |
+| **Real-Time Collaboration** | Everyone sees Manus working and can contribute |
+| **No App Switching** | Stay in Slack—no copying, pasting, or context switching |
+| **Version Control** | One thread, one version, zero "final\_v3" chaos |
+| **Transparent AI** | See what Manus is doing at every step |
+| **Team Alignment** | Everyone reviews and approves together |
 
 ## Tips for Effective Use
 
@@ -269,3 +269,6 @@ Don't expect perfection on the first try. Use the thread to refine:
 </AccordionGroup>
 
 **Next steps**: [<u>Install Manus in Slack</u>](https://open.manus.ai/docs/integrations/slack) and tag @manus in your next team thread.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

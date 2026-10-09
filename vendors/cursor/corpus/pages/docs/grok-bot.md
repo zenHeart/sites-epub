@@ -6,7 +6,8 @@ You work with a Bot by messaging it. Give it a task, the relevant context, and a
 
 Grok Bot runs on macOS, Windows, Linux, and iOS, and is included with
 every paid individual Cursor plan and with the Cursor Teams plan. You can also link an
-individual SuperGrok, SuperGrok Plus, or SuperGrok Heavy subscription. See
+individual SuperGrok, SuperGrok Plus, or SuperGrok Heavy subscription, or
+sign in with a seat on a self-serve Grok Business plan. See
 [Plans and billing](https://cursor.com/help/grok-bot/plans.md) for the full matrix.
 
 ## What makes Grok Bot different
@@ -19,7 +20,7 @@ individual SuperGrok, SuperGrok Plus, or SuperGrok Heavy subscription. See
 
 ## Your Bots share one computer
 
-All of your Bots use the same cloud computer, sharing its files, browser sessions, and app logins, which makes handoffs work without repeating setup. The computer belongs to your account, not to an individual Bot, so treat anything placed on it as available to every Bot you run; between users, isolation is strict. [The computer and apps](https://cursor.com/docs/grok-bot/work.md#the-computer-and-apps) covers the full model.
+All of your Bots use the same cloud computer, sharing its files, browser sessions, and app logins, which makes handoffs work without repeating setup. The computer belongs to your account, not to an individual Bot, so treat anything placed on it as available to every Bot you run; between users, isolation is strict. [The computer and apps](https://cursor.com/docs/grok-bot/work.md#the-computer-and-apps) covers the full model. When you chat with a teammate's [Team Bot](https://cursor.com/help/grok-bot/team-bots.md), it usually works on your computer too.
 
 ## A good first handoff
 
@@ -69,7 +70,8 @@ The computers Bots work on run in Cursor's cloud.
 ### How much does Grok Bot cost?
 
 Access is included with every paid individual Cursor plan and with the
-Cursor Teams plan, or through an individual SuperGrok account link. Usage
+Cursor Teams plan, through an individual SuperGrok account link, or with
+a seat on a self-serve Grok Business plan. Usage
 resets weekly. See [Plans and billing](https://cursor.com/help/grok-bot/plans.md).
 
 ## Next steps
@@ -95,6 +97,11 @@ baseline.
 ### Security
 
 Network policy, approvals and Auto Review, logging, and data handling.
+
+### Deployment
+
+Push the desktop app to managed devices, pick a version, and plan
+updates.
 
 
 ---

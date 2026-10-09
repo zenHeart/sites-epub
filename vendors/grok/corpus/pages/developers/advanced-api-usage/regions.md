@@ -8,7 +8,7 @@ If you need API request handling and model inference to happen in the United Sta
 
 > [!NOTE]
 >
-> The US endpoint currently serves one model, `grok-4.6`, and none of the image generation, video generation, or voice APIs. Token usage costs 10% more than on the global endpoint. The US guarantee covers API request handling, inference, moderation, and retained request data. It does not cover Files, Collections, server-side tools, or the network path from your systems to SpaceXAI. See [What the guarantee covers](#what-the-guarantee-covers).
+> The US endpoint currently serves two models, `grok-4.7` and `grok-4.6`, and none of the image generation, video generation, or voice APIs. Token usage costs 10% more than on the global endpoint. The US guarantee covers API request handling, inference, moderation, and retained request data. It does not cover Files, Collections, server-side tools, or the network path from your systems to SpaceXAI. See [What the guarantee covers](#what-the-guarantee-covers).
 
 ## Using the US endpoint
 
@@ -24,28 +24,11 @@ const xai = createXai({
 });
 
 const { text } = await generateText({
-  model: xai.responses('grok-4.6'),
+  model: xai.responses('grok-4.7'),
   prompt: 'Explain latency versus throughput in two sentences.',
 });
 
 console.log(text);
-```
-
-```python customLanguage="pythonXAI"
-import os
-
-from xai_sdk import Client
-from xai_sdk.chat import user
-
-client = Client(
-    api_key=os.getenv("XAI_API_KEY"),
-    api_host="us.api.x.ai",
-)
-
-chat = client.chat.create(model="grok-4.6")
-chat.append(user("Explain latency versus throughput in two sentences."))
-
-print(chat.sample().content)
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -58,7 +41,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input="Explain latency versus throughput in two sentences.",
 )
 
@@ -74,7 +57,7 @@ const client = new OpenAI({
 });
 
 const response = await client.responses.create({
-  model: 'grok-4.6',
+  model: 'grok-4.7',
   input: 'Explain latency versus throughput in two sentences.',
 });
 
@@ -86,14 +69,31 @@ curl https://us.api.x.ai/v1/responses \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "input": "Explain latency versus throughput in two sentences."
   }'
 ```
 
+```python customLanguage="pythonXAI"
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import user
+
+client = Client(
+    api_key=os.getenv("XAI_API_KEY"),
+    api_host="us.api.x.ai",
+)
+
+chat = client.chat.create(model="grok-4.7")
+chat.append(user("Explain latency versus throughput in two sentences."))
+
+print(chat.sample().content)
+```
+
 ### Model availability
 
-`grok-4.6` is currently the only model available on the US endpoint; the [models page in the console](https://console.x.ai/team/default/models?cluster=us-central-1\&utm_source=docs\&utm_medium=referral\&utm_campaign=developers-advanced-api-usage-regions\&utm_content=models) and `GET https://us.api.x.ai/v1/models` always show the current list. Requesting a model that is not on that list, including `grok-latest`, fails with `404 Not Found`:
+`grok-4.7` and `grok-4.6` are currently the only models available on the US endpoint; the [models page in the console](https://console.x.ai/team/default/models?cluster=us-central-1\&utm_source=docs\&utm_medium=referral\&utm_campaign=developers-advanced-api-usage-regions\&utm_content=models) and `GET https://us.api.x.ai/v1/models` always show the current list. Requesting a model that is not on that list, including `grok-latest`, fails with `404 Not Found`:
 
 ```json customLanguage="json"
 {
@@ -115,7 +115,7 @@ When you call `https://us.api.x.ai/v1`, SpaceXAI guarantees that the following h
 * Handling of the request by SpaceXAI's API servers.
 * Inference for the model you request.
 * Safety moderation of the request and the response.
-* Storage of the request metadata, prompt inputs, and model outputs that SpaceXAI retains. The [Security FAQ](/developers/faq/security#does-xai-train-on-customers-api-requests) describes what is retained and for how long.
+* Storage of the request metadata, prompt inputs, and model outputs that SpaceXAI retains. The [Security FAQ](/developers/faq/security#does-spacexai-train-on-customers-api-requests) describes what is retained and for how long.
 
 The image generation, video generation, and voice APIs are not served by the US endpoint. [Files](/developers/files), [Collections](/developers/files/collections), and server-side tools such as [web search](/developers/tools/web-search), [X search](/developers/tools/x-search), and [code execution](/developers/tools/code-execution) still work on the US endpoint, but they are outside the US guarantee and may process data outside the United States. If your requirements cover these features as well, avoid them when calling the US endpoint, or contact [support@x.ai](mailto:support@x.ai) to discuss your configuration.
 

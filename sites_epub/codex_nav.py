@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import re
+from dataclasses import replace
 from urllib.parse import urljoin, urlparse
 
 from bs4 import BeautifulSoup, Tag
@@ -18,6 +20,14 @@ SIX_SECTIONS = (
     "Administration",
 )
 SKIP_SECTION = {"Use Cases", "Resources"}
+
+# 2026-10: learn.chatgpt.com is mid-migration from ``/codex/<slug>`` to
+# ``/docs/<slug>`` and the split is partial — ``/codex/quickstart`` still answers
+# 200 while ``/codex/cli`` 308s to ``/docs/codex/cli``. 174 of the book's 204
+# committed routes were sitting on the redirecting half. ``llms.txt`` is the
+# site's own index of what lives where, so it decides the canonical spelling
+# instead of a per-route probe.
+_DOCS_INDEX_RE = re.compile(r"https://learn\.chatgpt\.com/docs/([A-Za-z0-9/_.\-]*?)(?:\.md)?(?=[)\s]|$)")
 
 
 def _plain(el: Tag) -> str:
@@ -119,3 +129,70 @@ def format_nav_routes(entries: list[IndexEntry]) -> str:
         f"{e.group}\t{e.title}\t{e.html_url}\t{e.md_url}" for e in entries
     ]
     return "\n".join(lines) + ("\n" if lines else "")
+
+
+def docs_index_paths(llms_text: str) -> set[str]:
+    """Paths the site indexes under ``/docs/`` (``llms.txt`` is the SSOT)."""
+    return {m.rstrip("/") for m in _DOCS_INDEX_RE.findall(llms_text) if m}
+
+
+def canonicalize(entries: list[IndexEntry], docs_paths: set[str]) -> list[IndexEntry]:
+    """Repoint ``/codex/<slug>`` routes at ``/docs/<slug>`` when the site moved them.
+
+    The route name is left alone so chapter files keep their identity across
+    the migration; only the URL the reader clicks changes. Codex's own pages
+    keep the ``codex/`` segment under ``/docs`` too (``/docs/codex/cli``), so a
+    nav route tries both spellings before deciding the page stayed put.
+
+    ``llms.txt`` omits a handful of routes (``changelog``,
+    ``reference/slash-commands``, ``enterprise/govcloud-configuration``,
+    ``hipaa-configuration``, ``developer-commands``, ``developer-settings``) that
+    also moved, so anything the index does not vouch for is resolved with one
+    live probe rather than trusted by default.
+    """
+    out: list[IndexEntry] = []
+    for entry in entries:
+        if entry.route == "codex":
+            # The docs root moved too: /codex -> /docs.
+            out.append(replace(entry, md_url=f"{SITE}/docs.md", html_url=f"{SITE}/docs"))
+            continue
+        if not entry.route.startswith("codex/"):
+            out.append(entry)
+            continue
+        tail = entry.route[len("codex/"):]
+        for candidate in (tail, f"codex/{tail}"):
+            if candidate in docs_paths:
+                url = f"{SITE}/docs/{candidate}"
+                out.append(replace(entry, md_url=url + ".md", html_url=url))
+                break
+        else:
+            url = f"{SITE}/docs/{tail}"
+            if _answers_200(url):
+                out.append(replace(entry, md_url=url + ".md", html_url=url))
+            else:
+                out.append(entry)
+    return out
+
+
+def _answers_200(url: str) -> bool:
+    """Direct-200 check.
+
+    ``http.fetch_text`` follows redirects, so it cannot tell "this URL serves
+    the page" from "this URL bounces to the page". The migration question is
+    exactly that distinction, so this asks urllib not to follow.
+    """
+    import urllib.error
+    import urllib.request
+
+    class _NoRedirect(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, *args):
+            return None
+
+    opener = urllib.request.build_opener(_NoRedirect)
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        return opener.open(req, timeout=20).status == 200
+    except urllib.error.HTTPError as exc:
+        return exc.code == 200
+    except Exception:
+        return False

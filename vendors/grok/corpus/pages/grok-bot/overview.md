@@ -8,10 +8,10 @@ with a browser, filesystem, and terminal, so tasks finish in your real tools
 instead of as chat drafts. [Get started](/grok-bot/get-started) with your first
 Bot, or read [how teams roll it out](/grok-bot/teams-and-enterprises).
 
-You work with a Bot by messaging it. Give it a task, the relevant context, and
-access to the tools it needs. It takes on multi-step work across apps and
-websites, keeps you updated in the conversation, and comes back when something
-needs your approval.
+You work with a Bot by messaging it. Type, dictate, or start a voice chat.
+Give it a task, the relevant context, and access to the tools it needs. It takes on multi-step work across apps and websites, keeps you
+updated in the conversation (including voice memos and drafts you approve
+before they are sent), and comes back when something needs your approval.
 
 Grok Bot runs on macOS, Windows, Linux, iOS, and Android, and is included with
 every paid individual Cursor plan and with the Cursor Teams plan. You can also
@@ -61,6 +61,15 @@ This tells the Bot what to do, where to work, what context to pull in, and what
 finished work looks like. Review the result, correct it, and turn the stable
 process into a [skill or routine](/grok-bot/skills-routines-and-automations).
 
+## Tag @bot on X
+
+You can also start work from X. Tag [@bot](https://x.com/bot) in a post or
+reply, and your main Bot picks up the post as a task while @bot confirms with a
+short public reply. Tagging requires an X account connected to your Grok
+account and is not available in every region yet.
+[Tag @bot on X](/grok-bot/tag-on-x) covers setup, regional availability, and
+why @bot might not reply.
+
 ## FAQ
 
 ### Does Grok Bot keep working when my laptop is closed?
@@ -91,8 +100,8 @@ The Bot hands those steps to you rather than working around them.
 ### Which platforms are supported?
 
 The desktop app runs on macOS (Apple silicon and Intel), Windows (x64 and
-Arm64), and Linux (x64 and Arm64), and the mobile app runs on iPhone and
-Android. The computers Bots work on run in Cursor's cloud.
+Arm64), and Linux (x64 and Arm64), and the mobile app runs on iPhone, iPad,
+and Android. The computers Bots work on run in Cursor's cloud.
 
 ### How much does Grok Bot cost?
 

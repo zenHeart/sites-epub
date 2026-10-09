@@ -219,12 +219,12 @@ Result: Weekly competitive intelligence report
 
 ## Available Manus Actions in Zapier
 
-| Action          | Description                                                | Use Case                                      |
-| :-------------- | :--------------------------------------------------------- | :-------------------------------------------- |
-| **Create Task** | Create a new Manus task with a custom prompt               | Trigger any Manus capability from another app |
-| **Get Task**    | Retrieve details of a specific task                        | Check task status or get results              |
-| **Update Task** | Modify task properties (title, visibility, shareable link) | Change task settings after creation           |
-| **Delete Task** | Remove a task                                              | Clean up completed or unnecessary tasks       |
+| Action | Description | Use Case |
+| :- | :- | :- |
+| **Create Task** | Create a new Manus task with a custom prompt | Trigger any Manus capability from another app |
+| **Get Task** | Retrieve details of a specific task | Check task status or get results |
+| **Update Task** | Modify task properties (title, visibility, shareable link) | Change task settings after creation |
+| **Delete Task** | Remove a task | Clean up completed or unnecessary tasks |
 
 ## Setting Up Manus on Zapier
 
@@ -367,3 +367,6 @@ Action: Manus researches competitors and creates a weekly report
 </AccordionGroup>
 
 **Next steps**: [Connect Manus on Zapier](https://zapier.com/apps/manus/integrations) and build your first intelligent workflow.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

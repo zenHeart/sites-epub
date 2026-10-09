@@ -29,3 +29,6 @@ Instead of manually translating your Figma designs into code, you can simply pro
    </Tip>
 
 This integration dramatically accelerates the development process, bridging the gap between design and development and allowing you to go from a static design to a live, interactive application in a fraction of the time.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

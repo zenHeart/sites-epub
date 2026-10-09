@@ -2,11 +2,11 @@
 
 # Microsoft Foundry
 
-Access xAI’s frontier reasoning and agentic models through Azure AI Foundry with enterprise-grade security, governance, and unified billing.
+Access SpaceXAI’s frontier reasoning and agentic models through Azure AI Foundry with enterprise-grade security, governance, and unified billing.
 
 This guide walks through setting up and using Grok models on Microsoft Foundry. Grok models on Foundry give you strong reasoning, native tool use, enterprise authentication through Microsoft Entra ID, Azure-native monitoring, and an OpenAI-compatible API.
 
-Usage is billed through the Azure Marketplace / your Azure subscription. Grok models are delivered through the xAI–Microsoft partnership with Azure-managed endpoints and optional Azure AI Content Safety layers. Review the specific model card in the Foundry catalog for the latest details on data processing, retention, and terms.
+Usage is billed through the Azure Marketplace / your Azure subscription. Grok models are delivered through the SpaceXAI–Microsoft partnership with Azure-managed endpoints and optional Azure AI Content Safety layers. Review the specific model card in the Foundry catalog for the latest details on data processing, retention, and terms.
 
 Grok on Foundry works with the official OpenAI Python/TypeScript SDKs, `azure-ai-projects`, LangChain, Semantic Kernel, LlamaIndex, and most OpenAI-compatible frameworks. Streaming, tool calling, and structured outputs are supported.
 
@@ -216,7 +216,7 @@ Start with the Playground in the Foundry portal for rapid prompt iteration, then
 
 ## Correlation IDs and debugging
 
-Foundry includes standard Azure request identifiers in response headers, such as `request-id`, `apim-request-id`, and `x-ms-request-id`. When contacting Microsoft or xAI support, include these IDs with your deployment name and approximate timestamp.
+Foundry includes standard Azure request identifiers in response headers, such as `request-id`, `apim-request-id`, and `x-ms-request-id`. When contacting Microsoft or SpaceXAI support, include these IDs with your deployment name and approximate timestamp.
 
 ## Feature support and capabilities
 
@@ -231,7 +231,7 @@ Foundry includes standard Azure request identifiers in response headers, such as
 
 ## Safety and responsible AI
 
-Grok models include xAI’s safety training and alignment. On Foundry, Azure AI Content Safety is available and often enabled by default or easily integrated.
+Grok models include SpaceXAI’s safety training and alignment. On Foundry, Azure AI Content Safety is available and often enabled by default or easily integrated.
 
 Before production deployment:
 
@@ -247,7 +247,7 @@ Before production deployment:
 * Validate vision/multimodal support and exact parameter availability for your chosen model/deployment.
 * Rate limits and quotas are managed at the Azure resource level.
 
-For the authoritative list of supported parameters and behaviors, consult the model card inside Azure AI Foundry and xAI Grok documentation linked from the catalog.
+For the authoritative list of supported parameters and behaviors, consult the model card inside Azure AI Foundry and SpaceXAI Grok documentation linked from the catalog.
 
 ## Best practices for production
 

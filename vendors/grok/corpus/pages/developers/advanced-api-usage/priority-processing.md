@@ -23,37 +23,6 @@ Priority requests are billed at a premium per-token rate. Cache discounts still 
 
 Pass `service_tier: "priority"` in your request body. The response includes a `service_tier` field confirming which tier was used.
 
-```bash customLanguage="bash"
-curl https://api.x.ai/v1/responses \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "grok-4.6",
-    "input": "Explain the Riemann hypothesis in one paragraph.",
-    "service_tier": "priority"
-  }'
-```
-
-```python customLanguage="pythonXAI"
-import os
-
-from xai_sdk import Client
-from xai_sdk.chat import user
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-chat = client.chat.create(
-    model="grok-4.6",
-    service_tier="priority",
-)
-chat.append(user("Explain the Riemann hypothesis in one paragraph."))
-
-response = chat.sample()
-
-print(response.content)
-print(f"Tier used: {response.service_tier}")
-```
-
 ```python customLanguage="pythonOpenAISDK"
 import os
 from openai import OpenAI
@@ -64,13 +33,24 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input="Explain the Riemann hypothesis in one paragraph.",
     service_tier="priority",
 )
 
 print(response.output_text)
 print(f"Tier used: {response.service_tier}")
+```
+
+```bash customLanguage="bash"
+curl https://api.x.ai/v1/responses \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "grok-4.7",
+    "input": "Explain the Riemann hypothesis in one paragraph.",
+    "service_tier": "priority"
+  }'
 ```
 
 ```javascript customLanguage="javascriptOpenAISDK"
@@ -82,7 +62,7 @@ const client = new OpenAI({
 });
 
 const response = await client.responses.create({
-  model: "grok-4.6",
+  model: "grok-4.7",
   input: "Explain the Riemann hypothesis in one paragraph.",
   service_tier: "priority",
 });
@@ -91,12 +71,32 @@ console.log(response.output_text);
 console.log(`Tier used: ${response.service_tier}`);
 ```
 
+```python customLanguage="pythonXAI"
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import user
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+chat = client.chat.create(
+    model="grok-4.7",
+    service_tier="priority",
+)
+chat.append(user("Explain the Riemann hypothesis in one paragraph."))
+
+response = chat.sample()
+
+print(response.content)
+print(f"Tier used: {response.service_tier}")
+```
+
 The response includes `"service_tier": "priority"` when the request was served at the priority tier, or `"service_tier": "default"` if it was served at the default tier instead. You are only billed at the priority rate when the response confirms `"priority"`.
 
 ```json customLanguage="json"
 {
   "id": "resp_abc123",
-  "model": "grok-4.6",
+  "model": "grok-4.7",
   "service_tier": "priority",
   "usage": {
     "input_tokens": 42,

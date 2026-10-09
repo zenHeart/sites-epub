@@ -1,6 +1,6 @@
 <!doctype html><html lang="en-us" class="antialiased leading-tight motion-safe:scroll-smooth" data-theme="dark"><head>
     <meta charset="utf-8">
-    
+    <script>!function(){var k="zencoder_theme",C={dark:"#0a0a0a",light:"#fafafa"},d=document.documentElement,m=matchMedia("(prefers-color-scheme:dark)"),s=function(){try{return localStorage.getItem(k)||"dark"}catch(e){return"dark"}},r=function(v){return v==="system"?m.matches?"dark":"light":v},t=function(v){var e=document.querySelector('meta[name="theme-color"]');if(!e){e=document.createElement("meta");e.setAttribute("name","theme-color");document.head.appendChild(e)}e.setAttribute("content",C[v]||C.dark)},a=function(v){var r2=r(v);d.setAttribute("data-theme",r2);t(r2)};a(s());m.addEventListener("change",function(){s()==="system"&&a("system")});window.themeSwitcher=function(){return{mode:s(),set:function(v){this.mode=v;try{localStorage.setItem(k,v)}catch(e){}a(v)}}}}()</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0a0a0a">
 
@@ -25,9 +25,20 @@
 
 <link rel="preload" as="font" type="font/woff2" href="//zencoder.ai/hubfs/raw_assets/public/forgood-tailwind-theme/css/fonts/inter-latin-wght-normal.woff2" crossorigin>
 
+<style>
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400 700;
+    src: url('//zencoder.ai/hubfs/raw_assets/public/forgood-tailwind-theme/css/fonts/inter-latin-wght-normal.woff2') format('woff2');
+  }
+</style>
 
-
-    
+    <style>
+      body{transition:background-color .3s ease,color .3s ease}
+      @media (prefers-reduced-motion: reduce){body{transition:none}}
+    </style>
 
     
       <title>AI Coding Agents: What Are They and How Do They Work?</title>
@@ -131,7 +142,142 @@
 
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
 
+    
+    {
+      "@type": "Organization",
+      "@id": "https://zencoder.ai/#organization",
+      "name": "Zencoder",
+      "alternateName": "Zencoder – The AI Coding Agent",
+      "url": "https://zencoder.ai",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zencoder.ai/hubfs/Logo-dark-1.svg"
+      },
+      "description": "Zencoder is an AI-powered coding agent that helps developers write, debug, and optimize code faster with intelligent code generation and chat assistance.",
+      "email": "support@zencoder.ai",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "500 W Hamilton Ave, 112550",
+        "addressLocality": "Campbell",
+        "addressRegion": "CA",
+        "postalCode": "95008",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/zencoderai/",
+        "https://x.com/zencoderai",
+        "https://www.instagram.com/zencoderai/",
+        "https://www.youtube.com/@zencoderai",
+        "https://github.com/zencoderai"
+      ]
+    },
+
+    
+    {
+      "@type": "WebSite",
+      "@id": "https://zencoder.ai/#website",
+      "url": "https://zencoder.ai",
+      "name": "Zencoder – The AI Coding Agent",
+      "description": "Zencoder is an AI-powered coding agent that helps developers write, debug, and optimize code faster with intelligent code generation and chat assistance.",
+      "publisher": { "@id": "https://zencoder.ai/#organization" },
+      "inLanguage": "en-us"
+    },
+
+    
+    {
+      "@type":
+        "WebPage",
+      "@id": "http://zencoder.ai/blog/about-ai-coding-agents#webpage",
+      "url": "http://zencoder.ai/blog/about-ai-coding-agents",
+      "name": "AI Coding Agents: What Are They and How Do They Work?",
+      "description": "Discover what AI coding agents are and how they transform software development with enhanced functionality and applications in the tech industry.",
+      "inLanguage": "en-us",
+      "isPartOf": { "@id": "https://zencoder.ai/#website" }
+      
+      
+    }
+
+    
+    
+    ,{
+      "@type": "BreadcrumbList",
+      "@id": "http://zencoder.ai/blog/about-ai-coding-agents#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://zencoder.ai/" }
+
+        
+          ,{ "@type": "ListItem", "position": 2, "name": "AI Coding Agents: What Are They and How Do They Work?",
+             "item": "http://zencoder.ai/blog/about-ai-coding-agents" }
+        
+      ]
+    }
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+
+,{
+  "@type": "FAQPage",
+  "@id": "http://zencoder.ai/blog/about-ai-coding-agents#faq",
+  "mainEntityOfPage": { "@id": "http://zencoder.ai/blog/about-ai-coding-agents#webpage" },
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is AI replacing coders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is a common concern, but the current trajectory suggests AI is more likely to transform the role of coders rather than replace them entirely. AI coding agents are powerful tools that can automate repetitive tasks, generate boilerplate code, detect errors, and assist with debugging. This allows human developers to focus on higher-level tasks such as system architecture, complex problem-solving, innovation, and overseeing the AI's output. The future points towards a collaborative relationship, where AI augments human capabilities, leading to increased productivity and potentially new types of development roles. Developers will need to adapt by learning how to effectively leverage these AI tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How difficult is AI coding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This question can be interpreted in two ways:\n\nDifficulty of using AI coding tools: For developers, using AI coding agents like Zencoder is designed to be increasingly intuitive. Many integrate directly into familiar IDEs and accept natural language prompts. The goal is to lower the barrier to entry and make them accessible, as highlighted by the \"ease of integration\" mentioned in the article. While there's a learning curve to maximize their potential, it's generally less about learning a new complex programming paradigm and more about learning how to prompt and guide the AI effectively.\nDifficulty of developing AI coding agents/algorithms: Creating the AI models and systems that power these coding agents is extremely complex. It requires deep expertise in machine learning, natural language processing, large-scale data management, and software engineering. This involves designing sophisticated algorithms, training massive models, and ensuring the AI can understand context and generate correct, efficient, and secure code, as discussed in \"Challenges in Training Context-Aware AI Coding Agents\".\nSo, using AI for coding is becoming easier, but building the AI itself remains a highly specialized and challenging field."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I start coding an AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you're interested in developing AI (rather than just using AI coding tools), here's a general path:\n\nStrengthen Foundational Skills: A strong understanding of mathematics (linear algebra, calculus, probability, statistics) and programming (Python is very popular in AI/ML, but R and C++ are also used) is crucial.\nLearn Core AI/ML Concepts: Study machine learning algorithms (e.g., regression, classification, clustering, neural networks), deep learning, natural language processing, and data structures. There are many online courses (Coursera, edX, Udacity), university programs, and books available.\nMaster AI/ML Libraries and Frameworks: Get hands-on experience with libraries like Scikit-learn, TensorFlow, PyTorch, Keras, and NLTK.\nWork on Projects: Start with small projects to apply what you've learned. This could be anything from a simple prediction model to a basic chatbot. Contributing to open-source AI projects can also be a great learning experience.\nStay Updated: The field of AI is evolving rapidly. Follow research papers, blogs (like the Zencoder Blog for AI in coding), and industry news.\nIf your question is about how to start using AI to help you code, the best way is to try out tools like Zencoder, GitHub Copilot, or others. Explore their features, integrate them into your workflow, and learn how to craft effective prompts to get the best results. Many resources, like \"How to Use AI in Coding - 12 Best Practices in 2025\", can guide you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the 5 types of agents in AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While the main article focuses on AI coding agents, the broader field of Artificial Intelligence categorizes agents based on their capabilities and intelligence. According to the Zencoder blog post \"Types of AI Agents: From Reactive to Self-Learning Systems\", AI agents can generally be classified into categories that often include:\n\nSimple Reflex Agents: These agents act only based on the current percept, ignoring the rest of the percept history. They follow condition-action rules (if-then statements). They are suitable for environments where decisions are based purely on immediate sensory input.\nModel-Based Reflex Agents: These agents maintain an internal state (a model of the world) to track aspects of the environment that cannot be seen in the current percept. They use this internal model along with the current percept to make decisions. This allows them to handle partially observable environments.\nGoal-Based Agents: These agents expand on model-based agents by having explicit goal information. They choose actions that will help them achieve their goals. This often involves search and planning to find a sequence of actions that leads to the goal state.\nUtility-Based Agents: When there are multiple ways to achieve a goal, or when goals conflict, utility-based agents choose the action that maximizes their expected utility. Utility is a function that maps a state (or sequence of states) onto a real number, representing a degree of happiness or desirability.\nLearning Agents: These agents can learn from their experiences and improve their performance over time. They have a \"learning element\" that modifies the agent's internal components (like the model, goals, or utility function) based on feedback from a \"critic\" and observations from a \"performance element.\" This allows them to operate in unknown environments and become more competent than their initial knowledge might allow.\nThese categories provide a framework for understanding the different levels of intelligence and autonomy that AI agents can possess, from simple reactive behaviors to complex learning and decision-making."
+      }
+    }
+  ]
+}
+
+    
+  ]
+}
+</script>
 
     
 
@@ -149,28 +295,141 @@
 
     
 
-    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
 
 <link rel="stylesheet" href="//zencoder.ai/hubfs/hub_generated/template_assets/1/183886388261/1784548489352/template_tailwind-generated.min.css">
 
-    
+    <script type="application/ld+json">
+{
+  "mainEntityOfPage" : {
+    "@type" : "WebPage",
+    "@id" : "http://zencoder.ai/blog/about-ai-coding-agents"
+  },
+  "author" : {
+    "name" : "Michael Staff",
+    "url" : "http://zencoder.ai/blog/author/michael-staff",
+    "@type" : "Person"
+  },
+  "headline" : "AI Coding Agents: What Are They and How Do They Work?",
+  "datePublished" : "2024-07-01T22:20:57.000Z",
+  "dateModified" : "2026-07-14T06:21:38.256Z",
+  "publisher" : {
+    "name" : "Zencoder",
+    "logo" : {
+      "url" : "//zencoder.ai/hubfs/Logo-dark-1.png",
+      "@type" : "ImageObject"
+    },
+    "@type" : "Organization"
+  },
+  "@context" : "https://schema.org",
+  "@type" : "BlogPosting",
+  "image" : [ "//zencoder.ai/hubfs/AI%20Coding%20Agents_%20What%20Are%20They%20and%20How%20Do%20They%20Work_.png" ]
+}
+</script>
 
 
 
     
 <!--  Added by GoogleAnalytics4 integration -->
+<script data-cookieconsent="ignore">
+var _hsp = window._hsp = window._hsp || [];
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+var useGoogleConsentModeV2 = true;
+var waitForUpdateMillis = 1000;
 
 
+if (!window._hsGoogleConsentRunOnce) {
+  window._hsGoogleConsentRunOnce = true;
+
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': waitForUpdateMillis
+  });
+
+  if (useGoogleConsentModeV2) {
+    _hsp.push(['useGoogleConsentModeV2'])
+  } else {
+    _hsp.push(['addPrivacyConsentListener', function(consent){
+      var hasAnalyticsConsent = consent && (consent.allowed || (consent.categories && consent.categories.analytics));
+      var hasAdsConsent = consent && (consent.allowed || (consent.categories && consent.categories.advertisement));
+
+      gtag('consent', 'update', {
+        'ad_storage': hasAdsConsent ? 'granted' : 'denied',
+        'analytics_storage': hasAnalyticsConsent ? 'granted' : 'denied',
+        'ad_user_data': hasAdsConsent ? 'granted' : 'denied',
+        'ad_personalization': hasAdsConsent ? 'granted' : 'denied'
+      });
+    }]);
+  }
+}
+
+gtag('js', new Date());
+gtag('set', 'developer_id.dZTQ1Zm', true);
+gtag('config', 'G-MLV8VVHRDL');
+</script>
+<script data-cookieconsent="ignore" async src="https://www.googletagmanager.com/gtag/js?id=G-MLV8VVHRDL"></script>
 
 <!-- /Added by GoogleAnalytics4 integration -->
 
 <!--  Added by GoogleTagManager integration -->
+<script data-cookieconsent="ignore">
+var _hsp = window._hsp = window._hsp || [];
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
 
+var useGoogleConsentModeV2 = true;
+var waitForUpdateMillis = 1000;
+
+if (useGoogleConsentModeV2) {
+
+  gtag('set','developer_id.dZTQ1Zm',true);
+
+  gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'analytics_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'wait_for_update': waitForUpdateMillis
+  });
+}
+
+var hsLoadGtm = function loadGtm() {
+    if(window._hsGtmLoadOnce) {
+      return;
+    }
+
+    if (useGoogleConsentModeV2) {
+      _hsp.push(['useGoogleConsentModeV2'])
+    }
+
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NBR53RSB');
+
+    window._hsGtmLoadOnce = true;
+};
+
+_hsp.push(['addPrivacyConsentListener', function(consent){
+  if(consent.allowed || (consent.categories && consent.categories.analytics)){
+    hsLoadGtm();
+  }
+}]);
+
+</script>
 
 <!-- /Added by GoogleTagManager integration -->
 
 
-
+<script type="module" src="https://assets.sandbox.cello.so/attribution/latest/cello-attribution.js" async></script>
 <link rel="amphtml" href="http://zencoder.ai/blog/about-ai-coding-agents?hs_amp=true">
 
 <meta property="og:image" content="//zencoder.ai/hubfs/AI%20Coding%20Agents_%20What%20Are%20They%20and%20How%20Do%20They%20Work_.png">
@@ -188,7 +447,9 @@
 <meta property="og:type" content="article">
 <link rel="alternate" type="application/rss+xml" href="//zencoder.ai/blog/rss.xml">
 <meta name="twitter:domain" content="zencoder.ai">
-
+<script src="//platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+</script>
 
 <meta http-equiv="content-language" content="en-us">
 
@@ -238,8 +499,22 @@
       </a>
 
       
-      
-      
+      <template x-teleport="body">
+        <div x-show="ctxOpen" class="fixed inset-0 z-[99]" @click="ctxOpen = false" @contextmenu.prevent="ctxOpen = false" x-cloak></div>
+      </template>
+      <template x-teleport="body">
+        <div x-show="ctxOpen" x-ref="ctxMenu" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-2" :style="`left: ${ctxX}px; top: ${ctxY}px`" class="fixed z-[100] min-w-[12rem] bg-popover ring-1 ring-ring rounded-lg p-2 shadow-2xl" role="menu" aria-label="Brand assets" @click.outside="ctxOpen = false" @keydown.arrow-down.prevent="ctxFocus(ctxFocusIdx + 1)" @keydown.arrow-up.prevent="ctxFocus(ctxFocusIdx - 1)" @keydown.home.prevent="ctxFocus(0)" @keydown.end.prevent="ctxFocus(ctxItems.length - 1)" @keydown.tab="ctxOpen = false" @contextmenu.prevent.stop x-cloak>
+          <button role="menuitem" tabindex="-1" @click="copySvg('logo'); ctxOpen = false" class="block w-full p-2 rounded-md text-sm/5 text-left text-secondary-foreground hover:bg-accent hover:text-foreground focus:bg-accent focus:text-foreground focus:outline-none transition-colors">
+            <span x-text="copied === 'logo' ? 'Copied!' : copied === 'error' ? 'Copy failed' : 'Copy logo as SVG'"></span>
+          </button>
+          <button role="menuitem" tabindex="-1" @click="copySvg('wordmark'); ctxOpen = false" class="block w-full p-2 rounded-md text-sm/5 text-left text-secondary-foreground hover:bg-accent hover:text-foreground focus:bg-accent focus:text-foreground focus:outline-none transition-colors">
+            <span x-text="copied === 'wordmark' ? 'Copied!' : copied === 'error' ? 'Copy failed' : 'Copy wordmark as SVG'"></span>
+          </button>
+          <a href="//zencoder.ai/hubfs/Zencoder-Logo-Kit.zip" role="menuitem" tabindex="-1" download class="block w-full p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground focus:bg-accent focus:text-foreground focus:outline-none transition-colors" @click="ctxOpen = false">
+            Download brand assets
+          </a>
+        </div>
+      </template>
     </div>
 
     
@@ -568,7 +843,14 @@
       
       <div class="flex items-center justify-between px-6 h-16">
         <div class="flex-1">
-          
+          <template x-if="mobileSubmenu !== null">
+            <button @click="mobileSubmenu = null; $nextTick(() => { if ($refs.menuScroll) $refs.menuScroll.scrollTop = 0 })" class="flex items-center gap-2 text-muted-foreground hover:text-foreground">
+              <svg class="size-3" viewbox="0 0 12 12" fill="currentColor" aria-hidden="true">
+                <path d="m7.75,11c-.192,0-.384-.073-.53-.22L2.97,6.53c-.293-.293-.293-.768,0-1.061L7.22,1.22c.293-.293.768-.293,1.061,0s.293.768,0,1.061l-3.72,3.72,3.72,3.72c.293.293.293.768,0,1.061-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+              </svg>
+              <span class="text-base text-muted-foreground font-medium">Back</span>
+            </button>
+          </template>
         </div>
         <button x-ref="closeBtn" @click="closedByBtn = true; mobileOpen = false; mobileSubmenu = null; openMenu = null" class="p-2 -m-2 text-muted-foreground hover:text-foreground">
           <span class="sr-only">Close menu</span>
@@ -584,10 +866,232 @@
         <div class="absolute inset-0 overflow-y-auto px-6 py-8 overscroll-contain" x-ref="menuScroll">
         
         
-        
+        <template x-if="mobileSubmenu === null">
+          <nav aria-label="Mobile navigation" class="will-change-transform transform-gpu" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-x-4" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 -translate-x-4">
+            <ul class="space-y-2 pt-14">
+              
+              <li>
+                
+                <button @click="mobileSubmenu = 1; $nextTick(() => { if ($refs.menuScroll) $refs.menuScroll.scrollTop = 0 })" class="block w-full text-left text-3xl font-medium text-foreground hover:text-secondary-foreground">
+                  Product
+                </button>
+                
+              </li>
+              
+              <li>
+                
+                <a href="//zencoder.ai/pricing" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="block text-3xl font-medium text-foreground hover:text-secondary-foreground">
+                  Pricing
+                </a>
+                
+              </li>
+              
+              <li>
+                
+                <button @click="mobileSubmenu = 3; $nextTick(() => { if ($refs.menuScroll) $refs.menuScroll.scrollTop = 0 })" class="block w-full text-left text-3xl font-medium text-foreground hover:text-secondary-foreground">
+                  Enterprise
+                </button>
+                
+              </li>
+              
+              <li>
+                
+                <button @click="mobileSubmenu = 4; $nextTick(() => { if ($refs.menuScroll) $refs.menuScroll.scrollTop = 0 })" class="block w-full text-left text-3xl font-medium text-foreground hover:text-secondary-foreground">
+                  Resources
+                </button>
+                
+              </li>
+              
+            </ul>
+          </nav>
+        </template>
 
         
-        
+        <template x-if="mobileSubmenu !== null">
+          <nav aria-label="Submenu navigation" class="will-change-transform transform-gpu" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-x-4" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-x-4">
+            
+            
+            <div x-show="mobileSubmenu === 1">
+              <h3 class="h-14 flex items-end pb-2 text-base font-medium text-muted-foreground">Product</h3>
+              
+              
+              
+              <div>
+                <ul class="space-y-2">
+                  
+                  <li>
+                    <a href="//zencoder.ai/zenflow" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true">
+                      Zenflow™ Code
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="//zencoder.ai/zenflow-work" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true">
+                      Zenflow™ Work
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="//zencoder.ai/product/coding-agent" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true">
+                      IDE Agents
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="//zencoder.ai/marketplace" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true">
+                      Marketplace
+                      
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              
+
+              
+              
+            </div>
+            
+            
+            
+            
+            
+            <div x-show="mobileSubmenu === 3">
+              <h3 class="h-14 flex items-end pb-2 text-base font-medium text-muted-foreground">Enterprise</h3>
+              
+              
+              
+              <div>
+                <ul class="space-y-2">
+                  
+                  <li>
+                    <a href="//zencoder.ai/enterprise" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true">
+                      Zencoder for Enterprise
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="//zencoder.ai/solutions/engineering-managers" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true">
+                      Zenflow for Engineering Managers
+                      
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              
+
+              
+              
+            </div>
+            
+            
+            
+            <div x-show="mobileSubmenu === 4">
+              <h3 class="h-14 flex items-end pb-2 text-base font-medium text-muted-foreground">Resources</h3>
+              
+              
+              
+              <div>
+                <ul class="space-y-2">
+                  
+                  <li>
+                    <a href="https://docs.zencoder.ai/" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true" target="_blank" rel="noopener noreferrer noopener">
+                      Docs
+                      
+<svg class="h-3.5 w-3.5" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" fill="currentColor">
+  <path d="m1.75,11c-.192,0-.384-.073-.53-.22-.293-.293-.293-.768,0-1.061L9.543,1.396c.293-.293.768-.293,1.061,0s.293.768,0,1.061L2.28,10.78c-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+  <path d="m10.25,7.25c-.414,0-.75-.336-.75-.75V2.5h-4c-.414,0-.75-.336-.75-.75s.336-.75.75-.75h4.75c.414,0,.75.336.75.75v4.75c0,.414-.336.75-.75.75Z" stroke-width="0"></path>
+</svg>
+
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="https://discord.com/invite/zencoder" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true" target="_blank" rel="noopener noreferrer noopener">
+                      Community
+                      
+<svg class="h-3.5 w-3.5" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" fill="currentColor">
+  <path d="m1.75,11c-.192,0-.384-.073-.53-.22-.293-.293-.293-.768,0-1.061L9.543,1.396c.293-.293.768-.293,1.061,0s.293.768,0,1.061L2.28,10.78c-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+  <path d="m10.25,7.25c-.414,0-.75-.336-.75-.75V2.5h-4c-.414,0-.75-.336-.75-.75s.336-.75.75-.75h4.75c.414,0,.75.336.75.75v4.75c0,.414-.336.75-.75.75Z" stroke-width="0"></path>
+</svg>
+
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="https://zencoder.ai/blog" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true">
+                      Blog
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="https://docs.zencoder.ai/changelog/home" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true" target="_blank" rel="noopener noreferrer noopener">
+                      Changelog
+                      
+<svg class="h-3.5 w-3.5" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" fill="currentColor">
+  <path d="m1.75,11c-.192,0-.384-.073-.53-.22-.293-.293-.293-.768,0-1.061L9.543,1.396c.293-.293.768-.293,1.061,0s.293.768,0,1.061L2.28,10.78c-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+  <path d="m10.25,7.25c-.414,0-.75-.336-.75-.75V2.5h-4c-.414,0-.75-.336-.75-.75s.336-.75.75-.75h4.75c.414,0,.75.336.75.75v4.75c0,.414-.336.75-.75.75Z" stroke-width="0"></path>
+</svg>
+
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              
+
+              
+              
+              <div>
+                <ul class="space-y-2 mt-2">
+                  
+                  <li>
+                    <a href="//zencoder.ai/contact" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true">
+                      Contact us
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="//zencoder.ai/webinars" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true">
+                      Webinars
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="https://zencoder.ai/customers" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true">
+                      Customers
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="https://job-boards.greenhouse.io/zencoder" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex items-center gap-2 text-3xl font-medium text-secondary-foreground hover:text-foreground" data-utm-pass="true" target="_blank" rel="noopener noreferrer noopener">
+                      Careers
+                      
+<svg class="h-3.5 w-3.5" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" fill="currentColor">
+  <path d="m1.75,11c-.192,0-.384-.073-.53-.22-.293-.293-.293-.768,0-1.061L9.543,1.396c.293-.293.768-.293,1.061,0s.293.768,0,1.061L2.28,10.78c-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+  <path d="m10.25,7.25c-.414,0-.75-.336-.75-.75V2.5h-4c-.414,0-.75-.336-.75-.75s.336-.75.75-.75h4.75c.414,0,.75.336.75.75v4.75c0,.414-.336.75-.75.75Z" stroke-width="0"></path>
+</svg>
+
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              
+            </div>
+            
+            
+          </nav>
+        </template>
         </div>
       </div>
 
@@ -609,7 +1113,11 @@
     </div>
   </div>
   <noscript>
-    
+    <style>
+      [x-cloak] { display: revert !important; }
+      #mobile-menu { position: static !important; display: block !important; height: auto !important; opacity: 1 !important; }
+      #mobile-menu [x-show] { display: block !important; }
+    </style>
   </noscript>
 </header></div></div>
     
@@ -1260,7 +1768,7 @@
         <li>
           
           
-          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://trust.zencoder.ai/" target="_blank" rel="noopener noreferrer noopener">
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://trust.forgood.ai/" target="_blank" rel="noopener noreferrer noopener">
             Trust Center
           </a>
         </li>
@@ -1414,39 +1922,123 @@
 </footer></div></div>
     
 
-    
-    
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.14.8/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
 
     
 
-    
+    <script>
+      (function () {
+        var load = function () {
+          var s = document.createElement('script');
+          s.src = 'https://kit.fontawesome.com/ef6cb0bdd9.js';
+          s.crossOrigin = 'anonymous';
+          s.defer = true;
+          document.head.appendChild(s);
+        };
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(load, { timeout: 2000 });
+        } else {
+          window.addEventListener('load', function () { setTimeout(load, 200); });
+        }
+      })();
+    </script>
 
     
 <!-- HubSpot performance collection script -->
+<script defer src="/hs/hsstatic/content-cwv-embed/static-1.1293/embed.js"></script>
+<script defer src="//zencoder.ai/hubfs/hub_generated/template_assets/1/184211210880/1784045155848/template_script-main.min.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en-us';
+</script>
 
-
-
-
-
-
+<script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="//zencoder.ai/hubfs/hub_generated/module_assets/1/185251510178/1791283324940/module_global-navigation.min.js"></script>
 
 
 <!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "http:\/\/zencoder.ai\/blog\/about-ai-coding-agents"]);
+_hsq.push(["setPageId", "170240887821"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 170240887821,
+    "legacyPageId": "170240887821",
+    "contentFolderId": null,
+    "contentGroupId": 167002545819,
+    "abTestId": null,
+    "languageVariantId": 170240887821,
+    "languageCode": "en-us",
+    
+    
+}]);
+</script>
 
-
-
+<script type="text/javascript" id="hs-script-loader" async defer src="/hs/scriptloader/46014728.js"></script>
 <!-- End of HubSpot Analytics Code -->
 
 
+<script type="text/javascript">
+var hsVars = {
+    render_id: "495cca60-5887-4039-8d91-f387f69d57cb",
+    ticks: 1791394937275,
+    page_id: 170240887821,
+    
+    content_group_id: 167002545819,
+    portal_id: 46014728,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en-us",
+    analytics_page_type: "blog-post",
+    scp_content_type: "",
+    
+    analytics_page_id: "170240887821",
+    category_id: 3,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
 
 
+<script defer src="/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js"></script>
 
+<script>
+(function () {
+  function loadAcsb() {
+    // prevent multiple injections
+    if (window._acsbLoaded) return;
+    window._acsbLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://acsbapp.com/apps/app/dist/js/app.js';
+    s.async = true;
+    s.onload = function () {
+      window.acsbJS && window.acsbJS.init();
+    };
+    document.head.appendChild(s);
+  }
 
-
-
+  // Load the accessibility script after the page's load event
+  window.addEventListener('load', function () {
+    // Use requestIdleCallback if supported to run during idle time
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadAcsb, { timeout: 2000 });
+    } else {
+      // Fallback: queue the task with a zero‑delay timeout
+      setTimeout(loadAcsb, 0);
+    }
+  }, { once: true });
+})();
+</script>
 
 <div id="fb-root"></div>
-   
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));</script> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
  
 
 

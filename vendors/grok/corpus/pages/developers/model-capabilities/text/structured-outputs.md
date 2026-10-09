@@ -15,7 +15,7 @@ There are two ways to request structured outputs from the model.
 
 The primary and most flexible method is to use the `response_format` parameter. By setting `response_format.type` to `"json_schema"` and providing your schema under `response_format.json_schema`, you can define exactly what structured output the model should return. The parameter also accepts `"json_object"` for any well-formed JSON when you don't need a specific structure, or `"text"` (the default) for free-form text.
 
-The second way is through tool calling. When you define tools, xAI models will always generate tool call arguments that strictly conform to the tool’s input JSON Schema (the `strict` flag is implicitly always `true`).
+The second way is through tool calling. When you define tools, SpaceXAI models will always generate tool call arguments that strictly conform to the tool’s input JSON Schema (the `strict` flag is implicitly always `true`).
 
 > [!NOTE]
 >
@@ -226,76 +226,56 @@ Total: $80.00 USD
 
 Use the structured outputs feature of the SDK to parse the invoice.
 
-```pythonXAI
-import os
-from datetime import date
-from enum import Enum
+```javascriptAISDK
+import { xai } from '@ai-sdk/xai';
+import { generateText, Output } from 'ai';
+import { z } from 'zod';
 
-from pydantic import BaseModel, Field
+const CurrencyEnum = z.enum(['USD', 'EUR', 'GBP']);
 
-from xai_sdk import Client
-from xai_sdk.chat import system, user
+const LineItemSchema = z.object({
+  description: z.string().describe('Description of the item or service'),
+  quantity: z.number().int().min(1).describe('Number of units'),
+  unit_price: z.number().min(0).describe('Price per unit'),
+});
 
-# Pydantic Schemas
+const AddressSchema = z.object({
+  street: z.string().describe('Street address'),
+  city: z.string().describe('City'),
+  postal_code: z.string().describe('Postal/ZIP code'),
+  country: z.string().describe('Country'),
+});
 
-class Currency(str, Enum):
-    USD = "USD"
-    EUR = "EUR"
-    GBP = "GBP"
+const InvoiceSchema = z.object({
+  vendor_name: z.string().describe('Name of the vendor'),
+  vendor_address: AddressSchema.describe("Vendor's address"),
+  invoice_number: z.string().describe('Unique invoice identifier'),
+  invoice_date: z.string().date().describe('Date the invoice was issued'),
+  line_items: z
+    .array(LineItemSchema)
+    .describe('List of purchased items/services'),
+  total_amount: z.number().min(0).describe('Total amount due'),
+  currency: CurrencyEnum.describe('Currency of the invoice'),
+});
 
-class LineItem(BaseModel):
-    description: str = Field(description="Description of the item or service")
-    quantity: int = Field(description="Number of units", ge=1)
-    unit_price: float = Field(description="Price per unit", ge=0)
+const result = await generateText({
+  model: xai.responses('grok-4.7'),
+  output: Output.object({ schema: InvoiceSchema }),
+  system:
+    'Given a raw invoice, carefully analyze the text and extract the invoice data into JSON format.',
+  prompt: \`
+  Vendor: Acme Corp, 123 Main St, Springfield, IL 62704
+  Invoice Number: INV-2025-001
+  Date: 2025-02-10
+  Items:
 
-class Address(BaseModel):
-    street: str = Field(description="Street address")
-    city: str = Field(description="City")
-    postal_code: str = Field(description="Postal/ZIP code")
-    country: str = Field(description="Country")
+  - Widget A, 5 units, $10.00 each
+  - Widget B, 2 units, $15.00 each
+    Total: $80.00 USD
+    \`,
+});
 
-class Invoice(BaseModel):
-    vendor_name: str = Field(description="Name of the vendor")
-    vendor_address: Address = Field(description="Vendor's address")
-    invoice_number: str = Field(description="Unique invoice identifier")
-    invoice_date: date = Field(description="Date the invoice was issued")
-    line_items: list[LineItem] = Field(description="List of purchased items/services")
-    total_amount: float = Field(description="Total amount due", ge=0)
-    currency: Currency = Field(description="Currency of the invoice")
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-chat = client.chat.create(model="grok-4.6")
-
-chat.append(system("Given a raw invoice, carefully analyze the text and extract the invoice data into JSON format."))
-chat.append(
-user("""
-Vendor: Acme Corp, 123 Main St, Springfield, IL 62704
-Invoice Number: INV-2025-001
-Date: 2025-02-10
-Items: - Widget A, 5 units, $10.00 each - Widget B, 2 units, $15.00 each
-Total: $80.00 USD
-""")
-)
-
-# The parse method returns a tuple of the full response object as well as the parsed pydantic object.
-
-response, invoice = chat.parse(Invoice)
-assert isinstance(invoice, Invoice)
-
-# Can access fields of the parsed invoice object directly
-
-print(invoice.vendor_name)
-print(invoice.invoice_number)
-print(invoice.invoice_date)
-print(invoice.line_items)
-print(invoice.total_amount)
-print(invoice.currency)
-
-# Can also access fields from the raw response object such as the content.
-
-# In this case, the content is the JSON schema representation of the parsed invoice object
-
-print(response.content)
+console.log(result._output);
 ```
 
 ```pythonOpenAISDK
@@ -338,7 +318,7 @@ client = OpenAI(
 )
 
 completion = client.beta.chat.completions.parse(
-    model="grok-4.6",
+    model="grok-4.7",
     messages=[
     {"role": "system", "content": "Given a raw invoice, carefully analyze the text and extract the invoice data into JSON format."},
     {"role": "user", "content": """
@@ -395,7 +375,7 @@ const client = new OpenAI({
 });
 
 const completion = await client.chat.completions.parse({
-    model: "grok-4.6",
+    model: "grok-4.7",
     messages: [
     { role: "system", content: "Given a raw invoice, carefully analyze the text and extract the invoice data into JSON format." },
     { role: "user", content: \`
@@ -416,56 +396,76 @@ const invoice = completion.choices[0].message.parsed;
 console.log(invoice);
 ```
 
-```javascriptAISDK
-import { xai } from '@ai-sdk/xai';
-import { generateText, Output } from 'ai';
-import { z } from 'zod';
+```pythonXAI
+import os
+from datetime import date
+from enum import Enum
 
-const CurrencyEnum = z.enum(['USD', 'EUR', 'GBP']);
+from pydantic import BaseModel, Field
 
-const LineItemSchema = z.object({
-  description: z.string().describe('Description of the item or service'),
-  quantity: z.number().int().min(1).describe('Number of units'),
-  unit_price: z.number().min(0).describe('Price per unit'),
-});
+from xai_sdk import Client
+from xai_sdk.chat import system, user
 
-const AddressSchema = z.object({
-  street: z.string().describe('Street address'),
-  city: z.string().describe('City'),
-  postal_code: z.string().describe('Postal/ZIP code'),
-  country: z.string().describe('Country'),
-});
+# Pydantic Schemas
 
-const InvoiceSchema = z.object({
-  vendor_name: z.string().describe('Name of the vendor'),
-  vendor_address: AddressSchema.describe("Vendor's address"),
-  invoice_number: z.string().describe('Unique invoice identifier'),
-  invoice_date: z.string().date().describe('Date the invoice was issued'),
-  line_items: z
-    .array(LineItemSchema)
-    .describe('List of purchased items/services'),
-  total_amount: z.number().min(0).describe('Total amount due'),
-  currency: CurrencyEnum.describe('Currency of the invoice'),
-});
+class Currency(str, Enum):
+    USD = "USD"
+    EUR = "EUR"
+    GBP = "GBP"
 
-const result = await generateText({
-  model: xai.responses('grok-4.6'),
-  output: Output.object({ schema: InvoiceSchema }),
-  system:
-    'Given a raw invoice, carefully analyze the text and extract the invoice data into JSON format.',
-  prompt: \`
-  Vendor: Acme Corp, 123 Main St, Springfield, IL 62704
-  Invoice Number: INV-2025-001
-  Date: 2025-02-10
-  Items:
+class LineItem(BaseModel):
+    description: str = Field(description="Description of the item or service")
+    quantity: int = Field(description="Number of units", ge=1)
+    unit_price: float = Field(description="Price per unit", ge=0)
 
-  - Widget A, 5 units, $10.00 each
-  - Widget B, 2 units, $15.00 each
-    Total: $80.00 USD
-    \`,
-});
+class Address(BaseModel):
+    street: str = Field(description="Street address")
+    city: str = Field(description="City")
+    postal_code: str = Field(description="Postal/ZIP code")
+    country: str = Field(description="Country")
 
-console.log(result._output);
+class Invoice(BaseModel):
+    vendor_name: str = Field(description="Name of the vendor")
+    vendor_address: Address = Field(description="Vendor's address")
+    invoice_number: str = Field(description="Unique invoice identifier")
+    invoice_date: date = Field(description="Date the invoice was issued")
+    line_items: list[LineItem] = Field(description="List of purchased items/services")
+    total_amount: float = Field(description="Total amount due", ge=0)
+    currency: Currency = Field(description="Currency of the invoice")
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+chat = client.chat.create(model="grok-4.7")
+
+chat.append(system("Given a raw invoice, carefully analyze the text and extract the invoice data into JSON format."))
+chat.append(
+user("""
+Vendor: Acme Corp, 123 Main St, Springfield, IL 62704
+Invoice Number: INV-2025-001
+Date: 2025-02-10
+Items: - Widget A, 5 units, $10.00 each - Widget B, 2 units, $15.00 each
+Total: $80.00 USD
+""")
+)
+
+# The parse method returns a tuple of the full response object as well as the parsed pydantic object.
+
+response, invoice = chat.parse(Invoice)
+assert isinstance(invoice, Invoice)
+
+# Can access fields of the parsed invoice object directly
+
+print(invoice.vendor_name)
+print(invoice.invoice_number)
+print(invoice.invoice_date)
+print(invoice.line_items)
+print(invoice.total_amount)
+print(invoice.currency)
+
+# Can also access fields from the raw response object such as the content.
+
+# In this case, the content is the JSON schema representation of the parsed invoice object
+
+print(response.content)
 ```
 
 ### Step 4: Type-safe Output
@@ -530,32 +530,6 @@ const ProofInfoSchema = z.object({
 });
 ```
 
-```python customLanguage="pythonXAI"
-import os
-from pydantic import BaseModel, Field
-
-from xai_sdk import Client
-from xai_sdk.chat import user
-from xai_sdk.tools import web_search
-
-# ProofInfo schema defined above
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-chat = client.chat.create(
-    model="grok-4.6",
-    tools=[web_search()],
-)
-
-chat.append(user("Find the latest machine-checked proof of the four color theorem."))
-
-response, proof = chat.parse(ProofInfo)
-
-print(f"Name: {proof.name}")
-print(f"Authors: {proof.authors}")
-print(f"Year: {proof.year}")
-print(f"Summary: {proof.summary}")
-```
-
 ```python customLanguage="pythonOpenAISDK"
 import os
 from openai import OpenAI
@@ -569,7 +543,7 @@ client = OpenAI(
 )
 
 response = client.responses.parse(
-    model="grok-4.6",
+    model="grok-4.7",
     input="Find the latest machine-checked proof of the four color theorem.",
     tools=[
         {"type": "web_search"}
@@ -600,7 +574,7 @@ const client = new OpenAI({
 const format = zodResponseFormat(ProofInfoSchema, "proof_info");
 
 const response = await client.responses.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     input: "Find the latest machine-checked proof of the four color theorem.",
     tools: [
         { type: "web_search" }
@@ -628,6 +602,32 @@ if (textContent) {
 }
 ```
 
+```python customLanguage="pythonXAI"
+import os
+from pydantic import BaseModel, Field
+
+from xai_sdk import Client
+from xai_sdk.chat import user
+from xai_sdk.tools import web_search
+
+# ProofInfo schema defined above
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+chat = client.chat.create(
+    model="grok-4.7",
+    tools=[web_search()],
+)
+
+chat.append(user("Find the latest machine-checked proof of the four color theorem."))
+
+response, proof = chat.parse(ProofInfo)
+
+print(f"Name: {proof.name}")
+print(f"Authors: {proof.authors}")
+print(f"Year: {proof.year}")
+print(f"Summary: {proof.summary}")
+```
+
 ### Example: Client-side Tools with Structured Output
 
 This example uses a client-side function tool to compute Collatz sequence steps and returns the result in a structured format:
@@ -650,64 +650,6 @@ const CollatzResultSchema = {
     required: ["starting_number", "steps"],
     additionalProperties: false,
 };
-```
-
-```python customLanguage="pythonXAI"
-import os
-import json
-from pydantic import BaseModel, Field
-
-from xai_sdk import Client
-from xai_sdk.chat import tool, tool_result, user
-
-# CollatzResult schema defined above
-
-def collatz_steps(n: int) -> int:
-    """Returns the number of steps for n to reach 1 in the Collatz sequence."""
-    steps = 0
-    while n != 1:
-        n = n // 2 if n % 2 == 0 else 3 * n + 1
-        steps += 1
-    return steps
-
-collatz_tool = tool(
-    name="collatz_steps",
-    description="Compute the number of steps for a number to reach 1 in the Collatz sequence",
-    parameters={
-        "type": "object",
-        "properties": {
-            "n": {"type": "integer", "description": "The starting number"},
-        },
-        "required": ["n"],
-    },
-)
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-chat = client.chat.create(
-    model="grok-4.6",
-    tools=[collatz_tool],
-)
-
-chat.append(user("Use the collatz_steps tool to find how many steps it takes for 20250709 to reach 1."))
-
-# Handle tool calls until we get a final response
-while True:
-    response = chat.sample()
-    
-    if not response.tool_calls:
-        break
-    
-    chat.append(response)
-    for tc in response.tool_calls:
-        args = json.loads(tc.function.arguments)
-        result = collatz_steps(args["n"])
-        chat.append(tool_result(str(result)))
-
-# Parse the final response into structured output
-response, result = chat.parse(CollatzResult)
-
-print(f"Starting number: {result.starting_number}")
-print(f"Steps to reach 1: {result.steps}")
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -755,7 +697,7 @@ messages = [
 # Handle tool calls until we get a final response
 while True:
     completion = client.chat.completions.create(
-        model="grok-4.6",
+        model="grok-4.7",
         messages=messages,
         tools=tools,
     )
@@ -777,7 +719,7 @@ while True:
 
 # Final call with structured output
 completion = client.beta.chat.completions.parse(
-    model="grok-4.6",
+    model="grok-4.7",
     messages=messages,
     response_format=CollatzResult,
 )
@@ -830,7 +772,7 @@ let messages = [
 // Handle tool calls until we get a final response
 while (true) {
     const completion = await client.chat.completions.create({
-        model: "grok-4.6",
+        model: "grok-4.7",
         messages,
         tools,
     });
@@ -855,7 +797,7 @@ while (true) {
 
 // Final call with structured output
 const completion = await client.chat.completions.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     messages,
     response_format: {
         type: "json_schema",
@@ -870,6 +812,64 @@ const completion = await client.chat.completions.create({
 const result = JSON.parse(completion.choices[0].message.content);
 console.log("Starting number:", result.starting_number);
 console.log("Steps to reach 1:", result.steps);
+```
+
+```python customLanguage="pythonXAI"
+import os
+import json
+from pydantic import BaseModel, Field
+
+from xai_sdk import Client
+from xai_sdk.chat import tool, tool_result, user
+
+# CollatzResult schema defined above
+
+def collatz_steps(n: int) -> int:
+    """Returns the number of steps for n to reach 1 in the Collatz sequence."""
+    steps = 0
+    while n != 1:
+        n = n // 2 if n % 2 == 0 else 3 * n + 1
+        steps += 1
+    return steps
+
+collatz_tool = tool(
+    name="collatz_steps",
+    description="Compute the number of steps for a number to reach 1 in the Collatz sequence",
+    parameters={
+        "type": "object",
+        "properties": {
+            "n": {"type": "integer", "description": "The starting number"},
+        },
+        "required": ["n"],
+    },
+)
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+chat = client.chat.create(
+    model="grok-4.7",
+    tools=[collatz_tool],
+)
+
+chat.append(user("Use the collatz_steps tool to find how many steps it takes for 20250709 to reach 1."))
+
+# Handle tool calls until we get a final response
+while True:
+    response = chat.sample()
+    
+    if not response.tool_calls:
+        break
+    
+    chat.append(response)
+    for tc in response.tool_calls:
+        args = json.loads(tc.function.arguments)
+        result = collatz_steps(args["n"])
+        chat.append(tool_result(str(result)))
+
+# Parse the final response into structured output
+response, result = chat.parse(CollatzResult)
+
+print(f"Starting number: {result.starting_number}")
+print(f"Steps to reach 1: {result.steps}")
 ```
 
 ## Alternative: Using `response_format` with `sample()` or `stream()`
@@ -947,7 +947,7 @@ client = Client(api_key=os.getenv("XAI_API_KEY"))
 
 # Pass the Pydantic model to response_format instead of using parse()
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     response_format=Invoice,  # Pass the Pydantic model here
 )
 
@@ -1000,7 +1000,7 @@ class Summary(BaseModel):
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     response_format=Summary,  # Pass the Pydantic model here
 )
 

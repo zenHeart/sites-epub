@@ -33,8 +33,4 @@ API keys are created on the [API Keys page](https://console.x.ai/team/default/ap
 * [Collections API](/developers/rest-api-reference/collections)
 * [Management API](/developers/rest-api-reference/management)
 
-## Other protocols
-
-* [gRPC API](/developers/grpc-api-reference)
-
 For status codes and their likely causes, see [Debugging Errors](/developers/debugging).

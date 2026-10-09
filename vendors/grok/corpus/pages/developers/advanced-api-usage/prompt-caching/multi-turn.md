@@ -17,37 +17,6 @@ For reasoning models, you can maintain cache hits by either:
 
 The prompt prefix is identical to the previous request, with only a new user message appended:
 
-```bash customLanguage="bash" addedLines="26"
-# Turn 1: Initial request (establishes the cache)
-curl https://api.x.ai/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "x-grok-conv-id: conv_abc123" \
-  -d '{
-    "model": "grok-4.6",
-    "messages": [
-      {"role": "system", "content": "You are Grok, a helpful and truthful AI assistant built by xAI."},
-      {"role": "user", "content": "What is prompt caching?"},
-      {"role": "assistant", "content": "Prompt caching stores KV pairs from unchanged prompt prefixes so they can be reused on subsequent requests. This makes responses faster and cheaper."}
-    ]
-  }'
-
-# Turn 2: Cache HIT — exact prefix preserved, new message appended
-curl https://api.x.ai/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "x-grok-conv-id: conv_abc123" \
-  -d '{
-    "model": "grok-4.6",
-    "messages": [
-      {"role": "system", "content": "You are Grok, a helpful and truthful AI assistant built by xAI."},
-      {"role": "user", "content": "What is prompt caching?"},
-      {"role": "assistant", "content": "Prompt caching stores KV pairs from unchanged prompt prefixes so they can be reused on subsequent requests. This makes responses faster and cheaper."},
-      {"role": "user", "content": "Show me a code example."}
-    ]
-  }'
-```
-
 ```python customLanguage="pythonOpenAISDK"
 from openai import OpenAI
 
@@ -64,7 +33,7 @@ messages = [
 
 # Turn 1: Initial request (establishes the cache)
 response = client.chat.completions.create(
-    model="grok-4.6",
+    model="grok-4.7",
     messages=messages,
     extra_headers={"x-grok-conv-id": conversation_id},
 )
@@ -76,11 +45,42 @@ messages.append({"role": "user", "content": "Show me a code example."})
 
 # Turn 2: Cache HIT — prefix is unchanged, only new messages appended
 response = client.chat.completions.create(
-    model="grok-4.6",
+    model="grok-4.7",
     messages=messages,
     extra_headers={"x-grok-conv-id": conversation_id},
 )
 print(f"Turn 2 — Cached tokens: {response.usage.prompt_tokens_details.cached_tokens}")
+```
+
+```bash customLanguage="bash" addedLines="26"
+# Turn 1: Initial request (establishes the cache)
+curl https://api.x.ai/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "x-grok-conv-id: conv_abc123" \
+  -d '{
+    "model": "grok-4.7",
+    "messages": [
+      {"role": "system", "content": "You are Grok, a helpful and truthful AI assistant built by xAI."},
+      {"role": "user", "content": "What is prompt caching?"},
+      {"role": "assistant", "content": "Prompt caching stores KV pairs from unchanged prompt prefixes so they can be reused on subsequent requests. This makes responses faster and cheaper."}
+    ]
+  }'
+
+# Turn 2: Cache HIT — exact prefix preserved, new message appended
+curl https://api.x.ai/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "x-grok-conv-id: conv_abc123" \
+  -d '{
+    "model": "grok-4.7",
+    "messages": [
+      {"role": "system", "content": "You are Grok, a helpful and truthful AI assistant built by xAI."},
+      {"role": "user", "content": "What is prompt caching?"},
+      {"role": "assistant", "content": "Prompt caching stores KV pairs from unchanged prompt prefixes so they can be reused on subsequent requests. This makes responses faster and cheaper."},
+      {"role": "user", "content": "Show me a code example."}
+    ]
+  }'
 ```
 
 ```javascript customLanguage="javascriptOpenAISDK"
@@ -103,7 +103,7 @@ const messages = [
 
 // Turn 1: Initial request (establishes the cache)
 const turn1 = await client.chat.completions.create(
-  { model: 'grok-4.6', messages },
+  { model: 'grok-4.7', messages },
   { headers: { 'x-grok-conv-id': conversationId } },
 );
 console.log(
@@ -117,7 +117,7 @@ messages.push({ role: 'user', content: 'Show me a code example.' });
 
 // Turn 2: Cache HIT — prefix unchanged, new message appended
 const turn2 = await client.chat.completions.create(
-  { model: 'grok-4.6', messages },
+  { model: 'grok-4.7', messages },
   { headers: { 'x-grok-conv-id': conversationId } },
 );
 console.log(
@@ -136,7 +136,7 @@ curl https://api.x.ai/v1/chat/completions \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -H "x-grok-conv-id: conv_abc123" \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "messages": [
       {"role": "system", "content": "You are Grok, a helpful and truthful AI assistant built by xAI."},
       {"role": "user", "content": "What is prompt caching?"},
@@ -160,7 +160,7 @@ curl https://api.x.ai/v1/chat/completions \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -H "x-grok-conv-id: conv_abc123" \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "messages": [
       {"role": "system", "content": "You are Grok, a helpful and truthful AI assistant built by xAI."},
       {"role": "user", "content": "What is prompt caching?"},
@@ -183,7 +183,7 @@ curl https://api.x.ai/v1/chat/completions \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -H "x-grok-conv-id: conv_abc123" \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "messages": [
       {"role": "user", "content": "What is prompt caching?"},
       {"role": "system", "content": "You are Grok, a helpful and truthful AI assistant built by xAI."},

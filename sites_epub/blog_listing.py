@@ -9,7 +9,15 @@ from urllib.parse import urljoin, urlparse
 from bs4 import BeautifulSoup
 
 DEFAULT_LISTING = "https://claude.com/blog"
-BLOG_PATH = re.compile(r"^/blog/([A-Za-z0-9][A-Za-z0-9\-]*)/?$")
+# 2026-10: claude.com 308-redirects /blog/<slug> to /resources/articles/<slug>.
+# Both spellings are accepted on input; the canonical URL is always the
+# /resources/articles one, so legacy links and sitemap <loc> dedupe together.
+LEGACY_BLOG_PATH = re.compile(r"^/blog/([A-Za-z0-9][A-Za-z0-9\-]*)/?$")
+ARTICLE_PATH = re.compile(r"^/resources/articles/([A-Za-z0-9][A-Za-z0-9\-]*)/?$")
+BLOG_PATH = re.compile(
+    r"^(?:/blog|/resources/articles)/([A-Za-z0-9][A-Za-z0-9\-]*)/?$"
+)
+CANONICAL_BLOG = "https://claude.com/resources/articles"
 PAGE_COUNT_RE = re.compile(r"(\d+)\s*/\s*(\d+)")
 COLLECTION_PAGE_RE = re.compile(r"([0-9a-fA-F]+)_page=(\d+)")
 
@@ -41,18 +49,20 @@ def normalize_blog_url(href: str, base: str = "https://claude.com") -> str | Non
     slug = match.group(1)
     if slug in {"category", "tag", "author"}:
         return None
-    return f"https://claude.com/blog/{slug}"
+    return f"{CANONICAL_BLOG}/{slug}"
 
 
 def extract_blog_urls(html: str, base: str = "https://claude.com") -> list[str]:
-    """De-duplicated https://claude.com/blog/<slug> URLs in first-seen order.
+    """De-duplicated https://claude.com/resources/articles/<slug> URLs in first-seen order.
 
     2026-08: claude.com moved off Webflow; the listing is now a React app whose
-    article links live in embedded JSON payloads (and in sitemap.xml <loc>,
-    which fetch_vendor appends to this html). Walk <a> tags first, then sweep
-    the raw text for href="..." and <loc> so payload links are covered.
-    normalize_blog_url still enforces host + EN slug, so i18n (/de/blog/...)
-    and chrome links stay excluded.
+    article links live in embedded JSON payloads. 2026-10: the listing page
+    itself only renders ~7 posts, so sitemap.xml <loc> (appended to this html
+    by fetch_vendor) is the real enumeration source — 257 root-language EN
+    articles vs. 7 on the listing page. Walk <a> tags first, then sweep the raw
+    text for both path spellings and <loc> so payload links are covered.
+    normalize_blog_url still enforces host + EN slug, so i18n (/de/...) and
+    chrome links stay excluded.
     """
     soup = BeautifulSoup(html, "lxml")
     seen: set[str] = set()
@@ -67,6 +77,8 @@ def extract_blog_urls(html: str, base: str = "https://claude.com") -> list[str]:
     for tag in soup.find_all("a", href=True):
         _add(tag["href"])
     for href in re.findall(r'href="([^"]*/blog/[^"]*)"', html):
+        _add(href)
+    for href in re.findall(r'href="([^"]*/resources/articles/[^"]*)"', html):
         _add(href)
     for loc in re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", html, flags=re.I):
         _add(loc)

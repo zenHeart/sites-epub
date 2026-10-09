@@ -255,3 +255,70 @@ SAN 列表中 **`epub.zenheart.site` 不在**。Fastly 在 CNAME 模式下默认
 **怎么修**：对以 `|` 开头且含 ``` 的行，行内剔除 ```` ```lang ```` 标记（保留格内代码文本）——coze `cozeloop_create-dataset` 即此修法。手工语料修会被 refetch 带回（§4 规律），重抓后需重放。
 
 **怎么防止复发**：新 vendor 门禁红 `leftover_markdown_fence` 时，先 repr 打印围栏行确认形态（独立行 vs 行内压扁），再选对应修法，不要盲改正则。
+
+---
+
+## 16. claude.com 博客从 Webflow 迁到 RSC：正文选择器与 canonical URL 一起换（2026-10-09）
+
+**症状**：`claude.com/blog` 整体 308 到 `/resources/articles`；243 条博客路由的 `html_url` 全部指向已死的 `/blog/<slug>`，缓存里还是 9-16 的旧 HTML。`blog_article._collect_body_blocks` 的三个 Webflow 选择器在新页命中数全为 0（`blog_post_content_wrap` / `u-rich-text-blog` / `hero_blog_post_details`）。
+
+**根因**：站点换框架，三处契约同时断：
+1. **URL 契约**：`/blog/<slug>` → `/resources/articles/<slug>`，`normalize_blog_url` 只认老路径，收到的全是重定向；
+2. **正文契约**：Webflow 的 `blog_post_content_wrap > .u-rich-text-blog.w-richtext` 外壳没了，但 `w-richtext` 这个 class 被保留下来挂在正文 div 上（新页 `article` → `BlogPostDetail-*-bodyWrap` → `grid-12` → `ArticleLayout-*-content` → `.w-richtext`，实测单块 3192 字）；
+3. **元数据契约**：`.hero_blog_post_details` 是唯一的日期/作者来源，新页没有；但每篇都发了 `ld+json` 的 `BlogPosting`（`datePublished` / `headline` / `author`）。
+
+**怎么发现**：先 `curl -sSL https://claude.com/blog | head` 看跳转，再用选择器逐个计数（命中 0 就是契约断了，不是内容空），最后 `soup.select_one(".w-richtext")` 验字数。
+
+**怎么修**（`blog_listing.py` / `blog_article.py`）：
+- `BLOG_PATH` 改成 `^(?:/blog|/resources/articles)/<slug>$`，`normalize_blog_url` 一律输出 canonical `https://claude.com/resources/articles/<slug>`——老链接和 sitemap `<loc>` 因此自然去重成同一个 URL；**route 仍是 `blog/<slug>`、group 仍是 `Blog`**，Blog-last 不变量不因 URL 迁移而破。
+- `_collect_body_blocks` 的选择器链末尾追加 `article .w-richtext` 与 `.w-richtext`。链是「命中即返回」，老页面仍在前三个选择器上短路，行为不变。
+- 新增 `_ldjson_article()`：展平 `@graph` 后找第一个 `BlogPosting/Article` 节点，作为 published / author / dek 的兜底；`CHROME_SELECTORS` 追加 `[class*="RelatedPosts-module"]` 等 CSS-module 子串选择器，清掉新页 chrome。
+
+**枚举源要换**：新列表页只渲染 7 篇文章，`<a>`/payload 扫不到全量；`fetch_vendor` 本来就把 `sitemap.xml` 拼在 `blog_html` 后面，`extract_blog_urls` 的 `<loc>` 分支因此直接吃 sitemap——**根语言 `/resources/articles/` 下 257 条，列表页 7 条**。i18n 镜像（`/de/resources/articles/…`）由 host+路径前缀一起挡掉。
+
+**怎么防止复发**：框架迁移期先验「选择器计数 + canonical URL 状态码」两个数，别先改代码；canonical 化只改 URL、不改 route/group，Book-last 与语料文件身份都不受影响。
+
+---
+
+## 17. SSR 里的博客 slug 消失后，sitemap 是唯一可靠枚举源（kimi，2026-10-09）
+
+**症状**：`kimi_nav.parse_kimi_blog` 在 SSR 文本里扫 `/blog/<slug>`，实测归零，基线 21 条路由掉到 17 条。更隐蔽的是 `docs_url=https://www.kimi.com` 的首页**静默缩水**：只剩 8 个 `<a>`，产品家族里 `/agent-swarm` `/sheets` `/design` `/build` 全部不再出现在首页锚点里，`parse_docs_html` 就此少收 6 页——`fetch` 报 `ok:true`，不比对基线就看不出丢了东西。
+
+**根因**：两个枚举面同时失效，而 kimi 的「产品页」根本不在 sitemap 的 `/docs/` 下——它在站点根。sitemap 只有 22 条 loc，其中一半是 `/en/*` 镜像。
+
+**怎么发现**：拿 `git show <上一笔>:vendors/<id>/corpus/routes.json` 的路由数当基线，逐条 live 探；只看 `fetch` 的 `ok:true` 会漏掉这种静默缩水。
+
+**怎么修**（`kimi_nav.py` 重写）：
+- **枚举**：sitemap 根语言 `<loc>`（剔 `/en/*`、`/zh/*` 镜像）∪ 首页锚点 ∪ `/products` 产品家族页链接爬取。第三个来源是关键——`/code` 与 `/products/kimi-work` 只在 `/products` 上有链接，首页和 `/docs` 都没有；且 Next.js 导航一部分以转义 JSON 形式存在，锚点正则和 payload 正则都要扫。
+- **canonical**：`/blog/<slug>` 现在 302 到 `/en/blog/<slug>`，博客路由一律用 `/en/blog/<slug>`，`/websites` 302 到 `/build`，路由改名为 `build`。
+- **索引页斜杠**：`/products` `/features` `/ai-models` `/academy` 只对 `/hub/` 形式返回 200，裸 `/hub` 是 308——`KIMI_INDEX_PATHS` 显式补尾斜杠。
+- **范围**：`KIMI_OUT_PREFIXES` 把 `/capabilities` `/use-cases` `/showcases` `/resources`（SEO 用例与内容营销 hub）、`/solutions` `/business` `/membership`（销售与定价）逐条列出，排除是可审计的而不是隐式的。前缀带不带尾斜杠语义不同：带斜杠覆盖子树和自己的索引页，不带只覆盖自身与子路径。
+
+**怎么防止复发**：新增/复测 vendor 时，枚举源至少要有两个（sitemap + 一个产品家族页），并在报告里写清 before→after 路由数；路由改名要连同 301/308 的 `Location` 一起核对，别只改名字。
+
+---
+
+## 18. 98MB 门禁下压体积：递归重压直到每张图都在阈值内（zencoder，2026-10-09）
+
+**症状**：zencoder 语料图 266MB，EPUB 远超 CI 的 98MB 门禁，`pack` 能在本地跑完但 push 阶段才炸。
+
+**根因**：`shrink_corpus_images.py` 的默认档（>400KB 转 JPEG q80、宽≤1400）压一轮仍有超限图留在包里；zencoder 一次 refetch 带回 7380 张博客图，单轮压不下来。
+
+**怎么修**：**递归重编码**——每轮重新统计仍超过阈值的图，按更小的宽/更低的质量再压一轮，循环到没有超限项。2026-09-16 实测：递归 JPEG 重编码 720px/q65，盘上省 1.07GB，`zencoder.epub` 266.3MB → 48.5MB，门禁通过，章节数不变。每轮都要同步 `image-map.json` 的 value 与文件名扩展名（URL 不变，页面源零改动）。
+
+**怎么防止复发**：CI 的 98MB 门禁是最后一道，体积要在本地 `pack --id <id>` 就看到；重压脚本要幂等——同一张图重复压只会掉画质，不会掉体积。
+
+---
+
+## 19. 语料里的示例 token 与 GitHub push protection（2026-10-09 处置流程）
+
+**症状**：`git push origin main` 被 GH secret-scanning / push protection 拦下，命中路径在 `vendors/<id>/corpus/**`。
+
+**处置流程**（与 §4 同源，这里是完整闭环）：
+1. **先本地扫再推**：`git diff --cached | grep -nE "xai-[A-Za-z0-9]{20,}|sk-ant-[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9]{30,}"`。命中行号就是待替换位置。
+2. **就地替换占位符**：保留厂商前缀的形状（`xai-YOUR_API_KEY_HERE`），让文档示例仍然可读，同时不匹配任何 key 正则。
+3. **`git commit --amend --no-edit`** 就地改写，**不要**追加一笔「修 token」的提交——历史里那笔仍然会被扫描。
+4. **重推**；仍被拦则回到第 1 步（push protection 的命中是一次性全部返回，不是逐个）。
+5. **接受「会被 refetch 带回」**：手工替换会被下一次 `--refetch` 覆盖（§4 规律）。要么把该页记进「每次 fetch 后重放」清单，要么每轮 fetch 后跑 `scripts/sanitize_corpus_html.py` 复查。**不要**为此改适配器去剥离语料里的示例——示例代码是文档价值的一部分。
+
+**怎么防止复发**：把第 1 步的扫描放进提交前自检清单，和封面标题门禁、`file vendors/<id>/icon.png` 魔数校验并列。

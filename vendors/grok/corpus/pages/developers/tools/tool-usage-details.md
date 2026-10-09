@@ -33,17 +33,21 @@ Returns a list of all **attempted** tool calls made during the agentic process. 
 
 This includes **every tool call attempt**, even if some fail.
 
-### `server_side_tool_usage` - Successful Calls (Billable)
+### `server_side_tool_usage` - Successful Calls
 
 ```pythonWithoutSDK
 response.server_side_tool_usage
 ```
 
-Returns a map of successfully executed tools and their invocation counts. This represents only the tool calls that returned meaningful responses and **determines your billing**.
+Returns a map of successfully executed tools and their invocation counts. This represents only the tool calls that returned meaningful responses and **determines your billing** for per-call tools; X Search is billed on the [item counts below](#x-search-item-counts) instead.
 
 ```output
 {'SERVER_SIDE_TOOL_X_SEARCH': 3, 'SERVER_SIDE_TOOL_WEB_SEARCH': 2}
 ```
+
+### X Search item counts
+
+As of September 21, 2026, X Search is billed per post and per user profile fetched rather than per call. The Responses API reports these counts as `usage.server_side_tool_usage_details.x_posts_fetched` and `x_users_fetched`. See [X Search usage counts](/developers/tools/x-search#usage-counts) for what each field includes.
 
 ## Tool Call Function Names vs Usage Categories
 
@@ -70,7 +74,7 @@ In most cases, `tool_calls` and `server_side_tool_usage` will show the same tool
 
 The agentic system handles these failures gracefully, updating its trajectory and continuing with alternative approaches when needed.
 
-**Billing Note**: Only successful tool executions (`server_side_tool_usage`) are billed. Failed attempts are not charged.
+**Billing Note**: Only successful tool executions (`server_side_tool_usage`) are billed. Failed attempts are not charged. X Search is billed per post and per user profile fetched rather than per call; see [X Search item counts](#x-search-item-counts).
 
 ## Understanding Token Usage
 
@@ -122,7 +126,7 @@ from xai_sdk.tools import web_search, x_search
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=[
         web_search(),
         x_search(),
@@ -130,7 +134,7 @@ chat = client.chat.create(
     max_turns=3,  # Limit to 3 assistant/tool-call turns
 )
 
-chat.append(user("What is the latest news from xAI?"))
+chat.append(user("What is the latest news from SpaceXAI?"))
 response = chat.sample()
 print(response.content)
 ```
@@ -165,11 +169,11 @@ for tool_call in response.tool_calls:
 | Tool call types | Description |
 |---------------|-------------|
 | `"client_side_tool"` | Client-side tool call - requires local execution |
-| `"web_search_tool"` | Web-search tool - handled by xAI server |
-| `"x_search_tool"` | X-search tool - handled by xAI server |
-| `"code_execution_tool"` | Code-execution tool - handled by xAI server |
-| `"collections_search_tool"` | Collections-search tool - handled by xAI server |
-| `"mcp_tool"` | MCP tool - handled by xAI server |
+| `"web_search_tool"` | Web-search tool - handled by SpaceXAI server |
+| `"x_search_tool"` | X-search tool - handled by SpaceXAI server |
+| `"code_execution_tool"` | Code-execution tool - handled by SpaceXAI server |
+| `"collections_search_tool"` | Collections-search tool - handled by SpaceXAI server |
+| `"mcp_tool"` | MCP tool - handled by SpaceXAI server |
 
 ### Using Responses API
 
@@ -178,8 +182,8 @@ Check the `type` field of output entries (`response.output[].type`):
 | Types | Description |
 |-------|-------------|
 | `"function_call"` | Client-side tool - requires local execution |
-| `"web_search_call"` | Web-search tool - handled by xAI server |
-| `"x_search_call"` | X-search tool - handled by xAI server |
-| `"code_interpreter_call"` | Code-execution tool - handled by xAI server |
-| `"file_search_call"` | Collections-search tool - handled by xAI server |
-| `"mcp_call"` | MCP tool - handled by xAI server |
+| `"web_search_call"` | Web-search tool - handled by SpaceXAI server |
+| `"custom_tool_call"` | X-search tool when `call_id` starts with `xs_` (attachment search uses `as_`) - handled by SpaceXAI server |
+| `"code_interpreter_call"` | Code-execution tool - handled by SpaceXAI server |
+| `"file_search_call"` | Collections-search tool - handled by SpaceXAI server |
+| `"mcp_call"` | MCP tool - handled by SpaceXAI server |

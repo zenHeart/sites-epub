@@ -12,27 +12,16 @@ Image generation uses flat per-image pricing regardless of prompt length. Each g
 
 Generate new images from text prompts with Grok Imagine models. Configure output count (up to 10 images per request), aspect ratio, resolution, and response format.
 
-```python customLanguage="pythonXAI"
-import xai_sdk
+```javascript customLanguage="javascriptAISDK"
+import { xai } from "@ai-sdk/xai";
+import { generateImage } from "ai";
 
-client = xai_sdk.Client()
+const { image } = await generateImage({
+    model: xai.image("grok-imagine-image-2.0"),
+    prompt: "A collage of London landmarks in a stenciled street‑art style",
+});
 
-response = client.image.sample(
-    prompt="A collage of London landmarks in a stenciled street‑art style",
-    model="grok-imagine-image-2.0",
-)
-
-print(response.url)
-```
-
-```bash
-curl -X POST https://api.x.ai/v1/images/generations \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -d '{
-    "model": "grok-imagine-image-2.0",
-    "prompt": "A collage of London landmarks in a stenciled street‑art style"
-  }'
+console.log(image.base64);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -51,55 +40,32 @@ response = client.images.generate(
 print(response.data[0].url)
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from "@ai-sdk/xai";
-import { generateImage } from "ai";
-
-const { image } = await generateImage({
-    model: xai.image("grok-imagine-image-2.0"),
-    prompt: "A collage of London landmarks in a stenciled street‑art style",
-});
-
-console.log(image.base64);
+```bash
+curl -X POST https://api.x.ai/v1/images/generations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -d '{
+    "model": "grok-imagine-image-2.0",
+    "prompt": "A collage of London landmarks in a stenciled street‑art style"
+  }'
 ```
 
-## Image Editing
-
-Edit a source image with natural language. Provide a public image URL or base64-encoded data URI, then describe the change you want Grok Imagine to apply. Multi-image editing supports up to 5 source images in a single request for combining subjects, transferring styles, and composing scenes.
-
 ```python customLanguage="pythonXAI"
-import base64
 import xai_sdk
 
 client = xai_sdk.Client()
 
-# Load image from file and encode as base64
-with open("photo.png", "rb") as f:
-    image_data = base64.b64encode(f.read()).decode("utf-8")
-
 response = client.image.sample(
-    prompt="Render this as a pencil sketch with detailed shading",
+    prompt="A collage of London landmarks in a stenciled street‑art style",
     model="grok-imagine-image-2.0",
-    image_url=f"data:image/png;base64,{image_data}",
 )
 
 print(response.url)
 ```
 
-```bash
-# Using a public URL as the source image
-curl -X POST https://api.x.ai/v1/images/edits \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -d '{
-    "model": "grok-imagine-image-2.0",
-    "prompt": "Render this as a pencil sketch with detailed shading",
-    "image": {
-      "url": "https://docs.x.ai/assets/api-examples/images/style-realistic.png",
-      "type": "image_url"
-    }
-  }'
-```
+## Image Editing
+
+Edit a source image with natural language. Provide a public image URL or base64-encoded data URI, then describe the change you want Grok Imagine to apply. Multi-image editing supports up to 5 source images in a single request for combining subjects, transferring styles, and composing scenes.
 
 ```javascript customLanguage="javascriptAISDK"
 import { xai } from "@ai-sdk/xai";
@@ -121,25 +87,43 @@ const { image } = await generateImage({
 console.log(image.base64);
 ```
 
-## Video Generation
-
-Animate a still image with a text prompt. The source image becomes the starting point for the generated video. Video requests are asynchronous: start a request, poll with the returned request ID, and use the completed video URL when ready. The xAI SDK and AI SDK handle polling for you.
+```bash
+# Using a public URL as the source image
+curl -X POST https://api.x.ai/v1/images/edits \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -d '{
+    "model": "grok-imagine-image-2.0",
+    "prompt": "Render this as a pencil sketch with detailed shading",
+    "image": {
+      "url": "https://docs.x.ai/assets/api-examples/images/style-realistic.png",
+      "type": "image_url"
+    }
+  }'
+```
 
 ```python customLanguage="pythonXAI"
-import os
+import base64
 import xai_sdk
 
-client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+client = xai_sdk.Client()
 
-response = client.video.generate(
-    prompt="Make the water crash down and slowly pan out the camera",
-    model="grok-imagine-video-1.5",
-    image_url="https://docs.x.ai/assets/api-examples/video/waterfall-still.png",
-    duration=12,
+# Load image from file and encode as base64
+with open("photo.png", "rb") as f:
+    image_data = base64.b64encode(f.read()).decode("utf-8")
+
+response = client.image.sample(
+    prompt="Render this as a pencil sketch with detailed shading",
+    model="grok-imagine-image-2.0",
+    image_url=f"data:image/png;base64,{image_data}",
 )
 
 print(response.url)
 ```
+
+## Video Generation
+
+Animate a still image with a text prompt. The source image becomes the starting point for the generated video. Video requests are asynchronous: start a request, poll with the returned request ID, and use the completed video URL when ready. The xAI SDK and AI SDK handle polling for you.
 
 ```javascript customLanguage="javascriptAISDK"
 import { xai } from "@ai-sdk/xai";
@@ -186,14 +170,30 @@ while true; do
 done
 ```
 
+```python customLanguage="pythonXAI"
+import os
+import xai_sdk
+
+client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+
+response = client.video.generate(
+    prompt="Make the water crash down and slowly pan out the camera",
+    model="grok-imagine-video-1.5",
+    image_url="https://docs.x.ai/assets/api-examples/video/waterfall-still.png",
+    duration=12,
+)
+
+print(response.url)
+```
+
 ## More Capabilities
 
-Beyond the top use cases above, the Imagine API supports several additional workflows:
+Beyond the top use cases above, the Imagine API supports several additional workflows. The [Video Overview](/developers/model-capabilities/video/overview) compares the video models and shows each mode with real inputs and outputs.
 
 * **[Multi-Image Editing](/developers/model-capabilities/images/multi-image-editing)** — Combine up to 5 source images in a single edit for compositing subjects, transferring styles, and building scenes from multiple references.
 * **[Video Generation](/developers/model-capabilities/video/generation)** — Generate videos from text prompts with configurable duration (up to 15s), aspect ratio, and resolution.
-* **[Video Editing](/developers/model-capabilities/video/editing)** — Modify an existing video with a text prompt while preserving the rest of the scene.
-* **[Reference-to-Video](/developers/model-capabilities/video/reference-to-video)** — Guide a generated video with one or more reference images that influence the output without forcing the first frame.
+* **[Video Editing](/developers/model-capabilities/video/editing)** — Modify an existing video with a text prompt on `grok-imagine-video`.
+* **[Reference-to-Video](/developers/model-capabilities/video/reference-to-video)** — Guide a video with up to 14 reference images and 3 voice references on `grok-imagine-video-1.5`, and pin first, last, and mid-video frames.
 * **[Video Extension](/developers/model-capabilities/video/extension)** — Continue an existing video from its last frame, combining the original and extension into one clip.
 * **[Files API Integration](/developers/model-capabilities/imagine/files)** — Reference stored files as Imagine inputs by ID, persist generated assets to the Files API, and optionally create a permanent shareable public URL — all in a single request.
 

@@ -69,7 +69,7 @@ ws.on("message", (data) => {
 
 ```
 
-**Demo Apps:** [Web Agent](https://github.com/xai-org/xai-cookbook/tree/main/voice-examples/agent/web) · [Twilio Phone Agent](https://github.com/xai-org/xai-cookbook/tree/main/voice-examples/agent/telephony) · [WebRTC Agent](https://github.com/xai-org/xai-cookbook/tree/main/voice-examples/agent/webrtc) · [iOS Tester App](https://github.com/xai-org/xai-cookbook/tree/main/iOS/VoiceTesterApp)
+**Demo Apps:** [Web Agent](https://github.com/xai-org/xai-cookbook/tree/main/examples/voice-agent-web) · [Twilio Phone Agent](https://github.com/xai-org/xai-cookbook/tree/main/examples/voice-agent-phone) · [WebRTC Agent](https://github.com/xai-org/xai-cookbook/tree/main/examples/voice-agent-webrtc) · [iOS Tester App](https://github.com/xai-org/xai-cookbook/tree/main/examples/voice-agent-mobile/swift)
 
 ## Text to Speech
 
@@ -132,11 +132,12 @@ fs.writeFileSync("welcome.mp3", buffer);
 
 ## Speech to Text
 
-Transcribe audio files in a single call or stream over WebSocket. 12 audio formats, word-level timestamps, multichannel, speaker diarization, Smart Turn end-of-turn detection, and 25 languages.
+Transcribe audio files in a single call or stream over WebSocket. The default is `grok-voice-transcribe-2.0`. 12 audio formats, word-level timestamps, multichannel, speaker diarization, Smart Turn end-of-turn detection, and 38+ languages.
 
 ```bash
 curl -X POST https://api.x.ai/v1/stt \
   -H "Authorization: Bearer $XAI_API_KEY" \
+  -F model=grok-voice-transcribe-2.0 \
   -F file=@recording.mp3
 ```
 
@@ -148,6 +149,7 @@ response = requests.post(
     "https://api.x.ai/v1/stt",
     headers={"Authorization": f"Bearer {os.environ['XAI_API_KEY']}"},
     files={"file": ("recording.mp3", open("recording.mp3", "rb"), "audio/mpeg")},
+    data={"model": "grok-voice-transcribe-2.0"},
 )
 
 print(response.json()["text"])
@@ -157,6 +159,7 @@ print(response.json()["text"])
 import fs from "fs";
 
 const formData = new FormData();
+formData.append("model", "grok-voice-transcribe-2.0");
 formData.append("file", new Blob([fs.readFileSync("recording.mp3")]), "recording.mp3");
 
 const response = await fetch("https://api.x.ai/v1/stt", {
@@ -264,7 +267,7 @@ The custom `voice_id` also works with the streaming TTS WebSocket and the Speech
 
 ## Voices
 
-When using the Speech to Speech API or Text to Speech, you can choose from the full set of built-in voices. Each has its own personality and tone, so pick the one that best fits your application (`eve` is the default):
+When using the Speech to Speech API or Text to Speech, you can choose from the full set of built-in voices. Each has its own personality and tone, and all of them can speak every supported language. Pick the one that best fits your application (`eve` is the default):
 
 ### Enterprise Compliance & Security
 

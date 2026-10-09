@@ -8,6 +8,8 @@ All prices are in USD. For per-model details, see the [models page](/developers/
 
 | Model | Context | Input / 1M tokens | Cached input / 1M tokens | Output / 1M tokens |
 | --- | --- | --- | --- | --- |
+| grok-4.7 (< 200k prompt tokens) | 500k | $2.00 | $0.50 | $6.00 |
+| grok-4.7 (≥ 200k prompt tokens) | 500k | $4.00 | $1.00 | $12.00 |
 | grok-4.6 (< 200k prompt tokens) | 500k | $2.00 | $0.50 | $6.00 |
 | grok-4.6 (≥ 200k prompt tokens) | 500k | $4.00 | $1.00 | $12.00 |
 | grok-4.5 (< 200k prompt tokens) | 500k | $2.00 | $0.30 | $6.00 |
@@ -29,23 +31,24 @@ All prices are in USD. For per-model details, see the [models page](/developers/
 
 | Model | Cost |
 | --- | --- |
-| grok-imagine-image | $0.02 / image |
-| grok-imagine-image-2.0 | $0.04 / image |
 | grok-imagine-image-quality | $0.05 / image |
+| grok-imagine-image-2.0 | $0.04 / image |
+| grok-imagine-image | $0.02 / image |
 | grok-imagine-video-1.5 | $0.080 / sec |
+| grok-imagine-video-1.5-lite | $0.020 / sec |
 | grok-imagine-video | $0.050 / sec |
 
 ### Voice Pricing
 
 | Mode | Cost |
 | --- | --- |
-| Speech to Speech (grok-voice-think-fast-2.0) | $0.08 / min ($4.80 / hr) audio<br />$0.004 / text input |
+| Speech to Speech (grok-voice-think-fast-2.0) | $0.08 / min ($4.80 / hr)<br />$0.004 / text input |
 | Speech to Text | $0.10 / hr (REST), $0.20 / hr (Streaming) |
 | Text to Speech | $15.00 / 1M chars |
 
 ## Tools Pricing
 
-Requests which make use of xAI provided [server-side tools](/developers/tools/overview) are priced based on two components: **token usage** and **server-side tool invocations**. Since the agent autonomously decides how many tools to call, costs scale with query complexity.
+Requests which make use of SpaceXAI provided [server-side tools](/developers/tools/overview) are priced based on two components: **token usage** and **server-side tool invocations**. Since the agent autonomously decides how many tools to call, costs scale with query complexity.
 
 ### Token Costs
 
@@ -59,24 +62,21 @@ All standard token types are billed for the model used in the request:
 
 ### Tool Invocation Costs
 
-> [!WARNING]
->
-> Starting September 21, 2026 at 12:00 PM PT, X Search is billed at $5 per 1k posts fetched and $10 per 1k user profiles fetched, replacing the current $5 per 1k calls. Every post returned by a search or thread fetch, including parent and quoted posts, counts; every profile returned by a user search counts.
-
 | Tool | Tool Name | Description | Cost / 1k Calls |
 | --- | --- | --- | --- |
 | Web Search | `web_search` | Search the internet and browse web pages | $5 |
-| X Search | `x_search` | Search X posts, user profiles, and threads‡ | $5 |
+| X Search | `x_search` | Search X posts, user profiles, and threads | $5 / 1k posts, $10 / 1k profiles |
 | Code Execution | `code_execution`, `code_interpreter`† | Run Python code in a sandboxed environment | $5 |
 | Image Generation | `image_generation` | Generate and edit images | [Imagine API rates](/developers/pricing#imagine-api-pricing) |
-| File Attachments | `attachment_search` | Search through files attached to messages | $10 |
+| File Attachments | `attachment_search` | Search through files attached to messages | $5 |
 | Collections Search | `collections_search`, `file_search`† | Query your uploaded document collections (RAG) | $2.50 |
 | Image Understanding | `view_image` | Analyze images found during Web Search and X Search\* | Token-based |
 | X Video Understanding | `view_x_video` | Analyze videos found during X Search\* | Token-based |
 | Remote MCP Tools | Set by MCP server | Connect and use custom MCP tool servers | Token-based |
 † All tool names work in the Responses API. In the gRPC API (Python xAI SDK), `code_interpreter` and `file_search` are not supported.
 \* Only applies to images and videos found by search tools — not to images passed directly in messages.
-‡ Starting September 21, 2026 at 12:00 PM PT, X Search is billed at $5 per 1k posts fetched and $10 per 1k user profiles fetched instead of $5 per 1k calls.
+
+X Search is billed per item fetched rather than per call: every post returned by a search or thread fetch, including parent and quoted posts, counts toward the post rate, and every profile returned by a user search counts toward the profile rate.
 
 For the view image and view x video tools, you will not be charged for the tool invocation itself but will be charged for the image tokens used to process the image or video.
 
@@ -130,6 +130,17 @@ You are only billed at the priority rate when the response confirms `"service_ti
 >
 > Priority Processing is available for Chat Completions and Responses endpoints only. It is not supported for image generation, video generation, or [Batch API](/developers/advanced-api-usage/batch-api) requests. See [Priority Processing documentation](/developers/advanced-api-usage/priority-processing) for full details.
 
+## Grok 4.7 Fast pricing (Cursor and Grok Build only)
+
+Grok 4.7 Fast is the same Grok 4.7 model served on faster infrastructure. It costs 2x the standard token rates, or 1.5x for long-context requests. It's available only in [Cursor](https://cursor.com) and [Grok Build](/build/overview), and is billed through your plan there. It is not available on the public xAI API, and Grok Build's free tier does not include it.
+
+| Prompt tokens | Input | Cached input | Output |
+|---|---|---|---|
+| Below 200k | $4.00 / 1M | $1.00 / 1M | $12.00 / 1M |
+| Above 200k | $6.00 / 1M | $1.50 / 1M | $18.00 / 1M |
+
+Long-context rates apply once a request's prompt exceeds 200k tokens. Cursor bills its own fast variant through your Cursor plan.
+
 ## US Regional Endpoint Pricing
 
 Requests sent to the [US regional endpoint](/developers/advanced-api-usage/regions), `https://us.api.x.ai/v1`, run inference in the United States; their token usage is billed at **1.1x** the global token rates, a 10% premium.
@@ -138,13 +149,13 @@ Requests sent to the [US regional endpoint](/developers/advanced-api-usage/regio
 |---|---|---|
 | Base URL | `https://api.x.ai/v1` | `https://us.api.x.ai/v1` |
 | Token pricing | Standard rates | **1.1x** standard rates |
-| Models | All models available to your team | Currently `grok-4.6` only |
+| Models | All models available to your team | Currently `grok-4.7` and `grok-4.6` only |
 
-The 1.1x multiplier applies to input, output, and cached input tokens, including long-context rates. [Prompt caching](/developers/advanced-api-usage/prompt-caching) discounts are applied before the multiplier. See the [Regional Endpoints documentation](/developers/advanced-api-usage/regions) for the scope of the US processing and storage guarantee.
+For `grok-4.7` this is $2.20 / $0.55 / $6.60 per 1M tokens (input / cached input / output) below 200k prompt tokens, and $4.40 / $1.10 / $13.20 above. The 1.1x multiplier applies to input, output, and cached input tokens, including long-context rates. [Prompt caching](/developers/advanced-api-usage/prompt-caching) discounts are applied before the multiplier. See the [Regional Endpoints documentation](/developers/advanced-api-usage/regions) for the scope of the US processing and storage guarantee.
 
 ## Files and Collections Pricing
 
-Files and collections stored on the xAI platform are billed based on the amount of storage used.
+Files and collections stored on the SpaceXAI platform are billed based on the amount of storage used.
 
 | Resource | Rate |
 |---|---:|

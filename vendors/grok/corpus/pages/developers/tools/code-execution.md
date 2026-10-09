@@ -39,6 +39,96 @@ Below are comprehensive examples showing how to integrate the code execution too
 
 ### Basic Calculations
 
+```javascriptAISDK
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
+
+const { text } = await generateText({
+  model: xai.responses('grok-4.7'),
+  prompt: 'Calculate the compound interest for $10,000 at 5% annually for 10 years',
+  tools: {
+    code_execution: xai.tools.codeExecution(),
+  },
+});
+
+console.log(text);
+```
+
+```pythonOpenAISDK
+import os
+from openai import OpenAI
+
+api_key = os.getenv("XAI_API_KEY")
+client = OpenAI(
+    api_key=api_key,
+    base_url="https://api.x.ai/v1",
+)
+
+response = client.responses.create(
+    model="grok-4.7",
+    input=[
+        {
+            "role": "user",
+            "content": "Calculate the compound interest for $10,000 at 5% annually for 10 years",
+        },
+    ],
+    tools=[
+        {
+            "type": "code_interpreter",
+        },
+    ],
+)
+
+print(response)
+```
+
+```pythonRequests
+import os
+import requests
+
+url = "https://api.x.ai/v1/responses"
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": f"Bearer {os.getenv('XAI_API_KEY')}"
+}
+payload = {
+    "model": "grok-4.7",
+    "input": [
+        {
+            "role": "user",
+            "content": "Calculate the compound interest for $10,000 at 5% annually for 10 years"
+        }
+    ],
+    "tools": [
+        {
+            "type": "code_interpreter",
+        }
+    ]
+}
+response = requests.post(url, headers=headers, json=payload)
+print(response.json())
+```
+
+```bash
+curl https://api.x.ai/v1/responses \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer $XAI_API_KEY" \\
+  -d '{
+  "model": "grok-4.7",
+  "input": [
+    {
+      "role": "user",
+      "content": "Calculate the compound interest for $10,000 at 5% annually for 10 years"
+    }
+  ],
+  "tools": [
+    {
+      "type": "code_interpreter"
+    }
+  ]
+}'
+```
+
 ```pythonXAI
 import os
 
@@ -48,7 +138,7 @@ from xai_sdk.tools import code_execution
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 chat = client.chat.create(
-    model="grok-4.6",  # reasoning model
+    model="grok-4.7",  # reasoning model
     tools=[code_execution()],
     include=["verbose_streaming"],
 )
@@ -78,97 +168,45 @@ print("\\n\\nServer Side Tool Calls:")
 print(response.tool_calls)
 ```
 
-```pythonOpenAISDK
-import os
-from openai import OpenAI
-
-api_key = os.getenv("XAI_API_KEY")
-client = OpenAI(
-    api_key=api_key,
-    base_url="https://api.x.ai/v1",
-)
-
-response = client.responses.create(
-    model="grok-4.6",
-    input=[
-        {
-            "role": "user",
-            "content": "Calculate the compound interest for $10,000 at 5% annually for 10 years",
-        },
-    ],
-    tools=[
-        {
-            "type": "code_interpreter",
-        },
-    ],
-)
-
-print(response)
-```
-
-```pythonRequests
-import os
-import requests
-
-url = "https://api.x.ai/v1/responses"
-headers = {
-    "Content-Type": "application/json",
-    "Authorization": f"Bearer {os.getenv('XAI_API_KEY')}"
-}
-payload = {
-    "model": "grok-4.6",
-    "input": [
-        {
-            "role": "user",
-            "content": "Calculate the compound interest for $10,000 at 5% annually for 10 years"
-        }
-    ],
-    "tools": [
-        {
-            "type": "code_interpreter",
-        }
-    ]
-}
-response = requests.post(url, headers=headers, json=payload)
-print(response.json())
-```
-
-```bash
-curl https://api.x.ai/v1/responses \\
-  -H "Content-Type: application/json" \\
-  -H "Authorization: Bearer $XAI_API_KEY" \\
-  -d '{
-  "model": "grok-4.6",
-  "input": [
-    {
-      "role": "user",
-      "content": "Calculate the compound interest for $10,000 at 5% annually for 10 years"
-    }
-  ],
-  "tools": [
-    {
-      "type": "code_interpreter"
-    }
-  ]
-}'
-```
+### Data Analysis
 
 ```javascriptAISDK
 import { xai } from '@ai-sdk/xai';
 import { generateText } from 'ai';
 
-const { text } = await generateText({
-  model: xai.responses('grok-4.6'),
-  prompt: 'Calculate the compound interest for $10,000 at 5% annually for 10 years',
+// Step 1: Load and analyze data
+const step1 = await generateText({
+  model: xai.responses('grok-4.7'),
+  prompt: \`I have sales data for Q1-Q4: [120000, 135000, 98000, 156000].
+Please analyze this data and create a visualization showing:
+1. Quarterly trends
+2. Growth rates
+3. Statistical summary\`,
   tools: {
     code_execution: xai.tools.codeExecution(),
   },
 });
 
-console.log(text);
-```
+console.log('##### Step 1: Data Analysis #####');
+console.log(step1.text);
 
-### Data Analysis
+// Step 2: Follow-up analysis using previousResponseId
+const step2 = await generateText({
+  model: xai.responses('grok-4.7'),
+  prompt: 'Now predict Q1 next year using linear regression',
+  tools: {
+    code_execution: xai.tools.codeExecution(),
+  },
+  providerOptions: {
+    xai: {
+      previousResponseId: step1.response.id,
+    },
+  },
+});
+
+console.log('##### Step 2: Prediction Analysis #####');
+console.log(step2.text);
+```
 
 ```pythonXAI
 import os
@@ -180,7 +218,7 @@ client = Client(api_key=os.getenv("XAI_API_KEY"))
 
 # Multi-turn conversation with data analysis
 chat = client.chat.create(
-    model="grok-4.6",  # reasoning model
+    model="grok-4.7",  # reasoning model
     tools=[code_execution()],
     include=["verbose_streaming"],
 )
@@ -244,44 +282,6 @@ print("\\n\\nServer Side Tool Calls:")
 print(response.tool_calls)
 ```
 
-```javascriptAISDK
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
-// Step 1: Load and analyze data
-const step1 = await generateText({
-  model: xai.responses('grok-4.6'),
-  prompt: \`I have sales data for Q1-Q4: [120000, 135000, 98000, 156000].
-Please analyze this data and create a visualization showing:
-1. Quarterly trends
-2. Growth rates
-3. Statistical summary\`,
-  tools: {
-    code_execution: xai.tools.codeExecution(),
-  },
-});
-
-console.log('##### Step 1: Data Analysis #####');
-console.log(step1.text);
-
-// Step 2: Follow-up analysis using previousResponseId
-const step2 = await generateText({
-  model: xai.responses('grok-4.6'),
-  prompt: 'Now predict Q1 next year using linear regression',
-  tools: {
-    code_execution: xai.tools.codeExecution(),
-  },
-  providerOptions: {
-    xai: {
-      previousResponseId: step1.response.id,
-    },
-  },
-});
-
-console.log('##### Step 2: Prediction Analysis #####');
-console.log(step2.text);
-```
-
 ## Best Practices
 
 ### 1. **Be Specific in Requests**
@@ -312,7 +312,7 @@ Data: [['2024-01', 50000, 35000], ['2024-02', 55000, 38000], ...]
 ### 3. **Use Appropriate Model Settings**
 
 * **Temperature**: Use lower values (0.0-0.3) for mathematical calculations
-* **Model**: Use reasoning models like `grok-4.6` for better code generation
+* **Model**: Use reasoning models like `grok-4.7` for better code generation
 
 ## Common Use Cases
 

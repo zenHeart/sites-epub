@@ -2,6 +2,8 @@
 
 Connect Bitbucket Cloud repositories to [Cloud Agents](https://cursor.com/docs/cloud-agent.md) and [Bugbot](https://cursor.com/docs/bugbot.md). Connect Bitbucket Data Center repositories to Bugbot.
 
+[Security Reviewer and Vulnerability Scanner](https://cursor.com/docs/security-agents.md#source-control-support) do not support Bitbucket Cloud or Bitbucket Data Center repositories.
+
 ## Setup
 
 ### Bitbucket Cloud
@@ -101,6 +103,27 @@ Add these Cursor IP addresses to your inbound allowlist:
 184.73.225.134
 3.209.66.12
 52.44.113.131
+100.63.97.141
+100.63.144.57
+18.210.232.136
+3.208.51.163
+3.224.130.48
+3.234.118.132
+34.197.19.148
+34.198.251.120
+34.199.187.247
+35.170.160.152
+44.215.226.85
+52.202.172.69
+54.81.109.217
+54.204.61.44
+54.236.99.119
+67.202.63.191
+184.193.125.229
+184.193.223.40
+184.194.140.210
+184.194.175.144
+184.194.208.56
 ```
 
 If Cursor should use a load balancer or API hostname that differs from the repository clone hostname, enter it as the external host during registration.
@@ -119,6 +142,10 @@ For instances without public inbound access, see [Advanced networking](https://c
 8. Open [Bugbot in Automations](https://cursor.com/automations/from-cursor/bugbot) to enable it on repositories from the instance
 
 Cursor uses the service account identity for Bugbot review comments, inline findings, webhooks, and build statuses.
+
+Bugbot reviews pull requests automatically when they're opened or updated. Comment commands such as `bugbot run` and `cursor review` don't run on Bitbucket Data Center. Cursor replies to the comment to say so.
+
+[Bugbot Autofix](https://cursor.com/docs/bugbot.md#autofix) isn't supported on Bitbucket Data Center. If Autofix is on, Bugbot skips it and says so in its review.
 
 ### Disconnect Bitbucket Data Center
 

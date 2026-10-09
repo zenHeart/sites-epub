@@ -697,14 +697,6 @@
   },
   {
     "group": "Jules",
-    "title": "Getting Started",
-    "md_url": "https://jules.google/docs/index.md",
-    "html_url": "https://jules.google/docs/index",
-    "route": "jules/index",
-    "kind": "doc"
-  },
-  {
-    "group": "Jules",
     "title": "Environment setup",
     "md_url": "https://jules.google/docs/environment.md",
     "html_url": "https://jules.google/docs/environment",
@@ -1517,14 +1509,6 @@
     "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/business-audit-logging.md",
     "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/business-audit-logging",
     "route": "code-assist/codeassist/business-audit-logging",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Use Gemini Code Assist in your IDE",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-in-ide.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/use-in-ide",
-    "route": "code-assist/codeassist/use-in-ide",
     "kind": "doc"
   },
   {
@@ -2490,1392 +2474,1392 @@
   {
     "group": "Blog",
     "title": "gemini app",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/",
     "route": "blog/innovation-and-ai/products/gemini-app",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "personal intelligence",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence/",
     "route": "blog/innovation-and-ai/products/gemini-app/personal-intelligence",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini drop january 2026",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-january-2026",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-january-2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-january-2026/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-january-2026/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-drop-january-2026",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini budget planning tips",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-budget-planning-tips",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-budget-planning-tips",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-budget-planning-tips/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-budget-planning-tips/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-budget-planning-tips",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "lyria 3",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/lyria-3",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/lyria-3",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/lyria-3/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/lyria-3/",
     "route": "blog/innovation-and-ai/products/gemini-app/lyria-3",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "android multi step tasks",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/android-multi-step-tasks",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/android-multi-step-tasks",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/android-multi-step-tasks/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/android-multi-step-tasks/",
     "route": "blog/innovation-and-ai/products/gemini-app/android-multi-step-tasks",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "lyria 3 year of the fire horse",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/lyria-3-year-of-the-fire-horse",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/lyria-3-year-of-the-fire-horse",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/lyria-3-year-of-the-fire-horse/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/lyria-3-year-of-the-fire-horse/",
     "route": "blog/innovation-and-ai/products/gemini-app/lyria-3-year-of-the-fire-horse",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini drop february 2026",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-february-2026",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-february-2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-february-2026/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-february-2026/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-drop-february-2026",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "switch to gemini app",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/switch-to-gemini-app",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/switch-to-gemini-app",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/switch-to-gemini-app/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/switch-to-gemini-app/",
     "route": "blog/innovation-and-ai/products/gemini-app/switch-to-gemini-app",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini drop updates march 2026",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "notebooks gemini notebooklm",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm/",
     "route": "blog/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "3d models charts",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/3d-models-charts",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/3d-models-charts",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/3d-models-charts/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/3d-models-charts/",
     "route": "blog/innovation-and-ai/products/gemini-app/3d-models-charts",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "personal intelligence nano banana",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
     "route": "blog/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini app now on mac os",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini drop april 2026",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-april-2026",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-april-2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-april-2026/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-april-2026/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-drop-april-2026",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "generate files in gemini",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/generate-files-in-gemini",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/generate-files-in-gemini",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/generate-files-in-gemini/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/generate-files-in-gemini/",
     "route": "blog/innovation-and-ai/products/gemini-app/generate-files-in-gemini",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "digitize notes gemini study guide",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/digitize-notes-gemini-study-guide",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/digitize-notes-gemini-study-guide",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/digitize-notes-gemini-study-guide/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/digitize-notes-gemini-study-guide/",
     "route": "blog/innovation-and-ai/products/gemini-app/digitize-notes-gemini-study-guide",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "next evolution gemini app",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
     "route": "blog/innovation-and-ai/products/gemini-app/next-evolution-gemini-app",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini features for businesses",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-features-for-businesses",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-features-for-businesses",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-features-for-businesses/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-features-for-businesses/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-features-for-businesses",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini study notebooks",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-study-notebooks",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-study-notebooks",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-study-notebooks/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-study-notebooks/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-study-notebooks",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "personal intelligence nano banana us expansion",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana-us-expansion",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana-us-expansion",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana-us-expansion/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana-us-expansion/",
     "route": "blog/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana-us-expansion",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini spark updates june 2026",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "how to make gemini study notebooks",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/how-to-make-gemini-study-notebooks",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/how-to-make-gemini-study-notebooks",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/how-to-make-gemini-study-notebooks/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/how-to-make-gemini-study-notebooks/",
     "route": "blog/innovation-and-ai/products/gemini-app/how-to-make-gemini-study-notebooks",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini southeast asia report 2026",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-southeast-asia-report-2026",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-southeast-asia-report-2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-southeast-asia-report-2026/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-southeast-asia-report-2026/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-southeast-asia-report-2026",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "speak naturally gemini app mac os",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/speak-naturally-gemini-app-mac-os",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/speak-naturally-gemini-app-mac-os",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/speak-naturally-gemini-app-mac-os/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/speak-naturally-gemini-app-mac-os/",
     "route": "blog/innovation-and-ai/products/gemini-app/speak-naturally-gemini-app-mac-os",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini spark updates july 2026",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-july-2026",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-july-2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-july-2026/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-july-2026/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-spark-updates-july-2026",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "new connected apps services gemini august 2026",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026/",
     "route": "blog/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "one billion monthly users",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/",
     "route": "blog/innovation-and-ai/products/gemini-app/one-billion-monthly-users",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini waymo",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-waymo",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "student offer google ai",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/",
     "route": "blog/innovation-and-ai/products/gemini-app/student-offer-google-ai",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "how to take practice sat",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/how-to-take-practice-sat",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/how-to-take-practice-sat",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/how-to-take-practice-sat/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/how-to-take-practice-sat/",
     "route": "blog/innovation-and-ai/products/gemini-app/how-to-take-practice-sat",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "four new interactive bts experiences",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/four-new-interactive-bts-experiences",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/four-new-interactive-bts-experiences",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/four-new-interactive-bts-experiences/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/four-new-interactive-bts-experiences/",
     "route": "blog/innovation-and-ai/products/gemini-app/four-new-interactive-bts-experiences",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "enable intelligent dictation macos",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/",
     "route": "blog/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "productivity features gemini live",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
     "route": "blog/innovation-and-ai/products/gemini-app/productivity-features-gemini-live",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "better tracks lyria gemini",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
     "route": "blog/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini app now on windows",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "household chores tips",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/",
     "route": "blog/innovation-and-ai/products/gemini-app/household-chores-tips",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "new connected apps gemini",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/",
     "route": "blog/innovation-and-ai/products/gemini-app/new-connected-apps-gemini",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "guided vision gemini live",
-    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live",
-    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/",
     "route": "blog/innovation-and-ai/products/gemini-app/guided-vision-gemini-live",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini models",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 deep think",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 1 pro",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 1 flash lite",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini embedding 2",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 1 flash live",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 1 flash tts",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "next generation gemini deep research",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini embedding 2 generally available",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2-generally-available",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2-generally-available",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2-generally-available/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2-generally-available/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2-generally-available",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 5",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-5",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini omni",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-omni",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini omni 3 5 videos",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini live 3 5 translate",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "introducing computer use gemini 3 5 flash",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini omni flash nano banana 2 lite",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 6 flash 3 5 flash lite 3 5 flash cyber",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "using gemini to manage farm",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/using-gemini-to-manage-farm",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/using-gemini-to-manage-farm",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/using-gemini-to-manage-farm/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/using-gemini-to-manage-farm/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/using-gemini-to-manage-farm",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "glanceboard gemini flash nano banana",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/glanceboard-gemini-flash-nano-banana",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/glanceboard-gemini-flash-nano-banana",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/glanceboard-gemini-flash-nano-banana/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/glanceboard-gemini-flash-nano-banana/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/glanceboard-gemini-flash-nano-banana",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini omni builders",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-builders",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-builders",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-builders/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-builders/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-omni-builders",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "introducing gemini 3 7 flash",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini omni experts roundtable",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-experts-roundtable",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-experts-roundtable",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-experts-roundtable/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-experts-roundtable/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-omni-experts-roundtable",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "what full stack development means",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/what-full-stack-development-means",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/what-full-stack-development-means",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/what-full-stack-development-means/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/what-full-stack-development-means/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/what-full-stack-development-means",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 5 transcribe",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "introducing agentic video in gemini",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "3 8 flash and 3 8 flash cyber",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 8 live gemini 3 8 live extended thinking",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 8 text to speech",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 8 live with live avatar",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 8 flash developers",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 4 argon",
-    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon",
-    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/",
     "route": "blog/products-and-platforms/products/gemini",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google bard new features update july 2023",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023/",
     "route": "blog/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "how to use google bard",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/how-to-use-google-bard",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/how-to-use-google-bard",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/how-to-use-google-bard/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/how-to-use-google-bard/",
     "route": "blog/products-and-platforms/products/gemini/how-to-use-google-bard",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google bard new features update sept 2023",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/",
     "route": "blog/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google bard expansion teens",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-expansion-teens",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-expansion-teens",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-expansion-teens/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-expansion-teens/",
     "route": "blog/products-and-platforms/products/gemini/google-bard-expansion-teens",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google bard try gemini ai",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/",
     "route": "blog/products-and-platforms/products/gemini/google-bard-try-gemini-ai",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google bard gemini pro image generation",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-gemini-pro-image-generation",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-gemini-pro-image-generation",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-gemini-pro-image-generation/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-bard-gemini-pro-image-generation/",
     "route": "blog/products-and-platforms/products/gemini/google-bard-gemini-pro-image-generation",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "bard gemini advanced app",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/bard-gemini-advanced-app",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/bard-gemini-advanced-app",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/bard-gemini-advanced-app/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/bard-gemini-advanced-app/",
     "route": "blog/products-and-platforms/products/gemini/bard-gemini-advanced-app",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini image generation issue",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-image-generation-issue",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-image-generation-issue",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-image-generation-issue/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-image-generation-issue/",
     "route": "blog/products-and-platforms/products/gemini/gemini-image-generation-issue",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google gemini update may 2024",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024/",
     "route": "blog/products-and-platforms/products/gemini/google-gemini-update-may-2024",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google gemini new features july 2024",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-new-features-july-2024",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-new-features-july-2024",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-new-features-july-2024/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-new-features-july-2024/",
     "route": "blog/products-and-platforms/products/gemini/google-gemini-new-features-july-2024",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "made by google gemini ai updates",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/made-by-google-gemini-ai-updates",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/made-by-google-gemini-ai-updates",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/made-by-google-gemini-ai-updates/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/made-by-google-gemini-ai-updates/",
     "route": "blog/products-and-platforms/products/gemini/made-by-google-gemini-ai-updates",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google gemini update august 2024",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-august-2024",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-august-2024",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-august-2024/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-august-2024/",
     "route": "blog/products-and-platforms/products/gemini/google-gemini-update-august-2024",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google gemini learning features",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-learning-features",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-learning-features",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-learning-features/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-learning-features/",
     "route": "blog/products-and-platforms/products/gemini/google-gemini-learning-features",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google gems tips",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gems-tips",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gems-tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gems-tips/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gems-tips/",
     "route": "blog/products-and-platforms/products/gemini/google-gems-tips",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini live extensions language expansion",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-extensions-language-expansion",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-extensions-language-expansion",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-extensions-language-expansion/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-extensions-language-expansion/",
     "route": "blog/products-and-platforms/products/gemini/gemini-live-extensions-language-expansion",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini iphone app",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-iphone-app",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-iphone-app",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-iphone-app/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-iphone-app/",
     "route": "blog/products-and-platforms/products/gemini/gemini-iphone-app",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google gemini ai holiday planning 2024",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-ai-holiday-planning-2024",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-ai-holiday-planning-2024",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-ai-holiday-planning-2024/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-ai-holiday-planning-2024/",
     "route": "blog/products-and-platforms/products/gemini/google-gemini-ai-holiday-planning-2024",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google gemini anniversary quiz",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-anniversary-quiz",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-anniversary-quiz",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-anniversary-quiz/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-anniversary-quiz/",
     "route": "blog/products-and-platforms/products/gemini/google-gemini-anniversary-quiz",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google gemini deep research",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/",
     "route": "blog/products-and-platforms/products/gemini/google-gemini-deep-research",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google gemini ai collection 2024",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-ai-collection-2024",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-ai-collection-2024",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-ai-collection-2024/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-ai-collection-2024/",
     "route": "blog/products-and-platforms/products/gemini/google-gemini-ai-collection-2024",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "new gemini app updates android",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-updates-android",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-updates-android",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-updates-android/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-updates-android/",
     "route": "blog/products-and-platforms/products/gemini/new-gemini-app-updates-android",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google arts culture gemini orchestra",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-arts-culture-gemini-orchestra",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-arts-culture-gemini-orchestra",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-arts-culture-gemini-orchestra/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-arts-culture-gemini-orchestra/",
     "route": "blog/products-and-platforms/products/gemini/google-arts-culture-gemini-orchestra",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini personalization",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-personalization",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-personalization",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-personalization/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-personalization/",
     "route": "blog/products-and-platforms/products/gemini/gemini-personalization",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "new gemini app features march 2025",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-features-march-2025",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-features-march-2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-features-march-2025/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-features-march-2025/",
     "route": "blog/products-and-platforms/products/gemini/new-gemini-app-features-march-2025",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google assistant gemini mobile",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-assistant-gemini-mobile",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-assistant-gemini-mobile",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-assistant-gemini-mobile/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-assistant-gemini-mobile/",
     "route": "blog/products-and-platforms/products/gemini/google-assistant-gemini-mobile",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini collaboration features",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/",
     "route": "blog/products-and-platforms/products/gemini/gemini-collaboration-features",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "tips how to use deep research",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/tips-how-to-use-deep-research",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/tips-how-to-use-deep-research",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/tips-how-to-use-deep-research/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/tips-how-to-use-deep-research/",
     "route": "blog/products-and-platforms/products/gemini/tips-how-to-use-deep-research",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "how we built gemini robotics",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/how-we-built-gemini-robotics",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/how-we-built-gemini-robotics",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/how-we-built-gemini-robotics/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/how-we-built-gemini-robotics/",
     "route": "blog/products-and-platforms/products/gemini/how-we-built-gemini-robotics",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini cloud media entertainment",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-cloud-media-entertainment",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-cloud-media-entertainment",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-cloud-media-entertainment/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-cloud-media-entertainment/",
     "route": "blog/products-and-platforms/products/gemini/gemini-cloud-media-entertainment",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini preview model billing update",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-preview-model-billing-update",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-preview-model-billing-update",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-preview-model-billing-update/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-preview-model-billing-update/",
     "route": "blog/products-and-platforms/products/gemini/gemini-preview-model-billing-update",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini live android tips",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-android-tips",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-android-tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-android-tips/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-android-tips/",
     "route": "blog/products-and-platforms/products/gemini/gemini-live-android-tips",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "deep research gemini 2 5 pro experimental",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/deep-research-gemini-2-5-pro-experimental",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/deep-research-gemini-2-5-pro-experimental",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/deep-research-gemini-2-5-pro-experimental/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/deep-research-gemini-2-5-pro-experimental/",
     "route": "blog/products-and-platforms/products/gemini/deep-research-gemini-2-5-pro-experimental",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "video generation",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/video-generation",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/video-generation",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/video-generation/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/video-generation/",
     "route": "blog/products-and-platforms/products/gemini/video-generation",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 2 5 flash preview",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-flash-preview",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-flash-preview",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-flash-preview/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-flash-preview/",
     "route": "blog/products-and-platforms/products/gemini/gemini-2-5-flash-preview",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google one ai premium students free",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-one-ai-premium-students-free",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-one-ai-premium-students-free",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-one-ai-premium-students-free/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-one-ai-premium-students-free/",
     "route": "blog/products-and-platforms/products/gemini/google-one-ai-premium-students-free",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "image editing",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/image-editing",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/image-editing",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/image-editing/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/image-editing/",
     "route": "blog/products-and-platforms/products/gemini/image-editing",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 2 5 pro updates",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-pro-updates",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-pro-updates",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-pro-updates/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-pro-updates/",
     "route": "blog/products-and-platforms/products/gemini/gemini-2-5-pro-updates",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini app updates io 2025",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-app-updates-io-2025",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-app-updates-io-2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-app-updates-io-2025/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-app-updates-io-2025/",
     "route": "blog/products-and-platforms/products/gemini/gemini-app-updates-io-2025",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "veo 3 expansion mobile",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/veo-3-expansion-mobile",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/veo-3-expansion-mobile",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/veo-3-expansion-mobile/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/veo-3-expansion-mobile/",
     "route": "blog/products-and-platforms/products/gemini/veo-3-expansion-mobile",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 2 5 pro latest preview",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-pro-latest-preview",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-pro-latest-preview",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-pro-latest-preview/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-pro-latest-preview/",
     "route": "blog/products-and-platforms/products/gemini/gemini-2-5-pro-latest-preview",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "scheduled actions gemini app",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/scheduled-actions-gemini-app",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/scheduled-actions-gemini-app",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/scheduled-actions-gemini-app/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/scheduled-actions-gemini-app/",
     "route": "blog/products-and-platforms/products/gemini/scheduled-actions-gemini-app",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 2 5 model family expands",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-model-family-expands",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-model-family-expands",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-model-family-expands/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-model-family-expands/",
     "route": "blog/products-and-platforms/products/gemini/gemini-2-5-model-family-expands",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "release notes podcast smokejumpers",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/release-notes-podcast-smokejumpers",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/release-notes-podcast-smokejumpers",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/release-notes-podcast-smokejumpers/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/release-notes-podcast-smokejumpers/",
     "route": "blog/products-and-platforms/products/gemini/release-notes-podcast-smokejumpers",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "release notes podcast gemini multimodal",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/release-notes-podcast-gemini-multimodal",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/release-notes-podcast-gemini-multimodal",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/release-notes-podcast-gemini-multimodal/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/release-notes-podcast-gemini-multimodal/",
     "route": "blog/products-and-platforms/products/gemini/release-notes-podcast-gemini-multimodal",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "photo to video",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/photo-to-video",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/photo-to-video",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/photo-to-video/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/photo-to-video/",
     "route": "blog/products-and-platforms/products/gemini/photo-to-video",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini drop july 2025",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2025",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2025/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2025/",
     "route": "blog/products-and-platforms/products/gemini/gemini-drop-july-2025",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 2 5 deep think",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-deep-think",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-deep-think",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-deep-think/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-deep-think/",
     "route": "blog/products-and-platforms/products/gemini/gemini-2-5-deep-think",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "storybooks",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/storybooks",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/storybooks",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/storybooks/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/storybooks/",
     "route": "blog/products-and-platforms/products/gemini/storybooks",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google ai pro students learning",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-ai-pro-students-learning",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-ai-pro-students-learning",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-ai-pro-students-learning/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-ai-pro-students-learning/",
     "route": "blog/products-and-platforms/products/gemini/google-ai-pro-students-learning",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "new gemini tools students august 2025",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-tools-students-august-2025",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-tools-students-august-2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-tools-students-august-2025/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-tools-students-august-2025/",
     "route": "blog/products-and-platforms/products/gemini/new-gemini-tools-students-august-2025",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "temporary chats privacy controls",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/temporary-chats-privacy-controls",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/temporary-chats-privacy-controls",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/temporary-chats-privacy-controls/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/temporary-chats-privacy-controls/",
     "route": "blog/products-and-platforms/products/gemini/temporary-chats-privacy-controls",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini drop august 2025",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-august-2025",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-august-2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-august-2025/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-august-2025/",
     "route": "blog/products-and-platforms/products/gemini/gemini-drop-august-2025",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini live updates august 2025",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-updates-august-2025",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-updates-august-2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-updates-august-2025/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-updates-august-2025/",
     "route": "blog/products-and-platforms/products/gemini/gemini-live-updates-august-2025",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini nano pixel 10 updates",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-pixel-10-updates",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-pixel-10-updates",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-pixel-10-updates/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-pixel-10-updates/",
     "route": "blog/products-and-platforms/products/gemini/gemini-nano-pixel-10-updates",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "updated image editing model",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/updated-image-editing-model",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/updated-image-editing-model",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/updated-image-editing-model/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/updated-image-editing-model/",
     "route": "blog/products-and-platforms/products/gemini/updated-image-editing-model",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "image generation prompting tips",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/image-generation-prompting-tips",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/image-generation-prompting-tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/image-generation-prompting-tips/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/image-generation-prompting-tips/",
     "route": "blog/products-and-platforms/products/gemini/image-generation-prompting-tips",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "new gemini app tools to help students in europe the middle east and africa",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-tools-to-help-students-in-europe-the-middle-east-and-africa",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-tools-to-help-students-in-europe-the-middle-east-and-africa",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-tools-to-help-students-in-europe-the-middle-east-and-africa/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-tools-to-help-students-in-europe-the-middle-east-and-africa/",
     "route": "blog/products-and-platforms/products/gemini/new-gemini-app-tools-to-help-students-in-europe-the-middle-east-and-africa",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini nano banana examples",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-banana-examples",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-banana-examples",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-banana-examples/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-banana-examples/",
     "route": "blog/products-and-platforms/products/gemini/gemini-nano-banana-examples",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "sharing gems",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/sharing-gems",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/sharing-gems",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/sharing-gems/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/sharing-gems/",
     "route": "blog/products-and-platforms/products/gemini/sharing-gems",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini photo to video tips",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-photo-to-video-tips",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-photo-to-video-tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-photo-to-video-tips/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-photo-to-video-tips/",
     "route": "blog/products-and-platforms/products/gemini/gemini-photo-to-video-tips",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini drop september 2025",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-september-2025",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-september-2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-september-2025/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-september-2025/",
     "route": "blog/products-and-platforms/products/gemini/gemini-drop-september-2025",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "guided learning google gemini",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/guided-learning-google-gemini",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/guided-learning-google-gemini",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/guided-learning-google-gemini/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/guided-learning-google-gemini/",
     "route": "blog/products-and-platforms/products/gemini/guided-learning-google-gemini",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "the global ai film award is now accepting applications",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/the-global-ai-film-award-is-now-accepting-applications",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/the-global-ai-film-award-is-now-accepting-applications",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/the-global-ai-film-award-is-now-accepting-applications/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/the-global-ai-film-award-is-now-accepting-applications/",
     "route": "blog/products-and-platforms/products/gemini/the-global-ai-film-award-is-now-accepting-applications",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "nano banana tips",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-tips",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-tips/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-tips/",
     "route": "blog/products-and-platforms/products/gemini/nano-banana-tips",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "bringing the best ai to university students in europe the middle east and africa at no cost",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/bringing-the-best-ai-to-university-students-in-europe-the-middle-east-and-africa-at-no-cost",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/bringing-the-best-ai-to-university-students-in-europe-the-middle-east-and-africa-at-no-cost",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/bringing-the-best-ai-to-university-students-in-europe-the-middle-east-and-africa-at-no-cost/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/bringing-the-best-ai-to-university-students-in-europe-the-middle-east-and-africa-at-no-cost/",
     "route": "blog/products-and-platforms/products/gemini/bringing-the-best-ai-to-university-students-in-europe-the-middle-east-and-africa-at-no-cost",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "using wear os gemini raise to talk",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/using-wear-os-gemini-raise-to-talk",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/using-wear-os-gemini-raise-to-talk",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/using-wear-os-gemini-raise-to-talk/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/using-wear-os-gemini-raise-to-talk/",
     "route": "blog/products-and-platforms/products/gemini/using-wear-os-gemini-raise-to-talk",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini drop october 2025",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-october-2025",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-october-2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-october-2025/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-october-2025/",
     "route": "blog/products-and-platforms/products/gemini/gemini-drop-october-2025",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini nano banana veo halloween images",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-banana-veo-halloween-images",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-banana-veo-halloween-images",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-banana-veo-halloween-images/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-nano-banana-veo-halloween-images/",
     "route": "blog/products-and-platforms/products/gemini/gemini-nano-banana-veo-halloween-images",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "deep research workspace app integration",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/deep-research-workspace-app-integration",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/deep-research-workspace-app-integration",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/deep-research-workspace-app-integration/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/deep-research-workspace-app-integration/",
     "route": "blog/products-and-platforms/products/gemini/deep-research-workspace-app-integration",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini live audio updates",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-audio-updates",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-audio-updates",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-audio-updates/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-audio-updates/",
     "route": "blog/products-and-platforms/products/gemini/gemini-live-audio-updates",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 collection",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-collection",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-collection",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-collection/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-collection/",
     "route": "blog/products-and-platforms/products/gemini/gemini-3-collection",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 gemini app",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-gemini-app",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-gemini-app",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-gemini-app/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-gemini-app/",
     "route": "blog/products-and-platforms/products/gemini/gemini-3-gemini-app",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
     "route": "blog/products-and-platforms/products/gemini/gemini-3",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "prompting tips nano banana pro",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/prompting-tips-nano-banana-pro",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/prompting-tips-nano-banana-pro",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/prompting-tips-nano-banana-pro/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/prompting-tips-nano-banana-pro/",
     "route": "blog/products-and-platforms/products/gemini/prompting-tips-nano-banana-pro",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "holiday tips prompts ai tools",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/holiday-tips-prompts-ai-tools",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/holiday-tips-prompts-ai-tools",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/holiday-tips-prompts-ai-tools/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/holiday-tips-prompts-ai-tools/",
     "route": "blog/products-and-platforms/products/gemini/holiday-tips-prompts-ai-tools",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini drop november 2025",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-november-2025",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-november-2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-november-2025/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-november-2025/",
     "route": "blog/products-and-platforms/products/gemini/gemini-drop-november-2025",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 deep think",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-deep-think",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-deep-think",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-deep-think/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-deep-think/",
     "route": "blog/products-and-platforms/products/gemini/gemini-3-deep-think",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 examples demos",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-examples-demos",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-examples-demos",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-examples-demos/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-examples-demos/",
     "route": "blog/products-and-platforms/products/gemini/gemini-3-examples-demos",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "meta prompting veo gemini tips",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/meta-prompting-veo-gemini-tips",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/meta-prompting-veo-gemini-tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/meta-prompting-veo-gemini-tips/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/meta-prompting-veo-gemini-tips/",
     "route": "blog/products-and-platforms/products/gemini/meta-prompting-veo-gemini-tips",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini audio model updates",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-audio-model-updates",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-audio-model-updates",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-audio-model-updates/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-audio-model-updates/",
     "route": "blog/products-and-platforms/products/gemini/gemini-audio-model-updates",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "visual reports",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/visual-reports",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/visual-reports",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/visual-reports/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/visual-reports/",
     "route": "blog/products-and-platforms/products/gemini/visual-reports",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 flash",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash/",
     "route": "blog/products-and-platforms/products/gemini/gemini-3-flash",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini 3 flash gemini app",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/",
     "route": "blog/products-and-platforms/products/gemini/gemini-3-flash-gemini-app",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini drop december 2025",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-december-2025",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-december-2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-december-2025/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-december-2025/",
     "route": "blog/products-and-platforms/products/gemini/gemini-drop-december-2025",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google gemini prompts new years resolutions",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-prompts-new-years-resolutions",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-prompts-new-years-resolutions",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-prompts-new-years-resolutions/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-prompts-new-years-resolutions/",
     "route": "blog/products-and-platforms/products/gemini/google-gemini-prompts-new-years-resolutions",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "where to use nano banana pro",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/where-to-use-nano-banana-pro",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/where-to-use-nano-banana-pro",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/where-to-use-nano-banana-pro/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/where-to-use-nano-banana-pro/",
     "route": "blog/products-and-platforms/products/gemini/where-to-use-nano-banana-pro",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "nano banana google trends 2025",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-google-trends-2025",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-google-trends-2025",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-google-trends-2025/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-google-trends-2025/",
     "route": "blog/products-and-platforms/products/gemini/nano-banana-google-trends-2025",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "how nano banana got its name",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/how-nano-banana-got-its-name",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/how-nano-banana-got-its-name",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/how-nano-banana-got-its-name/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/how-nano-banana-got-its-name/",
     "route": "blog/products-and-platforms/products/gemini/how-nano-banana-got-its-name",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "tips prompting lyria 3",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/tips-prompting-lyria-3",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/tips-prompting-lyria-3",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/tips-prompting-lyria-3/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/tips-prompting-lyria-3/",
     "route": "blog/products-and-platforms/products/gemini/tips-prompting-lyria-3",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google gemini home buying renting tips",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-home-buying-renting-tips",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-home-buying-renting-tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-home-buying-renting-tips/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-home-buying-renting-tips/",
     "route": "blog/products-and-platforms/products/gemini/google-gemini-home-buying-renting-tips",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini spring cleaning tips",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-spring-cleaning-tips",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-spring-cleaning-tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-spring-cleaning-tips/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-spring-cleaning-tips/",
     "route": "blog/products-and-platforms/products/gemini/gemini-spring-cleaning-tips",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini tips for parents",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-tips-for-parents",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-tips-for-parents",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-tips-for-parents/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-tips-for-parents/",
     "route": "blog/products-and-platforms/products/gemini/gemini-tips-for-parents",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "find job with google ai tools",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/find-job-with-google-ai-tools",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/find-job-with-google-ai-tools",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/find-job-with-google-ai-tools/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/find-job-with-google-ai-tools/",
     "route": "blog/products-and-platforms/products/gemini/find-job-with-google-ai-tools",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini help avoid jetlag",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-help-avoid-jetlag",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-help-avoid-jetlag",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-help-avoid-jetlag/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-help-avoid-jetlag/",
     "route": "blog/products-and-platforms/products/gemini/gemini-help-avoid-jetlag",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "coffee shop gemini features",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/coffee-shop-gemini-features",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/coffee-shop-gemini-features",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/coffee-shop-gemini-features/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/coffee-shop-gemini-features/",
     "route": "blog/products-and-platforms/products/gemini/coffee-shop-gemini-features",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "launch business with gemini",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/launch-business-with-gemini",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/launch-business-with-gemini",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/launch-business-with-gemini/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/launch-business-with-gemini/",
     "route": "blog/products-and-platforms/products/gemini/launch-business-with-gemini",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini live camera how to",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-camera-how-to",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-camera-how-to",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-camera-how-to/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-live-camera-how-to/",
     "route": "blog/products-and-platforms/products/gemini/gemini-live-camera-how-to",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "gemini drop july 2026",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/",
     "route": "blog/products-and-platforms/products/gemini/gemini-drop-july-2026",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "how gemini plans trips",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/how-gemini-plans-trips",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/how-gemini-plans-trips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/how-gemini-plans-trips/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/how-gemini-plans-trips/",
     "route": "blog/products-and-platforms/products/gemini/how-gemini-plans-trips",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "state fair tips",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/state-fair-tips",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/state-fair-tips",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/state-fair-tips/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/state-fair-tips/",
     "route": "blog/products-and-platforms/products/gemini/state-fair-tips",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "google gemini pixel football club partnerships",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/",
     "route": "blog/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "ai navigate bureaucracy",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/ai-navigate-bureaucracy",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/ai-navigate-bureaucracy",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/ai-navigate-bureaucracy/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/ai-navigate-bureaucracy/",
     "route": "blog/products-and-platforms/products/gemini/ai-navigate-bureaucracy",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "edys grocer gemini",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/edys-grocer-gemini",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/edys-grocer-gemini",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/edys-grocer-gemini/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/edys-grocer-gemini/",
     "route": "blog/products-and-platforms/products/gemini/edys-grocer-gemini",
     "kind": "blog"
   },
   {
     "group": "Blog",
     "title": "automate tasks with skills",
-    "md_url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills",
-    "html_url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/",
     "route": "blog/products-and-platforms/products/gemini/automate-tasks-with-skills",
     "kind": "blog"
   }

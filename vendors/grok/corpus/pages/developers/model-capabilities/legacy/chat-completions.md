@@ -22,23 +22,18 @@ You can also stream the response, which is covered in [Streaming Response](/deve
 
 The user sends a request to the xAI API endpoint. The API processes this and returns a complete response.
 
-```python customLanguage="pythonXAI"
-import os
+```javascript customLanguage="javascriptAISDK"
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
 
-from xai_sdk import Client
-from xai_sdk.chat import user, system
+const result = await generateText({
+  model: xai('grok-4.7'),
+  system:
+    "You are Grok, a helpful and useful AI built by xAI.",
+  prompt: 'Explain how neural networks learn in two sentences.',
+});
 
-client = Client(
-    api_key=os.getenv("XAI_API_KEY"),
-    timeout=3600, # Override default timeout with longer timeout for reasoning models
-)
-
-chat = client.chat.create(model="grok-4.6")
-chat.append(system("You are a PhD-level mathematician."))
-chat.append(user("What is 2 + 2?"))
-
-response = chat.sample()
-print(response.content)
+console.log(result.text);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -53,7 +48,7 @@ client = OpenAI(
 )
 
 completion = client.chat.completions.create(
-    model="grok-4.6",
+    model="grok-4.7",
     messages=[
         {"role": "system", "content": "You are a PhD-level mathematician."},
         {"role": "user", "content": "What is 2 + 2?"},
@@ -73,7 +68,7 @@ const client = new OpenAI({
 });
 
 const completion = await client.chat.completions.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     messages: [
         {
             role: "system",
@@ -87,20 +82,6 @@ const completion = await client.chat.completions.create({
 });
 
 console.log(completion.choices[0].message);
-```
-
-```javascript customLanguage="javascriptAISDK"
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
-const result = await generateText({
-  model: xai('grok-4.6'),
-  system:
-    "You are Grok, a helpful and useful AI built by xAI.",
-  prompt: 'Explain how neural networks learn in two sentences.',
-});
-
-console.log(result.text);
 ```
 
 ```bash
@@ -119,15 +100,45 @@ curl https://api.x.ai/v1/chat/completions \
             "content": "Explain how neural networks learn in two sentences."
         }
     ],
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "stream": false
 }'
 ```
 
+```python customLanguage="pythonXAI"
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import user, system
+
+client = Client(
+    api_key=os.getenv("XAI_API_KEY"),
+    timeout=3600, # Override default timeout with longer timeout for reasoning models
+)
+
+chat = client.chat.create(model="grok-4.7")
+chat.append(system("You are a PhD-level mathematician."))
+chat.append(user("What is 2 + 2?"))
+
+response = chat.sample()
+print(response.content)
+```
+
 Response:
 
-```python customLanguage="pythonXAI"
-'2 + 2 equals 4.'
+```javascript customLanguage="javascriptAISDK"
+// result object structure
+{
+  text: "Neural networks learn by adjusting connection weights...",
+  finishReason: "stop",
+  usage: {
+    inputTokens: 716,
+    outputTokens: 126,
+    totalTokens: 1009,
+    reasoningTokens: 167
+  },
+  totalUsage: { /* same as usage */ }
+}
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -149,27 +160,12 @@ ChatCompletionMessage(
 }
 ```
 
-```javascript customLanguage="javascriptAISDK"
-// result object structure
-{
-  text: "Neural networks learn by adjusting connection weights...",
-  finishReason: "stop",
-  usage: {
-    inputTokens: 716,
-    outputTokens: 126,
-    totalTokens: 1009,
-    reasoningTokens: 167
-  },
-  totalUsage: { /* same as usage */ }
-}
-```
-
 ```bash
 {
   "id": "0daf962f-a275-4a3c-839a-047854645532",
   "object": "chat.completion",
   "created": 1739301120,
-  "model": "grok-4.6",
+  "model": "grok-4.7",
   "choices": [
     {
       "index": 0,
@@ -194,6 +190,10 @@ ChatCompletionMessage(
   },
   "system_fingerprint": "fp_84ff176447"
 }
+```
+
+```python customLanguage="pythonXAI"
+'2 + 2 equals 4.'
 ```
 
 ## Conversations
@@ -272,26 +272,32 @@ The `image_url.url` can also be the image's url on the Internet.
 
 ### Image understanding example
 
-```pythonXAI
-import os
+```javascriptAISDK
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
 
-from xai_sdk import Client
-from xai_sdk.chat import user, image
+const result = await generateText({
+model: xai('grok-4'),
+messages: [
+        {
+            role: 'user',
+            content: [
+                {
+                    type: 'image',
+                    image: new URL(
+                        'https://science.nasa.gov/wp-content/uploads/2023/09/web-first-images-release.png',
+                    ),
+                },
+                {
+                    type: 'text',
+                    text: "What's in this image?",
+                },
+            ],
+        },
+    ],
+});
 
-client = Client(api_key=os.getenv('XAI_API_KEY'))
-
-image_url = "https://science.nasa.gov/wp-content/uploads/2023/09/web-first-images-release.png"
-
-chat = client.chat.create(model="grok-4")
-chat.append(
-    user(
-        "What's in this image?",
-        image(image_url=image_url, detail="high"),
-    )
-)
-
-response = chat.sample()
-print(response.content)
+console.log(result.text);
 ```
 
 ```pythonOpenAISDK
@@ -370,32 +376,26 @@ const completion = await openai.chat.completions.create({
 console.log(completion.choices[0].message.content);
 ```
 
-```javascriptAISDK
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
+```pythonXAI
+import os
 
-const result = await generateText({
-model: xai('grok-4'),
-messages: [
-        {
-            role: 'user',
-            content: [
-                {
-                    type: 'image',
-                    image: new URL(
-                        'https://science.nasa.gov/wp-content/uploads/2023/09/web-first-images-release.png',
-                    ),
-                },
-                {
-                    type: 'text',
-                    text: "What's in this image?",
-                },
-            ],
-        },
-    ],
-});
+from xai_sdk import Client
+from xai_sdk.chat import user, image
 
-console.log(result.text);
+client = Client(api_key=os.getenv('XAI_API_KEY'))
+
+image_url = "https://science.nasa.gov/wp-content/uploads/2023/09/web-first-images-release.png"
+
+chat = client.chat.create(model="grok-4")
+chat.append(
+    user(
+        "What's in this image?",
+        image(image_url=image_url, detail="high"),
+    )
+)
+
+response = chat.sample()
+print(response.content)
 ```
 
 ### Image input general limits

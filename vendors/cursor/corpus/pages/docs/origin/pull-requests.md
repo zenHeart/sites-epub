@@ -2,8 +2,6 @@
 
 Origin is currently released in early beta. You can create repos, push and pull with git, mirror from GitHub, browse and search code, open and merge pull requests, and share with your Cursor team.
 
-Please submit any and all feedback to [hi@cursor.com](mailto:hi@cursor.com) to help us make the product better.
-
 Open a repository at [cursor.com/codebase](https://cursor.com/codebase) and select the **Pull Requests** tab to see open pull requests and open one to review it.
 
 ## Pull request list
@@ -31,6 +29,8 @@ Open a pull request from the list to review it. Each pull request has four tabs:
 - **Files Changed** — the file diff; comment on lines and leave reviews from the diff
 
 Along with the tabs, you can request reviewers, leave reviews, comment on the pull request or on individual lines, and merge once reviews and CI are satisfied. Origin surfaces merge conflicts so you can resolve them before merging.
+
+When the repository's [rules](https://cursor.com/docs/origin/settings.md#rules-and-protections) require reviews, a **Request Changes** review from someone with write access blocks merging. To unblock it, that reviewer approves, or someone with write access dismisses the review.
 
 ## Mirrored GitHub repositories
 

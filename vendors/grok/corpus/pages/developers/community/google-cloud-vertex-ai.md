@@ -2,7 +2,7 @@
 
 # Google Cloud Vertex AI
 
-Access xAI’s Grok models through Google Cloud’s managed platform with enterprise security, governance, and unified billing.
+Access SpaceXAI’s Grok models through Google Cloud’s managed platform with enterprise security, governance, and unified billing.
 
 This guide walks through setting up and using Grok models on Google Cloud Vertex AI / Gemini Enterprise Agent Platform. Grok on Vertex AI is accessed as a partner model through the OpenAI-compatible API, including the Responses API and Chat Completions. Models are enabled through Model Garden.
 
@@ -45,7 +45,7 @@ pip install -U openai google-cloud-aiplatform
 
 Use the model ID shown in Model Garden. Vertex model names may use a publisher prefix, for example:
 
-* `xai/grok-4.6`
+* `xai/grok-4.7`
 
 Model availability generally matches the xAI API, subject to Google Cloud regional availability and quotas.
 
@@ -71,7 +71,7 @@ from openai import OpenAI
 client = OpenAI()  # Uses ADC / env vars automatically
 
 response = client.responses.create(
-    model="xai/grok-4.6",
+    model="xai/grok-4.7",
     input="Explain the advantages of using Grok for agentic workflows with parallel tool calling.",
     max_output_tokens=800,
 )
@@ -87,7 +87,7 @@ from openai import OpenAI
 client = OpenAI()
 
 response = client.chat.completions.create(
-    model="xai/grok-4.6",
+    model="xai/grok-4.7",
     messages=[
         {
             "role": "user",
@@ -181,4 +181,4 @@ Start in the Google Cloud console playground / Model Garden interface when avail
 * Explore enabled models in Model Garden.
 * Build agentic applications that use Grok’s tool-calling strengths.
 * Integrate with Google Cloud services such as Cloud Functions and Vertex AI Pipelines.
-* Review the full xAI Grok documentation and model cards for prompting tips and capabilities.
+* Review the full SpaceXAI Grok documentation and model cards for prompting tips and capabilities.

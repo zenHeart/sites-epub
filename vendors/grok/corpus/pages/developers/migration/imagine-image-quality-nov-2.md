@@ -37,20 +37,6 @@ Migrating is a one-line change to the `model` field. `grok-imagine-image-2.0` al
 * `medium` spends more compute on each image for finer detail; choose it where output quality matters more than cost.
 * `auto` (the default when `quality` is omitted) currently serves `low` for generation and `medium` for editing, and you are billed at the quality served.
 
-```python customLanguage="pythonXAI"
-import xai_sdk
-
-client = xai_sdk.Client()
-
-response = client.image.sample(
-    prompt="A watercolor painting of a lighthouse at dawn",
-    model="grok-imagine-image-2.0",
-    quality="low",
-)
-
-print(response.url)
-```
-
 ```python customLanguage="pythonOpenAISDK"
 from openai import OpenAI
 
@@ -94,6 +80,20 @@ curl -X POST https://api.x.ai/v1/images/generations \
     "prompt": "A watercolor painting of a lighthouse at dawn",
     "quality": "low"
   }'
+```
+
+```python customLanguage="pythonXAI"
+import xai_sdk
+
+client = xai_sdk.Client()
+
+response = client.image.sample(
+    prompt="A watercolor painting of a lighthouse at dawn",
+    model="grok-imagine-image-2.0",
+    quality="low",
+)
+
+print(response.url)
 ```
 
 The same `model` change applies to [image editing](/developers/model-capabilities/images/editing) requests on `/v1/images/edits`.

@@ -34,24 +34,6 @@ Use `https://mtls.api.x.ai` instead of `https://api.x.ai`. This is the only chan
 
 Include your client certificate and private key with every request. Here are examples:
 
-```bash
-curl https://mtls.api.x.ai/v1/chat/completions \\
-  --cert /path/to/client-cert.pem \\
-  --key /path/to/client-key.pem \\
-  -H "Content-Type: application/json" \\
-  -H "Authorization: Bearer $XAI_API_KEY" \\
-  -d '{
-    "messages": [
-      {
-        "role": "user",
-        "content": "Hello, world!"
-      }
-    ],
-    "model": "grok-4.6",
-    "stream": false
-  }'
-```
-
 ```pythonOpenAISDK
 import os
 import httpx
@@ -69,12 +51,30 @@ client = OpenAI(
 )
 
 completion = client.chat.completions.create(
-    model="grok-4.6",
+    model="grok-4.7",
     messages=[
         {"role": "user", "content": "Hello, world!"}
     ]
 )
 print(completion.choices[0].message.content)
+```
+
+```bash
+curl https://mtls.api.x.ai/v1/chat/completions \\
+  --cert /path/to/client-cert.pem \\
+  --key /path/to/client-key.pem \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer $XAI_API_KEY" \\
+  -d '{
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello, world!"
+      }
+    ],
+    "model": "grok-4.7",
+    "stream": false
+  }'
 ```
 
 ```javascriptOpenAISDK
@@ -92,7 +92,7 @@ const client = new OpenAI({
 });
 
 const completion = await client.chat.completions.create({
-    model: 'grok-4.6',
+    model: 'grok-4.7',
     messages: [
         { role: 'user', content: 'Hello, world!' }
     ],
@@ -153,4 +153,4 @@ curl -v https://mtls.api.x.ai/v1/api-key \\
   -H "Authorization: Bearer $XAI_API_KEY"
 ```
 
-A successful response confirms both your certificate and API key are working. If you see `403 Forbidden`, check that your certificate is signed by the CA you provided to xAI.
+A successful response confirms both your certificate and API key are working. If you see `403 Forbidden`, check that your certificate is signed by the CA you provided to SpaceXAI.

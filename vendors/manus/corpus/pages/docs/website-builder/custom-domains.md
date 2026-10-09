@@ -29,3 +29,6 @@ This means you can move from prototype to a fully branded, public site in minute
 ### Automatic SSL/HTTPS
 
 Security is handled automatically. Once your domain is connected, Manus will provision and configure a free SSL/TLS certificate for your site. This ensures that all traffic to and from your application is encrypted, providing a secure experience for your users and improving your site's search engine ranking.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

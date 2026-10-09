@@ -46,32 +46,33 @@ The `image_url` value can also be a public URL on the Internet instead of a base
 
 ### Image understanding example
 
-```python customLanguage="pythonXAI"
-import os
-from xai_sdk import Client
-from xai_sdk.chat import user, image
+```javascript customLanguage="javascriptAISDK"
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
 
-client = Client(
-    api_key=os.getenv("XAI_API_KEY"),
-    management_api_key=os.getenv("XAI_MANAGEMENT_API_KEY"),
-    timeout=3600,
-)
+const { text, response } = await generateText({
+    model: xai.responses('grok-4.7'),
+    messages: [
+        {
+            role: 'user',
+            content: [
+                {
+                    type: 'image',
+                    image: new URL('https://science.nasa.gov/wp-content/uploads/2023/09/web-first-images-release.png'),
+                },
+                {
+                    type: 'text',
+                    text: "What's in this image?",
+                },
+            ],
+        },
+    ]
+});
 
-image_url = "https://science.nasa.gov/wp-content/uploads/2023/09/web-first-images-release.png"
-chat = client.chat.create(model="grok-4.6")
-chat.append(
-    user(
-        "What's in this image?",
-        image(image_url=image_url, detail="high"),
-    )
-)
+console.log(text);
 
-response = chat.sample()
-print(response)
-
-# The response ID that can be used to continue the conversation later
-
-print(response.id)
+// The response ID can be used to continue the conversation
+console.log(response.id);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -89,7 +90,7 @@ image_url = (
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {
             "role": "user",
@@ -128,7 +129,7 @@ const image_url =
     "https://science.nasa.gov/wp-content/uploads/2023/09/web-first-images-release.png";
 
 const response = await client.responses.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     input: [
         {
             role: "user",
@@ -153,42 +154,13 @@ console.log(response);
 console.log(response.id);
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
-const { text, response } = await generateText({
-    model: xai.responses('grok-4.6'),
-    messages: [
-        {
-            role: 'user',
-            content: [
-                {
-                    type: 'image',
-                    image: new URL('https://science.nasa.gov/wp-content/uploads/2023/09/web-first-images-release.png'),
-                },
-                {
-                    type: 'text',
-                    text: "What's in this image?",
-                },
-            ],
-        },
-    ]
-});
-
-console.log(text);
-
-// The response ID can be used to continue the conversation
-console.log(response.id);
-```
-
 ```bash
 curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -m 3600 \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "input": [
       {
         "role": "user",
@@ -206,6 +178,34 @@ curl https://api.x.ai/v1/responses \
       }
     ]
   }'
+```
+
+```python customLanguage="pythonXAI"
+import os
+from xai_sdk import Client
+from xai_sdk.chat import user, image
+
+client = Client(
+    api_key=os.getenv("XAI_API_KEY"),
+    management_api_key=os.getenv("XAI_MANAGEMENT_API_KEY"),
+    timeout=3600,
+)
+
+image_url = "https://science.nasa.gov/wp-content/uploads/2023/09/web-first-images-release.png"
+chat = client.chat.create(model="grok-4.7")
+chat.append(
+    user(
+        "What's in this image?",
+        image(image_url=image_url, detail="high"),
+    )
+)
+
+response = chat.sample()
+print(response)
+
+# The response ID that can be used to continue the conversation later
+
+print(response.id)
 ```
 
 ### Image input general limits

@@ -26,11 +26,13 @@ Generates a response based on text or image prompts. The response ID can be used
 
 * `logprobs` (boolean | null) — Whether to return log probabilities of the output tokens or not. If true, returns the log probabilities of each output token returned in the content of message. Not supported by models \`grok-4.20\` and newer; the field will be silently ignored if set.
 
-* `max_output_tokens` (integer | null) — Max number of tokens that can be generated in a response. This includes both output and reasoning tokens. Defaults to 128,000 when unset; set a larger value to allow longer generations.
+* `max_output_tokens` (integer | null) — Max number of tokens that can be generated in a response. Only applies to visible output tokens (i.e. does not apply to tokens used for reasoning or function calls). Defaults to 128,000 when unset; set a larger value to allow longer generations.
 
 * `max_turns` (integer | null) — Maximum number of agentic tool calling turns allowed for this request.
   If not set, defaults to the server's global cap.
-  This parameter will be ignored for any non-agentic requests.
+  This parameter will be ignored for any non-agentic requests, and for
+  agentic SLOP requests that have neither a server-side tool nor a file
+  attachment.
 
 * `metadata` (object) — Not supported. Only maintained for compatibility reasons.
 
@@ -52,7 +54,9 @@ Generates a response based on text or image prompts. The response ID can be used
 
   * `summary` (string | null) — A summary of the model's reasoning process. Possible values are \`auto\`, \`concise\` and \`detailed\`. Only included for compatibility. The model shall always return \`detailed\`.
 
-* `reasoning_effort` (string | null) — reasoning\_effort alternative to reasoning configuration. This is a non-standard field meant to ease user experience. We only look at this if the reasoning field is unset.
+* `reasoning_effort` (string | null) — Non-standard alternative to \`reasoning.effort\` that accepts the same values. We only look at this if the reasoning field is unset.
+
+* `safety_identifier` (string | null) — Supplied by the API client to identify the end user behind this request. A stable string that uniquely identifies each of your users; hash your internal user id or username rather than sending an email or name. Stored with the request metadata so a usage-policy violation can be attributed to that user rather than to the API key.
 
 * `search_parameters` (object)
 
@@ -73,7 +77,7 @@ Generates a response based on text or image prompts. The response ID can be used
   * `to_date` (string | null) — Date up to which to consider the results in ISO-8601 YYYY-MM-DD. See
     \<https://en.wikipedia.org/wiki/ISO\_8601>.
 
-* `service_tier` ("default" | "priority")
+* `service_tier` ("default" | "priority" | "fast")
 
 * `store` (boolean | null) — Whether to store the input message(s) and model response for later retrieval.
 
@@ -119,7 +123,7 @@ Generates a response based on text or image prompts. The response ID can be used
 
 * `instructions` (string | null) — A system (or developer) message inserted into the model's context.
 
-* `max_output_tokens` (integer | null) — Max number of tokens that can be generated in a response. This includes both output and reasoning tokens.
+* `max_output_tokens` (integer | null) — Max number of tokens that can be generated in a response. Only applies to visible output tokens (i.e. does not apply to tokens used for reasoning or function calls).
 
 * `max_tool_calls` (integer | null) — The maximum number of tool calls allowed for this response.
 
@@ -149,7 +153,7 @@ Generates a response based on text or image prompts. The response ID can be used
 
 * `safety_identifier` (string | null) — A stable identifier used to help detect users of your application that may be violating xAI's usage policies.
 
-* `service_tier` ("default" | "priority", required)
+* `service_tier` ("default" | "priority" | "fast", required)
 
 * `status` (string, required) — Status of the response. One of \`completed\`, \`in\_progress\` or \`incomplete\`.
 
@@ -221,7 +225,14 @@ Generates a response based on text or image prompts. The response ID can be used
 
     * `web_search_calls` (integer, required) — Number of web search calls.
 
+    * `x_posts_fetched` (integer, required) — Number of X posts fetched across all X search calls, including nested
+      parent/quote posts and every post of a fetched thread, without
+      de-duplication. X search is billed per fetched item.
+
     * `x_search_calls` (integer, required) — Number of X search calls.
+
+    * `x_users_fetched` (integer, required) — Number of X user profiles fetched across all X search calls, without
+      de-duplication. X search is billed per fetched item.
 
   * `total_tokens` (integer, required) — Total tokens used.
 
@@ -229,22 +240,12 @@ Generates a response based on text or image prompts. The response ID can be used
 
 ### Code Examples
 
-```bash
-curl -s https://api.x.ai/v1/responses \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -d '{
-    "model": "grok-4.6",
-    "input": "What is the meaning of life?"
-  }'
-```
-
 ```javascriptAISDK
 import { xai } from "@ai-sdk/xai";
 import { generateText } from "ai";
 
 const result = await generateText({
-  model: xai.responses("grok-4.6"),
+  model: xai.responses("grok-4.7"),
   prompt: "What is the meaning of life?",
 });
 
@@ -262,11 +263,21 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input="What is the meaning of life?",
 )
 
 print(response.model_dump_json(indent=2))
+```
+
+```bash
+curl -s https://api.x.ai/v1/responses \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -d '{
+    "model": "grok-4.7",
+    "input": "What is the meaning of life?"
+  }'
 ```
 
 ```javascriptOpenAISDK
@@ -278,7 +289,7 @@ const client = new OpenAI({
 });
 
 const response = await client.responses.create({
-  model: "grok-4.6",
+  model: "grok-4.7",
   input: "What is the meaning of life?",
 });
 
@@ -372,7 +383,7 @@ Retrieve a previously generated response.
 
 * `instructions` (string | null) — A system (or developer) message inserted into the model's context.
 
-* `max_output_tokens` (integer | null) — Max number of tokens that can be generated in a response. This includes both output and reasoning tokens.
+* `max_output_tokens` (integer | null) — Max number of tokens that can be generated in a response. Only applies to visible output tokens (i.e. does not apply to tokens used for reasoning or function calls).
 
 * `max_tool_calls` (integer | null) — The maximum number of tool calls allowed for this response.
 
@@ -402,7 +413,7 @@ Retrieve a previously generated response.
 
 * `safety_identifier` (string | null) — A stable identifier used to help detect users of your application that may be violating xAI's usage policies.
 
-* `service_tier` ("default" | "priority", required)
+* `service_tier` ("default" | "priority" | "fast", required)
 
 * `status` (string, required) — Status of the response. One of \`completed\`, \`in\_progress\` or \`incomplete\`.
 
@@ -474,7 +485,14 @@ Retrieve a previously generated response.
 
     * `web_search_calls` (integer, required) — Number of web search calls.
 
+    * `x_posts_fetched` (integer, required) — Number of X posts fetched across all X search calls, including nested
+      parent/quote posts and every post of a fetched thread, without
+      de-duplication. X search is billed per fetched item.
+
     * `x_search_calls` (integer, required) — Number of X search calls.
+
+    * `x_users_fetched` (integer, required) — Number of X user profiles fetched across all X search calls, without
+      de-duplication. X search is billed per fetched item.
 
   * `total_tokens` (integer, required) — Total tokens used.
 
@@ -626,22 +644,6 @@ Compacts a full Responses API input window into a shorter canonical window.
 
 ### Code Examples
 
-```bash
-curl -s https://api.x.ai/v1/responses/compact \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -d '{
-    "model": "grok-4.6",
-    "input": [
-      {"role": "system", "content": "You are a concise and knowledgeable science tutor."},
-      {"role": "user", "content": "What is the Higgs boson and why is it important?"},
-      {"role": "assistant", "content": "The Higgs boson is an elementary particle in the Standard Model, predicted by Peter Higgs in 1964 and confirmed at CERN in 2012. It is the quantum excitation of the Higgs field, which gives mass to fundamental particles via the Higgs mechanism."},
-      {"role": "user", "content": "How does the Higgs mechanism actually work?"},
-      {"role": "assistant", "content": "Through spontaneous symmetry breaking. The Higgs field has a nonzero vacuum value, and particles acquire mass in proportion to how strongly they couple to it. Photons do not couple, which is why they remain massless."}
-    ]
-  }'
-```
-
 ```pythonOpenAISDK
 import os
 
@@ -653,7 +655,7 @@ client = OpenAI(
 )
 
 compacted = client.responses.compact(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {"role": "system", "content": "You are a concise and knowledgeable science tutor."},
         {"role": "user", "content": "What is the Higgs boson and why is it important?"},
@@ -680,6 +682,22 @@ compacted = client.responses.compact(
 print(compacted.model_dump_json(indent=2))
 ```
 
+```bash
+curl -s https://api.x.ai/v1/responses/compact \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -d '{
+    "model": "grok-4.7",
+    "input": [
+      {"role": "system", "content": "You are a concise and knowledgeable science tutor."},
+      {"role": "user", "content": "What is the Higgs boson and why is it important?"},
+      {"role": "assistant", "content": "The Higgs boson is an elementary particle in the Standard Model, predicted by Peter Higgs in 1964 and confirmed at CERN in 2012. It is the quantum excitation of the Higgs field, which gives mass to fundamental particles via the Higgs mechanism."},
+      {"role": "user", "content": "How does the Higgs mechanism actually work?"},
+      {"role": "assistant", "content": "Through spontaneous symmetry breaking. The Higgs field has a nonzero vacuum value, and particles acquire mass in proportion to how strongly they couple to it. Photons do not couple, which is why they remain massless."}
+    ]
+  }'
+```
+
 ```javascriptOpenAISDK
 import OpenAI from "openai";
 
@@ -689,7 +707,7 @@ const client = new OpenAI({
 });
 
 const compacted = await client.responses.compact({
-  model: "grok-4.6",
+  model: "grok-4.7",
   input: [
     { role: "system", content: "You are a concise and knowledgeable science tutor." },
     { role: "user", content: "What is the Higgs boson and why is it important?" },

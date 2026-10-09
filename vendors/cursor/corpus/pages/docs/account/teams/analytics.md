@@ -32,13 +32,15 @@ These lines are stored and later compared to the signatures of each line in subs
 
 All the AI detection is done on device, and never leaves the user's computer. We store the line counts as metadata and make them available via API or in the Analytics Dashboard.
 
-#### Known Limitations:
+#### Known limitations
 
 - Diff signatures may be invalidated if automated code formatting is modifying lines.
 
-- AI Code Tracking has not been implemented for Background Agents, or the Cursor CLI yet.
+- Cursor CLI commits must be scored on the same machine where the code was authored. Code signatures are stored on-device.
 
-- All code signatures are stored on-device. The git commit must be scored on the same machine as the AI code was authored.
+- Local commit and PR attribution settings only control trailers and footers. They don't control Usage Analytics.
+
+- AI Code Tracking supports Cursor CLI and Cloud Agents. The API reports these commits with `commitSource: "cli"` and `commitSource: "cloud"`. If metrics are missing for a specific workflow, report it as a bug.
 
 ## AI Output
 
@@ -170,7 +172,7 @@ Conversation Insights is free during the preview period. Starting January 1st, 2
 
 ## Grok Bot Conversation Insights
 
-Grok Bot Conversation Insights is rolling out to Enterprise teams with [Grok Bot enabled](https://cursor.com/docs/grok-bot/teams.md). When it's on for your team, a **Cursor** / **Grok Bot** source toggle appears at the top of Conversation Insights in the [Analytics dashboard](https://cursor.com/dashboard/analytics). If you don't see the toggle, ask your account team.
+Grok Bot Conversation Insights is available to all Enterprise teams that use [Grok Bot](https://cursor.com/docs/grok-bot/teams.md). A **Cursor** / **Grok Bot** source toggle appears at the top of Conversation Insights in the [Analytics dashboard](https://cursor.com/dashboard/analytics). To see Conversation Insights, **Disable Conversation Insights** must be off in [team settings](https://cursor.com/dashboard/settings). If your team restricts the analytics dashboard to admins, you also need permission to manage analytics. If you've checked both and the toggle is still missing, contact your account team.
 
 Grok Bot Conversation Insights applies the same idea as [Conversation Insights](https://cursor.com/docs/account/teams/analytics.md#conversation-insights) to the Bots your team runs. Cursor classifies each Grok Bot conversation so admins can see what kind of work Bots handle across the team, without reading the conversations themselves.
 

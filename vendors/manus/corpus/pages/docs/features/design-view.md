@@ -63,12 +63,12 @@ Design View is also available on the Manus mobile app, so you can continue your 
 
 ## Tips for Better Results
 
-| Tip                                   | Description                                                                                                                                                |
-| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Be Specific with Instructions**     | When using the Mark Tool, provide clear and direct instructions. For example, instead of saying "make this better," say "change the color to a deep blue." |
-| **Use High-Quality Reference Images** | When adding elements from a reference image, use a high-quality image with a clear subject for the best results.                                           |
-| **Start with a Good Base Image**      | The better your initial image, the easier it will be to refine. Spend some time crafting a good initial prompt to get a strong starting point.             |
-| **Iterate and Refine**                | Don't be afraid to make multiple small changes to get your image just right. The power of Design View is in its iterative workflow.                        |
+| Tip | Description |
+| - | - |
+| **Be Specific with Instructions** | When using the Mark Tool, provide clear and direct instructions. For example, instead of saying "make this better," say "change the color to a deep blue." |
+| **Use High-Quality Reference Images** | When adding elements from a reference image, use a high-quality image with a clear subject for the best results. |
+| **Start with a Good Base Image** | The better your initial image, the easier it will be to refine. Spend some time crafting a good initial prompt to get a strong starting point. |
+| **Iterate and Refine** | Don't be afraid to make multiple small changes to get your image just right. The power of Design View is in its iterative workflow. |
 
 ## Common Questions
 
@@ -85,3 +85,6 @@ Design View is also available on the Manus mobile app, so you can continue your 
     Yes, Manus Design View is available to all Manus users.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

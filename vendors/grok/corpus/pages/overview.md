@@ -8,11 +8,11 @@ We offer a range of models supporting multiple use cases and modalities.
 
 ### [Code API](/build/overview)
 
-Agentic coding with Grok Build (grok-4.6), our coding model, on the API and CLI.
+Agentic coding with Grok Build (grok-4.7), our coding model, on the API and CLI.
 
 * Agentic coding workflows
 * Powers Grok Build
-* Available on the API in early access
+* Available on the SpaceXAI API
 
 ### [Responses API](/developers/model-capabilities/text/generate-text)
 
@@ -57,7 +57,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input="Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}",
 )
 
@@ -69,7 +69,7 @@ curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "input": "Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}"
 }'
 ```

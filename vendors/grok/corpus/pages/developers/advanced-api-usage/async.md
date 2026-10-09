@@ -16,49 +16,6 @@ Adjust the `max_concurrent` param to control the maximum number of parallel requ
 
 You are unable to concurrently run your requests beyond the rate limits shown in the API console.
 
-```pythonXAI
-import asyncio
-import os
-
-from xai_sdk import AsyncClient
-from xai_sdk.chat import Response, user
-
-async def main():
-    client = AsyncClient(
-        api_key=os.getenv("XAI_API_KEY"),
-        timeout=3600, # Override default timeout with longer timeout for reasoning models
-    )
-
-    model = "grok-4.6"
-    requests = [
-        "Tell me a joke",
-        "Write a funny haiku",
-        "Generate a funny X post",
-        "Say something unhinged",
-    ]
-    # Define a semaphore to limit concurrent requests (e.g., max 2 concurrent requests at a time)
-    max_in_flight_requests = 2
-    semaphore = asyncio.Semaphore(max_in_flight_requests)
-
-    async def process_request(request) -> Response:
-        async with semaphore:
-            print(f"Processing request: {request}")
-            chat = client.chat.create(model=model, max_tokens=100)
-            chat.append(user(request))
-            return await chat.sample()
-
-    tasks = []
-    for request in requests:
-        tasks.append(process_request(request))
-
-    responses = await asyncio.gather(*tasks)
-    for i, response in enumerate(responses):
-        print(f"Total tokens used for response {i}: {response.usage.total_tokens}")
-
-if __name__ == "__main__":
-    asyncio.run(main())
-```
-
 ```pythonOpenAISDK
 import asyncio
 import os
@@ -78,7 +35,7 @@ async def send_request(sem: Semaphore, request: str) -> dict:
     # The 'async with sem' ensures only a limited number of requests run at once
     async with sem:
         return await client.chat.completions.create(
-            model="grok-4.6",
+            model="grok-4.7",
             messages=[{"role": "user", "content": request}]
         )
 
@@ -112,6 +69,49 @@ async def main() -> None:
     for i, response in enumerate(responses):
         print(f"# Response {i}:")
         print(response.choices[0].message.content)
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+```pythonXAI
+import asyncio
+import os
+
+from xai_sdk import AsyncClient
+from xai_sdk.chat import Response, user
+
+async def main():
+    client = AsyncClient(
+        api_key=os.getenv("XAI_API_KEY"),
+        timeout=3600, # Override default timeout with longer timeout for reasoning models
+    )
+
+    model = "grok-4.7"
+    requests = [
+        "Tell me a joke",
+        "Write a funny haiku",
+        "Generate a funny X post",
+        "Say something unhinged",
+    ]
+    # Define a semaphore to limit concurrent requests (e.g., max 2 concurrent requests at a time)
+    max_in_flight_requests = 2
+    semaphore = asyncio.Semaphore(max_in_flight_requests)
+
+    async def process_request(request) -> Response:
+        async with semaphore:
+            print(f"Processing request: {request}")
+            chat = client.chat.create(model=model, max_tokens=100)
+            chat.append(user(request))
+            return await chat.sample()
+
+    tasks = []
+    for request in requests:
+        tasks.append(process_request(request))
+
+    responses = await asyncio.gather(*tasks)
+    for i, response in enumerate(responses):
+        print(f"Total tokens used for response {i}: {response.usage.total_tokens}")
 
 if __name__ == "__main__":
     asyncio.run(main())

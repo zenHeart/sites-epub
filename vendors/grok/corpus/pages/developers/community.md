@@ -8,7 +8,7 @@ Grok is also accessible via your favorite community integrations, enabling you t
 
 ### LiteLLM
 
-LiteLLM provides a simple SDK or proxy server for calling different LLM providers. If you're using LiteLLM, integrating xAI as your provider is straightforward—just swap out the model name and API key to xAI's Grok model in your configuration.
+LiteLLM provides a simple SDK or proxy server for calling different LLM providers. If you're using LiteLLM, integrating SpaceXAI as your provider is straightforward—just swap out the model name and API key to SpaceXAI's Grok model in your configuration.
 
 For latest information and more examples, visit [LiteLLM xAI Provider Documentation](https://docs.litellm.ai/docs/providers/xai).
 
@@ -20,7 +20,7 @@ import os
 
 os.environ['XAI_API_KEY'] = ""
 response = completion(
-    model="xai/grok-4.6",
+    model="xai/grok-4.7",
     messages=[
         {
             "role": "user",
@@ -50,7 +50,7 @@ import { xai } from '@ai-sdk/xai';
 import { generateText } from 'ai';
 
 const { text } = await generateText({
-    model: xai.responses('grok-4.6'),
+    model: xai.responses('grok-4.7'),
     prompt: 'Write a vegetarian lasagna recipe for 4 people.',
 });
 ```
@@ -69,7 +69,7 @@ You can also generate images with the `generateImage` function:
 
 ```javascriptAISDK
 import { xai } from '@ai-sdk/xai';
-import { experimental_generateImage as generateImage } from 'ai';
+import { generateImage } from 'ai';
 
 const { image } = await generateImage({
     model: xai.image('grok-imagine-image-2.0'),

@@ -8,27 +8,16 @@ Generate images from text prompts with Grok Imagine models. The API supports bat
 
 Generate an image with a single API call:
 
-```python customLanguage="pythonXAI"
-import xai_sdk
+```javascript customLanguage="javascriptAISDK"
+import { xai } from "@ai-sdk/xai";
+import { generateImage } from "ai";
 
-client = xai_sdk.Client()
+const { image } = await generateImage({
+    model: xai.image("grok-imagine-image-2.0"),
+    prompt: "A collage of London landmarks in a stenciled street‑art style",
+});
 
-response = client.image.sample(
-    prompt="A collage of London landmarks in a stenciled street‑art style",
-    model="grok-imagine-image-2.0",
-)
-
-print(response.url)
-```
-
-```bash
-curl -X POST https://api.x.ai/v1/images/generations \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -d '{
-    "model": "grok-imagine-image-2.0",
-    "prompt": "A collage of London landmarks in a stenciled street‑art style"
-  }'
+console.log(image.base64);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -47,6 +36,16 @@ response = client.images.generate(
 print(response.data[0].url)
 ```
 
+```bash
+curl -X POST https://api.x.ai/v1/images/generations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -d '{
+    "model": "grok-imagine-image-2.0",
+    "prompt": "A collage of London landmarks in a stenciled street‑art style"
+  }'
+```
+
 ```javascript customLanguage="javascriptOpenAISDK"
 import OpenAI from "openai";
 
@@ -63,16 +62,17 @@ const response = await client.images.generate({
 console.log(response.data[0].url);
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from "@ai-sdk/xai";
-import { generateImage } from "ai";
+```python customLanguage="pythonXAI"
+import xai_sdk
 
-const { image } = await generateImage({
-    model: xai.image("grok-imagine-image-2.0"),
-    prompt: "A collage of London landmarks in a stenciled street‑art style",
-});
+client = xai_sdk.Client()
 
-console.log(image.base64);
+response = client.image.sample(
+    prompt="A collage of London landmarks in a stenciled street‑art style",
+    model="grok-imagine-image-2.0",
+)
+
+print(response.url)
 ```
 
 Images are returned as URLs by default. URLs are temporary, so download or process promptly. You can also request [base64 output](#base64-output) for embedding images directly.
@@ -83,19 +83,20 @@ Images are returned as URLs by default. URLs are temporary, so download or proce
 
 Generate multiple images in a single request with the `n` parameter (`1`–`10`). On the REST API and OpenAI-compatible SDKs, `n` is optional and defaults to `1`. The xAI Python SDK uses `sample()` for a single image and `sample_batch(n=...)` for more than one — `n` is required on `sample_batch()`.
 
-```python customLanguage="pythonXAI"
-import xai_sdk
+```javascript customLanguage="javascriptAISDK"
+import { xai } from "@ai-sdk/xai";
+import { generateImage } from "ai";
 
-client = xai_sdk.Client()
+const { images } = await generateImage({
+    model: xai.image("grok-imagine-image-2.0"),
+    prompt: "A futuristic city skyline at night",
+    n: 4,
+});
 
-responses = client.image.sample_batch(
-    prompt="A futuristic city skyline at night",
-    model="grok-imagine-image-2.0",
-    n=4,
-)
+images.forEach((image, i) => {
+    console.log(`Variation ${i + 1}: ${image.base64.slice(0, 50)}...`);
+});
 
-for i, image in enumerate(responses):
-    print(f"Variation {i + 1}: {image.url}")
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -136,22 +137,6 @@ response.data.forEach((image, i) => {
 
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from "@ai-sdk/xai";
-import { generateImage } from "ai";
-
-const { images } = await generateImage({
-    model: xai.image("grok-imagine-image-2.0"),
-    prompt: "A futuristic city skyline at night",
-    n: 4,
-});
-
-images.forEach((image, i) => {
-    console.log(`Variation ${i + 1}: ${image.base64.slice(0, 50)}...`);
-});
-
-```
-
 ```bash
 curl -X POST https://api.x.ai/v1/images/generations \
   -H "Content-Type: application/json" \
@@ -161,6 +146,21 @@ curl -X POST https://api.x.ai/v1/images/generations \
     "prompt": "A futuristic city skyline at night",
     "n": 4
   }'
+```
+
+```python customLanguage="pythonXAI"
+import xai_sdk
+
+client = xai_sdk.Client()
+
+responses = client.image.sample_batch(
+    prompt="A futuristic city skyline at night",
+    model="grok-imagine-image-2.0",
+    n=4,
+)
+
+for i, image in enumerate(responses):
+    print(f"Variation {i + 1}: {image.url}")
 ```
 
 ### Aspect Ratio
@@ -180,18 +180,17 @@ Control image dimensions with the `aspect_ratio` parameter. When omitted, the de
 | `5:2` | Wide banners |
 | `auto` | Model auto-selects the best ratio for the prompt |
 
-```python customLanguage="pythonXAI"
-import xai_sdk
+```javascript customLanguage="javascriptAISDK"
+import { xai } from "@ai-sdk/xai";
+import { generateImage } from "ai";
 
-client = xai_sdk.Client()
+const { image } = await generateImage({
+    model: xai.image("grok-imagine-image-2.0"),
+    prompt: "Mountain landscape at sunrise",
+    aspectRatio: "16:9",
+});
 
-response = client.image.sample(
-    prompt="Mountain landscape at sunrise",
-    model="grok-imagine-image-2.0",
-    aspect_ratio="16:9",
-)
-
-print(response.url)
+console.log(image.base64);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -229,19 +228,6 @@ const response = await client.images.generate({
 console.log(response.data[0].url);
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from "@ai-sdk/xai";
-import { generateImage } from "ai";
-
-const { image } = await generateImage({
-    model: xai.image("grok-imagine-image-2.0"),
-    prompt: "Mountain landscape at sunrise",
-    aspectRatio: "16:9",
-});
-
-console.log(image.base64);
-```
-
 ```bash
 curl -X POST https://api.x.ai/v1/images/generations \
   -H "Content-Type: application/json" \
@@ -253,6 +239,20 @@ curl -X POST https://api.x.ai/v1/images/generations \
   }'
 ```
 
+```python customLanguage="pythonXAI"
+import xai_sdk
+
+client = xai_sdk.Client()
+
+response = client.image.sample(
+    prompt="Mountain landscape at sunrise",
+    model="grok-imagine-image-2.0",
+    aspect_ratio="16:9",
+)
+
+print(response.url)
+```
+
 ### Resolution
 
 You can specify different resolutions of the output image with the `resolution` parameter. Currently supported image resolutions are:
@@ -260,18 +260,19 @@ You can specify different resolutions of the output image with the `resolution` 
 * `1k` (default when omitted)
 * `2k`
 
-```python customLanguage="pythonXAI"
-import xai_sdk
+```javascript customLanguage="javascriptAISDK"
+import { xai } from "@ai-sdk/xai";
+import { generateImage } from "ai";
 
-client = xai_sdk.Client()
+const { image } = await generateImage({
+    model: xai.image("grok-imagine-image-2.0"),
+    prompt: "An astronaut performing EVA in LEO.",
+    providerOptions: {
+        xai: { resolution: "2k" },
+    },
+});
 
-response = client.image.sample(
-    prompt="An astronaut performing EVA in LEO.",
-    model="grok-imagine-image-2.0",
-    resolution="2k"
-)
-
-print(response.url)
+console.log(image.base64);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -309,21 +310,6 @@ const response = await client.images.generate({
 console.log(response.data[0].url);
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from "@ai-sdk/xai";
-import { generateImage } from "ai";
-
-const { image } = await generateImage({
-    model: xai.image("grok-imagine-image-2.0"),
-    prompt: "An astronaut performing EVA in LEO.",
-    providerOptions: {
-        xai: { resolution: "2k" },
-    },
-});
-
-console.log(image.base64);
-```
-
 ```bash
 curl -X POST https://api.x.ai/v1/images/generations \
 -H "Content-Type: application/json" \
@@ -335,9 +321,34 @@ curl -X POST https://api.x.ai/v1/images/generations \
 }'
 ```
 
+```python customLanguage="pythonXAI"
+import xai_sdk
+
+client = xai_sdk.Client()
+
+response = client.image.sample(
+    prompt="An astronaut performing EVA in LEO.",
+    model="grok-imagine-image-2.0",
+    resolution="2k"
+)
+
+print(response.url)
+```
+
 ### Quality
 
 Control generation quality with the optional `quality` parameter. Allowed values are `low`, `medium`, and `auto`. When omitted, the default is `auto`, which lets the service choose the quality for each request. Auto currently uses `low` for image generation and `medium` for [image editing](/developers/model-capabilities/images/editing). Images are billed at the quality they are served at (see [Pricing](/developers/pricing)). Pass `low` or `medium` to pin a specific quality. The parameter is only supported for `grok-imagine-image-2.0`.
+
+```bash
+curl -X POST https://api.x.ai/v1/images/generations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -d '{
+    "model": "grok-imagine-image-2.0",
+    "prompt": "A watercolor painting of a lighthouse at dawn",
+    "quality": "low"
+  }'
+```
 
 ```python customLanguage="pythonXAI"
 import xai_sdk
@@ -353,35 +364,23 @@ response = client.image.sample(
 print(response.url)
 ```
 
-```bash
-curl -X POST https://api.x.ai/v1/images/generations \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -d '{
-    "model": "grok-imagine-image-2.0",
-    "prompt": "A watercolor painting of a lighthouse at dawn",
-    "quality": "low"
-  }'
-```
-
 ### Base64 Output
 
 Control the output format with the `response_format` parameter. When omitted, the default is `url`, which returns temporary hosted URLs. For embedding images directly without downloading, request base64:
 
-```python customLanguage="pythonXAI"
-import xai_sdk
+```javascript customLanguage="javascriptAISDK"
+import { xai } from "@ai-sdk/xai";
+import { generateImage } from "ai";
+import fs from "fs";
 
-client = xai_sdk.Client()
+const { image } = await generateImage({
+    model: xai.image("grok-imagine-image-2.0"),
+    prompt: "A serene Japanese garden",
+});
 
-response = client.image.sample(
-    prompt="A serene Japanese garden",
-    model="grok-imagine-image-2.0",
-    image_format="base64",
-)
-
-# Save to file
-with open("garden.jpg", "wb") as f:
-    f.write(response.image)
+// Save to file (AI SDK returns base64 by default)
+const imageBuffer = Buffer.from(image.base64, "base64");
+fs.writeFileSync("garden.jpg", imageBuffer);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -425,21 +424,6 @@ const imageBuffer = Buffer.from(response.data[0].b64_json, "base64");
 fs.writeFileSync("garden.jpg", imageBuffer);
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from "@ai-sdk/xai";
-import { generateImage } from "ai";
-import fs from "fs";
-
-const { image } = await generateImage({
-    model: xai.image("grok-imagine-image-2.0"),
-    prompt: "A serene Japanese garden",
-});
-
-// Save to file (AI SDK returns base64 by default)
-const imageBuffer = Buffer.from(image.base64, "base64");
-fs.writeFileSync("garden.jpg", imageBuffer);
-```
-
 ```bash
 curl -X POST https://api.x.ai/v1/images/generations \
   -H "Content-Type: application/json" \
@@ -450,6 +434,94 @@ curl -X POST https://api.x.ai/v1/images/generations \
     "response_format": "b64_json"
   }'
 ```
+
+```python customLanguage="pythonXAI"
+import xai_sdk
+
+client = xai_sdk.Client()
+
+response = client.image.sample(
+    prompt="A serene Japanese garden",
+    model="grok-imagine-image-2.0",
+    image_format="base64",
+)
+
+# Save to file
+with open("garden.jpg", "wb") as f:
+    f.write(response.image)
+```
+
+### Deferred Generation
+
+Image generation normally completes within the request. For long-running batches, or to avoid holding a connection open, set `deferred: true` on `/v1/images/generations` or `/v1/images/edits`. The request returns a `request_id` immediately; poll `GET /v1/images/{request_id}` for the result. Deferred requests support `response_format: "url"` only (the default). Results are stored alongside [deferred chat completions](/developers/advanced-api-usage/deferred-chat-completions) and retained for 24 hours.
+
+The poll response carries a `status`:
+
+* `pending` (HTTP `202`): still generating
+* `done` (HTTP `200`): `data` and `usage` are populated, in the same shape as a synchronous response
+* `failed` (HTTP `200`): `error` holds a `code` and `message`
+
+```python customLanguage="pythonRequests"
+import os
+import time
+import requests
+
+headers = {
+    "Authorization": f"Bearer {os.getenv('XAI_API_KEY')}",
+    "Content-Type": "application/json",
+}
+
+# Step 1: Start generation
+response = requests.post(
+    "https://api.x.ai/v1/images/generations",
+    headers=headers,
+    json={
+        "model": "grok-imagine-image-2.0",
+        "prompt": "A serene Japanese garden",
+        "deferred": True,
+    },
+)
+request_id = response.json()["request_id"]
+
+# Step 2: Poll for the result
+while True:
+    result = requests.get(
+        f"https://api.x.ai/v1/images/{request_id}",
+        headers={"Authorization": headers["Authorization"]},
+    )
+    data = result.json()
+
+    if data["status"] == "done":
+        print(f"Image URL: {data['data'][0]['url']}")
+        break
+    elif data["status"] == "failed":
+        print(f"Generation failed: {data['error']['message']}")
+        break
+    else:
+        print("Still processing...")
+        time.sleep(5)
+```
+
+```bash
+# Step 1: Start generation
+curl -X POST https://api.x.ai/v1/images/generations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -d '{
+    "model": "grok-imagine-image-2.0",
+    "prompt": "A serene Japanese garden",
+    "deferred": true
+  }'
+# => {"request_id": "..."}
+
+# Step 2: Poll for the result
+curl https://api.x.ai/v1/images/<request_id> \
+  -H "Authorization: Bearer $XAI_API_KEY"
+# => 202 {"request_id": "...", "status": "pending"}
+# => 200 {"request_id": "...", "status": "done", "data": [{"url": "...", "mime_type": "image/jpeg"}], "usage": {...}}
+```
+
+You can also register a [webhook](/developers/rest-api-reference/management/webhooks) for the `image.generation.completed`, `image.generation.failed`, `image.edit.completed` and `image.edit.failed` events instead of polling.
 
 ### Response Details
 

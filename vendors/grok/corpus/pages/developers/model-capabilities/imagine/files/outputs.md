@@ -10,6 +10,21 @@ Storage and public URL creation are independent: you can store privately without
 
 Generate an image, persist it to Files, and get a shareable public URL — all in one call:
 
+```bash
+curl -s -X POST https://api.x.ai/v1/images/generations \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "grok-imagine-image-quality",
+    "prompt": "A serene Japanese garden in winter",
+    "response_format": "url",
+    "storage_options": {
+      "filename": "garden.jpg",
+      "public_url": true
+    }
+  }'
+```
+
 ```python customLanguage="pythonXAI"
 import os
 import xai_sdk
@@ -30,21 +45,6 @@ print(f"File ID:    {response.file_output.file_id}")
 
 # Permanent, shareable public URL.
 print(f"Public URL: {response.public_url}")
-```
-
-```bash
-curl -s -X POST https://api.x.ai/v1/images/generations \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "grok-imagine-image-quality",
-    "prompt": "A serene Japanese garden in winter",
-    "response_format": "url",
-    "storage_options": {
-      "filename": "garden.jpg",
-      "public_url": true
-    }
-  }'
 ```
 
 The response body looks like this:
@@ -81,18 +81,6 @@ Key things to note:
 
 `filename` is required. Passing `storage_options={"filename": "..."}` with no other fields persists the asset privately: no expiry on the stored file and no public URL. You can always call [`create_public_url`](/developers/files/public-urls) on the stored `file_id` later if you change your mind.
 
-```python customLanguage="pythonXAI"
-response = client.image.sample(
-    prompt="A red circle on a white background",
-    model="grok-imagine-image-quality",
-    storage_options={"filename": "circle.jpg"},  # store privately, no public URL
-)
-
-print(response.file_output.file_id)    # file_...
-print(response.file_output.filename)   # circle.jpg
-print(response.public_url)             # None — public URL was not requested
-```
-
 ```bash
 curl -s -X POST https://api.x.ai/v1/images/generations \
   -H "Authorization: Bearer $XAI_API_KEY" \
@@ -105,11 +93,54 @@ curl -s -X POST https://api.x.ai/v1/images/generations \
   }'
 ```
 
+```python customLanguage="pythonXAI"
+response = client.image.sample(
+    prompt="A red circle on a white background",
+    model="grok-imagine-image-quality",
+    storage_options={"filename": "circle.jpg"},  # store privately, no public URL
+)
+
+print(response.file_output.file_id)    # file_...
+print(response.file_output.filename)   # circle.jpg
+print(response.public_url)             # None — public URL was not requested
+```
+
 ## Expiry Behaviour
 
 `storage_options` exposes two independent expiry knobs: `storage_options.expires_after` controls when the **stored file** auto-deletes, and `storage_options.public_url.expires_after` controls when the **public URL** auto-revokes. Omit `public_url.expires_after` and the URL inherits the file's expiry (or never expires if the file has none).
 
 A public URL can never outlive its file, and both values must be between **1 hour and 30 days**. See [Public URLs → Expiry Behaviour](/developers/files/public-urls#expiry-behaviour) for the full rules; the examples below show how the two knobs combine on an Imagine request.
+
+```bash
+# Permanent file, 24h public URL
+curl -s -X POST https://api.x.ai/v1/images/generations \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "grok-imagine-image-quality",
+    "prompt": "A futuristic city skyline at night",
+    "response_format": "url",
+    "storage_options": {
+      "filename": "skyline.jpg",
+      "public_url": {"expires_after": 86400}
+    }
+  }'
+
+# 2h file, public URL inherits the same expiry
+curl -s -X POST https://api.x.ai/v1/images/generations \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "grok-imagine-image-quality",
+    "prompt": "A futuristic city skyline at night",
+    "response_format": "url",
+    "storage_options": {
+      "filename": "skyline.jpg",
+      "expires_after": 7200,
+      "public_url": true
+    }
+  }'
+```
 
 ```python customLanguage="pythonXAI"
 import os
@@ -154,37 +185,6 @@ print(response.file_output.expires_at)             # ~24h from now
 print(response.file_output.public_url_expires_at)  # ~1h from now (URL dies before file)
 ```
 
-```bash
-# Permanent file, 24h public URL
-curl -s -X POST https://api.x.ai/v1/images/generations \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "grok-imagine-image-quality",
-    "prompt": "A futuristic city skyline at night",
-    "response_format": "url",
-    "storage_options": {
-      "filename": "skyline.jpg",
-      "public_url": {"expires_after": 86400}
-    }
-  }'
-
-# 2h file, public URL inherits the same expiry
-curl -s -X POST https://api.x.ai/v1/images/generations \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "grok-imagine-image-quality",
-    "prompt": "A futuristic city skyline at night",
-    "response_format": "url",
-    "storage_options": {
-      "filename": "skyline.jpg",
-      "expires_after": 7200,
-      "public_url": true
-    }
-  }'
-```
-
 ## The `file_output` Response
 
 Every Imagine response with `storage_options` set includes a `file_output` block on each generated asset:
@@ -204,6 +204,19 @@ The Python SDK also surfaces `response.public_url` and `response.public_url_erro
 
 When you request multiple images in a single call, each image gets its own `file_id` and its own `public_url` with a unique token. The files are completely independent — revoking or deleting one does not affect the others.
 
+```bash
+curl -s -X POST https://api.x.ai/v1/images/generations \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "grok-imagine-image-quality",
+    "prompt": "A cat wearing a hat, four different art styles",
+    "n": 4,
+    "response_format": "url",
+    "storage_options": {"filename": "cat-styles.jpg", "public_url": true}
+  }'
+```
+
 ```python customLanguage="pythonXAI"
 import os
 import xai_sdk
@@ -221,22 +234,24 @@ for r in responses:
     print(r.file_output.file_id, r.public_url)
 ```
 
+## Storing Image Edit Outputs
+
+`storage_options` works on `/v1/images/edits` the same way as `/v1/images/generations`. The edited result is stored as a new file.
+
 ```bash
-curl -s -X POST https://api.x.ai/v1/images/generations \
+curl -s -X POST https://api.x.ai/v1/images/edits \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "grok-imagine-image-quality",
-    "prompt": "A cat wearing a hat, four different art styles",
-    "n": 4,
+    "prompt": "Add a party hat to the dog",
+    "image": {
+      "url": "https://docs.x.ai/assets/api-examples/images/style-realistic.png"
+    },
     "response_format": "url",
-    "storage_options": {"filename": "cat-styles.jpg", "public_url": true}
+    "storage_options": {"filename": "party-dog.png", "public_url": true}
   }'
 ```
-
-## Storing Image Edit Outputs
-
-`storage_options` works on `/v1/images/edits` the same way as `/v1/images/generations`. The edited result is stored as a new file.
 
 ```python customLanguage="pythonXAI"
 import os
@@ -255,43 +270,9 @@ print(response.file_output.file_id)  # new file, not the input
 print(response.public_url)
 ```
 
-```bash
-curl -s -X POST https://api.x.ai/v1/images/edits \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "grok-imagine-image-quality",
-    "prompt": "Add a party hat to the dog",
-    "image": {
-      "url": "https://docs.x.ai/assets/api-examples/images/style-realistic.png"
-    },
-    "response_format": "url",
-    "storage_options": {"filename": "party-dog.png", "public_url": true}
-  }'
-```
-
 ## Storing Video Outputs
 
 The video endpoints (`/v1/videos/generations`, `/v1/videos/edits`, `/v1/videos/extensions`) use the same `storage_options` shape. Since video generation is asynchronous, `file_output.public_url` is populated on the **completed** response after the video finishes generating.
-
-```python customLanguage="pythonXAI"
-import os
-import xai_sdk
-
-client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
-
-# SDK handles polling automatically and returns the completed video.
-response = client.video.generate(
-    prompt="A ball bouncing slowly on a flat surface",
-    model="grok-imagine-video-1.5",
-    duration=5,
-    storage_options={"filename": "bouncing-ball.mp4", "public_url": True},
-)
-
-print(response.url)                   # ephemeral vidgen URL
-print(response.file_output.file_id)   # file_...
-print(response.public_url)            # https://files-cdn.x.ai/<token>/file_....mp4
-```
 
 ```bash
 # Start the generation
@@ -313,9 +294,31 @@ while true; do
   if [ "$STATUS" = "done" ]; then
     echo "$RESULT" | jq '.video.file_output'
     break
+  elif [ "$STATUS" = "failed" ]; then
+    echo "$RESULT" | jq .
+    break
   fi
   sleep 5
 done
+```
+
+```python customLanguage="pythonXAI"
+import os
+import xai_sdk
+
+client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+
+# SDK handles polling automatically and returns the completed video.
+response = client.video.generate(
+    prompt="A ball bouncing slowly on a flat surface",
+    model="grok-imagine-video-1.5",
+    duration=5,
+    storage_options={"filename": "bouncing-ball.mp4", "public_url": True},
+)
+
+print(response.url)                   # ephemeral vidgen URL
+print(response.file_output.file_id)   # file_...
+print(response.public_url)            # https://files-cdn.x.ai/<token>/file_....mp4
 ```
 
 Image-to-video, video editing, and video extension all accept `storage_options` the same way.
@@ -367,6 +370,24 @@ print(public_url)
 
 Files created through `storage_options` are full first-class Files API files. Use the [Files API](/developers/files/managing-files) to list, retrieve, update, and delete them, and use the public URL endpoints to revoke or re-create the URL after the fact:
 
+```bash
+FILE_ID="<file_output.file_id from the generation response>"
+
+# Stop sharing publicly (file stays in your storage)
+curl -s -X POST "https://api.x.ai/v1/files/$FILE_ID/public-url/revoke" \
+  -H "Authorization: Bearer $XAI_API_KEY"
+
+# Re-create with a 7-day expiry
+curl -s -X POST "https://api.x.ai/v1/files/$FILE_ID/public-url" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"expires_after": 604800}'
+
+# Delete the file (also revokes the public URL)
+curl -s -X DELETE "https://api.x.ai/v1/files/$FILE_ID" \
+  -H "Authorization: Bearer $XAI_API_KEY"
+```
+
 ```python customLanguage="pythonXAI"
 import os
 import xai_sdk
@@ -391,24 +412,6 @@ client.files.create_public_url(file_id, expires_after=604800)  # 7 days
 
 # Delete the file entirely (also tears down any active public URL)
 client.files.delete(file_id)
-```
-
-```bash
-FILE_ID="<file_output.file_id from the generation response>"
-
-# Stop sharing publicly (file stays in your storage)
-curl -s -X POST "https://api.x.ai/v1/files/$FILE_ID/public-url/revoke" \
-  -H "Authorization: Bearer $XAI_API_KEY"
-
-# Re-create with a 7-day expiry
-curl -s -X POST "https://api.x.ai/v1/files/$FILE_ID/public-url" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"expires_after": 604800}'
-
-# Delete the file (also revokes the public URL)
-curl -s -X DELETE "https://api.x.ai/v1/files/$FILE_ID" \
-  -H "Authorization: Bearer $XAI_API_KEY"
 ```
 
 ## Limitations

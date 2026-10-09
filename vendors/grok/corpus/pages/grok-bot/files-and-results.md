@@ -23,6 +23,12 @@ The desktop composer accepts up to six attachments at a time. Documents,
 images, and audio can be up to 25 MB each; videos can be up to 200 MB. Large,
 encrypted, damaged, or unusual files may not be readable.
 
+On iPhone, you can also share a photo, file, link, or text from another app
+into Grok Bot. Use the system share sheet, choose **Grok Bot**, pick a chat,
+and choose **Attach**. The item is added to that conversation's composer. On
+Android, the share sheet currently accepts text. See
+[Grok Bot for Mobile](/grok-bot/mobile).
+
 Tell the Bot what each attachment is and how it should use it:
 
 > The PDF is the signed policy. The spreadsheet is this month's transactions.
@@ -36,9 +42,9 @@ Paste a link when the Bot can access the page from its computer or a connector.
 If the page is private, sign in through the computer or install the relevant
 connector.
 
-Links in messages and results open in an in-app viewer when possible. Always
-check the destination before entering credentials or approving an external
-action.
+Links in messages and results open in your system browser; hovering over a
+link card shows a preview first. Always check the destination before entering
+credentials or approving an external action.
 
 ## Ask for a reviewable result
 
@@ -70,6 +76,15 @@ copies:
 
 > Update the report you just created. Add source links to the first two claims
 > and replace the final table with a CSV attachment.
+
+## Results from Cloud Agents
+
+A Bot can hand coding work to a
+[Cloud Agent](/grok-bot/teams-and-enterprises#cloud-agents). When the Cloud
+Agent finishes, the Bot copies the images, videos, and other files cited in the
+Cloud Agent's final report to its computer and attaches them to its reply.
+In the desktop app, the Cloud Agent's card in the conversation shows the same
+files; open an image or video to view it full screen.
 
 ## Preserve evidence
 

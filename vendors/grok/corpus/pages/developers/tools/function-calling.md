@@ -16,12 +16,94 @@ Define custom tools that the model can invoke during a conversation. The model r
 
 ## Quick Start
 
+```javascriptAISDK
+import { xai } from '@ai-sdk/xai';
+import { streamText, tool, stepCountIs } from 'ai';
+import { z } from 'zod';
+
+const result = streamText({
+  model: xai.responses('grok-4.7'),
+  tools: {
+    getTemperature: tool({
+      description: 'Get current temperature for a location',
+      inputSchema: z.object({
+        location: z.string().describe('City name'),
+        unit: z.enum(['celsius', 'fahrenheit']).default('fahrenheit'),
+      }),
+      execute: async ({ location, unit }) => ({
+        location,
+        temperature: unit === 'fahrenheit' ? 59 : 15,
+        unit,
+      }),
+    }),
+  },
+  stopWhen: stepCountIs(5),
+  prompt: 'What is the temperature in San Francisco?',
+});
+
+for await (const chunk of result.fullStream) {
+  if (chunk.type === 'text-delta') {
+    process.stdout.write(chunk.text);
+  }
+}
+```
+
+```pythonOpenAISDK
+import os
+import json
+from openai import OpenAI
+
+client = OpenAI(
+    api_key=os.getenv("XAI_API_KEY"),
+    base_url="https://api.x.ai/v1",
+)
+
+tools = [
+    {
+        "type": "function",
+        "name": "get_temperature",
+        "description": "Get current temperature for a location",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "location": {"type": "string", "description": "City name"},
+                "unit": {"type": "string", "enum": ["celsius", "fahrenheit"], "default": "fahrenheit"}
+            },
+            "required": ["location"]
+        },
+    },
+]
+
+response = client.responses.create(
+    model="grok-4.7",
+    input=[{"role": "user", "content": "What is the temperature in San Francisco?"}],
+    tools=tools,
+)
+
+# Handle function calls
+for item in response.output:
+    if item.type == "function_call":
+        args = json.loads(item.arguments)
+        result = {"location": args["location"], "temperature": 59, "unit": args.get("unit", "fahrenheit")}
+
+        response = client.responses.create(
+            model="grok-4.7",
+            input=[{"type": "function_call_output", "call_id": item.call_id, "output": json.dumps(result)}],
+            tools=tools,
+            previous_response_id=response.id,
+        )
+
+for item in response.output:
+    if item.type == "message":
+        print(item.content[0].text)
+```
+
 ```bash customLanguage="bash"
 curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -d '{
-  "model": "grok-4.6",
+  "model": "grok-4.7",
   "input": [
     {"role": "user", "content": "What is the temperature in San Francisco?"}
   ],
@@ -69,7 +151,7 @@ tools = [
 ]
 
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=tools,
 )
 chat.append(user("What is the temperature in San Francisco?"))
@@ -89,118 +171,9 @@ if response.tool_calls:
 print(response.content)
 ```
 
-```pythonOpenAISDK
-import os
-import json
-from openai import OpenAI
-
-client = OpenAI(
-    api_key=os.getenv("XAI_API_KEY"),
-    base_url="https://api.x.ai/v1",
-)
-
-tools = [
-    {
-        "type": "function",
-        "name": "get_temperature",
-        "description": "Get current temperature for a location",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "location": {"type": "string", "description": "City name"},
-                "unit": {"type": "string", "enum": ["celsius", "fahrenheit"], "default": "fahrenheit"}
-            },
-            "required": ["location"]
-        },
-    },
-]
-
-response = client.responses.create(
-    model="grok-4.6",
-    input=[{"role": "user", "content": "What is the temperature in San Francisco?"}],
-    tools=tools,
-)
-
-# Handle function calls
-for item in response.output:
-    if item.type == "function_call":
-        args = json.loads(item.arguments)
-        result = {"location": args["location"], "temperature": 59, "unit": args.get("unit", "fahrenheit")}
-
-        response = client.responses.create(
-            model="grok-4.6",
-            input=[{"type": "function_call_output", "call_id": item.call_id, "output": json.dumps(result)}],
-            tools=tools,
-            previous_response_id=response.id,
-        )
-
-for item in response.output:
-    if item.type == "message":
-        print(item.content[0].text)
-```
-
-```javascriptAISDK
-import { xai } from '@ai-sdk/xai';
-import { streamText, tool, stepCountIs } from 'ai';
-import { z } from 'zod';
-
-const result = streamText({
-  model: xai.responses('grok-4.6'),
-  tools: {
-    getTemperature: tool({
-      description: 'Get current temperature for a location',
-      inputSchema: z.object({
-        location: z.string().describe('City name'),
-        unit: z.enum(['celsius', 'fahrenheit']).default('fahrenheit'),
-      }),
-      execute: async ({ location, unit }) => ({
-        location,
-        temperature: unit === 'fahrenheit' ? 59 : 15,
-        unit,
-      }),
-    }),
-  },
-  stopWhen: stepCountIs(5),
-  prompt: 'What is the temperature in San Francisco?',
-});
-
-for await (const chunk of result.fullStream) {
-  if (chunk.type === 'text-delta') {
-    process.stdout.write(chunk.text);
-  }
-}
-```
-
 ## Defining Tools with Pydantic
 
 Use Pydantic models for type-safe parameter schemas:
-
-```pythonXAI
-from typing import Literal
-from pydantic import BaseModel, Field
-from xai_sdk.chat import tool
-
-class TemperatureRequest(BaseModel):
-    location: str = Field(description="City and state, e.g. San Francisco, CA")
-    unit: Literal["celsius", "fahrenheit"] = Field("fahrenheit", description="Temperature unit")
-
-class CeilingRequest(BaseModel):
-    location: str = Field(description="City and state, e.g. San Francisco, CA")
-
-# Generate JSON schema from Pydantic models
-tools = [
-    tool(
-        name="get_temperature",
-        description="Get current temperature for a location",
-        parameters=TemperatureRequest.model_json_schema(),
-    ),
-    tool(
-        name="get_ceiling",
-        description="Get current cloud ceiling for a location",
-        parameters=CeilingRequest.model_json_schema(),
-    ),
-]
-```
 
 ```pythonOpenAISDK
 from typing import Literal
@@ -229,9 +202,68 @@ tools = [
 ]
 ```
 
+```pythonXAI
+from typing import Literal
+from pydantic import BaseModel, Field
+from xai_sdk.chat import tool
+
+class TemperatureRequest(BaseModel):
+    location: str = Field(description="City and state, e.g. San Francisco, CA")
+    unit: Literal["celsius", "fahrenheit"] = Field("fahrenheit", description="Temperature unit")
+
+class CeilingRequest(BaseModel):
+    location: str = Field(description="City and state, e.g. San Francisco, CA")
+
+# Generate JSON schema from Pydantic models
+tools = [
+    tool(
+        name="get_temperature",
+        description="Get current temperature for a location",
+        parameters=TemperatureRequest.model_json_schema(),
+    ),
+    tool(
+        name="get_ceiling",
+        description="Get current cloud ceiling for a location",
+        parameters=CeilingRequest.model_json_schema(),
+    ),
+]
+```
+
 ## Handling Tool Calls
 
 When the model wants to use your tool, execute the function and return the result:
+
+```pythonOpenAISDK
+import json
+
+def get_temperature(location: str, unit: str = "fahrenheit") -> dict:
+    temp = 59 if unit == "fahrenheit" else 15
+    return {"location": location, "temperature": temp, "unit": unit}
+
+tools_map = {"get_temperature": get_temperature}
+
+# Process function calls
+for item in response.output:
+    if item.type == "function_call":
+        name = item.name
+        args = json.loads(item.arguments)
+
+        if name not in tools_map:
+            output = json.dumps({"error": f"Unknown function: {name}"})
+        else:
+            output = json.dumps(tools_map[name](**args))
+
+        response = client.responses.create(
+            model="grok-4.7",
+            input=[{"type": "function_call_output", "call_id": item.call_id, "output": output}],
+            tools=tools,
+            previous_response_id=response.id,
+        )
+
+for item in response.output:
+    if item.type == "message":
+        print(item.content[0].text)
+```
 
 ```pythonXAI
 import json
@@ -268,41 +300,28 @@ if response.tool_calls:
 print(response.content)
 ```
 
-```pythonOpenAISDK
-import json
-
-def get_temperature(location: str, unit: str = "fahrenheit") -> dict:
-    temp = 59 if unit == "fahrenheit" else 15
-    return {"location": location, "temperature": temp, "unit": unit}
-
-tools_map = {"get_temperature": get_temperature}
-
-# Process function calls
-for item in response.output:
-    if item.type == "function_call":
-        name = item.name
-        args = json.loads(item.arguments)
-
-        if name not in tools_map:
-            output = json.dumps({"error": f"Unknown function: {name}"})
-        else:
-            output = json.dumps(tools_map[name](**args))
-
-        response = client.responses.create(
-            model="grok-4.6",
-            input=[{"type": "function_call_output", "call_id": item.call_id, "output": output}],
-            tools=tools,
-            previous_response_id=response.id,
-        )
-
-for item in response.output:
-    if item.type == "message":
-        print(item.content[0].text)
-```
-
 ## Combining with Built-in Tools
 
 Function calling works alongside built-in agentic tools. The model can use web search, then call your custom function:
+
+```pythonOpenAISDK
+tools = [
+    {"type": "web_search"},          # Built-in
+    {"type": "x_search"},            # Built-in
+    {                                # Custom
+        "type": "function",
+        "name": "save_to_database",
+        "description": "Save research results to the database",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "data": {"type": "string", "description": "Data to save"}
+            },
+            "required": ["data"]
+        },
+    },
+]
+```
 
 ```pythonXAI
 from xai_sdk.chat import tool
@@ -325,33 +344,14 @@ tools = [
 ]
 
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=tools,
 )
 ```
 
-```pythonOpenAISDK
-tools = [
-    {"type": "web_search"},          # Built-in
-    {"type": "x_search"},            # Built-in
-    {                                # Custom
-        "type": "function",
-        "name": "save_to_database",
-        "description": "Save research results to the database",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "data": {"type": "string", "description": "Data to save"}
-            },
-            "required": ["data"]
-        },
-    },
-]
-```
-
 When mixing tools:
 
-* **Built-in tools** execute automatically on xAI servers
+* **Built-in tools** execute automatically on SpaceXAI servers
 * **Custom tools** pause execution and return to you for handling
 
 See [Advanced Usage](/developers/tools/advanced-usage#mixing-server-side-and-client-side-tools) for complete examples with tool loops.
@@ -385,7 +385,7 @@ Disable with `parallel_tool_calls: false` in your request.
 | Field | Required | Description |
 |-------|----------|-------------|
 | `name` | Yes | Unique identifier (max 350 tools per request) |
-| `description` | Yes | What the tool does — helps the model decide when to use it |
+| `description` | No | What the tool does. Treated as empty if omitted; a clear description helps the model decide when to use it |
 | `parameters` | Yes | JSON Schema defining function inputs |
 
 ### Parameter Schema
@@ -447,7 +447,7 @@ import { streamText, tool, stepCountIs } from 'ai';
 import { z } from 'zod';
 
 const result = streamText({
-  model: xai.responses('grok-4.6'),
+  model: xai.responses('grok-4.7'),
   tools: {
     getCurrentTemperature: tool({
       description: 'Get current temperature for a location',

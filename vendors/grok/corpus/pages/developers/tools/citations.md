@@ -53,42 +53,23 @@ When inline citations are disabled, the response text will not contain any `[[N]
 
 #### Enabled (default for Responses API; opt-in for xAI Python SDK)
 
-```bash customLanguage="bash" highlightedLines="10"
-# Inline citations are enabled by default for the Responses API
-curl https://api.x.ai/v1/responses \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -d '{
-  "model": "grok-4.6",
-  "input": [
-    {"role": "user", "content": "What is xAI?"}
-  ],
-  "tools": [{"type": "web_search"}]
-}'
-```
+```javascript customLanguage="javascriptAISDK" highlightedLines="8"
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
 
-```python customLanguage="pythonXAI" highlightedLines="14"
-import os
+const { text, sources } = await generateText({
+  model: xai.responses('grok-4.7'),
+  prompt: 'What is xAI?',
+  tools: {
+    web_search: xai.tools.webSearch(), // inline citations are enabled by default
+  },
+});
 
-from xai_sdk import Client
-from xai_sdk.chat import user
-from xai_sdk.tools import web_search, x_search
+// Text includes inline citation markdown
+console.log(text);
 
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-chat = client.chat.create(
-    model="grok-4.6",
-    tools=[
-        web_search(),
-        x_search(),
-    ],
-    include=["inline_citations"],  # Enable inline citations (opt-in for xAI Python SDK)
-)
-
-chat.append(user("What is xAI?"))
-response = chat.sample()
-
-# Access the response text (includes inline citation markdown)
-print(response.content)
+// Sources contain all citation URLs
+console.log('Sources:', sources);
 ```
 
 ```python customLanguage="pythonOpenAISDK" highlightedLines="15"
@@ -101,7 +82,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {"role": "user", "content": "What is xAI?"}
     ],
@@ -118,23 +99,18 @@ for item in response.output:
                 print(content.text)
 ```
 
-```javascript customLanguage="javascriptAISDK" highlightedLines="8"
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
-const { text, sources } = await generateText({
-  model: xai.responses('grok-4.6'),
-  prompt: 'What is xAI?',
-  tools: {
-    web_search: xai.tools.webSearch(), // inline citations are enabled by default
-  },
-});
-
-// Text includes inline citation markdown
-console.log(text);
-
-// Sources contain all citation URLs
-console.log('Sources:', sources);
+```bash customLanguage="bash" highlightedLines="10"
+# Inline citations are enabled by default for the Responses API
+curl https://api.x.ai/v1/responses \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -d '{
+  "model": "grok-4.7",
+  "input": [
+    {"role": "user", "content": "What is xAI?"}
+  ],
+  "tools": [{"type": "web_search"}]
+}'
 ```
 
 ```javascript customLanguage="javascriptOpenAISDK" highlightedLines="13"
@@ -146,7 +122,7 @@ const client = new OpenAI({
 });
 
 const response = await client.responses.create({
-  model: 'grok-4.6',
+  model: 'grok-4.7',
   input: [
     { role: 'user', content: 'What is xAI?' }
   ],
@@ -165,6 +141,30 @@ for (const item of response.output) {
 }
 ```
 
+```python customLanguage="pythonXAI" highlightedLines="14"
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import user
+from xai_sdk.tools import web_search, x_search
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+chat = client.chat.create(
+    model="grok-4.7",
+    tools=[
+        web_search(),
+        x_search(),
+    ],
+    include=["inline_citations"],  # Enable inline citations (opt-in for xAI Python SDK)
+)
+
+chat.append(user("What is xAI?"))
+response = chat.sample()
+
+# Access the response text (includes inline citation markdown)
+print(response.content)
+```
+
 #### Disabled (opt-out for Responses API; default for xAI Python SDK)
 
 ```python customLanguage="pythonOpenAISDK" highlightedLines="17"
@@ -177,7 +177,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {"role": "user", "content": "What is xAI?"}
     ],
@@ -206,7 +206,7 @@ response = requests.post(
         "Authorization": f"Bearer {os.getenv('XAI_API_KEY')}",
     },
     json={
-        "model": "grok-4.6",
+        "model": "grok-4.7",
         "include": ["no_inline_citations"],
         "input": [
             {"role": "user", "content": "What is xAI?"}
@@ -228,7 +228,7 @@ curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -d '{
-  "model": "grok-4.6",
+  "model": "grok-4.7",
   "include": ["no_inline_citations"],
   "input": [
     {"role": "user", "content": "What is xAI?"}
@@ -284,7 +284,7 @@ When inline citations are enabled, each `output_text` content block includes an 
   "completed_at": 1781829888,
   "id": "5808284d-ae14-9981-9289-73515f67ebda",
   "max_output_tokens": null,
-  "model": "grok-4.6",
+  "model": "grok-4.7",
   "object": "response",
   "output": [
     ...
@@ -354,37 +354,12 @@ Each citation annotation contains:
 
 Image embeds can also produce annotation metadata. The annotation `title` is not shown in the Markdown image.
 
-```python customLanguage="pythonXAI"
-# After streaming or sampling completes, access the structured inline citations:
-for citation in response.inline_citations:
-    print(f"Citation [{citation.id}]:")
-    print(f"  Position: {citation.start_index} to {citation.end_index}")
-    
-    # Check citation type
-    if citation.HasField("web_citation"):
-        print(f"  Web URL: {citation.web_citation.url}")
-    elif citation.HasField("x_citation"):
-        print(f"  X URL: {citation.x_citation.url}")
-```
-
-```python customLanguage="pythonOpenAISDK"
-# Access annotations from the response
-for item in response.output:
-    if item.type == "message":
-        for content in item.content:
-            if content.type == "output_text":
-                for annotation in content.annotations:
-                    print(f"Citation [{annotation.title}]:")
-                    print(f"  URL: {annotation.url}")
-                    print(f"  Position: {annotation.start_index} to {annotation.end_index}")
-```
-
 ```javascript customLanguage="javascriptAISDK"
 import { xai } from '@ai-sdk/xai';
 import { streamText } from 'ai';
 
 const { fullStream } = streamText({
-  model: xai.responses('grok-4.6'),
+  model: xai.responses('grok-4.7'),
   prompt: 'What is xAI?',
   tools: {
     web_search: xai.tools.webSearch(),
@@ -397,6 +372,18 @@ for await (const part of fullStream) {
     console.log(`Citation: ${part.url}`);
   }
 }
+```
+
+```python customLanguage="pythonOpenAISDK"
+# Access annotations from the response
+for item in response.output:
+    if item.type == "message":
+        for content in item.content:
+            if content.type == "output_text":
+                for annotation in content.annotations:
+                    print(f"Citation [{annotation.title}]:")
+                    print(f"  URL: {annotation.url}")
+                    print(f"  Position: {annotation.start_index} to {annotation.end_index}")
 ```
 
 ```javascript customLanguage="javascriptOpenAISDK"
@@ -414,6 +401,19 @@ for (const item of response.output) {
     }
   }
 }
+```
+
+```python customLanguage="pythonXAI"
+# After streaming or sampling completes, access the structured inline citations:
+for citation in response.inline_citations:
+    print(f"Citation [{citation.id}]:")
+    print(f"  Position: {citation.start_index} to {citation.end_index}")
+    
+    # Check citation type
+    if citation.HasField("web_citation"):
+        print(f"  Web URL: {citation.web_citation.url}")
+    elif citation.HasField("x_citation"):
+        print(f"  X URL: {citation.x_citation.url}")
 ```
 
 ```output

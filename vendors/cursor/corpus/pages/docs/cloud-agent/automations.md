@@ -30,11 +30,12 @@ Automations create cloud agents and are billed based on cloud agent usage. See [
 
 Automations use each model's maximum supported context window because they run as cloud agents. There is no context-window toggle.
 
-How usage is billed depends on the automation's [permission scope](https://cursor.com/docs/cloud-agent/automations.md#permissions):
+How usage is billed depends on **Run as** in [Share](https://cursor.com/docs/cloud-agent/automations.md#share):
 
-- **Team Owned**: Usage is billed to the team's usage pool. Automations execute under a shared team service account, so no individual user's usage is affected.
-- **Private**: Usage is billed to the user who created the automation.
-- **Team Visible**: Usage is billed to the user who created the automation, the same as Private.
+- **Me**: Usage is billed to you. Other members see this option as **Creator**.
+- **Service account**: Usage is billed to the team's usage pool. The automation runs as its own dedicated service account, so it does not use any member's personal usage.
+
+Personal accounts always bill to you. They do not have a Share menu.
 
 ## Triggers
 
@@ -222,23 +223,44 @@ Source control triggers infer the repository from the pull request. For other tr
 
 Use a multi-repo environment when an automation needs to work across multiple repositories. Select multiple repos when you configure the environment, or choose an existing one from your [Cloud Agents dashboard](https://cursor.com/dashboard/cloud-agents#environments).
 
-### Permissions
+On [Self-Hosted Machines](https://cursor.com/docs/cloud-agent/self-hosted.md#environments-on-self-hosted-machines), an automation uses only the environment's repositories. An any-repo pool worker started with `--clone-git-repos` checks out all of them. Other workers use the checkouts they already have.
 
-Control who can view and manage the automation. The permission scope also determines how usage is [billed](https://cursor.com/docs/cloud-agent/automations.md#billing).
+## Share
 
-- **Private**: Only you can manage the automation. Team admins can view and disable the automation.
-- **Team Visible**: Only you can manage the automation. Team members can view the automation, and team admins can disable the automation. It still runs with your auth.
-- **Team Owned**: Team members can view the automation. Only team admins can manage the automation. It runs with the team's shared automations service account.
+Team accounts set visibility and identity from **Share** on the automation detail header. Personal accounts do not have this menu.
 
-Promoting an automation from Private or Team Visible to Team Owned changes the identity it runs as. It stops using your auth and starts using the team's shared automations service account. If the automation uses webhook triggers, regenerate its webhook API key after the scope change. If it uses MCPs or other integrations that rely on personal OAuth credentials, make sure those are configured for the team's service account instead. Only team admins can promote an automation to Team Owned.
+### Run as
 
-### Identity
+- **Me**: The automation runs with your auth. Usage is billed to you. Other members see this option as **Creator**.
+- **Service account**: The automation runs as its own dedicated service account. Usage is billed to the team's usage pool. Only team admins can choose this.
+
+### Access
+
+- **Private**: Other team members cannot see the automation. Only you can manage it. Team admins can view and disable it.
+- **Members can view**: Team members can view the automation. You manage it when it runs as you. Team admins manage it when it runs as the service account. Admins can disable it in either case.
+- **Members can edit**: Team members can view and edit the automation.
+
+The menu also includes **Copy link**.
+
+Changing **Run as** to **Service account** changes the identity the automation uses. It stops using your auth and starts using a service account dedicated to that automation. If the automation uses webhook triggers, regenerate its webhook API key after the change. If it uses MCPs or other integrations that rely on personal OAuth credentials, make sure those are configured for the team's service account instead. Only team admins can switch an automation to the service account.
+
+### Service accounts for automations
+
+Each automation set to **Run as: Service account** gets its own service account. Cursor creates it the first time the automation is saved with that setting, whether from the automation editor or through the API or Terraform provider.
+
+On Enterprise teams, these accounts are listed in Dashboard → Settings → API Keys → Service Accounts with names like `automation-<id>`. Neither the ID in the name nor the service account ID (`sa_...`) is the automation's ID.
+
+Some older automations share a single team service account named `automations`. They move to their own service account the next time they are saved.
+
+An automation that runs as a service account stops running if that service account is archived or deleted. Only archive an `automation-` service account once you're sure no automation still uses it.
+
+## Identity
 
 When an automation acts on external services, it uses the following identities:
 
 - GitHub comments, review approvals, and reviewer requests run as `cursor`.
-- Team-scoped automations open pull requests as `cursor`.
-- Private automations open pull requests as your GitHub account.
+- Automations that run as you open pull requests as your GitHub account.
+- Automations that run as the service account open pull requests as `cursor`.
 - Slack messages are sent as the Cursor bot.
 
 ## Writing prompts

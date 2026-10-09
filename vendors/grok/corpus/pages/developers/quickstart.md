@@ -2,9 +2,9 @@
 
 # Quickstart
 
-Welcome! In this guide, we'll walk you through the basics of using the xAI API, from creating an account to making your first request.
+Welcome! In this guide, we'll walk you through the basics of using the SpaceXAI API, from creating an account to making your first request.
 
-## Step 1: Create an xAI account
+## Step 1: Create a SpaceXAI account
 
 Sign up for an account at [console.x.ai](https://console.x.ai/login?mode=sign-up\&utm_source=docs\&utm_medium=referral\&utm_campaign=quickstart), then load it with credits to start using the API.
 
@@ -26,47 +26,36 @@ XAI_API_KEY=your_api_key
 
 Pick your language and install the SDK:
 
-```bash customLanguage="pythonXAI"
-pip install xai-sdk
+```bash customLanguage="javascriptAISDK"
+npm install ai @ai-sdk/xai zod
 ```
 
 ```bash customLanguage="pythonOpenAISDK"
 pip install openai
 ```
 
-```bash customLanguage="javascriptAISDK"
-npm install ai @ai-sdk/xai zod
-```
-
 ```bash customLanguage="javascriptOpenAISDK"
 npm install openai
 ```
 
-## Step 4: Make your first request
-
-Send a coding prompt to [Grok Build](/build/overview) (`grok-4.6`) and get a response. The same model powers agentic coding in Grok Build and is available on the API in early access:
-
-```bash
-curl https://api.x.ai/v1/responses \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "grok-4.6",
-    "input": "Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}"
-  }'
+```bash customLanguage="pythonXAI"
+pip install xai-sdk
 ```
 
-```python customLanguage="pythonXAI"
-import os
-from xai_sdk import Client
-from xai_sdk.chat import user
+## Step 4: Make your first request
 
-client = Client(api_key=os.getenv("XAI_API_KEY"))
+Send a coding prompt to [Grok Build](/build/overview) (`grok-4.7`) and get a response. The same model powers agentic coding in Grok Build and is available on the SpaceXAI API:
 
-chat = client.chat.create(model="grok-4.6")
-chat.append(user("Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}"))
+```javascript customLanguage="javascriptAISDK"
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
 
-print(chat.sample().content)
+const { text } = await generateText({
+  model: xai.responses('grok-4.7'),
+  prompt: 'Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}',
+});
+
+console.log(text);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -78,23 +67,21 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input="Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}",
 )
 
 print(response.output_text)
 ```
 
-```javascript customLanguage="javascriptAISDK"
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
-const { text } = await generateText({
-  model: xai.responses('grok-4.6'),
-  prompt: 'Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}',
-});
-
-console.log(text);
+```bash
+curl https://api.x.ai/v1/responses \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "grok-4.7",
+    "input": "Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}"
+  }'
 ```
 
 ```javascript customLanguage="javascriptOpenAISDK"
@@ -106,11 +93,24 @@ const client = new OpenAI({
 });
 
 const response = await client.responses.create({
-  model: 'grok-4.6',
+  model: 'grok-4.7',
   input: 'Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}',
 });
 
 console.log(response.output_text);
+```
+
+```python customLanguage="pythonXAI"
+import os
+from xai_sdk import Client
+from xai_sdk.chat import user
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+chat = client.chat.create(model="grok-4.7")
+chat.append(user("Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}"))
+
+print(chat.sample().content)
 ```
 
 For multi-turn chat, reasoning, and [structured outputs](/developers/model-capabilities/text/structured-outputs), see the [Text Generation Guide](/developers/model-capabilities/text/generate-text). For agentic coding workflows, see the [Grok Build overview](/build/overview). For AI teammates on a cloud computer, see [Grok Bot](/grok-bot/overview).
@@ -119,18 +119,16 @@ For multi-turn chat, reasoning, and [structured outputs](/developers/model-capab
 
 Use the Imagine API to generate images from text prompts:
 
-```python customLanguage="pythonXAI"
-import os
-import xai_sdk
+```javascript customLanguage="javascriptAISDK"
+import { xai } from '@ai-sdk/xai';
+import { generateImage } from 'ai';
 
-client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+const { image } = await generateImage({
+  model: xai.image('grok-imagine-image-2.0'),
+  prompt: 'A futuristic city skyline at sunset',
+});
 
-response = client.image.sample(
-    prompt="A futuristic city skyline at sunset",
-    model="grok-imagine-image-2.0",
-)
-
-print(response.url)
+console.log(image.base64);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -148,18 +146,6 @@ response = client.images.generate(
 )
 
 print(response.data[0].url)
-```
-
-```javascript customLanguage="javascriptAISDK"
-import { xai } from '@ai-sdk/xai';
-import { generateImage } from 'ai';
-
-const { image } = await generateImage({
-  model: xai.image('grok-imagine-image-2.0'),
-  prompt: 'A futuristic city skyline at sunset',
-});
-
-console.log(image.base64);
 ```
 
 ```javascript customLanguage="javascriptOpenAISDK"
@@ -186,6 +172,20 @@ curl -X POST https://api.x.ai/v1/images/generations \
     "model": "grok-imagine-image-2.0",
     "prompt": "A futuristic city skyline at sunset"
   }'
+```
+
+```python customLanguage="pythonXAI"
+import os
+import xai_sdk
+
+client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+
+response = client.image.sample(
+    prompt="A futuristic city skyline at sunset",
+    model="grok-imagine-image-2.0",
+)
+
+print(response.url)
 ```
 
 For more advanced use cases like batch generation, aspect ratio control, and image editing, check out the [Image Generation Guide](/developers/model-capabilities/images/generation).

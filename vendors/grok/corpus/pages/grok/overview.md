@@ -2,7 +2,7 @@
 
 # Welcome to Grok
 
-Grok is xAI's assistant, available on the web at [grok.com](https://grok.com) and in the iOS and Android apps. Sign in once and your conversations, settings, and subscription stay in sync across every platform.
+Grok is SpaceXAI's assistant, available on the web at [grok.com](https://grok.com) and in the iOS and Android apps. Sign in once and your conversations, settings, and subscription stay in sync across every platform.
 
 ## What you can do
 

@@ -6,21 +6,21 @@ SIP lets you route PSTN, contact-center, or PBX calls into a Speech to Speech AP
 
 ### 1. Register the phone number
 
-Create a Direct SIP phone number and include the webhook details that should receive incoming-call events. Use `origin: "byo_trunk"` for a customer-owned number. Provisioning xAI phone numbers via API is not supported. xAI returns the webhook signing secret in the response.
+Create a Direct SIP phone number and include the webhook details that should receive incoming-call events. Use `origin: "byo_trunk"` for a customer-owned number. Provisioning SpaceXAI phone numbers via API is not supported. SpaceXAI returns the webhook signing secret in the response.
 
 Choose one SIP authentication method.
 
-The response includes a signing secret after you register the phone number. Store it securely; xAI returns it only once.
+The response includes a signing secret after you register the phone number. Store it securely; SpaceXAI returns it only once.
 
 Configure your carrier or PBX to route calls to:
 
 
 
-If you provide `allowed_addresses`, make sure the list contains your provider's SIP signaling CIDR ranges. If you provide SIP digest credentials, configure your carrier with the same username and password; xAI never returns the password after creation.
+If you provide `allowed_addresses`, make sure the list contains your provider's SIP signaling CIDR ranges. If you provide SIP digest credentials, configure your carrier with the same username and password; SpaceXAI never returns the password after creation.
 
 ### 2. Handle the incoming-call webhook
 
-When a caller dials the number, xAI sends a signed `realtime.call.incoming` webhook to the webhook URL. Verify the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers using the signing secret returned after you register the phone number, then read `data.call_id` from the payload.
+When a caller dials the number, SpaceXAI sends a signed `realtime.call.incoming` webhook to the webhook URL. Verify the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers using the signing secret returned after you register the phone number, then read `data.call_id` from the payload.
 
 The webhook has this shape:
 
@@ -101,6 +101,22 @@ ws.on("message", data => {
 });
 ```
 
+## Remove a phone number
+
+Delete the registration when SpaceXAI should stop answering the number. `phone_number_id` is in the create response. To find it later, list the team's numbers and match `phone_number`:
+
+```bash customLanguage="bash"
+curl "https://api.x.ai/v2/phone-numbers" \
+  -H "Authorization: Bearer $XAI_API_KEY"
+```
+
+```bash customLanguage="bash"
+curl -X DELETE "https://api.x.ai/v2/phone-numbers/phone_abc123" \
+  -H "Authorization: Bearer $XAI_API_KEY"
+```
+
+A successful delete returns `204` with an empty body. SpaceXAI deletes that number's inbound SIP trunk and dispatch rule. The webhook record stays, and the phone number stays in your carrier account. A SpaceXAI-provisioned number is not deleted; the API returns `403`. See [Delete phone number](/developers/rest-api-reference/inference/voice#delete-phone-number).
+
 ## Call control
 
 Use `refer` to transfer the caller to another PSTN or SIP destination. The request blocks until the transfer resolves; the HTTP status reports whether the destination answered. See [FAQ](#faq) for status codes, failed-transfer session behavior, and conversation resumption.
@@ -149,7 +165,7 @@ Each keypress is reported to the client WebSocket:
 
 ## Telephony providers
 
-In every provider, the destination is the xAI SIP URI for your registered number:
+In every provider, the destination is the SpaceXAI SIP URI for your registered number:
 
 
 
@@ -211,7 +227,7 @@ Other statuses are also possible:
 
 ### Does the session stay usable if a transfer fails?
 
-Yes. While the REFER is pending, the WebSocket stays open and the caller hears dialtone. After a `502`, that same realtime session stays connected. The failed transfer is a no-op on the xAI side: the caller remains on the call, and the agent can keep talking.
+Yes. While the REFER is pending, the WebSocket stays open and the caller hears dialtone. After a `502`, that same realtime session stays connected. The failed transfer is a no-op on the SpaceXAI side: the caller remains on the call, and the agent can keep talking.
 
 This path does not automatically start a new session or inject a failure-reason prompt. If the agent should tell the caller why the transfer failed, read the `refer` HTTP response and continue on this session, or resume later as below.
 

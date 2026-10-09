@@ -74,11 +74,11 @@ Mans will perform a detailed analysis, explaining the Skill's functionality and 
 
 Skills are designed to be highly efficient by using a "Progressive Disclosure" mechanism. This ensures that the agent only loads the information it needs, when it needs it, preserving the valuable context window. The content of a Skill is structured into three levels:
 
-| Level                 | Content                                                  | Load Time                                            | Context Cost                       |
-| :-------------------- | :------------------------------------------------------- | :--------------------------------------------------- | :--------------------------------- |
-| Level 1: Metadata     | The Skill's name and description                         | Loaded at startup                                    | Extremely low (\~100 tokens/Skill) |
-| Level 2: Instructions | The main content of the [SKILL.md](http://SKILL.md) file | Loaded when the Skill is triggered via slash command | Moderate (\<5k tokens)             |
-| Level 3: Resources    | Associated scripts, reference files, and other assets    | Loaded on demand when referenced in the instructions | Consumed only when used            |
+| Level | Content | Load Time | Context Cost |
+| :- | :- | :- | :- |
+| Level 1: Metadata | The Skill's name and description | Loaded at startup | Extremely low (\~100 tokens/Skill) |
+| Level 2: Instructions | The main content of the [SKILL.md](http://SKILL.md) file | Loaded when the Skill is triggered via slash command | Moderate (\<5k tokens) |
+| Level 3: Resources | Associated scripts, reference files, and other assets | Loaded on demand when referenced in the instructions | Consumed only when used |
 
 ## Tips
 
@@ -109,3 +109,6 @@ Skills are designed to be highly efficient by using a "Progressive Disclosure" m
     You can ask Manus to search GitHub for open-source Skills. We will also be launching a dedicated Manus Skills website in the future to serve as a central hub for the community.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

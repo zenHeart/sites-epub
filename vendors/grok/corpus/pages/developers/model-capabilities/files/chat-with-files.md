@@ -26,26 +26,6 @@ The examples below use `file_url` for simplicity. You can replace with `file_id`
 
 Attach a file to a conversation to let the model search through it for relevant information.
 
-```pythonXAI
-import os
-from xai_sdk import Client
-from xai_sdk.chat import user, file
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-# Attach a file by public URL (or use file(file_id) for uploaded files)
-chat = client.chat.create(model="grok-4.6")
-chat.append(user(
-    "What was the total revenue in this report?",
-    file(url="https://docs.x.ai/assets/api-examples/documents/sales-report.txt"),
-))
-
-# Get the response
-response = chat.sample()
-
-print(f"Answer: {response.content}")
-```
-
 ```pythonOpenAISDK
 import os
 from openai import OpenAI
@@ -57,7 +37,7 @@ client = OpenAI(
 
 # Attach a file by public URL (or use file_id for uploaded files)
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {
             "role": "user",
@@ -86,7 +66,7 @@ headers = {
 # Attach a file by public URL (or use file_id for uploaded files)
 chat_url = "https://api.x.ai/v1/responses"
 payload = {
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "input": [
         {
             "role": "user",
@@ -111,7 +91,7 @@ const client = new OpenAI({
 
 // Attach a file by public URL (or use file_id for uploaded files)
 const response = await client.responses.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     input: [
         {
             role: "user",
@@ -133,7 +113,7 @@ curl -X POST "https://api.x.ai/v1/responses" \\
   -H "Authorization: Bearer $XAI_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "input": [
       {
         "role": "user",
@@ -146,9 +126,61 @@ curl -X POST "https://api.x.ai/v1/responses" \\
   }'
 ```
 
+```pythonXAI
+import os
+from xai_sdk import Client
+from xai_sdk.chat import user, file
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+# Attach a file by public URL (or use file(file_id) for uploaded files)
+chat = client.chat.create(model="grok-4.7")
+chat.append(user(
+    "What was the total revenue in this report?",
+    file(url="https://docs.x.ai/assets/api-examples/documents/sales-report.txt"),
+))
+
+# Get the response
+response = chat.sample()
+
+print(f"Answer: {response.content}")
+```
+
 ## Streaming Chat with Files
 
 Get real-time responses while the model searches through your documents.
+
+```javascriptOpenAISDK
+import OpenAI from "openai";
+
+const client = new OpenAI({
+    apiKey: process.env.XAI_API_KEY,
+    baseURL: "https://api.x.ai/v1",
+});
+
+// Attach a file by public URL (or use file_id for uploaded files)
+const stream = await client.responses.create({
+    model: "grok-4.7",
+    input: [
+        {
+            role: "user",
+            content: [
+                { type: "input_text", text: "What is the weight of the XR-2000?" },
+                { type: "input_file", file_url: "https://docs.x.ai/assets/api-examples/documents/product-specs.txt" },
+            ],
+        },
+    ],
+    stream: true,
+});
+
+for await (const event of stream) {
+    if (event.type === "response.output_text.delta") {
+        process.stdout.write(event.delta);
+    }
+}
+
+console.log();
+```
 
 ```pythonXAI
 import os
@@ -158,7 +190,7 @@ from xai_sdk.chat import user, file
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 
 # Attach a file by public URL (or use file(file_id) for uploaded files)
-chat = client.chat.create(model="grok-4.6")
+chat = client.chat.create(model="grok-4.7")
 chat.append(user(
     "What is the weight of the XR-2000?",
     file(url="https://docs.x.ai/assets/api-examples/documents/product-specs.txt"),
@@ -184,65 +216,9 @@ for response, chunk in chat.stream():
 print(f"\\n\\nUsage: {response.usage}")
 ```
 
-```javascriptOpenAISDK
-import OpenAI from "openai";
-
-const client = new OpenAI({
-    apiKey: process.env.XAI_API_KEY,
-    baseURL: "https://api.x.ai/v1",
-});
-
-// Attach a file by public URL (or use file_id for uploaded files)
-const stream = await client.responses.create({
-    model: "grok-4.6",
-    input: [
-        {
-            role: "user",
-            content: [
-                { type: "input_text", text: "What is the weight of the XR-2000?" },
-                { type: "input_file", file_url: "https://docs.x.ai/assets/api-examples/documents/product-specs.txt" },
-            ],
-        },
-    ],
-    stream: true,
-});
-
-for await (const event of stream) {
-    if (event.type === "response.output_text.delta") {
-        process.stdout.write(event.delta);
-    }
-}
-
-console.log();
-```
-
 ## Multiple File Attachments
 
 Query across multiple documents simultaneously.
-
-```pythonXAI
-import os
-from xai_sdk import Client
-from xai_sdk.chat import user, file
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-# Attach files by public URL (or use file(file_id) for uploaded files)
-chat = client.chat.create(model="grok-4.6")
-chat.append(
-    user(
-        "Based on these documents, when did the project start, what is the budget, and how many people are on the team?",
-        file(url="https://docs.x.ai/assets/api-examples/documents/project-timeline.txt"),
-        file(url="https://docs.x.ai/assets/api-examples/documents/project-budget.txt"),
-        file(url="https://docs.x.ai/assets/api-examples/documents/project-team.txt"),
-    )
-)
-
-response = chat.sample()
-
-print(f"Answer: {response.content}")
-print("\\nDocuments searched: 3")
-```
 
 ```javascriptOpenAISDK
 import OpenAI from "openai";
@@ -254,7 +230,7 @@ const client = new OpenAI({
 
 // Attach files by public URL (or use file_id for uploaded files)
 const response = await client.responses.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     input: [
         {
             role: "user",
@@ -276,9 +252,85 @@ console.log("Answer: " + finalAnswer);
 console.log("Documents searched: 3");
 ```
 
+```pythonXAI
+import os
+from xai_sdk import Client
+from xai_sdk.chat import user, file
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+# Attach files by public URL (or use file(file_id) for uploaded files)
+chat = client.chat.create(model="grok-4.7")
+chat.append(
+    user(
+        "Based on these documents, when did the project start, what is the budget, and how many people are on the team?",
+        file(url="https://docs.x.ai/assets/api-examples/documents/project-timeline.txt"),
+        file(url="https://docs.x.ai/assets/api-examples/documents/project-budget.txt"),
+        file(url="https://docs.x.ai/assets/api-examples/documents/project-team.txt"),
+    )
+)
+
+response = chat.sample()
+
+print(f"Answer: {response.content}")
+print("\\nDocuments searched: 3")
+```
+
 ## Multi-Turn Conversations with Files
 
 Maintain context across multiple questions about the same documents. Use encrypted content to preserve file context efficiently across multiple turns.
+
+```javascriptOpenAISDK
+import OpenAI from "openai";
+
+const client = new OpenAI({
+    apiKey: process.env.XAI_API_KEY,
+    baseURL: "https://api.x.ai/v1",
+});
+
+// Attach a file by public URL (or use file_id for uploaded files)
+
+// First turn: Ask about the document
+const response1 = await client.responses.create({
+    model: "grok-4.7",
+    input: [
+        {
+            role: "user",
+            content: [
+                { type: "input_text", text: "What is the employee's name?" },
+                { type: "input_file", file_url: "https://docs.x.ai/assets/api-examples/documents/employee-info.txt" },
+            ],
+        },
+    ],
+});
+
+console.log("Q1: What is the employee's name?");
+console.log("A1: " + response1.output[response1.output.length - 1].content[0].text + "\\n");
+
+// Second turn: Ask about department (uses previous_response_id for context)
+const response2 = await client.responses.create({
+    model: "grok-4.7",
+    previous_response_id: response1.id,
+    input: [
+        { role: "user", content: "What department does this employee work in?" },
+    ],
+});
+
+console.log("Q2: What department does this employee work in?");
+console.log("A2: " + response2.output[response2.output.length - 1].content[0].text + "\\n");
+
+// Third turn: Ask about skills
+const response3 = await client.responses.create({
+    model: "grok-4.7",
+    previous_response_id: response2.id,
+    input: [
+        { role: "user", content: "What skills does this employee have?" },
+    ],
+});
+
+console.log("Q3: What skills does this employee have?");
+console.log("A3: " + response3.output[response3.output.length - 1].content[0].text + "\\n");
+```
 
 ```pythonXAI
 import os
@@ -289,7 +341,7 @@ client = Client(api_key=os.getenv("XAI_API_KEY"))
 
 # Create a multi-turn conversation with encrypted content
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     use_encrypted_content=True,  # Enable encrypted content for efficient multi-turn
 )
 
@@ -321,83 +373,9 @@ print("Q3: What skills does this employee have?")
 print(f"A3: {response3.content}\\n")
 ```
 
-```javascriptOpenAISDK
-import OpenAI from "openai";
-
-const client = new OpenAI({
-    apiKey: process.env.XAI_API_KEY,
-    baseURL: "https://api.x.ai/v1",
-});
-
-// Attach a file by public URL (or use file_id for uploaded files)
-
-// First turn: Ask about the document
-const response1 = await client.responses.create({
-    model: "grok-4.6",
-    input: [
-        {
-            role: "user",
-            content: [
-                { type: "input_text", text: "What is the employee's name?" },
-                { type: "input_file", file_url: "https://docs.x.ai/assets/api-examples/documents/employee-info.txt" },
-            ],
-        },
-    ],
-});
-
-console.log("Q1: What is the employee's name?");
-console.log("A1: " + response1.output[response1.output.length - 1].content[0].text + "\\n");
-
-// Second turn: Ask about department (uses previous_response_id for context)
-const response2 = await client.responses.create({
-    model: "grok-4.6",
-    previous_response_id: response1.id,
-    input: [
-        { role: "user", content: "What department does this employee work in?" },
-    ],
-});
-
-console.log("Q2: What department does this employee work in?");
-console.log("A2: " + response2.output[response2.output.length - 1].content[0].text + "\\n");
-
-// Third turn: Ask about skills
-const response3 = await client.responses.create({
-    model: "grok-4.6",
-    previous_response_id: response2.id,
-    input: [
-        { role: "user", content: "What skills does this employee have?" },
-    ],
-});
-
-console.log("Q3: What skills does this employee have?");
-console.log("A3: " + response3.output[response3.output.length - 1].content[0].text + "\\n");
-```
-
 ## Combining Files with Other Modalities
 
 You can combine file attachments with images and other content types in a single message.
-
-```pythonXAI
-import os
-from xai_sdk import Client
-from xai_sdk.chat import user, file, image
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-# Attach files by public URL (or use file(file_id) for uploaded files)
-chat = client.chat.create(model="grok-4.6")
-chat.append(
-    user(
-        "Based on the attached care guide, do you have any advice about the pictured cat?",
-        file(url="https://docs.x.ai/assets/api-examples/documents/cat-care.txt"),
-        image("https://media.x.ai/v1/docs/example-cat-in-tree-8e9ac3e0.png"),
-    )
-)
-
-response = chat.sample()
-
-print(f"Analysis: {response.content}")
-```
 
 ```javascriptOpenAISDK
 import OpenAI from "openai";
@@ -409,7 +387,7 @@ const client = new OpenAI({
 
 // Attach files by public URL (or use file_id for uploaded files)
 const response = await client.responses.create({
-    model: "grok-4.6",
+    model: "grok-4.7",
     input: [
         {
             role: "user",
@@ -432,9 +410,69 @@ const analysis = response.output[response.output.length - 1].content[0].text;
 console.log("Analysis: " + analysis);
 ```
 
+```pythonXAI
+import os
+from xai_sdk import Client
+from xai_sdk.chat import user, file, image
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+# Attach files by public URL (or use file(file_id) for uploaded files)
+chat = client.chat.create(model="grok-4.7")
+chat.append(
+    user(
+        "Based on the attached care guide, do you have any advice about the pictured cat?",
+        file(url="https://docs.x.ai/assets/api-examples/documents/cat-care.txt"),
+        image("https://media.x.ai/v1/docs/example-cat-in-tree-8e9ac3e0.png"),
+    )
+)
+
+response = chat.sample()
+
+print(f"Analysis: {response.content}")
+```
+
 ## Combining Files with Code Execution
 
 For data analysis tasks, you can attach data files and enable the code execution tool. This allows Grok to write and run Python code to analyze and process your data.
+
+```javascriptOpenAISDK
+import OpenAI from "openai";
+
+const client = new OpenAI({
+    apiKey: process.env.XAI_API_KEY,
+    baseURL: "https://api.x.ai/v1",
+});
+
+// Attach a file by public URL (or use file_id for uploaded files)
+const stream = await client.responses.create({
+    model: "grok-4.7",
+    input: [
+        {
+            role: "user",
+            content: [
+                {
+                    type: "input_text",
+                    text: "Analyze this sales data and calculate: 1) Total revenue by product, " +
+                        "2) Average units sold by region, " +
+                        "3) Which product-region combination has the highest revenue",
+                },
+                { type: "input_file", file_url: "https://docs.x.ai/assets/api-examples/documents/sales-data.csv" },
+            ],
+        },
+    ],
+    tools: [{ type: "code_interpreter" }],
+    stream: true,
+});
+
+for await (const event of stream) {
+    if (event.type === "response.output_text.delta") {
+        process.stdout.write(event.delta);
+    }
+}
+
+console.log();
+```
 
 ```pythonXAI
 import os
@@ -446,7 +484,7 @@ client = Client(api_key=os.getenv("XAI_API_KEY"))
 
 # Attach a file by public URL (or use file(file_id) for uploaded files)
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=[code_execution()],  # Enable code execution
 )
 
@@ -477,44 +515,6 @@ for response, chunk in chat.stream():
 print(f"\\n\\nUsage: {response.usage}")
 ```
 
-```javascriptOpenAISDK
-import OpenAI from "openai";
-
-const client = new OpenAI({
-    apiKey: process.env.XAI_API_KEY,
-    baseURL: "https://api.x.ai/v1",
-});
-
-// Attach a file by public URL (or use file_id for uploaded files)
-const stream = await client.responses.create({
-    model: "grok-4.6",
-    input: [
-        {
-            role: "user",
-            content: [
-                {
-                    type: "input_text",
-                    text: "Analyze this sales data and calculate: 1) Total revenue by product, " +
-                        "2) Average units sold by region, " +
-                        "3) Which product-region combination has the highest revenue",
-                },
-                { type: "input_file", file_url: "https://docs.x.ai/assets/api-examples/documents/sales-data.csv" },
-            ],
-        },
-    ],
-    tools: [{ type: "code_interpreter" }],
-    stream: true,
-});
-
-for await (const event of stream) {
-    if (event.type === "response.output_text.delta") {
-        process.stdout.write(event.delta);
-    }
-}
-
-console.log();
-```
-
 The model will:
 
 1. Access the attached data file
@@ -538,7 +538,7 @@ The model will:
 
 ### Model Compatibility
 
-* **Recommended model**: `grok-4.6` for best document understanding
+* **Recommended model**: `grok-4.7` for best document understanding
 * **Agentic requirement**: File attachments require [agentic-capable](/developers/tools/overview) models that support server-side tools.
 
 ## Next Steps

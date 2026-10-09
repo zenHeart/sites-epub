@@ -6,7 +6,7 @@ The Management API allows you to perform operations on your team programmaticall
 need a [management key](https://console.x.ai/team/default/management-keys?utm_source=docs\&utm_medium=referral\&utm_campaign=developers-rest-api-reference-management\&utm_content=management-keys) in
 order to use this API. The base URL for all endpoints is `https://management-api.x.ai`.
 
-The Management API serves as a dedicated interface to the xAI platform, empowering developers and teams to
+The Management API serves as a dedicated interface to the SpaceXAI platform, empowering developers and teams to
 programmatically manage their xAI API teams.
 
 For example, users can provision their API key, handle access controls,

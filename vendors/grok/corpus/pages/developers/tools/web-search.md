@@ -16,6 +16,70 @@ This tool is also supported in all Responses API compatible SDKs.
 
 ## Basic Usage
 
+```javascriptAISDK
+import { xai } from '@ai-sdk/xai';
+import { generateText } from 'ai';
+
+const { text, sources } = await generateText({
+  model: xai.responses('grok-4.7'),
+  prompt: 'What is xAI?',
+  tools: {
+    web_search: xai.tools.webSearch(),
+  },
+});
+
+console.log(text);
+console.log('Citations:', sources);
+```
+
+```pythonOpenAISDK
+import os
+from openai import OpenAI
+
+api_key = os.getenv("XAI_API_KEY")
+client = OpenAI(
+    api_key=api_key,
+    base_url="https://api.x.ai/v1",
+)
+
+response = client.responses.create(
+    model="grok-4.7",
+    input=[
+        {
+            "role": "user",
+            "content": "What is xAI?",
+        },
+    ],
+    tools=[
+        {
+            "type": "web_search",
+        },
+    ],
+)
+
+print(response)
+```
+
+```bash
+curl https://api.x.ai/v1/responses \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer $XAI_API_KEY" \\
+  -d '{
+  "model": "grok-4.7",
+  "input": [
+    {
+      "role": "user",
+      "content": "What is xAI?"
+    }
+  ],
+  "tools": [
+    {
+      "type": "web_search"
+    }
+  ]
+}'
+```
+
 ```pythonXAI
 import os
 
@@ -25,7 +89,7 @@ from xai_sdk.tools import web_search
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 chat = client.chat.create(
-    model="grok-4.6",  # reasoning model
+    model="grok-4.7",  # reasoning model
     tools=[web_search()],
     include=["verbose_streaming"],
 )
@@ -48,70 +112,6 @@ print("\\n\\nCitations:")
 print(response.citations)
 ```
 
-```pythonOpenAISDK
-import os
-from openai import OpenAI
-
-api_key = os.getenv("XAI_API_KEY")
-client = OpenAI(
-    api_key=api_key,
-    base_url="https://api.x.ai/v1",
-)
-
-response = client.responses.create(
-    model="grok-4.6",
-    input=[
-        {
-            "role": "user",
-            "content": "What is xAI?",
-        },
-    ],
-    tools=[
-        {
-            "type": "web_search",
-        },
-    ],
-)
-
-print(response)
-```
-
-```javascriptAISDK
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
-const { text, sources } = await generateText({
-  model: xai.responses('grok-4.6'),
-  prompt: 'What is xAI?',
-  tools: {
-    web_search: xai.tools.webSearch(),
-  },
-});
-
-console.log(text);
-console.log('Citations:', sources);
-```
-
-```bash
-curl https://api.x.ai/v1/responses \\
-  -H "Content-Type: application/json" \\
-  -H "Authorization: Bearer $XAI_API_KEY" \\
-  -d '{
-  "model": "grok-4.6",
-  "input": [
-    {
-      "role": "user",
-      "content": "What is xAI?"
-    }
-  ],
-  "tools": [
-    {
-      "type": "web_search"
-    }
-  ]
-}'
-```
-
 ## Web Search Parameters
 
 | Parameter | Description |
@@ -129,28 +129,21 @@ Use `allowed_domains` to make the web search **only** perform the search and web
 >
 > `allowed_domains` cannot be set together with `excluded_domains` in the same request.
 
-```pythonXAI
-import os
-
-from xai_sdk import Client
-from xai_sdk.chat import user
-from xai_sdk.tools import web_search
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-chat = client.chat.create(
-    model="grok-4.6",
-    tools=[
-        web_search(allowed_domains=["grokipedia.com"]),
-    ],
-)
-
-chat.append(user("What is xAI?"))
-# stream or sample the response...
+```javascriptAISDK
+const { text } = await generateText({
+  model: xai.responses('grok-4.7'),
+  prompt: 'What is xAI?',
+  tools: {
+    web_search: xai.tools.webSearch({
+      allowedDomains: ['grokipedia.com'],
+    }),
+  },
+});
 ```
 
 ```pythonOpenAISDK
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[{"role": "user", "content": "What is xAI?"}],
     tools=[
         {
@@ -161,40 +154,47 @@ response = client.responses.create(
 )
 ```
 
-```javascriptAISDK
-const { text } = await generateText({
-  model: xai.responses('grok-4.6'),
-  prompt: 'What is xAI?',
-  tools: {
-    web_search: xai.tools.webSearch({
-      allowedDomains: ['grokipedia.com'],
-    }),
-  },
-});
+```pythonXAI
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import user
+from xai_sdk.tools import web_search
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+chat = client.chat.create(
+    model="grok-4.7",
+    tools=[
+        web_search(allowed_domains=["grokipedia.com"]),
+    ],
+)
+
+chat.append(user("What is xAI?"))
+# stream or sample the response...
 ```
 
 ### Exclude Specific Domains
 
 Use `excluded_domains` to prevent the model from including the specified domains in any web search tool invocations.
 
-```pythonXAI
-chat = client.chat.create(
-    model="grok-4.6",
-    tools=[
-        web_search(excluded_domains=["grokipedia.com"]),
-    ],
-)
-```
-
 ```pythonOpenAISDK
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[{"role": "user", "content": "What is xAI?"}],
     tools=[
         {
             "type": "web_search",
             "filters": {"excluded_domains": ["grokipedia.com"]},
         },
+    ],
+)
+```
+
+```pythonXAI
+chat = client.chat.create(
+    model="grok-4.7",
+    tools=[
+        web_search(excluded_domains=["grokipedia.com"]),
     ],
 )
 ```
@@ -209,28 +209,21 @@ When enabled, you will see `SERVER_SIDE_TOOL_VIEW_IMAGE` in `response.server_sid
 >
 > Enabling this parameter for Web Search will also enable the image understanding for X Search tool if it's also included in the request.
 
-```pythonXAI
-import os
-
-from xai_sdk import Client
-from xai_sdk.chat import user
-from xai_sdk.tools import web_search
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-chat = client.chat.create(
-    model="grok-4.6",
-    tools=[
-        web_search(enable_image_understanding=True),
-    ],
-)
-
-chat.append(user("What is included in the image in xAI's official website?"))
-# stream or sample the response...
+```javascriptAISDK
+const { text } = await generateText({
+  model: xai.responses('grok-4.7'),
+  prompt: "What is included in the image in xAI's official website?",
+  tools: {
+    web_search: xai.tools.webSearch({
+      enableImageUnderstanding: true,
+    }),
+  },
+});
 ```
 
 ```pythonOpenAISDK
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {
             "role": "user",
@@ -246,16 +239,23 @@ response = client.responses.create(
 )
 ```
 
-```javascriptAISDK
-const { text } = await generateText({
-  model: xai.responses('grok-4.6'),
-  prompt: "What is included in the image in xAI's official website?",
-  tools: {
-    web_search: xai.tools.webSearch({
-      enableImageUnderstanding: true,
-    }),
-  },
-});
+```pythonXAI
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import user
+from xai_sdk.tools import web_search
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+chat = client.chat.create(
+    model="grok-4.7",
+    tools=[
+        web_search(enable_image_understanding=True),
+    ],
+)
+
+chat.append(user("What is included in the image in xAI's official website?"))
+# stream or sample the response...
 ```
 
 ### Enable Image Search
@@ -268,12 +268,32 @@ Setting `enable_image_search` to true lets Grok search for relevant images and i
 
 The Vercel AI SDK does not yet expose `enableImageSearch`; the examples below use the Responses API and xAI Python SDK.
 
+```python customLanguage="pythonOpenAISDK"
+response = client.responses.create(
+    model="grok-4.7",
+    input=[
+        {
+            "role": "user",
+            "content": "Show me images of Starship on the launch pad.",
+        },
+    ],
+    tools=[
+        {
+            "type": "web_search",
+            "enable_image_search": True,
+        },
+    ],
+)
+
+print(response)
+```
+
 ```bash customLanguage="bash"
 curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -d '{
-  "model": "grok-4.6",
+  "model": "grok-4.7",
   "input": [
     {
       "role": "user",
@@ -298,7 +318,7 @@ from xai_sdk.tools import web_search
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=[
         web_search(enable_image_search=True),
     ],
@@ -308,26 +328,6 @@ chat.append(user("Show me images of Starship on the launch pad."))
 response = chat.sample()
 print(response.content)
 print(response.server_side_tool_usage)
-```
-
-```python customLanguage="pythonOpenAISDK"
-response = client.responses.create(
-    model="grok-4.6",
-    input=[
-        {
-            "role": "user",
-            "content": "Show me images of Starship on the launch pad.",
-        },
-    ],
-    tools=[
-        {
-            "type": "web_search",
-            "enable_image_search": True,
-        },
-    ],
-)
-
-print(response)
 ```
 
 A response can include Markdown image embeds directly in the output text:

@@ -2,31 +2,34 @@
 
 # Video Generation
 
-Generate videos from text prompts with Grok video models. The API supports configurable duration, aspect ratio, and resolution, and the SDK handles asynchronous polling automatically. On `grok-imagine-video-1.5`, text-to-video supports native 1080p.
+Generate videos from text prompts with Grok video models. The API supports configurable duration, aspect ratio, and resolution, and the SDK handles asynchronous polling automatically. On `grok-imagine-video-1.5`, text-to-video supports native 1080p. For simple videos, we recommend `grok-imagine-video-1.5-lite`, the lowest price per second.
 
 > [!NOTE]
 >
-> On , text-to-video uses text-to-image then image-to-video under the hood: the model generates a first frame from your prompt, then animates it. You still make a single text-to-video request; the intermediate image is not returned.
+> On  and , text-to-video uses text-to-image then image-to-video under the hood: the model generates a first frame from your prompt, then animates it. You still make a single text-to-video request; the intermediate image is not returned.
+
+More examples, for every mode, are on the [Video Overview](/developers/model-capabilities/video/overview).
 
 ## Quick Start
 
 Generate a video with a single API call:
 
-```python customLanguage="pythonXAI"
-import os
-import xai_sdk
+```javascript customLanguage="javascriptAISDK"
+import { xai } from "@ai-sdk/xai";
+import { experimental_generateVideo as generateVideo } from "ai";
 
-client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+const result = await generateVideo({
+    model: xai.video("grok-imagine-video-1.5"),
+    prompt: "A glowing crystal-powered rocket launching from the red dunes of Mars, ancient alien ruins lighting up in the background as it soars into a sky full of unfamiliar constellations",
+    duration: 10,
+    aspectRatio: "16:9",
+    providerOptions: {
+        xai: { resolution: "720p" },
+    },
+});
 
-response = client.video.generate(
-    prompt="A glowing crystal-powered rocket launching from the red dunes of Mars, ancient alien ruins lighting up in the background as it soars into a sky full of unfamiliar constellations",
-    model="grok-imagine-video-1.5",
-    duration=10,
-    aspect_ratio="16:9",
-    resolution="720p",
-)
-
-print(response.url)
+const videoUrl = result.providerMetadata?.xai?.videoUrl;
+console.log(videoUrl);
 ```
 
 ```python customLanguage="pythonRequests"
@@ -63,28 +66,10 @@ while True:
     if data["status"] == "done":
         print(data["video"]["url"])
         break
-    elif data["status"] == "expired":
-        print("Request expired")
+    elif data["status"] == "failed":
+        print("Video generation failed")
         break
     time.sleep(5)
-```
-
-```javascript customLanguage="javascriptAISDK"
-import { xai } from "@ai-sdk/xai";
-import { experimental_generateVideo as generateVideo } from "ai";
-
-const result = await generateVideo({
-    model: xai.video("grok-imagine-video-1.5"),
-    prompt: "A glowing crystal-powered rocket launching from the red dunes of Mars, ancient alien ruins lighting up in the background as it soars into a sky full of unfamiliar constellations",
-    duration: 10,
-    aspectRatio: "16:9",
-    providerOptions: {
-        xai: { resolution: "720p" },
-    },
-});
-
-const videoUrl = result.providerMetadata?.xai?.videoUrl;
-console.log(videoUrl);
 ```
 
 ```bash
@@ -108,12 +93,29 @@ while true; do
   if [ "$STATUS" = "done" ]; then
     echo "$RESULT" | jq -r '.video.url'
     break
-  elif [ "$STATUS" = "failed" ] || [ "$STATUS" = "expired" ]; then
+  elif [ "$STATUS" = "failed" ]; then
     echo "Request $STATUS"; echo "$RESULT" | jq .
     break
   fi
   sleep 5
 done
+```
+
+```python customLanguage="pythonXAI"
+import os
+import xai_sdk
+
+client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+
+response = client.video.generate(
+    prompt="A glowing crystal-powered rocket launching from the red dunes of Mars, ancient alien ruins lighting up in the background as it soars into a sky full of unfamiliar constellations",
+    model="grok-imagine-video-1.5",
+    duration=10,
+    aspect_ratio="16:9",
+    resolution="720p",
+)
+
+print(response.url)
 ```
 
 Video generation is an **asynchronous process** that typically takes up to several minutes to complete. The exact time varies based on:
@@ -127,10 +129,12 @@ Video generation is an **asynchronous process** that typically takes up to sever
 
 Use the page that matches the kind of video output you want to create:
 
-* [Image-to-Video](/developers/model-capabilities/video/image-to-video) — Animate a still image.
-* [Video Editing](/developers/model-capabilities/video/editing) — Modify an existing video.
-* [Reference-to-Video](/developers/model-capabilities/video/reference-to-video) — Guide a generated video with reference images, and on `grok-imagine-video-1.5` pin exact first or last frames.
-* [Video Extension](/developers/model-capabilities/video/extension) — Continue an existing video from its last frame.
+* [Reference-to-Video](/developers/model-capabilities/video/reference-to-video): Guide a generated video with reference images; on `grok-imagine-video-1.5`, add voice references and pin exact first, key, or last frames.
+* [Image-to-Video](/developers/model-capabilities/video/image-to-video): Animate a still image.
+* [Video Editing](/developers/model-capabilities/video/editing): Modify an existing video with `grok-imagine-video`.
+* [Video Extension](/developers/model-capabilities/video/extension): Continue an existing video from its last frame with `grok-imagine-video`.
+
+To compare models, see [Capabilities and specifications](/developers/model-capabilities/video/overview#capabilities-and-specifications).
 
 ## How it works
 
@@ -176,7 +180,6 @@ The response includes a `status` field with one of these values:
 |--------|-------------|
 | `pending` | Video is still being generated |
 | `done` | Video is ready |
-| `expired` | Request has expired |
 | `failed` | Video generation failed |
 
 Response (when complete):
@@ -193,7 +196,7 @@ Response (when complete):
 }
 ```
 
-Videos are returned as temporary URLs. Access the xAI-hosted URL directly when you need it, or download/process it promptly if you need to keep a copy.
+Videos are returned as temporary URLs. Access the SpaceXAI-hosted URL directly when you need it, or download/process it promptly if you need to keep a copy.
 
 ## Configuration
 
@@ -201,7 +204,7 @@ The video generation API lets you control the output format of your generated vi
 
 ### Duration
 
-Control video length with the `duration` parameter. The allowed range is 1–15 seconds.
+Set `duration` from 1 to 15 seconds; the default is 8. Reference-to-video on `grok-imagine-video` allows up to 10 seconds.
 
 Video editing does not support custom `duration`. The edited video retains the duration of the original, which is capped at 8.7 seconds.
 
@@ -213,8 +216,10 @@ Video editing does not support custom `duration`. The edited video retains the d
 | `16:9` / `9:16` | Widescreen, mobile, stories (default: `16:9`) |
 | `4:3` / `3:4` | Presentations, portraits |
 | `3:2` / `2:3` | Photography |
+| `21:9` | Cinematic widescreen |
+| `5:2` | Web banners, wide headers |
 
-For image-to-video generation, the output defaults to the input image's aspect ratio. If you specify the `aspect_ratio` parameter, it will override this and stretch the image to the desired aspect ratio.
+Image-to-video output always matches the input image's aspect ratio; `aspect_ratio` is ignored.
 
 Video editing does not support custom `aspect_ratio` — the output matches the input video's aspect ratio.
 
@@ -226,25 +231,26 @@ Video editing does not support custom `aspect_ratio` — the output matches the 
 | `720p` | HD quality |
 | `480p` | Standard definition, faster processing (default) |
 
-**Note:** `1080p` is supported on `grok-imagine-video-1.5` for text-to-video and image-to-video. Reference-to-video is capped at 720p.
+**Note:** `grok-imagine-video-1.5` renders `1080p` natively for text-to-video and image-to-video; reference-to-video goes up to `720p`. `grok-imagine-video-1.5-lite` reaches 1080p for text-to-video and image-to-video by upscaling 720p. `grok-imagine-video` supports up to 720p.
 
 Video editing does not support custom `resolution`. The output resolution matches the input video's resolution, capped at 720p (e.g., a 1080p input will be downsized to 720p).
 
 ### Audio
 
-> [!WARNING]
->
-> Preset voices are generally available. Voice references with your own audio files are available to trusted partners, on request. .
+Generated videos include an audio track by default, with lip-synced speech on `grok-imagine-video-1.5` and `grok-imagine-video-1.5-lite`. On `grok-imagine-video-1.5`, reference-to-video can give up to 3 speakers a preset voice with `reference_audios`; see [Reference audio](/developers/model-capabilities/video/reference-to-video#reference-audio).
 
-On `grok-imagine-video-1.5`, [reference-to-video](/developers/model-capabilities/video/reference-to-video#reference-audio) can carry a voice via `reference_audios`. Voices come from the built-in roster and are named by `voice_id`; voice references with your own audio files are available to trusted partners [on request](https://x.ai/contact-sales?interest=imagine):
+Pass `generate_audio=False` to request a silent video:
 
-| Property | Description |
-|----------|-------------|
-| Source | A preset `voice_id` (e.g. `{"voice_id": "eve"}`), from the same roster as [Text to Speech](/developers/model-capabilities/audio/text-to-speech#voices). Identifiers are case-insensitive |
-| Limit | Max **3** voices per request |
-| Prompt | Reference voices by index: `<AUDIO_0>`, `<AUDIO_1>`, `<AUDIO_2>` |
-
-Generated videos include an audio track by default. Pass `generate_audio=False` to request a silent video:
+```bash
+curl -X POST https://api.x.ai/v1/videos/generations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -d '{
+    "model": "grok-imagine-video-1.5",
+    "prompt": "A paper boat drifting down a rain-soaked street",
+    "generate_audio": false
+  }'
+```
 
 ```python customLanguage="pythonXAI"
 import os
@@ -261,35 +267,24 @@ response = client.video.generate(
 print(response.url)
 ```
 
-```bash
-curl -X POST https://api.x.ai/v1/videos/generations \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -d '{
-    "model": "grok-imagine-video-1.5",
-    "prompt": "A paper boat drifting down a rain-soaked street",
-    "generate_audio": false
-  }'
-```
-
 ### Example
 
-```python customLanguage="pythonXAI"
-import os
-import xai_sdk
+```javascript customLanguage="javascriptAISDK"
+import { xai } from "@ai-sdk/xai";
+import { experimental_generateVideo as generateVideo } from "ai";
 
-client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+const result = await generateVideo({
+    model: xai.video("grok-imagine-video-1.5"),
+    prompt: "Timelapse of a flower blooming in a sunlit garden",
+    duration: 10,
+    aspectRatio: "16:9",
+    providerOptions: {
+        xai: { resolution: "720p" },
+    },
+});
 
-response = client.video.generate(
-    prompt="Timelapse of a flower blooming in a sunlit garden",
-    model="grok-imagine-video-1.5",
-    duration=10,
-    aspect_ratio="16:9",
-    resolution="720p",
-)
-
-print(f"Video URL: {response.url}")
-print(f"Duration: {response.duration}s")
+const videoUrl = result.providerMetadata?.xai?.videoUrl;
+console.log(videoUrl);
 ```
 
 ```python customLanguage="pythonRequests"
@@ -326,28 +321,10 @@ while True:
         print(f"Video URL: {data['video']['url']}")
         print(f"Duration: {data['video']['duration']}s")
         break
-    elif data["status"] == "expired":
-        print("Request expired")
+    elif data["status"] == "failed":
+        print("Video generation failed")
         break
     time.sleep(5)
-```
-
-```javascript customLanguage="javascriptAISDK"
-import { xai } from "@ai-sdk/xai";
-import { experimental_generateVideo as generateVideo } from "ai";
-
-const result = await generateVideo({
-    model: xai.video("grok-imagine-video-1.5"),
-    prompt: "Timelapse of a flower blooming in a sunlit garden",
-    duration: 10,
-    aspectRatio: "16:9",
-    providerOptions: {
-        xai: { resolution: "720p" },
-    },
-});
-
-const videoUrl = result.providerMetadata?.xai?.videoUrl;
-console.log(videoUrl);
 ```
 
 ```bash
@@ -371,12 +348,30 @@ while true; do
   if [ "$STATUS" = "done" ]; then
     echo "$RESULT" | jq -r '.video.url'
     break
-  elif [ "$STATUS" = "failed" ] || [ "$STATUS" = "expired" ]; then
+  elif [ "$STATUS" = "failed" ]; then
     echo "Request $STATUS"; echo "$RESULT" | jq .
     break
   fi
   sleep 5
 done
+```
+
+```python customLanguage="pythonXAI"
+import os
+import xai_sdk
+
+client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+
+response = client.video.generate(
+    prompt="Timelapse of a flower blooming in a sunlit garden",
+    model="grok-imagine-video-1.5",
+    duration=10,
+    aspect_ratio="16:9",
+    resolution="720p",
+)
+
+print(f"Video URL: {response.url}")
+print(f"Duration: {response.duration}s")
 ```
 
 ### Request Modes
@@ -389,14 +384,15 @@ The video generation endpoint supports multiple modes, determined by which field
 | Image-to-video | `prompt` + `image` | `prompt: { image, text }` | Generates video with the provided image as the starting frame. |
 | Reference-to-video | `prompt` + `reference_images` or `reference_audios` | `prompt: "..."` + `providerOptions.xai.{ mode: "reference-to-video", referenceImageUrls }` | Generates video guided by reference images and/or a preset voice on `grok-imagine-video-1.5`. |
 | First & Last frame | `last_frame`, optionally with `image` and/or `prompt` | REST body `last_frame` (no dedicated AI SDK field) | On `grok-imagine-video-1.5`, pins the exact last frame. Add `image` to also pin the first frame and interpolate between the two. `prompt` is optional whenever a frame is pinned. Can be combined with `reference_images` / `reference_audios`. |
+| Keyframes | `keyframes` (up to 4 `{image, timestamp_s}` entries), optionally with `image`, `last_frame`, and/or `prompt` | REST body `keyframes` (no dedicated AI SDK field) | On `grok-imagine-video-1.5`, pins images at exact moments strictly inside the clip, on a 1/3-second grid. Combine with `image` / `last_frame` for the endpoints and with `reference_images` / `reference_audios` for guidance. |
 | Edit-video | `/v1/videos/edits` + `video` | `prompt: "..."` + `providerOptions.xai.{ mode: "edit-video", videoUrl }` | Modifies an existing video based on the prompt. |
 | Extend-video | `/v1/videos/extensions` + `video` | `prompt: "..."` + `providerOptions.xai.{ mode: "extend-video", videoUrl }` | Extends an existing video from its last frame. |
 
-On `grok-imagine-video-1.5`, `image` combined with `reference_images`, `reference_audios`, or `last_frame` is reference-to-video with a pinned first frame. The clip starts on that image rather than treating it as a style reference. `last_frame` on its own (no `image`, no references) is valid: the model generates the opening and lands on the pinned frame. `prompt` is optional for any request that includes `image`, `reference_images`, or `last_frame`; it is required only for text-to-video. Classic `grok-imagine-video` still rejects `last_frame` and rejects combining `image` with reference inputs.
+On `grok-imagine-video-1.5`, `image` combined with `reference_images`, `reference_audios`, `last_frame`, or `keyframes` is reference-to-video with a pinned first frame. The clip starts on that image rather than treating it as a style reference. `last_frame` or `keyframes` on its own (no `image`, no references) is valid: the model generates the rest of the clip around the pinned frames. `prompt` is optional for any request that includes `image`, `reference_images`, `last_frame`, or `keyframes`; it is required only for text-to-video. Classic `grok-imagine-video` still rejects `last_frame` and `keyframes` and rejects combining `image` with reference inputs.
 
 Do not mix AI SDK `mode` values. Each request supports exactly one of `"edit-video"`, `"extend-video"`, or `"reference-to-video"`. When you omit `mode`, the AI SDK uses standard generation.
 
-See [First & Last frame](/developers/model-capabilities/video/reference-to-video#first--last-frame) for `last_frame` examples.
+See [First & Last frame](/developers/model-capabilities/video/reference-to-video#first--last-frame) for `last_frame` examples and [Keyframes](/developers/model-capabilities/video/reference-to-video#keyframes) for mid-video pins.
 
 ## Customize Polling Behavior
 
@@ -405,25 +401,7 @@ When using the SDK's `generate()` or `extend()` methods, you can control how lon
 | Python SDK | AI SDK (`providerOptions.xai`) | Description | Default |
 |-----------|-------------|-------------|---------|
 | `timeout` | `pollTimeoutMs` | Maximum time to wait for the video to complete | 10 minutes |
-| `interval` | `pollIntervalMs` | Time between status checks | 100 milliseconds |
-
-```python customLanguage="pythonXAI"
-import os
-from datetime import timedelta
-import xai_sdk
-
-client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
-
-response = client.video.generate(
-    prompt="Epic cinematic drone shot flying through mountain peaks",
-    model="grok-imagine-video-1.5",
-    duration=15,
-    timeout=timedelta(minutes=15),  # Wait up to 15 minutes
-    interval=timedelta(seconds=5),  # Check every 5 seconds
-)
-
-print(response.url)
-```
+| `interval` | `pollIntervalMs` | Time between status checks | 1 second (Python), 5 seconds (AI SDK) |
 
 ```javascript customLanguage="javascriptAISDK"
 import { xai } from "@ai-sdk/xai";
@@ -445,6 +423,24 @@ const videoUrl = result.providerMetadata?.xai?.videoUrl;
 console.log(videoUrl);
 ```
 
+```python customLanguage="pythonXAI"
+import os
+from datetime import timedelta
+import xai_sdk
+
+client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+
+response = client.video.generate(
+    prompt="Epic cinematic drone shot flying through mountain peaks",
+    model="grok-imagine-video-1.5",
+    duration=15,
+    timeout=timedelta(minutes=15),  # Wait up to 15 minutes
+    interval=timedelta(seconds=5),  # Check every 5 seconds
+)
+
+print(response.url)
+```
+
 If the video isn't ready within the timeout period, the Python SDK raises a `TimeoutError` and the AI SDK aborts via its `AbortSignal`. For even finer control, use the [manual polling approach](#handle-polling-manually); the Python SDK provides `start()` and `get()` methods, while the AI SDK supports a custom `abortSignal` for cancellation.
 
 ## Handle Polling Manually
@@ -452,41 +448,6 @@ If the video isn't ready within the timeout period, the Python SDK raises a `Tim
 For fine-grained control over the generation lifecycle, use `start()` or `extend_start()` to initiate generation/extension requests respectively and `get()` to check status.
 
 The `get()` method returns a response with a `status` field. Import the status enum from the SDK:
-
-```python customLanguage="pythonXAI"
-import os
-import time
-import xai_sdk
-from xai_sdk.proto import deferred_pb2
-
-client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
-
-# Start the generation request
-start_response = client.video.start(
-    prompt="A cat lounging in a sunbeam, tail gently swishing",
-    model="grok-imagine-video-1.5",
-    duration=5,
-)
-
-print(f"Request ID: {start_response.request_id}")
-
-# Poll for results
-while True:
-    result = client.video.get(start_response.request_id)
-    
-    if result.status == deferred_pb2.DeferredStatus.DONE:
-        print(f"Video URL: {result.response.video.url}")
-        break
-    elif result.status == deferred_pb2.DeferredStatus.EXPIRED:
-        print("Request expired")
-        break
-    elif result.status == deferred_pb2.DeferredStatus.FAILED:
-        print("Video generation failed")
-        break
-    elif result.status == deferred_pb2.DeferredStatus.PENDING:
-        print("Still processing...")
-        time.sleep(5)
-```
 
 ```python customLanguage="pythonRequests"
 import os
@@ -522,9 +483,6 @@ while True:
 
     if data["status"] == "done":
         print(f"Video URL: {data['video']['url']}")
-        break
-    elif data["status"] == "expired":
-        print("Request expired")
         break
     elif data["status"] == "failed":
         print("Video generation failed")
@@ -563,9 +521,6 @@ while (true) {
     if (data.status === "done") {
         console.log(`Video URL: ${data.video.url}`);
         break;
-    } else if (data.status === "expired") {
-        console.log("Request expired");
-        break;
     } else if (data.status === "failed") {
         console.log("Video generation failed");
         break;
@@ -597,7 +552,7 @@ while true; do
   if [ "$STATUS" = "done" ]; then
     echo "$RESULT" | jq -r '.video.url'
     break
-  elif [ "$STATUS" = "failed" ] || [ "$STATUS" = "expired" ]; then
+  elif [ "$STATUS" = "failed" ]; then
     echo "Request $STATUS"; echo "$RESULT" | jq .
     break
   fi
@@ -606,13 +561,44 @@ while true; do
 done
 ```
 
+```python customLanguage="pythonXAI"
+import os
+import time
+import xai_sdk
+from xai_sdk.proto import deferred_pb2
+
+client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+
+# Start the generation request
+start_response = client.video.start(
+    prompt="A cat lounging in a sunbeam, tail gently swishing",
+    model="grok-imagine-video-1.5",
+    duration=5,
+)
+
+print(f"Request ID: {start_response.request_id}")
+
+# Poll for results
+while True:
+    result = client.video.get(start_response.request_id)
+    
+    if result.status == deferred_pb2.DeferredStatus.DONE:
+        print(f"Video URL: {result.response.video.url}")
+        break
+    elif result.status == deferred_pb2.DeferredStatus.FAILED:
+        print("Video generation failed")
+        break
+    elif result.status == deferred_pb2.DeferredStatus.PENDING:
+        print("Still processing...")
+        time.sleep(5)
+```
+
 The available status values are:
 
 | Proto Value | Description |
 |-------------|-------------|
 | `deferred_pb2.DeferredStatus.PENDING` | Video is still being generated |
 | `deferred_pb2.DeferredStatus.DONE` | Video is ready |
-| `deferred_pb2.DeferredStatus.EXPIRED` | Request has expired |
 | `deferred_pb2.DeferredStatus.FAILED` | Video generation failed |
 
 ## Error Handling
@@ -665,7 +651,7 @@ The possible `error.code` values are:
 | `permission_denied` | The API key or team does not have permission for the requested video operation. | Confirm the API key belongs to the right team and that the team has access to the requested capability. |
 | `failed_precondition` | The requested operation is not available for the selected model or settings, such as video editing, video extension, or a requested resolution that the model cannot process. | Change the model, mode, resolution, or other request settings. |
 | `service_unavailable` | Video generation is temporarily overloaded. | Retry the request later. |
-| `internal_error` | The service could not complete the generation because of an internal failure. | Retry the request. If the error persists, contact xAI support with the `request_id`. |
+| `internal_error` | The service could not complete the generation because of an internal failure. | Retry the request. If the error persists, contact SpaceXAI support with the `request_id`. |
 
 Authentication errors, missing models, and rate limits are returned synchronously as standard API errors before a video job is created, so they do not appear in the `error.code` field of a failed video result.
 
@@ -693,17 +679,7 @@ except TimeoutError:
 
 ## Response Details
 
-The SDK response includes the generated video and provider-specific metadata. In the AI SDK, the xAI-hosted output URL is available at `providerMetadata.xai.videoUrl`.
-
-```python customLanguage="pythonXAI"
-if response.respect_moderation:
-    print(response.url)
-else:
-    print("Video filtered by moderation")
-
-print(f"Duration: {response.duration} seconds")
-print(f"Model: {response.model}")
-```
+The SDK response includes the generated video and provider-specific metadata. In the AI SDK, the SpaceXAI-hosted output URL is available at `providerMetadata.xai.videoUrl`.
 
 ```javascript customLanguage="javascriptAISDK"
 const result = await generateVideo({
@@ -713,6 +689,16 @@ const result = await generateVideo({
 });
 
 console.log(result.providerMetadata?.xai?.videoUrl);
+```
+
+```python customLanguage="pythonXAI"
+if response.respect_moderation:
+    print(response.url)
+else:
+    print("Video filtered by moderation")
+
+print(f"Duration: {response.duration} seconds")
+print(f"Model: {response.model}")
 ```
 
 ## Concurrent Requests

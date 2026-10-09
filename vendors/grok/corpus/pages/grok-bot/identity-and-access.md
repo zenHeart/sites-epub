@@ -39,9 +39,10 @@ auto-provisioning on, a user joins the team at first sign-in; otherwise,
 provision the user, then have them sign in to Cursor for a seat or invite them
 from the [Cursor dashboard](https://cursor.com/dashboard).
 
-If you use [SCIM](https://cursor.com/docs/account/teams/scim), provisioning is
-SCIM 2.0, available on the Enterprise plan, and deprovisioning is automatic:
-removing the user in your identity provider removes them from Cursor.
+**SCIM is Enterprise only.** If you use
+[SCIM](https://cursor.com/docs/account/teams/scim), provisioning is SCIM 2.0,
+and deprovisioning is automatic: removing the user in your identity provider
+removes them from Cursor.
 
 ## Assign the Cursor app
 

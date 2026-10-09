@@ -33,13 +33,13 @@ A useful skill states:
 5. What to return
 6. What requires approval
 
-Use **Settings → Plugins** to discover and install supported connectors and
-packaged skills. Type `/` in the desktop composer to reference a saved skill;
+Use **Marketplace** in the sidebar to discover and install supported connectors
+and packaged skills. Type `/` in the desktop composer to reference a saved skill;
 use `@` for Bots, groups, routines, and connectors.
 
-Installed private skills can be enabled per Bot. If a skill does not appear in
-the `/` menu, open it under **Settings → Plugins → Yours** and enable it for the
-current Bot.
+Private skills are one library shared by all your Bots. If a skill does not
+appear in the `/` menu, open **Marketplace → Your plugins → Manage plugins and
+skills** and check that it is listed under **Private skills**.
 
 ## Teach a workflow by demonstration
 
@@ -127,8 +127,9 @@ view its routines and recent runs. You can:
 * Delete it
 
 A Bot can own up to 50 routines, and the app keeps the 20 most recent run
-records for each routine. Deleting a routine is immediate and has no undo.
-Deleting a Bot also removes routines owned by that Bot.
+records for each routine. Routine schedules must be at least five minutes
+apart. Deleting a routine is immediate and has no undo. Deleting a Bot also
+removes routines owned by that Bot.
 
 To control unattended usage, Grok Bot may ask whether to keep routines running
 after a long period away and pause them if there is no response. Review paused

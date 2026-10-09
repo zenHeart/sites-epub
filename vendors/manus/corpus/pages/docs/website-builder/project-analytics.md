@@ -14,12 +14,12 @@ Manus-built applications come with integrated analytics, providing you with valu
 
 From the moment your site is live, Manus automatically tracks key metrics, giving you a clear picture of your site's performance.
 
-| Metric              | Description                                                                                |
-| :------------------ | :----------------------------------------------------------------------------------------- |
-| **Visitors**        | The number of unique users visiting your site over a given period.                         |
-| **Page Views**      | The total number of pages viewed, helping you identify your most popular content.          |
+| Metric | Description |
+| :- | :- |
+| **Visitors** | The number of unique users visiting your site over a given period. |
+| **Page Views** | The total number of pages viewed, helping you identify your most popular content. |
 | **Traffic Sources** | Where your users are coming from, such as direct traffic, search engines, or social media. |
-| **Users**           | Manus can also show you who your users if they had to log in to access your site           |
+| **Users** | Manus can also show you who your users if they had to log in to access your site |
 
 ## Database
 
@@ -45,3 +45,6 @@ Every Manus web project with the **database feature** includes a fully managed M
 * Click "Columns" to view the full schema (data types, constraints, indexes)
 * See which fields are required, unique, or have default values
 * Understand relationships between tables (foreign keys)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

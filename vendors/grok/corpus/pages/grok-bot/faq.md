@@ -60,9 +60,9 @@ enabled—your Auto-review rules. Sensitive or consequential actions can stop fo
 approval. Passwords, two-factor codes, CAPTCHAs, and similar human-only steps
 use a computer takeover.
 
-Put standing boundaries in each Bot's description and add narrow **Require
-Approval** rules for actions such as sending, publishing, deleting, purchasing,
-or changing production systems.
+Put standing boundaries in each Bot's description and add narrow **Ask first**
+rules for actions such as sending, publishing, deleting, purchasing, or
+changing production systems.
 
 ## How does Grok Bot handle data and privacy?
 
@@ -76,9 +76,10 @@ full boundary and links to current Cursor security information.
 
 ## How much does Grok Bot cost?
 
-Availability and billing depend on the account and plan. Eligible plans include
-SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra, and Cursor Teams
-Standard and Premium. Grok Bot subscriptions include weekly usage; eligible
+Availability and billing depend on the account and plan. Grok Bot is included
+with every paid individual Cursor plan and with the Cursor Teams plan, and you
+can link an individual SuperGrok, SuperGrok Plus, or SuperGrok Heavy
+subscription. Grok Bot subscriptions include weekly usage; eligible
 accounts can add on-demand usage billed from model and token cost. If you have
 both a Cursor and a SuperGrok subscription, Grok Bot uses whichever has more
 usage. Review the current access page or
@@ -92,6 +93,30 @@ Enterprise access is rolling out. Availability and administrative controls can
 vary by organization. Contact your Cursor account team for current enterprise
 access.
 
+## Can I dictate or talk to a Bot?
+
+Yes. On desktop, press `Cmd/Ctrl+D` or choose **Start voice input** to dictate
+into the composer. On iPhone and Android, dictate with **Start dictation**.
+**Start voice chat** starts a live conversation on desktop, iPhone, and
+Android. Bots can also send a **voice memo** you can play in the transcript.
+
+## What keyboard shortcuts does the desktop app have?
+
+See [Keyboard shortcuts](/grok-bot/chat-and-collaboration#keyboard-shortcuts).
+Dictate uses `Cmd/Ctrl+D`. Settings uses `Cmd/Ctrl+,`. **Start voice chat** is
+a button and has no keybinding.
+
+## Can I change the app language?
+
+Yes. Open **Settings** and choose **Language**. On desktop the picker includes
+**Follow System** and more than 20 languages. On iPhone and Android the
+follow-device option is labeled **System**, and the list is shorter.
+
+## Can I use more than one account?
+
+On desktop, open the account menu and choose **Switch account** or **Add
+account**. Settings lists the same accounts; inactive rows include **Remove**.
+
 ## Which platforms are supported?
 
 * macOS on Apple silicon and Intel
@@ -101,7 +126,7 @@ access.
 * iPhone on iOS 18 or later
 * Android 9 or later
 
-iPad is not supported at initial launch.
+The iOS app also runs on iPad with iPadOS 18 or later.
 
 ## What is the difference between a skill and a routine?
 
@@ -120,14 +145,19 @@ ten minutes.
 
 ## Can I share a Bot with someone else?
 
-Yes. Copy a public share link from the Bot. Anyone with the link can preview it
-on [x.ai](https://x.ai) and add a copy to their account. They do not get your
+Yes. Open the **Share menu** and choose **Create template**, then **Copy link**,
+and pick who can open it: **Public link** or **Team-only** (Enterprise accounts
+default to Team-only). Anyone who can open the link can preview it on
+[x.ai](https://x.ai) and add a copy to their account. They do not get your
 computer, logins, or conversation history.
 
 The link exposes the Bot's configuration. Strip secrets and anything
 confidential before you share. Adding a shared Bot accepts the
 [third-party bot terms](https://x.ai/legal/bot-sharing-terms). See
 [Share a Bot](/grok-bot/bots#share-a-bot).
+
+To give the team one Bot they all talk to, rather than a copy each person
+customizes, publish a [Team Bot](/grok-bot/team-bots).
 
 ## What happens if I delete a Bot?
 

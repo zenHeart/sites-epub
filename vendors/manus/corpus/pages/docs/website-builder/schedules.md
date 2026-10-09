@@ -49,11 +49,11 @@ You can view, pause, or delete your schedules at any time from **Settings > Sche
 
 ## Limitations & Configurations
 
-| Detail                    | Value                                                         |
-| :------------------------ | :------------------------------------------------------------ |
-| Minimum frequency         | Every 1 minute                                                |
-| Maximum schedules per app | 5                                                             |
-| Timezone                  | UTC (Manus handles conversions when you specify a local time) |
+| Detail | Value |
+| :- | :- |
+| Minimum frequency | Every 1 minute |
+| Maximum schedules per app | 5 |
+| Timezone | UTC (Manus handles conversions when you specify a local time) |
 
 **Timezones:** All schedules run in UTC. When you ask Manus to create a schedule for a specific local time (e.g., "every day at 9 AM Tokyo time"), Manus will automatically handle the conversion to UTC for you.
 
@@ -72,3 +72,6 @@ You can view, pause, or delete your schedules at any time from **Settings > Sche
     You can manage them from Settings > Schedules in the Manus project dashboard, where you can review status, next run time, success rate, average duration, and run history.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

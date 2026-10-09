@@ -12,21 +12,6 @@ You can upload files in several ways: from a file path, raw bytes, BytesIO objec
 
 ### Upload from File Path
 
-```pythonXAI
-import os
-from xai_sdk import Client
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-# Upload a file from disk
-file = client.files.upload("/path/to/your/document.pdf")
-
-print(f"File ID: {file.id}")
-print(f"Filename: {file.filename}")
-print(f"Size: {file.size} bytes")
-print(f"Created at: {file.created_at}")
-```
-
 ```pythonOpenAISDK
 import os
 from openai import OpenAI
@@ -110,6 +95,21 @@ curl https://api.x.ai/v1/files \\
   -F purpose=assistants
 ```
 
+```pythonXAI
+import os
+from xai_sdk import Client
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+# Upload a file from disk
+file = client.files.upload("/path/to/your/document.pdf")
+
+print(f"File ID: {file.id}")
+print(f"Filename: {file.filename}")
+print(f"Size: {file.size} bytes")
+print(f"Created at: {file.created_at}")
+```
+
 ### Upload from Bytes
 
 ```pythonXAI
@@ -156,24 +156,6 @@ You can also delete the file manually at any time before its TTL elapses.
 > [!WARNING]
 >
 > **Multipart field ordering matters**: `expires_after` must appear **before** the `file` field in the multipart body. Requests that send `expires_after` after `file` are rejected with `400`.
-
-```pythonXAI
-import os
-from datetime import timedelta
-from xai_sdk import Client
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-# Upload a file that will be auto-deleted in 24 hours.
-# expires_after accepts an int (seconds) or a datetime.timedelta.
-file = client.files.upload(
-    "/path/to/document.pdf",
-    expires_after=timedelta(hours=24),
-)
-
-print(f"File ID: {file.id}")
-print(f"Expires at: {file.expires_at.ToDatetime()}")
-```
 
 ```pythonOpenAISDK
 import os
@@ -275,6 +257,24 @@ curl https://api.x.ai/v1/files \\
   -F file=@/path/to/document.pdf
 ```
 
+```pythonXAI
+import os
+from datetime import timedelta
+from xai_sdk import Client
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+# Upload a file that will be auto-deleted in 24 hours.
+# expires_after accepts an int (seconds) or a datetime.timedelta.
+file = client.files.upload(
+    "/path/to/document.pdf",
+    expires_after=timedelta(hours=24),
+)
+
+print(f"File ID: {file.id}")
+print(f"Expires at: {file.expires_at.ToDatetime()}")
+```
+
 ## Upload with Progress Tracking
 
 Track upload progress for large files using callbacks or progress bars.
@@ -309,28 +309,10 @@ Retrieve a list of your uploaded files with pagination and sorting options.
 
 * **`limit`**: Maximum number of files to return. If not specified, uses the server default of 100. Maximum is 100.
 * **`order`**: Sort order. Either `"asc"` (ascending) or `"desc"` (descending). Defaults to `"desc"`.
-* **`sort_by`**: Field to sort by. Options: `"created_at"`, `"filename"`, or `"size"`. Defaults to `"created_at"`.
+* **`sort_by`**: Field to sort by. Options: `"created_at"`, `"filename"`, or `"size"`. Defaults to `"filename"`.
 * **`pagination_token`**: Pass the `pagination_token` returned by the previous response to fetch the next page. Omit it for the first page.
 
-The response always includes a `pagination_token`. When the returned page is shorter than `limit`, you've reached the end of the list.
-
-```pythonXAI
-import os
-from xai_sdk import Client
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-# List files with pagination and sorting
-response = client.files.list(
-    limit=10,
-    order="desc",
-    sort_by="created_at"
-)
-
-for file in response.data:
-    expires = file.expires_at.ToDatetime() if file.HasField("expires_at") else "never"
-    print(f"File: {file.filename} (ID: {file.id}, Size: {file.size} bytes, Expires: {expires})")
-```
+When more files remain, the response includes a `pagination_token`. On the last page it is `null` or empty.
 
 ```pythonOpenAISDK
 import os
@@ -397,35 +379,27 @@ curl https://api.x.ai/v1/files \\
   -H "Authorization: Bearer $XAI_API_KEY"
 ```
 
-### Paginating Through All Files
-
-The List endpoint returns at most `limit` files per call (capped at 100). To enumerate every file, keep calling the endpoint with the `pagination_token` from the previous response until the response returns fewer than `limit` items.
-
 ```pythonXAI
 import os
 from xai_sdk import Client
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 
-# Walk every page until the API returns a short page.
-page_size = 100
-token = None
-all_files = []
+# List files with pagination and sorting
+response = client.files.list(
+    limit=10,
+    order="desc",
+    sort_by="created_at"
+)
 
-while True:
-    response = client.files.list(
-        limit=page_size,
-        order="desc",
-        sort_by="created_at",
-        pagination_token=token,
-    )
-    all_files.extend(response.data)
-    if len(response.data) < page_size:
-        break
-    token = response.pagination_token
-
-print(f"Total files: {len(all_files)}")
+for file in response.data:
+    expires = file.expires_at.ToDatetime() if file.HasField("expires_at") else "never"
+    print(f"File: {file.filename} (ID: {file.id}, Size: {file.size} bytes, Expires: {expires})")
 ```
+
+### Paginating Through All Files
+
+The List endpoint returns at most `limit` files per call (capped at 100). To enumerate every file, keep calling the endpoint with the `pagination_token` from the previous response until the response no longer includes one.
 
 ```pythonRequests
 import os
@@ -441,7 +415,7 @@ all_files = []
 while True:
     response = requests.get(url, headers=headers, params=params).json()
     all_files.extend(response.get("data", []))
-    if len(response.get("data", [])) < page_size:
+    if not response.get("pagination_token"):
         break
     params["pagination_token"] = response["pagination_token"]
 
@@ -461,16 +435,12 @@ while (true) {
   });
   const page = await response.json();
   allFiles.push(...page.data);
-  if (page.data.length < pageSize) break;
   token = page.pagination_token;
+  if (!token) break;
 }
 
 console.log(\`Total files: \${allFiles.length}\`);
 ```
-
-## Getting File Metadata
-
-Retrieve detailed information about a specific file.
 
 ```pythonXAI
 import os
@@ -478,16 +448,29 @@ from xai_sdk import Client
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 
-# Get file metadata by ID
-file = client.files.get("file-abc123")
+# Walk every page until the API stops returning a pagination token.
+page_size = 100
+token = None
+all_files = []
 
-print(f"Filename: {file.filename}")
-print(f"Size: {file.size} bytes")
-print(f"Created: {file.created_at}")
-# expires_at is only set when the file was uploaded with expires_after
-if file.HasField("expires_at"):
-    print(f"Expires at: {file.expires_at.ToDatetime()}")
+while True:
+    response = client.files.list(
+        limit=page_size,
+        order="desc",
+        sort_by="created_at",
+        pagination_token=token,
+    )
+    all_files.extend(response.data)
+    token = response.pagination_token
+    if not token:
+        break
+
+print(f"Total files: {len(all_files)}")
 ```
+
+## Getting File Metadata
+
+Retrieve detailed information about a specific file.
 
 ```pythonOpenAISDK
 import os
@@ -554,25 +537,26 @@ curl https://api.x.ai/v1/files/file-abc123 \\
   -H "Authorization: Bearer $XAI_API_KEY"
 ```
 
-## Getting File Content
-
-Download the raw bytes of an uploaded file. The endpoint streams the response, so it works for files of any supported size without buffering the whole payload in memory at the API layer.
-
 ```pythonXAI
 import os
 from xai_sdk import Client
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 
-# Returns the complete file content as bytes.
-content = client.files.content("file-abc123")
+# Get file metadata by ID
+file = client.files.get("file-abc123")
 
-# Save to disk
-with open("downloaded.pdf", "wb") as f:
-    f.write(content)
-
-print(f"Saved {len(content)} bytes")
+print(f"Filename: {file.filename}")
+print(f"Size: {file.size} bytes")
+print(f"Created: {file.created_at}")
+# expires_at is only set when the file was uploaded with expires_after
+if file.HasField("expires_at"):
+    print(f"Expires at: {file.expires_at.ToDatetime()}")
 ```
+
+## Getting File Content
+
+Download the raw bytes of an uploaded file. The endpoint streams the response, so it works for files of any supported size without buffering the whole payload in memory at the API layer.
 
 ```pythonOpenAISDK
 import os
@@ -634,22 +618,25 @@ curl https://api.x.ai/v1/files/file-abc123/content \\
   --output downloaded.pdf
 ```
 
-## Deleting Files
-
-Remove files when they're no longer needed.
-
 ```pythonXAI
 import os
 from xai_sdk import Client
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 
-# Delete a file
-delete_response = client.files.delete("file-abc123")
+# Returns the complete file content as bytes.
+content = client.files.content("file-abc123")
 
-print(f"Deleted: {delete_response.deleted}")
-print(f"File ID: {delete_response.id}")
+# Save to disk
+with open("downloaded.pdf", "wb") as f:
+    f.write(content)
+
+print(f"Saved {len(content)} bytes")
 ```
+
+## Deleting Files
+
+Remove files when they're no longer needed.
 
 ```pythonOpenAISDK
 import os
@@ -715,6 +702,19 @@ curl -X DELETE https://api.x.ai/v1/files/file-abc123 \\
   -H "Authorization: Bearer $XAI_API_KEY"
 ```
 
+```pythonXAI
+import os
+from xai_sdk import Client
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+# Delete a file
+delete_response = client.files.delete("file-abc123")
+
+print(f"Deleted: {delete_response.deleted}")
+print(f"File ID: {delete_response.id}")
+```
+
 ## The File Object
 
 Every Files API endpoint that returns metadata (Upload, List, Get Metadata) returns the same `file` object shape:
@@ -727,7 +727,7 @@ Every Files API endpoint that returns metadata (Upload, List, Get Metadata) retu
 | `created_at` | integer | Upload time as a Unix timestamp (seconds). |
 | `expires_at` | integer or null | Unix timestamp at which the file will be deleted. `null` for permanent files; set when the file was uploaded with `expires_after`. |
 | `object` | string | Always `"file"`. Returned for OpenAI compatibility. |
-| `purpose` | string | Echoes the `purpose` value sent at upload time. xAI does not enforce or interpret this field; it is stored for OpenAI SDK compatibility. Setting `"assistants"` is the conventional choice. |
+| `purpose` | string | Echoes the `purpose` value sent at upload time. SpaceXAI does not enforce or interpret this field; it is stored for OpenAI SDK compatibility. Setting `"assistants"` is the conventional choice. |
 
 ## Limitations and Considerations
 

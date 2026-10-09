@@ -13,8 +13,8 @@ zero-trust, or mesh clients that run on Linux follow the same pattern. Your
 services stay off the public internet, and access is governed by the access
 controls and identity provider you already use.
 
-> Team Setup is Enterprise only. It does not appear on other plans. Network
-> Controls is also Enterprise only. That
+> **Team Setup is Enterprise only.** It does not appear on other plans.
+> **Network Controls is also Enterprise only.** That
 > [network policy](/grok-bot/security#network-policy) is a separate layer that
 > still applies; private network reach does not replace your destination
 > allowlist.
@@ -39,10 +39,10 @@ controls and identity provider you already use.
 
 ### Route through a member's desktop
 
-In the Grok Bot desktop app, open **Settings → Computer** and turn on **Route
-egress through this desktop**. The route uses the current device's network and
-IP address. It stops when the setting is turned off or an Enterprise admin
-disables **Allow Local Egress**.
+In the Grok Bot desktop app, open **Settings → Computer → Network** and turn on
+**Route traffic through this computer**. The route uses the current device's
+network and IP address. It stops when the setting is turned off or an Enterprise
+admin disables **Allow Local Egress**.
 
 Each member controls their own desktop route. Enterprise admins can remove this
 option for the whole team from
@@ -62,8 +62,8 @@ Cursor side.
 
 ## Before you start
 
-* You are a team admin on the Enterprise plan. Team Setup does not appear on other
-  plans.
+* You are a team admin on the Enterprise plan. **Team Setup is Enterprise
+  only** and does not appear on other plans.
 * Your networking client runs on Debian-based Linux and can be installed and
   started from a shell script. Team computers run Linux, and scripts run as the
   computer user with `sudo` available.
@@ -71,7 +71,8 @@ Cursor side.
   connector inside the VPC or intranet you want to reach, per your vendor's
   architecture.
 * You have decided how computers will authenticate to your network. Keep
-  credentials out of setup scripts.
+  credentials out of setup scripts; if a script needs one, store it as a
+  [Team Secret](/grok-bot/teams-and-enterprises#team-secrets).
 
 ## How Team Setup runs your scripts
 
@@ -79,7 +80,10 @@ Team Setup lives on the **Grok Bot** page of the
 [Cursor dashboard](https://cursor.com/dashboard/bot): manifests of install
 scripts that run on every team computer. Each manifest holds one or more script
 entries, and each entry has an **ID**, a **Setup Script**, and an optional
-**Check Script**.
+**Check Script**. To run a manifest on one cohort's computers only, add it under
+the group's Grok Bot tab instead; see
+[Group settings](/grok-bot/teams-and-enterprises#group-settings). Group
+manifests follow the same rules as the ones below.
 
 * Scripts run as the computer user on every team computer; use `sudo` for
   privileged installs.
@@ -90,6 +94,12 @@ entries, and each entry has an **ID**, a **Setup Script**, and an optional
   to verify it succeeded.
 * Entries run one at a time, in order. Each script has a 30-minute timeout. A
   failed script does not block the computer; it is retried on a later refresh.
+* Scripts read your team's
+  [Team Secrets](/grok-bot/teams-and-enterprises#team-secrets) as environment
+  variables, so a credential a script needs never appears in the manifest.
+  Secrets are present only while the script runs, and script output is redacted
+  before it is logged. A computer whose setup comes from more than one team
+  receives no secrets.
 
 ## Create the manifest
 
@@ -121,12 +131,13 @@ editor. The manifest has this structure:
 }
 ```
 
-> Do not include secrets. Setup scripts run as the computer user on every team
-> computer, and manifests are plain text applied to your whole fleet. Do not
-> embed auth keys, tokens, or other credentials. Have members authenticate
-> interactively in the computer's browser, where your identity provider's
-> policies apply, or use a mechanism from your vendor's documentation that keeps
-> long-lived credentials out of the script.
+> Do not paste secret values into scripts. Setup scripts run as the computer
+> user on every team computer, and manifests are plain text applied to your
+> whole fleet. If a script needs an auth key, token, or other credential, store
+> it as a [Team Secret](/grok-bot/teams-and-enterprises#team-secrets) and read
+> it from the environment, for example `"$MY_AUTH_KEY"`. Where your vendor
+> supports it, prefer having members authenticate interactively in the
+> computer's browser, where your identity provider's policies apply.
 
 ## Set up your networking client
 
@@ -159,20 +170,28 @@ intranet you want to reach.
 **Connect and verify:**
 
 1. Authenticate each computer. Tailscale prints a login URL that opens in the
-   computer's browser, where your identity provider's policies apply. Keep auth
-   keys out of the script.
+   computer's browser, where your identity provider's policies apply. If you
+   would rather join computers without a member signing in, store a reusable,
+   tagged [auth key](https://tailscale.com/docs/concepts/auth-keys) as a
+   [Team Secret](/grok-bot/teams-and-enterprises#team-secrets) and pass it from
+   the environment, for example `tailscale up --auth-key "$TS_AUTHKEY"`. Every
+   team computer then joins under the same key and tags rather than under the
+   member's identity, so scope the key's ACLs accordingly. Never paste the key
+   into the script itself.
 2. Confirm the computer appears in your Tailscale admin console and is allowed
    to use the exit node.
 3. Ask a Bot to reach an internal hostname.
 
 **If it does not work:**
 
-* The client installed but nobody authenticated. The login step is deliberately
-  manual, since scripts cannot hold secrets. Check the machine list in your
-  Tailscale admin console.
+* The client installed but nobody authenticated. With browser login, the step
+  is manual; with an auth key, check that the Team Secret exists, that its name
+  matches what the script reads, and that the key has not expired. Check the
+  machine list in your Tailscale admin console.
 * Your team's network policy is allowlist-only and blocks Tailscale's
-  coordination servers or relays. Allow the endpoints from Tailscale's docs,
-  then recreate the computer.
+  coordination servers or relays. Allow the endpoints from Tailscale's docs.
+  Running computers apply the change within about a minute. Sleeping computers
+  apply it when they next wake.
 * The exit node is not advertised or approved in your tailnet. Check route
   settings in the admin console.
 * The computer was recreated, for example after an image update or reset, and
@@ -190,8 +209,10 @@ the Tailscale one has, so validate it on a pilot computer before rolling out.
 **Before you start:** you run a Cloudflare Tunnel connector inside your private
 network, with the services you need routed through it, and you have chosen your
 Cloudflare Access policy. Identity-based policies fit this pattern well, since
-members sign in through the browser. Access service tokens are secrets; keep
-them out of setup scripts.
+members sign in through the browser. Access service tokens are secrets; if you
+use them, store them as
+[Team Secrets](/grok-bot/teams-and-enterprises#team-secrets) rather than in
+setup scripts.
 
 **Team Setup manifest:**
 
@@ -218,9 +239,11 @@ them out of setup scripts.
 * Cloudflare Access denies the request. Check your Access logs and confirm the
   member has authenticated.
 * Your team's network policy is allowlist-only and blocks the tunnel hostname or
-  Cloudflare's endpoints. Allow them, then recreate the computer.
+  Cloudflare's endpoints. Allow them. Running computers apply the change within
+  about a minute. Sleeping computers apply it when they next wake.
 * A service token was embedded in the setup script. Do not do this; manifests are
-  plain text. Use identity-based Access, or supply tokens at use time.
+  plain text. Use identity-based Access, or store the token as a Team Secret and
+  have the script read it from the environment.
 * A `cloudflared access tcp` listener is not running when the Bot needs it.
   Listeners do not persist across sessions; start one when needed.
 
@@ -235,14 +258,13 @@ Setup steps; validate yours on a pilot computer before rolling out.
 
 ## Roll out to existing computers
 
-* New computers apply manifests when they are created.
-* Running computers pick up manifest changes on a periodic refresh; expect up to
-  about a day.
-* To apply a change immediately, restart or recreate the computer. Members can
-  reset their own computer from the desktop app, and organization admins can
+* New computers apply manifests when they start.
+* Running computers pick up manifest changes on a periodic refresh, roughly
+  daily.
+* To apply a manifest change immediately, recreate the computer or have the
+  member reset it from the desktop app. Organization admins can recreate or
   terminate a member's computer from the dashboard. The durable disk is kept,
-  and the next session starts a fresh computer that applies current manifests
-  at boot.
+  and the next computer applies current manifests when it starts.
 * Image updates recreate computers automatically, and your scripts re-apply.
   Sign-in sessions, including your network client's login, may need to be
   re-established after a computer is recreated.
@@ -253,8 +275,9 @@ The Grok Bot [network policy](/grok-bot/security#network-policy) is a separate
 layer that controls which destinations team computers may reach.
 If your team uses **Team allowlist only**, add the destinations your networking
 client needs, such as coordination servers, relays, and gateways, from your
-vendor's documentation. Network policy changes apply when a computer is created
-or recreated.
+vendor's documentation. Running computers apply policy changes within about a
+minute. Sleeping computers apply them when they next wake. You do not need to
+recreate the computer.
 
 ## Limitations
 
@@ -278,10 +301,12 @@ or recreated.
 
 ### Can I put an auth key or credential in the setup script?
 
-No. Setup scripts are not a secret store, and the dashboard warns against
-including secrets. Authenticate computers interactively, or use a mechanism from
-your vendor's docs that does not require embedding a long-lived credential in the
-script.
+Not in the script text. Manifests are plain text, and the dashboard warns
+against pasting secrets into them. Store the credential as a
+[Team Secret](/grok-bot/teams-and-enterprises#team-secrets) on the Grok Bot page
+and have the script read it as an environment variable. Team Secrets are
+Enterprise only. Where your vendor supports it, interactive browser login is
+still the simplest option, since your identity provider's policies apply to it.
 
 ### Which networking tools can I use?
 
@@ -291,8 +316,9 @@ Validate your client on a pilot computer first.
 
 ### Do existing computers get a new manifest?
 
-Yes, within about a day. Running computers refresh manifests periodically.
-Restart or recreate a computer to apply changes immediately.
+Yes. Running computers refresh manifests periodically, roughly daily. To apply
+a manifest change immediately, recreate the computer or have the member reset
+it from the desktop app.
 
 ### Does this change the IP addresses my services see?
 
@@ -304,7 +330,8 @@ ranges.
 ### We use a strict network allowlist. Will our client work?
 
 Only if you allow its endpoints. Add the destinations your client requires to
-your team allowlist, then recreate computers to pick up the policy change.
+your team allowlist. Running computers apply the change within about a minute.
+Sleeping computers apply it when they next wake.
 
 ### Is this the same as the Tailscale and Cloudflare Tunnel sections in the Cloud Agents docs?
 
@@ -314,8 +341,8 @@ your own gateway or connector, as described on this page.
 
 ### Which plans include Team Setup?
 
-Team Setup is Enterprise only. Team admins manage manifests. If you do not see
-it on the Grok Bot page of the dashboard, you are not on Enterprise, or you
+**Team Setup is Enterprise only.** Team admins manage manifests. If you do not
+see it on the Grok Bot page of the dashboard, you are not on Enterprise, or you
 need your account team to enable Grok Bot for the organization.
 
 ### What happens if the setup script fails on some computers?

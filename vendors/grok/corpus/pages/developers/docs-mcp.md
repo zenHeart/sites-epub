@@ -2,7 +2,7 @@
 
 # Docs MCP Server
 
-xAI hosts a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that gives AI assistants and agents direct access to the xAI documentation. Instead of copy-pasting docs into a prompt, you can point any MCP-compatible client at the server and let it pull the information it needs.
+SpaceXAI hosts a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that gives AI assistants and agents direct access to the SpaceXAI documentation. Instead of copy-pasting docs into a prompt, you can point any MCP-compatible client at the server and let it pull the information it needs.
 
 You can use this with all popular IDEs/Editors of your choice.
 

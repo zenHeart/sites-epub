@@ -21,34 +21,21 @@ Multi-agent research goes beyond single-turn tool use by coordinating a team of 
 
 To use Realtime Multi-agent Research, specify `grok-4.20-multi-agent` as the model name in your API requests. This model is optimized for orchestrating multiple agents that collaborate on research tasks.
 
-```python customLanguage="pythonXAI" highlightedLines="9"
-import os
+```typescript customLanguage="javascriptAISDK" highlightedLines="5"
+import { xai } from "@ai-sdk/xai";
+import { generateText } from "ai";
 
-from xai_sdk import Client
-from xai_sdk.chat import user
-from xai_sdk.tools import web_search, x_search
+const { text } = await generateText({
+  model: xai.responses("grok-4.20-multi-agent"),
+  prompt:
+    "Research the latest breakthroughs in quantum computing and summarize the key findings.",
+  tools: {
+    web_search: xai.tools.webSearch(),
+    x_search: xai.tools.xSearch(),
+  },
+});
 
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-chat = client.chat.create(
-    model="grok-4.20-multi-agent",
-    tools=[web_search(), x_search()],
-    include=["verbose_streaming"],
-)
-
-chat.append(user("Research the latest breakthroughs in quantum computing and summarize the key findings."))
-
-is_thinking = True
-for response, chunk in chat.stream():
-    if response.usage.reasoning_tokens and is_thinking:
-        print(f"\rThinking... ({response.usage.reasoning_tokens} tokens)", end="", flush=True)
-    if chunk.content and is_thinking:
-        print("\n\nFinal Response:")
-        is_thinking = False
-    if chunk.content and not is_thinking:
-        print(chunk.content, end="", flush=True)
-
-print("\n\nUsage:")
-print(response.usage)
+console.log(text);
 ```
 
 ```python customLanguage="pythonOpenAISDK" highlightedLines="10"
@@ -122,21 +109,34 @@ curl https://api.x.ai/v1/responses \
 }'
 ```
 
-```typescript customLanguage="javascriptAISDK" highlightedLines="5"
-import { xai } from "@ai-sdk/xai";
-import { generateText } from "ai";
+```python customLanguage="pythonXAI" highlightedLines="9"
+import os
 
-const { text } = await generateText({
-  model: xai.responses("grok-4.20-multi-agent"),
-  prompt:
-    "Research the latest breakthroughs in quantum computing and summarize the key findings.",
-  tools: {
-    web_search: xai.tools.webSearch(),
-    x_search: xai.tools.xSearch(),
-  },
-});
+from xai_sdk import Client
+from xai_sdk.chat import user
+from xai_sdk.tools import web_search, x_search
 
-console.log(text);
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+chat = client.chat.create(
+    model="grok-4.20-multi-agent",
+    tools=[web_search(), x_search()],
+    include=["verbose_streaming"],
+)
+
+chat.append(user("Research the latest breakthroughs in quantum computing and summarize the key findings."))
+
+is_thinking = True
+for response, chunk in chat.stream():
+    if response.usage.reasoning_tokens and is_thinking:
+        print(f"\rThinking... ({response.usage.reasoning_tokens} tokens)", end="", flush=True)
+    if chunk.content and is_thinking:
+        print("\n\nFinal Response:")
+        is_thinking = False
+    if chunk.content and not is_thinking:
+        print(chunk.content, end="", flush=True)
+
+print("\n\nUsage:")
+print(response.usage)
 ```
 
 ## How Multi-agent Works
@@ -149,7 +149,7 @@ When you send a request to the multi-agent model, multiple agents are launched t
 
 ### Built-in Tools Support
 
-xAI provides a set of built-in tools you can enable in the request to help with the most common use cases, e.g., `web_search`, `x_search`, `code_execution`, `collections_search`. Check out [this doc](/developers/tools/overview) for more information.
+SpaceXAI provides a set of built-in tools you can enable in the request to help with the most common use cases, e.g., `web_search`, `x_search`, `code_execution`, `collections_search`. Check out [this doc](/developers/tools/overview) for more information.
 
 Once you enable those tools in the request, the server will perform the agent loop to invoke those tools on the server side based on your query until the final answer is generated.
 
@@ -176,22 +176,19 @@ You can configure how many agents collaborate on a request. The two available se
 
 ### 4-Agent Setup
 
-```python customLanguage="pythonXAI" highlightedLines="8,9"
-import os
+```typescript customLanguage="javascriptAISDK" highlightedLines="5,8"
+import { xai } from "@ai-sdk/xai";
+import { generateText } from "ai";
 
-from xai_sdk import Client
-from xai_sdk.chat import user
+const { text } = await generateText({
+  model: xai.responses("grok-4.20-multi-agent"),
+  prompt: "What are the key differences between TCP and UDP?",
+  providerOptions: {
+    xai: { reasoningEffort: "low" },
+  },
+});
 
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-chat = client.chat.create(
-    model="grok-4.20-multi-agent",
-    agent_count=4,
-)
-
-chat.append(user("What are the key differences between TCP and UDP?"))
-for response, chunk in chat.stream():
-    if chunk.content:
-        print(chunk.content, end="", flush=True)
+console.log(text);
 ```
 
 ```python customLanguage="pythonOpenAISDK" highlightedLines="10,11"
@@ -256,23 +253,6 @@ curl https://api.x.ai/v1/responses \
 }'
 ```
 
-```typescript customLanguage="javascriptAISDK" highlightedLines="5,8"
-import { xai } from "@ai-sdk/xai";
-import { generateText } from "ai";
-
-const { text } = await generateText({
-  model: xai.responses("grok-4.20-multi-agent"),
-  prompt: "What are the key differences between TCP and UDP?",
-  providerOptions: {
-    xai: { reasoningEffort: "low" },
-  },
-});
-
-console.log(text);
-```
-
-### 16-Agent Setup
-
 ```python customLanguage="pythonXAI" highlightedLines="8,9"
 import os
 
@@ -282,13 +262,31 @@ from xai_sdk.chat import user
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 chat = client.chat.create(
     model="grok-4.20-multi-agent",
-    agent_count=16,
+    agent_count=4,
 )
 
-chat.append(user("Analyze the design trade-offs in modern programming languages: compare Rust's ownership model, Go's simplicity philosophy, and Haskell's pure functional approach. Cover memory safety, concurrency, developer productivity, and ecosystem maturity."))
+chat.append(user("What are the key differences between TCP and UDP?"))
 for response, chunk in chat.stream():
     if chunk.content:
         print(chunk.content, end="", flush=True)
+```
+
+### 16-Agent Setup
+
+```typescript customLanguage="javascriptAISDK" highlightedLines="5,9"
+import { xai } from "@ai-sdk/xai";
+import { generateText } from "ai";
+
+const { text } = await generateText({
+  model: xai.responses("grok-4.20-multi-agent"),
+  prompt:
+    "Analyze the design trade-offs in modern programming languages: compare Rust's ownership model, Go's simplicity philosophy, and Haskell's pure functional approach. Cover memory safety, concurrency, developer productivity, and ecosystem maturity.",
+  providerOptions: {
+    xai: { reasoningEffort: "high" },
+  },
+});
+
+console.log(text);
 ```
 
 ```python customLanguage="pythonOpenAISDK" highlightedLines="10,11"
@@ -353,20 +351,22 @@ curl https://api.x.ai/v1/responses \
 }'
 ```
 
-```typescript customLanguage="javascriptAISDK" highlightedLines="5,9"
-import { xai } from "@ai-sdk/xai";
-import { generateText } from "ai";
+```python customLanguage="pythonXAI" highlightedLines="8,9"
+import os
 
-const { text } = await generateText({
-  model: xai.responses("grok-4.20-multi-agent"),
-  prompt:
-    "Analyze the design trade-offs in modern programming languages: compare Rust's ownership model, Go's simplicity philosophy, and Haskell's pure functional approach. Cover memory safety, concurrency, developer productivity, and ecosystem maturity.",
-  providerOptions: {
-    xai: { reasoningEffort: "high" },
-  },
-});
+from xai_sdk import Client
+from xai_sdk.chat import user
 
-console.log(text);
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+chat = client.chat.create(
+    model="grok-4.20-multi-agent",
+    agent_count=16,
+)
+
+chat.append(user("Analyze the design trade-offs in modern programming languages: compare Rust's ownership model, Go's simplicity philosophy, and Haskell's pure functional approach. Cover memory safety, concurrency, developer productivity, and ecosystem maturity."))
+for response, chunk in chat.stream():
+    if chunk.content:
+        print(chunk.content, end="", flush=True)
 ```
 
 > [!NOTE]
@@ -379,32 +379,17 @@ console.log(text);
 
 Multi-agent works without any built-in tools — the agents rely purely on their collective knowledge and reasoning to collaborate on a response.
 
-```python customLanguage="pythonXAI"
-import os
+```typescript customLanguage="javascriptAISDK"
+import { xai } from "@ai-sdk/xai";
+import { generateText } from "ai";
 
-from xai_sdk import Client
-from xai_sdk.chat import user
+const { text } = await generateText({
+  model: xai.responses("grok-4.20-multi-agent"),
+  prompt:
+    "Compare the major approaches to distributed consensus in computer science: Paxos, Raft, and Byzantine fault tolerance. Analyze the trade-offs in safety guarantees, performance, and implementation complexity.",
+});
 
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-chat = client.chat.create(
-    model="grok-4.20-multi-agent",
-    include=["verbose_streaming"],
-)
-
-chat.append(user("Compare the major approaches to distributed consensus in computer science: Paxos, Raft, and Byzantine fault tolerance. Analyze the trade-offs in safety guarantees, performance, and implementation complexity."))
-
-is_thinking = True
-for response, chunk in chat.stream():
-    if response.usage.reasoning_tokens and is_thinking:
-        print(f"\rThinking... ({response.usage.reasoning_tokens} tokens)", end="", flush=True)
-    if chunk.content and is_thinking:
-        print("\n\nFinal Response:")
-        is_thinking = False
-    if chunk.content and not is_thinking:
-        print(chunk.content, end="", flush=True)
-
-print("\n\nUsage:")
-print(response.usage)
+console.log(text);
 ```
 
 ```python customLanguage="pythonOpenAISDK"
@@ -466,17 +451,32 @@ curl https://api.x.ai/v1/responses \
 }'
 ```
 
-```typescript customLanguage="javascriptAISDK"
-import { xai } from "@ai-sdk/xai";
-import { generateText } from "ai";
+```python customLanguage="pythonXAI"
+import os
 
-const { text } = await generateText({
-  model: xai.responses("grok-4.20-multi-agent"),
-  prompt:
-    "Compare the major approaches to distributed consensus in computer science: Paxos, Raft, and Byzantine fault tolerance. Analyze the trade-offs in safety guarantees, performance, and implementation complexity.",
-});
+from xai_sdk import Client
+from xai_sdk.chat import user
 
-console.log(text);
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+chat = client.chat.create(
+    model="grok-4.20-multi-agent",
+    include=["verbose_streaming"],
+)
+
+chat.append(user("Compare the major approaches to distributed consensus in computer science: Paxos, Raft, and Byzantine fault tolerance. Analyze the trade-offs in safety guarantees, performance, and implementation complexity."))
+
+is_thinking = True
+for response, chunk in chat.stream():
+    if response.usage.reasoning_tokens and is_thinking:
+        print(f"\rThinking... ({response.usage.reasoning_tokens} tokens)", end="", flush=True)
+    if chunk.content and is_thinking:
+        print("\n\nFinal Response:")
+        is_thinking = False
+    if chunk.content and not is_thinking:
+        print(chunk.content, end="", flush=True)
+
+print("\n\nUsage:")
+print(response.usage)
 ```
 
 ### Multi-turn Conversation

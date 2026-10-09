@@ -97,10 +97,10 @@ ws.on("message", (data) => {
 
 ### Get Started with Our Tester Apps
 
-* **[iOS Tester App](https://github.com/xai-org/xai-cookbook/tree/main/iOS/VoiceTesterApp)** — A Swift-based iOS app to act as a guide for setting up voice agents in your apps.
-* **[Web Agent (WebSocket)](https://github.com/xai-org/xai-cookbook/tree/main/voice-examples/agent/web)** — A web app voice agent using WebSocket.
-* **[WebRTC Agent](https://github.com/xai-org/xai-cookbook/tree/main/voice-examples/agent/webrtc)** — A web app voice agent using WebRTC.
-* **[Telephony Agent](https://github.com/xai-org/xai-cookbook/tree/main/voice-examples/agent/telephony)** — A callable phone agent using Twilio.
+* **[iOS Tester App](https://github.com/xai-org/xai-cookbook/tree/main/examples/voice-agent-mobile/swift)** — A Swift-based iOS app to act as a guide for setting up voice agents in your apps.
+* **[Web Agent (WebSocket)](https://github.com/xai-org/xai-cookbook/tree/main/examples/voice-agent-web)** — A web app voice agent using WebSocket.
+* **[WebRTC Agent](https://github.com/xai-org/xai-cookbook/tree/main/examples/voice-agent-webrtc)** — A web app voice agent using WebRTC.
+* **[Telephony Agent](https://github.com/xai-org/xai-cookbook/tree/main/examples/voice-agent-phone)** — A callable phone agent using Twilio.
 
 ## Authentication
 
@@ -147,9 +147,6 @@ After the session has been created, clients may send the [session.update](/devel
 | `voice` | string | Voice selection: any built-in voice (e.g. `eve`) or a [custom voice ID](/developers/model-capabilities/audio/custom-voices) (see [Available Voices](#available-voices)) |
 | `tools` | array | Tools available to the voice agent. Supports `file_search`, `web_search`, `x_search`, `mcp`, and `function` types. See [Using Tools](#using-tools-with-grok-speech-to-speech-api). |
 | `turn_detection.type` | string | null | `"server_vad"` for automatic detection, `null` for manual text turns |
-| `turn_detection.threshold` | number | optional | VAD activation threshold (0.1–0.9). Higher values require louder audio to trigger. Default: `0.85`. |
-| `turn_detection.silence_duration_ms` | number | optional | How long the user must be silent (in ms) before the server ends the turn (0–10000). Higher values let users pause longer without being cut off. |
-| `turn_detection.prefix_padding_ms` | number | optional | Amount of audio (in ms) to include before the detected start of speech (0–10000). Helps capture the beginning of words that might otherwise be clipped by the VAD. Default: `333`. |
 | `turn_detection.idle_timeout_ms` | number | optional | When set, the server proactively re-engages the user if no speech is detected for this many milliseconds after the assistant finishes responding. The timer re-arms after every response, so it fires repeatedly each `idle_timeout_ms` until the user speaks. Default: `null`.  |
 | `resumption.enabled` | boolean | optional | Opt in to [Session Resumption](#session-resumption): the server caches conversation turns keyed by `conversation_id` and replays them on reconnect so the model stays conditioned on prior context. Defaults to `false`. See [Session Resumption](#session-resumption). |
 | `audio.input.format.type` | string | Input codec: `"audio/pcm"`, `"audio/pcmu"`, `"audio/pcma"`, or `"audio/opus"` |
@@ -756,7 +753,7 @@ An invalid configuration — too many entries, `allowed_*` and `excluded_*` set 
 
 ### Remote MCP Tools
 
-Use the `mcp` tool type to connect your voice agent to external [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) servers. This lets you extend your voice agent with third-party or custom tools without implementing them as client-side functions — xAI manages the MCP server connection and tool execution on your behalf.
+Use the `mcp` tool type to connect your voice agent to external [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) servers. This lets you extend your voice agent with third-party or custom tools without implementing them as client-side functions — SpaceXAI manages the MCP server connection and tool execution on your behalf.
 
 ```pythonWithoutSDK
 session_config = {
@@ -899,7 +896,7 @@ const sessionConfig = {
 
 > [!NOTE]
 >
-> MCP tools are server-side tools — xAI handles the connection and execution automatically. Unlike custom function tools, you don't need to handle tool call responses in your client code. For more details on MCP tool configuration, see the [Remote MCP Tools](/developers/tools/remote-mcp) guide.
+> MCP tools are server-side tools — SpaceXAI handles the connection and execution automatically. Unlike custom function tools, you don't need to handle tool call responses in your client code. For more details on MCP tool configuration, see the [Remote MCP Tools](/developers/tools/remote-mcp) guide.
 
 ### Custom Function Tools
 
@@ -1051,7 +1048,7 @@ const sessionConfig = {
 
 > [!NOTE]
 >
-> Server-side tools (web search, X search, collections, and MCP) are executed automatically by xAI — you don't need to handle their responses. Only custom function tools require client-side handling. For more details, see [Collections](/developers/rest-api-reference/collections), [Web Search](/developers/tools/web-search), [X Search](/developers/tools/x-search), and [Remote MCP Tools](/developers/tools/remote-mcp).
+> Server-side tools (web search, X search, collections, and MCP) are executed automatically by SpaceXAI — you don't need to handle their responses. Only custom function tools require client-side handling. For more details, see [Collections](/developers/rest-api-reference/collections), [Web Search](/developers/tools/web-search), [X Search](/developers/tools/x-search), and [Remote MCP Tools](/developers/tools/remote-mcp).
 
 ### Handling Function Call Responses
 
@@ -1279,7 +1276,7 @@ The server injects a full response lifecycle (`response.created` → `response.o
 
 > [!NOTE]
 >
-> `force_message` is an xAI extension. It is not part of the OpenAI Realtime API.
+> `force_message` is an SpaceXAI extension. It is not part of the OpenAI Realtime API.
 
 ## Per-Response Instructions
 
@@ -1504,7 +1501,7 @@ If you have an existing application built on the [OpenAI Realtime API](https://d
 
 #### Using the OpenAI SDK
 
-If you are using the official OpenAI SDK, point the client at the xAI endpoint and supply your xAI API key:
+If you are using the official OpenAI SDK, point the client at the SpaceXAI endpoint and supply your xAI API key:
 
 ```python customLanguage="pythonWithoutSDK"
 import asyncio
@@ -1637,7 +1634,7 @@ This is the newest voice model. Use `grok-voice-latest` for new integrations so 
 
 ## OpenAI Realtime API Compatibility
 
-The Grok Speech to Speech API is compatible with the [OpenAI Realtime API](https://developers.openai.com/api/docs/guides/realtime-conversations). Most OpenAI client libraries and SDKs work with the xAI endpoint by changing the base URL to `wss://api.x.ai/v1/realtime`. This section documents event naming differences and unsupported events.
+The Grok Speech to Speech API is compatible with the [OpenAI Realtime API](https://developers.openai.com/api/docs/guides/realtime-conversations). Most OpenAI client libraries and SDKs work with the SpaceXAI endpoint by changing the base URL to `wss://api.x.ai/v1/realtime`. This section documents event naming differences and unsupported events.
 
 ### Event Naming Differences
 
@@ -1665,9 +1662,9 @@ The xAI API uses different event names for a few events with different payloads:
 | `output_audio_buffer.cleared` | WebRTC/SIP only. |
 | `rate_limits.updated` | Not emitted. |
 
-### xAI Extensions
+### SpaceXAI Extensions
 
-These events and features are xAI-specific and not part of the OpenAI Realtime API:
+These events and features are SpaceXAI-specific and not part of the OpenAI Realtime API:
 
 | Event / Feature | Description |
 |---|---|

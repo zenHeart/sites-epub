@@ -3,12 +3,18 @@
 Use these controls and deployment details to decide whether Grok Bot is allowed in, and to limit what Bots can access, change, and retain. Rollout steps and the dashboard settings list live on [Grok Bot for Teams and Enterprise](https://cursor.com/docs/grok-bot/teams.md). Common review questions are on [Grok Bot security FAQ](https://cursor.com/docs/grok-bot/security-faq.md).
 
 **Enterprise only** on the Grok Bot dashboard: the organization-wide enable
-switch, **Network Controls**, **Team Setup**, **Action Recording**,
+switch, **Network Controls**, **Team Setup**, **Team Secrets**, **Action Recording**,
 **Allow Local Egress**, **Enforce Auto-review** with its team rules, and
 computer management for organization admins. Audit logs, OpenTelemetry
 Export, the MCP allowlist, and SCIM are also Enterprise only. Self-serve
 Teams do not see those settings. The full list is on
 [admin controls](https://cursor.com/docs/grok-bot/teams.md#admin-controls).
+
+## Architecture
+
+The Grok Bot desktop and mobile apps send each request to Cursor's servers. From there, work runs on the member's hosted computer, prompts go to model providers, and tool calls reach third-party services through connected apps.
+
+A control sits on each of those paths. Each one links to its section on this page.
 
 ## Network policy
 
@@ -23,7 +29,7 @@ Teams do not see those settings. The full list is on
 
 - **Destinations** cover web domains as well as IP ranges with ports for raw connections, with no cap on the number of entries.
 - **Directory groups. Enterprise only, inside Network Controls.** Groups can set their own network policy, which replaces the team's for their members, and a lock makes the team policy effective for everyone.
-- **The policy is separate from Cloud Agent network settings**, and it's applied when a computer is created or recreated. Recreate or restart a running computer to pick up a new policy.
+- **The policy is separate from Cloud Agent network settings.** Running computers apply changes automatically within about a minute. Sleeping computers apply changes when they next wake. You don't need to recreate the computer.
 - **Restricting egress limits where data can be sent.** Dedicated data loss prevention hooks are not available.
 
 Blocking a plugin doesn't block that service's website. The connector policy and the network policy are separate layers, and closing both paths takes both controls.
@@ -44,11 +50,11 @@ Approvals keep consequential actions under the member's control. The strongest b
 > change the campaign or message the agency. Ask for approval after showing
 > the current value, proposed value, and expected impact.
 
-When an action needs approval, the conversation shows the proposed operation and its inputs. **Allow once** lets the Bot continue with that action, **Always allow** can save a matching rule, and **Deny** blocks it (on iPhone, the controls are **Approve once** and **Deny**). An approval controls the proposed action, not work already completed, and nobody should approve an action whose target or effect they can't identify.
+When an action needs approval, the conversation shows the proposed operation and its inputs. **Allow once** lets the Bot continue with that action, **Always allow** can save a matching rule, and **Deny** blocks it. The controls are the same on iPhone. An approval controls the proposed action, not work already completed, and nobody should approve an action whose target or effect they can't identify.
 
 Auto Review is the review layer behind those prompts: an independent review model that evaluates risky Bot actions before they run, covering shell commands, plugin calls, computer use, automation writes (changes to routines and event triggers), and delegation such as Cloud Agent and subagent launches. It can let an action proceed, require approval, or deny it.
 
-- **Team admins can enforce Auto-review. Enterprise only.** The switch lives on the Grok Bot page of the Cursor dashboard. When it is on, members can't turn Auto-review off.
+- **Team admins can enforce Auto-review. Enterprise only.** The switch lives on the Grok Bot page of the Cursor dashboard. When it is on, members can't turn Auto-review off, unless a group they belong to lifts the lock with **Don't enforce for this group**; see [Group settings](https://cursor.com/docs/grok-bot/teams.md#group-settings).
 - **Admins can add team Auto-review rules. Enterprise only.** These live on the Grok Bot page too. They apply to every member's Bots, show up as locked rows in the member settings table, and save automatically when an admin adds, edits, or deletes a rule. If admins turn enforcement off, the team rules stop applying and members go back to their own rules only.
 - **Members can add personal rules** under **Settings** > **General** > **Auto-review**. **Ask first** rules always stop matching actions, and **Allow automatically** rules let matching actions proceed only when the reviewer finds no other reason to stop. Members can add personal rules on top of team rules, but they only make behavior stricter; **Ask first** wins when rules conflict. Keep rules narrow and tied to a known action, like "ask first before sending any external email" or "allow automatically when running `git status` in `/workspace/reports`". Avoid broad rules like "allow everything in the browser". Personal rules are stored on the current desktop and synced to its Grok Bot computer, so another desktop installation needs its own.
 - **It doesn't review every side effect.** Memory writes and most settings changes are examples. Treat it as a complement to explicit boundaries and least privilege, working alongside controls that don't depend on a model's judgment: per-action approvals, the network policy, and per-user isolation.
@@ -86,7 +92,7 @@ Each member's computer keeps local files, browser sessions, and anything saved i
 
 - **Idle computers hibernate automatically.** Hibernation is not deletion.
 - **Image updates preserve files.** Computers on a stale system image are recreated on the fresh image with member files preserved.
-- **Member resets keep synced data.** Members can reset their own computer from the desktop app. Reset keeps the synced durable data, and recent unsynced work can be lost. See [Grok Bot computer](https://cursor.com/help/grok-bot/computer-recovery.md).
+- **Member resets keep saved data.** Members can reset their own computer from the desktop app. Like Recover, Reset rebuilds the computer from the last saved data, and very recent changes can be lost if the computer can't be reached to save them. See [Grok Bot computer](https://cursor.com/help/grok-bot/computer-recovery.md).
 - **Deletion follows the DPA.** Under the [Data Processing Agreement](https://cursor.com/terms/dpa), data is deleted or returned within 30 days of written direction after the service ends.
 - **Backups run daily.** Cursor's production control plane is covered by daily encrypted backups, replicated to a separate recovery facility.
 
@@ -98,9 +104,9 @@ Grok Bot computers run in the United States today. That is not the same as Curso
 
 ## Models and data
 
-Cursor manages model selection. There is no customer-facing model picker, and the serving mix can change over time with no fixed vendor set guaranteed. Usage analytics show the model that served each request, including failovers, and billing follows the serving model.
+Grok Bot manages model selection. There is no customer-facing model picker, and the serving mix can change over time with no fixed vendor set guaranteed. Each request goes to a first-party xAI model or a third-party model from a provider on the [sub-processor list](https://trust.cursor.com/subprocessors). Usage and spending views record this activity as Grok Bot usage rather than by model. See [Which AI models power Grok Bot?](https://cursor.com/help/grok-bot/models.md).
 
-- **The team model allowlist is Enterprise only, and enforcement is not guaranteed.** The list is honored by default. Onboarding presents an acknowledgement that Grok Bot may not follow it, so treat enforcement as configuration dependent. See [model access control](https://cursor.com/docs/enterprise/model-and-integration-management.md#model-access-control).
+- **The team model allowlist does not govern Grok Bot.** Grok Bot uses xAI first-party models and may use third-party models regardless of your [model access control](https://cursor.com/docs/enterprise/model-and-integration-management.md#model-access-control) settings. Teams with a model allowlist see this acknowledgement when they enable Grok Bot. If your contract restricts subprocessors, contact your account team.
 - **Privacy Mode applies.** While a member is on your team, the team's privacy mode governs them, and with Privacy Mode enabled, customer data is not used for training.
 - **Zero Data Retention follows Cursor's existing provider agreements.** Model providers don't keep prompts or outputs, and Grok Bot adds no separate control. Providers may run abuse and safety classifiers, and flagged data may be stored for investigation.
 
@@ -108,7 +114,7 @@ Cursor manages model selection. There is no customer-facing model picker, and th
 
 Bots can act on a member's own machine through the desktop app: run commands, read files, and move files between the cloud computer and the local machine. This is separate from work in the hosted computer, with its own control, and it's distinct from Auto Review, which governs work inside the hosted computer.
 
-Per-command approval is the default, and the approval card shows the exact command. Members choose the policy under **Settings** > **General** > **Agent** > **Execution on Local Computer**: ask every time, always allow, or never. Recommend **Never** unless a Bot has a specific reason to work on local files. Admins can cap the policy for the whole team with [Execution on Local Computer](https://cursor.com/docs/grok-bot/teams.md#execution-on-local-computer) on the Grok Bot page; a member's own setting still applies when it is stricter.
+Per-command approval is the default, and the approval card shows the exact command. Members choose the policy under **Settings** > **Computer** > **Execution on this computer** (or **Settings** > **General** > **Bot** > **Execution on Local Computer** until a desktop is listed under **Computer**): ask every time, always allow, or never. Recommend **Never** unless a Bot has a specific reason to work on local files. Admins can cap the policy for the whole team with [Execution on Local Computer](https://cursor.com/docs/grok-bot/teams.md#execution-on-local-computer) on the Grok Bot page; a member's own setting still applies when it is stricter.
 
 ## Hosting
 

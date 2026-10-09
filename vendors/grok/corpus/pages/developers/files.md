@@ -61,38 +61,6 @@ To use files with Grok, you'll need to:
 
 Here's a quick example of the complete workflow:
 
-```pythonXAI
-import os
-from xai_sdk import Client
-from xai_sdk.chat import user, file
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-# 1a. Reference a public file by URL
-file_url = "https://example-files.online-convert.com/document/txt/example.txt"
-
-# 1b. Or upload a file and reference by ID
-uploaded_file = client.files.upload(
-    b"Employee: Alice Johnson\\nDepartment: Engineering",
-    filename="employee.txt",
-)
-
-# 2. Chat with files
-chat = client.chat.create(model="grok-4.6")
-chat.append(user(
-    "Summarize both documents",
-    file(url=file_url),
-    file(uploaded_file.id),
-))
-
-# 3. Get the answer
-response = chat.sample()
-print(response.content)
-
-# 4. Clean up uploaded file
-client.files.delete(uploaded_file.id)
-```
-
 ```javascriptWithoutSDK
 // 1a. Reference a public file by URL
 const fileUrl = "https://docs.x.ai/assets/api-examples/documents/sales-report.txt";
@@ -117,7 +85,7 @@ const chatRes = await fetch("https://api.x.ai/v1/responses", {
     Authorization: \`Bearer \${process.env.XAI_API_KEY}\`,
   },
   body: JSON.stringify({
-    model: "grok-4.6",
+    model: "grok-4.7",
     input: [
       {
         role: "user",
@@ -144,6 +112,38 @@ await fetch(\`https://api.x.ai/v1/files/\${uploadedFile.id}\`, {
 });
 ```
 
+```pythonXAI
+import os
+from xai_sdk import Client
+from xai_sdk.chat import user, file
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+# 1a. Reference a public file by URL
+file_url = "https://example-files.online-convert.com/document/txt/example.txt"
+
+# 1b. Or upload a file and reference by ID
+uploaded_file = client.files.upload(
+    b"Employee: Alice Johnson\\nDepartment: Engineering",
+    filename="employee.txt",
+)
+
+# 2. Chat with files
+chat = client.chat.create(model="grok-4.7")
+chat.append(user(
+    "Summarize both documents",
+    file(url=file_url),
+    file(uploaded_file.id),
+))
+
+# 3. Get the answer
+response = chat.sample()
+print(response.content)
+
+# 4. Clean up uploaded file
+client.files.delete(uploaded_file.id)
+```
+
 ## Key Features
 
 ### Multiple File Support
@@ -162,7 +162,7 @@ Combine files with the [code execution tool](/developers/model-capabilities/file
 
 * **File size**: Maximum 512 MB per file
 * **No batch requests**: File attachments with document search are agentic requests and do not support batch mode (`n > 1`)
-* **Agentic models only**: Requires models that support agentic tool calling (e.g., `grok-4.20`, `grok-4.5`, `grok-4.6`)
+* **Agentic models only**: Requires models that support agentic tool calling (e.g., `grok-4.20`, `grok-4.5`, `grok-4.6`, `grok-4.7`)
 * **Supported file formats**:
   * Plain text files (.txt)
   * Markdown files (.md)

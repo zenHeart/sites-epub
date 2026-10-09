@@ -10,7 +10,8 @@ when the desktop or mobile app is disconnected.
 1. Keep Grok Bot open while authentication runs in your browser.
 2. Confirm the browser shows a successful Cursor sign-in.
 3. Return to the app manually if it does not regain focus.
-4. Try **Get started** or **Sign In with Cursor** again.
+4. Choose **Sign in** on the welcome screen again. If you are already in the
+   app, use **Sign In with Cursor** from Settings.
 5. Confirm that your account has Grok Bot access.
 
 If your organization uses SSO, complete the organization login rather than
@@ -30,7 +31,8 @@ If progress is still changing, wait. If it fails or stops changing:
 1. Retry from the error state.
 2. Restart Grok Bot.
 3. Check for a Grok Bot app update.
-4. Use **Update Agent Computer** if the computer remains unreachable.
+4. If the computer remains unreachable, open **Settings → Updates** and choose
+   **Update** under **Grok Bot's Computer**.
 
 ## The computer cannot be reached
 
@@ -41,17 +43,19 @@ Recover in this order:
 
 1. Choose **Retry** or reopen the conversation.
 2. Restart the Grok Bot app.
-3. Choose **Recover computer** or **Recover Agent Computer** from the
-   unreachable-computer state when offered.
-4. If recovery is not available, open **Settings → Beta** and choose **Update
-   Agent Computer**.
+3. Choose **Recover computer** from the unreachable-computer state when offered
+   (the confirmation dialog calls it **Recover Grok Bot's Computer**).
+4. If recovery is not available, open **Settings → Updates** and choose
+   **Update** under **Grok Bot's Computer**. On iPhone and Android, the same
+   controls are **Update Computer** and **Reset Computer** under **Settings →
+   Bot → Bot Computer**.
 5. Wait for the replacement computer to become available.
-6. Use **Reset Agent Computer** only if recovery and update fail and you accept losing
-   recent unsynced work.
+6. Use **Reset** only if recovery and update fail and you accept losing recent
+   unsynced work.
 
-**Recover Agent Computer** and **Update Agent Computer** preserve durable files
-and logins. **Reset Agent Computer** restores the last saved snapshot and can
-lose recent or unsynced work.
+**Recover computer** and **Update** preserve durable files and logins.
+**Reset** restores the last saved snapshot and can lose recent or unsynced
+work.
 
 ## A Bot appears stuck
 
@@ -81,7 +85,8 @@ always be avoided.
 
 ## A plugin will not install or authenticate
 
-1. Open **Settings → Plugins** and confirm the connector is installed.
+1. Open **Marketplace** from the sidebar, choose **Your plugins**, and confirm
+   the plugin is listed under **Installed**.
 2. Reopen its detail page and choose the authentication action.
 3. Complete authorization with the intended account in the browser.
 4. Return to Grok Bot and retry the task.
@@ -130,7 +135,7 @@ Read the proposed target and arguments. If the card is no longer actionable:
 2. Send the Bot a replacement instruction
 3. Ask it to regenerate the action with the corrected scope
 
-If an action keeps requiring approval, check **Settings → General →
+If an action keeps requiring approval, check **Settings → General → Bot →
 Auto-review** for a matching **Ask first** rule, including team rules your
 admin requires. **Ask first** rules take precedence over **Allow
 automatically** rules.
@@ -138,19 +143,27 @@ automatically** rules.
 ## Local computer work is refused
 
 Cloud-computer work and local-computer work use different permissions. Open
-**Settings → General → Agent → Execution on Local Computer** and review the
-policy.
+**Settings → General → Bot → Execution on Local Computer** (or the computer's
+row under **Settings → Computer → Computers**) and review the policy.
 
 Keep local access disabled unless the task specifically requires files or
 commands on the computer in front of you.
+
+## @bot did not reply on X
+
+Tagging @bot isn't available in every region yet, and @bot also stays quiet
+when a post has a video, tags @grok as well, or doesn't pass internal
+moderation. [Tag @bot on X](/grok-bot/tag-on-x#when-bot-stays-quiet) lists the
+common causes and what each @bot reply means.
 
 ## Update Grok Bot
 
 The Grok Bot app and the Agent Computer have separate updates.
 
-* To update the app, open **Settings → Beta → Check for Updates**. If an update
-  is ready, choose **Restart to Update**.
-* To rebuild the cloud computer, use **Update Agent Computer**.
+* To update the app, open **Settings → Updates → Check for Updates**. If an
+  update is ready, choose **Restart to Update**.
+* To rebuild the cloud computer, choose **Update** under **Grok Bot's
+  Computer** in the same section.
 
 Updating the desktop app does not reset the cloud computer.
 
@@ -164,6 +177,7 @@ Collect:
 * The Bot or routine name
 * The approximate time and time zone
 * The full request ID or conversation ID if one is shown
-* Whether retry, app restart, or **Update Agent Computer** changed the result
+* Whether retry, app restart, or updating Grok Bot's computer changed the
+  result
 
 Do not include passwords, one-time codes, private keys, or secret values.

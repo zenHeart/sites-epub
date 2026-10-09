@@ -8,8 +8,10 @@ Set up Grok Bot, create your first Bot, and hand it a useful task.
 
 You need:
 
-* An eligible plan: SuperGrok Plus, SuperGrok Heavy, Cursor Pro+, Cursor Ultra,
-  or Cursor Teams Standard or Premium (sign in with your Cursor account)
+* An eligible plan: every paid individual Cursor plan or the Cursor Teams plan,
+  or an individual SuperGrok, SuperGrok Plus, or SuperGrok Heavy subscription
+  linked to your Cursor account (see
+  [Plans and billing](https://cursor.com/help/grok-bot/plans))
 * The Grok Bot desktop app for macOS, Windows, or Linux
 * An app or website where your first Bot can do useful work
 
@@ -59,14 +61,19 @@ To check the architecture, run `uname -m` in a terminal: `x86_64` means x64
 and `aarch64` means Arm64.
 
 Grok Bot checks for updates automatically. You can also use **Check for
-Updates** from **Settings → Beta**.
+Updates** from **Settings → Updates**.
 
 ## 2. Sign in
 
-1. Choose **Get started** on the welcome screen. If you are already in the app,
+1. Choose **Sign in** on the welcome screen. If you are already in the app,
    use **Sign In with Cursor** from Settings.
 2. Finish authentication in the browser window that opens.
 3. Return to Grok Bot after the browser confirms the sign-in.
+4. If your access comes from a SuperGrok subscription, link it when the app
+   asks. On iPhone and Android, the access screen offers **Link Grok Account**
+   and then **Finished Linking? Refresh My Status**; on desktop,
+   **Settings → Usage & Billing** offers **Link SuperGrok Heavy** (the label
+   names the SuperGrok tier that applies to your account).
 
 Grok Bot uses your Cursor account. If your organization requires single sign-on
 (SSO), complete the normal organization sign-in flow.
@@ -95,10 +102,14 @@ For example:
 > Never change production settings.
 
 Focused Bots build more useful context than one catch-all Bot. You can add more
-Bots later with **New → Create new agent** when work naturally splits into
+Bots later with **New → Create new Bot** when work naturally splits into
 distinct roles.
 
 ## 4. Give it a first task
+
+Type in the composer, or dictate with **Start voice input** (`Cmd/Ctrl+D` on
+desktop; **Start dictation** on iPhone and Android). You can also choose
+**Start voice chat** for a live conversation.
 
 A strong request includes:
 
@@ -139,8 +150,8 @@ take over the computer.
 The browser session persists on your shared Grok Bot computer, so other Bots
 can use the same signed-in session when appropriate.
 
-For supported services, you can also install a connector from **Settings →
-Plugins** and authenticate it in your browser.
+For supported services, you can also install a plugin from **Marketplace** in
+the sidebar and authenticate it in your browser.
 
 ## 6. Review the result
 

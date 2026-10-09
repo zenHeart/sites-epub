@@ -32,7 +32,7 @@ from xai_sdk.chat import user
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     messages=[user("Say hello")],
 )
 response = chat.sample()
@@ -57,16 +57,6 @@ The `usage` object in every REST completion and response includes `cost_in_usd_t
 }
 ```
 
-```bash customLanguage="bash"
-curl https://api.x.ai/v1/responses \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "grok-4.6",
-    "input": "Say hello"
-  }' | jq '.usage.cost_in_usd_ticks'
-```
-
 ```python customLanguage="pythonOpenAISDK"
 import os
 from openai import OpenAI
@@ -77,7 +67,7 @@ client = OpenAI(
 )
 
 completion = client.chat.completions.create(
-    model="grok-4.6",
+    model="grok-4.7",
     messages=[{"role": "user", "content": "Say hello"}],
 )
 
@@ -85,6 +75,16 @@ completion = client.chat.completions.create(
 cost_ticks = completion.usage.cost_in_usd_ticks
 cost_usd = cost_ticks / 1e10
 print(f"Cost: ${cost_usd:.6f}")
+```
+
+```bash customLanguage="bash"
+curl https://api.x.ai/v1/responses \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "grok-4.7",
+    "input": "Say hello"
+  }' | jq '.usage.cost_in_usd_ticks'
 ```
 
 ```javascript customLanguage="javascriptOpenAISDK"
@@ -96,7 +96,7 @@ const client = new OpenAI({
 });
 
 const completion = await client.chat.completions.create({
-  model: "grok-4.6",
+  model: "grok-4.7",
   messages: [{ role: "user", content: "Say hello" }],
 });
 
@@ -115,26 +115,6 @@ When using the xAI SDK for streaming, each chunk carries a running `cost_in_usd_
 
 When using the OpenAI SDK or the REST API, set `stream_options: { include_usage: true }` on the request. Cost is only included in the final chunk (with empty `choices`); intermediate chunks do not contain usage data.
 
-```python customLanguage="pythonXAI"
-import os
-from xai_sdk import Client
-from xai_sdk.chat import user
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-chat = client.chat.create(
-    model="grok-4.6",
-    messages=[user("Tell me a joke")],
-)
-
-for response, chunk in chat.stream():
-    print(chunk.content, end="", flush=True)
-print()
-
-# After the stream completes, cost is on the final response.
-print(f"Cost: ${response.cost_usd:.6f}")
-```
-
 ```python customLanguage="pythonOpenAISDK"
 import os
 from openai import OpenAI
@@ -145,7 +125,7 @@ client = OpenAI(
 )
 
 stream = client.chat.completions.create(
-    model="grok-4.6",
+    model="grok-4.7",
     messages=[{"role": "user", "content": "Tell me a joke"}],
     stream=True,
     stream_options={"include_usage": True},
@@ -159,38 +139,29 @@ for chunk in stream:
         print(chunk.choices[0].delta.content or "", end="", flush=True)
 ```
 
-## Tracking cost across a conversation
-
-`cost_in_usd_ticks` is per-request; it does not accumulate across turns. In a multi-turn conversation, sum the costs yourself:
-
 ```python customLanguage="pythonXAI"
 import os
 from xai_sdk import Client
-from xai_sdk.chat import system, user
+from xai_sdk.chat import user
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 
 chat = client.chat.create(
-    model="grok-4.6",
-    messages=[system("You are a helpful assistant.")],
+    model="grok-4.7",
+    messages=[user("Tell me a joke")],
 )
 
-total_cost_usd = 0.0
-while True:
-    prompt = input("You: ")
-    if prompt.lower() == "exit":
-        break
+for response, chunk in chat.stream():
+    print(chunk.content, end="", flush=True)
+print()
 
-    chat.append(user(prompt))
-    response = chat.sample()
-    print(f"Grok: {response.content}")
-    chat.append(response)
-
-    total_cost_usd += response.cost_usd or 0.0
-    print(f"  (this turn: ${response.cost_usd or 0:.6f})")
-
-print(f"Total session cost: ${total_cost_usd:.4f}")
+# After the stream completes, cost is on the final response.
+print(f"Cost: ${response.cost_usd:.6f}")
 ```
+
+## Tracking cost across a conversation
+
+`cost_in_usd_ticks` is per-request; it does not accumulate across turns. In a multi-turn conversation, sum the costs yourself:
 
 ```python customLanguage="pythonOpenAISDK"
 import os
@@ -211,7 +182,7 @@ while True:
 
     messages.append({"role": "user", "content": prompt})
     completion = client.chat.completions.create(
-        model="grok-4.6",
+        model="grok-4.7",
         messages=messages,
     )
 
@@ -227,32 +198,38 @@ while True:
 print(f"Total session cost: ${total_cost_usd:.4f}")
 ```
 
-## Server-side tools
-
-When a request uses server-side tools (web search, X search, code execution), the model may make multiple internal calls before returning a final answer. The returned `cost_in_usd_ticks` covers all token costs and all tool invocations from that request in a single value. No separate accumulation needed.
-
 ```python customLanguage="pythonXAI"
 import os
 from xai_sdk import Client
-from xai_sdk.chat import user
-from xai_sdk.tools import web_search, x_search
+from xai_sdk.chat import system, user
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 
 chat = client.chat.create(
-    model="grok-4.6",
-    tools=[web_search(), x_search()],
+    model="grok-4.7",
+    messages=[system("You are a helpful assistant.")],
 )
-chat.append(user("What are people saying about xAI's latest announcement?"))
 
-response = chat.sample()
-print(response.content)
+total_cost_usd = 0.0
+while True:
+    prompt = input("You: ")
+    if prompt.lower() == "exit":
+        break
 
-# Shows which server-side tools were invoked and how many times.
-print(f"Tools used: {response.server_side_tool_usage}")
-# Cost covers all model decodes + every tool call in the agentic loop.
-print(f"Cost: ${response.cost_usd:.4f}")
+    chat.append(user(prompt))
+    response = chat.sample()
+    print(f"Grok: {response.content}")
+    chat.append(response)
+
+    total_cost_usd += response.cost_usd or 0.0
+    print(f"  (this turn: ${response.cost_usd or 0:.6f})")
+
+print(f"Total session cost: ${total_cost_usd:.4f}")
 ```
+
+## Server-side tools
+
+When a request uses server-side tools (web search, X search, code execution), the model may make multiple internal calls before returning a final answer. The returned `cost_in_usd_ticks` covers all token costs and all tool invocations from that request in a single value. No separate accumulation needed.
 
 ```python customLanguage="pythonOpenAISDK"
 import os
@@ -264,7 +241,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input="What are people saying about xAI's latest announcement?",
     tools=[
         {"type": "web_search"},
@@ -284,15 +261,56 @@ curl https://api.x.ai/v1/responses \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "tools": [{"type": "web_search"}, {"type": "x_search"}],
     "input": "What are people saying about xAI'\''s latest announcement?"
   }' | jq '{tools_used: .usage.num_server_side_tools_used, cost_in_usd_ticks: .usage.cost_in_usd_ticks}'
 ```
 
+```python customLanguage="pythonXAI"
+import os
+from xai_sdk import Client
+from xai_sdk.chat import user
+from xai_sdk.tools import web_search, x_search
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+chat = client.chat.create(
+    model="grok-4.7",
+    tools=[web_search(), x_search()],
+)
+chat.append(user("What are people saying about xAI's latest announcement?"))
+
+response = chat.sample()
+print(response.content)
+
+# Shows which server-side tools were invoked and how many times.
+print(f"Tools used: {response.server_side_tool_usage}")
+# Cost covers all model decodes + every tool call in the agentic loop.
+print(f"Cost: ${response.cost_usd:.4f}")
+```
+
 ## Image and video generation
 
 Image and video responses include the same `cost_in_usd_ticks` field in their `usage` object:
+
+```python customLanguage="pythonOpenAISDK"
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    api_key=os.getenv("XAI_API_KEY"),
+    base_url="https://api.x.ai/v1",
+)
+
+response = client.images.generate(
+    model="grok-imagine-image-2.0",
+    prompt="A cat on a rocket",
+)
+
+cost_ticks = response.usage.cost_in_usd_ticks
+print(f"Image cost: ${cost_ticks / 1e10:.4f}")
+```
 
 ```bash customLanguage="bash"
 # Image generation
@@ -325,24 +343,6 @@ video = client.video.generate(
     prompt="A cat floating in space",
 )
 print(f"Video cost: ${video.cost_usd:.4f}")
-```
-
-```python customLanguage="pythonOpenAISDK"
-import os
-from openai import OpenAI
-
-client = OpenAI(
-    api_key=os.getenv("XAI_API_KEY"),
-    base_url="https://api.x.ai/v1",
-)
-
-response = client.images.generate(
-    model="grok-imagine-image-2.0",
-    prompt="A cat on a rocket",
-)
-
-cost_ticks = response.usage.cost_in_usd_ticks
-print(f"Image cost: ${cost_ticks / 1e10:.4f}")
 ```
 
 ## Batch API

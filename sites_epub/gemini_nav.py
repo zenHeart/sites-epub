@@ -21,6 +21,7 @@ from different origins cannot overwrite each other in corpus/pages.
 from __future__ import annotations
 
 import re
+import time
 from urllib.parse import urljoin, urlparse
 
 from bs4 import BeautifulSoup
@@ -166,7 +167,22 @@ def parse_gemini_docs() -> list[IndexEntry]:
     docs: list[IndexEntry] = []
 
     def fetch(url: str) -> str:
-        return fetch_text(url)
+        # support.google.com rate-limits bursts with 429 even after http.py's
+        # own retries, which would abort the whole six-root vendor on one
+        # help-centre root. Back off and retry here, then let it raise: a root
+        # that stays unreachable must fail the vendor loudly rather than
+        # silently dropping its routes out of routes.json.
+        last: Exception | None = None
+        for delay in (0, 20, 60):
+            if delay:
+                time.sleep(delay)
+            try:
+                return fetch_text(url)
+            except Exception as exc:
+                last = exc
+                if "429" not in str(exc):
+                    raise
+        raise last  # type: ignore[misc]
 
     # 1. AI Studio product pages (ai.google.dev devsite nav). Scope rule
     #    (SKILL.md 范围铁律): product pages only — Gemini API usage docs
@@ -274,12 +290,16 @@ def parse_gemini_blog() -> list[IndexEntry]:
             continue
         seen.add(route)
         title = path.rsplit("/", 1)[-1].replace("-", " ")
+        # blog.google serves every article only at the trailing-slash form;
+        # the slash-less spelling 308s there (verified across all Gemini
+        # sections 2026-10-09). The sitemap emits both spellings.
+        canonical = f"https://blog.google{path}/"
         out.append(
             IndexEntry(
                 group="Blog",
                 title=title,
-                md_url=loc.rstrip("/"),
-                html_url=loc.rstrip("/"),
+                md_url=canonical,
+                html_url=canonical,
                 route=route,
                 kind="blog",
             )

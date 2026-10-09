@@ -55,14 +55,14 @@ When you publish a web application, you can choose between two hosting modes dep
 
 Your application runs on Google Cloud Run. It scales from zero when there's no traffic, and scales up automatically to handle demand.
 
-| Spec         | Detail                                                    |
-| :----------- | :-------------------------------------------------------- |
-| CPU          | 1 vCPU per instance                                       |
-| Memory       | 512 MB per instance                                       |
-| Auto-scaling | 0 to 5 instances                                          |
-| Cold starts  | Yes — instances spin up on first request after inactivity |
-| Region       | US (default)                                              |
-| Pricing      | Billed per active request duration. \$0 when idle.        |
+| Spec | Detail |
+| :- | :- |
+| CPU | 1 vCPU per instance |
+| Memory | 512 MB per instance |
+| Auto-scaling | 0 to 5 instances |
+| Cold starts | Yes — instances spin up on first request after inactivity |
+| Region | US (default) |
+| Pricing | Billed per active request duration. \$0 when idle. |
 
 Autoscale hosting is ideal for most web applications: APIs, dashboards, form-based tools, and sites with variable traffic.
 
@@ -70,27 +70,30 @@ Autoscale hosting is ideal for most web applications: APIs, dashboards, form-bas
 
 Your application runs on a reserved instance. It stays running continuously — there are no cold starts and no request timeout.
 
-| Spec         | Detail                                                                               |
-| :----------- | :----------------------------------------------------------------------------------- |
-| CPU          | 1 vCPU                                                                               |
-| Memory       | 512 MB                                                                               |
-| Auto-scaling | No — single persistent process                                                       |
-| Cold starts  | No — always warm and ready                                                           |
-| Region       | US (default)                                                                         |
-| Pricing      | Billed by actual CPU and memory consumption. Up to \~\$36/month at full utilization. |
+| Spec | Detail |
+| :- | :- |
+| CPU | 1 vCPU |
+| Memory | 512 MB |
+| Auto-scaling | No — single persistent process |
+| Cold starts | No — always warm and ready |
+| Region | US (default) |
+| Pricing | Billed by actual CPU, memory consumption and egress. <br /><br />Up to \~\$36/month at full utilization. Egress is charged |
 
 Reserved hosting is designed for workloads that need a persistent process: background workers, WebSocket connections, message queues, bots, real-time data streams, or long-running jobs.
 
 ### Choosing Between Them
 
-| Consideration                           | Autoscale                        | Reserved                                              |
-| :-------------------------------------- | :------------------------------- | :---------------------------------------------------- |
-| Traffic pattern                         | Sporadic or bursty               | Continuous or event-driven                            |
-| Cost when idle                          | \$0                              | Low (idle process still consumes minimal resources)   |
-| Persistent connections (WebSocket, SSE) | Not recommended                  | Recommended                                           |
-| Background workers / queues             | Not supported                    | Supported                                             |
-| Handles traffic spikes                  | Yes — auto-scales to 5 instances | Throttled — single instance may slow under heavy load |
+| Consideration | Autoscale | Reserved |
+| :- | :- | :- |
+| Traffic pattern | Sporadic or bursty | Continuous or event-driven |
+| Cost when idle | \$0 | Low (idle process still consumes minimal resources) |
+| Persistent connections (WebSocket, SSE) | Not recommended | Recommended |
+| Background workers / queues | Not supported | Supported |
+| Handles traffic spikes | Yes — auto-scales to 5 instances | Throttled — single instance may slow under heavy load |
 
 You can switch between hosting modes at any time from the project settings.
 
 Each account includes a complimentary monthly \$10 budget of credits shared between hosting and database cloud usage.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

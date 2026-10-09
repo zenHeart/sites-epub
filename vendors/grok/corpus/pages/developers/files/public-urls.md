@@ -2,7 +2,7 @@
 
 # Public URLs
 
-Every file you upload through the [Files API](/developers/files/managing-files) lives in private storage by default — fetching it requires your API key. **Public URLs** turn a stored file into a permanent, shareable link on the xAI CDN that anyone can open — no API key required.
+Every file you upload through the [Files API](/developers/files/managing-files) lives in private storage by default — fetching it requires your API key. **Public URLs** turn a stored file into a permanent, shareable link on the SpaceXAI CDN that anyone can open — no API key required.
 
 You stay in control after creation:
 
@@ -21,25 +21,6 @@ If you need to gate access (e.g. only logged-in users), keep the file private an
 > Integration](/developers/model-capabilities/imagine/files).
 
 ## Quick Start
-
-```pythonXAI
-import os
-from xai_sdk import Client
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-# 1. Upload (or reference an existing) file
-file = client.files.upload("/path/to/diagram.png")
-
-# 2. Create the public URL
-resp = client.files.create_public_url(file.id)
-
-print(resp.public_url)
-# https://files-cdn.x.ai/<token>/file_abc123.png
-
-# 3. When you're done sharing, revoke it
-client.files.revoke_public_url(file.id)
-```
 
 ```bash
 # 1. Upload (or reference an existing) file
@@ -60,6 +41,25 @@ curl -s -X POST "https://api.x.ai/v1/files/$FILE_ID/public-url/revoke" \\
   -H "Authorization: Bearer $XAI_API_KEY"
 ```
 
+```pythonXAI
+import os
+from xai_sdk import Client
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+# 1. Upload (or reference an existing) file
+file = client.files.upload("/path/to/diagram.png")
+
+# 2. Create the public URL
+resp = client.files.create_public_url(file.id)
+
+print(resp.public_url)
+# https://files-cdn.x.ai/<token>/file_abc123.png
+
+# 3. When you're done sharing, revoke it
+client.files.revoke_public_url(file.id)
+```
+
 > [!WARNING]
 >
 > Public URLs can only be created for files that **already exist** in your Files API storage. You
@@ -78,33 +78,6 @@ The URL's effective expiry comes from two inputs: whether you pass `expires_afte
 * **File has its own expiration at time `T`, `expires_after` set to `N`** — URL auto-revokes `N` seconds from now. `N` must be ≤ the file's remaining lifetime, otherwise the request is rejected.
 
 `expires_after` must be between **3600 seconds (1 hour)** and **2592000 seconds (30 days)**. A public URL can never outlive its file — requesting an `expires_after` greater than the file's remaining lifetime is rejected.
-
-```pythonXAI
-import os
-from datetime import timedelta
-from xai_sdk import Client
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-file = client.files.upload("/path/to/photo.png")
-
-# 1. Indefinite: omit expires_after on a file with no expiry.
-# Must call revoke_public_url to explicitly revoke the public URL.
-resp = client.files.create_public_url(file.id)
-assert not resp.HasField("expires_at")
-
-# 2. URL-bound: pass expires_after as int seconds or a timedelta
-resp = client.files.create_public_url(file.id, expires_after=timedelta(hours=24))
-print(f"Expires at: {resp.expires_at.seconds}")
-
-# 3. Inherited: file has its own expiration, omit expires_after on the URL
-ttl_file = client.files.upload(
-    b"\\x89PNG\\r\\n\\x1a\\n" + b"\\x00" * 32,
-    filename="short-lived.png",
-    expires_after=timedelta(hours=2),
-)
-resp = client.files.create_public_url(ttl_file.id)
-# resp.expires_at matches the file's expires_at
-```
 
 ```bash
 # 1. Indefinite — file has no expiry.
@@ -132,6 +105,33 @@ curl -s -X POST "https://api.x.ai/v1/files/$FILE_ID/public-url" \\
   -H "Authorization: Bearer $XAI_API_KEY" \\
   -H "Content-Type: application/json" -d '{}'
 # {"public_url":"...","expires_at":<matches file expiry>}
+```
+
+```pythonXAI
+import os
+from datetime import timedelta
+from xai_sdk import Client
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+file = client.files.upload("/path/to/photo.png")
+
+# 1. Indefinite: omit expires_after on a file with no expiry.
+# Must call revoke_public_url to explicitly revoke the public URL.
+resp = client.files.create_public_url(file.id)
+assert not resp.HasField("expires_at")
+
+# 2. URL-bound: pass expires_after as int seconds or a timedelta
+resp = client.files.create_public_url(file.id, expires_after=timedelta(hours=24))
+print(f"Expires at: {resp.expires_at.seconds}")
+
+# 3. Inherited: file has its own expiration, omit expires_after on the URL
+ttl_file = client.files.upload(
+    b"\\x89PNG\\r\\n\\x1a\\n" + b"\\x00" * 32,
+    filename="short-lived.png",
+    expires_after=timedelta(hours=2),
+)
+resp = client.files.create_public_url(ttl_file.id)
+# resp.expires_at matches the file's expires_at
 ```
 
 ## Idempotency
@@ -165,6 +165,17 @@ assert resp3.expires_at.seconds > resp1.expires_at.seconds
 
 Revoking invalidates the URL and clears it from the file's metadata. The original file is untouched and continues to be accessible through authenticated endpoints.
 
+```bash
+curl -s -X POST "https://api.x.ai/v1/files/file_abc123/public-url/revoke" \\
+  -H "Authorization: Bearer $XAI_API_KEY"
+# {"id":"file_abc123","revoked":true,"public_url":"https://files-cdn.x.ai/..."}
+
+# Calling again is safe — returns revoked=false
+curl -s -X POST "https://api.x.ai/v1/files/file_abc123/public-url/revoke" \\
+  -H "Authorization: Bearer $XAI_API_KEY"
+# {"id":"file_abc123","revoked":false}
+```
+
 ```pythonXAI
 import os
 from xai_sdk import Client
@@ -187,17 +198,6 @@ print(file.filename)
 client.files.revoke_public_url("file_abc123")  # no-op, no error
 ```
 
-```bash
-curl -s -X POST "https://api.x.ai/v1/files/file_abc123/public-url/revoke" \\
-  -H "Authorization: Bearer $XAI_API_KEY"
-# {"id":"file_abc123","revoked":true,"public_url":"https://files-cdn.x.ai/..."}
-
-# Calling again is safe — returns revoked=false
-curl -s -X POST "https://api.x.ai/v1/files/file_abc123/public-url/revoke" \\
-  -H "Authorization: Bearer $XAI_API_KEY"
-# {"id":"file_abc123","revoked":false}
-```
-
 **Revocation is all-or-nothing.** A file can only have one public URL at a time, so revoking breaks the link for everyone who has it. If a link leaks to the wrong party, the only remedy is to revoke and create a new URL — the new one will have a fresh token and the old URL stays permanently dead.
 
 ## Finding Files with a Public URL
@@ -205,6 +205,12 @@ curl -s -X POST "https://api.x.ai/v1/files/file_abc123/public-url/revoke" \\
 `get_file` and `list_files` always return the current public URL state of a file. `public_url` and `public_url_expires_at` are populated on every file with an active public URL.
 
 You can also use the [`filter`](/developers/rest-api-reference/files/manage) parameter on `list_files` to find files with or without an active public URL:
+
+```bash
+# URL-encode the filter
+curl -s "https://api.x.ai/v1/files?filter=public_url%20!%3D%20null" \\
+  -H "Authorization: Bearer $XAI_API_KEY"
+```
 
 ```pythonXAI
 import os
@@ -219,12 +225,6 @@ for f in with_url.data:
 
 # All files that do not currently have a public URL
 without_url = client.files.list(filter="public_url = null")
-```
-
-```bash
-# URL-encode the filter
-curl -s "https://api.x.ai/v1/files?filter=public_url%20!%3D%20null" \\
-  -H "Authorization: Bearer $XAI_API_KEY"
 ```
 
 ## Limitations

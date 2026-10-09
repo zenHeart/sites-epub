@@ -20,6 +20,6 @@ For customers with bespoke needs or to request custom pricing, please fill out o
 
 Please refer to our [Legal Resources](https://x.ai/legal) for our Enterprise Terms of Service and Data Processing Addendum.
 
-### Does xAI sell crypto tokens?
+### Does SpaceXAI sell crypto tokens?
 
-xAI is not affiliated with any cryptocurrency. We are aware of several scam websites that unlawfully use our name and logo.
+SpaceXAI is not affiliated with any cryptocurrency. We are aware of several scam websites that unlawfully use our name and logo.

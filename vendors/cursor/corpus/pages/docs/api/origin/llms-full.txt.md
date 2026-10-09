@@ -31,6 +31,10 @@ Requests and responses use `application/json`. JSON field names are **camelCase*
 
 Responses carry fields that sit at their default value rather than dropping them, so a `false` boolean, a `0` number, an empty string, and an empty array are all present in the body. Read the value itself instead of treating a missing key as the default. Fields documented as absent or omitted are optional in the contract and stay out of the body when they are unset.
 
+### Preview
+
+Some surface is published in preview. It appears in this reference and the spec, but its shape can change before it's generally available. The [OpenAPI specification](https://cursor.com/docs/api/origin/openapi.yaml) marks it `x-cursor-visibility: PREVIEW`. The marker can sit on an operation, a parameter, a schema, or a single field, so a stable operation can still return a preview field. Endpoints in preview carry a **Preview** badge in this reference. Treat preview fields as optional and don't build a hard dependency on their shape.
+
 ## Getting started
 
 ### Origin access
@@ -96,7 +100,7 @@ Installations use one of two repository-selection modes:
 - `all`: the installation can access every repository owned by the selected target.
 - `selected`: the installation can access only repositories selected by the workspace admin.
 
-Both modes cover mirrored repositories as well as native Origin ones, so a mirror appears in `GET /installation/repos` and can be selected. A mirror is read-only until it becomes a stable outbound mirror: see [Mirrored repositories](https://cursor.com/docs/api/origin/llms-full.txt#mirrored-repositories).
+Both modes cover mirrored repositories as well as native Origin ones, so a mirror appears in `GET /installation/repos` and can be selected. A mirror is read-only for the installation: see [Mirrored repositories](https://cursor.com/docs/api/origin/llms-full.txt#mirrored-repositories).
 
 Use `GET /installation/repos` with an installation token to discover the repositories available to that installation. App JWT endpoints can list, inspect, and delete the app's installations. Deleting an installation prevents new tokens from being minted.
 
@@ -214,11 +218,15 @@ Authorization: Bearer oit_...
 
 The response includes `expiresAt`. Mint tokens just in time, refresh them before expiration, treat them like passwords, and never log them.
 
+A token expires at most 15 minutes after creation, and never later than the app JWT that requested it, so the five-minute JWT recommended above yields a token of at most five minutes. Read `expiresAt` and mint a new token when it passes rather than assuming a duration: Origin tokens are shorter-lived than GitHub App installation tokens, and an integration that reuses a token on GitHub's schedule fails once the token expires. Sign the JWT with a later `exp` when a job needs the full 15 minutes, as the [CloneKit CI recipe](https://cursor.com/docs/origin/clonekit-ci.md#mint-a-token-in-the-job) does.
+
 Removing the installation, or deleting the app, invalidates its installation tokens before `expiresAt`. The REST API and Git over HTTPS then reject the token with `401`. Do not retry with the same token; the app must be reinstalled before it can mint a working one.
 
 An installation token cannot exceed the installation's approved scopes or repository access. You can attenuate a token to fewer `scopes` or `repositoryIds`. Empty or omitted arrays inherit the complete installation grant.
 
 Use installation tokens for repository-scoped operations, including pull requests, check-run writes, and [Git over HTTPS](https://cursor.com/docs/api/origin/llms-full.txt#git-https-authentication).
+
+To act as a member of the installation's namespace instead of as the app, mint an installation user token. See [Acting on behalf of users](https://cursor.com/docs/api/origin/acting-as-users.md).
 
 ### Git HTTPS authentication
 
@@ -251,7 +259,9 @@ git -c credential.helper="!f() { echo username=x-access-token; echo password=${I
 
 The Origin CLI credential helper is for user logins. App integrations pass the installation token as shown here. Treat the token like a password, never log it, and mint a fresh one before `expiresAt` when a job still needs Git access.
 
-On a mirrored repository, an installation token clones, fetches, and pulls, and Origin rejects `git push` with `403` until the mirror becomes a stable outbound mirror. See [Mirrored repositories](https://cursor.com/docs/api/origin/llms-full.txt#mirrored-repositories).
+Git over HTTPS meters its own budget, separate from the REST budget in [Rate limits](https://cursor.com/docs/api/origin/llms-full.txt#rate-limits). A charged Git response carries the same `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Used` headers, with `X-RateLimit-Resource` set to `git` rather than `core`. Over-budget Git requests return `429` with `Retry-After` and `X-RateLimit-Reset`. Read the headers to pace a job rather than assuming a number; unmetered requests carry no rate-limit headers.
+
+On a mirrored repository, an installation token clones, fetches, and pulls, and Origin rejects `git push` with `403`. See [Mirrored repositories](https://cursor.com/docs/api/origin/llms-full.txt#mirrored-repositories).
 
 ### User-authenticated CLI requests
 
@@ -320,48 +330,57 @@ Webhook signatures do not carry a key ID, so verification should try each active
 
 Request only the minimum scopes your app needs. `repository:metadata:read` and app or installation metadata access are granted automatically and should not be added separately to installation URLs.
 
-| Scope                                    | Allows                                                                                                                                                                                                                      |
-| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `repository:metadata:read`               | Read repository metadata. Added automatically.                                                                                                                                                                              |
-| `repository:contents:read`               | Read commits, branches, contents, comparison files, and low-level Git objects. Search file text. Download a repository archive. Clone, fetch, and pull over Git HTTPS. Sync a mirrored repository from its upstream source. |
-| `repository:contents:write`              | Push over Git HTTPS. Merge pull requests. Create branches and commit file changes through the Git data endpoints. Re-request a check run.                                                                                   |
-| `repository:pull_requests:read`          | Read pull requests, changed files, pull request commits, assigned labels, and merge eligibility.                                                                                                                            |
-| `repository:pull_requests:write`         | Create and update pull requests. Assign and remove pull request labels.                                                                                                                                                     |
-| `repository:pull_requests:reviews:read`  | Read pull request comments, comment threads, submitted reviews, and requested reviewers.                                                                                                                                    |
-| `repository:pull_requests:reviews:write` | Create and update comments; resolve and reopen comment threads; create, update, and dismiss reviews; request and remove reviewers.                                                                                          |
-| `repository:checks:read`                 | Read check suites, runs, and check run annotations.                                                                                                                                                                         |
-| `repository:checks:write`                | Create and update check suites and runs. Append check run annotations.                                                                                                                                                      |
-| `repository:labels:read`                 | Read the label definitions a repository owns.                                                                                                                                                                               |
-| `repository:labels:write`                | Create, update, and delete repository label definitions.                                                                                                                                                                    |
-| `repository:rulesets:read`               | Read repository rulesets.                                                                                                                                                                                                   |
-| `repository:rulesets:write`              | Create, update, and delete repository rulesets.                                                                                                                                                                             |
-| `repository:settings:read`               | Read the grants held directly on a repository.                                                                                                                                                                              |
-| `repository:settings:write`              | Update repository settings: the default branch, visibility, merge methods, and automatic head-branch deletion. Upsert and delete grants on a repository.                                                                    |
-| `namespace:settings:read`                | Read the grants held directly on an owner.                                                                                                                                                                                  |
-| `namespace:settings:write`               | Upsert and delete grants on an owner.                                                                                                                                                                                       |
+| Scope                                    | Allows                                                                                                                                                                                                                                                                                                                                        |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `repository:metadata:read`               | Read repository metadata. Added automatically.                                                                                                                                                                                                                                                                                                |
+| `repository:members:read`                | Read a collaborator's permission on a repository. See user email addresses in pull request, review, comment, check run, requested reviewer, and merge eligibility responses. Filter pull requests by author email.                                                                                                                            |
+| `repository:contents:read`               | Read commits, branches, contents, comparison files, and low-level Git objects. Search file text. Download a repository archive. Clone, fetch, and pull over Git HTTPS.                                                                                                                                                                        |
+| `repository:contents:write`              | Push over Git HTTPS. Merge pull requests. Create branches and commit file changes through the Git data endpoints. Re-request a check run. Dismiss another reviewer's `request_changes` review, together with `repository:pull_requests:reviews:write`.                                                                                        |
+| `repository:pull_requests:read`          | Read pull requests, changed files, pull request commits, assigned labels, and merge eligibility. Refresh a pull request's test merge against the current tip of its base branch.                                                                                                                                                              |
+| `repository:pull_requests:write`         | Create and update pull requests. Assign and remove pull request labels.                                                                                                                                                                                                                                                                       |
+| `repository:pull_requests:reviews:read`  | Read pull request comments, comment threads, submitted reviews, and requested reviewers.                                                                                                                                                                                                                                                      |
+| `repository:pull_requests:reviews:write` | Create and update comments; add and remove comment reactions; resolve and reopen comment threads; create, update, and dismiss reviews; request and remove reviewers.                                                                                                                                                                          |
+| `repository:checks:read`                 | Read check suites, runs, and check run annotations.                                                                                                                                                                                                                                                                                           |
+| `repository:checks:write`                | Create and update check suites and runs. Append check run annotations.                                                                                                                                                                                                                                                                        |
+| `repository:labels:read`                 | Read the label definitions a repository owns.                                                                                                                                                                                                                                                                                                 |
+| `repository:labels:write`                | Create, update, and delete repository label definitions.                                                                                                                                                                                                                                                                                      |
+| `repository:rulesets:read`               | Read repository rulesets.                                                                                                                                                                                                                                                                                                                     |
+| `repository:rulesets:write`              | Create, update, and delete repository rulesets.                                                                                                                                                                                                                                                                                               |
+| `repository:settings:read`               | Read the grants held directly on a repository.                                                                                                                                                                                                                                                                                                |
+| `repository:settings:write`              | Update repository settings: the default branch, visibility, merge methods, and automatic head-branch deletion. Upsert and delete grants on a repository.                                                                                                                                                                                      |
+| `repository:mirror:read`                 | Read a repository's mirror source and direction from `mirror` on [Get Repo](https://cursor.com/docs/api/origin/llms-full.txt#get-repo).                                                                                                                                                                                                       |
+| `repository:mirror:sync`                 | Sync a mirrored repository from its upstream source.                                                                                                                                                                                                                                                                                          |
+| `namespace:settings:read`                | Read the grants held directly on an owner. Read the SSH certificate authorities an owner trusts and whether it requires certificates. Read a namespace's inbound IP allowlist and its entries.                                                                                                                                                |
+| `namespace:settings:write`               | Upsert and delete grants on an owner. Add and remove SSH certificate authorities and set whether the owner requires certificates. Add, update, remove, and replace inbound IP allowlist entries and set whether the namespace enforces its allowlist. The certificate authority and allowlist writes are carried by a Cursor user credential. |
+| `namespace:user_tokens:write`            | Mint installation user tokens that act as a member of the installation's namespace. A token can't carry this scope. See [Acting on behalf of users](https://cursor.com/docs/api/origin/acting-as-users.md).                                                                                                                                   |
 
 Requesting a `:write` scope also grants the matching `:read` scope, so `repository:labels:write` covers `repository:labels:read` and you do not have to list both. The reverse does not hold: a read scope never grants writes.
 
 The installation token can only narrow these grants. It cannot add a scope or repository the workspace admin did not approve.
 
-Mirror-state changes sit outside this table. [Transition Repo Mirror](https://cursor.com/docs/api/origin/migrations#transition-repo-mirror), [Force Repo Mirror Cutover](https://cursor.com/docs/api/origin/migrations#force-repo-mirror-cutover), and [Detach Repo Mirror](https://cursor.com/docs/api/origin/migrations#detach-repo-mirror) take `repository:mirror:write` or `repository:mirror:delete`, which an app cannot request at installation: they are carried by a Cursor user credential, and the caller must also administer the repository on the mirror's upstream source.
+Mirror-state changes sit outside this table. [Transition Repo Mirror](https://cursor.com/docs/api/origin/migrations.md#transition-repo-mirror) and [Detach Repo Mirror](https://cursor.com/docs/api/origin/migrations.md#detach-repo-mirror) take `repository:mirror:write` or `repository:mirror:delete`, which an app cannot request at installation: they are carried by a Cursor user credential, and the caller must also administer the repository on the mirror's upstream source. [Get Mirror Transition Job](https://cursor.com/docs/api/origin/migrations.md#get-mirror-transition-job) and [Get Active Mirror Transition Job](https://cursor.com/docs/api/origin/migrations.md#get-active-mirror-transition-job), which read those transitions, take `repository:mirror:read` on the same credential.
 
-App management sits outside it for the same reason. [Create App](https://cursor.com/docs/api/origin/llms-full.txt#create-app) takes `namespace:apps:create`, [List Namespace Apps](https://cursor.com/docs/api/origin/llms-full.txt#list-namespace-apps) takes `namespace:apps:read`, [Get App](https://cursor.com/docs/api/origin/llms-full.txt#get-app) takes `app:settings:read`, and [Update App](https://cursor.com/docs/api/origin/llms-full.txt#update-app), [Add App Signing Key](https://cursor.com/docs/api/origin/llms-full.txt#add-app-signing-key), and [Revoke App Signing Key](https://cursor.com/docs/api/origin/llms-full.txt#revoke-app-signing-key) take `app:settings:write`. A publisher holds these on a Cursor user credential; an app cannot request them for itself.
+Installation management sits outside it too. [Add App Installation Repositories](https://cursor.com/docs/api/origin/llms-full.txt#add-app-installation-repositories) takes `namespace:installations:write`, which an app cannot request at installation: a namespace admin holds it on a Cursor user credential, and the same credential kind that consented to the installation is the one that can extend it.
+
+App management sits outside it for the same reason. [Create App](https://cursor.com/docs/api/origin/llms-full.txt#create-app) takes `namespace:apps:create`, [List Namespace Apps](https://cursor.com/docs/api/origin/llms-full.txt#list-namespace-apps) and [Get App](https://cursor.com/docs/api/origin/llms-full.txt#get-app) take `namespace:apps:read`, and [Update App](https://cursor.com/docs/api/origin/llms-full.txt#update-app), [Add App Signing Key](https://cursor.com/docs/api/origin/llms-full.txt#add-app-signing-key), and [Revoke App Signing Key](https://cursor.com/docs/api/origin/llms-full.txt#revoke-app-signing-key) take `app:settings:write`. A publisher holds these on a Cursor user credential; an app cannot request them for itself.
 
 The table covers the scopes an app requests at installation. To look up the scope a single operation requires, read its `x-origin-scopes` extension in the [OpenAPI specification](https://cursor.com/docs/api/origin/openapi.yaml). That extension covers every operation, including the `app`, `installation`, and `namespace` scopes that come with the credential itself rather than from an installation grant. An operation whose scopes all come with the credential marks its extension `ambient: true`: there is nothing to request for it, and presenting the right credential is enough.
 
 ### Mirrored repositories
 
-An installation uses every scope it holds on a native Origin repository and on a stable outbound mirror. On a repository in any other mirror state, only two scopes apply:
+An installation uses every scope it holds on a native Origin repository. On a mirrored repository, only five scopes apply:
 
 - `repository:metadata:read`
+- `repository:members:read`
 - `repository:contents:read`
+- `repository:mirror:read`
+- `repository:mirror:sync`
 
 Every other scope returns `403` on that repository, whatever the workspace admin approved. Over the REST API, repository and contents reads, commit comparison, and [Sync Mirror](https://cursor.com/docs/api/origin/llms-full.txt#sync-mirror) keep working, and Origin rejects pull requests, reviews, comments, checks, rulesets, and every write. Over Git HTTPS, clone, fetch, pull, and LFS download keep working, and Origin rejects push and LFS upload.
 
-Moving a repository out of that state is a user-credential operation rather than something an installation can do: [Transition Repo Mirror](https://cursor.com/docs/api/origin/migrations#transition-repo-mirror) advances the mirror direction, [Force Repo Mirror Cutover](https://cursor.com/docs/api/origin/migrations#force-repo-mirror-cutover) cuts over to the upstream source without pushing divergent refs back, and [Detach Repo Mirror](https://cursor.com/docs/api/origin/migrations#detach-repo-mirror) disconnects the mirror for good.
+Changing a repository's mirror state is a user-credential operation rather than something an installation can do: [Transition Repo Mirror](https://cursor.com/docs/api/origin/migrations.md#transition-repo-mirror) retries a mirror whose initial sync failed, and [Detach Repo Mirror](https://cursor.com/docs/api/origin/migrations.md#detach-repo-mirror) disconnects the mirror for good, leaving a native repository.
 
-The `mirror` object on a repository does not tell you whether writes are allowed. A mirror partway through a transition can report `mirror.status` as `outbound` and still be read-only, so treat the `403` as authoritative rather than branching on `mirror.status`.
+Treat the `403` as authoritative rather than deciding from `mirror.status` whether writes are allowed.
 
 ## Rate limits
 
@@ -375,12 +394,12 @@ The Origin API uses a shared per-principal point budget that resets on a rolling
 
 Every endpoint charges a fixed cost against that budget before the handler runs. Authentication and authorization failures are not charged.
 
-| Cost | Operations                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0    | [Get Rate Limit](https://cursor.com/docs/api/origin/llms-full.txt#get-rate-limit). Status only; does not consume points.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| 1    | Most read endpoints, plus [Create Installation Access Token](https://cursor.com/docs/api/origin/llms-full.txt#create-installation-access-token)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| 5    | Ordinary writes, plus these heavier reads: [Get Commit](https://cursor.com/docs/api/origin/llms-full.txt#get-commit), [List Commit Files](https://cursor.com/docs/api/origin/llms-full.txt#list-commit-files), [List Comparison Files](https://cursor.com/docs/api/origin/llms-full.txt#list-comparison-files), [List Pull Request Files](https://cursor.com/docs/api/origin/llms-full.txt#list-pull-request-files), [Get Repo Tarball](https://cursor.com/docs/api/origin/llms-full.txt#get-repo-tarball), and [Grep Contents](https://cursor.com/docs/api/origin/llms-full.txt#grep-contents)                                                                                     |
-| 10   | [Create App](https://cursor.com/docs/api/origin/llms-full.txt#create-app), [Create Repo](https://cursor.com/docs/api/origin/llms-full.txt#create-repo), [Create Commit From Files](https://cursor.com/docs/api/origin/llms-full.txt#create-commit-from-files), [Merge Pull Request](https://cursor.com/docs/api/origin/llms-full.txt#merge-pull-request), [Get Pull Request Mergeability](https://cursor.com/docs/api/origin/llms-full.txt#get-pull-request-mergeability), [Transition Repo Mirror](https://cursor.com/docs/api/origin/migrations#transition-repo-mirror), and [Force Repo Mirror Cutover](https://cursor.com/docs/api/origin/migrations#force-repo-mirror-cutover) |
+| Cost | Operations                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0    | [Get Rate Limit](https://cursor.com/docs/api/origin/llms-full.txt#get-rate-limit). Status only; does not consume points.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| 1    | Most read endpoints, plus [Create Installation Access Token](https://cursor.com/docs/api/origin/llms-full.txt#create-installation-access-token)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 5    | Ordinary writes, plus these heavier reads: [Get Commit](https://cursor.com/docs/api/origin/llms-full.txt#get-commit), [List Commit Files](https://cursor.com/docs/api/origin/llms-full.txt#list-commit-files), [List Comparison Files](https://cursor.com/docs/api/origin/llms-full.txt#list-comparison-files), [List Pull Request Files](https://cursor.com/docs/api/origin/llms-full.txt#list-pull-request-files), [Get Repo Tarball](https://cursor.com/docs/api/origin/llms-full.txt#get-repo-tarball), and [Grep Contents](https://cursor.com/docs/api/origin/llms-full.txt#grep-contents)                                                                                                                                                                                                                                    |
+| 10   | [Create App](https://cursor.com/docs/api/origin/llms-full.txt#create-app), [Create Repo](https://cursor.com/docs/api/origin/llms-full.txt#create-repo), [Create Commit From Files](https://cursor.com/docs/api/origin/llms-full.txt#create-commit-from-files), [Merge Pull Request](https://cursor.com/docs/api/origin/llms-full.txt#merge-pull-request), [Prepare Pull Request Merge Ref](https://cursor.com/docs/api/origin/llms-full.txt#prepare-pull-request-merge-ref), [Get Pull Request Mergeability](https://cursor.com/docs/api/origin/llms-full.txt#get-pull-request-mergeability), [Replace Inbound IP Allowlist Entries](https://cursor.com/docs/api/origin/llms-full.txt#replace-inbound-ip-allowlist-entries), and [Transition Repo Mirror](https://cursor.com/docs/api/origin/migrations.md#transition-repo-mirror) |
 
 Cursor can raise per-app minute budgets for design partners. Contact Cursor if your integration needs a higher limit.
 
@@ -430,6 +449,8 @@ Paginated endpoints accept:
 
 Responses use a resource-specific collection field and `nextPageToken`. It is empty when no next page exists. Public list responses do not include total counts. Page tokens are bound to their originating resource and filters. Restart pagination when filters change. Invalid or mismatched non-empty tokens return `400`.
 
+Send the same `pageSize` on every request in a sequence, continuations included. Most list endpoints apply a `pageSize` sent with a page token to that page and keep the previous page size when it is omitted; their `pageToken` entries say so. The rest differ in what a page token remembers, so a constant `pageSize` gets the same page size from every endpoint.
+
 ### Errors
 
 Errors use a Google RPC-style body:
@@ -454,6 +475,12 @@ Every error response carries the request ID twice: in an `X-Request-ID` response
 
 Unmatched paths under `/v1/origin`, and requests that use the wrong method on a known path, return this same body rather than a generic router error. The message names the method and path and never echoes the query string.
 
+### IDs
+
+Resource IDs are opaque strings with a type prefix, such as `app_…` for an app and `i_…` for an installation. Store and compare them as whole strings. Don't parse them, derive meaning from their characters, or rely on their sort order.
+
+An ID stays the same for the life of its resource, while names and slugs can change. A repository keeps its ID across a rename, so key cached data on the ID rather than on `{ownerSlug}/{repoName}`, and address the repository by ID as described in [Repository paths](https://cursor.com/docs/api/origin/llms-full.txt#repository-paths).
+
 ### Repository paths
 
 Repository-scoped paths take the owner slug and repository name as `{ownerSlug}/{repoName}`. Both segments resolve case-insensitively, so any casing addresses the repository. Responses return the stored name and slug rather than the casing you sent, and Git HTTPS URLs resolve the same way. Compare repository names case-insensitively, and read the canonical casing from [Get Repo](https://cursor.com/docs/api/origin/llms-full.txt#get-repo).
@@ -469,7 +496,55 @@ Resource snapshots contain the resource's current fields. Container context uses
 - `RepositoryReference` identifies a repository.
 - `PullRequestReference` identifies a pull request and nests its repository reference.
 - `ThreadReference` identifies the thread containing a pull request comment.
-- `OriginActor` identifies a public actor as one of `user`, `app`, or `serviceAccount`. Exactly one variant is present; read the identity from that variant.
+- `OriginActor` identifies a public actor as one of `user`, `app`, or `serviceAccount`. Exactly one variant is present; read the identity from that variant. A `user` can carry `performedVia`, naming the app (`performedVia.app`) or the service account (`performedVia.serviceAccount`), such as the user's personal Grok bot, that acted on the user's behalf; the user is still the actor. See [Acting on behalf of users](https://cursor.com/docs/api/origin/acting-as-users.md). A `serviceAccount`, including one in `performedVia`, carries its `id` and, when Cursor can describe the account, a `type` naming the product it acts for and a `displayName`.
+
+A `user` actor's `email` is member information. In pull request, review, comment, check run, requested reviewer, and merge eligibility responses, it's an empty string unless the caller holds `repository:members:read` on the repository. Every other response and webhook payload that carries a `user` includes it.
+
+An actor field is absent when the user or service account it names has been deleted, and requested-reviewer lists leave out a deleted reviewer. A deleted service account named in `performedVia` still appears with its `id` alone.
+
+## Check runs
+
+Apps report CI results as check suites and check runs against a commit through [Post Check Run](https://cursor.com/docs/api/origin/llms-full.txt#post-check-run) and [Batch Upsert Check Runs](https://cursor.com/docs/api/origin/llms-full.txt#batch-upsert-check-runs), and read them back through the [Checks](https://cursor.com/docs/api/origin/llms-full.txt#checks) endpoints. This section defines the terms those endpoints share: which attempt is current, how Origin orders and reports writes, and how timestamps and deadlines behave.
+
+### Attempts and the current attempt
+
+Each `(actor, key, externalId, baseSha)` reported against a commit is one suite attempt, and each `(suite, key, externalId)` within it is one run attempt. A post without `baseSha` addresses the base-agnostic attempt, so the same `externalId` posted against a second base, or with and without a base, starts a separate attempt. Reusing an `externalId` with the same base updates that attempt in place; a new `externalId` starts a new attempt and keeps the earlier one as history. Superseded attempts stay readable by id through [Get Check Suite](https://cursor.com/docs/api/origin/llms-full.txt#get-check-suite) and [Get Check Run](https://cursor.com/docs/api/origin/llms-full.txt#get-check-run).
+
+Where the API shows a commit's current checks, in [List Check Suites For Commit](https://cursor.com/docs/api/origin/llms-full.txt#list-check-suites-for-commit), [List Check Runs For Commit](https://cursor.com/docs/api/origin/llms-full.txt#list-check-runs-for-commit), and the pull request's CI state and required checks, Origin collapses attempts in two steps:
+
+1. The current suite attempt per `(actor, key)` is the one whose current runs, as the second step picks them, carry the newest `externalUpdatedAt`; a suite with no runs ranks by its `createdAt`. Ties break by the suite's `createdAt`, then its `id`, newest first.
+2. Within that suite attempt, the current run for a `key` is the one with the newest `externalUpdatedAt`. Ties break by `createdAt`, then `id`, newest first.
+
+In the commit listings, attempts reported against different `baseSha` values compete in the same collapse for their `(actor, key)`.
+
+[List Check Runs For Suite](https://cursor.com/docs/api/origin/llms-full.txt#list-check-runs-for-suite) applies the second step to the suite you name. A run is current for its commit only when its suite is the commit's current suite attempt. Because the first step ranks whole suite attempts, a run posted under a superseded suite attempt stays out of the commit's checks while another attempt holds a newer `externalUpdatedAt`; once its timestamp is the newest, its suite attempt becomes current and the other attempt's runs are hidden instead.
+
+A cancelled attempt does not displace a passing one. At either step, a cancelled attempt ranks below the other attempts of its `key` when the newest attempt of that `key` that was not cancelled passed. A run passed when it is `completed` with the conclusion `success`, `neutral`, or `skipped`. A suite attempt passed when all its current runs passed, and it counts as cancelled when its current runs are all `completed`, at least one with the conclusion `cancelled` and the rest passing. When a re-run of the passing attempt is requested, cancelled attempts whose `externalUpdatedAt` is at or after the request rank by their timestamps again. A newer cancelled suite attempt still displaces an older one that did not fully pass.
+
+A run whose re-run was requested keeps its place as the current attempt for its `key` and reads as pending until the owning app answers: see [Rerequest Check Run](https://cursor.com/docs/api/origin/llms-full.txt#rerequest-check-run).
+
+### Ordering writes
+
+Origin orders posts to one run, the same `externalId` and `key` in the suite, by `checkRun.externalUpdatedAt` at millisecond precision. A post applies only when its value is at or after the run's stored `externalUpdatedAt`, raised to `rerequestedAt` while a re-request is outstanding. Equal values apply, so the later post wins, with two exceptions that are also treated as stale: a `queued`, `in_progress`, or `failing` post cannot reopen a `completed` run at the same timestamp, and a post at exactly the stored timestamp is ignored while `rerequestedAt` is set. A newer value applies, including reopening a `completed` run, with one exception that is treated as stale whatever its timestamp: a `completed` post with the conclusion `cancelled` cannot replace a `completed` run whose conclusion is `success`, `neutral`, or `skipped`.
+
+A stale post still succeeds. The response is HTTP `200` with the stored suite and run, not the posted values, and the run's `updatedAt` does not move. Each posted run comes back as a pair: `checkRun`, the stored run after the call, and `outcome`, what the write did to it. [Post Check Run](https://cursor.com/docs/api/origin/llms-full.txt#post-check-run) returns the pair at the top level of its response, next to `checkSuite`. [Batch Upsert Check Runs](https://cursor.com/docs/api/origin/llms-full.txt#batch-upsert-check-runs) returns one pair per posted run in `results[]`, in request order, so a batch element carries the same per-run result the single call inlines. Read `outcome`, or each `results[].outcome`, to learn what the write did:
+
+| `outcome`       | Meaning                                                                                     |
+| --------------- | ------------------------------------------------------------------------------------------- |
+| `created`       | No run existed for `(externalId, key)` in the suite; one was created.                       |
+| `updated`       | An existing run was replaced with the posted values.                                        |
+| `unchanged`     | The posted values, `externalUpdatedAt` included, equal the stored run; nothing was written. |
+| `ignored_stale` | The post was ignored as stale; `checkRun` carries the stored run, not the posted values.    |
+
+`updatedAt` does not advance on an `unchanged` or `ignored_stale` post, so it cannot tell the two apart; only `outcome` can. Treat an unrecognized value as "the stored run is in the response; whether it was written is unknown". In a batch, Origin applies the rule to each run separately: a stale run does not fail the batch, and `results[]` carries the stored run in that run's slot with `outcome` `ignored_stale`.
+
+On Batch Upsert Check Runs, the top-level `checkRuns[]` is deprecated in favor of `results[]`. It is still populated with the same stored runs, in the same order, but it carries no outcomes; read `results[]` instead. This applies to the batch only: on Post Check Run, `checkRun` and `outcome` are the top-level fields to read.
+
+### Timestamps and deadlines
+
+A post whose `externalUpdatedAt`, `startedAt`, or `completedAt` is more than 60 seconds in the future returns `InvalidArgument` (HTTP 400). `completedAt` must not precede `startedAt` when both are in the same post. `deadlineAt` must not be more than 24 hours in the future.
+
+Only a running run, `in_progress` or `failing`, expires. Once its `deadlineAt` has passed, a periodic sweep completes it with the conclusion `timed_out`, sets `completedAt` if the run had none, and delivers [`repository.check_run.completed`](https://cursor.com/docs/api/origin/llms-full.txt#events). Like every completed run, a timed-out run reads with no `deadlineAt`. Expiry lands some minutes after the deadline rather than at it: the sweep runs about every 30 minutes by default, an operational setting that can change, so do not depend on the interval. A `queued` run never expires, and neither does a run with no `deadlineAt`. A `completed` post clears the deadline. Origin leaves `externalUpdatedAt` untouched when it times a run out, so a later post with a newer `externalUpdatedAt` still applies to a timed-out run. A timed-out run keeps its expired deadline until a re-request or a `completed` post clears it. A post that reopens it without its own `deadlineAt` before then gets the expired deadline back, so once the run is `in_progress` or `failing`, the next sweep times it out again. To keep the run open, send a new `deadlineAt` with that post.
 
 ## Current limitations
 
@@ -478,7 +553,7 @@ Resource snapshots contain the resource's current fields. Container context uses
 - Threads are addressable only for resolution. There is no endpoint that lists threads directly; read them from the comments they contain.
 - Push webhooks do not include a complete commit list.
 - Pull request merge supports native Origin repositories. Mirrored repositories are rejected.
-- A mirrored repository is read-only for an installation until it becomes a stable outbound mirror. See [Mirrored repositories](https://cursor.com/docs/api/origin/llms-full.txt#mirrored-repositories).
+- A mirrored repository is read-only for an installation. See [Mirrored repositories](https://cursor.com/docs/api/origin/llms-full.txt#mirrored-repositories).
 
 ## Implementation checklist
 
@@ -489,6 +564,7 @@ Resource snapshots contain the resource's current fields. Container context uses
 - Request the minimum scopes and repository access.
 - Treat page tokens as opaque and restart pagination when filters change.
 - Keep check `key` values stable and readable. Use a new immutable `externalId` for each retry and increasing `externalUpdatedAt` values for updates.
+- Read `outcome` on every Post Check Run response, and each `results[].outcome` on every Batch Upsert Check Runs response; a stale post returns `200` with the stored run. See [Check runs](https://cursor.com/docs/api/origin/llms-full.txt#check-runs).
 - Verify webhook signatures against the raw request body before parsing.
 - Deduplicate deliveries with `webhook-id` and process asynchronously after returning `2xx`.
 - Ignore unknown JSON fields for forward compatibility.
@@ -496,7 +572,7 @@ Resource snapshots contain the resource's current fields. Container context uses
 
 ## Endpoint reference
 
-Download the [OpenAPI specification](https://cursor.com/docs/api/origin/openapi.yaml) for the complete component schemas. The document declares `https://api.cursor.com` as its server and a `bearerAuth` HTTP bearer security scheme, and each operation lists the response codes that operation can return, plus a request and response example. Every operation also carries an `x-origin-scopes` extension: `scopes` holds the scope the operation requires, and `tokenTypes` holds the credential kinds it accepts. Path parameters carry the same names the URLs use, `ownerSlug` and `repoName`. Every operation carries a unique `operationId`; where one operation answers two URL shapes, the second shape's id takes a `_2` suffix, as in `OriginService_GetRepoTarball_2`.
+Download the [OpenAPI specification](https://cursor.com/docs/api/origin/openapi.yaml) for the complete component schemas. The document declares `https://api.cursor.com` as its server and a `bearerAuth` HTTP bearer security scheme, and each operation lists the response codes that operation can return, plus a request and response example. Every operation also carries an `x-origin-scopes` extension: `scopes` holds the scope the operation requires, and `tokenTypes` holds the credential kinds it accepts. Each webhook payload schema carries an `x-origin-webhook-events` extension listing the [events](https://cursor.com/docs/api/origin/llms-full.txt#event-payloads) that deliver it, and [preview](https://cursor.com/docs/api/origin/llms-full.txt#preview) surface carries `x-cursor-visibility: PREVIEW`. Path parameters carry the same names the URLs use, `ownerSlug` and `repoName`. Every operation carries a unique `operationId`; where one operation answers two URL shapes, the second shape's id takes a `_2` suffix, as in `OriginService_GetRepoTarball_2`.
 
 The JSON snippets show schema-shaped placeholder values. Response field descriptions reflect the OpenAPI schema and current platform contract.
 
@@ -504,7 +580,9 @@ The JSON snippets show schema-shaped placeholder values. Response field descript
 
 ### Get Rate Limit
 
-/v1/origin/rate\_limit
+GET
+
+`/v1/origin/rate_limit`
 
 Requires no scope (app JWT or installation access token or user access token).
 
@@ -571,7 +649,9 @@ curl --request GET \
 
 ### Get Authenticated App
 
-/v1/origin/app
+GET
+
+`/v1/origin/app`
 
 Requires no scope (app JWT).
 
@@ -593,7 +673,7 @@ Registered HTTPS URL that receives the app's webhook deliveries.
 
 `events` array
 
-Webhook event subscriptions configured for the app.
+Webhook event subscriptions configured for the app. The `installation.*` events are always delivered and never appear here.
 
 `createdAt` string
 
@@ -657,7 +737,9 @@ curl --request GET \
 
 ### List App Installations
 
-/v1/origin/app/installations
+GET
+
+`/v1/origin/app/installations`
 
 Requires no scope (app JWT).
 
@@ -784,7 +866,9 @@ curl --request GET \
 
 ### Get App Installation
 
-/v1/origin/app/installations/
+GET
+
+`/v1/origin/app/installations/{installationId}`
 
 Requires no scope (app JWT).
 
@@ -897,7 +981,9 @@ curl --request GET \
 
 ### Delete App Installation
 
-/v1/origin/app/installations/
+DELETE
+
+`/v1/origin/app/installations/{installationId}`
 
 Requires no scope (app JWT).
 
@@ -927,7 +1013,9 @@ curl --request DELETE \
 
 ### Create Installation Access Token
 
-/v1/origin/app/installations//access\_tokens
+POST
+
+`/v1/origin/app/installations/{installationId}/access_tokens`
 
 Requires no scope (app JWT).
 
@@ -988,9 +1076,84 @@ curl --request POST \
 }
 ```
 
+### Create Installation User Token
+
+POST
+
+`/v1/origin/app/installations/{installationId}/user_access_tokens`
+
+Requires no scope (app JWT).
+
+Creates an installation user token that acts on behalf of one member of the installation's namespace.
+
+The installation must belong to the authenticated app and have accepted `namespace:user_tokens:write`. Name the user with exactly one of `userId` or `userEmail`. An unknown, ambiguous, or ineligible user receives `PermissionDenied` (HTTP 403) without revealing which condition failed.
+
+The token's access is limited to permissions held by both the installation and the user. When both `scopes` and `repositoryIds` are set, each scope must be allowed on every listed repository for both principals or the request receives `PermissionDenied` (HTTP 403). See [Acting on behalf of users](https://cursor.com/docs/api/origin/acting-as-users.md) for the complete flow.
+
+#### Path Parameters
+
+`installationId` string Required
+
+The unique identifier of the installation to scope the token to. Bound from the URL path; the installation must belong to the authenticated app.
+
+#### Request Body
+
+`userId` string
+
+The user's `user_…` ID, as returned in actor payloads. Set exactly one of `userId` or `userEmail`.
+
+`userEmail` string
+
+The user's account email. It must match exactly one eligible namespace member.
+
+`scopes` array
+
+Scope strings that cap the token. Values must be unique and included in the installation's accepted scopes. Requesting `namespace:user_tokens:write` returns `InvalidArgument` (HTTP 400); it authorizes minting and cannot be delegated to the token. Empty or omitted adds no scope cap.
+
+`repositoryIds` array
+
+Repository IDs that cap the token. Values must be unique, accessible to the installation, and contain at most 50 entries. Empty or omitted adds no repository cap.
+
+#### Response Fields
+
+`token` string
+
+Short-lived installation user token. Treat it as a secret and do not log it.
+
+`expiresAt` string
+
+RFC 3339 expiration time; the token expires after at most 15 minutes and never outlives the app JWT used to mint it.
+
+```bash
+curl --request POST \
+  --url 'https://api.cursor.com/v1/origin/app/installations/INSTALLATION_ID/user_access_tokens' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "userId": "user_01k2ja2000e0080000000000c3",
+  "scopes": [
+    "repository:pull_requests:reviews:write"
+  ],
+  "repositoryIds": [
+    "repo_01k2ja2000e0080000000000q4"
+  ]
+}'
+```
+
+**Response shape:**
+
+```json
+{
+  "token": "YOUR_INSTALLATION_USER_TOKEN",
+  "expiresAt": "2026-08-01T10:30:00Z"
+}
+```
+
 ### List App Installation Repositories
 
-/v1/origin/installation/repos
+GET
+
+`/v1/origin/installation/repos`
 
 Requires no scope (installation access token).
 
@@ -1000,7 +1163,7 @@ Requires an installation access token (`oit_`) minted by CreateInstallationAcces
 
 Partners discover their repositories through this endpoint. List entries are sparse repository summaries; use [Get Repo](https://cursor.com/docs/api/origin/llms-full.txt#get-repo) for full timestamps. [Get Repo](https://cursor.com/docs/api/origin/llms-full.txt#get-repo) includes the output-only `cloneUrl`.
 
-Results include mirrored repositories. A mirror is read-only until it becomes a stable outbound mirror: see [Mirrored repositories](https://cursor.com/docs/api/origin/llms-full.txt#mirrored-repositories).
+Results include mirrored repositories, which are read-only for an installation: see [Mirrored repositories](https://cursor.com/docs/api/origin/llms-full.txt#mirrored-repositories).
 
 #### Query Parameters
 
@@ -1010,7 +1173,11 @@ Max repositories to return. Defaults to 30 when unset or 0. Values above 100 are
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page.
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. The same filter must be used when requesting subsequent pages. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
+
+`filter` string
+
+Optional case-insensitive substring filter applied to repository names and owner namespaces. A single-slash `owner/repo` value matches each half against its corresponding field. Leading and trailing whitespace is ignored; an empty value applies no filter.
 
 #### Response Fields
 
@@ -1064,7 +1231,7 @@ Opaque repository identifier assigned by the source.
 
 `repositories[].mirror.status` string
 
-Effective mirror direction during a transition, until cutover completes. Allowed values: `inbound`, `outbound`.
+Effective mirror direction during a transition, until cutover completes. Allowed values: `inbound`.
 
 `repositories[].visibility` string
 
@@ -1081,6 +1248,10 @@ Whether pull requests can land as squash merges.
 `repositories[].deleteBranchOnMerge` boolean
 
 Whether the head branch is deleted automatically on merge.
+
+`repositories[].webUrl` string
+
+Output-only web URL for this repository on Cursor. Absent when Origin can't form a link for it.
 
 `nextPageToken` string
 
@@ -1105,6 +1276,7 @@ curl --request GET \
       "id": "repo_01k2ja2000e0080000000000q4",
       "name": "rocket",
       "fullName": "acme/rocket",
+      "webUrl": "https://cursor.com/codebase/acme/rocket",
       "owner": {
         "slug": "acme",
         "id": "ns_01k2ja2000e0080000000000p3",
@@ -1123,7 +1295,9 @@ curl --request GET \
 
 ### List Webhook Deliveries
 
-/v1/origin/app/webhook/deliveries
+GET
+
+`/v1/origin/app/webhook/deliveries`
 
 Requires no scope (app JWT).
 
@@ -1293,7 +1467,9 @@ curl --request GET \
 
 ### Batch Redeliver Webhook Deliveries
 
-/v1/origin/app/webhook/deliveries:batchRedeliver
+POST
+
+`/v1/origin/app/webhook/deliveries:batchRedeliver`
 
 Requires no scope (app JWT).
 
@@ -1348,7 +1524,9 @@ curl --request POST \
 
 ### Ping Webhook
 
-/v1/origin/app/webhook/pings
+POST
+
+`/v1/origin/app/webhook/pings`
 
 Requires no scope (app JWT).
 
@@ -1403,9 +1581,11 @@ curl --request POST \
 
 ### Get App
 
-/v1/origin/apps/
+GET
 
-Requires scope `app:settings:read` (user access token).
+`/v1/origin/apps/{appId}`
+
+Requires scope `namespace:apps:read` (user access token).
 
 Returns a single app by its identifier. This is the management read for app publishers; [Get Authenticated App](https://cursor.com/docs/api/origin/llms-full.txt#get-authenticated-app) is the equivalent self-read for the app's own JWT credential.
 
@@ -1431,7 +1611,7 @@ Registered HTTPS URL that receives the app's webhook deliveries. Empty when the 
 
 `events` array
 
-Webhook event subscriptions configured for the app.
+Webhook event subscriptions configured for the app. The `installation.*` events are always delivered and never appear here.
 
 `createdAt` string
 
@@ -1495,7 +1675,9 @@ curl --request GET \
 
 ### Update App
 
-/v1/origin/apps/
+PATCH
+
+`/v1/origin/apps/{appId}`
 
 Requires scope `app:settings:write` (user access token).
 
@@ -1523,7 +1705,7 @@ Clean replace of the webhook event subscriptions. Omit to leave them unchanged.
 
 `events.events` array
 
-The app's complete new set of webhook event subscriptions. An empty list clears them.
+The app's complete new set of webhook event subscriptions. An empty list clears repository subscriptions; `installation.*` events are always delivered and cannot be listed here.
 
 `description` string
 
@@ -1565,7 +1747,7 @@ Registered HTTPS URL that receives the app's webhook deliveries. Empty when the 
 
 `events` array
 
-Webhook event subscriptions configured for the app.
+Webhook event subscriptions configured for the app. The `installation.*` events are always delivered and never appear here.
 
 `createdAt` string
 
@@ -1641,7 +1823,9 @@ curl --request PATCH \
 
 ### Add App Signing Key
 
-/v1/origin/apps//signing\_keys
+POST
+
+`/v1/origin/apps/{appId}/signing_keys`
 
 Requires scope `app:settings:write` (user access token).
 
@@ -1690,7 +1874,9 @@ curl --request POST \
 
 ### Revoke App Signing Key
 
-/v1/origin/apps//signing\_keys/
+DELETE
+
+`/v1/origin/apps/{appId}/signing_keys/{kid}`
 
 Requires scope `app:settings:write` (user access token).
 
@@ -1724,7 +1910,9 @@ curl --request DELETE \
 
 ### List Namespace Apps
 
-/v1/origin/namespaces//apps
+GET
+
+`/v1/origin/namespaces/{namespaceSlug}/apps`
 
 Requires scope `namespace:apps:read` (user access token).
 
@@ -1796,11 +1984,15 @@ curl --request GET \
 
 ### Create App
 
-/v1/origin/namespaces//apps
+POST
+
+`/v1/origin/namespaces/{namespaceSlug}/apps`
 
 Requires scope `namespace:apps:create` (user access token).
 
 Creates an app owned by a namespace. Apps are created private. Generate the Ed25519 key pair locally and send only the public key; Origin stores it to verify the app's JWTs. Invalid webhook URLs, event types, redirect URIs, or scopes return `InvalidArgument` (HTTP 400).
+
+The namespace owner must be eligible to write to Origin when the request is made, the same requirement [Create Repo](https://cursor.com/docs/api/origin/llms-full.txt#create-repo) carries. A user owner must be on a Pro, Pro Student, Pro+, Ultra, or Start plan. A team owner must have an active paid team plan, must not be on Privacy Mode (Legacy), and must not have Origin turned off by a team admin. An ineligible owner returns `FailedPrecondition` (HTTP 400). Origin reads the namespace owner's eligibility, not the calling user's.
 
 #### Path Parameters
 
@@ -1824,7 +2016,7 @@ Outbound webhook delivery URL, an absolute HTTPS URL. Empty means the app receiv
 
 `events` array
 
-Webhook event subscriptions, as event slugs from [Events](https://cursor.com/docs/api/origin/llms-full.txt#events). Unknown event types are rejected.
+Webhook event subscriptions, as event slugs from [Events](https://cursor.com/docs/api/origin/llms-full.txt#events). Unknown event types are rejected. An empty list subscribes to no events, so the app receives only the `installation.*` events, which are always delivered and cannot be listed here.
 
 `description` string
 
@@ -1858,7 +2050,7 @@ Registered HTTPS URL that receives the app's webhook deliveries. Empty when the 
 
 `events` array
 
-Webhook event subscriptions configured for the app.
+Webhook event subscriptions configured for the app. The `installation.*` events are always delivered and never appear here.
 
 `createdAt` string
 
@@ -1939,15 +2131,237 @@ curl --request POST \
 }
 ```
 
+### Add App Installation Repositories
+
+POST
+
+`/v1/origin/namespaces/{namespaceSlug}/installations/{installationId}/repos`
+
+Requires scope `namespace:installations:write` (user access token).
+
+Adds repositories to an installation's repository selection and returns the updated installation. The write is additive: the listed repositories are unioned with the current selection, a request whose repositories are all already granted succeeds without changing anything, and the installation's scopes never change.
+
+Every listed repository must belong to the target namespace, or the request returns `FailedPrecondition` (HTTP 400) and grants nothing. The same error covers an installation that already carries every repository in the namespace (`repoSelectionMode` is `all`), one that is suspended, and one that predates per-installation scopes. An installation that does not exist, or that belongs to another namespace, returns `404`; the message names the consent page to open when the app has never been installed in the namespace, because this endpoint cannot perform a first install.
+
+The caller must be a Cursor user credential with installation-management access to the namespace. App tokens, installation tokens, and service accounts cannot change an installation's repositories.
+
+#### Path Parameters
+
+`namespaceSlug` string Required
+
+Slug of the namespace the installation belongs to.
+
+`installationId` string Required
+
+Installation identifier.
+
+#### Request Body
+
+`repoIds` array Required
+
+Repository IDs to add to the installation's selection. At least one is required; values are deduplicated, and repositories that are already part of the selection are accepted without change. Every listed repository must belong to the namespace, or the request fails and nothing is granted.
+
+#### Response Fields
+
+`id` string
+
+Installation identifier that the app stores and uses to mint installation access tokens.
+
+`appId` string
+
+Identifier of the installed app.
+
+`target` object
+
+Owner selected by the customer for this installation.
+
+`target.slug` string
+
+URL-facing owner slug used with the owner ID to identify the repository owner.
+
+`target.id` string
+
+Origin owner identifier.
+
+`target.type` string
+
+Owner namespace type. Output-only. Allowed values: `team`, `user`. Omitted when unknown.
+
+`createdAt` string
+
+RFC 3339 installation creation timestamp.
+
+`updatedAt` string
+
+RFC 3339 timestamp for the latest installation update.
+
+`repoSelectionMode` string
+
+Repository grant mode; exactly all or selected.
+
+`scopes` array
+
+Scopes approved for the installation.
+
+`installedBy` object
+
+The user who originally installed the app, not the most recent re-consent actor. Output-only. Absent when that user record can no longer be read.
+
+`installedBy.id` string
+
+Public identifier for the user, prefixed `user_`.
+
+`installedBy.email` string
+
+Email address of the user.
+
+`installedBy.displayName` string
+
+Display name of the user: the account's first and last name joined with a space, the same name the product renders. Omitted when the account has no name.
+
+`installedBy.handle` string
+
+The user's claimed profile handle, without the `@` prefix. Present only while that profile is publicly visible; omitted otherwise.
+
+`suspendedAt` string
+
+RFC 3339 timestamp set while the installation is suspended. Omitted while the installation is active.
+
+`deletedAt` string
+
+RFC 3339 timestamp for the installation's deletion. Carried only on the `installation.deleted` webhook snapshot; a deleted installation no longer resolves through the API, so this endpoint never returns it.
+
+```bash
+curl --request POST \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/installations/INSTALLATION_ID/repos' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "repoIds": [
+    "repo_01k2ja2000e0080000000000q4",
+    "repo_01k2ja2000e0080000000000q5"
+  ]
+}'
+```
+
+**Response shape:**
+
+```json
+{
+  "id": "inst_01k2ja2000e0080000000000b2",
+  "appId": "app_01k2ja2000e0080000000000a1",
+  "target": {
+    "slug": "acme",
+    "id": "ns_01k2ja2000e0080000000000p3",
+    "type": "team"
+  },
+  "createdAt": "2026-08-01T09:30:00Z",
+  "updatedAt": "2026-08-02T14:45:00Z",
+  "repoSelectionMode": "selected",
+  "scopes": [
+    "repository:contents:read",
+    "repository:pull_requests:read",
+    "repository:metadata:read"
+  ]
+}
+```
+
 ## Repositories
 
 `cloneUrl` is an output-only HTTPS clone URL. [Get Repo](https://cursor.com/docs/api/origin/llms-full.txt#get-repo) includes `cloneUrl`.
 
 Partners discover their repositories through [List App Installation Repositories](https://cursor.com/docs/api/origin/llms-full.txt#list-app-installation-repositories). Namespace-wide repository listing and creation are not part of the partner API.
 
+### List Namespaces
+
+GET
+
+`/v1/origin/namespaces`
+
+Requires no scope (user access token).
+
+Lists the namespaces you can list repositories in, ordered by slug.
+
+The candidates are the namespaces of your teams, your personal namespace, and the namespaces holding repositories you were granted. Only those on which you hold `namespace:repositories:read` are returned, so every result is a valid `ownerSlug` for [List Repos](https://cursor.com/docs/api/origin/llms-full.txt#list-repos).
+
+The caller must be a Cursor user credential; the call needs no scope of its own. App tokens, installation tokens, and service accounts receive `PermissionDenied` (HTTP 403).
+
+#### Query Parameters
+
+`pageSize` integer
+
+Max namespaces to return. Defaults to 30 when unset or 0. Values above 100 are clamped to 100.
+
+`pageToken` string
+
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
+
+#### Response Fields
+
+`namespaces` array
+
+Namespaces you can list repositories in, ordered by slug.
+
+`namespaces[].namespace` object
+
+Owner reference for the namespace.
+
+`namespaces[].namespace.slug` string
+
+URL-facing owner slug. Use it as `ownerSlug` with [List Repos](https://cursor.com/docs/api/origin/llms-full.txt#list-repos).
+
+`namespaces[].namespace.id` string
+
+Origin owner identifier.
+
+`namespaces[].namespace.type` string
+
+Owner namespace type. Output-only. Allowed values: `team`, `user`. Omitted when unknown.
+
+`namespaces[].viewerCanCreateRepositories` boolean
+
+Whether [Create Repo](https://cursor.com/docs/api/origin/llms-full.txt#create-repo) in this namespace would pass authorization and the owner's plan and settings checks for you.
+
+`nextPageToken` string
+
+Opaque cursor for the next page; empty when there are no more pages.
+
+```bash
+curl --request GET \
+  --url 'https://api.cursor.com/v1/origin/namespaces' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN'
+```
+
+**Response shape:**
+
+```json
+{
+  "namespaces": [
+    {
+      "namespace": {
+        "slug": "acme",
+        "id": "ns_01k2ja2000e0080000000000p3",
+        "type": "team"
+      },
+      "viewerCanCreateRepositories": true
+    },
+    {
+      "namespace": {
+        "slug": "jane",
+        "id": "ns_01k2ja2000e0080000000000p4",
+        "type": "user"
+      },
+      "viewerCanCreateRepositories": false
+    }
+  ]
+}
+```
+
 ### List Repos
 
-/v1/origin/repos/
+GET
+
+`/v1/origin/repos/{ownerSlug}`
 
 Requires scope `namespace:repositories:read` (user access token).
 
@@ -1967,7 +2381,7 @@ Max repos to return. Defaults to 30 when unset or 0. Values above 100 are clampe
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page.
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 `filter` string
 
@@ -2041,7 +2455,7 @@ Opaque repository identifier assigned by the source.
 
 `repositories[].mirror.status` string
 
-Effective mirror direction during a transition, until cutover completes. Allowed values: `inbound`, `outbound`.
+Effective mirror direction during a transition, until cutover completes. Allowed values: `inbound`.
 
 `repositories[].visibility` string
 
@@ -2058,6 +2472,10 @@ Whether pull requests can land as squash merges.
 `repositories[].deleteBranchOnMerge` boolean
 
 Whether the head branch is deleted automatically on merge.
+
+`repositories[].webUrl` string
+
+Output-only web URL for this repository on Cursor. Absent when Origin can't form a link for it.
 
 `nextPageToken` string
 
@@ -2078,6 +2496,7 @@ curl --request GET \
       "id": "repo_01k2ja2000e0080000000000q4",
       "name": "rocket",
       "fullName": "acme/rocket",
+      "webUrl": "https://cursor.com/codebase/acme/rocket",
       "owner": {
         "slug": "acme",
         "id": "ns_01k2ja2000e0080000000000p3",
@@ -2095,7 +2514,9 @@ curl --request GET \
 
 ### Get Repo
 
-/v1/origin/repos//
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}`
 
 Requires scope `repository:metadata:read` (installation access token or user access token).
 
@@ -2165,7 +2586,7 @@ Output-only HTTPS clone URL; the get-repository response includes it.
 
 `mirror` object
 
-Mirror metadata. Absent for a native repository and before a mirror's initial sync is ready.
+Mirror metadata. Absent for a native repository, before a mirror's initial sync is ready, and when the caller doesn't hold `repository:mirror:read` on the repository.
 
 `mirror.source` string
 
@@ -2177,7 +2598,7 @@ Opaque repository identifier assigned by the source.
 
 `mirror.status` string
 
-Effective mirror direction during a transition, until cutover completes. Allowed values: `inbound`, `outbound`.
+Effective mirror direction during a transition, until cutover completes. Allowed values: `inbound`.
 
 `visibility` string
 
@@ -2195,6 +2616,10 @@ Whether pull requests can land as squash merges.
 
 Whether the head branch is deleted automatically on merge.
 
+`webUrl` string
+
+Output-only web URL for this repository on Cursor. Absent when Origin can't form a link for it.
+
 ```bash
 curl --request GET \
   --url 'https://api.cursor.com/v1/origin/repos/OWNER_SLUG/REPO_NAME' \
@@ -2208,6 +2633,7 @@ curl --request GET \
   "id": "repo_01k2ja2000e0080000000000q4",
   "name": "rocket",
   "fullName": "acme/rocket",
+  "webUrl": "https://cursor.com/codebase/acme/rocket",
   "owner": {
     "slug": "acme",
     "id": "ns_01k2ja2000e0080000000000p3",
@@ -2223,7 +2649,9 @@ curl --request GET \
 
 ### Update Repo
 
-/v1/origin/repos//
+PATCH
+
+`/v1/origin/repos/{ownerSlug}/{repoName}`
 
 Requires scope `repository:settings:write` (installation access token or user access token).
 
@@ -2329,7 +2757,7 @@ Opaque repository identifier assigned by the source.
 
 `mirror.status` string
 
-Effective mirror direction during a transition, until cutover completes. Allowed values: `inbound`, `outbound`.
+Effective mirror direction during a transition, until cutover completes. Allowed values: `inbound`.
 
 `visibility` string
 
@@ -2346,6 +2774,10 @@ Whether pull requests can land as squash merges.
 `deleteBranchOnMerge` boolean
 
 Whether the head branch is deleted automatically on merge.
+
+`webUrl` string
+
+Output-only web URL for this repository on Cursor. Absent when Origin can't form a link for it.
 
 ```bash
 curl --request PATCH \
@@ -2368,6 +2800,7 @@ curl --request PATCH \
   "id": "repo_01k2ja2000e0080000000000q4",
   "name": "rocket",
   "fullName": "acme/rocket",
+  "webUrl": "https://cursor.com/codebase/acme/rocket",
   "owner": {
     "slug": "acme",
     "id": "ns_01k2ja2000e0080000000000p3",
@@ -2387,7 +2820,9 @@ curl --request PATCH \
 
 ### Create Repo
 
-/v1/origin/repos/
+POST
+
+`/v1/origin/repos/{ownerSlug}`
 
 Requires scope `namespace:repositories:create` (user access token).
 
@@ -2479,7 +2914,7 @@ Opaque repository identifier assigned by the source.
 
 `mirror.status` string
 
-Effective mirror direction during a transition, until cutover completes. Allowed values: `inbound`, `outbound`.
+Effective mirror direction during a transition, until cutover completes. Allowed values: `inbound`.
 
 `visibility` string
 
@@ -2496,6 +2931,10 @@ Whether pull requests can land as squash merges.
 `deleteBranchOnMerge` boolean
 
 Whether the head branch is deleted automatically on merge.
+
+`webUrl` string
+
+Output-only web URL for this repository on Cursor. Absent when Origin can't form a link for it.
 
 ```bash
 curl --request POST \
@@ -2515,6 +2954,7 @@ curl --request POST \
   "id": "repo_01k2ja2000e0080000000000q4",
   "name": "rocket",
   "fullName": "acme/rocket",
+  "webUrl": "https://cursor.com/codebase/acme/rocket",
   "owner": {
     "slug": "acme",
     "id": "ns_01k2ja2000e0080000000000p3",
@@ -2530,7 +2970,9 @@ curl --request POST \
 
 ### List Branches
 
-/v1/origin/repos///branches
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/branches`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -2554,7 +2996,7 @@ Max branches to return. Defaults to 30 when unset or 0. Values above 100 are cla
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page. Encodes the page offset, so `page_size` on a follow-up request is ignored when a token is supplied.
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. Encodes the resume position. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 #### Response Fields
 
@@ -2599,15 +3041,86 @@ curl --request GET \
 }
 ```
 
+### Get Repository Collaborator Permission
+
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/collaborators/{userId}/permission`
+
+Requires scope `repository:members:read` (installation access token or user access token).
+
+Returns a user's permission on a repository, combined from their direct and inherited grants. The result describes the user's grants and does not depend on the credential you call with. Only repositories whose source of truth is Origin are supported. A user whose grants give no access, an ID that names no active account, a mirrored repository, and a repository that does not exist or is not visible to you all return the same `404`.
+
+#### Path Parameters
+
+`ownerSlug` string Required
+
+Owning entity's unique slug.
+
+`repoName` string Required
+
+Repo name, unique to the owner entity.
+
+`userId` string Required
+
+Public ID of the user (`user_…`). A malformed ID returns `InvalidArgument` (HTTP 400).
+
+#### Response Fields
+
+`user` object
+
+The collaborator. Always set.
+
+`user.id` string
+
+Public identifier for the user.
+
+`user.email` string
+
+Email address of the user. Always set.
+
+`user.displayName` string
+
+Display name of the user: the account's first and last name joined with a space, the same name the product renders. Omitted when the account has no name.
+
+`user.handle` string
+
+The user's claimed profile handle, without the `@` prefix. Present only while that profile is publicly visible; omitted otherwise.
+
+`permission` string
+
+The user's permission on the repository, combined from every grant that reaches it: grants on the repository and on its owner, whether held directly, through a group, or through the owning team's built-in groups. Owner-level `PERMISSION_READ`, `PERMISSION_CONTRIBUTOR`, and `PERMISSION_WRITE` grants count only on internal repositories, and `PERMISSION_CONTRIBUTOR` counts as `read`. The highest level wins, so the value can differ from the `permission` of any single grant that [List Repository Grants](https://cursor.com/docs/api/origin/llms-full.txt#list-repository-grants) returns. It is `custom` when a custom policy gives repository access that none of the user's preset grants does. Allowed values: `read`, `write`, `admin`, `custom`.
+
+```bash
+curl --request GET \
+  --url 'https://api.cursor.com/v1/origin/repos/OWNER_SLUG/REPO_NAME/collaborators/USER_ID/permission' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN'
+```
+
+**Response shape:**
+
+```json
+{
+  "user": {
+    "id": "user_01k2ja2000e0080000000000c3",
+    "email": "jane@acme.dev",
+    "displayName": "Jane Doe"
+  },
+  "permission": "write"
+}
+```
+
 ### Get Repo Tarball
 
-/v1/origin/repos///tarball/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/tarball/{ref}`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
 Downloads a gzip-compressed tar of the repository tree at `ref`.
 
-Origin keys the archive on the repository and the commit `ref` resolves to. The first request for a given commit responds `200` with `Content-Type: application/gzip` and streams the archive as the response body. Later requests for the same commit respond `302` with an empty body and a signed download URL in `Location`, valid for 15 minutes; follow the redirect to fetch the bytes. Archive entries sit at the root of the tar, with no wrapping directory. An empty repository returns `ABORTED` (HTTP 409 Conflict), and a ref that does not resolve returns `404`.
+Origin keys the archive on the repository and the commit `ref` resolves to. The first request for a given commit responds `200` with `Content-Type: application/gzip` and streams the archive as the response body. Later requests for the same commit respond `302` with an empty body and a signed download URL in `Location`, valid for 15 minutes; follow the redirect to fetch the bytes. The archive contains a single top-level directory named `{ownerSlug}-{repoName}-{shortSha}/`, where `shortSha` is the first 7 hex characters of the resolved commit, matching the layout of GitHub's tarball endpoint. An empty repository returns `ABORTED` (HTTP 409 Conflict), and a ref that does not resolve returns `404`.
 
 Send the ref as a query parameter instead of a path segment to address a ref containing "/": `GET /v1/origin/repos/{ownerSlug}/{repoName}/tarball?ref=refs/heads/main`. Omit it to archive the repository's default branch.
 
@@ -2652,9 +3165,11 @@ curl --request GET --location --output repo.tar.gz \
 
 ### Sync Mirror
 
-/v1/origin/repos//:syncMirror
+POST
 
-Requires scope `repository:contents:read` (installation access token or user access token).
+`/v1/origin/repos/{ownerSlug}/{repoName}:syncMirror`
+
+Requires scope `repository:mirror:sync` (installation access token or user access token).
 
 Synchronizes one ref of a mirrored repository from its upstream source. Returns HTTP `200` when the sync target is satisfied, or HTTP `202` when the sync is still pending. `wait=false` (the default) schedules the sync and usually returns `202`; it returns `200` immediately when `sha` is already reachable from `ref`. `wait=true` blocks until satisfied or the wait budget (\~2 minutes) expires; expiry still returns `202` and the sync continues in the background. Repositories that do not pull from an upstream source are rejected.
 
@@ -2707,27 +3222,23 @@ curl --request POST \
 }
 ```
 
-The mirror-transition endpoints are documented on the [Origin Migration API](https://cursor.com/docs/api/origin/migrations). [Sync Mirror](https://cursor.com/docs/api/origin/llms-full.txt#sync-mirror) stays on this page.
+The mirror-transition endpoints are documented on the [Origin Migration API](https://cursor.com/docs/api/origin/migrations.md). [Sync Mirror](https://cursor.com/docs/api/origin/llms-full.txt#sync-mirror) stays on this page.
 
 ### Detach Repo Mirror
 
-See [Detach Repo Mirror](https://cursor.com/docs/api/origin/migrations#detach-repo-mirror).
+See [Detach Repo Mirror](https://cursor.com/docs/api/origin/migrations.md#detach-repo-mirror).
 
 ### Get Mirror Transition Job
 
-See [Get Mirror Transition Job](https://cursor.com/docs/api/origin/migrations#get-mirror-transition-job).
+See [Get Mirror Transition Job](https://cursor.com/docs/api/origin/migrations.md#get-mirror-transition-job).
 
 ### Get Active Mirror Transition Job
 
-See [Get Active Mirror Transition Job](https://cursor.com/docs/api/origin/migrations#get-active-mirror-transition-job).
-
-### Force Repo Mirror Cutover
-
-See [Force Repo Mirror Cutover](https://cursor.com/docs/api/origin/migrations#force-repo-mirror-cutover).
+See [Get Active Mirror Transition Job](https://cursor.com/docs/api/origin/migrations.md#get-active-mirror-transition-job).
 
 ### Transition Repo Mirror
 
-See [Transition Repo Mirror](https://cursor.com/docs/api/origin/migrations#transition-repo-mirror).
+See [Transition Repo Mirror](https://cursor.com/docs/api/origin/migrations.md#transition-repo-mirror).
 
 ## Checks
 
@@ -2741,19 +3252,25 @@ See [Transition Repo Mirror](https://cursor.com/docs/api/origin/migrations#trans
   - `text`: extended Markdown details, up to 65,535 UTF-8 bytes.
 - Use `detailsUrl` for a link to the provider's external results page.
 
+[Check runs](https://cursor.com/docs/api/origin/llms-full.txt#check-runs) defines which attempt is current, how `externalUpdatedAt` orders writes and what `outcome` reports, and the timestamp and deadline rules these endpoints share.
+
 ### Post Check Run
 
-/v1/origin/repos///check-runs
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/check-runs`
 
 Requires scope `repository:checks:write` (installation access token).
 
 Upserts a check suite + check run using an installation access token with `repository:checks:write`. The write is attributed to the app that owns the authenticated installation. A repeated call with the same `(repo, head_sha, suite.key, check.key)` updates the existing check run in place rather than creating a duplicate.
 
-The endpoint atomically resolves or creates the suite attempt and upserts one run attempt. `externalUpdatedAt` orders updates to the same run identity; stale retries cannot overwrite newer state.
+The endpoint atomically resolves or creates the suite attempt and upserts one run attempt. `externalUpdatedAt` orders updates to the same run identity; stale retries cannot overwrite newer state, and a `cancelled` completion cannot replace a stored passing result; see [Ordering writes](https://cursor.com/docs/api/origin/llms-full.txt#ordering-writes). A post that is ignored as stale, and a post that repeats the stored values, both still return `200` with the stored suite and run, so read `outcome` to tell `ignored_stale` and `unchanged` apart from `created` and `updated`. `updatedAt` does not move for either, so it cannot distinguish them.
 
-`deadlineAt` records an optional deadline on the run. Origin stores it, returns it on reads, and clears it once the run reaches `completed`. A deadline more than 24 hours in the future is rejected with `InvalidArgument` (HTTP 400) rather than clamped.
+Within a suite, the current attempt for a run `key` is the run with the newest `externalUpdatedAt`, breaking ties by `createdAt` and then by `id`, newest first. Each `(actor, key, externalId)` reported against a commit is one suite attempt, and the current attempt per `(actor, key)` is the one whose runs carry the newest `externalUpdatedAt`, with a suite that has no runs ranking by its own `createdAt`. A run is current for its commit only while its suite is the commit's current attempt, so a run posted under an older suite `externalId` stays hidden from the commit-scoped listings while another attempt of that suite has newer activity. At both levels, a cancelled attempt does not displace a passing one; [Attempts and the current attempt](https://cursor.com/docs/api/origin/llms-full.txt#attempts-and-the-current-attempt) has the rule. Superseded attempts stay readable by id.
 
-When the deadline passes on a run still `in_progress`, Origin completes the run itself with a `timed_out` conclusion and delivers `repository.check_run.completed`. Expiry runs as a periodic sweep rather than on a per-run timer, so a run can sit past its deadline briefly before Origin closes it. A `queued` run never expires, and neither does a run that carries no `deadlineAt`. Completing the run yourself before the deadline clears it. Origin leaves the run's `externalUpdatedAt` untouched when it times a run out, so a later completion from your provider can still overwrite the `timed_out` conclusion.
+`deadlineAt` records an optional deadline on the run. Origin stores it and returns it on reads until the run reaches `completed`. A deadline more than 24 hours in the future is rejected with `InvalidArgument` (HTTP 400) rather than clamped.
+
+When the deadline passes on a run still `in_progress` or `failing`, Origin completes the run itself with a `timed_out` conclusion, setting `completedAt` if the run had none, and delivers `repository.check_run.completed`. Expiry runs as a periodic sweep rather than on a per-run timer, so expiry lands some minutes after the deadline rather than at it. The sweep runs about every 30 minutes by default, an operational setting that can change. A `queued` run never expires, and neither does a run that carries no `deadlineAt`. Completing the run yourself before the deadline clears it. Origin leaves the run's `externalUpdatedAt` untouched when it times a run out, so a later completion from your provider can still overwrite the `timed_out` conclusion. A timed-out run keeps its expired deadline until a re-request or a `completed` post clears it, and a later post that reopens it as `in_progress` or `failing` without a new `deadlineAt` before then gets the expired deadline back, so the next sweep times the run out again.
 
 #### Path Parameters
 
@@ -2770,6 +3287,10 @@ Repo name, unique to the owner entity.
 `headSha` string Required
 
 Head commit SHA the check run is reported against (40- or 64-char hex).
+
+`baseSha` string
+
+Comparison base the check run was evaluated against (40- or 64-character hex): a pull request version's `baseSha`. It is part of the check suite and check run identity, so posting the same `externalId` and `key` against another base creates a separate attempt instead of overwriting the first. Omit it for a base-agnostic run; a later post must repeat the same value to address the same attempt. An empty string returns `InvalidArgument` (HTTP 400).
 
 `checkSuite` object Required
 
@@ -2805,7 +3326,7 @@ Human-facing check-run name.
 
 `checkRun.status` string Required
 
-Settable values: `CHECK_RUN_LIFECYCLE_STATUS_UNSPECIFIED`, `queued`, `in_progress`, `completed`. The schema also lists `rerequested`, which only Origin sets on re-request; a request carrying it returns `InvalidArgument` (HTTP 400).
+Settable values: `CHECK_RUN_LIFECYCLE_STATUS_UNSPECIFIED`, `queued`, `in_progress`, `failing`, `completed`. `failing` marks a run that keeps going after a step failed: post it without a `conclusion`, then post `completed` with the verdict when the run ends. The schema also lists `rerequested`, which only Origin sets on re-request; a request carrying it returns `InvalidArgument` (HTTP 400).
 
 `checkRun.conclusion` string
 
@@ -2817,11 +3338,11 @@ The external system's last-update time. Used to order concurrent updates so a st
 
 `checkRun.startedAt` string
 
-When the check run started.
+When the check run started. A value more than 60 seconds in the future returns `InvalidArgument` (HTTP 400).
 
 `checkRun.completedAt` string
 
-When the check run completed.
+When the check run completed. A value more than 60 seconds in the future returns `InvalidArgument` (HTTP 400), as does a value that precedes `startedAt` when both are posted together.
 
 `checkRun.detailsUrl` string
 
@@ -2897,6 +3418,10 @@ Owner namespace type. Output-only. Allowed values: `team`, `user`. Omitted when 
 
 Commit SHA to which the suite is attached.
 
+`checkSuite.baseSha` string
+
+Comparison base this attempt was reported against (lowercase hex), when the reporting app supplied one: a pull request version's `baseSha`. It is part of the attempt's identity, so an app can report one attempt per head and base pair. Absent for a base-agnostic attempt, which applies to every pull request at `sha`.
+
 `checkSuite.key` string
 
 Stable app-chosen required-check identity. Required checks match on app plus this key, not name.
@@ -2965,6 +3490,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`checkSuite.actor.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`checkSuite.actor.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `checkRun` object
 
 The upserted check run.
@@ -3013,6 +3546,10 @@ Server-assigned identifier of the containing check suite.
 
 Commit SHA to which the run is attached.
 
+`checkRun.baseSha` string
+
+Comparison base this run was reported against (lowercase hex), when the reporting app supplied one; always the owning suite's `baseSha`. Absent for a base-agnostic run.
+
 `checkRun.key` string
 
 Stable app-chosen logical run identity; required checks may match on app, suite key, and this key.
@@ -3023,7 +3560,7 @@ Display-only run name; it is not used for required-check matching.
 
 `checkRun.status` string
 
-Lifecycle status; queued, in\_progress, completed, or rerequested. A rerequested run is a completed run whose re-run was asked for and the owning app has not answered yet: treat it as pending and render it like queued.
+Lifecycle status; queued, in\_progress, failing, completed, or rerequested. A failing run is still going but its app already knows it will not pass: it has no conclusion yet and counts as pending for required checks. A rerequested run is a completed run whose re-run was asked for and the owning app has not answered yet: treat it as pending and render it like queued.
 
 `checkRun.conclusion` string
 
@@ -3059,7 +3596,7 @@ Provider identity for one attempt. Reuse it to update that attempt and use a new
 
 `checkRun.actor` object
 
-Public actor that produced the run.
+Public actor that produced the run. Always the owning check suite's `actor`.
 
 `checkRun.actor.user` object
 
@@ -3101,6 +3638,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`checkRun.actor.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`checkRun.actor.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `checkRun.output` object
 
 Human-readable result object containing title, summary, and longer text when supplied.
@@ -3132,6 +3677,10 @@ RFC 3339 timestamp of the outstanding re-request. Absent when no re-request is p
 `checkRun.rerequestedBy` object
 
 Principal that asked for the re-run, carrying the same actor variants as `actor`. Present whenever `rerequestedAt` is set, and cleared together with it.
+
+`outcome` string
+
+What this call did to `checkRun`. Allowed values: `created`, `updated`, `unchanged`, `ignored_stale`. A post that was ignored as stale and a post that repeated the stored values both return the stored run, so this field is the only way to tell them apart.
 
 ```bash
 curl --request POST \
@@ -3231,19 +3780,24 @@ curl --request POST \
       "summary": "128 tests passed.",
       "text": "All suites green."
     }
-  }
+  },
+  "outcome": "created"
 }
 ```
 
 ### Batch Upsert Check Runs
 
-/v1/origin/repos///check-runs:batchUpsert
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/check-runs:batchUpsert`
 
 Requires scope `repository:checks:write` (installation access token).
 
 Atomically upserts several check runs belonging to one suite. The request accepts at most 10 runs and rejects duplicate `(external_id, key)` identities. Every run is committed or the entire request is rolled back.
 
 Each run accepts the same optional `deadlineAt` as [Post Check Run](https://cursor.com/docs/api/origin/llms-full.txt#post-check-run).
+
+Origin applies the `externalUpdatedAt` ordering rule to each run separately. A run ignored as stale does not fail the batch: the response carries the stored run in its place, and `results[].outcome` reports each run's verdict in request order.
 
 #### Path Parameters
 
@@ -3260,6 +3814,10 @@ Repo name, unique to the owner entity.
 `headSha` string Required
 
 Head commit SHA the check runs are reported against (40- or 64-char hex).
+
+`baseSha` string
+
+Comparison base every check run in this request was evaluated against (40- or 64-character hex); see `baseSha` on [Post Check Run](https://cursor.com/docs/api/origin/llms-full.txt#post-check-run). Omit it for base-agnostic runs. An empty string returns `InvalidArgument` (HTTP 400).
 
 `checkSuite` object Required
 
@@ -3295,7 +3853,7 @@ Human-facing check-run name.
 
 `checkRuns[0].status` string Required
 
-Settable values: `CHECK_RUN_LIFECYCLE_STATUS_UNSPECIFIED`, `queued`, `in_progress`, `completed`. The schema also lists `rerequested`, which only Origin sets on re-request; a request carrying it returns `InvalidArgument` (HTTP 400).
+Settable values: `CHECK_RUN_LIFECYCLE_STATUS_UNSPECIFIED`, `queued`, `in_progress`, `failing`, `completed`. `failing` marks a run that keeps going after a step failed: post it without a `conclusion`, then post `completed` with the verdict when the run ends. The schema also lists `rerequested`, which only Origin sets on re-request; a request carrying it returns `InvalidArgument` (HTTP 400).
 
 `checkRuns[0].conclusion` string
 
@@ -3307,11 +3865,11 @@ The external system's last-update time. Used to order concurrent updates so a st
 
 `checkRuns[0].startedAt` string
 
-When the check run started.
+When the check run started. A value more than 60 seconds in the future returns `InvalidArgument` (HTTP 400).
 
 `checkRuns[0].completedAt` string
 
-When the check run completed.
+When the check run completed. A value more than 60 seconds in the future returns `InvalidArgument` (HTTP 400), as does a value that precedes `startedAt` when both are posted together.
 
 `checkRuns[0].detailsUrl` string
 
@@ -3387,6 +3945,10 @@ Owner namespace type. Output-only. Allowed values: `team`, `user`. Omitted when 
 
 Commit SHA to which the suite is attached.
 
+`checkSuite.baseSha` string
+
+Comparison base this attempt was reported against (lowercase hex), when the reporting app supplied one: a pull request version's `baseSha`. It is part of the attempt's identity, so an app can report one attempt per head and base pair. Absent for a base-agnostic attempt, which applies to every pull request at `sha`.
+
 `checkSuite.key` string
 
 Stable app-chosen required-check identity. Required checks match on app plus this key, not name.
@@ -3455,9 +4017,17 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`checkSuite.actor.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`checkSuite.actor.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `checkRuns` array
 
-Persisted check runs in the same order as the request.
+Deprecated: read `results[].checkRun` instead. Still populated, in request order.
 
 `checkRuns[].id` string
 
@@ -3503,6 +4073,10 @@ Server-assigned identifier of the containing check suite.
 
 Commit SHA to which the run is attached.
 
+`checkRuns[].baseSha` string
+
+Comparison base this run was reported against (lowercase hex), when the reporting app supplied one; always the owning suite's `baseSha`. Absent for a base-agnostic run.
+
 `checkRuns[].key` string
 
 Stable app-chosen logical run identity; required checks may match on app, suite key, and this key.
@@ -3513,7 +4087,7 @@ Display-only run name; it is not used for required-check matching.
 
 `checkRuns[].status` string
 
-Lifecycle status; queued, in\_progress, completed, or rerequested. A rerequested run is a completed run whose re-run was asked for and the owning app has not answered yet: treat it as pending and render it like queued.
+Lifecycle status; queued, in\_progress, failing, completed, or rerequested. A failing run is still going but its app already knows it will not pass: it has no conclusion yet and counts as pending for required checks. A rerequested run is a completed run whose re-run was asked for and the owning app has not answered yet: treat it as pending and render it like queued.
 
 `checkRuns[].conclusion` string
 
@@ -3549,7 +4123,7 @@ Provider identity for one attempt. Reuse it to update that attempt and use a new
 
 `checkRuns[].actor` object
 
-Public actor that produced the run.
+Public actor that produced the run. Always the owning check suite's `actor`.
 
 `checkRuns[].actor.user` object
 
@@ -3591,6 +4165,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`checkRuns[].actor.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`checkRuns[].actor.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `checkRuns[].output` object
 
 Human-readable result object containing title, summary, and longer text when supplied.
@@ -3622,6 +4204,18 @@ RFC 3339 timestamp of the outstanding re-request. Absent when no re-request is p
 `checkRuns[].rerequestedBy` object
 
 Principal that asked for the re-run, carrying the same actor variants as `actor`. Present whenever `rerequestedAt` is set, and cleared together with it.
+
+`results` array
+
+One result per posted run, in request order.
+
+`results[].checkRun` object
+
+The stored check run after this call: the posted values when `outcome` is `created` or `updated`, and the run as it already was otherwise. Carries the same fields as `checkRuns[]`.
+
+`results[].outcome` string
+
+What this call did to `results[].checkRun`. Allowed values: `created`, `updated`, `unchanged`, `ignored_stale`. A run ignored as stale and a run that repeated the stored values both return the stored run, so this field is the only way to tell them apart.
 
 ```bash
 curl --request POST \
@@ -3725,13 +4319,58 @@ curl --request POST \
         "text": "All suites green."
       }
     }
+  ],
+  "results": [
+    {
+      "checkRun": {
+        "id": "cr_01k2ja2000e0080000000000g7",
+        "repository": {
+          "id": "repo_01k2ja2000e0080000000000q4",
+          "name": "rocket",
+          "owner": {
+            "slug": "acme",
+            "id": "ns_01k2ja2000e0080000000000p3",
+            "type": "team"
+          }
+        },
+        "checkSuite": {
+          "id": "crg_01k2ja2000e0080000000000h8"
+        },
+        "sha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
+        "key": "ci-8842-unit-tests",
+        "name": "unit-tests",
+        "status": "completed",
+        "conclusion": "success",
+        "detailsUrl": "https://ci.acme.dev/runs/8842",
+        "externalUpdatedAt": "2026-08-02T14:44:30Z",
+        "startedAt": "2026-08-02T14:40:00Z",
+        "completedAt": "2026-08-02T14:44:30Z",
+        "createdAt": "2026-08-01T09:30:00Z",
+        "updatedAt": "2026-08-02T14:45:00Z",
+        "externalId": "run-8842",
+        "actor": {
+          "user": {
+            "id": "user_01k2ja2000e0080000000000c3",
+            "email": "jane@acme.dev"
+          }
+        },
+        "output": {
+          "title": "Unit tests",
+          "summary": "128 tests passed.",
+          "text": "All suites green."
+        }
+      },
+      "outcome": "created"
+    }
   ]
 }
 ```
 
 ### Get Check Run
 
-/v1/origin/repos///check-runs/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/check-runs/{checkRunId}`
 
 Requires scope `repository:checks:read` (installation access token or user access token).
 
@@ -3797,6 +4436,10 @@ Server-assigned identifier of the containing check suite.
 
 Commit SHA to which the run is attached.
 
+`baseSha` string
+
+Comparison base this run was reported against (lowercase hex), when the reporting app supplied one; always the owning suite's `baseSha`. Absent for a base-agnostic run.
+
 `key` string
 
 Stable app-chosen logical run identity; required checks may match on app, suite key, and this key.
@@ -3807,7 +4450,7 @@ Display-only run name; it is not used for required-check matching.
 
 `status` string
 
-Lifecycle status; queued, in\_progress, completed, or rerequested. A rerequested run is a completed run whose re-run was asked for and the owning app has not answered yet: treat it as pending and render it like queued.
+Lifecycle status; queued, in\_progress, failing, completed, or rerequested. A failing run is still going but its app already knows it will not pass: it has no conclusion yet and counts as pending for required checks. A rerequested run is a completed run whose re-run was asked for and the owning app has not answered yet: treat it as pending and render it like queued.
 
 `conclusion` string
 
@@ -3843,7 +4486,7 @@ Provider identity for one attempt. Reuse it to update that attempt and use a new
 
 `actor` object
 
-Public actor that produced the run.
+Public actor that produced the run. Always the owning check suite's `actor`.
 
 `actor.user` object
 
@@ -3884,6 +4527,14 @@ Service account variant of the actor. Set when a service account performed the a
 `actor.serviceAccount.id` string
 
 Public identifier for the service account.
+
+`actor.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`actor.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
 
 `output` object
 
@@ -3968,13 +4619,15 @@ curl --request GET \
 
 ### List Check Run Annotations
 
-/v1/origin/repos///check-runs//annotations
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/check-runs/{checkRunId}/annotations`
 
 Requires scope `repository:checks:read` (installation access token or user access token).
 
 Lists a check run's annotations in ascending ID order.
 
-Annotation IDs are time-sortable, so ascending ID order is also creation order. A page token fixes the page size and scope for the rest of the sequence, so `pageSize` is ignored once you send one.
+Annotation IDs are time-sortable, so ascending ID order is also creation order. A page token fixes the scope for the rest of the sequence.
 
 #### Path Parameters
 
@@ -3998,7 +4651,7 @@ Maximum annotations to return. Defaults to 30 when omitted or zero; values above
 
 `pageToken` string
 
-Opaque cursor from a previous response's `nextPageToken`. Omit for the first page.
+Opaque cursor from a previous response's `nextPageToken`. Omit for the first page. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 #### Response Fields
 
@@ -4020,7 +4673,7 @@ Severity of the annotation. Allowed values: `notice`, `warning`, `failure`.
 
 `annotations[].message` string
 
-Annotation message.
+Annotation message. May contain Markdown.
 
 `annotations[].title` string
 
@@ -4101,7 +4754,9 @@ curl --request GET \
 
 ### Create Check Run Annotations
 
-/v1/origin/repos///check-runs//annotations
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/check-runs/{checkRunId}/annotations`
 
 Requires scope `repository:checks:write` (installation access token).
 
@@ -4135,7 +4790,7 @@ Severity of the annotation. Allowed values: `notice`, `warning`, `failure`.
 
 `annotations[].message` string Required
 
-Annotation message. Must be non-empty. Maximum 65,535 bytes of UTF-8.
+Annotation message. May contain Markdown. Must be non-empty. Maximum 65,535 bytes of UTF-8.
 
 `annotations[].title` string
 
@@ -4193,7 +4848,7 @@ Severity of the annotation. Allowed values: `notice`, `warning`, `failure`.
 
 `annotations[].message` string
 
-Annotation message.
+Annotation message. May contain Markdown.
 
 `annotations[].title` string
 
@@ -4285,7 +4940,9 @@ curl --request POST \
 
 ### Rerequest Check Run
 
-/v1/origin/repos///check-runs//rerequest
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/check-runs/{checkRunId}/rerequest`
 
 Requires scope `repository:contents:write` (installation access token or user access token).
 
@@ -4359,6 +5016,10 @@ Server-assigned identifier of the containing check suite.
 
 Commit SHA to which the run is attached.
 
+`baseSha` string
+
+Comparison base this run was reported against (lowercase hex), when the reporting app supplied one; always the owning suite's `baseSha`. Absent for a base-agnostic run.
+
 `key` string
 
 Stable app-chosen logical run identity; required checks may match on app, suite key, and this key.
@@ -4369,7 +5030,7 @@ Display-only run name; it is not used for required-check matching.
 
 `status` string
 
-Lifecycle status; queued, in\_progress, completed, or rerequested. A rerequested run is a completed run whose re-run was asked for and the owning app has not answered yet: treat it as pending and render it like queued.
+Lifecycle status; queued, in\_progress, failing, completed, or rerequested. A failing run is still going but its app already knows it will not pass: it has no conclusion yet and counts as pending for required checks. A rerequested run is a completed run whose re-run was asked for and the owning app has not answered yet: treat it as pending and render it like queued.
 
 `conclusion` string
 
@@ -4405,7 +5066,7 @@ Provider identity for one attempt. Reuse it to update that attempt and use a new
 
 `actor` object
 
-Public actor that produced the run.
+Public actor that produced the run. Always the owning check suite's `actor`.
 
 `actor.user` object
 
@@ -4446,6 +5107,14 @@ Service account variant of the actor. Set when a service account performed the a
 `actor.serviceAccount.id` string
 
 Public identifier for the service account.
+
+`actor.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`actor.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
 
 `output` object
 
@@ -4539,7 +5208,9 @@ curl --request POST \
 
 ### Get Check Suite
 
-/v1/origin/repos///check-suites/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/check-suites/{checkSuiteId}`
 
 Requires scope `repository:checks:read` (installation access token or user access token).
 
@@ -4596,6 +5267,10 @@ Owner namespace type. Output-only. Allowed values: `team`, `user`. Omitted when 
 `sha` string
 
 Commit SHA to which the suite is attached.
+
+`baseSha` string
+
+Comparison base this attempt was reported against (lowercase hex), when the reporting app supplied one: a pull request version's `baseSha`. It is part of the attempt's identity, so an app can report one attempt per head and base pair. Absent for a base-agnostic attempt, which applies to every pull request at `sha`.
 
 `key` string
 
@@ -4665,6 +5340,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`actor.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`actor.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 ```bash
 curl --request GET \
   --url 'https://api.cursor.com/v1/origin/repos/OWNER_SLUG/REPO_NAME/check-suites/CHECK_SUITE_ID' \
@@ -4703,11 +5386,13 @@ curl --request GET \
 
 ### List Check Runs For Suite
 
-/v1/origin/repos///check-suites//check-runs
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/check-suites/{checkSuiteId}/check-runs`
 
 Requires scope `repository:checks:read` (installation access token or user access token).
 
-Lists a suite's current check runs. When a run key was reported more than once in the suite, only the latest attempt for that key is returned; superseded attempts are omitted. A run that has been re-requested stays in the listing and reads as pending, with `status` `rerequested` and `rerequestedAt` set, and its superseded `conclusion` and timings unchanged, until the app that owns it answers. Read a superseded attempt by its own id with [Get Check Run](https://cursor.com/docs/api/origin/llms-full.txt#get-check-run). Paginated.
+Lists a suite's current check runs. When a run key was reported more than once in the suite, only the latest attempt for that key is returned; superseded attempts are omitted. [Post Check Run](https://cursor.com/docs/api/origin/llms-full.txt#post-check-run) defines which attempt is the latest. A run that has been re-requested stays in the listing and reads as pending, with `status` `rerequested` and `rerequestedAt` set, and its superseded `conclusion` and timings unchanged, until the app that owns it answers. Read a superseded attempt by its own id with [Get Check Run](https://cursor.com/docs/api/origin/llms-full.txt#get-check-run). Paginated.
 
 #### Path Parameters
 
@@ -4731,7 +5416,7 @@ Max check runs to return. Defaults to 30 when unset or 0. Values above 100 are c
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page. Encodes the last-seen check-run id scoped to this suite, so `page_size` on a follow-up request is ignored when a token is supplied.
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. Encodes the last-seen check-run id scoped to this suite. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 #### Response Fields
 
@@ -4783,6 +5468,10 @@ Server-assigned identifier of the containing check suite.
 
 Commit SHA to which the run is attached.
 
+`checkRuns[].baseSha` string
+
+Comparison base this run was reported against (lowercase hex), when the reporting app supplied one; always the owning suite's `baseSha`. Absent for a base-agnostic run.
+
 `checkRuns[].key` string
 
 Stable app-chosen logical run identity; required checks may match on app, suite key, and this key.
@@ -4793,7 +5482,7 @@ Display-only run name; it is not used for required-check matching.
 
 `checkRuns[].status` string
 
-Lifecycle status; queued, in\_progress, completed, or rerequested. A rerequested run is a completed run whose re-run was asked for and the owning app has not answered yet: treat it as pending and render it like queued.
+Lifecycle status; queued, in\_progress, failing, completed, or rerequested. A failing run is still going but its app already knows it will not pass: it has no conclusion yet and counts as pending for required checks. A rerequested run is a completed run whose re-run was asked for and the owning app has not answered yet: treat it as pending and render it like queued.
 
 `checkRuns[].conclusion` string
 
@@ -4829,7 +5518,7 @@ Provider identity for one attempt. Reuse it to update that attempt and use a new
 
 `checkRuns[].actor` object
 
-Public actor that produced the run.
+Public actor that produced the run. Always the owning check suite's `actor`.
 
 `checkRuns[].actor.user` object
 
@@ -4870,6 +5559,14 @@ Service account variant of the actor. Set when a service account performed the a
 `checkRuns[].actor.serviceAccount.id` string
 
 Public identifier for the service account.
+
+`checkRuns[].actor.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`checkRuns[].actor.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
 
 `checkRuns[].output` object
 
@@ -4962,11 +5659,13 @@ curl --request GET \
 
 ### List Check Runs For Commit
 
-/v1/origin/repos///commits//check-runs
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/commits/{sha}/check-runs`
 
 Requires scope `repository:checks:read` (installation access token or user access token).
 
-Lists a commit's current check runs across all suites: only runs belonging to each suite's latest attempt, and within each suite only the latest attempt per run key. Superseded attempts are omitted. A run that has been re-requested stays in the listing and reads as pending, with `status` `rerequested` and `rerequestedAt` set, and its superseded `conclusion` and timings unchanged, until the app that owns it answers. Read a superseded attempt by its own id with [Get Check Run](https://cursor.com/docs/api/origin/llms-full.txt#get-check-run). Optionally filtered by check name and status. Paginated.
+Lists a commit's current check runs across all suites: only runs belonging to each suite's latest attempt, and within each suite only the latest attempt per run key. Superseded attempts are omitted; [Post Check Run](https://cursor.com/docs/api/origin/llms-full.txt#post-check-run) defines which attempt is the latest. A run that has been re-requested stays in the listing and reads as pending, with `status` `rerequested` and `rerequestedAt` set, and its superseded `conclusion` and timings unchanged, until the app that owns it answers. Read a superseded attempt by its own id with [Get Check Run](https://cursor.com/docs/api/origin/llms-full.txt#get-check-run). Optionally filtered by check name and status. Paginated.
 
 Filters apply to the collapsed set, so a run matches on its latest attempt's status and a filter never resurfaces a superseded attempt. Page tokens embed the filters they were minted under, so a token replayed under different filters is rejected; restart pagination when a filter changes.
 
@@ -4992,7 +5691,7 @@ Max check runs to return. Defaults to 30 when unset or 0. Values above 100 are c
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page. Encodes the last-seen check-run id scoped to this commit and to the filters below, so `page_size` on a follow-up request is ignored when a token is supplied, and reusing a token under different filters returns `InvalidArgument` (HTTP 400).
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. Encodes the last-seen check-run id scoped to this commit and to the filters below; reusing a token under different filters returns `InvalidArgument` (HTTP 400). `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 `checkName` string
 
@@ -5000,7 +5699,7 @@ Optional exact check-run name filter, matched against `checkRuns[].name`. Omit t
 
 `status` string
 
-Optional status filter. Allowed values: `queued`, `in_progress`, `completed`, `rerequested`. Any other value returns `InvalidArgument` (HTTP 400). Omit to list runs in any status.
+Optional status filter. Allowed values: `queued`, `in_progress`, `failing`, `completed`, `rerequested`. Any other value returns `InvalidArgument` (HTTP 400). Omit to list runs in any status.
 
 #### Response Fields
 
@@ -5052,6 +5751,10 @@ Server-assigned identifier of the containing check suite.
 
 Commit SHA to which the run is attached.
 
+`checkRuns[].baseSha` string
+
+Comparison base this run was reported against (lowercase hex), when the reporting app supplied one; always the owning suite's `baseSha`. Absent for a base-agnostic run.
+
 `checkRuns[].key` string
 
 Stable app-chosen logical run identity; required checks may match on app, suite key, and this key.
@@ -5062,7 +5765,7 @@ Display-only run name; it is not used for required-check matching.
 
 `checkRuns[].status` string
 
-Lifecycle status; queued, in\_progress, completed, or rerequested. A rerequested run is a completed run whose re-run was asked for and the owning app has not answered yet: treat it as pending and render it like queued.
+Lifecycle status; queued, in\_progress, failing, completed, or rerequested. A failing run is still going but its app already knows it will not pass: it has no conclusion yet and counts as pending for required checks. A rerequested run is a completed run whose re-run was asked for and the owning app has not answered yet: treat it as pending and render it like queued.
 
 `checkRuns[].conclusion` string
 
@@ -5098,7 +5801,7 @@ Provider identity for one attempt. Reuse it to update that attempt and use a new
 
 `checkRuns[].actor` object
 
-Public actor that produced the run.
+Public actor that produced the run. Always the owning check suite's `actor`.
 
 `checkRuns[].actor.user` object
 
@@ -5139,6 +5842,14 @@ Service account variant of the actor. Set when a service account performed the a
 `checkRuns[].actor.serviceAccount.id` string
 
 Public identifier for the service account.
+
+`checkRuns[].actor.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`checkRuns[].actor.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
 
 `checkRuns[].output` object
 
@@ -5231,11 +5942,13 @@ curl --request GET \
 
 ### List Check Suites For Commit
 
-/v1/origin/repos///commits//check-suites
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/commits/{sha}/check-suites`
 
 Requires scope `repository:checks:read` (installation access token or user access token).
 
-Lists check suites reported against a commit. Returns only the latest attempt of each suite, per reporting actor and suite key; superseded attempts are omitted. Read a superseded attempt by its own id with [Get Check Suite](https://cursor.com/docs/api/origin/llms-full.txt#get-check-suite). Returns suite metadata only (no embedded runs). Paginated.
+Lists check suites reported against a commit. Returns only the latest attempt of each suite, per reporting actor and suite key; superseded attempts are omitted, and [Post Check Run](https://cursor.com/docs/api/origin/llms-full.txt#post-check-run) defines which attempt is the latest. Read a superseded attempt by its own id with [Get Check Suite](https://cursor.com/docs/api/origin/llms-full.txt#get-check-suite). Returns suite metadata only (no embedded runs). Paginated.
 
 #### Path Parameters
 
@@ -5259,7 +5972,7 @@ Max suites to return. Defaults to 30 when unset or 0. Values above 100 are clamp
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page. Encodes the last-seen check-suite id scoped to this commit, so `page_size` on a follow-up request is ignored when a token is supplied.
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. Encodes the last-seen check-suite id scoped to this commit. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 #### Response Fields
 
@@ -5302,6 +6015,10 @@ Owner namespace type. Output-only. Allowed values: `team`, `user`. Omitted when 
 `checkSuites[].sha` string
 
 Commit SHA to which the suite is attached.
+
+`checkSuites[].baseSha` string
+
+Comparison base this attempt was reported against (lowercase hex), when the reporting app supplied one: a pull request version's `baseSha`. It is part of the attempt's identity, so an app can report one attempt per head and base pair. Absent for a base-agnostic attempt, which applies to every pull request at `sha`.
 
 `checkSuites[].key` string
 
@@ -5371,6 +6088,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`checkSuites[].actor.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`checkSuites[].actor.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `nextPageToken` string
 
 Opaque cursor for the next page; empty when there are no more pages.
@@ -5423,7 +6148,9 @@ A comparison is a summary only: it never embeds commit lists or file diffs. `sta
 
 ### List Commits
 
-/v1/origin/repos///commits
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/commits`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -5453,7 +6180,23 @@ Max commits to return. Defaults to 30 when unset or 0. Values above 100 are clam
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page. Encodes the starting ref and page, so `sha`/`page_size` on a follow-up request are ignored when a token is supplied.
+Opaque cursor from a previous response's `nextPageToken`. Empty for the first page. Encodes the starting ref, walk position, and email and time filters; `sha`, `pageSize`, `authorEmails`, `committerEmails`, `since`, and `until` are ignored when a token is supplied. A filtered page can contain fewer than `pageSize` commits, or none, while `nextPageToken` is set. Keep paging until it is empty.
+
+`authorEmails` array
+
+Optional Git author email filter. Matches any listed email, case-insensitively after trimming whitespace. Blank entries and duplicates are ignored. At most 100 distinct emails; empty means no filter. These are Git author emails, not Origin actor IDs. Each page scans at most 1,000 commits for matches.
+
+`committerEmails` array
+
+Optional Git committer email filter. Uses the same normalization and 100-email limit as `authorEmails`; empty means no filter. When both filters are set, a commit must match both lists. Each page scans at most 1,000 commits for matches.
+
+`since` string
+
+Optional inclusive lower bound on committer time, as an RFC 3339 timestamp (for example `2026-08-01T00:00:00Z`): only commits committed at or after it are listed. Git records committer time in whole seconds, so fractional seconds are ignored, and a rebase or cherry-pick rewrites committer time but not author time. The listing ends once it reads 100 consecutive commits older than `since`, as `git log --since` does. The time filters share each page's 1,000-commit scan with the email filters. A malformed timestamp returns `InvalidArgument` (HTTP 400).
+
+`until` string
+
+Optional inclusive upper bound on committer time, as an RFC 3339 timestamp: only commits committed at or before it are listed. A malformed timestamp, or a `since` later than `until`, returns `InvalidArgument` (HTTP 400).
 
 #### Response Fields
 
@@ -5521,6 +6264,10 @@ Parent commit references, each containing a SHA.
 
 Parent commit SHA.
 
+`commits[].webUrl` string
+
+Output-only web URL for this commit on Cursor. Absent when Origin can't form a link for it.
+
 `nextPageToken` string
 
 Opaque cursor for the next page; empty when there are no more pages.
@@ -5563,7 +6310,8 @@ curl --request GET \
         "additions": 128,
         "deletions": 46,
         "total": 174
-      }
+      },
+      "webUrl": "https://cursor.com/codebase/acme/rocket/commit/9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4"
     }
   ]
 }
@@ -5571,7 +6319,9 @@ curl --request GET \
 
 ### Get Commit
 
-/v1/origin/repos///commits/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/commits/{sha}`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -5591,7 +6341,7 @@ Repo name, unique to the owner entity.
 
 `sha` string Required
 
-SHA, branch, tag, or symbolic ref (for example `HEAD`) of the commit to fetch.
+SHA, branch, tag, or symbolic ref (for example `HEAD`) of the commit to fetch. An abbreviated SHA resolves the same way as on [Get Git Commit](https://cursor.com/docs/api/origin/llms-full.txt#get-git-commit).
 
 #### Response Fields
 
@@ -5671,6 +6421,10 @@ Aggregate deleted lines for the commit.
 
 Aggregate additions plus deletions for the commit.
 
+`webUrl` string
+
+Output-only web URL for this commit on Cursor. Absent when Origin can't form a link for it.
+
 ```bash
 curl --request GET \
   --url 'https://api.cursor.com/v1/origin/repos/OWNER_SLUG/REPO_NAME/commits/SHA' \
@@ -5707,19 +6461,22 @@ curl --request GET \
     "additions": 128,
     "deletions": 46,
     "total": 174
-  }
+  },
+  "webUrl": "https://cursor.com/codebase/acme/rocket/commit/9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4"
 }
 ```
 
 ### List Commit Files
 
-/v1/origin/repos///commits//files
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/commits/{sha}/files`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
 Lists the files changed by a commit.
 
-`sha` may be a commit SHA, branch, tag, or symbolic ref such as `HEAD`. Results default to 30 files and are capped at 100. A page token fixes the resolved commit, page size, and file cursor; on later requests, `sha` and `pageSize` must match the token. Each file includes `filename`, `status`, `additions`, `deletions`, `changes`, `patch`, and `previousFilename` when renamed or copied. `patch` is empty for binary files.
+`sha` may be a commit SHA, branch, tag, or symbolic ref such as `HEAD`. Results default to 30 files and are capped at 100. A page token fixes the resolved commit and file cursor; on later requests, `sha` must match the token. Each file includes `filename`, `status`, `additions`, `deletions`, `changes`, `patch`, and `previousFilename` when renamed or copied. `patch` is empty for binary files.
 
 #### Path Parameters
 
@@ -5733,7 +6490,7 @@ Repo name, unique to the owner entity.
 
 `sha` string Required
 
-SHA, branch, tag, or symbolic ref (for example `HEAD`) of the commit whose files should be listed.
+SHA, branch, tag, or symbolic ref (for example `HEAD`) of the commit whose files should be listed. An abbreviated SHA resolves the same way as on [Get Git Commit](https://cursor.com/docs/api/origin/llms-full.txt#get-git-commit).
 
 #### Query Parameters
 
@@ -5743,7 +6500,7 @@ Max changed files to return. Defaults to 30 when unset or 0. Values above 100 ar
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page. The token fixes the resolved commit, page size, and file cursor, so `sha` and `page_size` on a follow-up request must match the token.
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. The token fixes the resolved commit and file cursor, so `sha` on a follow-up request must match the token. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 #### Response Fields
 
@@ -5781,7 +6538,7 @@ Previous path when the file was renamed or copied.
 
 `nextPageToken` string
 
-Token fixes the resolved commit, page size, and file cursor; subsequent sha and pageSize values must match it.
+Token fixes the resolved commit and file cursor; subsequent sha values must match it.
 
 ```bash
 curl --request GET \
@@ -5808,7 +6565,9 @@ curl --request GET \
 
 ### Compare Commits
 
-/v1/origin/repos///compare/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/compare/{basehead}`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -5908,6 +6667,10 @@ Parent commit references, each containing a SHA.
 
 Parent commit SHA.
 
+`baseCommit.webUrl` string
+
+Output-only web URL for this commit on Cursor. Absent when Origin can't form a link for it.
+
 `headCommit` object
 
 Sparse resolved head commit with no stats or files.
@@ -5971,6 +6734,10 @@ Parent commit references, each containing a SHA.
 `headCommit.parents[].sha` string
 
 Parent commit SHA.
+
+`headCommit.webUrl` string
+
+Output-only web URL for this commit on Cursor. Absent when Origin can't form a link for it.
 
 `mergeBaseCommit` object
 
@@ -6036,6 +6803,10 @@ Parent commit references, each containing a SHA.
 
 Parent commit SHA.
 
+`mergeBaseCommit.webUrl` string
+
+Output-only web URL for this commit on Cursor. Absent when Origin can't form a link for it.
+
 ```bash
 curl --request GET \
   --url 'https://api.cursor.com/v1/origin/repos/OWNER_SLUG/REPO_NAME/compare/BASE...HEAD' \
@@ -6076,7 +6847,8 @@ curl --request GET \
       "additions": 128,
       "deletions": 46,
       "total": 174
-    }
+    },
+    "webUrl": "https://cursor.com/codebase/acme/rocket/commit/3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
   },
   "headCommit": {
     "sha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
@@ -6105,7 +6877,8 @@ curl --request GET \
       "additions": 128,
       "deletions": 46,
       "total": 174
-    }
+    },
+    "webUrl": "https://cursor.com/codebase/acme/rocket/commit/9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4"
   },
   "mergeBaseCommit": {
     "sha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
@@ -6134,14 +6907,17 @@ curl --request GET \
       "additions": 128,
       "deletions": 46,
       "total": 174
-    }
+    },
+    "webUrl": "https://cursor.com/codebase/acme/rocket/commit/3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
   }
 }
 ```
 
 ### List Comparison Files
 
-/v1/origin/repos///compare//files
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/compare/{basehead}/files`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -6171,7 +6947,7 @@ Max changed files to return. Defaults to 30 when unset or 0. Values above 100 ar
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page. The token is bound to the resolved comparison, page size, and file cursor, so `basehead` and `page_size` on a follow-up request must match the token. Origin re-resolves the comparison on every page; when its commits have moved since the token was issued, the request returns `InvalidArgument` (HTTP 400) and listing must restart from the first page.
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. The token is bound to the resolved comparison and file cursor, so `basehead` on a follow-up request must match the token. Origin re-resolves the comparison on every page; when its commits have moved since the token was issued, the request returns `InvalidArgument` (HTTP 400) and listing must restart from the first page. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 #### Response Fields
 
@@ -6236,7 +7012,9 @@ curl --request GET \
 
 ### Get Contents
 
-/v1/origin/repos///contents
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/contents`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -6320,7 +7098,9 @@ curl --request GET \
 
 ### Batch Get Contents
 
-/v1/origin/repos///contents:batchGet
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/contents:batchGet`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -6438,7 +7218,9 @@ curl --request POST \
 
 ### Grep Contents
 
-/v1/origin/repos//:grep
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}:grep`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -6462,7 +7244,7 @@ Commit, branch, tag, or symbolic ref (for example `HEAD`) to search. Empty means
 
 `query` string Required
 
-The pattern to search for. By default it is a regular expression supporting character classes, quantifiers, alternation, groups, and anchors; set `literal` to search for the text exactly instead. Whitespace is significant and is searched for as given. An empty pattern returns `InvalidArgument` (HTTP 400). Maximum UTF-8 size: 4096 bytes.
+The pattern to search for. By default it is a regular expression supporting character classes, quantifiers, alternation, groups, and anchors; set `literal` to search for the text exactly instead. Whitespace is significant and is searched for as given. When `literal` is false, case-insensitive matching is a leading `(?i)` in the pattern (for example `(?i)launch`) and whole-word matching is `\b` around it (for example `\blaunch\b`). An empty pattern returns `InvalidArgument` (HTTP 400). Maximum UTF-8 size: 4096 bytes.
 
 `literal` boolean
 
@@ -6470,11 +7252,11 @@ Search for `query` as exact text rather than as a regular expression.
 
 `caseInsensitive` boolean
 
-Match upper and lower case as equivalent.
+Match upper and lower case as equivalent. Applied only when `literal` is true. Ignored for a regular-expression search; write a leading `(?i)` in `query` instead.
 
 `wholeWord` boolean
 
-Match only complete words.
+Match only complete words. Applied only when `literal` is true. Ignored for a regular-expression search; write `\b` around the pattern instead.
 
 `contextBefore` integer
 
@@ -6589,9 +7371,13 @@ curl --request POST \
 
 Low-level git objects. Reads need `repository:contents:read`, and an empty repository returns `409`. [Create Commit From Files](https://cursor.com/docs/api/origin/llms-full.txt#create-commit-from-files) and [Create Git Ref](https://cursor.com/docs/api/origin/llms-full.txt#create-git-ref) write git objects and need `repository:contents:write`.
 
+Besides branches and tags, [Get Git Ref](https://cursor.com/docs/api/origin/llms-full.txt#get-git-ref) reads a pull request's merge preview at `pull/{pullNumber}/merge` (normalized to `refs/pull/{pullNumber}/merge`): a commit that merges the pull request's current head into the tip of its base branch as of the last refresh. Origin refreshes it when the pull request is created, when its head is pushed, when it is retargeted, and when it is reopened, before the matching `pull_request.*` webhook events are published and within a bounded time budget; a refresh that does not finish in time leaves the previous ref in place, and the events still publish. Origin does not refresh it because the base branch advanced on its own, and it deletes the ref when the merge has conflicts and when the pull request closes or merges, so a `404` on an open pull request means conflicts or a preview not yet prepared. [Prepare Pull Request Merge Ref](https://cursor.com/docs/api/origin/llms-full.txt#prepare-pull-request-merge-ref) brings it up to date with the base branch's current tip. Each pull request version also reports its own test merge in `version.potentialMergeCommit`, whose `state` tells those two cases apart; see [Pull requests](https://cursor.com/docs/api/origin/llms-full.txt#pull-requests). The pull request's `mergeCommitSha` is a different commit, set only once it has merged.
+
 ### Get Blob
 
-/v1/origin/repos///git/blobs/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/git/blobs/{sha}`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -6648,7 +7434,9 @@ curl --request GET \
 
 ### Get Git Commit
 
-/v1/origin/repos///git/commits/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/git/commits/{sha}`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -6666,7 +7454,7 @@ Repo name, unique to the owner entity.
 
 `sha` string Required
 
-Full or abbreviated hex SHA of the commit object, or a branch, tag, or symbolic ref such as `HEAD`.
+Full or abbreviated hex SHA of the commit object, or a branch, tag, or symbolic ref such as `HEAD`. An abbreviation needs at least 5 hex characters and is resolved among commit objects only; it fails when no commit or more than one commit carries it.
 
 #### Response Fields
 
@@ -6761,7 +7549,9 @@ curl --request GET \
 
 ### Create Commit From Files
 
-/v1/origin/repos///git/commits:createFromFiles
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/git/commits:createFromFiles`
 
 Requires scope `repository:contents:write` (installation access token or user access token).
 
@@ -6799,7 +7589,7 @@ Commit message.
 
 `author` object Required
 
-Commit author. Timestamps are assigned by the server.
+Commit author. Timestamps are assigned by the server. Origin drops `<`, `>`, and newline characters from `name` and `email`, as `git commit` does, and a value with nothing left returns `InvalidArgument` (HTTP 400).
 
 `author.name` string Required
 
@@ -6811,7 +7601,7 @@ Email recorded in the Git identity.
 
 `committer` object
 
-Commit committer. Defaults to `author` when omitted.
+Commit committer. Defaults to `author` when omitted. Its `name` and `email` are cleaned the same way as `author`'s.
 
 `committer.name` string
 
@@ -6902,11 +7692,17 @@ curl --request POST \
 
 ### Get Git Ref
 
-/v1/origin/repos///git/ref/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/git/ref/{ref}`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
 Returns a single Git reference by name. `ref` is typically `heads/<branch>` or `tags/<tag>` (with or without a leading `refs/`), or the symbolic `HEAD`. Exact match only; use ListMatchingGitRefs for prefixes. Empty repositories return 409 Conflict.
+
+`pull/<number>/merge` is a pull request's merge preview: a commit that merges its current head into the tip of its base branch as of the last refresh. It is a different commit from the pull request's `mergeCommitSha`, which is set only once the pull request has merged. The pull request's `version.potentialMergeCommit` reports the test merge per version: while a version is the latest and its `state` is `prepared`, its `sha` is the commit this ref points at.
+
+Origin refreshes the preview when a pull request is created, when its head is pushed, when it is retargeted, and when it is reopened, before the matching `pull_request.*` webhook events publish and within a bounded time budget. A refresh that does not finish in time leaves the previous ref in place, and the events still publish. Origin does not refresh it because the base branch merely advanced, and it deletes the ref when the merge has conflicts and when the pull request closes or merges, so a `404` on an open pull request means the merge conflicts or the preview is not prepared yet. To bring it up to date with the base branch's current tip, call [Prepare Pull Request Merge Ref](https://cursor.com/docs/api/origin/llms-full.txt#prepare-pull-request-merge-ref).
 
 #### Path Parameters
 
@@ -6920,7 +7716,7 @@ Repo name, unique to the owner entity.
 
 `ref` string Required
 
-Git reference name. Typically `heads/<branch>` or `tags/<tag>`; a leading `refs/` is accepted and normalized. The symbolic `HEAD` is also accepted (returned as `ref: "HEAD"` with the tip commit). Exact match on the full ref name.
+Git reference name. Typically `heads/<branch>` or `tags/<tag>`; a leading `refs/` is accepted and normalized. The symbolic `HEAD` is also accepted (returned as `ref: "HEAD"` with the tip commit), as is `pull/<number>/merge` for a pull request's merge preview. Exact match on the full ref name.
 
 #### Response Fields
 
@@ -6960,7 +7756,9 @@ curl --request GET \
 
 ### Create Git Ref
 
-/v1/origin/repos///git/refs
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/git/refs`
 
 Requires scope `repository:contents:write` (installation access token or user access token).
 
@@ -7029,9 +7827,53 @@ curl --request POST \
 }
 ```
 
+### Delete Git Ref
+
+DELETE
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/git/refs/{ref}`
+
+Requires scope `repository:contents:write` (installation access token or user access token).
+
+Deletes a branch reference. The response body is empty.
+
+Only branch references can be deleted. A branch that does not exist returns `404`. The repository default branch, a branch a deletion rule protects, and a repository whose contents are mirrored from another host return `FailedPrecondition` (HTTP 400). Pull requests whose head is the deleted branch are closed, as after a pushed deletion. A branch whose tip moves while the delete is in flight fails with `FailedPrecondition` (HTTP 400) or `Aborted` (HTTP 409 Conflict); retry to delete the new tip.
+
+#### Path Parameters
+
+`ownerSlug` string Required
+
+Owning entity's unique slug.
+
+`repoName` string Required
+
+Repo name, unique to the owner entity.
+
+`ref` string Required
+
+Branch reference to delete, as `refs/heads/<branch>` or `heads/<branch>`.
+
+#### Response Fields
+
+Successful requests return no response body.
+
+```bash
+curl --request DELETE \
+  --url 'https://api.cursor.com/v1/origin/repos/OWNER_SLUG/REPO_NAME/git/refs/REF' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN'
+```
+
+**Response:**
+
+```text
+204 No Content
+```
+
 ### List Matching Git Refs
 
-/v1/origin/repos///git/matching-refs
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/git/matching-refs`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -7097,7 +7939,9 @@ curl --request GET \
 
 ### List Matching Git Refs by Path
 
-/v1/origin/repos///git/matching-refs/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/git/matching-refs/{ref}`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -7161,7 +8005,9 @@ curl --request GET \
 
 ### Get Tag
 
-/v1/origin/repos///git/tags/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/git/tags/{sha}`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -7250,7 +8096,9 @@ curl --request GET \
 
 ### Get Tree
 
-/v1/origin/repos///git/trees/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/git/trees/{sha}`
 
 Requires scope `repository:contents:read` (installation access token or user access token).
 
@@ -7336,11 +8184,13 @@ curl --request GET \
 
 ## Grants
 
-A grant binds one principal to one repository or one owner with one permission. These endpoints read, set, and remove the grants held directly on a resource, so access changes can be scripted and reviewed like code. Writes reuse the checks behind the Codebase permissions UI and record the same `repository.access_changed` and `namespace.access_changed` audit events. For the principal kinds, the two permission ladders, and how owner-level grants interact with repository-level ones, read [Origin Grants API](https://cursor.com/docs/api/origin/grants-api).
+A grant binds one principal to one repository or one owner with one permission. These endpoints read, set, and remove the grants held directly on a resource, so access changes can be scripted and reviewed like code. Writes reuse the checks behind the Codebase permissions UI and record the same `repository.access_changed` and `namespace.access_changed` audit events. For the principal kinds, the two permission ladders, and how owner-level grants interact with repository-level ones, read [Origin Grants API](https://cursor.com/docs/api/origin/grants-api.md).
 
 ### List Repository Grants
 
-/v1/origin/repos///grants
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/grants`
 
 Requires scope `repository:settings:read` (installation access token or user access token).
 
@@ -7360,11 +8210,11 @@ Repo name, unique to the owner entity.
 
 `pageSize` integer
 
-Max grants to return. Defaults to 30 when unset or 0. Values above 100 are clamped to 100. Ignored when `pageToken` is set.
+Max grants to return. Defaults to 30 when unset or 0. Values above 100 are clamped to 100.
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page.
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 #### Response Fields
 
@@ -7394,7 +8244,7 @@ The user's claimed profile handle, without the `@` prefix. Present only while th
 
 `grants[].group` object
 
-A Cursor organization group principal.
+A Cursor group principal: a group the owner's team owns, or a group in that team's organization.
 
 `grants[].group.id` string
 
@@ -7472,11 +8322,13 @@ curl --request GET \
 
 ### Upsert Repository Grant
 
-/v1/origin/repos///grants
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/grants`
 
 Requires scope `repository:settings:write` (installation access token or user access token).
 
-Sets the permission a user, group, or owning-team group holds directly on a repository, replacing any permission granted directly to that principal before. Repeating a grant the principal already holds succeeds without change. A user must be an active member of the repository owner's team or organization, and a group an active group of that organization; otherwise the request returns `FailedPrecondition` (HTTP 400).
+Sets the permission a user, group, or owning-team group holds directly on a repository, replacing any permission granted directly to that principal before. Repeating a grant the principal already holds succeeds without change. A user must be an active member of the repository owner's team or organization. A group must be one the owner's team owns, or an active group in that team's organization; otherwise the request returns `FailedPrecondition` (HTTP 400).
 
 #### Path Parameters
 
@@ -7512,7 +8364,7 @@ The user's claimed profile handle, without the `@` prefix. Present only while th
 
 `group` object
 
-A Cursor organization group principal.
+A Cursor group principal: a group the owner's team owns, or a group in that team's organization.
 
 `group.id` string
 
@@ -7554,7 +8406,7 @@ The user's claimed profile handle, without the `@` prefix. Present only while th
 
 `group` object
 
-A Cursor organization group principal.
+A Cursor group principal: a group the owner's team owns, or a group in that team's organization.
 
 `group.id` string
 
@@ -7599,7 +8451,9 @@ curl --request POST \
 
 ### Delete Repository Grant
 
-/v1/origin/repos///grants
+DELETE
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/grants`
 
 Requires scope `repository:settings:write` (installation access token or user access token).
 
@@ -7639,7 +8493,7 @@ The user's claimed profile handle, without the `@` prefix. Present only while th
 
 `group` object
 
-A Cursor organization group principal.
+A Cursor group principal: a group the owner's team owns, or a group in that team's organization.
 
 `group.id` string
 
@@ -7677,7 +8531,9 @@ curl --request DELETE \
 
 ### List Namespace Grants
 
-/v1/origin/owners//grants
+GET
+
+`/v1/origin/namespaces/{namespaceSlug}/grants`
 
 Requires scope `namespace:settings:read` (installation access token or user access token).
 
@@ -7685,19 +8541,19 @@ Lists who has been granted access to an owner: users, groups, and the owning tea
 
 #### Path Parameters
 
-`ownerSlug` string Required
+`namespaceSlug` string Required
 
-Slug of the owner whose grants to list.
+Slug of the namespace whose grants to list.
 
 #### Query Parameters
 
 `pageSize` integer
 
-Max grants to return. Defaults to 30 when unset or 0. Values above 100 are clamped to 100. Ignored when `pageToken` is set.
+Max grants to return. Defaults to 30 when unset or 0. Values above 100 are clamped to 100.
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page.
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 #### Response Fields
 
@@ -7727,7 +8583,7 @@ The user's claimed profile handle, without the `@` prefix. Present only while th
 
 `grants[].group` object
 
-A Cursor organization group principal.
+A Cursor group principal: a group the owner's team owns, or a group in that team's organization.
 
 `grants[].group.id` string
 
@@ -7751,7 +8607,7 @@ Opaque cursor for the next page; empty when there are no more pages.
 
 ```bash
 curl --request GET \
-  --url 'https://api.cursor.com/v1/origin/owners/{ownerSlug}/grants' \
+  --url 'https://api.cursor.com/v1/origin/namespaces/{namespaceSlug}/grants' \
   --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN'
 ```
 
@@ -7792,17 +8648,19 @@ curl --request GET \
 
 ### Upsert Namespace Grant
 
-/v1/origin/owners//grants
+POST
+
+`/v1/origin/namespaces/{namespaceSlug}/grants`
 
 Requires scope `namespace:settings:write` (installation access token or user access token).
 
-Sets the permission a user, group, or owning-team group holds directly on an owner, replacing any permission granted directly to that principal before. Repeating a grant the principal already holds succeeds without change. The request returns `FailedPrecondition` (HTTP 400) when the user is not an active member of the owning team or its organization, when the group is not an active group of that organization, or when the write would leave the owner without an admin.
+Sets the permission a user, group, or owning-team group holds directly on an owner, replacing any permission granted directly to that principal before. Repeating a grant the principal already holds succeeds without change. The request returns `FailedPrecondition` (HTTP 400) when the user is not an active member of the owning team or its organization, when the group is neither owned by that team nor an active group in its organization, or when the write would leave the owner without an admin.
 
 #### Path Parameters
 
-`ownerSlug` string Required
+`namespaceSlug` string Required
 
-Owner slug.
+Namespace slug.
 
 #### Request Body
 
@@ -7828,7 +8686,7 @@ The user's claimed profile handle, without the `@` prefix. Present only while th
 
 `group` object
 
-A Cursor organization group principal.
+A Cursor group principal: a group the owner's team owns, or a group in that team's organization.
 
 `group.id` string
 
@@ -7870,7 +8728,7 @@ The user's claimed profile handle, without the `@` prefix. Present only while th
 
 `group` object
 
-A Cursor organization group principal.
+A Cursor group principal: a group the owner's team owns, or a group in that team's organization.
 
 `group.id` string
 
@@ -7890,7 +8748,7 @@ Permission the principal now holds on every repository under the owner.
 
 ```bash
 curl --request POST \
-  --url 'https://api.cursor.com/v1/origin/owners/OWNER_SLUG/grants' \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/grants' \
   --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN' \
   --header 'Content-Type: application/json' \
   --data '{
@@ -7915,7 +8773,9 @@ curl --request POST \
 
 ### Delete Namespace Grant
 
-/v1/origin/owners//grants
+DELETE
+
+`/v1/origin/namespaces/{namespaceSlug}/grants`
 
 Requires scope `namespace:settings:write` (installation access token or user access token).
 
@@ -7923,9 +8783,9 @@ Removes the permission a user, group, or owning-team group holds directly on an 
 
 #### Path Parameters
 
-`ownerSlug` string Required
+`namespaceSlug` string Required
 
-Owner slug.
+Namespace slug.
 
 #### Request Body
 
@@ -7951,7 +8811,7 @@ The user's claimed profile handle, without the `@` prefix. Present only while th
 
 `group` object
 
-A Cursor organization group principal.
+A Cursor group principal: a group the owner's team owns, or a group in that team's organization.
 
 `group.id` string
 
@@ -7971,7 +8831,7 @@ Successful requests return no response body.
 
 ```bash
 curl --request DELETE \
-  --url 'https://api.cursor.com/v1/origin/owners/OWNER_SLUG/grants' \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/grants' \
   --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN' \
   --header 'Content-Type: application/json' \
   --data '{
@@ -7987,13 +8847,577 @@ curl --request DELETE \
 204 No Content
 ```
 
+## Inbound IP allowlist
+
+A namespace's inbound IP allowlist holds the addresses allowed to reach its repositories. While the namespace enforces the list and at least one entry is enabled, git over SSH and HTTPS, the API, and file downloads on the namespace's repositories accept a Cursor user's requests only from listed addresses. The list does not restrict requests made with an app JWT, an installation access token, an installation user token, or a service account. These endpoints read the list, turn enforcement on or off, add, update, and remove entries, and replace the whole entry set. Allowlists are available on team namespaces.
+
+Each entry is an IPv4 or IPv6 address or CIDR range with its own opaque `id`. The entry endpoints address an entry by that ID as `entryId`, and the ID stays the same when [Update Inbound IP Allowlist Entry](https://cursor.com/docs/api/origin/llms-full.txt#update-inbound-ip-allowlist-entry) changes the entry's `cidr`. A namespace lists at most 1,000 entries, and a disabled entry stays listed but admits nothing.
+
+Reading the list and its entries accepts installation and user tokens holding `namespace:settings:read`. Turning enforcement on or off and adding, updating, removing, and replacing entries take a Cursor user credential holding `namespace:settings:write`; app and installation tokens are not accepted. Enabling enforcement, an update, or a removal that would exclude the caller's own address returns `InvalidArgument` (HTTP 400), and a write from a caller an enforced list already excludes returns `PermissionDenied` (HTTP 403).
+
+### Get Inbound IP Allowlist
+
+GET
+
+`/v1/origin/namespaces/{namespaceSlug}/inbound-ip-allowlist`
+
+Requires scope `namespace:settings:read` (installation access token or user access token).
+
+Returns the namespace's inbound IP allowlist: whether it is enforced and every entry, oldest first. The response is not paginated; a namespace lists at most 1,000 entries. Allowlists are available on team namespaces; any other namespace returns `FailedPrecondition` (HTTP 400).
+
+#### Path Parameters
+
+`namespaceSlug` string Required
+
+Slug of the namespace whose allowlist to return.
+
+#### Response Fields
+
+`enabled` boolean
+
+Whether the list is enforced. The list takes effect only while this is `true` and at least one entry is enabled; see [Update Inbound IP Allowlist](https://cursor.com/docs/api/origin/llms-full.txt#update-inbound-ip-allowlist).
+
+`entries` array
+
+Every entry, oldest first.
+
+`entries[].id` string
+
+Entry ID, which the entry endpoints take as `entryId`. It stays the same when the entry's CIDR changes.
+
+`entries[].cidr` string
+
+IPv4 or IPv6 address or CIDR range, spelled as it was submitted.
+
+`entries[].description` string
+
+Label for the entry, at most 255 characters.
+
+`entries[].enabled` boolean
+
+Whether the entry admits its addresses. A disabled entry stays listed but admits nothing.
+
+`entries[].createdAt` string
+
+RFC 3339 timestamp for when the entry was added.
+
+`etag` string
+
+Fingerprint of the entry set. It changes whenever an entry is added, updated, or removed; turning enforcement on or off doesn't change it. Pass it to [Replace Inbound IP Allowlist Entries](https://cursor.com/docs/api/origin/llms-full.txt#replace-inbound-ip-allowlist-entries) to reject the replace if the entries changed since this read.
+
+```bash
+curl --request GET \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/inbound-ip-allowlist' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN'
+```
+
+**Response shape:**
+
+```json
+{
+  "enabled": true,
+  "entries": [
+    {
+      "id": "nsip_01k2ja2000e0080000000000c4",
+      "cidr": "203.0.113.0/24",
+      "description": "Office",
+      "enabled": true,
+      "createdAt": "2026-08-02T14:45:00Z"
+    },
+    {
+      "id": "nsip_01k2ja2000e0080000000000c5",
+      "cidr": "198.51.100.7",
+      "description": "VPN egress",
+      "enabled": false,
+      "createdAt": "2026-08-03T09:10:00Z"
+    }
+  ]
+}
+```
+
+### Update Inbound IP Allowlist
+
+PATCH
+
+`/v1/origin/namespaces/{namespaceSlug}/inbound-ip-allowlist`
+
+Requires scope `namespace:settings:write` (user access token).
+
+Turns enforcement of the namespace's inbound IP allowlist on or off and returns the allowlist. While the list is enforced and at least one entry is enabled, git over SSH and HTTPS, the API, and file downloads on the namespace's repositories accept a Cursor user's requests only from listed addresses; app JWTs, installation access tokens, installation user tokens, and service accounts are not restricted. Enabling a list that excludes the caller's own address returns `InvalidArgument` (HTTP 400), and a caller the enforced list already excludes receives `PermissionDenied` (HTTP 403). Setting the current value succeeds without change.
+
+The caller must be a Cursor user credential holding `namespace:settings:write`. App and installation tokens are not accepted.
+
+#### Path Parameters
+
+`namespaceSlug` string Required
+
+Namespace slug.
+
+#### Request Body
+
+`enabled` boolean Required
+
+`true` to enforce the namespace's inbound IP allowlist, `false` to stop enforcing it.
+
+#### Response Fields
+
+`enabled` boolean
+
+Whether the list is enforced. The list takes effect only while this is `true` and at least one entry is enabled.
+
+`entries` array
+
+Every entry, oldest first.
+
+`entries[].id` string
+
+Entry ID, which the entry endpoints take as `entryId`. It stays the same when the entry's CIDR changes.
+
+`entries[].cidr` string
+
+IPv4 or IPv6 address or CIDR range, spelled as it was submitted.
+
+`entries[].description` string
+
+Label for the entry, at most 255 characters.
+
+`entries[].enabled` boolean
+
+Whether the entry admits its addresses. A disabled entry stays listed but admits nothing.
+
+`entries[].createdAt` string
+
+RFC 3339 timestamp for when the entry was added.
+
+`etag` string
+
+Fingerprint of the entry set. It changes whenever an entry is added, updated, or removed; turning enforcement on or off doesn't change it. Pass it to [Replace Inbound IP Allowlist Entries](https://cursor.com/docs/api/origin/llms-full.txt#replace-inbound-ip-allowlist-entries) to reject the replace if the entries changed since this read.
+
+```bash
+curl --request PATCH \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/inbound-ip-allowlist' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "enabled": true
+}'
+```
+
+**Response shape:**
+
+```json
+{
+  "enabled": true,
+  "entries": [
+    {
+      "id": "nsip_01k2ja2000e0080000000000c4",
+      "cidr": "203.0.113.0/24",
+      "description": "Office",
+      "enabled": true,
+      "createdAt": "2026-08-02T14:45:00Z"
+    }
+  ]
+}
+```
+
+### Add Inbound IP Allowlist Entry
+
+POST
+
+`/v1/origin/namespaces/{namespaceSlug}/inbound-ip-allowlist/entries`
+
+Requires scope `namespace:settings:write` (user access token).
+
+Adds an entry to the namespace's inbound IP allowlist and returns it.
+
+The CIDR is stored as spelled, after trimming surrounding whitespace. A CIDR the namespace already lists with the same spelling returns `AlreadyExists` (HTTP 409 Conflict). A CIDR that does not parse, a range covering an entire address space (`/0`), or a list already holding 1,000 entries returns `InvalidArgument` (HTTP 400). While the list is enforced, a caller whose own address it excludes receives `PermissionDenied` (HTTP 403).
+
+The caller must be a Cursor user credential holding `namespace:settings:write`. App and installation tokens are not accepted.
+
+#### Path Parameters
+
+`namespaceSlug` string Required
+
+Namespace slug.
+
+#### Request Body
+
+`cidr` string Required
+
+IPv4 or IPv6 address or CIDR range, for example `203.0.113.0/24`, `203.0.113.7`, or `2001:db8::/32`. Stored as spelled after trimming surrounding whitespace. A range covering an entire address space (`/0`) is rejected.
+
+`description` string
+
+Label for the entry, at most 255 characters.
+
+`enabled` boolean
+
+Whether the entry admits its addresses. Defaults to `true` when omitted.
+
+#### Response Fields
+
+`id` string
+
+Entry ID, which the entry endpoints take as `entryId`. It stays the same when the entry's CIDR changes.
+
+`cidr` string
+
+IPv4 or IPv6 address or CIDR range, spelled as it was submitted.
+
+`description` string
+
+Label for the entry, at most 255 characters.
+
+`enabled` boolean
+
+Whether the entry admits its addresses. A disabled entry stays listed but admits nothing.
+
+`createdAt` string
+
+RFC 3339 timestamp for when the entry was added.
+
+```bash
+curl --request POST \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/inbound-ip-allowlist/entries' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "cidr": "203.0.113.0/24",
+  "description": "Office"
+}'
+```
+
+**Response shape:**
+
+```json
+{
+  "id": "nsip_01k2ja2000e0080000000000c4",
+  "cidr": "203.0.113.0/24",
+  "description": "Office",
+  "enabled": true,
+  "createdAt": "2026-08-02T14:45:00Z"
+}
+```
+
+### Get Inbound IP Allowlist Entry
+
+GET
+
+`/v1/origin/namespaces/{namespaceSlug}/inbound-ip-allowlist/entries/{entryId}`
+
+Requires scope `namespace:settings:read` (installation access token or user access token).
+
+Returns one inbound IP allowlist entry by its ID. An ID the namespace does not list returns `404`.
+
+#### Path Parameters
+
+`namespaceSlug` string Required
+
+Namespace slug.
+
+`entryId` string Required
+
+`id` of the entry.
+
+#### Response Fields
+
+`id` string
+
+Entry ID, which the entry endpoints take as `entryId`. It stays the same when the entry's CIDR changes.
+
+`cidr` string
+
+IPv4 or IPv6 address or CIDR range, spelled as it was submitted.
+
+`description` string
+
+Label for the entry, at most 255 characters.
+
+`enabled` boolean
+
+Whether the entry admits its addresses. A disabled entry stays listed but admits nothing.
+
+`createdAt` string
+
+RFC 3339 timestamp for when the entry was added.
+
+```bash
+curl --request GET \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/inbound-ip-allowlist/entries/ENTRY_ID' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN'
+```
+
+**Response shape:**
+
+```json
+{
+  "id": "nsip_01k2ja2000e0080000000000c4",
+  "cidr": "203.0.113.0/24",
+  "description": "Office",
+  "enabled": true,
+  "createdAt": "2026-08-02T14:45:00Z"
+}
+```
+
+### Delete Inbound IP Allowlist Entry
+
+DELETE
+
+`/v1/origin/namespaces/{namespaceSlug}/inbound-ip-allowlist/entries/{entryId}`
+
+Requires scope `namespace:settings:write` (user access token).
+
+Removes an inbound IP allowlist entry by its ID. An ID the namespace does not list returns `404`. Removing the entry that admits the caller's own address from an enforced list returns `InvalidArgument` (HTTP 400), and a caller the enforced list already excludes receives `PermissionDenied` (HTTP 403). The response body is empty.
+
+The caller must be a Cursor user credential holding `namespace:settings:write`. App and installation tokens are not accepted.
+
+#### Path Parameters
+
+`namespaceSlug` string Required
+
+Namespace slug.
+
+`entryId` string Required
+
+`id` of the entry to remove.
+
+#### Response Fields
+
+Successful requests return no response body.
+
+```bash
+curl --request DELETE \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/inbound-ip-allowlist/entries/ENTRY_ID' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN'
+```
+
+**Response:**
+
+```text
+204 No Content
+```
+
+### Update Inbound IP Allowlist Entry
+
+PATCH
+
+`/v1/origin/namespaces/{namespaceSlug}/inbound-ip-allowlist/entries/{entryId}`
+
+Requires scope `namespace:settings:write` (user access token).
+
+Updates an inbound IP allowlist entry by its ID.
+
+Omitted fields keep their stored values, and a new `cidr` changes the entry's range and keeps its ID. An ID the namespace does not list returns `404`, and a `cidr` another entry already uses returns `AlreadyExists` (HTTP 409 Conflict). A change that would exclude the caller's own address from an enforced list returns `InvalidArgument` (HTTP 400), and a caller the enforced list already excludes receives `PermissionDenied` (HTTP 403).
+
+The caller must be a Cursor user credential holding `namespace:settings:write`. App and installation tokens are not accepted.
+
+#### Path Parameters
+
+`namespaceSlug` string Required
+
+Namespace slug.
+
+`entryId` string Required
+
+`id` of the entry to change.
+
+#### Request Body
+
+`cidr` string
+
+New CIDR for the entry, subject to the same rules as `cidr` on [Add Inbound IP Allowlist Entry](https://cursor.com/docs/api/origin/llms-full.txt#add-inbound-ip-allowlist-entry). Omit to leave unchanged.
+
+`description` string
+
+Label for the entry, at most 255 characters. Omit to leave unchanged.
+
+`enabled` boolean
+
+Whether the entry admits its addresses. Omit to leave unchanged.
+
+#### Response Fields
+
+`id` string
+
+Entry ID, which the entry endpoints take as `entryId`. It stays the same when the entry's CIDR changes.
+
+`cidr` string
+
+IPv4 or IPv6 address or CIDR range, spelled as it was submitted.
+
+`description` string
+
+Label for the entry, at most 255 characters.
+
+`enabled` boolean
+
+Whether the entry admits its addresses. A disabled entry stays listed but admits nothing.
+
+`createdAt` string
+
+RFC 3339 timestamp for when the entry was added.
+
+```bash
+curl --request PATCH \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/inbound-ip-allowlist/entries/ENTRY_ID' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "cidr": "203.0.113.0/25",
+  "description": "Office, east wing"
+}'
+```
+
+**Response shape:**
+
+```json
+{
+  "id": "nsip_01k2ja2000e0080000000000c4",
+  "cidr": "203.0.113.0/25",
+  "description": "Office, east wing",
+  "enabled": true,
+  "createdAt": "2026-08-02T14:45:00Z"
+}
+```
+
+### Replace Inbound IP Allowlist Entries
+
+POST
+
+`/v1/origin/namespaces/{namespaceSlug}/inbound-ip-allowlist/entries:replace`
+
+Requires scope `namespace:settings:write` (user access token).
+
+Replaces the namespace's allowlist entries with the full set you send and returns the allowlist.
+
+Origin matches entries by `cidr` exactly as typed, after trimming surrounding whitespace. CIDRs aren't normalized, so `10.0.0.1/8` and `10.0.0.0/8` are different entries. A matched entry keeps its `id` and `createdAt` and takes the `description` and `enabled` you send, a new CIDR is added, and a stored entry you leave out is deleted. The call doesn't change whether the list is enforced; use [Update Inbound IP Allowlist](https://cursor.com/docs/api/origin/llms-full.txt#update-inbound-ip-allowlist) for that. The replace is all or nothing. In the response, kept entries come first, then new entries in request order.
+
+Each call costs 10 points, however many entries it sends. To manage a large list, or to sync one from Terraform, send the whole set here instead of one call per entry.
+
+The caller must be a Cursor user credential holding `namespace:settings:write` with admin permission on the namespace. App and installation tokens and service accounts are not accepted.
+
+| Status                         | When                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `InvalidArgument` (HTTP 400)   | A `cidr` doesn't parse, is a `/0` range, or is listed twice with the same trimmed spelling, a `description` is over 255 characters, there are more than 1,000 entries, `entries` is empty without `allowEmpty`, or the set would exclude your own address from an enforced list. Each problem is a `BadRequest` field violation naming its index, for example `entries[3]`. |
+| `PermissionDenied` (HTTP 403)  | The caller isn't a namespace admin, is a service account, or is already excluded by the enforced list.                                                                                                                                                                                                                                                                      |
+| `Aborted` (HTTP 409 Conflict)  | `etag` doesn't match the current entries, or the entries changed during the replace. Read the allowlist again and retry.                                                                                                                                                                                                                                                    |
+| `ResourceExhausted` (HTTP 429) | The [rate limit](https://cursor.com/docs/api/origin/llms-full.txt#rate-limits) is exceeded.                                                                                                                                                                                                                                                                                 |
+
+#### Path Parameters
+
+`namespaceSlug` string Required
+
+Namespace slug.
+
+#### Request Body
+
+`entries` array
+
+The complete set of entries the list should hold, at most 1,000.
+
+`entries[].cidr` string Required
+
+IPv4 or IPv6 address or CIDR range, subject to the same rules as `cidr` on [Add Inbound IP Allowlist Entry](https://cursor.com/docs/api/origin/llms-full.txt#add-inbound-ip-allowlist-entry). Stored as typed after trimming, with no normalization. Each spelling can appear once.
+
+`entries[].description` string
+
+Label for the entry, at most 255 characters.
+
+`entries[].enabled` boolean
+
+Whether the entry admits its addresses. Defaults to `true` when omitted.
+
+`etag` string
+
+`etag` from a prior read of the allowlist. When set and the entries have changed since, the call returns `Aborted` (HTTP 409 Conflict) and changes nothing. Omit to replace whatever is stored.
+
+`allowEmpty` boolean
+
+Set to `true` to send an empty `entries`, which deletes every entry. Without it, an empty `entries` returns `InvalidArgument` (HTTP 400).
+
+#### Response Fields
+
+`allowlist` object
+
+The allowlist after the replace, in the same shape [Get Inbound IP Allowlist](https://cursor.com/docs/api/origin/llms-full.txt#get-inbound-ip-allowlist) returns: `enabled`, `entries[]`, and the new `etag`.
+
+`addedCount` integer
+
+Entries added.
+
+`updatedCount` integer
+
+Stored entries whose `description` or `enabled` changed.
+
+`removedCount` integer
+
+Stored entries deleted because the request left them out.
+
+`unchangedCount` integer
+
+Stored entries kept as they were. All four counts are always present, including when they're `0`.
+
+```bash
+curl --request POST \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/inbound-ip-allowlist/entries:replace' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "entries": [
+    {
+      "cidr": "203.0.113.0/24",
+      "description": "Office"
+    },
+    {
+      "cidr": "198.51.100.7",
+      "description": "VPN egress",
+      "enabled": false
+    }
+  ],
+  "etag": "8d41e07c2b9f3a65d1c4e8b07a2f9c13"
+}'
+```
+
+**Response shape:**
+
+```json
+{
+  "allowlist": {
+    "enabled": true,
+    "entries": [
+      {
+        "id": "nsip_01k2ja2000e0080000000000c4",
+        "cidr": "203.0.113.0/24",
+        "description": "Office",
+        "enabled": true,
+        "createdAt": "2026-08-02T14:45:00Z"
+      },
+      {
+        "id": "nsip_01k2ja2000e0080000000000c6",
+        "cidr": "198.51.100.7",
+        "description": "VPN egress",
+        "enabled": false,
+        "createdAt": "2026-08-04T11:20:00Z"
+      }
+    ],
+    "etag": "3f2c9a7b1e5d4c08a6b2f1e9d7c3a5b4"
+  },
+  "addedCount": 1,
+  "updatedCount": 0,
+  "removedCount": 2,
+  "unchangedCount": 1
+}
+```
+
 ## Labels
 
 A label definition belongs to one repository and is addressed by its name. Assigning labels to a pull request is a separate surface; see [Set Pull Request Labels](https://cursor.com/docs/api/origin/llms-full.txt#set-pull-request-labels).
 
 ### List Labels
 
-/v1/origin/repos///labels
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/labels`
 
 Requires scope `repository:labels:read` (installation access token or user access token).
 
@@ -8019,7 +9443,7 @@ Maximum labels to return. Defaults to 30 when omitted or zero; values above 100 
 
 `pageToken` string
 
-Opaque cursor from a previous response's `nextPageToken`. Omit for the first page.
+Opaque cursor from a previous response's `nextPageToken`. Omit for the first page. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 #### Response Fields
 
@@ -8070,13 +9494,15 @@ curl --request GET \
 
 ### Create Label
 
-/v1/origin/repos///labels
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/labels`
 
 Requires scope `repository:labels:write` (installation access token or user access token).
 
 Creates a label on a repository.
 
-A name already used by another label on the repository returns `AlreadyExists` (HTTP 409 Conflict). A `color` that is not six hexadecimal characters, a `name` longer than 50 characters, or a `description` longer than 255 characters returns `InvalidArgument` (HTTP 400).
+A name already used by another label on the repository returns `AlreadyExists` (HTTP 409 Conflict). A `color` that is not six hexadecimal characters, a `name` longer than 50 characters, a `description` longer than 255 characters, or a `name` or `description` that contains a NUL character returns `InvalidArgument` (HTTP 400).
 
 #### Path Parameters
 
@@ -8145,7 +9571,9 @@ curl --request POST \
 
 ### Get Label
 
-/v1/origin/repos///labels/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/labels/{labelName}`
 
 Requires scope `repository:labels:read` (installation access token or user access token).
 
@@ -8204,7 +9632,9 @@ curl --request GET \
 
 ### Delete Label
 
-/v1/origin/repos///labels/
+DELETE
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/labels/{labelName}`
 
 Requires scope `repository:labels:write` (installation access token or user access token).
 
@@ -8244,13 +9674,15 @@ curl --request DELETE \
 
 ### Update Label
 
-/v1/origin/repos///labels/
+PATCH
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/labels/{labelName}`
 
 Requires scope `repository:labels:write` (installation access token or user access token).
 
 Updates a repository label identified by its current name.
 
-Omitted fields are left unchanged, and a request that omits all three returns the label as it stands. Renaming to a name another label already uses returns `AlreadyExists` (HTTP 409 Conflict). An unknown `labelName` returns `404`.
+Omitted fields are left unchanged, and a request that omits all three returns the label as it stands. Renaming to a name another label already uses returns `AlreadyExists` (HTTP 409 Conflict). A `color` that is not six hexadecimal characters, a `name` longer than 50 characters, a `description` longer than 255 characters, or a `name` or `description` that contains a NUL character returns `InvalidArgument` (HTTP 400). An unknown `labelName` returns `404`.
 
 #### Path Parameters
 
@@ -8323,17 +9755,25 @@ curl --request PATCH \
 
 Closed or merged pull requests may additionally include `closedAt`, `mergedAt`, and `mergeCommitSha`. Treat `head.ref` and `base.ref` as opaque Origin ref strings; they may be short branch names or fully qualified `refs/heads/…` values.
 
+`version` is the pull request's latest numbered revision. Origin records a new version when the head is pushed, when the pull request is retargeted to another base, and when a pull request is reopened after its head moved while it was closed, each with its own `headSha`, `baseSha`, and diff stats. A reopen that records a version sends [`pull_request.head_ref.pushed`](https://cursor.com/docs/api/origin/llms-full.txt#events), the same event a push sends. The base branch advancing on its own records nothing, so `version.baseSha` (and `base.sha`, which mirrors it) is the base tip as resolved when the version was recorded and can lag the branch's current tip until the next version is recorded. Read the branch's current tip with [Get Git Ref](https://cursor.com/docs/api/origin/llms-full.txt#get-git-ref).
+
+`mergeCommitSha` is the commit the merge wrote to the base branch: set once merged, unset before. The pre-merge preview is the `pull/{pullNumber}/merge` ref, a different commit; see [Git data](https://cursor.com/docs/api/origin/llms-full.txt#git-data).
+
+`version.potentialMergeCommit` reports Origin's test merge of that version: whether it is `prepared`, hit a `merge_conflict`, or is still `unknown`; the base branch tip `baseSha` the merge was attempted on; and, once prepared, the merge commit's `sha`. It describes that version only, so a merged pull request keeps reporting it. `pull_request.*` webhook payloads carry it as of the event. An event waits for the preparation only within a time budget, so it can say `unknown` where a later [Get Pull Request](https://cursor.com/docs/api/origin/llms-full.txt#get-pull-request) says `prepared`; re-read the pull request or wait for the next event.
+
 Review `verdict` is `approve`, `request_changes`, or `comment`. `submittedAt` is absent for an unsubmitted draft review. `dismissal` is absent while the verdict remains active. Dismissed reviews remain visible in review listings. Reviews automatically superseded by a newer decision carry a server-generated message.
 
 Comments expose a `thread` reference for grouping. Create-comment requests still accept the scalar `threadId` command parameter when replying. Resolve or reopen a thread with [Update Pull Request Thread](https://cursor.com/docs/api/origin/llms-full.txt#update-pull-request-thread).
 
 ### List Pull Requests
 
-/v1/origin/repos///pulls
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls`
 
 Requires scope `repository:pull_requests:read` (installation access token or user access token).
 
-Lists pull requests in a repo, optionally filtered by head branch, base branch, author, creation-time range, and state. Each pull request includes its assigned labels.
+Lists pull requests in a repo, optionally filtered by head branch, head commit, base branch, author, creation-time range, stack, labels, and state. Each pull request includes its assigned labels and, when it belongs to a stack, its `stack` membership.
 
 Results are sorted by creation order or by last update, selected with `sortBy`, most recent first. Set `direction=asc` for the other order. Page tokens embed the sort and the filters they were minted under, so a token replayed under a different sort or filter set is rejected; restart pagination when either changes.
 
@@ -8363,11 +9803,11 @@ Maximum results to return. Defaults to 30; maximum 100.
 
 `pageToken` string
 
-Opaque cursor from a previous response's `nextPageToken`. Omit it for the first page.
+Opaque cursor from a previous response's `nextPageToken`. Omit it for the first page. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 `author` string
 
-Optional author filter. Pass a public actor ID exactly as this endpoint returns it in `pullRequests[].author.user.id`, `pullRequests[].author.app.id`, or `pullRequests[].author.serviceAccount.id` (`user_…`, `app_…`, or `sa_…`), or the exact email address of a user. Email matching is case-insensitive. Apps and service accounts have no email identity, so only user authors can be selected that way. An author with no pull requests returns an empty list, as does an email that resolves to no single user. Any other value, including the shared `origin-cursor-managed-actor` ID, returns `InvalidArgument` (HTTP 400).
+Optional author filter. Pass a public actor ID exactly as this endpoint returns it in `pullRequests[].author.user.id`, `pullRequests[].author.app.id`, or `pullRequests[].author.serviceAccount.id` (`user_…`, `app_…`, or `sa_…`), or the exact email address of a user. Email matching is case-insensitive. Apps and service accounts have no email identity, so only user authors can be selected that way. An author with no pull requests returns an empty list, as does an email that resolves to no single user. Any other value, including the shared `origin-cursor-managed-actor` ID, returns `InvalidArgument` (HTTP 400). Filtering by email requires `repository:members:read` on the repository. Without it, an email returns `PermissionDenied` (HTTP 403), so filter by the author's ID instead.
 
 `base` string
 
@@ -8388,6 +9828,18 @@ Optional inclusive upper bound on creation time, in the same RFC 3339 format as 
 `sortBy` string
 
 Sort key. Allowed values: `created` (creation order, the default) or `updated` (time of last update). Any other value returns `InvalidArgument` (HTTP 400).
+
+`headSha` string
+
+Optional head commit filter: the full 40- or 64-character hex SHA of a pull request head, matched case-insensitively. Selects a pull request when any of its recorded versions has that head commit, current or superseded, so compare `head.sha` on each result to tell the two apart. The other filters still apply, and `state` defaults to `open`, so pass `state=all` to reach merged and closed pull requests. Malformed, abbreviated, and unknown SHAs match nothing.
+
+`stackId` string
+
+Optional stack filter: a stack id as returned in `pullRequests[].stack.id`. Returns only that stack's members, in the requested sort order rather than stack order, so rebuild the stack from each member's `stack.parentPullRequest`. `state` still defaults to `open`, which excludes merged members; pass `state=all` for the whole stack. A well-formed id that names no stack in this repository returns an empty list, and any other value returns `InvalidArgument` (HTTP 400).
+
+`labels` array
+
+Optional label filter, in [preview](https://cursor.com/docs/api/origin/llms-full.txt#preview). Repeat the parameter once per label name, as in `labels=bug&labels=security`. A comma is part of the name, so `labels=bug,security` names a single label. Returns only pull requests that carry every named label. Origin trims whitespace around each name and counts a repeated name once. Omit the parameter, or pass only blank values, for no filter. More than 10 names, a name longer than 50 characters, or a name that isn't a label in this repository returns an empty list. The other filters still apply, and `state` still defaults to `open`.
 
 #### Response Fields
 
@@ -8491,6 +9943,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`pullRequests[].author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`pullRequests[].author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `pullRequests[].createdAt` string
 
 RFC 3339 pull request creation timestamp.
@@ -8509,7 +9969,7 @@ RFC 3339 merge timestamp; may appear on merged pull requests.
 
 `pullRequests[].mergeCommitSha` string
 
-Merge commit SHA; may appear after merge.
+SHA of the commit the merge wrote to the base branch. Set once the pull request merges and absent before. The pre-merge preview is a different commit, read through the `pull/<number>/merge` ref with [Get Git Ref](https://cursor.com/docs/api/origin/llms-full.txt#get-git-ref).
 
 `pullRequests[].additions` integer
 
@@ -8543,6 +10003,34 @@ Six-character hex color without a leading `#`.
 
 Label description. Absent when the label has none.
 
+`pullRequests[].stack` object
+
+Stack membership: the chain of dependent pull requests this one belongs to, each stacked on the one it builds upon. Absent when the pull request is not part of a stack.
+
+`pullRequests[].stack.id` string
+
+Stable stack identifier, shared by every member of the stack. Pass it as `stackId` to [List Pull Requests](https://cursor.com/docs/api/origin/llms-full.txt#list-pull-requests) to read the other members.
+
+`pullRequests[].stack.parentPullRequest` object
+
+The pull request this one is stacked on. Absent on the root of the stack. A merged parent stays referenced until the child is retargeted or re-parented.
+
+`pullRequests[].stack.parentPullRequest.id` string
+
+Stable Origin identifier of the parent pull request.
+
+`pullRequests[].stack.parentPullRequest.number` string
+
+Repository-local number of the parent pull request, encoded as a JSON string.
+
+`pullRequests[].stack.parentPullRequest.repository` object
+
+Repository the parent belongs to, carrying the same `id`, `name`, and `owner` fields as a check run's `repository`. Stacks never cross repositories, so this is always the pull request's own repository.
+
+`pullRequests[].webUrl` string
+
+Output-only web URL for this pull request on Cursor. Absent when Origin can't form a link for it.
+
 `pullRequests[].version` object
 
 Current numbered pull request version and its head/base SHAs.
@@ -8562,6 +10050,22 @@ Base SHA captured by this pull request version.
 `pullRequests[].version.createdAt` string
 
 RFC 3339 timestamp for creation of this pull request version.
+
+`pullRequests[].version.potentialMergeCommit` object
+
+Origin's test merge of this version, a commit that merges its `headSha` onto the base branch tip, and how far its preparation got. Present on every version. It describes this version only and stays readable after the pull request merges; it is a different commit from `mergeCommitSha`. For a stacked pull request the base branch is the parent's branch, so the test merge covers only this pull request's changes on top of it.
+
+`pullRequests[].version.potentialMergeCommit.state` string
+
+How far the test merge's preparation got. Allowed values: `unknown`, `prepared`, `merge_conflict`. `unknown` means the test merge is not prepared: the version is waiting for its preparation, or the preparation timed out or failed. Every new version starts as `unknown`, so it never carries another version's commit. `prepared` means the test merge exists and `sha` and `baseSha` describe it. `merge_conflict` means merging `headSha` onto the base branch tip in `baseSha` conflicted, so there is no test merge; it is the condition [Get Pull Request Mergeability](https://cursor.com/docs/api/origin/llms-full.txt#get-pull-request-mergeability) reports as a `merge_conflict` blocker, and reopening the pull request prepares the version again. Treat an unrecognized value as `unknown`.
+
+`pullRequests[].version.potentialMergeCommit.sha` string
+
+SHA of the two-parent test-merge commit: its first parent is this object's `baseSha` and its second parent is the version's `headSha`. Present only when `state` is `prepared`. The `pull/{pullNumber}/merge` ref points at it while this version is the latest. After that it stays readable by SHA through [Get Commit](https://cursor.com/docs/api/origin/llms-full.txt#get-commit), but it cannot be fetched by SHA over Git.
+
+`pullRequests[].version.potentialMergeCommit.baseSha` string
+
+Base branch tip Origin merged `headSha` onto when it prepared this version: the test merge's first parent when `state` is `prepared`, and the tip the merge conflicted with when `state` is `merge_conflict`. Absent when `state` is `unknown`, and on a `merge_conflict` recorded before Origin reported this field for conflicts. It can be newer than `pullRequests[].version.baseSha`, and Origin does not refresh it when the base branch merely advances.
 
 `nextPageToken` string
 
@@ -8591,7 +10095,7 @@ curl --request GET \
         "sha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4"
       },
       "base": {
-        "ref": "main",
+        "ref": "add-telemetry-schema",
         "sha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
       },
       "author": {
@@ -8605,6 +10109,7 @@ curl --request GET \
       "additions": 128,
       "deletions": 46,
       "changedFiles": 5,
+      "webUrl": "https://cursor.com/codebase/acme/rocket/pull/17",
       "labels": [
         {
           "id": "lbl_01k2ja2000e0080000000000m1",
@@ -8613,6 +10118,22 @@ curl --request GET \
           "description": "Something isn't working"
         }
       ],
+      "stack": {
+        "id": "stk_01k2ja2000e0080000000000s1",
+        "parentPullRequest": {
+          "id": "pr_01k2ja2000e0080000000000d3",
+          "number": "16",
+          "repository": {
+            "id": "repo_01k2ja2000e0080000000000q4",
+            "name": "rocket",
+            "owner": {
+              "slug": "acme",
+              "id": "ns_01k2ja2000e0080000000000p3",
+              "type": "team"
+            }
+          }
+        }
+      },
       "version": {
         "number": "3",
         "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
@@ -8626,7 +10147,9 @@ curl --request GET \
 
 ### Get Pull Request
 
-/v1/origin/repos///pulls/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}`
 
 Requires scope `repository:pull_requests:read` (installation access token or user access token).
 
@@ -8744,6 +10267,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `createdAt` string
 
 RFC 3339 pull request creation timestamp.
@@ -8762,7 +10293,7 @@ RFC 3339 merge timestamp; may appear on merged pull requests.
 
 `mergeCommitSha` string
 
-Merge commit SHA; may appear after merge.
+SHA of the commit the merge wrote to the base branch. Set once the pull request merges and absent before. The pre-merge preview is a different commit, read through the `pull/<number>/merge` ref with [Get Git Ref](https://cursor.com/docs/api/origin/llms-full.txt#get-git-ref).
 
 `additions` integer
 
@@ -8796,6 +10327,34 @@ Six-character hex color without a leading `#`.
 
 Label description. Absent when the label has none.
 
+`stack` object
+
+Stack membership: the chain of dependent pull requests this one belongs to, each stacked on the one it builds upon. Absent when the pull request is not part of a stack.
+
+`stack.id` string
+
+Stable stack identifier, shared by every member of the stack. Pass it as `stackId` to [List Pull Requests](https://cursor.com/docs/api/origin/llms-full.txt#list-pull-requests) to read the other members.
+
+`stack.parentPullRequest` object
+
+The pull request this one is stacked on. Absent on the root of the stack. A merged parent stays referenced until the child is retargeted or re-parented.
+
+`stack.parentPullRequest.id` string
+
+Stable Origin identifier of the parent pull request.
+
+`stack.parentPullRequest.number` string
+
+Repository-local number of the parent pull request, encoded as a JSON string.
+
+`stack.parentPullRequest.repository` object
+
+Repository the parent belongs to, carrying the same `id`, `name`, and `owner` fields as a check run's `repository`. Stacks never cross repositories, so this is always the pull request's own repository.
+
+`webUrl` string
+
+Output-only web URL for this pull request on Cursor. Absent when Origin can't form a link for it.
+
 `version` object
 
 Current numbered pull request version and its head/base SHAs.
@@ -8815,6 +10374,22 @@ Base SHA captured by this pull request version.
 `version.createdAt` string
 
 RFC 3339 timestamp for creation of this pull request version.
+
+`version.potentialMergeCommit` object
+
+Origin's test merge of this version, a commit that merges its `headSha` onto the base branch tip, and how far its preparation got. Present on every version. It describes this version only and stays readable after the pull request merges; it is a different commit from `mergeCommitSha`. For a stacked pull request the base branch is the parent's branch, so the test merge covers only this pull request's changes on top of it.
+
+`version.potentialMergeCommit.state` string
+
+How far the test merge's preparation got. Allowed values: `unknown`, `prepared`, `merge_conflict`. `unknown` means the test merge is not prepared: the version is waiting for its preparation, or the preparation timed out or failed. Every new version starts as `unknown`, so it never carries another version's commit. `prepared` means the test merge exists and `sha` and `baseSha` describe it. `merge_conflict` means merging `headSha` onto the base branch tip in `baseSha` conflicted, so there is no test merge; it is the condition [Get Pull Request Mergeability](https://cursor.com/docs/api/origin/llms-full.txt#get-pull-request-mergeability) reports as a `merge_conflict` blocker, and reopening the pull request prepares the version again. Treat an unrecognized value as `unknown`.
+
+`version.potentialMergeCommit.sha` string
+
+SHA of the two-parent test-merge commit: its first parent is this object's `baseSha` and its second parent is the version's `headSha`. Present only when `state` is `prepared`. The `pull/{pullNumber}/merge` ref points at it while this version is the latest. After that it stays readable by SHA through [Get Commit](https://cursor.com/docs/api/origin/llms-full.txt#get-commit), but it cannot be fetched by SHA over Git.
+
+`version.potentialMergeCommit.baseSha` string
+
+Base branch tip Origin merged `headSha` onto when it prepared this version: the test merge's first parent when `state` is `prepared`, and the tip the merge conflicted with when `state` is `merge_conflict`. Absent when `state` is `unknown`, and on a `merge_conflict` recorded before Origin reported this field for conflicts. It can be newer than `version.baseSha`, and Origin does not refresh it when the base branch merely advances.
 
 ```bash
 curl --request GET \
@@ -8838,7 +10413,7 @@ curl --request GET \
     "sha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4"
   },
   "base": {
-    "ref": "main",
+    "ref": "add-telemetry-schema",
     "sha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
   },
   "author": {
@@ -8852,6 +10427,7 @@ curl --request GET \
   "additions": 128,
   "deletions": 46,
   "changedFiles": 5,
+  "webUrl": "https://cursor.com/codebase/acme/rocket/pull/17",
   "labels": [
     {
       "id": "lbl_01k2ja2000e0080000000000m1",
@@ -8860,18 +10436,41 @@ curl --request GET \
       "description": "Something isn't working"
     }
   ],
+  "stack": {
+    "id": "stk_01k2ja2000e0080000000000s1",
+    "parentPullRequest": {
+      "id": "pr_01k2ja2000e0080000000000d3",
+      "number": "16",
+      "repository": {
+        "id": "repo_01k2ja2000e0080000000000q4",
+        "name": "rocket",
+        "owner": {
+          "slug": "acme",
+          "id": "ns_01k2ja2000e0080000000000p3",
+          "type": "team"
+        }
+      }
+    }
+  },
   "version": {
     "number": "3",
     "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
     "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
-    "createdAt": "2026-08-01T09:30:00Z"
+    "createdAt": "2026-08-01T09:30:00Z",
+    "potentialMergeCommit": {
+      "state": "prepared",
+      "sha": "c7b6a5948372615049f8e7d6c5b4a3928170605f",
+      "baseSha": "5e2d1c0b9a8f7e6d5c4b3a2918070605f4e3d2c1"
+    }
   }
 }
 ```
 
 ### Create Pull Request
 
-/v1/origin/repos///pulls
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls`
 
 Requires scope `repository:pull_requests:write` (installation access token or user access token).
 
@@ -8915,9 +10514,17 @@ Target branch name (what the change merges into). Must name a branch that exists
 
 When true, create as a draft. When false or omitted, create as open (ready for review).
 
-`parentPullNumber` string
+`parentPullRequest` object
 
-Optional parent pull request number when stacking this change on another open/draft change in the same repository.
+Optional stack parent: another open or draft pull request in the same repository. Set exactly one member. An empty selector, more than one member, or `clear` returns `InvalidArgument` (HTTP 400).
+
+`parentPullRequest.number` string
+
+Parent pull request number within the repository.
+
+`parentPullRequest.id` string
+
+Parent pull request id, as returned in `id`.
 
 #### Response Fields
 
@@ -9017,6 +10624,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `createdAt` string
 
 RFC 3339 pull request creation timestamp.
@@ -9035,7 +10650,7 @@ RFC 3339 merge timestamp; may appear on merged pull requests.
 
 `mergeCommitSha` string
 
-Merge commit SHA; may appear after merge.
+SHA of the commit the merge wrote to the base branch. Set once the pull request merges and absent before. The pre-merge preview is a different commit, read through the `pull/<number>/merge` ref with [Get Git Ref](https://cursor.com/docs/api/origin/llms-full.txt#get-git-ref).
 
 `additions` integer
 
@@ -9069,6 +10684,34 @@ Six-character hex color without a leading `#`.
 
 Label description. Absent when the label has none.
 
+`stack` object
+
+Stack membership: the chain of dependent pull requests this one belongs to, each stacked on the one it builds upon. Absent when the pull request is not part of a stack.
+
+`stack.id` string
+
+Stable stack identifier, shared by every member of the stack. Pass it as `stackId` to [List Pull Requests](https://cursor.com/docs/api/origin/llms-full.txt#list-pull-requests) to read the other members.
+
+`stack.parentPullRequest` object
+
+The pull request this one is stacked on. Absent on the root of the stack. A merged parent stays referenced until the child is retargeted or re-parented.
+
+`stack.parentPullRequest.id` string
+
+Stable Origin identifier of the parent pull request.
+
+`stack.parentPullRequest.number` string
+
+Repository-local number of the parent pull request, encoded as a JSON string.
+
+`stack.parentPullRequest.repository` object
+
+Repository the parent belongs to, carrying the same `id`, `name`, and `owner` fields as a check run's `repository`. Stacks never cross repositories, so this is always the pull request's own repository.
+
+`webUrl` string
+
+Output-only web URL for this pull request on Cursor. Absent when Origin can't form a link for it.
+
 `version` object
 
 Current numbered pull request version and its head/base SHAs.
@@ -9088,6 +10731,22 @@ Base SHA captured by this pull request version.
 `version.createdAt` string
 
 RFC 3339 timestamp for creation of this pull request version.
+
+`version.potentialMergeCommit` object
+
+Origin's test merge of this version, a commit that merges its `headSha` onto the base branch tip, and how far its preparation got. Present on every version. It describes this version only and stays readable after the pull request merges; it is a different commit from `mergeCommitSha`. For a stacked pull request the base branch is the parent's branch, so the test merge covers only this pull request's changes on top of it.
+
+`version.potentialMergeCommit.state` string
+
+How far the test merge's preparation got. Allowed values: `unknown`, `prepared`, `merge_conflict`. `unknown` means the test merge is not prepared: the version is waiting for its preparation, or the preparation timed out or failed. Every new version starts as `unknown`, so it never carries another version's commit. `prepared` means the test merge exists and `sha` and `baseSha` describe it. `merge_conflict` means merging `headSha` onto the base branch tip in `baseSha` conflicted, so there is no test merge; it is the condition [Get Pull Request Mergeability](https://cursor.com/docs/api/origin/llms-full.txt#get-pull-request-mergeability) reports as a `merge_conflict` blocker, and reopening the pull request prepares the version again. Treat an unrecognized value as `unknown`.
+
+`version.potentialMergeCommit.sha` string
+
+SHA of the two-parent test-merge commit: its first parent is this object's `baseSha` and its second parent is the version's `headSha`. Present only when `state` is `prepared`. The `pull/{pullNumber}/merge` ref points at it while this version is the latest. After that it stays readable by SHA through [Get Commit](https://cursor.com/docs/api/origin/llms-full.txt#get-commit), but it cannot be fetched by SHA over Git.
+
+`version.potentialMergeCommit.baseSha` string
+
+Base branch tip Origin merged `headSha` onto when it prepared this version: the test merge's first parent when `state` is `prepared`, and the tip the merge conflicted with when `state` is `merge_conflict`. Absent when `state` is `unknown`, and on a `merge_conflict` recorded before Origin reported this field for conflicts. It can be newer than `version.baseSha`, and Origin does not refresh it when the base branch merely advances.
 
 ```bash
 curl --request POST \
@@ -9133,6 +10792,7 @@ curl --request POST \
   "additions": 128,
   "deletions": 46,
   "changedFiles": 5,
+  "webUrl": "https://cursor.com/codebase/acme/rocket/pull/17",
   "labels": [
     {
       "id": "lbl_01k2ja2000e0080000000000m1",
@@ -9152,15 +10812,19 @@ curl --request POST \
 
 ### Update Pull Request
 
-/v1/origin/repos///pulls/
+PATCH
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}`
 
 Requires scope `repository:pull_requests:write` (installation access token or user access token).
 
-Updates a pull request's title, body, base branch, and/or lifecycle state.
+Updates a pull request's title, body, base branch, stack parent, and/or lifecycle state.
 
-Omitted fields are unchanged. Present fields are applied in order: metadata, then reopen/draft/ready-for-review, then base, then close. Close runs last so a same-request retarget can still see an open change; reopen runs before base so a closed pull can be retargeted. If a later step fails, earlier steps may already have been committed.
+Omitted fields are unchanged. Present fields are applied in order: metadata, then reopen/draft/ready-for-review, then base, then stack parent, then close. Close runs last so a same-request retarget can still see an open change; reopen runs before base so a closed pull can be retargeted; the stack parent runs after base so an explicit parent wins over the one a base change derives. If a later step fails, earlier steps may already have been committed.
 
 A `title` longer than 256 characters, or a `body` longer than 65,536 characters, returns `InvalidArgument` (HTTP 400). Both limits count Unicode code points.
+
+Reopening a closed pull request, with `state` set to `"open"` or `draft` set to `false`, requires its head branch and its base branch to exist. When either branch was deleted, the request returns `FailedPrecondition` (HTTP 400) and the pull request stays closed, even when the same request also sets `base`; push the branch again, then reopen the pull request. To merge it into another branch, send `base` once it's open.
 
 #### Path Parameters
 
@@ -9186,15 +10850,31 @@ New body / description. An empty string clears the body. Maximum length: 65,536 
 
 `state` string
 
-`"open"` or `"closed"`. `"closed"` closes the pull request. `"open"` without `draft: true` marks it ready for review, including publishing an existing draft. Merged is not writable. use `MergePullRequest`.
+`"open"` or `"closed"`. `"closed"` closes the pull request. `"open"` without `draft: true` marks it ready for review, including publishing an existing draft. Reopening a pull request whose head moved while it was closed records a new `version` and sends [`pull_request.head_ref.pushed`](https://cursor.com/docs/api/origin/llms-full.txt#events). Merged is not writable; use `MergePullRequest`.
 
 `draft` boolean
 
-`true` marks the pull request draft; `false` marks it ready for review (and reopens it if currently closed). Ignored when `state` is `"closed"`.
+`true` marks the pull request draft; `false` marks it ready for review (and reopens it if currently closed, which can record a new `version`). Ignored when `state` is `"closed"`.
 
 `base` string
 
 New base branch. Retargets the pull request and can update stack parentage when the new base is another change's head (or the default branch). Must name a branch that exists in the repo at call time; a commit SHA, a tag name, or a branch that does not exist returns `InvalidArgument` (HTTP 400).
+
+`parentPullRequest` object
+
+Stack parent edit. Set exactly one member: `number` or `id` stacks this pull request on that parent, replacing any current parent, and `clear` removes the parent. Omit the field to leave the stack unchanged. An empty selector, `clear: false`, or more than one member returns `InvalidArgument` (HTTP 400). This is an association only: no branch is rewritten, and `base` is retargeted only when you send it too. Origin applies it after `base`, so an explicit parent wins over the one a base change derives.
+
+`parentPullRequest.number` string
+
+Parent pull request number within the repository.
+
+`parentPullRequest.id` string
+
+Parent pull request id, as returned in `id`.
+
+`parentPullRequest.clear` boolean
+
+Removes the current stack parent. Only `true` is accepted.
 
 #### Response Fields
 
@@ -9294,6 +10974,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `createdAt` string
 
 RFC 3339 pull request creation timestamp.
@@ -9312,7 +11000,7 @@ RFC 3339 merge timestamp; may appear on merged pull requests.
 
 `mergeCommitSha` string
 
-Merge commit SHA; may appear after merge.
+SHA of the commit the merge wrote to the base branch. Set once the pull request merges and absent before. The pre-merge preview is a different commit, read through the `pull/<number>/merge` ref with [Get Git Ref](https://cursor.com/docs/api/origin/llms-full.txt#get-git-ref).
 
 `additions` integer
 
@@ -9346,6 +11034,34 @@ Six-character hex color without a leading `#`.
 
 Label description. Absent when the label has none.
 
+`stack` object
+
+Stack membership: the chain of dependent pull requests this one belongs to, each stacked on the one it builds upon. Absent when the pull request is not part of a stack.
+
+`stack.id` string
+
+Stable stack identifier, shared by every member of the stack. Pass it as `stackId` to [List Pull Requests](https://cursor.com/docs/api/origin/llms-full.txt#list-pull-requests) to read the other members.
+
+`stack.parentPullRequest` object
+
+The pull request this one is stacked on. Absent on the root of the stack. A merged parent stays referenced until the child is retargeted or re-parented.
+
+`stack.parentPullRequest.id` string
+
+Stable Origin identifier of the parent pull request.
+
+`stack.parentPullRequest.number` string
+
+Repository-local number of the parent pull request, encoded as a JSON string.
+
+`stack.parentPullRequest.repository` object
+
+Repository the parent belongs to, carrying the same `id`, `name`, and `owner` fields as a check run's `repository`. Stacks never cross repositories, so this is always the pull request's own repository.
+
+`webUrl` string
+
+Output-only web URL for this pull request on Cursor. Absent when Origin can't form a link for it.
+
 `version` object
 
 Current numbered pull request version and its head/base SHAs.
@@ -9365,6 +11081,22 @@ Base SHA captured by this pull request version.
 `version.createdAt` string
 
 RFC 3339 timestamp for creation of this pull request version.
+
+`version.potentialMergeCommit` object
+
+Origin's test merge of this version, a commit that merges its `headSha` onto the base branch tip, and how far its preparation got. Present on every version. It describes this version only and stays readable after the pull request merges; it is a different commit from `mergeCommitSha`. For a stacked pull request the base branch is the parent's branch, so the test merge covers only this pull request's changes on top of it.
+
+`version.potentialMergeCommit.state` string
+
+How far the test merge's preparation got. Allowed values: `unknown`, `prepared`, `merge_conflict`. `unknown` means the test merge is not prepared: the version is waiting for its preparation, or the preparation timed out or failed. Every new version starts as `unknown`, so it never carries another version's commit. `prepared` means the test merge exists and `sha` and `baseSha` describe it. `merge_conflict` means merging `headSha` onto the base branch tip in `baseSha` conflicted, so there is no test merge; it is the condition [Get Pull Request Mergeability](https://cursor.com/docs/api/origin/llms-full.txt#get-pull-request-mergeability) reports as a `merge_conflict` blocker, and reopening the pull request prepares the version again. Treat an unrecognized value as `unknown`.
+
+`version.potentialMergeCommit.sha` string
+
+SHA of the two-parent test-merge commit: its first parent is this object's `baseSha` and its second parent is the version's `headSha`. Present only when `state` is `prepared`. The `pull/{pullNumber}/merge` ref points at it while this version is the latest. After that it stays readable by SHA through [Get Commit](https://cursor.com/docs/api/origin/llms-full.txt#get-commit), but it cannot be fetched by SHA over Git.
+
+`version.potentialMergeCommit.baseSha` string
+
+Base branch tip Origin merged `headSha` onto when it prepared this version: the test merge's first parent when `state` is `prepared`, and the tip the merge conflicted with when `state` is `merge_conflict`. Absent when `state` is `unknown`, and on a `merge_conflict` recorded before Origin reported this field for conflicts. It can be newer than `version.baseSha`, and Origin does not refresh it when the base branch merely advances.
 
 ```bash
 curl --request PATCH \
@@ -9410,6 +11142,7 @@ curl --request PATCH \
   "additions": 128,
   "deletions": 46,
   "changedFiles": 5,
+  "webUrl": "https://cursor.com/codebase/acme/rocket/pull/17",
   "labels": [
     {
       "id": "lbl_01k2ja2000e0080000000000m1",
@@ -9429,7 +11162,9 @@ curl --request PATCH \
 
 ### List Pull Request Comments
 
-/v1/origin/repos///pulls//comments
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/comments`
 
 Requires scope `repository:pull_requests:reviews:read` (installation access token or user access token).
 
@@ -9457,7 +11192,7 @@ Maximum comments to return. Defaults to 30; maximum 100.
 
 `pageToken` string
 
-Opaque cursor from a previous response's `nextPageToken`. Omit it for the first page.
+Opaque cursor from a previous response's `nextPageToken`. Omit it for the first page. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 `since` string
 
@@ -9504,10 +11239,6 @@ Head SHA captured by this pull request version.
 `comments[].thread.version.baseSha` string
 
 Base SHA captured by this pull request version.
-
-`comments[].thread.version.createdAt` string
-
-RFC 3339 timestamp for creation of this pull request version.
 
 `comments[].thread.path` string
 
@@ -9585,6 +11316,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`comments[].author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`comments[].author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `comments[].createdAt` string
 
 RFC 3339 comment creation timestamp.
@@ -9592,6 +11331,22 @@ RFC 3339 comment creation timestamp.
 `comments[].updatedAt` string
 
 RFC 3339 timestamp for the latest comment edit.
+
+`comments[].reactions` array
+
+Every reaction on the comment, oldest first. A newly created comment has none.
+
+`comments[].reactions[].content` string
+
+The reaction's name, for the eight emoji that have one: `thumbs_up`, `thumbs_down`, `laugh`, `hooray`, `confused`, `heart`, `rocket`, or `eyes`. Any other emoji carries `CONTENT_UNSPECIFIED`; read `emoji` for every reaction.
+
+`comments[].reactions[].reactor` object
+
+The principal that placed the reaction, with the same fields as `comments[].author`. Absent when the reactor's account was deleted.
+
+`comments[].reactions[].emoji` string
+
+The emoji, such as `✅`, exactly as it was placed.
 
 `pullRequest` object
 
@@ -9655,8 +11410,7 @@ curl --request GET \
         "version": {
           "number": "3",
           "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
-          "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
-          "createdAt": "2026-08-01T09:30:00Z"
+          "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
         },
         "path": "src/telemetry/retry.ts",
         "side": "right",
@@ -9673,7 +11427,29 @@ curl --request GET \
         }
       },
       "createdAt": "2026-08-01T09:30:00Z",
-      "updatedAt": "2026-08-02T14:45:00Z"
+      "updatedAt": "2026-08-02T14:45:00Z",
+      "reactions": [
+        {
+          "content": "heart",
+          "reactor": {
+            "user": {
+              "id": "user_01k2ja2000e0080000000000c3",
+              "email": "jane@acme.dev"
+            }
+          },
+          "emoji": "❤️"
+        },
+        {
+          "content": "heart",
+          "reactor": {
+            "app": {
+              "id": "app_01k2ja2000e0080000000000a1",
+              "displayName": "Acme CI"
+            }
+          },
+          "emoji": "❤️"
+        }
+      ]
     }
   ],
   "pullRequest": {
@@ -9694,7 +11470,9 @@ curl --request GET \
 
 ### Get Pull Request Comment
 
-/v1/origin/repos///pulls/comments/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/comments/{commentId}`
 
 Requires scope `repository:pull_requests:reviews:read` (installation access token or user access token).
 
@@ -9741,10 +11519,6 @@ Head SHA captured by this pull request version.
 `thread.version.baseSha` string
 
 Base SHA captured by this pull request version.
-
-`thread.version.createdAt` string
-
-RFC 3339 timestamp for creation of this pull request version.
 
 `thread.path` string
 
@@ -9822,6 +11596,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `createdAt` string
 
 RFC 3339 comment creation timestamp.
@@ -9829,6 +11611,22 @@ RFC 3339 comment creation timestamp.
 `updatedAt` string
 
 RFC 3339 timestamp for the latest comment edit.
+
+`reactions` array
+
+Every reaction on the comment, oldest first. A newly created comment has none.
+
+`reactions[].content` string
+
+The reaction's name, for the eight emoji that have one: `thumbs_up`, `thumbs_down`, `laugh`, `hooray`, `confused`, `heart`, `rocket`, or `eyes`. Any other emoji carries `CONTENT_UNSPECIFIED`; read `emoji` for every reaction.
+
+`reactions[].reactor` object
+
+The principal that placed the reaction, with the same fields as `author`. Absent when the reactor's account was deleted.
+
+`reactions[].emoji` string
+
+The emoji, such as `✅`, exactly as it was placed.
 
 ```bash
 curl --request GET \
@@ -9846,8 +11644,7 @@ curl --request GET \
     "version": {
       "number": "3",
       "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
-      "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
-      "createdAt": "2026-08-01T09:30:00Z"
+      "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
     },
     "path": "src/telemetry/retry.ts",
     "side": "right",
@@ -9864,13 +11661,79 @@ curl --request GET \
     }
   },
   "createdAt": "2026-08-01T09:30:00Z",
-  "updatedAt": "2026-08-02T14:45:00Z"
+  "updatedAt": "2026-08-02T14:45:00Z",
+  "reactions": [
+    {
+      "content": "heart",
+      "reactor": {
+        "user": {
+          "id": "user_01k2ja2000e0080000000000c3",
+          "email": "jane@acme.dev"
+        }
+      },
+      "emoji": "❤️"
+    },
+    {
+      "content": "heart",
+      "reactor": {
+        "app": {
+          "id": "app_01k2ja2000e0080000000000a1",
+          "displayName": "Acme CI"
+        }
+      },
+      "emoji": "❤️"
+    }
+  ]
 }
+```
+
+### Delete Pull Request Comment
+
+DELETE
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/comments/{commentId}`
+
+Requires scope `repository:pull_requests:reviews:write` (installation access token or user access token).
+
+Deletes a pull request comment by its stable Origin id. The response body is empty.
+
+The comment's author can always delete it. Any other caller must hold write access to the repository, which `repository:contents:write` grants, and otherwise receives `PermissionDenied` (HTTP 403). Deleting the last comment of a thread removes the thread; deleting any other comment, the thread opener included, leaves the thread and its remaining comments in place. Thread resolution is not a gate. Reactions to the comment and its edit history are removed with it.
+
+An unknown id, an already-deleted comment, and a comment in another repository all return `404`. A malformed id returns `InvalidArgument` (HTTP 400).
+
+#### Path Parameters
+
+`ownerSlug` string Required
+
+Owning entity's unique slug.
+
+`repoName` string Required
+
+Repo name, unique to the owner entity.
+
+`commentId` string Required
+
+#### Response Fields
+
+Successful requests return no response body.
+
+```bash
+curl --request DELETE \
+  --url 'https://api.cursor.com/v1/origin/repos/OWNER_SLUG/REPO_NAME/pulls/comments/COMMENT_ID' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN'
+```
+
+**Response:**
+
+```text
+204 No Content
 ```
 
 ### Create Pull Request Comment
 
-/v1/origin/repos///pulls//comments
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/comments`
 
 Requires scope `repository:pull_requests:reviews:write` (installation access token or user access token).
 
@@ -9964,10 +11827,6 @@ Head SHA captured by this pull request version.
 
 Base SHA captured by this pull request version.
 
-`thread.version.createdAt` string
-
-RFC 3339 timestamp for creation of this pull request version.
-
 `thread.path` string
 
 File path of the thread's diff anchor. Empty for general-discussion threads.
@@ -10044,6 +11903,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `createdAt` string
 
 RFC 3339 comment creation timestamp.
@@ -10051,6 +11918,22 @@ RFC 3339 comment creation timestamp.
 `updatedAt` string
 
 RFC 3339 timestamp for the latest comment edit.
+
+`reactions` array
+
+Every reaction on the comment, oldest first. A newly created comment has none.
+
+`reactions[].content` string
+
+The reaction's name, for the eight emoji that have one: `thumbs_up`, `thumbs_down`, `laugh`, `hooray`, `confused`, `heart`, `rocket`, or `eyes`. Any other emoji carries `CONTENT_UNSPECIFIED`; read `emoji` for every reaction.
+
+`reactions[].reactor` object
+
+The principal that placed the reaction, with the same fields as `author`. Absent when the reactor's account was deleted.
+
+`reactions[].emoji` string
+
+The emoji, such as `✅`, exactly as it was placed.
 
 ```bash
 curl --request POST \
@@ -10072,8 +11955,7 @@ curl --request POST \
     "version": {
       "number": "3",
       "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
-      "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
-      "createdAt": "2026-08-01T09:30:00Z"
+      "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
     },
     "path": "src/telemetry/retry.ts",
     "side": "right",
@@ -10090,13 +11972,16 @@ curl --request POST \
     }
   },
   "createdAt": "2026-08-01T09:30:00Z",
-  "updatedAt": "2026-08-02T14:45:00Z"
+  "updatedAt": "2026-08-02T14:45:00Z",
+  "reactions": []
 }
 ```
 
 ### Update Pull Request Comment
 
-/v1/origin/repos///pulls/comments/
+PATCH
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/comments/{commentId}`
 
 Requires scope `repository:pull_requests:reviews:write` (installation access token or user access token).
 
@@ -10152,10 +12037,6 @@ Head SHA captured by this pull request version.
 
 Base SHA captured by this pull request version.
 
-`thread.version.createdAt` string
-
-RFC 3339 timestamp for creation of this pull request version.
-
 `thread.path` string
 
 File path of the thread's diff anchor. Empty for general-discussion threads.
@@ -10232,6 +12113,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `createdAt` string
 
 RFC 3339 comment creation timestamp.
@@ -10239,6 +12128,22 @@ RFC 3339 comment creation timestamp.
 `updatedAt` string
 
 RFC 3339 timestamp for the latest comment edit.
+
+`reactions` array
+
+Every reaction on the comment, oldest first. A newly created comment has none.
+
+`reactions[].content` string
+
+The reaction's name, for the eight emoji that have one: `thumbs_up`, `thumbs_down`, `laugh`, `hooray`, `confused`, `heart`, `rocket`, or `eyes`. Any other emoji carries `CONTENT_UNSPECIFIED`; read `emoji` for every reaction.
+
+`reactions[].reactor` object
+
+The principal that placed the reaction, with the same fields as `author`. Absent when the reactor's account was deleted.
+
+`reactions[].emoji` string
+
+The emoji, such as `✅`, exactly as it was placed.
 
 ```bash
 curl --request PATCH \
@@ -10260,8 +12165,7 @@ curl --request PATCH \
     "version": {
       "number": "3",
       "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
-      "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
-      "createdAt": "2026-08-01T09:30:00Z"
+      "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
     },
     "path": "src/telemetry/retry.ts",
     "side": "right",
@@ -10278,13 +12182,135 @@ curl --request PATCH \
     }
   },
   "createdAt": "2026-08-01T09:30:00Z",
-  "updatedAt": "2026-08-02T14:45:00Z"
+  "updatedAt": "2026-08-02T14:45:00Z",
+  "reactions": [
+    {
+      "content": "heart",
+      "reactor": {
+        "user": {
+          "id": "user_01k2ja2000e0080000000000c3",
+          "email": "jane@acme.dev"
+        }
+      },
+      "emoji": "❤️"
+    },
+    {
+      "content": "heart",
+      "reactor": {
+        "app": {
+          "id": "app_01k2ja2000e0080000000000a1",
+          "displayName": "Acme CI"
+        }
+      },
+      "emoji": "❤️"
+    }
+  ]
 }
+```
+
+### Add Pull Request Comment Reaction
+
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/comments/{commentId}/reactions`
+
+Requires scope `repository:pull_requests:reviews:write` (installation access token or user access token).
+
+Adds the caller's reaction to a pull request comment. The response body is empty.
+
+A caller holds at most one reaction of each emoji on a comment, so adding one the caller already holds succeeds without change and delivers no [`pull_request.comment.reaction.added`](https://cursor.com/docs/api/origin/llms-full.txt#events) event. With an installation access token, the caller is the installation's app.
+
+A comment outside the repository in the path, or a pending-review comment not visible to the caller, returns `404`. A comment in the caller's own unsubmitted review returns `FailedPrecondition` (HTTP 400).
+
+#### Path Parameters
+
+`ownerSlug` string Required
+
+Owning entity's unique slug.
+
+`repoName` string Required
+
+Repo name, unique to the owner entity.
+
+`commentId` string Required
+
+#### Request Body
+
+`emoji` string Required
+
+The emoji to place, such as `✅`, stored exactly as sent. At most 32 Unicode code points, with no control characters or unpaired surrogates; `.` and `..` are rejected. A missing or invalid value returns `InvalidArgument` (HTTP 400).
+
+#### Response Fields
+
+Successful requests return no response body.
+
+```bash
+curl --request POST \
+  --url 'https://api.cursor.com/v1/origin/repos/OWNER_SLUG/REPO_NAME/pulls/comments/COMMENT_ID/reactions' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "emoji": "✅"
+}'
+```
+
+**Response:**
+
+```text
+204 No Content
+```
+
+### Remove Pull Request Comment Reaction
+
+DELETE
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/comments/{commentId}/reactions/{emoji}`
+
+Requires scope `repository:pull_requests:reviews:write` (installation access token or user access token).
+
+Removes the caller's reaction from a pull request comment. The response body is empty.
+
+Removing a reaction the caller doesn't hold succeeds without change, and the same reaction placed by other principals is never affected. With an installation access token, the caller is the installation's app.
+
+A comment outside the repository in the path, or a pending-review comment not visible to the caller, returns `404`. A comment in the caller's own unsubmitted review returns `FailedPrecondition` (HTTP 400).
+
+#### Path Parameters
+
+`ownerSlug` string Required
+
+Owning entity's unique slug.
+
+`repoName` string Required
+
+Repo name, unique to the owner entity.
+
+`commentId` string Required
+
+`emoji` string Required
+
+The emoji to remove, exactly as it appears in the comment's `reactions`, percent-encoded in the path: `✅` is `%E2%9C%85`.
+
+#### Response Fields
+
+Successful requests return no response body.
+
+```bash
+curl --request DELETE \
+  --url 'https://api.cursor.com/v1/origin/repos/OWNER_SLUG/REPO_NAME/pulls/comments/COMMENT_ID/reactions/%E2%9C%85' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN'
+```
+
+**Response:**
+
+```text
+204 No Content
 ```
 
 ### Update Pull Request Thread
 
-/v1/origin/repos///pulls/threads/
+PATCH
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/threads/{threadId}`
 
 Requires scope `repository:pull_requests:reviews:write` (installation access token or user access token).
 
@@ -10334,10 +12360,6 @@ Head SHA captured by this pull request version.
 
 Base SHA captured by this pull request version.
 
-`version.createdAt` string
-
-RFC 3339 timestamp for creation of this pull request version.
-
 `path` string
 
 File path of the thread's diff anchor. Empty for general-discussion threads.
@@ -10384,8 +12406,7 @@ curl --request PATCH \
   "version": {
     "number": "3",
     "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
-    "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
-    "createdAt": "2026-08-01T09:30:00Z"
+    "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
   },
   "path": "src/telemetry/retry.ts",
   "side": "right",
@@ -10399,13 +12420,15 @@ curl --request PATCH \
 
 ### List Pull Request Commits
 
-/v1/origin/repos///pulls//commits
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/commits`
 
 Requires scope `repository:pull_requests:read` (installation access token or user access token).
 
 Lists the commits in a pull request.
 
-Returns the pull request's commits as sparse `Commit` objects (no `stats`). Results default to 30 and are capped at 100, with at most 250 commits visible overall. A page token fixes the pull request version, page size, and commit cursor; `pageSize` must match the token on later requests, and a token that no longer matches the current head or base returns `400`.
+Returns the pull request's commits as sparse `Commit` objects (no `stats`). Results default to 30 and are capped at 100, with at most 250 commits visible overall. A page token fixes the pull request version and commit cursor; a token that no longer matches the current head or base returns `400`.
 
 #### Path Parameters
 
@@ -10427,7 +12450,7 @@ Max commits to return. Defaults to 30 when unset or 0. Values above 100 are clam
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page. The token is bound to the repository, pull request version, page size, and commit offset.
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. The token is bound to the repository, pull request version, and commit offset. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 #### Response Fields
 
@@ -10495,9 +12518,13 @@ Parent commit references, each containing a SHA.
 
 Parent commit SHA.
 
+`commits[].webUrl` string
+
+Output-only web URL for this commit on Cursor. Absent when Origin can't form a link for it.
+
 `nextPageToken` string
 
-Token fixes the pull request version, page size, and commit cursor; a token stale against the current head or base returns 400.
+Token fixes the pull request version and commit cursor; a token stale against the current head or base returns 400.
 
 ```bash
 curl --request GET \
@@ -10537,7 +12564,8 @@ curl --request GET \
         "additions": 128,
         "deletions": 46,
         "total": 174
-      }
+      },
+      "webUrl": "https://cursor.com/codebase/acme/rocket/commit/9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4"
     }
   ]
 }
@@ -10545,13 +12573,15 @@ curl --request GET \
 
 ### List Pull Request Files
 
-/v1/origin/repos///pulls//files
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/files`
 
 Requires scope `repository:pull_requests:read` (installation access token or user access token).
 
 Lists the files changed in a pull request.
 
-Returns filename, status, line counts, patch, and optional previous filename. Results default to 30 files and are capped at 100. A page token fixes the pull request version, page size, and file cursor; `pageSize` must match the token on later requests, and a token that no longer matches the current head or base returns `400`.
+Returns filename, status, line counts, patch, and optional previous filename. Results default to 30 files and are capped at 100. A page token fixes the pull request version and file cursor; a token that no longer matches the current head or base returns `400`.
 
 #### Path Parameters
 
@@ -10573,7 +12603,7 @@ Max changed files to return. Defaults to 30 when unset or 0. Values above 100 ar
 
 `pageToken` string
 
-Opaque cursor from a previous response's `next_page_token`. Empty for the first page. The token is bound to the repository, pull request version, page size, and changed-file cursor.
+Opaque cursor from a previous response's `next_page_token`. Empty for the first page. The token is bound to the repository, pull request version, and changed-file cursor. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 #### Response Fields
 
@@ -10611,7 +12641,7 @@ Previous path when the file was renamed or copied.
 
 `nextPageToken` string
 
-Token fixes pull request version, page size, and file cursor; a token stale against the current head or base returns 400.
+Token fixes pull request version and file cursor; a token stale against the current head or base returns 400.
 
 ```bash
 curl --request GET \
@@ -10638,7 +12668,9 @@ curl --request GET \
 
 ### List Pull Request Labels
 
-/v1/origin/repos///pulls//labels
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/labels`
 
 Requires scope `repository:pull_requests:read` (installation access token or user access token).
 
@@ -10703,7 +12735,9 @@ curl --request GET \
 
 ### Set Pull Request Labels
 
-/v1/origin/repos///pulls//labels
+PUT
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/labels`
 
 Requires scope `repository:pull_requests:write` (installation access token or user access token).
 
@@ -10764,7 +12798,9 @@ curl --request PUT \
 
 ### Add Pull Request Labels
 
-/v1/origin/repos///pulls//labels
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/labels`
 
 Requires scope `repository:pull_requests:write` (installation access token or user access token).
 
@@ -10825,7 +12861,9 @@ curl --request POST \
 
 ### Remove All Pull Request Labels
 
-/v1/origin/repos///pulls//labels
+DELETE
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/labels`
 
 Requires scope `repository:pull_requests:write` (installation access token or user access token).
 
@@ -10863,7 +12901,9 @@ curl --request DELETE \
 
 ### Remove Pull Request Label
 
-/v1/origin/repos///pulls//labels/
+DELETE
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/labels/{labelName}`
 
 Requires scope `repository:pull_requests:write` (installation access token or user access token).
 
@@ -10916,13 +12956,19 @@ curl --request DELETE \
 
 ### Merge Pull Request
 
-/v1/origin/repos///pulls//merge
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/merge`
 
 Requires scope `repository:contents:write` (installation access token or user access token).
 
 Merges a pull request into its base.
 
-For a stacked pull request, merges the entire root-to-target prefix ending at this pull number. not only this pull. Supported only on native Origin repositories; mirrored repositories are rejected.
+For a stacked pull request, merges the entire root-to-target prefix ending at this pull number, not only this pull. Supported only on native Origin repositories; mirrored repositories are rejected.
+
+The merge lands the head commit of the pull request's latest `version`. If the head branch has moved past that commit, for example because a push landed that Origin has not recorded as a new version yet, the request returns `Aborted` (HTTP 409 Conflict), the same answer as a stale `expectedHeadSha`, and nothing merges. Retry after [Get Pull Request](https://cursor.com/docs/api/origin/llms-full.txt#get-pull-request) reports the new head in `version.headSha`.
+
+Merge Pull Request returns `FailedPrecondition` (HTTP 400), and nothing merges, when the pull request's base branch is the head branch of another open or draft pull request that it isn't stacked on, because the merge would land on that pull request's branch. For a stacked pull request, Origin checks the base of the stack's lowest unmerged pull request, where the merge lands. The repository's default branch never triggers this refusal, and neither does a base branch that an `active` `push_branch` ruleset with a `deletion` rule names in `includedRefNames`; a pattern that matches every branch, such as `~ALL`, doesn't count. Merge the other pull request first, or stack this one on it by setting `parentPullRequest` with [Update Pull Request](https://cursor.com/docs/api/origin/llms-full.txt#update-pull-request). [Get Pull Request Mergeability](https://cursor.com/docs/api/origin/llms-full.txt#get-pull-request-mergeability) reports the same condition as a `needs_restack` blocker.
 
 #### Path Parameters
 
@@ -10952,7 +12998,7 @@ How the pull request lands. Allowed values: `merge`, which writes a merge commit
 
 `mergeCommitSha` string
 
-SHA of the merge commit written to the base.
+SHA of the commit the merge wrote to the base branch. The pre-merge preview is a different commit, read through the `pull/<number>/merge` ref with [Get Git Ref](https://cursor.com/docs/api/origin/llms-full.txt#get-git-ref).
 
 `mergedPullNumbers` array
 
@@ -11058,6 +13104,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`pullRequest.author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`pullRequest.author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `pullRequest.createdAt` string
 
 RFC 3339 pull request creation timestamp.
@@ -11076,7 +13130,7 @@ RFC 3339 merge timestamp; may appear on merged pull requests.
 
 `pullRequest.mergeCommitSha` string
 
-Merge commit SHA; may appear after merge.
+SHA of the commit the merge wrote to the base branch. Set once the pull request merges and absent before. The pre-merge preview is a different commit, read through the `pull/<number>/merge` ref with [Get Git Ref](https://cursor.com/docs/api/origin/llms-full.txt#get-git-ref).
 
 `pullRequest.additions` integer
 
@@ -11110,6 +13164,34 @@ Six-character hex color without a leading `#`.
 
 Label description. Absent when the label has none.
 
+`pullRequest.stack` object
+
+Stack membership: the chain of dependent pull requests this one belongs to, each stacked on the one it builds upon. Absent when the pull request is not part of a stack.
+
+`pullRequest.stack.id` string
+
+Stable stack identifier, shared by every member of the stack. Pass it as `stackId` to [List Pull Requests](https://cursor.com/docs/api/origin/llms-full.txt#list-pull-requests) to read the other members.
+
+`pullRequest.stack.parentPullRequest` object
+
+The pull request this one is stacked on. Absent on the root of the stack. A merged parent stays referenced until the child is retargeted or re-parented.
+
+`pullRequest.stack.parentPullRequest.id` string
+
+Stable Origin identifier of the parent pull request.
+
+`pullRequest.stack.parentPullRequest.number` string
+
+Repository-local number of the parent pull request, encoded as a JSON string.
+
+`pullRequest.stack.parentPullRequest.repository` object
+
+Repository the parent belongs to, carrying the same `id`, `name`, and `owner` fields as a check run's `repository`. Stacks never cross repositories, so this is always the pull request's own repository.
+
+`pullRequest.webUrl` string
+
+Output-only web URL for this pull request on Cursor. Absent when Origin can't form a link for it.
+
 `pullRequest.version` object
 
 Current numbered pull request version and its head/base SHAs.
@@ -11129,6 +13211,22 @@ Base SHA captured by this pull request version.
 `pullRequest.version.createdAt` string
 
 RFC 3339 timestamp for creation of this pull request version.
+
+`pullRequest.version.potentialMergeCommit` object
+
+Origin's test merge of this version, a commit that merges its `headSha` onto the base branch tip, and how far its preparation got. Present on every version. It describes this version only and stays readable after the pull request merges; it is a different commit from `mergeCommitSha`. For a stacked pull request the base branch is the parent's branch, so the test merge covers only this pull request's changes on top of it.
+
+`pullRequest.version.potentialMergeCommit.state` string
+
+How far the test merge's preparation got. Allowed values: `unknown`, `prepared`, `merge_conflict`. `unknown` means the test merge is not prepared: the version is waiting for its preparation, or the preparation timed out or failed. Every new version starts as `unknown`, so it never carries another version's commit. `prepared` means the test merge exists and `sha` and `baseSha` describe it. `merge_conflict` means merging `headSha` onto the base branch tip in `baseSha` conflicted, so there is no test merge; it is the condition [Get Pull Request Mergeability](https://cursor.com/docs/api/origin/llms-full.txt#get-pull-request-mergeability) reports as a `merge_conflict` blocker, and reopening the pull request prepares the version again. Treat an unrecognized value as `unknown`.
+
+`pullRequest.version.potentialMergeCommit.sha` string
+
+SHA of the two-parent test-merge commit: its first parent is this object's `baseSha` and its second parent is the version's `headSha`. Present only when `state` is `prepared`. The `pull/{pullNumber}/merge` ref points at it while this version is the latest. After that it stays readable by SHA through [Get Commit](https://cursor.com/docs/api/origin/llms-full.txt#get-commit), but it cannot be fetched by SHA over Git.
+
+`pullRequest.version.potentialMergeCommit.baseSha` string
+
+Base branch tip Origin merged `headSha` onto when it prepared this version: the test merge's first parent when `state` is `prepared`, and the tip the merge conflicted with when `state` is `merge_conflict`. Absent when `state` is `unknown`, and on a `merge_conflict` recorded before Origin reported this field for conflicts. It can be newer than `pullRequest.version.baseSha`, and Origin does not refresh it when the base branch merely advances.
 
 ```bash
 curl --request POST \
@@ -11179,6 +13277,7 @@ curl --request POST \
     "additions": 128,
     "deletions": 46,
     "changedFiles": 5,
+    "webUrl": "https://cursor.com/codebase/acme/rocket/pull/17",
     "labels": [
       {
         "id": "lbl_01k2ja2000e0080000000000m1",
@@ -11197,9 +13296,88 @@ curl --request POST \
 }
 ```
 
+### Prepare Pull Request Merge Ref
+
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/merge_ref`
+
+Requires scope `repository:pull_requests:read` (installation access token or user access token).
+
+Brings a pull request's test merge up to date with the current tip of its base branch.
+
+The test merge is the merge commit at `refs/pull/{pullNumber}/merge`, which [Get Git Ref](https://cursor.com/docs/api/origin/llms-full.txt#get-git-ref) reads: its first parent is the base tip and its second parent is the head. Origin updates that ref when the pull request's head changes, but not when only the base branch moves, so a CI run that checks it out later can test an old base. Call this endpoint when the ref's first parent is behind the base tip.
+
+When the recorded test merge already uses the current base tip, Origin returns it without recomputing. Otherwise it computes one merge against the current tip and returns the result, or `pending` when that merge can't finish within the request. Call again after `pending`: each call computes at most one merge, and concurrent calls for the same pull request share it.
+
+Supported only on native Origin repositories. A mirrored repository, a closed or merged pull request, and a request made while Origin has the refresh turned off return `FailedPrecondition` (HTTP 400).
+
+This operation is in preview and its shape can change while the contract settles. Decode responses with unknown fields and unknown enum values tolerated, and treat an unrecognized `state` as `pending`.
+
+#### Path Parameters
+
+`ownerSlug` string Required
+
+Owning entity's unique slug.
+
+`repoName` string Required
+
+Repo name, unique to the owner entity.
+
+`pullNumber` string Required
+
+Number of the pull request whose test merge to refresh.
+
+#### Request Body
+
+`expectedHeadSha` string
+
+Guard against refreshing a head your app has not seen: the full commit SHA (40 or 64 hexadecimal characters) expected to be the pull request's current head. When the head differs, the request is rejected with `Aborted` (HTTP 409 Conflict) and nothing is computed. Values that are not a full commit SHA are rejected with `InvalidArgument` (HTTP 400). Omit it to refresh whatever the current head is.
+
+#### Response Fields
+
+`state` string
+
+Result of the refresh. Allowed values: `mergeable`, meaning the test merge uses the current base tip and `mergeCommitSha` names it; `conflicted`, meaning the head doesn't merge cleanly into the current base tip; and `pending`, meaning the merge didn't finish within the request, so call again. Treat an unrecognized value as `pending`.
+
+`mergeCommitSha` string
+
+The test merge commit, whose first parent is `baseSha` and whose second parent is `headSha`. Set only when `state` is `mergeable`.
+
+`baseSha` string
+
+Tip of the base branch the merge was computed, or is being computed, against. Empty when `state` is `pending` and the base tip couldn't be read.
+
+`headSha` string
+
+Head commit of the pull request the merge is for.
+
+```bash
+curl --request POST \
+  --url 'https://api.cursor.com/v1/origin/repos/OWNER_SLUG/REPO_NAME/pulls/PULL_NUMBER/merge_ref' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "expectedHeadSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4"
+}'
+```
+
+**Response shape:**
+
+```json
+{
+  "state": "mergeable",
+  "mergeCommitSha": "5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b7c6d",
+  "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
+  "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4"
+}
+```
+
 ### Get Pull Request Mergeability
 
-/v1/origin/repos///pulls//mergeability
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/mergeability`
 
 Requires scope `repository:pull_requests:read` (installation access token or user access token).
 
@@ -11357,7 +13535,11 @@ Whether more paths conflict than are listed.
 
 `blockers[].mergeConflict.inheritedFromDownstack` boolean
 
-Whether the conflict comes from a pull request below this one in the stack, so this pull request is waiting on that one rather than conflicted itself.
+Whether the conflict comes from a pull request below this one in the stack. This pull request might also conflict on its own paths; `conflictsBeyondDownstack` says whether it does.
+
+`blockers[].mergeConflict.conflictsBeyondDownstack` boolean
+
+Whether this pull request conflicts on a path the pull request below it doesn't. `false` when every conflict is inherited from below, and `true` when this pull request isn't in a stack.
 
 `blockers[].stackShape` object
 
@@ -11494,7 +13676,9 @@ curl --request GET \
 
 ### List Pull Request Requested Reviewers
 
-/v1/origin/repos///pulls//requested\_reviewers
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/requested_reviewers`
 
 Requires scope `repository:pull_requests:reviews:read` (installation access token or user access token).
 
@@ -11572,7 +13756,9 @@ curl --request GET \
 
 ### Request Pull Request Reviewers
 
-/v1/origin/repos///pulls//requested\_reviewers
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/requested_reviewers`
 
 Requires scope `repository:pull_requests:reviews:write` (installation access token or user access token).
 
@@ -11671,7 +13857,9 @@ curl --request POST \
 
 ### Remove Pull Request Requested Reviewers
 
-/v1/origin/repos///pulls//requested\_reviewers
+DELETE
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/requested_reviewers`
 
 Requires scope `repository:pull_requests:reviews:write` (installation access token or user access token).
 
@@ -11732,7 +13920,9 @@ curl --request DELETE \
 
 ### List Pull Request Reviews
 
-/v1/origin/repos///pulls//reviews
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/reviews`
 
 Requires scope `repository:pull_requests:reviews:read` (installation access token or user access token).
 
@@ -11758,7 +13948,7 @@ Maximum reviews to return. Defaults to 30; maximum 100.
 
 `pageToken` string
 
-Opaque cursor from a previous response's `nextPageToken`. Omit it for the first page.
+Opaque cursor from a previous response's `nextPageToken`. Omit it for the first page. `pageSize` on a follow-up request applies to that page; omit it to keep the previous page size.
 
 #### Response Fields
 
@@ -11814,6 +14004,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`reviews[].author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`reviews[].author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `reviews[].verdict` string
 
 Review verdict; approve, request\_changes, or comment.
@@ -11841,10 +14039,6 @@ Head SHA captured by this pull request version.
 `reviews[].pullRequestVersion.baseSha` string
 
 Base SHA captured by this pull request version.
-
-`reviews[].pullRequestVersion.createdAt` string
-
-RFC 3339 timestamp for creation of this pull request version.
 
 `reviews[].dismissal` object
 
@@ -11893,6 +14087,14 @@ Service account variant of the actor. Set when a service account performed the a
 `reviews[].dismissal.dismissedBy.serviceAccount.id` string
 
 Public identifier for the service account.
+
+`reviews[].dismissal.dismissedBy.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`reviews[].dismissal.dismissedBy.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
 
 `reviews[].dismissal.dismissedAt` string
 
@@ -11971,8 +14173,7 @@ curl --request GET \
       "pullRequestVersion": {
         "number": "3",
         "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
-        "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
-        "createdAt": "2026-08-01T09:30:00Z"
+        "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
       }
     }
   ],
@@ -11994,7 +14195,9 @@ curl --request GET \
 
 ### Create Pull Request Review
 
-/v1/origin/repos///pulls//reviews
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/reviews`
 
 Requires scope `repository:pull_requests:reviews:write` (installation access token or user access token).
 
@@ -12122,6 +14325,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `verdict` string
 
 Review verdict; approve, request\_changes, or comment.
@@ -12149,10 +14360,6 @@ Head SHA captured by this pull request version.
 `pullRequestVersion.baseSha` string
 
 Base SHA captured by this pull request version.
-
-`pullRequestVersion.createdAt` string
-
-RFC 3339 timestamp for creation of this pull request version.
 
 `dismissal` object
 
@@ -12202,6 +14409,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`dismissal.dismissedBy.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`dismissal.dismissedBy.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `dismissal.dismissedAt` string
 
 RFC 3339 dismissal timestamp.
@@ -12239,15 +14454,16 @@ curl --request POST \
   "pullRequestVersion": {
     "number": "3",
     "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
-    "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
-    "createdAt": "2026-08-01T09:30:00Z"
+    "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
   }
 }
 ```
 
 ### Update Pull Request Review
 
-/v1/origin/repos///pulls//reviews/
+PATCH
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/reviews/{reviewId}`
 
 Requires scope `repository:pull_requests:reviews:write` (installation access token or user access token).
 
@@ -12325,6 +14541,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `verdict` string
 
 Review verdict; approve, request\_changes, or comment.
@@ -12352,10 +14576,6 @@ Head SHA captured by this pull request version.
 `pullRequestVersion.baseSha` string
 
 Base SHA captured by this pull request version.
-
-`pullRequestVersion.createdAt` string
-
-RFC 3339 timestamp for creation of this pull request version.
 
 `dismissal` object
 
@@ -12405,6 +14625,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`dismissal.dismissedBy.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`dismissal.dismissedBy.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `dismissal.dismissedAt` string
 
 RFC 3339 dismissal timestamp.
@@ -12440,21 +14668,22 @@ curl --request PATCH \
   "pullRequestVersion": {
     "number": "3",
     "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
-    "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
-    "createdAt": "2026-08-01T09:30:00Z"
+    "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
   }
 }
 ```
 
 ### Dismiss Pull Request Review
 
-/v1/origin/repos///pulls//reviews//dismissals
+PUT
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/pulls/{pullNumber}/reviews/{reviewId}/dismissals`
 
 Requires scope `repository:pull_requests:reviews:write` (installation access token or user access token).
 
 Dismisses a submitted review so its verdict no longer counts toward the pull request's review state. The review itself is retained and keeps appearing in ListPullRequestReviews, with `dismissal` set.
 
-Dismissing does not require having authored the review; write permission on the repository's pull request reviews is sufficient.
+Dismissing does not require having authored the review; write permission on the repository's pull request reviews is sufficient, with two exceptions: a service account can dismiss only its own reviews, and dismissing another reviewer's `request_changes` review also requires write permission on the repository's contents, because a change request can block merge. Either exception returns `PermissionDenied` (HTTP 403).
 
 Only `approve` and `request_changes` reviews can be dismissed, and only once: a `comment` review, an unsubmitted draft review, or an already-dismissed review returns FAILED\_PRECONDITION, and repeating the call leaves the first dismissal in place. A review that does not belong to the named pull request returns NOT\_FOUND.
 
@@ -12530,6 +14759,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`author.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`author.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `verdict` string
 
 Review verdict; approve, request\_changes, or comment.
@@ -12557,10 +14794,6 @@ Head SHA captured by this pull request version.
 `pullRequestVersion.baseSha` string
 
 Base SHA captured by this pull request version.
-
-`pullRequestVersion.createdAt` string
-
-RFC 3339 timestamp for creation of this pull request version.
 
 `dismissal` object
 
@@ -12610,6 +14843,14 @@ Service account variant of the actor. Set when a service account performed the a
 
 Public identifier for the service account.
 
+`dismissal.dismissedBy.serviceAccount.type` string
+
+Product or feature the service account acts for. Allowed values: `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`. Absent when the account no longer exists or Cursor doesn't describe it. New values can be added; treat an absent or unrecognized value as an account of a product you don't recognize, never as an error.
+
+`dismissal.dismissedBy.serviceAccount.displayName` string
+
+Product name Cursor shows for the service account: `Cursor` for Cursor's own managed accounts, or a Grok bot's name. Never empty when present; a Grok bot whose name can't be read is named `Grok Bot`. Omitted when the account has no product name.
+
 `dismissal.dismissedAt` string
 
 RFC 3339 dismissal timestamp.
@@ -12645,8 +14886,7 @@ curl --request PUT \
   "pullRequestVersion": {
     "number": "3",
     "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
-    "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
-    "createdAt": "2026-08-01T09:30:00Z"
+    "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
   },
   "dismissal": {
     "dismissedBy": {
@@ -12665,7 +14905,9 @@ curl --request PUT \
 
 ### List Rulesets
 
-/v1/origin/repos///rulesets
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/rulesets`
 
 Requires scope `repository:rulesets:read` (installation access token or user access token).
 
@@ -12727,11 +14969,11 @@ Stable Origin ID for this rule.
 
 `rulesets[].rules[].ruleType` string
 
-Rule type, for example `pull_request`, `require_status_checks`, `require_branch_up_to_date`, `deletion`, or `non_fast_forward`.
+Rule type. A `merge_branch` ruleset accepts `pull_request`, `require_status_checks`, and `require_branch_up_to_date`. A `push_branch`, `push_tag`, or `push_repository` ruleset accepts `deletion`, `non_fast_forward`, `block_direct_updates`, `block_merges`, `ref_name_pattern`, and `required_linear_history`.
 
 `rulesets[].rules[].parameters` object
 
-Type-specific parameters as a JSON object. The shape depends on `rulesets[].rules[].ruleType`.
+Type-specific parameters as a JSON object. The shape depends on `rulesets[].rules[].ruleType`; [Create Ruleset](https://cursor.com/docs/api/origin/llms-full.txt#create-ruleset) lists the parameters of each rule type.
 
 `rulesets[].bypassActors` array
 
@@ -12751,7 +14993,7 @@ A user principal. Exactly one of `user`, `team`, `app`, or `originRole` is prese
 
 `rulesets[].bypassActors[].user.id` string
 
-Numeric Cursor user ID encoded as a decimal string.
+The user's public ID (`user_…`).
 
 `rulesets[].bypassActors[].team` object
 
@@ -12843,7 +15085,7 @@ curl --request GET \
           "id": "rsba_01k2ja2000e0080000000000w9",
           "bypassMode": "always",
           "user": {
-            "id": "act_01k2ja2000e0080000000000x0"
+            "id": "user_01k2ja2000e0080000000000c3"
           }
         }
       ]
@@ -12863,7 +15105,9 @@ curl --request GET \
 
 ### Create Ruleset
 
-/v1/origin/repos///rulesets
+POST
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/rulesets`
 
 Requires scope `repository:rulesets:write` (installation access token or user access token).
 
@@ -12909,11 +15153,75 @@ Ref name patterns this ruleset excludes. Same pattern language and 64-entry cap 
 
 `rules` array
 
-Protection rules to store. Each entry carries `ruleType` and optional `parameters`; Origin assigns each rule's `id`. Values above 20 entries are rejected with `InvalidArgument` (HTTP 400).
+Protection rules to store. Each entry carries `ruleType` and optional `parameters`; Origin assigns each rule's `id`. Values above 20 entries are rejected with `InvalidArgument` (HTTP 400). Each rule type runs in one kind of ruleset: a `merge_branch` ruleset accepts only the merge rule types `pull_request`, `require_status_checks`, and `require_branch_up_to_date`, and a `push_branch`, `push_tag`, or `push_repository` ruleset accepts only the push rule types `deletion`, `non_fast_forward`, `block_direct_updates`, `block_merges`, `ref_name_pattern`, and `required_linear_history`. A rule whose type never runs in the ruleset's `kind` returns `InvalidArgument` (HTTP 400).
+
+`rules[].ruleType` string Required
+
+Rule type. A `merge_branch` ruleset accepts `pull_request`, `require_status_checks`, and `require_branch_up_to_date`. A `push_branch`, `push_tag`, or `push_repository` ruleset accepts `deletion`, `non_fast_forward`, `block_direct_updates`, `block_merges`, `ref_name_pattern`, and `required_linear_history`. Any other value, or a type the ruleset's `kind` doesn't accept, is rejected with `InvalidArgument` (HTTP 400).
+
+`rules[].parameters` object
+
+Type-specific parameters as a JSON object. The shape depends on `rules[].ruleType`, and unknown keys are rejected. `require_branch_up_to_date`, `deletion`, `non_fast_forward`, `block_merges`, and `required_linear_history` take no parameters: send `{}` or omit `parameters`. `pull_request` parameters are also accepted in snake\_case, such as `required_approving_review_count`; the camelCase key wins when both are sent.
+
+`rules[].parameters.requiredApprovingReviewCount` integer
+
+For `pull_request` rules: how many approving reviews the pull request needs, from 0 to 50. Defaults to 1.
+
+`rules[].parameters.requireCodeOwnerReview` boolean
+
+For `pull_request` rules: when `true`, every changed path that has code owners must also be approved by one of its owners. Defaults to `false`.
+
+`rules[].parameters.dismissStaleReviewsOnPush` boolean
+
+For `pull_request` rules: not supported yet. `true` makes the rule fail for every pull request it applies to. Defaults to `false`.
+
+`rules[].parameters.requireLastPushApproval` boolean
+
+For `pull_request` rules: not supported yet. `true` makes the rule fail for every pull request it applies to. Defaults to `false`.
+
+`rules[].parameters.requiredReviewThreadResolution` boolean
+
+For `pull_request` rules: not supported yet. `true` makes the rule fail for every pull request it applies to. Defaults to `false`.
+
+`rules[].parameters.requiredChecks` array
+
+For `require_status_checks` rules, where it's required: checks that must all pass on the pull request's head commit before it can merge. An empty list requires nothing. Entries that repeat the same `actorKind`, `actorId`, `groupKey`, and `runKey` are rejected. A check is named by the actor that reports it and the keys it reports under, never by a display name or context string, and every value must be a non-empty string.
+
+`rules[].parameters.requiredChecks[].actorKind` string
+
+Kind of the check suite's `actor`: `app`, `service_account`, or `user`. Required in each entry.
+
+`rules[].parameters.requiredChecks[].actorId` string
+
+The actor's ID exactly as the check suite's `actor` reports it, such as `app_…`, `sa_…`, or `user_…`. A bare UUID or an ID containing `|` is rejected. An ID that names no actor is accepted but never matches, so the check reads as missing. Required in each entry.
+
+`rules[].parameters.requiredChecks[].groupKey` string
+
+The check suite `key` the actor reports. Required in each entry.
+
+`rules[].parameters.requiredChecks[].runKey` string
+
+A check run `key` in that suite. When set, only the newest run with this key must pass; when omitted, every run in the suite must pass. A run passes when it completes as `success`, `neutral`, or `skipped`.
+
+`rules[].parameters.requiredChecks[].name` string
+
+Label merge blockers show for this check in place of `actorKind/actorId/groupKey[/runKey]`. Matching ignores it.
+
+`rules[].parameters.blockDirectUpdates` boolean
+
+For `block_direct_updates` rules: when `true`, a targeted ref can be created or updated only by merging a pull request. When `false`, the rule has no effect. Defaults to `true`.
+
+`rules[].parameters.pattern` string
+
+For `ref_name_pattern` rules, where it's required: an RE2 regular expression, 1 to 1024 characters. A created or updated branch or tag name, without `refs/heads/` or `refs/tags/`, must match it. A match anywhere in the name counts; anchor the pattern with `^` and `$` to match the whole name.
+
+`rules[].parameters.negate` boolean
+
+For `ref_name_pattern` rules: when `true`, the name must not match `pattern`. Defaults to `false`.
 
 `bypassActors` array
 
-Bypass principals to store. Each entry carries `bypassMode` and exactly one of `user`, `team`, `app`, or `originRole`; Origin assigns each actor's `id`. Values above 15 entries are rejected with `InvalidArgument` (HTTP 400).
+Bypass principals to store. Each entry carries `bypassMode` and exactly one of `user`, `team`, `app`, or `originRole`; Origin assigns each actor's `id`. Identify a `user` by its public ID (`user_…`) in `user.id`. Values above 15 entries are rejected with `InvalidArgument` (HTTP 400).
 
 #### Response Fields
 
@@ -12955,11 +15263,11 @@ Stable Origin ID for this rule.
 
 `rules[].ruleType` string
 
-Rule type, for example `pull_request`, `require_status_checks`, `require_branch_up_to_date`, `deletion`, or `non_fast_forward`.
+Rule type. A `merge_branch` ruleset accepts `pull_request`, `require_status_checks`, and `require_branch_up_to_date`. A `push_branch`, `push_tag`, or `push_repository` ruleset accepts `deletion`, `non_fast_forward`, `block_direct_updates`, `block_merges`, `ref_name_pattern`, and `required_linear_history`.
 
 `rules[].parameters` object
 
-Type-specific parameters as a JSON object. The shape depends on `rules[].ruleType`.
+Type-specific parameters as a JSON object. The shape depends on `rules[].ruleType`; [Create Ruleset](https://cursor.com/docs/api/origin/llms-full.txt#create-ruleset) lists the parameters of each rule type.
 
 `bypassActors` array
 
@@ -12979,7 +15287,7 @@ A user principal. Exactly one of `user`, `team`, `app`, or `originRole` is prese
 
 `bypassActors[].user.id` string
 
-Numeric Cursor user ID encoded as a decimal string.
+The user's public ID (`user_…`).
 
 `bypassActors[].team` object
 
@@ -13034,7 +15342,7 @@ curl --request POST \
     {
       "bypassMode": "always",
       "user": {
-        "id": "act_01k2ja2000e0080000000000x0"
+        "id": "user_01k2ja2000e0080000000000c3"
       }
     }
   ]
@@ -13067,7 +15375,7 @@ curl --request POST \
       "id": "rsba_01k2ja2000e0080000000000w9",
       "bypassMode": "always",
       "user": {
-        "id": "act_01k2ja2000e0080000000000x0"
+        "id": "user_01k2ja2000e0080000000000c3"
       }
     }
   ]
@@ -13076,7 +15384,9 @@ curl --request POST \
 
 ### Get Ruleset
 
-/v1/origin/repos///rulesets/
+GET
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/rulesets/{rulesetId}`
 
 Requires scope `repository:rulesets:read` (installation access token or user access token).
 
@@ -13138,11 +15448,11 @@ Stable Origin ID for this rule.
 
 `rules[].ruleType` string
 
-Rule type, for example `pull_request`, `require_status_checks`, `require_branch_up_to_date`, `deletion`, or `non_fast_forward`.
+Rule type. A `merge_branch` ruleset accepts `pull_request`, `require_status_checks`, and `require_branch_up_to_date`. A `push_branch`, `push_tag`, or `push_repository` ruleset accepts `deletion`, `non_fast_forward`, `block_direct_updates`, `block_merges`, `ref_name_pattern`, and `required_linear_history`.
 
 `rules[].parameters` object
 
-Type-specific parameters as a JSON object. The shape depends on `rules[].ruleType`.
+Type-specific parameters as a JSON object. The shape depends on `rules[].ruleType`; [Create Ruleset](https://cursor.com/docs/api/origin/llms-full.txt#create-ruleset) lists the parameters of each rule type.
 
 `bypassActors` array
 
@@ -13162,7 +15472,7 @@ A user principal. Exactly one of `user`, `team`, `app`, or `originRole` is prese
 
 `bypassActors[].user.id` string
 
-Numeric Cursor user ID encoded as a decimal string.
+The user's public ID (`user_…`).
 
 `bypassActors[].team` object
 
@@ -13224,7 +15534,7 @@ curl --request GET \
       "id": "rsba_01k2ja2000e0080000000000w9",
       "bypassMode": "always",
       "user": {
-        "id": "act_01k2ja2000e0080000000000x0"
+        "id": "user_01k2ja2000e0080000000000c3"
       }
     }
   ]
@@ -13233,7 +15543,9 @@ curl --request GET \
 
 ### Update Ruleset
 
-/v1/origin/repos///rulesets/
+PUT
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/rulesets/{rulesetId}`
 
 Requires scope `repository:rulesets:write` (installation access token or user access token).
 
@@ -13283,11 +15595,75 @@ Ref name patterns this ruleset excludes. Same pattern language and 64-entry cap 
 
 `rules` array
 
-Protection rules to store. Each entry carries `ruleType` and optional `parameters`; Origin assigns each rule's `id`. Values above 20 entries are rejected with `InvalidArgument` (HTTP 400).
+Protection rules to store. Each entry carries `ruleType` and optional `parameters`; Origin assigns each rule's `id`. Values above 20 entries are rejected with `InvalidArgument` (HTTP 400). Each rule type runs in one kind of ruleset: a `merge_branch` ruleset accepts only the merge rule types `pull_request`, `require_status_checks`, and `require_branch_up_to_date`, and a `push_branch`, `push_tag`, or `push_repository` ruleset accepts only the push rule types `deletion`, `non_fast_forward`, `block_direct_updates`, `block_merges`, `ref_name_pattern`, and `required_linear_history`. A rule whose type never runs in the ruleset's `kind` returns `InvalidArgument` (HTTP 400).
+
+`rules[].ruleType` string Required
+
+Rule type. A `merge_branch` ruleset accepts `pull_request`, `require_status_checks`, and `require_branch_up_to_date`. A `push_branch`, `push_tag`, or `push_repository` ruleset accepts `deletion`, `non_fast_forward`, `block_direct_updates`, `block_merges`, `ref_name_pattern`, and `required_linear_history`. Any other value, or a type the ruleset's `kind` doesn't accept, is rejected with `InvalidArgument` (HTTP 400).
+
+`rules[].parameters` object
+
+Type-specific parameters as a JSON object. The shape depends on `rules[].ruleType`, and unknown keys are rejected. `require_branch_up_to_date`, `deletion`, `non_fast_forward`, `block_merges`, and `required_linear_history` take no parameters: send `{}` or omit `parameters`. `pull_request` parameters are also accepted in snake\_case, such as `required_approving_review_count`; the camelCase key wins when both are sent.
+
+`rules[].parameters.requiredApprovingReviewCount` integer
+
+For `pull_request` rules: how many approving reviews the pull request needs, from 0 to 50. Defaults to 1.
+
+`rules[].parameters.requireCodeOwnerReview` boolean
+
+For `pull_request` rules: when `true`, every changed path that has code owners must also be approved by one of its owners. Defaults to `false`.
+
+`rules[].parameters.dismissStaleReviewsOnPush` boolean
+
+For `pull_request` rules: not supported yet. `true` makes the rule fail for every pull request it applies to. Defaults to `false`.
+
+`rules[].parameters.requireLastPushApproval` boolean
+
+For `pull_request` rules: not supported yet. `true` makes the rule fail for every pull request it applies to. Defaults to `false`.
+
+`rules[].parameters.requiredReviewThreadResolution` boolean
+
+For `pull_request` rules: not supported yet. `true` makes the rule fail for every pull request it applies to. Defaults to `false`.
+
+`rules[].parameters.requiredChecks` array
+
+For `require_status_checks` rules, where it's required: checks that must all pass on the pull request's head commit before it can merge. An empty list requires nothing. Entries that repeat the same `actorKind`, `actorId`, `groupKey`, and `runKey` are rejected. A check is named by the actor that reports it and the keys it reports under, never by a display name or context string, and every value must be a non-empty string.
+
+`rules[].parameters.requiredChecks[].actorKind` string
+
+Kind of the check suite's `actor`: `app`, `service_account`, or `user`. Required in each entry.
+
+`rules[].parameters.requiredChecks[].actorId` string
+
+The actor's ID exactly as the check suite's `actor` reports it, such as `app_…`, `sa_…`, or `user_…`. A bare UUID or an ID containing `|` is rejected. An ID that names no actor is accepted but never matches, so the check reads as missing. Required in each entry.
+
+`rules[].parameters.requiredChecks[].groupKey` string
+
+The check suite `key` the actor reports. Required in each entry.
+
+`rules[].parameters.requiredChecks[].runKey` string
+
+A check run `key` in that suite. When set, only the newest run with this key must pass; when omitted, every run in the suite must pass. A run passes when it completes as `success`, `neutral`, or `skipped`.
+
+`rules[].parameters.requiredChecks[].name` string
+
+Label merge blockers show for this check in place of `actorKind/actorId/groupKey[/runKey]`. Matching ignores it.
+
+`rules[].parameters.blockDirectUpdates` boolean
+
+For `block_direct_updates` rules: when `true`, a targeted ref can be created or updated only by merging a pull request. When `false`, the rule has no effect. Defaults to `true`.
+
+`rules[].parameters.pattern` string
+
+For `ref_name_pattern` rules, where it's required: an RE2 regular expression, 1 to 1024 characters. A created or updated branch or tag name, without `refs/heads/` or `refs/tags/`, must match it. A match anywhere in the name counts; anchor the pattern with `^` and `$` to match the whole name.
+
+`rules[].parameters.negate` boolean
+
+For `ref_name_pattern` rules: when `true`, the name must not match `pattern`. Defaults to `false`.
 
 `bypassActors` array
 
-Bypass principals to store. Each entry carries `bypassMode` and exactly one of `user`, `team`, `app`, or `originRole`; Origin assigns each actor's `id`. Values above 15 entries are rejected with `InvalidArgument` (HTTP 400).
+Bypass principals to store. Each entry carries `bypassMode` and exactly one of `user`, `team`, `app`, or `originRole`; Origin assigns each actor's `id`. Identify a `user` by its public ID (`user_…`) in `user.id`. Values above 15 entries are rejected with `InvalidArgument` (HTTP 400).
 
 #### Response Fields
 
@@ -13329,11 +15705,11 @@ Stable Origin ID for this rule.
 
 `rules[].ruleType` string
 
-Rule type, for example `pull_request`, `require_status_checks`, `require_branch_up_to_date`, `deletion`, or `non_fast_forward`.
+Rule type. A `merge_branch` ruleset accepts `pull_request`, `require_status_checks`, and `require_branch_up_to_date`. A `push_branch`, `push_tag`, or `push_repository` ruleset accepts `deletion`, `non_fast_forward`, `block_direct_updates`, `block_merges`, `ref_name_pattern`, and `required_linear_history`.
 
 `rules[].parameters` object
 
-Type-specific parameters as a JSON object. The shape depends on `rules[].ruleType`.
+Type-specific parameters as a JSON object. The shape depends on `rules[].ruleType`; [Create Ruleset](https://cursor.com/docs/api/origin/llms-full.txt#create-ruleset) lists the parameters of each rule type.
 
 `bypassActors` array
 
@@ -13353,7 +15729,7 @@ A user principal. Exactly one of `user`, `team`, `app`, or `originRole` is prese
 
 `bypassActors[].user.id` string
 
-Numeric Cursor user ID encoded as a decimal string.
+The user's public ID (`user_…`).
 
 `bypassActors[].team` object
 
@@ -13408,7 +15784,7 @@ curl --request PUT \
     {
       "bypassMode": "always",
       "user": {
-        "id": "act_01k2ja2000e0080000000000x0"
+        "id": "user_01k2ja2000e0080000000000c3"
       }
     }
   ]
@@ -13441,7 +15817,7 @@ curl --request PUT \
       "id": "rsba_01k2ja2000e0080000000000w9",
       "bypassMode": "always",
       "user": {
-        "id": "act_01k2ja2000e0080000000000x0"
+        "id": "user_01k2ja2000e0080000000000c3"
       }
     }
   ]
@@ -13450,7 +15826,9 @@ curl --request PUT \
 
 ### Delete Ruleset
 
-/v1/origin/repos///rulesets/
+DELETE
+
+`/v1/origin/repos/{ownerSlug}/{repoName}/rulesets/{rulesetId}`
 
 Requires scope `repository:rulesets:write` (installation access token or user access token).
 
@@ -13488,13 +15866,259 @@ curl --request DELETE \
 204 No Content
 ```
 
+## SSH certificate authorities
+
+An SSH certificate authority is a public key an owner trusts: user certificates it signs authenticate git over SSH on the owner's repositories, so members of the owning team can use git over SSH without registering an SSH key. These endpoints list the authorities an owner trusts, add and remove them, and set whether the owner requires certificates. Authorities belong to team-owned owners, and the duplicate check on add is scoped to the owner rather than to Origin as a whole, so more than one owner can trust the same authority.
+
+Listing accepts installation and user tokens. Adding and removing authorities and setting the requirement take a Cursor user credential holding `namespace:settings:write`; app and installation tokens are not accepted.
+
+### List SSH Certificate Authorities
+
+GET
+
+`/v1/origin/namespaces/{namespaceSlug}/ssh-certificate-authorities`
+
+Requires scope `namespace:settings:read` (installation access token or user access token).
+
+Lists the SSH certificate authorities an owner trusts for git over SSH, newest first, together with whether the owner requires certificates. The response is not paginated: every authority is returned.
+
+#### Path Parameters
+
+`namespaceSlug` string Required
+
+Slug of the namespace whose authorities to list.
+
+#### Response Fields
+
+`certificateAuthorities` array
+
+Every authority the owner trusts, newest first.
+
+`certificateAuthorities[].id` string
+
+Identifier of the authority; [Delete SSH Certificate Authority](https://cursor.com/docs/api/origin/llms-full.txt#delete-ssh-certificate-authority) takes it as `certificateAuthorityId`.
+
+`certificateAuthorities[].name` string
+
+Label given when the authority was added.
+
+`certificateAuthorities[].keyType` string
+
+OpenSSH key type of the authority's public key, for example `ssh-ed25519`.
+
+`certificateAuthorities[].fingerprint` string
+
+SHA-256 fingerprint of the public key as `SHA256:<base64>`, the form `ssh-keygen -l` prints.
+
+`certificateAuthorities[].publicKey` string
+
+The authority's public key as `<key_type> <base64>`, without a comment.
+
+`certificateAuthorities[].createdAt` string
+
+RFC 3339 timestamp for when the authority was added.
+
+`requireCertificates` boolean
+
+Whether the owner requires SSH certificates; see [Set SSH Certificate Requirement](https://cursor.com/docs/api/origin/llms-full.txt#set-ssh-certificate-requirement).
+
+```bash
+curl --request GET \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/ssh-certificate-authorities' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN'
+```
+
+**Response shape:**
+
+```json
+{
+  "certificateAuthorities": [
+    {
+      "id": "nsca_01k2ja2000e0080000000000s5",
+      "name": "Acme production CA",
+      "keyType": "ssh-ed25519",
+      "fingerprint": "SHA256:D5vlIclvaSZlwq4gmckavfLE7n7F542Eyhk/PvXkRq0",
+      "publicKey": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPwoQNzBuiWhDF4EKwRyt8h48XRY7Bc4yWbQ9s3Tnj7Q",
+      "createdAt": "2026-08-02T14:45:00Z"
+    }
+  ],
+  "requireCertificates": true
+}
+```
+
+### Add SSH Certificate Authority
+
+POST
+
+`/v1/origin/namespaces/{namespaceSlug}/ssh-certificate-authorities`
+
+Requires scope `namespace:settings:write` (user access token).
+
+Adds an SSH certificate authority the owner trusts and returns it. Members of the owning team can then use git over SSH on the owner's repositories with user certificates the authority signed, without registering an SSH key.
+
+`publicKey` is the authority's own public key as one OpenSSH `authorized_keys` line. A certificate, an unsupported key type, or an RSA key under 2048 bits returns `InvalidArgument` (HTTP 400). A key the owner already lists returns `AlreadyExists` (HTTP 409 Conflict); the check is scoped to the owner, so more than one owner can trust the same authority. Authorities can be added to team-owned owners only; any other owner returns `FailedPrecondition` (HTTP 400).
+
+The caller must be a Cursor user credential holding `namespace:settings:write`. App and installation tokens are not accepted.
+
+#### Path Parameters
+
+`namespaceSlug` string Required
+
+Namespace slug.
+
+#### Request Body
+
+`publicKey` string Required
+
+The authority's public key as one OpenSSH `authorized_keys` line (`<key_type> <base64> [comment]`). Accepted key types are `ssh-ed25519`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, `ecdsa-sha2-nistp521`, and `ssh-rsa` with a modulus of at least 2048 bits. Certificates are not accepted.
+
+`name` string Required
+
+Label for the authority, at most 255 characters.
+
+#### Response Fields
+
+`id` string
+
+Identifier of the authority; [Delete SSH Certificate Authority](https://cursor.com/docs/api/origin/llms-full.txt#delete-ssh-certificate-authority) takes it as `certificateAuthorityId`.
+
+`name` string
+
+Label given when the authority was added.
+
+`keyType` string
+
+OpenSSH key type of the authority's public key, for example `ssh-ed25519`.
+
+`fingerprint` string
+
+SHA-256 fingerprint of the public key as `SHA256:<base64>`, the form `ssh-keygen -l` prints.
+
+`publicKey` string
+
+The authority's public key as `<key_type> <base64>`, without a comment.
+
+`createdAt` string
+
+RFC 3339 timestamp for when the authority was added.
+
+```bash
+curl --request POST \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/ssh-certificate-authorities' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "publicKey": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPwoQNzBuiWhDF4EKwRyt8h48XRY7Bc4yWbQ9s3Tnj7Q acme-ssh-ca",
+  "name": "Acme production CA"
+}'
+```
+
+**Response shape:**
+
+```json
+{
+  "id": "nsca_01k2ja2000e0080000000000s5",
+  "name": "Acme production CA",
+  "keyType": "ssh-ed25519",
+  "fingerprint": "SHA256:D5vlIclvaSZlwq4gmckavfLE7n7F542Eyhk/PvXkRq0",
+  "publicKey": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPwoQNzBuiWhDF4EKwRyt8h48XRY7Bc4yWbQ9s3Tnj7Q",
+  "createdAt": "2026-08-02T14:45:00Z"
+}
+```
+
+### Delete SSH Certificate Authority
+
+DELETE
+
+`/v1/origin/namespaces/{namespaceSlug}/ssh-certificate-authorities/{certificateAuthorityId}`
+
+Requires scope `namespace:settings:write` (user access token).
+
+Removes an SSH certificate authority from the owner. Every certificate the authority signed stops working. While the owner requires certificates, its last authority cannot be removed; the request returns `FailedPrecondition` (HTTP 400). The response body is empty.
+
+The caller must be a Cursor user credential holding `namespace:settings:write`. App and installation tokens are not accepted.
+
+#### Path Parameters
+
+`namespaceSlug` string Required
+
+Namespace slug.
+
+`certificateAuthorityId` string Required
+
+`id` of the authority to remove.
+
+#### Response Fields
+
+Successful requests return no response body.
+
+```bash
+curl --request DELETE \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/ssh-certificate-authorities/CERTIFICATE_AUTHORITY_ID' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN'
+```
+
+**Response:**
+
+```text
+204 No Content
+```
+
+### Set SSH Certificate Requirement
+
+POST
+
+`/v1/origin/namespaces/{namespaceSlug}/ssh-certificate-authorities:setRequirement`
+
+Requires scope `namespace:settings:write` (user access token).
+
+Sets whether the owner requires SSH certificates and returns the owner's setting. While required, git over SSH on the owner's repositories accepts only certificates from the owner's authorities: SSH keys registered by users are refused, and so are user API keys over HTTPS. Requiring certificates needs at least one listed authority; otherwise the request returns `FailedPrecondition` (HTTP 400). Setting the current value succeeds without change.
+
+The caller must be a Cursor user credential holding `namespace:settings:write`. App and installation tokens are not accepted.
+
+#### Path Parameters
+
+`namespaceSlug` string Required
+
+Namespace slug.
+
+#### Request Body
+
+`requireCertificates` boolean Required
+
+True to require SSH certificates on the owner's repositories, false to stop requiring them.
+
+#### Response Fields
+
+`requireCertificates` boolean
+
+Whether the owner requires SSH certificates for git over SSH.
+
+```bash
+curl --request POST \
+  --url 'https://api.cursor.com/v1/origin/namespaces/NAMESPACE_SLUG/ssh-certificate-authorities:setRequirement' \
+  --header 'Authorization: Bearer YOUR_ORIGIN_TOKEN' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "requireCertificates": true
+}'
+```
+
+**Response shape:**
+
+```json
+{
+  "requireCertificates": true
+}
+```
+
 ## Webhooks
 
 Origin sends signed HTTP `POST` requests to the app's registered HTTPS webhook URL with `content-type: application/json`.
 
 Delivery is at least once. Deduplicate retries with `webhook-id`, durably accept the request, return `2xx` quickly, and process the event asynchronously.
 
-Origin retries transport errors, `429`, and `5xx` responses up to seven total attempts. Retry delays are 5 seconds, 30 seconds, 1 minute, 2 minutes, 4 minutes, and 8 minutes. Other `4xx` responses are terminal.
+Origin waits 10 seconds for the receiver's response headers. That deadline covers DNS resolution, the connection, the TLS handshake, and the time to the response, and it applies to every attempt. An attempt that passes it is recorded as a transport error and retried on the [Retries](https://cursor.com/docs/api/origin/llms-full.txt#retries) schedule. Repeated failures can [disable delivery automatically](https://cursor.com/docs/api/origin/llms-full.txt#automatic-disable).
 
 To confirm a receiver works before any real event reaches it, call [Ping Webhook](https://cursor.com/docs/api/origin/llms-full.txt#ping-webhook).
 
@@ -13525,6 +16149,8 @@ lowercaseHex(SHA-256("<webhook-id>.<webhook-timestamp>.<raw-request-body>"))
 ```
 
 Verify the Ed25519 signature over the UTF-8 bytes of that hexadecimal digest against an active Origin JWKS key. Reject timestamps more than five minutes from the current time.
+
+Standard Webhooks libraries do not verify Origin deliveries. The headers use Standard Webhooks names, but Origin signs the SHA-256 digest instead of the signed content itself, under a `v1ed` version tag the Standard Webhooks spec doesn't define. Verify with the construction above, as the following example does.
 
 ```typescript
 import {
@@ -13601,62 +16227,86 @@ Each request wraps the event payload with delivery, app, and installation identi
 
 `deliveryId` is stable across retries. `event.id` identifies the underlying domain event.
 
+### Retries
+
+Origin retries transport errors, `429`, and `5xx` responses up to seven total attempts. Other `4xx` responses are terminal.
+
+The first attempt is the original send. The six retries wait 5 seconds, 30 seconds, 1 minute, 2 minutes, 4 minutes, and 8 minutes, in that order.
+
+A receiver that fails every attempt sees seven `POST`s over about 16 minutes. `webhook-id` stays the same on every attempt. Deduplicate on it.
+
+### Automatic disable
+
+An owner can pause an app's webhook delivery from the app's settings. Origin also disables it on its own when the receiver fails at least 20 delivery rounds across a 72-hour window, with no successful delivery in that window, and the failures reach more than one installer namespace.
+
+Delivery stops until an owner resumes it. [Batch Redeliver Webhook Deliveries](https://cursor.com/docs/api/origin/llms-full.txt#batch-redeliver-webhook-deliveries) returns `FailedPrecondition` (HTTP 400) and queues nothing. The API exposes no field for the paused state, so treat that `FailedPrecondition` as the signal.
+
+Clearing the app's `webhookUrl` through [Update App](https://cursor.com/docs/api/origin/llms-full.txt#update-app) is a separate action. It cancels the pending deliveries, and setting a URL again does not bring them back.
+
 ### Recovery
 
 Use an app JWT to query [`GET /app/webhook/deliveries`](https://cursor.com/docs/api/origin/llms-full.txt#list-webhook-deliveries). Filter by delivery status, event type, installation, time range, or page token. `delivered=false` returns every delivery the receiver has never acknowledged with `2xx`. Deliveries stay listable for seven days, so recover within that window.
 
-Use [`POST /app/webhook/deliveries:batchRedeliver`](https://cursor.com/docs/api/origin/llms-full.txt#batch-redeliver-webhook-deliveries) to queue redelivery for up to 100 delivery IDs. The operation deduplicates IDs and reports the result for each delivery.
-
-An owner can pause an app's webhook delivery from the app's settings, and Origin can pause it on its own: an app whose receiver fails at least 20 delivery rounds across a 72-hour window, with no successful delivery in that window and failures reaching more than one installer namespace, is disabled automatically. Either way delivery stops until an owner resumes it, redelivery requests return `FailedPrecondition` (HTTP 400) and nothing is queued, and the API exposes no field for the paused state, so treat a redelivery `FailedPrecondition` as the signal. Clearing the app's `webhookUrl` through [Update App](https://cursor.com/docs/api/origin/llms-full.txt#update-app) has a stronger effect: it cancels the pending deliveries outright, and setting a URL again does not bring them back.
+Use [`POST /app/webhook/deliveries:batchRedeliver`](https://cursor.com/docs/api/origin/llms-full.txt#batch-redeliver-webhook-deliveries) to queue redelivery for up to 100 delivery IDs. The operation deduplicates IDs and reports the result for each delivery. A paused or [automatically disabled](https://cursor.com/docs/api/origin/llms-full.txt#automatic-disable) app rejects the call with `FailedPrecondition` (HTTP 400) and queues nothing.
 
 ## Webhooks reference
 
-Every event Origin delivers, and each event's payload documented field by field. For subscription mechanics, headers, signature verification, the delivery envelope, and retries, see [Webhooks](https://cursor.com/docs/api/origin/llms-full.txt#webhooks).
+Every event Origin delivers, and each event's payload documented field by field. For subscription mechanics, headers, signature verification, the delivery envelope, the [retry schedule](https://cursor.com/docs/api/origin/llms-full.txt#retries), and [automatic disable](https://cursor.com/docs/api/origin/llms-full.txt#automatic-disable), see [Webhooks](https://cursor.com/docs/api/origin/llms-full.txt#webhooks).
 
 ### Events
 
-| Event                               | Delivered when                                                                                                                               |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `repository.created`                | A repository is created.                                                                                                                     |
-| `repository.deleted`                | A repository is deleted.                                                                                                                     |
-| `repository.pushed`                 | One or more refs change in a push.                                                                                                           |
-| `repository.metadata.updated`       | A repository's default branch changes.                                                                                                       |
-| `pull_request.created`              | A pull request opens.                                                                                                                        |
-| `pull_request.head_ref.pushed`      | The pull request head advances.                                                                                                              |
-| `pull_request.base_ref.updated`     | The base ref or resolved base commit changes.                                                                                                |
-| `pull_request.metadata.updated`     | The title or description changes.                                                                                                            |
-| `pull_request.closed`               | A pull request closes without merging, including when Origin closes it because a push left its head with no history in common with its base. |
-| `pull_request.merged`               | A pull request merges.                                                                                                                       |
-| `pull_request.reopened`             | A closed pull request reopens.                                                                                                               |
-| `pull_request.published`            | A draft becomes open.                                                                                                                        |
-| `pull_request.comment.created`      | A visible pull request comment is created.                                                                                                   |
-| `pull_request.review.submitted`     | A review is submitted with any verdict.                                                                                                      |
-| `pull_request.review.dismissed`     | A submitted review is dismissed, explicitly or by being superseded.                                                                          |
-| `pull_request.reviewer.added`       | A reviewer is requested.                                                                                                                     |
-| `pull_request.reviewer.removed`     | A reviewer is removed.                                                                                                                       |
-| `pull_request.reviewer.rerequested` | A reviewer is requested again.                                                                                                               |
-| `repository.check_run.created`      | A check run is created.                                                                                                                      |
-| `repository.check_run.completed`    | A check run completes.                                                                                                                       |
-| `repository.check_run.rerequested`  | A completed check run is re-requested. Delivered only to the app that owns the run.                                                          |
-| `installation.created`              | The app is installed.                                                                                                                        |
-| `installation.updated`              | Scopes, repository selection, or the owner namespace slug change.                                                                            |
-| `installation.suspended`            | The installation is suspended.                                                                                                               |
-| `installation.unsuspended`          | A suspended installation is restored.                                                                                                        |
-| `installation.deleted`              | The app is uninstalled.                                                                                                                      |
+| Event                                      | Delivered when                                                                                                                                                                            |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `repository.created`                       | A repository is created.                                                                                                                                                                  |
+| `repository.deleted`                       | A repository is deleted.                                                                                                                                                                  |
+| `repository.pushed`                        | One or more refs change in a push.                                                                                                                                                        |
+| `repository.metadata.updated`              | A repository's default branch changes.                                                                                                                                                    |
+| `pull_request.created`                     | A pull request opens.                                                                                                                                                                     |
+| `pull_request.head_ref.pushed`             | The pull request head advances.                                                                                                                                                           |
+| `pull_request.base_ref.updated`            | The base ref or resolved base commit changes.                                                                                                                                             |
+| `pull_request.metadata.updated`            | The title or description changes.                                                                                                                                                         |
+| `pull_request.closed`                      | A pull request closes without merging, including when Origin closes it because a push left its head with no history in common with its base.                                              |
+| `pull_request.merged`                      | A pull request merges.                                                                                                                                                                    |
+| `pull_request.reopened`                    | A closed pull request reopens.                                                                                                                                                            |
+| `pull_request.published`                   | A draft becomes open.                                                                                                                                                                     |
+| `pull_request.label.added`                 | A label is assigned to a pull request.                                                                                                                                                    |
+| `pull_request.label.removed`               | A label is unassigned from a pull request, including when the label definition is deleted.                                                                                                |
+| `pull_request.comment.created`             | A visible pull request comment is created.                                                                                                                                                |
+| `pull_request.comment.reaction.added`      | A reaction is placed on a pull request comment. Re-placing a reaction the reactor already holds delivers nothing.                                                                         |
+| `pull_request.comment.reaction.removed`    | A reaction is removed from a pull request comment. Removing a reaction the reactor does not hold delivers nothing.                                                                        |
+| `pull_request.review.submitted`            | A review is submitted with any verdict.                                                                                                                                                   |
+| `pull_request.review.dismissed`            | A submitted review is dismissed, explicitly or by being superseded.                                                                                                                       |
+| `pull_request.reviewer.added`              | A reviewer is requested.                                                                                                                                                                  |
+| `pull_request.reviewer.removed`            | A reviewer is removed.                                                                                                                                                                    |
+| `pull_request.reviewer.rerequested`        | A reviewer is requested again.                                                                                                                                                            |
+| `repository.check_run.created`             | A check run is created.                                                                                                                                                                   |
+| `repository.check_run.updated`             | A check run is updated without completing: a post that Origin applies leaves it `queued`, `in_progress`, or `failing`, including one that reopens a completed run.                        |
+| `repository.check_run.completed`           | A check run completes.                                                                                                                                                                    |
+| `repository.check_run.rerequested`         | A completed check run is re-requested. Delivered only to the app that owns the run.                                                                                                       |
+| `repository.check_run.annotations.created` | Annotations are added to a check run with [Create Check Run Annotations](https://cursor.com/docs/api/origin/llms-full.txt#create-check-run-annotations). Each request delivers one event. |
+| `installation.created`                     | The app is installed.                                                                                                                                                                     |
+| `installation.updated`                     | Scopes, repository selection, or the owner namespace slug change.                                                                                                                         |
+| `installation.suspended`                   | The installation is suspended.                                                                                                                                                            |
+| `installation.unsuspended`                 | A suspended installation is restored.                                                                                                                                                     |
+| `installation.deleted`                     | The app is uninstalled.                                                                                                                                                                   |
 
 Every event's payload shape is documented field by field in [Event payloads](https://cursor.com/docs/api/origin/llms-full.txt#event-payloads).
 
 The five `installation.*` events go to the app itself rather than to a repository subscription. Origin always sends them, so they do not appear in the app's selectable event list. Every other event in this table is a repository-scoped subscription.
 
-Origin does not deliver `repository.pushed` for a repository it mirrors from GitHub. GitHub owns those pushes and sends its own push webhooks, so an Origin delivery would duplicate them. Pushes to native Origin repositories and to outbound mirrors are delivered as usual, and the mirror state does not affect any other event. `repository.deleted` is delivered for a repository mirrored from GitHub: stopping the sync deletes the Cursor-side repository only, and GitHub sends nothing for it.
+A new app subscribes to none of the repository-scoped events. Select the ones you need in the app's settings, or set them with the `events` field of [Create App](https://cursor.com/docs/api/origin/llms-full.txt#create-app) or [Update App](https://cursor.com/docs/api/origin/llms-full.txt#update-app). Origin delivers an event only to apps subscribed to it, with a webhook URL set, whose installation covers the repository and holds the scope the event requires. Otherwise there's no delivery and no error: nothing is sent, and nothing appears in [List Webhook Deliveries](https://cursor.com/docs/api/origin/llms-full.txt#list-webhook-deliveries).
+
+Origin does not deliver `repository.pushed` for a repository it mirrors from GitHub. GitHub owns those pushes and sends its own push webhooks, so an Origin delivery would duplicate them. Pushes to native Origin repositories are delivered as usual, and the mirror state does not affect any other event. `repository.deleted` is delivered for a repository mirrored from GitHub: stopping the sync deletes the Cursor-side repository only, and GitHub sends nothing for it.
 
 ### Event payloads
 
-Each event's [envelope](https://cursor.com/docs/api/origin/llms-full.txt#delivery-envelope) carries the event's payload object in `payload`. Events that share a shape share a payload family; each family below documents the events that deliver it, its fields, and a sample payload, generated from the [OpenAPI specification](https://cursor.com/docs/api/origin/openapi.yaml).
+Each event's [envelope](https://cursor.com/docs/api/origin/llms-full.txt#delivery-envelope) carries the event's payload object in `payload`. Events that share a shape share a payload family; each family below documents the events that deliver it, its fields, and a sample payload, generated from the [OpenAPI specification](https://cursor.com/docs/api/origin/openapi.yaml). In the spec, each payload schema's `x-origin-webhook-events` extension lists the events that deliver it.
 
 ### Repository Created
 
-repository.created
+EVENT
+
+`repository.created`
 
 #### Payload Fields
 
@@ -13724,7 +16374,7 @@ Opaque repository identifier assigned by the source.
 
 `repository.mirror.status` string
 
-Effective direction during a transition, until cutover completes. One of `inbound`, `outbound`.
+Effective direction during a transition, until cutover completes. One of `inbound`.
 
 `repository.visibility` string
 
@@ -13742,6 +16392,10 @@ Whether pull requests may land as squash merges.
 
 Whether the head branch is deleted automatically on merge.
 
+`repository.webUrl` string
+
+Web URL for this repository on Cursor.
+
 **Sample `event.payload`:**
 
 ```json
@@ -13750,6 +16404,7 @@ Whether the head branch is deleted automatically on merge.
     "id": "repo_01k2ja2000e0080000000000q4",
     "name": "rocket",
     "fullName": "acme/rocket",
+    "webUrl": "https://cursor.com/codebase/acme/rocket",
     "owner": {
       "slug": "acme",
       "id": "ns_01k2ja2000e0080000000000p3",
@@ -13765,7 +16420,9 @@ Whether the head branch is deleted automatically on merge.
 
 ### Repository Deleted
 
-repository.deleted
+EVENT
+
+`repository.deleted`
 
 #### Payload Fields
 
@@ -13816,7 +16473,9 @@ When the repository was deleted. RFC 3339 timestamp.
 
 ### Repository Push
 
-repository.pushed
+EVENT
+
+`repository.pushed`
 
 One atomic push, which may update several refs. There is no commits array; each ref update carries best-effort tip metadata only.
 
@@ -13912,7 +16571,7 @@ When Origin observed the push. RFC 3339 timestamp.
 
 `pusher` object
 
-The principal that performed the push, as verified by Origin. Absent when Origin itself performed the push, such as the merge push that advances the base ref when a pull request merges.
+The principal that performed the push, as verified by Origin. Absent when Origin itself performed the push, such as the merge push that advances the base ref when a pull request merges, and when Origin could not resolve the pusher when the event was recorded, such as a user whose account no longer exists. An app that has since been deleted is sent with its `id` only.
 
 `pusher.user` object
 
@@ -13928,6 +16587,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`pusher.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`pusher.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`pusher.user.performedVia.app.id` string
+
+`pusher.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`pusher.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`pusher.user.performedVia.serviceAccount.id` string
+
+`pusher.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`pusher.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `pusher.app` object
 
 `pusher.app.id` string
@@ -13939,6 +16626,14 @@ The app's registered display name, never empty when present. Omitted on payloads
 `pusher.serviceAccount` object
 
 `pusher.serviceAccount.id` string
+
+`pusher.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`pusher.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `refUpdatesCount` integer
 
@@ -13994,7 +16689,9 @@ Number of ref updates in the atomic push. ref\_updates may be shorter when the p
 
 ### Repository Metadata Updated
 
-repository.metadata.updated
+EVENT
+
+`repository.metadata.updated`
 
 Carries the full repository snapshot with no delta and no updating actor. Compare successive snapshots or refetch the repository to see what changed.
 
@@ -14064,7 +16761,7 @@ Opaque repository identifier assigned by the source.
 
 `repository.mirror.status` string
 
-Effective direction during a transition, until cutover completes. One of `inbound`, `outbound`.
+Effective direction during a transition, until cutover completes. One of `inbound`.
 
 `repository.visibility` string
 
@@ -14082,6 +16779,10 @@ Whether pull requests may land as squash merges.
 
 Whether the head branch is deleted automatically on merge.
 
+`repository.webUrl` string
+
+Web URL for this repository on Cursor.
+
 **Sample `event.payload`:**
 
 ```json
@@ -14090,6 +16791,7 @@ Whether the head branch is deleted automatically on merge.
     "id": "repo_01k2ja2000e0080000000000q4",
     "name": "rocket",
     "fullName": "acme/rocket",
+    "webUrl": "https://cursor.com/codebase/acme/rocket",
     "owner": {
       "slug": "acme",
       "id": "ns_01k2ja2000e0080000000000p3",
@@ -14106,14 +16808,17 @@ Whether the head branch is deleted automatically on merge.
 
 ### Pull Request Events
 
-pull\_request.created
-pull\_request.published
-pull\_request.reopened
-pull\_request.closed
-pull\_request.merged
-pull\_request.metadata.updated
-pull\_request.head\_ref.pushed
-pull\_request.base\_ref.updated
+EVENT
+
+`pull_request.created`
+`pull_request.published`
+`pull_request.reopened`
+`pull_request.closed`
+`pull_request.merged`
+`pull_request.metadata.updated`
+`pull_request.head_ref.pushed`
+`pull_request.base_ref.updated`
+`pull_request.stack_parent.updated`
 
 A pull request lifecycle change. The lifecycle action is the envelope's `event.type`; there is no separate action field.
 
@@ -14161,7 +16866,7 @@ The ref this side points at, as Origin records it.
 
 `pullRequest.head.sha` string
 
-Tip commit SHA of this side at the change's latest version.
+Tip commit SHA of this side at the change's latest version. For `base` this is the version's `base_sha`, which can lag the branch's current tip (see `PullRequestVersion`).
 
 `pullRequest.base` object
 
@@ -14173,7 +16878,7 @@ The ref this side points at, as Origin records it.
 
 `pullRequest.base.sha` string
 
-Tip commit SHA of this side at the change's latest version.
+Tip commit SHA of this side at the change's latest version. For `base` this is the version's `base_sha`, which can lag the branch's current tip (see `PullRequestVersion`).
 
 `pullRequest.author` object
 
@@ -14193,6 +16898,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`pullRequest.author.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`pullRequest.author.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`pullRequest.author.user.performedVia.app.id` string
+
+`pullRequest.author.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`pullRequest.author.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`pullRequest.author.user.performedVia.serviceAccount.id` string
+
+`pullRequest.author.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`pullRequest.author.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `pullRequest.author.app` object
 
 `pullRequest.author.app.id` string
@@ -14204,6 +16937,14 @@ The app's registered display name, never empty when present. Omitted on payloads
 `pullRequest.author.serviceAccount` object
 
 `pullRequest.author.serviceAccount.id` string
+
+`pullRequest.author.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`pullRequest.author.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `pullRequest.createdAt` string
 
@@ -14223,7 +16964,7 @@ When the pull request was merged; unset unless merged. RFC 3339 timestamp.
 
 `pullRequest.mergeCommitSha` string
 
-SHA of the resulting merge commit; set once merged.
+SHA of the commit the merge wrote to the base branch; set once merged, unset before. The pre-merge preview is the `pull/\<number>/merge` ref (see GetGitRef), a different commit.
 
 `pullRequest.additions` integer
 
@@ -14236,6 +16977,52 @@ Lines deleted by the pull request's latest version.
 `pullRequest.changedFiles` integer
 
 Files changed by the pull request's latest version.
+
+`pullRequest.stack` object
+
+Stack membership. Unset when the pull request is not part of a stack.
+
+`pullRequest.stack.id` string
+
+Stable stack identifier. Pass it as `stack_id` to `ListPullRequests` to list the stack's members.
+
+`pullRequest.stack.parentPullRequest` object
+
+The pull request this one is stacked on. Unset for the root of the stack. A merged parent stays referenced until the child is retargeted or re-parented.
+
+`pullRequest.stack.parentPullRequest.id` string
+
+Immutable Origin change id.
+
+`pullRequest.stack.parentPullRequest.number` string
+
+`pullRequest.stack.parentPullRequest.repository` object
+
+Repository reference for this pull request.
+
+`pullRequest.stack.parentPullRequest.repository.id` string
+
+`pullRequest.stack.parentPullRequest.repository.name` string
+
+`pullRequest.stack.parentPullRequest.repository.owner` object
+
+The owner of a repo.
+
+`pullRequest.stack.parentPullRequest.repository.owner.slug` string
+
+Unique URL-friendly name of the owner.
+
+`pullRequest.stack.parentPullRequest.repository.owner.id` string
+
+Unique ID of the owner namespace.
+
+`pullRequest.stack.parentPullRequest.repository.owner.type` string
+
+`team` or `user`. Output-only; unset when unknown. One of `team`, `user`.
+
+`pullRequest.webUrl` string
+
+Web URL for this pull request on Cursor.
 
 `pullRequest.version` object
 
@@ -14251,11 +17038,27 @@ Head commit SHA for this version.
 
 `pullRequest.version.baseSha` string
 
-Base commit SHA this version is diffed against.
+Base commit SHA this version is diffed against: the base branch tip as resolved when the version was recorded. It can lag the branch's current tip until the next head push or retarget.
 
 `pullRequest.version.createdAt` string
 
 When this version was created. RFC 3339 timestamp.
+
+`pullRequest.version.potentialMergeCommit` object
+
+Origin's test merge of this version and how far its preparation got (`state`). Computed for this version: the commit's second parent is `head_sha`; its first parent is the test merge's `base_sha`, the base branch tip at preparation, which can be newer than this version's `base_sha`. The `pull/\<number>/merge` ref points only at the latest version's commit; older commits stay readable by SHA through the API (`GetCommit`), though not fetchable by SHA over git. Distinct from `PullRequest.merge_commit_sha`, which is set only once merged. Set on `PullRequest.version` and `PullRequestWebhook.version`.
+
+`pullRequest.version.potentialMergeCommit.state` string
+
+How far the preparation of this version got; a new version starts as `unknown` until its own preparation lands. Unrecognized values must be treated as `unknown`. One of `unknown`, `prepared`, `merge_conflict`.
+
+`pullRequest.version.potentialMergeCommit.sha` string
+
+Set only when `state` is `prepared`: the two-parent test-merge commit, second parent the version's `head_sha`, first parent `base_sha`; the tip of `pull/\<number>/merge` while this version is the latest; readable by SHA afterwards.
+
+`pullRequest.version.potentialMergeCommit.baseSha` string
+
+Set whenever the state was computed (`prepared` or `merge_conflict`): the base branch tip the merge was attempted against at preparation time; can be newer than the version's `base_sha`, not refreshed when the base merely advances; re-prepared on reopen. May be absent on a `merge_conflict` recorded before this field carried it.
 
 `repository` object
 
@@ -14298,7 +17101,7 @@ Unique ID of the owner namespace.
       "sha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4"
     },
     "base": {
-      "ref": "main",
+      "ref": "add-telemetry-schema",
       "sha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
     },
     "author": {
@@ -14312,6 +17115,23 @@ Unique ID of the owner namespace.
     "additions": 128,
     "deletions": 46,
     "changedFiles": 5,
+    "webUrl": "https://cursor.com/codebase/acme/rocket/pull/17",
+    "stack": {
+      "id": "stk_01k2ja2000e0080000000000s1",
+      "parentPullRequest": {
+        "id": "pr_01k2ja2000e0080000000000d3",
+        "number": "16",
+        "repository": {
+          "id": "repo_01k2ja2000e0080000000000q4",
+          "name": "rocket",
+          "owner": {
+            "slug": "acme",
+            "id": "ns_01k2ja2000e0080000000000p3",
+            "type": "team"
+          }
+        }
+      }
+    },
     "version": {
       "number": "3",
       "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
@@ -14331,9 +17151,168 @@ Unique ID of the owner namespace.
 }
 ```
 
+### Pull Request Label Events
+
+EVENT
+
+`pull_request.label.added`
+`pull_request.label.removed`
+
+A change to the pull request's assigned labels. Read the current set with `ListPullRequestLabels`.
+
+#### Payload Fields
+
+`pullRequest` object
+
+The pull request whose assigned labels changed.
+
+`pullRequest.id` string
+
+Immutable Origin change id.
+
+`pullRequest.number` string
+
+`pullRequest.repository` object
+
+Repository reference for this pull request.
+
+`pullRequest.repository.id` string
+
+`pullRequest.repository.name` string
+
+`pullRequest.repository.owner` object
+
+The owner of a repo.
+
+`pullRequest.repository.owner.slug` string
+
+Unique URL-friendly name of the owner.
+
+`pullRequest.repository.owner.id` string
+
+Unique ID of the owner namespace.
+
+`pullRequest.repository.owner.type` string
+
+`team` or `user`. Output-only; unset when unknown. One of `team`, `user`.
+
+`label` object
+
+The label the event is about.
+
+`label.id` string
+
+`label.name` string
+
+`label.color` string
+
+Six-character hex color without a leading `#`.
+
+`label.description` string
+
+`actor` object
+
+The principal that assigned or removed the label, when known.
+
+`actor.user` object
+
+`actor.user.id` string
+
+`actor.user.email` string Required
+
+`actor.user.displayName` string
+
+Human-readable display name: the account's first and last name, each trimmed, joined with a space — exactly the name the product UI renders. Omitted when the account has no name; never synthesized from the email, the id, or any other field. May also be absent on webhook payloads whose actor could not be resolved.
+
+`actor.user.handle` string
+
+The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
+
+`actor.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`actor.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`actor.user.performedVia.app.id` string
+
+`actor.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`actor.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`actor.user.performedVia.serviceAccount.id` string
+
+`actor.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`actor.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
+`actor.app` object
+
+`actor.app.id` string
+
+`actor.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`actor.serviceAccount` object
+
+`actor.serviceAccount.id` string
+
+`actor.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`actor.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
+**Sample `event.payload`:**
+
+```json
+{
+  "pullRequest": {
+    "id": "pr_01k2ja2000e0080000000000d4",
+    "number": "17",
+    "repository": {
+      "id": "repo_01k2ja2000e0080000000000q4",
+      "name": "rocket",
+      "owner": {
+        "slug": "acme",
+        "id": "ns_01k2ja2000e0080000000000p3",
+        "type": "team"
+      }
+    }
+  },
+  "label": {
+    "id": "lbl_01k2ja2000e0080000000000m1",
+    "name": "bug",
+    "color": "d73a4a",
+    "description": "Something isn't working"
+  },
+  "actor": {
+    "user": {
+      "id": "user_01k2ja2000e0080000000000c3",
+      "email": "jane@acme.dev"
+    }
+  }
+}
+```
+
 ### Pull Request Comment
 
-pull\_request.comment.created
+EVENT
+
+`pull_request.comment.created`
 
 A comment created on a pull request. Comments filed with a review are delivered when the review submits, one event per comment.
 
@@ -14391,19 +17370,15 @@ The pull request version the thread was filed against, including its head and ba
 
 `comment.thread.version.number` string
 
-Monotonic version number within the change (1-based).
+Monotonic version number within the pull request (1-based).
 
 `comment.thread.version.headSha` string
 
-Head commit SHA for this version.
+Head commit SHA of this version.
 
 `comment.thread.version.baseSha` string
 
 Base commit SHA this version is diffed against.
-
-`comment.thread.version.createdAt` string
-
-When this version was created. RFC 3339 timestamp.
 
 `comment.thread.path` string
 
@@ -14453,6 +17428,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`comment.author.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`comment.author.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`comment.author.user.performedVia.app.id` string
+
+`comment.author.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`comment.author.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`comment.author.user.performedVia.serviceAccount.id` string
+
+`comment.author.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`comment.author.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `comment.author.app` object
 
 `comment.author.app.id` string
@@ -14465,6 +17468,14 @@ The app's registered display name, never empty when present. Omitted on payloads
 
 `comment.author.serviceAccount.id` string
 
+`comment.author.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`comment.author.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `comment.createdAt` string
 
 RFC 3339 timestamp.
@@ -14472,6 +17483,84 @@ RFC 3339 timestamp.
 `comment.updatedAt` string
 
 RFC 3339 timestamp.
+
+`comment.reactions` array
+
+Every reaction on the comment, oldest first. A newly created comment has none. A reaction whose reactor's account was deleted has no `reactor`.
+
+`comment.reactions[].content` string
+
+The reaction's name, for the eight emoji that have one. Any other emoji carries `CONTENT_UNSPECIFIED`; read `emoji` for every reaction. One of `thumbs_up`, `thumbs_down`, `laugh`, `hooray`, `confused`, `heart`, `rocket`, `eyes`.
+
+`comment.reactions[].reactor` object
+
+The principal that placed the reaction. Only the reactor can remove it, so this is the acting principal on both the added and removed events.
+
+`comment.reactions[].reactor.user` object
+
+`comment.reactions[].reactor.user.id` string
+
+`comment.reactions[].reactor.user.email` string Required
+
+`comment.reactions[].reactor.user.displayName` string
+
+Human-readable display name: the account's first and last name, each trimmed, joined with a space — exactly the name the product UI renders. Omitted when the account has no name; never synthesized from the email, the id, or any other field. May also be absent on webhook payloads whose actor could not be resolved.
+
+`comment.reactions[].reactor.user.handle` string
+
+The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
+
+`comment.reactions[].reactor.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`comment.reactions[].reactor.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`comment.reactions[].reactor.user.performedVia.app.id` string
+
+`comment.reactions[].reactor.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`comment.reactions[].reactor.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`comment.reactions[].reactor.user.performedVia.serviceAccount.id` string
+
+`comment.reactions[].reactor.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`comment.reactions[].reactor.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
+`comment.reactions[].reactor.app` object
+
+`comment.reactions[].reactor.app.id` string
+
+`comment.reactions[].reactor.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`comment.reactions[].reactor.serviceAccount` object
+
+`comment.reactions[].reactor.serviceAccount.id` string
+
+`comment.reactions[].reactor.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`comment.reactions[].reactor.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
+`comment.reactions[].emoji` string
+
+The emoji, such as `✅`, exactly as it was placed.
 
 **Sample `event.payload`:**
 
@@ -14497,8 +17586,7 @@ RFC 3339 timestamp.
       "version": {
         "number": "3",
         "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
-        "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
-        "createdAt": "2026-08-01T09:30:00Z"
+        "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
       },
       "path": "src/telemetry/retry.ts",
       "side": "right",
@@ -14515,15 +17603,189 @@ RFC 3339 timestamp.
       }
     },
     "createdAt": "2026-08-01T09:30:00Z",
-    "updatedAt": "2026-08-02T14:45:00Z"
+    "updatedAt": "2026-08-02T14:45:00Z",
+    "reactions": []
+  }
+}
+```
+
+### Pull Request Comment Reaction Events
+
+EVENT
+
+`pull_request.comment.reaction.added`
+`pull_request.comment.reaction.removed`
+
+A reaction added to or removed from a pull request comment. The envelope's `event.type` carries the action. Only a change is delivered: placing a reaction the reactor already holds on the comment, or removing one the reactor does not hold, delivers nothing.
+
+#### Payload Fields
+
+`pullRequest` object
+
+The pull request the comment was filed on.
+
+`pullRequest.id` string
+
+Immutable Origin change id.
+
+`pullRequest.number` string
+
+`pullRequest.repository` object
+
+Repository reference for this pull request.
+
+`pullRequest.repository.id` string
+
+`pullRequest.repository.name` string
+
+`pullRequest.repository.owner` object
+
+The owner of a repo.
+
+`pullRequest.repository.owner.slug` string
+
+Unique URL-friendly name of the owner.
+
+`pullRequest.repository.owner.id` string
+
+Unique ID of the owner namespace.
+
+`pullRequest.repository.owner.type` string
+
+`team` or `user`. Output-only; unset when unknown. One of `team`, `user`.
+
+`comment` object
+
+The comment the reaction is on.
+
+`comment.id` string
+
+`comment.thread` object
+
+The thread the comment belongs to.
+
+`comment.thread.id` string
+
+`reaction` object
+
+The reaction that was added or removed.
+
+`reaction.content` string
+
+The reaction's name, for the eight emoji that have one. Any other emoji carries `CONTENT_UNSPECIFIED`; read `emoji` for every reaction. One of `thumbs_up`, `thumbs_down`, `laugh`, `hooray`, `confused`, `heart`, `rocket`, `eyes`.
+
+`reaction.reactor` object
+
+The principal that placed the reaction. Only the reactor can remove it, so this is the acting principal on both the added and removed events.
+
+`reaction.reactor.user` object
+
+`reaction.reactor.user.id` string
+
+`reaction.reactor.user.email` string Required
+
+`reaction.reactor.user.displayName` string
+
+Human-readable display name: the account's first and last name, each trimmed, joined with a space — exactly the name the product UI renders. Omitted when the account has no name; never synthesized from the email, the id, or any other field. May also be absent on webhook payloads whose actor could not be resolved.
+
+`reaction.reactor.user.handle` string
+
+The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
+
+`reaction.reactor.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`reaction.reactor.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`reaction.reactor.user.performedVia.app.id` string
+
+`reaction.reactor.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`reaction.reactor.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`reaction.reactor.user.performedVia.serviceAccount.id` string
+
+`reaction.reactor.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`reaction.reactor.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
+`reaction.reactor.app` object
+
+`reaction.reactor.app.id` string
+
+`reaction.reactor.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`reaction.reactor.serviceAccount` object
+
+`reaction.reactor.serviceAccount.id` string
+
+`reaction.reactor.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`reaction.reactor.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
+`reaction.emoji` string
+
+The emoji, such as `✅`, exactly as it was placed.
+
+**Sample `event.payload`:**
+
+```json
+{
+  "pullRequest": {
+    "id": "pr_01k2ja2000e0080000000000d4",
+    "number": "17",
+    "repository": {
+      "id": "repo_01k2ja2000e0080000000000q4",
+      "name": "rocket",
+      "owner": {
+        "slug": "acme",
+        "id": "ns_01k2ja2000e0080000000000p3",
+        "type": "team"
+      }
+    }
+  },
+  "comment": {
+    "id": "cmt_01k2ja2000e0080000000000e5",
+    "thread": {
+      "id": "cth_01k2ja2000e0080000000000s6"
+    }
+  },
+  "reaction": {
+    "content": "heart",
+    "reactor": {
+      "user": {
+        "id": "user_01k2ja2000e0080000000000c3",
+        "email": "jane@acme.dev"
+      }
+    },
+    "emoji": "❤️"
   }
 }
 ```
 
 ### Pull Request Review Events
 
-pull\_request.review\.submitted
-pull\_request.review\.dismissed
+EVENT
+
+`pull_request.review.submitted`
+`pull_request.review.dismissed`
 
 #### Payload Fields
 
@@ -14587,6 +17849,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`review.author.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`review.author.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`review.author.user.performedVia.app.id` string
+
+`review.author.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`review.author.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`review.author.user.performedVia.serviceAccount.id` string
+
+`review.author.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`review.author.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `review.author.app` object
 
 `review.author.app.id` string
@@ -14598,6 +17888,14 @@ The app's registered display name, never empty when present. Omitted on payloads
 `review.author.serviceAccount` object
 
 `review.author.serviceAccount.id` string
+
+`review.author.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`review.author.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `review.verdict` string
 
@@ -14617,19 +17915,15 @@ The pull request version and head SHA the verdict applies to.
 
 `review.pullRequestVersion.number` string
 
-Monotonic version number within the change (1-based).
+Monotonic version number within the pull request (1-based).
 
 `review.pullRequestVersion.headSha` string
 
-Head commit SHA for this version.
+Head commit SHA of this version.
 
 `review.pullRequestVersion.baseSha` string
 
 Base commit SHA this version is diffed against.
-
-`review.pullRequestVersion.createdAt` string
-
-When this version was created. RFC 3339 timestamp.
 
 `review.dismissal` object
 
@@ -14653,6 +17947,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`review.dismissal.dismissedBy.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`review.dismissal.dismissedBy.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`review.dismissal.dismissedBy.user.performedVia.app.id` string
+
+`review.dismissal.dismissedBy.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`review.dismissal.dismissedBy.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`review.dismissal.dismissedBy.user.performedVia.serviceAccount.id` string
+
+`review.dismissal.dismissedBy.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`review.dismissal.dismissedBy.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `review.dismissal.dismissedBy.app` object
 
 `review.dismissal.dismissedBy.app.id` string
@@ -14664,6 +17986,14 @@ The app's registered display name, never empty when present. Omitted on payloads
 `review.dismissal.dismissedBy.serviceAccount` object
 
 `review.dismissal.dismissedBy.serviceAccount.id` string
+
+`review.dismissal.dismissedBy.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`review.dismissal.dismissedBy.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `review.dismissal.dismissedAt` string
 
@@ -14704,8 +18034,7 @@ Reason recorded with the dismissal. Reviews retired automatically because their 
     "pullRequestVersion": {
       "number": "3",
       "headSha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
-      "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8",
-      "createdAt": "2026-08-01T09:30:00Z"
+      "baseSha": "3b1f9c2d8a7e6f5049c8b7a6d5e4f3a2b1c0d9e8"
     }
   }
 }
@@ -14713,9 +18042,11 @@ Reason recorded with the dismissal. Reviews retired automatically because their 
 
 ### Pull Request Reviewer Events
 
-pull\_request.reviewer.added
-pull\_request.reviewer.removed
-pull\_request.reviewer.rerequested
+EVENT
+
+`pull_request.reviewer.added`
+`pull_request.reviewer.removed`
+`pull_request.reviewer.rerequested`
 
 A change to the pull request's requested reviewers. Read the current pending set with `ListPullRequestRequestedReviewers`.
 
@@ -14773,6 +18104,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`reviewer.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`reviewer.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`reviewer.user.performedVia.app.id` string
+
+`reviewer.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`reviewer.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`reviewer.user.performedVia.serviceAccount.id` string
+
+`reviewer.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`reviewer.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `reviewer.group` object
 
 Public Origin group identity (`grp_…`). Currently id-only.
@@ -14801,6 +18160,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`createdBy.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`createdBy.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`createdBy.user.performedVia.app.id` string
+
+`createdBy.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`createdBy.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`createdBy.user.performedVia.serviceAccount.id` string
+
+`createdBy.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`createdBy.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `createdBy.app` object
 
 `createdBy.app.id` string
@@ -14812,6 +18199,14 @@ The app's registered display name, never empty when present. Omitted on payloads
 `createdBy.serviceAccount` object
 
 `createdBy.serviceAccount.id` string
+
+`createdBy.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`createdBy.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `createdAt` string
 
@@ -14847,8 +18242,11 @@ When the review request was created. RFC 3339 timestamp.
 
 ### Check Run Events
 
-repository.check\_run.created
-repository.check\_run.completed
+EVENT
+
+`repository.check_run.created`
+`repository.check_run.updated`
+`repository.check_run.completed`
 
 Committed snapshot for an Origin check-run lifecycle event.
 
@@ -14914,6 +18312,10 @@ Unique ID of the owner namespace.
 
 Resolved head commit SHA the suite is attached to (lowercase hex).
 
+`checkSuite.baseSha` string
+
+The comparison base this attempt was reported against (lowercase hex), when the reporting app supplied one: a pull request version's `base_sha`. Part of the attempt's identity, so one app can report one attempt per (head, base) pair. Absent means the attempt is base-agnostic and applies to every pull request at `sha`. A pull request's CI state and required checks consider only base-agnostic attempts and the ones reported against that pull request's latest version `base_sha`; commit-scoped listings (`ListCheckSuitesForCommit`, `ListCheckRunsForCommit`) return every base.
+
 `checkSuite.key` string
 
 App-chosen idempotency key for the suite.
@@ -14956,6 +18358,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`checkSuite.actor.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`checkSuite.actor.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`checkSuite.actor.user.performedVia.app.id` string
+
+`checkSuite.actor.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`checkSuite.actor.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`checkSuite.actor.user.performedVia.serviceAccount.id` string
+
+`checkSuite.actor.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`checkSuite.actor.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `checkSuite.actor.app` object
 
 `checkSuite.actor.app.id` string
@@ -14967,6 +18397,14 @@ The app's registered display name, never empty when present. Omitted on payloads
 `checkSuite.actor.serviceAccount` object
 
 `checkSuite.actor.serviceAccount.id` string
+
+`checkSuite.actor.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`checkSuite.actor.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `checkRun` object
 
@@ -15010,6 +18448,10 @@ Suite this check run belongs to.
 
 Resolved head commit SHA the check run is attached to (lowercase hex).
 
+`checkRun.baseSha` string
+
+The comparison base this run was reported against (lowercase hex), when the reporting app supplied one; always the owning suite's `base_sha`. Absent means base-agnostic (see `CheckSuite.base_sha`).
+
 `checkRun.key` string
 
 App-chosen idempotency key for the check run.
@@ -15020,7 +18462,7 @@ Human-facing check-run name.
 
 `checkRun.status` string
 
-Lifecycle state. `rerequested` is a completed run whose re-run was requested and not yet answered by the owning app: pending for readers (render like `queued`), with `conclusion` and the timings still describing the superseded attempt. Set only by Origin on re-request (RerequestCheckRun); apps cannot post it. One of `queued`, `in_progress`, `completed`, `rerequested`.
+Lifecycle state. `failing` is a run still going whose app already knows it will not pass: pending for gates and required checks, no `conclusion` yet, an early warning for readers. `rerequested` is a completed run whose re-run was requested and not yet answered by the owning app: pending for readers (render like `queued`), with `conclusion` and the timings still describing the superseded attempt. Set only by Origin on re-request (RerequestCheckRun); apps cannot post it. One of `queued`, `in_progress`, `completed`, `rerequested`, `failing`.
 
 `checkRun.conclusion` string
 
@@ -15048,7 +18490,7 @@ RFC 3339 timestamp.
 
 `checkRun.updatedAt` string
 
-RFC 3339 timestamp.
+When Origin last wrote the run. Not advanced by a post that was ignored as stale or that repeated the stored values (see `PostCheckRunResponse.outcome`), so it cannot tell those two apart. RFC 3339 timestamp.
 
 `checkRun.externalId` string
 
@@ -15056,7 +18498,7 @@ Provider-assigned immutable identity for this check attempt (see `CheckRunInput.
 
 `checkRun.actor` object
 
-Principal that produced the check run.
+Principal that produced the check run; always the owning suite's `actor`.
 
 `checkRun.actor.user` object
 
@@ -15072,6 +18514,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`checkRun.actor.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`checkRun.actor.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`checkRun.actor.user.performedVia.app.id` string
+
+`checkRun.actor.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`checkRun.actor.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`checkRun.actor.user.performedVia.serviceAccount.id` string
+
+`checkRun.actor.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`checkRun.actor.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `checkRun.actor.app` object
 
 `checkRun.actor.app.id` string
@@ -15083,6 +18553,14 @@ The app's registered display name, never empty when present. Omitted on payloads
 `checkRun.actor.serviceAccount` object
 
 `checkRun.actor.serviceAccount.id` string
+
+`checkRun.actor.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`checkRun.actor.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `checkRun.output` object
 
@@ -15102,7 +18580,7 @@ Detailed output. May contain Markdown. Maximum UTF-8 size: 65535 bytes.
 
 `checkRun.deadlineAt` string
 
-Optional deadline. Omitted or unset means no expiration. RFC 3339 timestamp.
+Optional deadline. Omitted or unset means no expiration. Cleared when the run completes, including when it expires as `timed_out` (see `CheckRunInput.deadline_at`). RFC 3339 timestamp.
 
 `checkRun.isRerequestable` boolean
 
@@ -15130,6 +18608,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`checkRun.rerequestedBy.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`checkRun.rerequestedBy.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`checkRun.rerequestedBy.user.performedVia.app.id` string
+
+`checkRun.rerequestedBy.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`checkRun.rerequestedBy.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`checkRun.rerequestedBy.user.performedVia.serviceAccount.id` string
+
+`checkRun.rerequestedBy.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`checkRun.rerequestedBy.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `checkRun.rerequestedBy.app` object
 
 `checkRun.rerequestedBy.app.id` string
@@ -15142,35 +18648,13 @@ The app's registered display name, never empty when present. Omitted on payloads
 
 `checkRun.rerequestedBy.serviceAccount.id` string
 
-`actor` object
+`checkRun.rerequestedBy.serviceAccount.type` string
 
-The principal that produced the check run.
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
 
-`actor.user` object
+`checkRun.rerequestedBy.serviceAccount.displayName` string
 
-`actor.user.id` string
-
-`actor.user.email` string Required
-
-`actor.user.displayName` string
-
-Human-readable display name: the account's first and last name, each trimmed, joined with a space — exactly the name the product UI renders. Omitted when the account has no name; never synthesized from the email, the id, or any other field. May also be absent on webhook payloads whose actor could not be resolved.
-
-`actor.user.handle` string
-
-The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
-
-`actor.app` object
-
-`actor.app.id` string
-
-`actor.app.displayName` string
-
-The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
-
-`actor.serviceAccount` object
-
-`actor.serviceAccount.id` string
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 **Sample `event.payload`:**
 
@@ -15247,19 +18731,15 @@ The app's registered display name, never empty when present. Omitted on payloads
       "summary": "128 tests passed.",
       "text": "All suites green."
     }
-  },
-  "actor": {
-    "user": {
-      "id": "user_01k2ja2000e0080000000000c3",
-      "email": "jane@acme.dev"
-    }
   }
 }
 ```
 
 ### Check Run Rerequested
 
-repository.check\_run.rerequested
+EVENT
+
+`repository.check_run.rerequested`
 
 repository.check\_run.rerequested webhook payload, delivered only to the app that owns the check run. Answer by posting a fresh run for the same head SHA and key — a new run (new external\_id) or an update of the re-requested run. The stamped run reads `status: rerequested` (its conclusion and timings are the superseded result) until the answering post clears `rerequested_at`. Each accepted re-request emits one event, and a run may be re-requested again once answered, so dedupe redeliveries on the event id alone; `check_run.rerequested_at` carries the outstanding stamp. The payload carries no pull request context (check runs attach to `(repository, sha)`): a consumer that needs the pull request resolves it from `check_run.sha` via its own head mapping, or `ListPullRequests` filtered to the head branch it built.
 
@@ -15325,6 +18805,10 @@ Unique ID of the owner namespace.
 
 Resolved head commit SHA the suite is attached to (lowercase hex).
 
+`checkSuite.baseSha` string
+
+The comparison base this attempt was reported against (lowercase hex), when the reporting app supplied one: a pull request version's `base_sha`. Part of the attempt's identity, so one app can report one attempt per (head, base) pair. Absent means the attempt is base-agnostic and applies to every pull request at `sha`. A pull request's CI state and required checks consider only base-agnostic attempts and the ones reported against that pull request's latest version `base_sha`; commit-scoped listings (`ListCheckSuitesForCommit`, `ListCheckRunsForCommit`) return every base.
+
 `checkSuite.key` string
 
 App-chosen idempotency key for the suite.
@@ -15367,6 +18851,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`checkSuite.actor.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`checkSuite.actor.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`checkSuite.actor.user.performedVia.app.id` string
+
+`checkSuite.actor.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`checkSuite.actor.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`checkSuite.actor.user.performedVia.serviceAccount.id` string
+
+`checkSuite.actor.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`checkSuite.actor.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `checkSuite.actor.app` object
 
 `checkSuite.actor.app.id` string
@@ -15378,6 +18890,14 @@ The app's registered display name, never empty when present. Omitted on payloads
 `checkSuite.actor.serviceAccount` object
 
 `checkSuite.actor.serviceAccount.id` string
+
+`checkSuite.actor.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`checkSuite.actor.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `checkRun` object
 
@@ -15421,6 +18941,10 @@ Suite this check run belongs to.
 
 Resolved head commit SHA the check run is attached to (lowercase hex).
 
+`checkRun.baseSha` string
+
+The comparison base this run was reported against (lowercase hex), when the reporting app supplied one; always the owning suite's `base_sha`. Absent means base-agnostic (see `CheckSuite.base_sha`).
+
 `checkRun.key` string
 
 App-chosen idempotency key for the check run.
@@ -15431,7 +18955,7 @@ Human-facing check-run name.
 
 `checkRun.status` string
 
-Lifecycle state. `rerequested` is a completed run whose re-run was requested and not yet answered by the owning app: pending for readers (render like `queued`), with `conclusion` and the timings still describing the superseded attempt. Set only by Origin on re-request (RerequestCheckRun); apps cannot post it. One of `queued`, `in_progress`, `completed`, `rerequested`.
+Lifecycle state. `failing` is a run still going whose app already knows it will not pass: pending for gates and required checks, no `conclusion` yet, an early warning for readers. `rerequested` is a completed run whose re-run was requested and not yet answered by the owning app: pending for readers (render like `queued`), with `conclusion` and the timings still describing the superseded attempt. Set only by Origin on re-request (RerequestCheckRun); apps cannot post it. One of `queued`, `in_progress`, `completed`, `rerequested`, `failing`.
 
 `checkRun.conclusion` string
 
@@ -15459,7 +18983,7 @@ RFC 3339 timestamp.
 
 `checkRun.updatedAt` string
 
-RFC 3339 timestamp.
+When Origin last wrote the run. Not advanced by a post that was ignored as stale or that repeated the stored values (see `PostCheckRunResponse.outcome`), so it cannot tell those two apart. RFC 3339 timestamp.
 
 `checkRun.externalId` string
 
@@ -15467,7 +18991,7 @@ Provider-assigned immutable identity for this check attempt (see `CheckRunInput.
 
 `checkRun.actor` object
 
-Principal that produced the check run.
+Principal that produced the check run; always the owning suite's `actor`.
 
 `checkRun.actor.user` object
 
@@ -15483,6 +19007,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`checkRun.actor.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`checkRun.actor.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`checkRun.actor.user.performedVia.app.id` string
+
+`checkRun.actor.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`checkRun.actor.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`checkRun.actor.user.performedVia.serviceAccount.id` string
+
+`checkRun.actor.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`checkRun.actor.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `checkRun.actor.app` object
 
 `checkRun.actor.app.id` string
@@ -15494,6 +19046,14 @@ The app's registered display name, never empty when present. Omitted on payloads
 `checkRun.actor.serviceAccount` object
 
 `checkRun.actor.serviceAccount.id` string
+
+`checkRun.actor.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`checkRun.actor.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `checkRun.output` object
 
@@ -15513,7 +19073,7 @@ Detailed output. May contain Markdown. Maximum UTF-8 size: 65535 bytes.
 
 `checkRun.deadlineAt` string
 
-Optional deadline. Omitted or unset means no expiration. RFC 3339 timestamp.
+Optional deadline. Omitted or unset means no expiration. Cleared when the run completes, including when it expires as `timed_out` (see `CheckRunInput.deadline_at`). RFC 3339 timestamp.
 
 `checkRun.isRerequestable` boolean
 
@@ -15541,6 +19101,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
 
+`checkRun.rerequestedBy.user.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`checkRun.rerequestedBy.user.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`checkRun.rerequestedBy.user.performedVia.app.id` string
+
+`checkRun.rerequestedBy.user.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`checkRun.rerequestedBy.user.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`checkRun.rerequestedBy.user.performedVia.serviceAccount.id` string
+
+`checkRun.rerequestedBy.user.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`checkRun.rerequestedBy.user.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
+
 `checkRun.rerequestedBy.app` object
 
 `checkRun.rerequestedBy.app.id` string
@@ -15552,6 +19140,14 @@ The app's registered display name, never empty when present. Omitted on payloads
 `checkRun.rerequestedBy.serviceAccount` object
 
 `checkRun.rerequestedBy.serviceAccount.id` string
+
+`checkRun.rerequestedBy.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`checkRun.rerequestedBy.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 **Sample `event.payload`:**
 
@@ -15640,9 +19236,177 @@ The app's registered display name, never empty when present. Omitted on payloads
 }
 ```
 
+### Check Run Annotations
+
+EVENT
+
+`repository.check_run.annotations.created`
+
+One `CreateCheckRunAnnotations` request appended annotations to a check run (`repository.check_run.annotations.created`). Annotations are append-only (never edited or removed individually), so `.created` is their whole lifecycle, and one request is one event. `check_run` is a reference, not a snapshot: read `GetCheckRun` for the run's status, conclusion, and output. `annotations` is in request order and may be shorter than `annotations_count` when Origin capped the list to keep the body deliverable; page the rest with `ListCheckRunAnnotations`. Like the other check-run webhooks the payload carries no pull request context: resolve the pull request from `sha`.
+
+#### Payload Fields
+
+`repository` object
+
+The repository the check run belongs to.
+
+`repository.id` string
+
+`repository.name` string
+
+`repository.owner` object
+
+The owner of a repo.
+
+`repository.owner.slug` string
+
+Unique URL-friendly name of the owner.
+
+`repository.owner.id` string
+
+Unique ID of the owner namespace.
+
+`repository.owner.type` string
+
+`team` or `user`. Output-only; unset when unknown. One of `team`, `user`.
+
+`checkRun` object
+
+The check run the annotations were appended to, with its suite.
+
+`checkRun.id` string
+
+`checkRun.name` string
+
+`checkRun.checkSuite` object
+
+Suite the check run belongs to.
+
+`checkRun.checkSuite.id` string
+
+`sha` string
+
+Resolved head commit SHA the check run is attached to (lowercase hex).
+
+`baseSha` string
+
+The comparison base the check run was reported against (lowercase hex), when its app supplied one; absent means base-agnostic (see `CheckRun.base_sha`).
+
+`annotations` array
+
+The appended annotations, in request order. May be shorter than annotations\_count when Origin capped the list.
+
+`annotations[].id` string
+
+`annotations[].checkRunId` string
+
+`annotations[].annotationLevel` string
+
+One of `notice`, `warning`, `failure`.
+
+`annotations[].message` string
+
+`annotations[].title` string
+
+`annotations[].rawDetails` string
+
+`annotations[].createdAt` string
+
+RFC 3339 timestamp.
+
+`annotations[].updatedAt` string
+
+RFC 3339 timestamp.
+
+`annotations[].location` object
+
+Optional source location for a check-run annotation. `path`, `start_line`, and `end_line` are required whenever the enclosing annotation supplies this message. `path` is canonical and repository-relative, lines and columns are positive 1-based inclusive coordinates, and `columns` is supported only for a single-line range.
+
+`annotations[].location.path` string Required
+
+Maximum UTF-8 size: 4096 bytes.
+
+`annotations[].location.startLine` integer Required
+
+`annotations[].location.endLine` integer Required
+
+`annotations[].location.columns` object
+
+Optional paired columns for a single-line annotation range.
+
+`annotations[].location.columns.startColumn` integer
+
+`annotations[].location.columns.endColumn` integer
+
+`annotationsCount` integer
+
+Number of annotations the request appended.
+
+`createdAt` string
+
+When the batch was appended. RFC 3339 timestamp.
+
+**Sample `event.payload`:**
+
+```json
+{
+  "repository": {
+    "id": "repo_01k2ja2000e0080000000000q4",
+    "name": "rocket",
+    "owner": {
+      "slug": "acme",
+      "id": "ns_01k2ja2000e0080000000000p3",
+      "type": "team"
+    }
+  },
+  "checkRun": {
+    "id": "cr_01k2ja2000e0080000000000g7",
+    "name": "unit-tests",
+    "checkSuite": {
+      "id": "crg_01k2ja2000e0080000000000h8"
+    }
+  },
+  "sha": "9a41f0c3d2b8e7f6a5c4d3e2f1b0a9c8d7e6f5a4",
+  "annotations": [
+    {
+      "id": "cra_01k2ja2000e0080000000000v1",
+      "checkRunId": "cr_01k2ja2000e0080000000000g7",
+      "annotationLevel": "warning",
+      "message": "Deprecated API usage; migrate to the v2 client.",
+      "title": "Deprecated API",
+      "createdAt": "2026-08-02T14:45:00Z",
+      "updatedAt": "2026-08-02T14:45:00Z",
+      "location": {
+        "path": "src/telemetry.ts",
+        "startLine": 42,
+        "endLine": 42,
+        "columns": {
+          "startColumn": 5,
+          "endColumn": 31
+        }
+      }
+    },
+    {
+      "id": "cra_01k2ja2000e0080000000000v2",
+      "checkRunId": "cr_01k2ja2000e0080000000000g7",
+      "annotationLevel": "failure",
+      "message": "Three tests failed in telemetry.test.ts.",
+      "title": "Test failures",
+      "rawDetails": "FAIL telemetry.test.ts flushes on shutdown (expected 1 call, received 0)",
+      "createdAt": "2026-08-02T14:45:00Z",
+      "updatedAt": "2026-08-02T14:45:00Z"
+    }
+  ],
+  "annotationsCount": 2,
+  "createdAt": "2026-08-02T14:45:00Z"
+}
+```
+
 ### Installation Created
 
-installation.created
+EVENT
+
+`installation.created`
 
 #### Payload Fields
 
@@ -15737,6 +19501,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 `installation.installedBy.handle` string
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
+
+`installation.installedBy.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`installation.installedBy.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`installation.installedBy.performedVia.app.id` string
+
+`installation.installedBy.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`installation.installedBy.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`installation.installedBy.performedVia.serviceAccount.id` string
+
+`installation.installedBy.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`installation.installedBy.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `app` object
 
@@ -15793,7 +19585,9 @@ The app's registered display name, never empty when present. Omitted when enqueu
 
 ### Installation Updated
 
-installation.updated
+EVENT
+
+`installation.updated`
 
 #### Payload Fields
 
@@ -15888,6 +19682,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 `installation.installedBy.handle` string
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
+
+`installation.installedBy.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`installation.installedBy.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`installation.installedBy.performedVia.app.id` string
+
+`installation.installedBy.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`installation.installedBy.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`installation.installedBy.performedVia.serviceAccount.id` string
+
+`installation.installedBy.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`installation.installedBy.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `app` object
 
@@ -15944,7 +19766,9 @@ The app's registered display name, never empty when present. Omitted when enqueu
 
 ### Installation Suspended
 
-installation.suspended
+EVENT
+
+`installation.suspended`
 
 #### Payload Fields
 
@@ -16039,6 +19863,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 `installation.installedBy.handle` string
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
+
+`installation.installedBy.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`installation.installedBy.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`installation.installedBy.performedVia.app.id` string
+
+`installation.installedBy.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`installation.installedBy.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`installation.installedBy.performedVia.serviceAccount.id` string
+
+`installation.installedBy.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`installation.installedBy.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `app` object
 
@@ -16095,7 +19947,9 @@ The app's registered display name, never empty when present. Omitted when enqueu
 
 ### Installation Unsuspended
 
-installation.unsuspended
+EVENT
+
+`installation.unsuspended`
 
 #### Payload Fields
 
@@ -16190,6 +20044,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 `installation.installedBy.handle` string
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
+
+`installation.installedBy.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`installation.installedBy.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`installation.installedBy.performedVia.app.id` string
+
+`installation.installedBy.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`installation.installedBy.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`installation.installedBy.performedVia.serviceAccount.id` string
+
+`installation.installedBy.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`installation.installedBy.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `app` object
 
@@ -16245,7 +20127,9 @@ The app's registered display name, never empty when present. Omitted when enqueu
 
 ### Installation Deleted
 
-installation.deleted
+EVENT
+
+`installation.deleted`
 
 #### Payload Fields
 
@@ -16340,6 +20224,34 @@ Human-readable display name: the account's first and last name, each trimmed, jo
 `installation.installedBy.handle` string
 
 The user's claimed profile handle (the identity behind cursor.com /@handle), without the @ prefix. Present only while the user's profile is publicly visible; omitted for users without a claimed handle and for non-public profiles.
+
+`installation.installedBy.performedVia` object
+
+Set when an app (with an installation user token) or a service account, such as the user's personal Grok bot, acted on this user's behalf, for the action this field describes: on a comment's author it names what created the comment, not an actor that later edited or deleted it. Absent when the user acted directly; may be absent when delegation data is unavailable.
+
+`installation.installedBy.performedVia.app` object
+
+The app that acted on the user's behalf.
+
+`installation.installedBy.performedVia.app.id` string
+
+`installation.installedBy.performedVia.app.displayName` string
+
+The app's registered display name, never empty when present. Omitted on payloads whose app could not be resolved and on the first-party Cursor facade actor.
+
+`installation.installedBy.performedVia.serviceAccount` object
+
+The service account the user acted through, such as their personal Grok bot. As with `app`, the user is still the actor.
+
+`installation.installedBy.performedVia.serviceAccount.id` string
+
+`installation.installedBy.performedVia.serviceAccount.type` string
+
+Which product or feature the account acts for. Unset when the account no longer exists. The set is append-only: an unrecognized value decodes as unset under `ignoreUnknownFields` / `DiscardUnknown`; treat an unset type as an account of a product you do not recognize, never as an error. One of `bugbot`, `automations`, `agent_serve`, `agent`, `grok_bot`, `env_builds`.
+
+`installation.installedBy.performedVia.serviceAccount.displayName` string
+
+The product name Cursor shows for the account, such as a Grok bot's name; never empty when present. A Grok bot whose name cannot be read is named "Grok Bot". Omitted when the account has no product name.
 
 `app` object
 

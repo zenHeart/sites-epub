@@ -100,15 +100,15 @@ This maintains control over:
 
 ## Benefits
 
-| Benefit                    | Description                                        |
-| :------------------------- | :------------------------------------------------- |
+| Benefit | Description |
+| :- | :- |
 | **Zero Version Confusion** | One workspace, always current—no "final\_v3" files |
-| **Real-Time Updates**      | See changes instantly as team members prompt Manus |
-| **Direct AI Interaction**  | Everyone can prompt Manus, not just the owner      |
-| **Cost Efficient**         | Only owner consumes credits, collaborators free    |
-| **Faster Iteration**       | No export-feedback-revise cycles                   |
-| **Single Source of Truth** | One link, one version, one workspace               |
-| **Transparent Process**    | See all prompts and changes in real-time           |
+| **Real-Time Updates** | See changes instantly as team members prompt Manus |
+| **Direct AI Interaction** | Everyone can prompt Manus, not just the owner |
+| **Cost Efficient** | Only owner consumes credits, collaborators free |
+| **Faster Iteration** | No export-feedback-revise cycles |
+| **Single Source of Truth** | One link, one version, one workspace |
+| **Transparent Process** | See all prompts and changes in real-time |
 
 ## Important Notes
 
@@ -209,3 +209,6 @@ This maintains control over:
     Yes. Collab works with slides, web development, research, data analysis, and all other Manus capabilities.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

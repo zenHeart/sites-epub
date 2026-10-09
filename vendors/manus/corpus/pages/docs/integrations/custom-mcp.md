@@ -243,3 +243,6 @@ Implement proper authorization checks:
     Treat custom MCP servers like any other internal service: version control, automated testing, monitoring, and regular updates. Keep the server in sync with changes to your internal systems' APIs.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

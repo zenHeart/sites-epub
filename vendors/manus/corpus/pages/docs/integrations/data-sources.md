@@ -49,3 +49,6 @@ Data sources are automatically available in your tasks. Simply mention the data 
 <Warning>
   Data from third-party sources is subject to their terms of service and data freshness policies. Always verify critical information from official sources.
 </Warning>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -35,7 +35,7 @@ See [Models](https://cursor.com/docs/models-and-pricing.md) for the current list
 
 ### Auto-review and model access
 
-[Auto-review](https://cursor.com/docs/agent/security/run-modes.md#run-mode) uses a background classifier that runs on [Claude 4.5 Haiku](https://cursor.com/docs/models/claude-4-5-haiku.md) or [GPT-5.4 Mini](https://cursor.com/docs/models/gpt-5-4-mini.md). Blocking all of them disables Auto-review in the IDE, even when team Run Modes includes it. See [Auto-review classifier requirements](https://cursor.com/docs/agent/security/run-modes.md#auto-review-model-requirements).
+[Auto-review](https://cursor.com/docs/agent/security/run-modes.md#run-mode) uses a background classifier that runs on Gemini 3.5 Flash Lite, with [Claude 4.5 Haiku](https://cursor.com/docs/models/claude-4-5-haiku.md) as the fallback. Keep Claude 4.5 Haiku allowed. Blocking it can disable Auto-review in the IDE, even when team Run Modes includes it. See [Auto-review classifier requirements](https://cursor.com/docs/agent/security/run-modes.md#auto-review-model-requirements).
 
 ## Restrict personal API keys (BYOK controls)
 
@@ -170,7 +170,7 @@ Add repository URLs or patterns in the [team dashboard](https://cursor.com/docs/
 
 Lock a Git organization, group, or namespace to your Cursor organization so only your teams can use its repositories with [Cloud Agents](https://cursor.com/docs/cloud-agent.md), [automations](https://cursor.com/docs/cloud-agent/automations.md), and [Bugbot](https://cursor.com/docs/bugbot.md). Cursor always verifies that a user can access a repository's connected source before it runs an agent or Bugbot check. Protected Git Scopes adds an organization-level guarantee on top of that per-user check, so enterprises can be confident their code can't be reached through unsanctioned ("shadow IT") Cursor accounts or outside teams, even ones that already have legitimate Git access.
 
-Protect or remove a scope from the [Integrations & MCP](https://cursor.com/dashboard/integrations) tab of your dashboard (Teams and Enterprise). Claiming a scope requires a Cursor team admin who is also a Git provider admin. Works with cloud and self-hosted GitHub and GitLab.
+Protect or remove a scope from the [Integrations](https://cursor.com/dashboard/integrations) tab of your dashboard (Teams and Enterprise). Claiming a scope requires a Cursor team admin who is also a Git provider admin. Works with cloud and self-hosted GitHub and GitLab.
 
 ## Integration: Slack
 

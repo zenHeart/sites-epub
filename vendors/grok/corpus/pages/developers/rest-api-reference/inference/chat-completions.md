@@ -42,6 +42,8 @@ Create a chat response from text/image chat prompts. This is the endpoint for ma
 
 * `response_format` (object | object | object)
 
+* `safety_identifier` (string | null) — Supplied by the API client to identify the end user behind this request. A stable string that uniquely identifies each of your users; hash your internal user id or username rather than sending an email or name. Stored with the request metadata so a usage-policy violation can be attributed to that user rather than to the API key.
+
 * `search_parameters` (object)
 
   * `from_date` (string | null) — Date from which to consider the results in ISO-8601 YYYY-MM-DD. See
@@ -63,7 +65,7 @@ Create a chat response from text/image chat prompts. This is the endpoint for ma
 
 * `seed` (integer | null) — If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same \`seed\` and parameters should return the same result. Determinism is not guaranteed, and you should refer to the \`system\_fingerprint\` response parameter to monitor changes in the backend.
 
-* `service_tier` ("default" | "priority")
+* `service_tier` ("default" | "priority" | "fast")
 
 * `stop` (array | null) — (Not supported by reasoning models) Up to 4 sequences where the API will stop generating further tokens.
 
@@ -130,7 +132,8 @@ Create a chat response from text/image chat prompts. This is the endpoint for ma
 * `output_files` (array | null) — Files generated during the response (e.g., by the code execution tool).
   Only populated when \`code\_execution\_files\_output\` is included.
 
-* `service_tier` ("default" | "priority", required) — Processing tier for a request. Determines scheduling priority and billing.
+* `service_tier` ("default" | "priority" | "fast", required) — Processing tier for a request. \`Fast\` and \`Priority\` are interchangeable: the model's fast
+  deployment and its rates where configured, else higher scheduling priority at a higher price.
 
 * `system_fingerprint` (string | null) — System fingerprint, used to indicate xAI system configuration changes.
 
@@ -165,6 +168,29 @@ Create a chat response from text/image chat prompts. This is the endpoint for ma
     * `image_tokens` (integer, required) — Image prompt token used.
 
     * `text_tokens` (integer, required) — Total text prompt token used (cached + non-cached text tokens).
+
+  * `server_side_tool_usage_details` (object)
+
+    * `code_interpreter_calls` (integer, required) — Number of code interpreter calls.
+
+    * `document_search_calls` (integer, required) — Number of document search calls.
+
+    * `file_search_calls` (integer, required) — Number of file search calls.
+
+    * `image_generation_calls` (integer, required) — Number of image generation calls.
+
+    * `mcp_calls` (integer, required) — Number of MCP calls.
+
+    * `web_search_calls` (integer, required) — Number of web search calls.
+
+    * `x_posts_fetched` (integer, required) — Number of X posts fetched across all X search calls, including nested
+      parent/quote posts and every post of a fetched thread, without
+      de-duplication. X search is billed per fetched item.
+
+    * `x_search_calls` (integer, required) — Number of X search calls.
+
+    * `x_users_fetched` (integer, required) — Number of X user profiles fetched across all X search calls, without
+      de-duplication. X search is billed per fetched item.
 
   * `total_tokens` (integer, required) — Total token used, the sum of prompt token and completion token amount.
 
@@ -274,7 +300,8 @@ Tries to fetch a result for a previously-started deferred completion. Returns \`
 * `output_files` (array | null) — Files generated during the response (e.g., by the code execution tool).
   Only populated when \`code\_execution\_files\_output\` is included.
 
-* `service_tier` ("default" | "priority", required) — Processing tier for a request. Determines scheduling priority and billing.
+* `service_tier` ("default" | "priority" | "fast", required) — Processing tier for a request. \`Fast\` and \`Priority\` are interchangeable: the model's fast
+  deployment and its rates where configured, else higher scheduling priority at a higher price.
 
 * `system_fingerprint` (string | null) — System fingerprint, used to indicate xAI system configuration changes.
 
@@ -309,6 +336,29 @@ Tries to fetch a result for a previously-started deferred completion. Returns \`
     * `image_tokens` (integer, required) — Image prompt token used.
 
     * `text_tokens` (integer, required) — Total text prompt token used (cached + non-cached text tokens).
+
+  * `server_side_tool_usage_details` (object)
+
+    * `code_interpreter_calls` (integer, required) — Number of code interpreter calls.
+
+    * `document_search_calls` (integer, required) — Number of document search calls.
+
+    * `file_search_calls` (integer, required) — Number of file search calls.
+
+    * `image_generation_calls` (integer, required) — Number of image generation calls.
+
+    * `mcp_calls` (integer, required) — Number of MCP calls.
+
+    * `web_search_calls` (integer, required) — Number of web search calls.
+
+    * `x_posts_fetched` (integer, required) — Number of X posts fetched across all X search calls, including nested
+      parent/quote posts and every post of a fetched thread, without
+      de-duplication. X search is billed per fetched item.
+
+    * `x_search_calls` (integer, required) — Number of X search calls.
+
+    * `x_users_fetched` (integer, required) — Number of X user profiles fetched across all X search calls, without
+      de-duplication. X search is billed per fetched item.
 
   * `total_tokens` (integer, required) — Total token used, the sum of prompt token and completion token amount.
 

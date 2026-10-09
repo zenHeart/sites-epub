@@ -86,6 +86,11 @@ def parse_llms_generic(
             continue
         if path == "/help" or path.startswith("/help/"):
             continue
+        # Mintlify serves the llms index itself per locale under
+        # /docs/_llms/<locale>; those are index pages, not documentation, and
+        # manus.im returns 404 for every one of them.
+        if "/_llms/" in path or path.endswith("/_llms"):
+            continue
         if path.endswith(".md"):
             md_url = f"{p.scheme}://{p.netloc}{path}"
             html_url = re.sub(r"\.md$", "", md_url)

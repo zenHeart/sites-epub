@@ -19,43 +19,6 @@ This tool is also supported in all Responses API compatible SDKs. The Vercel AI 
 
 Add `image_generation` to `tools` and ask for an image. In the xAI SDK, each generated image is exposed on `response.image_outputs` as decoded bytes you can write straight to a file. In the Responses API, each image arrives as an `image_generation_call` output item whose `result` field carries the base64-encoded image with no data-URL prefix, so you can decode it directly.
 
-```bash customLanguage="bash"
-curl https://api.x.ai/v1/responses \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -d '{
-  "model": "grok-4.6",
-  "input": "Generate an image of a corgi surfing a big wave, in the style of a Japanese woodblock print",
-  "tools": [
-    {
-      "type": "image_generation"
-    }
-  ]
-}' | jq -r '.output[] | select(.type == "image_generation_call") | .result' \
-  | base64 --decode > corgi_surfing.jpg
-```
-
-```python customLanguage="pythonXAI"
-import os
-
-from xai_sdk import Client
-from xai_sdk.chat import user
-from xai_sdk.tools import image_generation
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-chat = client.chat.create(
-    model="grok-4.6",
-    tools=[image_generation()],
-)
-chat.append(user("Generate an image of a corgi surfing a big wave, in the style of a Japanese woodblock print"))
-response = chat.sample()
-
-print(response.content)
-with open("image.jpeg", "wb") as f:
-    f.write(response.image_outputs[0].image)
-```
-
 ```python customLanguage="pythonOpenAISDK"
 import base64
 import os
@@ -68,7 +31,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input="Generate an image of a corgi surfing a big wave, in the style of a Japanese woodblock print",
     tools=[{"type": "image_generation"}],
 )
@@ -84,6 +47,22 @@ if image_data:
         f.write(base64.b64decode(image_data[0]))
 ```
 
+```bash customLanguage="bash"
+curl https://api.x.ai/v1/responses \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -d '{
+  "model": "grok-4.7",
+  "input": "Generate an image of a corgi surfing a big wave, in the style of a Japanese woodblock print",
+  "tools": [
+    {
+      "type": "image_generation"
+    }
+  ]
+}' | jq -r '.output[] | select(.type == "image_generation_call") | .result' \
+  | base64 --decode > corgi_surfing.jpg
+```
+
 ```python customLanguage="pythonRequests"
 import base64
 import os
@@ -96,7 +75,7 @@ headers = {
     "Authorization": f"Bearer {os.getenv('XAI_API_KEY')}",
 }
 payload = {
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "input": "Generate an image of a corgi surfing a big wave, in the style of a Japanese woodblock print",
     "tools": [{"type": "image_generation"}],
 }
@@ -119,7 +98,7 @@ const client = new OpenAI({
 });
 
 const response = await client.responses.create({
-  model: "grok-4.6",
+  model: "grok-4.7",
   input:
     "Generate an image of a corgi surfing a big wave, in the style of a Japanese woodblock print",
   tools: [{ type: "image_generation" }],
@@ -132,6 +111,27 @@ const imageData = response.output
 if (imageData.length > 0) {
   fs.writeFileSync("corgi_surfing.jpg", Buffer.from(imageData[0], "base64"));
 }
+```
+
+```python customLanguage="pythonXAI"
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import user
+from xai_sdk.tools import image_generation
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+chat = client.chat.create(
+    model="grok-4.7",
+    tools=[image_generation()],
+)
+chat.append(user("Generate an image of a corgi surfing a big wave, in the style of a Japanese woodblock print"))
+response = chat.sample()
+
+print(response.content)
+with open("image.jpeg", "wb") as f:
+    f.write(response.image_outputs[0].image)
 ```
 
 A completed `image_generation_call` output item looks like this:
@@ -162,12 +162,20 @@ By default the model can both generate new images and edit existing ones. The op
 
 For example, to let the model create images but never modify ones already in the conversation:
 
+```python customLanguage="pythonOpenAISDK"
+response = client.responses.create(
+    model="grok-4.7",
+    input="Generate an image of a hot air balloon over the desert",
+    tools=[{"type": "image_generation", "action": "generate"}],
+)
+```
+
 ```bash customLanguage="bash"
 curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -d '{
-  "model": "grok-4.6",
+  "model": "grok-4.7",
   "input": "Generate an image of a hot air balloon over the desert",
   "tools": [
     {
@@ -180,31 +188,65 @@ curl https://api.x.ai/v1/responses \
 
 ```python customLanguage="pythonXAI"
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=[image_generation(action="generate")],
 )
 chat.append(user("Generate an image of a hot air balloon over the desert"))
 response = chat.sample()
 ```
 
-```python customLanguage="pythonOpenAISDK"
-response = client.responses.create(
-    model="grok-4.6",
-    input="Generate an image of a hot air balloon over the desert",
-    tools=[{"type": "image_generation", "action": "generate"}],
-)
-```
-
 ## Editing input images
 
 With `action` set to `edit` (or the default `auto`), the model can edit any image already in the conversation: images you attach as input as well as images it generated earlier. Edits produce `image_generation_call` items with an `ie_` ID prefix.
+
+```python customLanguage="pythonOpenAISDK"
+import base64
+import os
+
+from openai import OpenAI
+
+client = OpenAI(
+    api_key=os.getenv("XAI_API_KEY"),
+    base_url="https://api.x.ai/v1",
+)
+
+response = client.responses.create(
+    model="grok-4.7",
+    input=[
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "input_text",
+                    "text": "Edit this image so it looks like a watercolor painting.",
+                },
+                {
+                    "type": "input_image",
+                    "image_url": "https://docs.x.ai/assets/api-examples/images/style-realistic.png",
+                },
+            ],
+        }
+    ],
+    tools=[{"type": "image_generation", "action": "edit"}],
+)
+
+image_data = [
+    output.result
+    for output in response.output
+    if output.type == "image_generation_call"
+]
+
+if image_data:
+    with open("watercolor.jpg", "wb") as f:
+        f.write(base64.b64decode(image_data[0]))
+```
 
 ```bash customLanguage="bash"
 curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -d '{
-  "model": "grok-4.6",
+  "model": "grok-4.7",
   "input": [
     {
       "role": "user",
@@ -239,7 +281,7 @@ from xai_sdk.tools import image_generation
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=[image_generation(action="edit")],
 )
 chat.append(
@@ -254,6 +296,10 @@ with open("image.jpeg", "wb") as f:
     f.write(response.image_outputs[0].image)
 ```
 
+## Multi-turn editing
+
+Images generated on a previous turn stay editable on follow-up turns. Continue the conversation — append the previous response to the chat in the xAI SDK, or pass `previous_response_id` in the Responses API — and the model can refine its earlier images by reference:
+
 ```python customLanguage="pythonOpenAISDK"
 import base64
 import os
@@ -266,23 +312,9 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
-    input=[
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "input_text",
-                    "text": "Edit this image so it looks like a watercolor painting.",
-                },
-                {
-                    "type": "input_image",
-                    "image_url": "https://docs.x.ai/assets/api-examples/images/style-realistic.png",
-                },
-            ],
-        }
-    ],
-    tools=[{"type": "image_generation", "action": "edit"}],
+    model="grok-4.7",
+    input="Generate an image of a lighthouse on a rocky coast",
+    tools=[{"type": "image_generation"}],
 )
 
 image_data = [
@@ -292,13 +324,27 @@ image_data = [
 ]
 
 if image_data:
-    with open("watercolor.jpg", "wb") as f:
+    with open("lighthouse.jpg", "wb") as f:
         f.write(base64.b64decode(image_data[0]))
+
+# Follow up: edit the image from the previous turn
+followup = client.responses.create(
+    model="grok-4.7",
+    previous_response_id=response.id,
+    input="Make it night time with a full moon",
+    tools=[{"type": "image_generation"}],
+)
+
+image_data_followup = [
+    output.result
+    for output in followup.output
+    if output.type == "image_generation_call"
+]
+
+if image_data_followup:
+    with open("lighthouse_night.jpg", "wb") as f:
+        f.write(base64.b64decode(image_data_followup[0]))
 ```
-
-## Multi-turn editing
-
-Images generated on a previous turn stay editable on follow-up turns. Continue the conversation — append the previous response to the chat in the xAI SDK, or pass `previous_response_id` in the Responses API — and the model can refine its earlier images by reference:
 
 ```python customLanguage="pythonXAI"
 import os
@@ -310,7 +356,7 @@ from xai_sdk.tools import image_generation
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=[image_generation()],
 )
 
@@ -328,6 +374,12 @@ with open("edited_image.jpeg", "wb") as f:
     f.write(followup.image_outputs[0].image)
 ```
 
+If you manage conversation state yourself instead of using `previous_response_id`, pass the previous turn's output items (including the `image_generation_call` items) back verbatim in `input`; the images they carry remain editable on the next request.
+
+## Combining with other tools
+
+The image generation tool composes with the other server-side tools. Include several tools in the same request and the model orchestrates them within a single agentic loop, feeding what one tool found into the next. Here it looks up a fact with [web search](/developers/tools/web-search) first, then writes an image prompt from what it learned:
+
 ```python customLanguage="pythonOpenAISDK"
 import base64
 import os
@@ -340,52 +392,34 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
-    input="Generate an image of a lighthouse on a rocky coast",
-    tools=[{"type": "image_generation"}],
+    model="grok-4.7",
+    input=(
+        "Find out which team won the most recent FIFA World Cup, then generate an "
+        "image of a celebratory poster for that team, in a vintage travel-poster style."
+    ),
+    tools=[
+        {"type": "web_search"},
+        {"type": "image_generation"},
+    ],
 )
 
-image_data = [
-    output.result
-    for output in response.output
-    if output.type == "image_generation_call"
-]
-
-if image_data:
-    with open("lighthouse.jpg", "wb") as f:
-        f.write(base64.b64decode(image_data[0]))
-
-# Follow up: edit the image from the previous turn
-followup = client.responses.create(
-    model="grok-4.6",
-    previous_response_id=response.id,
-    input="Make it night time with a full moon",
-    tools=[{"type": "image_generation"}],
-)
-
-image_data_followup = [
-    output.result
-    for output in followup.output
-    if output.type == "image_generation_call"
-]
-
-if image_data_followup:
-    with open("lighthouse_night.jpg", "wb") as f:
-        f.write(base64.b64decode(image_data_followup[0]))
+for output in response.output:
+    if output.type == "web_search_call":
+        print(f"Web search: {output.action}")
+    elif output.type == "image_generation_call":
+        print(f"Image prompt: {output.prompt}")
+        with open("champions_poster.jpg", "wb") as f:
+            f.write(base64.b64decode(output.result))
+    elif output.type == "message":
+        print(output.content[0].text)
 ```
-
-If you manage conversation state yourself instead of using `previous_response_id`, pass the previous turn's output items (including the `image_generation_call` items) back verbatim in `input`; the images they carry remain editable on the next request.
-
-## Combining with other tools
-
-The image generation tool composes with the other server-side tools. Include several tools in the same request and the model orchestrates them within a single agentic loop, feeding what one tool found into the next. Here it looks up a fact with [web search](/developers/tools/web-search) first, then writes an image prompt from what it learned:
 
 ```bash customLanguage="bash"
 curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -d '{
-  "model": "grok-4.6",
+  "model": "grok-4.7",
   "input": "Find out which team won the most recent FIFA World Cup, then generate an image of a celebratory poster for that team, in a vintage travel-poster style.",
   "tools": [
     {
@@ -409,7 +443,7 @@ from xai_sdk.tools import image_generation, web_search
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=[web_search(), image_generation()],
 )
 chat.append(
@@ -428,40 +462,6 @@ with open("image.jpeg", "wb") as f:
 print(response.server_side_tool_usage)
 ```
 
-```python customLanguage="pythonOpenAISDK"
-import base64
-import os
-
-from openai import OpenAI
-
-client = OpenAI(
-    api_key=os.getenv("XAI_API_KEY"),
-    base_url="https://api.x.ai/v1",
-)
-
-response = client.responses.create(
-    model="grok-4.6",
-    input=(
-        "Find out which team won the most recent FIFA World Cup, then generate an "
-        "image of a celebratory poster for that team, in a vintage travel-poster style."
-    ),
-    tools=[
-        {"type": "web_search"},
-        {"type": "image_generation"},
-    ],
-)
-
-for output in response.output:
-    if output.type == "web_search_call":
-        print(f"Web search: {output.action}")
-    elif output.type == "image_generation_call":
-        print(f"Image prompt: {output.prompt}")
-        with open("champions_poster.jpg", "wb") as f:
-            f.write(base64.b64decode(output.result))
-    elif output.type == "message":
-        print(output.content[0].text)
-```
-
 The response output interleaves the tool calls in the order they ran: a `web_search_call` item, a message answering the factual question with citations, and an `image_generation_call` item carrying the poster.
 
 The same pattern works with [X search](/developers/tools/x-search), [code execution](/developers/tools/code-execution), and your own client-side functions. See [Advanced Usage](/developers/tools/advanced-usage#tool-combinations) for more tool combination patterns.
@@ -471,34 +471,6 @@ The same pattern works with [X search](/developers/tools/x-search), [code execut
 When streaming, each image generation call emits progress events—`in_progress`, then `generating`, then `completed`—followed by a `response.output_item.done` event whose item carries the base64 result. Partial image previews are not emitted.
 
 In the xAI SDK, pass `include=["verbose_streaming"]` to watch tool calls as they happen; the decoded images are available on the accumulated response via `response.image_outputs` once the stream ends.
-
-```python customLanguage="pythonXAI"
-import os
-
-from xai_sdk import Client
-from xai_sdk.chat import user
-from xai_sdk.tools import get_tool_call_type, image_generation
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-
-chat = client.chat.create(
-    model="grok-4.6",
-    tools=[image_generation()],
-    include=["verbose_streaming"],
-)
-chat.append(user("Generate an image of an origami fox in a paper forest"))
-
-for response, chunk in chat.stream():
-    for tool_call in chunk.tool_calls:
-        if get_tool_call_type(tool_call) == "image_generation_tool":
-            print(f"\nGenerating image: {tool_call.function.arguments}")
-    if chunk.content:
-        print(chunk.content, end="", flush=True)
-
-# The accumulated response carries the decoded images once the stream ends
-with open("image.jpeg", "wb") as f:
-    f.write(response.image_outputs[0].image)
-```
 
 ```python customLanguage="pythonOpenAISDK"
 import base64
@@ -512,7 +484,7 @@ client = OpenAI(
 )
 
 stream = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input="Generate an image of an origami fox in a paper forest",
     tools=[{"type": "image_generation"}],
     stream=True,
@@ -540,7 +512,7 @@ const client = new OpenAI({
 });
 
 const stream = await client.responses.create({
-  model: "grok-4.6",
+  model: "grok-4.7",
   input: "Generate an image of an origami fox in a paper forest",
   tools: [{ type: "image_generation" }],
   stream: true,
@@ -563,6 +535,34 @@ for await (const event of stream) {
     process.stdout.write(event.delta);
   }
 }
+```
+
+```python customLanguage="pythonXAI"
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import user
+from xai_sdk.tools import get_tool_call_type, image_generation
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+
+chat = client.chat.create(
+    model="grok-4.7",
+    tools=[image_generation()],
+    include=["verbose_streaming"],
+)
+chat.append(user("Generate an image of an origami fox in a paper forest"))
+
+for response, chunk in chat.stream():
+    for tool_call in chunk.tool_calls:
+        if get_tool_call_type(tool_call) == "image_generation_tool":
+            print(f"\nGenerating image: {tool_call.function.arguments}")
+    if chunk.content:
+        print(chunk.content, end="", flush=True)
+
+# The accumulated response carries the decoded images once the stream ends
+with open("image.jpeg", "wb") as f:
+    f.write(response.image_outputs[0].image)
 ```
 
 ## Related

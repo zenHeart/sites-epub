@@ -61,10 +61,10 @@ check.
 ## Connect an app
 
 Connectors give a Bot a structured way to work with supported services.
-Connectors are shown as **Plugins** in the current app.
+Connectors are installed as plugins from **Marketplace**.
 
-1. Open **Settings → Plugins**.
-2. Browse the available connectors.
+1. Open **Marketplace** from the sidebar.
+2. Browse the available plugins.
 3. Choose **Add**.
 4. Complete authentication in your browser if requested.
 5. In chat, type `@` to attach the connector to the task. Type `/` to reference
@@ -76,6 +76,17 @@ for visual workflows a connector does not expose.
 
 Installed connectors are account-wide. Their availability is not isolated to
 one Bot.
+
+## Search and read X
+
+Bots can search and read what's public on X without you connecting an X
+account. Ask a Bot to search posts, open a post from its link, read an
+account's posts and mentions, see who quoted or reposted a post, count recent
+posts on a topic, or check trends and news.
+
+This access is read-only and doesn't sign in as you. For your DMs, bookmarks,
+home timeline, or who liked your posts, add the X plugin from **Marketplace**
+and sign in with X.
 
 ## Work with files
 
@@ -89,15 +100,16 @@ results into the shared workspace or attach them to the conversation.
 
 ## Update, recover, or reset the computer
 
-When the computer is unreachable, use **Recover computer** from the error state.
-For planned maintenance or last-resort recovery, open **Settings → Beta**:
+When the computer is unreachable, use **Recover computer** from the error state
+(the confirmation dialog calls it **Recover Grok Bot's Computer**). Recovery is
+offered only there, not in Settings. For planned maintenance or last-resort
+recovery, open **Settings → Updates** and use the **Grok Bot's Computer**
+controls:
 
-* **Update Agent Computer** rebuilds with the latest image while preserving
-  durable state.
-* **Recover Agent Computer** replaces an unreachable computer while preserving
-  durable state when that action is offered.
-* **Reset Agent Computer** returns to the most recent durable snapshot and can
-  discard recent unsaved work.
+* **Update** installs the latest software on the computer and keeps your files
+  in place.
+* **Reset** rebuilds the computer from your last saved snapshot; very recent
+  changes may be lost.
 
 Wait for active work to finish before recovery when possible. See
 [Troubleshooting](/grok-bot/troubleshooting) for the least-destructive order.

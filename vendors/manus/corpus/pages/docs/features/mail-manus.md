@@ -160,13 +160,13 @@ Manus processes email content to execute tasks. Emails are handled according to 
 
 ## Tips for Better Results
 
-| Tip                  | Good Example                                              | Poor Example               |
-| :------------------- | :-------------------------------------------------------- | :------------------------- |
-| **Be specific**      | "Create a table with columns: name, company, role, email" | "Organize this"            |
-| **Provide context**  | "I'm evaluating CRM vendors for our sales team"           | \[No context provided]     |
-| **Specify format**   | "Generate a slide deck with findings"                     | "Give me the results"      |
-| **Use subject line** | Subject: "Extract key dates and deadlines"                | \[Blank subject]           |
-| **Combine features** | "Use Wide Research to analyze all 50 items"               | \[Single-threaded request] |
+| Tip | Good Example | Poor Example |
+| :- | :- | :- |
+| **Be specific** | "Create a table with columns: name, company, role, email" | "Organize this" |
+| **Provide context** | "I'm evaluating CRM vendors for our sales team" | \[No context provided] |
+| **Specify format** | "Generate a slide deck with findings" | "Give me the results" |
+| **Use subject line** | Subject: "Extract key dates and deadlines" | \[Blank subject] |
+| **Combine features** | "Use Wide Research to analyze all 50 items" | \[Single-threaded request] |
 
 ## When to Use Mail Manus
 
@@ -223,3 +223,6 @@ Manus processes email content to execute tasks. Emails are handled according to 
 </AccordionGroup>
 
 ***
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

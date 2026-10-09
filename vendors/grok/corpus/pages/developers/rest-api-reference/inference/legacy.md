@@ -98,6 +98,29 @@
 
     * `text_tokens` (integer, required) — Total text prompt token used (cached + non-cached text tokens).
 
+  * `server_side_tool_usage_details` (object)
+
+    * `code_interpreter_calls` (integer, required) — Number of code interpreter calls.
+
+    * `document_search_calls` (integer, required) — Number of document search calls.
+
+    * `file_search_calls` (integer, required) — Number of file search calls.
+
+    * `image_generation_calls` (integer, required) — Number of image generation calls.
+
+    * `mcp_calls` (integer, required) — Number of MCP calls.
+
+    * `web_search_calls` (integer, required) — Number of web search calls.
+
+    * `x_posts_fetched` (integer, required) — Number of X posts fetched across all X search calls, including nested
+      parent/quote posts and every post of a fetched thread, without
+      de-duplication. X search is billed per fetched item.
+
+    * `x_search_calls` (integer, required) — Number of X search calls.
+
+    * `x_users_fetched` (integer, required) — Number of X user profiles fetched across all X search calls, without
+      de-duplication. X search is billed per fetched item.
+
   * `total_tokens` (integer, required) — Total token used, the sum of prompt token and completion token amount.
 
 \*\*Request example:\*\*
@@ -150,7 +173,7 @@
 
 > [!WARNING]
 >
-> **Deprecated**: The Anthropic SDK compatibility is fully deprecated. Please migrate to the [Responses API](/developers/rest-api-reference/inference/responses#create-new-response) or [gRPC](/developers/grpc-api-reference).
+> **Deprecated**: The Anthropic SDK compatibility is fully deprecated. Please migrate to the [Responses API](/developers/rest-api-reference/inference/responses#create-new-response) or the gRPC API.
 
 ## POST /v1/messages
 
@@ -258,7 +281,7 @@ Create a messages response. This endpoint is compatible with the Anthropic API.
 
 > [!WARNING]
 >
-> **Deprecated**: The Anthropic SDK compatibility is fully deprecated. Please migrate to the [Responses API](/developers/rest-api-reference/inference/responses#create-new-response) or [gRPC](/developers/grpc-api-reference).
+> **Deprecated**: The Anthropic SDK compatibility is fully deprecated. Please migrate to the [Responses API](/developers/rest-api-reference/inference/responses#create-new-response) or the gRPC API.
 
 ## POST /v1/complete
 

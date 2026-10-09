@@ -129,7 +129,7 @@ The response body contains raw audio bytes. Save directly to a file or pipe to a
 
 ## Voices
 
-Each voice has a distinct personality. Listen to samples and choose the best fit for your use case (`eve` is the default):
+Each voice has a distinct personality. All voices can speak every supported language. Listen to samples and choose the best fit for your use case (`eve` is the default):
 
 Voice IDs are **case-insensitive** - `eve`, `Eve`, and `EVE` all work. [Preview all voices in the playground →](https://console.x.ai/team/default/voice/text-to-speech?campaign=voice-docs-tts\&utm_source=docs\&utm_medium=referral\&utm_campaign=developers-model-capabilities-audio-text-to-speech\&utm_content=text-to-speech)
 
@@ -236,7 +236,7 @@ for voice in voices {
 
 ## Supported Languages
 
-The TTS API supports 20 languages via BCP-47 language codes. Use `auto` for automatic language detection, or specify a language code explicitly for consistent results.
+The TTS API supports 20 languages via BCP-47 language codes. Use `auto` for automatic language detection, or specify a language code explicitly for consistent results. Voice and language are independent: any built-in voice can speak any supported language.
 
 Language code validation is **case-insensitive** — `en`, `EN`, and `En` all work.
 
@@ -1446,7 +1446,7 @@ task.cancel(with: .normalClosure, reason: nil)
 
 * [TTS Playground](https://console.x.ai/team/default/voice/text-to-speech?campaign=voice-docs-tts\&utm_source=docs\&utm_medium=referral\&utm_campaign=developers-model-capabilities-audio-text-to-speech\&utm_content=text-to-speech) - Try voices and speech tags in your browser
 * [Create an API Key](https://console.x.ai/team/default/api-keys?campaign=voice-docs-tts\&utm_source=docs\&utm_medium=referral\&utm_campaign=developers-model-capabilities-audio-text-to-speech\&utm_content=api-keys) - Get started with the API
-* [Voice Overview](/developers/model-capabilities/audio/voice) - Overview of all xAI voice capabilities
+* [Voice Overview](/developers/model-capabilities/audio/voice) - Overview of all SpaceXAI voice capabilities
 * [Speech to Speech API](/developers/model-capabilities/audio/speech-to-speech) - Real-time voice conversations via WebSocket
 * [API Reference](/developers/rest-api-reference/inference/voice#text-to-speech---rest) - Full TTS endpoint specification
 * [List Voices](/developers/rest-api-reference/inference/voice#text-to-speech---list-voices) - Programmatically discover available voices

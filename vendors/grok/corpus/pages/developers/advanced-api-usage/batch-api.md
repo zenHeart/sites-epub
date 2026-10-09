@@ -67,19 +67,6 @@ curl -X POST https://api.x.ai/v1/batches \\
   }'
 ```
 
-```pythonXAI
-from xai_sdk import Client
-
-client = Client()
-
-# Create a batch with a descriptive name
-batch = client.batch.create(batch_name="customer_feedback_analysis")
-print(f"Created batch: {batch.batch_id}")
-
-# Store the batch_id for later use
-batch_id = batch.batch_id
-```
-
 ```javascriptWithoutSDK
 // Create a batch with a descriptive name
 const response = await fetch("https://api.x.ai/v1/batches", {
@@ -97,6 +84,19 @@ console.log(\`Created batch: \${batch.batch_id}\`);
 const batchId = batch.batch_id;
 ```
 
+```pythonXAI
+from xai_sdk import Client
+
+client = Client()
+
+# Create a batch with a descriptive name
+batch = client.batch.create(batch_name="customer_feedback_analysis")
+print(f"Created batch: {batch.batch_id}")
+
+# Store the batch_id for later use
+batch_id = batch.batch_id
+```
+
 ## Step 2: Add requests to the batch
 
 With your batch created, you can now add requests to it. Each request will be processed asynchronously.
@@ -104,83 +104,6 @@ With your batch created, you can now add requests to it. Each request will be pr
 **With the xAI SDK, adding batch requests is simple:** use `chat.create()` for text, `image.prepare()` for images, `video.prepare()` for videos, or `video.prepare_extension()` for video extensions, then pass them as a list. You can also upload a [JSONL file](#jsonl-file-upload) if you prefer.
 
 **Important:** Assign a unique `batch_request_id` to each request. This ID lets you match results back to their original requests, which becomes important when you're processing hundreds or thousands of items. If you don't provide an ID, we generate a UUID for you. Using your own IDs is useful for idempotency (ensuring a request is only processed once) and for linking batch requests to records in your own system.
-
-```pythonXAI
-from xai_sdk import Client
-from xai_sdk.chat import system, user
-from xai_sdk.tools import web_search, x_search, mcp
-
-client = Client()
-
-batch_requests = []
-
-# Chat completion with tools
-chat = client.chat.create(
-    model="grok-4.3",
-    batch_request_id="chat_001",
-    tools=[web_search(), x_search()],
-)
-chat.append(system("Analyze market sentiment from recent news and posts."))
-chat.append(user("What is the current sentiment around TSLA stock?"))
-batch_requests.append(chat)
-
-# Image generation
-image_req = client.image.prepare(
-    prompt="A sleek modern laptop on a minimalist desk",
-    model="grok-imagine-image-2.0",
-    batch_request_id="img_001",
-)
-batch_requests.append(image_req)
-
-# Image edit
-image_edit_req = client.image.prepare(
-    prompt="Add a rainbow in the background",
-    model="grok-imagine-image-2.0",
-    image_url="https://picsum.photos/800",
-    batch_request_id="img_edit_001",
-)
-batch_requests.append(image_edit_req)
-
-# Video generation
-video_req = client.video.prepare(
-    prompt="A product rotating on a turntable with dramatic lighting",
-    model="grok-imagine-video-1.5",
-    batch_request_id="vid_001",
-)
-batch_requests.append(video_req)
-
-# Video edit
-video_edit_req = client.video.prepare(
-    prompt="Make it slow motion",
-    model="grok-imagine-video",
-    video_url="https://lorem.video/cat_360p_3s",
-    batch_request_id="vid_edit_001",
-)
-batch_requests.append(video_edit_req)
-
-# Video extension
-video_ext_req = client.video.prepare_extension(
-    prompt="The camera slowly pans to reveal a sunset behind the mountains",
-    model="grok-imagine-video",
-    video_url="https://lorem.video/cat_360p_3s",
-    duration=6,
-    batch_request_id="vid_ext_001",
-)
-batch_requests.append(video_ext_req)
-
-# Remote MCP
-mcp_chat = client.chat.create(
-    model="grok-4.3",
-    batch_request_id="mcp_001",
-    tools=[mcp(server_url="https://mcp.deepwiki.com/mcp")],
-)
-mcp_chat.append(user("What does the xai-sdk-python repo do?"))
-batch_requests.append(mcp_chat)
-
-# Add all requests to the batch
-client.batch.add(batch_id=batch.batch_id, batch_requests=batch_requests)
-print(f"Added {len(batch_requests)} requests to batch")
-```
 
 ```bash
 curl -X POST https://api.x.ai/v1/batches/{batch_id}/requests \\
@@ -318,6 +241,83 @@ if (!response.ok) throw new Error(\`Failed to add requests: \${await response.te
 console.log(\`Added \${batchRequests.length} requests to batch\`);
 ```
 
+```pythonXAI
+from xai_sdk import Client
+from xai_sdk.chat import system, user
+from xai_sdk.tools import web_search, x_search, mcp
+
+client = Client()
+
+batch_requests = []
+
+# Chat completion with tools
+chat = client.chat.create(
+    model="grok-4.3",
+    batch_request_id="chat_001",
+    tools=[web_search(), x_search()],
+)
+chat.append(system("Analyze market sentiment from recent news and posts."))
+chat.append(user("What is the current sentiment around TSLA stock?"))
+batch_requests.append(chat)
+
+# Image generation
+image_req = client.image.prepare(
+    prompt="A sleek modern laptop on a minimalist desk",
+    model="grok-imagine-image-2.0",
+    batch_request_id="img_001",
+)
+batch_requests.append(image_req)
+
+# Image edit
+image_edit_req = client.image.prepare(
+    prompt="Add a rainbow in the background",
+    model="grok-imagine-image-2.0",
+    image_url="https://picsum.photos/800",
+    batch_request_id="img_edit_001",
+)
+batch_requests.append(image_edit_req)
+
+# Video generation
+video_req = client.video.prepare(
+    prompt="A product rotating on a turntable with dramatic lighting",
+    model="grok-imagine-video-1.5",
+    batch_request_id="vid_001",
+)
+batch_requests.append(video_req)
+
+# Video edit
+video_edit_req = client.video.prepare(
+    prompt="Make it slow motion",
+    model="grok-imagine-video",
+    video_url="https://lorem.video/cat_360p_3s",
+    batch_request_id="vid_edit_001",
+)
+batch_requests.append(video_edit_req)
+
+# Video extension
+video_ext_req = client.video.prepare_extension(
+    prompt="The camera slowly pans to reveal a sunset behind the mountains",
+    model="grok-imagine-video",
+    video_url="https://lorem.video/cat_360p_3s",
+    duration=6,
+    batch_request_id="vid_ext_001",
+)
+batch_requests.append(video_ext_req)
+
+# Remote MCP
+mcp_chat = client.chat.create(
+    model="grok-4.3",
+    batch_request_id="mcp_001",
+    tools=[mcp(server_url="https://mcp.deepwiki.com/mcp")],
+)
+mcp_chat.append(user("What does the xai-sdk-python repo do?"))
+batch_requests.append(mcp_chat)
+
+# Add all requests to the batch
+client.batch.add(batch_id=batch.batch_id, batch_requests=batch_requests)
+print(f"Added {len(batch_requests)} requests to batch")
+```
+
 ## Step 3: Monitor batch progress
 
 After adding requests, they begin processing in the background. Since batch processing is asynchronous, you need to poll the batch status to know when results are ready.
@@ -338,6 +338,28 @@ curl https://api.x.ai/v1/batches/{batch_id} \\
 #     "num_error": 5
 #   }
 # }
+```
+
+```javascriptWithoutSDK
+// Poll until all requests are processed
+console.log("Waiting for batch to complete...");
+const interval = setInterval(async () => {
+  const response = await fetch(
+    \`https://api.x.ai/v1/batches/\${batchId}\`,
+    { headers: { Authorization: \`Bearer \${process.env.XAI_API_KEY}\` } }
+  );
+  const batch = await response.json();
+
+  const { num_pending, num_success, num_error, num_requests } = batch.state;
+  const completed = num_success + num_error;
+  console.log(\`Progress: \${completed}/\${num_requests} complete, \${num_pending} pending\`);
+
+  if (num_requests > 0 && num_pending === 0) {
+    clearInterval(interval);
+    console.log("Batch processing complete!");
+  }
+  // Wait before polling again (avoid hammering the API)
+}, 5000);
 ```
 
 ```pythonXAI
@@ -363,28 +385,6 @@ while True:
     
     # Wait before polling again (avoid hammering the API)
     time.sleep(5)
-```
-
-```javascriptWithoutSDK
-// Poll until all requests are processed
-console.log("Waiting for batch to complete...");
-const interval = setInterval(async () => {
-  const response = await fetch(
-    \`https://api.x.ai/v1/batches/\${batchId}\`,
-    { headers: { Authorization: \`Bearer \${process.env.XAI_API_KEY}\` } }
-  );
-  const batch = await response.json();
-
-  const { num_pending, num_success, num_error, num_requests } = batch.state;
-  const completed = num_success + num_error;
-  console.log(\`Progress: \${completed}/\${num_requests} complete, \${num_pending} pending\`);
-
-  if (num_requests > 0 && num_pending === 0) {
-    clearInterval(interval);
-    console.log("Batch processing complete!");
-  }
-  // Wait before polling again (avoid hammering the API)
-}, 5000);
 ```
 
 ### Understanding batch states
@@ -424,56 +424,6 @@ Each result is linked to its original request via the `batch_request_id` you ass
 The SDK provides convenient `.succeeded` and `.failed` properties to separate successful responses from errors.
 
 **Pagination:** Results are returned in pages. Use the `limit` parameter to control page size and `pagination_token` to fetch subsequent pages. When `pagination_token` is `None`, you've reached the end.
-
-```pythonXAI
-from xai_sdk import Client
-
-client = Client()
-
-# Paginate through all results
-all_succeeded = []
-all_failed = []
-pagination_token = None
-
-while True:
-    # Fetch a page of results (limit controls page size)
-    page = client.batch.list_batch_results(
-        batch_id=batch.batch_id,
-        limit=100,
-        pagination_token=pagination_token,
-    )
-    
-    # Collect results from this page
-    all_succeeded.extend(page.succeeded)
-    all_failed.extend(page.failed)
-    
-    # Check if there are more pages
-    if page.pagination_token is None:
-        break
-    pagination_token = page.pagination_token
-
-# Process results - handle different response types
-print(f"Successfully processed: {len(all_succeeded)} requests")
-for result in all_succeeded:
-    rid = result.batch_request_id
-    resp = result.proto.response
-
-    if resp.HasField("completion_response"):
-        # Chat completion response
-        print(f"[{rid}] {result.response.content}")
-        print(f"  Tokens used: {result.response.usage.total_tokens}")
-    elif resp.HasField("image_response"):
-        # Image generation response
-        print(f"[{rid}] Image URL: {result.image_response.url}")
-    elif resp.HasField("video_response"):
-        # Video generation response
-        print(f"[{rid}] Video URL: {result.video_response.url}")
-
-if all_failed:
-    print(f"\\nFailed: {len(all_failed)} requests")
-    for result in all_failed:
-        print(f"[{result.batch_request_id}] Error: {result.error_message}")
-```
 
 ```bash
 # Fetch first page
@@ -538,6 +488,56 @@ if (allFailed.length > 0) {
 }
 ```
 
+```pythonXAI
+from xai_sdk import Client
+
+client = Client()
+
+# Paginate through all results
+all_succeeded = []
+all_failed = []
+pagination_token = None
+
+while True:
+    # Fetch a page of results (limit controls page size)
+    page = client.batch.list_batch_results(
+        batch_id=batch.batch_id,
+        limit=100,
+        pagination_token=pagination_token,
+    )
+    
+    # Collect results from this page
+    all_succeeded.extend(page.succeeded)
+    all_failed.extend(page.failed)
+    
+    # Check if there are more pages
+    if page.pagination_token is None:
+        break
+    pagination_token = page.pagination_token
+
+# Process results - handle different response types
+print(f"Successfully processed: {len(all_succeeded)} requests")
+for result in all_succeeded:
+    rid = result.batch_request_id
+    resp = result.proto.response
+
+    if resp.HasField("completion_response"):
+        # Chat completion response
+        print(f"[{rid}] {result.response.content}")
+        print(f"  Tokens used: {result.response.usage.total_tokens}")
+    elif resp.HasField("image_response"):
+        # Image generation response
+        print(f"[{rid}] Image URL: {result.image_response.url}")
+    elif resp.HasField("video_response"):
+        # Video generation response
+        print(f"[{rid}] Video URL: {result.video_response.url}")
+
+if all_failed:
+    print(f"\\nFailed: {len(all_failed)} requests")
+    for result in all_failed:
+        print(f"[{result.batch_request_id}] Error: {result.error_message}")
+```
+
 ## Additional operations
 
 Beyond the core workflow, the Batch API provides additional operations for managing your batches.
@@ -551,17 +551,6 @@ curl -X POST https://api.x.ai/v1/batches/{batch_id}:cancel \\
   -H "Authorization: Bearer $XAI_API_KEY"
 ```
 
-```pythonXAI
-from xai_sdk import Client
-
-client = Client()
-
-# Cancel processing
-cancelled_batch = client.batch.cancel(batch_id=batch.batch_id)
-print(f"Cancelled batch: {cancelled_batch.batch_id}")
-print(f"Completed before cancellation: {cancelled_batch.state.num_success} requests")
-```
-
 ```javascriptWithoutSDK
 // Cancel processing
 const response = await fetch(
@@ -573,6 +562,17 @@ console.log(\`Cancelled batch: \${cancelledBatch.batch_id}\`);
 console.log(\`Completed before cancellation: \${cancelledBatch.state.num_success} requests\`);
 ```
 
+```pythonXAI
+from xai_sdk import Client
+
+client = Client()
+
+# Cancel processing
+cancelled_batch = client.batch.cancel(batch_id=batch.batch_id)
+print(f"Cancelled batch: {cancelled_batch.batch_id}")
+print(f"Completed before cancellation: {cancelled_batch.state.num_success} requests")
+```
+
 ### List all batches
 
 View all batches belonging to your team. Batches are retained until they expire (check the `expires_at` field). This endpoint supports the same `limit` and `pagination_token` parameters for paginating through large lists.
@@ -580,19 +580,6 @@ View all batches belonging to your team. Batches are retained until they expire 
 ```bash
 curl "https://api.x.ai/v1/batches?limit=20" \\
   -H "Authorization: Bearer $XAI_API_KEY"
-```
-
-```pythonXAI
-from xai_sdk import Client
-
-client = Client()
-
-# List recent batches
-response = client.batch.list(limit=20)
-
-for batch in response.batches:
-    status = "complete" if batch.state.num_pending == 0 else "processing"
-    print(f"{batch.name} ({batch.batch_id}): {status}")
 ```
 
 ```javascriptWithoutSDK
@@ -609,6 +596,19 @@ for (const batch of data.batches) {
 }
 ```
 
+```pythonXAI
+from xai_sdk import Client
+
+client = Client()
+
+# List recent batches
+response = client.batch.list(limit=20)
+
+for batch in response.batches:
+    status = "complete" if batch.state.num_pending == 0 else "processing"
+    print(f"{batch.name} ({batch.batch_id}): {status}")
+```
+
 ### Check individual request status
 
 For detailed tracking, you can inspect the metadata for each request in a batch. This shows the status, timing, and other details for individual requests. This endpoint supports the same `limit` and `pagination_token` parameters for paginating through large batches.
@@ -616,18 +616,6 @@ For detailed tracking, you can inspect the metadata for each request in a batch.
 ```bash
 curl "https://api.x.ai/v1/batches/{batch_id}/requests?limit=50" \\
   -H "Authorization: Bearer $XAI_API_KEY"
-```
-
-```pythonXAI
-from xai_sdk import Client
-
-client = Client()
-
-# Get metadata for individual requests
-metadata = client.batch.list_batch_requests(batch_id=batch.batch_id)
-
-for request in metadata.batch_request_metadata:
-    print(f"Request {request.batch_request_id}: {request.state}")
 ```
 
 ```javascriptWithoutSDK
@@ -643,6 +631,18 @@ for (const req of data.batch_request_metadata) {
 }
 ```
 
+```pythonXAI
+from xai_sdk import Client
+
+client = Client()
+
+# Get metadata for individual requests
+metadata = client.batch.list_batch_requests(batch_id=batch.batch_id)
+
+for request in metadata.batch_request_metadata:
+    print(f"Request {request.batch_request_id}: {request.state}")
+```
+
 ### Track costs
 
 Each batch tracks the total processing cost. Access the cost breakdown after processing to understand your spending. For pricing details, see [Batch API Pricing on the Pricing page](/developers/pricing#batch-api-pricing).
@@ -654,19 +654,6 @@ curl -s "https://api.x.ai/v1/batches/{batch_id}/results?limit=100" \\
 
 # Cost per result can be found on response.results[].batch_result.response.chat_get_completion.usage.cost_in_usd_ticks
 # Cost is returned in ticks (1e-10 USD) for precision
-```
-
-```pythonXAI
-from xai_sdk import Client
-
-client = Client()
-
-# Get batch with cost information
-batch = client.batch.get(batch_id=batch.batch_id)
-
-# Cost is returned in ticks (1e-10 USD) for precision
-total_cost_usd = batch.cost_breakdown.total_cost_usd_ticks / 1e10
-print("Total cost: $%.4f" % total_cost_usd)
 ```
 
 ```javascriptWithoutSDK
@@ -685,84 +672,22 @@ for (const r of data.results) {
 console.log(\`Total cost: $\${(totalTicks / 1e10).toFixed(4)}\`);
 ```
 
-## Complete example
-
-This end-to-end example demonstrates a realistic batch workflow: analyzing customer feedback at scale. It creates a batch, submits feedback items for sentiment analysis, waits for processing, and outputs the results. For simplicity, this example doesn't paginate results—see [Step 4](#step-4-retrieve-results) for pagination when processing larger batches.
-
 ```pythonXAI
-import time
 from xai_sdk import Client
-from xai_sdk.chat import system, user
 
 client = Client()
 
-# Sample dataset: customer feedback to analyze
-feedback_data = [
-    {"id": "fb_001", "text": "Absolutely love this product! Best purchase ever."},
-    {"id": "fb_002", "text": "Delivery was late and the packaging was damaged."},
-    {"id": "fb_003", "text": "Works fine, nothing special to report."},
-    {"id": "fb_004", "text": "Customer support was incredibly helpful!"},
-    {"id": "fb_005", "text": "The app keeps crashing on my phone."},
-]
+# Get batch with cost information
+batch = client.batch.get(batch_id=batch.batch_id)
 
-# Step 1: Create a batch
-print("Creating batch...")
-batch = client.batch.create(batch_name="feedback_sentiment_analysis")
-print(f"Batch created: {batch.batch_id}")
-
-# Step 2: Build and add requests
-print("\\nAdding requests...")
-batch_requests = []
-for item in feedback_data:
-    chat = client.chat.create(
-        model="grok-4.3",
-        batch_request_id=item["id"],
-    )
-    chat.append(system(
-        "Analyze the sentiment of the customer feedback. "
-        "Respond with exactly one word: positive, negative, or neutral."
-    ))
-    chat.append(user(item["text"]))
-    batch_requests.append(chat)
-
-client.batch.add(batch_id=batch.batch_id, batch_requests=batch_requests)
-print(f"Added {len(batch_requests)} requests")
-
-# Step 3: Wait for completion
-print("\\nProcessing...")
-while True:
-    batch = client.batch.get(batch_id=batch.batch_id)
-    pending = batch.state.num_pending
-    completed = batch.state.num_success + batch.state.num_error
-    
-    print(f"  {completed}/{batch.state.num_requests} complete")
-    
-    if pending == 0:
-        break
-    time.sleep(2)
-
-# Step 4: Retrieve and display results
-print("\\n--- Results ---")
-results = client.batch.list_batch_results(batch_id=batch.batch_id)
-
-# Create a lookup for original feedback text
-feedback_lookup = {item["id"]: item["text"] for item in feedback_data}
-
-for result in results.succeeded:
-    original_text = feedback_lookup.get(result.batch_request_id, "")
-    sentiment = result.response.content.strip().lower()
-    print(f"[{sentiment.upper()}] {original_text[:50]}...")
-
-# Report any failures
-if results.failed:
-    print("\\n--- Errors ---")
-    for result in results.failed:
-        print(f"[{result.batch_request_id}] {result.error_message}")
-
-# Display cost
-cost_usd = batch.cost_breakdown.total_cost_usd_ticks / 1e10
-print("\\nTotal cost: $%.4f" % cost_usd)
+# Cost is returned in ticks (1e-10 USD) for precision
+total_cost_usd = batch.cost_breakdown.total_cost_usd_ticks / 1e10
+print("Total cost: $%.4f" % total_cost_usd)
 ```
+
+## Complete example
+
+This end-to-end example demonstrates a realistic batch workflow: analyzing customer feedback at scale. It creates a batch, submits feedback items for sentiment analysis, waits for processing, and outputs the results. For simplicity, this example doesn't paginate results—see [Step 4](#step-4-retrieve-results) for pagination when processing larger batches.
 
 ```javascriptWithoutSDK
 const BASE_URL = "https://api.x.ai/v1";
@@ -860,6 +785,81 @@ const interval = setInterval(async () => {
 }, 2000);
 ```
 
+```pythonXAI
+import time
+from xai_sdk import Client
+from xai_sdk.chat import system, user
+
+client = Client()
+
+# Sample dataset: customer feedback to analyze
+feedback_data = [
+    {"id": "fb_001", "text": "Absolutely love this product! Best purchase ever."},
+    {"id": "fb_002", "text": "Delivery was late and the packaging was damaged."},
+    {"id": "fb_003", "text": "Works fine, nothing special to report."},
+    {"id": "fb_004", "text": "Customer support was incredibly helpful!"},
+    {"id": "fb_005", "text": "The app keeps crashing on my phone."},
+]
+
+# Step 1: Create a batch
+print("Creating batch...")
+batch = client.batch.create(batch_name="feedback_sentiment_analysis")
+print(f"Batch created: {batch.batch_id}")
+
+# Step 2: Build and add requests
+print("\\nAdding requests...")
+batch_requests = []
+for item in feedback_data:
+    chat = client.chat.create(
+        model="grok-4.3",
+        batch_request_id=item["id"],
+    )
+    chat.append(system(
+        "Analyze the sentiment of the customer feedback. "
+        "Respond with exactly one word: positive, negative, or neutral."
+    ))
+    chat.append(user(item["text"]))
+    batch_requests.append(chat)
+
+client.batch.add(batch_id=batch.batch_id, batch_requests=batch_requests)
+print(f"Added {len(batch_requests)} requests")
+
+# Step 3: Wait for completion
+print("\\nProcessing...")
+while True:
+    batch = client.batch.get(batch_id=batch.batch_id)
+    pending = batch.state.num_pending
+    completed = batch.state.num_success + batch.state.num_error
+    
+    print(f"  {completed}/{batch.state.num_requests} complete")
+    
+    if pending == 0:
+        break
+    time.sleep(2)
+
+# Step 4: Retrieve and display results
+print("\\n--- Results ---")
+results = client.batch.list_batch_results(batch_id=batch.batch_id)
+
+# Create a lookup for original feedback text
+feedback_lookup = {item["id"]: item["text"] for item in feedback_data}
+
+for result in results.succeeded:
+    original_text = feedback_lookup.get(result.batch_request_id, "")
+    sentiment = result.response.content.strip().lower()
+    print(f"[{sentiment.upper()}] {original_text[:50]}...")
+
+# Report any failures
+if results.failed:
+    print("\\n--- Errors ---")
+    for result in results.failed:
+        print(f"[{result.batch_request_id}] {result.error_message}")
+
+# Display cost
+cost_usd = batch.cost_breakdown.total_cost_usd_ticks / 1e10
+print("\\nTotal cost: $%.4f" % cost_usd)
+```
+
 ## JSONL File Upload
 
 As an alternative to adding requests via the SDK, you can create batches by uploading a JSONL file. This is useful when generating requests from scripts, pipelines, or external tools.
@@ -894,24 +894,6 @@ Supported `url` values:
 Only batch-enabled models are accepted. Refer to the relevant [model pages](/developers/models) for the most up-to-date information; models that are not batch-enabled are rejected with "not supported for batch processing".
 
 Upload the file via the [Files API](/developers/files), then create a batch referencing it:
-
-```pythonXAI
-from xai_sdk import Client
-
-client = Client()
-
-# Upload the JSONL file
-file = client.files.upload(
-    file=open("batch_requests.jsonl", "rb"),
-)
-
-# Create a batch with the file ID
-batch = client.batch.create(
-    batch_name="sentiment_analysis",
-    input_file_id=file.id,
-)
-print(f"Created batch: {batch.batch_id}")
-```
 
 ```bash
 # Upload the JSONL file
@@ -957,6 +939,24 @@ const batch = await batchRes.json();
 console.log(\`Created batch: \${batch.batch_id}\`);
 ```
 
+```pythonXAI
+from xai_sdk import Client
+
+client = Client()
+
+# Upload the JSONL file
+file = client.files.upload(
+    file=open("batch_requests.jsonl", "rb"),
+)
+
+# Create a batch with the file ID
+batch = client.batch.create(
+    batch_name="sentiment_analysis",
+    input_file_id=file.id,
+)
+print(f"Created batch: {batch.batch_id}")
+```
+
 The file is processed asynchronously in the background. If any line is invalid, the batch is cancelled with an error message. Monitor progress and retrieve results the same way as inline batches.
 
 File-based batches are sealed after creation — you cannot add more requests via `AddBatchRequests`. Maximum file size is **200 MB** with up to **50,000** requests. Each `custom_id` must be unique within the file.
@@ -985,6 +985,5 @@ Both [server-side tools](/developers/tools/overview) and client-side function to
 ## Related
 
 * [API Reference: Batch endpoints](/developers/rest-api-reference/inference/batches#create-a-new-batch)
-* [gRPC Reference: Batch Management](/developers/grpc-api-reference/batches)
 * [Pricing — Batch API Pricing](/developers/pricing#batch-api-pricing)
 * [xAI Python SDK](https://github.com/xai-org/xai-sdk-python)

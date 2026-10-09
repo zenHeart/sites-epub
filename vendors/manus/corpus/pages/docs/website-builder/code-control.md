@@ -21,3 +21,6 @@ For complete control, you can download the entire codebase for your application 
 * **Integrate with Your Own Workflow**: You can integrate the code into your existing development workflow, such as a Git repository or a CI/CD pipeline.
 
 This commitment to code transparency and portability ensures that you always have the flexibility to adapt and grow your application as your needs evolve.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

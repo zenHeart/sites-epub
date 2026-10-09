@@ -35,22 +35,22 @@ For example, you can give a single, comprehensive instruction like this:
 
 Manus will understand the distinct requests within your prompt and execute all of them in one go, saving you time and effort.
 
-| Edit Type     | Example Prompt                                                  |
-| :------------ | :-------------------------------------------------------------- |
-| **Styling**   | `"Change the font of all headings to Georgia."`                 |
-| **Layout**    | `"Increase the spacing between the items in this list."`        |
-| **Content**   | `"Change the text of the main button to 'Get Started Now'."`    |
+| Edit Type | Example Prompt |
+| :- | :- |
+| **Styling** | `"Change the font of all headings to Georgia."` |
+| **Layout** | `"Increase the spacing between the items in this list."` |
+| **Content** | `"Change the text of the main button to 'Get Started Now'."` |
 | **Structure** | `"Duplicate this section and place it below the contact form."` |
 
 ### AI Edit: Your Creative Partner
 
 For more complex or creative changes, you can use the AI edit feature. Simply select an element and ask Manus to improve it. This is like having a design consultant and copywriter at your fingertips.
 
-| Goal               | Example Prompt                                                                      |
-| :----------------- | :---------------------------------------------------------------------------------- |
-| **Improve Copy**   | `"Rewrite this headline to be more engaging and benefit-oriented."`                 |
-| **Enhance Design** | `"Suggest a better, more modern color palette for this section."`                   |
-| **Refine Layout**  | `"Restructure this feature list to be more visually appealing and easier to scan."` |
+| Goal | Example Prompt |
+| :- | :- |
+| **Improve Copy** | `"Rewrite this headline to be more engaging and benefit-oriented."` |
+| **Enhance Design** | `"Suggest a better, more modern color palette for this section."` |
+| **Refine Layout** | `"Restructure this feature list to be more visually appealing and easier to scan."` |
 
 Manus will provide suggestions and apply the changes for you, making it easy to elevate your design and content beyond the quality of your content.
 
@@ -75,3 +75,6 @@ For a more immersive experience, you can expand the preview to fullscreen mode. 
 #### Live Preview
 
 A live, interactive preview of your application is available from the very beginning of the development process. This allows you to see the results of your requests instantly and provide feedback for adjustments. The live preview is an essential part of the iterative development process, enabling you to refine your application with natural language commands and see the changes reflected immediately.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

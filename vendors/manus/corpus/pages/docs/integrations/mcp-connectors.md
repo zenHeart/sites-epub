@@ -118,10 +118,13 @@ Why This Works: A single workflow updates your CRM, task manager, and email syst
 
 Manus offers MCP connectors for a growing list of popular tools and services, organized by category:
 
-| Category           | Connectors                                   |
-| :----------------- | :------------------------------------------- |
-| **Productivity**   | Gmail, Google Calendar, Google Drive, Notion |
-| **Business & CRM** | HubSpot, Stripe                              |
-| **Development**    | GitHub, Hugging Face                         |
+| Category | Connectors |
+| :- | :- |
+| **Productivity** | Gmail, Google Calendar, Google Drive, Notion |
+| **Business & CRM** | HubSpot, Stripe |
+| **Development** | GitHub, Hugging Face |
 
 **Note**: This list represents commonly used connectors. Additional integrations are available, and new connectors are added regularly. Check your Manus settings to see the full list of available integrations.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

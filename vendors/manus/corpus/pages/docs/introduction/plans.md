@@ -107,3 +107,6 @@ Upgrade to a higher plan for more monthly credits and additional features.
     Visit our [<u>Help Center</u>](https://help.manus.im/) or contact support for assistance with your account and billing.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

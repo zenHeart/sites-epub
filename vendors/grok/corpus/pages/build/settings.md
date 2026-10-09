@@ -33,13 +33,13 @@ Copy into `$GROK_HOME/config.toml`, or `~/.grok/config.toml` when `GROK_HOME` is
 ```toml customLanguage="toml"
 [models]
 default = "grok-build"                       # recommended for coding / agent sessions
-web_search = "grok-4.6"                      # model used by client-side web_search tool
+web_search = "grok-4.7"                      # model used by client-side web_search tool
 
-[model."grok-4.6"]
-model = "grok-4.6"                           # id sent to the API
+[model."grok-4.7"]
+model = "grok-4.7"                           # id sent to the API
 base_url = "https://api.x.ai/v1"             # provider endpoint
-name = "Grok 4.6"                            # shown in model picker
-description = "Grok 4.6 from xAI"
+name = "Grok 4.7"                            # shown in model picker
+description = "Grok 4.7 from xAI"
 env_key = "XAI_API_KEY"                      # env var holding the API key
 api_backend = "responses"                    # chat_completions | responses | messages
 temperature = 0.7

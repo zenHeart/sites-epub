@@ -14,6 +14,31 @@ We strongly recommend using streaming mode when using agentic tool calling. It p
 
 ### Streaming Example
 
+```javascriptAISDK
+import { xai } from '@ai-sdk/xai';
+import { streamText } from 'ai';
+
+const { fullStream } = streamText({
+  model: xai.responses('grok-4.7'),
+  prompt: 'What are the latest updates from xAI?',
+  tools: {
+    web_search: xai.tools.webSearch(),
+    x_search: xai.tools.xSearch(),
+    code_execution: xai.tools.codeExecution(),
+  },
+});
+
+for await (const part of fullStream) {
+  if (part.type === 'tool-call') {
+    console.log(\`Calling tool: \${part.toolName}\`);
+  } else if (part.type === 'text-delta') {
+    process.stdout.write(part.text);
+  } else if (part.type === 'source' && part.sourceType === 'url') {
+    console.log(\`Citation: \${part.url}\`);
+  }
+}
+```
+
 ```pythonXAI
 import os
 
@@ -23,7 +48,7 @@ from xai_sdk.tools import code_execution, web_search, x_search
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=[
         web_search(),
         x_search(),
@@ -50,13 +75,18 @@ for response, chunk in chat.stream():
 print("\\nCitations:", response.citations)
 ```
 
+## Synchronous Mode
+
+For simpler use cases or when you want to wait for the complete agentic workflow to finish before processing the response, you can use synchronous requests:
+
 ```javascriptAISDK
 import { xai } from '@ai-sdk/xai';
-import { streamText } from 'ai';
+import { generateText } from 'ai';
 
-const { fullStream } = streamText({
-  model: xai.responses('grok-4.6'),
-  prompt: 'What are the latest updates from xAI?',
+// Synchronous request - waits for complete response
+const { text, sources } = await generateText({
+  model: xai.responses('grok-4.7'),
+  prompt: 'What is the latest update from xAI?',
   tools: {
     web_search: xai.tools.webSearch(),
     x_search: xai.tools.xSearch(),
@@ -64,20 +94,12 @@ const { fullStream } = streamText({
   },
 });
 
-for await (const part of fullStream) {
-  if (part.type === 'tool-call') {
-    console.log(\`Calling tool: \${part.toolName}\`);
-  } else if (part.type === 'text-delta') {
-    process.stdout.write(part.text);
-  } else if (part.type === 'source' && part.sourceType === 'url') {
-    console.log(\`Citation: \${part.url}\`);
-  }
-}
+console.log('Final Response:');
+console.log(text);
+
+console.log('\\nCitations:');
+console.log(sources);
 ```
-
-## Synchronous Mode
-
-For simpler use cases or when you want to wait for the complete agentic workflow to finish before processing the response, you can use synchronous requests:
 
 ```pythonXAI
 import os
@@ -88,7 +110,7 @@ from xai_sdk.tools import code_execution, web_search, x_search
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=[
         web_search(),
         x_search(),
@@ -112,60 +134,11 @@ print(response.usage)
 print(response.server_side_tool_usage)
 ```
 
-```javascriptAISDK
-import { xai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
-// Synchronous request - waits for complete response
-const { text, sources } = await generateText({
-  model: xai.responses('grok-4.6'),
-  prompt: 'What is the latest update from xAI?',
-  tools: {
-    web_search: xai.tools.webSearch(),
-    x_search: xai.tools.xSearch(),
-    code_execution: xai.tools.codeExecution(),
-  },
-});
-
-console.log('Final Response:');
-console.log(text);
-
-console.log('\\nCitations:');
-console.log(sources);
-```
-
 Synchronous requests will wait for the entire agentic process to complete before returning. This is simpler for basic use cases but provides less visibility into intermediate steps.
 
 ## Using Tools with Responses API
 
 We also support using the Responses API in both streaming and non-streaming modes:
-
-```pythonXAI
-import os
-
-from xai_sdk import Client
-from xai_sdk.chat import user
-from xai_sdk.tools import web_search, x_search
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-chat = client.chat.create(
-    model="grok-4.6",
-    store_messages=True,  # Enable Responses API
-    tools=[
-        web_search(),
-        x_search(),
-    ],
-)
-
-chat.append(user("What is the latest update from xAI?"))
-response = chat.sample()
-
-print(response.content)
-print(response.citations)
-
-# The response id can be used to continue the conversation
-print(response.id)
-```
 
 ```pythonOpenAISDK
 import os
@@ -178,7 +151,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {
             "role": "user",
@@ -203,7 +176,7 @@ curl https://api.x.ai/v1/responses \\
   -H "Content-Type: application/json" \\
   -H "Authorization: Bearer $XAI_API_KEY" \\
   -d '{
-  "model": "grok-4.6",
+  "model": "grok-4.7",
   "input": [
     {
       "role": "user",
@@ -219,6 +192,33 @@ curl https://api.x.ai/v1/responses \\
     }
   ]
 }'
+```
+
+```pythonXAI
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import user
+from xai_sdk.tools import web_search, x_search
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+chat = client.chat.create(
+    model="grok-4.7",
+    store_messages=True,  # Enable Responses API
+    tools=[
+        web_search(),
+        x_search(),
+    ],
+)
+
+chat.append(user("What is the latest update from xAI?"))
+response = chat.sample()
+
+print(response.content)
+print(response.citations)
+
+# The response id can be used to continue the conversation
+print(response.id)
 ```
 
 ## Accessing Tool Outputs
@@ -244,7 +244,7 @@ from xai_sdk.tools import code_execution
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=[
         code_execution(),
     ],

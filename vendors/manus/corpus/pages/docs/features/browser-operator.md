@@ -48,11 +48,11 @@ Manus works in a dedicated tab to complete your task. It uses your logged-in ses
 
 The Browser Operator uses your **local browser**, which is ideal for tasks requiring access to sites where you are already logged in. This avoids CAPTCHAs and security checks. For other tasks, Manus uses an isolated **Cloud Browser**.
 
-| Feature            | Manus Browser Operator (Local)          | Cloud Browser                          |
-| ------------------ | --------------------------------------- | -------------------------------------- |
-| **Environment**    | Your local desktop browser              | Isolated, sandboxed cloud environment  |
-| **Authentication** | Uses your existing browser logins       | Requires logging in within the session |
-| **Best For**       | Authenticated sessions, sensitive sites | General web tasks, broad research      |
+| Feature | Manus Browser Operator (Local) | Cloud Browser |
+| - | - | - |
+| **Environment** | Your local desktop browser | Isolated, sandboxed cloud environment |
+| **Authentication** | Uses your existing browser logins | Requires logging in within the session |
+| **Best For** | Authenticated sessions, sensitive sites | General web tasks, broad research |
 
 ### Security and Control
 
@@ -83,3 +83,6 @@ You have full control over the Browser Operator. You must authorize every sessio
     A: You can take over by clicking into the tab or stop the task completely by closing the tab.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

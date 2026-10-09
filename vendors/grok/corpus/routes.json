@@ -1296,6 +1296,310 @@
     "kind": "doc"
   },
   {
+    "group": "Grok Bot Guides",
+    "title": "guides",
+    "md_url": "https://x.ai/bot/guides.md",
+    "html_url": "https://x.ai/bot/guides",
+    "route": "bot/guides",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "designing grok bot with grok bot",
+    "md_url": "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot.md",
+    "html_url": "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot",
+    "route": "bot/guides/designing-grok-bot-with-grok-bot",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "engineering",
+    "md_url": "https://x.ai/bot/guides/engineering.md",
+    "html_url": "https://x.ai/bot/guides/engineering",
+    "route": "bot/guides/engineering",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "getting started",
+    "md_url": "https://x.ai/bot/guides/getting-started.md",
+    "html_url": "https://x.ai/bot/guides/getting-started",
+    "route": "bot/guides/getting-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot 101",
+    "md_url": "https://x.ai/bot/guides/grok-bot-101.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-101",
+    "route": "bot/guides/grok-bot-101",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for engineering",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-engineering.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-engineering",
+    "route": "bot/guides/grok-bot-for-engineering",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for founder led sales",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-founder-led-sales.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-founder-led-sales",
+    "route": "bot/guides/grok-bot-for-founder-led-sales",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for gtm",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-gtm.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-gtm",
+    "route": "bot/guides/grok-bot-for-gtm",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for legal ops",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-legal-ops.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-legal-ops",
+    "route": "bot/guides/grok-bot-for-legal-ops",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for marketing",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-marketing.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-marketing",
+    "route": "bot/guides/grok-bot-for-marketing",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for mobile app development",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-mobile-app-development.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-mobile-app-development",
+    "route": "bot/guides/grok-bot-for-mobile-app-development",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for performance marketing",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-performance-marketing.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-performance-marketing",
+    "route": "bot/guides/grok-bot-for-performance-marketing",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for pms",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-pms.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-pms",
+    "route": "bot/guides/grok-bot-for-pms",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for post sales",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-post-sales.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-post-sales",
+    "route": "bot/guides/grok-bot-for-post-sales",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for recruiting",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-recruiting.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-recruiting",
+    "route": "bot/guides/grok-bot-for-recruiting",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for sdrs",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-sdrs.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-sdrs",
+    "route": "bot/guides/grok-bot-for-sdrs",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for support",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-support.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-support",
+    "route": "bot/guides/grok-bot-for-support",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "grok bot for work",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-work.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-work",
+    "route": "bot/guides/grok-bot-for-work",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "how i run multiple teams of grok bots",
+    "md_url": "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots.md",
+    "html_url": "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots",
+    "route": "bot/guides/how-i-run-multiple-teams-of-grok-bots",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "templates for grok bot",
+    "md_url": "https://x.ai/bot/guides/templates-for-grok-bot.md",
+    "html_url": "https://x.ai/bot/guides/templates-for-grok-bot",
+    "route": "bot/guides/templates-for-grok-bot",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
+    "title": "use cases",
+    "md_url": "https://x.ai/bot/use-cases.md",
+    "html_url": "https://x.ai/bot/use-cases",
+    "route": "bot/use-cases",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Product",
+    "title": "build",
+    "md_url": "https://x.ai/build.md",
+    "html_url": "https://x.ai/build",
+    "route": "build",
+    "kind": "doc"
+  },
+  {
+    "group": "xAI Changelog",
+    "title": "bot",
+    "md_url": "https://x.ai/changelog/bot.md",
+    "html_url": "https://x.ai/changelog/bot",
+    "route": "changelog/bot",
+    "kind": "doc"
+  },
+  {
+    "group": "xAI Changelog",
+    "title": "build",
+    "md_url": "https://x.ai/changelog/build.md",
+    "html_url": "https://x.ai/changelog/build",
+    "route": "changelog/build",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Product",
+    "title": "build mode",
+    "md_url": "https://x.ai/grok/build-mode.md",
+    "html_url": "https://x.ai/grok/build-mode",
+    "route": "grok/build-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Product",
+    "title": "excel",
+    "md_url": "https://x.ai/grok/excel.md",
+    "html_url": "https://x.ai/grok/excel",
+    "route": "grok/excel",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Product",
+    "title": "outlook",
+    "md_url": "https://x.ai/grok/outlook.md",
+    "html_url": "https://x.ai/grok/outlook",
+    "route": "grok/outlook",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Product",
+    "title": "powerpoint",
+    "md_url": "https://x.ai/grok/powerpoint.md",
+    "html_url": "https://x.ai/grok/powerpoint",
+    "route": "grok/powerpoint",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Product",
+    "title": "word",
+    "md_url": "https://x.ai/grok/word.md",
+    "html_url": "https://x.ai/grok/word",
+    "route": "grok/word",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Product",
+    "title": "workspace",
+    "md_url": "https://x.ai/grok/workspace.md",
+    "html_url": "https://x.ai/grok/workspace",
+    "route": "grok/workspace",
+    "kind": "doc"
+  },
+  {
+    "group": "xAI News",
+    "title": "grok",
+    "md_url": "https://x.ai/news/grok.md",
+    "html_url": "https://x.ai/news/grok",
+    "route": "news/grok",
+    "kind": "doc"
+  },
+  {
+    "group": "xAI News",
+    "title": "grok 1.5",
+    "md_url": "https://x.ai/news/grok-1.5.md",
+    "html_url": "https://x.ai/news/grok-1.5",
+    "route": "news/grok-1.5",
+    "kind": "doc"
+  },
+  {
+    "group": "xAI News",
+    "title": "grok 1.5v",
+    "md_url": "https://x.ai/news/grok-1.5v.md",
+    "html_url": "https://x.ai/news/grok-1.5v",
+    "route": "news/grok-1.5v",
+    "kind": "doc"
+  },
+  {
+    "group": "xAI News",
+    "title": "workflows",
+    "md_url": "https://x.ai/news/workflows.md",
+    "html_url": "https://x.ai/news/workflows",
+    "route": "news/workflows",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Voice",
+    "title": "cloning",
+    "md_url": "https://x.ai/voice/cloning.md",
+    "html_url": "https://x.ai/voice/cloning",
+    "route": "voice/cloning",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Voice",
+    "title": "speech to text",
+    "md_url": "https://x.ai/voice/speech-to-text.md",
+    "html_url": "https://x.ai/voice/speech-to-text",
+    "route": "voice/speech-to-text",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Voice",
+    "title": "text to speech",
+    "md_url": "https://x.ai/voice/text-to-speech.md",
+    "html_url": "https://x.ai/voice/text-to-speech",
+    "route": "voice/text-to-speech",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Voice",
+    "title": "translation",
+    "md_url": "https://x.ai/voice/translation.md",
+    "html_url": "https://x.ai/voice/translation",
+    "route": "voice/translation",
+    "kind": "doc"
+  },
+  {
     "group": "Bot Guides",
     "title": "Design",
     "md_url": "https://x.ai/bot/guides/design.md",

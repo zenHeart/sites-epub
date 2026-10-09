@@ -27,6 +27,11 @@ def _looks_missing(text: str) -> bool:
     return False
 
 
+#: Vendors whose primary adapter reads a single nav surface and therefore misses
+#: whole sub-trees; gap_fill re-enumerates them from sitemap/llms/product pages.
+GAP_FILL_VENDORS = frozenset({"codex", "cursor", "grok", "manus", "zencoder"})
+
+
 def discover_entries(
     vendor: Vendor,
     *,
@@ -40,7 +45,9 @@ def discover_entries(
 
         if not docs_html:
             raise ValueError("codex adapter needs docs HTML")
-        docs = parse_nav_html(docs_html)
+        from .codex_nav import canonicalize, docs_index_paths
+
+        docs = canonicalize(parse_nav_html(docs_html), docs_index_paths(docs_llms or ""))
     elif vendor.adapter == "claude":
         from .claude_nav import parse_llms_txt
 
@@ -53,6 +60,12 @@ def discover_entries(
         if not docs_llms:
             raise ValueError("xai adapter needs llms.txt")
         docs = parse_xai_llms(docs_llms, vendor.docs_url)
+    elif vendor.adapter == "kimi":
+        from .kimi_nav import parse_kimi_docs
+
+        if not docs_html:
+            raise ValueError("kimi adapter needs docs HTML")
+        docs = parse_kimi_docs(docs_html)
     elif vendor.adapter == "minimax":
         from .minimax_nav import parse_minimax_docs
 
@@ -131,7 +144,22 @@ def discover_entries(
             from .generic_blog import parse_blog_html
 
             blog = parse_blog_html(blog_html, vendor.blog_url)
-    return list(docs) + list(blog)
+    # Second-source pass: pages the primary nav missed (see sites_epub/gap_fill.py).
+    if vendor.id in GAP_FILL_VENDORS:
+        from .gap_fill import drop_retired, supplement
+
+        taken = {e.route for e in docs} | {e.route for e in blog}
+        docs = docs + supplement(vendor.id, taken)
+    else:
+        from .gap_fill import drop_retired
+
+    docs = drop_retired(vendor.id, docs)
+    blog = drop_retired(vendor.id, blog)
+    # SKILL.md 不变量：Blog 恒为最后一个大章节。补抓来源（gap_fill）按 URL
+    # 字典序产出条目，会把博客页排到中间（zencoder 的 424 条 Blog 全部来自补抓），
+    # 这里做一次稳定分组：非 blog 在前、blog 在后，各自保持原有相对顺序。
+    entries = list(docs) + list(blog)
+    return [e for e in entries if e.kind != "blog"] + [e for e in entries if e.kind == "blog"]
 
 
 def compile_from_sources(
@@ -469,6 +497,14 @@ def fetch_vendor(
                         )
                         parts.append(fetch_text(page_url))
                 blog_html = "\n".join(parts)
+            if vendor.adapter == "kimi":
+                # /blog/<slug> 302s to /en/blog/<slug>; the i18n listing is the
+                # canonical blog index, so read it explicitly instead of relying
+                # on whatever the root listing happens to embed.
+                try:
+                    blog_html = blog_html + "\n" + fetch_text("https://www.kimi.com/en/blog")
+                except Exception:
+                    pass
             try:
                 sitemap = fetch_text(_origin(vendor.blog_url) + "/sitemap.xml")
                 if sitemap and "<loc>" in sitemap:

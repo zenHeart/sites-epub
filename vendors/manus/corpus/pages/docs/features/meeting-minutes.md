@@ -63,3 +63,6 @@ Designed to capture in-person meetings, interviews, or monologues with a single 
     Recording is free, while the analysis and generation of notes will consume credits. If you run out of credits, the analysis will be paused until you top up or upgrade your plan.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

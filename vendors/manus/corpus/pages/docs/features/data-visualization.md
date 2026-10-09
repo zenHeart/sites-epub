@@ -57,14 +57,14 @@ Manus performs actual analysis, identifies patterns, extracts insights, and pres
 
 Manus supports a comprehensive range of chart types, allowing you to select up to five different visualization styles for a single analysis. This ensures your data is presented in the most effective format for your audience.
 
-| Chart Type        | Best For                                                   |
-| :---------------- | :--------------------------------------------------------- |
-| **Bar Charts**    | Comparing values across categories, showing rankings       |
-| **Line Charts**   | Displaying trends over time, showing growth patterns       |
-| **Pie Charts**    | Illustrating proportions and percentage breakdowns         |
+| Chart Type | Best For |
+| :- | :- |
+| **Bar Charts** | Comparing values across categories, showing rankings |
+| **Line Charts** | Displaying trends over time, showing growth patterns |
+| **Pie Charts** | Illustrating proportions and percentage breakdowns |
 | **Scatter Plots** | Revealing correlations and relationships between variables |
-| **Heat Maps**     | Showing intensity patterns across two dimensions           |
-| **Radar Charts**  | Multi-dimensional comparisons, competitive analysis        |
+| **Heat Maps** | Showing intensity patterns across two dimensions |
+| **Radar Charts** | Multi-dimensional comparisons, competitive analysis |
 
 **Mix and Match**: Select multiple chart types for comprehensive analysis. For example, combine line charts (trends), bar charts (comparisons), and pie charts (composition) in a single output.
 
@@ -254,3 +254,6 @@ Manus supports a comprehensive range of chart types, allowing you to select up t
     The current version works with static datasets. For ongoing monitoring, you can re-run analysis with updated data files.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -11,6 +11,7 @@ Transcribe an audio file with a single API call:
 ```bash
 curl -X POST https://api.x.ai/v1/stt \
   -H "Authorization: Bearer $XAI_API_KEY" \
+  -F model=grok-voice-transcribe-2.0 \
   -F format=true \
   -F language=en \
   -F "keyterm=Understand The Universe" \
@@ -26,6 +27,7 @@ response = requests.post(
     headers={"Authorization": f"Bearer {os.environ['XAI_API_KEY']}"},
     files={"file": ("audio.mp3", open("audio.mp3", "rb"), "audio/mpeg")},
     data=[
+        ("model", "grok-voice-transcribe-2.0"),
         ("format", "true"),
         ("language", "en"),
         ("keyterm", "Understand The Universe"),
@@ -44,6 +46,7 @@ for word in result.get("words", []):
 import fs from "fs";
 
 const formData = new FormData();
+formData.append("model", "grok-voice-transcribe-2.0");
 formData.append("format", "true");
 formData.append("language", "en");
 formData.append("keyterm", "Understand The Universe");
@@ -73,25 +76,43 @@ Note: The `file` parameter must be provided after all other parameters in the mu
 
 [Live Voice Demos](https://x.ai/api/voice)
 
+## Model Selection
+
+Pass `model` on the REST form or as a WebSocket query parameter.
+
+| Model | Description |
+|-------|-------------|
+| `grok-voice-transcribe-2.0` | Our best transcription model. Default when `model` is omitted. |
+
 ## Supported Languages
 
-The `language` parameter enables formatting for the following languages. The model transcribes speech in any of these languages regardless of the `language` parameter — setting it enables formatting of numbers, currencies, and units into their written form.
+`grok-voice-transcribe-2.0` transcribes 38+ languages, including every language listed below. It detects the spoken language automatically and follows switches partway through a recording, so `language` is optional. When you know what's being spoken, set `language` to its code and the model leans toward that language when the audio is ambiguous.
 
 | Language | Code | | Language | Code |
 |----------|------|-|----------|------|
-| Arabic | `ar` | | Macedonian | `mk` |
-| Czech | `cs` | | Malay | `ms` |
-| Danish | `da` | | Persian | `fa` |
-| Dutch | `nl` | | Polish | `pl` |
-| English | `en` | | Portuguese | `pt` |
-| Filipino | `fil` | | Romanian | `ro` |
-| French | `fr` | | Russian | `ru` |
-| German | `de` | | Spanish | `es` |
-| Hindi | `hi` | | Swedish | `sv` |
-| Indonesian | `id` | | Thai | `th` |
-| Italian | `it` | | Turkish | `tr` |
-| Japanese | `ja` | | Vietnamese | `vi` |
-| Korean | `ko` | | | |
+| Arabic | `ar` | | Italian | `it` |
+| Bosnian | `bs` | | Japanese | `ja` |
+| Bulgarian | `bg` | | Korean | `ko` |
+| Cantonese | `yue` | | Macedonian | `mk` |
+| Catalan | `ca` | | Malay | `ms` |
+| Chinese (Mandarin) | `zh` | | Norwegian (Bokmål) | `nb` |
+| Croatian | `hr` | | Persian | `fa` |
+| Czech | `cs` | | Polish | `pl` |
+| Danish | `da` | | Portuguese | `pt` |
+| Dutch | `nl` | | Romanian | `ro` |
+| English | `en` | | Russian | `ru` |
+| Filipino | `fil` | | Slovak | `sk` |
+| Finnish | `fi` | | Spanish | `es` |
+| French | `fr` | | Swedish | `sv` |
+| German | `de` | | Thai | `th` |
+| Greek | `el` | | Turkish | `tr` |
+| Hindi | `hi` | | Ukrainian | `uk` |
+| Hungarian | `hu` | | Urdu | `ur` |
+| Indonesian | `id` | | Vietnamese | `vi` |
+
+Spanish, Portuguese, and Arabic also accept regional codes. `es` means Mexican Spanish (`es-MX`), `pt` means Brazilian Portuguese (`pt-BR`), and `ar` means Egyptian Arabic (`ar-EG`). Pass `es-ES` or `pt-PT` for the European variants, or `ar-AE` or `ar-SA` for Emirati or Saudi Arabic.
+
+Text formatting (`format=true`) writes spoken numbers, currencies, and units in their written form in Arabic, Chinese (Mandarin), English, French, German, Japanese, Portuguese, Russian, Spanish, Swedish, and Vietnamese. Formatting follows the `language` code, so pass both. In other languages, `format=true` has no effect.
 
 ## Request Body
 
@@ -101,10 +122,11 @@ The request uses `multipart/form-data`. Either `file` or `url` must be provided.
 |-----------|------|---------|----------|-------------|
 | `file` | file | | ✓† | Audio file to transcribe. Max **500 MB**. See [Supported Formats](#supported-audio-formats). Must be the last field in the multipart form. |
 | `url` | string | | ✓† | URL of an audio file to download and transcribe (server-side). |
+| `model` | string | `grok-voice-transcribe-2.0` | | `grok-voice-transcribe-2.0` (default). |
 | `audio_format` | string | | | Format hint for raw/headerless audio: `pcm`, `mulaw`, `alaw`. Container formats are auto-detected — do not set this field for MP3, WAV, etc. |
 | `sample_rate` | integer | | | Sample rate in Hz. Only required for raw audio (`pcm`, `mulaw`, `alaw`). Supported: `8000`, `16000`, `22050`, `24000`, `44100`, `48000`. |
-| `language` | string | | | Language code (e.g. `en`, `fr`, `de`). Used with `format=true` to enable text formatting. See [Supported Languages](#supported-languages). |
-| `format` | boolean | `false` | | When `true`, enables Inverse Text Normalization — converts spoken numbers/currency to written form (e.g. "one hundred dollars" → "$100"). Requires `language`. |
+| `language` | string | | | Language code (e.g. `en`, `fr`, `de`). Biases transcription toward that language and selects the formatting rules for `format=true`. See [Supported Languages](#supported-languages). |
+| `format` | boolean | `false` | | When `true`, enables Inverse Text Normalization — converts spoken numbers/currency to written form (e.g. "one hundred dollars" → "$100"). Requires `language`. See [Supported Languages](#supported-languages) for coverage. |
 | `multichannel` | boolean | `false` | | When `true`, transcribes each audio channel independently. Results returned in the `channels` array. |
 | `channels` | integer | | | Number of audio channels (2–8). Only required for multichannel raw audio. Auto-detected for container formats. |
 | `diarize` | boolean | `false` | | When `true`, enables speaker diarization. Each word in the response includes a `speaker` field (integer) identifying the detected speaker. |
@@ -121,6 +143,7 @@ Option fields should precede `file` in the multipart body — for streamable upl
 ```bash
 curl -X POST https://api.x.ai/v1/stt \
   -H "Authorization: Bearer $XAI_API_KEY" \
+  -F model=grok-voice-transcribe-2.0 \
   -F format=true \
   -F language=en \
   -F "keyterm=Understand The Universe" \
@@ -205,7 +228,9 @@ Configuration is done via URL query parameters — no setup message required. Au
 | `encoding` | string | `pcm` | Audio encoding: `pcm`, `mulaw`, `alaw`, or `opus`. See [Opus Streaming](#opus-streaming). |
 | `interim_results` | boolean | `false` | When `true`, emit partial transcripts `is_final=false` every ~500 ms. |
 | `endpointing` | integer | `400` | Silence duration (ms) before utterance-final event. Range: 0–5000. `0` = fire on any VAD silence boundary. |
-| `language` | string | | Language code for text formatting. See [Supported Languages](#supported-languages). |
+| `language` | string | | Language code (e.g. `en`, `fr`, `de`). Biases transcription toward that language and selects the formatting rules for `format=true`. See [Supported Languages](#supported-languages). |
+| `format` | boolean | `false` | When `true`, converts spoken numbers, currencies, and units to written form. Requires `language`. See [Supported Languages](#supported-languages) for coverage. |
+| `model` | string | `grok-voice-transcribe-2.0` | `grok-voice-transcribe-2.0` (default). |
 | `diarize` | boolean | | When `true`, enables speaker diarization. Words include a `speaker` field identifying the detected speaker. |
 | `filler_words` | boolean | `false` | When `true`, filler words (e.g. `uh`, `um`, `er`) are included in the transcript. When `false` (default), filler words are automatically removed. |
 | `multichannel` | boolean | `false` | Per-channel transcription. Requires `channels` ≥ 2. Not supported with `encoding=opus`. |
@@ -267,7 +292,7 @@ Set `encoding=opus` to stream compressed audio instead of raw PCM — roughly 4 
 **Example URL:**
 
 ```
-wss://api.x.ai/v1/stt?encoding=opus&interim_results=true
+wss://api.x.ai/v1/stt?model=grok-voice-transcribe-2.0&encoding=opus&interim_results=true
 ```
 
 **Typical use case:** Dictation and live transcription from mobile or other bandwidth-constrained clients, where streaming raw PCM is wasteful. Most platform audio APIs and WebRTC stacks produce Opus packets natively.
@@ -287,7 +312,7 @@ When `multichannel=true` and `channels` ≥ 2, the server transcribes each audio
 **Example URL:**
 
 ```
-wss://api.x.ai/v1/stt?sample_rate=16000&encoding=pcm&multichannel=true&channels=2&interim_results=true
+wss://api.x.ai/v1/stt?model=grok-voice-transcribe-2.0&sample_rate=16000&encoding=pcm&multichannel=true&channels=2&interim_results=true
 ```
 
 **Typical use case:** Call center recordings with agent on channel 0 and customer on channel 1, enabling per-speaker transcription without requiring speaker diarization.
@@ -315,7 +340,7 @@ Smart Turn uses a lightweight ML model to predict whether the speaker has finish
 When Smart Turn is enabled, the model has full control over when `speech_final` fires. To prevent sessions from hanging during extended silence (e.g. the user walks away), set `smart_turn_timeout` to a maximum silence duration in milliseconds (1–5000). If the model keeps predicting "not done" for longer than this duration, `speech_final` fires anyway as a safety net.
 
 ```
-wss://api.x.ai/v1/stt?sample_rate=16000&encoding=pcm&interim_results=true&smart_turn=0.7&smart_turn_timeout=3000
+wss://api.x.ai/v1/stt?model=grok-voice-transcribe-2.0&sample_rate=16000&encoding=pcm&interim_results=true&smart_turn=0.7&smart_turn_timeout=3000
 ```
 
 Without `smart_turn_timeout`, the model has unlimited control — `speech_final` only fires when confidence exceeds the threshold.
@@ -347,7 +372,7 @@ import os
 import websockets
 
 API_KEY = os.environ["XAI_API_KEY"]
-WS_URL = "wss://api.x.ai/v1/stt?sample_rate=16000&encoding=pcm&interim_results=true&language=en&keyterm=Understand+The+Universe"
+WS_URL = "wss://api.x.ai/v1/stt?model=grok-voice-transcribe-2.0&sample_rate=16000&encoding=pcm&interim_results=true&language=en&keyterm=Understand+The+Universe"
 
 async def transcribe_stream(audio_file: str):
     headers = {"Authorization": f"Bearer {API_KEY}"}
@@ -389,7 +414,7 @@ import fs from "fs";
 import WebSocket from "ws";
 
 const apiKey = process.env.XAI_API_KEY;
-const url = "wss://api.x.ai/v1/stt?sample_rate=16000&encoding=pcm&interim_results=true&language=en&keyterm=Understand+The+Universe";
+const url = "wss://api.x.ai/v1/stt?model=grok-voice-transcribe-2.0&sample_rate=16000&encoding=pcm&interim_results=true&language=en&keyterm=Understand+The+Universe";
 
 const ws = new WebSocket(url, { headers: { Authorization: `Bearer ${apiKey}` } });
 
@@ -439,7 +464,7 @@ ws.on("message", (data) => {
 
 * **Use 16 kHz sample rate with PCM encoding** (`sample_rate=16000&encoding=pcm`) — this is the model's native rate and avoids resampling on the server
 * **Enable `interim_results`** for responsive UX — show transcription as the user speaks
-* **Use `language=en`** to enable text formatting — numbers and currencies are written in their standard form
+* **Add `format=true` with `language`** (e.g. `language=en&format=true`) to write numbers and currencies in their standard form
 * **Send 100 ms audio chunks** (3,200 bytes at 16 kHz PCM16) for a good balance of latency and efficiency
 * **Use `encoding=opus` on bandwidth-constrained clients** — ~4 KB/s versus 48 KB/s for raw PCM at 24 kHz. See [Opus Streaming](#opus-streaming)
 * **Wait for `transcript.created`** before sending audio — the server needs to initialize its ASR backend
@@ -458,7 +483,7 @@ ws.on("message", (data) => {
 
 ## Related
 
-* [Voice Overview](/developers/model-capabilities/audio/voice) — Overview of all xAI voice capabilities
+* [Voice Overview](/developers/model-capabilities/audio/voice) — Overview of all SpaceXAI voice capabilities
 * [Text to Speech](/developers/model-capabilities/audio/text-to-speech) — Convert text to speech
 * [API Reference — Speech to text](/developers/rest-api-reference/inference/voice#speech-to-text---rest) — Full REST endpoint specification
 * [API Reference — Streaming](/developers/rest-api-reference/inference/voice#speech-to-text---streaming) — WebSocket streaming specification

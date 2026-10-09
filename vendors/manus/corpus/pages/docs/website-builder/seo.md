@@ -56,3 +56,6 @@ To get the most out of our SEO feature, consider the following tips:
     Manus does not currently support a "Private Publish" option. However, without enabling SEO optimization, your site will be much harder for search engines to discover and index effectively. For restricted access, you can share your project via email with specific visitors or publish it within your team.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

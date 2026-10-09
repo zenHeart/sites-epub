@@ -12,6 +12,18 @@ The referenced file must be the correct content type for the endpoint (images: P
 
 ## Editing a stored image
 
+```bash
+curl -s -X POST https://api.x.ai/v1/images/edits \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "grok-imagine-image-quality",
+    "prompt": "Add a party hat to the dog",
+    "image": { "file_id": "file_7de029f4-eb66-42ee-87f8-b2a9d9e7466a" },
+    "response_format": "url"
+  }'
+```
+
 ```python customLanguage="pythonXAI"
 import os
 import xai_sdk
@@ -27,30 +39,7 @@ response = client.image.sample(
 print(response.url)
 ```
 
-```bash
-curl -s -X POST https://api.x.ai/v1/images/edits \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "grok-imagine-image-quality",
-    "prompt": "Add a party hat to the dog",
-    "image": { "file_id": "file_7de029f4-eb66-42ee-87f8-b2a9d9e7466a" },
-    "response_format": "url"
-  }'
-```
-
 ## Editing with multiple stored images
-
-```python customLanguage="pythonXAI"
-response = client.image.sample(
-    prompt="Blend these two scenes into one cohesive composition",
-    model="grok-imagine-image-quality",
-    image_file_ids=[
-        "file_7de029f4-eb66-42ee-87f8-b2a9d9e7466a",
-        "file_2cd998e7-bf12-44aa-92c8-e3d1f1c1234f",
-    ],
-)
-```
 
 ```bash
 # Each images entry independently carries url or file_id — mix kinds within a single request.
@@ -68,18 +57,18 @@ curl -s -X POST https://api.x.ai/v1/images/edits \
   }'
 ```
 
-## Image-to-video from a stored first frame
-
 ```python customLanguage="pythonXAI"
-response = client.video.generate(
-    prompt="Pan across the scene as the sky darkens",
-    model="grok-imagine-video-1.5",
-    duration=5,
-    image_file_id="file_7de029f4-eb66-42ee-87f8-b2a9d9e7466a",
+response = client.image.sample(
+    prompt="Blend these two scenes into one cohesive composition",
+    model="grok-imagine-image-quality",
+    image_file_ids=[
+        "file_7de029f4-eb66-42ee-87f8-b2a9d9e7466a",
+        "file_2cd998e7-bf12-44aa-92c8-e3d1f1c1234f",
+    ],
 )
-
-print(response.url)
 ```
+
+## Image-to-video from a stored first frame
 
 ```bash
 curl -s -X POST https://api.x.ai/v1/videos/generations \
@@ -93,15 +82,18 @@ curl -s -X POST https://api.x.ai/v1/videos/generations \
   }'
 ```
 
-## Editing a stored video
-
 ```python customLanguage="pythonXAI"
 response = client.video.generate(
-    prompt="Add rain and a moody atmosphere",
-    model="grok-imagine-video",
-    video_file_id="file_5be118c3-da55-31dd-76e7-a1b8c8d6355b",
+    prompt="Pan across the scene as the sky darkens",
+    model="grok-imagine-video-1.5",
+    duration=5,
+    image_file_id="file_7de029f4-eb66-42ee-87f8-b2a9d9e7466a",
 )
+
+print(response.url)
 ```
+
+## Editing a stored video
 
 ```bash
 curl -s -X POST https://api.x.ai/v1/videos/edits \
@@ -114,19 +106,15 @@ curl -s -X POST https://api.x.ai/v1/videos/edits \
   }'
 ```
 
-## Reference-to-video with multiple stored images
-
 ```python customLanguage="pythonXAI"
 response = client.video.generate(
-    prompt="A woman in this dress walks down a city street at night",
-    model="grok-imagine-video-1.5",
-    duration=5,
-    reference_image_file_ids=[
-        "file_5be118c3-da55-31dd-76e7-a1b8c8d6355b",  # subject
-        "file_2cd998e7-bf12-44aa-92c8-e3d1f1c1234f",  # outfit
-    ],
+    prompt="Add rain and a moody atmosphere",
+    model="grok-imagine-video",
+    video_file_id="file_5be118c3-da55-31dd-76e7-a1b8c8d6355b",
 )
 ```
+
+## Reference-to-video with multiple stored images
 
 ```bash
 # Each reference_images entry independently carries url or file_id — mix kinds within a single request.
@@ -142,6 +130,18 @@ curl -s -X POST https://api.x.ai/v1/videos/generations \
       { "url": "https://example.com/dress.jpg" }
     ]
   }'
+```
+
+```python customLanguage="pythonXAI"
+response = client.video.generate(
+    prompt="A woman in this dress walks down a city street at night",
+    model="grok-imagine-video-1.5",
+    duration=5,
+    reference_image_file_ids=[
+        "file_5be118c3-da55-31dd-76e7-a1b8c8d6355b",  # subject
+        "file_2cd998e7-bf12-44aa-92c8-e3d1f1c1234f",  # outfit
+    ],
+)
 ```
 
 ## Related

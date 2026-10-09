@@ -40,3 +40,6 @@ When you ask Manus to add payments, it acts as your personal payments specialist
 2. **Manus Sets Up the Sandbox**: Manus will create the claimable sandbox and configure all the necessary products, pricing, and webhooks.
 3. **Test Your Checkout Flow**: You can test the entire payment process in the live preview to ensure everything is working correctly.
 4. **Go Live**: When you are satisfied, tell Manus: `"I'm ready to go live with payments."` You will then be prompted to "claim" the sandbox, which involves creating your official Stripe account and completing their secure Know Your Customer (KYC) process. All the configurations Manus created are seamlessly transferred to your new, permanent Stripe account, ready to accept real payments instantly.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

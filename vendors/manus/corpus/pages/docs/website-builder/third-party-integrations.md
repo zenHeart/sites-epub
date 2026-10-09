@@ -45,3 +45,6 @@ For example, when setting up a custom API integration, you might say:
 > "I need to connect to a custom API. The API key is YOUR\_API\_KEY. Please use this key in the Authorization header for all requests."
 
 Manus will store the API key as an environment variable on the server and will not expose it in the client-side code. This ensures that your secrets remain confidential and your application is secure.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

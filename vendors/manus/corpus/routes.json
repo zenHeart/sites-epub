@@ -352,115 +352,75 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Indexes",
-    "title": "Italian (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/it.md",
-    "html_url": "https://manus.im/docs/_llms/it",
-    "route": "docs/_llms/it",
+    "group": "Manus: Blog",
+    "title": "manus 1.5 release",
+    "md_url": "https://manus.im/blog/manus-1.5-release.md",
+    "html_url": "https://manus.im/blog/manus-1.5-release",
+    "route": "blog/manus-1.5-release",
+    "kind": "blog"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "game dev",
+    "md_url": "https://manus.im/features/game-dev.md",
+    "html_url": "https://manus.im/features/game-dev",
+    "route": "features/game-dev",
     "kind": "doc"
   },
   {
-    "group": "Manus: Indexes",
-    "title": "German (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/de.md",
-    "html_url": "https://manus.im/docs/_llms/de",
-    "route": "docs/_llms/de",
+    "group": "Manus: Features",
+    "title": "mail",
+    "md_url": "https://manus.im/features/mail.md",
+    "html_url": "https://manus.im/features/mail",
+    "route": "features/mail",
     "kind": "doc"
   },
   {
-    "group": "Manus: Indexes",
-    "title": "Turkish (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/tr.md",
-    "html_url": "https://manus.im/docs/_llms/tr",
-    "route": "docs/_llms/tr",
+    "group": "Manus: Features",
+    "title": "manus browser operator",
+    "md_url": "https://manus.im/features/manus-browser-operator.md",
+    "html_url": "https://manus.im/features/manus-browser-operator",
+    "route": "features/manus-browser-operator",
     "kind": "doc"
   },
   {
-    "group": "Manus: Indexes",
-    "title": "Spanish (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/es.md",
-    "html_url": "https://manus.im/docs/_llms/es",
-    "route": "docs/_llms/es",
+    "group": "Manus: Features",
+    "title": "skills",
+    "md_url": "https://manus.im/features/skills.md",
+    "html_url": "https://manus.im/features/skills",
+    "route": "features/skills",
     "kind": "doc"
   },
   {
-    "group": "Manus: Indexes",
-    "title": "French (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/fr.md",
-    "html_url": "https://manus.im/docs/_llms/fr",
-    "route": "docs/_llms/fr",
+    "group": "Manus: Features",
+    "title": "video",
+    "md_url": "https://manus.im/features/video.md",
+    "html_url": "https://manus.im/features/video",
+    "route": "features/video",
     "kind": "doc"
   },
   {
-    "group": "Manus: Indexes",
-    "title": "Hindi (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/hi.md",
-    "html_url": "https://manus.im/docs/_llms/hi",
-    "route": "docs/_llms/hi",
+    "group": "Manus: Features",
+    "title": "video editor",
+    "md_url": "https://manus.im/features/video-editor.md",
+    "html_url": "https://manus.im/features/video-editor",
+    "route": "features/video-editor",
     "kind": "doc"
   },
   {
-    "group": "Manus: Indexes",
-    "title": "Korean (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/ko.md",
-    "html_url": "https://manus.im/docs/_llms/ko",
-    "route": "docs/_llms/ko",
+    "group": "Manus: Features",
+    "title": "webapp",
+    "md_url": "https://manus.im/features/webapp.md",
+    "html_url": "https://manus.im/features/webapp",
+    "route": "features/webapp",
     "kind": "doc"
   },
   {
-    "group": "Manus: Indexes",
-    "title": "Japanese (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/ja.md",
-    "html_url": "https://manus.im/docs/_llms/ja",
-    "route": "docs/_llms/ja",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Indexes",
-    "title": "Brazilian Portuguese (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/pt-br.md",
-    "html_url": "https://manus.im/docs/_llms/pt-br",
-    "route": "docs/_llms/pt-br",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Indexes",
-    "title": "Simplified Chinese (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/zh-hans.md",
-    "html_url": "https://manus.im/docs/_llms/zh-hans",
-    "route": "docs/_llms/zh-hans",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Indexes",
-    "title": "Arabic (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/ar.md",
-    "html_url": "https://manus.im/docs/_llms/ar",
-    "route": "docs/_llms/ar",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Indexes",
-    "title": "Traditional Chinese (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/zh-hant.md",
-    "html_url": "https://manus.im/docs/_llms/zh-hant",
-    "route": "docs/_llms/zh-hant",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Indexes",
-    "title": "Indonesian (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/id.md",
-    "html_url": "https://manus.im/docs/_llms/id",
-    "route": "docs/_llms/id",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Indexes",
-    "title": "Vietnamese (44 pages)",
-    "md_url": "https://manus.im/docs/_llms/vi.md",
-    "html_url": "https://manus.im/docs/_llms/vi",
-    "route": "docs/_llms/vi",
+    "group": "Manus: Features",
+    "title": "wide research",
+    "md_url": "https://manus.im/features/wide-research.md",
+    "html_url": "https://manus.im/features/wide-research",
+    "route": "features/wide-research",
     "kind": "doc"
   },
   {

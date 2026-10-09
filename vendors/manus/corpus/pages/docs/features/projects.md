@@ -37,12 +37,12 @@ You can manually organize your projects by dragging and dropping them into your 
 
 Manus provides a filtering mechanism to help you manage your tasks. Click the filter icon in the task list header to access the following options:
 
-| Filter Option         | Description                                                               |
-| :-------------------- | :------------------------------------------------------------------------ |
-| **All tasks**         | Displays all tasks, including those within projects and standalone tasks. |
-| **Non-project tasks** | Displays only tasks that are not associated with any project.             |
-| **Favorites**         | Displays tasks you have marked as favorites.                              |
-| **Scheduled**         | Displays tasks that have been scheduled for a specific time.              |
+| Filter Option | Description |
+| :- | :- |
+| **All tasks** | Displays all tasks, including those within projects and standalone tasks. |
+| **Non-project tasks** | Displays only tasks that are not associated with any project. |
+| **Favorites** | Displays tasks you have marked as favorites. |
+| **Scheduled** | Displays tasks that have been scheduled for a specific time. |
 
 This is particularly useful for quickly locating standalone tasks that exist outside of your project structure.
 
@@ -58,10 +58,10 @@ Projects and individual tasks are **private by default**. When you invite a coll
 
 When a project's configuration is updated, the changes propagate as follows:
 
-| Update Type             | When it Takes Effect                                         |
-| :---------------------- | :----------------------------------------------------------- |
+| Update Type | When it Takes Effect |
+| :- | :- |
 | **Instruction updates** | Apply the next time you send a message in your current task. |
-| **File updates**        | Only take effect in new tasks created after the update.      |
+| **File updates** | Only take effect in new tasks created after the update. |
 
 All previously created tasks remain unaffected and will continue to use the configuration that existed when they were created.
 
@@ -100,3 +100,6 @@ Projects are available to all users across all subscription tiers.
     There is no limit to the number of projects you can create. You can create as many as you need to organize your work.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

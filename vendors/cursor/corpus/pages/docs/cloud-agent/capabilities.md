@@ -28,7 +28,7 @@ Cloud agents run in a remote VM that can be fully onboarded with your repo, depe
 
 Cloud agents can use [MCP (Model Context Protocol)](https://cursor.com/docs/mcp.md) servers configured for your team. This gives agents access to external tools and data sources like databases, APIs, and third-party services during their runs.
 
-Add and enable personal MCP servers through the MCP dropdown in [cursor.com/agents](https://cursor.com/agents). Team admins configure shared servers under **Dashboard -> Integrations & MCP**.
+Add and enable personal MCP servers through the MCP dropdown in [cursor.com/agents](https://cursor.com/agents). Team admins configure shared servers under **Dashboard -> Plugins & MCPs**.
 
 Admins can link shared Team MCP servers to the [Default team marketplace](https://cursor.com/docs/plugins.md#migrate-existing-team-mcps). Linking keeps the servers available to Cloud Agents and also makes them available for teammates to install and configure in the Agent Window, IDE, and CLI.
 
@@ -89,6 +89,7 @@ Depending on your MCP client, tool names may include a server prefix (for exampl
 | `run-info`                          | Get the current run's identity, metadata, and URL. Start here.                                                                                                                                                          |
 | `environment-info`                  | Get the current run's environment version, config, dashboard URL, and effective egress policy.                                                                                                                          |
 | `get-events`                        | List the current run's dashboard events, oldest first.                                                                                                                                                                  |
+| `rename-chat`                       | Rename the current run's chat. The new title, up to 200 characters, shows in the agents list and the conversation header.                                                                                               |
 | `list-cloud-agents`                 | Browse Cloud Agent runs visible to you in this environment. Filter by source, status, date, code changes, PR creation, and archived state.                                                                              |
 | `batch-fetch-details`               | Fetch details for specific run IDs (`bcId`s). Optionally include transcripts, diff metadata, setup logs, environment info, and run events via `include_events` (writes `events.json` per run; up to 50 runs per batch). |
 | `get-automation`                    | Get an automation's details like name and owner from its ID.                                                                                                                                                            |
@@ -128,18 +129,26 @@ To subscribe, describe the wait in your prompt. For example, "open a PR and keep
 
 Agents can subscribe to events from these integrations:
 
-| Integration | Events                                                                                                                                                                                                                     |
-| :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GitHub      | Pull request activity (comments, reviews, and lifecycle changes) for one PR, a whole repo, or one author's PRs, and CI results on a branch. Uses the [GitHub integration](https://cursor.com/docs/integrations/github.md). |
-| Slack       | Replies in a thread, messages in a channel, and newly created public channels. Uses the [Slack integration](https://cursor.com/docs/integrations/slack.md).                                                                |
-| Linear      | Issues created or changing state, and new comments on issues. Uses the [Linear integration](https://cursor.com/docs/integrations/linear.md).                                                                               |
-| Timers      | A point in time: a one-off reminder after a delay, or a recurring cron schedule. Recurring loops are also available as the built-in [`/loop`](https://cursor.com/docs/skills.md#built-in-cursor-skills) skill.             |
+| Integration | Events                                                                                                                                                                                                         |
+| :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GitHub      | Pull request activity (comments, reviews, and lifecycle changes) for one PR, and CI results on a branch. Uses the [GitHub integration](https://cursor.com/docs/integrations/github.md).                        |
+| Slack       | Replies in a thread and messages in a channel. Uses the [Slack integration](https://cursor.com/docs/integrations/slack.md).                                                                                    |
+| Linear      | Issues created or changing state, and new comments on issues. Uses the [Linear integration](https://cursor.com/docs/integrations/linear.md).                                                                   |
+| Timers      | A point in time: a one-off reminder after a delay, or a recurring cron schedule. Recurring loops are also available as the built-in [`/loop`](https://cursor.com/docs/skills.md#built-in-cursor-skills) skill. |
 
 ### How subscriptions work
 
 - Subscriptions belong to a single agent conversation. Events wake that agent as follow-up messages.
 - Bursts coalesce. Several events arriving close together can wake the agent once, and the agent re-reads the source (the PR, thread, or issue) before acting.
 - A subscription lasts at most 180 days. Agents also unsubscribe on their own when the wait is over.
+
+### GitHub CI subscriptions
+
+A CI subscription waits until every check on the commit has completed, then delivers one commit-wide result: success, or failure with the names of the failed checks.
+
+Some checks stay pending for a long time, for example while a person approves them. A single pending check holds back the whole result, and the agent keeps waiting.
+
+Finish those checks with GitHub's [`action_required`](https://docs.github.com/en/rest/checks/runs#create-a-check-run) conclusion instead of leaving them pending. The check completes, still requires action, and still blocks merge when it's a required check, so the CI subscription delivers while merge stays protected.
 
 ## Fixing CI Failures
 

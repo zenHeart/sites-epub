@@ -10,13 +10,25 @@ Generate an image based on a prompt. This is the endpoint for making generation 
 
 * `aspect_ratio` ("1:1" | "3:4" | "4:3" | "9:16" | "16:9" | "2:3" | "3:2" | "9:19.5" | "19.5:9" | "9:20" | "20:9" | "1:2" | "2:1" | "21:9" | "5:2" | "auto")
 
+* `deferred` (boolean | null) — If set, the request returns immediately with a \`request\_id\` and the
+  image is generated in the background. Poll \`GET /v1/images/\{request\_id}\`
+  for the result. Only \`response\_format: "url"\` is supported in this mode.
+
 * `model` (string | null) — Model to be used.
 
 * `n` (integer | null) — Number of images to be generated
 
+* `output` (object)
+
+  * `upload_urls` (array\<string>, required) — Signed URLs to upload the generated images via HTTP PUT, one per
+    image: the list length must equal \`n\` (default 1). Each PUT sends a
+    \`Content-Type\` equal to the image's \`mime\_type\` in the response
+    (\`image/jpeg\` unless the requested quality produces PNG), so sign the
+    URL for that type or without a Content-Type constraint.
+
 * `prompt` (string) — Prompt for image generation.
 
-* `resolution` ("1k" | "2k")
+* `resolution` ("1k" | "2k" | "1.5k")
 
 * `response_format` (string | null) — Response format to return the image in. Can be url or b64\_json. If b64\_json is specified, the image will be returned as a base64-encoded string instead of a url to the generated image file.
 
@@ -100,16 +112,6 @@ Generate an image based on a prompt. This is the endpoint for making generation 
 
 ### Code Examples
 
-```bash
-curl -s https://api.x.ai/v1/images/generations \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -d '{
-    "model": "grok-imagine-image-2.0",
-    "prompt": "A collage of London landmarks in a stenciled street‑art style"
-  }'
-```
-
 ```pythonOpenAISDK
 import os
 
@@ -126,6 +128,16 @@ response = client.images.generate(
 )
 
 print(response.model_dump_json(indent=2))
+```
+
+```bash
+curl -s https://api.x.ai/v1/images/generations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $XAI_API_KEY" \
+  -d '{
+    "model": "grok-imagine-image-2.0",
+    "prompt": "A collage of London landmarks in a stenciled street‑art style"
+  }'
 ```
 
 ```javascriptOpenAISDK
@@ -169,6 +181,10 @@ Edit an image based on a prompt. This is the endpoint for making edit requests t
 
 * `aspect_ratio` ("1:1" | "3:4" | "4:3" | "9:16" | "16:9" | "2:3" | "3:2" | "9:19.5" | "19.5:9" | "9:20" | "20:9" | "1:2" | "2:1" | "21:9" | "5:2" | "auto")
 
+* `deferred` (boolean | null) — If set, the request returns immediately with a \`request\_id\` and the
+  edit is generated in the background. Poll \`GET /v1/images/\{request\_id}\`
+  for the result. Only \`response\_format: "url"\` is supported in this mode.
+
 * `image` (object)
 
   * `file_id` (string | null) — File ID from the xAI Files API. Mutually exclusive with \`url\`.
@@ -193,9 +209,17 @@ Edit an image based on a prompt. This is the endpoint for making edit requests t
 
 * `n` (integer | null) — Number of image edits to be generated.
 
+* `output` (object)
+
+  * `upload_urls` (array\<string>, required) — Signed URLs to upload the generated images via HTTP PUT, one per
+    image: the list length must equal \`n\` (default 1). Each PUT sends a
+    \`Content-Type\` equal to the image's \`mime\_type\` in the response
+    (\`image/jpeg\` unless the requested quality produces PNG), so sign the
+    URL for that type or without a Content-Type constraint.
+
 * `prompt` (string, required) — Prompt for image editing.
 
-* `resolution` ("1k" | "2k")
+* `resolution` ("1k" | "2k" | "1.5k")
 
 * `response_format` (string | null) — Response format to return the image in. Can be \`url\` or \`b64\_json\`. If \`b64\_json\` is specified, the image will be returned as a base64-encoded string instead of a url to the generated image file.
 
@@ -347,5 +371,123 @@ print(json.dumps(response.json(), indent=2))
       "url": "..."
     }
   ]
+}
+```
+
+***
+
+## GET /v1/images/\{request\_id}
+
+\`GET /v1/images/\{request\_id}\`: 202 while pending, 200 with \`data\` when
+done or with \`error\` when failed (a failed generation is a body, not an
+HTTP error, so pollers do not retry-storm).
+
+### Path Parameters
+
+* `request_id` (string, required) — The deferred request id returned by a previous image request.
+
+### Response Body
+
+* `data` (array | null) — The generated images. Present when done.
+
+* `error` (object)
+
+  * `code` (string, required) — Machine-readable error code: \`invalid\_argument\`, \`permission\_denied\`,
+    \`failed\_precondition\`, \`service\_unavailable\` or \`internal\_error\`.
+
+  * `message` (string, required) — Human-readable error message describing the failure.
+
+* `request_id` (string, required) — The polled request id.
+
+* `status` (string, required) — \`"pending"\`, \`"done"\` or \`"failed"\`.
+
+* `usage` (object)
+
+  * `cost_in_usd_ticks` (integer, required) — The cost of this request expressed in USD ticks.
+    One USD cent equals 100,000,000 ticks, so one US dollar equals
+    10,000,000,000 ticks.
+
+  * `input_tokens` (integer | null) — Total input tokens: prompt text tokens + input image tokens
+    (the sum of \`input\_tokens\_details\`, where \`cached\_tokens\` is a subset
+    of \`text\_tokens\`, not additive).
+
+  * `input_tokens_details` (object)
+
+    * `cached_tokens` (integer, required) — Text tokens served from cache from previous requests (a subset of
+      \`text\_tokens\`).
+
+    * `image_tokens` (integer, required) — Input image tokens, as reported by the image engine.
+
+    * `text_tokens` (integer, required) — Prompt text tokens consumed by the prompt-rewriting (upsampler) LLM,
+      including any served from cache.
+
+  * `output_tokens` (integer | null) — Total output tokens: rewritten-prompt text tokens + reasoning tokens
+    \+ generated image tokens (the sum of \`output\_tokens\_details\`).
+
+  * `output_tokens_details` (object)
+
+    * `image_tokens` (integer, required) — Generated image tokens, as reported by the image engine.
+
+    * `reasoning_tokens` (integer, required) — Reasoning (thinking) tokens generated by the prompt-rewriting
+      (upsampler) LLM.
+
+    * `text_tokens` (integer, required) — Rewritten-prompt text tokens generated by the prompt-rewriting
+      (upsampler) LLM, excluding reasoning tokens.
+
+  * `total_tokens` (integer | null) — Total tokens (input + output).
+
+### Code Examples
+
+```bash
+curl -s "https://api.x.ai/v1/images/$IMAGE_REQUEST_ID" \
+  -H "Authorization: Bearer $XAI_API_KEY"
+```
+
+```javascriptWithoutSDK
+const response = await fetch(
+  `https://api.x.ai/v1/images/${process.env.IMAGE_REQUEST_ID}`,
+  {
+    headers: {
+      Authorization: `Bearer ${process.env.XAI_API_KEY}`,
+    },
+  },
+);
+
+console.log(JSON.stringify(await response.json(), null, 2));
+```
+
+```pythonWithoutSDK
+import json
+import os
+
+import requests
+
+request_id = os.environ["IMAGE_REQUEST_ID"]
+
+response = requests.get(
+    f"https://api.x.ai/v1/images/{request_id}",
+    headers={
+        "Authorization": f"Bearer {os.environ['XAI_API_KEY']}",
+    },
+)
+
+print(json.dumps(response.json(), indent=2))
+```
+
+\*\*Response example:\*\*
+
+```json
+{
+  "request_id": "e5b1b4d4-7b6a-4a0e-9c0d-7f3c7d8a1b2c",
+  "status": "done",
+  "data": [
+    {
+      "url": "..."
+    }
+  ],
+  "usage": {
+    "total_tokens": 0,
+    "image_cost": 2000000
+  }
 }
 ```

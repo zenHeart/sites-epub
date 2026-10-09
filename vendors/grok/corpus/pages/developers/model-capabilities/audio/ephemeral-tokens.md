@@ -6,7 +6,7 @@ Ephemeral tokens provide secure, short-lived authentication for client-side appl
 
 ## How It Works
 
-1. Your **server** requests an ephemeral token from xAI using your API key
+1. Your **server** requests an ephemeral token from SpaceXAI using your API key
 2. Your server passes the ephemeral token to the **client**
 3. The **client** uses the ephemeral token to authenticate the WebSocket connection
 4. The token expires automatically after the configured duration
@@ -17,7 +17,7 @@ Ephemeral tokens provide secure, short-lived authentication for client-side appl
 
 ## Creating Ephemeral Tokens
 
-You need to set up a server endpoint to fetch the ephemeral token from xAI. The ephemeral token gives the holder scoped access to resources.
+You need to set up a server endpoint to fetch the ephemeral token from SpaceXAI. The ephemeral token gives the holder scoped access to resources.
 
 **Endpoint:** `POST https://api.x.ai/v1/realtime/client_secrets`
 

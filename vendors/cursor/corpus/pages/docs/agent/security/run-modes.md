@@ -18,11 +18,15 @@ In the desktop application, go to **Settings > Agents > Approvals & Execution**.
 
 Auto-review applies to shell, MCP, and Fetch tool calls. Cursor checks each call in this order:
 
-![The execution lifecycle of agent actions on Auto-review mode. Allowlisted calls run immediately, other shell commands run in the sandbox when possible, and anything else goes to the classifier, which can allow the call, ask the agent to take a different approach, or ask you to approve.](https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/uploads/kreview-auto-review-light.svg)
+![The execution lifecycle of agent actions on Auto-review mode. On your local machine, allowlisted shell, Fetch, and MCP calls run outside the sandbox. Other shell commands run in the sandbox when they can. Shell commands that can't use the sandbox, sandboxed commands that fail, and other calls go to an LLM classifier on the Cursor backend. The classifier can run read-only ReadFile, Grep, Glob, and ListDir calls on your machine. Allowed calls run outside the sandbox. For blocked calls, the agent chooses a different approach or asks you to approve the action.](/docs-static/images/agent/auto-review-lifecycle-light.svg)
 
-A shell command "can run in the sandbox" when it works under the sandbox's file and network limits. Commands that need full system access, like writes outside the workspace or privileged operations, can't be sandboxed, so they go to the classifier instead.
+A shell command "can run in the sandbox" when it works under the sandbox's file and network limits. Commands that need more access, like full network access, writes outside the workspace, or privileged operations, can't use the sandbox, so they go to the classifier instead.
+
+If a sandboxed command fails on a sandbox restriction, such as a permission error, the agent can rerun it outside the sandbox. The classifier reviews that rerun.
 
 Sandboxing is a layer on top of Run Modes for shell commands. It controls where a supported terminal command runs, not whether the mode uses the Auto-review classifier.
+
+The classifier runs on the Cursor backend. To judge a call, it can make read-only `ReadFile`, `Grep`, `Glob`, and `ListDir` calls on your machine, for example to read a script the command runs.
 
 When the classifier blocks a call, Cursor can try another approach. If the agent decides that the action makes sense despite what the classifier said, Cursor will show you an approval prompt.
 
@@ -32,11 +36,11 @@ The classifier can make mistakes. It can allow a call you would have blocked, or
 
 ### Auto-review classifier requirements
 
-Auto-review's classifier runs on a small Cursor-managed model. Today that is [Claude 4.5 Haiku](https://cursor.com/docs/models/claude-4-5-haiku.md) or [GPT-5.4 Mini](https://cursor.com/docs/models/gpt-5-4-mini.md).
+Auto-review's classifier runs on small Cursor-managed models. Today it uses Gemini 3.5 Flash Lite, with [Claude 4.5 Haiku](https://cursor.com/docs/models/claude-4-5-haiku.md) as the fallback.
 
-Enterprise [model access controls](https://cursor.com/docs/enterprise/model-and-integration-management.md#model-access-control) apply. Auto-review is available when at least one of those models is allowed for the team. Blocking all of them disables Auto-review in **Settings > Agents > Approvals & Execution**, even when team Run Modes includes it. Members then use Allowlist instead.
+Enterprise [model access controls](https://cursor.com/docs/enterprise/model-and-integration-management.md#model-access-control) apply to both. Keep Claude 4.5 Haiku allowed for the team. Allowing it keeps Auto-review available in **Settings > Agents > Approvals & Execution**, and Auto-review uses it for every review when Gemini 3.5 Flash Lite is blocked. Blocking Claude 4.5 Haiku can disable Auto-review there, even when team Run Modes includes it. Members then use Allowlist instead.
 
-If Auto-review is grayed out, enable those models in [Team Settings → Models](https://cursor.com/dashboard/team-settings/models), fully quit and reopen Cursor, then check Approvals & Execution again.
+If Auto-review is grayed out, enable Claude 4.5 Haiku in [Team Settings → Models](https://cursor.com/dashboard/team-settings/models), fully quit and reopen Cursor, then check Approvals & Execution again.
 
 ### Configuring Auto-review
 
@@ -105,6 +109,61 @@ Customize sandbox behavior with a `sandbox.json` file:
 If both files exist, Cursor merges them with the project-level file taking priority. Team-admin policies and Cursor's hardcoded security rules layer on top, so local files cannot weaken those protections.
 
 Use `sandbox.json` to control network policy, extra readable or writable paths, temporary directory writes, and shared build caches. See the [`sandbox.json` reference](https://cursor.com/docs/reference/sandbox.md) for the full schema.
+
+### Read access
+
+Read access controls whether the agent can read files outside your workspace without asking you first. It covers the agent's file reads and searches, plus terminal commands that run in the sandbox.
+
+Read access requires Cursor 3.23 or later.
+
+Set it in **Settings > Agents > Approvals & Execution > Read Access**:
+
+| Mode          | Behavior                                                                                                              |
+| :------------ | :-------------------------------------------------------------------------------------------------------------------- |
+| **System**    | The agent can read files outside the workspace without approval. This is the default.                                 |
+| **Workspace** | The agent reads freely inside the workspace. Anything outside needs your approval unless it's on your Read Allowlist. |
+
+With **Workspace** selected:
+
+- **File reads outside the workspace ask first.** The approval card shows the full path and why Cursor is asking. Click **Allow** to let the read through.
+- **Searches stay inside the boundary.** Grep results skip files outside the workspace and your Read Allowlist.
+- **Sandboxed commands see less of your machine.** On macOS and Linux, a sandboxed command can read the workspace, your Read Allowlist, and the system paths common tools need to run, like system libraries, toolchains, and certificate stores. Commands get a private temp directory for the project instead of the host temp directory.
+
+The workspace boundary also includes this project's folder under `~/.cursor/projects`, plus the skills, rules, and plugins folders in `~/.cursor`.
+
+Read access doesn't apply in **Run Everything** mode, which runs every call without checks, so the setting is hidden there.
+
+#### Read Allowlist
+
+Add paths the agent can read outside the workspace to the **Read Allowlist** in the same settings section. In Auto-review, expand **Allowlist Options** to find it. The list only applies when Read Access is **Workspace**.
+
+- **Folders.** An absolute folder path like `/opt/shared/design-tokens` allows everything under it.
+- **Globs.** A pattern with `*`, like `~/notes/*.md`, allows the files it matches. Sandboxed commands can't match globs, so they get read access to the pattern's parent folder.
+- **Home directory.** `~` expands to your home directory.
+
+#### Configure read access in `sandbox.json`
+
+Set `readBoundary` and `additionalReadPaths` in `sandbox.json` to configure read access per machine or per project:
+
+```json
+{
+  "readBoundary": "workspace",
+  "additionalReadPaths": ["/opt/shared/design-tokens", "~/notes/*.md"]
+}
+```
+
+A value in `sandbox.json` replaces the one in Cursor settings, and the project file wins over `~/.cursor/sandbox.json`. Settings show which file controls the value.
+
+In the [CLI](https://cursor.com/docs/cli/overview.md), set `sandbox.readBoundary` in [`cli-config.json`](https://cursor.com/docs/cli/reference/configuration.md) and add `Read(...)` entries to [`permissions.allow`](https://cursor.com/docs/cli/reference/permissions.md) for the allowlist. `sandbox.json` overrides both.
+
+#### Team read policy
+
+Admins on Enterprise plans can set a read policy for the team in [Team Settings > Security & automation](https://cursor.com/dashboard/team-settings?view=extension-security), or for an [organization group](https://cursor.com/docs/enterprise/organization-groups.md#auto-run-and-smart-auto). Turn on **Read Controls**, then pick a mode:
+
+- **System** leaves the choice to each member.
+- **Workspace** turns on Workspace for every member. Their setting shows as controlled by the admin, and approval cards explain that the read needs approval under the team's read policy.
+
+With **Workspace**, the team's **Read Allowlist** adds to each member's own list. Turn off **Read Control User Extensions** to apply only the team list and ignore paths from member settings and `sandbox.json`.
 
 ### How sandboxing works on your platform
 
@@ -307,16 +366,17 @@ Run Modes and sandboxing are not the only safety controls. These protections can
 
 ## Team controls
 
-Admins can override which modes are available for their users, as well as configure the sandbox networking rules for terminal commands, and more. All of these settings are available in the web dashboard.
+Admins can override which modes are available for their users, configure the sandbox networking rules for terminal commands, set a [team read policy](https://cursor.com/docs/agent/security/run-modes.md#team-read-policy), and more. All of these settings are available in the web dashboard.
 
 Team settings take precedence over individual and project configuration. Use them when you want a consistent baseline for everyone. If you enable Auto-review for the team, keep one of the [models the classifier needs](https://cursor.com/docs/agent/security/run-modes.md#auto-review-model-requirements) allowed under [model access control](https://cursor.com/docs/enterprise/model-and-integration-management.md#model-access-control).
 
 ## Changelog
 
-| Cursor version | Date         | Change                                                                                                                                                                                                    |
-| :------------- | :----------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **3.6**        | May 29, 2026 | [Auto-review](/changelog/auto-review) shipped as the recommended default.                                                                                                                                 |
-| **3.5**        | May 22, 2026 | **Ask Every Time** was deprecated. New users cannot choose it. Use **Allowlist** with an empty allowlist for the same behavior. **Run in Sandbox** was folded into **Allowlist** with sandboxing enabled. |
+| Cursor version | Date         | Change                                                                                                                                                                                                            |
+| :------------- | :----------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **3.23**       | Oct 1, 2026  | [Read access](https://cursor.com/docs/agent/security/run-modes.md#read-access) added a Workspace mode that asks before the agent reads files outside the workspace, with a Read Allowlist and a team read policy. |
+| **3.6**        | May 29, 2026 | [Auto-review](/changelog/auto-review) shipped as the recommended default.                                                                                                                                         |
+| **3.5**        | May 22, 2026 | **Ask Every Time** was deprecated. New users cannot choose it. Use **Allowlist** with an empty allowlist for the same behavior. **Run in Sandbox** was folded into **Allowlist** with sandboxing enabled.         |
 
 ### Cloud Agents do not use Run Modes
 

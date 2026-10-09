@@ -19,12 +19,12 @@ You can combine server-side agentic tools (like web search and code execution) w
 
 ### How It Works
 
-The key difference when mixing server-side and client-side tools is that **server-side tools are executed automatically by xAI**, while **client-side tools require developer intervention**:
+The key difference when mixing server-side and client-side tools is that **server-side tools are executed automatically by SpaceXAI**, while **client-side tools require developer intervention**:
 
 1. Define your client-side tools using [standard function calling patterns](/developers/tools/function-calling)
 2. Include both server-side and client-side tools in your request
-3. **xAI automatically executes any server-side tools** the model decides to use (web search, code execution, etc.)
-4. **When the model calls client-side tools, execution pauses** - xAI returns the tool calls to you instead of executing them
+3. **SpaceXAI automatically executes any server-side tools** the model decides to use (web search, code execution, etc.)
+4. **When the model calls client-side tools, execution pauses** - SpaceXAI returns the tool calls to you instead of executing them
 5. **Detect and execute client-side tool calls yourself**, then append the results back to continue the conversation
 6. **Repeat this process** until the model generates a final response with no additional client-side tool calls
 
@@ -86,7 +86,7 @@ For more details, check [Identifying Tool Call Types](/developers/tools/tool-usa
        ),
    ]
 
-   model = "grok-4.6"
+   model = "grok-4.7"
    ```
 
 2. Perform the tool loop with conversation continuation:
@@ -217,7 +217,7 @@ For more details, see [Identifying Tool Call Types](/developers/tools/tool-usage
        # In a real app, this would query your database
        return f"The weather in {city} is sunny."
 
-   model = "grok-4.6"
+   model = "grok-4.7"
    tools = [
        {
            "type": "function",
@@ -364,11 +364,11 @@ When using agentic tools, you may want multi-turn conversations where follow-up 
 
 ### Store the Conversation History Remotely
 
-You can choose to store the conversation history remotely on the xAI server, and every time you want to continue the conversation, you can pick up from the last response where you want to resume from.
+You can choose to store the conversation history remotely on the SpaceXAI server, and every time you want to continue the conversation, you can pick up from the last response where you want to resume from.
 
 There are only 2 extra steps:
 
-1. Add the parameter `store_messages=True` when making the first agentic request. This tells the service to store the entire conversation history on xAI servers, including the model's reasoning, server-side tool calls, and corresponding responses.
+1. Add the parameter `store_messages=True` when making the first agentic request. This tells the service to store the entire conversation history on SpaceXAI servers, including the model's reasoning, server-side tool calls, and corresponding responses.
 2. Pass `previous_response_id=response.id` when creating the follow-up conversation, where `response` is the response returned by `chat.sample()` or `chat.stream()` from the conversation that you wish to continue.
 
 Note that the follow-up conversation does not need to use the same tools, model parameters, or any other configuration as the initial conversation—it will still be fully hydrated with the complete agentic state from the previous interaction.
@@ -382,7 +382,7 @@ from xai_sdk.tools import web_search, x_search
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 # First turn.
 chat = client.chat.create(
-    model="grok-4.6",  # reasoning model
+    model="grok-4.7",  # reasoning model
     tools=[web_search(), x_search()],
     store_messages=True,
 )
@@ -394,7 +394,7 @@ print("\\n\\nUsage for first turn:", response.server_side_tool_usage)
 
 # Second turn.
 chat = client.chat.create(
-    model="grok-4.6",  # reasoning model
+    model="grok-4.7",  # reasoning model
     tools=[web_search(), x_search()],
     # pass the response id of the first turn to continue the conversation
     previous_response_id=response.id,
@@ -409,7 +409,7 @@ print("\\n\\nUsage for second turn:", response.server_side_tool_usage)
 
 ### Append the Encrypted Agentic Tool Calling States
 
-There is another option for the ZDR (Zero Data Retention) users, or the users who don't want to use the above option, that is to let the xAI server also return
+There is another option for the ZDR (Zero Data Retention) users, or the users who don't want to use the above option, that is to let the SpaceXAI server also return
 the encrypted reasoning and the encrypted tool output besides the final content to the client side, and those encrypted contents can be included as a part of the context
 in the next turn conversation.
 
@@ -427,7 +427,7 @@ from xai_sdk.tools import web_search, x_search
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 # First turn.
 chat = client.chat.create(
-    model="grok-4.6",  # reasoning model
+    model="grok-4.7",  # reasoning model
     tools=[web_search(), x_search()],
     use_encrypted_content=True,
 )
@@ -464,15 +464,6 @@ Here are some common patterns for combining tools, depending on your use case:
 | **Extract insights from multiple sources** | Web Search + X Search + Code Execution | Collect data from various sources then compute correlations and trends |
 | **Monitor real-time discussions** | X Search + Web Search | Track social sentiment alongside authoritative information |
 
-```pythonXAI
-from xai_sdk.tools import web_search, x_search, code_execution
-
-# Example tool combinations for different scenarios
-research_setup = [web_search(), code_execution()]
-news_setup = [web_search(), x_search()]
-comprehensive_setup = [web_search(), x_search(), code_execution()]
-```
-
 ```pythonWithoutSDK
 research_setup = {
   "tools": [
@@ -497,11 +488,104 @@ comprehensive_setup = {
 }
 ```
 
+```pythonXAI
+from xai_sdk.tools import web_search, x_search, code_execution
+
+# Example tool combinations for different scenarios
+research_setup = [web_search(), code_execution()]
+news_setup = [web_search(), x_search()]
+comprehensive_setup = [web_search(), x_search(), code_execution()]
+```
+
 ### Using Tool Combinations in Different Scenarios
 
 1. When you want to search for news on the Internet, you can activate all search tools:
    * Web search tool
    * X search tool
+
+```pythonOpenAISDK
+import os
+from openai import OpenAI
+
+api_key = os.getenv("XAI_API_KEY")
+client = OpenAI(
+    api_key=api_key,
+    base_url="https://api.x.ai/v1",
+)
+
+response = client.responses.create(
+    model="grok-4.7",
+    input=[
+        {
+            "role": "user",
+            "content": "what is the latest update from xAI?",
+        },
+    ],
+    tools=[
+        {
+            "type": "web_search",
+        },
+        {
+            "type": "x_search",
+        },
+    ],
+)
+
+print(response)
+```
+
+```pythonRequests
+import os
+import requests
+
+url = "https://api.x.ai/v1/responses"
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": f"Bearer {os.getenv('XAI_API_KEY')}"
+}
+payload = {
+    "model": "grok-4.7",
+    "input": [
+        {
+            "role": "user",
+            "content": "what is the latest update from xAI?"
+        }
+    ],
+    "tools": [
+        {
+            "type": "web_search",
+        },
+        {
+            "type": "x_search",
+        }
+    ]
+}
+response = requests.post(url, headers=headers, json=payload)
+print(response.json())
+```
+
+```bash
+curl https://api.x.ai/v1/responses \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer $XAI_API_KEY" \\
+  -d '{
+  "model": "grok-4.7",
+  "input": [
+    {
+      "role": "user",
+      "content": "What is the latest update from xAI?"
+    }
+  ],
+  "tools": [
+    {
+      "type": "web_search"
+    },
+    {
+      "type": "x_search"
+    }
+  ]
+}'
+```
 
 ```pythonXAI
 import os
@@ -512,7 +596,7 @@ from xai_sdk.tools import web_search, x_search
 
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 chat = client.chat.create(
-    model="grok-4.6",  # reasoning model
+    model="grok-4.7",  # reasoning model
     tools=[
         web_search(),
         x_search(),
@@ -544,117 +628,10 @@ print("\\n\\nServer Side Tool Calls:")
 print(response.tool_calls)
 ```
 
-```pythonOpenAISDK
-import os
-from openai import OpenAI
-
-api_key = os.getenv("XAI_API_KEY")
-client = OpenAI(
-    api_key=api_key,
-    base_url="https://api.x.ai/v1",
-)
-
-response = client.responses.create(
-    model="grok-4.6",
-    input=[
-        {
-            "role": "user",
-            "content": "what is the latest update from xAI?",
-        },
-    ],
-    tools=[
-        {
-            "type": "web_search",
-        },
-        {
-            "type": "x_search",
-        },
-    ],
-)
-
-print(response)
-```
-
-```pythonRequests
-import os
-import requests
-
-url = "https://api.x.ai/v1/responses"
-headers = {
-    "Content-Type": "application/json",
-    "Authorization": f"Bearer {os.getenv('XAI_API_KEY')}"
-}
-payload = {
-    "model": "grok-4.6",
-    "input": [
-        {
-            "role": "user",
-            "content": "what is the latest update from xAI?"
-        }
-    ],
-    "tools": [
-        {
-            "type": "web_search",
-        },
-        {
-            "type": "x_search",
-        }
-    ]
-}
-response = requests.post(url, headers=headers, json=payload)
-print(response.json())
-```
-
-```bash
-curl https://api.x.ai/v1/responses \\
-  -H "Content-Type: application/json" \\
-  -H "Authorization: Bearer $XAI_API_KEY" \\
-  -d '{
-  "model": "grok-4.6",
-  "input": [
-    {
-      "role": "user",
-      "content": "What is the latest update from xAI?"
-    }
-  ],
-  "tools": [
-    {
-      "type": "web_search"
-    },
-    {
-      "type": "x_search"
-    }
-  ]
-}'
-```
-
 2. When you want to collect up-to-date data from the Internet and perform calculations based on the Internet data, you can choose to activate:
    * Web search tool
    * Code execution tool
 
-```pythonXAI
-import os
-
-from xai_sdk import Client
-from xai_sdk.chat import user
-from xai_sdk.tools import web_search, code_execution
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-chat = client.chat.create(
-    model="grok-4.6",  # reasoning model
-    # research_tools
-    tools=[
-        web_search(),
-        code_execution(),
-    ],
-    include=["verbose_streaming"],
-)
-
-chat.append(user("What is the average market cap of the companies with the top 5 market cap in the US stock market today?"))
-
-# sample or stream the response...
-```
-
 ```pythonOpenAISDK
 import os
 from openai import OpenAI
@@ -666,7 +643,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {
             "role": "user",
@@ -697,7 +674,7 @@ headers = {
     "Authorization": f"Bearer {os.getenv('XAI_API_KEY')}"
 }
 payload = {
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "input": [
         {
             "role": "user",
@@ -723,7 +700,7 @@ curl https://api.x.ai/v1/responses \\
   -H "Content-Type: application/json" \\
   -H "Authorization: Bearer $XAI_API_KEY" \\
   -d '{
-  "model": "grok-4.6",
+  "model": "grok-4.7",
   "input": [
     {
       "role": "user",
@@ -739,6 +716,29 @@ curl https://api.x.ai/v1/responses \\
     }
   ]
 }'
+```
+
+```pythonXAI
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import user
+from xai_sdk.tools import web_search, code_execution
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+chat = client.chat.create(
+    model="grok-4.7",  # reasoning model
+    # research_tools
+    tools=[
+        web_search(),
+        code_execution(),
+    ],
+    include=["verbose_streaming"],
+)
+
+chat.append(user("What is the average market cap of the companies with the top 5 market cap in the US stock market today?"))
+
+# sample or stream the response...
 ```
 
 ## Using Images in the Context
@@ -757,7 +757,7 @@ from xai_sdk.tools import web_search, x_search
 # Create the client and define the server-side tools to use
 client = Client(api_key=os.getenv("XAI_API_KEY"))
 chat = client.chat.create(
-    model="grok-4.6",  # reasoning model
+    model="grok-4.7",  # reasoning model
     tools=[web_search(), x_search()],
     include=["verbose_streaming"],
 )

@@ -16,6 +16,12 @@ List all models available to the authenticating API key, including model names (
 
   * `cached_prompt_text_token_price_long_context` (integer | null) — Price of the cached prompt text token for long context requests (USD cents per 100 million tokens).
 
+  * `capabilities` (object)
+
+    * `default_reasoning_effort` (string | null) — Model-wide default when effort is omitted; aliases may have their own defaults.
+
+    * `reasoning_effort` (array\<string>, required) — The values the model accepts for \`reasoning\_effort\` or \`reasoning.effort\`.
+
   * `completion_text_token_price` (integer | null) — Price of the completion text token in USD cents per 100 million tokens.
 
   * `completion_text_token_price_long_context` (integer | null) — Price of the completion text token for long context requests (USD cents per 100 million tokens).
@@ -46,8 +52,8 @@ List all models available to the authenticating API key, including model names (
       Medium is the default quality a request serves at when it leaves
       \`quality\` unset.
 
-    * `resolution` (string, required) — Output resolution this price applies to: \`"1k"\` or \`"2k"\`. 1k is the
-      default when a request leaves \`resolution\` unset.
+    * `resolution` (string, required) — Output resolution this price applies to: \`"1k"\`, \`"1.5k"\`, or \`"2k"\`.
+      1k is the default when a request leaves \`resolution\` unset.
 
   * `prompt_image_token_price` (integer | null) — Price of the prompt image token in USD cents per 100 million tokens.
 
@@ -87,7 +93,16 @@ List all models available to the authenticating API key, including model names (
       "completion_text_token_price": 80000,
       "prompt_text_token_price_long_context": 40000,
       "completion_text_token_price_long_context": 160000,
-      "long_context_threshold": 128000
+      "long_context_threshold": 128000,
+      "capabilities": {
+        "reasoning_effort": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "default_reasoning_effort": "high"
+      }
     },
     {
       "id": "grok-imagine-image",
@@ -121,6 +136,12 @@ Get information about a model with its model\_id, including pricing.
 
 * `cached_prompt_text_token_price_long_context` (integer | null) — Price of the cached prompt text token for long context requests (USD cents per 100 million tokens).
 
+* `capabilities` (object)
+
+  * `default_reasoning_effort` (string | null) — Model-wide default when effort is omitted; aliases may have their own defaults.
+
+  * `reasoning_effort` (array\<string>, required) — The values the model accepts for \`reasoning\_effort\` or \`reasoning.effort\`.
+
 * `completion_text_token_price` (integer | null) — Price of the completion text token in USD cents per 100 million tokens.
 
 * `completion_text_token_price_long_context` (integer | null) — Price of the completion text token for long context requests (USD cents per 100 million tokens).
@@ -151,8 +172,8 @@ Get information about a model with its model\_id, including pricing.
     Medium is the default quality a request serves at when it leaves
     \`quality\` unset.
 
-  * `resolution` (string, required) — Output resolution this price applies to: \`"1k"\` or \`"2k"\`. 1k is the
-    default when a request leaves \`resolution\` unset.
+  * `resolution` (string, required) — Output resolution this price applies to: \`"1k"\`, \`"1.5k"\`, or \`"2k"\`.
+    1k is the default when a request leaves \`resolution\` unset.
 
 * `prompt_image_token_price` (integer | null) — Price of the prompt image token in USD cents per 100 million tokens.
 
@@ -191,6 +212,12 @@ List all chat and image understanding models available to the authenticating API
 
   * `cached_prompt_text_token_price_long_context` (integer, required) — Price of the cached prompt text token for long context requests (USD cents per 100 million tokens).
     When 0, falls back to cached\_prompt\_text\_token\_price.
+
+  * `capabilities` (object)
+
+    * `default_reasoning_effort` (string | null) — Model-wide default when effort is omitted; aliases may have their own defaults.
+
+    * `reasoning_effort` (array\<string>, required) — The values the model accepts for \`reasoning\_effort\` or \`reasoning.effort\`.
 
   * `completion_text_token_price` (integer, required) — Price of the completion text token in USD cents per 100 million token.
 
@@ -279,7 +306,16 @@ List all chat and image understanding models available to the authenticating API
       "cached_prompt_text_token_price_long_context": 0,
       "completion_text_token_price_long_context": 160000,
       "long_context_threshold": 128000,
-      "aliases": []
+      "aliases": [],
+      "capabilities": {
+        "reasoning_effort": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "default_reasoning_effort": "high"
+      }
     }
   ]
 }
@@ -303,6 +339,12 @@ Get full information about a chat or image understanding model with its model\_i
 
 * `cached_prompt_text_token_price_long_context` (integer, required) — Price of the cached prompt text token for long context requests (USD cents per 100 million tokens).
   When 0, falls back to cached\_prompt\_text\_token\_price.
+
+* `capabilities` (object)
+
+  * `default_reasoning_effort` (string | null) — Model-wide default when effort is omitted; aliases may have their own defaults.
+
+  * `reasoning_effort` (array\<string>, required) — The values the model accepts for \`reasoning\_effort\` or \`reasoning.effort\`.
 
 * `completion_text_token_price` (integer, required) — Price of the completion text token in USD cents per 100 million token.
 
@@ -406,8 +448,8 @@ List all image generation models available to the authenticating API key with fu
       Medium is the default quality a request serves at when it leaves
       \`quality\` unset.
 
-    * `resolution` (string, required) — Output resolution this price applies to: \`"1k"\` or \`"2k"\`. 1k is the
-      default when a request leaves \`resolution\` unset.
+    * `resolution` (string, required) — Output resolution this price applies to: \`"1k"\`, \`"1.5k"\`, or \`"2k"\`.
+      1k is the default when a request leaves \`resolution\` unset.
 
   * `version` (string, required) — Version of the model.
 
@@ -477,8 +519,8 @@ Get full information about an image generation model with its model\_id.
     Medium is the default quality a request serves at when it leaves
     \`quality\` unset.
 
-  * `resolution` (string, required) — Output resolution this price applies to: \`"1k"\` or \`"2k"\`. 1k is the
-    default when a request leaves \`resolution\` unset.
+  * `resolution` (string, required) — Output resolution this price applies to: \`"1k"\`, \`"1.5k"\`, or \`"2k"\`.
+    1k is the default when a request leaves \`resolution\` unset.
 
 * `version` (string, required) — Version of the model.
 

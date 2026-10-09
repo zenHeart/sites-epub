@@ -70,3 +70,6 @@ If you wish to stop syncing your project with GitHub, you can disconnect the int
     2. Manus does not have permission to access the repository. This can happen if you are trying to sync with a repository that was not originally created through the Manus export feature, or if the repository's name or owner was changed after creation. Ensure you are working with the repository that Manus created for your project under its original name and owner.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

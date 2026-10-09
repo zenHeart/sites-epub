@@ -56,3 +56,6 @@ Or, for more structural changes:
 Manus will understand your instructions and update the application instantly. This conversational approach makes iteration incredibly fast and allows you to focus on the creative aspects of your project.\
 \
 Check out some web applications we built [here ](https://manusai.notion.site/Manus-Web-App-Use-Cases-2927ff657cfa8174a2a1fedb6bece124)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

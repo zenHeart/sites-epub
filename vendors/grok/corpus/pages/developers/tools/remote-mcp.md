@@ -2,7 +2,7 @@
 
 # Remote MCP Tools
 
-Remote MCP Tools allow Grok to connect to external MCP (Model Context Protocol) servers, extending its capabilities with custom tools from third parties or your own implementations. Simply specify a server URL and optional configuration - xAI manages the MCP server connection and interaction on your behalf.
+Remote MCP Tools allow Grok to connect to external MCP (Model Context Protocol) servers, extending its capabilities with custom tools from third parties or your own implementations. Simply specify a server URL and optional configuration - SpaceXAI manages the MCP server connection and interaction on your behalf.
 
 ## SDK Support
 
@@ -27,44 +27,6 @@ To use remote MCP tools, you need to configure the connection to your MCP server
 
 ### Basic MCP Tool Usage
 
-```pythonXAI
-import os
-
-from xai_sdk import Client
-from xai_sdk.chat import user
-from xai_sdk.tools import mcp
-
-client = Client(api_key=os.getenv("XAI_API_KEY"))
-chat = client.chat.create(
-    model="grok-4.6",
-    tools=[
-        mcp(server_url="https://mcp.deepwiki.com/mcp", server_label="deepwiki"),
-    ],
-    include=["verbose_streaming"],
-)
-
-chat.append(user("What can you do with https://github.com/xai-org/xai-sdk-python?"))
-
-is_thinking = True
-for response, chunk in chat.stream():
-    # View the server-side tool calls as they are being made in real-time
-    for tool_call in chunk.tool_calls:
-        print(f"\\nCalling tool: {tool_call.function.name} with arguments: {tool_call.function.arguments}")
-    if response.usage.reasoning_tokens and is_thinking:
-        print(f"\\rThinking... ({response.usage.reasoning_tokens} tokens)", end="", flush=True)
-    if chunk.content and is_thinking:
-        print("\\n\\nFinal Response:")
-        is_thinking = False
-    if chunk.content and not is_thinking:
-        print(chunk.content, end="", flush=True)
-
-print("\\n\\nUsage:")
-print(response.usage)
-print(response.server_side_tool_usage)
-print("\\n\\nServer Side Tool Calls:")
-print(response.tool_calls)
-```
-
 ```pythonOpenAISDK
 import os
 from openai import OpenAI
@@ -76,7 +38,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok-4.6",
+    model="grok-4.7",
     input=[
         {
             "role": "user",
@@ -105,7 +67,7 @@ headers = {
     "Authorization": f"Bearer {os.getenv('XAI_API_KEY')}"
 }
 payload = {
-    "model": "grok-4.6",
+    "model": "grok-4.7",
     "input": [
         {
             "role": "user",
@@ -129,7 +91,7 @@ curl https://api.x.ai/v1/responses \\
   -H "Content-Type: application/json" \\
   -H "Authorization: Bearer $XAI_API_KEY" \\
   -d '{
-  "model": "grok-4.6",
+  "model": "grok-4.7",
   "input": [
     {
       "role": "user",
@@ -144,6 +106,44 @@ curl https://api.x.ai/v1/responses \\
     }
   ]
 }'
+```
+
+```pythonXAI
+import os
+
+from xai_sdk import Client
+from xai_sdk.chat import user
+from xai_sdk.tools import mcp
+
+client = Client(api_key=os.getenv("XAI_API_KEY"))
+chat = client.chat.create(
+    model="grok-4.7",
+    tools=[
+        mcp(server_url="https://mcp.deepwiki.com/mcp", server_label="deepwiki"),
+    ],
+    include=["verbose_streaming"],
+)
+
+chat.append(user("What can you do with https://github.com/xai-org/xai-sdk-python?"))
+
+is_thinking = True
+for response, chunk in chat.stream():
+    # View the server-side tool calls as they are being made in real-time
+    for tool_call in chunk.tool_calls:
+        print(f"\\nCalling tool: {tool_call.function.name} with arguments: {tool_call.function.arguments}")
+    if response.usage.reasoning_tokens and is_thinking:
+        print(f"\\rThinking... ({response.usage.reasoning_tokens} tokens)", end="", flush=True)
+    if chunk.content and is_thinking:
+        print("\\n\\nFinal Response:")
+        is_thinking = False
+    if chunk.content and not is_thinking:
+        print(chunk.content, end="", flush=True)
+
+print("\\n\\nUsage:")
+print(response.usage)
+print(response.server_side_tool_usage)
+print("\\n\\nServer Side Tool Calls:")
+print(response.tool_calls)
 ```
 
 ## Tool Enablement and Access Control
@@ -173,7 +173,7 @@ Enable multiple MCP servers simultaneously to create a rich ecosystem of special
 
 ```pythonXAI
 chat = client.chat.create(
-    model="grok-4.6",
+    model="grok-4.7",
     tools=[
         mcp(server_url="https://mcp.deepwiki.com/mcp", server_label="deepwiki"),
         mcp(server_url="https://your-custom-tools.com/mcp", server_label="custom"),

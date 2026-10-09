@@ -16,6 +16,11 @@ CHROME_SELECTORS = (
     ".is_related_posts",
     ".nav_desktop_layout",
     ".footer_wrap",
+    # 2026-10 RSC rewrite: the Webflow class names are gone, but the related
+    # posts rail / site nav carry stable CSS-module substrings.
+    '[class*="RelatedPosts-module"]',
+    '[class*="Navigation-module"]',
+    '[class*="Footer-module"]',
 )
 TITLE_SUFFIX = re.compile(r"\s*\|\s*Claude by Anthropic\s*$", re.I)
 
@@ -64,6 +69,13 @@ def _collect_body_blocks(soup: BeautifulSoup) -> list[Tag]:
         "div.blog_post_content_wrap div.u-rich-text-blog.w-richtext",
         "div.blog_post_content_wrap .w-richtext",
         "div.u-rich-text-blog.w-richtext",
+        # 2026-10: the RSC rewrite dropped every blog_post_content_wrap wrapper
+        # but kept the Webflow ``w-richtext`` class on the single article body
+        # div (verified 3192 chars on /resources/articles/1m-context). It sits
+        # inside the article element, siblings of the related-posts rail, so
+        # picking it directly keeps that rail out of the body.
+        "article .w-richtext",
+        ".w-richtext",
     )
     for sel in selectors:
         found = False
@@ -115,6 +127,48 @@ def _details_value(soup: BeautifulSoup, label: str) -> str | None:
     return None
 
 
+def _ldjson_nodes(soup: BeautifulSoup) -> list[object]:
+    """Every object in every ld+json block, flattened out of @graph wrappers."""
+    import json
+
+    nodes: list[object] = []
+    for tag in soup.find_all("script", attrs={"type": "application/ld+json"}):
+        raw = tag.string or tag.get_text() or ""
+        raw = raw.strip()
+        if not raw:
+            continue
+        try:
+            data = json.loads(raw)
+        except ValueError:
+            continue
+        stack = [data]
+        while stack:
+            node = stack.pop()
+            if isinstance(node, list):
+                stack.extend(node)
+            elif isinstance(node, dict):
+                if "@graph" in node:
+                    graph = node["@graph"]
+                    stack.extend(graph if isinstance(graph, list) else [graph])
+                nodes.append(node)
+    return nodes
+
+
+def _ldjson_article(soup: BeautifulSoup) -> dict:
+    """The first schema.org BlogPosting/Article node, if the page ships one.
+
+    2026-10: the RSC pages dropped ``.hero_blog_post_details`` entirely, so the
+    old Webflow byline scraping has nothing left to read. Every article page
+    still emits a BlogPosting ld+json with datePublished / headline / author.
+    """
+    for node in _ldjson_nodes(soup):
+        types = node.get("@type")
+        types = types if isinstance(types, list) else [types]
+        if any(t in {"BlogPosting", "Article", "NewsArticle"} for t in types):
+            return node
+    return {}
+
+
 def extract_article(html: str, url: str | None = None) -> Article:
     soup = BeautifulSoup(html, "lxml")
     for sel in CHROME_SELECTORS:
@@ -123,6 +177,7 @@ def extract_article(html: str, url: str | None = None) -> Article:
 
     h1 = soup.find("h1")
     title = _plain(h1) if h1 else ""
+    ld = _ldjson_article(soup)
     if not title:
         og = _meta_content(soup, "og:title", "twitter:title")
         if og:
@@ -130,15 +185,34 @@ def extract_article(html: str, url: str | None = None) -> Article:
         elif soup.title:
             title = TITLE_SUFFIX.sub("", soup.title.get_text(" ", strip=True)).strip()
     if not title:
+        title = TITLE_SUFFIX.sub("", str(ld.get("headline") or "")).strip()
+    if not title:
         title = "Untitled"
 
     dek_el = soup.select_one(".hero_blog_description_wrap")
     dek = _plain(dek_el) if dek_el else None
+    if not dek:
+        dek = (str(ld.get("description") or "").strip() or None)
 
     published = _details_value(soup, "Date")
     author = _details_value(soup, "Author(s)") or _details_value(soup, "Author")
     if not published:
         published = _meta_content(soup, "article:published_time")
+    if not published:
+        published = (str(ld.get("datePublished") or "").strip() or None)
+    if not author:
+        ld_author = ld.get("author")
+        if isinstance(ld_author, dict):
+            author = (str(ld_author.get("name") or "").strip() or None)
+        elif isinstance(ld_author, list):
+            names = [
+                str(a.get("name") or "").strip()
+                for a in ld_author
+                if isinstance(a, dict) and a.get("name")
+            ]
+            author = ", ".join(names) or None
+        elif ld_author:
+            author = str(ld_author).strip()
 
     body_el = _pick_body(soup)
     if body_el is None:
