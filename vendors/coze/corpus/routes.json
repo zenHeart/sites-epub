@@ -1785,6 +1785,14 @@
   },
   {
     "group": "\u6263\u5b50: \u6559\u7a0b",
+    "title": "Coze CLI/Coze CLI\uff1a\u8d26\u53f7\u767b\u5f55\u4e0e\u6388\u6743",
+    "md_url": "https://docs.coze.cn/developer_guides_coze_cli_quickstart.md",
+    "html_url": "https://docs.coze.cn/developer_guides_coze_cli_quickstart",
+    "route": "developer_guides_coze_cli_quickstart",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u6559\u7a0b",
     "title": "Coze CLI/Coze CLI\uff1a10 \u5206\u949f\u5f00\u53d1\u5e76\u4e0a\u7ebf Web \u5e94\u7528",
     "md_url": "https://docs.coze.cn/coze-cli-develop-and-deploy-a-web-application.md",
     "html_url": "https://docs.coze.cn/coze-cli-develop-and-deploy-a-web-application",
@@ -4825,6 +4833,14 @@
   },
   {
     "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/\u97f3\u89c6\u9891/\u57fa\u4e8e WebSocket \u5b9e\u73b0\u97f3\u9891\u901a\u8bdd/\u57fa\u4e8e WebSocket OpenAPI \u5b9e\u73b0\u97f3\u9891\u901a\u8bdd",
+    "md_url": "https://docs.coze.cn/dev_how_to_guides_websocket_openapi.md",
+    "html_url": "https://docs.coze.cn/dev_how_to_guides_websocket_openapi",
+    "route": "dev_how_to_guides_websocket_openapi",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
     "title": "\u5f00\u53d1\u5de5\u5177/\u97f3\u89c6\u9891/\u57fa\u4e8e WebSocket \u5b9e\u73b0\u97f3\u9891\u901a\u8bdd/\u96c6\u6210 WebSocket \u5b9e\u65f6\u8bed\u97f3 Web SDK",
     "md_url": "https://docs.coze.cn/dev_how_to_guides_install_wschat_sdk.md",
     "html_url": "https://docs.coze.cn/dev_how_to_guides_install_wschat_sdk",
@@ -4889,10 +4905,922 @@
   },
   {
     "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/\u9274\u6743\u65b9\u5f0f\u6982\u8ff0",
+    "md_url": "https://docs.coze.cn/developer_guides_authentication.md",
+    "html_url": "https://docs.coze.cn/developer_guides_authentication",
+    "route": "developer_guides_authentication",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/\u6dfb\u52a0\u4e2a\u4eba\u8bbf\u95ee\u4ee4\u724c",
+    "md_url": "https://docs.coze.cn/developer_guides_pat.md",
+    "html_url": "https://docs.coze.cn/developer_guides_pat",
+    "route": "developer_guides_pat",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/\u6dfb\u52a0\u670d\u52a1\u8bbf\u95ee\u4ee4\u724c",
+    "md_url": "https://docs.coze.cn/developer_guides_service_token.md",
+    "html_url": "https://docs.coze.cn/developer_guides_service_token",
+    "route": "developer_guides_service_token",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/OAuth \u5e94\u7528\u7ba1\u7406",
+    "md_url": "https://docs.coze.cn/developer_guides_oauth_apps.md",
+    "html_url": "https://docs.coze.cn/developer_guides_oauth_apps",
+    "route": "developer_guides_oauth_apps",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/\u901a\u8fc7\u793a\u4f8b\u6587\u4ef6\u4f53\u9a8c OAuth \u6388\u6743\u6d41\u7a0b",
+    "md_url": "https://docs.coze.cn/developer_guides_ouath_demo.md",
+    "html_url": "https://docs.coze.cn/developer_guides_ouath_demo",
+    "route": "developer_guides_ouath_demo",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/OAuth \u6388\u6743\u7801\u6388\u6743",
+    "md_url": "https://docs.coze.cn/developer_guides_oauth_code.md",
+    "html_url": "https://docs.coze.cn/developer_guides_oauth_code",
+    "route": "developer_guides_oauth_code",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/OAuth PKCE",
+    "md_url": "https://docs.coze.cn/developer_guides_oauth_pkce.md",
+    "html_url": "https://docs.coze.cn/developer_guides_oauth_pkce",
+    "route": "developer_guides_oauth_pkce",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u521b\u5efa\u667a\u80fd\u4f53",
+    "md_url": "https://docs.coze.cn/developer_guides_create_bot.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_bot",
+    "route": "developer_guides_create_bot",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u66f4\u65b0\u667a\u80fd\u4f53",
+    "md_url": "https://docs.coze.cn/developer_guides_update_bot.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_bot",
+    "route": "developer_guides_update_bot",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u53d1\u5e03\u667a\u80fd\u4f53",
+    "md_url": "https://docs.coze.cn/developer_guides_publish_bot.md",
+    "html_url": "https://docs.coze.cn/developer_guides_publish_bot",
+    "route": "developer_guides_publish_bot",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u67e5\u770b\u667a\u80fd\u4f53\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_bots_list_draft_published.md",
+    "html_url": "https://docs.coze.cn/developer_guides_bots_list_draft_published",
+    "route": "developer_guides_bots_list_draft_published",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u67e5\u770b\u667a\u80fd\u4f53\u914d\u7f6e",
+    "md_url": "https://docs.coze.cn/developer_guides_get_metadata_draft_published.md",
+    "html_url": "https://docs.coze.cn/developer_guides_get_metadata_draft_published",
+    "route": "developer_guides_get_metadata_draft_published",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u5f00\u542f\u6216\u5173\u95ed\u667a\u80fd\u4f53\u591a\u4eba\u534f\u4f5c",
+    "md_url": "https://docs.coze.cn/developer_guides_switch_bot_develop_mode.md",
+    "html_url": "https://docs.coze.cn/developer_guides_switch_bot_develop_mode",
+    "route": "developer_guides_switch_bot_develop_mode",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u6dfb\u52a0\u667a\u80fd\u4f53\u7684\u534f\u4f5c\u8005",
+    "md_url": "https://docs.coze.cn/developer_guides_add_bot_collaborator.md",
+    "html_url": "https://docs.coze.cn/developer_guides_add_bot_collaborator",
+    "route": "developer_guides_add_bot_collaborator",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u6dfb\u52a0\u5e94\u7528\u7684\u534f\u4f5c\u8005",
+    "md_url": "https://docs.coze.cn/developer_guides_add_app_collaborator.md",
+    "html_url": "https://docs.coze.cn/developer_guides_add_app_collaborator",
+    "route": "developer_guides_add_app_collaborator",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u5220\u9664\u667a\u80fd\u4f53\u7684\u534f\u4f5c\u8005",
+    "md_url": "https://docs.coze.cn/developer_guides_remove_bot_collaborator.md",
+    "html_url": "https://docs.coze.cn/developer_guides_remove_bot_collaborator",
+    "route": "developer_guides_remove_bot_collaborator",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u5220\u9664\u5e94\u7528\u7684\u534f\u4f5c\u8005",
+    "md_url": "https://docs.coze.cn/developer_guides_remove_app_collaborator.md",
+    "html_url": "https://docs.coze.cn/developer_guides_remove_app_collaborator",
+    "route": "developer_guides_remove_app_collaborator",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u67e5\u770b\u667a\u80fd\u4f53\u7248\u672c\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_bot_versions.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_bot_versions",
+    "route": "developer_guides_list_bot_versions",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u590d\u5236\u8d44\u6e90",
+    "md_url": "https://docs.coze.cn/developer_guides_copy_resource_task.md",
+    "html_url": "https://docs.coze.cn/developer_guides_copy_resource_task",
+    "route": "developer_guides_copy_resource_task",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u67e5\u8be2\u8d44\u6e90\u590d\u5236\u7684\u7ed3\u679c",
+    "md_url": "https://docs.coze.cn/developer_guides_query_resource_copy_execution_result.md",
+    "html_url": "https://docs.coze.cn/developer_guides_query_resource_copy_execution_result",
+    "route": "developer_guides_query_resource_copy_execution_result",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/API \u4ecb\u7ecd",
+    "md_url": "https://docs.coze.cn/developer_guides_coze_api_overview.md",
+    "html_url": "https://docs.coze.cn/developer_guides_coze_api_overview",
+    "route": "developer_guides_coze_api_overview",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u66f4\u65b0\u65e5\u5fd7",
+    "md_url": "https://docs.coze.cn/developer_guides_changelog.md",
+    "html_url": "https://docs.coze.cn/developer_guides_changelog",
+    "route": "developer_guides_changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u51c6\u5907\u5de5\u4f5c",
+    "md_url": "https://docs.coze.cn/developer_guides_preparation.md",
+    "html_url": "https://docs.coze.cn/developer_guides_preparation",
+    "route": "developer_guides_preparation",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/API Playground",
+    "md_url": "https://docs.coze.cn/developer_guides_api_playground.md",
+    "html_url": "https://docs.coze.cn/developer_guides_api_playground",
+    "route": "developer_guides_api_playground",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9519\u8bef\u7801",
+    "md_url": "https://docs.coze.cn/developer_guides_coze_error_codes.md",
+    "html_url": "https://docs.coze.cn/developer_guides_coze_error_codes",
+    "route": "developer_guides_coze_error_codes",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/API \u5e38\u89c1\u95ee\u9898",
+    "md_url": "https://docs.coze.cn/developer_guides_api_faq.md",
+    "html_url": "https://docs.coze.cn/developer_guides_api_faq",
+    "route": "developer_guides_api_faq",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5bf9\u8bdd/\u53d1\u8d77\u5bf9\u8bdd",
+    "md_url": "https://docs.coze.cn/developer_guides_chat_v3.md",
+    "html_url": "https://docs.coze.cn/developer_guides_chat_v3",
+    "route": "developer_guides_chat_v3",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u4e0b\u67b6\u667a\u80fd\u4f53",
+    "md_url": "https://docs.coze.cn/developer_guides_unpublish_agent.md",
+    "html_url": "https://docs.coze.cn/developer_guides_unpublish_agent",
+    "route": "developer_guides_unpublish_agent",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/Bot object",
+    "md_url": "https://docs.coze.cn/developer_guides_bot_object.md",
+    "html_url": "https://docs.coze.cn/developer_guides_bot_object",
+    "route": "developer_guides_bot_object",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u67e5\u770b\u5e94\u7528\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_published_apps_list.md",
+    "html_url": "https://docs.coze.cn/developer_guides_published_apps_list",
+    "route": "developer_guides_published_apps_list",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u667a\u80fd\u4f53\u53d1\u5e03\u56de\u8c03\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_agent_callback_messages.md",
+    "html_url": "https://docs.coze.cn/developer_guides_agent_callback_messages",
+    "route": "developer_guides_agent_callback_messages",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u6267\u884c\u5de5\u4f5c\u6d41",
+    "md_url": "https://docs.coze.cn/developer_guides_workflow_run.md",
+    "html_url": "https://docs.coze.cn/developer_guides_workflow_run",
+    "route": "developer_guides_workflow_run",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u521b\u5efa\u4f1a\u8bdd",
+    "md_url": "https://docs.coze.cn/developer_guides_create_conversation.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_conversation",
+    "route": "developer_guides_create_conversation",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u67e5\u770b\u4f1a\u8bdd\u4fe1\u606f",
+    "md_url": "https://docs.coze.cn/developer_guides_retrieve_conversation.md",
+    "html_url": "https://docs.coze.cn/developer_guides_retrieve_conversation",
+    "route": "developer_guides_retrieve_conversation",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u67e5\u770b\u4f1a\u8bdd\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_conversations.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_conversations",
+    "route": "developer_guides_list_conversations",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u66f4\u65b0\u4f1a\u8bdd\u540d\u79f0",
+    "md_url": "https://docs.coze.cn/developer_guides_edit_conversation.md",
+    "html_url": "https://docs.coze.cn/developer_guides_edit_conversation",
+    "route": "developer_guides_edit_conversation",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u5220\u9664\u4f1a\u8bdd",
+    "md_url": "https://docs.coze.cn/developer_guides_delete_conversation.md",
+    "html_url": "https://docs.coze.cn/developer_guides_delete_conversation",
+    "route": "developer_guides_delete_conversation",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u6e05\u9664\u4e0a\u4e0b\u6587",
+    "md_url": "https://docs.coze.cn/developer_guides_clear_conversation_context.md",
+    "html_url": "https://docs.coze.cn/developer_guides_clear_conversation_context",
+    "route": "developer_guides_clear_conversation_context",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u521b\u5efa\u6d88\u606f",
+    "md_url": "https://docs.coze.cn/developer_guides_create_message.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_message",
+    "route": "developer_guides_create_message",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u67e5\u770b\u6d88\u606f\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_message.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_message",
+    "route": "developer_guides_list_message",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u67e5\u770b\u6d88\u606f\u8be6\u60c5",
+    "md_url": "https://docs.coze.cn/developer_guides_retrieve_message.md",
+    "html_url": "https://docs.coze.cn/developer_guides_retrieve_message",
+    "route": "developer_guides_retrieve_message",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u4fee\u6539\u6d88\u606f",
+    "md_url": "https://docs.coze.cn/developer_guides_modify_message.md",
+    "html_url": "https://docs.coze.cn/developer_guides_modify_message",
+    "route": "developer_guides_modify_message",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u5220\u9664\u6d88\u606f",
+    "md_url": "https://docs.coze.cn/developer_guides_delete_message.md",
+    "html_url": "https://docs.coze.cn/developer_guides_delete_message",
+    "route": "developer_guides_delete_message",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6587\u4ef6/\u4e0a\u4f20\u6587\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_upload_files.md",
+    "html_url": "https://docs.coze.cn/developer_guides_upload_files",
+    "route": "developer_guides_upload_files",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6587\u4ef6/\u67e5\u770b\u6587\u4ef6\u8be6\u60c5",
+    "md_url": "https://docs.coze.cn/developer_guides_retrieve_files.md",
+    "html_url": "https://docs.coze.cn/developer_guides_retrieve_files",
+    "route": "developer_guides_retrieve_files",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5bf9\u8bdd/\u67e5\u770b\u5bf9\u8bdd\u8be6\u60c5",
+    "md_url": "https://docs.coze.cn/developer_guides_retrieve_chat.md",
+    "html_url": "https://docs.coze.cn/developer_guides_retrieve_chat",
+    "route": "developer_guides_retrieve_chat",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5bf9\u8bdd/\u67e5\u770b\u5bf9\u8bdd\u6d88\u606f\u8be6\u60c5",
+    "md_url": "https://docs.coze.cn/developer_guides_list_chat_messages.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_chat_messages",
+    "route": "developer_guides_list_chat_messages",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5bf9\u8bdd/\u63d0\u4ea4\u5de5\u5177\u6267\u884c\u7ed3\u679c",
+    "md_url": "https://docs.coze.cn/developer_guides_chat_submit_tool_outputs.md",
+    "html_url": "https://docs.coze.cn/developer_guides_chat_submit_tool_outputs",
+    "route": "developer_guides_chat_submit_tool_outputs",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/API \u6559\u7a0b/\u901a\u8fc7\u5bf9\u8bdd\u63a5\u53e3\u83b7\u53d6\u667a\u80fd\u4f53\u56de\u590d",
+    "md_url": "https://docs.coze.cn/developer_guides_get_chat_response.md",
+    "html_url": "https://docs.coze.cn/developer_guides_get_chat_response",
+    "route": "developer_guides_get_chat_response",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u6d88\u606f type \u8bf4\u660e",
+    "md_url": "https://docs.coze.cn/developer_guides_message_type.md",
+    "html_url": "https://docs.coze.cn/developer_guides_message_type",
+    "route": "developer_guides_message_type",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u77e5\u8bc6\u5e93/\u521b\u5efa\u77e5\u8bc6\u5e93",
+    "md_url": "https://docs.coze.cn/developer_guides_create_dataset.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_dataset",
+    "route": "developer_guides_create_dataset",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u77e5\u8bc6\u5e93/\u67e5\u770b\u77e5\u8bc6\u5e93\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_dataset.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_dataset",
+    "route": "developer_guides_list_dataset",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u77e5\u8bc6\u5e93/\u4fee\u6539\u77e5\u8bc6\u5e93\u4fe1\u606f",
+    "md_url": "https://docs.coze.cn/developer_guides_update_dataset.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_dataset",
+    "route": "developer_guides_update_dataset",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u77e5\u8bc6\u5e93/\u5220\u9664\u77e5\u8bc6\u5e93",
+    "md_url": "https://docs.coze.cn/developer_guides_delete_dataset.md",
+    "html_url": "https://docs.coze.cn/developer_guides_delete_dataset",
+    "route": "developer_guides_delete_dataset",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u77e5\u8bc6\u5e93/\u521b\u5efa\u77e5\u8bc6\u5e93\u6587\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_create_knowledge_files.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_knowledge_files",
+    "route": "developer_guides_create_knowledge_files",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u77e5\u8bc6\u5e93/\u4fee\u6539\u77e5\u8bc6\u5e93\u6587\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_modify_knowledge_files.md",
+    "html_url": "https://docs.coze.cn/developer_guides_modify_knowledge_files",
+    "route": "developer_guides_modify_knowledge_files",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u77e5\u8bc6\u5e93/\u67e5\u770b\u77e5\u8bc6\u5e93\u6587\u4ef6\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_knowledge_files.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_knowledge_files",
+    "route": "developer_guides_list_knowledge_files",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5bf9\u8bdd/\u53d6\u6d88\u8fdb\u884c\u4e2d\u7684\u5bf9\u8bdd",
+    "md_url": "https://docs.coze.cn/developer_guides_chat_cancel.md",
+    "html_url": "https://docs.coze.cn/developer_guides_chat_cancel",
+    "route": "developer_guides_chat_cancel",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u6267\u884c\u5de5\u4f5c\u6d41\uff08\u6d41\u5f0f\u54cd\u5e94\uff09",
+    "md_url": "https://docs.coze.cn/developer_guides_workflow_stream_run.md",
+    "html_url": "https://docs.coze.cn/developer_guides_workflow_stream_run",
+    "route": "developer_guides_workflow_stream_run",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u6062\u590d\u8fd0\u884c\u5de5\u4f5c\u6d41\uff08\u6d41\u5f0f\u54cd\u5e94\uff09",
+    "md_url": "https://docs.coze.cn/developer_guides_workflow_resume.md",
+    "html_url": "https://docs.coze.cn/developer_guides_workflow_resume",
+    "route": "developer_guides_workflow_resume",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u6062\u590d\u8fd0\u884c\u5de5\u4f5c\u6d41",
+    "md_url": "https://docs.coze.cn/developer_guides_resume_workflow.md",
+    "html_url": "https://docs.coze.cn/developer_guides_resume_workflow",
+    "route": "developer_guides_resume_workflow",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u67e5\u8be2\u5de5\u4f5c\u6d41\u5f02\u6b65\u8fd0\u884c\u7ed3\u679c",
+    "md_url": "https://docs.coze.cn/developer_guides_workflow_history.md",
+    "html_url": "https://docs.coze.cn/developer_guides_workflow_history",
+    "route": "developer_guides_workflow_history",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/OAuth \u8bbe\u5907\u6388\u6743",
+    "md_url": "https://docs.coze.cn/developer_guides_oauth_device_code.md",
+    "html_url": "https://docs.coze.cn/developer_guides_oauth_device_code",
+    "route": "developer_guides_oauth_device_code",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/OAuth JWT \u6388\u6743\uff08\u5f00\u53d1\u8005\uff09",
+    "md_url": "https://docs.coze.cn/developer_guides_oauth_jwt.md",
+    "html_url": "https://docs.coze.cn/developer_guides_oauth_jwt",
+    "route": "developer_guides_oauth_jwt",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/OAuth JWT \u6388\u6743\uff08\u6e20\u9053\u573a\u666f\uff09",
+    "md_url": "https://docs.coze.cn/developer_guides_oauth_jwt_channel.md",
+    "html_url": "https://docs.coze.cn/developer_guides_oauth_jwt_channel",
+    "route": "developer_guides_oauth_jwt_channel",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/OAuth JWT \u6388\u6743\uff08\u8de8\u8d26\u53f7\u6388\u6743\u573a\u666f\uff09",
+    "md_url": "https://docs.coze.cn/developer_guides_oauth_jwt_collaborate.md",
+    "html_url": "https://docs.coze.cn/developer_guides_oauth_jwt_collaborate",
+    "route": "developer_guides_oauth_jwt_collaborate",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/OAuth JWT \u6388\u6743\uff08\u4f01\u4e1a\u7279\u6743\u5e94\u7528\uff09",
+    "md_url": "https://docs.coze.cn/developer_guides_oauth_jwt_privilege.md",
+    "html_url": "https://docs.coze.cn/developer_guides_oauth_jwt_privilege",
+    "route": "developer_guides_oauth_jwt_privilege",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/OAuth \u6388\u6743\uff08\u591a\u4eba\u534f\u4f5c\u573a\u666f\uff09",
+    "md_url": "https://docs.coze.cn/developer_guides_oauth_collaborate.md",
+    "html_url": "https://docs.coze.cn/developer_guides_oauth_collaborate",
+    "route": "developer_guides_oauth_collaborate",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u9274\u6743/\u9274\u6743\u5e38\u89c1\u95ee\u9898",
+    "md_url": "https://docs.coze.cn/developer_guides_authentication_faq.md",
+    "html_url": "https://docs.coze.cn/developer_guides_authentication_faq",
+    "route": "developer_guides_authentication_faq",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Python SDK/Python SDK \u6982\u8ff0",
+    "md_url": "https://docs.coze.cn/developer_guides_python_overview.md",
+    "html_url": "https://docs.coze.cn/developer_guides_python_overview",
+    "route": "developer_guides_python_overview",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Python SDK/\u5b89\u88c5 Python SDK",
+    "md_url": "https://docs.coze.cn/developer_guides_python_installation.md",
+    "html_url": "https://docs.coze.cn/developer_guides_python_installation",
+    "route": "developer_guides_python_installation",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Python SDK/\u914d\u7f6e\u8bbf\u95ee\u5bc6\u94a5",
+    "md_url": "https://docs.coze.cn/developer_guides_python_access_token.md",
+    "html_url": "https://docs.coze.cn/developer_guides_python_access_token",
+    "route": "developer_guides_python_access_token",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Python SDK/\u5feb\u901f\u5f00\u59cb",
+    "md_url": "https://docs.coze.cn/developer_guides_python_getting_started.md",
+    "html_url": "https://docs.coze.cn/developer_guides_python_getting_started",
+    "route": "developer_guides_python_getting_started",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Chat SDK/Chat SDK \u6982\u8ff0",
+    "md_url": "https://docs.coze.cn/developer_guides_web_sdk_overview.md",
+    "html_url": "https://docs.coze.cn/developer_guides_web_sdk_overview",
+    "route": "developer_guides_web_sdk_overview",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Chat SDK/\u5b89\u88c5\u5e76\u4f7f\u7528 Chat SDK",
+    "md_url": "https://docs.coze.cn/developer_guides_install_web_sdk.md",
+    "html_url": "https://docs.coze.cn/developer_guides_install_web_sdk",
+    "route": "developer_guides_install_web_sdk",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Chat SDK/Chat SDK \u53d1\u5e03\u5386\u53f2",
+    "md_url": "https://docs.coze.cn/developer_guides_web_sdk_changelog.md",
+    "html_url": "https://docs.coze.cn/developer_guides_web_sdk_changelog",
+    "route": "developer_guides_web_sdk_changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Chat SDK/\uff08\u5386\u53f2\u7248\u672c\uff09Chat SDK",
+    "md_url": "https://docs.coze.cn/developer_guides_web_sdk.md",
+    "html_url": "https://docs.coze.cn/developer_guides_web_sdk",
+    "route": "developer_guides_web_sdk",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Node.js SDK/Node.js SDK \u6982\u8ff0",
+    "md_url": "https://docs.coze.cn/developer_guides_nodejs_overview.md",
+    "html_url": "https://docs.coze.cn/developer_guides_nodejs_overview",
+    "route": "developer_guides_nodejs_overview",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Node.js SDK/\u5b89\u88c5 Node.js SDK",
+    "md_url": "https://docs.coze.cn/developer_guides_nodejs_install.md",
+    "html_url": "https://docs.coze.cn/developer_guides_nodejs_install",
+    "route": "developer_guides_nodejs_install",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Node.js SDK/\u914d\u7f6e\u8bbf\u95ee\u5bc6\u94a5",
+    "md_url": "https://docs.coze.cn/developer_guides_nodejs_access_token.md",
+    "html_url": "https://docs.coze.cn/developer_guides_nodejs_access_token",
+    "route": "developer_guides_nodejs_access_token",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Node.js SDK/\u5feb\u901f\u5f00\u59cb",
+    "md_url": "https://docs.coze.cn/developer_guides_nodejs_getting_started.md",
+    "html_url": "https://docs.coze.cn/developer_guides_nodejs_getting_started",
+    "route": "developer_guides_nodejs_getting_started",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6e20\u9053/\u66f4\u65b0\u5ba1\u6838\u7ed3\u679c",
+    "md_url": "https://docs.coze.cn/developer_guides_update_review_result.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_review_result",
+    "route": "developer_guides_update_review_result",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u6267\u884c\u5bf9\u8bdd\u6d41",
+    "md_url": "https://docs.coze.cn/developer_guides_workflow_chat.md",
+    "html_url": "https://docs.coze.cn/developer_guides_workflow_chat",
+    "route": "developer_guides_workflow_chat",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u77e5\u8bc6\u5e93/\u67e5\u770b\u77e5\u8bc6\u5e93\u6587\u4ef6\u4e0a\u4f20\u8fdb\u5ea6",
+    "md_url": "https://docs.coze.cn/developer_guides_get_dataset_progress.md",
+    "html_url": "https://docs.coze.cn/developer_guides_get_dataset_progress",
+    "route": "developer_guides_get_dataset_progress",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u77e5\u8bc6\u5e93/\u66f4\u65b0\u77e5\u8bc6\u5e93\u56fe\u7247\u63cf\u8ff0",
+    "md_url": "https://docs.coze.cn/developer_guides_update_image_caption.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_image_caption",
+    "route": "developer_guides_update_image_caption",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u77e5\u8bc6\u5e93/\u67e5\u770b\u77e5\u8bc6\u5e93\u56fe\u7247\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_get_images.md",
+    "html_url": "https://docs.coze.cn/developer_guides_get_images",
+    "route": "developer_guides_get_images",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u77e5\u8bc6\u5e93/\u5220\u9664\u77e5\u8bc6\u5e93\u6587\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_delete_knowdge_files.md",
+    "html_url": "https://docs.coze.cn/developer_guides_delete_knowdge_files",
+    "route": "developer_guides_delete_knowdge_files",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Java SDK/Java SDK \u6982\u8ff0",
+    "md_url": "https://docs.coze.cn/developer_guides_java_overview.md",
+    "html_url": "https://docs.coze.cn/developer_guides_java_overview",
+    "route": "developer_guides_java_overview",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Java SDK/\u5b89\u88c5 Java SDK",
+    "md_url": "https://docs.coze.cn/developer_guides_java_installation.md",
+    "html_url": "https://docs.coze.cn/developer_guides_java_installation",
+    "route": "developer_guides_java_installation",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Java SDK/\u914d\u7f6e\u8bbf\u95ee\u5bc6\u94a5",
+    "md_url": "https://docs.coze.cn/developer_guides_java_access_token.md",
+    "html_url": "https://docs.coze.cn/developer_guides_java_access_token",
+    "route": "developer_guides_java_access_token",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Java SDK/\u5feb\u901f\u5f00\u59cb",
+    "md_url": "https://docs.coze.cn/developer_guides_java_getting_started.md",
+    "html_url": "https://docs.coze.cn/developer_guides_java_getting_started",
+    "route": "developer_guides_java_getting_started",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/ASR\u3001TTS \u4e0e\u97f3\u8272/\u67e5\u770b\u97f3\u8272\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_voices.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_voices",
+    "route": "developer_guides_list_voices",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/ASR\u3001TTS \u4e0e\u97f3\u8272/\u8bed\u97f3\u5408\u6210",
+    "md_url": "https://docs.coze.cn/developer_guides_text_to_speech.md",
+    "html_url": "https://docs.coze.cn/developer_guides_text_to_speech",
+    "route": "developer_guides_text_to_speech",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/ASR\u3001TTS \u4e0e\u97f3\u8272/\u8bed\u97f3\u8bc6\u522b",
+    "md_url": "https://docs.coze.cn/developer_guides_audio_transcriptions.md",
+    "html_url": "https://docs.coze.cn/developer_guides_audio_transcriptions",
+    "route": "developer_guides_audio_transcriptions",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/ASR\u3001TTS \u4e0e\u97f3\u8272/\u590d\u523b\u97f3\u8272",
+    "md_url": "https://docs.coze.cn/developer_guides_clone_voices.md",
+    "html_url": "https://docs.coze.cn/developer_guides_clone_voices",
+    "route": "developer_guides_clone_voices",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/RTC \u8bed\u97f3/\u521b\u5efa\u623f\u95f4",
+    "md_url": "https://docs.coze.cn/developer_guides_create_room.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_room",
+    "route": "developer_guides_create_room",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6e20\u9053/\u6dfb\u52a0\u53d1\u5e03\u5e73\u53f0",
+    "md_url": "https://docs.coze.cn/developer_guides_install_channel.md",
+    "html_url": "https://docs.coze.cn/developer_guides_install_channel",
+    "route": "developer_guides_install_channel",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Go SDK/Go SDK \u6982\u8ff0",
+    "md_url": "https://docs.coze.cn/developer_guides_go_overview.md",
+    "html_url": "https://docs.coze.cn/developer_guides_go_overview",
+    "route": "developer_guides_go_overview",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Go SDK/\u5b89\u88c5 Go SDK",
+    "md_url": "https://docs.coze.cn/developer_guides_go_installation.md",
+    "html_url": "https://docs.coze.cn/developer_guides_go_installation",
+    "route": "developer_guides_go_installation",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Go SDK/\u914d\u7f6e\u8bbf\u95ee\u5bc6\u94a5",
+    "md_url": "https://docs.coze.cn/developer_guides_go_access_token.md",
+    "html_url": "https://docs.coze.cn/developer_guides_go_access_token",
+    "route": "developer_guides_go_access_token",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Go SDK/\u5feb\u901f\u5f00\u59cb",
+    "md_url": "https://docs.coze.cn/developer_guides_go_getting_started.md",
+    "html_url": "https://docs.coze.cn/developer_guides_go_getting_started",
+    "route": "developer_guides_go_getting_started",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/API \u6559\u7a0b/\u5982\u4f55\u5b9e\u73b0\u4f1a\u8bdd\u9694\u79bb",
+    "md_url": "https://docs.coze.cn/developer_guides_session_isolation.md",
+    "html_url": "https://docs.coze.cn/developer_guides_session_isolation",
+    "route": "developer_guides_session_isolation",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/WebSocket \u8bed\u97f3/\u53cc\u5411\u6d41\u5f0f\u8bed\u97f3\u8bc6\u522b",
+    "md_url": "https://docs.coze.cn/developer_guides_asr_api.md",
+    "html_url": "https://docs.coze.cn/developer_guides_asr_api",
+    "route": "developer_guides_asr_api",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/WebSocket \u8bed\u97f3/\u53cc\u5411\u6d41\u5f0f\u8bed\u97f3\u8bc6\u522b\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_asr_event.md",
+    "html_url": "https://docs.coze.cn/developer_guides_asr_event",
+    "route": "developer_guides_asr_event",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/WebSocket \u8bed\u97f3/\u53cc\u5411\u6d41\u5f0f\u8bed\u97f3\u5408\u6210",
+    "md_url": "https://docs.coze.cn/developer_guides_tts_api.md",
+    "html_url": "https://docs.coze.cn/developer_guides_tts_api",
+    "route": "developer_guides_tts_api",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/WebSocket \u8bed\u97f3/\u53cc\u5411\u6d41\u5f0f\u8bed\u97f3\u5408\u6210\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_tts_event.md",
+    "html_url": "https://docs.coze.cn/developer_guides_tts_event",
+    "route": "developer_guides_tts_event",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/WebSocket \u8bed\u97f3/\u53cc\u5411\u6d41\u5f0f\u8bed\u97f3\u5bf9\u8bdd",
+    "md_url": "https://docs.coze.cn/developer_guides_streaming_chat_api.md",
+    "html_url": "https://docs.coze.cn/developer_guides_streaming_chat_api",
+    "route": "developer_guides_streaming_chat_api",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
     "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/API \u6559\u7a0b/API \u8c03\u7528\u65b9\u5f0f",
     "md_url": "https://docs.coze.cn/dev_how_to_guides_api_call_methods_overview.md",
     "html_url": "https://docs.coze.cn/dev_how_to_guides_api_call_methods_overview",
     "route": "dev_how_to_guides_api_call_methods_overview",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/WebSocket \u8bed\u97f3/\u53cc\u5411\u6d41\u5f0f\u5bf9\u8bdd\u4e0a\u884c\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_streaming_chat_event.md",
+    "html_url": "https://docs.coze.cn/developer_guides_streaming_chat_event",
+    "route": "developer_guides_streaming_chat_event",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/WebSocket \u8bed\u97f3/\u53cc\u5411\u6d41\u5f0f\u5bf9\u8bdd\u4e0b\u884c\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_streaming_chat_downlink_event.md",
+    "html_url": "https://docs.coze.cn/developer_guides_streaming_chat_downlink_event",
+    "route": "developer_guides_streaming_chat_downlink_event",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/RTC \u8bed\u97f3/Realtime \u4e0a\u884c\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_signaling_uplink_event.md",
+    "html_url": "https://docs.coze.cn/developer_guides_signaling_uplink_event",
+    "route": "developer_guides_signaling_uplink_event",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/RTC \u8bed\u97f3/Realtime \u4e0b\u884c\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_signaling_downlink_event.md",
+    "html_url": "https://docs.coze.cn/developer_guides_signaling_downlink_event",
+    "route": "developer_guides_signaling_downlink_event",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/RTC \u8bed\u97f3/Realtime \u4e8b\u4ef6\u9519\u8bef\u7801",
+    "md_url": "https://docs.coze.cn/developer_guides_realtime_error_codes.md",
+    "html_url": "https://docs.coze.cn/developer_guides_realtime_error_codes",
+    "route": "developer_guides_realtime_error_codes",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Chat SDK/Chat SDK \u5e38\u89c1\u95ee\u9898",
+    "md_url": "https://docs.coze.cn/developer_guides_chat_sdk_faq.md",
+    "html_url": "https://docs.coze.cn/developer_guides_chat_sdk_faq",
+    "route": "developer_guides_chat_sdk_faq",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/API \u6559\u7a0b/\u5347\u7ea7\u4f01\u4e1a\u7248\u540e\u66f4\u65b0 API \u6388\u6743",
+    "md_url": "https://docs.coze.cn/developer_guides_update_authorization.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_authorization",
+    "route": "developer_guides_update_authorization",
     "kind": "doc"
   },
   {
@@ -4921,10 +5849,634 @@
   },
   {
     "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/API \u6559\u7a0b/\u901a\u8fc7\u63d2\u4ef6\u5b9e\u73b0\u56fe\u6587\u751f\u6210",
+    "md_url": "https://docs.coze.cn/developer_guides_zu9730yf.md",
+    "html_url": "https://docs.coze.cn/developer_guides_zu9730yf",
+    "route": "developer_guides_zu9730yf",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/API \u6559\u7a0b/\u9519\u8bef\u7801 4100/4101 \u95ee\u9898\u6392\u67e5",
+    "md_url": "https://docs.coze.cn/developer_guides_troubleshooting_4100_4101.md",
+    "html_url": "https://docs.coze.cn/developer_guides_troubleshooting_4100_4101",
+    "route": "developer_guides_troubleshooting_4100_4101",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/API \u6559\u7a0b/\u6a21\u578b\u80fd\u529b\u5dee\u5f02",
+    "md_url": "https://docs.coze.cn/developer_guides_model_api_param_support.md",
+    "html_url": "https://docs.coze.cn/developer_guides_model_api_param_support",
+    "route": "developer_guides_model_api_param_support",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Web SDK\uff08AI \u7f16\u7a0b\uff09",
+    "md_url": "https://docs.coze.cn/developer_guides_vibe_coding_websdk.md",
+    "html_url": "https://docs.coze.cn/developer_guides_vibe_coding_websdk",
+    "route": "developer_guides_vibe_coding_websdk",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Web SDK\uff08\u4f4e\u4ee3\u7801\uff09",
+    "md_url": "https://docs.coze.cn/developer_guides_ui_builder_web_sdk.md",
+    "html_url": "https://docs.coze.cn/developer_guides_ui_builder_web_sdk",
+    "route": "developer_guides_ui_builder_web_sdk",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/SDK \u53c2\u8003/Card SDK/\u5b89\u88c5\u5e76\u4f7f\u7528 Card SDK",
+    "md_url": "https://docs.coze.cn/developer_guides_card_sdk.md",
+    "html_url": "https://docs.coze.cn/developer_guides_card_sdk",
+    "route": "developer_guides_card_sdk",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u53d8\u91cf/\u8bbe\u7f6e\u7528\u6237\u53d8\u91cf\u7684\u503c",
+    "md_url": "https://docs.coze.cn/developer_guides_update_variable.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_variable",
+    "route": "developer_guides_update_variable",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u53d8\u91cf/\u83b7\u53d6\u7528\u6237\u53d8\u91cf\u7684\u503c",
+    "md_url": "https://docs.coze.cn/developer_guides_read_variable.md",
+    "html_url": "https://docs.coze.cn/developer_guides_read_variable",
+    "route": "developer_guides_read_variable",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u7528\u91cf\u9650\u989d/\u521b\u5efa\u7528\u91cf\u9650\u989d\u914d\u7f6e",
+    "md_url": "https://docs.coze.cn/developer_guides_create_device_quotas.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_device_quotas",
+    "route": "developer_guides_create_device_quotas",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u7528\u91cf\u9650\u989d/\u67e5\u8be2\u7528\u91cf\u9650\u989d\u914d\u7f6e",
+    "md_url": "https://docs.coze.cn/developer_guides_get_device_quotas.md",
+    "html_url": "https://docs.coze.cn/developer_guides_get_device_quotas",
+    "route": "developer_guides_get_device_quotas",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u7528\u91cf\u9650\u989d/\u66f4\u65b0\u7528\u91cf\u9650\u989d\u914d\u7f6e",
+    "md_url": "https://docs.coze.cn/developer_guides_update_device_quotas.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_device_quotas",
+    "route": "developer_guides_update_device_quotas",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u8d26\u5355\u4e0e\u6743\u76ca/\u5bfc\u51fa\u7ec8\u7aef\u7528\u6237\u8d26\u5355",
+    "md_url": "https://docs.coze.cn/developer_guides_create_bill_task.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_bill_task",
+    "route": "developer_guides_create_bill_task",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u8d26\u5355\u4e0e\u6743\u76ca/\u67e5\u8be2\u8d26\u5355\u6587\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_billing_file.md",
+    "html_url": "https://docs.coze.cn/developer_guides_billing_file",
+    "route": "developer_guides_billing_file",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u8d26\u5355\u4e0e\u6743\u76ca/\u67e5\u8be2\u5957\u9910\u6743\u76ca",
+    "md_url": "https://docs.coze.cn/developer_guides_get_benefit.md",
+    "html_url": "https://docs.coze.cn/developer_guides_get_benefit",
+    "route": "developer_guides_get_benefit",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u8d26\u5355\u4e0e\u6743\u76ca/\u8d26\u5355\u63a8\u9001\u56de\u8c03\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_billing_callback_message.md",
+    "html_url": "https://docs.coze.cn/developer_guides_billing_callback_message",
+    "route": "developer_guides_billing_callback_message",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u667a\u80fd\u4f53\u5220\u9664\u56de\u8c03\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_agent_delete_callback_messages.md",
+    "html_url": "https://docs.coze.cn/developer_guides_agent_delete_callback_messages",
+    "route": "developer_guides_agent_delete_callback_messages",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/\u58f0\u7eb9\u8bc6\u522b/\u521b\u5efa\u58f0\u7eb9\u7ec4",
+    "md_url": "https://docs.coze.cn/developer_guides_create_voiceprint_group.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_voiceprint_group",
+    "route": "developer_guides_create_voiceprint_group",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/\u58f0\u7eb9\u8bc6\u522b/\u67e5\u8be2\u58f0\u7eb9\u7ec4\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_voiceprint_group.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_voiceprint_group",
+    "route": "developer_guides_list_voiceprint_group",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/\u58f0\u7eb9\u8bc6\u522b/\u66f4\u65b0\u58f0\u7eb9\u7ec4\u4fe1\u606f",
+    "md_url": "https://docs.coze.cn/developer_guides_update_voiceprint_group.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_voiceprint_group",
+    "route": "developer_guides_update_voiceprint_group",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/\u58f0\u7eb9\u8bc6\u522b/\u5220\u9664\u58f0\u7eb9\u7ec4",
+    "md_url": "https://docs.coze.cn/developer_guides_delete_voiceprint_group.md",
+    "html_url": "https://docs.coze.cn/developer_guides_delete_voiceprint_group",
+    "route": "developer_guides_delete_voiceprint_group",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/\u58f0\u7eb9\u8bc6\u522b/\u521b\u5efa\u58f0\u7eb9",
+    "md_url": "https://docs.coze.cn/developer_guides_create_voiceprint.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_voiceprint",
+    "route": "developer_guides_create_voiceprint",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/\u58f0\u7eb9\u8bc6\u522b/\u66f4\u65b0\u58f0\u7eb9",
+    "md_url": "https://docs.coze.cn/developer_guides_update_voiceprint.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_voiceprint",
+    "route": "developer_guides_update_voiceprint",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/\u58f0\u7eb9\u8bc6\u522b/\u67e5\u8be2\u58f0\u7eb9\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_voiceprint.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_voiceprint",
+    "route": "developer_guides_list_voiceprint",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/\u58f0\u7eb9\u8bc6\u522b/\u5220\u9664\u58f0\u7eb9",
+    "md_url": "https://docs.coze.cn/developer_guides_delete_voiceprint.md",
+    "html_url": "https://docs.coze.cn/developer_guides_delete_voiceprint",
+    "route": "developer_guides_delete_voiceprint",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u97f3\u89c6\u9891/\u58f0\u7eb9\u8bc6\u522b/\u58f0\u7eb9\u7279\u5f81\u6bd4\u5bf9",
+    "md_url": "https://docs.coze.cn/developer_guides_identify_voiceprint.md",
+    "html_url": "https://docs.coze.cn/developer_guides_identify_voiceprint",
+    "route": "developer_guides_identify_voiceprint",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u67e5\u8be2\u8f93\u51fa\u8282\u70b9\u7684\u6267\u884c\u7ed3\u679c",
+    "md_url": "https://docs.coze.cn/developer_guides_get_node_execute_history_response.md",
+    "html_url": "https://docs.coze.cn/developer_guides_get_node_execute_history_response",
+    "route": "developer_guides_get_node_execute_history_response",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u67e5\u8be2\u5de5\u4f5c\u6d41\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_get_workflow_list.md",
+    "html_url": "https://docs.coze.cn/developer_guides_get_workflow_list",
+    "route": "developer_guides_get_workflow_list",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6587\u4ef6\u5939/\u67e5\u8be2\u6587\u4ef6\u5939\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_workspace_list_folder.md",
+    "html_url": "https://docs.coze.cn/developer_guides_workspace_list_folder",
+    "route": "developer_guides_workspace_list_folder",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6587\u4ef6\u5939/\u67e5\u8be2\u6587\u4ef6\u5939\u8be6\u60c5",
+    "md_url": "https://docs.coze.cn/developer_guides_workspace_read_folder.md",
+    "html_url": "https://docs.coze.cn/developer_guides_workspace_read_folder",
+    "route": "developer_guides_workspace_read_folder",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u63d0\u4ea4\u6d88\u606f\u8bc4\u4ef7",
+    "md_url": "https://docs.coze.cn/developer_guides_message_feedback.md",
+    "html_url": "https://docs.coze.cn/developer_guides_message_feedback",
+    "route": "developer_guides_message_feedback",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f1a\u8bdd\u4e0e\u6d88\u606f/\u5220\u9664\u6d88\u606f\u8bc4\u4ef7",
+    "md_url": "https://docs.coze.cn/developer_guides_delete_message_feedback.md",
+    "html_url": "https://docs.coze.cn/developer_guides_delete_message_feedback",
+    "route": "developer_guides_delete_message_feedback",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u56de\u8c03/\u521b\u5efa\u56de\u8c03\u5e94\u7528",
+    "md_url": "https://docs.coze.cn/developer_guides_create_callback_app.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_callback_app",
+    "route": "developer_guides_create_callback_app",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u56de\u8c03/\u4fee\u6539\u56de\u8c03\u5e94\u7528",
+    "md_url": "https://docs.coze.cn/developer_guides_update_callback_app.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_callback_app",
+    "route": "developer_guides_update_callback_app",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u56de\u8c03/\u67e5\u8be2\u56de\u8c03\u5e94\u7528\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_callback_app.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_callback_app",
+    "route": "developer_guides_list_callback_app",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u56de\u8c03/\u5220\u9664\u56de\u8c03\u5e94\u7528",
+    "md_url": "https://docs.coze.cn/developer_guides_delete_callback_app.md",
+    "html_url": "https://docs.coze.cn/developer_guides_delete_callback_app",
+    "route": "developer_guides_delete_callback_app",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u56de\u8c03/\u8ba2\u9605\u56de\u8c03\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_subscribe_callback_message.md",
+    "html_url": "https://docs.coze.cn/developer_guides_subscribe_callback_message",
+    "route": "developer_guides_subscribe_callback_message",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u56de\u8c03/\u67e5\u8be2\u5df2\u8ba2\u9605\u7684\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_list_subscribed_callback_message.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_subscribed_callback_message",
+    "route": "developer_guides_list_subscribed_callback_message",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u56de\u8c03/\u53d6\u6d88\u8ba2\u9605\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_unsubscribe_callback_message.md",
+    "html_url": "https://docs.coze.cn/developer_guides_unsubscribe_callback_message",
+    "route": "developer_guides_unsubscribe_callback_message",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u67e5\u8be2\u5de5\u4f5c\u6d41\u57fa\u672c\u4fe1\u606f",
+    "md_url": "https://docs.coze.cn/developer_guides_get_workflow_info.md",
+    "html_url": "https://docs.coze.cn/developer_guides_get_workflow_info",
+    "route": "developer_guides_get_workflow_info",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u67e5\u8be2\u5de5\u4f5c\u6d41\u7684\u7248\u672c\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_workflow_version.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_workflow_version",
+    "route": "developer_guides_list_workflow_version",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u5f00\u542f\u6216\u5173\u95ed\u5de5\u4f5c\u6d41\u591a\u4eba\u534f\u4f5c",
+    "md_url": "https://docs.coze.cn/developer_guides_switch_workflow_develop_mode.md",
+    "html_url": "https://docs.coze.cn/developer_guides_switch_workflow_develop_mode",
+    "route": "developer_guides_switch_workflow_develop_mode",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u667a\u80fd\u4f53\u548c\u5e94\u7528/\u667a\u80fd\u4f53\u4e0b\u67b6\u56de\u8c03\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_agent_unpublished_callback_messages.md",
+    "html_url": "https://docs.coze.cn/developer_guides_agent_unpublished_callback_messages",
+    "route": "developer_guides_agent_unpublished_callback_messages",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f01\u4e1a/\u7ec4\u7ec7/\u6210\u5458\u7ba1\u7406\uff08\u706b\u5c71 API\uff09",
+    "md_url": "https://docs.coze.cn/developer_guides_create_coze_user.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_coze_user",
+    "route": "developer_guides_create_coze_user",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f01\u4e1a/\u7ec4\u7ec7/\u6dfb\u52a0\u4f01\u4e1a\u6210\u5458",
+    "md_url": "https://docs.coze.cn/developer_guides_add_enterprise_member.md",
+    "html_url": "https://docs.coze.cn/developer_guides_add_enterprise_member",
+    "route": "developer_guides_add_enterprise_member",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f01\u4e1a/\u7ec4\u7ec7/\u4fee\u6539\u4f01\u4e1a\u5458\u5de5\u7684\u89d2\u8272",
+    "md_url": "https://docs.coze.cn/developer_guides_update_enterprise_people.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_enterprise_people",
+    "route": "developer_guides_update_enterprise_people",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6e20\u9053/\u7ed1\u5b9a\u8bbe\u5907",
+    "md_url": "https://docs.coze.cn/developer_guides_bind_connector_config.md",
+    "html_url": "https://docs.coze.cn/developer_guides_bind_connector_config",
+    "route": "developer_guides_bind_connector_config",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u7a7a\u95f4/\u521b\u5efa\u5de5\u4f5c\u7a7a\u95f4",
+    "md_url": "https://docs.coze.cn/developer_guides_create_workspace.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_workspace",
+    "route": "developer_guides_create_workspace",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u7a7a\u95f4/\u67e5\u770b\u7a7a\u95f4\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_workspace.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_workspace",
+    "route": "developer_guides_list_workspace",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u7a7a\u95f4/\u4fee\u6539\u5de5\u4f5c\u7a7a\u95f4\u57fa\u672c\u4fe1\u606f",
+    "md_url": "https://docs.coze.cn/developer_guides_update_workspace_info.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_workspace_info",
+    "route": "developer_guides_update_workspace_info",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u7a7a\u95f4/\u67e5\u770b\u7a7a\u95f4\u6210\u5458\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_space_member.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_space_member",
+    "route": "developer_guides_list_space_member",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u7a7a\u95f4/\u6279\u91cf\u9080\u8bf7\u7528\u6237\u52a0\u5165\u7a7a\u95f4",
+    "md_url": "https://docs.coze.cn/developer_guides_add_space_member.md",
+    "html_url": "https://docs.coze.cn/developer_guides_add_space_member",
+    "route": "developer_guides_add_space_member",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u7a7a\u95f4/\u6279\u91cf\u79fb\u9664\u7a7a\u95f4\u4e2d\u7684\u7528\u6237",
+    "md_url": "https://docs.coze.cn/developer_guides_remove_space_member.md",
+    "html_url": "https://docs.coze.cn/developer_guides_remove_space_member",
+    "route": "developer_guides_remove_space_member",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f01\u4e1a/\u7ec4\u7ec7/\u79fb\u9664\u4f01\u4e1a\u6210\u5458",
+    "md_url": "https://docs.coze.cn/developer_guides_remove_enterprise_member.md",
+    "html_url": "https://docs.coze.cn/developer_guides_remove_enterprise_member",
+    "route": "developer_guides_remove_enterprise_member",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u6dfb\u52a0\u5de5\u4f5c\u6d41\u534f\u4f5c\u8005",
+    "md_url": "https://docs.coze.cn/developer_guides_add_workflow_collaborator.md",
+    "html_url": "https://docs.coze.cn/developer_guides_add_workflow_collaborator",
+    "route": "developer_guides_add_workflow_collaborator",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u5de5\u4f5c\u6d41/\u5220\u9664\u5de5\u4f5c\u6d41\u534f\u4f5c\u8005",
+    "md_url": "https://docs.coze.cn/developer_guides_remove_workflow_collaborator.md",
+    "html_url": "https://docs.coze.cn/developer_guides_remove_workflow_collaborator",
+    "route": "developer_guides_remove_workflow_collaborator",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u63d2\u4ef6/\u67e5\u8be2\u4ed8\u8d39\u63d2\u4ef6\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_plugin.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_plugin",
+    "route": "developer_guides_list_plugin",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u63d2\u4ef6/\u67e5\u8be2\u63d2\u4ef6\u5206\u7c7b",
+    "md_url": "https://docs.coze.cn/developer_guides_list_plugin_category.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_plugin_category",
+    "route": "developer_guides_list_plugin_category",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u63d2\u4ef6/\u67e5\u8be2\u63d2\u4ef6\u8be6\u60c5",
+    "md_url": "https://docs.coze.cn/developer_guides_get_plugin.md",
+    "html_url": "https://docs.coze.cn/developer_guides_get_plugin",
+    "route": "developer_guides_get_plugin",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u63d2\u4ef6/\u6279\u91cf\u67e5\u8be2\u63d2\u4ef6\u4fe1\u606f",
+    "md_url": "https://docs.coze.cn/developer_guides_batch_get_plugins_info.md",
+    "html_url": "https://docs.coze.cn/developer_guides_batch_get_plugins_info",
+    "route": "developer_guides_batch_get_plugins_info",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u63d2\u4ef6/\u8c03\u7528\u63d2\u4ef6\u5de5\u5177",
+    "md_url": "https://docs.coze.cn/developer_guides_call_plugin_tool.md",
+    "html_url": "https://docs.coze.cn/developer_guides_call_plugin_tool",
+    "route": "developer_guides_call_plugin_tool",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u63d2\u4ef6/\u7533\u8bf7\u63d2\u4ef6\u6269\u5bb9\u56de\u8c03\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_benefit_plugin_scale_requested.md",
+    "html_url": "https://docs.coze.cn/developer_guides_benefit_plugin_scale_requested",
+    "route": "developer_guides_benefit_plugin_scale_requested",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u63d2\u4ef6/\u63d2\u4ef6\u6269\u5bb9\u5230\u671f\u56de\u8c03\u4e8b\u4ef6",
+    "md_url": "https://docs.coze.cn/developer_guides_benefit_plugin_scale_expired.md",
+    "html_url": "https://docs.coze.cn/developer_guides_benefit_plugin_scale_expired",
+    "route": "developer_guides_benefit_plugin_scale_expired",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f01\u4e1a/\u7ec4\u7ec7/\u521b\u5efa\u7ec4\u7ec7",
+    "md_url": "https://docs.coze.cn/developer_guides_create_organization.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_organization",
+    "route": "developer_guides_create_organization",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f01\u4e1a/\u7ec4\u7ec7/\u4fee\u6539\u7ec4\u7ec7\u57fa\u672c\u4fe1\u606f",
+    "md_url": "https://docs.coze.cn/developer_guides_update_organization_info.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_organization_info",
+    "route": "developer_guides_update_organization_info",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f01\u4e1a/\u7ec4\u7ec7/\u67e5\u8be2\u7ec4\u7ec7\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_organization.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_organization",
+    "route": "developer_guides_list_organization",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f01\u4e1a/\u7ec4\u7ec7/\u6dfb\u52a0\u7ec4\u7ec7\u6210\u5458",
+    "md_url": "https://docs.coze.cn/developer_guides_add_organization_people.md",
+    "html_url": "https://docs.coze.cn/developer_guides_add_organization_people",
+    "route": "developer_guides_add_organization_people",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f01\u4e1a/\u7ec4\u7ec7/\u67e5\u8be2\u7ec4\u7ec7\u6210\u5458\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_list_organization_people.md",
+    "html_url": "https://docs.coze.cn/developer_guides_list_organization_people",
+    "route": "developer_guides_list_organization_people",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f01\u4e1a/\u7ec4\u7ec7/\u4fee\u6539\u7ec4\u7ec7\u6210\u5458\u89d2\u8272",
+    "md_url": "https://docs.coze.cn/developer_guides_update_organization_people.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update_organization_people",
+    "route": "developer_guides_update_organization_people",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u4f01\u4e1a/\u7ec4\u7ec7/\u79fb\u9664\u7ec4\u7ec7\u6210\u5458",
+    "md_url": "https://docs.coze.cn/developer_guides_remove_organization_member.md",
+    "html_url": "https://docs.coze.cn/developer_guides_remove_organization_member",
+    "route": "developer_guides_remove_organization_member",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6570\u636e\u5e93/\u521b\u5efa\u6263\u5b50\u6570\u636e\u5e93",
+    "md_url": "https://docs.coze.cn/developer_guides_create_coze_database.md",
+    "html_url": "https://docs.coze.cn/developer_guides_create_coze_database",
+    "route": "developer_guides_create_coze_database",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6570\u636e\u5e93/\u63d2\u5165\u6570\u636e",
+    "md_url": "https://docs.coze.cn/developer_guides_insert.md",
+    "html_url": "https://docs.coze.cn/developer_guides_insert",
+    "route": "developer_guides_insert",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6570\u636e\u5e93/\u66f4\u65b0\u6570\u636e",
+    "md_url": "https://docs.coze.cn/developer_guides_update.md",
+    "html_url": "https://docs.coze.cn/developer_guides_update",
+    "route": "developer_guides_update",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6570\u636e\u5e93/\u67e5\u8be2\u6570\u636e",
+    "md_url": "https://docs.coze.cn/developer_guides_query.md",
+    "html_url": "https://docs.coze.cn/developer_guides_query",
+    "route": "developer_guides_query",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6570\u636e\u5e93/\u5220\u9664\u6570\u636e",
+    "md_url": "https://docs.coze.cn/developer_guides_delete.md",
+    "html_url": "https://docs.coze.cn/developer_guides_delete",
+    "route": "developer_guides_delete",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6570\u636e\u5e93/\u67e5\u8be2\u6570\u636e\u5e93\u5217\u8868",
+    "md_url": "https://docs.coze.cn/developer_guides_query_database_list.md",
+    "html_url": "https://docs.coze.cn/developer_guides_query_database_list",
+    "route": "developer_guides_query_database_list",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6570\u636e\u5e93/\u67e5\u8be2\u5f02\u6b65\u6267\u884c\u7ed3\u679c",
+    "md_url": "https://docs.coze.cn/developer_guides_get_async_task_result.md",
+    "html_url": "https://docs.coze.cn/developer_guides_get_async_task_result",
+    "route": "developer_guides_get_async_task_result",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/API \u53c2\u8003/\u6570\u636e\u5e93/\u5220\u9664\u6263\u5b50\u6570\u636e\u5e93",
+    "md_url": "https://docs.coze.cn/developer_guides_delete_coze_database.md",
+    "html_url": "https://docs.coze.cn/developer_guides_delete_coze_database",
+    "route": "developer_guides_delete_coze_database",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
     "title": "\u5e38\u89c1\u95ee\u9898",
     "md_url": "https://docs.coze.cn/guides_FAQ.md",
     "html_url": "https://docs.coze.cn/guides_FAQ",
     "route": "guides_FAQ",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u4f4e\u4ee3\u7801",
+    "title": "\u5f00\u53d1\u5de5\u5177/Coze CLI",
+    "md_url": "https://docs.coze.cn/developer_guides_coze_cli.md",
+    "html_url": "https://docs.coze.cn/developer_guides_coze_cli",
+    "route": "developer_guides_coze_cli",
     "kind": "doc"
   },
   {

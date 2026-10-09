@@ -1,0 +1,1644 @@
+<!doctype html><html lang="en-us" class="antialiased leading-tight motion-safe:scroll-smooth" data-theme="dark"><head>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0a">
+
+    
+      
+      
+      
+        
+        
+        
+        
+        
+        
+      
+      <link rel="preload" as="image" imagesrcset="https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp?width=768&amp;name=Cover-Sep-23-2026-12-59-50-0086-PM.webp 768w,
+                         https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp?width=1280&amp;name=Cover-Sep-23-2026-12-59-50-0086-PM.webp 1280w,
+                         https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp?width=1600&amp;name=Cover-Sep-23-2026-12-59-50-0086-PM.webp 1600w,
+                         https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp?width=2048&amp;name=Cover-Sep-23-2026-12-59-50-0086-PM.webp 2048w" imagesizes="(min-width: 1024px) 1024px, 100vw" fetchpriority="high">
+    
+
+    
+
+<link rel="preload" as="font" type="font/woff2" href="//zencoder.ai/hubfs/raw_assets/public/forgood-tailwind-theme/css/fonts/inter-latin-wght-normal.woff2" crossorigin>
+
+
+
+    
+
+    
+      <title>What Is Agentic Engineering? Everything You Need To Know</title>
+    
+
+    
+      <link rel="shortcut icon" href="//zencoder.ai/hubfs/export.png">
+    
+
+    
+      <meta name="description" content="Learn what agentic engineering is and how you can use AI agents to automate development, improve software quality, and streamline delivery.">
+    
+
+    
+
+    
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://zencoder.ai/blog/agentic-engineering">
+    <meta property="og:title" content="What Is Agentic Engineering? Everything You Need To Know">
+    <meta property="og:description" content="Learn what agentic engineering is and how you can use AI agents to automate development, improve software quality, and streamline delivery.">
+    
+      <meta property="og:image" content="//zencoder.ai/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp">
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://zencoder.ai/blog/agentic-engineering">
+    <meta property="twitter:title" content="What Is Agentic Engineering? Everything You Need To Know">
+    <meta property="twitter:description" content="Learn what agentic engineering is and how you can use AI agents to automate development, improve software quality, and streamline delivery.">
+    
+      <meta property="twitter:image" content="//zencoder.ai/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp">
+    
+
+    <!-- Schema.org Structured Data -->
+    
+<!--
+  templateType: "none"
+  isAvailableForNewContent: false
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:description" content="Learn what agentic engineering is and how you can use AI agents to automate development, improve software quality, and streamline delivery.">
+    <meta property="og:title" content="What Is Agentic Engineering? Everything You Need To Know">
+    <meta name="twitter:description" content="Learn what agentic engineering is and how you can use AI agents to automate development, improve software quality, and streamline delivery.">
+    <meta name="twitter:title" content="What Is Agentic Engineering? Everything You Need To Know">
+
+    
+
+    
+
+    
+
+<link rel="stylesheet" href="//zencoder.ai/hubfs/hub_generated/template_assets/1/183886388261/1784548489352/template_tailwind-generated.min.css">
+
+    
+
+
+
+    
+<!--  Added by GoogleAnalytics4 integration -->
+
+
+
+<!-- /Added by GoogleAnalytics4 integration -->
+
+<!--  Added by GoogleTagManager integration -->
+
+
+<!-- /Added by GoogleTagManager integration -->
+
+
+
+<link rel="amphtml" href="http://zencoder.ai/blog/agentic-engineering?hs_amp=true">
+
+<meta property="og:image" content="//zencoder.ai/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp">
+<meta property="og:image:width" content="2420">
+<meta property="og:image:height" content="1210">
+<meta property="og:image:alt" content="Agentic Engineering Cover">
+<meta name="twitter:image" content="//zencoder.ai/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp">
+<meta name="twitter:image:alt" content="Agentic Engineering Cover">
+
+<meta property="og:url" content="http://zencoder.ai/blog/agentic-engineering">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="http://zencoder.ai/blog/agentic-engineering">
+
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/rss+xml" href="//zencoder.ai/blog/rss.xml">
+<meta name="twitter:domain" content="zencoder.ai">
+
+
+<meta http-equiv="content-language" content="en-us">
+
+
+
+
+
+
+  <meta name="generator" content="HubSpot"></head>
+  <body class="min-h-screen bg-background text-foreground pt-16">
+<!--  Added by GoogleTagManager integration -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBR53RSB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- /Added by GoogleTagManager integration -->
+
+    
+      <div data-global-resource-path="forgood-tailwind-theme/templates/partials/header.html"><div id="hs_cos_wrapper_module_17398143398242" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+<header class="fixed w-full top-0 isolate z-50 bg-background" x-data="globalNav">
+  
+  <nav aria-label="Main navigation" class="container-page flex items-center justify-between py-4" :inert="mobileOpen">
+    
+    
+    <div class="flex flex-1 relative" x-data="navLogo" @contextmenu="onContext($event)">
+      <a href="/" class="-m-1.5 p-1.5">
+        <span class="sr-only">Zencoder</span>
+        <svg id="zc-brand-source" class="h-7 w-auto" viewbox="0 0 258 49" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#e65c2c" data-zc-mark>
+            <path d="M20.463 33.724c-.624-2.107-1.68-4.61-3.838-5.532-2.187-.852-4.678.163-6.468 1.453-1.342.986-2.514 2.299-3.133 3.874-.21.537-.356 1.097-.426 1.663-.087.566-.163 1.138-.151 1.715.064 3.74 2.082 7.329 4.853 9.762 1.51 1.289 3.464 2.474 5.54 2.328 3.313-.338 3.949-4.429 4.305-7.084.152-1.097.158-2.205.105-3.308-.087-1.651-.338-3.279-.793-4.872Z" />
+            <path d="M39.699 34.587c-.998-.484-2.048-.834-3.115-1.126-1.592-.426-3.225-.694-4.882-.753-2.193-.058-4.899.17-6.445 1.943-1.487 1.815-1.289 4.505-.612 6.606.525 1.581 1.411 3.098 2.718 4.177.443.362.933.677 1.452.922.513.257 1.032.508 1.587.677 3.575 1.097 7.611.286 10.778-1.599 1.686-1.033 3.424-2.532 3.92-4.557.7-3.256-2.986-5.123-5.407-6.284Z" />
+            <path d="M49.241 16.616c-.466-1.926-1.347-4.044-3.114-5.141-2.876-1.675-5.792 1.26-7.647 3.198-.77.799-1.429 1.686-2.03 2.613-.898 1.383-1.656 2.854-2.222 4.406-.729 2.071-1.353 4.72-.146 6.728 1.266 1.972 3.879 2.62 6.084 2.626 1.668-.006 3.383-.385 4.812-1.295.484-.309.933-.677 1.324-1.097.402-.409.799-.829 1.131-1.296 2.147-3.063 2.626-7.153 1.808-10.754Z" />
+            <path d="M30.88 18.115c2.269-.595 3.686-2.882 4.374-4.977.507-1.587.676-3.337.256-4.977-.146-.554-.356-1.096-.63-1.598-.262-.508-.536-1.016-.886-1.477C31.743 2.098 28.004.383 24.33.044 22.353-.107 20.072.08 18.48 1.421c-2.485 2.223-.595 5.905.676 8.263.525.974 1.167 1.878 1.861 2.736 1.038 1.284 2.199 2.457 3.505 3.478 1.739 1.336 4.066 2.742 6.358 2.217Z" />
+            <path d="M11.632 25.59c1.54-.59 3.015-1.331 4.392-2.259 1.808-1.243 3.861-3.023 4.071-5.363.134-2.34-1.598-4.399-3.383-5.7-1.353-.974-2.963-1.675-4.654-1.785-.571-.035-1.149 0-1.709.105-.566.093-1.132.198-1.68.385C5.134 12.187 2.34 15.215.888 18.611c-.758 1.832-1.283 4.067-.501 5.992 1.348 3.046 5.43 2.387 8.061 1.908 1.091-.198 2.147-.531 3.179-.922Z" />
+          </g>
+          <g fill="currentColor" class="hidden lg:inline" data-zc-word>
+            <path d="M65.316 30.03 77.081 20.222v-.391H65.602v-3.18h17.201v2.287L71.038 28.816v.689l11.765-.327v3.18H65.316v-2.328Z" />
+            <path d="M106.676 25.455H90.467c.286 2.387 1.814 4.324 6.614 4.324 4.165 0 5.629-1.237 5.88-2.544h3.721c-.187 2.737-2.893 5.432-9.601 5.432-8.3 0-10.715-4.131-10.715-8.04 0-5.024 3.85-8.297 10.458-8.297 6.609 0 9.858 2.987 9.858 7.848v1.278Zm-3.715-2.544c0-2.095-1.686-3.688-5.979-3.688-3.943 0-5.85 1.336-6.387 3.781h12.366Z" />
+            <path d="M111.319 16.651h4.071l-.064 4.603h.391c1.178-3.209 3.395-4.924 8.481-4.924 6.422 0 8.679 3.086 8.679 6.932v9.09h-4.071v-8.005c0-2.795-1.429-4.674-6.136-4.674-3.815 0-7.28 1.809-7.28 5.625v7.054h-4.071V16.651Z" />
+            <path d="M137.356 24.499c0-4.452 3.465-8.169 10.365-8.169s9.601 2.946 9.601 6.348l-3.722.327c-.035-1.78-1.592-3.495-5.815-3.495s-6.358 2.194-6.358 4.989c0 2.638 1.651 4.989 6.201 4.989s6.007-1.651 6.036-3.431l3.722.327c0 3.273-2.572 6.284-9.916 6.284s-10.114-4.195-10.114-8.169Z" />
+            <path d="M161.708 24.534c0-4.131 3.05-8.199 10.779-8.199s10.778 4.068 10.778 8.199-2.986 8.134-10.778 8.134-10.779-3.974-10.779-8.134Zm17.48 0c0-2.609-1.814-5.024-6.707-5.024-4.894 0-6.708 2.415-6.708 5.024 0 2.608 1.779 4.953 6.708 4.953 4.928 0 6.707-2.351 6.707-4.953Z" />
+            <path d="M187.588 24.312c0-4.417 3.593-7.977 10.108-7.977 4.421 0 6.509 1.237 7.337 3.402h.362v-7.585h4.071v20.2h-4.071c.064-1.143.128-2.736.157-4.032h-.39c-.764 2.573-2.882 4.353-7.589 4.353-6.357 0-9.98-3.308-9.98-8.361Zm17.801.187v-.478c0-2.48-2.292-4.511-7.122-4.511-4.421 0-6.643 2.065-6.643 4.802 0 3.18 2.444 5.181 6.614 5.181 4.766 0 7.151-2.859 7.151-4.994Z" />
+            <path d="M234.506 25.455h-16.209c.286 2.387 1.814 4.324 6.614 4.324 4.165 0 5.629-1.237 5.88-2.544h3.721c-.187 2.737-2.893 5.432-9.601 5.432-8.3 0-10.714-4.131-10.714-8.04 0-5.024 3.849-8.297 10.458-8.297 6.608 0 9.857 2.987 9.857 7.848v1.278Zm-3.721-2.544c0-2.095-1.686-3.688-5.979-3.688-3.943 0-5.85 1.336-6.387 3.781h12.366Z" />
+            <path d="M239.149 16.651h4.071l-.064 4.802h.391c.985-2.83 2.881-5.118 7.302-5.118 5.185 0 7.151 2.859 7.151 7.247 0 1.208-.064 2.287-.093 2.795h-3.815c.035-.385.064-1.05.064-1.622 0-3.367-1.114-5.082-4.479-5.082-4.165 0-6.451 3.238-6.451 6.739v5.94h-4.071V16.651Z" />
+          </g>
+        </svg>
+      </a>
+
+      
+      
+      
+    </div>
+
+    
+    <div class="flex lg:hidden items-center gap-6">
+      
+      <a href="https://auth.zencoder.ai/signup" class="btn btn-sm btn-default" data-utm-pass="true">
+        Get started
+      </a>
+      
+      
+      <button x-ref="menuBtn" @click="closedByBtn = mobileOpen; mobileOpen = !mobileOpen; mobileSubmenu = null" type="button" :aria-expanded="mobileOpen.toString()" aria-controls="mobile-menu" class="-m-2 inline-flex items-center justify-center rounded-md p-2 text-neutral-800 dark:text-neutral-300">
+        <span class="sr-only" x-text="mobileOpen ? 'Close main menu' : 'Open main menu'"></span>
+        <svg x-show="!mobileOpen" class="size-4" viewbox="0 0 12 12" fill="currentColor" aria-hidden="true">
+          <path d="m10.75,4H1.25c-.414,0-.75-.336-.75-.75s.336-.75.75-.75h9.5c.414,0,.75.336.75.75s-.336.75-.75.75Z" stroke-width="0"></path>
+          <path d="m10.75,9.5H1.25c-.414,0-.75-.336-.75-.75s.336-.75.75-.75h9.5c.414,0,.75.336.75.75s-.336.75-.75.75Z" stroke-width="0"></path>
+        </svg>
+        <svg x-show="mobileOpen" x-cloak class="size-4" viewbox="0 0 12 12" fill="currentColor" aria-hidden="true">
+          <path d="m2.25,10.5c-.192,0-.384-.073-.53-.22-.293-.293-.293-.768,0-1.061L9.22,1.72c.293-.293.768-.293,1.061,0s.293.768,0,1.061l-7.5,7.5c-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+          <path d="m9.75,10.5c-.192,0-.384-.073-.53-.22L1.72,2.78c-.293-.293-.293-.768,0-1.061s.768-.293,1.061,0l7.5,7.5c.293.293.293.768,0,1.061-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+        </svg>
+      </button>
+    </div>
+
+    
+    <div class="hidden lg:flex lg:gap-x-1">
+      
+      <div class="relative" x-data="{ t: null }" @mouseenter="clearTimeout(t); openMenu = 1" @mouseleave="t = setTimeout(() => { if (openMenu === 1) openMenu = null }, 150)" @focusin="clearTimeout(t); openMenu = 1" @focusout="$nextTick(() => { if (!$el.contains(document.activeElement)) openMenu = null })">
+        
+        
+        <button class="btn btn-sm btn-menu" :aria-expanded="(openMenu === 1).toString()" aria-haspopup="true" aria-controls="desktop-dropdown-1" @keydown.escape="openMenu = null">
+          Product
+        </button>
+        
+
+        
+        
+        
+        
+        
+        
+        <div id="desktop-dropdown-1" x-show="openMenu === 1" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-2" x-effect="if (openMenu === 1 &amp;&amp; $el.__lastMenu !== 1) { $el.__lastMenu = 1; $nextTick(() => { const r = $el.getBoundingClientRect(); const pad = 16; if (r.right > window.innerWidth - pad) $el.style.left = (window.innerWidth - pad - r.right + r.left - r.width / 2) + 'px'; else if (r.left < pad) $el.style.left = (pad - r.left + r.width / 2) + 'px'; else $el.style.left = ''; }) } else if (openMenu !== 1) { $el.__lastMenu = null; }" class="absolute left-1/2 -translate-x-1/2 top-full pt-2 z-50" @keydown.escape="openMenu = null; $el.closest('.relative')?.querySelector('button, a')?.focus()" x-cloak>
+          
+          <div class="bg-popover ring-1 ring-ring rounded-lg p-2 shadow-2xl flex flex-col gap-3">
+            
+            
+            
+            <div class="flex gap-3">
+              
+              
+              <div class="min-w-[12rem]">
+                
+                <ul>
+                  
+                  <li>
+                    <a href="//zencoder.ai/zenflow" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors group">
+                      Zenflow™ Code
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="//zencoder.ai/zenflow-work" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors group">
+                      Zenflow™ Work
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="//zencoder.ai/product/coding-agent" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors group">
+                      IDE Agents
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="//zencoder.ai/marketplace" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors group">
+                      Marketplace
+                      
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              
+
+              
+
+              
+              
+            </div>
+            
+
+            
+            
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="relative" x-data="{ t: null }" @mouseenter="clearTimeout(t); openMenu = 2" @mouseleave="t = setTimeout(() => { if (openMenu === 2) openMenu = null }, 150)" @focusin="clearTimeout(t); openMenu = 2" @focusout="$nextTick(() => { if (!$el.contains(document.activeElement)) openMenu = null })">
+        
+        
+        <a class="btn btn-sm btn-menu" href="//zencoder.ai/pricing">
+          Pricing
+        </a>
+        
+
+        
+        
+      </div>
+      
+      <div class="relative" x-data="{ t: null }" @mouseenter="clearTimeout(t); openMenu = 3" @mouseleave="t = setTimeout(() => { if (openMenu === 3) openMenu = null }, 150)" @focusin="clearTimeout(t); openMenu = 3" @focusout="$nextTick(() => { if (!$el.contains(document.activeElement)) openMenu = null })">
+        
+        
+        <button class="btn btn-sm btn-menu" :aria-expanded="(openMenu === 3).toString()" aria-haspopup="true" aria-controls="desktop-dropdown-3" @keydown.escape="openMenu = null">
+          Enterprise
+        </button>
+        
+
+        
+        
+        
+        
+        
+        
+        <div id="desktop-dropdown-3" x-show="openMenu === 3" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-2" x-effect="if (openMenu === 3 &amp;&amp; $el.__lastMenu !== 3) { $el.__lastMenu = 3; $nextTick(() => { const r = $el.getBoundingClientRect(); const pad = 16; if (r.right > window.innerWidth - pad) $el.style.left = (window.innerWidth - pad - r.right + r.left - r.width / 2) + 'px'; else if (r.left < pad) $el.style.left = (pad - r.left + r.width / 2) + 'px'; else $el.style.left = ''; }) } else if (openMenu !== 3) { $el.__lastMenu = null; }" class="absolute left-1/2 -translate-x-1/2 top-full pt-2 z-50" @keydown.escape="openMenu = null; $el.closest('.relative')?.querySelector('button, a')?.focus()" x-cloak>
+          
+          <div class="bg-popover ring-1 ring-ring rounded-lg p-2 shadow-2xl flex flex-col gap-3">
+            
+            
+            
+            <div class="flex gap-3">
+              
+              
+              <div class="min-w-[12rem]">
+                
+                <ul>
+                  
+                  <li>
+                    <a href="//zencoder.ai/enterprise" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors group">
+                      Zencoder for Enterprise
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="//zencoder.ai/solutions/engineering-managers" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors group">
+                      Zenflow for Engineering Managers
+                      
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              
+
+              
+
+              
+              
+            </div>
+            
+
+            
+            
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="relative" x-data="{ t: null }" @mouseenter="clearTimeout(t); openMenu = 4" @mouseleave="t = setTimeout(() => { if (openMenu === 4) openMenu = null }, 150)" @focusin="clearTimeout(t); openMenu = 4" @focusout="$nextTick(() => { if (!$el.contains(document.activeElement)) openMenu = null })">
+        
+        
+        <button class="btn btn-sm btn-menu" :aria-expanded="(openMenu === 4).toString()" aria-haspopup="true" aria-controls="desktop-dropdown-4" @keydown.escape="openMenu = null">
+          Resources
+        </button>
+        
+
+        
+        
+        
+        
+        
+        
+        <div id="desktop-dropdown-4" x-show="openMenu === 4" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-2" x-effect="if (openMenu === 4 &amp;&amp; $el.__lastMenu !== 4) { $el.__lastMenu = 4; $nextTick(() => { const r = $el.getBoundingClientRect(); const pad = 16; if (r.right > window.innerWidth - pad) $el.style.left = (window.innerWidth - pad - r.right + r.left - r.width / 2) + 'px'; else if (r.left < pad) $el.style.left = (pad - r.left + r.width / 2) + 'px'; else $el.style.left = ''; }) } else if (openMenu !== 4) { $el.__lastMenu = null; }" class="absolute left-1/2 -translate-x-1/2 top-full pt-2 z-50" @keydown.escape="openMenu = null; $el.closest('.relative')?.querySelector('button, a')?.focus()" x-cloak>
+          
+          <div class="bg-popover ring-1 ring-ring rounded-lg p-2 shadow-2xl flex flex-col gap-3">
+            
+            
+            
+            <div class="flex gap-3">
+              
+              
+              <div class="min-w-[12rem]">
+                
+                <ul>
+                  
+                  <li>
+                    <a href="https://docs.zencoder.ai/" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors group" target="_blank" rel="noopener noreferrer noopener">
+                      Docs
+                      
+<svg class="h-2.5 w-2.5 text-secondary-foreground/90 group-hover:text-secondary-foreground" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" fill="currentColor">
+  <path d="m1.75,11c-.192,0-.384-.073-.53-.22-.293-.293-.293-.768,0-1.061L9.543,1.396c.293-.293.768-.293,1.061,0s.293.768,0,1.061L2.28,10.78c-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+  <path d="m10.25,7.25c-.414,0-.75-.336-.75-.75V2.5h-4c-.414,0-.75-.336-.75-.75s.336-.75.75-.75h4.75c.414,0,.75.336.75.75v4.75c0,.414-.336.75-.75.75Z" stroke-width="0"></path>
+</svg>
+
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="https://discord.com/invite/zencoder" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors group" target="_blank" rel="noopener noreferrer noopener">
+                      Community
+                      
+<svg class="h-2.5 w-2.5 text-secondary-foreground/90 group-hover:text-secondary-foreground" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" fill="currentColor">
+  <path d="m1.75,11c-.192,0-.384-.073-.53-.22-.293-.293-.293-.768,0-1.061L9.543,1.396c.293-.293.768-.293,1.061,0s.293.768,0,1.061L2.28,10.78c-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+  <path d="m10.25,7.25c-.414,0-.75-.336-.75-.75V2.5h-4c-.414,0-.75-.336-.75-.75s.336-.75.75-.75h4.75c.414,0,.75.336.75.75v4.75c0,.414-.336.75-.75.75Z" stroke-width="0"></path>
+</svg>
+
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="https://zencoder.ai/blog" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors group">
+                      Blog
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="https://docs.zencoder.ai/changelog/home" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors group" target="_blank" rel="noopener noreferrer noopener">
+                      Changelog
+                      
+<svg class="h-2.5 w-2.5 text-secondary-foreground/90 group-hover:text-secondary-foreground" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" fill="currentColor">
+  <path d="m1.75,11c-.192,0-.384-.073-.53-.22-.293-.293-.293-.768,0-1.061L9.543,1.396c.293-.293.768-.293,1.061,0s.293.768,0,1.061L2.28,10.78c-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+  <path d="m10.25,7.25c-.414,0-.75-.336-.75-.75V2.5h-4c-.414,0-.75-.336-.75-.75s.336-.75.75-.75h4.75c.414,0,.75.336.75.75v4.75c0,.414-.336.75-.75.75Z" stroke-width="0"></path>
+</svg>
+
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              
+
+              
+              <div class="w-px bg-ring"></div>
+              
+
+              
+              
+              <div class="min-w-[12rem]">
+                
+                <ul>
+                  
+                  <li>
+                    <a href="//zencoder.ai/contact" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors">
+                      Contact us
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="//zencoder.ai/webinars" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors">
+                      Webinars
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="https://zencoder.ai/customers" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors">
+                      Customers
+                      
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="https://job-boards.greenhouse.io/zencoder" class="flex items-center gap-1 p-2 rounded-md text-sm/5 text-secondary-foreground hover:bg-accent hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer noopener">
+                      Careers
+                      
+<svg class="h-2.5 w-2.5" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" fill="currentColor">
+  <path d="m1.75,11c-.192,0-.384-.073-.53-.22-.293-.293-.293-.768,0-1.061L9.543,1.396c.293-.293.768-.293,1.061,0s.293.768,0,1.061L2.28,10.78c-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+  <path d="m10.25,7.25c-.414,0-.75-.336-.75-.75V2.5h-4c-.414,0-.75-.336-.75-.75s.336-.75.75-.75h4.75c.414,0,.75.336.75.75v4.75c0,.414-.336.75-.75.75Z" stroke-width="0"></path>
+</svg>
+
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              
+            </div>
+            
+
+            
+            
+            
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+
+    
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-3">
+      
+      <a href="https://auth.zencoder.ai/signin" class="btn btn-sm btn-ghost" data-utm-pass="true" target="_blank" rel="noopener noreferrer noopener">
+        Log in
+      </a>
+      
+      
+      <a href="https://auth.zencoder.ai/signup" class="btn btn-sm btn-default" data-utm-pass="true">
+        Get started
+      </a>
+      
+    </div>
+  </nav>
+
+  
+  <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile menu" x-show="mobileOpen" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="lg:hidden fixed inset-0 z-[60] bg-background h-dvh overscroll-contain touch-pan-y will-change-transform transform-gpu" @keydown.tab="onTabTrap($event)" x-cloak>
+    
+    <div class="flex flex-col h-full min-h-0">
+      
+      
+      <div class="flex items-center justify-between px-6 h-16">
+        <div class="flex-1">
+          
+        </div>
+        <button x-ref="closeBtn" @click="closedByBtn = true; mobileOpen = false; mobileSubmenu = null; openMenu = null" class="p-2 -m-2 text-muted-foreground hover:text-foreground">
+          <span class="sr-only">Close menu</span>
+          <svg class="size-4" viewbox="0 0 12 12" fill="currentColor" aria-hidden="true">
+            <path d="m2.25,10.5c-.192,0-.384-.073-.53-.22-.293-.293-.293-.768,0-1.061L9.22,1.72c.293-.293.768-.293,1.061,0s.293.768,0,1.061l-7.5,7.5c-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+            <path d="m9.75,10.5c-.192,0-.384-.073-.53-.22L1.72,2.78c-.293-.293-.293-.768,0-1.061s.768-.293,1.061,0l7.5,7.5c.293.293.293.768,0,1.061-.146.146-.338.22-.53.22Z" stroke-width="0"></path>
+          </svg>
+        </button>
+      </div>
+
+      
+      <div class="relative flex-1 min-h-0 overflow-hidden">
+        <div class="absolute inset-0 overflow-y-auto px-6 py-8 overscroll-contain" x-ref="menuScroll">
+        
+        
+        
+
+        
+        
+        </div>
+      </div>
+
+      
+      <div class="px-6 py-6 border-t border-border">
+        <div class="flex gap-3">
+          
+          <a href="https://auth.zencoder.ai/" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex-1 justify-center btn btn-secondary" data-utm-pass="true">
+            Log in
+          </a>
+          
+          
+          <a href="//zencoder.ai/contact/sales" @click="mobileOpen = false; mobileSubmenu = null; openMenu = null" class="flex-1 justify-center btn btn-default" data-utm-pass="true">
+            Talk to sales
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <noscript>
+    
+  </noscript>
+</header></div></div>
+    
+
+    <main id="main-content">
+      
+
+<div class="bg-background">
+  <div class="container-page section-py">
+    <div class="max-w-2xl mx-auto">
+      <div class="flex justify-center">
+        
+        
+          
+            
+              
+<!-- Breadcrumbs -->
+<div class="mb-8">
+  <nav class="flex" aria-label="Breadcrumb">
+    <ol class="flex items-center space-x-2">
+      <li>
+        <a href="//zencoder.ai/blog" class="font-medium tracking-wider uppercase text-xs text-muted-foreground hover:text-accent-foreground">Blog</a>
+      </li>
+      <li>
+        <span class="font-medium tracking-wider uppercase text-xs text-neutral-400 dark:text-neutral-600">/</span>
+      </li>
+      <li>
+        
+        <a href="//zencoder.ai/blog/tag/industry-insights" class="font-medium tracking-wider uppercase text-xs text-muted-foreground hover:text-accent-foreground">Industry Insights</a>
+        
+      </li>
+    </ol>
+  </nav>
+</div>
+
+            
+          
+        
+      </div>
+
+      <div class="mb-8">
+        <h1 class="h1 text-pretty text-center"><span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" data-hs-cos-general-type="meta_field">What Is Agentic Engineering? Everything You Need To Know</span></h1>
+      </div>
+
+      <div class="flex items-center justify-center mb-12">
+        <a href="//zencoder.ai/blog/author/sergio" class="text-center group">
+          <p class="text-sm text-muted-foreground group-hover:text-foreground">Sergio</p>
+          <p class="text-sm text-muted-foreground">
+            Published: <time datetime="2026-09-23">September 23, 2026</time>
+            
+          </p>
+        </a>
+      </div>
+    </div>
+
+    
+    
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    <div class="mb-12 max-w-5xl mx-auto">
+      <img src="https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp?width=1600&amp;height=900&amp;name=Cover-Sep-23-2026-12-59-50-0086-PM.webp" srcset="https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp?width=768&amp;name=Cover-Sep-23-2026-12-59-50-0086-PM.webp 768w, https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp?width=1280&amp;name=Cover-Sep-23-2026-12-59-50-0086-PM.webp 1280w, https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp?width=1600&amp;name=Cover-Sep-23-2026-12-59-50-0086-PM.webp 1600w, https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-59-50-0086-PM.webp?width=2048&amp;name=Cover-Sep-23-2026-12-59-50-0086-PM.webp 2048w" sizes="(min-width: 1024px) 1024px, 100vw" alt="Agentic Engineering Cover" width="1600" height="900" class="w-full h-auto rounded-2xl ring-1 ring-ring" loading="eager" fetchpriority="high" decoding="async">
+    </div>
+    
+
+    <div class="pb-16 border-b border-ring">
+      <article class="
+        prose prose-neutral dark:prose-invert prose-base lg:prose-lg
+        prose-headings:font-medium
+        prose-a:font-normal prose-a:[text-underline-position:under] prose-a:[text-decoration-thickness:from-font]
+        prose-pre:border prose-pre:border-ring prose-pre:text-sm prose-pre:text-wrap
+        article max-w-2xl mx-auto post__content text-pretty
+      ">
+        <span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><p style="line-height: 1.2;"><span>Agentic engineering is a software development approach that enables AI to execute complete engineering tasks independently instead of only </span><a href="/blog/types-of-prompt-engineering-methods-ai" rel="noopener" target="_blank"><u><span>generating code in response to prompts</span></u></a><span>.</span></p>
+<p style="line-height: 1.2;"><span>When done well, agentic engineering offloads the mechanical work of implementation, freeing you to focus on architecture and judgment rather than boilerplate.</span></p>
+<p style="line-height: 1.2;"><span>In this article, you'll learn about </span><strong><span>agentic engineering </span></strong><span>and the best practices for using it.</span></p>
+<p style="line-height: 1.2;"><span></span></p><div class="hs-cta-embed hs-cta-simple-placeholder hs-cta-embed-171760058926" style="max-width:100%; max-height:100%; width:700px;height:137.953125px; margin: 0 auto; display: block; margin-top: 20px; margin-bottom: 20px" data-hubspot-wrapper-cta-id="171760058926" align="center"> 
+ <a href="/hs/cta/wi/redirect?encryptedPayload=AVxigLKYZ8%2BHHWBuUznW9OhUOmKth3Jzk8VIJLXx8dpgh3QQXxqkhpa%2Fbv4E2hp%2FXykyFm38FJEAlzCwlQ%2Fpz0Tqld1Dax9u0mzNZIZM4lImwR3HlsuyagllbkzaLxWNXGGIIst89oo9A8NqVKNbh%2F40Y%2BkML7c2ek3CGSv9URACBNaUKsXbt81vUnMGMyrnLqnd28ABGZjvkQ%3D%3D&amp;webInteractiveContentId=171760058926&amp;portalId=46014728" target="_blank" rel="noopener" crossorigin="anonymous"> <img alt="Follow AI Trends with Zencoder" loading="lazy" src="https://no-cache.hubspot.com/cta/default/46014728/interactive-171760058926.png" style="height: 100%; width: 100%; object-fit: fill; margin: 0 auto; display: block; margin-top: 20px; margin-bottom: 20px" onerror="this.style.display='none'" align="center"> </a> 
+</div></span><p></p>
+<h2 style="line-height: 1.2;"><span>Key Takeaways</span></h2>
+<ul>
+<li><strong><span>Agentic engineering is about building complete workflows</span></strong><strong><span style="white-space-collapse: preserve;"><br></span></strong><a href="/blog/agentic-ai-vs-traditional-automation" rel="noopener" target="_blank"><u><span>Unlike traditional automation</span></u></a><span>, which executes predefined scripts, agentic engineering enables </span><a href="/blog/how-to-build-an-ai-agent" rel="noopener" target="_blank"><u><span>AI agents</span></u></a><span> to plan, implement, test, fix, and refine changes with minimal supervision, while developers retain control over final decisions.</span></li>
+<li><strong><span>Clear goals and the right context lead to better results</span></strong><span style="white-space-collapse: preserve;"><br></span><span>AI agents perform best when they receive detailed requirements, repository context, coding standards, and success criteria. The more precise the instructions, the more accurate and reliable the outcome.</span></li>
+<li><strong><span>Testing and human review are essential for production-quality software</span></strong><span style="white-space-collapse: preserve;"><br></span><span>Even though an AI agent can complete tasks independently, </span><a href="/glossary/test-automation-framework" rel="noopener" target="_blank"><u><span>automated testing</span></u></a><span>, security checks, and developer review are still needed to verify quality, catch issues, and ensure the implementation meets </span><a href="/blog/how-ai-can-bridge-the-gap-between-business-goals-and-developer-output" rel="noopener" target="_blank"><u><span>business requirements</span></u></a><span>.</span></li>
+<li><strong><span>Agentic engineering is for reliable software delivery, not rapid prototyping</span></strong><span style="white-space-collapse: preserve;"><br></span><span>While vibe coding excels at speed and experimentation, agentic engineering prioritizes planning, verification, documentation, security, and maintainability, so it’s better suited to production systems and long-term codebases.</span></li>
+<li><strong><span>The right platform makes adopting agentic engineering much easier</span></strong><span style="white-space-collapse: preserve;"><br></span><span>Platforms like </span><a href="/zenflow" rel="noopener" target="_blank"><u><span>Zencoder's Zenflow Code</span></u></a><span> provide structured workflows, </span><a href="/blog/multi-agent-orchestration" rel="noopener" target="_blank"><u><span>multi-agent orchestration</span></u></a><span>, built-in testing, repository intelligence, and approval controls, helping teams implement agentic engineering safely while improving development speed and code quality.</span></li>
+</ul>
+<h2 style="line-height: 1.2;"><span>What Is Agentic Engineering?</span></h2>
+<p style="line-height: 1.2;"><span>Agentic engineering is a software development approach where AI agents independently complete parts of the development process while working toward goals and within rules set by human developers.</span></p>
+<p style="line-height: 1.2; text-align: center;"><span style="white-space-collapse: preserve;"><img src="//zencoder.ai/hs-fs/hubfs/What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp?width=672&amp;height=286&amp;name=What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp" width="672" height="286" loading="lazy" alt="Agentic engineering example" style="height: auto; max-width: 100%; width: 672px;" srcset="//zencoder.ai/hs-fs/hubfs/What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp?width=336&amp;height=143&amp;name=What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp 336w, //zencoder.ai/hs-fs/hubfs/What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp?width=672&amp;height=286&amp;name=What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp 672w, //zencoder.ai/hs-fs/hubfs/What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp?width=1008&amp;height=429&amp;name=What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp 1008w, //zencoder.ai/hs-fs/hubfs/What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp?width=1344&amp;height=572&amp;name=What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp 1344w, //zencoder.ai/hs-fs/hubfs/What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp?width=1680&amp;height=715&amp;name=What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp 1680w, //zencoder.ai/hs-fs/hubfs/What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp?width=2016&amp;height=858&amp;name=What%20Is%20Agentic%20Engineering_%20Everything%20You%20Need%20To%20Know.webp 2016w" sizes="(max-width: 672px) 100vw, 672px"></span></p>
+<p style="line-height: 1.2;"><span>Instead of only generating code when prompted, these agents can:</span></p>
+<ul>
+<li><strong><span>Understand requirements</span></strong><span> to determine what needs to be built or changed</span></li>
+<li><strong><span>Plan tasks </span></strong><span>by breaking a complex goal into smaller, manageable steps</span></li>
+<li><strong><span>Modify multiple files </span></strong><span>across the codebase when the implementation requires it</span></li>
+<li><strong><span>Run commands and tests</span></strong><span> to verify that the changes work as expected</span></li>
+<li><strong><span>Identify and fix </span></strong><a href="/blog/coding-errors-and-how-ai-helps" rel="noopener" target="_blank"><strong><u><span>errors</span></u></strong></a><span> when tests fail, or problems are detected</span></li>
+<li><strong><span>Refine the implementation</span></strong><span> until it meets the defined requirements before presenting the final result</span></li>
+</ul>
+<p style="line-height: 1.2;"><span>This shifts the developer's role from writing every line of code to defining objectives, providing context, reviewing the agent's decisions, and approving the outcome.</span></p>
+<h2 style="line-height: 1.2;"><span>How Does Agentic Engineering Work?</span></h2>
+<p style="line-height: 1.2;"><span>Agentic engineering turns software development into a repeatable workflow that AI agents can </span><strong><span>execute with limited supervision</span></strong><span>. Here's how the process typically works:</span></p>
+<h3>1. Defining the Outcome</h3>
+<p style="line-height: 1.2;"><span>The first step is to </span><strong><span>clearly define the desired outcome</span></strong><span>. Instead of asking the </span><a href="/blog/ai-code-generation-for-debugging-how-developers-can-reduce-time-spent-on-fixes" rel="noopener" target="_blank"><u><span>AI to generate a specific piece of code</span></u></a><span>, you describe the complete objective, the constraints it must follow, and your idea of a successful result.</span></p>
+<p style="line-height: 1.2;"><span>For example, imagine a SaaS company wants customers to </span><strong><span>export account audit logs as a CSV file</span></strong><span>. A simple prompt like, "</span><em><span>Build a CSV export button,</span></em><span>" leaves too much open to interpretation. A better agentic task would include requirements such as:</span></p>
+<ul>
+<li><span>Only administrators can export audit logs</span></li>
+<li><span>Exports must respect the user's selected date range</span></li>
+<li><span>Timestamps must use the account's configured time zone</span></li>
+<li><span>The endpoint must support up to 100,000 records</span></li>
+<li><span>The interface should display export progress and notify users if the export fails</span></li>
+<li><span>The implementation must include automated tests and updated documentation</span></li>
+</ul>
+<p style="line-height: 1.2;"><span>With these requirements in place, the agent has enough context to begin working independently.</span></p>
+<h3>2. Gathering Repository Context</h3>
+<p style="line-height: 1.2;"><span>Before making any changes, the AI agent explores the existing codebase to understand how the project works. It examines:</span></p>
+<ul>
+<li><strong><span>Folder structure</span></strong><span> to understand how the project is organized</span></li>
+<li><strong><span>Configuration files</span></strong><span> to identify project settings and environment requirements</span></li>
+<li><strong><span>Dependencies </span></strong><span>to see which libraries and frameworks are already in use</span></li>
+<li><strong><span>Database models</span></strong><span> to understand how data is structured and stored</span></li>
+<li><strong><span>Coding conventions </span></strong><span>to match the project's existing style and patterns</span></li>
+<li><strong><span>Existing tests </span></strong><span>to learn how functionality is validated</span></li>
+<li><strong><span>Similar features </span></strong><span>that have already been implemented so it can reuse existing logic instead of creating duplicate solutions</span></li>
+</ul>
+<p style="line-height: 1.2;"><span>Continuing with the audit log export example, the agent might discover that the application </span><strong><span>already has a background job system</span></strong><span> for processing large reports. It could also find an authorization helper that protects administrator-only features and a shared utility for formatting dates and times.</span></p>
+<p style="line-height: 1.2;"><span>These help the agent build the new feature in a way that matches the rest of the application. Instead of creating duplicate code or introducing a different approach, it can reuse existing components, follow established patterns, and maintain a consistent architecture.</span></p>
+<p style="line-height: 1.2;"><span>Many teams make this process even more efficient by including machine-readable documentation, such as an </span><strong><span>AGENTS.md file</span></strong><span>. This file provides coding agents with project-specific instructions, such as how to set up the development environment, run tests, follow coding standards, and comply with repository-specific rules before making changes.</span></p>
+<h3>3. Creating an Implementation Plan</h3>
+<p style="line-height: 1.2;"><span>After understanding both the task and the codebase, the AI agent creates a </span><strong><span>step-by-step plan for completing the work</span></strong><span>. For the example task, the plan may include the following steps:</span></p>
+<ul>
+<li><span>Add an export request endpoint</span></li>
+<li><span>Reuse the existing administrator permission check</span></li>
+<li><span>Queue large exports through the project’s job system</span></li>
+<li><span>Generate the CSV with account-specific time-zone formatting</span></li>
+<li><span>Store the completed file using the current report-storage mechanism</span></li>
+<li><span>Add export status and download controls to the audit-log page</span></li>
+<li><span>Create unit, integration, and authorization tests</span></li>
+<li><span>Update the administrator documentation</span></li>
+</ul>
+<p style="line-height: 1.2;"><span>A plan gives the developer an opportunity to catch architectural mistakes before the agent modifies several files. It also gives the agent a stable checklist against which it can evaluate progress.</span></p>
+<h3>4. Executing the work</h3>
+<p style="line-height: 1.2;"><span>With a plan in place, the AI agent begins implementing the feature. Depending on the tools it has access to, it may be able to modify the codebase, run commands, test its changes, and update the project just as a developer would.</span></p>
+<p style="line-height: 1.2;"><span>During the audit log export task, the agent might:</span></p>
+<ul>
+<li><strong><span>Create a new branch </span></strong><span>to keep the changes isolated</span></li>
+<li><strong><span>Implement the export endpoint </span></strong><span>and related backend logic</span></li>
+<li><strong><span>Update the user interface </span></strong><span>with export status and download controls</span></li>
+<li><strong><span>Modify configuration files</span></strong><span> if new settings are required</span></li>
+<li><strong><span>Run database migrations</span></strong><span> if the feature introduces schema changes</span></li>
+<li><strong><span>Install approved dependencies</span></strong><span> if additional libraries are needed</span></li>
+<li><strong><span>Commit related changes </span></strong><span>as logical units of work</span></li>
+</ul>
+<p style="line-height: 1.2;"><span>The agent may also discover that the original plan needs adjustment. For example, it could determine that streaming the CSV directly from the API would cause request timeouts for large exports. Within its established boundaries, it can revise the plan and instead use the existing background job infrastructure.</span></p>
+<h3>5. Verifying and Improving the Implementation</h3>
+<p style="line-height: 1.2;"><span>Once the feature is complete, the </span><strong><span>AI agent verifies that everything works as expected.</span></strong><span> It runs tests and analyzes the results to identify and fix any issues before the work is considered complete.</span></p>
+<p style="line-height: 1.2;"><span>To verify the audit log export feature, the agent might:</span></p>
+<ul>
+<li><a href="/blog/automated-unit-testing" rel="noopener" target="_blank"><strong><u><span>Run unit tests</span></u></strong></a><span> to confirm individual components work correctly</span></li>
+<li><a href="/glossary/integration-testing" rel="noopener" target="_blank"><strong><u><span>Execute integration tests</span></u></strong></a><strong><span style="white-space-collapse: preserve;"> </span></strong><span>to ensure the feature works with the rest of the application</span></li>
+<li><strong><span>Compile the project</span></strong><span> to check for build errors</span></li>
+<li><strong><span>Run the linter and static analysis tools</span></strong><span> to identify code quality and potential reliability issues</span></li>
+<li><a href="/blog/ensuring-transparency-and-safety-in-ai-generated-code-for-large-teams" rel="noopener" target="_blank"><strong><u><span>Perform security checks</span></u></strong></a><strong><span style="white-space-collapse: preserve;"> </span></strong><span>to detect common vulnerabilities</span></li>
+<li><strong><span>Test the feature in the application </span></strong><span>to confirm it behaves as expected from a user's perspective</span></li>
+</ul>
+<p style="line-height: 1.2;"><span>For example, the first version of the audit log export feature might pass all unit tests but fail an integration test because timestamps are displayed incorrectly during daylight saving time transitions. The agent can analyze the test results, identify the faulty time zone conversion, update the implementation, and rerun the tests until the problem is resolved.</span></p>
+<h3>6. Reviewing the Complete Change</h3>
+<p style="line-height: 1.2;"><span>After completing its checks, the agent presents the implementation for human review. The output should include the code changes, a summary of major decisions, test results, known limitations, and any assumptions made during the task.</span></p>
+<p style="line-height: 1.2;"><span>The developer then reviews the implementation to confirm it </span><strong><span>meets both the technical and business requirements</span></strong><span>. Instead of only checking whether the code compiles, they should ask questions such as:</span></p>
+<ul>
+<li><span>Does the implementation satisfy the original business requirement?</span></li>
+<li><span>Does it follow the project's architecture and coding standards?</span></li>
+<li><span>Are authorization and security rules implemented correctly?</span></li>
+<li><span>Could the feature expose sensitive data or create security risks?</span></li>
+<li><span>Are errors and failure scenarios handled appropriately?</span></li>
+<li><span>Will the code be easy to maintain in the future?</span></li>
+<li><span>Do the tests cover the most important use cases and potential risks?</span></li>
+<li><span>Did the agent make any unnecessary or unrelated changes?</span></li>
+</ul>
+<h2 style="line-height: 1.2;"><span>Agentic Engineering Best Practices</span></h2>
+<p style="line-height: 1.2;"><span>Follow these</span><strong><span> best practices</span></strong><span> to help AI agents deliver more reliable and accurate outcomes:</span></p>
+<h3>1. Start With Clear Tasks</h3>
+<p style="line-height: 1.2;"><span>AI agents perform best when they have a well-defined objective. Clearly explain what needs to change, what should remain unchanged, how success will be measured, and when the agent should stop and ask for help. Start with low-risk tasks such as </span><strong><span>fixing reproducible bugs, adding tests, updating documentation, or completing small refactors</span></strong><span>. As the workflow proves reliable, gradually expand to more complex work.</span></p>
+<h3>2. Give the Agent the Right Context</h3>
+<p style="line-height: 1.2;"><span>Provide the information the agent needs to complete the task, such as setup instructions, coding standards, folder structure, testing requirements, and any restricted actions. Store these guidelines in the repository to </span><strong><span>keep them current </span></strong><span>as the project evolves, avoiding irrelevant information that could distract the agent from key requirements.</span></p>
+<h3>3. Rely on Automated Quality Checks</h3>
+<p style="line-height: 1.2;"><span>Use automated tests and validation tools instead of relying only on written instructions. Unit tests, integration tests, linting, type checking, security scans, and </span><a href="/glossary/performance-testing" rel="noopener" target="_blank"><u><span>performance tests</span></u></a><span> help </span><strong><span>verify the agent's work</span></strong><span>. Whenever possible, pair every important requirement with a corresponding test. This gives the agent clear feedback, reduces guesswork, and makes it easier to confirm the task was completed correctly.</span></p>
+<h3>4. Limit Access and Permissions</h3>
+<p style="line-height: 1.2;"><span>Give the agent only the tools and permissions it needs to complete the task. Run it in an isolated branch, container, or development environment where </span><strong><span>changes can be safely reviewed, tested, or discarded</span></strong><span>. Require human approval for high-risk actions such as modifying infrastructure, adding new dependencies, merging protected branches, or deploying to production.</span></p>
+<h3>5. Review How the Work Was Done</h3>
+<p style="line-height: 1.2;"><span>Review more than just the final code. Ask the agent to</span><strong><span> explain how it completed the task, what decisions it made, which tests it ran, and whether any uncertainties remain</span></strong><span>. If the same mistakes happen repeatedly, improve your repository documentation, automated checks, or task templates.</span></p>
+<h2 style="line-height: 1.2;"><span>Agentic Engineering vs. Vibe Coding</span></h2>
+<p style="line-height: 1.2;"><span>Although both agentic engineering and vibe coding use AI to generate code from </span><a href="/blog/ai-prompt-engineering-best-practices" rel="noopener" target="_blank"><u><span>natural-language prompts</span></u></a><span>, </span><strong><span>they follow distinct workflows</span></strong><span>. Here are the key differences between the two:</span></p>
+<div align="left">
+<div data-hs-responsive-table="true" style="overflow-x: auto; max-width: 100%; width: 100%;">
+<table style="border-collapse: collapse; width: 100%; border: 3px none currentcolor;"><colgroup><col style="width: 21%;"><col style="width: 37%;"><col style="width: 42%;"></colgroup>
+<tbody>
+<tr style="height: 35px;">
+<td style="vertical-align: top; width: 21%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2; text-align: center;"><strong><span>Category</span></strong></p>
+</td>
+<td style="vertical-align: top; width: 37%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2; text-align: center;"><strong><span>Agentic engineering</span></strong></p>
+</td>
+<td style="vertical-align: top; width: 42%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2; text-align: center;"><strong><span>Vibe coding</span></strong></p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="vertical-align: top; width: 21%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Primary goal</span></p>
+</td>
+<td style="vertical-align: top; width: 37%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Deliver a defined engineering outcome</span></p>
+</td>
+<td style="border-width: 1px; border-style: solid; border-color: #FFFFFF; vertical-align: top; width: 42%;">
+<p style="line-height: 1.2;"><span>Turn an idea into working software quickly</span></p>
+</td>
+</tr>
+<tr style="height: 49px;">
+<td style="vertical-align: top; width: 21%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Typical starting point</span></p>
+</td>
+<td style="vertical-align: top; width: 37%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>A specification, issue, acceptance criteria, or technical plan</span></p>
+</td>
+<td style="border-width: 1px; border-style: solid; border-color: #FFFFFF; vertical-align: top; width: 42%;">
+<p style="line-height: 1.2;"><span>A conversational description of what the user wants</span></p>
+</td>
+</tr>
+<tr style="height: 53px;">
+<td style="vertical-align: top; width: 21%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>AI role</span></p>
+</td>
+<td style="vertical-align: top; width: 37%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Plans and executes multi-step work within defined boundaries</span></p>
+</td>
+<td style="border-width: 1px; border-style: solid; border-color: #FFFFFF; vertical-align: top; width: 42%;">
+<p style="line-height: 1.2;"><span>Generates code in response to iterative natural-language prompts</span></p>
+</td>
+</tr>
+<tr style="height: 78px;">
+<td style="vertical-align: top; width: 21%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Human role</span></p>
+</td>
+<td style="vertical-align: top; width: 37%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Defines requirements, designs the environment, reviews decisions, and approves results</span></p>
+</td>
+<td style="border-width: 1px; border-style: solid; border-color: #FFFFFF; vertical-align: top; width: 42%;">
+<p style="line-height: 1.2;"><span>Guides the output based largely on whether the application appears to work</span></p>
+</td>
+</tr>
+<tr style="height: 72px;">
+<td style="vertical-align: top; width: 21%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Verification</span></p>
+</td>
+<td style="vertical-align: top; width: 37%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Uses tests, linters, type checks, security tools, logs, and acceptance criteria</span></p>
+</td>
+<td style="border-width: 1px; border-style: solid; border-color: #FFFFFF; vertical-align: top; width: 42%;">
+<p style="line-height: 1.2;"><span>Often relies on running the application and checking the visible result</span></p>
+</td>
+</tr>
+<tr style="height: 63px;">
+<td style="vertical-align: top; width: 21%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Planning</span></p>
+</td>
+<td style="vertical-align: top; width: 37%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Investigation and planning before or during implementation</span></p>
+</td>
+<td style="border-width: 1px; border-style: solid; border-color: #FFFFFF; vertical-align: top; width: 42%;">
+<p style="line-height: 1.2;"><span>Direct progression from idea to generated code</span></p>
+</td>
+</tr>
+<tr style="height: 58px;">
+<td style="vertical-align: top; width: 21%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Security</span></p>
+</td>
+<td style="vertical-align: top; width: 37%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Controlled permissions, secrets, dependencies, and sensitive actions</span></p>
+</td>
+<td style="border-width: 1px; border-style: solid; border-color: #FFFFFF; vertical-align: top; width: 42%;">
+<p style="line-height: 1.2;"><span>Limited focus on security during experimentation</span></p>
+</td>
+</tr>
+<tr style="height: 66px;">
+<td style="vertical-align: top; width: 21%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Documentation</span></p>
+</td>
+<td style="vertical-align: top; width: 37%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Recorded decisions and implementation details for future maintenance</span></p>
+</td>
+<td style="border-width: 1px; border-style: solid; border-color: #FFFFFF; vertical-align: top; width: 42%;">
+<p style="line-height: 1.2;"><span>Prototype-first approach with documentation as a lower priority</span></p>
+</td>
+</tr>
+<tr style="height: 126px;">
+<td style="vertical-align: top; width: 21%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Best use cases</span></p>
+</td>
+<td style="vertical-align: top; width: 37%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<ul>
+<li><span>Production features</span></li>
+<li><span>Refactoring</span></li>
+<li><span>Testing</span></li>
+<li><span>Migrations</span></li>
+<li><a href="https://zencoder.ai/blog/reduce-bugs-in-code"><u><span>Bug fixes</span></u></a></li>
+<li><span>Ongoing maintenance</span></li>
+</ul>
+</td>
+<td style="border-width: 1px; border-style: solid; border-color: #FFFFFF; vertical-align: top; width: 42%;">
+<ul>
+<li><span>Personal tools</span></li>
+<li><span>Mockups</span></li>
+<li><span>Experiments</span></li>
+<li><span>Demos</span></li>
+<li><span>Early prototypes</span></li>
+</ul>
+</td>
+</tr>
+<tr style="height: 52px;">
+<td style="vertical-align: top; width: 21%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Main risk</span></p>
+</td>
+<td style="vertical-align: top; width: 37%; border: 1px solid #cccccc; border-color: #FFFFFF;">
+<p style="line-height: 1.2;"><span>Incorrect changes caused by poor context or weak verification</span></p>
+</td>
+<td style="border-width: 1px; border-style: solid; border-color: #FFFFFF; vertical-align: top; width: 42%;">
+<p style="line-height: 1.2;"><span>Unsecured working code that’s difficult to maintain</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h2 style="line-height: 1.2;"><span>How Zencoder Supports Agentic Engineering</span></h2>
+<p style="line-height: 1.2;"><span>Agentic engineering requires a platform that can coordinate planning, implementation, testing, verification, and </span><a href="/blog/automated-code-review-tools" rel="noopener" target="_blank"><u><span>code reviews</span></u></a><span> while keeping developers in control. </span><a href="https://zencoder.ai/"><strong><u><span>Zencoder</span></u></strong></a><span> helps you adopt agentic engineering by combining </span><a href="/blog/best-ai-coding-assistants" rel="noopener" target="_blank"><u><span>AI coding assistance</span></u></a><span> with structured, </span><a href="/blog/multi-agent-ai-workflows" rel="noopener" target="_blank"><u><span>multi-agent engineering workflows</span></u></a><span>.</span></p>
+<p style="line-height: 1.2; text-align: center;"><span style="white-space-collapse: preserve;"><img src="//zencoder.ai/hs-fs/hubfs/image1%2028.webp?width=672&amp;height=336&amp;name=image1%2028.webp" width="672" height="336" loading="lazy" alt="Zencoder homepage" style="height: auto; max-width: 100%; width: 672px;" srcset="//zencoder.ai/hs-fs/hubfs/image1%2028.webp?width=336&amp;height=168&amp;name=image1%2028.webp 336w, //zencoder.ai/hs-fs/hubfs/image1%2028.webp?width=672&amp;height=336&amp;name=image1%2028.webp 672w, //zencoder.ai/hs-fs/hubfs/image1%2028.webp?width=1008&amp;height=504&amp;name=image1%2028.webp 1008w, //zencoder.ai/hs-fs/hubfs/image1%2028.webp?width=1344&amp;height=672&amp;name=image1%2028.webp 1344w, //zencoder.ai/hs-fs/hubfs/image1%2028.webp?width=1680&amp;height=840&amp;name=image1%2028.webp 1680w, //zencoder.ai/hs-fs/hubfs/image1%2028.webp?width=2016&amp;height=1008&amp;name=image1%2028.webp 2016w" sizes="(max-width: 672px) 100vw, 672px"></span></p>
+<p style="line-height: 1.2;"><span>One of the platform's core capabilities is </span><strong><span>Zenflow Code</span></strong><span>, a multi-agent AI engineering platform that helps development teams build, test, review, and deliver software more efficiently. Whether you're experimenting with AI-assisted development or building fully agentic engineering workflows, it provides the structure, automation, and safeguards you need to ship reliable software at scale.</span></p>
+<p style="line-height: 1.2;"><span>Key features include:</span></p>
+<ul>
+<li><a href="/blog/spec-driven-development" rel="noopener" target="_blank"><strong><u><span>Spec-driven workflows</span></u></strong></a><span> – Build from requirements, PRDs, and architecture documents so implementations stay aligned with project goals.</span></li>
+<li><strong><span>Multi-agent orchestration</span></strong><span> – Coordinate specialized AI agents for coding, testing, refactoring, and code reviews using shared project context.</span></li>
+<li><strong><span>Built-in verification</span></strong><span> – Automatically run tests and </span><a href="/blog/ai-code-review-tools" rel="noopener" target="_blank"><u><span>AI-powered code reviews</span></u></a><span> throughout the development process to catch issues before code reaches production.</span></li>
+<li><a href="/blog/parallel-agents-why-orchestration-not-bigger-models-is-the-real-ai-productivity-multiplier" rel="noopener" target="_blank"><strong><u><span>Parallel execution</span></u></strong></a><span> – Run multiple engineering tasks simultaneously in isolated environments to speed up feature development, bug fixes, and refactoring.</span></li>
+<li><strong><span>Repository intelligence</span></strong><span> – Give AI agents a deeper understanding of your codebase so they can produce more accurate implementations and maintain consistency across projects.</span></li>
+<li><strong><span>Governance and approval controls</span></strong><span> – Standardize engineering workflows with approval gates, role-based permissions, and human review for high-risk changes.</span></li>
+</ul>
+<p style="line-height: 1.2;"><a href="https://auth.zencoder.ai/signup" rel="noopener" target="_blank"><u><span>Try Zencoder for free today</span></u></a><span> and see how Zenflow Code can help your team build, test, and ship software with greater speed and confidence.</span></p>
+<p style="line-height: 1.2;"><span></span></p><div class="hs-cta-embed hs-cta-simple-placeholder hs-cta-embed-171760058884" style="max-width:100%; max-height:100%; width:700px;height:137.953125px; margin: 0 auto; display: block; margin-top: 20px; margin-bottom: 20px" data-hubspot-wrapper-cta-id="171760058884" align="center"> 
+ <a href="/hs/cta/wi/redirect?encryptedPayload=AVxigLJRkIJVsKY%2BkelQp5VOE5OoI9Usigx5h4ezQM11CW5jL4yJSrruUn6zlKQkf68bQFAG7gFXN%2Btfwy0pTTwT%2BIfzix5SC9maRTXIeOW1X6kaqYU0QqC4ZnlTs1n0NXjhNOrv6Vkna9RFHfGA%2BzO0jUCXRL3S%2BOVtJJWjdWrayAWMrUSjSVqJiljT1zgF7uYsH%2BKZ2N9Q%2Bw%3D%3D&amp;webInteractiveContentId=171760058884&amp;portalId=46014728" target="_blank" rel="noopener" crossorigin="anonymous"> <img alt="Transform Your Development Workflows with Zencoder" loading="lazy" src="https://no-cache.hubspot.com/cta/default/46014728/interactive-171760058884.png" style="height: 100%; width: 100%; object-fit: fill; margin: 0 auto; display: block; margin-top: 20px; margin-bottom: 20px" onerror="this.style.display='none'" align="center"> </a> 
+</div><p></p>
+<h2 style="line-height: 1.2;"><span>FAQ:</span></h2>
+<h3>1. Does agentic engineering replace software developers?</h3>
+<p style="line-height: 1.2;"><span>No. AI agents can automate tasks such as coding, </span><a href="/blog/testing-vs-debugging" rel="noopener" target="_blank"><u><span>testing, debugging</span></u></a><span>, and documentation, but developers are still responsible for defining requirements, reviewing results, making architectural decisions, and ensuring the software is secure and reliable.</span></p>
+<h3>2. Is agentic engineering the same as using an AI coding assistant?</h3>
+<p style="line-height: 1.2;"><span>Not exactly. An AI coding assistant may suggest code or answer questions without controlling the wider workflow. Agentic engineering equips the AI with the context and tooling needed to run end-to-end workflows, from planning and writing code to testing and debugging.</span></p>
+<h3>3. Can non-developers use agentic engineering?</h3>
+<p style="line-height: 1.2;"><span>Yes, but mostly for simpler projects such as prototypes or internal tools. Building production software still requires technical expertise to review the agent's work, ensure it is secure and maintainable, and confirm it meets business requirements.</span></p>
+<h3>4. What is agentic context engineering?</h3>
+<p style="line-height: 1.2;"><span>Broadly, it means engineering the context an agent works from, including its instructions, memory, and tool results, so that information stays accurate as a task runs. The term also refers more narrowly to ACE, a research framework where the agent refines its own context as an evolving “playbook.”</span></p>
+<h3>5. What is agentic data engineering?</h3>
+<p style="line-height: 1.2;"><span>Agentic data engineering is the use of AI agents to autonomously build data pipelines, write transformations, and monitor data quality from a high-level goal. The engineer sets the intent and reviews the results while the agent does the work.</span></p>
+      </article>
+    </div>
+
+    
+    <div class="mt-16">
+      <h2 class="h3 mb-8">Latest in Industry Insights</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        
+        
+          
+          
+            
+            
+            
+              
+                
+                
+                
+                <a href="//zencoder.ai/blog/build-your-own-ai-assistant" class="group relative block transition-colors duration-200" aria-label="Read more about How to Build Your Own AI Assistant: A Step-by-Step Guide">
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    
+  
+  <div class="aspect-2/1 overflow-hidden rounded ring-1 ring-ring">
+    <img src="https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-01-48-59-0428-PM.webp?width=800&amp;height=400&amp;name=Cover-Sep-23-2026-01-48-59-0428-PM.webp" srcset="https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-01-48-59-0428-PM.webp?width=400&amp;name=Cover-Sep-23-2026-01-48-59-0428-PM.webp 400w, https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-01-48-59-0428-PM.webp?width=600&amp;name=Cover-Sep-23-2026-01-48-59-0428-PM.webp 600w, https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-01-48-59-0428-PM.webp?width=800&amp;name=Cover-Sep-23-2026-01-48-59-0428-PM.webp 800w, https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-01-48-59-0428-PM.webp?width=1200&amp;name=Cover-Sep-23-2026-01-48-59-0428-PM.webp 1200w" sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw" alt="How to Build Your Own AI Assistant: A Step-by-Step Guide" width="800" height="400" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-103 transition-transform duration-300">
+  </div>
+  
+  <div class="py-6">
+    <div class="flex items-center gap-x-1">
+
+      
+      
+      
+      
+      <span class="relative z-10 text-sm text-muted-foreground">Industry Insights</span>
+      <span class="text-sm text-muted-foreground">•</span>
+      
+      
+      
+      
+      
+
+      
+      <span class="text-sm text-muted-foreground">
+        September 23, 2026
+      </span>
+      
+    </div>
+    <h3 class="mt-2 text-lg font-normal font-sans text-secondary-foreground group-hover:text-foreground transition-colors duration-300">
+      How to Build Your Own AI Assistant: A Step-by-Step Guide
+    </h3>
+  </div>
+</a>
+                
+              
+            
+              
+                
+                
+                
+                <a href="//zencoder.ai/blog/ai-agent-vs-mcp" class="group relative block transition-colors duration-200" aria-label="Read more about AI Agent vs. MCP: How They Differ and Work Together">
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    
+  
+  <div class="aspect-2/1 overflow-hidden rounded ring-1 ring-ring">
+    <img src="https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-01-07-16-2764-PM.webp?width=800&amp;height=400&amp;name=Cover-Sep-23-2026-01-07-16-2764-PM.webp" srcset="https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-01-07-16-2764-PM.webp?width=400&amp;name=Cover-Sep-23-2026-01-07-16-2764-PM.webp 400w, https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-01-07-16-2764-PM.webp?width=600&amp;name=Cover-Sep-23-2026-01-07-16-2764-PM.webp 600w, https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-01-07-16-2764-PM.webp?width=800&amp;name=Cover-Sep-23-2026-01-07-16-2764-PM.webp 800w, https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-01-07-16-2764-PM.webp?width=1200&amp;name=Cover-Sep-23-2026-01-07-16-2764-PM.webp 1200w" sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw" alt="AI Agent vs. MCP: How They Differ and Work Together" width="800" height="400" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-103 transition-transform duration-300">
+  </div>
+  
+  <div class="py-6">
+    <div class="flex items-center gap-x-1">
+
+      
+      
+      
+      
+      <span class="relative z-10 text-sm text-muted-foreground">Industry Insights</span>
+      <span class="text-sm text-muted-foreground">•</span>
+      
+      
+      
+      
+      
+
+      
+      <span class="text-sm text-muted-foreground">
+        September 23, 2026
+      </span>
+      
+    </div>
+    <h3 class="mt-2 text-lg font-normal font-sans text-secondary-foreground group-hover:text-foreground transition-colors duration-300">
+      AI Agent vs. MCP: How They Differ and Work Together
+    </h3>
+  </div>
+</a>
+                
+              
+            
+              
+            
+              
+                
+                
+                
+                <a href="//zencoder.ai/blog/vibe-coding-vs-agentic-coding" class="group relative block transition-colors duration-200" aria-label="Read more about Vibe Coding vs. Agentic Coding: 5 Key Differences in 2026">
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    
+  
+  <div class="aspect-2/1 overflow-hidden rounded ring-1 ring-ring">
+    <img src="https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-52-03-6031-PM.webp?width=800&amp;height=400&amp;name=Cover-Sep-23-2026-12-52-03-6031-PM.webp" srcset="https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-52-03-6031-PM.webp?width=400&amp;name=Cover-Sep-23-2026-12-52-03-6031-PM.webp 400w, https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-52-03-6031-PM.webp?width=600&amp;name=Cover-Sep-23-2026-12-52-03-6031-PM.webp 600w, https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-52-03-6031-PM.webp?width=800&amp;name=Cover-Sep-23-2026-12-52-03-6031-PM.webp 800w, https://zencoder.ai/hs-fs/hubfs/Cover-Sep-23-2026-12-52-03-6031-PM.webp?width=1200&amp;name=Cover-Sep-23-2026-12-52-03-6031-PM.webp 1200w" sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw" alt="Vibe Coding vs. Agentic Coding: 5 Key Differences in 2026" width="800" height="400" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-103 transition-transform duration-300">
+  </div>
+  
+  <div class="py-6">
+    <div class="flex items-center gap-x-1">
+
+      
+      
+      
+      
+      <span class="relative z-10 text-sm text-muted-foreground">Industry Insights</span>
+      <span class="text-sm text-muted-foreground">•</span>
+      
+      
+      
+      
+      
+
+      
+      <span class="text-sm text-muted-foreground">
+        September 23, 2026
+      </span>
+      
+    </div>
+    <h3 class="mt-2 text-lg font-normal font-sans text-secondary-foreground group-hover:text-foreground transition-colors duration-300">
+      Vibe Coding vs. Agentic Coding: 5 Key Differences in 2026
+    </h3>
+  </div>
+</a>
+                
+              
+            
+          
+        
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+    </main>
+
+    
+      <div data-global-resource-path="forgood-tailwind-theme/templates/partials/footer.html"><div id="hs_cos_wrapper_module_17376119765712" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+
+
+
+
+<footer class="relative overflow-hidden isolate">
+  <div class="bg-secondary border-y border-ring">
+    <div class="container-page">
+      <div class="py-32 flex flex-col items-center text-center gap-8">
+        <h2 class="h1">Build complex. Stay simple</h2>
+        
+        
+
+<div class="flex items-center justify-center gap-x-3">
+  
+    
+    
+
+    
+    
+
+    
+    
+    <a data-utm-pass="true" href="https://auth.zencoder.ai/signup" class="btn btn-default ">
+      
+      Get started
+      
+    </a>
+  
+    
+    
+
+    
+    
+      
+    
+
+    
+    
+    <a data-utm-pass="true" href="//zencoder.ai/contact/sales" class="btn btn-secondary ">
+      
+      Contact sales
+      
+        
+<svg class="h-2.5 w-2.5 ml-1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" fill="currentColor">
+  <path d="m4.25,11c-.192,0-.384-.073-.53-.22-.293-.293-.293-.768,0-1.061l3.72-3.72-3.72-3.72c-.293-.293-.293-.768,0-1.061s.768-.293,1.061,0l4.25,4.25c.293.293.293.768,0,1.061l-4.25,4.25c-.146.146-.338.22-.53.22Z"></path>
+</svg>
+
+      
+    </a>
+  
+</div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-card">
+    <div class="container-page">
+      <div class="py-16 md:grid md:grid-cols-3 md:gap-8 lg:grid-cols-5">
+        <div class="flex justify-start">
+          
+  <svg class="h-7 w-7 text-secondary-foreground" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Zencoder logo">
+    <g fill="currentColor">
+      <path d="M20.463 33.724c-.624-2.107-1.68-4.61-3.838-5.532-2.187-.852-4.678.163-6.468 1.453-1.342.986-2.514 2.299-3.133 3.874-.21.537-.356 1.097-.426 1.663-.087.566-.163 1.138-.151 1.715.064 3.74 2.082 7.329 4.853 9.762 1.51 1.289 3.464 2.474 5.54 2.328 3.313-.338 3.949-4.429 4.305-7.084.152-1.097.158-2.205.105-3.308-.087-1.651-.338-3.279-.793-4.872Z" />
+      <path d="M39.699 34.587c-.998-.484-2.048-.834-3.115-1.126-1.592-.426-3.225-.694-4.882-.753-2.193-.058-4.899.17-6.445 1.943-1.487 1.815-1.289 4.505-.612 6.606.525 1.581 1.411 3.098 2.718 4.177.443.362.933.677 1.452.922.513.257 1.032.508 1.587.677 3.575 1.097 7.611.286 10.778-1.599 1.686-1.033 3.424-2.532 3.92-4.557.7-3.256-2.986-5.123-5.407-6.284Z" />
+      <path d="M49.241 16.616c-.466-1.926-1.347-4.044-3.114-5.141-2.876-1.675-5.792 1.26-7.647 3.198-.77.799-1.429 1.686-2.03 2.613-.898 1.383-1.656 2.854-2.222 4.406-.729 2.071-1.353 4.72-.146 6.728 1.266 1.972 3.879 2.62 6.084 2.626 1.668-.006 3.383-.385 4.812-1.295.484-.309.933-.677 1.324-1.097.402-.409.799-.829 1.131-1.296 2.147-3.063 2.626-7.153 1.808-10.754Z" />
+      <path d="M30.88 18.115c2.269-.595 3.686-2.882 4.374-4.977.507-1.587.676-3.337.256-4.977-.146-.554-.356-1.096-.63-1.598-.262-.508-.536-1.016-.886-1.477C31.743 2.098 28.004.383 24.33.044 22.353-.107 20.072.08 18.48 1.421c-2.485 2.223-.595 5.905.676 8.263.525.974 1.167 1.878 1.861 2.736 1.038 1.284 2.199 2.457 3.505 3.478 1.739 1.336 4.066 2.742 6.358 2.217Z" />
+      <path d="M11.632 25.59c1.54-.59 3.015-1.331 4.392-2.259 1.808-1.243 3.861-3.023 4.071-5.363.134-2.34-1.598-4.399-3.383-5.7-1.353-.974-2.963-1.675-4.654-1.785-.571-.035-1.149 0-1.709.105-.566.093-1.132.198-1.68.385C5.134 12.187 2.34 15.215.888 18.611c-.758 1.832-1.283 4.067-.501 5.992 1.348 3.046 5.43 2.387 8.061 1.908 1.091-.198 2.147-.531 3.179-.922Z" />
+    </g>
+  </svg>
+
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 gap-8 md:col-span-2 md:mt-0 lg:col-span-4 lg:grid-cols-5">
+          
+            
+  <div>
+    <h3 class="text-sm/6 capitalize tracking-[.015em] text-muted-foreground font-normal">Product</h3>
+    <ul role="list" class="mt-2 space-y-2">
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/zenflow">
+            Zenflow™ Code
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/zenflow-work">
+            Zenflow™ Work
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/product/coding-agent">
+            IDE Agents
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/product/universal-ai-platform">
+            CLI
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/product/integrations">
+            Integrations
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/enterprise">
+            Enterprise
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/pricing">
+            Pricing
+          </a>
+        </li>
+      
+      
+    </ul>
+  </div>
+
+          
+            
+  <div>
+    <h3 class="text-sm/6 capitalize tracking-[.015em] text-muted-foreground font-normal">Resources</h3>
+    <ul role="list" class="mt-2 space-y-2">
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://docs.zencoder.ai/" target="_blank" rel="noopener noreferrer noopener">
+            Docs
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/marketplace">
+            Marketplace
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/newsletter">
+            Newsletter
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/webinars">
+            Webinars
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://status.zencoder.ai/" target="_blank" rel="noopener noreferrer noopener">
+            Status
+          </a>
+        </li>
+      
+      
+    </ul>
+  </div>
+
+          
+            
+  <div>
+    <h3 class="text-sm/6 capitalize tracking-[.015em] text-muted-foreground font-normal">Company</h3>
+    <ul role="list" class="mt-2 space-y-2">
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/about">
+            About
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://job-boards.greenhouse.io/zencoder" target="_blank" rel="noopener noreferrer noopener">
+            Careers
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/blog">
+            Blog
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/customers">
+            Customers
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/newsroom">
+            Newsroom
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/events">
+            Events
+          </a>
+        </li>
+      
+      
+    </ul>
+  </div>
+
+          
+            
+  <div>
+    <h3 class="text-sm/6 capitalize tracking-[.015em] text-muted-foreground font-normal">Legal</h3>
+    <ul role="list" class="mt-2 space-y-2">
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://zencoder.ai/legal/terms-of-service" target="_blank" rel="noopener noreferrer noopener">
+            Terms – Zencoder
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://zencoder.ai/legal/terms-of-service-zenflow" target="_blank" rel="noopener noreferrer noopener">
+            Terms – Zenflow
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://zencoder.ai/legal/privacy-policy" target="_blank" rel="noopener noreferrer noopener">
+            Privacy Policy
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://zencoder.ai/legal/acceptable-use-policy" target="_blank" rel="noopener noreferrer noopener">
+            Usage Policy
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://trust.forgood.ai/" target="_blank" rel="noopener noreferrer noopener">
+            Trust Center
+          </a>
+        </li>
+      
+      
+        <li>
+          <button type="button" class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors cursor-pointer" onclick="(function(){ var _hsp = window._hsp = window._hsp || []; _hsp.push(['showBanner']); })()">
+            Manage Cookies
+          </button>
+        </li>
+        <li>
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors flex items-center gap-2" href="#" data-acsb-custom-trigger="true" aria-label="Accessibility widget">
+            <span>Accessibility</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+          
+          
+  <div>
+    <h3 class="text-sm/6 capitalize tracking-[.015em] text-muted-foreground font-normal">Connect</h3>
+    <ul role="list" class="mt-2 space-y-2">
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="//zencoder.ai/contact">
+            Contact us
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://discord.com/invite/zencoder" target="_blank" rel="noopener noreferrer noopener">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://www.linkedin.com/company/zencoderai" target="_blank" rel="noopener noreferrer noopener">
+            LinkedIn
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://www.youtube.com/@zencoderai" target="_blank" rel="noopener noreferrer noopener">
+            YouTube
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          <a class="text-base/6 sm:text-sm/6 capitalize tracking-[.015em] text-secondary-foreground hover:text-foreground transition-colors" href="https://x.com/zencoderai" target="_blank" rel="noopener noreferrer noopener">
+            X
+          </a>
+        </li>
+      
+      
+    </ul>
+  </div>
+
+        </div>
+      </div>
+
+      <div class="py-8 space-y-6 md:space-y-0 md:grid md:grid-cols-3 md:items-center md:gap-6">
+        <p class="text-sm/6 font-sans text-muted-foreground">© 2026 For Good AI Inc. All rights reserved.</p>
+
+        <div class="md:justify-self-center" x-data="themeSwitcher()">
+          <fieldset class="contents">
+            <legend class="sr-only">Color theme</legend>
+            <div class="inline-flex rounded-full bg-secondary ring-1 ring-inset ring-ring p-1">
+              <div class="relative grid grid-cols-3 rounded-full">
+                <input class="peer/light sr-only" type="radio" name="theme" value="light" id="theme-light" :checked="mode === 'light'" @change="set('light')">
+                <label for="theme-light" class="relative z-10 cursor-pointer rounded-full px-3 py-1.5 transition-colors text-muted-foreground hover:text-secondary-foreground peer-checked/light:text-secondary-foreground flex items-center justify-center" aria-label="Light theme">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" class="w-3.5 h-3.5"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor"><circle cx="6" cy="6" r="2.25"></circle><line x1="6" y1=".75" x2="6" y2="1.5"></line><line x1="9.712" y1="2.288" x2="9.182" y2="2.818"></line><line x1="11.25" y1="6" x2="10.5" y2="6"></line><line x1="9.712" y1="9.712" x2="9.182" y2="9.182"></line><line x1="6" y1="11.25" x2="6" y2="10.5"></line><line x1="2.288" y1="9.712" x2="2.818" y2="9.182"></line><line x1=".75" y1="6" x2="1.5" y2="6"></line><line x1="2.288" y1="2.288" x2="2.818" y2="2.818"></line></g></svg>
+                </label>
+                <input class="peer/system sr-only" type="radio" name="theme" value="system" id="theme-system" :checked="mode === 'system'" @change="set('system')">
+                <label for="theme-system" class="relative z-10 cursor-pointer rounded-full px-3 py-1.5 transition-colors text-muted-foreground hover:text-secondary-foreground peer-checked/system:text-secondary-foreground flex items-center justify-center" aria-label="System theme">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" class="w-3.5 h-3.5"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor"><path d="m9,11.25c-2-.667-4-.667-6,0"></path><line x1="6" y1="10.75" x2="6" y2="8.25"></line><rect x=".75" y=".75" width="10.5" height="7.5" rx="2" ry="2" transform="translate(12 9) rotate(180)"></rect></g></svg>
+                </label>
+                <input class="peer/dark sr-only" type="radio" name="theme" value="dark" id="theme-dark" :checked="mode === 'dark'" @change="set('dark')">
+                <label for="theme-dark" class="relative z-10 cursor-pointer rounded-full px-3 py-1.5 transition-colors text-muted-foreground hover:text-secondary-foreground peer-checked/dark:text-secondary-foreground flex items-center justify-center" aria-label="Dark theme">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" class="w-3.5 h-3.5"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor"><path d="m8.5,7.75c-2.347,0-4.25-1.903-4.25-4.25,0-1.018.373-1.939.969-2.671C2.693,1.208.75,3.368.75,6c0,2.899,2.351,5.25,5.25,5.25,2.632,0,4.792-1.943,5.171-4.469-.732.597-1.653.969-2.671.969Z"></path></g></svg>
+                </label>
+                <span class="pointer-events-none absolute inset-y-0 left-0 w-1/3 rounded-full bg-accent ring-1 ring-inset ring-ring transition-transform duration-150 ease-[cubic-bezier(0.65,0,0.35,1)] peer-checked/system:translate-x-full peer-checked/dark:translate-x-[200%]" aria-hidden="true"></span>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+      
+        
+        
+        <div class="md:justify-self-end">
+          <div class="flex flex-wrap items-center gap-2">
+            <p class="text-sm/6 font-sans text-muted-foreground mr-2">Ask AI about Zencoder</p>
+            <div class="inline-flex p-1">
+              
+                <a target="_blank" rel="noopener noreferrer" aria-label="Ask ChatGPT about Zencoder" class="cursor-pointer rounded-full px-3 py-1.5 transition-colors text-muted-foreground hover:text-secondary-foreground flex items-center justify-center" href="https://chatgpt.com/?prompt=What+is+Zencoder+and+how+does+it+help+developers+code+faster%3F+Summarize+https%3A%2F%2Fzencoder.ai">
+                  <svg aria-hidden="true" class="w-4 h-4" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M38.3545 36.0751V26.6598C38.3545 25.8668 38.652 25.2719 39.3455 24.8759L58.2754 13.9741C60.8525 12.4877 63.925 11.7942 67.0958 11.7942C78.9887 11.7942 86.5212 21.0114 86.5212 30.8227C86.5212 31.5162 86.5212 32.3092 86.4217 33.1022L66.7983 21.6055C65.6092 20.912 64.4196 20.912 63.2304 21.6055L38.3545 36.0751ZM82.5562 72.7451V50.2471C82.5562 48.8592 81.9617 47.8684 80.7725 47.1746L55.8967 32.7052L64.0233 28.0468C64.7171 27.6508 65.3121 27.6508 66.0054 28.0468L84.9354 38.9486C90.3867 42.1205 94.0533 48.8592 94.0533 55.4001C94.0533 62.9321 89.5937 69.8705 82.5562 72.7451ZM32.5072 52.9238L24.3804 48.1667C23.6869 47.7709 23.3894 47.1759 23.3894 46.383V24.5793C23.3894 13.9751 31.5162 5.94685 42.5175 5.94685C46.6804 5.94685 50.5446 7.33477 53.8162 9.81222L34.2921 21.1109C33.1031 21.8044 32.5081 22.7954 32.5081 24.1833L32.5072 52.9238ZM50 63.0326L38.3545 56.4917V42.6167L50 36.0761L61.6446 42.6167V56.4917L50 63.0326ZM57.4825 93.1617C53.3196 93.1617 49.4554 91.7738 46.1837 89.2963L65.7079 77.9976C66.8971 77.3042 67.4917 76.313 67.4917 74.9251V46.1838L75.7179 50.9409C76.4117 51.3367 76.7092 51.9317 76.7092 52.7246V74.5284C76.7092 85.1326 68.4829 93.1617 57.4825 93.1617ZM33.9937 71.0609L15.0637 60.1588C9.61233 56.9871 5.94588 50.2484 5.94588 43.7076C5.94588 36.0761 10.5048 29.2377 17.5411 26.3633V48.9596C17.5411 50.3476 18.1361 51.3388 19.3251 52.0321L44.1025 66.4021L35.9756 71.0609C35.2821 71.4567 34.6872 71.4567 33.9937 71.0609ZM32.9042 87.3142C21.705 87.3142 13.4787 78.8901 13.4787 68.4838C13.4787 67.6909 13.5781 66.898 13.6767 66.1051L33.2007 77.4034C34.3897 78.0971 35.5796 78.0971 36.7686 77.4034L61.6446 63.0334V72.4488C61.6446 73.2417 61.3471 73.8367 60.6533 74.2326L41.7233 85.1342C39.1466 86.6209 36.0751 87.3142 32.9042 87.3142ZM57.4825 99.1076C69.4746 99.1076 79.4842 90.5846 81.7646 79.2859C92.8642 76.4117 100 66.0055 100 55.4013C100 48.4634 97.0271 41.7246 91.675 36.8681C92.1708 34.7866 92.4683 32.7052 92.4683 30.6247C92.4683 16.4526 80.9713 5.84735 67.6908 5.84735C65.0154 5.84735 62.4383 6.24335 59.8617 7.13581C55.4012 2.77494 49.2562 0 42.5175 0C30.5252 0 20.516 8.52281 18.2355 19.8215C7.13583 22.6959 0 33.1022 0 43.7063C0 50.6442 2.97294 57.383 8.32479 62.2396C7.82933 64.3209 7.53183 66.4021 7.53183 68.483C7.53183 82.6551 19.0285 93.2601 32.3092 93.2601C34.9847 93.2601 37.5616 92.8642 40.1385 91.9717C44.5979 96.3326 50.7429 99.1076 57.4825 99.1076Z" fill="currentColor" />
+                  </svg>
+                </a>
+              
+                <a target="_blank" rel="noopener noreferrer" aria-label="Ask Claude about Zencoder" class="cursor-pointer rounded-full px-3 py-1.5 transition-colors text-muted-foreground hover:text-secondary-foreground flex items-center justify-center" href="https://claude.ai/new?q=What+is+Zencoder+and+how+does+it+help+developers+code+faster%3F+Summarize+https%3A%2F%2Fzencoder.ai">
+                  <svg aria-hidden="true" class="w-4 h-4" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.6203 66.4812L39.2911 55.4516L39.6203 54.4903L39.2911 53.959H38.3291L35.038 53.7566L23.7975 53.4531L14.0506 53.0483L4.6076 52.5424L2.22785 52.0364L0 49.1019L0.227848 47.6347L2.22785 46.294L5.08861 46.5469L11.4177 46.977L20.9114 47.6347L27.7975 48.0395L38 49.1019H39.6203L39.8481 48.4442L39.2911 48.0395L38.8608 47.6347L29.038 40.9815L18.4051 33.9489L12.8354 29.9013L9.82278 27.8523L8.3038 25.9297L7.64557 21.7303L10.3797 18.72L14.0506 18.9729L14.9873 19.2259L18.7089 22.0845L26.6582 28.2317L37.038 35.8715L38.557 37.1364L39.1646 36.7063L39.2405 36.4027L38.557 35.2644L32.9114 25.0696L26.8861 14.6977L24.2025 10.3972L23.4937 7.81685C23.2405 6.75436 23.0633 5.86896 23.0633 4.78118L26.1772 0.556539L27.8987 0L32.0506 0.556539L33.7975 2.07437L36.3797 7.96863L40.557 17.2527L47.038 29.876L48.9367 33.62L49.9494 37.0858L50.3291 38.1482H50.9873V37.5411L51.519 30.4326L52.5063 21.705L53.4684 10.4731L53.7975 7.3109L55.3671 3.51632L58.481 1.46724L60.9114 2.63091L62.9114 5.4895L62.6329 7.3362L61.443 15.0519L59.1139 27.1439L57.5949 35.2391H58.481L59.4937 34.2272L63.5949 28.7883L70.481 20.1872L73.519 16.7721L77.0633 13.0028L79.3418 11.2067H83.6456L86.8101 15.912L85.3924 20.769L80.962 26.385L77.2911 31.1409L72.0253 38.2241L68.7342 43.8907L69.038 44.3461L69.8228 44.2702L81.7215 41.7405L88.1519 40.5768L95.8228 39.2613L99.2911 40.8803L99.6709 42.5247L98.3038 45.8892L90.1013 47.913L80.481 49.8356L66.1519 53.2254L65.9747 53.3519L66.1772 53.6049L72.6329 54.212L75.3924 54.3638H82.1519L94.7342 55.2998L98.0253 57.4753L100 60.1315L99.6709 62.1553L94.6076 64.7356L87.7721 63.1166L71.8228 59.322L66.3544 57.956H65.5949V58.4113L70.1519 62.8637L78.5063 70.4022L88.962 80.1164L89.4937 82.5196L88.1519 84.4169L86.7342 84.2145L77.5443 77.3084L74 74.1968L65.9747 67.4425H65.443V68.1508L67.2911 70.8576L77.0633 85.53L77.5696 90.0329L76.8608 91.5001L74.3291 92.3855L71.5443 91.8796L65.8228 83.8604L59.9241 74.8292L55.1646 66.7341L54.5823 67.063L51.7722 97.2932L50.4557 98.8363L47.4177 100L44.8861 98.0774L43.5443 94.9658L44.8861 88.8186L46.5063 80.7994L47.8228 74.4245L49.0127 66.5065L49.7215 63.8755L49.6709 63.6985L49.0886 63.7744L43.1139 71.9707L34.0253 84.2398L26.8354 91.9302L25.1139 92.6132L22.1266 91.0701L22.4051 88.3127L24.0759 85.8588L34.0253 73.2102L40.0253 65.3681L43.8987 60.8399L43.8734 60.1821H43.6456L17.2152 77.3337L12.5063 77.9408L10.481 76.0435L10.7342 72.932L11.6962 71.9201L19.6456 66.4559L19.6203 66.4812Z" fill="currentColor" />
+                  </svg>
+                </a>
+              
+                <a target="_blank" rel="noopener noreferrer" aria-label="Ask Perplexity about Zencoder" class="cursor-pointer rounded-full px-3 py-1.5 transition-colors text-muted-foreground hover:text-secondary-foreground flex items-center justify-center" href="https://www.perplexity.ai/search?q=What+is+Zencoder+and+how+does+it+help+developers+code+faster%3F+Summarize+https%3A%2F%2Fzencoder.ai">
+                  <svg aria-hidden="true" class="w-4 h-4" viewbox="0 0 86 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M85.9451 29.9462H74.1376V0L45.3625 26.8123V0H40.5825V26.8123L11.8076 0V29.9462H0V73.0925H11.7759V100L40.5825 74.3587V100H45.3625V74.3587L74.1689 100V73.0925H85.9451V29.9462ZM69.3258 11.0161V29.9462H49.0345L69.3258 11.0161ZM16.5876 11.0161L36.8787 29.9462H16.5876V11.0161ZM4.78 68.3125V34.7578H36.8154L11.7759 57.7714V68.3125H4.81169H4.78ZM16.5559 59.8607L40.5825 37.7968V67.9644L16.5559 89.3319V59.8607ZM69.3576 89.3319L45.3308 67.9644V37.7968L69.3576 59.8607V89.3319ZM81.1332 68.3125H74.1689V57.7714L49.1295 34.7578H81.1651V68.3125H81.1332Z" fill="currentColor" />
+                  </svg>
+                </a>
+              
+                <a target="_blank" rel="noopener noreferrer" aria-label="Ask Gemini about Zencoder" class="cursor-pointer rounded-full px-3 py-1.5 transition-colors text-muted-foreground hover:text-secondary-foreground flex items-center justify-center" href="https://www.google.com/search?udm=50&amp;aep=11&amp;q=What+is+Zencoder+and+how+does+it+help+developers+code+faster%3F+Summarize+https%3A%2F%2Fzencoder.ai">
+                  <svg aria-hidden="true" class="w-4 h-4" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50.0001 0C51.0487 0 51.9608 0.716212 52.2166 1.73358C53.0009 4.84542 54.024 7.88069 55.2971 10.8334C58.6134 18.5376 63.1637 25.2811 68.9419 31.0586C74.7219 36.8359 81.4625 41.3866 89.1669 44.703C92.1219 45.976 95.155 46.9991 98.2662 47.7834C99.2837 48.0392 100 48.9514 100 50.0001C100 51.0487 99.2837 51.9609 98.2662 52.2166C95.155 53.0009 92.1194 54.024 89.1669 55.2971C81.4625 58.6136 74.7187 63.1637 68.9419 68.9419C63.1637 74.7219 58.6136 81.4625 55.2971 89.1669C54.024 92.1219 53.0009 95.155 52.2166 98.2662C51.9609 99.2837 51.0487 100 50.0001 100C48.9514 100 48.0392 99.2837 47.7834 98.2662C46.9991 95.155 45.976 92.1194 44.703 89.1669C41.3866 81.4625 36.8387 74.7187 31.0586 68.9419C25.2781 63.1637 18.5376 58.6134 10.8334 55.2971C7.87788 54.024 4.84542 53.0009 1.73358 52.2166C0.716212 51.9608 0 51.0487 0 50.0001C0 48.9514 0.7163 48.0392 1.73358 47.7834C4.84543 46.9991 7.88069 45.9762 10.8334 44.703C18.5378 41.3864 25.2811 36.8361 31.0586 31.0586C36.8361 25.2811 41.3864 18.5378 44.703 10.8334C45.9762 7.87788 46.9991 4.84543 47.7834 1.73358C48.0392 0.7163 48.9514 0 50.0001 0Z" fill="currentColor" />
+                  </svg>
+                </a>
+              
+                <a target="_blank" rel="noopener noreferrer" aria-label="Ask Grok about Zencoder" class="cursor-pointer rounded-full px-3 py-1.5 transition-colors text-muted-foreground hover:text-secondary-foreground flex items-center justify-center" href="https://grok.com/?q=What+is+Zencoder+and+how+does+it+help+developers+code+faster%3F+Summarize+https%3A%2F%2Fzencoder.ai">
+                  <svg aria-hidden="true" class="w-4 h-4" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M38.6218 64.1904L71.8668 38.596C73.4968 37.3413 75.8263 37.8307 76.6031 39.7798C80.69 50.0583 78.8642 62.4108 70.7321 70.8916C62.6 79.3723 51.285 81.2325 40.9429 76.9963L29.6451 82.4518C45.8495 94.0028 65.5268 91.1464 77.8232 78.3137C87.5763 68.1416 90.5974 54.2765 87.7726 41.7732L87.7984 41.7998C83.7021 23.4318 88.8053 16.0899 99.2584 1.07681C99.5058 0.720841 99.7532 0.364869 100.001 0L86.2453 14.3456V14.3011L38.6134 64.1992" fill="currentColor" /><path d="M31.7604 70.4102C20.1297 58.8231 22.1349 40.8911 32.0589 30.5504C39.3974 22.8969 51.4206 19.7733 61.9163 24.3653L73.1884 18.9367C71.1579 17.4061 68.5553 15.7597 65.5684 14.6028C52.0693 8.80939 35.9074 11.6927 24.9338 23.1283C14.3783 34.1366 11.0589 51.063 16.7591 65.5067C21.0171 76.3016 14.037 83.937 7.00568 91.6437C4.51402 94.3756 2.01381 97.108 0 100L31.7517 70.419" fill="currentColor" />
+                  </svg>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  
+  <div role="complementary" aria-label="Accessibility Information">
+    <div id="accessibility-help-content" class="sr-only">
+      <h2>Accessibility Screen-Reader Guide, Feedback, and Issue Reporting</h2>
+      <p>This website is designed to be accessible to all users, including those using screen readers and other assistive technologies.</p>
+    </div>
+  </div>
+</footer></div></div>
+    
+
+    
+    
+
+    
+
+    
+
+    
+<!-- HubSpot performance collection script -->
+
+
+
+
+
+
+<!-- Start of Web Interactives Embed Code -->
+
+<!-- End of Web Interactives Embed Code -->
+
+
+<!-- Start of HubSpot Analytics Code -->
+
+
+
+<!-- End of HubSpot Analytics Code -->
+
+
+
+
+
+
+
+
+
+<div id="fb-root"></div>
+   
+ 
+
+
+  
+</body></html>

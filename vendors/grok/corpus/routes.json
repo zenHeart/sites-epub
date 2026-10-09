@@ -17,10 +17,10 @@
   },
   {
     "group": "Developers",
-    "title": "Get Started \u2014 Grok 4.6",
-    "md_url": "https://docs.x.ai/developers/grok-4-6.md",
-    "html_url": "https://docs.x.ai/developers/grok-4-6",
-    "route": "developers/grok-4-6",
+    "title": "Get Started \u2014 Grok 4.7",
+    "md_url": "https://docs.x.ai/developers/grok-4-7.md",
+    "html_url": "https://docs.x.ai/developers/grok-4-7",
+    "route": "developers/grok-4-7",
     "kind": "doc"
   },
   {
@@ -133,6 +133,14 @@
     "md_url": "https://docs.x.ai/developers/model-capabilities/video/generation.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/video/generation",
     "route": "developers/model-capabilities/video/generation",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Imagine \u2014 Video Overview",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/video/overview.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/video/overview",
+    "route": "developers/model-capabilities/video/overview",
     "kind": "doc"
   },
   {
@@ -1033,10 +1041,26 @@
   },
   {
     "group": "Grok Bot",
+    "title": "Work with Grok Bot \u2014 Team Bots",
+    "md_url": "https://docs.x.ai/grok-bot/team-bots.md",
+    "html_url": "https://docs.x.ai/grok-bot/team-bots",
+    "route": "grok-bot/team-bots",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
     "title": "Work with Grok Bot \u2014 Message and collaborate",
     "md_url": "https://docs.x.ai/grok-bot/chat-and-collaboration.md",
     "html_url": "https://docs.x.ai/grok-bot/chat-and-collaboration",
     "route": "grok-bot/chat-and-collaboration",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Work with Grok Bot \u2014 Tag @bot on X",
+    "md_url": "https://docs.x.ai/grok-bot/tag-on-x.md",
+    "html_url": "https://docs.x.ai/grok-bot/tag-on-x",
+    "route": "grok-bot/tag-on-x",
     "kind": "doc"
   },
   {
@@ -1273,7 +1297,151 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Sep 11, 2026 Grok Bot 101 Grok Bot is an agent with a computer. Learn how to stand one up, chain specialists, and run the workflows I actually use. Read More",
+    "title": "Design",
+    "md_url": "https://x.ai/bot/guides/design.md",
+    "html_url": "https://x.ai/bot/guides/design",
+    "route": "bot-guides/design",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "GTM",
+    "md_url": "https://x.ai/bot/guides/gtm.md",
+    "html_url": "https://x.ai/bot/guides/gtm",
+    "route": "bot-guides/gtm",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Product",
+    "md_url": "https://x.ai/bot/guides/product.md",
+    "html_url": "https://x.ai/bot/guides/product",
+    "route": "bot-guides/product",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Engineering",
+    "md_url": "https://x.ai/bot/guides/engineering.md",
+    "html_url": "https://x.ai/bot/guides/engineering",
+    "route": "bot-guides/engineering",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Getting started",
+    "md_url": "https://x.ai/bot/guides/getting-started.md",
+    "html_url": "https://x.ai/bot/guides/getting-started",
+    "route": "bot-guides/getting-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Support",
+    "md_url": "https://x.ai/bot/guides/support.md",
+    "html_url": "https://x.ai/bot/guides/support",
+    "route": "bot-guides/support",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Marketing",
+    "md_url": "https://x.ai/bot/guides/marketing.md",
+    "html_url": "https://x.ai/bot/guides/marketing",
+    "route": "bot-guides/marketing",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Recruiting",
+    "md_url": "https://x.ai/bot/guides/recruiting.md",
+    "html_url": "https://x.ai/bot/guides/recruiting",
+    "route": "bot-guides/recruiting",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Sales",
+    "md_url": "https://x.ai/bot/guides/sales.md",
+    "html_url": "https://x.ai/bot/guides/sales",
+    "route": "bot-guides/sales",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Legal",
+    "md_url": "https://x.ai/bot/guides/legal.md",
+    "html_url": "https://x.ai/bot/guides/legal",
+    "route": "bot-guides/legal",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Marketing Grok Bot for Marketing Six marketing bots that research competitors, draft positioning in Google Docs, build Google Ads shells, and open PRs on the marketing site.",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-marketing.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-marketing",
+    "route": "bot-guides/grok-bot-for-marketing",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Sales Grok Bot for Founder-Led Sales How to sell as a founder with Grok Bot: ICP research, design-partner outreach, call prep, a first-customer playbook, and a pipeline forecast.",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-founder-led-sales.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-founder-led-sales",
+    "route": "bot-guides/grok-bot-for-founder-led-sales",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Marketing Grok Bot for Performance Marketing How we stood up an entire ad program with a team of bots, and the parts we still do ourselves.",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-performance-marketing.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-performance-marketing",
+    "route": "bot-guides/grok-bot-for-performance-marketing",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Sales Grok Bot for Post-Sales How I run post-sales with one chief of staff bot, account specialists, and routines that prep calls and keep promises from slipping.",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-post-sales.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-post-sales",
+    "route": "bot-guides/grok-bot-for-post-sales",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Recruiting Grok Bot for Recruiting How our recruiting team uses Grok Bot for interview prep, scorecards, sourcing, and loop analysis across the ATS.",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-recruiting.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-recruiting",
+    "route": "bot-guides/grok-bot-for-recruiting",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Grok Bot for SDRs How I run SDR outbound with Cursor and Grok Bot: research packets, CLEAR vs FLAG intake, and bots that stage work I still send. GTM",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-sdrs.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-sdrs",
+    "route": "bot-guides/grok-bot-for-sdrs",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Grok Bot for Work Four bots that changed my output: Inbox Manager, Calendar EA, Intel Scout, and Bot Boss as the single front door. Getting started",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-work.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-work",
+    "route": "bot-guides/grok-bot-for-work",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Grok Bot for Legal Ops How Legal Ops uses Grok Bot for counsel 1:1 prep, Slack triage, contract workflows, and draft-then-human-send review. Legal",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-legal-ops.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-legal-ops",
+    "route": "bot-guides/grok-bot-for-legal-ops",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Grok Bot 101 Grok Bot is an agent with a computer. Learn how to stand one up, chain specialists, and run the workflows I actually use. Getting started",
     "md_url": "https://x.ai/bot/guides/grok-bot-101.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-101",
     "route": "bot-guides/grok-bot-101",
@@ -1281,7 +1449,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Engineering \u00b7 Sep 10, 2026 Grok Bot for Engineering",
+    "title": "Grok Bot for Engineering How I run a fleet of engineer bots that manage cloud agents, keep a feedback loop closed, and run the rest of the mini org. Engineering",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-engineering.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-engineering",
     "route": "bot-guides/grok-bot-for-engineering",
@@ -1289,7 +1457,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Support \u00b7 Sep 9, 2026 Grok Bot for Support",
+    "title": "Grok Bot for Support How we use Grok Bot to work a support queue: connectors, five jobs, and routines that keep going after you close the laptop. Support",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-support.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-support",
     "route": "bot-guides/grok-bot-for-support",
@@ -1297,7 +1465,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Getting started \u00b7 Sep 8, 2026 Templates for Grok Bot",
+    "title": "Templates for Grok Bot Templates share a bot as a recipe, not a clone. What gets packaged, how to publish one, and how to install someone else\u2019s. Getting started",
     "md_url": "https://x.ai/bot/guides/templates-for-grok-bot.md",
     "html_url": "https://x.ai/bot/guides/templates-for-grok-bot",
     "route": "bot-guides/templates-for-grok-bot",
@@ -1305,7 +1473,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Engineering \u00b7 Aug 27, 2026 How I run multiple teams of Grok Bots",
+    "title": "How I run multiple teams of Grok Bots Each project gets a channel, a roster, and a Notion board. An experimental pattern for coordinating bots like a human team. Engineering",
     "md_url": "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots.md",
     "html_url": "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots",
     "route": "bot-guides/how-i-run-multiple-teams-of-grok-bots",
@@ -1313,7 +1481,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Grok Bot for mobile app development Six bots, one mobile game studio. How I use Grok Bot to build, ship, and improve Rank\u2019em. Aug 25, 2026",
+    "title": "Grok Bot for mobile app development Six bots, one mobile game studio. How I use Grok Bot to build, ship, and improve Rank\u2019em. Engineering",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-mobile-app-development.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-mobile-app-development",
     "route": "bot-guides/grok-bot-for-mobile-app-development",
@@ -1321,7 +1489,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Designing Grok Bot with Grok Bot How a designer uses always-on Grok Bot agents to explore more ideas, work with real production assets, and keep judgment in the loop. Aug 24, 2026",
+    "title": "Designing Grok Bot with Grok Bot How a designer uses always-on Grok Bot agents to explore more ideas, work with real production assets, and keep judgment in the loop. Design",
     "md_url": "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot.md",
     "html_url": "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot",
     "route": "bot-guides/designing-grok-bot-with-grok-bot",
@@ -1329,7 +1497,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Grok Bot for GTM How I use Grok Bot for Enterprise GTM at SpaceXAI: a Chief of Staff, prospecting and account prompts, live slides, and the rest of the team. Aug 16, 2026",
+    "title": "Grok Bot for GTM How I use Grok Bot for Enterprise GTM at SpaceXAI: a Chief of Staff, prospecting and account prompts, live slides, and the rest of the team. GTM",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-gtm.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-gtm",
     "route": "bot-guides/grok-bot-for-gtm",
@@ -1337,7 +1505,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Grok Bot for PMs For the first time, a PM can have a team that reports to them. Attention lists, shipping software, and the bots I actually run. Aug 15, 2026",
+    "title": "Grok Bot for PMs For the first time, a PM can have a team that reports to them. Attention lists, shipping software, and the bots I actually run. Product",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-pms.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-pms",
     "route": "bot-guides/grok-bot-for-pms",
@@ -1345,15 +1513,47 @@
   },
   {
     "group": "News",
-    "title": "Sep 3, 2026 Grok Bot for Enterprise Grok Bot is now available for enterprises. Grok and Cursor Enterprise customers have free usage for the next two weeks, and can invite their whole organization, including people without an existing seat. Read More",
-    "md_url": "https://x.ai/news/grok-bot-for-enterprise.md",
-    "html_url": "https://x.ai/news/grok-bot-for-enterprise",
-    "route": "news/grok-bot-for-enterprise",
+    "title": "Grok 4.7 Sep 21, 2026 Introducing Grok 4.7 SpaceXAI's most powerful model for coding and knowledge work. Twice as fast, at half the price of comparable models. Read More",
+    "md_url": "https://x.ai/news/grok-4-7.md",
+    "html_url": "https://x.ai/news/grok-4-7",
+    "route": "news/grok-4-7",
     "kind": "blog"
   },
   {
     "group": "News",
-    "title": "Product \u00b7 Sep 4, 2026 Setting Grok Bot loose on procurement",
+    "title": "Product \u00b7 Sep 28, 2026 Team Bots: shared AI teammates that learn as they work",
+    "md_url": "https://x.ai/news/team-bots.md",
+    "html_url": "https://x.ai/news/team-bots",
+    "route": "news/team-bots",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Product \u00b7 Sep 22, 2026 How SpaceXAI is using Grok Bot to scale customer support",
+    "md_url": "https://x.ai/news/grok-bot-customer-support.md",
+    "html_url": "https://x.ai/news/grok-bot-customer-support",
+    "route": "news/grok-bot-customer-support",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Sep 18, 2026 Introducing Grok Voice Transcribe 2.0",
+    "md_url": "https://x.ai/news/grok-voice-transcribe-2.md",
+    "html_url": "https://x.ai/news/grok-voice-transcribe-2",
+    "route": "news/grok-voice-transcribe-2",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Product \u00b7 Sep 16, 2026 Memory in Grok Build",
+    "md_url": "https://x.ai/news/grok-build-memory.md",
+    "html_url": "https://x.ai/news/grok-build-memory",
+    "route": "news/grok-build-memory",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Setting Grok Bot loose on procurement We gave Grok Bot access to vendor spend, contracts, and usage data. It found more than $100,000 in direct savings. Sep 4, 2026",
     "md_url": "https://x.ai/news/grok-bot-procurement.md",
     "html_url": "https://x.ai/news/grok-bot-procurement",
     "route": "news/grok-bot-procurement",
@@ -1361,7 +1561,7 @@
   },
   {
     "group": "News",
-    "title": "Product \u00b7 Sep 3, 2026 Designing Grok Bot for a world of persistent agents",
+    "title": "Designing Grok Bot for a world of persistent agents How we designed Grok Bot for agents that persist beyond a single session \u2014 from a chat history to a Bot roster, presence, a computer of the Bot\u2019s own, and work that starts without a prompt. Sep 3, 2026",
     "md_url": "https://x.ai/news/designing-grok-bot.md",
     "html_url": "https://x.ai/news/designing-grok-bot",
     "route": "news/designing-grok-bot",
@@ -1369,7 +1569,15 @@
   },
   {
     "group": "News",
-    "title": "Company \u00b7 Sep 1, 2026 Biosecurity at the frontier",
+    "title": "Grok Bot for Enterprise Grok Bot is now available for enterprises. Grok and Cursor Enterprise customers have free usage for the next two weeks, and can invite their whole organization, including people without an existing seat. Sep 3, 2026",
+    "md_url": "https://x.ai/news/grok-bot-for-enterprise.md",
+    "html_url": "https://x.ai/news/grok-bot-for-enterprise",
+    "route": "news/grok-bot-for-enterprise",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Biosecurity at the frontier LatchBio evaluated Grok's performance on biosecurity monitoring and adversarial biological tasks. They found that Grok 4.6 detects and refuses dangerous queries more reliably than any other frontier system. Sep 1, 2026",
     "md_url": "https://x.ai/news/biosafety-at-the-frontier.md",
     "html_url": "https://x.ai/news/biosafety-at-the-frontier",
     "route": "news/biosafety-at-the-frontier",
@@ -1377,7 +1585,7 @@
   },
   {
     "group": "News",
-    "title": "Product \u00b7 Aug 29, 2026 Grok Bot now works with X",
+    "title": "Grok Bot now works with X Grok Bot now has a tighter integration with X. Aug 29, 2026",
     "md_url": "https://x.ai/news/grok-bot-and-x.md",
     "html_url": "https://x.ai/news/grok-bot-and-x",
     "route": "news/grok-bot-and-x",
@@ -1505,7 +1713,7 @@
   },
   {
     "group": "News",
-    "title": "Grok for Outlook Use the Grok add-in for Microsoft Outlook to summarize long email threads, draft replies in your voice, and keep your inbox organized. Jul 21, 2026",
+    "title": "Introducing Grok for Outlook Use the Grok add-in for Microsoft Outlook to summarize long email threads, draft replies in your voice, and keep your inbox organized. Jul 21, 2026",
     "md_url": "https://x.ai/news/introducing-outlook-addin.md",
     "html_url": "https://x.ai/news/introducing-outlook-addin",
     "route": "news/introducing-outlook-addin",
@@ -1513,7 +1721,7 @@
   },
   {
     "group": "News",
-    "title": "Grok for Excel Use the Grok add-in for Microsoft Excel to ask questions in plain English, write formulas, and run scenarios without leaving the workbook. Jul 20, 2026",
+    "title": "Introducing Grok for Excel Use the Grok add-in for Microsoft Excel to ask questions in plain English, write formulas, and run scenarios without leaving the workbook. Jul 20, 2026",
     "md_url": "https://x.ai/news/introducing-excel-addin.md",
     "html_url": "https://x.ai/news/introducing-excel-addin",
     "route": "news/introducing-excel-addin",
@@ -1577,7 +1785,7 @@
   },
   {
     "group": "News",
-    "title": "Grok for Word Use the Grok add-in for Microsoft Word to turn notes into documents, style and format your work, or bring research from the web into Word. Jun 18, 2026",
+    "title": "Introducing Grok for Word Use the Grok add-in for Microsoft Word to turn notes into documents, style and format your work, or bring research from the web into Word. Jun 18, 2026",
     "md_url": "https://x.ai/news/introducing-word-addin.md",
     "html_url": "https://x.ai/news/introducing-word-addin",
     "route": "news/introducing-word-addin",
@@ -1601,7 +1809,7 @@
   },
   {
     "group": "News",
-    "title": "Grok for PowerPoint Grok now works inside Microsoft PowerPoint \u2014 turn outlines into slides, expand the deck, and tighten the narrative without leaving the app. Jun 16, 2026",
+    "title": "Introducing Grok for PowerPoint Grok now works inside Microsoft PowerPoint \u2014 turn outlines into slides, expand the deck, and tighten the narrative without leaving the app. Jun 16, 2026",
     "md_url": "https://x.ai/news/introducing-powerpoint-addin.md",
     "html_url": "https://x.ai/news/introducing-powerpoint-addin",
     "route": "news/introducing-powerpoint-addin",

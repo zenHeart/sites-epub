@@ -23,7 +23,7 @@ Gemini API Docs and API Reference
 - [Context caching](https://ai.google.dev/gemini-api/docs/caching.md.txt): Learn how to use Context Caching in the Interactions API
 - [Release notes](https://ai.google.dev/gemini-api/docs/changelog.md.txt): Keep track of updates to the Gemini API
 - [Code execution](https://ai.google.dev/gemini-api/docs/code-execution.md.txt): Learn how to use the Gemini API code execution feature.
-- [Set up your coding assistant with Gemini MCP and Skills](https://ai.google.dev/gemini-api/docs/coding-agents.md.txt): Install Gemini API skills to give your AI coding assistant access to the latest documentation and best practices.
+- [Coding agent setup &amp; developer resources](https://ai.google.dev/gemini-api/docs/coding-agents.md.txt): Use Gemini API skills, MCP tools, plugins, and machine-readable documentation to help your coding agent write accurate Gemini code.
 - [Computer use](https://ai.google.dev/gemini-api/docs/computer-use.md.txt): Learn how to use the Gemini API computer use feature.
 - [Customer support analysis with Gemini and CrewAI](https://ai.google.dev/gemini-api/docs/crewai-example.md.txt): Building CrewAI Agents with Gemini
 - [Building managed agents](https://ai.google.dev/gemini-api/docs/custom-agents.md.txt): How to create and use custom agents with managed agents in the Gemini API.
@@ -59,7 +59,7 @@ Gemini API Docs and API Reference
 - [Media resolution](https://ai.google.dev/gemini-api/docs/generate-content/media-resolution.md.txt): Learn about how to use media resolutions with multimodal inputs.
 - [Generate music with Lyria 3.5](https://ai.google.dev/gemini-api/docs/generate-content/music-generation.md.txt): Generate music with the Gemini API using Lyria 3 Clip and Lyria 3.5
 - [Priority inference](https://ai.google.dev/gemini-api/docs/generate-content/priority-inference.md.txt): Documentation for Google's legacy Gemini Generate Content API.
-- [Text-to-speech generation (TTS)](https://ai.google.dev/gemini-api/docs/generate-content/speech-generation.md.txt): Get started generating audio with the Gemini API
+- [Text-to-speech generation (TTS)](https://ai.google.dev/gemini-api/docs/generate-content/speech-generation.md.txt): Generate high-fidelity speech and multi-speaker audio with the Gemini API using gemini-3.8-flash-tts and gemini-3.8-flash-lite-tts.
 - [Structured outputs](https://ai.google.dev/gemini-api/docs/generate-content/structured-output.md.txt): Learn how to generate structured JSON output with the Gemini API.
 - [Text generation](https://ai.google.dev/gemini-api/docs/generate-content/text-generation.md.txt): Get started building chat and text generation apps with the Gemini API
 - [Gemini thinking](https://ai.google.dev/gemini-api/docs/generate-content/thinking.md.txt): Documentation for Google's legacy Gemini Generate Content API.
@@ -74,7 +74,7 @@ Gemini API Docs and API Reference
 - [Grounding with Google Search](https://ai.google.dev/gemini-api/docs/google-search.md.txt): Ground your model&#39;s responses in real-time information from Google Search to improve factual accuracy and provide citations.
 - (https://ai.google.dev/gemini-api/docs/image-generation.md.txt): Get started generating images with the Gemini API using Nano Banana and Nano Banana Pro
 - [Image understanding](https://ai.google.dev/gemini-api/docs/image-understanding.md.txt): Get started building with Gemini&#39;s multimodal capabilities in the Gemini API
-- [Generate images using Imagen](https://ai.google.dev/gemini-api/docs/imagen.md.txt): Get started generating images with the Gemini API
+- [Generate images using Imagen](https://ai.google.dev/gemini-api/docs/imagen.md.txt): Imagen models are shut down; migrate to Nano Banana for image generation.
 - [Interactions API: Breaking changes migration guide (May 2026)](https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026.md.txt): Guide for migrating to upcoming breaking changes in the Interactions API, including the steps schema and response format changes.
 - [Interactions API](https://ai.google.dev/gemini-api/docs/interactions-overview.md.txt): The Interactions API is the simplest and recommended way to build with Gemini models and agents.
 - [ReAct agent from scratch with Gemini and LangGraph](https://ai.google.dev/gemini-api/docs/langgraph-example.md.txt): Building LangGraph Agents with Gemini
@@ -97,7 +97,7 @@ Gemini API Docs and API Reference
 - [Grounding with Google Maps](https://ai.google.dev/gemini-api/docs/maps-grounding.md.txt): Ground your model&#39;s responses in rich, real-world data from Google Maps to provide factually accurate, location-aware answers
 - [Media resolution](https://ai.google.dev/gemini-api/docs/media-resolution.md.txt): Learn about how to use media resolutions with multimodal inputs in the Interactions API.
 - [Migrate to the Google GenAI SDK](https://ai.google.dev/gemini-api/docs/migrate.md.txt): Documentation for Google's Gemini API.
-- [Gemini Developer API vs. Gemini Enterprise Agent Platform](https://ai.google.dev/gemini-api/docs/migrate-to-cloud.md.txt): Documentation for Google's Gemini API.
+- [Gemini Developer API vs. Gemini platform](https://ai.google.dev/gemini-api/docs/migrate-to-cloud.md.txt): Documentation for Google's Gemini API.
 - [Migrating to the Interactions API](https://ai.google.dev/gemini-api/docs/migrate-to-interactions.md.txt): Guide for migrating from generateContent to the Interactions API.
 - [Fine-tuning with the Gemini API](https://ai.google.dev/gemini-api/docs/model-tuning.md.txt): Learn how fine-tune a Gemini model with the Gemini API
 - [Models](https://ai.google.dev/gemini-api/docs/models.md.txt): Learn about all of Google&#39;s most advanced AI models
@@ -107,7 +107,7 @@ Gemini API Docs and API Reference
 - [Deep Research Pro preview](https://ai.google.dev/gemini-api/docs/models/deep-research-pro-preview-12-2025.md.txt): Learn about Gemini Deep Research Pro preview model from Google
 - [Gemini 2.0 Flash](https://ai.google.dev/gemini-api/docs/models/gemini-2.0-flash.md.txt): Learn about Gemini 2.0 Flash from Google
 - [Gemini 2.0 Flash-Lite](https://ai.google.dev/gemini-api/docs/models/gemini-2.0-flash-lite.md.txt): Learn about Gemini 2.0 Flash-Lite from Google
-- [Gemini 2.5 Computer Use model](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025.md.txt): Learn about the Gemini Computer Use model from Google
+- [Gemini 2.5 computer use model](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-computer-use-preview-10-2025.md.txt): Learn about the Gemini Computer Use model from Google
 - [Gemini 2.5 Flash](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash.md.txt): Learn about Gemini 2.5 Flash from Google
 - [Gemini 2.5 Flash image (Nano Banana)](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-image.md.txt): Learn about Gemini 2.5 Flash Image from Google
 - [Gemini 2.5 Flash-Lite](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-lite.md.txt): Learn about Gemini 2.5 Flash-Lite from Google
@@ -124,10 +124,10 @@ Gemini API Docs and API Reference
 - [Gemini 3.1 Flash-Lite](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite.md.txt): Learn about Gemini 3.1 Flash-Lite from Google
 - [Gemini 3.1 Flash-Lite Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite-preview.md.txt): Learn about Gemini 3 Flash Preview from Google
 - [Gemini 3.1 Flash live preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-live-preview.md.txt): Learn about the Gemini 3.1 Flash Live Preview model from Google
-- [Gemini 3.1 Flash TTS (Text-to-Speech) Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-tts-preview.md.txt): Learn about Gemini 3.1 Flash TTS Preview model from Google
+- [Gemini 3.1 Flash TTS (text-to-speech) preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-tts-preview.md.txt): Learn about Gemini 3.1 Flash TTS Preview model from Google
 - [Gemini 3.1 Pro Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview.md.txt): Learn about Gemini 3.1 Pro Preview from Google
 - [Gemini 3.5 Flash](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash.md.txt): Learn about Gemini 3.5 Flash from Google
-- [Gemini 3.5 Live Translate](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-live-translate-preview.md.txt): Learn about the Gemini 3.5 Live Translate model from Google
+- [Gemini 3.5 Live translate](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-live-translate-preview.md.txt): Learn about the Gemini 3.5 Live Translate model from Google
 - [Gemini Embedding model](https://ai.google.dev/gemini-api/docs/models/gemini-embedding-001.md.txt): Learn about the Gemini Embedding model from Google
 - [Gemini Embedding 2 model](https://ai.google.dev/gemini-api/docs/models/gemini-embedding-2.md.txt): Learn about the Gemini Embedding 2 model from Google
 - [Gemini Embedding 2 Preview model](https://ai.google.dev/gemini-api/docs/models/gemini-embedding-2-preview.md.txt): Learn about the Gemini Embedding 2 model from Google
@@ -139,7 +139,7 @@ Gemini API Docs and API Reference
 - [Lyria RealTime experimental](https://ai.google.dev/gemini-api/docs/models/lyria-realtime-exp.md.txt): Learn about the Lyria RealTime experimental music generation model from Google
 - [Veo 2.0](https://ai.google.dev/gemini-api/docs/models/veo-2.0-generate-001.md.txt): Learn about the Veo 2.0 video generation model from Google
 - [Veo 3.1](https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview.md.txt): Learn about the Veo 3.1 video generation model from Google
-- [Veo 3.1 Lite Preview](https://ai.google.dev/gemini-api/docs/models/veo-3.1-lite-generate-preview.md.txt): Learn about the Veo 3.1 video generation model from Google
+- [Veo 3.1 Lite preview](https://ai.google.dev/gemini-api/docs/models/veo-3.1-lite-generate-preview.md.txt): Learn about the Veo 3.1 video generation model from Google
 - [Generate music with Lyria 3.5](https://ai.google.dev/gemini-api/docs/music-generation.md.txt): Generate music with the Gemini API using Lyria 3 Clip and Lyria 3.5.
 - [Authentication with OAuth quickstart](https://ai.google.dev/gemini-api/docs/oauth.md.txt): Documentation for Google's Gemini API.
 - [OpenAI compatibility](https://ai.google.dev/gemini-api/docs/openai.md.txt): Documentation for Google's Gemini API.
@@ -153,7 +153,7 @@ Gemini API Docs and API Reference
 - [Gemini Robotics ER](https://ai.google.dev/gemini-api/docs/robotics-overview.md.txt): Overview of Gemini Robotics ER models and capabilities for building robotics applications.
 - [Safety and factuality guidance](https://ai.google.dev/gemini-api/docs/safety-guidance.md.txt): Documentation for Google's Gemini API.
 - [Safety settings](https://ai.google.dev/gemini-api/docs/safety-settings.md.txt): Documentation for Google's Gemini API.
-- [Text-to-speech generation (TTS)](https://ai.google.dev/gemini-api/docs/speech-generation.md.txt): Get started generating audio with the Gemini API
+- [Text-to-speech generation (TTS)](https://ai.google.dev/gemini-api/docs/speech-generation.md.txt): Generate high-fidelity speech and multi-speaker audio with the Gemini API using gemini-3.8-flash-tts and gemini-3.8-flash-lite-tts.
 - [Streaming interactions](https://ai.google.dev/gemini-api/docs/streaming.md.txt): Stream Interactions API responses using server-sent events (SSE)
 - [Structured outputs](https://ai.google.dev/gemini-api/docs/structured-output.md.txt): Learn how to generate structured JSON output with the Gemini API.
 - [Durable AI agent with Gemini and Temporal](https://ai.google.dev/gemini-api/docs/temporal-example.md.txt): Building durable AI agents with Gemini and Temporal
@@ -207,3 +207,20 @@ Gemini API Docs and API Reference
 - [Gemini 3.8 Live](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live.md.txt): Learn about the Gemini 3.8 Live model from Google
 - [Thinking in the Live API](https://ai.google.dev/gemini-api/docs/live-api/thinking.md.txt): Learn about Thinking in the Gemini Live API, including architectural differences, interaction status tracking, and non-blocking tools.
 - [Gemini 3.8 Live Extended Thinking](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live-extended-thinking.md.txt): Learn about the Gemini 3.8 Live Extended Thinking model from Google
+- [Credentials in managed agents](https://ai.google.dev/gemini-api/docs/agent-credentials.md.txt): Learn how to store and manage server-side credentials for managed agents in the Gemini API, including bearer tokens, OAuth2 configurations, and environment variable secrets.
+- [Lyria prompt guide](https://ai.google.dev/gemini-api/docs/lyria-prompt-guide.md.txt): Guide to prompt engineering for music generation with Lyria 3.5 and Lyria RealTime in the Gemini API
+- [API errors](https://ai.google.dev/gemini-api/docs/generate-content/api-errors.md.txt): Documentation for Google's legacy Gemini Generate Content API.
+- [Voice design](https://ai.google.dev/gemini-api/docs/generate-content/voice-design.md.txt): Create custom vocal personas from natural language with the Gemini API
+- [Voice replication](https://ai.google.dev/gemini-api/docs/voice-replication.md.txt): Replicate a speaker&#39;s voice with persistent voice IDs or stateless client keys in the Gemini API
+- [Voice replication](https://ai.google.dev/gemini-api/docs/generate-content/voice-replication.md.txt): Replicate a speaker&#39;s voice with persistent voice IDs or stateless client keys in the Gemini API
+- [Gemini 3.8 Flash-Lite TTS](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash-lite-tts.md.txt): Learn about the Gemini 3.8 Flash-Lite TTS model from Google.
+- [Voice design](https://ai.google.dev/gemini-api/docs/voice-design.md.txt): Create custom vocal personas from natural language with the Gemini API
+- [Antigravity preview](https://ai.google.dev/gemini-api/docs/models/antigravity-preview-09-2026.md.txt): Learn about Antigravity Agent preview model from Google
+- [Gemini 3.8 Flash TTS](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash-tts.md.txt): Learn about the Gemini 3.8 Flash TTS model from Google.
+- [Gemini Nano Banana 2.1](https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1.md.txt): Learn about Gemini Nano Banana 2.1 from Google
+- [What&#39;s new in Gemini 3.6 Flash and 3.5 Flash-Lite](https://ai.google.dev/gemini-api/docs/generate-content/whats-new-gemini-3.6.md.txt): Learn about what&#39;s new in Gemini 3.6 Flash and Gemini 3.5 Flash-Lite, including model capabilities, API changes, and migration guidance.
+- [What&#39;s new in Gemini 3.7 Flash](https://ai.google.dev/gemini-api/docs/whats-new-gemini-3.7.md.txt): Learn about what&#39;s new in Gemini 3.7 Flash, including model capabilities, API changes, and migration guidance.
+- [What&#39;s new in Gemini 3.7 Flash](https://ai.google.dev/gemini-api/docs/generate-content/whats-new-gemini-3.7.md.txt): Learn about what&#39;s new in Gemini 3.7 Flash, including model capabilities, API changes, and migration guidance.
+- [What&#39;s new in Gemini 3.6 Flash and 3.5 Flash-Lite](https://ai.google.dev/gemini-api/docs/whats-new-gemini-3.6.md.txt): Learn about what&#39;s new in Gemini 3.6 Flash and Gemini 3.5 Flash-Lite, including model capabilities, API changes, and migration guidance.
+- [Gemini Robotics ER 2 preview](https://ai.google.dev/gemini-api/docs/models/gemini-robotics-er-2-preview.md.txt): Learn about Gemini Robotics ER 2 from Google
+- [Gemini Robotics ER 2 streaming](https://ai.google.dev/gemini-api/docs/models/gemini-robotics-er-2-streaming-preview.md.txt): Learn about Gemini Robotics ER 2 Streaming from Google

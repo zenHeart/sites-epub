@@ -1,6 +1,6 @@
 [
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Introduction",
     "title": "Welcome",
     "md_url": "https://manus.im/docs/introduction/welcome.md",
     "html_url": "https://manus.im/docs/introduction/welcome",
@@ -8,7 +8,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Introduction",
     "title": "Plans and Pricing",
     "md_url": "https://manus.im/docs/introduction/plans.md",
     "html_url": "https://manus.im/docs/introduction/plans",
@@ -16,7 +16,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Projects",
     "md_url": "https://manus.im/docs/features/projects.md",
     "html_url": "https://manus.im/docs/features/projects",
@@ -24,7 +24,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Manus Skills",
     "md_url": "https://manus.im/docs/features/skills.md",
     "html_url": "https://manus.im/docs/features/skills",
@@ -32,7 +32,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Design View",
     "md_url": "https://manus.im/docs/features/design-view.md",
     "html_url": "https://manus.im/docs/features/design-view",
@@ -40,7 +40,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Wide Research",
     "md_url": "https://manus.im/docs/features/wide-research.md",
     "html_url": "https://manus.im/docs/features/wide-research",
@@ -48,7 +48,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Manus Slides",
     "md_url": "https://manus.im/docs/features/slides.md",
     "html_url": "https://manus.im/docs/features/slides",
@@ -56,15 +56,15 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
-    "title": "Scheduled Tasks",
-    "md_url": "https://manus.im/docs/features/scheduled-tasks.md",
-    "html_url": "https://manus.im/docs/features/scheduled-tasks",
-    "route": "docs/features/scheduled-tasks",
+    "group": "Manus: Features",
+    "title": "Automations",
+    "md_url": "https://manus.im/docs/automations.md",
+    "html_url": "https://manus.im/docs/automations",
+    "route": "docs/automations",
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Data Analysis & Visualization",
     "md_url": "https://manus.im/docs/features/data-visualization.md",
     "html_url": "https://manus.im/docs/features/data-visualization",
@@ -72,7 +72,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Multimedia Processing",
     "md_url": "https://manus.im/docs/features/multi-modal.md",
     "html_url": "https://manus.im/docs/features/multi-modal",
@@ -80,7 +80,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Mail Manus",
     "md_url": "https://manus.im/docs/features/mail-manus.md",
     "html_url": "https://manus.im/docs/features/mail-manus",
@@ -88,7 +88,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Manus Collab",
     "md_url": "https://manus.im/docs/features/collab.md",
     "html_url": "https://manus.im/docs/features/collab",
@@ -96,7 +96,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Cloud browser",
     "md_url": "https://manus.im/docs/features/cloud-browser.md",
     "html_url": "https://manus.im/docs/features/cloud-browser",
@@ -104,7 +104,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Browser Operator",
     "md_url": "https://manus.im/docs/features/browser-operator.md",
     "html_url": "https://manus.im/docs/features/browser-operator",
@@ -112,7 +112,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Desktop",
     "md_url": "https://manus.im/docs/features/desktop.md",
     "html_url": "https://manus.im/docs/features/desktop",
@@ -120,7 +120,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Features",
     "title": "Meeting minutes",
     "md_url": "https://manus.im/docs/features/meeting-minutes.md",
     "html_url": "https://manus.im/docs/features/meeting-minutes",
@@ -128,7 +128,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Getting started",
     "md_url": "https://manus.im/docs/website-builder/getting-started.md",
     "html_url": "https://manus.im/docs/website-builder/getting-started",
@@ -136,7 +136,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Editing and Previewing",
     "md_url": "https://manus.im/docs/website-builder/editing-and-previewing.md",
     "html_url": "https://manus.im/docs/website-builder/editing-and-previewing",
@@ -144,7 +144,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Publishing",
     "md_url": "https://manus.im/docs/website-builder/publishing.md",
     "html_url": "https://manus.im/docs/website-builder/publishing",
@@ -152,7 +152,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Usage and Pricing",
     "md_url": "https://manus.im/docs/website-builder/getting-started/usage-and-pricing.md",
     "html_url": "https://manus.im/docs/website-builder/getting-started/usage-and-pricing",
@@ -160,7 +160,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Built-in AI Capabilities",
     "md_url": "https://manus.im/docs/website-builder/ai-capabilities.md",
     "html_url": "https://manus.im/docs/website-builder/ai-capabilities",
@@ -168,7 +168,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Cloud Infrastructure",
     "md_url": "https://manus.im/docs/website-builder/cloud-infrastructure.md",
     "html_url": "https://manus.im/docs/website-builder/cloud-infrastructure",
@@ -176,7 +176,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Access Control",
     "md_url": "https://manus.im/docs/website-builder/access-control.md",
     "html_url": "https://manus.im/docs/website-builder/access-control",
@@ -184,7 +184,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Notifications",
     "md_url": "https://manus.im/docs/website-builder/notifications.md",
     "html_url": "https://manus.im/docs/website-builder/notifications",
@@ -192,7 +192,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Payments",
     "md_url": "https://manus.im/docs/website-builder/payments.md",
     "html_url": "https://manus.im/docs/website-builder/payments",
@@ -200,7 +200,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Project Analytics ",
     "md_url": "https://manus.im/docs/website-builder/project-analytics.md",
     "html_url": "https://manus.im/docs/website-builder/project-analytics",
@@ -208,7 +208,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Custom Domains: Professionalize Your Brand",
     "md_url": "https://manus.im/docs/website-builder/custom-domains.md",
     "html_url": "https://manus.im/docs/website-builder/custom-domains",
@@ -216,7 +216,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Search Engine Optimization",
     "md_url": "https://manus.im/docs/website-builder/seo.md",
     "html_url": "https://manus.im/docs/website-builder/seo",
@@ -224,7 +224,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Code Control",
     "md_url": "https://manus.im/docs/website-builder/code-control.md",
     "html_url": "https://manus.im/docs/website-builder/code-control",
@@ -232,7 +232,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Make a Copy",
     "md_url": "https://manus.im/docs/website-builder/make-a-copy.md",
     "html_url": "https://manus.im/docs/website-builder/make-a-copy",
@@ -240,7 +240,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Import from Figma: From Design to App in One Step",
     "md_url": "https://manus.im/docs/website-builder/import-figma.md",
     "html_url": "https://manus.im/docs/website-builder/import-figma",
@@ -248,7 +248,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Third-Party Integrations",
     "md_url": "https://manus.im/docs/website-builder/third-party-integrations.md",
     "html_url": "https://manus.im/docs/website-builder/third-party-integrations",
@@ -256,7 +256,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "GitHub Integration",
     "md_url": "https://manus.im/docs/website-builder/github-integration.md",
     "html_url": "https://manus.im/docs/website-builder/github-integration",
@@ -264,7 +264,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "App Publishing (mobile)",
     "md_url": "https://manus.im/docs/website-builder/app-publishing.md",
     "html_url": "https://manus.im/docs/website-builder/app-publishing",
@@ -272,7 +272,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Website Builder",
     "title": "Schedules",
     "md_url": "https://manus.im/docs/website-builder/schedules.md",
     "html_url": "https://manus.im/docs/website-builder/schedules",
@@ -280,7 +280,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Integrations",
     "title": "Integrate Manus with Your Existing Tools",
     "md_url": "https://manus.im/docs/integrations/integrations.md",
     "html_url": "https://manus.im/docs/integrations/integrations",
@@ -288,7 +288,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Integrations",
     "title": "MCP Connectors",
     "md_url": "https://manus.im/docs/integrations/mcp-connectors.md",
     "html_url": "https://manus.im/docs/integrations/mcp-connectors",
@@ -296,7 +296,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Integrations",
     "title": "Custom MCP Servers",
     "md_url": "https://manus.im/docs/integrations/custom-mcp.md",
     "html_url": "https://manus.im/docs/integrations/custom-mcp",
@@ -304,7 +304,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Integrations",
     "title": "Manus Browser Operator ",
     "md_url": "https://manus.im/docs/integrations/manus-browser-operator.md",
     "html_url": "https://manus.im/docs/integrations/manus-browser-operator",
@@ -312,7 +312,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Integrations",
     "title": "Slack Integration",
     "md_url": "https://manus.im/docs/integrations/slack-integration.md",
     "html_url": "https://manus.im/docs/integrations/slack-integration",
@@ -320,7 +320,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Integrations",
     "title": "Zapier ",
     "md_url": "https://manus.im/docs/integrations/zapier.md",
     "html_url": "https://manus.im/docs/integrations/zapier",
@@ -328,7 +328,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Integrations",
     "title": "Manus API",
     "md_url": "https://manus.im/docs/integrations/manus-api.md",
     "html_url": "https://manus.im/docs/integrations/manus-api",
@@ -336,7 +336,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Integrations",
     "title": "Nano Banana Pro",
     "md_url": "https://manus.im/docs/integrations/nano-banana-pro.md",
     "html_url": "https://manus.im/docs/integrations/nano-banana-pro",
@@ -344,7 +344,7 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Docs",
+    "group": "Manus: Integrations",
     "title": "Data Sources",
     "md_url": "https://manus.im/docs/integrations/data-sources.md",
     "html_url": "https://manus.im/docs/integrations/data-sources",
@@ -352,11 +352,147 @@
     "kind": "doc"
   },
   {
+    "group": "Manus: Indexes",
+    "title": "Italian (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/it.md",
+    "html_url": "https://manus.im/docs/_llms/it",
+    "route": "docs/_llms/it",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "German (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/de.md",
+    "html_url": "https://manus.im/docs/_llms/de",
+    "route": "docs/_llms/de",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "Turkish (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/tr.md",
+    "html_url": "https://manus.im/docs/_llms/tr",
+    "route": "docs/_llms/tr",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "Spanish (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/es.md",
+    "html_url": "https://manus.im/docs/_llms/es",
+    "route": "docs/_llms/es",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "French (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/fr.md",
+    "html_url": "https://manus.im/docs/_llms/fr",
+    "route": "docs/_llms/fr",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "Hindi (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/hi.md",
+    "html_url": "https://manus.im/docs/_llms/hi",
+    "route": "docs/_llms/hi",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "Korean (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/ko.md",
+    "html_url": "https://manus.im/docs/_llms/ko",
+    "route": "docs/_llms/ko",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "Japanese (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/ja.md",
+    "html_url": "https://manus.im/docs/_llms/ja",
+    "route": "docs/_llms/ja",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "Brazilian Portuguese (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/pt-br.md",
+    "html_url": "https://manus.im/docs/_llms/pt-br",
+    "route": "docs/_llms/pt-br",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "Simplified Chinese (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/zh-hans.md",
+    "html_url": "https://manus.im/docs/_llms/zh-hans",
+    "route": "docs/_llms/zh-hans",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "Arabic (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/ar.md",
+    "html_url": "https://manus.im/docs/_llms/ar",
+    "route": "docs/_llms/ar",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "Traditional Chinese (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/zh-hant.md",
+    "html_url": "https://manus.im/docs/_llms/zh-hant",
+    "route": "docs/_llms/zh-hant",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "Indonesian (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/id.md",
+    "html_url": "https://manus.im/docs/_llms/id",
+    "route": "docs/_llms/id",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Indexes",
+    "title": "Vietnamese (44 pages)",
+    "md_url": "https://manus.im/docs/_llms/vi.md",
+    "html_url": "https://manus.im/docs/_llms/vi",
+    "route": "docs/_llms/vi",
+    "kind": "doc"
+  },
+  {
     "group": "Blog",
-    "title": "manus resumes independent operations",
-    "md_url": "https://manus.im/blog/manus-resumes-independent-operations.md",
-    "html_url": "https://manus.im/blog/manus-resumes-independent-operations",
-    "route": "blog/manus-resumes-independent-operations",
+    "title": "introducing manus 2 0",
+    "md_url": "https://manus.im/blog/introducing-manus-2-0.md",
+    "html_url": "https://manus.im/blog/introducing-manus-2-0",
+    "route": "blog/introducing-manus-2-0",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing video editor",
+    "md_url": "https://manus.im/blog/introducing-video-editor.md",
+    "html_url": "https://manus.im/blog/introducing-video-editor",
+    "route": "blog/introducing-video-editor",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing game developer",
+    "md_url": "https://manus.im/blog/introducing-game-developer.md",
+    "html_url": "https://manus.im/blog/introducing-game-developer",
+    "route": "blog/introducing-game-developer",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing manus flex",
+    "md_url": "https://manus.im/blog/introducing-manus-flex.md",
+    "html_url": "https://manus.im/blog/introducing-manus-flex",
+    "route": "blog/introducing-manus-flex",
     "kind": "blog"
   },
   {
@@ -365,6 +501,14 @@
     "md_url": "https://manus.im/blog/wally.md",
     "html_url": "https://manus.im/blog/wally",
     "route": "blog/wally",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus resumes independent operations",
+    "md_url": "https://manus.im/blog/manus-resumes-independent-operations.md",
+    "html_url": "https://manus.im/blog/manus-resumes-independent-operations",
+    "route": "blog/manus-resumes-independent-operations",
     "kind": "blog"
   },
   {
@@ -981,6 +1125,14 @@
     "md_url": "https://manus.im/blog/what-we-saw-in-the-past-three-months-and-what-we-see-in-the-future.md",
     "html_url": "https://manus.im/blog/what-we-saw-in-the-past-three-months-and-what-we-see-in-the-future",
     "route": "blog/what-we-saw-in-the-past-three-months-and-what-we-see-in-the-future",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "learn ai with manus",
+    "md_url": "https://manus.im/blog/learn-ai-with-manus.md",
+    "html_url": "https://manus.im/blog/learn-ai-with-manus",
+    "route": "blog/learn-ai-with-manus",
     "kind": "blog"
   },
   {

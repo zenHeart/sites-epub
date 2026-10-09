@@ -17,6 +17,14 @@
   },
   {
     "group": "Docs",
+    "title": "\u63d2\u4ef6",
+    "md_url": "https://www.kimi.com/plugins.md",
+    "html_url": "https://www.kimi.com/plugins",
+    "route": "plugins",
+    "kind": "doc"
+  },
+  {
+    "group": "Docs",
     "title": "\u5b9a\u65f6\u4efb\u52a1",
     "md_url": "https://www.kimi.com/tasks.md",
     "html_url": "https://www.kimi.com/tasks",
@@ -25,18 +33,18 @@
   },
   {
     "group": "Docs",
-    "title": "PPT",
-    "md_url": "https://www.kimi.com/slides.md",
-    "html_url": "https://www.kimi.com/slides",
-    "route": "slides",
+    "title": "\u7075\u611f\u5e93",
+    "md_url": "https://www.kimi.com/inspiration.md",
+    "html_url": "https://www.kimi.com/inspiration",
+    "route": "inspiration",
     "kind": "doc"
   },
   {
     "group": "Docs",
-    "title": "\u96c6\u7fa4",
-    "md_url": "https://www.kimi.com/agent-swarm.md",
-    "html_url": "https://www.kimi.com/agent-swarm",
-    "route": "agent-swarm",
+    "title": "PPT",
+    "md_url": "https://www.kimi.com/slides.md",
+    "html_url": "https://www.kimi.com/slides",
+    "route": "slides",
     "kind": "doc"
   },
   {
@@ -53,46 +61,6 @@
     "md_url": "https://www.kimi.com/docs.md",
     "html_url": "https://www.kimi.com/docs",
     "route": "docs",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "\u7f51\u7ad9",
-    "md_url": "https://www.kimi.com/websites.md",
-    "html_url": "https://www.kimi.com/websites",
-    "route": "websites",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "\u8868\u683c",
-    "md_url": "https://www.kimi.com/sheets.md",
-    "html_url": "https://www.kimi.com/sheets",
-    "route": "sheets",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "\u8bbe\u8ba1",
-    "md_url": "https://www.kimi.com/design.md",
-    "html_url": "https://www.kimi.com/design",
-    "route": "design",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "Kimi Work",
-    "md_url": "https://www.kimi.com/products/kimi-work.md",
-    "html_url": "https://www.kimi.com/products/kimi-work",
-    "route": "products/kimi-work",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "Kimi Code",
-    "md_url": "https://www.kimi.com/code.md",
-    "html_url": "https://www.kimi.com/code",
-    "route": "code",
     "kind": "doc"
   },
   {

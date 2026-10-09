@@ -1,6 +1,14 @@
 [
   {
     "group": "AI Studio",
+    "title": "AI Studio",
+    "md_url": "https://ai.google.dev/gemini-api/docs.md",
+    "html_url": "https://ai.google.dev/gemini-api/docs",
+    "route": "gemini-api",
+    "kind": "doc"
+  },
+  {
+    "group": "AI Studio",
     "title": "Quickstart",
     "md_url": "https://ai.google.dev/gemini-api/docs/ai-studio-quickstart.md",
     "html_url": "https://ai.google.dev/gemini-api/docs/ai-studio-quickstart",
@@ -48,16 +56,16 @@
     "kind": "doc"
   },
   {
-    "group": "AI Studio",
-    "title": "Troubleshooting",
-    "md_url": "https://ai.google.dev/gemini-api/docs/troubleshoot-ai-studio.md",
-    "html_url": "https://ai.google.dev/gemini-api/docs/troubleshoot-ai-studio",
-    "route": "gemini-api/docs/troubleshoot-ai-studio",
+    "group": "Antigravity",
+    "title": "Changelog",
+    "md_url": "https://antigravity.google/docs/changelog.md",
+    "html_url": "https://antigravity.google/docs/changelog",
+    "route": "antigravity/changelog",
     "kind": "doc"
   },
   {
     "group": "Antigravity",
-    "title": "home",
+    "title": "Home",
     "md_url": "https://antigravity.google/docs/home.md",
     "html_url": "https://antigravity.google/docs/home",
     "route": "antigravity/home",
@@ -65,7 +73,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "overview",
+    "title": "Antigravity 2.0 overview",
     "md_url": "https://antigravity.google/docs/overview.md",
     "html_url": "https://antigravity.google/docs/overview",
     "route": "antigravity/overview",
@@ -73,7 +81,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "getting-started",
+    "title": "Getting started",
     "md_url": "https://antigravity.google/docs/getting-started.md",
     "html_url": "https://antigravity.google/docs/getting-started",
     "route": "antigravity/getting-started",
@@ -81,7 +89,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "build-with-google",
+    "title": "Build with Google",
     "md_url": "https://antigravity.google/docs/build-with-google.md",
     "html_url": "https://antigravity.google/docs/build-with-google",
     "route": "antigravity/build-with-google",
@@ -89,7 +97,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "features",
+    "title": "Feature overview",
     "md_url": "https://antigravity.google/docs/features.md",
     "html_url": "https://antigravity.google/docs/features",
     "route": "antigravity/features",
@@ -97,7 +105,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "models",
+    "title": "Models",
     "md_url": "https://antigravity.google/docs/models.md",
     "html_url": "https://antigravity.google/docs/models",
     "route": "antigravity/models",
@@ -105,7 +113,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "projects",
+    "title": "Projects",
     "md_url": "https://antigravity.google/docs/projects.md",
     "html_url": "https://antigravity.google/docs/projects",
     "route": "antigravity/projects",
@@ -113,7 +121,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "remote-control",
+    "title": "Remote Control",
     "md_url": "https://antigravity.google/docs/remote-control.md",
     "html_url": "https://antigravity.google/docs/remote-control",
     "route": "antigravity/remote-control",
@@ -121,7 +129,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "settings",
+    "title": "Settings",
     "md_url": "https://antigravity.google/docs/settings.md",
     "html_url": "https://antigravity.google/docs/settings",
     "route": "antigravity/settings",
@@ -129,7 +137,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "agent-settings",
+    "title": "Agent settings",
     "md_url": "https://antigravity.google/docs/agent-settings.md",
     "html_url": "https://antigravity.google/docs/agent-settings",
     "route": "antigravity/agent-settings",
@@ -137,7 +145,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "artifact-review",
+    "title": "Artifact review",
     "md_url": "https://antigravity.google/docs/artifact-review.md",
     "html_url": "https://antigravity.google/docs/artifact-review",
     "route": "antigravity/artifact-review",
@@ -145,7 +153,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "mcp",
+    "title": "MCP",
     "md_url": "https://antigravity.google/docs/mcp.md",
     "html_url": "https://antigravity.google/docs/mcp",
     "route": "antigravity/mcp",
@@ -153,7 +161,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "skills",
+    "title": "Agent skills",
     "md_url": "https://antigravity.google/docs/skills.md",
     "html_url": "https://antigravity.google/docs/skills",
     "route": "antigravity/skills",
@@ -161,15 +169,31 @@
   },
   {
     "group": "Antigravity",
-    "title": "rules-workflows",
-    "md_url": "https://antigravity.google/docs/rules-workflows.md",
-    "html_url": "https://antigravity.google/docs/rules-workflows",
-    "route": "antigravity/rules-workflows",
+    "title": "Rules",
+    "md_url": "https://antigravity.google/docs/rules.md",
+    "html_url": "https://antigravity.google/docs/rules",
+    "route": "antigravity/rules",
     "kind": "doc"
   },
   {
     "group": "Antigravity",
-    "title": "plugins",
+    "title": "Slash commands overview",
+    "md_url": "https://antigravity.google/docs/slash-commands.md",
+    "html_url": "https://antigravity.google/docs/slash-commands",
+    "route": "antigravity/slash-commands",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Marketplace",
+    "md_url": "https://antigravity.google/docs/marketplace.md",
+    "html_url": "https://antigravity.google/docs/marketplace",
+    "route": "antigravity/marketplace",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Plugins",
     "md_url": "https://antigravity.google/docs/plugins.md",
     "html_url": "https://antigravity.google/docs/plugins",
     "route": "antigravity/plugins",
@@ -177,7 +201,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "hooks",
+    "title": "Hooks",
     "md_url": "https://antigravity.google/docs/hooks.md",
     "html_url": "https://antigravity.google/docs/hooks",
     "route": "antigravity/hooks",
@@ -185,7 +209,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "sidecars",
+    "title": "Sidecars",
     "md_url": "https://antigravity.google/docs/sidecars.md",
     "html_url": "https://antigravity.google/docs/sidecars",
     "route": "antigravity/sidecars",
@@ -193,7 +217,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "permissions",
+    "title": "Permissions",
     "md_url": "https://antigravity.google/docs/permissions.md",
     "html_url": "https://antigravity.google/docs/permissions",
     "route": "antigravity/permissions",
@@ -201,7 +225,15 @@
   },
   {
     "group": "Antigravity",
-    "title": "subagents",
+    "title": "Terminal sandbox",
+    "md_url": "https://antigravity.google/docs/sandbox.md",
+    "html_url": "https://antigravity.google/docs/sandbox",
+    "route": "antigravity/sandbox",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Custom subagents",
     "md_url": "https://antigravity.google/docs/subagents.md",
     "html_url": "https://antigravity.google/docs/subagents",
     "route": "antigravity/subagents",
@@ -209,7 +241,31 @@
   },
   {
     "group": "Antigravity",
-    "title": "artifacts",
+    "title": "Teamwork agent teams (/teamwork-preview)",
+    "md_url": "https://antigravity.google/docs/teamwork.md",
+    "html_url": "https://antigravity.google/docs/teamwork",
+    "route": "antigravity/teamwork",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Boost deep reasoning (/boost)",
+    "md_url": "https://antigravity.google/docs/boost.md",
+    "html_url": "https://antigravity.google/docs/boost",
+    "route": "antigravity/boost",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Plan (/plan)",
+    "md_url": "https://antigravity.google/docs/plan.md",
+    "html_url": "https://antigravity.google/docs/plan",
+    "route": "antigravity/plan",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Artifacts",
     "md_url": "https://antigravity.google/docs/artifacts.md",
     "html_url": "https://antigravity.google/docs/artifacts",
     "route": "antigravity/artifacts",
@@ -217,7 +273,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "implementation-plan",
+    "title": "Plan",
     "md_url": "https://antigravity.google/docs/implementation-plan.md",
     "html_url": "https://antigravity.google/docs/implementation-plan",
     "route": "antigravity/implementation-plan",
@@ -225,7 +281,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "walkthrough",
+    "title": "Walkthrough",
     "md_url": "https://antigravity.google/docs/walkthrough.md",
     "html_url": "https://antigravity.google/docs/walkthrough",
     "route": "antigravity/walkthrough",
@@ -233,7 +289,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "screenshots",
+    "title": "Screenshots",
     "md_url": "https://antigravity.google/docs/screenshots.md",
     "html_url": "https://antigravity.google/docs/screenshots",
     "route": "antigravity/screenshots",
@@ -241,7 +297,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-overview",
+    "title": "Antigravity CLI overview",
     "md_url": "https://antigravity.google/docs/cli/overview.md",
     "html_url": "https://antigravity.google/docs/cli/overview",
     "route": "antigravity/cli/overview",
@@ -249,15 +305,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-getting-started",
-    "md_url": "https://antigravity.google/docs/cli/getting-started.md",
-    "html_url": "https://antigravity.google/docs/cli/getting-started",
-    "route": "antigravity/cli/getting-started",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "cli-install",
+    "title": "Installation and auth",
     "md_url": "https://antigravity.google/docs/cli/install.md",
     "html_url": "https://antigravity.google/docs/cli/install",
     "route": "antigravity/cli/install",
@@ -265,7 +313,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-tutorial",
+    "title": "Tutorial",
     "md_url": "https://antigravity.google/docs/cli/tutorial.md",
     "html_url": "https://antigravity.google/docs/cli/tutorial",
     "route": "antigravity/cli/tutorial",
@@ -273,7 +321,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-using",
+    "title": "Using Antigravity CLI",
     "md_url": "https://antigravity.google/docs/cli/using.md",
     "html_url": "https://antigravity.google/docs/cli/using",
     "route": "antigravity/cli/using",
@@ -281,7 +329,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-features",
+    "title": "Features",
     "md_url": "https://antigravity.google/docs/cli/features.md",
     "html_url": "https://antigravity.google/docs/cli/features",
     "route": "antigravity/cli/features",
@@ -289,7 +337,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "gcli-migration",
+    "title": "Migration",
     "md_url": "https://antigravity.google/docs/cli/gcli-migration.md",
     "html_url": "https://antigravity.google/docs/cli/gcli-migration",
     "route": "antigravity/cli/gcli-migration",
@@ -297,7 +345,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-prompting",
+    "title": "Prompting and interaction",
     "md_url": "https://antigravity.google/docs/cli/prompting.md",
     "html_url": "https://antigravity.google/docs/cli/prompting",
     "route": "antigravity/cli/prompting",
@@ -305,7 +353,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-headless",
+    "title": "Headless mode",
     "md_url": "https://antigravity.google/docs/cli/headless.md",
     "html_url": "https://antigravity.google/docs/cli/headless",
     "route": "antigravity/cli/headless",
@@ -313,7 +361,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-artifacts",
+    "title": "Reviewing artifacts",
     "md_url": "https://antigravity.google/docs/cli/artifacts.md",
     "html_url": "https://antigravity.google/docs/cli/artifacts",
     "route": "antigravity/cli/artifacts",
@@ -321,7 +369,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-conversations",
+    "title": "Managing conversations",
     "md_url": "https://antigravity.google/docs/cli/conversations.md",
     "html_url": "https://antigravity.google/docs/cli/conversations",
     "route": "antigravity/cli/conversations",
@@ -329,7 +377,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-modes",
+    "title": "Choose an execution mode",
     "md_url": "https://antigravity.google/docs/cli/modes.md",
     "html_url": "https://antigravity.google/docs/cli/modes",
     "route": "antigravity/cli/modes",
@@ -337,39 +385,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-projects",
-    "md_url": "https://antigravity.google/docs/cli/projects.md",
-    "html_url": "https://antigravity.google/docs/cli/projects",
-    "route": "antigravity/cli/projects",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "cli-subagents",
-    "md_url": "https://antigravity.google/docs/cli/subagents.md",
-    "html_url": "https://antigravity.google/docs/cli/subagents",
-    "route": "antigravity/cli/subagents",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "cli-sandbox",
-    "md_url": "https://antigravity.google/docs/cli/sandbox.md",
-    "html_url": "https://antigravity.google/docs/cli/sandbox",
-    "route": "antigravity/cli/sandbox",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "cli-settings",
-    "md_url": "https://antigravity.google/docs/cli/settings.md",
-    "html_url": "https://antigravity.google/docs/cli/settings",
-    "route": "antigravity/cli/settings",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "cli-vim-editor-mode",
+    "title": "Vim editor mode",
     "md_url": "https://antigravity.google/docs/cli/vim-editor-mode.md",
     "html_url": "https://antigravity.google/docs/cli/vim-editor-mode",
     "route": "antigravity/cli/vim-editor-mode",
@@ -377,7 +393,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-credits",
+    "title": "AI credits",
     "md_url": "https://antigravity.google/docs/cli/credits.md",
     "html_url": "https://antigravity.google/docs/cli/credits",
     "route": "antigravity/cli/credits",
@@ -385,31 +401,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "mcp",
-    "md_url": "https://antigravity.google/docs/cli/mcp.md",
-    "html_url": "https://antigravity.google/docs/cli/mcp",
-    "route": "antigravity/cli/mcp",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "cli-plugins",
-    "md_url": "https://antigravity.google/docs/cli/plugins.md",
-    "html_url": "https://antigravity.google/docs/cli/plugins",
-    "route": "antigravity/cli/plugins",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "cli-permissions",
-    "md_url": "https://antigravity.google/docs/cli/permissions.md",
-    "html_url": "https://antigravity.google/docs/cli/permissions",
-    "route": "antigravity/cli/permissions",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "cli-statusline",
+    "title": "Status line customization",
     "md_url": "https://antigravity.google/docs/cli/statusline.md",
     "html_url": "https://antigravity.google/docs/cli/statusline",
     "route": "antigravity/cli/statusline",
@@ -417,7 +409,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-title",
+    "title": "Terminal title customization",
     "md_url": "https://antigravity.google/docs/cli/title.md",
     "html_url": "https://antigravity.google/docs/cli/title",
     "route": "antigravity/cli/title",
@@ -425,7 +417,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "agents",
+    "title": "Agents command (/agents)",
     "md_url": "https://antigravity.google/docs/cli/commands/agents.md",
     "html_url": "https://antigravity.google/docs/cli/commands/agents",
     "route": "antigravity/cli/commands/agents",
@@ -433,7 +425,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "codesearch",
+    "title": "Code search command (/codesearch)",
     "md_url": "https://antigravity.google/docs/cli/commands/codesearch.md",
     "html_url": "https://antigravity.google/docs/cli/commands/codesearch",
     "route": "antigravity/cli/commands/codesearch",
@@ -441,7 +433,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "credits",
+    "title": "AI credits command (/credits)",
     "md_url": "https://antigravity.google/docs/cli/commands/credits.md",
     "html_url": "https://antigravity.google/docs/cli/commands/credits",
     "route": "antigravity/cli/commands/credits",
@@ -449,7 +441,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "diff",
+    "title": "Diff command (/diff)",
     "md_url": "https://antigravity.google/docs/cli/commands/diff.md",
     "html_url": "https://antigravity.google/docs/cli/commands/diff",
     "route": "antigravity/cli/commands/diff",
@@ -457,7 +449,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "permissions",
+    "title": "Permissions command (/permissions)",
     "md_url": "https://antigravity.google/docs/cli/commands/permissions.md",
     "html_url": "https://antigravity.google/docs/cli/commands/permissions",
     "route": "antigravity/cli/commands/permissions",
@@ -465,7 +457,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "resume",
+    "title": "Resume command (/resume)",
     "md_url": "https://antigravity.google/docs/cli/commands/resume.md",
     "html_url": "https://antigravity.google/docs/cli/commands/resume",
     "route": "antigravity/cli/commands/resume",
@@ -473,7 +465,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "statusline",
+    "title": "Status line command (/statusline)",
     "md_url": "https://antigravity.google/docs/cli/commands/statusline.md",
     "html_url": "https://antigravity.google/docs/cli/commands/statusline",
     "route": "antigravity/cli/commands/statusline",
@@ -481,7 +473,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "title",
+    "title": "Window title command (/title)",
     "md_url": "https://antigravity.google/docs/cli/commands/title.md",
     "html_url": "https://antigravity.google/docs/cli/commands/title",
     "route": "antigravity/cli/commands/title",
@@ -489,7 +481,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "usage",
+    "title": "Model quotas (/usage)",
     "md_url": "https://antigravity.google/docs/cli/commands/usage.md",
     "html_url": "https://antigravity.google/docs/cli/commands/usage",
     "route": "antigravity/cli/commands/usage",
@@ -497,7 +489,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "voice",
+    "title": "Voice dictation (/voice)",
     "md_url": "https://antigravity.google/docs/cli/commands/voice.md",
     "html_url": "https://antigravity.google/docs/cli/commands/voice",
     "route": "antigravity/cli/commands/voice",
@@ -505,7 +497,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-best-practices",
+    "title": "Best practices",
     "md_url": "https://antigravity.google/docs/cli/best-practices.md",
     "html_url": "https://antigravity.google/docs/cli/best-practices",
     "route": "antigravity/cli/best-practices",
@@ -513,7 +505,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-troubleshooting",
+    "title": "Troubleshooting",
     "md_url": "https://antigravity.google/docs/cli/troubleshooting.md",
     "html_url": "https://antigravity.google/docs/cli/troubleshooting",
     "route": "antigravity/cli/troubleshooting",
@@ -521,7 +513,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "cli-reference",
+    "title": "CLI reference",
     "md_url": "https://antigravity.google/docs/cli/reference.md",
     "html_url": "https://antigravity.google/docs/cli/reference",
     "route": "antigravity/cli/reference",
@@ -529,7 +521,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "sdk-overview",
+    "title": "Antigravity SDK overview",
     "md_url": "https://antigravity.google/docs/sdk/overview.md",
     "html_url": "https://antigravity.google/docs/sdk/overview",
     "route": "antigravity/sdk/overview",
@@ -537,7 +529,15 @@
   },
   {
     "group": "Antigravity",
-    "title": "sdk-personas",
+    "title": "Local models",
+    "md_url": "https://antigravity.google/docs/sdk/local-models.md",
+    "html_url": "https://antigravity.google/docs/sdk/local-models",
+    "route": "antigravity/sdk/local-models",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Personas",
     "md_url": "https://antigravity.google/docs/sdk/personas.md",
     "html_url": "https://antigravity.google/docs/sdk/personas",
     "route": "antigravity/sdk/personas",
@@ -545,7 +545,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "sdk-tools",
+    "title": "Tools and skills",
     "md_url": "https://antigravity.google/docs/sdk/tools.md",
     "html_url": "https://antigravity.google/docs/sdk/tools",
     "route": "antigravity/sdk/tools",
@@ -553,7 +553,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "sdk-mcp",
+    "title": "MCP",
     "md_url": "https://antigravity.google/docs/sdk/mcp.md",
     "html_url": "https://antigravity.google/docs/sdk/mcp",
     "route": "antigravity/sdk/mcp",
@@ -561,7 +561,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "sdk-policies",
+    "title": "Policies",
     "md_url": "https://antigravity.google/docs/sdk/policies.md",
     "html_url": "https://antigravity.google/docs/sdk/policies",
     "route": "antigravity/sdk/policies",
@@ -569,7 +569,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "sdk-subagents",
+    "title": "Subagents",
     "md_url": "https://antigravity.google/docs/sdk/subagents.md",
     "html_url": "https://antigravity.google/docs/sdk/subagents",
     "route": "antigravity/sdk/subagents",
@@ -577,7 +577,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "sdk-structured-output",
+    "title": "Structured output",
     "md_url": "https://antigravity.google/docs/sdk/structured-output.md",
     "html_url": "https://antigravity.google/docs/sdk/structured-output",
     "route": "antigravity/sdk/structured-output",
@@ -585,7 +585,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "sdk-lifecycle",
+    "title": "Lifecycle and hooks",
     "md_url": "https://antigravity.google/docs/sdk/lifecycle.md",
     "html_url": "https://antigravity.google/docs/sdk/lifecycle",
     "route": "antigravity/sdk/lifecycle",
@@ -593,7 +593,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "ide-overview",
+    "title": "Antigravity IDE overview",
     "md_url": "https://antigravity.google/docs/ide/overview.md",
     "html_url": "https://antigravity.google/docs/ide/overview",
     "route": "antigravity/ide/overview",
@@ -601,15 +601,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "ide-getting-started",
-    "md_url": "https://antigravity.google/docs/ide/getting-started.md",
-    "html_url": "https://antigravity.google/docs/ide/getting-started",
-    "route": "antigravity/ide/getting-started",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "tab",
+    "title": "Tab",
     "md_url": "https://antigravity.google/docs/ide/tab.md",
     "html_url": "https://antigravity.google/docs/ide/tab",
     "route": "antigravity/ide/tab",
@@ -617,7 +609,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "agent-side-panel",
+    "title": "Side panel",
     "md_url": "https://antigravity.google/docs/ide/agent-side-panel.md",
     "html_url": "https://antigravity.google/docs/ide/agent-side-panel",
     "route": "antigravity/ide/agent-side-panel",
@@ -625,7 +617,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "review-changes-editor",
+    "title": "Review changes",
     "md_url": "https://antigravity.google/docs/ide/review-changes-editor.md",
     "html_url": "https://antigravity.google/docs/ide/review-changes-editor",
     "route": "antigravity/ide/review-changes-editor",
@@ -633,31 +625,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "ide-implementation-plan",
-    "md_url": "https://antigravity.google/docs/ide/implementation-plan.md",
-    "html_url": "https://antigravity.google/docs/ide/implementation-plan",
-    "route": "antigravity/ide/implementation-plan",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "ide-walkthrough",
-    "md_url": "https://antigravity.google/docs/ide/walkthrough.md",
-    "html_url": "https://antigravity.google/docs/ide/walkthrough",
-    "route": "antigravity/ide/walkthrough",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "ide-screenshots",
-    "md_url": "https://antigravity.google/docs/ide/screenshots.md",
-    "html_url": "https://antigravity.google/docs/ide/screenshots",
-    "route": "antigravity/ide/screenshots",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "ide-browser-recordings",
+    "title": "Browser recordings",
     "md_url": "https://antigravity.google/docs/ide/browser-recordings.md",
     "html_url": "https://antigravity.google/docs/ide/browser-recordings",
     "route": "antigravity/ide/browser-recordings",
@@ -665,7 +633,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "browser",
+    "title": "Overview",
     "md_url": "https://antigravity.google/docs/ide/browser.md",
     "html_url": "https://antigravity.google/docs/ide/browser",
     "route": "antigravity/ide/browser",
@@ -673,7 +641,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "allowlist-denylist",
+    "title": "Allowlist and denylist",
     "md_url": "https://antigravity.google/docs/ide/allowlist-denylist.md",
     "html_url": "https://antigravity.google/docs/ide/allowlist-denylist",
     "route": "antigravity/ide/allowlist-denylist",
@@ -681,7 +649,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "separate-chrome-profile",
+    "title": "Separate Chrome profile",
     "md_url": "https://antigravity.google/docs/ide/separate-chrome-profile.md",
     "html_url": "https://antigravity.google/docs/ide/separate-chrome-profile",
     "route": "antigravity/ide/separate-chrome-profile",
@@ -689,31 +657,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "mcp",
-    "md_url": "https://antigravity.google/docs/ide/mcp.md",
-    "html_url": "https://antigravity.google/docs/ide/mcp",
-    "route": "antigravity/ide/mcp",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "ide-skills",
-    "md_url": "https://antigravity.google/docs/ide/skills.md",
-    "html_url": "https://antigravity.google/docs/ide/skills",
-    "route": "antigravity/ide/skills",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "ide-rules",
-    "md_url": "https://antigravity.google/docs/ide/rules.md",
-    "html_url": "https://antigravity.google/docs/ide/rules",
-    "route": "antigravity/ide/rules",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "ide-workflows",
+    "title": "Workflows",
     "md_url": "https://antigravity.google/docs/ide/workflows.md",
     "html_url": "https://antigravity.google/docs/ide/workflows",
     "route": "antigravity/ide/workflows",
@@ -721,31 +665,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "ide-plugins",
-    "md_url": "https://antigravity.google/docs/ide/plugins.md",
-    "html_url": "https://antigravity.google/docs/ide/plugins",
-    "route": "antigravity/ide/plugins",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "ide-hooks",
-    "md_url": "https://antigravity.google/docs/ide/hooks.md",
-    "html_url": "https://antigravity.google/docs/ide/hooks",
-    "route": "antigravity/ide/hooks",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "ide-settings",
-    "md_url": "https://antigravity.google/docs/ide/settings.md",
-    "html_url": "https://antigravity.google/docs/ide/settings",
-    "route": "antigravity/ide/settings",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "firebase-studio-migration",
+    "title": "Firebase Studio migration",
     "md_url": "https://antigravity.google/docs/firebase-studio-migration.md",
     "html_url": "https://antigravity.google/docs/firebase-studio-migration",
     "route": "antigravity/firebase-studio-migration",
@@ -753,7 +673,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "enterprise",
+    "title": "Enterprise",
     "md_url": "https://antigravity.google/docs/enterprise.md",
     "html_url": "https://antigravity.google/docs/enterprise",
     "route": "antigravity/enterprise",
@@ -761,7 +681,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "plans",
+    "title": "Plans",
     "md_url": "https://antigravity.google/docs/plans.md",
     "html_url": "https://antigravity.google/docs/plans",
     "route": "antigravity/plans",
@@ -769,7 +689,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "faq",
+    "title": "FAQ",
     "md_url": "https://antigravity.google/docs/faq.md",
     "html_url": "https://antigravity.google/docs/faq",
     "route": "antigravity/faq",
@@ -2089,7 +2009,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Customize Gemini\u2019s responses with your instructions",
+    "title": "Manage what Gemini remembers about you and customize responses",
     "md_url": "https://support.google.com/gemini/answer/16598625",
     "html_url": "https://support.google.com/gemini/answer/16598625",
     "route": "gemini-app/16598625",
@@ -2329,6 +2249,14 @@
   },
   {
     "group": "Gemini App Help",
+    "title": "Use Gemini on your Googlebook",
+    "md_url": "https://support.google.com/gemini/answer/18199354",
+    "html_url": "https://support.google.com/gemini/answer/18199354",
+    "route": "gemini-app/18199354",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
     "title": "Use the Gemini app for Windows",
     "md_url": "https://support.google.com/gemini/answer/18263854",
     "html_url": "https://support.google.com/gemini/answer/18263854",
@@ -2337,10 +2265,26 @@
   },
   {
     "group": "Gemini App Help",
+    "title": "Ask Gemini to handle your everyday phone calls",
+    "md_url": "https://support.google.com/gemini/answer/18336420",
+    "html_url": "https://support.google.com/gemini/answer/18336420",
+    "route": "gemini-app/18336420",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
     "title": "Get audio descriptions with Guided Vision in Gemini Live",
     "md_url": "https://support.google.com/gemini/answer/18365638",
     "html_url": "https://support.google.com/gemini/answer/18365638",
     "route": "gemini-app/18365638",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "About the transition from Gems to skills",
+    "md_url": "https://support.google.com/gemini/answer/18560919",
+    "html_url": "https://support.google.com/gemini/answer/18560919",
+    "route": "gemini-app/18560919",
     "kind": "doc"
   },
   {
@@ -2393,7 +2337,7 @@
   },
   {
     "group": "NotebookLM Help",
-    "title": "Upgrade Gemini Notebook",
+    "title": "Learn about Gemini Notebook\u2019s plans",
     "md_url": "https://support.google.com/gemininotebook/answer/16213268",
     "html_url": "https://support.google.com/gemininotebook/answer/16213268",
     "route": "notebooklm/16213268",
@@ -2841,6 +2785,22 @@
   },
   {
     "group": "Blog",
+    "title": "new connected apps gemini",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini",
+    "route": "blog/innovation-and-ai/products/gemini-app/new-connected-apps-gemini",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "guided vision gemini live",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live",
+    "route": "blog/innovation-and-ai/products/gemini-app/guided-vision-gemini-live",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "gemini models",
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models",
@@ -3045,6 +3005,38 @@
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 8 text to speech",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 8 live with live avatar",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 3 8 flash developers",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 4 argon",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon",
     "kind": "blog"
   },
   {
@@ -3869,6 +3861,22 @@
     "md_url": "https://blog.google/products-and-platforms/products/gemini/ai-navigate-bureaucracy",
     "html_url": "https://blog.google/products-and-platforms/products/gemini/ai-navigate-bureaucracy",
     "route": "blog/products-and-platforms/products/gemini/ai-navigate-bureaucracy",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "edys grocer gemini",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/edys-grocer-gemini",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/edys-grocer-gemini",
+    "route": "blog/products-and-platforms/products/gemini/edys-grocer-gemini",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automate tasks with skills",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills",
+    "route": "blog/products-and-platforms/products/gemini/automate-tasks-with-skills",
     "kind": "blog"
   }
 ]

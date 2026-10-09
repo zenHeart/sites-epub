@@ -17,6 +17,110 @@
   },
   {
     "group": "MiniMax Design",
+    "title": "简体中文",
+    "md_url": "https://design.minimax.io/zh-cn",
+    "html_url": "https://design.minimax.io/zh-cn",
+    "route": "mm-design-zh-cn",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "繁體中文",
+    "md_url": "https://design.minimax.io/zh-tw",
+    "html_url": "https://design.minimax.io/zh-tw",
+    "route": "mm-design-zh-tw",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "日本語",
+    "md_url": "https://design.minimax.io/ja",
+    "html_url": "https://design.minimax.io/ja",
+    "route": "mm-design-ja",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "한국어",
+    "md_url": "https://design.minimax.io/ko",
+    "html_url": "https://design.minimax.io/ko",
+    "route": "mm-design-ko",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "Español",
+    "md_url": "https://design.minimax.io/es",
+    "html_url": "https://design.minimax.io/es",
+    "route": "mm-design-es",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "Português (Brasil)",
+    "md_url": "https://design.minimax.io/pt-br",
+    "html_url": "https://design.minimax.io/pt-br",
+    "route": "mm-design-pt-br",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "Français",
+    "md_url": "https://design.minimax.io/fr",
+    "html_url": "https://design.minimax.io/fr",
+    "route": "mm-design-fr",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "Deutsch",
+    "md_url": "https://design.minimax.io/de",
+    "html_url": "https://design.minimax.io/de",
+    "route": "mm-design-de",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "Bahasa Indonesia",
+    "md_url": "https://design.minimax.io/id",
+    "html_url": "https://design.minimax.io/id",
+    "route": "mm-design-id",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "ไทย",
+    "md_url": "https://design.minimax.io/th",
+    "html_url": "https://design.minimax.io/th",
+    "route": "mm-design-th",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "Tiếng Việt",
+    "md_url": "https://design.minimax.io/vi",
+    "html_url": "https://design.minimax.io/vi",
+    "route": "mm-design-vi",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "Filipino",
+    "md_url": "https://design.minimax.io/fil",
+    "html_url": "https://design.minimax.io/fil",
+    "route": "mm-design-fil",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
+    "title": "Italiano",
+    "md_url": "https://design.minimax.io/it",
+    "html_url": "https://design.minimax.io/it",
+    "route": "mm-design-it",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
     "title": "Tools",
     "md_url": "https://design.minimax.io/tools",
     "html_url": "https://design.minimax.io/tools",
@@ -72,7 +176,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**Text-to-Video Creation (Hailuo 2.3)**",
     "md_url": "https://hailuoai.video/create/text-to-video",
     "html_url": "https://hailuoai.video/create/text-to-video",
@@ -80,7 +184,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**Image-to-Video Animation**",
     "md_url": "https://hailuoai.video/create/image-to-video",
     "html_url": "https://hailuoai.video/create/image-to-video",
@@ -88,7 +192,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**Image Generation (Nano Banana Model)**",
     "md_url": "https://hailuoai.video/create/image-generation",
     "html_url": "https://hailuoai.video/create/image-generation",
@@ -96,7 +200,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Hug Generator**",
     "md_url": "https://hailuoai.video/tools/ai-hug-generator",
     "html_url": "https://hailuoai.video/tools/ai-hug-generator",
@@ -104,7 +208,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Dance Generator**",
     "md_url": "https://hailuoai.video/tools/ai-dance-generator",
     "html_url": "https://hailuoai.video/tools/ai-dance-generator",
@@ -112,7 +216,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Kiss Generator**",
     "md_url": "https://hailuoai.video/tools/ai-kiss-generator",
     "html_url": "https://hailuoai.video/tools/ai-kiss-generator",
@@ -120,7 +224,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Kungfu & Fight Generator**",
     "md_url": "https://hailuoai.video/tools/ai-kungfu-generator",
     "html_url": "https://hailuoai.video/tools/ai-kungfu-generator",
@@ -128,7 +232,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Muscle & Body Transformation**",
     "md_url": "https://hailuoai.video/tools/ai-muscle-generator",
     "html_url": "https://hailuoai.video/tools/ai-muscle-generator",
@@ -136,7 +240,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Ad Generator**",
     "md_url": "https://hailuoai.video/tools/ai-ad-generator",
     "html_url": "https://hailuoai.video/tools/ai-ad-generator",
@@ -144,7 +248,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Product Video Maker**",
     "md_url": "https://hailuoai.video/tools/ai-product-video-maker",
     "html_url": "https://hailuoai.video/tools/ai-product-video-maker",
@@ -152,7 +256,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Shorts & Reels Generator**",
     "md_url": "https://hailuoai.video/tools/ai-shorts-generator",
     "html_url": "https://hailuoai.video/tools/ai-shorts-generator",
@@ -160,7 +264,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Video Style Transfer**",
     "md_url": "https://hailuoai.video/ai-video-style-transfer",
     "html_url": "https://hailuoai.video/ai-video-style-transfer",
@@ -168,7 +272,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Gender Swap**",
     "md_url": "https://hailuoai.video/ai-video-landing/ai-gender-swap",
     "html_url": "https://hailuoai.video/ai-video-landing/ai-gender-swap",
@@ -176,7 +280,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Animation Generator**",
     "md_url": "https://hailuoai.video/tools/ai-animation-generator",
     "html_url": "https://hailuoai.video/tools/ai-animation-generator",
@@ -184,7 +288,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Christmas & Santa Generator**",
     "md_url": "https://hailuoai.video/tools/ai-santa-video-generator",
     "html_url": "https://hailuoai.video/tools/ai-santa-video-generator",
@@ -192,7 +296,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**AI Baby & Pet Video Maker**",
     "md_url": "https://hailuoai.video/ai-baby-story-video",
     "html_url": "https://hailuoai.video/ai-baby-story-video",
@@ -200,7 +304,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**Hailuo 2.3 Model Info**",
     "md_url": "https://hailuoai.video/tools/hailuo-2-3-model",
     "html_url": "https://hailuoai.video/tools/hailuo-2-3-model",
@@ -208,7 +312,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**Nano Banana Pro Info**",
     "md_url": "https://hailuoai.video/tools/nano-banana-pro",
     "html_url": "https://hailuoai.video/tools/nano-banana-pro",
@@ -216,7 +320,7 @@
     "kind": "doc"
   },
   {
-    "group": "Hailuo \u4ea7\u54c1",
+    "group": "Hailuo 产品",
     "title": "**Hailuo AI Agent Platform**",
     "md_url": "https://hailuoai.video/agent",
     "html_url": "https://hailuoai.video/agent",

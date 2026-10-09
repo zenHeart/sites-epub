@@ -33,18 +33,18 @@
   },
   {
     "group": "Cursor: Get Started",
-    "title": "claude sonnet 5",
-    "md_url": "https://cursor.com/docs/models/claude-sonnet-5.md",
-    "html_url": "https://cursor.com/docs/models/claude-sonnet-5",
-    "route": "docs/models/claude-sonnet-5",
+    "title": "claude sonnet 5 5",
+    "md_url": "https://cursor.com/docs/models/claude-sonnet-5-5.md",
+    "html_url": "https://cursor.com/docs/models/claude-sonnet-5-5",
+    "route": "docs/models/claude-sonnet-5-5",
     "kind": "doc"
   },
   {
     "group": "Cursor: Get Started",
-    "title": "claude opus 5",
-    "md_url": "https://cursor.com/docs/models/claude-opus-5.md",
-    "html_url": "https://cursor.com/docs/models/claude-opus-5",
-    "route": "docs/models/claude-opus-5",
+    "title": "claude opus 5 5",
+    "md_url": "https://cursor.com/docs/models/claude-opus-5-5.md",
+    "html_url": "https://cursor.com/docs/models/claude-opus-5-5",
+    "route": "docs/models/claude-opus-5-5",
     "kind": "doc"
   },
   {
@@ -53,6 +53,14 @@
     "md_url": "https://cursor.com/docs/models/claude-fable-5-1.md",
     "html_url": "https://cursor.com/docs/models/claude-fable-5-1",
     "route": "docs/models/claude-fable-5-1",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "claude haiku 5 5",
+    "md_url": "https://cursor.com/docs/models/claude-haiku-5-5.md",
+    "html_url": "https://cursor.com/docs/models/claude-haiku-5-5",
+    "route": "docs/models/claude-haiku-5-5",
     "kind": "doc"
   },
   {
@@ -105,6 +113,14 @@
   },
   {
     "group": "Cursor: Get Started",
+    "title": "grok 4 7",
+    "md_url": "https://cursor.com/docs/models/grok-4-7.md",
+    "html_url": "https://cursor.com/docs/models/grok-4-7",
+    "route": "docs/models/grok-4-7",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
     "title": "grok 4 6",
     "md_url": "https://cursor.com/docs/models/grok-4-6.md",
     "html_url": "https://cursor.com/docs/models/grok-4-6",
@@ -125,6 +141,14 @@
     "md_url": "https://cursor.com/docs/models/cursor-composer-2-5.md",
     "html_url": "https://cursor.com/docs/models/cursor-composer-2-5",
     "route": "docs/models/cursor-composer-2-5",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
+    "title": "release notes",
+    "md_url": "https://cursor.com/docs/release-notes.md",
+    "html_url": "https://cursor.com/docs/release-notes",
+    "route": "docs/release-notes",
     "kind": "doc"
   },
   {
@@ -293,6 +317,14 @@
     "md_url": "https://cursor.com/docs/grok-bot/teams.md",
     "html_url": "https://cursor.com/docs/grok-bot/teams",
     "route": "docs/grok-bot/teams",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: grok-bot",
+    "title": "deployment",
+    "md_url": "https://cursor.com/docs/grok-bot/deployment.md",
+    "html_url": "https://cursor.com/docs/grok-bot/deployment",
+    "route": "docs/grok-bot/deployment",
     "kind": "doc"
   },
   {
@@ -489,6 +521,14 @@
   },
   {
     "group": "Cursor: cloud-agents",
+    "title": "rollouts",
+    "md_url": "https://cursor.com/docs/rollouts.md",
+    "html_url": "https://cursor.com/docs/rollouts",
+    "route": "docs/rollouts",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
     "title": "mobile",
     "md_url": "https://cursor.com/docs/cloud-agent/mobile.md",
     "html_url": "https://cursor.com/docs/cloud-agent/mobile",
@@ -625,6 +665,14 @@
   },
   {
     "group": "Cursor: origin",
+    "title": "mirror github",
+    "md_url": "https://cursor.com/docs/origin/mirror-github.md",
+    "html_url": "https://cursor.com/docs/origin/mirror-github",
+    "route": "docs/origin/mirror-github",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
     "title": "git",
     "md_url": "https://cursor.com/docs/origin/git.md",
     "html_url": "https://cursor.com/docs/origin/git",
@@ -633,10 +681,10 @@
   },
   {
     "group": "Cursor: origin",
-    "title": "mirror github",
-    "md_url": "https://cursor.com/docs/origin/mirror-github.md",
-    "html_url": "https://cursor.com/docs/origin/mirror-github",
-    "route": "docs/origin/mirror-github",
+    "title": "clonekit ci",
+    "md_url": "https://cursor.com/docs/origin/clonekit-ci.md",
+    "html_url": "https://cursor.com/docs/origin/clonekit-ci",
+    "route": "docs/origin/clonekit-ci",
     "kind": "doc"
   },
   {
@@ -657,26 +705,34 @@
   },
   {
     "group": "Cursor: origin",
+    "title": "agents",
+    "md_url": "https://cursor.com/docs/origin/agents.md",
+    "html_url": "https://cursor.com/docs/origin/agents",
+    "route": "docs/origin/agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "apps",
+    "md_url": "https://cursor.com/docs/origin/apps.md",
+    "html_url": "https://cursor.com/docs/origin/apps",
+    "route": "docs/origin/apps",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "build app",
+    "md_url": "https://cursor.com/docs/origin/apps/build-app.md",
+    "html_url": "https://cursor.com/docs/origin/apps/build-app",
+    "route": "docs/origin/apps/build-app",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
     "title": "settings",
     "md_url": "https://cursor.com/docs/origin/settings.md",
     "html_url": "https://cursor.com/docs/origin/settings",
     "route": "docs/origin/settings",
-    "kind": "doc"
-  },
-  {
-    "group": "Cursor: origin",
-    "title": "codebase settings",
-    "md_url": "https://cursor.com/docs/origin/codebase-settings.md",
-    "html_url": "https://cursor.com/docs/origin/codebase-settings",
-    "route": "docs/origin/codebase-settings",
-    "kind": "doc"
-  },
-  {
-    "group": "Cursor: origin",
-    "title": "integrations",
-    "md_url": "https://cursor.com/docs/origin/integrations.md",
-    "html_url": "https://cursor.com/docs/origin/integrations",
-    "route": "docs/origin/integrations",
     "kind": "doc"
   },
   {
@@ -801,10 +857,10 @@
   },
   {
     "group": "Cursor: SDK",
-    "title": "changelog",
-    "md_url": "https://cursor.com/docs/sdk/changelog.md",
-    "html_url": "https://cursor.com/docs/sdk/changelog",
-    "route": "docs/sdk/changelog",
+    "title": "sdk",
+    "md_url": "https://cursor.com/docs/release-notes/sdk.md",
+    "html_url": "https://cursor.com/docs/release-notes/sdk",
+    "route": "docs/release-notes/sdk",
     "kind": "doc"
   },
   {
@@ -1240,6 +1296,38 @@
     "kind": "doc"
   },
   {
+    "group": "API: Origin API",
+    "title": "acting as users",
+    "md_url": "https://cursor.com/docs/api/origin/acting-as-users.md",
+    "html_url": "https://cursor.com/docs/api/origin/acting-as-users",
+    "route": "docs/api/origin/acting-as-users",
+    "kind": "doc"
+  },
+  {
+    "group": "API: Origin API",
+    "title": "migrations",
+    "md_url": "https://cursor.com/docs/api/origin/migrations.md",
+    "html_url": "https://cursor.com/docs/api/origin/migrations",
+    "route": "docs/api/origin/migrations",
+    "kind": "doc"
+  },
+  {
+    "group": "API: Origin API",
+    "title": "mcp",
+    "md_url": "https://cursor.com/docs/api/origin/mcp.md",
+    "html_url": "https://cursor.com/docs/api/origin/mcp",
+    "route": "docs/api/origin/mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "API: Origin API",
+    "title": "tools",
+    "md_url": "https://cursor.com/docs/api/origin/mcp/tools.md",
+    "html_url": "https://cursor.com/docs/api/origin/mcp/tools",
+    "route": "docs/api/origin/mcp/tools",
+    "kind": "doc"
+  },
+  {
     "group": "Blog",
     "title": "joining spacex",
     "md_url": "https://cursor.com/blog/joining-spacex.md",
@@ -1249,18 +1337,26 @@
   },
   {
     "group": "Blog",
-    "title": "grok 4 6",
-    "md_url": "https://cursor.com/blog/grok-4-6.md",
-    "html_url": "https://cursor.com/blog/grok-4-6",
-    "route": "blog/grok-4-6",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "git at any scale",
     "md_url": "https://cursor.com/blog/git-at-any-scale.md",
     "html_url": "https://cursor.com/blog/git-at-any-scale",
     "route": "blog/git-at-any-scale",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "improved token efficiency",
+    "md_url": "https://cursor.com/blog/improved-token-efficiency.md",
+    "html_url": "https://cursor.com/blog/improved-token-efficiency",
+    "route": "blog/improved-token-efficiency",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "rollouts and security reviewer",
+    "md_url": "https://cursor.com/blog/rollouts-and-security-reviewer.md",
+    "html_url": "https://cursor.com/blog/rollouts-and-security-reviewer",
+    "route": "blog/rollouts-and-security-reviewer",
     "kind": "blog"
   },
   {
@@ -1305,6 +1401,14 @@
   },
   {
     "group": "Blog",
+    "title": "grok 4 6",
+    "md_url": "https://cursor.com/blog/grok-4-6.md",
+    "html_url": "https://cursor.com/blog/grok-4-6",
+    "route": "blog/grok-4-6",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "how cursor router works",
     "md_url": "https://cursor.com/blog/how-cursor-router-works.md",
     "html_url": "https://cursor.com/blog/how-cursor-router-works",
@@ -1313,34 +1417,18 @@
   },
   {
     "group": "Blog",
-    "title": "mixture of kittens",
-    "md_url": "https://cursor.com/blog/mixture-of-kittens.md",
-    "html_url": "https://cursor.com/blog/mixture-of-kittens",
-    "route": "blog/mixture-of-kittens",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "cloud agent environment",
-    "md_url": "https://cursor.com/blog/cloud-agent-environment.md",
-    "html_url": "https://cursor.com/blog/cloud-agent-environment",
-    "route": "blog/cloud-agent-environment",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "cursor start india",
-    "md_url": "https://cursor.com/blog/cursor-start-india.md",
-    "html_url": "https://cursor.com/blog/cursor-start-india",
-    "route": "blog/cursor-start-india",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "self driving codebases",
     "md_url": "https://cursor.com/blog/self-driving-codebases.md",
     "html_url": "https://cursor.com/blog/self-driving-codebases",
     "route": "blog/self-driving-codebases",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "grab",
+    "md_url": "https://cursor.com/blog/grab.md",
+    "html_url": "https://cursor.com/blog/grab",
+    "route": "blog/grab",
     "kind": "blog"
   },
   {
@@ -1365,6 +1453,30 @@
     "md_url": "https://cursor.com/blog/imdex.md",
     "html_url": "https://cursor.com/blog/imdex",
     "route": "blog/imdex",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "mixture of kittens",
+    "md_url": "https://cursor.com/blog/mixture-of-kittens.md",
+    "html_url": "https://cursor.com/blog/mixture-of-kittens",
+    "route": "blog/mixture-of-kittens",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cloud agent environment",
+    "md_url": "https://cursor.com/blog/cloud-agent-environment.md",
+    "html_url": "https://cursor.com/blog/cloud-agent-environment",
+    "route": "blog/cloud-agent-environment",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "cursor start india",
+    "md_url": "https://cursor.com/blog/cursor-start-india.md",
+    "html_url": "https://cursor.com/blog/cursor-start-india",
+    "route": "blog/cursor-start-india",
     "kind": "blog"
   },
   {

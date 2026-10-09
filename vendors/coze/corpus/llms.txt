@@ -688,7 +688,7 @@
 - [开发工具/API 参考/工作流/执行工作流（流式响应）](https://docs.coze.cn/developer_guides_workflow_stream_run.md)
 - [开发工具/API 参考/工作流/恢复运行工作流（流式响应）](https://docs.coze.cn/developer_guides_workflow_resume.md)
 - [开发工具/API 参考/工作流/恢复运行工作流](https://docs.coze.cn/developer_guides_resume_workflow.md)
-- [开发工具/API 参考/工作流/查询工作流异步运行结果](https://docs.coze.cn/developer_guides_workflow_history.md)
+- [开发工具/API 参考/工作流/查询工作流异步运行结果](https://docs.coze.cn/developer_guides_workflow_history.md): 本文档介绍了查询工作流异步运行结果API，包含接口说明、使用限制、基础请求信息、请求参数、返回参数等内容，帮助开发者通过execute_id查询异步执行的工作流运行结果。
 - [开发工具/API 参考/鉴权/OAuth 设备授权](https://docs.coze.cn/developer_guides_oauth_device_code.md)
 - [开发工具/API 参考/鉴权/OAuth JWT 授权（开发者）](https://docs.coze.cn/developer_guides_oauth_jwt.md)
 - [开发工具/API 参考/鉴权/OAuth JWT 授权（渠道场景）](https://docs.coze.cn/developer_guides_oauth_jwt_channel.md): 该文档介绍了扣子编程在渠道入驻场景下的OAuth JWT授权。支持多硬件厂商入驻，渠道侧需通过JWT流程获OAuth Access Token来调用OpenAPI。文中给出多语言SDK示例代码，还阐述了准备工作，如创建渠道OAuth应用及完成授权等，详细说明了授权流程。
