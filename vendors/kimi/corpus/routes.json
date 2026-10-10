@@ -1,208 +1,24 @@
 [
   {
     "group": "Docs",
-    "title": "index",
-    "md_url": "https://www.kimi.com/.md",
-    "html_url": "https://www.kimi.com/",
-    "route": "index",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "agent",
-    "md_url": "https://www.kimi.com/agent.md",
-    "html_url": "https://www.kimi.com/agent",
-    "route": "agent",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "agent swarm",
-    "md_url": "https://www.kimi.com/agent-swarm.md",
-    "html_url": "https://www.kimi.com/agent-swarm",
-    "route": "agent-swarm",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "plugins",
-    "md_url": "https://www.kimi.com/plugins.md",
-    "html_url": "https://www.kimi.com/plugins",
-    "route": "plugins",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "tasks",
-    "md_url": "https://www.kimi.com/tasks.md",
-    "html_url": "https://www.kimi.com/tasks",
-    "route": "tasks",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "slides",
-    "md_url": "https://www.kimi.com/slides.md",
-    "html_url": "https://www.kimi.com/slides",
-    "route": "slides",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "deep research",
-    "md_url": "https://www.kimi.com/deep-research.md",
-    "html_url": "https://www.kimi.com/deep-research",
-    "route": "deep-research",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "docs",
-    "md_url": "https://www.kimi.com/docs.md",
-    "html_url": "https://www.kimi.com/docs",
-    "route": "docs",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "build",
-    "md_url": "https://www.kimi.com/build.md",
-    "html_url": "https://www.kimi.com/build",
-    "route": "build",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "sheets",
-    "md_url": "https://www.kimi.com/sheets.md",
-    "html_url": "https://www.kimi.com/sheets",
-    "route": "sheets",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "design",
-    "md_url": "https://www.kimi.com/design.md",
-    "html_url": "https://www.kimi.com/design",
-    "route": "design",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "bot",
-    "md_url": "https://www.kimi.com/bot.md",
-    "html_url": "https://www.kimi.com/bot",
-    "route": "bot",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "mykimi",
-    "md_url": "https://www.kimi.com/mykimi.md",
-    "html_url": "https://www.kimi.com/mykimi",
-    "route": "mykimi",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "inspiration",
-    "md_url": "https://www.kimi.com/inspiration.md",
-    "html_url": "https://www.kimi.com/inspiration",
-    "route": "inspiration",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
     "title": "kimi work",
-    "md_url": "https://www.kimi.com/products/kimi-work.md",
+    "md_url": "https://www.kimi.com/products/kimi-work",
     "html_url": "https://www.kimi.com/products/kimi-work",
     "route": "products/kimi-work",
     "kind": "doc"
   },
   {
     "group": "Docs",
-    "title": "code",
-    "md_url": "https://www.kimi.com/code.md",
-    "html_url": "https://www.kimi.com/code",
-    "route": "code",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "kimi browser extension",
-    "md_url": "https://www.kimi.com/products/kimi-browser-extension.md",
-    "html_url": "https://www.kimi.com/products/kimi-browser-extension",
-    "route": "products/kimi-browser-extension",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
     "title": "download",
-    "md_url": "https://www.kimi.com/products/download.md",
+    "md_url": "https://www.kimi.com/products/download",
     "html_url": "https://www.kimi.com/products/download",
     "route": "products/download",
     "kind": "doc"
   },
   {
     "group": "Docs",
-    "title": "products",
-    "md_url": "https://www.kimi.com/products/.md",
-    "html_url": "https://www.kimi.com/products/",
-    "route": "products",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "websites",
-    "md_url": "https://www.kimi.com/features/websites.md",
-    "html_url": "https://www.kimi.com/features/websites",
-    "route": "features/websites",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "slides",
-    "md_url": "https://www.kimi.com/features/slides.md",
-    "html_url": "https://www.kimi.com/features/slides",
-    "route": "features/slides",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "docs",
-    "md_url": "https://www.kimi.com/features/docs.md",
-    "html_url": "https://www.kimi.com/features/docs",
-    "route": "features/docs",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "sheets",
-    "md_url": "https://www.kimi.com/features/sheets.md",
-    "html_url": "https://www.kimi.com/features/sheets",
-    "route": "features/sheets",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "deep research",
-    "md_url": "https://www.kimi.com/features/deep-research.md",
-    "html_url": "https://www.kimi.com/features/deep-research",
-    "route": "features/deep-research",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
-    "title": "features",
-    "md_url": "https://www.kimi.com/features/.md",
-    "html_url": "https://www.kimi.com/features/",
-    "route": "features",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
     "title": "kimi k3",
-    "md_url": "https://www.kimi.com/ai-models/kimi-k3.md",
+    "md_url": "https://www.kimi.com/ai-models/kimi-k3",
     "html_url": "https://www.kimi.com/ai-models/kimi-k3",
     "route": "ai-models/kimi-k3",
     "kind": "doc"
@@ -210,7 +26,7 @@
   {
     "group": "Docs",
     "title": "kimi k2 6",
-    "md_url": "https://www.kimi.com/ai-models/kimi-k2-6.md",
+    "md_url": "https://www.kimi.com/ai-models/kimi-k2-6",
     "html_url": "https://www.kimi.com/ai-models/kimi-k2-6",
     "route": "ai-models/kimi-k2-6",
     "kind": "doc"
@@ -218,23 +34,15 @@
   {
     "group": "Docs",
     "title": "kimi k2 5",
-    "md_url": "https://www.kimi.com/ai-models/kimi-k2-5.md",
+    "md_url": "https://www.kimi.com/ai-models/kimi-k2-5",
     "html_url": "https://www.kimi.com/ai-models/kimi-k2-5",
     "route": "ai-models/kimi-k2-5",
     "kind": "doc"
   },
   {
     "group": "Docs",
-    "title": "ai models",
-    "md_url": "https://www.kimi.com/ai-models/.md",
-    "html_url": "https://www.kimi.com/ai-models/",
-    "route": "ai-models",
-    "kind": "doc"
-  },
-  {
-    "group": "Docs",
     "title": "kimi work getting started",
-    "md_url": "https://www.kimi.com/academy/kimi-work-getting-started.md",
+    "md_url": "https://www.kimi.com/academy/kimi-work-getting-started",
     "html_url": "https://www.kimi.com/academy/kimi-work-getting-started",
     "route": "academy/kimi-work-getting-started",
     "kind": "doc"
@@ -242,23 +50,15 @@
   {
     "group": "Docs",
     "title": "kimi code cheat sheet",
-    "md_url": "https://www.kimi.com/academy/kimi-code-cheat-sheet.md",
+    "md_url": "https://www.kimi.com/academy/kimi-code-cheat-sheet",
     "html_url": "https://www.kimi.com/academy/kimi-code-cheat-sheet",
     "route": "academy/kimi-code-cheat-sheet",
     "kind": "doc"
   },
   {
-    "group": "Docs",
-    "title": "academy",
-    "md_url": "https://www.kimi.com/academy/.md",
-    "html_url": "https://www.kimi.com/academy/",
-    "route": "academy",
-    "kind": "doc"
-  },
-  {
     "group": "Blog",
     "title": "kimi k3",
-    "md_url": "https://www.kimi.com/en/blog/kimi-k3.md",
+    "md_url": "https://www.kimi.com/en/blog/kimi-k3",
     "html_url": "https://www.kimi.com/en/blog/kimi-k3",
     "route": "blog/kimi-k3",
     "kind": "blog"
@@ -266,7 +66,7 @@
   {
     "group": "Blog",
     "title": "perception bench",
-    "md_url": "https://www.kimi.com/en/blog/perception-bench.md",
+    "md_url": "https://www.kimi.com/en/blog/perception-bench",
     "html_url": "https://www.kimi.com/en/blog/perception-bench",
     "route": "blog/perception-bench",
     "kind": "blog"
@@ -274,7 +74,7 @@
   {
     "group": "Blog",
     "title": "kimi k2 6",
-    "md_url": "https://www.kimi.com/en/blog/kimi-k2-6.md",
+    "md_url": "https://www.kimi.com/en/blog/kimi-k2-6",
     "html_url": "https://www.kimi.com/en/blog/kimi-k2-6",
     "route": "blog/kimi-k2-6",
     "kind": "blog"
@@ -282,7 +82,7 @@
   {
     "group": "Blog",
     "title": "agent swarm",
-    "md_url": "https://www.kimi.com/en/blog/agent-swarm.md",
+    "md_url": "https://www.kimi.com/en/blog/agent-swarm",
     "html_url": "https://www.kimi.com/en/blog/agent-swarm",
     "route": "blog/agent-swarm",
     "kind": "blog"
@@ -290,7 +90,7 @@
   {
     "group": "Blog",
     "title": "worldvqa",
-    "md_url": "https://www.kimi.com/en/blog/worldvqa.md",
+    "md_url": "https://www.kimi.com/en/blog/worldvqa",
     "html_url": "https://www.kimi.com/en/blog/worldvqa",
     "route": "blog/worldvqa",
     "kind": "blog"
@@ -298,7 +98,7 @@
   {
     "group": "Blog",
     "title": "kimi k2 5",
-    "md_url": "https://www.kimi.com/en/blog/kimi-k2-5.md",
+    "md_url": "https://www.kimi.com/en/blog/kimi-k2-5",
     "html_url": "https://www.kimi.com/en/blog/kimi-k2-5",
     "route": "blog/kimi-k2-5",
     "kind": "blog"
@@ -306,7 +106,7 @@
   {
     "group": "Blog",
     "title": "kimi vendor verifier",
-    "md_url": "https://www.kimi.com/en/blog/kimi-vendor-verifier.md",
+    "md_url": "https://www.kimi.com/en/blog/kimi-vendor-verifier",
     "html_url": "https://www.kimi.com/en/blog/kimi-vendor-verifier",
     "route": "blog/kimi-vendor-verifier",
     "kind": "blog"
@@ -314,7 +114,7 @@
   {
     "group": "Blog",
     "title": "kimi k2 thinking",
-    "md_url": "https://www.kimi.com/en/blog/kimi-k2-thinking.md",
+    "md_url": "https://www.kimi.com/en/blog/kimi-k2-thinking",
     "html_url": "https://www.kimi.com/en/blog/kimi-k2-thinking",
     "route": "blog/kimi-k2-thinking",
     "kind": "blog"
@@ -322,7 +122,7 @@
   {
     "group": "Blog",
     "title": "kimi k2",
-    "md_url": "https://www.kimi.com/en/blog/kimi-k2.md",
+    "md_url": "https://www.kimi.com/en/blog/kimi-k2",
     "html_url": "https://www.kimi.com/en/blog/kimi-k2",
     "route": "blog/kimi-k2",
     "kind": "blog"

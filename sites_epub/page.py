@@ -270,6 +270,38 @@ def promote_markdown_fences(soup: BeautifulSoup, root: Tag) -> None:
         node.extract()
 
 
+def _richest_root(soup, page_url: str | None) -> Tag | None:
+    """Pick the candidate root that actually carries the article text.
+
+    Several sites (Kimi, Gemini, MiniMax...) wrap a small promo/stat card in
+    ``<article>`` and put the real content in a sibling ``<main>``, so a plain
+    "first match wins" order silently drops the article. Score every candidate
+    through ``sanitize_body_html`` -- raw ``get_text()`` counts ``<script>``
+    payload and would pick the wrong root -- and keep the richest.
+    """
+    def text_len(el: Tag) -> int:
+        try:
+            html = el.decode_contents() if hasattr(el, "decode_contents") else str(el)
+        except Exception:
+            return 0
+        cleaned = sanitize_body_html(html, page_url=page_url)
+        soup2 = BeautifulSoup(cleaned, "lxml")
+        root = soup2.body if soup2.body else soup2
+        if isinstance(root, Tag):
+            return len(_plain(root).strip())
+        return len(re.sub(r"\s+", " ", str(root)).strip())
+
+    best: Tag | None = None
+    best_len = -1
+    for el in (soup.select_one("article"), soup.select_one("main"), soup.body):
+        if el is None:
+            continue
+        n = text_len(el)
+        if n > best_len:
+            best, best_len = el, n
+    return best
+
+
 def extract_from_html(
     html: str,
     *,
@@ -283,7 +315,7 @@ def extract_from_html(
             if el.name in {"article", "main"}:
                 continue
             el.decompose()
-    article = soup.select_one("article") or soup.select_one("main") or soup.body
+    article = _richest_root(soup, url)
     if article is None:
         raise ValueError("doc body not found")
     h1 = article.find("h1") or soup.find("h1")

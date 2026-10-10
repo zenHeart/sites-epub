@@ -104,7 +104,10 @@ def _entries_from_paths(paths: list[str]) -> list[IndexEntry]:
             IndexEntry(
                 group="Docs",
                 title=path.strip("/").rsplit("/", 1)[-1].replace("-", " ") or "index",
-                md_url=html_url + ".md",
+                # Soft 404: the ``.md`` twin of a product page answers 200 with
+                # the parent index (and ``/products/.md`` is a malformed URL
+                # anyway), so the HTML page is the only real source.
+                md_url=html_url,
                 html_url=html_url,
                 route=path.strip("/") or "index",
                 kind="doc",
@@ -189,7 +192,11 @@ def parse_kimi_blog(html: str, blog_url: str) -> list[IndexEntry]:
             IndexEntry(
                 group="Blog",
                 title=slug.replace("-", " "),
-                md_url=url + ".md",
+                # Soft 404: ``<url>.md`` answers 200 but redirects to the blog
+                # index page, and ``fetch_source`` accepts it as readable, so
+                # every post would cache the same listing. The HTML page is the
+                # only source carrying the article.
+                md_url=url,
                 html_url=url,
                 route=f"blog/{slug}",
                 kind="blog",
