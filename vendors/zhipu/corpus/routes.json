@@ -214,5 +214,13 @@
     "html_url": "https://zcode.z.ai/cn/docs/qa",
     "route": "zcode-qa",
     "kind": "doc"
+  },
+  {
+    "group": "ZCode \u4ea7\u54c1",
+    "title": "\u7248\u672c\u53d1\u5e03\u4e0e\u66f4\u65b0",
+    "md_url": "https://zcode.z.ai/cn/changelog",
+    "html_url": "https://zcode.z.ai/cn/changelog",
+    "route": "zcode-changelog",
+    "kind": "doc"
   }
 ]

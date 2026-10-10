@@ -1,565 +1,5 @@
 [
   {
-    "group": "Zencoder: Administration",
-    "title": "agents",
-    "md_url": "https://docs.zencoder.ai/admin/agents.md",
-    "html_url": "https://docs.zencoder.ai/admin/agents",
-    "route": "admin/agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Administration",
-    "title": "api keys",
-    "md_url": "https://docs.zencoder.ai/admin/api-keys.md",
-    "html_url": "https://docs.zencoder.ai/admin/api-keys",
-    "route": "admin/api-keys",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Administration",
-    "title": "billing",
-    "md_url": "https://docs.zencoder.ai/admin/billing.md",
-    "html_url": "https://docs.zencoder.ai/admin/billing",
-    "route": "admin/billing",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Administration",
-    "title": "connections",
-    "md_url": "https://docs.zencoder.ai/admin/connections.md",
-    "html_url": "https://docs.zencoder.ai/admin/connections",
-    "route": "admin/connections",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Administration",
-    "title": "overview",
-    "md_url": "https://docs.zencoder.ai/admin/overview.md",
-    "html_url": "https://docs.zencoder.ai/admin/overview",
-    "route": "admin/overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Administration",
-    "title": "privacy security",
-    "md_url": "https://docs.zencoder.ai/admin/privacy-security.md",
-    "html_url": "https://docs.zencoder.ai/admin/privacy-security",
-    "route": "admin/privacy-security",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Administration",
-    "title": "quota management",
-    "md_url": "https://docs.zencoder.ai/admin/quota-management.md",
-    "html_url": "https://docs.zencoder.ai/admin/quota-management",
-    "route": "admin/quota-management",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Administration",
-    "title": "repositories",
-    "md_url": "https://docs.zencoder.ai/admin/repositories.md",
-    "html_url": "https://docs.zencoder.ai/admin/repositories",
-    "route": "admin/repositories",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Administration",
-    "title": "sso",
-    "md_url": "https://docs.zencoder.ai/admin/sso.md",
-    "html_url": "https://docs.zencoder.ai/admin/sso",
-    "route": "admin/sso",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Administration",
-    "title": "user management",
-    "md_url": "https://docs.zencoder.ai/admin/user-management.md",
-    "html_url": "https://docs.zencoder.ai/admin/user-management",
-    "route": "admin/user-management",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "april 2025",
-    "md_url": "https://docs.zencoder.ai/changelog/april-2025.md",
-    "html_url": "https://docs.zencoder.ai/changelog/april-2025",
-    "route": "changelog/april-2025",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "april 2026",
-    "md_url": "https://docs.zencoder.ai/changelog/april-2026.md",
-    "html_url": "https://docs.zencoder.ai/changelog/april-2026",
-    "route": "changelog/april-2026",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "august 2025",
-    "md_url": "https://docs.zencoder.ai/changelog/august-2025.md",
-    "html_url": "https://docs.zencoder.ai/changelog/august-2025",
-    "route": "changelog/august-2025",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "august 2026",
-    "md_url": "https://docs.zencoder.ai/changelog/august-2026.md",
-    "html_url": "https://docs.zencoder.ai/changelog/august-2026",
-    "route": "changelog/august-2026",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "december 2025",
-    "md_url": "https://docs.zencoder.ai/changelog/december-2025.md",
-    "html_url": "https://docs.zencoder.ai/changelog/december-2025",
-    "route": "changelog/december-2025",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "february 2026",
-    "md_url": "https://docs.zencoder.ai/changelog/february-2026.md",
-    "html_url": "https://docs.zencoder.ai/changelog/february-2026",
-    "route": "changelog/february-2026",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "home",
-    "md_url": "https://docs.zencoder.ai/changelog/home.md",
-    "html_url": "https://docs.zencoder.ai/changelog/home",
-    "route": "changelog/home",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "january 2026",
-    "md_url": "https://docs.zencoder.ai/changelog/january-2026.md",
-    "html_url": "https://docs.zencoder.ai/changelog/january-2026",
-    "route": "changelog/january-2026",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "july 2025",
-    "md_url": "https://docs.zencoder.ai/changelog/july-2025.md",
-    "html_url": "https://docs.zencoder.ai/changelog/july-2025",
-    "route": "changelog/july-2025",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "july 2026",
-    "md_url": "https://docs.zencoder.ai/changelog/july-2026.md",
-    "html_url": "https://docs.zencoder.ai/changelog/july-2026",
-    "route": "changelog/july-2026",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "june 2025",
-    "md_url": "https://docs.zencoder.ai/changelog/june-2025.md",
-    "html_url": "https://docs.zencoder.ai/changelog/june-2025",
-    "route": "changelog/june-2025",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "june 2026",
-    "md_url": "https://docs.zencoder.ai/changelog/june-2026.md",
-    "html_url": "https://docs.zencoder.ai/changelog/june-2026",
-    "route": "changelog/june-2026",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "march 2025",
-    "md_url": "https://docs.zencoder.ai/changelog/march-2025.md",
-    "html_url": "https://docs.zencoder.ai/changelog/march-2025",
-    "route": "changelog/march-2025",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "march 2026",
-    "md_url": "https://docs.zencoder.ai/changelog/march-2026.md",
-    "html_url": "https://docs.zencoder.ai/changelog/march-2026",
-    "route": "changelog/march-2026",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "may 2025",
-    "md_url": "https://docs.zencoder.ai/changelog/may-2025.md",
-    "html_url": "https://docs.zencoder.ai/changelog/may-2025",
-    "route": "changelog/may-2025",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "may 2026",
-    "md_url": "https://docs.zencoder.ai/changelog/may-2026.md",
-    "html_url": "https://docs.zencoder.ai/changelog/may-2026",
-    "route": "changelog/may-2026",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "november 2025",
-    "md_url": "https://docs.zencoder.ai/changelog/november-2025.md",
-    "html_url": "https://docs.zencoder.ai/changelog/november-2025",
-    "route": "changelog/november-2025",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "october 2025",
-    "md_url": "https://docs.zencoder.ai/changelog/october-2025.md",
-    "html_url": "https://docs.zencoder.ai/changelog/october-2025",
-    "route": "changelog/october-2025",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Changelog",
-    "title": "september 2025",
-    "md_url": "https://docs.zencoder.ai/changelog/september-2025.md",
-    "html_url": "https://docs.zencoder.ai/changelog/september-2025",
-    "route": "changelog/september-2025",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: CLI Integrations",
-    "title": "claude code",
-    "md_url": "https://docs.zencoder.ai/clis/claude-code.md",
-    "html_url": "https://docs.zencoder.ai/clis/claude-code",
-    "route": "clis/claude-code",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: CLI Integrations",
-    "title": "codex",
-    "md_url": "https://docs.zencoder.ai/clis/codex.md",
-    "html_url": "https://docs.zencoder.ai/clis/codex",
-    "route": "clis/codex",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: CLI Integrations",
-    "title": "custom agent",
-    "md_url": "https://docs.zencoder.ai/clis/custom-agent.md",
-    "html_url": "https://docs.zencoder.ai/clis/custom-agent",
-    "route": "clis/custom-agent",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: CLI Integrations",
-    "title": "gemini",
-    "md_url": "https://docs.zencoder.ai/clis/gemini.md",
-    "html_url": "https://docs.zencoder.ai/clis/gemini",
-    "route": "clis/gemini",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: CLI Integrations",
-    "title": "overview",
-    "md_url": "https://docs.zencoder.ai/clis/overview.md",
-    "html_url": "https://docs.zencoder.ai/clis/overview",
-    "route": "clis/overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: FAQ",
-    "title": "geographic restrictions",
-    "md_url": "https://docs.zencoder.ai/faq/geographic-restrictions.md",
-    "html_url": "https://docs.zencoder.ai/faq/geographic-restrictions",
-    "route": "faq/geographic-restrictions",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: FAQ",
-    "title": "pricing",
-    "md_url": "https://docs.zencoder.ai/faq/pricing.md",
-    "html_url": "https://docs.zencoder.ai/faq/pricing",
-    "route": "faq/pricing",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: FAQ",
-    "title": "privacy",
-    "md_url": "https://docs.zencoder.ai/faq/privacy.md",
-    "html_url": "https://docs.zencoder.ai/faq/privacy",
-    "route": "faq/privacy",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: FAQ",
-    "title": "refund policy",
-    "md_url": "https://docs.zencoder.ai/faq/refund-policy.md",
-    "html_url": "https://docs.zencoder.ai/faq/refund-policy",
-    "route": "faq/refund-policy",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: FAQ",
-    "title": "retired tutorials",
-    "md_url": "https://docs.zencoder.ai/faq/retired-tutorials.md",
-    "html_url": "https://docs.zencoder.ai/faq/retired-tutorials",
-    "route": "faq/retired-tutorials",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "ai agents",
-    "md_url": "https://docs.zencoder.ai/features/ai-agents.md",
-    "html_url": "https://docs.zencoder.ai/features/ai-agents",
-    "route": "features/ai-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "analytics",
-    "md_url": "https://docs.zencoder.ai/features/analytics.md",
-    "html_url": "https://docs.zencoder.ai/features/analytics",
-    "route": "features/analytics",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "analytics api",
-    "md_url": "https://docs.zencoder.ai/features/analytics-api.md",
-    "html_url": "https://docs.zencoder.ai/features/analytics-api",
-    "route": "features/analytics-api",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "coding agent",
-    "md_url": "https://docs.zencoder.ai/features/coding-agent.md",
-    "html_url": "https://docs.zencoder.ai/features/coding-agent",
-    "route": "features/coding-agent",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "context management",
-    "md_url": "https://docs.zencoder.ai/features/context-management.md",
-    "html_url": "https://docs.zencoder.ai/features/context-management",
-    "route": "features/context-management",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "custom models configuration",
-    "md_url": "https://docs.zencoder.ai/features/custom-models-configuration.md",
-    "html_url": "https://docs.zencoder.ai/features/custom-models-configuration",
-    "route": "features/custom-models-configuration",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "keyboard shortcuts",
-    "md_url": "https://docs.zencoder.ai/features/keyboard-shortcuts.md",
-    "html_url": "https://docs.zencoder.ai/features/keyboard-shortcuts",
-    "route": "features/keyboard-shortcuts",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "mcp deep dive",
-    "md_url": "https://docs.zencoder.ai/features/mcp-deep-dive.md",
-    "html_url": "https://docs.zencoder.ai/features/mcp-deep-dive",
-    "route": "features/mcp-deep-dive",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "models",
-    "md_url": "https://docs.zencoder.ai/features/models.md",
-    "html_url": "https://docs.zencoder.ai/features/models",
-    "route": "features/models",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "multi repo",
-    "md_url": "https://docs.zencoder.ai/features/multi-repo.md",
-    "html_url": "https://docs.zencoder.ai/features/multi-repo",
-    "route": "features/multi-repo",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "private deployments",
-    "md_url": "https://docs.zencoder.ai/features/private-deployments.md",
-    "html_url": "https://docs.zencoder.ai/features/private-deployments",
-    "route": "features/private-deployments",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "security",
-    "md_url": "https://docs.zencoder.ai/features/security.md",
-    "html_url": "https://docs.zencoder.ai/features/security",
-    "route": "features/security",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "skills",
-    "md_url": "https://docs.zencoder.ai/features/skills.md",
-    "html_url": "https://docs.zencoder.ai/features/skills",
-    "route": "features/skills",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "team administration",
-    "md_url": "https://docs.zencoder.ai/features/team-administration.md",
-    "html_url": "https://docs.zencoder.ai/features/team-administration",
-    "route": "features/team-administration",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Features",
-    "title": "universal cli platform",
-    "md_url": "https://docs.zencoder.ai/features/universal-cli-platform.md",
-    "html_url": "https://docs.zencoder.ai/features/universal-cli-platform",
-    "route": "features/universal-cli-platform",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "course overview",
-    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/course-overview.md",
-    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/course-overview",
-    "route": "learn/10x-engineer/course-overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "module 01",
-    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-01.md",
-    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-01",
-    "route": "learn/10x-engineer/module-01",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "module 02",
-    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-02.md",
-    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-02",
-    "route": "learn/10x-engineer/module-02",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "module 03",
-    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-03.md",
-    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-03",
-    "route": "learn/10x-engineer/module-03",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "module 04",
-    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-04.md",
-    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-04",
-    "route": "learn/10x-engineer/module-04",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "module 05",
-    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-05.md",
-    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-05",
-    "route": "learn/10x-engineer/module-05",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "module 06",
-    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-06.md",
-    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-06",
-    "route": "learn/10x-engineer/module-06",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "module 07",
-    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-07.md",
-    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-07",
-    "route": "learn/10x-engineer/module-07",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "module 08",
-    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-08.md",
-    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-08",
-    "route": "learn/10x-engineer/module-08",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "ai coding foundations",
-    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/ai-coding-foundations.md",
-    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/ai-coding-foundations",
-    "route": "learn/enterprise-best-practices/ai-coding-foundations",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "ci cd automation",
-    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/ci-cd-automation.md",
-    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/ci-cd-automation",
-    "route": "learn/enterprise-best-practices/ci-cd-automation",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "enterprise security compliance deployment",
-    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/enterprise-security-compliance-deployment.md",
-    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/enterprise-security-compliance-deployment",
-    "route": "learn/enterprise-best-practices/enterprise-security-compliance-deployment",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "integration ecosystem",
-    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/integration-ecosystem.md",
-    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/integration-ecosystem",
-    "route": "learn/enterprise-best-practices/integration-ecosystem",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "measuring success",
-    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/measuring-success.md",
-    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/measuring-success",
-    "route": "learn/enterprise-best-practices/measuring-success",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "overview",
-    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/overview.md",
-    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/overview",
-    "route": "learn/enterprise-best-practices/overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder Learn",
-    "title": "team collaboration zen agents",
-    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/team-collaboration-zen-agents.md",
-    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/team-collaboration-zen-agents",
-    "route": "learn/enterprise-best-practices/team-collaboration-zen-agents",
-    "kind": "doc"
-  },
-  {
     "group": "Zenflow",
     "title": "april 2026",
     "md_url": "https://docs.zencoder.ai/zenflow-changelog/april-2026.md",
@@ -1061,6 +501,638 @@
     "md_url": "https://docs.zencoder.ai/zenflow/workflows/spec-first.md",
     "html_url": "https://docs.zencoder.ai/zenflow/workflows/spec-first",
     "route": "zenflow/workflows/spec-first",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "april 2025",
+    "md_url": "https://docs.zencoder.ai/changelog/april-2025.md",
+    "html_url": "https://docs.zencoder.ai/changelog/april-2025",
+    "route": "changelog/april-2025",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "april 2026",
+    "md_url": "https://docs.zencoder.ai/changelog/april-2026.md",
+    "html_url": "https://docs.zencoder.ai/changelog/april-2026",
+    "route": "changelog/april-2026",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "august 2025",
+    "md_url": "https://docs.zencoder.ai/changelog/august-2025.md",
+    "html_url": "https://docs.zencoder.ai/changelog/august-2025",
+    "route": "changelog/august-2025",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "august 2026",
+    "md_url": "https://docs.zencoder.ai/changelog/august-2026.md",
+    "html_url": "https://docs.zencoder.ai/changelog/august-2026",
+    "route": "changelog/august-2026",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "december 2025",
+    "md_url": "https://docs.zencoder.ai/changelog/december-2025.md",
+    "html_url": "https://docs.zencoder.ai/changelog/december-2025",
+    "route": "changelog/december-2025",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "february 2026",
+    "md_url": "https://docs.zencoder.ai/changelog/february-2026.md",
+    "html_url": "https://docs.zencoder.ai/changelog/february-2026",
+    "route": "changelog/february-2026",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "home",
+    "md_url": "https://docs.zencoder.ai/changelog/home.md",
+    "html_url": "https://docs.zencoder.ai/changelog/home",
+    "route": "changelog/home",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "january 2026",
+    "md_url": "https://docs.zencoder.ai/changelog/january-2026.md",
+    "html_url": "https://docs.zencoder.ai/changelog/january-2026",
+    "route": "changelog/january-2026",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "july 2025",
+    "md_url": "https://docs.zencoder.ai/changelog/july-2025.md",
+    "html_url": "https://docs.zencoder.ai/changelog/july-2025",
+    "route": "changelog/july-2025",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "july 2026",
+    "md_url": "https://docs.zencoder.ai/changelog/july-2026.md",
+    "html_url": "https://docs.zencoder.ai/changelog/july-2026",
+    "route": "changelog/july-2026",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "june 2025",
+    "md_url": "https://docs.zencoder.ai/changelog/june-2025.md",
+    "html_url": "https://docs.zencoder.ai/changelog/june-2025",
+    "route": "changelog/june-2025",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "june 2026",
+    "md_url": "https://docs.zencoder.ai/changelog/june-2026.md",
+    "html_url": "https://docs.zencoder.ai/changelog/june-2026",
+    "route": "changelog/june-2026",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "march 2025",
+    "md_url": "https://docs.zencoder.ai/changelog/march-2025.md",
+    "html_url": "https://docs.zencoder.ai/changelog/march-2025",
+    "route": "changelog/march-2025",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "march 2026",
+    "md_url": "https://docs.zencoder.ai/changelog/march-2026.md",
+    "html_url": "https://docs.zencoder.ai/changelog/march-2026",
+    "route": "changelog/march-2026",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "may 2025",
+    "md_url": "https://docs.zencoder.ai/changelog/may-2025.md",
+    "html_url": "https://docs.zencoder.ai/changelog/may-2025",
+    "route": "changelog/may-2025",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "may 2026",
+    "md_url": "https://docs.zencoder.ai/changelog/may-2026.md",
+    "html_url": "https://docs.zencoder.ai/changelog/may-2026",
+    "route": "changelog/may-2026",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "november 2025",
+    "md_url": "https://docs.zencoder.ai/changelog/november-2025.md",
+    "html_url": "https://docs.zencoder.ai/changelog/november-2025",
+    "route": "changelog/november-2025",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "october 2025",
+    "md_url": "https://docs.zencoder.ai/changelog/october-2025.md",
+    "html_url": "https://docs.zencoder.ai/changelog/october-2025",
+    "route": "changelog/october-2025",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Changelog",
+    "title": "september 2025",
+    "md_url": "https://docs.zencoder.ai/changelog/september-2025.md",
+    "html_url": "https://docs.zencoder.ai/changelog/september-2025",
+    "route": "changelog/september-2025",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: User Guides",
+    "title": "building with multi model workflows",
+    "md_url": "https://docs.zencoder.ai/user-guides/guides/building-with-multi-model-workflows.md",
+    "html_url": "https://docs.zencoder.ai/user-guides/guides/building-with-multi-model-workflows",
+    "route": "user-guides/guides/building-with-multi-model-workflows",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: User Guides",
+    "title": "connect openrouter custom model",
+    "md_url": "https://docs.zencoder.ai/user-guides/guides/connect-openrouter-custom-model.md",
+    "html_url": "https://docs.zencoder.ai/user-guides/guides/connect-openrouter-custom-model",
+    "route": "user-guides/guides/connect-openrouter-custom-model",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: User Guides",
+    "title": "spec driven development",
+    "md_url": "https://docs.zencoder.ai/user-guides/guides/spec-driven-development.md",
+    "html_url": "https://docs.zencoder.ai/user-guides/guides/spec-driven-development",
+    "route": "user-guides/guides/spec-driven-development",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: User Guides",
+    "title": "troubleshooting",
+    "md_url": "https://docs.zencoder.ai/user-guides/troubleshooting.md",
+    "html_url": "https://docs.zencoder.ai/user-guides/troubleshooting",
+    "route": "user-guides/troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "course overview",
+    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/course-overview.md",
+    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/course-overview",
+    "route": "learn/10x-engineer/course-overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "module 01",
+    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-01.md",
+    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-01",
+    "route": "learn/10x-engineer/module-01",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "module 02",
+    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-02.md",
+    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-02",
+    "route": "learn/10x-engineer/module-02",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "module 03",
+    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-03.md",
+    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-03",
+    "route": "learn/10x-engineer/module-03",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "module 04",
+    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-04.md",
+    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-04",
+    "route": "learn/10x-engineer/module-04",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "module 05",
+    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-05.md",
+    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-05",
+    "route": "learn/10x-engineer/module-05",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "module 06",
+    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-06.md",
+    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-06",
+    "route": "learn/10x-engineer/module-06",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "module 07",
+    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-07.md",
+    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-07",
+    "route": "learn/10x-engineer/module-07",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "module 08",
+    "md_url": "https://docs.zencoder.ai/learn/10x-engineer/module-08.md",
+    "html_url": "https://docs.zencoder.ai/learn/10x-engineer/module-08",
+    "route": "learn/10x-engineer/module-08",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "ai coding foundations",
+    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/ai-coding-foundations.md",
+    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/ai-coding-foundations",
+    "route": "learn/enterprise-best-practices/ai-coding-foundations",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "ci cd automation",
+    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/ci-cd-automation.md",
+    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/ci-cd-automation",
+    "route": "learn/enterprise-best-practices/ci-cd-automation",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "enterprise security compliance deployment",
+    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/enterprise-security-compliance-deployment.md",
+    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/enterprise-security-compliance-deployment",
+    "route": "learn/enterprise-best-practices/enterprise-security-compliance-deployment",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "integration ecosystem",
+    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/integration-ecosystem.md",
+    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/integration-ecosystem",
+    "route": "learn/enterprise-best-practices/integration-ecosystem",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "measuring success",
+    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/measuring-success.md",
+    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/measuring-success",
+    "route": "learn/enterprise-best-practices/measuring-success",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "overview",
+    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/overview.md",
+    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/overview",
+    "route": "learn/enterprise-best-practices/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder Learn",
+    "title": "team collaboration zen agents",
+    "md_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/team-collaboration-zen-agents.md",
+    "html_url": "https://docs.zencoder.ai/learn/enterprise-best-practices/team-collaboration-zen-agents",
+    "route": "learn/enterprise-best-practices/team-collaboration-zen-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "ai agents",
+    "md_url": "https://docs.zencoder.ai/features/ai-agents.md",
+    "html_url": "https://docs.zencoder.ai/features/ai-agents",
+    "route": "features/ai-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "analytics",
+    "md_url": "https://docs.zencoder.ai/features/analytics.md",
+    "html_url": "https://docs.zencoder.ai/features/analytics",
+    "route": "features/analytics",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "analytics api",
+    "md_url": "https://docs.zencoder.ai/features/analytics-api.md",
+    "html_url": "https://docs.zencoder.ai/features/analytics-api",
+    "route": "features/analytics-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "coding agent",
+    "md_url": "https://docs.zencoder.ai/features/coding-agent.md",
+    "html_url": "https://docs.zencoder.ai/features/coding-agent",
+    "route": "features/coding-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "context management",
+    "md_url": "https://docs.zencoder.ai/features/context-management.md",
+    "html_url": "https://docs.zencoder.ai/features/context-management",
+    "route": "features/context-management",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "custom models configuration",
+    "md_url": "https://docs.zencoder.ai/features/custom-models-configuration.md",
+    "html_url": "https://docs.zencoder.ai/features/custom-models-configuration",
+    "route": "features/custom-models-configuration",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "keyboard shortcuts",
+    "md_url": "https://docs.zencoder.ai/features/keyboard-shortcuts.md",
+    "html_url": "https://docs.zencoder.ai/features/keyboard-shortcuts",
+    "route": "features/keyboard-shortcuts",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "mcp deep dive",
+    "md_url": "https://docs.zencoder.ai/features/mcp-deep-dive.md",
+    "html_url": "https://docs.zencoder.ai/features/mcp-deep-dive",
+    "route": "features/mcp-deep-dive",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "models",
+    "md_url": "https://docs.zencoder.ai/features/models.md",
+    "html_url": "https://docs.zencoder.ai/features/models",
+    "route": "features/models",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "multi repo",
+    "md_url": "https://docs.zencoder.ai/features/multi-repo.md",
+    "html_url": "https://docs.zencoder.ai/features/multi-repo",
+    "route": "features/multi-repo",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "private deployments",
+    "md_url": "https://docs.zencoder.ai/features/private-deployments.md",
+    "html_url": "https://docs.zencoder.ai/features/private-deployments",
+    "route": "features/private-deployments",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "security",
+    "md_url": "https://docs.zencoder.ai/features/security.md",
+    "html_url": "https://docs.zencoder.ai/features/security",
+    "route": "features/security",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "skills",
+    "md_url": "https://docs.zencoder.ai/features/skills.md",
+    "html_url": "https://docs.zencoder.ai/features/skills",
+    "route": "features/skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "team administration",
+    "md_url": "https://docs.zencoder.ai/features/team-administration.md",
+    "html_url": "https://docs.zencoder.ai/features/team-administration",
+    "route": "features/team-administration",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Features",
+    "title": "universal cli platform",
+    "md_url": "https://docs.zencoder.ai/features/universal-cli-platform.md",
+    "html_url": "https://docs.zencoder.ai/features/universal-cli-platform",
+    "route": "features/universal-cli-platform",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Administration",
+    "title": "agents",
+    "md_url": "https://docs.zencoder.ai/admin/agents.md",
+    "html_url": "https://docs.zencoder.ai/admin/agents",
+    "route": "admin/agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Administration",
+    "title": "api keys",
+    "md_url": "https://docs.zencoder.ai/admin/api-keys.md",
+    "html_url": "https://docs.zencoder.ai/admin/api-keys",
+    "route": "admin/api-keys",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Administration",
+    "title": "billing",
+    "md_url": "https://docs.zencoder.ai/admin/billing.md",
+    "html_url": "https://docs.zencoder.ai/admin/billing",
+    "route": "admin/billing",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Administration",
+    "title": "connections",
+    "md_url": "https://docs.zencoder.ai/admin/connections.md",
+    "html_url": "https://docs.zencoder.ai/admin/connections",
+    "route": "admin/connections",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Administration",
+    "title": "overview",
+    "md_url": "https://docs.zencoder.ai/admin/overview.md",
+    "html_url": "https://docs.zencoder.ai/admin/overview",
+    "route": "admin/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Administration",
+    "title": "privacy security",
+    "md_url": "https://docs.zencoder.ai/admin/privacy-security.md",
+    "html_url": "https://docs.zencoder.ai/admin/privacy-security",
+    "route": "admin/privacy-security",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Administration",
+    "title": "quota management",
+    "md_url": "https://docs.zencoder.ai/admin/quota-management.md",
+    "html_url": "https://docs.zencoder.ai/admin/quota-management",
+    "route": "admin/quota-management",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Administration",
+    "title": "repositories",
+    "md_url": "https://docs.zencoder.ai/admin/repositories.md",
+    "html_url": "https://docs.zencoder.ai/admin/repositories",
+    "route": "admin/repositories",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Administration",
+    "title": "sso",
+    "md_url": "https://docs.zencoder.ai/admin/sso.md",
+    "html_url": "https://docs.zencoder.ai/admin/sso",
+    "route": "admin/sso",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Administration",
+    "title": "user management",
+    "md_url": "https://docs.zencoder.ai/admin/user-management.md",
+    "html_url": "https://docs.zencoder.ai/admin/user-management",
+    "route": "admin/user-management",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: CLI Integrations",
+    "title": "claude code",
+    "md_url": "https://docs.zencoder.ai/clis/claude-code.md",
+    "html_url": "https://docs.zencoder.ai/clis/claude-code",
+    "route": "clis/claude-code",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: CLI Integrations",
+    "title": "codex",
+    "md_url": "https://docs.zencoder.ai/clis/codex.md",
+    "html_url": "https://docs.zencoder.ai/clis/codex",
+    "route": "clis/codex",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: CLI Integrations",
+    "title": "custom agent",
+    "md_url": "https://docs.zencoder.ai/clis/custom-agent.md",
+    "html_url": "https://docs.zencoder.ai/clis/custom-agent",
+    "route": "clis/custom-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: CLI Integrations",
+    "title": "gemini",
+    "md_url": "https://docs.zencoder.ai/clis/gemini.md",
+    "html_url": "https://docs.zencoder.ai/clis/gemini",
+    "route": "clis/gemini",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: CLI Integrations",
+    "title": "overview",
+    "md_url": "https://docs.zencoder.ai/clis/overview.md",
+    "html_url": "https://docs.zencoder.ai/clis/overview",
+    "route": "clis/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: FAQ",
+    "title": "geographic restrictions",
+    "md_url": "https://docs.zencoder.ai/faq/geographic-restrictions.md",
+    "html_url": "https://docs.zencoder.ai/faq/geographic-restrictions",
+    "route": "faq/geographic-restrictions",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: FAQ",
+    "title": "pricing",
+    "md_url": "https://docs.zencoder.ai/faq/pricing.md",
+    "html_url": "https://docs.zencoder.ai/faq/pricing",
+    "route": "faq/pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: FAQ",
+    "title": "privacy",
+    "md_url": "https://docs.zencoder.ai/faq/privacy.md",
+    "html_url": "https://docs.zencoder.ai/faq/privacy",
+    "route": "faq/privacy",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: FAQ",
+    "title": "refund policy",
+    "md_url": "https://docs.zencoder.ai/faq/refund-policy.md",
+    "html_url": "https://docs.zencoder.ai/faq/refund-policy",
+    "route": "faq/refund-policy",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: FAQ",
+    "title": "retired tutorials",
+    "md_url": "https://docs.zencoder.ai/faq/retired-tutorials.md",
+    "html_url": "https://docs.zencoder.ai/faq/retired-tutorials",
+    "route": "faq/retired-tutorials",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Get Started",
+    "title": "ide agent concepts",
+    "md_url": "https://docs.zencoder.ai/get-started/ide-agent-concepts.md",
+    "html_url": "https://docs.zencoder.ai/get-started/ide-agent-concepts",
+    "route": "get-started/ide-agent-concepts",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Get Started",
+    "title": "install ide plugin",
+    "md_url": "https://docs.zencoder.ai/get-started/install-ide-plugin.md",
+    "html_url": "https://docs.zencoder.ai/get-started/install-ide-plugin",
+    "route": "get-started/install-ide-plugin",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Get Started",
+    "title": "install zenflow",
+    "md_url": "https://docs.zencoder.ai/get-started/install-zenflow.md",
+    "html_url": "https://docs.zencoder.ai/get-started/install-zenflow",
+    "route": "get-started/install-zenflow",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Get Started",
+    "title": "zenflow concepts",
+    "md_url": "https://docs.zencoder.ai/get-started/zenflow-concepts.md",
+    "html_url": "https://docs.zencoder.ai/get-started/zenflow-concepts",
+    "route": "get-started/zenflow-concepts",
+    "kind": "doc"
+  },
+  {
+    "group": "Zencoder: Get Started",
+    "title": "welcome",
+    "md_url": "https://docs.zencoder.ai/welcome.md",
+    "html_url": "https://docs.zencoder.ai/welcome",
+    "route": "welcome",
     "kind": "doc"
   },
   {
@@ -1681,6 +1753,14 @@
   },
   {
     "group": "Blog",
+    "title": "automated unit testing",
+    "md_url": "https://zencoder.ai/blog/automated-unit-testing",
+    "html_url": "https://zencoder.ai/blog/automated-unit-testing",
+    "route": "blog/automated-unit-testing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "importance of inline comments",
     "md_url": "https://zencoder.ai/blog/importance-of-inline-comments",
     "html_url": "https://zencoder.ai/blog/importance-of-inline-comments",
@@ -1741,14 +1821,6 @@
     "md_url": "https://zencoder.ai/blog/zenflow-sentry-integration-automated-bug-resolution",
     "html_url": "https://zencoder.ai/blog/zenflow-sentry-integration-automated-bug-resolution",
     "route": "blog/zenflow-sentry-integration-automated-bug-resolution",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "spec driven development for software services firms",
-    "md_url": "https://zencoder.ai/blog/spec-driven-development-for-software-services-firms",
-    "html_url": "https://zencoder.ai/blog/spec-driven-development-for-software-services-firms",
-    "route": "blog/spec-driven-development-for-software-services-firms",
     "kind": "blog"
   },
   {
@@ -1885,6 +1957,14 @@
     "md_url": "https://zencoder.ai/blog/ai-code-generation-for-debugging-how-developers-can-reduce-time-spent-on-fixes",
     "html_url": "https://zencoder.ai/blog/ai-code-generation-for-debugging-how-developers-can-reduce-time-spent-on-fixes",
     "route": "blog/ai-code-generation-for-debugging-how-developers-can-reduce-time-spent-on-fixes",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "top free ides beginner developers",
+    "md_url": "https://zencoder.ai/blog/top-free-ides-beginner-developers",
+    "html_url": "https://zencoder.ai/blog/top-free-ides-beginner-developers",
+    "route": "blog/top-free-ides-beginner-developers",
     "kind": "blog"
   },
   {
@@ -2141,14 +2221,6 @@
     "md_url": "https://zencoder.ai/blog/developer-life-with-ai-coding-assistant",
     "html_url": "https://zencoder.ai/blog/developer-life-with-ai-coding-assistant",
     "route": "blog/developer-life-with-ai-coding-assistant",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "top free ides beginner developers",
-    "md_url": "https://zencoder.ai/blog/top-free-ides-beginner-developers",
-    "html_url": "https://zencoder.ai/blog/top-free-ides-beginner-developers",
-    "route": "blog/top-free-ides-beginner-developers",
     "kind": "blog"
   },
   {
@@ -2841,14 +2913,6 @@
   },
   {
     "group": "Blog",
-    "title": "ai agent orchestration",
-    "md_url": "https://zencoder.ai/blog/ai-agent-orchestration",
-    "html_url": "https://zencoder.ai/blog/ai-agent-orchestration",
-    "route": "blog/ai-agent-orchestration",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "ai autonomous agents",
     "md_url": "https://zencoder.ai/blog/ai-autonomous-agents",
     "html_url": "https://zencoder.ai/blog/ai-autonomous-agents",
@@ -3345,6 +3409,14 @@
   },
   {
     "group": "Blog",
+    "title": "ai agent orchestration",
+    "md_url": "https://zencoder.ai/blog/ai-agent-orchestration",
+    "html_url": "https://zencoder.ai/blog/ai-agent-orchestration",
+    "route": "blog/ai-agent-orchestration",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "static code analysis",
     "md_url": "https://zencoder.ai/blog/static-code-analysis",
     "html_url": "https://zencoder.ai/blog/static-code-analysis",
@@ -3445,6 +3517,14 @@
     "md_url": "https://zencoder.ai/blog/ai-automation-business-opportunities",
     "html_url": "https://zencoder.ai/blog/ai-automation-business-opportunities",
     "route": "blog/ai-automation-business-opportunities",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "spec driven development for software services firms",
+    "md_url": "https://zencoder.ai/blog/spec-driven-development-for-software-services-firms",
+    "html_url": "https://zencoder.ai/blog/spec-driven-development-for-software-services-firms",
+    "route": "blog/spec-driven-development-for-software-services-firms",
     "kind": "blog"
   },
   {
@@ -4061,14 +4141,6 @@
     "md_url": "https://zencoder.ai/blog/coderabbit-alternatives",
     "html_url": "https://zencoder.ai/blog/coderabbit-alternatives",
     "route": "blog/coderabbit-alternatives",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "automated unit testing",
-    "md_url": "https://zencoder.ai/blog/automated-unit-testing",
-    "html_url": "https://zencoder.ai/blog/automated-unit-testing",
-    "route": "blog/automated-unit-testing",
     "kind": "blog"
   },
   {

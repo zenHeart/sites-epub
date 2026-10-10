@@ -21,6 +21,17 @@ CANONICAL_BLOG = "https://claude.com/resources/articles"
 PAGE_COUNT_RE = re.compile(r"(\d+)\s*/\s*(\d+)")
 COLLECTION_PAGE_RE = re.compile(r"([0-9a-fA-F]+)_page=(\d+)")
 
+# 2026-10: two signals had both gone stale at once for the engineering blog.
+# claude.com/blog is now a React listing that renders ~6 posts and carries no
+# Webflow pagination markers, and claude.com/sitemap.xml never listed the
+# engineering posts — so /blog/a-harness-for-every-task-dynamic-workflows-in-claude-code
+# (16k chars live) was enumerated by neither. Anthropic's engineering blog has
+# moved to its own host and publishes its own sitemap; that is the missing
+# second source, and it is what ``compile.discover_entries`` unions in.
+ENGINEERING_HOST = "claude.dev"
+ENGINEERING_BLOG_SITEMAP = "https://claude.dev/sitemap.xml"
+ENGINEERING_BLOG_PATH = re.compile(r"^/blog/([A-Za-z0-9][A-Za-z0-9\-]*)/?$")
+
 
 @dataclass(frozen=True)
 class Pagination:
@@ -41,6 +52,11 @@ def normalize_blog_url(href: str, base: str = "https://claude.com") -> str | Non
     if parsed.scheme not in {"http", "https"}:
         return None
     host = parsed.netloc.lower()
+    if host in {ENGINEERING_HOST, "www." + ENGINEERING_HOST}:
+        match = ENGINEERING_BLOG_PATH.match(parsed.path)
+        if not match:
+            return None
+        return f"https://{ENGINEERING_HOST}/blog/{match.group(1)}"
     if host not in {"claude.com", "www.claude.com"}:
         return None
     match = BLOG_PATH.match(parsed.path)

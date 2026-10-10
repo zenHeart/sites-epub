@@ -1,4 +1,16 @@
 {
+  "blog/forge-scalable-agent-rl-en-1779896141": "93a5817852de9c85ad829c04f6fece7b7c38b80af100e79281e5faebc2ae4050",
+  "blog/minimax-agent-team-long-running-1779893953": "2b62a8f8c3057b6bb95dac2572ff07608222e3bb07c6cc99c353af89fe91ec40",
+  "blog/minimax-h3": "1c6a8dd7f9e4a29cfd721c439cc7330a20685b1447f3d1f6c9e28b6b49b01535",
+  "blog/minimax-m2-en-1748600000": "eae1a9cc37f8b025f841e342c043c45b10b37d97a656905773adb9597a8eba75",
+  "blog/minimax-m2-her": "bcce99c751f3c32155fbb147ef005e32bff365288ff9a0c843f119a0fb99c17e",
+  "blog/minimax-m21": "2dc40096a5d57afd58818e99b9c0d4c9e4a81caee5ddb71eee190478032561a2",
+  "blog/minimax-m25": "4d42320ca28f298386b94db96c08cd27f55d8dd09bcd8a14f93cbda05a15eca7",
+  "blog/minimax-m27": "dc983c0e929b56508969558f01defdaadb9c936ec95838f2a17020a2872a7c36",
+  "blog/minimax-m3": "c7ae79eb11817284cf26a314650d5ce023ad999f00dc8b9138fb2aeb748bcfaa",
+  "blog/minimax-maxproof-math-proof-evolution": "0d6ea53014a65fbd945857ef8d28b29ce51b769dbf147cbe1e322bee94149876",
+  "blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model": "b93a12648d0692135c507c7509a947a35acde951ddb0a46bd397f8a766b1b9a6",
+  "blog/sparse-token-forgetting": "49371816cbd2019a8a53293b69ce8c7b8af023cc6ab1412d7b797ef4d1a2e719",
   "hailuo-agent": "6af8be176062cd3f7bbb8445c967842fd54028547fc438bd0e5b9190c33539c9",
   "hailuo-ai-baby-story-video": "4831375a7336665dcb0748688f121aae26bd36b3c3e3d5d0c1e177133939fbcb",
   "hailuo-ai-video-landing-ai-gender-swap": "b04812d411533c94197107f9fbd8ba98134c600df7a9b04dedb465dec5cfc2b8",
@@ -18,8 +30,10 @@
   "hailuo-tools-ai-shorts-generator": "9f7790f35ae8104fdf10568fdabc58d87da5ae44087126329f4ec66e7080c2f7",
   "hailuo-tools-hailuo-2-3-model": "25d15512aacdcbfc97772f17facbe40e84c8e6fa28a3d60240606c3489fa3546",
   "hailuo-tools-nano-banana-pro": "b5342d73d8377a4586836dce69945b509a659802b481709b68def5b8e9b9aa1c",
+  "minimax-iomodels-text": "8f9fab4aa81c7ab792fd62a82cfc691e4914a77bc2d07363e035842ee372ee0b",
   "minimax-iomodels-text-m27": "abc5c98143e5d55fbbc54fc83cd7582619ac99d2bd9eb162f24012b155e5fafe",
   "minimax-iomodels-text-m3": "abc5c98143e5d55fbbc54fc83cd7582619ac99d2bd9eb162f24012b155e5fafe",
+  "mm-code-download": "5d7f2e759f4787c69647c109a37e0f694ba42fbe8686ca0c9a82ce4285bd392f",
   "mm-design-de": "7382be60f4b8359e9c566ec048e7ce00c77bd33e1ea1baa564d7892afb2102ac",
   "mm-design-es": "389afc12dd9e8fc99de49ccdd17f44b50640a92bfc0debb0c13b31a533006719",
   "mm-design-fil": "fc0f60fecc7150a091252102f6670244e00dad8ef0910a4fb9a6afa5f96af49f",
@@ -39,5 +53,6 @@
   "mm-design-tools-image-to-video": "1201af811e54083c031d8b8d4ea96beb07e51a34f3746bd7251ffba9e0131724",
   "mm-design-vi": "12e1e0054406cbae40019f19c1d72bb904b0339349c48cdb3096d283ae59954b",
   "mm-design-zh-cn": "d85a280225ce76cd15add1f47abe91624062b0bf0c4674a2bfbba3d487e6408c",
-  "mm-design-zh-tw": "0e63ac7bfc4f11ba2f5332afb799eea0f3140cc5b8e513f3bfbad7c0811ebb18"
+  "mm-design-zh-tw": "0e63ac7bfc4f11ba2f5332afb799eea0f3140cc5b8e513f3bfbad7c0811ebb18",
+  "news/minimax-speech-28": "b738a919fe9330cc20450ae44302a1ef442f2b6f3d3ebb0fdeac88a6a8a70846"
 }

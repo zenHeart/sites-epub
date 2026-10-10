@@ -114,6 +114,10 @@ def discover_entries(
             from .gemini_nav import parse_gemini_blog
 
             blog = parse_gemini_blog()
+        elif vendor.adapter == "minimax":
+            from .minimax_nav import parse_minimax_blog
+
+            blog = parse_minimax_blog(blog_html, vendor.blog_url)
         elif vendor.adapter == "xai":
             from .xai_nav import parse_xai_blog, parse_xai_bot_guides
 
@@ -125,16 +129,42 @@ def discover_entries(
             except Exception:
                 pass
         elif "claude.com/blog" in vendor.blog_url:
-            from .blog_listing import extract_blog_urls
+            from .blog_listing import (
+                ENGINEERING_BLOG_SITEMAP,
+                extract_blog_urls,
+            )
 
             urls = extract_blog_urls(blog_html, base="https://claude.com")
-            for url in urls:
+            # The engineering blog lives on claude.dev and is absent from both
+            # the claude.com listing and the claude.com sitemap, so it needs its
+            # own sitemap as a second enumeration source.
+            try:
+                from .http import fetch_text as _fetch_text
+
+                urls += extract_blog_urls(
+                    _fetch_text(ENGINEERING_BLOG_SITEMAP), base=ENGINEERING_BLOG_SITEMAP
+                )
+            except Exception:
+                pass
+            seen_routes: set[str] = set()
+            for url in dict.fromkeys(urls):
                 slug = url.rstrip("/").rsplit("/", 1)[-1]
+                route = f"blog/{slug}"
+                # The engineering sitemap and the claude.com listing both link the
+                # newest posts, so the union can name one post twice — once per
+                # host spelling. Route is the dedupe key, not URL.
+                if route in seen_routes:
+                    continue
+                seen_routes.add(route)
+                # Only claude.com serves a .md twin; the claude.dev engineering
+                # posts are HTML-only, so pointing md_url at the HTML page avoids
+                # a guaranteed 404 fetch per post.
+                md_url = url + ".md" if url.startswith("https://claude.com/") else url
                 blog.append(
                     IndexEntry(
                         group="Blog",
                         title=slug.replace("-", " "),
-                        md_url=url + ".md",
+                        md_url=md_url,
                         html_url=url,
                         route=f"blog/{slug}",
                         kind="blog",
@@ -503,6 +533,13 @@ def fetch_vendor(
                 # on whatever the root listing happens to embed.
                 try:
                     blog_html = blog_html + "\n" + fetch_text("https://www.kimi.com/en/blog")
+                except Exception:
+                    pass
+            if vendor.adapter == "minimax":
+                # www.minimax.io/sitemap.xml lists zero blog/news URLs, so the
+                # announcements live only on their own listing page.
+                try:
+                    blog_html = blog_html + "\n" + fetch_text("https://www.minimax.io/news")
                 except Exception:
                     pass
             try:

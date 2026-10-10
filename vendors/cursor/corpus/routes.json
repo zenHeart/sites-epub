@@ -1328,6 +1328,14 @@
     "kind": "doc"
   },
   {
+    "group": "Cursor: Changelog",
+    "title": "changelog",
+    "md_url": "https://cursor.com/changelog.md",
+    "html_url": "https://cursor.com/changelog",
+    "route": "changelog",
+    "kind": "doc"
+  },
+  {
     "group": "Cursor: Docs",
     "title": "request based legacy",
     "md_url": "https://cursor.com/docs/account/pricing/request-based-legacy.md",
@@ -2313,6 +2321,14 @@
   },
   {
     "group": "Cursor: Help Center",
+    "title": "agent email",
+    "md_url": "https://cursor.com/help/grok-bot/agent-email.md",
+    "html_url": "https://cursor.com/help/grok-bot/agent-email",
+    "route": "help/grok-bot/agent-email",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
     "title": "computer recovery",
     "md_url": "https://cursor.com/help/grok-bot/computer-recovery.md",
     "html_url": "https://cursor.com/help/grok-bot/computer-recovery",
@@ -2669,6 +2685,14 @@
     "md_url": "https://cursor.com/help/troubleshooting/tab-issues.md",
     "html_url": "https://cursor.com/help/troubleshooting/tab-issues",
     "route": "help/troubleshooting/tab-issues",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "bugbot usage based billing",
+    "md_url": "https://cursor.com/help/account-and-billing/bugbot-usage-based-billing.md",
+    "html_url": "https://cursor.com/help/account-and-billing/bugbot-usage-based-billing",
+    "route": "help/account-and-billing/bugbot-usage-based-billing",
     "kind": "doc"
   },
   {

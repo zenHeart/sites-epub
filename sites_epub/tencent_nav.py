@@ -42,6 +42,12 @@ def parse_tencent_docs() -> list[IndexEntry]:
         parts = path[len("/docs/"):].strip("/").split("/")
         if not parts or not parts[0]:
             continue
+        # A bare /docs/<domain> is the domain's landing page, not a chapter:
+        # workbuddy.cn serves a ~3.8KB client-rendered shell for /docs/cli,
+        # /docs/ide, /docs/plugin, /docs/workbuddyapp and /docs/workbuddymini,
+        # so extracting one yields no body and no images.
+        if len(parts) == 1:
+            continue
         group = GROUPS.get(parts[0], "WorkBuddy 工作台")
         route = "wb-" + "-".join(parts).lower()
         if route in seen:

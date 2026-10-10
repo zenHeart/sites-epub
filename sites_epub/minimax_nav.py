@@ -5,6 +5,14 @@ family entry; products are organized around models; one book per vendor):
 - minimax.io/models/*  international model catalog pages (SSR nav)
 - hailuoai.com         Hailuo consumer product pages (llms.txt index;
     hailuoai.video serves the identical index — not double-counted)
+- minimax.io/blog     model release + research posts (product-facing writing)
+- minimax.io/news     model/product announcements
+
+The blog and news listings are enumerated separately because
+``www.minimax.io/sitemap.xml`` lists 0 blog/news URLs (it only covers the
+static marketing shell), so the corpus had no official writing at all until
+this source was added. Blog is the last TOC parent, so these entries carry
+``kind="blog"``.
 """
 
 from __future__ import annotations
@@ -18,6 +26,9 @@ from .http import fetch_text
 from .models import IndexEntry
 
 LLMS_LINK = re.compile(r"^\s*-\s+\[([^\]]+)\]\(([^)]+)\)", re.M)
+
+#: ``/blog/<slug>`` research + release posts and ``/news/<slug>`` announcements.
+POST_PATH = re.compile(r"^/(blog|news)/([A-Za-z0-9][A-Za-z0-9._\-]*)/?$")
 
 SKIP_SUFFIX = (
     ".png", ".svg", ".jpg", ".jpeg", ".gif", ".webp", ".ico",
@@ -71,8 +82,10 @@ def parse_minimax_docs() -> list[IndexEntry]:
             )
         )
 
-    # 2. MiniMax Code (code.minimax.io — "MiniMax Agent" coding product)
-    for u in ("https://code.minimax.io/", "https://code.minimax.io/download"):
+    # 2. MiniMax Code (code.minimax.io — "MiniMax Agent" coding product).
+    # The site root is a client-rendered shell that yields no body and no
+    # images, so only the server-rendered download page is a chapter.
+    for u in ("https://code.minimax.io/download",):
         try:
             chtml = fetch_text(u)
         except Exception:  # noqa: BLE001
@@ -100,6 +113,9 @@ def parse_minimax_docs() -> list[IndexEntry]:
             continue
         p = urlparse(clean)
         if not p.path or p.path == "/":
+            continue
+        # /media-plan/* is the pricing and subscription funnel, not usage docs.
+        if p.path.startswith("/media-plan"):
             continue
         route = "mm-design-" + re.sub(r"[^a-z0-9-]+", "-", p.path.strip("/").lower()).strip("-")
         if route in dseen:
@@ -144,3 +160,41 @@ def parse_minimax_docs() -> list[IndexEntry]:
             )
         )
     return docs
+
+
+def parse_minimax_blog(html: str, blog_url: str) -> list[IndexEntry]:
+    """Research / release posts from the ``/blog`` and ``/news`` listings.
+
+    minimax.io is a Next.js site, so the listing's card grid ships as escaped
+    JSON rather than only as anchors — both are swept, and the slug is the
+    route. Titles are seeded from the slug and replaced by the real article
+    title at extraction time.
+    """
+    out: list[IndexEntry] = []
+    seen: set[str] = set()
+    candidates = re.findall(r'href="(/[A-Za-z0-9/_.\-]*)"', html)
+    candidates += re.findall(r'"(/[A-Za-z0-9/_.\-]+)"', html)
+    for cand in candidates:
+        match = POST_PATH.match(cand.rstrip("/") or "/")
+        if not match:
+            continue
+        section, slug = match.group(1), match.group(2)
+        route = f"{section}/{slug}"
+        if route in seen:
+            continue
+        seen.add(route)
+        url = f"https://www.minimax.io/{section}/{slug}"
+        out.append(
+            IndexEntry(
+                group="Blog",
+                title=slug.replace("-", " "),
+                # No .md twin is published for these; pointing md_url at the
+                # HTML page keeps the fetch to one request instead of a
+                # guaranteed 404 followed by a retry.
+                md_url=url,
+                html_url=url,
+                route=route,
+                kind="blog",
+            )
+        )
+    return out

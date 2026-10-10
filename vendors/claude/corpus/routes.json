@@ -1777,10 +1777,26 @@
   },
   {
     "group": "Blog",
+    "title": "building effective agent automations",
+    "md_url": "https://claude.dev/blog/building-effective-agent-automations",
+    "html_url": "https://claude.dev/blog/building-effective-agent-automations",
+    "route": "blog/building-effective-agent-automations",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "how block orchestrates claude fable across thousands of pull requests",
     "md_url": "https://claude.com/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests.md",
     "html_url": "https://claude.com/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests",
     "route": "blog/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automating eval design and hillclimbing",
+    "md_url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing",
+    "html_url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing",
+    "route": "blog/automating-eval-design-and-hillclimbing",
     "kind": "blog"
   },
   {
@@ -1805,6 +1821,14 @@
     "md_url": "https://claude.com/resources/articles/were-expanding-the-claude-startups-program-to-help-founders-build.md",
     "html_url": "https://claude.com/resources/articles/were-expanding-the-claude-startups-program-to-help-founders-build",
     "route": "blog/were-expanding-the-claude-startups-program-to-help-founders-build",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude code in the cloud",
+    "md_url": "https://claude.dev/blog/claude-code-in-the-cloud",
+    "html_url": "https://claude.dev/blog/claude-code-in-the-cloud",
+    "route": "blog/claude-code-in-the-cloud",
     "kind": "blog"
   },
   {
@@ -3821,6 +3845,102 @@
     "md_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents.md",
     "html_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents",
     "route": "blog/zero-trust-for-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "getting started with claude code mods",
+    "md_url": "https://claude.dev/blog/getting-started-with-claude-code-mods",
+    "html_url": "https://claude.dev/blog/getting-started-with-claude-code-mods",
+    "route": "blog/getting-started-with-claude-code-mods",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "building with claude sonnet 5 5",
+    "md_url": "https://claude.dev/blog/building-with-claude-sonnet-5-5",
+    "html_url": "https://claude.dev/blog/building-with-claude-sonnet-5-5",
+    "route": "blog/building-with-claude-sonnet-5-5",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "what a task costs on opus 5 5",
+    "md_url": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5",
+    "html_url": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5",
+    "route": "blog/what-a-task-costs-on-opus-5-5",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "spending your effort",
+    "md_url": "https://claude.dev/blog/spending-your-effort",
+    "html_url": "https://claude.dev/blog/spending-your-effort",
+    "route": "blog/spending-your-effort",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how we made claude ai faster",
+    "md_url": "https://claude.dev/blog/how-we-made-claude-ai-faster",
+    "html_url": "https://claude.dev/blog/how-we-made-claude-ai-faster",
+    "route": "blog/how-we-made-claude-ai-faster",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "getting the most out of opus 5 5",
+    "md_url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5",
+    "html_url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5",
+    "route": "blog/getting-the-most-out-of-opus-5-5",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the new rules of context engineering for claude 5 generation models",
+    "md_url": "https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+    "html_url": "https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+    "route": "blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "lessons from building claude code how we use skills",
+    "md_url": "https://claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills",
+    "html_url": "https://claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills",
+    "route": "blog/lessons-from-building-claude-code-how-we-use-skills",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "a harness for every task dynamic workflows in claude code",
+    "md_url": "https://claude.dev/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+    "html_url": "https://claude.dev/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+    "route": "blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "using claude code the unreasonable effectiveness of html",
+    "md_url": "https://claude.dev/blog/using-claude-code-the-unreasonable-effectiveness-of-html",
+    "html_url": "https://claude.dev/blog/using-claude-code-the-unreasonable-effectiveness-of-html",
+    "route": "blog/using-claude-code-the-unreasonable-effectiveness-of-html",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "lessons from building claude code prompt caching is everything",
+    "md_url": "https://claude.dev/blog/lessons-from-building-claude-code-prompt-caching-is-everything",
+    "html_url": "https://claude.dev/blog/lessons-from-building-claude-code-prompt-caching-is-everything",
+    "route": "blog/lessons-from-building-claude-code-prompt-caching-is-everything",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "seeing like an agent",
+    "md_url": "https://claude.dev/blog/seeing-like-an-agent",
+    "html_url": "https://claude.dev/blog/seeing-like-an-agent",
+    "route": "blog/seeing-like-an-agent",
     "kind": "blog"
   }
 ]

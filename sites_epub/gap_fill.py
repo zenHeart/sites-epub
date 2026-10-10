@@ -36,6 +36,13 @@ from .models import IndexEntry
 _LINK_RE = re.compile(r"\[[^\]\n]{1,140}\]\((https?://[^\s)\]]+)\)")
 _HREF_RE = re.compile(r'href=["\'](https?://[^"\'\s]+)["\']')
 _LOC_RE = re.compile(r"<loc>\s*([^<\s]+?)\s*</loc>")
+#: Bare ``- https://host/path.md`` bullets. Cursor's llms.txt is written this
+#: way for its whole help centre, so the markdown-link and href patterns missed
+#: it entirely. The pattern is deliberately strict — the URL must be the whole
+#: line after the bullet — because llms.txt also lists translations in the form
+#: ``- Spanish: `https://cursor.com/es/docs/bugbot.md` ``, and those are i18n
+#: mirrors that must stay out of the book.
+_BARE_URL_RE = re.compile(r"^\s*-\s+(https?://[^\s<>)\]`]+)\s*$", re.M)
 _NON_PAGE_EXT = (
     ".dmg", ".exe", ".deb", ".rpm", ".appimage", ".png", ".jpg", ".jpeg", ".gif",
     ".svg", ".webp", ".zip", ".tar", ".gz", ".pdf", ".woff", ".woff2", ".mp4", ".ico",
@@ -57,7 +64,12 @@ def _clean(raw: str) -> str | None:
 
 
 def _links(body: str) -> set[str]:
-    raw = set(_LOC_RE.findall(body)) | set(_LINK_RE.findall(body)) | set(_HREF_RE.findall(body))
+    raw = (
+        set(_LOC_RE.findall(body))
+        | set(_LINK_RE.findall(body))
+        | set(_HREF_RE.findall(body))
+        | set(_BARE_URL_RE.findall(body))
+    )
     out = set()
     for item in raw:
         cleaned = _clean(item)
@@ -112,6 +124,7 @@ GROUPS: dict[str, tuple[tuple[str, str], ...]] = {
     ),
     # Cursor: docs / help centre / learn course / guides / workflows.
     "cursor": (
+        ("/changelog", "Cursor: Changelog"),
         ("/docs/", "Cursor: Docs"),
         ("/docs/release-notes", "Cursor: Release Notes"),
         ("/help/", "Cursor: Help Center"),
@@ -132,17 +145,22 @@ GROUPS: dict[str, tuple[tuple[str, str], ...]] = {
         ("/build", "Grok Product"),
     ),
     "manus": (("/features/", "Manus: Features"), ("/blog/", "Manus: Blog")),
-    # Zencoder: Zenflow is a first-party product and belongs in the book.
+    # Zencoder: Zenflow is a first-party product and belongs in the book, and
+    # docs.zencoder.ai's own getting-started / user-guide trees were missing
+    # because the primary adapter only ever read zencoder.ai/sitemap.xml.
     "zencoder": (
         ("/zenflow-changelog", "Zenflow"),
         ("/zenflow-work", "Zenflow"),
         ("/zenflow/", "Zenflow"),
         ("/changelog/", "Zencoder Changelog"),
+        ("/get-started/", "Zencoder: Get Started"),
+        ("/user-guides/", "Zencoder: User Guides"),
         ("/learn/", "Zencoder Learn"),
         ("/features/", "Zencoder: Features"),
         ("/admin/", "Zencoder: Administration"),
         ("/clis", "Zencoder: CLI Integrations"),
         ("/faq", "Zencoder: FAQ"),
+        ("/welcome", "Zencoder: Get Started"),
     ),
 }
 
@@ -165,6 +183,18 @@ DENY: dict[str, tuple[tuple[str, str], ...]] = {
     ),
     "cursor": (
         ("/for/", "「Cursor for <人群/语言>」获客落地页，非产品文档"),
+        # i18n mirrors of the same pages: llms.txt lists each help article once
+        # per locale, and the doc tree under a locale prefix is a translation.
+        ("/cn/", "简体中文镜像"),
+        ("/pt-BR/", "葡萄牙语（巴西）镜像"),
+        ("/es/", "西班牙语镜像"),
+        ("/ja/", "日语镜像"),
+        ("/de/", "德语镜像"),
+        ("/fr/", "法语镜像"),
+        ("/ko/", "韩语镜像"),
+        ("/it/", "意大利语镜像"),
+        ("/ru/", "俄语镜像"),
+        ("/zh/", "中文镜像"),
         ("/terms/", "法务条款"),
         ("/abuse", "滥用政策，法务文本"),
         ("/acceptable-use-policy", "可接受使用政策，法务文本"),
@@ -266,6 +296,15 @@ BLOG_GROUP = {"cursor": "Cursor: Blog", "manus": "Manus: Blog", "zencoder": "Blo
 #: so the scope policy above cannot drop them — only an explicit retired list
 #: can. Every entry is a 404/307-to-/404 confirmed live, not a guess.
 RETIRED: dict[str, tuple[str, ...]] = {
+    "kimi": (
+        # The homepage still anchors these four product names, but the pages
+        # themselves were retired: each answers 200 with the client-rendered
+        # homepage shell and yields no body text and no images. Confirmed live.
+        "https://www.kimi.com/plugins",
+        "https://www.kimi.com/tasks",
+        "https://www.kimi.com/mykimi",
+        "https://www.kimi.com/design",
+    ),
     "manus": (
         "https://manus.im/blog/manus-is-hiring",
         "https://manus.im/blog/manus-pops-event-bts",
@@ -400,4 +439,11 @@ def supplement(vendor_id: str, taken_routes: set[str]) -> list[IndexEntry]:
                     kind="blog" if group == BLOG_GROUP.get(vendor_id) else "doc",
                 )
             )
-    return out
+    # ``grouped_html`` keys its section headings on first appearance and renames
+    # any repeat, so a supplement that visits several sources (sitemap, then
+    # llms.txt) can emit the same group twice and split one knowledge domain
+    # across two sections. Sorting by the GROUPS declaration order keeps each
+    # domain in a single run; within a group the URL order is preserved.
+    order = {group: i for i, (_prefix, group) in enumerate(GROUPS.get(vendor_id, ()))}
+    order.setdefault(BLOG_GROUP.get(vendor_id, "\x00"), len(order))
+    return sorted(out, key=lambda e: order.get(e.group, len(order)))

@@ -29,10 +29,24 @@ def main(vendor: str, threshold: int, max_width: int) -> int:
     for p in sorted(img_dir.iterdir()):
         if p.suffix.lower() == ".gif" or p.stat().st_size <= threshold:
             continue
+        # Target name for the recompressed copy. When the source is already a
+        # JPEG under that name the copy would land on the source itself, so a
+        # temp file is used and only swapped in if it wins — otherwise a repeat
+        # run either deletes the image (out == p always ties on size) or leaves
+        # the corpus unable to shrink any further.
+        target = img_dir / (p.stem + ".jpg")
+        in_place = target == p
+        out = img_dir / (p.stem + ".shrink-tmp.jpg") if in_place else target
+        # A different image may already occupy the target name (two URLs whose
+        # local names share a stem). Only the copy this pass writes may be
+        # removed when the recompression loses.
+        out_existed = (not in_place) and target.exists()
         try:
             im = Image.open(p)
             im.load()
         except Exception:  # noqa: BLE001
+            if in_place and out.exists():
+                out.unlink()
             continue
         if im.mode in ("RGBA", "LA", "P"):
             im = im.convert("RGBA")
@@ -43,16 +57,19 @@ def main(vendor: str, threshold: int, max_width: int) -> int:
             im = im.convert("RGB")
         if im.width > max_width:
             im = im.resize((max_width, round(im.height * max_width / im.width)), Image.LANCZOS)
-        out = img_dir / (p.stem + ".jpg")
         im.save(out, "JPEG", quality=80, optimize=True)
         if out.stat().st_size >= p.stat().st_size:
-            out.unlink()
+            if in_place or not out_existed:
+                out.unlink()
             continue
         saved += p.stat().st_size - out.stat().st_size
-        p.unlink()
-        url = reverse.get(p.name)
-        if url:
-            mapping[url] = out.name
+        if in_place:
+            out.replace(p)
+        else:
+            p.unlink()
+            url = reverse.get(p.name)
+            if url:
+                mapping[url] = out.name
         changed += 1
     map_path.write_text(json.dumps(mapping, indent=2) + "\n", encoding="utf-8")
     total = sum(q.stat().st_size for q in img_dir.iterdir())
