@@ -10,8 +10,8 @@
     "chapters": 493
   },
   "cursor": {
-    "sha256": "345bdf43e3a8de2b5f53dac582d4a8462ea01a0300037f0dfcbed119134c4f90",
-    "packed_at": "2026-10-10T11:39:21Z",
+    "sha256": "7ca0cd40b97047fc2bfc85af12fd2ef884dddbad87c0e04b5cb4b105c25c2a01",
+    "packed_at": "2026-10-10T15:31:58Z",
     "chapters": 493
   },
   "grok": {
@@ -35,9 +35,9 @@
     "chapters": 56
   },
   "kimi": {
-    "sha256": "4c7a477b445d0a7770875adc36aca0ad9ee3faff7b29931a76cd117aebd58067",
-    "packed_at": "2026-10-10T11:45:25Z",
-    "chapters": 192
+    "sha256": "054cc9524329fe11a388afa58b10813ddad6c5079a77452f68fbd78c1d4ad99b",
+    "packed_at": "2026-10-10T15:32:15Z",
+    "chapters": 95
   },
   "zhipu": {
     "sha256": "e1a5d0a410c84f5780ca4eab3b00fe2bb89d87a21744e370582f7270bc8f232b",
