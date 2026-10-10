@@ -241,178 +241,10 @@
   },
   {
     "group": "Resources \u6559\u7a0b",
-    "title": "game assets",
-    "md_url": "https://www.kimi.com/resources/game-assets",
-    "html_url": "https://www.kimi.com/resources/game-assets",
-    "route": "resources/game-assets",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "generate slides with ai",
-    "md_url": "https://www.kimi.com/resources/generate-slides-with-ai",
-    "html_url": "https://www.kimi.com/resources/generate-slides-with-ai",
-    "route": "resources/generate-slides-with-ai",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "how to make a 2d game",
-    "md_url": "https://www.kimi.com/resources/how-to-make-a-2d-game",
-    "html_url": "https://www.kimi.com/resources/how-to-make-a-2d-game",
-    "route": "resources/how-to-make-a-2d-game",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "how to create a 3d model from a picture",
-    "md_url": "https://www.kimi.com/resources/how-to-create-a-3d-model-from-a-picture",
-    "html_url": "https://www.kimi.com/resources/how-to-create-a-3d-model-from-a-picture",
-    "route": "resources/how-to-create-a-3d-model-from-a-picture",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "game ideas",
-    "md_url": "https://www.kimi.com/resources/game-ideas",
-    "html_url": "https://www.kimi.com/resources/game-ideas",
-    "route": "resources/game-ideas",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "how to create game assets",
-    "md_url": "https://www.kimi.com/resources/how-to-create-game-assets",
-    "html_url": "https://www.kimi.com/resources/how-to-create-game-assets",
-    "route": "resources/how-to-create-game-assets",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "how to make a 3d game",
-    "md_url": "https://www.kimi.com/resources/how-to-make-a-3d-game",
-    "html_url": "https://www.kimi.com/resources/how-to-make-a-3d-game",
-    "route": "resources/how-to-make-a-3d-game",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "how to make a game with ai",
-    "md_url": "https://www.kimi.com/resources/how-to-make-a-game-with-ai",
-    "html_url": "https://www.kimi.com/resources/how-to-make-a-game-with-ai",
-    "route": "resources/how-to-make-a-game-with-ai",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai for enterprise",
-    "md_url": "https://www.kimi.com/resources/ai-for-enterprise",
-    "html_url": "https://www.kimi.com/resources/ai-for-enterprise",
-    "route": "resources/ai-for-enterprise",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai for business",
-    "md_url": "https://www.kimi.com/resources/ai-for-business",
-    "html_url": "https://www.kimi.com/resources/ai-for-business",
-    "route": "resources/ai-for-business",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai in business examples",
-    "md_url": "https://www.kimi.com/resources/ai-in-business-examples",
-    "html_url": "https://www.kimi.com/resources/ai-in-business-examples",
-    "route": "resources/ai-in-business-examples",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
     "title": "kimi browser extension",
     "md_url": "https://www.kimi.com/resources/kimi-browser-extension",
     "html_url": "https://www.kimi.com/resources/kimi-browser-extension",
     "route": "resources/kimi-browser-extension",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "research writing skills",
-    "md_url": "https://www.kimi.com/resources/research-writing-skills",
-    "html_url": "https://www.kimi.com/resources/research-writing-skills",
-    "route": "resources/research-writing-skills",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "goal setting skills for agents",
-    "md_url": "https://www.kimi.com/resources/goal-setting-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/goal-setting-skills-for-agents",
-    "route": "resources/goal-setting-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "e commerce skills for agents",
-    "md_url": "https://www.kimi.com/resources/e-commerce-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/e-commerce-skills-for-agents",
-    "route": "resources/e-commerce-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai business strategy",
-    "md_url": "https://www.kimi.com/resources/ai-business-strategy",
-    "html_url": "https://www.kimi.com/resources/ai-business-strategy",
-    "route": "resources/ai-business-strategy",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai business ideas",
-    "md_url": "https://www.kimi.com/resources/ai-business-ideas",
-    "html_url": "https://www.kimi.com/resources/ai-business-ideas",
-    "route": "resources/ai-business-ideas",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "how to use ai in business",
-    "md_url": "https://www.kimi.com/resources/how-to-use-ai-in-business",
-    "html_url": "https://www.kimi.com/resources/how-to-use-ai-in-business",
-    "route": "resources/how-to-use-ai-in-business",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "data visualization skills for agents",
-    "md_url": "https://www.kimi.com/resources/data-visualization-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/data-visualization-skills-for-agents",
-    "route": "resources/data-visualization-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "financial modeling skills for agents",
-    "md_url": "https://www.kimi.com/resources/financial-modeling-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/financial-modeling-skills-for-agents",
-    "route": "resources/financial-modeling-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "financial analysis skills for agents",
-    "md_url": "https://www.kimi.com/resources/financial-analysis-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/financial-analysis-skills-for-agents",
-    "route": "resources/financial-analysis-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "visual coding",
-    "md_url": "https://www.kimi.com/resources/visual-coding",
-    "html_url": "https://www.kimi.com/resources/visual-coding",
-    "route": "resources/visual-coding",
     "kind": "doc"
   },
   {
@@ -425,50 +257,10 @@
   },
   {
     "group": "Resources \u6559\u7a0b",
-    "title": "how to create a portfolio website",
-    "md_url": "https://www.kimi.com/resources/how-to-create-a-portfolio-website",
-    "html_url": "https://www.kimi.com/resources/how-to-create-a-portfolio-website",
-    "route": "resources/how-to-create-a-portfolio-website",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "create ecommerce websites",
-    "md_url": "https://www.kimi.com/resources/create-ecommerce-websites",
-    "html_url": "https://www.kimi.com/resources/create-ecommerce-websites",
-    "route": "resources/create-ecommerce-websites",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "make a website for a small business",
-    "md_url": "https://www.kimi.com/resources/make-a-website-for-a-small-business",
-    "html_url": "https://www.kimi.com/resources/make-a-website-for-a-small-business",
-    "route": "resources/make-a-website-for-a-small-business",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
     "title": "kimi community",
     "md_url": "https://www.kimi.com/resources/kimi-community",
     "html_url": "https://www.kimi.com/resources/kimi-community",
     "route": "resources/kimi-community",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "prompts for ai image generators",
-    "md_url": "https://www.kimi.com/resources/prompts-for-ai-image-generators",
-    "html_url": "https://www.kimi.com/resources/prompts-for-ai-image-generators",
-    "route": "resources/prompts-for-ai-image-generators",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "how to create ai images",
-    "md_url": "https://www.kimi.com/resources/how-to-create-ai-images",
-    "html_url": "https://www.kimi.com/resources/how-to-create-ai-images",
-    "route": "resources/how-to-create-ai-images",
     "kind": "doc"
   },
   {
@@ -489,14 +281,6 @@
   },
   {
     "group": "Resources \u6559\u7a0b",
-    "title": "ai poster ideas",
-    "md_url": "https://www.kimi.com/resources/ai-poster-ideas",
-    "html_url": "https://www.kimi.com/resources/ai-poster-ideas",
-    "route": "resources/ai-poster-ideas",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
     "title": "agent skills examples",
     "md_url": "https://www.kimi.com/resources/agent-skills-examples",
     "html_url": "https://www.kimi.com/resources/agent-skills-examples",
@@ -513,34 +297,10 @@
   },
   {
     "group": "Resources \u6559\u7a0b",
-    "title": "benefits of ai in business",
-    "md_url": "https://www.kimi.com/resources/benefits-of-ai-in-business",
-    "html_url": "https://www.kimi.com/resources/benefits-of-ai-in-business",
-    "route": "resources/benefits-of-ai-in-business",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
     "title": "kimi for windows",
     "md_url": "https://www.kimi.com/resources/kimi-for-windows",
     "html_url": "https://www.kimi.com/resources/kimi-for-windows",
     "route": "resources/kimi-for-windows",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "knowledge based agents in ai",
-    "md_url": "https://www.kimi.com/resources/knowledge-based-agents-in-ai",
-    "html_url": "https://www.kimi.com/resources/knowledge-based-agents-in-ai",
-    "route": "resources/knowledge-based-agents-in-ai",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "rational agent",
-    "md_url": "https://www.kimi.com/resources/rational-agent",
-    "html_url": "https://www.kimi.com/resources/rational-agent",
-    "route": "resources/rational-agent",
     "kind": "doc"
   },
   {
@@ -553,242 +313,10 @@
   },
   {
     "group": "Resources \u6559\u7a0b",
-    "title": "business proposal vs business plan",
-    "md_url": "https://www.kimi.com/resources/business-proposal-vs-business-plan",
-    "html_url": "https://www.kimi.com/resources/business-proposal-vs-business-plan",
-    "route": "resources/business-proposal-vs-business-plan",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "software testing skills",
-    "md_url": "https://www.kimi.com/resources/software-testing-skills",
-    "html_url": "https://www.kimi.com/resources/software-testing-skills",
-    "route": "resources/software-testing-skills",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "goal based agent",
-    "md_url": "https://www.kimi.com/resources/goal-based-agent",
-    "html_url": "https://www.kimi.com/resources/goal-based-agent",
-    "route": "resources/goal-based-agent",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai virtual agent",
-    "md_url": "https://www.kimi.com/resources/ai-virtual-agent",
-    "html_url": "https://www.kimi.com/resources/ai-virtual-agent",
-    "route": "resources/ai-virtual-agent",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "content writing skills for agents",
-    "md_url": "https://www.kimi.com/resources/content-writing-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/content-writing-skills-for-agents",
-    "route": "resources/content-writing-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "customer support skills for agents",
-    "md_url": "https://www.kimi.com/resources/customer-support-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/customer-support-skills-for-agents",
-    "route": "resources/customer-support-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "spreadsheet skills for agents",
-    "md_url": "https://www.kimi.com/resources/spreadsheet-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/spreadsheet-skills-for-agents",
-    "route": "resources/spreadsheet-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "agent ai vs agentic ai",
-    "md_url": "https://www.kimi.com/resources/agent-ai-vs-agentic-ai",
-    "html_url": "https://www.kimi.com/resources/agent-ai-vs-agentic-ai",
-    "route": "resources/agent-ai-vs-agentic-ai",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "multimedia skills for agents",
-    "md_url": "https://www.kimi.com/resources/multimedia-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/multimedia-skills-for-agents",
-    "route": "resources/multimedia-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "creative writing skills for agents",
-    "md_url": "https://www.kimi.com/resources/creative-writing-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/creative-writing-skills-for-agents",
-    "route": "resources/creative-writing-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "web development skills for agents",
-    "md_url": "https://www.kimi.com/resources/web-development-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/web-development-skills-for-agents",
-    "route": "resources/web-development-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "report writing skills for agents",
-    "md_url": "https://www.kimi.com/resources/report-writing-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/report-writing-skills-for-agents",
-    "route": "resources/report-writing-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "html skills for agents",
-    "md_url": "https://www.kimi.com/resources/html-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/html-skills-for-agents",
-    "route": "resources/html-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "business writing skills for agents",
-    "md_url": "https://www.kimi.com/resources/business-writing-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/business-writing-skills-for-agents",
-    "route": "resources/business-writing-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "software skills for agents",
-    "md_url": "https://www.kimi.com/resources/software-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/software-skills-for-agents",
-    "route": "resources/software-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "translation skills for agents",
-    "md_url": "https://www.kimi.com/resources/translation-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/translation-skills-for-agents",
-    "route": "resources/translation-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "academic writing skills for agents",
-    "md_url": "https://www.kimi.com/resources/academic-writing-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/academic-writing-skills-for-agents",
-    "route": "resources/academic-writing-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "chart skills for agents",
-    "md_url": "https://www.kimi.com/resources/chart-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/chart-skills-for-agents",
-    "route": "resources/chart-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai agent workflow",
-    "md_url": "https://www.kimi.com/resources/ai-agent-workflow",
-    "html_url": "https://www.kimi.com/resources/ai-agent-workflow",
-    "route": "resources/ai-agent-workflow",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
     "title": "agentic ai architectures",
     "md_url": "https://www.kimi.com/resources/agentic-ai-architectures",
     "html_url": "https://www.kimi.com/resources/agentic-ai-architectures",
     "route": "resources/agentic-ai-architectures",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "productivity skills for agents",
-    "md_url": "https://www.kimi.com/resources/productivity-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/productivity-skills-for-agents",
-    "route": "resources/productivity-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "copywriting skills for agents",
-    "md_url": "https://www.kimi.com/resources/copywriting-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/copywriting-skills-for-agents",
-    "route": "resources/copywriting-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "seo skills for agents",
-    "md_url": "https://www.kimi.com/resources/seo-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/seo-skills-for-agents",
-    "route": "resources/seo-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ppt skills for agents",
-    "md_url": "https://www.kimi.com/resources/ppt-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/ppt-skills-for-agents",
-    "route": "resources/ppt-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "data analysis skills for agents",
-    "md_url": "https://www.kimi.com/resources/data-analysis-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/data-analysis-skills-for-agents",
-    "route": "resources/data-analysis-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "product management skills for agents",
-    "md_url": "https://www.kimi.com/resources/product-management-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/product-management-skills-for-agents",
-    "route": "resources/product-management-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "design skills for agents",
-    "md_url": "https://www.kimi.com/resources/design-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/design-skills-for-agents",
-    "route": "resources/design-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "coding skills for agents",
-    "md_url": "https://www.kimi.com/resources/coding-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/coding-skills-for-agents",
-    "route": "resources/coding-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "pdf skills for agents",
-    "md_url": "https://www.kimi.com/resources/pdf-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/pdf-skills-for-agents",
-    "route": "resources/pdf-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai in programming",
-    "md_url": "https://www.kimi.com/resources/ai-in-programming",
-    "html_url": "https://www.kimi.com/resources/ai-in-programming",
-    "route": "resources/ai-in-programming",
     "kind": "doc"
   },
   {
@@ -801,106 +329,10 @@
   },
   {
     "group": "Resources \u6559\u7a0b",
-    "title": "how to draft a business plan",
-    "md_url": "https://www.kimi.com/resources/how-to-draft-a-business-plan",
-    "html_url": "https://www.kimi.com/resources/how-to-draft-a-business-plan",
-    "route": "resources/how-to-draft-a-business-plan",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "types of business plan",
-    "md_url": "https://www.kimi.com/resources/types-of-business-plan",
-    "html_url": "https://www.kimi.com/resources/types-of-business-plan",
-    "route": "resources/types-of-business-plan",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "business plan templates",
-    "md_url": "https://www.kimi.com/resources/business-plan-templates",
-    "html_url": "https://www.kimi.com/resources/business-plan-templates",
-    "route": "resources/business-plan-templates",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ui ux design skills for agents",
-    "md_url": "https://www.kimi.com/resources/ui-ux-design-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/ui-ux-design-skills-for-agents",
-    "route": "resources/ui-ux-design-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "academic skills for agents",
-    "md_url": "https://www.kimi.com/resources/academic-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/academic-skills-for-agents",
-    "route": "resources/academic-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "graphic skills for agents",
-    "md_url": "https://www.kimi.com/resources/graphic-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/graphic-skills-for-agents",
-    "route": "resources/graphic-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "customer service skills for agents",
-    "md_url": "https://www.kimi.com/resources/customer-service-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/customer-service-skills-for-agents",
-    "route": "resources/customer-service-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
     "title": "what are ai skills",
     "md_url": "https://www.kimi.com/resources/what-are-ai-skills",
     "html_url": "https://www.kimi.com/resources/what-are-ai-skills",
     "route": "resources/what-are-ai-skills",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "communication skills for agents",
-    "md_url": "https://www.kimi.com/resources/communication-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/communication-skills-for-agents",
-    "route": "resources/communication-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "business intelligence and business analytics",
-    "md_url": "https://www.kimi.com/resources/business-intelligence-and-business-analytics",
-    "html_url": "https://www.kimi.com/resources/business-intelligence-and-business-analytics",
-    "route": "resources/business-intelligence-and-business-analytics",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "business data analysis",
-    "md_url": "https://www.kimi.com/resources/business-data-analysis",
-    "html_url": "https://www.kimi.com/resources/business-data-analysis",
-    "route": "resources/business-data-analysis",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "agentic coding tools",
-    "md_url": "https://www.kimi.com/resources/agentic-coding-tools",
-    "html_url": "https://www.kimi.com/resources/agentic-coding-tools",
-    "route": "resources/agentic-coding-tools",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "what is ai code",
-    "md_url": "https://www.kimi.com/resources/what-is-ai-code",
-    "html_url": "https://www.kimi.com/resources/what-is-ai-code",
-    "route": "resources/what-is-ai-code",
     "kind": "doc"
   },
   {
@@ -913,130 +345,10 @@
   },
   {
     "group": "Resources \u6559\u7a0b",
-    "title": "product manager skills for agents",
-    "md_url": "https://www.kimi.com/resources/product-manager-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/product-manager-skills-for-agents",
-    "route": "resources/product-manager-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "public speaking skills for agents",
-    "md_url": "https://www.kimi.com/resources/public-speaking-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/public-speaking-skills-for-agents",
-    "route": "resources/public-speaking-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "project management skills for agents",
-    "md_url": "https://www.kimi.com/resources/project-management-skills-for-agents",
-    "html_url": "https://www.kimi.com/resources/project-management-skills-for-agents",
-    "route": "resources/project-management-skills-for-agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai automation",
-    "md_url": "https://www.kimi.com/resources/ai-automation",
-    "html_url": "https://www.kimi.com/resources/ai-automation",
-    "route": "resources/ai-automation",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "organize files",
-    "md_url": "https://www.kimi.com/resources/organize-files",
-    "html_url": "https://www.kimi.com/resources/organize-files",
-    "route": "resources/organize-files",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai agents examples",
-    "md_url": "https://www.kimi.com/resources/ai-agents-examples",
-    "html_url": "https://www.kimi.com/resources/ai-agents-examples",
-    "route": "resources/ai-agents-examples",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai workflow automation",
-    "md_url": "https://www.kimi.com/resources/ai-workflow-automation",
-    "html_url": "https://www.kimi.com/resources/ai-workflow-automation",
-    "route": "resources/ai-workflow-automation",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "one person company",
-    "md_url": "https://www.kimi.com/resources/one-person-company",
-    "html_url": "https://www.kimi.com/resources/one-person-company",
-    "route": "resources/one-person-company",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai coding workflow",
-    "md_url": "https://www.kimi.com/resources/ai-coding-workflow",
-    "html_url": "https://www.kimi.com/resources/ai-coding-workflow",
-    "route": "resources/ai-coding-workflow",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai excel bot",
-    "md_url": "https://www.kimi.com/resources/ai-excel-bot",
-    "html_url": "https://www.kimi.com/resources/ai-excel-bot",
-    "route": "resources/ai-excel-bot",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "desktop automation",
-    "md_url": "https://www.kimi.com/resources/desktop-automation",
-    "html_url": "https://www.kimi.com/resources/desktop-automation",
-    "route": "resources/desktop-automation",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "technical design document",
-    "md_url": "https://www.kimi.com/resources/technical-design-document",
-    "html_url": "https://www.kimi.com/resources/technical-design-document",
-    "route": "resources/technical-design-document",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai computer use",
-    "md_url": "https://www.kimi.com/resources/ai-computer-use",
-    "html_url": "https://www.kimi.com/resources/ai-computer-use",
-    "route": "resources/ai-computer-use",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai agent use cases",
-    "md_url": "https://www.kimi.com/resources/ai-agent-use-cases",
-    "html_url": "https://www.kimi.com/resources/ai-agent-use-cases",
-    "route": "resources/ai-agent-use-cases",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
     "title": "agentic ai",
     "md_url": "https://www.kimi.com/resources/agentic-ai",
     "html_url": "https://www.kimi.com/resources/agentic-ai",
     "route": "resources/agentic-ai",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "llm agent",
-    "md_url": "https://www.kimi.com/resources/llm-agent",
-    "html_url": "https://www.kimi.com/resources/llm-agent",
-    "route": "resources/llm-agent",
     "kind": "doc"
   },
   {
@@ -1069,30 +381,6 @@
     "md_url": "https://www.kimi.com/resources/how-to-install-hermes-agent",
     "html_url": "https://www.kimi.com/resources/how-to-install-hermes-agent",
     "route": "resources/how-to-install-hermes-agent",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "local ai assistant",
-    "md_url": "https://www.kimi.com/resources/local-ai-assistant",
-    "html_url": "https://www.kimi.com/resources/local-ai-assistant",
-    "route": "resources/local-ai-assistant",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "ai cowork",
-    "md_url": "https://www.kimi.com/resources/ai-cowork",
-    "html_url": "https://www.kimi.com/resources/ai-cowork",
-    "route": "resources/ai-cowork",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "local ai agent",
-    "md_url": "https://www.kimi.com/resources/local-ai-agent",
-    "html_url": "https://www.kimi.com/resources/local-ai-agent",
-    "route": "resources/local-ai-agent",
     "kind": "doc"
   },
   {
@@ -1153,34 +441,10 @@
   },
   {
     "group": "Resources \u6559\u7a0b",
-    "title": "ai agent vs llm",
-    "md_url": "https://www.kimi.com/resources/ai-agent-vs-llm",
-    "html_url": "https://www.kimi.com/resources/ai-agent-vs-llm",
-    "route": "resources/ai-agent-vs-llm",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
     "title": "kimi work introduction",
     "md_url": "https://www.kimi.com/resources/kimi-work-introduction",
     "html_url": "https://www.kimi.com/resources/kimi-work-introduction",
     "route": "resources/kimi-work-introduction",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "vibe coding examples",
-    "md_url": "https://www.kimi.com/resources/vibe-coding-examples",
-    "html_url": "https://www.kimi.com/resources/vibe-coding-examples",
-    "route": "resources/vibe-coding-examples",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "technical design document templates",
-    "md_url": "https://www.kimi.com/resources/technical-design-document-templates",
-    "html_url": "https://www.kimi.com/resources/technical-design-document-templates",
-    "route": "resources/technical-design-document-templates",
     "kind": "doc"
   },
   {
@@ -1197,46 +461,6 @@
     "md_url": "https://www.kimi.com/resources/kimi-claw-introduction",
     "html_url": "https://www.kimi.com/resources/kimi-claw-introduction",
     "route": "resources/kimi-claw-introduction",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "how to vibe code",
-    "md_url": "https://www.kimi.com/resources/how-to-vibe-code",
-    "html_url": "https://www.kimi.com/resources/how-to-vibe-code",
-    "route": "resources/how-to-vibe-code",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "how to build a website from scratch",
-    "md_url": "https://www.kimi.com/resources/how-to-build-a-website-from-scratch",
-    "html_url": "https://www.kimi.com/resources/how-to-build-a-website-from-scratch",
-    "route": "resources/how-to-build-a-website-from-scratch",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "how to build a website",
-    "md_url": "https://www.kimi.com/resources/how-to-build-a-website",
-    "html_url": "https://www.kimi.com/resources/how-to-build-a-website",
-    "route": "resources/how-to-build-a-website",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "how to build a business website for free",
-    "md_url": "https://www.kimi.com/resources/how-to-build-a-business-website-for-free",
-    "html_url": "https://www.kimi.com/resources/how-to-build-a-business-website-for-free",
-    "route": "resources/how-to-build-a-business-website-for-free",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "create websites with ai",
-    "md_url": "https://www.kimi.com/resources/create-websites-with-ai",
-    "html_url": "https://www.kimi.com/resources/create-websites-with-ai",
-    "route": "resources/create-websites-with-ai",
     "kind": "doc"
   },
   {

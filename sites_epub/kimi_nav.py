@@ -95,78 +95,41 @@ KIMI_OUT_PREFIXES = (
 #: Suffixes that are never pages.
 KIMI_OUT_SUFFIXES = (".md", ".xml", ".txt", ".json", ".js", ".css", ".png", ".jpg", ".jpeg", ".svg", ".ico", ".webmanifest", ".woff2")
 
-#: ``/resources/<slug>`` children that are genuinely Kimi tutorials. Reviewed
-#: against the live listing: the agent/agent-skill library, agent & agentic-AI
-#: explainers, vibe-coding and coding-agent walkthroughs, AI image/slides/poster
-#: creation, AI business & website building, the Kimi product pages, and the
-#: sibling coding-agent setup guides. Everything else on that hub is an office
-#: suite or third-party PDF utility SEO page and stays out of the book.
+#: ``/resources/<slug>`` children that are genuinely Kimi tutorials. The hub is
+#: a programmatic SEO farm: every tutorial slug has a same-shaped sibling that
+#: answers the same long-tail office-suite query (``how-to-make-a-2d-game`` /
+#: ``how-to-make-a-3d-game``, ``ai-for-business`` / ``ai-for-enterprise``,
+#: ``game-assets`` / ``game-ideas``), and the ``*-skills-for-agents`` family is
+#: 36 pages that differ only in which skill category they name. Those
+#: keyword-stacked clusters are SEO 落地页 under 范围铁律 and stay out of the
+#: book.
+#:
+#: What remains is the reviewed allowlist below: Kimi's own product pages, the
+#: sibling coding-agent setup guides, the pages that document the agent-skill
+#: mechanism itself rather than one skill category, the agent / agentic-AI
+#: concept explainers, and the AI-creation and site-building walkthroughs a
+#: Kimi user would actually follow. Anything unlisted stays out and the
+#: omission is visible in one place.
 RESOURCES_KEEP = frozenset({
-    # Agent skill library (Kimi 可安装技能说明)
-    "academic-skills-for-agents", "academic-writing-skills-for-agents",
-    "business-writing-skills-for-agents", "chart-skills-for-agents",
-    "coding-skills-for-agents", "communication-skills-for-agents",
-    "content-writing-skills-for-agents", "copywriting-skills-for-agents",
-    "creative-writing-skills-for-agents", "customer-service-skills-for-agents",
-    "customer-support-skills-for-agents", "data-analysis-skills-for-agents",
-    "data-visualization-skills-for-agents", "design-skills-for-agents",
-    "e-commerce-skills-for-agents", "financial-analysis-skills-for-agents",
-    "financial-modeling-skills-for-agents", "goal-setting-skills-for-agents",
-    "graphic-skills-for-agents", "html-skills-for-agents",
-    "multimedia-skills-for-agents", "pdf-skills-for-agents",
-    "ppt-skills-for-agents", "product-management-skills-for-agents",
-    "product-manager-skills-for-agents", "productivity-skills-for-agents",
-    "project-management-skills-for-agents", "public-speaking-skills-for-agents",
-    "report-writing-skills-for-agents", "research-writing-skills",
-    "seo-skills-for-agents", "skill-development-skills-for-agents",
-    "software-skills-for-agents", "software-testing-skills",
-    "spreadsheet-skills-for-agents", "translation-skills-for-agents",
-    "ui-ux-design-skills-for-agents", "web-development-skills-for-agents",
-    "create-skills", "agent-skills-examples", "what-are-ai-skills",
-    # 智能体与 AI 概念
-    "agent-ai-vs-agentic-ai", "agent-harness", "agent-orchestration",
-    "agentic-ai", "agentic-ai-architectures", "agentic-coding",
-    "agentic-coding-tools", "ai-agent", "ai-agent-use-cases",
-    "ai-agent-vs-llm", "ai-agent-workflow", "ai-agents-examples",
-    "ai-automation", "ai-computer-use", "ai-cowork", "ai-virtual-agent",
-    "ai-workflow-automation", "autonomous-ai-agent", "goal-based-agent",
-    "knowledge-based-agents-in-ai", "llm-agent", "local-ai-agent",
-    "local-ai-assistant", "multi-agent", "multi-agent-collaboration",
-    "parallel-agent", "rational-agent", "types-of-ai-agent",
-    # Vibe Coding 与编程
-    "what-is-vibe-coding", "how-to-vibe-code", "vibe-coding-examples",
-    "what-is-ai-code", "visual-coding", "ai-coding-workflow",
-    "ai-in-programming", "desktop-automation",
-    # AI 创作：图片、海报、幻灯片、游戏
-    "create-your-poster", "ai-poster-ideas", "how-to-create-ai-images",
-    "prompts-for-ai-image-generators", "generate-slides-with-ai",
-    "game-assets", "game-ideas", "how-to-create-game-assets",
-    "how-to-make-a-2d-game", "how-to-make-a-3d-game",
-    "how-to-make-a-game-with-ai", "how-to-create-a-3d-model-from-a-picture",
-    # AI 商业与建站
-    "ai-business-ideas", "ai-business-strategy", "ai-for-business",
-    "ai-for-enterprise", "ai-in-business-examples", "benefits-of-ai-in-business",
-    "how-to-use-ai-in-business", "one-person-company", "ai-excel-bot",
-    "business-data-analysis", "business-intelligence-and-business-analytics",
-    "business-proposal-vs-business-plan", "how-to-write-a-business-proposal",
-    "how-to-draft-a-business-plan", "types-of-business-plan",
-    "business-plan-templates",
-    "create-ecommerce-websites", "create-websites-with-ai",
-    "how-to-build-a-website", "how-to-build-a-website-from-scratch",
-    "how-to-build-a-business-website-for-free",
-    "make-a-website-for-a-small-business", "how-to-build-landing-pages",
-    "how-to-create-a-portfolio-website", "how-to-create-an-online-store-website",
     # Kimi 自有产品
-    "kimi-brand", "kimi-browser-extension", "kimi-claw-introduction",
-    "kimi-code-introduction", "kimi-community", "kimi-for-mac",
-    "kimi-for-windows", "kimi-mira-introduction", "kimi-work-dashboard",
-    "kimi-work-introduction", "kimi-work-remote-control", "kimi-k2-7-code",
+    "kimi-brand", "kimi-k2-7-code", "kimi-browser-extension",
+    "kimi-claw-introduction", "kimi-code-introduction", "kimi-community",
+    "kimi-for-mac", "kimi-for-windows", "kimi-mira-introduction",
+    "kimi-work-dashboard", "kimi-work-introduction", "kimi-work-remote-control",
     # 同类编程 Agent 的安装与技能（第三方 API 接入类不在此列）
     "cursor-skills", "cursor-ai-website", "opencode-install", "opencode-skills",
     "openclaw-cloud", "openclaw-skills", "how-to-install-hermes-agent",
-    # 工程写作
-    "technical-design-document", "technical-design-document-templates",
-    "organize-files",
+    # 技能机制本身（按技能分类铺开的那 36 页是关键词堆叠，不在此列）
+    "create-skills", "agent-skills-examples", "what-are-ai-skills",
+    "skill-development-skills-for-agents",
+    # 智能体与 AI 概念
+    "ai-agent", "multi-agent", "parallel-agent", "multi-agent-collaboration",
+    "agentic-ai", "agentic-coding", "agentic-ai-architectures",
+    "agent-harness", "agent-orchestration", "autonomous-ai-agent",
+    "types-of-ai-agent",
+    # Vibe Coding、AI 创作与建站
+    "what-is-vibe-coding", "create-your-poster",
+    "how-to-build-landing-pages", "how-to-write-a-business-proposal",
 })
 
 

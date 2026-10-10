@@ -291,6 +291,18 @@ DENY: dict[str, tuple[tuple[str, str], ...]] = {
 
 BLOG_GROUP = {"cursor": "Cursor: Blog", "manus": "Manus: Blog", "zencoder": "Blog"}
 
+#: vendor -> URLs whose published ``.md`` twin is an abridged export. The twin
+#: answers 200 and reads cleanly, so ``fetch_source`` accepts it and the corpus
+#: silently keeps barely half the live article (measured on cursor's help
+#: centre: 2334 of 4850 and 6361 of 12908 extracted characters). Pointing
+#: ``md_url`` at the HTML page makes the live article the only source.
+HTML_ONLY_ROUTES: dict[str, frozenset[str]] = {
+    "cursor": frozenset({
+        "https://cursor.com/help/account-and-billing/bugbot-usage-based-billing",
+        "https://cursor.com/help/grok-bot/agent-email",
+    }),
+}
+
 #: Routes the site still advertises but no longer serves. These come from the
 #: *primary* enumeration (the vendor's own llms.txt / sitemap / blog listing),
 #: so the scope policy above cannot drop them — only an explicit retired list
@@ -410,6 +422,7 @@ def supplement(vendor_id: str, taken_routes: set[str]) -> list[IndexEntry]:
         return []
     sources, _ = spec
     blog_host = BLOG_HOSTS.get(vendor_id)
+    html_only = HTML_ONLY_ROUTES.get(vendor_id, frozenset())
     seen = set(taken_routes)
     out: list[IndexEntry] = []
     for source in sources:
@@ -433,7 +446,7 @@ def supplement(vendor_id: str, taken_routes: set[str]) -> list[IndexEntry]:
                 IndexEntry(
                     group=group,
                     title=_title_for(url),
-                    md_url=html_url + ".md",
+                    md_url=html_url if html_url in html_only else html_url + ".md",
                     html_url=html_url,
                     route=route,
                     kind="blog" if group == BLOG_GROUP.get(vendor_id) else "doc",

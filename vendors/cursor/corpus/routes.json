@@ -2322,7 +2322,7 @@
   {
     "group": "Cursor: Help Center",
     "title": "agent email",
-    "md_url": "https://cursor.com/help/grok-bot/agent-email.md",
+    "md_url": "https://cursor.com/help/grok-bot/agent-email",
     "html_url": "https://cursor.com/help/grok-bot/agent-email",
     "route": "help/grok-bot/agent-email",
     "kind": "doc"
@@ -2690,7 +2690,7 @@
   {
     "group": "Cursor: Help Center",
     "title": "bugbot usage based billing",
-    "md_url": "https://cursor.com/help/account-and-billing/bugbot-usage-based-billing.md",
+    "md_url": "https://cursor.com/help/account-and-billing/bugbot-usage-based-billing",
     "html_url": "https://cursor.com/help/account-and-billing/bugbot-usage-based-billing",
     "route": "help/account-and-billing/bugbot-usage-based-billing",
     "kind": "doc"
