@@ -71,20 +71,20 @@
 
 ## Indexes
 
-- [Italian (44 pages)](https://manus.im/docs/_llms/it.md): Documentation for Italian.
-- [German (44 pages)](https://manus.im/docs/_llms/de.md): Documentation for German.
-- [Turkish (44 pages)](https://manus.im/docs/_llms/tr.md): Documentation for Turkish.
-- [Spanish (44 pages)](https://manus.im/docs/_llms/es.md): Documentation for Spanish.
-- [French (44 pages)](https://manus.im/docs/_llms/fr.md): Documentation for French.
-- [Hindi (44 pages)](https://manus.im/docs/_llms/hi.md): Documentation for Hindi.
-- [Korean (44 pages)](https://manus.im/docs/_llms/ko.md): Documentation for Korean.
-- [Japanese (44 pages)](https://manus.im/docs/_llms/ja.md): Documentation for Japanese.
-- [Brazilian Portuguese (44 pages)](https://manus.im/docs/_llms/pt-br.md): Documentation for Brazilian Portuguese.
-- [Simplified Chinese (44 pages)](https://manus.im/docs/_llms/zh-hans.md): Documentation for Simplified Chinese.
-- [Arabic (44 pages)](https://manus.im/docs/_llms/ar.md): Documentation for Arabic.
-- [Traditional Chinese (44 pages)](https://manus.im/docs/_llms/zh-hant.md): Documentation for Traditional Chinese.
-- [Indonesian (44 pages)](https://manus.im/docs/_llms/id.md): Documentation for Indonesian.
-- [Vietnamese (44 pages)](https://manus.im/docs/_llms/vi.md): Documentation for Vietnamese.
+- [Italian (44 pages)](https://manus.im/docs/_llms/it.txt): Documentation for Italian.
+- [German (44 pages)](https://manus.im/docs/_llms/de.txt): Documentation for German.
+- [Turkish (44 pages)](https://manus.im/docs/_llms/tr.txt): Documentation for Turkish.
+- [Spanish (44 pages)](https://manus.im/docs/_llms/es.txt): Documentation for Spanish.
+- [French (44 pages)](https://manus.im/docs/_llms/fr.txt): Documentation for French.
+- [Hindi (44 pages)](https://manus.im/docs/_llms/hi.txt): Documentation for Hindi.
+- [Korean (44 pages)](https://manus.im/docs/_llms/ko.txt): Documentation for Korean.
+- [Japanese (44 pages)](https://manus.im/docs/_llms/ja.txt): Documentation for Japanese.
+- [Brazilian Portuguese (44 pages)](https://manus.im/docs/_llms/pt-br.txt): Documentation for Brazilian Portuguese.
+- [Simplified Chinese (44 pages)](https://manus.im/docs/_llms/zh-hans.txt): Documentation for Simplified Chinese.
+- [Arabic (44 pages)](https://manus.im/docs/_llms/ar.txt): Documentation for Arabic.
+- [Traditional Chinese (44 pages)](https://manus.im/docs/_llms/zh-hant.txt): Documentation for Traditional Chinese.
+- [Indonesian (44 pages)](https://manus.im/docs/_llms/id.txt): Documentation for Indonesian.
+- [Vietnamese (44 pages)](https://manus.im/docs/_llms/vi.txt): Documentation for Vietnamese.
 
 
 This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -1985,6 +1985,14 @@
   },
   {
     "group": "\u6263\u5b50: \u5b9a\u4ef7",
+    "title": "\u7533\u8bf7\u9000\u6b3e",
+    "md_url": "https://docs.coze.cn/coze_pro_refund.md",
+    "html_url": "https://docs.coze.cn/coze_pro_refund",
+    "route": "coze_pro_refund",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u5b9a\u4ef7",
     "title": "\u8d26\u5355\u4e0e\u7528\u91cf",
     "md_url": "https://docs.coze.cn/coze_pro_bills_and_usage.md",
     "html_url": "https://docs.coze.cn/coze_pro_bills_and_usage",

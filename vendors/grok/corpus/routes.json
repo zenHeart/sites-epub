@@ -97,6 +97,14 @@
   },
   {
     "group": "Developers",
+    "title": "Text \u2014 Best Practices Guide",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/text/best-practices.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/text/best-practices",
+    "route": "developers/model-capabilities/text/best-practices",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
     "title": "Imagine",
     "md_url": "https://docs.x.ai/developers/model-capabilities/imagine.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/imagine",
@@ -125,6 +133,14 @@
     "md_url": "https://docs.x.ai/developers/model-capabilities/images/multi-image-editing.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/images/multi-image-editing",
     "route": "developers/model-capabilities/images/multi-image-editing",
+    "kind": "doc"
+  },
+  {
+    "group": "Developers",
+    "title": "Imagine \u2014 Image Prompting Guide",
+    "md_url": "https://docs.x.ai/developers/model-capabilities/images/prompting-guide.md",
+    "html_url": "https://docs.x.ai/developers/model-capabilities/images/prompting-guide",
+    "route": "developers/model-capabilities/images/prompting-guide",
     "kind": "doc"
   },
   {
@@ -1113,6 +1129,14 @@
   },
   {
     "group": "Grok Bot",
+    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Deploy to your organization",
+    "md_url": "https://docs.x.ai/grok-bot/deployment.md",
+    "html_url": "https://docs.x.ai/grok-bot/deployment",
+    "route": "grok-bot/deployment",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
     "title": "Manage and protect \u2014 Teams and enterprises \u2014 Identity and access",
     "md_url": "https://docs.x.ai/grok-bot/identity-and-access.md",
     "html_url": "https://docs.x.ai/grok-bot/identity-and-access",
@@ -1296,6 +1320,214 @@
     "kind": "doc"
   },
   {
+    "group": "X Subscription",
+    "title": "Get Started",
+    "md_url": "https://docs.x.ai/x-subscription/overview.md",
+    "html_url": "https://docs.x.ai/x-subscription/overview",
+    "route": "x-subscription/overview",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Get Started \u2014 Do I have to switch?",
+    "md_url": "https://docs.x.ai/x-subscription/do-i-have-to-switch.md",
+    "html_url": "https://docs.x.ai/x-subscription/do-i-have-to-switch",
+    "route": "x-subscription/do-i-have-to-switch",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Get Started \u2014 Who can combine accounts?",
+    "md_url": "https://docs.x.ai/x-subscription/eligibility.md",
+    "html_url": "https://docs.x.ai/x-subscription/eligibility",
+    "route": "x-subscription/eligibility",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Get Started \u2014 How to unify accounts",
+    "md_url": "https://docs.x.ai/x-subscription/unify-accounts.md",
+    "html_url": "https://docs.x.ai/x-subscription/unify-accounts",
+    "route": "x-subscription/unify-accounts",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Get Started \u2014 I have more than one Cursor account",
+    "md_url": "https://docs.x.ai/x-subscription/multiple-cursor-accounts.md",
+    "html_url": "https://docs.x.ai/x-subscription/multiple-cursor-accounts",
+    "route": "x-subscription/multiple-cursor-accounts",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Get Started \u2014 X Premium customers",
+    "md_url": "https://docs.x.ai/x-subscription/x-premium.md",
+    "html_url": "https://docs.x.ai/x-subscription/x-premium",
+    "route": "x-subscription/x-premium",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Get Started \u2014 Enterprise account unification",
+    "md_url": "https://docs.x.ai/x-subscription/enterprise.md",
+    "html_url": "https://docs.x.ai/x-subscription/enterprise",
+    "route": "x-subscription/enterprise",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Plans and usage",
+    "md_url": "https://docs.x.ai/x-subscription/pricing.md",
+    "html_url": "https://docs.x.ai/x-subscription/pricing",
+    "route": "x-subscription/pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Plans and usage \u2014 Usage limits",
+    "md_url": "https://docs.x.ai/x-subscription/usage-limits.md",
+    "html_url": "https://docs.x.ai/x-subscription/usage-limits",
+    "route": "x-subscription/usage-limits",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Plans and usage \u2014 Extra usage credits and top-ups",
+    "md_url": "https://docs.x.ai/x-subscription/extra-usage.md",
+    "html_url": "https://docs.x.ai/x-subscription/extra-usage",
+    "route": "x-subscription/extra-usage",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Plans and usage \u2014 Prepaid balance and automatic top-ups",
+    "md_url": "https://docs.x.ai/x-subscription/prepaid-balance.md",
+    "html_url": "https://docs.x.ai/x-subscription/prepaid-balance",
+    "route": "x-subscription/prepaid-balance",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Plans and usage \u2014 Spending caps and alerts",
+    "md_url": "https://docs.x.ai/x-subscription/spending-caps.md",
+    "html_url": "https://docs.x.ai/x-subscription/spending-caps",
+    "route": "x-subscription/spending-caps",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Plans and usage \u2014 Cursor Token Rate",
+    "md_url": "https://docs.x.ai/x-subscription/cursor-token-rate.md",
+    "html_url": "https://docs.x.ai/x-subscription/cursor-token-rate",
+    "route": "x-subscription/cursor-token-rate",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Manage your subscription",
+    "md_url": "https://docs.x.ai/x-subscription/manage.md",
+    "html_url": "https://docs.x.ai/x-subscription/manage",
+    "route": "x-subscription/manage",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Manage your subscription \u2014 Upgrade or downgrade",
+    "md_url": "https://docs.x.ai/x-subscription/upgrade-or-downgrade.md",
+    "html_url": "https://docs.x.ai/x-subscription/upgrade-or-downgrade",
+    "route": "x-subscription/upgrade-or-downgrade",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Manage your subscription \u2014 Team plans, seats, and invites",
+    "md_url": "https://docs.x.ai/x-subscription/team-plans.md",
+    "html_url": "https://docs.x.ai/x-subscription/team-plans",
+    "route": "x-subscription/team-plans",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Manage your subscription \u2014 Payment methods",
+    "md_url": "https://docs.x.ai/x-subscription/payment-methods.md",
+    "html_url": "https://docs.x.ai/x-subscription/payment-methods",
+    "route": "x-subscription/payment-methods",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Manage your subscription \u2014 Invoices & Refunds",
+    "md_url": "https://docs.x.ai/x-subscription/invoices-and-refunds.md",
+    "html_url": "https://docs.x.ai/x-subscription/invoices-and-refunds",
+    "route": "x-subscription/invoices-and-refunds",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Manage your subscription \u2014 Cancel your subscription",
+    "md_url": "https://docs.x.ai/x-subscription/cancel.md",
+    "html_url": "https://docs.x.ai/x-subscription/cancel",
+    "route": "x-subscription/cancel",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Manage your subscription \u2014 App Store subscriptions",
+    "md_url": "https://docs.x.ai/x-subscription/app-store.md",
+    "html_url": "https://docs.x.ai/x-subscription/app-store",
+    "route": "x-subscription/app-store",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Manage your subscription \u2014 Google Play subscriptions",
+    "md_url": "https://docs.x.ai/x-subscription/google-play.md",
+    "html_url": "https://docs.x.ai/x-subscription/google-play",
+    "route": "x-subscription/google-play",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Sign-in",
+    "md_url": "https://docs.x.ai/x-subscription/sign-in.md",
+    "html_url": "https://docs.x.ai/x-subscription/sign-in",
+    "route": "x-subscription/sign-in",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Sign-in \u2014 Sign-in domains",
+    "md_url": "https://docs.x.ai/x-subscription/sign-in-domains.md",
+    "html_url": "https://docs.x.ai/x-subscription/sign-in-domains",
+    "route": "x-subscription/sign-in-domains",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Grok Bot",
+    "md_url": "https://docs.x.ai/x-subscription/grok-bot.md",
+    "html_url": "https://docs.x.ai/x-subscription/grok-bot",
+    "route": "x-subscription/grok-bot",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Grok Bot \u2014 Grok Bot sign-in",
+    "md_url": "https://docs.x.ai/x-subscription/grok-bot-sign-in.md",
+    "html_url": "https://docs.x.ai/x-subscription/grok-bot-sign-in",
+    "route": "x-subscription/grok-bot-sign-in",
+    "kind": "doc"
+  },
+  {
+    "group": "X Subscription",
+    "title": "Help",
+    "md_url": "https://docs.x.ai/x-subscription/faq.md",
+    "html_url": "https://docs.x.ai/x-subscription/faq",
+    "route": "x-subscription/faq",
+    "kind": "doc"
+  },
+  {
     "group": "Grok Bot Guides",
     "title": "guides",
     "md_url": "https://x.ai/bot/guides.md",
@@ -1449,6 +1681,14 @@
   },
   {
     "group": "Grok Bot Guides",
+    "title": "sales",
+    "md_url": "https://x.ai/bot/guides/sales.md",
+    "html_url": "https://x.ai/bot/guides/sales",
+    "route": "bot/guides/sales",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
     "title": "templates for grok bot",
     "md_url": "https://x.ai/bot/guides/templates-for-grok-bot.md",
     "html_url": "https://x.ai/bot/guides/templates-for-grok-bot",
@@ -1464,11 +1704,67 @@
     "kind": "doc"
   },
   {
-    "group": "Grok Product",
-    "title": "build",
-    "md_url": "https://x.ai/build.md",
-    "html_url": "https://x.ai/build",
-    "route": "build",
+    "group": "Grok Voice",
+    "title": "cloning",
+    "md_url": "https://x.ai/voice/cloning.md",
+    "html_url": "https://x.ai/voice/cloning",
+    "route": "voice/cloning",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Voice",
+    "title": "speech to text",
+    "md_url": "https://x.ai/voice/speech-to-text.md",
+    "html_url": "https://x.ai/voice/speech-to-text",
+    "route": "voice/speech-to-text",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Voice",
+    "title": "text to speech",
+    "md_url": "https://x.ai/voice/text-to-speech.md",
+    "html_url": "https://x.ai/voice/text-to-speech",
+    "route": "voice/text-to-speech",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Voice",
+    "title": "translation",
+    "md_url": "https://x.ai/voice/translation.md",
+    "html_url": "https://x.ai/voice/translation",
+    "route": "voice/translation",
+    "kind": "doc"
+  },
+  {
+    "group": "xAI News",
+    "title": "grok",
+    "md_url": "https://x.ai/news/grok.md",
+    "html_url": "https://x.ai/news/grok",
+    "route": "news/grok",
+    "kind": "doc"
+  },
+  {
+    "group": "xAI News",
+    "title": "grok 1.5",
+    "md_url": "https://x.ai/news/grok-1.5.md",
+    "html_url": "https://x.ai/news/grok-1.5",
+    "route": "news/grok-1.5",
+    "kind": "doc"
+  },
+  {
+    "group": "xAI News",
+    "title": "grok 1.5v",
+    "md_url": "https://x.ai/news/grok-1.5v.md",
+    "html_url": "https://x.ai/news/grok-1.5v",
+    "route": "news/grok-1.5v",
+    "kind": "doc"
+  },
+  {
+    "group": "xAI News",
+    "title": "workflows",
+    "md_url": "https://x.ai/news/workflows.md",
+    "html_url": "https://x.ai/news/workflows",
+    "route": "news/workflows",
     "kind": "doc"
   },
   {
@@ -1485,6 +1781,14 @@
     "md_url": "https://x.ai/changelog/build.md",
     "html_url": "https://x.ai/changelog/build",
     "route": "changelog/build",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Product",
+    "title": "build",
+    "md_url": "https://x.ai/build.md",
+    "html_url": "https://x.ai/build",
+    "route": "build",
     "kind": "doc"
   },
   {
@@ -1536,83 +1840,11 @@
     "kind": "doc"
   },
   {
-    "group": "xAI News",
-    "title": "grok",
-    "md_url": "https://x.ai/news/grok.md",
-    "html_url": "https://x.ai/news/grok",
-    "route": "news/grok",
-    "kind": "doc"
-  },
-  {
-    "group": "xAI News",
-    "title": "grok 1.5",
-    "md_url": "https://x.ai/news/grok-1.5.md",
-    "html_url": "https://x.ai/news/grok-1.5",
-    "route": "news/grok-1.5",
-    "kind": "doc"
-  },
-  {
-    "group": "xAI News",
-    "title": "grok 1.5v",
-    "md_url": "https://x.ai/news/grok-1.5v.md",
-    "html_url": "https://x.ai/news/grok-1.5v",
-    "route": "news/grok-1.5v",
-    "kind": "doc"
-  },
-  {
-    "group": "xAI News",
-    "title": "workflows",
-    "md_url": "https://x.ai/news/workflows.md",
-    "html_url": "https://x.ai/news/workflows",
-    "route": "news/workflows",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Voice",
-    "title": "cloning",
-    "md_url": "https://x.ai/voice/cloning.md",
-    "html_url": "https://x.ai/voice/cloning",
-    "route": "voice/cloning",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Voice",
-    "title": "speech to text",
-    "md_url": "https://x.ai/voice/speech-to-text.md",
-    "html_url": "https://x.ai/voice/speech-to-text",
-    "route": "voice/speech-to-text",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Voice",
-    "title": "text to speech",
-    "md_url": "https://x.ai/voice/text-to-speech.md",
-    "html_url": "https://x.ai/voice/text-to-speech",
-    "route": "voice/text-to-speech",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Voice",
-    "title": "translation",
-    "md_url": "https://x.ai/voice/translation.md",
-    "html_url": "https://x.ai/voice/translation",
-    "route": "voice/translation",
-    "kind": "doc"
-  },
-  {
     "group": "Bot Guides",
     "title": "Design",
     "md_url": "https://x.ai/bot/guides/design.md",
     "html_url": "https://x.ai/bot/guides/design",
     "route": "bot-guides/design",
-    "kind": "doc"
-  },
-  {
-    "group": "Bot Guides",
-    "title": "GTM",
-    "md_url": "https://x.ai/bot/guides/gtm.md",
-    "html_url": "https://x.ai/bot/guides/gtm",
-    "route": "bot-guides/gtm",
     "kind": "doc"
   },
   {
@@ -1721,7 +1953,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Grok Bot for SDRs How I run SDR outbound with Cursor and Grok Bot: research packets, CLEAR vs FLAG intake, and bots that stage work I still send. GTM",
+    "title": "Grok Bot for SDRs How I run SDR outbound with Cursor and Grok Bot: research packets, CLEAR vs FLAG intake, and bots that stage work I still send. Sales",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-sdrs.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-sdrs",
     "route": "bot-guides/grok-bot-for-sdrs",
@@ -1801,7 +2033,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Grok Bot for GTM How I use Grok Bot for Enterprise GTM at SpaceXAI: a Chief of Staff, prospecting and account prompts, live slides, and the rest of the team. GTM",
+    "title": "Grok Bot for GTM How I use Grok Bot for Enterprise GTM at SpaceXSI: a Chief of Staff, prospecting and account prompts, live slides, and the rest of the team. Sales",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-gtm.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-gtm",
     "route": "bot-guides/grok-bot-for-gtm",
@@ -1817,10 +2049,18 @@
   },
   {
     "group": "News",
-    "title": "Grok 4.7 Sep 21, 2026 Introducing Grok 4.7 SpaceXAI's most powerful model for coding and knowledge work. Twice as fast, at half the price of comparable models. Read More",
-    "md_url": "https://x.ai/news/grok-4-7.md",
-    "html_url": "https://x.ai/news/grok-4-7",
-    "route": "news/grok-4-7",
+    "title": "Oct 14, 2026 Introducing Grok Voice 3.0 The world\u2019s most intelligent voice model. Read More",
+    "md_url": "https://x.ai/news/grok-voice-3.md",
+    "html_url": "https://x.ai/news/grok-voice-3",
+    "route": "news/grok-voice-3",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Product \u00b7 Oct 12, 2026 Introducing The X Subscription",
+    "md_url": "https://x.ai/news/x-subscription.md",
+    "html_url": "https://x.ai/news/x-subscription",
+    "route": "news/x-subscription",
     "kind": "blog"
   },
   {
@@ -1833,7 +2073,7 @@
   },
   {
     "group": "News",
-    "title": "Product \u00b7 Sep 22, 2026 How SpaceXAI is using Grok Bot to scale customer support",
+    "title": "Product \u00b7 Sep 22, 2026 How SpaceXSI is using Grok Bot to scale customer support",
     "md_url": "https://x.ai/news/grok-bot-customer-support.md",
     "html_url": "https://x.ai/news/grok-bot-customer-support",
     "route": "news/grok-bot-customer-support",
@@ -1841,7 +2081,15 @@
   },
   {
     "group": "News",
-    "title": "Sep 18, 2026 Introducing Grok Voice Transcribe 2.0",
+    "title": "Product \u00b7 Sep 21, 2026 Introducing Grok 4.7",
+    "md_url": "https://x.ai/news/grok-4-7.md",
+    "html_url": "https://x.ai/news/grok-4-7",
+    "route": "news/grok-4-7",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Introducing Grok Voice Transcribe 2.0 Announcing SpaceXSI's newest speech-to-text model, with unparalleled accuracy and cost effectiveness. Sep 18, 2026",
     "md_url": "https://x.ai/news/grok-voice-transcribe-2.md",
     "html_url": "https://x.ai/news/grok-voice-transcribe-2",
     "route": "news/grok-voice-transcribe-2",
@@ -1849,7 +2097,7 @@
   },
   {
     "group": "News",
-    "title": "Product \u00b7 Sep 16, 2026 Memory in Grok Build",
+    "title": "Memory in Grok Build Grok Build now carries conventions, decisions, and project facts from one session to the next. Notes are written in the background as you work and read back when you return to the project. Sep 16, 2026",
     "md_url": "https://x.ai/news/grok-build-memory.md",
     "html_url": "https://x.ai/news/grok-build-memory",
     "route": "news/grok-build-memory",
@@ -1977,7 +2225,7 @@
   },
   {
     "group": "News",
-    "title": "Introducing Grok Voice Think Fast 2.0 Introducing our most capable speech-to-speech voice model. Jul 29, 2026",
+    "title": "Introducing Grok Voice 2.0 Introducing our most capable speech-to-speech voice model. Jul 29, 2026",
     "md_url": "https://x.ai/news/grok-voice-think-fast-2.md",
     "html_url": "https://x.ai/news/grok-voice-think-fast-2",
     "route": "news/grok-voice-think-fast-2",
@@ -2033,7 +2281,7 @@
   },
   {
     "group": "News",
-    "title": "Introducing Grok 4.5 Grok 4.5 is SpaceXAI's smartest model built for coding, agentic tasks, and knowledge work. Jul 16, 2026",
+    "title": "Introducing Grok 4.5 Grok 4.5 is SpaceXSI's smartest model built for coding, agentic tasks, and knowledge work. Jul 16, 2026",
     "md_url": "https://x.ai/news/grok-4-5.md",
     "html_url": "https://x.ai/news/grok-4-5",
     "route": "news/grok-4-5",
@@ -2217,7 +2465,7 @@
   },
   {
     "group": "News",
-    "title": "New Compute Partnership with Anthropic SpaceXAI has signed an agreement with Anthropic to provide access to Colossus 1. May 6, 2026",
+    "title": "New Compute Partnership with Anthropic SpaceXSI has signed an agreement with Anthropic to provide access to Colossus 1. May 6, 2026",
     "md_url": "https://x.ai/news/anthropic-compute-partnership.md",
     "html_url": "https://x.ai/news/anthropic-compute-partnership",
     "route": "news/anthropic-compute-partnership",
@@ -2249,7 +2497,7 @@
   },
   {
     "group": "News",
-    "title": "Grok Voice Think Fast 1.0 Our most capable voice agent is now available via API. Apr 23, 2026",
+    "title": "Grok Voice 1.0 Our most capable voice agent is now available via API. Apr 23, 2026",
     "md_url": "https://x.ai/news/grok-voice-think-fast-1.md",
     "html_url": "https://x.ai/news/grok-voice-think-fast-1",
     "route": "news/grok-voice-think-fast-1",

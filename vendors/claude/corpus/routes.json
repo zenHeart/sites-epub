@@ -209,14 +209,6 @@
   },
   {
     "group": "Getting started",
-    "title": "Find bugs with ultrareview",
-    "md_url": "https://code.claude.com/docs/en/ultrareview.md",
-    "html_url": "https://code.claude.com/docs/en/ultrareview",
-    "route": "ultrareview",
-    "kind": "doc"
-  },
-  {
-    "group": "Getting started",
     "title": "Get started with the desktop app",
     "md_url": "https://code.claude.com/docs/en/desktop-quickstart.md",
     "html_url": "https://code.claude.com/docs/en/desktop-quickstart",
@@ -265,6 +257,78 @@
   },
   {
     "group": "Getting started",
+    "title": "Review locally with /code-review",
+    "md_url": "https://code.claude.com/docs/en/code-review-local.md",
+    "html_url": "https://code.claude.com/docs/en/code-review-local",
+    "route": "code-review-local",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Find bugs with ultrareview",
+    "md_url": "https://code.claude.com/docs/en/ultrareview.md",
+    "html_url": "https://code.claude.com/docs/en/ultrareview",
+    "route": "ultrareview",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Claude Code with GitHub Enterprise Server",
+    "md_url": "https://code.claude.com/docs/en/github-enterprise-server.md",
+    "html_url": "https://code.claude.com/docs/en/github-enterprise-server",
+    "route": "github-enterprise-server",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Code Review",
+    "md_url": "https://code.claude.com/docs/en/code-review.md",
+    "html_url": "https://code.claude.com/docs/en/code-review",
+    "route": "code-review",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Set up Code Review",
+    "md_url": "https://code.claude.com/docs/en/code-review-setup.md",
+    "html_url": "https://code.claude.com/docs/en/code-review-setup",
+    "route": "code-review-setup",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Customize Code Review",
+    "md_url": "https://code.claude.com/docs/en/code-review-customize.md",
+    "html_url": "https://code.claude.com/docs/en/code-review-customize",
+    "route": "code-review-customize",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Read and request reviews on a pull request",
+    "md_url": "https://code.claude.com/docs/en/code-review-pull-requests.md",
+    "html_url": "https://code.claude.com/docs/en/code-review-pull-requests",
+    "route": "code-review-pull-requests",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Code Review costs and usage",
+    "md_url": "https://code.claude.com/docs/en/code-review-costs.md",
+    "html_url": "https://code.claude.com/docs/en/code-review-costs",
+    "route": "code-review-costs",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Troubleshoot Code Review",
+    "md_url": "https://code.claude.com/docs/en/code-review-troubleshooting.md",
+    "html_url": "https://code.claude.com/docs/en/code-review-troubleshooting",
+    "route": "code-review-troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
     "title": "Catch security issues as Claude writes code",
     "md_url": "https://code.claude.com/docs/en/security-guidance.md",
     "html_url": "https://code.claude.com/docs/en/security-guidance",
@@ -281,14 +345,6 @@
   },
   {
     "group": "Getting started",
-    "title": "Code Review",
-    "md_url": "https://code.claude.com/docs/en/code-review.md",
-    "html_url": "https://code.claude.com/docs/en/code-review",
-    "route": "code-review",
-    "kind": "doc"
-  },
-  {
-    "group": "Getting started",
     "title": "Claude Code GitHub Actions",
     "md_url": "https://code.claude.com/docs/en/github-actions.md",
     "html_url": "https://code.claude.com/docs/en/github-actions",
@@ -301,14 +357,6 @@
     "md_url": "https://code.claude.com/docs/en/github-actions-cloud-providers.md",
     "html_url": "https://code.claude.com/docs/en/github-actions-cloud-providers",
     "route": "github-actions-cloud-providers",
-    "kind": "doc"
-  },
-  {
-    "group": "Getting started",
-    "title": "Claude Code with GitHub Enterprise Server",
-    "md_url": "https://code.claude.com/docs/en/github-enterprise-server.md",
-    "html_url": "https://code.claude.com/docs/en/github-enterprise-server",
-    "route": "github-enterprise-server",
     "kind": "doc"
   },
   {
@@ -1073,6 +1121,14 @@
   },
   {
     "group": "Configuration",
+    "title": "Auto mode classifier request charges",
+    "md_url": "https://code.claude.com/docs/en/auto-mode-classifier-billing.md",
+    "html_url": "https://code.claude.com/docs/en/auto-mode-classifier-billing",
+    "route": "auto-mode-classifier-billing",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
     "title": "Configure the sandboxed Bash tool",
     "md_url": "https://code.claude.com/docs/en/sandboxing.md",
     "html_url": "https://code.claude.com/docs/en/sandboxing",
@@ -1777,6 +1833,46 @@
   },
   {
     "group": "Blog",
+    "title": "how an anthropic japan business development representative runs his day",
+    "md_url": "https://claude.com/resources/articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+    "html_url": "https://claude.com/resources/articles/how-an-anthropic-japan-business-development-representative-runs-his-day",
+    "route": "blog/how-an-anthropic-japan-business-development-representative-runs-his-day",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "solving code review at anthropic",
+    "md_url": "https://claude.dev/blog/solving-code-review-at-anthropic",
+    "html_url": "https://claude.dev/blog/solving-code-review-at-anthropic",
+    "route": "blog/solving-code-review-at-anthropic",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "code review is now generally available",
+    "md_url": "https://claude.com/resources/articles/code-review-is-now-generally-available.md",
+    "html_url": "https://claude.com/resources/articles/code-review-is-now-generally-available",
+    "route": "blog/code-review-is-now-generally-available",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agent observability on the claude platform",
+    "md_url": "https://claude.com/resources/articles/agent-observability-on-the-claude-platform.md",
+    "html_url": "https://claude.com/resources/articles/agent-observability-on-the-claude-platform",
+    "route": "blog/agent-observability-on-the-claude-platform",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "uber s ciso on building an insider threat program for ai",
+    "md_url": "https://claude.com/resources/articles/uber-s-ciso-on-building-an-insider-threat-program-for-ai.md",
+    "html_url": "https://claude.com/resources/articles/uber-s-ciso-on-building-an-insider-threat-program-for-ai",
+    "route": "blog/uber-s-ciso-on-building-an-insider-threat-program-for-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "building effective agent automations",
     "md_url": "https://claude.dev/blog/building-effective-agent-automations",
     "html_url": "https://claude.dev/blog/building-effective-agent-automations",
@@ -1805,38 +1901,6 @@
     "md_url": "https://claude.com/resources/articles/how-comcast-booz-allen-use-claude-mythos-to-secure-their-codebases.md",
     "html_url": "https://claude.com/resources/articles/how-comcast-booz-allen-use-claude-mythos-to-secure-their-codebases",
     "route": "blog/how-comcast-booz-allen-use-claude-mythos-to-secure-their-codebases",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "claude now works in google docs sheets and slides",
-    "md_url": "https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides.md",
-    "html_url": "https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides",
-    "route": "blog/claude-now-works-in-google-docs-sheets-and-slides",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "were expanding the claude startups program to help founders build",
-    "md_url": "https://claude.com/resources/articles/were-expanding-the-claude-startups-program-to-help-founders-build.md",
-    "html_url": "https://claude.com/resources/articles/were-expanding-the-claude-startups-program-to-help-founders-build",
-    "route": "blog/were-expanding-the-claude-startups-program-to-help-founders-build",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "claude code in the cloud",
-    "md_url": "https://claude.dev/blog/claude-code-in-the-cloud",
-    "html_url": "https://claude.dev/blog/claude-code-in-the-cloud",
-    "route": "blog/claude-code-in-the-cloud",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "how cresta turned cx expertise into an agent builder on the claude agent sdk",
-    "md_url": "https://claude.com/resources/articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
-    "html_url": "https://claude.com/resources/articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk",
-    "route": "blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk",
     "kind": "blog"
   },
   {
@@ -2497,6 +2561,14 @@
   },
   {
     "group": "Blog",
+    "title": "claude now works in google docs sheets and slides",
+    "md_url": "https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides.md",
+    "html_url": "https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides",
+    "route": "blog/claude-now-works-in-google-docs-sheets-and-slides",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "claude on google cloud fedramp high",
     "md_url": "https://claude.com/resources/articles/claude-on-google-cloud-fedramp-high.md",
     "html_url": "https://claude.com/resources/articles/claude-on-google-cloud-fedramp-high",
@@ -3053,6 +3125,14 @@
     "md_url": "https://claude.com/resources/articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
     "html_url": "https://claude.com/resources/articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system",
     "route": "blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how cresta turned cx expertise into an agent builder on the claude agent sdk",
+    "md_url": "https://claude.com/resources/articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk.md",
+    "html_url": "https://claude.com/resources/articles/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk",
+    "route": "blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk",
     "kind": "blog"
   },
   {
@@ -3729,6 +3809,14 @@
   },
   {
     "group": "Blog",
+    "title": "were expanding the claude startups program to help founders build",
+    "md_url": "https://claude.com/resources/articles/were-expanding-the-claude-startups-program-to-help-founders-build.md",
+    "html_url": "https://claude.com/resources/articles/were-expanding-the-claude-startups-program-to-help-founders-build",
+    "route": "blog/were-expanding-the-claude-startups-program-to-help-founders-build",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "what 1 000 small business owners taught us about ai",
     "md_url": "https://claude.com/resources/articles/what-1-000-small-business-owners-taught-us-about-ai.md",
     "html_url": "https://claude.com/resources/articles/what-1-000-small-business-owners-taught-us-about-ai",
@@ -3845,6 +3933,14 @@
     "md_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents.md",
     "html_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents",
     "route": "blog/zero-trust-for-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude code in the cloud",
+    "md_url": "https://claude.dev/blog/claude-code-in-the-cloud",
+    "html_url": "https://claude.dev/blog/claude-code-in-the-cloud",
+    "route": "blog/claude-code-in-the-cloud",
     "kind": "blog"
   },
   {

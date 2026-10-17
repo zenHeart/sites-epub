@@ -23,11 +23,11 @@
       "icon": "vendors/claude/icon.png",
       "author": "Anthropic",
       "adapter": "claude",
-      "updated_at": "2026-10-10T09:41:40Z",
+      "updated_at": "2026-10-17T22:05:11Z",
       "packed_at": "2026-10-10T10:36:55Z",
       "summary": "Claude Code 文档树与 claude.com/blog 全文，文档导航在前、Blog 在最后。",
       "category": "docs",
-      "chapters": 493,
+      "chapters": 505,
       "cover": "covers/claude.png"
     },
     {
@@ -38,11 +38,11 @@
       "icon": "vendors/cursor/icon.png",
       "author": "Cursor",
       "adapter": "generic",
-      "updated_at": "2026-10-10T14:58:14Z",
+      "updated_at": "2026-10-17T22:06:45Z",
       "packed_at": "2026-10-11T08:03:47Z",
       "summary": "Cursor 文档（llms.txt 导航）与官方博客，增量抓取后离线打包。",
       "category": "docs",
-      "chapters": 493,
+      "chapters": 499,
       "cover": "covers/cursor.png"
     },
     {
@@ -53,11 +53,11 @@
       "icon": "vendors/grok/icon.png",
       "author": "xAI",
       "adapter": "xai",
-      "updated_at": "2026-10-09T08:29:53Z",
+      "updated_at": "2026-10-17T22:32:07Z",
       "packed_at": "2026-10-09T14:09:23Z",
       "summary": "xAI 官方文档（Build / Developers / Grok / Grok Bot / Console / Integrations）与 x.ai/news 全文，按站点目录打包为一部 EPUB，News 排在末尾。",
       "category": "docs",
-      "chapters": 306,
+      "chapters": 337,
       "cover": "covers/grok.png"
     },
     {
@@ -68,11 +68,11 @@
       "icon": "vendors/gemini/icon.png",
       "author": "Google",
       "adapter": "gemini",
-      "updated_at": "2026-10-09T02:01:35Z",
+      "updated_at": "2026-10-17T22:34:45Z",
       "packed_at": "2026-10-09T10:52:34Z",
       "summary": "Google AI 会员产品书:Gemini 网页版、AI Studio、Antigravity(含 agy CLI)、Jules、NotebookLM、Flow/Canvas(网页版帮助中心内),Blog 排在末尾;不含 Gemini API 使用文档。",
       "category": "docs",
-      "chapters": 483,
+      "chapters": 498,
       "cover": "covers/gemini.png"
     },
     {
@@ -83,11 +83,11 @@
       "icon": "vendors/manus/icon.png",
       "author": "Manus",
       "adapter": "generic",
-      "updated_at": "2026-10-09T09:06:10Z",
+      "updated_at": "2026-10-17T22:36:10Z",
       "packed_at": "2026-10-09T14:05:08Z",
       "summary": "Manus 官方文档与博客:通用智能体、Desktop、Browser Operator、Wide Research 等功能指南,Blog 排在末尾。",
       "category": "docs",
-      "chapters": 174,
+      "chapters": 183,
       "cover": "covers/manus.png"
     },
     {
@@ -98,11 +98,11 @@
       "icon": "vendors/coze/icon.png",
       "author": "ByteDance",
       "adapter": "generic",
-      "updated_at": "2026-10-09T01:55:30Z",
+      "updated_at": "2026-10-17T22:37:48Z",
       "packed_at": "2026-10-09T11:12:41Z",
       "summary": "字节跳动扣子(Coze)Agent 产品文档:低代码搭建、工作流、扣子编程、扣子罗盘、教程与客户案例;不含开放平台 API 文档。",
       "category": "docs",
-      "chapters": 957,
+      "chapters": 958,
       "cover": "covers/coze.png"
     },
     {
@@ -113,11 +113,11 @@
       "icon": "vendors/kimi/icon.png",
       "author": "Moonshot AI",
       "adapter": "kimi",
-      "updated_at": "2026-10-10T15:00:04Z",
+      "updated_at": "2026-10-17T22:38:16Z",
       "packed_at": "2026-10-11T08:05:15Z",
       "summary": "Kimi 产品书(Moonshot AI):kimi.com 产品页(含 Kimi Work/WebBridge)与官方 Blog。",
       "category": "docs",
-      "chapters": 95,
+      "chapters": 94,
       "cover": "covers/kimi.png"
     },
     {
@@ -128,7 +128,7 @@
       "icon": "vendors/minimax/icon.png",
       "author": "MiniMax",
       "adapter": "minimax",
-      "updated_at": "2026-10-10T10:45:03Z",
+      "updated_at": "2026-10-17T22:39:05Z",
       "packed_at": "2026-10-10T10:46:20Z",
       "summary": "MiniMax 模型与产品书:minimax.io 模型目录 + MiniMax Code + MiniMax Design 创作工具 + 海螺 Hailuo 产品页,聚合为厂商一书;官方 Blog(/blog 研究与发布文章)与 News 公告排在末尾。",
       "category": "docs",
@@ -143,7 +143,7 @@
       "icon": "vendors/tencent/icon.png",
       "author": "Tencent",
       "adapter": "tencent",
-      "updated_at": "2026-10-10T10:46:51Z",
+      "updated_at": "2026-10-17T22:39:25Z",
       "packed_at": "2026-10-10T10:47:51Z",
       "summary": "",
       "category": "docs",
@@ -158,11 +158,11 @@
       "icon": "vendors/zencoder/icon.png",
       "author": "Zencoder",
       "adapter": "zencoder",
-      "updated_at": "2026-10-10T09:56:10Z",
+      "updated_at": "2026-10-17T22:41:00Z",
       "packed_at": "2026-10-10T10:22:10Z",
       "summary": "",
       "category": "docs",
-      "chapters": 566,
+      "chapters": 545,
       "cover": ""
     },
     {
@@ -173,7 +173,7 @@
       "icon": "vendors/zhipu/icon.png",
       "author": "Zhipu AI",
       "adapter": "zhipu",
-      "updated_at": "2026-10-10T09:20:45Z",
+      "updated_at": "2026-10-17T22:41:23Z",
       "packed_at": "2026-10-10T09:59:13Z",
       "summary": "智谱 GLM 厂商书:模型 + 产品聚合(ZCode Agentic IDE + Z.ai Chat 与其他智谱产品);不含开放平台 API 使用文档(范围铁律)。",
       "category": "docs",

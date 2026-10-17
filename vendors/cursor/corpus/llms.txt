@@ -5,14 +5,16 @@
 - https://cursor.com/docs.md
 - https://cursor.com/docs/get-started/quickstart.md
 - https://cursor.com/docs/models-and-pricing.md
+  - https://cursor.com/docs/account/pricing/legacy-cursor-plans.md
   - https://cursor.com/docs/cursor-router.md
   - https://cursor.com/docs/models/claude-sonnet-5-5.md
   - https://cursor.com/docs/models/claude-opus-5-5.md
   - https://cursor.com/docs/models/claude-fable-5-1.md
   - https://cursor.com/docs/models/claude-haiku-5-5.md
+  - https://cursor.com/docs/models/gemini-4-argon.md
   - https://cursor.com/docs/models/gemini-3-1-pro.md
   - https://cursor.com/docs/models/gemini-3-8-flash.md
-  - https://cursor.com/docs/models/muse-spark-1-3.md
+  - https://cursor.com/docs/models/muse-wonder.md
   - https://cursor.com/docs/models/gpt-5-6-sol.md
   - https://cursor.com/docs/models/gpt-5-6-terra.md
   - https://cursor.com/docs/models/gpt-5-6-luna.md
@@ -110,6 +112,7 @@
 - https://cursor.com/docs/origin/agents.md
 - https://cursor.com/docs/origin/apps.md
   - https://cursor.com/docs/origin/apps/build-app.md
+  - https://cursor.com/docs/origin/apps/publish.md
 - https://cursor.com/docs/origin/settings.md
 
 ## Integrations
@@ -470,6 +473,10 @@
 - https://cursor.com/help/grok-bot/computer-recovery.md
 - https://cursor.com/help/grok-bot/secrets.md
 - https://cursor.com/help/grok-bot/get-help.md
+
+## The X Subscription
+
+- https://cursor.com/help/the-x-subscription/overview.md
 
 ## Troubleshooting
 

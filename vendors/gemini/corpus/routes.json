@@ -65,15 +65,15 @@
   },
   {
     "group": "Antigravity",
-    "title": "Home",
-    "md_url": "https://antigravity.google/docs/home.md",
-    "html_url": "https://antigravity.google/docs/home",
-    "route": "antigravity/home",
+    "title": "Antigravity Extensions",
+    "md_url": "https://antigravity.google/docs/ide/extensions.md",
+    "html_url": "https://antigravity.google/docs/ide/extensions",
+    "route": "antigravity/ide/extensions",
     "kind": "doc"
   },
   {
     "group": "Antigravity",
-    "title": "Antigravity 2.0 overview",
+    "title": "Choose your Antigravity",
     "md_url": "https://antigravity.google/docs/overview.md",
     "html_url": "https://antigravity.google/docs/overview",
     "route": "antigravity/overview",
@@ -81,10 +81,26 @@
   },
   {
     "group": "Antigravity",
-    "title": "Getting started",
+    "title": "Get started",
     "md_url": "https://antigravity.google/docs/getting-started.md",
     "html_url": "https://antigravity.google/docs/getting-started",
     "route": "antigravity/getting-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Authenticate",
+    "md_url": "https://antigravity.google/docs/install.md",
+    "html_url": "https://antigravity.google/docs/install",
+    "route": "antigravity/install",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Choose a model",
+    "md_url": "https://antigravity.google/docs/models.md",
+    "html_url": "https://antigravity.google/docs/models",
+    "route": "antigravity/models",
     "kind": "doc"
   },
   {
@@ -101,14 +117,6 @@
     "md_url": "https://antigravity.google/docs/features.md",
     "html_url": "https://antigravity.google/docs/features",
     "route": "antigravity/features",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "Models",
-    "md_url": "https://antigravity.google/docs/models.md",
-    "html_url": "https://antigravity.google/docs/models",
-    "route": "antigravity/models",
     "kind": "doc"
   },
   {
@@ -265,6 +273,38 @@
   },
   {
     "group": "Antigravity",
+    "title": "Browser command (/browser)",
+    "md_url": "https://antigravity.google/docs/commands/browser.md",
+    "html_url": "https://antigravity.google/docs/commands/browser",
+    "route": "antigravity/commands/browser",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Goal command (/goal)",
+    "md_url": "https://antigravity.google/docs/commands/goal.md",
+    "html_url": "https://antigravity.google/docs/commands/goal",
+    "route": "antigravity/commands/goal",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Learn command (/learn)",
+    "md_url": "https://antigravity.google/docs/commands/learn.md",
+    "html_url": "https://antigravity.google/docs/commands/learn",
+    "route": "antigravity/commands/learn",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Schedule command (/schedule)",
+    "md_url": "https://antigravity.google/docs/commands/schedule.md",
+    "html_url": "https://antigravity.google/docs/commands/schedule",
+    "route": "antigravity/commands/schedule",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Artifacts",
     "md_url": "https://antigravity.google/docs/artifacts.md",
     "html_url": "https://antigravity.google/docs/artifacts",
@@ -297,31 +337,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "Antigravity CLI overview",
-    "md_url": "https://antigravity.google/docs/cli/overview.md",
-    "html_url": "https://antigravity.google/docs/cli/overview",
-    "route": "antigravity/cli/overview",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "Installation and auth",
-    "md_url": "https://antigravity.google/docs/cli/install.md",
-    "html_url": "https://antigravity.google/docs/cli/install",
-    "route": "antigravity/cli/install",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "Tutorial",
-    "md_url": "https://antigravity.google/docs/cli/tutorial.md",
-    "html_url": "https://antigravity.google/docs/cli/tutorial",
-    "route": "antigravity/cli/tutorial",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "Using Antigravity CLI",
+    "title": "CLI settings and tips",
     "md_url": "https://antigravity.google/docs/cli/using.md",
     "html_url": "https://antigravity.google/docs/cli/using",
     "route": "antigravity/cli/using",
@@ -393,7 +409,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "AI credits",
+    "title": "CLI AI credits",
     "md_url": "https://antigravity.google/docs/cli/credits.md",
     "html_url": "https://antigravity.google/docs/cli/credits",
     "route": "antigravity/cli/credits",
@@ -425,10 +441,34 @@
   },
   {
     "group": "Antigravity",
+    "title": "Side question command (/btw)",
+    "md_url": "https://antigravity.google/docs/cli/commands/btw.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/btw",
+    "route": "antigravity/cli/commands/btw",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Changelog command (/changelog)",
+    "md_url": "https://antigravity.google/docs/cli/commands/changelog.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/changelog",
+    "route": "antigravity/cli/commands/changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Code search command (/codesearch)",
     "md_url": "https://antigravity.google/docs/cli/commands/codesearch.md",
     "html_url": "https://antigravity.google/docs/cli/commands/codesearch",
     "route": "antigravity/cli/commands/codesearch",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Context command (/context)",
+    "md_url": "https://antigravity.google/docs/cli/commands/context.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/context",
+    "route": "antigravity/cli/commands/context",
     "kind": "doc"
   },
   {
@@ -445,6 +485,14 @@
     "md_url": "https://antigravity.google/docs/cli/commands/diff.md",
     "html_url": "https://antigravity.google/docs/cli/commands/diff",
     "route": "antigravity/cli/commands/diff",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Effort command (/effort)",
+    "md_url": "https://antigravity.google/docs/cli/commands/effort.md",
+    "html_url": "https://antigravity.google/docs/cli/commands/effort",
+    "route": "antigravity/cli/commands/effort",
     "kind": "doc"
   },
   {
@@ -497,7 +545,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "Best practices",
+    "title": "CLI best practices",
     "md_url": "https://antigravity.google/docs/cli/best-practices.md",
     "html_url": "https://antigravity.google/docs/cli/best-practices",
     "route": "antigravity/cli/best-practices",
@@ -505,7 +553,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "Troubleshooting",
+    "title": "CLI troubleshooting",
     "md_url": "https://antigravity.google/docs/cli/troubleshooting.md",
     "html_url": "https://antigravity.google/docs/cli/troubleshooting",
     "route": "antigravity/cli/troubleshooting",
@@ -513,7 +561,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "CLI reference",
+    "title": "CLI commands",
     "md_url": "https://antigravity.google/docs/cli/reference.md",
     "html_url": "https://antigravity.google/docs/cli/reference",
     "route": "antigravity/cli/reference",
@@ -589,14 +637,6 @@
     "md_url": "https://antigravity.google/docs/sdk/lifecycle.md",
     "html_url": "https://antigravity.google/docs/sdk/lifecycle",
     "route": "antigravity/sdk/lifecycle",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "Antigravity IDE overview",
-    "md_url": "https://antigravity.google/docs/ide/overview.md",
-    "html_url": "https://antigravity.google/docs/ide/overview",
-    "route": "antigravity/ide/overview",
     "kind": "doc"
   },
   {
@@ -1512,6 +1552,14 @@
     "kind": "doc"
   },
   {
+    "group": "Gemini Code Assist",
+    "title": "no longer available for purchase",
+    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/sunset.md",
+    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/sunset",
+    "route": "code-assist/codeassist/sunset",
+    "kind": "doc"
+  },
+  {
     "group": "Gemini App Help",
     "title": "Use Gemini Apps",
     "md_url": "https://support.google.com/gemini/answer/13275745",
@@ -1889,7 +1937,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Gemini Apps limits & upgrades for Google AI subscribers",
+    "title": "Gemini Apps limits & feature availability",
     "md_url": "https://support.google.com/gemini/answer/16275805",
     "html_url": "https://support.google.com/gemini/answer/16275805",
     "route": "gemini-app/16275805",
@@ -1913,7 +1961,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Schedule actions in Gemini Apps",
+    "title": "Schedules in Gemini Apps",
     "md_url": "https://support.google.com/gemini/answer/16316416",
     "html_url": "https://support.google.com/gemini/answer/16316416",
     "route": "gemini-app/16316416",
@@ -2137,7 +2185,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Find & manage your Gemini Spark tasks",
+    "title": "Find & manage your tasks in Gemini Apps",
     "md_url": "https://support.google.com/gemini/answer/17094196",
     "html_url": "https://support.google.com/gemini/answer/17094196",
     "route": "gemini-app/17094196",
@@ -2153,7 +2201,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Use Gemini Spark to manage your tasks & workflows in Gemini Apps",
+    "title": "Manage your tasks & workflows in Gemini Apps",
     "md_url": "https://support.google.com/gemini/answer/17094507",
     "html_url": "https://support.google.com/gemini/answer/17094507",
     "route": "gemini-app/17094507",
@@ -2161,7 +2209,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Create & manage schedules for tasks in Gemini Spark",
+    "title": "Create & manage schedules for tasks in Gemini",
     "md_url": "https://support.google.com/gemini/answer/17094710",
     "html_url": "https://support.google.com/gemini/answer/17094710",
     "route": "gemini-app/17094710",
@@ -2185,7 +2233,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Use Gemini Spark with the Gemini app on Mac",
+    "title": "Assign tasks in the Gemini app on Mac",
     "md_url": "https://support.google.com/gemini/answer/17208717",
     "html_url": "https://support.google.com/gemini/answer/17208717",
     "route": "gemini-app/17208717",
@@ -2225,7 +2273,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Streamline your Google Photos workflows with Gemini Spark",
+    "title": "Streamline your Google Photos workflows in Gemini Apps",
     "md_url": "https://support.google.com/gemini/answer/18116629",
     "html_url": "https://support.google.com/gemini/answer/18116629",
     "route": "gemini-app/18116629",
@@ -2265,10 +2313,58 @@
   },
   {
     "group": "Gemini App Help",
+    "title": "Google's Gemini Apps User Guidelines: Keeping Google AI Safe and Helpful",
+    "md_url": "https://support.google.com/gemini/answer/18481641",
+    "html_url": "https://support.google.com/gemini/answer/18481641",
+    "route": "gemini-app/18481641",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
     "title": "About the transition from Gems to skills",
     "md_url": "https://support.google.com/gemini/answer/18560919",
     "html_url": "https://support.google.com/gemini/answer/18560919",
     "route": "gemini-app/18560919",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Troubleshoot error codes in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/18647528",
+    "html_url": "https://support.google.com/gemini/answer/18647528",
+    "route": "gemini-app/18647528",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "About Gemini models",
+    "md_url": "https://support.google.com/gemini/answer/18648722",
+    "html_url": "https://support.google.com/gemini/answer/18648722",
+    "route": "gemini-app/18648722",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Customize your Gemini chats experience",
+    "md_url": "https://support.google.com/gemini/answer/18736938",
+    "html_url": "https://support.google.com/gemini/answer/18736938",
+    "route": "gemini-app/18736938",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Draft Gmail messages in Gemini chats",
+    "md_url": "https://support.google.com/gemini/answer/18741629",
+    "html_url": "https://support.google.com/gemini/answer/18741629",
+    "route": "gemini-app/18741629",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Use Google Antigravity in the Gemini app on Mac",
+    "md_url": "https://support.google.com/gemini/answer/18755601",
+    "html_url": "https://support.google.com/gemini/answer/18755601",
+    "route": "gemini-app/18755601",
     "kind": "doc"
   },
   {
@@ -2409,7 +2505,7 @@
   },
   {
     "group": "NotebookLM Help",
-    "title": "Generate a Slide Deck in Gemini Notebook",
+    "title": "Generate Slide Decks in Gemini Notebook",
     "md_url": "https://support.google.com/gemininotebook/answer/16757456",
     "html_url": "https://support.google.com/gemininotebook/answer/16757456",
     "route": "notebooklm/16757456",
@@ -2469,6 +2565,14 @@
     "md_url": "https://support.google.com/gemininotebook/answer/18323649",
     "html_url": "https://support.google.com/gemininotebook/answer/18323649",
     "route": "notebooklm/18323649",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Use & manage connected apps in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/18784282",
+    "html_url": "https://support.google.com/gemininotebook/answer/18784282",
+    "route": "notebooklm/18784282",
     "kind": "doc"
   },
   {
@@ -2785,6 +2889,14 @@
   },
   {
     "group": "Blog",
+    "title": "gemini 4 argon availability",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-4-argon-availability",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "gemini models",
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
@@ -3021,6 +3133,14 @@
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing gemini 4 argon",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon",
     "kind": "blog"
   },
   {

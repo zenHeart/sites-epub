@@ -353,14 +353,6 @@
   },
   {
     "group": "Resources \u6559\u7a0b",
-    "title": "opencode install",
-    "md_url": "https://www.kimi.com/resources/opencode-install",
-    "html_url": "https://www.kimi.com/resources/opencode-install",
-    "route": "resources/opencode-install",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
     "title": "kimi work dashboard",
     "md_url": "https://www.kimi.com/resources/kimi-work-dashboard",
     "html_url": "https://www.kimi.com/resources/kimi-work-dashboard",

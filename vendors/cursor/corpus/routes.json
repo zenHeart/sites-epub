@@ -25,6 +25,14 @@
   },
   {
     "group": "Cursor: Get Started",
+    "title": "legacy cursor plans",
+    "md_url": "https://cursor.com/docs/account/pricing/legacy-cursor-plans.md",
+    "html_url": "https://cursor.com/docs/account/pricing/legacy-cursor-plans",
+    "route": "docs/account/pricing/legacy-cursor-plans",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
     "title": "cursor router",
     "md_url": "https://cursor.com/docs/cursor-router.md",
     "html_url": "https://cursor.com/docs/cursor-router",
@@ -65,6 +73,14 @@
   },
   {
     "group": "Cursor: Get Started",
+    "title": "gemini 4 argon",
+    "md_url": "https://cursor.com/docs/models/gemini-4-argon.md",
+    "html_url": "https://cursor.com/docs/models/gemini-4-argon",
+    "route": "docs/models/gemini-4-argon",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
     "title": "gemini 3 1 pro",
     "md_url": "https://cursor.com/docs/models/gemini-3-1-pro.md",
     "html_url": "https://cursor.com/docs/models/gemini-3-1-pro",
@@ -81,10 +97,10 @@
   },
   {
     "group": "Cursor: Get Started",
-    "title": "muse spark 1 3",
-    "md_url": "https://cursor.com/docs/models/muse-spark-1-3.md",
-    "html_url": "https://cursor.com/docs/models/muse-spark-1-3",
-    "route": "docs/models/muse-spark-1-3",
+    "title": "muse wonder",
+    "md_url": "https://cursor.com/docs/models/muse-wonder.md",
+    "html_url": "https://cursor.com/docs/models/muse-wonder",
+    "route": "docs/models/muse-wonder",
     "kind": "doc"
   },
   {
@@ -725,6 +741,14 @@
     "md_url": "https://cursor.com/docs/origin/apps/build-app.md",
     "html_url": "https://cursor.com/docs/origin/apps/build-app",
     "route": "docs/origin/apps/build-app",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "publish",
+    "md_url": "https://cursor.com/docs/origin/apps/publish.md",
+    "html_url": "https://cursor.com/docs/origin/apps/publish",
+    "route": "docs/origin/apps/publish",
     "kind": "doc"
   },
   {
@@ -1545,6 +1569,14 @@
   },
   {
     "group": "Cursor: Docs",
+    "title": "gemini 3 5 flash lite",
+    "md_url": "https://cursor.com/docs/models/gemini-3-5-flash-lite.md",
+    "html_url": "https://cursor.com/docs/models/gemini-3-5-flash-lite",
+    "route": "docs/models/gemini-3-5-flash-lite",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
     "title": "gemini 3 6 flash",
     "md_url": "https://cursor.com/docs/models/gemini-3-6-flash.md",
     "html_url": "https://cursor.com/docs/models/gemini-3-6-flash",
@@ -1733,6 +1765,14 @@
     "md_url": "https://cursor.com/docs/models/kimi-k3.md",
     "html_url": "https://cursor.com/docs/models/kimi-k3",
     "route": "docs/models/kimi-k3",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "muse spark 1 3",
+    "md_url": "https://cursor.com/docs/models/muse-spark-1-3.md",
+    "html_url": "https://cursor.com/docs/models/muse-spark-1-3",
+    "route": "docs/models/muse-spark-1-3",
     "kind": "doc"
   },
   {
@@ -2621,6 +2661,14 @@
     "md_url": "https://cursor.com/help/security-and-privacy/sso.md",
     "html_url": "https://cursor.com/help/security-and-privacy/sso",
     "route": "help/security-and-privacy/sso",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "overview",
+    "md_url": "https://cursor.com/help/the-x-subscription/overview.md",
+    "html_url": "https://cursor.com/help/the-x-subscription/overview",
+    "route": "help/the-x-subscription/overview",
     "kind": "doc"
   },
   {

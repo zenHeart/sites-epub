@@ -352,12 +352,44 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Blog",
-    "title": "manus 1.5 release",
-    "md_url": "https://manus.im/blog/manus-1.5-release.md",
-    "html_url": "https://manus.im/blog/manus-1.5-release",
-    "route": "blog/manus-1.5-release",
-    "kind": "blog"
+    "group": "Manus: Features",
+    "title": "app publishing",
+    "md_url": "https://manus.im/features/app-publishing.md",
+    "html_url": "https://manus.im/features/app-publishing",
+    "route": "features/app-publishing",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "automations",
+    "md_url": "https://manus.im/features/automations.md",
+    "html_url": "https://manus.im/features/automations",
+    "route": "features/automations",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "cloud computer",
+    "md_url": "https://manus.im/features/cloud-computer.md",
+    "html_url": "https://manus.im/features/cloud-computer",
+    "route": "features/cloud-computer",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "connectors",
+    "md_url": "https://manus.im/features/connectors.md",
+    "html_url": "https://manus.im/features/connectors",
+    "route": "features/connectors",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "figma to code",
+    "md_url": "https://manus.im/features/figma-to-code.md",
+    "html_url": "https://manus.im/features/figma-to-code",
+    "route": "features/figma-to-code",
+    "kind": "doc"
   },
   {
     "group": "Manus: Features",
@@ -381,6 +413,22 @@
     "md_url": "https://manus.im/features/manus-browser-operator.md",
     "html_url": "https://manus.im/features/manus-browser-operator",
     "route": "features/manus-browser-operator",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "meta ads",
+    "md_url": "https://manus.im/features/meta-ads.md",
+    "html_url": "https://manus.im/features/meta-ads",
+    "route": "features/meta-ads",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "projects",
+    "md_url": "https://manus.im/features/projects.md",
+    "html_url": "https://manus.im/features/projects",
+    "route": "features/projects",
     "kind": "doc"
   },
   {
@@ -424,11 +472,35 @@
     "kind": "doc"
   },
   {
+    "group": "Manus: Blog",
+    "title": "manus 1.5 release",
+    "md_url": "https://manus.im/blog/manus-1.5-release.md",
+    "html_url": "https://manus.im/blog/manus-1.5-release",
+    "route": "blog/manus-1.5-release",
+    "kind": "blog"
+  },
+  {
     "group": "Blog",
     "title": "introducing manus 2 0",
     "md_url": "https://manus.im/blog/introducing-manus-2-0.md",
     "html_url": "https://manus.im/blog/introducing-manus-2-0",
     "route": "blog/introducing-manus-2-0",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "circa builds customer story",
+    "md_url": "https://manus.im/blog/circa-builds-customer-story.md",
+    "html_url": "https://manus.im/blog/circa-builds-customer-story",
+    "route": "blog/circa-builds-customer-story",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "manus partners oppo",
+    "md_url": "https://manus.im/blog/manus-partners-oppo.md",
+    "html_url": "https://manus.im/blog/manus-partners-oppo",
+    "route": "blog/manus-partners-oppo",
     "kind": "blog"
   },
   {
