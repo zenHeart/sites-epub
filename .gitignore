@@ -23,3 +23,7 @@ secrets/
 .cache/
 .pytest_cache/
 scratch/
+.codex/
+gitout.txt
+module.txt
+show.txt
