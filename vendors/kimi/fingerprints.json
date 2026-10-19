@@ -23,7 +23,6 @@
   "build": "2880db4273bb8cd1b3b3f4047baffa58d6cbad8a02b4d6c5735bb7aba51a8f54",
   "code": "0d10e11ad0a72c6f39cc7c23640d0f7f7f8c9cb5e8a728d4f2ca439ec92960fe",
   "deep-research": "0cf2635ae084150f5ec5ae8786017f20848e90c119a0f2c5af1e50ed7f282f1e",
-  "design": "157a66a8126b580364bab743dfaaee33f778775b104fc1b6c68711125e4a1efa",
   "docs": "d35e4c65cb489cf1dba7effd18900c07f5b55e9c1d6462638dcc13a538e83983",
   "features/agent-swarm": "940f6d7fc1bdba0e167287d6d46eaec9c0a59f009738e9802046cd3425e794d2",
   "features/deep-research": "7da7e5515617ee1d49aa5a7da243daa0de2e4be6993e4cb0ebac80a9c50be9de",
@@ -51,8 +50,6 @@
   "help/websites": "e5faacfc790bff8abe6bb1080443f3c966a856cd3290bfe7cf27473657698114",
   "index": "f7024650278f9b54f7af9b2b9e804597e1ab6475702cd6d2483e449689cc0ac7",
   "inspiration": "ee58280dc25a4c93f447edbaf39b7ed9cd9125d5c892b30e641861bb2a41974c",
-  "mykimi": "cc15159fde5f7b0d7e708f8af22502381cedf73a2d136c74f630223bf3b496d8",
-  "plugins": "cc15159fde5f7b0d7e708f8af22502381cedf73a2d136c74f630223bf3b496d8",
   "products/download": "ec994814ab38c4f4fd7dff2b34781b1533318479b1e1fb0a9b41e98bee488fd7",
   "products/kimi-browser-extension": "ac23643dbc712d44e8ebce8c32d466b15d3c08b2528a430ee1778d51332a0acd",
   "products/kimi-office": "6ad379219a26f5795c49abb0d49d0a7b00e50dc365f029a1f158a288caba653e",
@@ -88,7 +85,6 @@
   "resources/multi-agent-collaboration": "702ef576fad5980d6a4127d417fd09accc97350ecf4bb475e153c94fbea6ca7b",
   "resources/openclaw-cloud": "0fbeb6f9a7c51a21067037385f626c2b6ee0cd627af841ea7d35dddc5e7e2a97",
   "resources/openclaw-skills": "758fc1de2063744407cc28f2f0da8a6f3a436a0a62f6e59cf2f4c4578df76a4e",
-  "resources/opencode-install": "f76c9fce92f8d05db66fa59c95e7000b228bbb3eabd2bca5206c590c453b960c",
   "resources/opencode-skills": "dcfc465fba3d6b9ebd9e05a1dae9e2484bb9547cc987992b343537227284ef37",
   "resources/parallel-agent": "86b06c7a9de07f3e2d12dce044bd28ca0d9b1499fb2dca65539a56ab300546d8",
   "resources/skill-development-skills-for-agents": "dc16fd1de52499b7e6dfc540930d28be1607a34b0e6ab54f10d00403bf3b1a40",
@@ -96,6 +92,5 @@
   "resources/what-are-ai-skills": "988e189b8a63a058b498321901786654e104653661cd645a79195897871eaa8a",
   "resources/what-is-vibe-coding": "5ffaf608f70cb8abac5afa9b82e69db40b4673dc078bc8a1dbe8100b9bf8fd1a",
   "sheets": "2e6ba648a1f4bee3fe20e9c3a7c8a54c632095ba2d00de660111ea5b82e71b99",
-  "slides": "9facf1d6fa56d1a6fa43d71a3563db6756f1de7a91479aefcf087a81d7e5c442",
-  "tasks": "cc15159fde5f7b0d7e708f8af22502381cedf73a2d136c74f630223bf3b496d8"
+  "slides": "9facf1d6fa56d1a6fa43d71a3563db6756f1de7a91479aefcf087a81d7e5c442"
 }

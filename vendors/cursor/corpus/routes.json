@@ -3105,6 +3105,14 @@
   },
   {
     "group": "Blog",
+    "title": "navan",
+    "md_url": "https://cursor.com/blog/navan.md",
+    "html_url": "https://cursor.com/blog/navan",
+    "route": "blog/navan",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "grab",
     "md_url": "https://cursor.com/blog/grab.md",
     "html_url": "https://cursor.com/blog/grab",
@@ -3125,14 +3133,6 @@
     "md_url": "https://cursor.com/blog/nokia.md",
     "html_url": "https://cursor.com/blog/nokia",
     "route": "blog/nokia",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "imdex",
-    "md_url": "https://cursor.com/blog/imdex.md",
-    "html_url": "https://cursor.com/blog/imdex",
-    "route": "blog/imdex",
     "kind": "blog"
   },
   {

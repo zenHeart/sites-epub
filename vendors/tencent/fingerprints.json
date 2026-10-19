@@ -1,11 +1,5 @@
 {
-  "wb-cli": "3ae65293258282fc2151b90aab3d61501223456652e1f2f5bebf86ac5a165bdd",
-  "wb-enterprise": "9991c4385d189f6bbfc86289061c44a7f93c1827a2e7f581927ecf641aa50ff4",
-  "wb-ide": "08b3f0c1593145b60ec7ef84370f2a8127f01a707def64d8825bdfd6c59760d7",
-  "wb-plugin": "616c41cb76cd03ad382e1695412e1485bf9262bc99205913156914fa212a652e",
-  "wb-workbuddy": "5c69c24e74d241ce5da03c7ee5d6b9bf1e0965492b6850c5a4deab15e3561d10",
   "wb-workbuddy-account-cancellation": "c55a67bdb7be3e291b8d04718e304977da8c5c447562cbdc3d756e654c14beca",
-  "wb-workbuddy-billing": "dd9af69364760b925bb8b76124579bbdc15f9947a769e5e77887e7479fd24e04",
   "wb-workbuddy-changelog": "d286676ec2279bf08b740c69099631081463475870af2a1c35c9a69b8759bd09",
   "wb-workbuddy-contact": "30dda4657b4a28f47845612bdb1bf6966b0d231776aa8c276f90dba139799aff",
   "wb-workbuddy-conversation": "66d6478304d085aebf3408ba321a4204d12390909eb1d4ad2b326a49110b4812",
@@ -85,14 +79,11 @@
   "wb-workbuddy-plan": "403ed845aa55e78d566b717d480bb4b4c53a9e52674a85b9360968871e26d210",
   "wb-workbuddy-pricing": "90ab51e22f3a10e0d5045696b11671ccff48c1d2a4aed1c9097400eed52f7906",
   "wb-workbuddy-qq-guide": "194b1a6287de5eeb6393b8c01686955005338dd98c6c88f26df810747ac314dc",
-  "wb-workbuddy-quickstart": "5d1ca13f9f78d9e2d8992259c624d9ad9e91ef5d9642a972b03071e723d1efaa",
   "wb-workbuddy-results": "23654a3c107b9d61d952e57eb165755a4a66f1b98b3953a09e626643960e386a",
   "wb-workbuddy-scenarios": "9b369b4420d73f531a2a4a235328d8d9864d27d6652cd2faf05626a04dd3ddab",
   "wb-workbuddy-task-management": "3361f7f2a939e0fb351176e67a888ac0831372bdb206f94041ecee6af51c99b2",
   "wb-workbuddy-usage": "7bae6123676314892d5b0e281dec24ab4a68aa182adb30565e181a67402436a3",
   "wb-workbuddy-wechat-guide": "df70bb2721cfb996028e20e15942fd21649df84a8265bc2e75c3e0b8220afdf9",
   "wb-workbuddy-wecom-guide": "321f29f09b9daae267e61062726fefdc57c81ff2da9f591cf1c64b3b529e35b8",
-  "wb-workbuddy-weixinbot-guide": "385c408dc2c7ca5d2d808c9ea7ae82ab00062a2da0bdadcfb46e7a547aa515c2",
-  "wb-workbuddyapp": "81b32cd85baac922d8283ac1dc2a92dfcd8d48ab08e33b8ab2221f135d81e4ba",
-  "wb-workbuddymini": "dcec6524c2ea3d440b8b4ff8fefc4916874204e29d03d4a6114adc7dc4e734ae"
+  "wb-workbuddy-weixinbot-guide": "385c408dc2c7ca5d2d808c9ea7ae82ab00062a2da0bdadcfb46e7a547aa515c2"
 }
