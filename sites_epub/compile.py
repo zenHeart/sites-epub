@@ -581,6 +581,14 @@ def fetch_vendor(
         # refetch 绕过指纹缓存,让存量页面吃到新的 fetch_source 判定
         # (如「md 无图回退 HTML」);默认增量模式仍直读缓存。
         text = fetch_source(entry)
+        if not text.strip():
+            # 空正文 = 源站没给出内容(403 挑战页 / 死链 / 临时故障)。
+            # 既有缓存若是好的就保留它,别用空文件覆盖;否则该路由没有正文,
+            # 交给上层从路由表里剔掉(0 字节章节会让打包门禁永远红)。
+            if cached.strip():
+                return entry.route, cached, False
+            dest.unlink(missing_ok=True)
+            return entry.route, "", True
         dest.write_text(text, encoding="utf-8")
         return entry.route, text, True
 
@@ -590,6 +598,32 @@ def fetch_vendor(
             route, text, did_fetch = fut.result()
             sources[route] = text
             (fetched if did_fetch else skipped).append(route)
+
+    # Routes whose body came back empty (site blocked / Cloudflare challenge /
+    # dead URL) are not chapters. A 0-byte page would fail the pack gate with
+    # "doc body is empty" on every run, so drop the route instead of shipping
+    # an empty chapter.
+    empty_routes = [e for e in entries if not (sources.get(e.route) or "").strip()]
+    if empty_routes:
+        dropped = {e.route for e in empty_routes}
+        entries = [e for e in entries if e.route not in dropped]
+        for e in empty_routes:
+            sources.pop(e.route, None)
+        fetched[:] = [r for r in fetched if r not in dropped]
+        skipped[:] = [r for r in skipped if r not in dropped]
+        for e in empty_routes:
+            stale = pages_dir / f"{e.route}.md"
+            if stale.is_file() and not stale.read_text(
+                encoding="utf-8", errors="replace"
+            ).strip():
+                stale.unlink()
+        (corpus / "routes.json").write_text(
+            json.dumps([_entry_dict(e) for e in entries], indent=2), encoding="utf-8"
+        )
+        print(
+            f"{vendor.id}: dropped {len(empty_routes)} route(s) with empty body: "
+            + ", ".join(sorted(e.route for e in empty_routes))
+        )
 
     new_fp = {route: content_hash(text) for route, text in sources.items()}
     save_fingerprints(fp_path, new_fp)

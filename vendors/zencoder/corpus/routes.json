@@ -929,14 +929,6 @@
   },
   {
     "group": "Zencoder: Get Started",
-    "title": "community support",
-    "md_url": "https://docs.zencoder.ai/get-started/community-support.md",
-    "html_url": "https://docs.zencoder.ai/get-started/community-support",
-    "route": "get-started/community-support",
-    "kind": "doc"
-  },
-  {
-    "group": "Zencoder: Get Started",
     "title": "install ide plugin",
     "md_url": "https://docs.zencoder.ai/get-started/install-ide-plugin.md",
     "html_url": "https://docs.zencoder.ai/get-started/install-ide-plugin",

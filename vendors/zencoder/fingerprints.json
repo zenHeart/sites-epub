@@ -478,7 +478,6 @@
   "features/skills": "7e3a6de32f61e1d71ae0ad1128e18de9782c3148ccf445348722d33b6dfb6b92",
   "features/team-administration": "13892b1d196f49a0d2b93d8747100685b0bc48a84de26fd6825dc1c2e74865a4",
   "features/universal-cli-platform": "091b1b744dfdd07c046f5955fd63b9ca0b5bb0df81127bdbf2175ca8f9ce5a20",
-  "get-started/community-support": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "get-started/ide-agent-concepts": "8279b7bc6a51e5dd3f22021ee95f28f5c211f8de82fdbd312ad6a296a3bc5325",
   "get-started/install-ide-plugin": "a12dc03205a2464da9ef46ba950d9e57c2badf8e030d4e69745f76025b05b1e5",
   "get-started/install-zenflow": "7a191145b0291335521222c20f72d920d887e31c59ac7de376d67abb064bff2a",

@@ -344,3 +344,34 @@ SAN 列表中 **`epub.zenheart.site` 不在**。Fastly 在 CNAME 模式下默认
 **怎么防止复发**：枚举源至少要有两个（锚点 + payload / sitemap / 产品家族页），
 并把 before→after 路由数写进日报。改动后必须重算 `fingerprints.json`
 （§19 之外的第三条链：语料字节变了而指纹没变，下一轮会重抓并覆盖手工修补）。
+
+---
+
+## 21. 源站 403 挑战页 → 0 字节语料 → 打包门禁 "doc body is empty"（zencoder，2026-10-20）
+
+**症状**：CI Build EPUB 在 "Pack catalog vendors (offline)" 步失败，报
+`broken images or unlinked titles` / `doc body is empty`；但 `fetch` 全绿。
+本机 `pack --id zencoder` 复现：只有 `get-started/community-support` 一页炸。
+
+**根因（两层）**：
+1. `docs.zencoder.ai` 对本机代理节点整站返 Cloudflare 挑战页（403 + "Just a moment..."）。
+   `http.fetch_bytes` 对 403 重试 3 次后抛异常，`fetch_source` 把两个异常都吞掉、
+   返回 `""`。
+2. `compile.load_one` 无条件 `dest.write_text(text)` → 写出一个 **0 字节**语料文件，
+   同时该路由仍留在 `routes.json` 里。打包时 `page.extract_page` 对空正文抛
+   `ValueError("doc body is empty")`，`run_pack` 记 `ok:false` → `cmd_pack` 退出码 1。
+
+**怎么发现**：`git log` 显示该路由是**上一轮**新增且当轮没推送——所以当轮 CI 从没
+pack 过它，问题延迟到下一轮才暴露。**没推送的语料提交 = 没被 CI 验过**。
+
+**怎么修**（`compile.py`，fetch 侧，不改打包器语义）：
+- `load_one`：fetch 回来空正文时，**不覆盖已有的好缓存**（站点临时故障不该毁掉好语料）；
+  没有好缓存就删掉空文件，把路由交给上层丢弃。
+- `fetch_vendor`：正文为空的路由从 `entries`/`routes.json`/`sources` 里一起剔掉
+  （0 字节章节会让门禁每轮都红，而源站仍会在 llms.txt 里继续广告这个路由）。
+
+**怎么防止复发**：
+- 语料里不允许有 0 字节页：`find vendors/*/corpus/pages -name '*.md' -size 0` 应为空。
+- 源站整站 403/挑战时，抓取会「静默成功」但正文为空——**路由数与正文数要分开核对**。
+- 改 `compile.py` 会在 `PACKER_FILES` 里，**12 本书全部重打**；改之前先本地
+  `pack --id <id>` 逐本验（`pandoc` 在 `/usr/local/bin/pandoc`）。
