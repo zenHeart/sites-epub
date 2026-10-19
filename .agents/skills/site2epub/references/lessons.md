@@ -375,3 +375,117 @@ pack 过它，问题延迟到下一轮才暴露。**没推送的语料提交 = �
 - 源站整站 403/挑战时，抓取会「静默成功」但正文为空——**路由数与正文数要分开核对**。
 - 改 `compile.py` 会在 `PACKER_FILES` 里，**12 本书全部重打**；改之前先本地
   `pack --id <id>` 逐本验（`pandoc` 在 `/usr/local/bin/pandoc`）。
+
+---
+
+## 22. srcset 按逗号切分 → 伪图片 URL → 抓取空转（grok，2026-10-20）
+
+**症状**：`fetch --id grok` 挂 23 分钟才返回，`fetched=0, skipped=337`（语料其实
+一点没变）。抓取期间 `corpus/images/` 一张新图都不落地，进程 90% 时间卡在
+`_ssl__SSLSocket_do_handshake`，`lsof` 里堆满到 Clash 代理 7890 端口的
+CLOSE_WAIT 连接。
+
+**根因**：`images.collect_image_urls` 把 `srcset` 按 `,` 切：
+```python
+for part in srcset.split(","):
+    token = part.strip().split(" ")[0]
+```
+但 xAI 的 CDN URL **路径里就带逗号**：
+`https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/hero.jpg`
+于是每个图被切成 3 段，后两段被 `normalize_image_url` 拼成**伪 URL**：
+`https://docs.x.ai/<当前页路径>/onerror=redirect`、`.../width=320`、`.../height=320`。
+这些伪 URL 一律 403/404，每条走满 3 次重试。grok 语料引用 2460 个图片 URL，
+其中 **1354 个**是这类伪 URL —— 一次 grok 抓取凭空多出 1350 次无效网络请求。
+
+**怎么发现**：
+- `lsof -nP -a -p <pid> -iTCP` 看连接数是否只涨不落；
+- 把「页面引用的图片 URL」和「`corpus/image-map.json`」做差集，多出来的就是伪 URL；
+- 直接 `curl` 一个伪 URL 看状态码（403/404 + 路径里带 `onerror=redirect`）。
+
+**怎么修**（`images.py`，**改前先本地 `pack --id <id>` 逐本验**）：
+srcset 必须按 WHATWG 规范解析——**URL 以空白结束，不是以逗号结束**：
+```python
+tokens = srcset.split()
+i = 0
+while i < len(tokens):
+    url = tokens[i]; i += 1
+    if url.endswith(","):
+        url = url.rstrip(",")
+    else:
+        if i < len(tokens) and not tokens[i].startswith(","):
+            i += 1                      # descriptor（如 640w）
+        if i < len(tokens) and tokens[i].startswith(","):
+            i += 1
+    yield url
+```
+
+**怎么防止复发**：新增/复测 vendor 时，若其图片 URL 含 `,`（Cloudflare
+`cdn-cgi/image/fit=...`、某些 Vercel/Shopify 变体），抓取耗时会异常；
+抓取超过 10 分钟没新图落地时，先查是不是伪 URL 撑起来的。`images.py` 在
+`PACKER_FILES` 里，改动会让 12 本书全部重打。
+
+---
+
+## 23. 打包键被噪声搅动 → 每天白重打 9~11 本书（2026-10-20）
+
+**症状**：CI Build EPUB 每轮都要 20+ 分钟（pack 15 分钟），即使当天只有 1 本书
+的内容变了。逐本比对 `git diff HEAD -- vendors/<id>/corpus/` 才发现：
+**9 个厂商的 `corpus/image-map.json` 与 2 个厂商的 `corpus/llms.txt` 变了**，
+但内容其实一个字没变。
+
+**根因（两处）**：
+1. `compile.py` 写 image-map 用 `map_path.write_text(json.dumps(image_map, indent=2))`
+   —— **不写结尾换行**，而仓库里已提交的文件都带换行。于是每轮 fetch 都把
+   9 个厂商的 image-map 末尾换行剥掉，git 就报「已修改」。
+2. `corpus/llms.txt` 存的是站点索引页原文，里面嵌着 **Next.js build id 与
+   `dataUpdatedAt` 时间戳**（kimi：`dataUpdatedAt:1792429889639` → `1792445408414`；
+   minimax：`21:20:37.138Z` → `21:31:33.832Z`）。每轮必然变。
+
+而 `pack_cache.vendor_pack_key` 会 **哈希 corpus 下每一个文件**
+（`for path in sorted(p for p in corpus.rglob("*") if p.is_file())`），
+所以这两种噪声都会改打包键 → 整本书重打。skill 里「语料没变的书复用上次 EPUB」
+的意图被噪声打穿了。
+
+**怎么发现**：`git diff --name-only HEAD -- vendors/<id>/corpus/` 列出变化的
+corpus 文件；再用 `head.endswith(b"\n")` 与 `json.loads()` 比对内容是否真变。
+
+**怎么修**：
+- 立刻可用（不改代码）：fetch 后把**只有结尾换行差异**的 image-map.json 恢复成
+  HEAD 的字节（`git checkout --`），把只差 build id/时间戳的 llms.txt 也恢复——
+  两者都不参与打包内容（`pack_vendor` 不读 llms.txt；image-map 只存映射关系）。
+  这样当天只有真变了的书会重打。
+- 根治（要动 `compile.py`）：`map_path.write_text(json.dumps(image_map, indent=2) + "\n")`；
+  llms.txt 的噪声要么在写盘前抹掉，要么把 `corpus/llms.txt` 排除出打包键。
+  **改 `compile.py` 属于 `PACKER_FILES` 变更 → 12 本书一次性全部重打**，
+  按 §21 的要求先本地逐本 `pack --id <id>` 验。
+
+**怎么防止复发**：日报里报告「哪几本会重打」（= 真有 corpus 内容变化的那几本），
+而不是「fetch 了几个厂商」；两者不是一回事。
+
+---
+
+## 24. fingerprints 重算要用「活跃路由」，不是「全部页面文件」（2026-10-20）
+
+**症状**：`workflow.md` 的指纹重算片段用
+`(corpus/"pages").glob("**/*.md")` 全量枚举，于是把**孤儿页**（路由早已从
+`routes.json` 删除、但 `.md` 还留在磁盘上）也写进 `fingerprints.json`。
+而 `fetch_vendor` 的 `save_fingerprints` 只写**活跃路由**（`sources` 的 key）。
+两套语义打架：跑完维护脚本后，路由数 500 的 cursor 会拿到 505 条指纹。
+
+**为什么重要**：`fetch_vendor` 写指纹时按活跃路由裁剪，等于每轮自动清理孤儿指纹
+（2026-10-20 一次清掉 120 条：gemini 29 / zencoder 25 / grok 23 / manus 15 /
+tencent 9 / claude 7 / cursor 5 / kimi 5 / minimax 2）。但维护脚本的重算片段
+会把它们**加回来**，两轮之间反复横跳，diff 全是噪声。
+
+**怎么修**：重算指纹时按 `routes.json` 的活跃路由取页面，别 glob 全部文件：
+```python
+routes = {r["route"] for r in json.loads((corpus/"routes.json").read_text())}
+fp = {r: content_hash((corpus/"pages"/f"{r}.md").read_text(errors="replace"))
+      for r in sorted(routes) if (corpus/"pages"/f"{r}.md").is_file()}
+save_fingerprints(corpus.parent/"fingerprints.json", fp)
+```
+
+**怎么防止复发**：删指纹前先确认该 key 不在 `routes.json` 里——**指纹数应等于
+活跃路由数**；对不上就是有孤儿。注意 `corpus/pages/` 里的孤儿 `.md`（2026-10-20
+共 9 个厂商 120 个，约 2.7 MB）目前无人清理：它们不进打包内容（`pack_vendor`
+按 `routes.json` 出章），但仍参与打包键哈希。
