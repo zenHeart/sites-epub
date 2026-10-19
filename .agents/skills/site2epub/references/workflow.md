@@ -104,7 +104,8 @@ file vendors/<id>/icon.png
 git diff --cached | grep -E "xai-[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}" && echo "WARN: 真 key 漏出"
 
 # 4. 语料维护（新增 vendor / 大批 refetch 后必跑；脚本同时报告 secret 命中与乱码页）
-python3 .agents/skills/site2epub/scripts/sanitize_corpus_html.py <id>
+python3 .agents/skills/site2epub/scripts/sanitize_corpus_html.py <id>   # 默认改写：剥 script/style/template + 把 key 换成占位符
+python3 .agents/skills/site2epub/scripts/sanitize_corpus_html.py <id> --report-only   # 只读体检，不改文件
 python3 .agents/skills/site2epub/scripts/shrink_corpus_images.py <id>
 # 然后对齐指纹（脚本改动过语料字节时）：
 python3 - <<'PY'

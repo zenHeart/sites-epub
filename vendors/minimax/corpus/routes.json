@@ -345,6 +345,14 @@
   },
   {
     "group": "Blog",
+    "title": "minimax m31f",
+    "md_url": "https://www.minimax.io/blog/minimax-m31f",
+    "html_url": "https://www.minimax.io/blog/minimax-m31f",
+    "route": "blog/minimax-m31f",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "minimax h3",
     "md_url": "https://www.minimax.io/blog/minimax-h3",
     "html_url": "https://www.minimax.io/blog/minimax-h3",

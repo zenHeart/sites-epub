@@ -1897,14 +1897,6 @@
   },
   {
     "group": "Blog",
-    "title": "how comcast booz allen use claude mythos to secure their codebases",
-    "md_url": "https://claude.com/resources/articles/how-comcast-booz-allen-use-claude-mythos-to-secure-their-codebases.md",
-    "html_url": "https://claude.com/resources/articles/how-comcast-booz-allen-use-claude-mythos-to-secure-their-codebases",
-    "route": "blog/how-comcast-booz-allen-use-claude-mythos-to-secure-their-codebases",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "1m context",
     "md_url": "https://claude.com/resources/articles/1m-context.md",
     "html_url": "https://claude.com/resources/articles/1m-context",
@@ -3125,6 +3117,14 @@
     "md_url": "https://claude.com/resources/articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
     "html_url": "https://claude.com/resources/articles/how-coderabbit-used-claude-to-build-an-agent-orchestration-system",
     "route": "blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how comcast booz allen use claude mythos to secure their codebases",
+    "md_url": "https://claude.com/resources/articles/how-comcast-booz-allen-use-claude-mythos-to-secure-their-codebases.md",
+    "html_url": "https://claude.com/resources/articles/how-comcast-booz-allen-use-claude-mythos-to-secure-their-codebases",
+    "route": "blog/how-comcast-booz-allen-use-claude-mythos-to-secure-their-codebases",
     "kind": "blog"
   },
   {

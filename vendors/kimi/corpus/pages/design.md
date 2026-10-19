@@ -10,29 +10,8 @@
     <link rel="dns-prefetch" href="https://statics.kimi.ai" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Kimi Design</title>
-    <script>
-      (function() {
-        var theme = 'light'
-        var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-
-        var stored = null
-        try { stored = localStorage.getItem('CUSTOM_THEME') } catch (e) {}
-        if (stored) {
-          try {
-            var parsed = JSON.parse(stored)
-            if (parsed === 'dark') theme = 'dark'
-            else if (parsed === 'light') theme = 'light'
-            else if (parsed === 'system') theme = isDark ? 'dark' : 'light'
-          } catch (e) {}
-        } else if (window.INJECT_ENV && window.INJECT_ENV.theme) {
-          theme = window.INJECT_ENV.theme === 'dark' ? 'dark' : 'light'
-        } else {
-          theme = isDark ? 'dark' : 'light'
-        }
-        document.documentElement.classList.add(theme)
-      })()
-    </script>
-    <script type="module" crossorigin src="https://statics.kimi.ai/kimi-design-web/assets/index-BTsbrcJZ.js"></script>
+    
+    
     <link rel="modulepreload" crossorigin href="https://statics.kimi.ai/kimi-design-web/assets/vue-Dr_Kvv8m.js">
     <link rel="modulepreload" crossorigin href="https://statics.kimi.ai/kimi-design-web/assets/rolldown-runtime-Dd_uD5pT.js">
     <link rel="modulepreload" crossorigin href="https://statics.kimi.ai/kimi-design-web/assets/core-DSAJGeJG.js">

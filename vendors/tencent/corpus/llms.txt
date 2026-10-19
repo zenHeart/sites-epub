@@ -7,18 +7,18 @@
     <meta name="description" content="腾讯云 CodeBuddy 是新一代 AI 代码编辑器。提供代码补全、错误诊断、技术问答、性能优化等服务，支持主流编程语言，提升编码效率90%，降低代码错误率35%，适用于企业级应用开发和教学实践。">
     <meta name="generator" content="VitePress v2.0.0-alpha.20">
     
-    <link rel="preload stylesheet" href="https://download.codebuddy.cn/web/docs/5fcc784577447f1c241564381c92e0dfeb888ff0/docs/static/style.hDj_KWUg.css" as="style">
-    <script type="module" src="https://download.codebuddy.cn/web/docs/5fcc784577447f1c241564381c92e0dfeb888ff0/docs/static/chunks/metadata.42b191c9.js" crossorigin></script>
-    <script type="module" src="https://download.codebuddy.cn/web/docs/5fcc784577447f1c241564381c92e0dfeb888ff0/docs/static/app.BdRoks0-.js" crossorigin></script>
-    <link rel="preload" href="https://download.codebuddy.cn/web/docs/5fcc784577447f1c241564381c92e0dfeb888ff0/docs/static/inter-roman-latin.q5rAVC0E.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="modulepreload" href="https://download.codebuddy.cn/web/docs/5fcc784577447f1c241564381c92e0dfeb888ff0/docs/static/chunks/framework.BnWaPxNt.js" crossorigin="">
-    <link rel="modulepreload" href="https://download.codebuddy.cn/web/docs/5fcc784577447f1c241564381c92e0dfeb888ff0/docs/static/chunks/theme.BDnvIFQo.js" crossorigin="">
-    <link rel="modulepreload" href="https://download.codebuddy.cn/web/docs/5fcc784577447f1c241564381c92e0dfeb888ff0/docs/static/chunks/sidebar.pN4mlTPz.js" crossorigin="">
-    <link rel="modulepreload" href="https://download.codebuddy.cn/web/docs/5fcc784577447f1c241564381c92e0dfeb888ff0/docs/static/index.md.bSRKpDA3.lean.js" crossorigin="">
+    <link rel="preload stylesheet" href="https://download.codebuddy.cn/web/docs/aafbbf51beede9ed92e891325729f1e61074e0a4/docs/static/style.3zaY0nzc.css" as="style">
+    <script type="module" src="https://download.codebuddy.cn/web/docs/aafbbf51beede9ed92e891325729f1e61074e0a4/docs/static/chunks/metadata.dc367c96.js" crossorigin></script>
+    <script type="module" src="https://download.codebuddy.cn/web/docs/aafbbf51beede9ed92e891325729f1e61074e0a4/docs/static/app.BGcK8dKj.js" crossorigin></script>
+    <link rel="preload" href="https://download.codebuddy.cn/web/docs/aafbbf51beede9ed92e891325729f1e61074e0a4/docs/static/inter-roman-latin.q5rAVC0E.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="https://download.codebuddy.cn/web/docs/aafbbf51beede9ed92e891325729f1e61074e0a4/docs/static/chunks/framework.CXb_itQa.js" crossorigin="">
+    <link rel="modulepreload" href="https://download.codebuddy.cn/web/docs/aafbbf51beede9ed92e891325729f1e61074e0a4/docs/static/chunks/theme.CsfGlS7x.js" crossorigin="">
+    <link rel="modulepreload" href="https://download.codebuddy.cn/web/docs/aafbbf51beede9ed92e891325729f1e61074e0a4/docs/static/chunks/sidebar.z4w5o5HA.js" crossorigin="">
+    <link rel="modulepreload" href="https://download.codebuddy.cn/web/docs/aafbbf51beede9ed92e891325729f1e61074e0a4/docs/static/index.md.Djfvhn-i.lean.js" crossorigin="">
     <link rel="icon" type="image/svg+xml" href="https://download.codebuddy.cn/web/workbuddy/eb02746771ab068964c9ce8804176ef2692ddd80/docs/assets/logo.svg">
-    <meta name="build-info" content="prod / main@5fcc7845774 / build 2026/10/16 22:16:11 / commit 2026/10/16 22:15:15">
+    <meta name="build-info" content="prod / main@aafbbf51beed / build 2026/10/19 11:15:33 / commit 2026/10/19 11:14:09">
     <script>(function(){var e=document.documentElement,t=e.getAttribute(`data-brand`);if(t!==`wb`&&t!==`cb`){t=`cb`;try{var n=location.hostname;(n.indexOf(`workbuddy.cn`)>-1||n.indexOf(`workbuddy.ai`)>-1)&&(t=`wb`)}catch{}e.setAttribute(`data-brand`,t)}try{var r={cb:`https://download.codebuddy.cn/web/website/91541fc9837f594933a81b4d19c295c075b3f329/docs/assets/logo.svg`,wb:`https://download.codebuddy.cn/web/workbuddy/eb02746771ab068964c9ce8804176ef2692ddd80/docs/assets/logo.svg`},i=document.querySelector(`link[rel="icon"]`);i||(i=document.createElement(`link`),i.rel=`icon`,i.type=`image/svg+xml`,document.head.appendChild(i)),i.href=r[t]}catch{}})();</script>
-    <script>(function(){try{var e={mode:`prod`,buildTime:`2026/10/16 22:16:11`,gitBranch:`main`,gitCommit:`5fcc7845774`,gitCommitTime:`2026/10/16 22:15:15`};window.__BUILD_INFO__=e;var t=e.mode===`dev`?`color:#ef4444;font-weight:bold;`:`color:#22c55e;font-weight:bold;`;console.log(`%c🚀 CodeBuddy/WorkBuddy Docs %c
+    <script>(function(){try{var e={mode:`prod`,buildTime:`2026/10/19 11:15:33`,gitBranch:`main`,gitCommit:`aafbbf51beed`,gitCommitTime:`2026/10/19 11:14:09`};window.__BUILD_INFO__=e;var t=e.mode===`dev`?`color:#ef4444;font-weight:bold;`:`color:#22c55e;font-weight:bold;`;console.log(`%c🚀 CodeBuddy/WorkBuddy Docs %c
 %c🧭 运行环境: %c`+e.mode.toUpperCase()+`
 %c📅 构建时间: %c`+e.buildTime+`
 %c📝 提交时间: %c`+e.gitCommitTime+`

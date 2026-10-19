@@ -1097,6 +1097,14 @@
   },
   {
     "group": "Cursor: Account",
+    "title": "tenancy restriction",
+    "md_url": "https://cursor.com/docs/enterprise/tenancy-restriction.md",
+    "html_url": "https://cursor.com/docs/enterprise/tenancy-restriction",
+    "route": "docs/enterprise/tenancy-restriction",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Account",
     "title": "endpoint security",
     "md_url": "https://cursor.com/docs/enterprise/endpoint-security.md",
     "html_url": "https://cursor.com/docs/enterprise/endpoint-security",
@@ -2377,10 +2385,10 @@
   },
   {
     "group": "Cursor: Help Center",
-    "title": "connect plugins",
-    "md_url": "https://cursor.com/help/grok-bot/connect-plugins.md",
-    "html_url": "https://cursor.com/help/grok-bot/connect-plugins",
-    "route": "help/grok-bot/connect-plugins",
+    "title": "connect apps",
+    "md_url": "https://cursor.com/help/grok-bot/connect-apps.md",
+    "html_url": "https://cursor.com/help/grok-bot/connect-apps",
+    "route": "help/grok-bot/connect-apps",
     "kind": "doc"
   },
   {

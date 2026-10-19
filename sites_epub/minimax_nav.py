@@ -35,6 +35,16 @@ SKIP_SUFFIX = (
     ".zip", ".pdf", ".json", ".xml", ".yaml", ".yml", ".css", ".js",
 )
 
+#: The model submenu ships as JSON inside the Next.js flight payload rather
+#: than as ``<a href>`` anchors:
+#: ``{\"title\":\"MiniMax M2.7\",\"link\":\"/models/text/m27\"}``.
+#: Anchors alone silently drop the older models whenever the site collapses
+#: that nav, so the payload is swept as a second enumeration surface.
+MODEL_PAYLOAD_LINK = re.compile(
+    r'\\?"title\\?":\\?"((?:[^"\\]|\\.){1,60}?)\\?",\\?"(?:link|href)\\?":'
+    r'\\?"((?:/models|/product)[^"\\]*)\\?"'
+)
+
 
 def _clean(href: str, base: str) -> str | None:
     href = href.split("#", 1)[0].split("?", 1)[0].strip()
@@ -69,6 +79,35 @@ def parse_minimax_docs() -> list[IndexEntry]:
             continue
         seen.add(route)
         title = " ".join(a.get_text(" ", strip=True).split()) or p.path.rsplit("/", 1)[-1]
+        if not title:
+            continue
+        docs.append(
+            IndexEntry(
+                group="MiniMax Models",
+                title=title,
+                md_url=clean + ".md",
+                html_url=clean,
+                route=route,
+                kind="doc",
+            )
+        )
+
+    # 1b. Same catalog, second enumeration surface: the model submenu is JSON
+    # in the Next.js flight payload, so the <a href> anchors alone dropped
+    # M2.5 / M2.7 (both still live) and shrank the book by two chapters.
+    # Union both surfaces so a nav change cannot shrink the corpus silently.
+    for ptitle, href in MODEL_PAYLOAD_LINK.findall(html):
+        clean = _clean(href, "https://www.minimax.io/models")
+        if not clean or "minimax.io" not in clean:
+            continue
+        p = urlparse(clean)
+        if not (p.path.startswith("/models") or p.path.startswith("/product")):
+            continue
+        route = "minimax-io" + p.path.strip("/").replace("/", "-")
+        if route in seen:
+            continue
+        seen.add(route)
+        title = " ".join(ptitle.replace('\\"', '"').split()) or p.path.rstrip("/").rsplit("/", 1)[-1]
         if not title:
             continue
         docs.append(

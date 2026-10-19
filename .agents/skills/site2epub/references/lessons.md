@@ -322,3 +322,25 @@ SAN 列表中 **`epub.zenheart.site` 不在**。Fastly 在 CNAME 模式下默认
 5. **接受「会被 refetch 带回」**：手工替换会被下一次 `--refetch` 覆盖（§4 规律）。要么把该页记进「每次 fetch 后重放」清单，要么每轮 fetch 后跑 `scripts/sanitize_corpus_html.py` 复查。**不要**为此改适配器去剥离语料里的示例——示例代码是文档价值的一部分。
 
 **怎么防止复发**：把第 1 步的扫描放进提交前自检清单，和封面标题门禁、`file vendors/<id>/icon.png` 魔数校验并列。
+
+---
+
+## 20. 导航折叠导致的静默掉页：枚举必须有两个面（minimax，2026-10-20）
+
+**症状**：minimax 书 56 → 55 章，`minimax-iomodels-text`（M2.5）与
+`minimax-iomodels-text-m27`（M2.7）两页消失，`fetch` 仍报 `ok:true`。
+
+**根因**：`minimax_nav.parse_minimax_docs` 只扫 `/models` 页的 `<a href>`。
+站点把模型子菜单改写成 Next.js flight payload 里的
+`{\"title\":\"MiniMax M2.7\",\"link\":\"/models/text/m27\"}`，**锚点里不再有这两条**——
+但两页线上仍是 200，payload 里也仍然列着。单一枚举面被折叠 = 静默掉页。
+
+**怎么发现**：拿 `git show HEAD:vendors/<id>/corpus/routes.json` 的路由数当基线逐轮对比
+（§17 同一规律）；再对掉掉的路由做 live 探——`200` 说明是枚举漏了，不是页面没了。
+
+**怎么修**：`MODEL_PAYLOAD_LINK` 正则从 payload 里同时抓 `title`+`link` 对，
+与锚点面**取并集**再生成 route（route 命名规则不变，旧语料文件身份不受影响）。
+
+**怎么防止复发**：枚举源至少要有两个（锚点 + payload / sitemap / 产品家族页），
+并把 before→after 路由数写进日报。改动后必须重算 `fingerprints.json`
+（§19 之外的第三条链：语料字节变了而指纹没变，下一轮会重抓并覆盖手工修补）。
