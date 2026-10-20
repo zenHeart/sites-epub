@@ -489,3 +489,56 @@ save_fingerprints(corpus.parent/"fingerprints.json", fp)
 活跃路由数**；对不上就是有孤儿。注意 `corpus/pages/` 里的孤儿 `.md`（2026-10-20
 共 9 个厂商 120 个，约 2.7 MB）目前无人清理：它们不进打包内容（`pack_vendor`
 按 `routes.json` 出章），但仍参与打包键哈希。
+
+---
+
+## 25. 本机 pack 与 CI pack 会分歧：gemini 本地出「塌陷书」，CI 出正常书（2026-10-21）
+
+**症状**：本地 `pack --id gemini` 报 `ok:true, chapters:500`，但成品只有 1.9MB /
+3 个 xhtml / 1257 个 section / 219 张图；同一天 CI 产出的线上 `gemini.epub` 是
+24.3MB / 10 个 xhtml / 5506 个 section / 883 张图。本地正文只剩 **17%**。
+
+**根因**：不是语料问题，是**本机 pandoc（3.12.1）与 CI pandoc 的 HTML reader 行为差异**。
+gemini 语料是 devsite 系整页 HTML，`book.html` 里大量重复 id（pandoc 打出成百条
+`Duplicate identifier 'whats-next' / 'next-steps' / 'antigravity-cli'` 警告），
+本地 pandoc 3.12.1 对这种嵌套结构会塌成单章并丢掉大部分图；CI 的 pandoc 正常分章。
+**A/B 证据**：把上一笔提交（语料完全相同的前一天）checkout 到独立 worktree 用同一条
+命令打包，产物字节数与 section 数几乎完全一致（1,631,230 text bytes / 1257 sections
+两边相同）——证明与当天语料改动无关。
+
+**怎么发现**：别只看 `pack` 返回的 `ok:true`；要**同时看产物体积与 xhtml 数量**。
+`walk_chapters` 在塌陷书上会报 `chapter_count 0 / fail_count 0 / ok True`——**空跑也绿**，
+所以 `check_epub.py` 在本地 gemini 上是假通过。
+
+**怎么防止复发**：
+1. 本地 pack 预演只对 **cursor / grok / claude** 等可信；**gemini 只能由 CI 判**。
+   2026-10-21 实测：cursor 27.5MB/502 章、grok 47.7MB/338 章、claude 52.1MB/505 章，
+   与线上体积一致；只有 gemini 塌。
+2. 预演结论不要外推到 gemini：CI 才是门禁，gemini 的健康度以 CI 产物为准。
+3. 排查「本地包变小」时，先做 worktree A/B（`git worktree add --detach` 上一笔提交
+   再打包），能立刻区分「语料改坏了」与「工具链分歧」。
+
+---
+
+## 26. srcset 逗号切分 bug 的影响面已量化，修法待择时（2026-10-21）
+
+**状态**：§22 的 WHATWG srcset 解析修法**仍未落地**，`images.py` 仍是
+`for part in srcset.split(",")`。2026-10-21 实测 grok 抓取耗时 **1508s（25 分钟）**，
+`fetched=1, skipped=337`，全程零新图落地。
+
+**影响面（按 image-map 实测统计，逗号 URL 只在两个厂商）**：
+
+| 厂商 | 图片总数 | URL 含逗号 | 形态 | 修 srcset 后的净效果 |
+|---|---|---|---|---|
+| grok | 1974 | 274 | `media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/...` | 去掉伪 URL（每轮约 1350 次无效请求） |
+| minimax | 371 | 144 | `filecdn.minimax.chat/...?x-oss-process=image/format,webp`（逗号在 query） | 保住完整 URL，可能多收几张 webp 变体 |
+| 其余 10 家 | — | 0 | — | 解析结果与现状**完全一致** |
+
+**为什么还没改**：`images.py` 在 `PACKER_FILES` 里，一改就是 **12 本书全量重打**
+（CI 约 25~30 分钟），而且会让从未近期重打的书也进一次打包通道——收益是每天省 20 分钟
+抓取时间，代价是一次全站重建 + 未预期回归风险。属于需要显式择时的运维决策，
+不适合在例行增量抓取里顺手做。
+
+**怎么择时**：建议单独一个「只做这件事」的变更窗口：改 `images.py` → 本地
+`pack --id grok` 与 `pack --id minimax` 验体积（grok 线上 47.4MB、minimax 26.5MB，
+离 98MB 门禁都很远）→ 提交 → 盯 CI 全量重打 → 确认 12 本都绿再收工。
