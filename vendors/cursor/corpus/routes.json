@@ -392,6 +392,14 @@
     "kind": "doc"
   },
   {
+    "group": "Cursor: grok-bot",
+    "title": "inference hooks",
+    "md_url": "https://cursor.com/docs/grok-bot/inference-hooks.md",
+    "html_url": "https://cursor.com/docs/grok-bot/inference-hooks",
+    "route": "docs/grok-bot/inference-hooks",
+    "kind": "doc"
+  },
+  {
     "group": "Cursor: customizing",
     "title": "customize cursor",
     "md_url": "https://cursor.com/docs/customize-cursor.md",
@@ -709,6 +717,14 @@
     "md_url": "https://cursor.com/docs/origin/pull-requests.md",
     "html_url": "https://cursor.com/docs/origin/pull-requests",
     "route": "docs/origin/pull-requests",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
+    "title": "code tours",
+    "md_url": "https://cursor.com/docs/origin/code-tours.md",
+    "html_url": "https://cursor.com/docs/origin/code-tours",
+    "route": "docs/origin/code-tours",
     "kind": "doc"
   },
   {

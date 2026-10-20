@@ -9,10 +9,10 @@ Gemini API Docs and API Reference
 - [Agents overview](https://ai.google.dev/gemini-api/docs/agents.md.txt): Build agents that reason, write code, manage files, and browse the web with the Gemini API.
 - [Google AI Studio quickstart](https://ai.google.dev/gemini-api/docs/ai-studio-quickstart.md.txt): Documentation for Google's Gemini API.
 - [Agents in AI Studio Playground](https://ai.google.dev/gemini-api/docs/aistudio-agents.md.txt): Learn how to use Agents in AI Studio
-- [Build Android Apps in Google AI Studio](https://ai.google.dev/gemini-api/docs/aistudio-android.md.txt): Learn how to build native Android apps with Kotlin and Jetpack Compose in Google AI Studio.
+- [Build Android apps in Google AI Studio](https://ai.google.dev/gemini-api/docs/aistudio-android.md.txt): Learn how to build native Android apps with Kotlin and Jetpack Compose in Google AI Studio.
 - [Build apps in Google AI Studio](https://ai.google.dev/gemini-api/docs/aistudio-build-mode.md.txt): Learn how to build full-stack applications using the vibe coding experience in Google AI Studio.
 - [Deploying from Google AI Studio](https://ai.google.dev/gemini-api/docs/aistudio-deploying.md.txt): Documentation for Google's Gemini API.
-- [Develop Full-Stack Apps in Google AI Studio](https://ai.google.dev/gemini-api/docs/aistudio-fullstack.md.txt): Learn how to develop full-stack applications with server-side logic in Google AI Studio.
+- [Develop full-stack apps in Google AI Studio](https://ai.google.dev/gemini-api/docs/aistudio-fullstack.md.txt): Learn how to develop full-stack applications with server-side logic in Google AI Studio.
 - [Antigravity agent](https://ai.google.dev/gemini-api/docs/antigravity-agent.md.txt): Use the Antigravity managed agent to perform multi-step tasks that require reasoning, file operations, and tool use.
 - [Using Gemini API keys](https://ai.google.dev/gemini-api/docs/api-key.md.txt): Get your Gemini API key and start building in less than 5 minutes using the Interactions API.
 - [API versions explained](https://ai.google.dev/gemini-api/docs/api-versions.md.txt): Documentation for Google's Gemini API.

@@ -201,7 +201,7 @@
   },
   {
     "group": "Getting started",
-    "title": "Automate work with routines",
+    "title": "Automate work with scheduled tasks",
     "md_url": "https://code.claude.com/docs/en/routines.md",
     "html_url": "https://code.claude.com/docs/en/routines",
     "route": "routines",

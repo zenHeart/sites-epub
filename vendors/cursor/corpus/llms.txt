@@ -58,6 +58,7 @@
   - https://cursor.com/docs/grok-bot/computers.md
   - https://cursor.com/docs/grok-bot/security.md
     - https://cursor.com/docs/grok-bot/security-faq.md
+  - https://cursor.com/docs/grok-bot/inference-hooks.md
 
 ## customizing
 
@@ -108,6 +109,7 @@
 - https://cursor.com/docs/origin/git.md
 - https://cursor.com/docs/origin/clonekit-ci.md
 - https://cursor.com/docs/origin/pull-requests.md
+- https://cursor.com/docs/origin/code-tours.md
 - https://cursor.com/docs/origin/browse.md
 - https://cursor.com/docs/origin/agents.md
 - https://cursor.com/docs/origin/apps.md

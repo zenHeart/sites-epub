@@ -2057,6 +2057,14 @@
   },
   {
     "group": "News",
+    "title": "Product \u00b7 Oct 20, 2026 Using Grok Bot to detect and respond to incidents",
+    "md_url": "https://x.ai/news/incident-sweep.md",
+    "html_url": "https://x.ai/news/incident-sweep",
+    "route": "news/incident-sweep",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
     "title": "Product \u00b7 Oct 12, 2026 Introducing The X Subscription",
     "md_url": "https://x.ai/news/x-subscription.md",
     "html_url": "https://x.ai/news/x-subscription",
@@ -2081,7 +2089,7 @@
   },
   {
     "group": "News",
-    "title": "Product \u00b7 Sep 21, 2026 Introducing Grok 4.7",
+    "title": "Introducing Grok 4.7 SpaceXSI's most powerful model for coding and knowledge work. Twice as fast, at half the price of comparable models. Sep 21, 2026",
     "md_url": "https://x.ai/news/grok-4-7.md",
     "html_url": "https://x.ai/news/grok-4-7",
     "route": "news/grok-4-7",
@@ -2489,7 +2497,7 @@
   },
   {
     "group": "News",
-    "title": "Custom Voices Your voice. Your brand. Clone a voice from a short recording and use it across Grok Text to Speech and Voice Agent APIs. Apr 30, 2026",
+    "title": "Custom Voices Your voice. Your brand. Clone a voice from a short recording and use it across Grok Text to Speech and Speech to Speech APIs. Apr 30, 2026",
     "md_url": "https://x.ai/news/grok-custom-voices.md",
     "html_url": "https://x.ai/news/grok-custom-voices",
     "route": "news/grok-custom-voices",
