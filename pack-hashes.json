@@ -5,24 +5,24 @@
     "chapters": 209
   },
   "claude": {
-    "sha256": "52b84067096b87d134f5637da34c9f64d1dc53f6f194f6758374233c55a3b10b",
-    "packed_at": "2026-10-19T19:00:10Z",
+    "sha256": "9339b1b6b9d503136bb81255e2dc9c475e154289864b55f40d99803a0b4e650d",
+    "packed_at": "2026-10-20T22:19:05Z",
     "chapters": 505
   },
   "cursor": {
-    "sha256": "359c2d820102ef42756f98e5b508e92c43cd1ca8c97e4e6e8485e7d8b0adecaf",
-    "packed_at": "2026-10-19T21:53:16Z",
-    "chapters": 500
+    "sha256": "8ac12e1d8ffa399438416bd4b74169ec0459642f010ef470edc2625c7916f315",
+    "packed_at": "2026-10-20T22:21:37Z",
+    "chapters": 502
   },
   "grok": {
-    "sha256": "c68779e1da9ffe79f3186f517e351f5f8096bbdbd635d3535226fd36177a5cea",
-    "packed_at": "2026-10-19T19:02:59Z",
-    "chapters": 337
+    "sha256": "07fc388a06c2191118828d8eea1e948b3b987e3dbd0e790b760158c864dd86f8",
+    "packed_at": "2026-10-20T22:22:55Z",
+    "chapters": 338
   },
   "gemini": {
-    "sha256": "ebaf388ae931544fcb54e6a980cf84f6323b16929a7510b93fcdb2d90174adce",
-    "packed_at": "2026-10-19T19:04:01Z",
-    "chapters": 499
+    "sha256": "00682713bbc3cf284baa5f6040f862a68f7bbb56045e42f784daebb48355c9e7",
+    "packed_at": "2026-10-20T22:24:20Z",
+    "chapters": 500
   },
   "manus": {
     "sha256": "7a9410a1763c0aad9c2b738d42f10ca8970189659c1378f3d807c0b99cfb8048",
@@ -70,8 +70,8 @@
     "chapters": 87
   },
   "zencoder": {
-    "sha256": "eba91d104d288cdbab72b4da24750116100154642e29e81f131cc19e03125162",
-    "packed_at": "2026-10-19T19:09:54Z",
+    "sha256": "7d56c76a8588f90ac1b8e0604ef924b4ef10a892debb6ad27ecdb7d7cbda1544",
+    "packed_at": "2026-10-20T22:26:16Z",
     "chapters": 544
   }
 }
