@@ -129,6 +129,102 @@
   },
   {
     "group": "Academy \u6559\u7a0b",
+    "title": "mini game studio",
+    "md_url": "https://www.kimi.com/academy/mini-game-studio",
+    "html_url": "https://www.kimi.com/academy/mini-game-studio",
+    "route": "academy/mini-game-studio",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "discord community ops agent",
+    "md_url": "https://www.kimi.com/academy/discord-community-ops-agent",
+    "html_url": "https://www.kimi.com/academy/discord-community-ops-agent",
+    "route": "academy/discord-community-ops-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "game advisor agent",
+    "md_url": "https://www.kimi.com/academy/game-advisor-agent",
+    "html_url": "https://www.kimi.com/academy/game-advisor-agent",
+    "route": "academy/game-advisor-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "sre incident agent",
+    "md_url": "https://www.kimi.com/academy/sre-incident-agent",
+    "html_url": "https://www.kimi.com/academy/sre-incident-agent",
+    "route": "academy/sre-incident-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "fund reconciliation agent",
+    "md_url": "https://www.kimi.com/academy/fund-reconciliation-agent",
+    "html_url": "https://www.kimi.com/academy/fund-reconciliation-agent",
+    "route": "academy/fund-reconciliation-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "regulatory daily report agent",
+    "md_url": "https://www.kimi.com/academy/regulatory-daily-report-agent",
+    "html_url": "https://www.kimi.com/academy/regulatory-daily-report-agent",
+    "route": "academy/regulatory-daily-report-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "domestic investment banking legal advice agent",
+    "md_url": "https://www.kimi.com/academy/domestic-investment-banking-legal-advice-agent",
+    "html_url": "https://www.kimi.com/academy/domestic-investment-banking-legal-advice-agent",
+    "route": "academy/domestic-investment-banking-legal-advice-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "financial portfolio review agent",
+    "md_url": "https://www.kimi.com/academy/financial-portfolio-review-agent",
+    "html_url": "https://www.kimi.com/academy/financial-portfolio-review-agent",
+    "route": "academy/financial-portfolio-review-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "hk ipo scan agent",
+    "md_url": "https://www.kimi.com/academy/hk-ipo-scan-agent",
+    "html_url": "https://www.kimi.com/academy/hk-ipo-scan-agent",
+    "route": "academy/hk-ipo-scan-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "financial morning report agent",
+    "md_url": "https://www.kimi.com/academy/financial-morning-report-agent",
+    "html_url": "https://www.kimi.com/academy/financial-morning-report-agent",
+    "route": "academy/financial-morning-report-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "financial deep research agent",
+    "md_url": "https://www.kimi.com/academy/financial-deep-research-agent",
+    "html_url": "https://www.kimi.com/academy/financial-deep-research-agent",
+    "route": "academy/financial-deep-research-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "financial modeling agent",
+    "md_url": "https://www.kimi.com/academy/financial-modeling-agent",
+    "html_url": "https://www.kimi.com/academy/financial-modeling-agent",
+    "route": "academy/financial-modeling-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
     "title": "best practices for context caching",
     "md_url": "https://www.kimi.com/academy/best-practices-for-context-caching",
     "html_url": "https://www.kimi.com/academy/best-practices-for-context-caching",

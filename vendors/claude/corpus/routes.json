@@ -1825,10 +1825,26 @@
   },
   {
     "group": "Blog",
-    "title": "dashboards and motion",
-    "md_url": "https://claude.com/resources/articles/dashboards-and-motion.md",
-    "html_url": "https://claude.com/resources/articles/dashboards-and-motion",
-    "route": "blog/dashboards-and-motion",
+    "title": "claude duet",
+    "md_url": "https://claude.com/resources/articles/claude-duet.md",
+    "html_url": "https://claude.com/resources/articles/claude-duet",
+    "route": "blog/claude-duet",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "hcltech joins claude partner network",
+    "md_url": "https://claude.com/resources/articles/hcltech-joins-claude-partner-network.md",
+    "html_url": "https://claude.com/resources/articles/hcltech-joins-claude-partner-network",
+    "route": "blog/hcltech-joins-claude-partner-network",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude security now scans continuously and tracks fixes",
+    "md_url": "https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes.md",
+    "html_url": "https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes",
+    "route": "blog/claude-security-now-scans-continuously-and-tracks-fixes",
     "kind": "blog"
   },
   {
@@ -1885,14 +1901,6 @@
     "md_url": "https://claude.com/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests.md",
     "html_url": "https://claude.com/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests",
     "route": "blog/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "automating eval design and hillclimbing",
-    "md_url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing",
-    "html_url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing",
-    "route": "blog/automating-eval-design-and-hillclimbing",
     "kind": "blog"
   },
   {
@@ -2821,6 +2829,14 @@
     "md_url": "https://claude.com/resources/articles/create-files.md",
     "html_url": "https://claude.com/resources/articles/create-files",
     "route": "blog/create-files",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "dashboards and motion",
+    "md_url": "https://claude.com/resources/articles/dashboards-and-motion.md",
+    "html_url": "https://claude.com/resources/articles/dashboards-and-motion",
+    "route": "blog/dashboards-and-motion",
     "kind": "blog"
   },
   {
@@ -3957,6 +3973,14 @@
     "md_url": "https://claude.dev/blog/building-with-claude-sonnet-5-5",
     "html_url": "https://claude.dev/blog/building-with-claude-sonnet-5-5",
     "route": "blog/building-with-claude-sonnet-5-5",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "automating eval design and hillclimbing",
+    "md_url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing",
+    "html_url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing",
+    "route": "blog/automating-eval-design-and-hillclimbing",
     "kind": "blog"
   },
   {

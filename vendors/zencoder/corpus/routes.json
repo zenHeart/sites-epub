@@ -1113,6 +1113,14 @@
   },
   {
     "group": "Blog",
+    "title": "agentic ai examples",
+    "md_url": "https://zencoder.ai/blog/agentic-ai-examples",
+    "html_url": "https://zencoder.ai/blog/agentic-ai-examples",
+    "route": "blog/agentic-ai-examples",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "vibe vs traditional coding",
     "md_url": "https://zencoder.ai/blog/vibe-vs-traditional-coding",
     "html_url": "https://zencoder.ai/blog/vibe-vs-traditional-coding",
@@ -1157,14 +1165,6 @@
     "md_url": "https://zencoder.ai/blog/python-file-directory-code-snippets",
     "html_url": "https://zencoder.ai/blog/python-file-directory-code-snippets",
     "route": "blog/python-file-directory-code-snippets",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "automated test case creation",
-    "md_url": "https://zencoder.ai/blog/automated-test-case-creation",
-    "html_url": "https://zencoder.ai/blog/automated-test-case-creation",
-    "route": "blog/automated-test-case-creation",
     "kind": "blog"
   },
   {
@@ -1817,14 +1817,6 @@
   },
   {
     "group": "Blog",
-    "title": "ai workflows examples",
-    "md_url": "https://zencoder.ai/blog/ai-workflows-examples",
-    "html_url": "https://zencoder.ai/blog/ai-workflows-examples",
-    "route": "blog/ai-workflows-examples",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "unit test generation key features",
     "md_url": "https://zencoder.ai/blog/unit-test-generation-key-features",
     "html_url": "https://zencoder.ai/blog/unit-test-generation-key-features",
@@ -1845,14 +1837,6 @@
     "md_url": "https://zencoder.ai/blog/ai-code-review-tools",
     "html_url": "https://zencoder.ai/blog/ai-code-review-tools",
     "route": "blog/ai-code-review-tools",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "ai agent vs mcp",
-    "md_url": "https://zencoder.ai/blog/ai-agent-vs-mcp",
-    "html_url": "https://zencoder.ai/blog/ai-agent-vs-mcp",
-    "route": "blog/ai-agent-vs-mcp",
     "kind": "blog"
   },
   {
@@ -2009,6 +1993,14 @@
   },
   {
     "group": "Blog",
+    "title": "autonomous ai agents examples",
+    "md_url": "https://zencoder.ai/blog/autonomous-ai-agents-examples",
+    "html_url": "https://zencoder.ai/blog/autonomous-ai-agents-examples",
+    "route": "blog/autonomous-ai-agents-examples",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "ai code generation for debugging how developers can reduce time spent on fixes",
     "md_url": "https://zencoder.ai/blog/ai-code-generation-for-debugging-how-developers-can-reduce-time-spent-on-fixes",
     "html_url": "https://zencoder.ai/blog/ai-code-generation-for-debugging-how-developers-can-reduce-time-spent-on-fixes",
@@ -2157,14 +2149,6 @@
     "md_url": "https://zencoder.ai/blog/managing-technical-debt",
     "html_url": "https://zencoder.ai/blog/managing-technical-debt",
     "route": "blog/managing-technical-debt",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "agentic ai examples",
-    "md_url": "https://zencoder.ai/blog/agentic-ai-examples",
-    "html_url": "https://zencoder.ai/blog/agentic-ai-examples",
-    "route": "blog/agentic-ai-examples",
     "kind": "blog"
   },
   {
@@ -3569,6 +3553,14 @@
   },
   {
     "group": "Blog",
+    "title": "ai workflows examples",
+    "md_url": "https://zencoder.ai/blog/ai-workflows-examples",
+    "html_url": "https://zencoder.ai/blog/ai-workflows-examples",
+    "route": "blog/ai-workflows-examples",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "qodo alternatives",
     "md_url": "https://zencoder.ai/blog/qodo-alternatives",
     "html_url": "https://zencoder.ai/blog/qodo-alternatives",
@@ -3657,6 +3649,14 @@
   },
   {
     "group": "Blog",
+    "title": "automated test case creation",
+    "md_url": "https://zencoder.ai/blog/automated-test-case-creation",
+    "html_url": "https://zencoder.ai/blog/automated-test-case-creation",
+    "route": "blog/automated-test-case-creation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "ai driven code quality assurance",
     "md_url": "https://zencoder.ai/blog/ai-driven-code-quality-assurance",
     "html_url": "https://zencoder.ai/blog/ai-driven-code-quality-assurance",
@@ -3677,14 +3677,6 @@
     "md_url": "https://zencoder.ai/blog/best-ai-coding-agents",
     "html_url": "https://zencoder.ai/blog/best-ai-coding-agents",
     "route": "blog/best-ai-coding-agents",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "autonomous ai agents examples",
-    "md_url": "https://zencoder.ai/blog/autonomous-ai-agents-examples",
-    "html_url": "https://zencoder.ai/blog/autonomous-ai-agents-examples",
-    "route": "blog/autonomous-ai-agents-examples",
     "kind": "blog"
   },
   {
@@ -4053,6 +4045,14 @@
     "md_url": "https://zencoder.ai/blog/coding-best-practices",
     "html_url": "https://zencoder.ai/blog/coding-best-practices",
     "route": "blog/coding-best-practices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai agent vs mcp",
+    "md_url": "https://zencoder.ai/blog/ai-agent-vs-mcp",
+    "html_url": "https://zencoder.ai/blog/ai-agent-vs-mcp",
+    "route": "blog/ai-agent-vs-mcp",
     "kind": "blog"
   },
   {
