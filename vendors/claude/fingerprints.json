@@ -81,6 +81,7 @@
   "blog/build-plugins-for-claude": "cacd784e1b92d17a26fc372855a83b72a5ccb580d1570b5c127e4d64bddc8247",
   "blog/build-responsive-web-layouts": "151c1983ce1ca385930a7eeb4033caf4d8693396f2c4c5d1f3680fd4d15db416",
   "blog/building-agents-that-reach-production-systems-with-mcp": "01f2568fd9c770766578e7b1057962af5ce242489a9e5a23be5cac36edf8e861",
+  "blog/building-agents-when-to-fold-subagents-into-your-main-agent-loop": "7d3245692d65d7ecbd3e78c9cd86dff977c0730f0072201c531aa6894c56b004",
   "blog/building-agents-with-skills-equipping-agents-for-specialized-work": "8997ae4400d6aacbd32a7dfde4fe51eceb3b6033d38ffebc3c850e21ea477893",
   "blog/building-agents-with-the-claude-agent-sdk": "13eac8b0130f12d53d10ada00f6407fe65aa037ba537efe39a2fcf311fb61b7d",
   "blog/building-ai-agents-for-startups": "1cb5258fe00c1d1589781d5ce9fa94052061d185a8c00a2b75910595a25852b8",

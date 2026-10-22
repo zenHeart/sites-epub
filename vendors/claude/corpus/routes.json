@@ -1833,6 +1833,14 @@
   },
   {
     "group": "Blog",
+    "title": "building agents when to fold subagents into your main agent loop",
+    "md_url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+    "html_url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
+    "route": "blog/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "hcltech joins claude partner network",
     "md_url": "https://claude.com/resources/articles/hcltech-joins-claude-partner-network.md",
     "html_url": "https://claude.com/resources/articles/hcltech-joins-claude-partner-network",
@@ -1893,14 +1901,6 @@
     "md_url": "https://claude.dev/blog/building-effective-agent-automations",
     "html_url": "https://claude.dev/blog/building-effective-agent-automations",
     "route": "blog/building-effective-agent-automations",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "how block orchestrates claude fable across thousands of pull requests",
-    "md_url": "https://claude.com/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests.md",
-    "html_url": "https://claude.com/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests",
-    "route": "blog/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests",
     "kind": "blog"
   },
   {
@@ -3101,6 +3101,14 @@
     "md_url": "https://claude.com/resources/articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents.md",
     "html_url": "https://claude.com/resources/articles/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents",
     "route": "blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how block orchestrates claude fable across thousands of pull requests",
+    "md_url": "https://claude.com/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests.md",
+    "html_url": "https://claude.com/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests",
+    "route": "blog/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests",
     "kind": "blog"
   },
   {

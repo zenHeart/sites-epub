@@ -1,6 +1,7 @@
 {
   "blog/forge-scalable-agent-rl-en-1779896141": "e74effa0a2a81a6aa398e2fdf1ad4028b750787c216d14126939f521fd41e91c",
   "blog/minimax-agent-team-long-running-1779893953": "6b7a28c2ba9d4ecf804be8e39f9537a906f5a083a370ad4bd07db9fa25eb2a7a",
+  "blog/minimax-code-mini-app-1792650729": "df03200622c328d6fe6e36d3bcf6e4b9f3a1c5103ae3365d33d844eb88e43032",
   "blog/minimax-h3": "163d49ace821e89b840d3a6e7b794648840d203e6f4da1bb41e979f43cc33529",
   "blog/minimax-m2-en-1748600000": "13e08f7c394f3290b99258de33ecba5a4d9d37d81539ee68dfeb7c5be49d9643",
   "blog/minimax-m2-her": "aa615f471e1dfa7c3dff12baebf9aad8a10ba7dcf2605c8bfc36f1cc69793f20",
@@ -53,7 +54,7 @@
   "mm-design-tools-ai-video-generator": "16638bcd49641f7050871791cef245d0551cd5da3712e4d9fcacd099baddee4a",
   "mm-design-tools-image-to-video": "1201af811e54083c031d8b8d4ea96beb07e51a34f3746bd7251ffba9e0131724",
   "mm-design-vi": "12e1e0054406cbae40019f19c1d72bb904b0339349c48cdb3096d283ae59954b",
-  "mm-design-zh-cn": "d85a280225ce76cd15add1f47abe91624062b0bf0c4674a2bfbba3d487e6408c",
-  "mm-design-zh-tw": "0e63ac7bfc4f11ba2f5332afb799eea0f3140cc5b8e513f3bfbad7c0811ebb18",
+  "mm-design-zh-hans": "cf0860b315a65b1e83779acf7f2ed6d9d7b75f14b602998748d2216b004bce11",
+  "mm-design-zh-hant": "263ccadd881c795e0eab10704ddc8e020ea6642590ee69400e95d9226457069a",
   "news/minimax-speech-28": "71fa75866f47150bd08ef7d16dd24cbbc1a18100e19b36a095eb8d81b7d083be"
 }

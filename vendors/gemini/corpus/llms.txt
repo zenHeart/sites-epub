@@ -168,7 +168,7 @@ Gemini API Docs and API Reference
 - [URL context](https://ai.google.dev/gemini-api/docs/url-context.md.txt): Ground your model&#39;s responses in real-time information by providing URLs as context for more accurate and citation-backed answers.
 - [Abuse monitoring](https://ai.google.dev/gemini-api/docs/usage-policies.md.txt): Documentation for Google's Gemini API.
 - [Market research agent with Gemini and the AI SDK by Vercel](https://ai.google.dev/gemini-api/docs/vercel-ai-sdk-example.md.txt): Building apps with Gemini and the AI SDK by Vercel
-- [Video generation in the Gemini API](https://ai.google.dev/gemini-api/docs/video.md.txt): Choose the right video generation model for your use case — Gemini Omni Flash for fast conversational editing, or Veo 3.1 for high-fidelity cinematic videos.
+- [Video generation in the Gemini API](https://ai.google.dev/gemini-api/docs/video.md.txt): Generate and edit videos in the Gemini API using Gemini Omni Flash.
 - [Video understanding](https://ai.google.dev/gemini-api/docs/video-understanding.md.txt): Get started building with Gemini&#39;s multimodal capabilities in the Gemini API
 - [Webhooks](https://ai.google.dev/gemini-api/docs/webhooks.md.txt): Learn how to use webhooks in the Gemini API.
 - [What&#39;s new in Gemini 3.5 Flash](https://ai.google.dev/gemini-api/docs/whats-new-gemini-3.5.md.txt): Learn about the new features and migration guidance for Gemini 3.5 Flash.
@@ -228,3 +228,5 @@ Gemini API Docs and API Reference
 - [Long decode](https://ai.google.dev/gemini-api/docs/long-decode.md.txt): Use long decode with Gemini 4 Argon on the Interactions API to generate past 64K tokens up to the 1M-token context window with background execution.
 - [Gemini 4 Argon](https://ai.google.dev/gemini-api/docs/models/gemini-4-argon.md.txt): Explore Gemini 4 Argon (gemini-4-argon), Google&#39;s latest Gemini 4 model for coding, reasoning, and agents, featuring a 1M context window and long decode.
 - [Safety settings](https://ai.google.dev/gemini-api/docs/generate-content/safety-settings.md.txt): Documentation for Google's legacy Gemini Generate Content API.
+- [Gemini 3.6 Flash](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash.md.txt): Learn about Gemini 3.6 Flash from Google
+- [Gemini 3.5 Flash-Lite](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite.md.txt): Learn about Gemini 3.5 Flash-Lite from Google

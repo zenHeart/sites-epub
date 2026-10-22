@@ -33,18 +33,26 @@
   },
   {
     "group": "MiniMax Design",
+    "title": "Tools",
+    "md_url": "https://design.minimax.io/tools",
+    "html_url": "https://design.minimax.io/tools",
+    "route": "mm-design-tools",
+    "kind": "doc"
+  },
+  {
+    "group": "MiniMax Design",
     "title": "\u7b80\u4f53\u4e2d\u6587",
-    "md_url": "https://design.minimax.io/zh-cn",
-    "html_url": "https://design.minimax.io/zh-cn",
-    "route": "mm-design-zh-cn",
+    "md_url": "https://design.minimax.io/zh-hans",
+    "html_url": "https://design.minimax.io/zh-hans",
+    "route": "mm-design-zh-hans",
     "kind": "doc"
   },
   {
     "group": "MiniMax Design",
     "title": "\u7e41\u9ad4\u4e2d\u6587",
-    "md_url": "https://design.minimax.io/zh-tw",
-    "html_url": "https://design.minimax.io/zh-tw",
-    "route": "mm-design-zh-tw",
+    "md_url": "https://design.minimax.io/zh-hant",
+    "html_url": "https://design.minimax.io/zh-hant",
+    "route": "mm-design-zh-hant",
     "kind": "doc"
   },
   {
@@ -133,14 +141,6 @@
     "md_url": "https://design.minimax.io/it",
     "html_url": "https://design.minimax.io/it",
     "route": "mm-design-it",
-    "kind": "doc"
-  },
-  {
-    "group": "MiniMax Design",
-    "title": "Tools",
-    "md_url": "https://design.minimax.io/tools",
-    "html_url": "https://design.minimax.io/tools",
-    "route": "mm-design-tools",
     "kind": "doc"
   },
   {
@@ -365,6 +365,14 @@
     "md_url": "https://www.minimax.io/news/minimax-speech-28",
     "html_url": "https://www.minimax.io/news/minimax-speech-28",
     "route": "news/minimax-speech-28",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "minimax code mini app 1792650729",
+    "md_url": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",
+    "html_url": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",
+    "route": "blog/minimax-code-mini-app-1792650729",
     "kind": "blog"
   },
   {

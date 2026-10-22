@@ -2225,14 +2225,6 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "What's new for Gemini Spark",
-    "md_url": "https://support.google.com/gemini/answer/17171264",
-    "html_url": "https://support.google.com/gemini/answer/17171264",
-    "route": "gemini-app/17171264",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini App Help",
     "title": "Assign tasks in the Gemini app on Mac",
     "md_url": "https://support.google.com/gemini/answer/17208717",
     "html_url": "https://support.google.com/gemini/answer/17208717",

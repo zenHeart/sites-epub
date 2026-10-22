@@ -1569,6 +1569,14 @@
   },
   {
     "group": "Grok Bot Guides",
+    "title": "grok bot for clay",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-clay.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-clay",
+    "route": "bot/guides/grok-bot-for-clay",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
     "title": "grok bot for engineering",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-engineering.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-engineering",
@@ -1921,6 +1929,14 @@
   },
   {
     "group": "Bot Guides",
+    "title": "Sales Grok Bot for Clay How the Clay plugin for Grok Bot turns a sentence into a GTM workflow: a speed-to-lead test, common use cases, and setup.",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-clay.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-clay",
+    "route": "bot-guides/grok-bot-for-clay",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
     "title": "Sales Grok Bot for Founder-Led Sales How to sell as a founder with Grok Bot: ICP research, design-partner outreach, call prep, a first-customer playbook, and a pipeline forecast.",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-founder-led-sales.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-founder-led-sales",
@@ -1945,7 +1961,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Recruiting Grok Bot for Recruiting How our recruiting team uses Grok Bot for interview prep, scorecards, sourcing, and loop analysis across the ATS.",
+    "title": "Grok Bot for Recruiting How our recruiting team uses Grok Bot for interview prep, scorecards, sourcing, and loop analysis across the ATS. Recruiting",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-recruiting.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-recruiting",
     "route": "bot-guides/grok-bot-for-recruiting",
@@ -2057,6 +2073,14 @@
   },
   {
     "group": "News",
+    "title": "Company \u00b7 Oct 22, 2026 Introducing the SpaceX Super Intelligence Partner Network",
+    "md_url": "https://x.ai/news/partnernetworkannouncement.md",
+    "html_url": "https://x.ai/news/partnernetworkannouncement",
+    "route": "news/partnernetworkannouncement",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
     "title": "Product \u00b7 Oct 20, 2026 Using Grok Bot to detect and respond to incidents",
     "md_url": "https://x.ai/news/incident-sweep.md",
     "html_url": "https://x.ai/news/incident-sweep",
@@ -2081,7 +2105,7 @@
   },
   {
     "group": "News",
-    "title": "Product \u00b7 Sep 22, 2026 How SpaceXSI is using Grok Bot to scale customer support",
+    "title": "How SpaceXSI is using Grok Bot to scale customer support We rebuilt the combined SpaceXSI and Cursor support operation around Grok Bot, expanding to a much broader product portfolio without adding headcount. Sep 22, 2026",
     "md_url": "https://x.ai/news/grok-bot-customer-support.md",
     "html_url": "https://x.ai/news/grok-bot-customer-support",
     "route": "news/grok-bot-customer-support",

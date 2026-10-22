@@ -2489,6 +2489,14 @@
   },
   {
     "group": "Cursor: Help Center",
+    "title": "pages",
+    "md_url": "https://cursor.com/help/grok-bot/pages.md",
+    "html_url": "https://cursor.com/help/grok-bot/pages",
+    "route": "help/grok-bot/pages",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
     "title": "plans",
     "md_url": "https://cursor.com/help/grok-bot/plans.md",
     "html_url": "https://cursor.com/help/grok-bot/plans",
@@ -2541,6 +2549,14 @@
     "md_url": "https://cursor.com/help/grok-bot/voice-chat.md",
     "html_url": "https://cursor.com/help/grok-bot/voice-chat",
     "route": "help/grok-bot/voice-chat",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "x chat",
+    "md_url": "https://cursor.com/help/grok-bot/x-chat.md",
+    "html_url": "https://cursor.com/help/grok-bot/x-chat",
+    "route": "help/grok-bot/x-chat",
     "kind": "doc"
   },
   {
