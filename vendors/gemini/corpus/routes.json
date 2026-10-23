@@ -289,6 +289,14 @@
   },
   {
     "group": "Antigravity",
+    "title": "Grill me command (/grill-me)",
+    "md_url": "https://antigravity.google/docs/commands/grill-me.md",
+    "html_url": "https://antigravity.google/docs/commands/grill-me",
+    "route": "antigravity/commands/grill-me",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Learn command (/learn)",
     "md_url": "https://antigravity.google/docs/commands/learn.md",
     "html_url": "https://antigravity.google/docs/commands/learn",
@@ -2049,14 +2057,6 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Generative AI Prohibited Use Policy",
-    "md_url": "https://support.google.com/gemini/answer/16625148",
-    "html_url": "https://support.google.com/gemini/answer/16625148",
-    "route": "gemini-app/16625148",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini App Help",
     "title": "Use Gemini Live on Android XR",
     "md_url": "https://support.google.com/gemini/answer/16665938",
     "html_url": "https://support.google.com/gemini/answer/16665938",
@@ -2317,6 +2317,14 @@
     "md_url": "https://support.google.com/gemini/answer/18560919",
     "html_url": "https://support.google.com/gemini/answer/18560919",
     "route": "gemini-app/18560919",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "View & manage your Memory summary in Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/18617127",
+    "html_url": "https://support.google.com/gemini/answer/18617127",
+    "route": "gemini-app/18617127",
     "kind": "doc"
   },
   {
@@ -3989,6 +3997,14 @@
     "md_url": "https://blog.google/products-and-platforms/products/gemini/stylist-outfit-tips-gemini/",
     "html_url": "https://blog.google/products-and-platforms/products/gemini/stylist-outfit-tips-gemini/",
     "route": "blog/products-and-platforms/products/gemini/stylist-outfit-tips-gemini",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 4 argon builders",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-4-argon-builders/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-4-argon-builders/",
+    "route": "blog/products-and-platforms/products/gemini/gemini-4-argon-builders",
     "kind": "blog"
   }
 ]

@@ -1297,14 +1297,6 @@
   },
   {
     "group": "Blog",
-    "title": "enterprise security how ai protects your codebase",
-    "md_url": "https://zencoder.ai/blog/enterprise-security-how-ai-protects-your-codebase",
-    "html_url": "https://zencoder.ai/blog/enterprise-security-how-ai-protects-your-codebase",
-    "route": "blog/enterprise-security-how-ai-protects-your-codebase",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "best autonomous coding solutions",
     "md_url": "https://zencoder.ai/blog/best-autonomous-coding-solutions",
     "html_url": "https://zencoder.ai/blog/best-autonomous-coding-solutions",
@@ -1961,6 +1953,14 @@
   },
   {
     "group": "Blog",
+    "title": "enterprise security how ai protects your codebase",
+    "md_url": "https://zencoder.ai/blog/enterprise-security-how-ai-protects-your-codebase",
+    "html_url": "https://zencoder.ai/blog/enterprise-security-how-ai-protects-your-codebase",
+    "route": "blog/enterprise-security-how-ai-protects-your-codebase",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "python secure password generator",
     "md_url": "https://zencoder.ai/blog/python-secure-password-generator",
     "html_url": "https://zencoder.ai/blog/python-secure-password-generator",
@@ -1997,14 +1997,6 @@
     "md_url": "https://zencoder.ai/blog/augment-code-vs-cursor",
     "html_url": "https://zencoder.ai/blog/augment-code-vs-cursor",
     "route": "blog/augment-code-vs-cursor",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "how to build an ai agent",
-    "md_url": "https://zencoder.ai/blog/how-to-build-an-ai-agent",
-    "html_url": "https://zencoder.ai/blog/how-to-build-an-ai-agent",
-    "route": "blog/how-to-build-an-ai-agent",
     "kind": "blog"
   },
   {
@@ -2097,6 +2089,14 @@
   },
   {
     "group": "Blog",
+    "title": "ai automation business opportunities",
+    "md_url": "https://zencoder.ai/blog/ai-automation-business-opportunities",
+    "html_url": "https://zencoder.ai/blog/ai-automation-business-opportunities",
+    "route": "blog/ai-automation-business-opportunities",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "remote agents",
     "md_url": "https://zencoder.ai/blog/remote-agents",
     "html_url": "https://zencoder.ai/blog/remote-agents",
@@ -2177,6 +2177,14 @@
   },
   {
     "group": "Blog",
+    "title": "the reality of self hosting llms performance cost and control with glm 4.5 fp8 white paper",
+    "md_url": "https://zencoder.ai/blog/the-reality-of-self-hosting-llms-performance-cost-and-control-with-glm-4.5-fp8-white-paper",
+    "html_url": "https://zencoder.ai/blog/the-reality-of-self-hosting-llms-performance-cost-and-control-with-glm-4.5-fp8-white-paper",
+    "route": "blog/the-reality-of-self-hosting-llms-performance-cost-and-control-with-glm-4.5-fp8-white-paper",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "agentic ai vs ai agents",
     "md_url": "https://zencoder.ai/blog/agentic-ai-vs-ai-agents",
     "html_url": "https://zencoder.ai/blog/agentic-ai-vs-ai-agents",
@@ -2205,14 +2213,6 @@
     "md_url": "https://zencoder.ai/blog/how-to-use-zencoder-to-solve-tasks-in-clickup",
     "html_url": "https://zencoder.ai/blog/how-to-use-zencoder-to-solve-tasks-in-clickup",
     "route": "blog/how-to-use-zencoder-to-solve-tasks-in-clickup",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "agentic ai examples",
-    "md_url": "https://zencoder.ai/blog/agentic-ai-examples",
-    "html_url": "https://zencoder.ai/blog/agentic-ai-examples",
-    "route": "blog/agentic-ai-examples",
     "kind": "blog"
   },
   {
@@ -2633,14 +2633,6 @@
   },
   {
     "group": "Blog",
-    "title": "the reality of self hosting llms performance cost and control with glm 4.5 fp8 white paper",
-    "md_url": "https://zencoder.ai/blog/the-reality-of-self-hosting-llms-performance-cost-and-control-with-glm-4.5-fp8-white-paper",
-    "html_url": "https://zencoder.ai/blog/the-reality-of-self-hosting-llms-performance-cost-and-control-with-glm-4.5-fp8-white-paper",
-    "route": "blog/the-reality-of-self-hosting-llms-performance-cost-and-control-with-glm-4.5-fp8-white-paper",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "ai driven code quality assurance",
     "md_url": "https://zencoder.ai/blog/ai-driven-code-quality-assurance",
     "html_url": "https://zencoder.ai/blog/ai-driven-code-quality-assurance",
@@ -2901,6 +2893,14 @@
     "md_url": "https://zencoder.ai/blog/5-tips-on-how-to-use-ai-in-coding-in-2025",
     "html_url": "https://zencoder.ai/blog/5-tips-on-how-to-use-ai-in-coding-in-2025",
     "route": "blog/5-tips-on-how-to-use-ai-in-coding-in-2025",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to build an ai agent",
+    "md_url": "https://zencoder.ai/blog/how-to-build-an-ai-agent",
+    "html_url": "https://zencoder.ai/blog/how-to-build-an-ai-agent",
+    "route": "blog/how-to-build-an-ai-agent",
     "kind": "blog"
   },
   {
@@ -3913,6 +3913,14 @@
   },
   {
     "group": "Blog",
+    "title": "agentic ai examples",
+    "md_url": "https://zencoder.ai/blog/agentic-ai-examples",
+    "html_url": "https://zencoder.ai/blog/agentic-ai-examples",
+    "route": "blog/agentic-ai-examples",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "best ai tools for r",
     "md_url": "https://zencoder.ai/blog/best-ai-tools-for-r",
     "html_url": "https://zencoder.ai/blog/best-ai-tools-for-r",
@@ -4125,14 +4133,6 @@
     "md_url": "https://zencoder.ai/blog/how-to-get-better-at-programming",
     "html_url": "https://zencoder.ai/blog/how-to-get-better-at-programming",
     "route": "blog/how-to-get-better-at-programming",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "ai automation business opportunities",
-    "md_url": "https://zencoder.ai/blog/ai-automation-business-opportunities",
-    "html_url": "https://zencoder.ai/blog/ai-automation-business-opportunities",
-    "route": "blog/ai-automation-business-opportunities",
     "kind": "blog"
   },
   {

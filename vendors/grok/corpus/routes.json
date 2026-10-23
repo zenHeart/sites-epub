@@ -1169,6 +1169,14 @@
   },
   {
     "group": "Grok Bot",
+    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Inference hooks",
+    "md_url": "https://docs.x.ai/grok-bot/inference-hooks.md",
+    "html_url": "https://docs.x.ai/grok-bot/inference-hooks",
+    "route": "grok-bot/inference-hooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
     "title": "Manage and protect \u2014 Teams and enterprises \u2014 Grok Bot security",
     "md_url": "https://docs.x.ai/grok-bot/security.md",
     "html_url": "https://docs.x.ai/grok-bot/security",
@@ -1525,6 +1533,230 @@
     "md_url": "https://docs.x.ai/x-subscription/faq.md",
     "html_url": "https://docs.x.ai/x-subscription/faq",
     "route": "x-subscription/faq",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Article to Read-Along",
+    "md_url": "https://docs.x.ai/cookbook/examples/article-to-read-along.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/article-to-read-along",
+    "route": "cookbook/examples/article-to-read-along",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Live Interpreter",
+    "md_url": "https://docs.x.ai/cookbook/examples/live-interpreter.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/live-interpreter",
+    "route": "cookbook/examples/live-interpreter",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Photo to Talking Character",
+    "md_url": "https://docs.x.ai/cookbook/examples/photo-to-talking-character.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/photo-to-talking-character",
+    "route": "cookbook/examples/photo-to-talking-character",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Podcast from a Link",
+    "md_url": "https://docs.x.ai/cookbook/examples/podcast-from-a-link.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/podcast-from-a-link",
+    "route": "cookbook/examples/podcast-from-a-link",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Screenshot to React Component",
+    "md_url": "https://docs.x.ai/cookbook/examples/screenshot-to-component.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/screenshot-to-component",
+    "route": "cookbook/examples/screenshot-to-component",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Company to Call Brief",
+    "md_url": "https://docs.x.ai/cookbook/examples/company-to-call-brief.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/company-to-call-brief",
+    "route": "cookbook/examples/company-to-call-brief",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "CSV to Answers",
+    "md_url": "https://docs.x.ai/cookbook/examples/csv-to-answers.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/csv-to-answers",
+    "route": "cookbook/examples/csv-to-answers",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Database over MCP",
+    "md_url": "https://docs.x.ai/cookbook/examples/database-over-mcp.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/database-over-mcp",
+    "route": "cookbook/examples/database-over-mcp",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Docs to Cited Answers",
+    "md_url": "https://docs.x.ai/cookbook/examples/docs-to-cited-answers.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/docs-to-cited-answers",
+    "route": "cookbook/examples/docs-to-cited-answers",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Mobile Voice Apps",
+    "md_url": "https://docs.x.ai/cookbook/examples/voice-agent-mobile.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/voice-agent-mobile",
+    "route": "cookbook/examples/voice-agent-mobile",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Phone Voice Agent",
+    "md_url": "https://docs.x.ai/cookbook/examples/voice-agent-phone.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/voice-agent-phone",
+    "route": "cookbook/examples/voice-agent-phone",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Photo to Time-Lapse",
+    "md_url": "https://docs.x.ai/cookbook/examples/photo-to-time-lapse.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/photo-to-time-lapse",
+    "route": "cookbook/examples/photo-to-time-lapse",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Product Photo to Video Ad",
+    "md_url": "https://docs.x.ai/cookbook/examples/product-video-ad.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/product-video-ad",
+    "route": "cookbook/examples/product-video-ad",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Prompt Caching",
+    "md_url": "https://docs.x.ai/cookbook/examples/prompt-caching.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/prompt-caching",
+    "route": "cookbook/examples/prompt-caching",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Prompt Injection Defenses",
+    "md_url": "https://docs.x.ai/cookbook/examples/prompt-injection-defenses.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/prompt-injection-defenses",
+    "route": "cookbook/examples/prompt-injection-defenses",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Reasoning Effort Evals",
+    "md_url": "https://docs.x.ai/cookbook/examples/reasoning-effort-evals.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/reasoning-effort-evals",
+    "route": "cookbook/examples/reasoning-effort-evals",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Receipts to Spreadsheet",
+    "md_url": "https://docs.x.ai/cookbook/examples/receipts-to-spreadsheet.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/receipts-to-spreadsheet",
+    "route": "cookbook/examples/receipts-to-spreadsheet",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Reviews to Themes",
+    "md_url": "https://docs.x.ai/cookbook/examples/reviews-to-themes.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/reviews-to-themes",
+    "route": "cookbook/examples/reviews-to-themes",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Storyboard to Short Film",
+    "md_url": "https://docs.x.ai/cookbook/examples/storyboard-to-film.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/storyboard-to-film",
+    "route": "cookbook/examples/storyboard-to-film",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Topics to Morning Briefing",
+    "md_url": "https://docs.x.ai/cookbook/examples/topics-to-morning-briefing.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/topics-to-morning-briefing",
+    "route": "cookbook/examples/topics-to-morning-briefing",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Web Voice Agent",
+    "md_url": "https://docs.x.ai/cookbook/examples/voice-agent-web.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/voice-agent-web",
+    "route": "cookbook/examples/voice-agent-web",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "\ud835\udd4f Post to Fact-Check",
+    "md_url": "https://docs.x.ai/cookbook/examples/x-post-fact-check.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/x-post-fact-check",
+    "route": "cookbook/examples/x-post-fact-check",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "\ud835\udd4f Sentiment Tracker",
+    "md_url": "https://docs.x.ai/cookbook/examples/x-sentiment-tracker.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/x-sentiment-tracker",
+    "route": "cookbook/examples/x-sentiment-tracker",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Bug Report to Fix",
+    "md_url": "https://docs.x.ai/cookbook/examples/bug-report-to-fix.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/bug-report-to-fix",
+    "route": "cookbook/examples/bug-report-to-fix",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Meeting to Action Items",
+    "md_url": "https://docs.x.ai/cookbook/examples/meeting-to-action-items.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/meeting-to-action-items",
+    "route": "cookbook/examples/meeting-to-action-items",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Refund Agent with Human Approval",
+    "md_url": "https://docs.x.ai/cookbook/examples/refund-agent-human-approval.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/refund-agent-human-approval",
+    "route": "cookbook/examples/refund-agent-human-approval",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "Video Dubbing",
+    "md_url": "https://docs.x.ai/cookbook/examples/video-dubbing.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/video-dubbing",
+    "route": "cookbook/examples/video-dubbing",
+    "kind": "doc"
+  },
+  {
+    "group": "Cookbook",
+    "title": "WebRTC Voice Agent",
+    "md_url": "https://docs.x.ai/cookbook/examples/voice-agent-webrtc.md",
+    "html_url": "https://docs.x.ai/cookbook/examples/voice-agent-webrtc",
+    "route": "cookbook/examples/voice-agent-webrtc",
     "kind": "doc"
   },
   {
@@ -1929,7 +2161,7 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Sales Grok Bot for Clay How the Clay plugin for Grok Bot turns a sentence into a GTM workflow: a speed-to-lead test, common use cases, and setup.",
+    "title": "Sales Grok Bot for Clay Grok Bot builds your GTM workflows, and Clay supplies the data to run them. Together they handle enrichment, research, signals and outbound sequencing.",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-clay.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-clay",
     "route": "bot-guides/grok-bot-for-clay",

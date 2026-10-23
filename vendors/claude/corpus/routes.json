@@ -1825,14 +1825,6 @@
   },
   {
     "group": "Blog",
-    "title": "claude duet",
-    "md_url": "https://claude.com/resources/articles/claude-duet.md",
-    "html_url": "https://claude.com/resources/articles/claude-duet",
-    "route": "blog/claude-duet",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "building agents when to fold subagents into your main agent loop",
     "md_url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
     "html_url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
@@ -1841,10 +1833,42 @@
   },
   {
     "group": "Blog",
+    "title": "unified claude enterprise",
+    "md_url": "https://claude.com/resources/articles/unified-claude-enterprise.md",
+    "html_url": "https://claude.com/resources/articles/unified-claude-enterprise",
+    "route": "blog/unified-claude-enterprise",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude duet safety privacy and security",
+    "md_url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security.md",
+    "html_url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security",
+    "route": "blog/claude-duet-safety-privacy-and-security",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude models on google cloud anthropic managed",
+    "md_url": "https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed.md",
+    "html_url": "https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed",
+    "route": "blog/claude-models-on-google-cloud-anthropic-managed",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "hcltech joins claude partner network",
     "md_url": "https://claude.com/resources/articles/hcltech-joins-claude-partner-network.md",
     "html_url": "https://claude.com/resources/articles/hcltech-joins-claude-partner-network",
     "route": "blog/hcltech-joins-claude-partner-network",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude duet",
+    "md_url": "https://claude.com/resources/articles/claude-duet.md",
+    "html_url": "https://claude.com/resources/articles/claude-duet",
+    "route": "blog/claude-duet",
     "kind": "blog"
   },
   {
@@ -1877,30 +1901,6 @@
     "md_url": "https://claude.com/resources/articles/code-review-is-now-generally-available.md",
     "html_url": "https://claude.com/resources/articles/code-review-is-now-generally-available",
     "route": "blog/code-review-is-now-generally-available",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "agent observability on the claude platform",
-    "md_url": "https://claude.com/resources/articles/agent-observability-on-the-claude-platform.md",
-    "html_url": "https://claude.com/resources/articles/agent-observability-on-the-claude-platform",
-    "route": "blog/agent-observability-on-the-claude-platform",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "uber s ciso on building an insider threat program for ai",
-    "md_url": "https://claude.com/resources/articles/uber-s-ciso-on-building-an-insider-threat-program-for-ai.md",
-    "html_url": "https://claude.com/resources/articles/uber-s-ciso-on-building-an-insider-threat-program-for-ai",
-    "route": "blog/uber-s-ciso-on-building-an-insider-threat-program-for-ai",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "building effective agent automations",
-    "md_url": "https://claude.dev/blog/building-effective-agent-automations",
-    "html_url": "https://claude.dev/blog/building-effective-agent-automations",
-    "route": "blog/building-effective-agent-automations",
     "kind": "blog"
   },
   {
@@ -1949,6 +1949,14 @@
     "md_url": "https://claude.com/resources/articles/agent-identity-access-model.md",
     "html_url": "https://claude.com/resources/articles/agent-identity-access-model",
     "route": "blog/agent-identity-access-model",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "agent observability on the claude platform",
+    "md_url": "https://claude.com/resources/articles/agent-observability-on-the-claude-platform.md",
+    "html_url": "https://claude.com/resources/articles/agent-observability-on-the-claude-platform",
+    "route": "blog/agent-observability-on-the-claude-platform",
     "kind": "blog"
   },
   {
@@ -3785,6 +3793,14 @@
   },
   {
     "group": "Blog",
+    "title": "uber s ciso on building an insider threat program for ai",
+    "md_url": "https://claude.com/resources/articles/uber-s-ciso-on-building-an-insider-threat-program-for-ai.md",
+    "html_url": "https://claude.com/resources/articles/uber-s-ciso-on-building-an-insider-threat-program-for-ai",
+    "route": "blog/uber-s-ciso-on-building-an-insider-threat-program-for-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "upgraded anthropic console",
     "md_url": "https://claude.com/resources/articles/upgraded-anthropic-console.md",
     "html_url": "https://claude.com/resources/articles/upgraded-anthropic-console",
@@ -3957,6 +3973,14 @@
     "md_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents.md",
     "html_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents",
     "route": "blog/zero-trust-for-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "building effective agent automations",
+    "md_url": "https://claude.dev/blog/building-effective-agent-automations",
+    "html_url": "https://claude.dev/blog/building-effective-agent-automations",
+    "route": "blog/building-effective-agent-automations",
     "kind": "blog"
   },
   {

@@ -2185,14 +2185,6 @@
   },
   {
     "group": "Cursor: Help Center",
-    "title": "inline edit",
-    "md_url": "https://cursor.com/help/ai-features/inline-edit.md",
-    "html_url": "https://cursor.com/help/ai-features/inline-edit",
-    "route": "help/ai-features/inline-edit",
-    "kind": "doc"
-  },
-  {
-    "group": "Cursor: Help Center",
     "title": "max mode",
     "md_url": "https://cursor.com/help/ai-features/max-mode.md",
     "html_url": "https://cursor.com/help/ai-features/max-mode",

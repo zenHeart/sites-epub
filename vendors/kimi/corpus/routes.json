@@ -769,11 +769,27 @@
   },
   {
     "group": "Kimi \u4ea7\u54c1",
+    "title": "make3d",
+    "md_url": "https://www.kimi.com/make3d",
+    "html_url": "https://www.kimi.com/make3d",
+    "route": "make3d",
+    "kind": "doc"
+  },
+  {
+    "group": "Kimi \u4ea7\u54c1",
     "title": "code",
     "md_url": "https://www.kimi.com/code",
     "html_url": "https://www.kimi.com/code",
     "route": "code",
     "kind": "doc"
+  },
+  {
+    "group": "Blog",
+    "title": "kimi k3 1 pro",
+    "md_url": "https://www.kimi.com/en/blog/kimi-k3-1-pro",
+    "html_url": "https://www.kimi.com/en/blog/kimi-k3-1-pro",
+    "route": "blog/kimi-k3-1-pro",
+    "kind": "blog"
   },
   {
     "group": "Blog",
