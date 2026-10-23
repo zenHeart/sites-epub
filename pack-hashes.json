@@ -5,24 +5,24 @@
     "chapters": 209
   },
   "claude": {
-    "sha256": "8d49cfc86f739708177c6415c650bdffebefc8c73d57660a5de5d073cfba74f0",
-    "packed_at": "2026-10-22T22:07:08Z",
-    "chapters": 509
+    "sha256": "06685fd5ab5d4424ad0094f1534144900445a1fa72dfc7b830f5aa9adca139b9",
+    "packed_at": "2026-10-23T22:02:32Z",
+    "chapters": 512
   },
   "cursor": {
-    "sha256": "7b632f4cbb6998303daa2dbcb21f95155fcabe6dc69670a3452f39d3da5fdfa6",
-    "packed_at": "2026-10-22T22:09:50Z",
-    "chapters": 504
+    "sha256": "b08b6c61e947f843558a3e5145b28861f1def0d3de5a2696c56bc8f853caf05d",
+    "packed_at": "2026-10-23T22:05:15Z",
+    "chapters": 503
   },
   "grok": {
-    "sha256": "e972a4d34ee60947dc5b27d631c3ee47ad6afdd9ee9fa72db0e58f050710e948",
-    "packed_at": "2026-10-22T22:11:12Z",
-    "chapters": 341
+    "sha256": "c77e0a7f396f7335c72f8124109aa6456859e41a818f8eeaf8a1b3605f2e112e",
+    "packed_at": "2026-10-23T22:06:42Z",
+    "chapters": 370
   },
   "gemini": {
-    "sha256": "0d200a858c81671b76ed67d5e9121616a321f8a95dde97e1bd2509f96620d11b",
-    "packed_at": "2026-10-22T22:12:47Z",
-    "chapters": 499
+    "sha256": "d857c715b900d273dbf7a797cf24c629ecd87b7f9c33ec9a72db65b492c5d859",
+    "packed_at": "2026-10-23T22:08:19Z",
+    "chapters": 501
   },
   "manus": {
     "sha256": "7a9410a1763c0aad9c2b738d42f10ca8970189659c1378f3d807c0b99cfb8048",
@@ -35,9 +35,9 @@
     "chapters": 58
   },
   "kimi": {
-    "sha256": "a542f4acce6c516ce169c3f065a8be82d95c5ea3020e61bd7cbfd6fe4650cb8c",
-    "packed_at": "2026-10-21T22:04:11Z",
-    "chapters": 106
+    "sha256": "c3b2a2b1ed221b878124ac040556d14741bda5ec7ad7d6474780b9262941ab3b",
+    "packed_at": "2026-10-23T22:08:54Z",
+    "chapters": 108
   },
   "zhipu": {
     "sha256": "62216852b18e98990a989294146077b6f51142c6cfe658b76a88b8b22d3cef46",
@@ -70,8 +70,8 @@
     "chapters": 87
   },
   "zencoder": {
-    "sha256": "72b09453e97d384ac977b121edfbdb10ef780b598a0cef6ee0f94546f42ac15d",
-    "packed_at": "2026-10-22T22:15:17Z",
+    "sha256": "a43d2fc85fddcdeb4bce982c639b4aba585090944f1b33ccad86948cfaa2c7d9",
+    "packed_at": "2026-10-23T22:11:02Z",
     "chapters": 544
   }
 }
