@@ -2385,6 +2385,14 @@
   },
   {
     "group": "Cursor: Help Center",
+    "title": "approvals",
+    "md_url": "https://cursor.com/help/grok-bot/approvals.md",
+    "html_url": "https://cursor.com/help/grok-bot/approvals",
+    "route": "help/grok-bot/approvals",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
     "title": "computer recovery",
     "md_url": "https://cursor.com/help/grok-bot/computer-recovery.md",
     "html_url": "https://cursor.com/help/grok-bot/computer-recovery",
@@ -2397,6 +2405,14 @@
     "md_url": "https://cursor.com/help/grok-bot/connect-apps.md",
     "html_url": "https://cursor.com/help/grok-bot/connect-apps",
     "route": "help/grok-bot/connect-apps",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "create media",
+    "md_url": "https://cursor.com/help/grok-bot/create-media.md",
+    "html_url": "https://cursor.com/help/grok-bot/create-media",
+    "route": "help/grok-bot/create-media",
     "kind": "doc"
   },
   {
@@ -2445,6 +2461,14 @@
     "md_url": "https://cursor.com/help/grok-bot/how-to.md",
     "html_url": "https://cursor.com/help/grok-bot/how-to",
     "route": "help/grok-bot/how-to",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "memory",
+    "md_url": "https://cursor.com/help/grok-bot/memory.md",
+    "html_url": "https://cursor.com/help/grok-bot/memory",
+    "route": "help/grok-bot/memory",
     "kind": "doc"
   },
   {

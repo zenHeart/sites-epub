@@ -123,22 +123,26 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Agent Security](https://learn.chatgpt.com/docs/enterprise/agent-security.md): Manage Global policies and environment settings for ChatGPT Work and Codex
 - [Analytics API](https://learn.chatgpt.com/docs/enterprise/analytics-api.md): Understand aggregated workspace reporting and Analytics API access
 - [Bedrock through LiteLLM](https://learn.chatgpt.com/docs/enterprise/bedrock-through-litellm.md): Connect Codex to Amazon Bedrock through a LiteLLM gateway
+- [Best practices for ChatGPT Edu workspace configuration in higher education](https://learn.chatgpt.com/docs/enterprise/higher-education-roles-and-permissions.md): Configure higher education permissions with recommended roles, role matrices, and Admin plugin prompts
 - [ChatGPT usage limits and spend controls](https://learn.chatgpt.com/docs/enterprise/usage-limits.md): Understand when ChatGPT workspace credit controls can affect plan-dependent Codex usage
 - [ChatGPT Work admin FAQ](https://learn.chatgpt.com/docs/enterprise/work-admin-faq.md): Manage access, data, governance, observability, usage, and incident controls for ChatGPT Work
 - [ChatGPT Work cloud security](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-cloud-security.md): Review cloud execution boundaries, connected accounts, browser and network controls, data retention, and audit visibility for ChatGPT Work
 - [ChatGPT Work local security](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-local-security.md): Review local execution, device and browser access, managed policies, data handling, and audit limitations for ChatGPT Work
 - [ChatGPT Work Overview](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-overview.md): Understand local and cloud execution, network access, connected apps, privacy, and data retention for ChatGPT Work in Enterprise and Edu workspaces
 - [ChatGPT Work: usage and cost](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-usage-and-cost.md): Understand shared credit consumption, billing impact, spending controls, and role-based adoption planning for ChatGPT Work
+- [Codex security cookbook](https://learn.chatgpt.com/docs/enterprise/security-cookbook.md): Configure, verify, and combine enterprise controls for Codex access, files, services, and actions
 - [Compliance API and audit events](https://learn.chatgpt.com/docs/enterprise/compliance-api.md): Understand the purpose and administration boundary of the Compliance API
-- [Deploy the Windows app](https://learn.chatgpt.com/docs/enterprise/windows-deployment.md): Install the ChatGPT desktop app with Intune, SCCM, another management tool, or a user installer
+- [Deploy the Windows app and Codex CLI](https://learn.chatgpt.com/docs/enterprise/windows-deployment.md): Deploy the Windows desktop app and Codex CLI with Intune, SCCM, or another enterprise management tool
+- [Dynamic groups](https://learn.chatgpt.com/docs/enterprise/dynamic-groups.md): Automatically manage group membership using SCIM user attributes
 - [Gateway compatibility requirements](https://learn.chatgpt.com/docs/enterprise/gateway-compatibility.md): Check the gateway requirements for Codex
 - [Governance](https://learn.chatgpt.com/docs/enterprise/governance.md): Choose the appropriate analytics, usage, and audit surface for each administration question
 - [GPTs and Sharing](https://learn.chatgpt.com/docs/enterprise/gpts-and-sharing.md): Manage GPT sharing, ownership, connected apps, and third-party actions across your workspace.
 - [Groups and provisioning](https://learn.chatgpt.com/docs/enterprise/groups-and-provisioning.md): Understand group membership sources and their workspace access boundary
 - [Local computer access for Work Cloud and dots](https://learn.chatgpt.com/docs/enterprise/cloud-local-access.md): Review shared policies and compatibility, then enable local computer access separately for Work and dots
 - [Manage app updates](https://learn.chatgpt.com/docs/enterprise/manage-app-updates.md): Control how your organization updates the ChatGPT desktop app on macOS and Windows
-- [Manage ChatGPT Space and shared pages](https://learn.chatgpt.com/docs/enterprise/chatgpt-space.md): Manage Library sharing permissions in Space, understand existing-access limits, and help members share pages.
-- [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration.md): Distribute configuration defaults and enforce requirements across supported local clients
+- [Manage ChatGPT Space, pages, and slides](https://learn.chatgpt.com/docs/enterprise/chatgpt-space.md): Manage Library sharing permissions in Space, understand existing-access limits, and help members share pages and slide decks.
+- [Manage dots permissions and capabilities](https://learn.chatgpt.com/docs/enterprise/dots-admin-guide.md): Set up dots access, apps, and Slack for your Enterprise workspace.
+- [Managed configuration](https://learn.chatgpt.com/docs/enterprise/managed-configuration.md): Configure requirements and defaults in Agent security and manage advanced or device-local settings
 - [Plugin controls](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors.md): Choose which plugins your team can use, and manage access to their connected services and actions
 - [Plugin management](https://learn.chatgpt.com/docs/enterprise/plugin-management.md): Import and sync workspace plugins from GitHub
 - [Prisma AIRS](https://learn.chatgpt.com/docs/enterprise/prisma-airs.md): Connect Palo Alto Networks Prisma AIRS to scan Codex prompts
@@ -148,8 +152,9 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Set up and manage @ChatGPT in Slack and Microsoft Teams](https://learn.chatgpt.com/docs/enterprise/chatgpt-slack-and-teams.md): Install @ChatGPT, configure shared access, and manage your Slack or Microsoft Teams deployment.
 - [Set up and manage teams and Team Tasks](https://learn.chatgpt.com/docs/enterprise/teams.md): Set team and task permissions, configure shared connections, and create and manage recurring Team Tasks.
 - [Sign in with ChatGPT through a gateway](https://learn.chatgpt.com/docs/enterprise/sign-in-with-chatgpt-through-a-gateway.md): Keep your gateway for Codex model requests while users sign in with their ChatGPT workspace.
-- [Sites administration](https://learn.chatgpt.com/docs/enterprise/sites.md): Enable Sites, manage connected plugins, and control sharing and network access
+- [Sites administration](https://learn.chatgpt.com/docs/enterprise/sites.md): Plan site access, review publishing decisions, and maintain sites in your workspace
 - [Skill controls](https://learn.chatgpt.com/docs/enterprise/skills.md): Compare ChatGPT workspace, local filesystem, and plugin skill controls
+- [Understand ChatGPT education plans](https://learn.chatgpt.com/docs/enterprise/education-plans.md): Compare education plans, help members get access, and manage work across multiple workspaces.
 - [Usage Insights for ChatGPT Work in Codex](https://learn.chatgpt.com/docs/enterprise/usage-insights.md): Understand usage and credit consumption across ChatGPT Work and Codex, and assess the value of your team's workflows
 - [Use API/provider credentials through a gateway](https://learn.chatgpt.com/docs/enterprise/connect-to-a-gateway.md): Connect Codex to an LLM gateway with provider credentials
 - [User lifecycle management](https://learn.chatgpt.com/docs/enterprise/user-lifecycle.md): Provision employees, update group-based permissions, and remove workspace access and Codex tokens
@@ -166,7 +171,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees.md): Use Git worktrees in Codex to run chats in parallel
 
 ## Extend
-- [Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp.md): Give Codex access to third-party tools and context
+- [Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp.md): Connect ChatGPT and Codex to your tools and information.
 - [Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay.md): Show ChatGPT or Codex a workflow once and turn it into a reusable skill
 
 ## Feature Maturity
@@ -176,6 +181,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Features](https://learn.chatgpt.com/docs/features.md): Explore workflows, capabilities, commands, and settings in ChatGPT
 - [ChatGPT Voice](https://learn.chatgpt.com/docs/features/voice.md): Try voice in Chat, Work, and Codex in the ChatGPT desktop app.
 - [Codex Micro](https://learn.chatgpt.com/docs/features/codex-micro.md): Your command center for Codex chats.
+- [Composer Predictions](https://learn.chatgpt.com/docs/features/composer-predictions.md): Get suggestions for your next message.
 
 ## Get Started With Work
 - [Get started with ChatGPT Work](https://learn.chatgpt.com/docs/get-started-with-work.md): Delegate substantial tasks to ChatGPT with ChatGPT Work and get reviewable results.
@@ -227,6 +233,9 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 
 ## Mobile
 - [Codex on mobile](https://learn.chatgpt.com/docs/mobile.md): Start, guide, approve, and review Codex tasks on a connected computer from your phone.
+
+## Model Catalogs
+- [Implementing model catalogs for gateways and clouds](https://learn.chatgpt.com/docs/model-catalogs.md): Fetch version-specific Codex defaults, apply provider overrides, and serve a model catalog
 
 ## Model Selection
 - [Model selection](https://learn.chatgpt.com/docs/model-selection.md): Find the right model for your use case
@@ -287,29 +296,30 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Auto-review](https://learn.chatgpt.com/docs/sandboxing/auto-review.md): How Codex routes sandbox-boundary approvals through a reviewer agent
 
 ## Security
-- [Codex Security](https://learn.chatgpt.com/docs/security.md): Find and remediate vulnerabilities with the Codex Security plugin, CLI, TypeScript SDK, or Codex Security Cloud.
+- [Codex Security](https://learn.chatgpt.com/docs/security.md): Scan code, investigate findings, and review fixes with Codex Security.
+- [Codex Security CI/CD overview](https://learn.chatgpt.com/docs/security/cli/ci.md): Choose a CI integration, prepare scan access, and decide how findings and scan coverage affect your pipeline.
 - [Codex Security CLI FAQ](https://learn.chatgpt.com/docs/security/cli/faq.md): Answers about Codex Security scans, findings, false positives, coverage, cost, and CI.
-- [Codex Security CLI quickstart](https://learn.chatgpt.com/docs/security/cli.md): Set up Codex Security, run a local scan, and review the report, findings, and coverage.
+- [Codex Security CLI quickstart](https://learn.chatgpt.com/docs/security/cli.md): Sign in, scan a local repository, and review the findings and coverage.
 - [Codex Security CLI reference](https://learn.chatgpt.com/docs/security/cli/reference.md): Arguments, output formats, scan artifacts, and exit codes for the Codex Security CLI.
-- [Codex Security Cloud FAQ](https://learn.chatgpt.com/docs/security/faq.md): Common questions about Codex Security Cloud.
+- [Codex Security Cloud FAQ](https://learn.chatgpt.com/docs/security/faq.md): Understand Cloud scan results, validation, patches, and commit monitoring.
 - [Codex Security Cloud setup](https://learn.chatgpt.com/docs/security/setup.md): Install Codex Security Cloud, scan a GitHub repository, and review findings.
 - [Codex Security plugin changelog](https://learn.chatgpt.com/docs/security/plugin/changelog.md): Notable user-facing changes to the Codex Security plugin.
 - [Codex Security plugin quickstart](https://learn.chatgpt.com/docs/security/plugin.md): Install the Codex Security plugin, run your first read-only scan, and review the result in Codex.
 - [Codex Security TypeScript SDK](https://learn.chatgpt.com/docs/security/sdk.md): Run Codex Security scans from TypeScript, select targets, inspect results, and manage scan lifecycle.
-- [Export and track security findings](https://learn.chatgpt.com/docs/security/plugin/export-findings.md): Create portable findings artifacts or prepare approval-gated issues and draft advisories from a completed scan.
-- [Fix and verify security findings](https://learn.chatgpt.com/docs/security/plugin/fix-findings.md): Turn accepted findings into minimal patches with focused regression evidence.
-- [Improving the threat model](https://learn.chatgpt.com/docs/security/threat-model.md): Refine the Codex Security context that ranks findings and helps you review faster
-- [Propose security hardening](https://learn.chatgpt.com/docs/security/plugin/security-hardening.md): Develop evidence-backed structural security improvements, compare tradeoffs, and prepare an implementation handoff.
+- [Export and track security findings](https://learn.chatgpt.com/docs/security/plugin/export-findings.md): Export scan results or create issues and draft advisories.
+- [Fix and verify security findings](https://learn.chatgpt.com/docs/security/plugin/fix-findings.md): Generate a patch for a finding and verify that it fixes the issue.
+- [Improve the Cloud threat model](https://learn.chatgpt.com/docs/security/threat-model.md): Add deployment context and security assumptions to a monitored repository's threat model.
+- [Propose security hardening](https://learn.chatgpt.com/docs/security/plugin/security-hardening.md): Compare architectural changes and their security and engineering tradeoffs.
 - [Review code changes for security](https://learn.chatgpt.com/docs/security/plugin/code-changes.md): Review pull requests and local changes for security regressions manually or in CI/CD.
-- [Run a Codex Security scan](https://learn.chatgpt.com/docs/security/plugin/scans.md): Scan an authorized repository or one scoped folder and review findings, coverage, and artifacts.
-- [Run a deep security scan](https://learn.chatgpt.com/docs/security/plugin/deep-scans.md): Run a slower, more thorough review of a repository or scoped folder.
+- [Run a Codex Security scan](https://learn.chatgpt.com/docs/security/plugin/scans.md): Scan a repository.
+- [Run a deep security scan](https://learn.chatgpt.com/docs/security/plugin/deep-scans.md): Run repeated security reviews of a repository or folder and set limits on concurrency and duration.
 - [Run bulk security scans](https://learn.chatgpt.com/docs/security/cli/bulk-scans.md): Discover GitHub repositories or run resumable security scans from a CSV inventory.
-- [Run Codex Security in CI](https://learn.chatgpt.com/docs/security/cli/ci.md): Scan pull-request and merge-request changes, preserve structured results, upload SARIF, and set a severity policy.
+- [Run Codex Security in GitHub Actions](https://learn.chatgpt.com/docs/security/cli/ci/github.md): Scan pull requests and repositories with the Codex Security Action, save reports, upload SARIF, and configure enforcement.
 - [Run Codex Security in GitLab CI/CD](https://learn.chatgpt.com/docs/security/cli/ci/gitlab.md): Scan GitLab merge requests and branches, publish SARIF findings, and optionally open draft merge requests with verified fixes.
 - [Security Review](https://learn.chatgpt.com/docs/security/security-review.md): Configure and run in-depth security reviews for GitHub pull requests.
 - [Triage a backlog](https://learn.chatgpt.com/docs/security/plugin/triage-backlog.md): Review existing security findings against a repository and order follow-up work.
 - [Use the Codex Security workbench](https://learn.chatgpt.com/docs/security/plugin/workbench.md): Start security scans, review findings, and inspect repository history in the Codex desktop app.
-- [Write vulnerability reports](https://learn.chatgpt.com/docs/security/plugin/vulnerability-reports.md): Turn findings, disclosure notes, source, and proof-of-concept material into polished, source-backed vulnerability reports.
+- [Write vulnerability reports](https://learn.chatgpt.com/docs/security/plugin/vulnerability-reports.md): Turn findings, disclosure notes, source, and proof-of-concept material into vulnerability reports with supporting evidence.
 
 ## Security Administration
 - [Security](https://learn.chatgpt.com/docs/security-administration.md): Manage permissions, security, and safety controls for ChatGPT and Codex developer tools
@@ -318,15 +328,19 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Sign in with ChatGPT](https://learn.chatgpt.com/docs/sign-in-with-chatgpt.md): Use your ChatGPT account in other apps, with usage limits that keep you in control.
 
 ## Sites
-- [Sites](https://learn.chatgpt.com/docs/sites.md): Build and share hosted sites in ChatGPT
+- [Sites](https://learn.chatgpt.com/docs/sites.md): Build and share a website by describing it in ChatGPT or Codex
+- [Create a site](https://learn.chatgpt.com/docs/sites/creating-a-site.md): Describe, build, and refine a website in ChatGPT or Codex
+- [Data and connections](https://learn.chatgpt.com/docs/sites/data-and-connections.md): Save records, connect apps, and add sign-in to your site
+- [Manage a site](https://learn.chatgpt.com/docs/sites/managing-a-site.md): Review analytics, change domains and settings, and manage site versions
+- [Publish and share](https://learn.chatgpt.com/docs/sites/publishing-and-sharing.md): Review your site, choose its audience, and collaborate with editors
 
 ## Skills And Plugins
 - [Skills & Plugins](https://learn.chatgpt.com/docs/skills-and-plugins.md): Add reusable workflows, expertise, and connected tools to ChatGPT and Codex
 
 ## Space
-- [ChatGPT Space](https://learn.chatgpt.com/docs/space.md): A home for your pages, files, and shared work with ChatGPT
-- [Collaborate in Space](https://learn.chatgpt.com/docs/space/collaboration.md): Share pages and Spaces with the right people and permissions
-- [Get started with ChatGPT Space](https://learn.chatgpt.com/docs/space/getting-started.md): Create a page, add your context, and work on it with ChatGPT
+- [ChatGPT Space](https://learn.chatgpt.com/docs/space.md): A home for your pages, slides, files, and shared work with ChatGPT
+- [Collaborate in Space](https://learn.chatgpt.com/docs/space/collaboration.md): Share pages, slides, and Spaces with the right people and permissions
+- [Get started with ChatGPT Space](https://learn.chatgpt.com/docs/space/getting-started.md): Create a page or slide deck, add your context, and work with ChatGPT
 - [Work with agents in Space](https://learn.chatgpt.com/docs/space/agents.md): Ask ChatGPT or a dot to draft, research, and revise a page
 - [Work with pages](https://learn.chatgpt.com/docs/space/pages.md): Create, organize, and edit pages with ChatGPT and collaborators
 
@@ -356,6 +370,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 
 ## Whats New
 - [What's new](https://learn.chatgpt.com/docs/whats-new.md): A weekly digest of ChatGPT and Codex features that can change how you work
+- [Create your dot in the ChatGPT mobile app](https://learn.chatgpt.com/docs/whats-new/dots-october-9-2026.md): This week in dots: mobile setup, more context from ChatGPT and Codex, and improvements to browsing, notifications, and everyday use.
 - [DevDay 2026](https://learn.chatgpt.com/docs/whats-new/devday-2026.md): DevDay updates across ChatGPT, Codex, Sites, plugins, the API, and Enterprise.
 - [October 5–9, 2026](https://learn.chatgpt.com/docs/whats-new/october-5-9-2026.md)
 - [September 28–October 2, 2026](https://learn.chatgpt.com/docs/whats-new/september-28-october-2-2026.md)
