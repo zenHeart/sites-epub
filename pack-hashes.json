@@ -20,9 +20,9 @@
     "chapters": 370
   },
   "gemini": {
-    "sha256": "14eadb98b69bc0acefc7d1f6fff57931d385871d72568fd96bbfca5b8bc74cfa",
-    "packed_at": "2026-10-24T22:13:54Z",
-    "chapters": 502
+    "sha256": "56ee4d05c85299b3eaf1cf4252e37abc4ce8badcf0f7b6f71eac7046e8fc02fb",
+    "packed_at": "2026-10-24T22:58:48Z",
+    "chapters": 501
   },
   "manus": {
     "sha256": "4ae1cac3c9ffcd4bc5a49a39d15fee5653b8787d10894121fec356f7bcb3afbf",
