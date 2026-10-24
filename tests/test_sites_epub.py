@@ -29,11 +29,57 @@ from sites_epub.mdx import looks_like_runtime_source, transform_mdx  # noqa: E40
 from sites_epub.page import extract_from_html, extract_from_markdown, extract_page  # noqa: E402
 from sites_epub.models import IndexEntry, Vendor  # noqa: E402
 from sites_epub.page import DocPage  # noqa: E402
+from sites_epub.codex_nav import parse_nav_html as parse_codex_nav  # noqa: E402
 from sites_epub.walk import blocking_defects, walk_chapters  # noqa: E402
 
 FIXTURES = ROOT / "fixtures"
 NAV = FIXTURES / "nav.html"
 SAMPLE = FIXTURES / "sample.png"
+
+#: 2026-10: learn.chatgpt.com dropped the native <select> for the section
+#: dropdown and renders it client-side, so the variant -> label mapping now
+#: survives only inside the MobileContextDropdown island's props.
+_DROPDOWN_PROPS = {
+    "ariaLabel": [0, "Docs"],
+    "rootId": [0, "mobile-nav-tab-3-context-select"],
+    "initialValue": [0, "mobile-nav-tab-3-variant-0"],
+    "options": [
+        1,
+        [
+            [0, {"value": [0, "mobile-nav-tab-3-variant-0"], "label": [0, "Overview"]}],
+            [0, {"value": [0, "mobile-nav-tab-3-variant-1"], "label": [0, "Features"]}],
+            [0, {"value": [0, "mobile-nav-tab-3-variant-2"], "label": [0, "Configuration"]}],
+            [0, {"value": [0, "mobile-nav-tab-3-variant-3"], "label": [0, "Developers"]}],
+            [0, {"value": [0, "mobile-nav-tab-3-variant-4"], "label": [0, "Security"]}],
+            [0, {"value": [0, "mobile-nav-tab-3-variant-5"], "label": [0, "Administration"]}],
+            [0, {"value": [0, "mobile-nav-tab-3-variant-6"], "label": [0, "Use Cases"]}],
+            [0, {"value": [0, "mobile-nav-tab-3-variant-7"], "label": [0, "Resources"]}],
+        ],
+    ],
+}
+
+
+def _dropdown_nav_html() -> str:
+    """A nav page whose six sections live in an astro-island, not a <select>."""
+    import html as html_mod
+    import json
+
+    panels = []
+    for idx in range(8):
+        href = "/codex" if idx == 0 else f"/codex/section-{idx}"
+        panels.append(
+            '<div data-mobile-nav-variant-content '
+            f'data-variant-id="mobile-nav-tab-3-variant-{idx}">'
+            f'<a href="{href}">Page {idx}</a></div>'
+        )
+    props = html_mod.escape(json.dumps(_DROPDOWN_PROPS), quote=True)
+    return (
+        "<html><body>"
+        f'<astro-island component-url="/_astro/MobileContextDropdown.react.js" '
+        f'component-export="default" props="{props}"></astro-island>'
+        + "".join(panels)
+        + "</body></html>"
+    )
 
 
 def _entries() -> list[IndexEntry]:
@@ -95,6 +141,24 @@ def _chapter_text(zf: zipfile.ZipFile) -> str:
 
 
 class TestDiscover(unittest.TestCase):
+    def test_codex_nav_dropdown_island_replaces_select(self) -> None:
+        """The section mapping lives in the dropdown island's props now."""
+        entries = parse_codex_nav(_dropdown_nav_html())
+        self.assertTrue(entries)
+        groups = [e.group for e in entries]
+        self.assertIn("Overview", groups)
+        self.assertIn("Administration", groups)
+        self.assertNotIn("Use Cases", groups)
+        self.assertNotIn("Resources", groups)
+        self.assertEqual(groups[0], "Overview")
+        for e in entries:
+            self.assertTrue(e.route.startswith("codex"))
+            self.assertEqual(e.kind, "doc")
+
+    def test_codex_nav_requires_a_codex_section_mapping(self) -> None:
+        with self.assertRaises(ValueError):
+            parse_codex_nav("<html><body><nav>no sections here</nav></body></html>")
+
     def test_codex_nav_fixture_rejects_sibling_trees(self) -> None:
         html = NAV.read_text(encoding="utf-8")
         vendor = Vendor(

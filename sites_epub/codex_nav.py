@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 from dataclasses import replace
 from urllib.parse import urljoin, urlparse
@@ -68,32 +69,106 @@ def md_url_for(path: str) -> str:
     return html_url_for(path) + ".md"
 
 
+#: Labels that identify the Codex dropdown among the page's several nav
+#: dropdowns (the API docs tab has "Models"/"Agents", the plugins tab has
+#: "Plugins"/"Commerce", the blog tab has "Showcase"/"Cookbook").
+_CODEX_SECTION_MARKERS = {"Overview", "Features", "Administration"}
+
+
 def _section_select(soup: BeautifulSoup) -> Tag | None:
     # 2026-08: site renamed aria-label "Docs section" → "Docs"; several selects
     # share that label. Locate by option-set instead of the brittle label text.
     for sel in soup.find_all("select"):
         labels = {_plain(opt) for opt in sel.find_all("option")}
-        if {"Overview", "Features", "Administration"} <= labels:
+        if _CODEX_SECTION_MARKERS <= labels:
             return sel
     return None
+
+
+def _astro_prop(value: object) -> str:
+    """Read one Astro prop value: Astro serializes as ``[type, value]``."""
+    if isinstance(value, list) and len(value) >= 2:
+        value = value[1]
+    return value if isinstance(value, str) else ""
+
+
+def _dropdown_options(soup: BeautifulSoup) -> dict[str, str]:
+    """Variant id -> section label from the MobileContextDropdown island.
+
+    2026-10: the site dropped the native ``<select>`` and renders the section
+    dropdown client-side, so the option list survives only as JSON inside the
+    island's ``props`` attribute. The variant ids (``mobile-nav-tab-3-variant-N``)
+    and the panel markup are unchanged, so the mapping is identical to the one
+    the ``<select>`` used to carry.
+
+    The page carries one dropdown per nav tab (API docs, plugins, Codex, blog);
+    the Codex one is picked by its label set, the same discriminator the old
+    ``<select>`` lookup used.
+    """
+    fallback: dict[str, str] = {}
+    for island in soup.find_all("astro-island"):
+        marker = f"{island.get('component-url') or ''}{island.get('component-export') or ''}"
+        if "MobileContextDropdown" not in marker:
+            continue
+        props = island.get("props")
+        if not props:
+            continue
+        try:
+            data = json.loads(props)
+        except (TypeError, ValueError):
+            continue
+        options = data.get("options")
+        if not isinstance(options, list) or len(options) < 2:
+            continue
+        out: dict[str, str] = {}
+        for entry in options[1]:
+            if not isinstance(entry, list) or len(entry) < 2:
+                continue
+            item = entry[1]
+            if not isinstance(item, dict):
+                continue
+            vid = _astro_prop(item.get("value")).strip()
+            label = _astro_prop(item.get("label")).strip()
+            if vid and label:
+                out[vid] = label
+        if not out:
+            continue
+        if _CODEX_SECTION_MARKERS <= set(out.values()):
+            return out
+        fallback = fallback or out
+    return fallback
+
+
+def _variant_sections(soup: BeautifulSoup) -> dict[str, str]:
+    """Variant id -> section label, from whichever markup carries it."""
+    select = _section_select(soup)
+    if select is not None:
+        out: dict[str, str] = {}
+        for opt in select.find_all("option"):
+            vid = (opt.get("value") or "").strip()
+            label = _plain(opt)
+            if vid and label:
+                out[vid] = label
+        return out
+    return _dropdown_options(soup)
 
 
 def parse_nav_html(html: str) -> list[IndexEntry]:
     """De-duplicated in-site Codex routes under the six horizontal sections."""
     soup = BeautifulSoup(html, "lxml")
-    select = _section_select(soup)
-    if select is None:
-        raise ValueError("Codex six-section nav select not found")
-
-    variant_to_group: dict[str, str] = {}
-    for opt in select.find_all("option"):
-        label = _plain(opt)
-        vid = (opt.get("value") or "").strip()
-        if not vid or label in SKIP_SECTION:
-            continue
-        if label not in SIX_SECTIONS:
-            continue
-        variant_to_group[vid] = label
+    sections = _variant_sections(soup)
+    if _CODEX_SECTION_MARKERS <= set(sections.values()):
+        variant_to_group: dict[str, str] = {}
+        for vid, label in sections.items():
+            if label in SKIP_SECTION:
+                continue
+            if label not in SIX_SECTIONS:
+                continue
+            variant_to_group[vid] = label
+    else:
+        raise ValueError("Codex six-section nav mapping not found")
+    if not variant_to_group:
+        raise ValueError("Codex six-section nav mapping empty")
 
     seen: set[str] = set()
     out: list[IndexEntry] = []
