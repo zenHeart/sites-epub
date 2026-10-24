@@ -27,3 +27,6 @@ scratch/
 gitout.txt
 module.txt
 show.txt
+
+# The corpus negation above re-includes macOS metadata files; keep them out.
+**/.DS_Store
