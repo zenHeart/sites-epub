@@ -542,3 +542,40 @@ gemini 语料是 devsite 系整页 HTML，`book.html` 里大量重复 id（pando
 **怎么择时**：建议单独一个「只做这件事」的变更窗口：改 `images.py` → 本地
 `pack --id grok` 与 `pack --id minimax` 验体积（grok 线上 47.4MB、minimax 26.5MB，
 离 98MB 门禁都很远）→ 提交 → 盯 CI 全量重打 → 确认 12 本都绿再收工。
+
+---
+
+## 27. 导航控件从 `<select>` 换成客户端渲染的 island：codex 抓取整体断掉（2026-10-25）
+
+**症状**：`fetch --id codex` 直接抛 `Codex six-section nav select not found`，
+不是 0 路由而是**整个厂商抓不到**；同一时刻 curl `learn.chatgpt.com/docs` 却是 200。
+
+**根因**：站点把六个分区的下拉框从原生 `<select>` 改成了客户端渲染的
+`MobileContextDropdown` astro-island。**变的是「变体 → 分区名」这份映射的载体，
+不是变体本身**——`data-variant-id`（`mobile-nav-tab-3-variant-N`）与
+`data-mobile-nav-variant-content` 面板原样保留，映射搬进了 island 的 `props`：
+
+```
+props="{"options":[1,[[0,{"value":[0,"mobile-nav-tab-3-variant-0"],
+                           "label":[0,"Overview"]}], ...]]}"
+```
+
+**怎么发现**：先分清「网络挂了」还是「解析契约断了」——`curl` 同一 URL 通、fetch
+抛的是解析异常，就不是网络问题；再数 `<select>` 命中数（0）与
+`[data-mobile-nav-variant-content]` 命中数（31），面板还在、选择器没了 = 载体换了。
+
+**怎么修**（`codex_nav.py`）：`_variant_sections()` 先走老 `<select>` 分支，
+取不到再读 island 的 `props`（astro 把 prop 序列化成 `[type, value]`，数组是
+`[1, [...]]`、元素是 `[0, {...}]`，所以 label/value 都要再剥一层）。
+
+**关键点：页面有 4 个下拉框**（API docs / plugins / Codex / blog），
+必须**按 label 集合挑** Codex 那一个（`{Overview, Features, Administration}`），
+不能取第一个——tab-1 的第一个下拉框是 API 文档的。
+
+**怎么防止复发**：
+- 枚举源保持两个面（§17/§20）：`/docs/` 路径仍由 `llms.txt` 决定，
+  `canonicalize()` 只改 URL 不改 route/group，语料文件身份不受迁移影响。
+- 改动前做 A/B：`git show HEAD:sites_epub/codex_nav.py` 与新版本对同一 fixture
+  跑一遍，输出必须逐条相同（本次 144 条全同），再加一条针对新载体形态的回归测试。
+- `codex_nav.py` 在 `PACKER_FILES` 里 → 改它 **12 本书全量重打**，
+  一次性代价约 25~30 分钟 CI（workflow timeout 45 分钟，够用）。
