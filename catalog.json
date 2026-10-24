@@ -69,10 +69,10 @@
       "author": "Google",
       "adapter": "gemini",
       "updated_at": "2026-10-24T21:29:27Z",
-      "packed_at": "2026-10-19T18:10:10Z",
+      "packed_at": "2026-10-24T22:33:55Z",
       "summary": "Google AI 会员产品书:Gemini 网页版、AI Studio、Antigravity(含 agy CLI)、Jules、NotebookLM、Flow/Canvas(网页版帮助中心内),Blog 排在末尾;不含 Gemini API 使用文档。",
       "category": "docs",
-      "chapters": 502,
+      "chapters": 501,
       "cover": "covers/gemini.png"
     },
     {

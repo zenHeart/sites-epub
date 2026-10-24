@@ -2368,14 +2368,6 @@
     "kind": "doc"
   },
   {
-    "group": "Gemini App Help",
-    "title": "Manage browser & app permissions for tasks in Gemini",
-    "md_url": "https://support.google.com/gemini/answer/18766567",
-    "html_url": "https://support.google.com/gemini/answer/18766567",
-    "route": "gemini-app/18766567",
-    "kind": "doc"
-  },
-  {
     "group": "NotebookLM Help",
     "title": "Learn about Gemini Notebook",
     "md_url": "https://support.google.com/gemininotebook/answer/16164461",
