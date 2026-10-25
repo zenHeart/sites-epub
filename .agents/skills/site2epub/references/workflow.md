@@ -101,24 +101,32 @@ done
 file vendors/<id>/icon.png
 
 # 3. 没有真 API key 被提交
-git diff --cached | grep -E "xai-[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}" && echo "WARN: 真 key 漏出"
+#    正则必须覆盖各厂商 key 前缀，只扫 OpenAI/Anthropic/AWS 会漏掉 Google 的 AIza
+git diff --cached | grep -nE "AIza[0-9A-Za-z_\-]{30,}|xai-[A-Za-z0-9]{20,}|sk-ant-[A-Za-z0-9_\-]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{20,}" && echo "WARN: 真 key 漏出"
 
 # 4. 语料维护（新增 vendor / 大批 refetch 后必跑；脚本同时报告 secret 命中与乱码页）
 python3 .agents/skills/site2epub/scripts/sanitize_corpus_html.py <id>   # 默认改写：剥 script/style/template + 把 key 换成占位符
 python3 .agents/skills/site2epub/scripts/sanitize_corpus_html.py <id> --report-only   # 只读体检，不改文件
 python3 .agents/skills/site2epub/scripts/shrink_corpus_images.py <id>
-# 然后对齐指纹（脚本改动过语料字节时）：
-python3 - <<'PY'
-import sys; sys.path.insert(0, '.')
-from pathlib import Path
-from sites_epub.fingerprint import content_hash, save_fingerprints
-vendor = "<id>"
-corpus = Path(f"vendors/{vendor}/corpus")
-fp = {p.relative_to(corpus / "pages").as_posix()[:-3]: content_hash(p.read_text(encoding="utf-8", errors="replace")) for p in (corpus / "pages").glob("**/*.md")}
-save_fingerprints(corpus.parent / "fingerprints.json", fp)
-print("fingerprints:", len(fp))
-PY
+
+# 4b. 抹掉构建噪声：image-map.json 的末尾换行、docs.html/blog.html 的部署号、
+#     llms.txt 的 build id / 时间戳。它们都不进打包内容，却会改打包键，
+#     让本来没变的书白白重打（lessons §23）。跑在 sanitize / shrink 之后。
+python3 .agents/skills/site2epub/scripts/restore_corpus_noise.py
+
+# 4c. 对齐指纹（脚本改动过语料字节时）。按「活跃路由」重算，不 glob 全部
+#     页面文件，否则会把孤儿页写回指纹（lessons §24）。
+python3 .agents/skills/site2epub/scripts/recompute_fingerprints.py <id>
+
+# 4d. 范围与结构门禁：路由数 vs HEAD（静默掉页）、Blog 是否最后一个 TOC
+#     parent、有没有新混进来的开放平台 API 路由、有没有 0 字节页。
+python3 .agents/skills/site2epub/scripts/scope_gate.py
 
 # 5. 本地离线 pack 预演 CI（需 pandoc；Windows 加 PYTHONUTF8=1），看体积 + walk 门禁
 python3 -m sites_epub pack --id <id>
 ```
+
+> **本地算打包键 ≠ CI 算的**：`vendor_pack_key` 哈希 corpus 下每个文件，而
+> `corpus/docs.html`、`corpus/blog.html`、`.DS_Store` 被 gitignore、CI 的
+> checkout 里没有，本地却有。于是本地算出来「全书要重打」是**测量假象**。
+> 判断「哪几本会重打」要么在干净 worktree 里算，要么只信 CI 结论。

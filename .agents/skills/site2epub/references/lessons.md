@@ -661,3 +661,68 @@ navigation"`、`role="MAIN"` 一并删）。改在打包器而不是语料，是
 结论要修正为：**塌陷是语料形态 + reader 能力共同决定的，不是某一端的 bug**；
 §25 的「本地/CI 分歧」多半也是同一批 `role="main"` 页面在不同 pandoc 版本上的
 表现差异，而不是真正的版本差异。
+
+---
+
+## 29. 产品换域名 → 整组章节被静默删掉（minimax，2026-10-26）
+
+**症状**：`fetch --id minimax` 报 `ok:true, fetched=0, skipped=57, entries=57`，
+路由数 58 → 57，`MiniMax Code` 这一整个 group 消失，`scope_gate` 报
+`route shrinkage 58 -> 57`。**fetch 全绿，不比对基线就发现不了。**
+
+**根因（两层叠加，缺一不可）**：
+1. `minimax_nav.py` 的 MiniMax Code 章节是**硬编码种子 URL**
+   （`for u in ("https://code.minimax.io/download",)`），不是从导航里枚举出来的——
+   所以 §21 的「空正文丢路由」规则会直接把它丢掉，**没有任何备份枚举面能救它**。
+2. 产品本身没下线，只是**换了域名**：`code.minimax.io` 整个子域现在返 nginx 404
+   （`https://code.minimax.io/` 根路径也是 404），而
+   `https://agent.minimax.io/download` **标题一字不差**：
+   `Download MiniMax Code for macOS & Windows | AI Coding and Work`。
+   `www.minimax.io/models` 里仍然链着 `code.minimax.io/download`（站点自己没改）。
+
+**怎么发现**：
+- 路由数 vs HEAD 基线逐轮比对（§17/§20 同一规律）；
+- 丢掉的路由做 live 探：`curl -sL https://code.minimax.io/download` → 404，
+  body 是**裸 nginx 404**（`<center><h1>404 Not Found</h1></center>`），
+  不是应用自己的 404 页 → 说明是**子域/网关层**的问题，不是页面被删；
+- 换 UA、换 IP 都一样 → 不是反爬；
+- 找同产品的**新域名**：从 `www.minimax.io/models` 的链接里扫出
+  `agent.minimax.io/download`，比对 `<title>` 完全一致 → 确认是迁移不是下线。
+
+**怎么修**：把种子 URL 改成新域名，并保留旧域名作 fallback（第一个取到正文的胜出）。
+`route` / `group` / 标题规则都不变 → 语料文件身份与章节数稳定。
+
+**怎么防止复发**：
+- **硬编码种子 URL 是单点故障**：它没有「第二枚举面」兜底，改域名/下线都会直接
+  删掉整节。新增这类种子 URL 时，务必同时准备一个 fallback 域名。
+- 丢路由时先判「**是不是空正文被丢**」（日志会打印 `dropped N route(s) with
+  empty body`）。空正文被丢 ≠ 路由该消失：可能是源站临时故障（§21），
+  也可能是域名迁移（本文）。**先 live 探 + 比对标题，再决定是删还是改种子**。
+- 判据固化在 `scripts/scope_gate.py`：`route shrinkage` 直接报 PROBLEM。
+
+---
+
+## 30. 本地算的打包键 ≠ CI 算的：「要重打几本」可以是测量假象（2026-10-26）
+
+**症状**：本轮只有 minimax 一个厂商真有内容变化，但**本地**算打包键得出
+「11 本要重打、1 本复用」。按这个结论下判断会误判成大改。
+
+**根因**：`vendor_pack_key` 哈希 `corpus/` 下**每一个文件**，而
+`corpus/docs.html`、`corpus/blog.html` 被 `.gitignore` 忽略（fetch 每次写的
+路由发现快照），`.DS_Store` 也被 `**/.DS_Store` 忽略。
+**本地工作树里有、CI 的 checkout 里没有** → 两边哈希的输入不同 →
+本地键和 CI 键必然不等。本机还有 `vendors/gemini/corpus/**/.DS_Store` 同理。
+
+**怎么发现**：在 `git worktree add --detach /tmp/x HEAD` 的**干净 worktree** 里
+算键 → 12 本全部与线上 `pack-hashes.json` 一致；同一份代码在主工作树里算 →
+11 本不等。差异文件用 `comm` 对比两个 worktree 的 `corpus` 文件清单即可定位。
+
+**怎么防止复发**：
+- 判断「哪几本会重打」**要么在干净 worktree 里算，要么只信 CI 结论**，
+  不要拿主工作树的本地键下结论。
+- 算键时要用 `git ls-files -z` 取文件清单：**非 ASCII 文件名**（`git ls-files`
+  默认会 C-quote 成 `"...\345\217\221..."`）会让集合比对静默失配，
+  凭空造出「这一本要重打」的假象（本次 tencent / zencoder 就是这么被骗到的）。
+- 真正的噪声源另见 §23：`image-map.json` 末尾换行、`docs.html`/`blog.html` 的
+  部署号、`llms.txt` 的 build id。已由 `scripts/restore_corpus_noise.py` 自动抹平。
+

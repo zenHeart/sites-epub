@@ -121,13 +121,22 @@ def parse_minimax_docs() -> list[IndexEntry]:
             )
         )
 
-    # 2. MiniMax Code (code.minimax.io — "MiniMax Agent" coding product).
+    # 2. MiniMax Code ("MiniMax Agent" coding product).
     # The site root is a client-rendered shell that yields no body and no
     # images, so only the server-rendered download page is a chapter.
-    for u in ("https://code.minimax.io/download",):
+    # 2026-10-26: the product moved from code.minimax.io to agent.minimax.io.
+    # The old host now answers a flat nginx 404 for the whole subdomain, which
+    # made §21's empty-body rule drop the route and silently delete the whole
+    # "MiniMax Code" group (58 -> 57 chapters). The new host serves the same
+    # page under the same title, so the seed URL is repointed and the retired
+    # host is kept as a fallback. Route id / group / title rule are unchanged,
+    # so the corpus file identity and the chapter count stay stable.
+    for u in ("https://agent.minimax.io/download", "https://code.minimax.io/download"):
         try:
             chtml = fetch_text(u)
         except Exception:  # noqa: BLE001
+            continue
+        if not chtml.strip():
             continue
         csoup = BeautifulSoup(chtml, "lxml")
         ctitle = csoup.title.get_text(" ", strip=True).split(":")[0].strip() if csoup.title else "MiniMax Code"
@@ -141,6 +150,7 @@ def parse_minimax_docs() -> list[IndexEntry]:
                 kind="doc",
             )
         )
+        break
 
     # 3. MiniMax Design (design.minimax.io — SSR creative tools product)
     dhtml = fetch_text("https://design.minimax.io/")
