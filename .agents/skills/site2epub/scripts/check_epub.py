@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -19,7 +20,8 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("epub", type=Path)
     args = parser.parse_args(argv)
-    report = walk_chapters(args.epub)
+    expected = _expected_routes(args.epub)
+    report = walk_chapters(args.epub, expected_routes=expected)
     broken = [
         (c.chapter, d)
         for c in report.chapters
@@ -33,7 +35,51 @@ def main(argv: list[str] | None = None) -> int:
     if broken:
         print("blocking:", broken[:8], file=sys.stderr)
         return 1
+    defect = page_count_defect(report, expected)
+    if defect:
+        print(f"FAIL {defect}", file=sys.stderr)
+        return 1
     return 0
+
+
+def page_count_defect(report, expected: int | None) -> str | None:
+    """Floor the page count.
+
+    A pack whose headings were swallowed by the pandoc reader loses every
+    .doc-page wrapper, and then walk_chapters reports chapter_count 0 /
+    fail_count 0 / ok True -- the exact shape of a 24.5MB book that shipped
+    as 1.9MB with a single chapter and zero page titles, twice (2026-10-25).
+    Zero page units is never valid, and the count must match the corpus that
+    was supposed to be packed.
+    """
+    if report.chapter_count == 0:
+        return "book contains no page units (pack collapsed)"
+    if expected is not None and report.chapter_count != expected:
+        return f"page units {report.chapter_count} != corpus routes {expected}"
+    return None
+
+
+def _expected_routes(epub: Path, root: Path = ROOT) -> int | None:
+    """Route count for this vendor, read from the committed corpus.
+
+    The packed EPUB is named after the vendor (``dist/gemini.epub``), so the
+    corpus routes are found at ``vendors/<vendor>/corpus/routes.json``.  One
+    route produces exactly one page unit in the packed book.
+    """
+    routes_path = root / "vendors" / epub.stem / "corpus" / "routes.json"
+    if not routes_path.is_file():
+        return None
+    try:
+        data = json.loads(routes_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    if isinstance(data, list):
+        return len(data)
+    if isinstance(data, dict):
+        for key in ("routes", "pages"):
+            if isinstance(data.get(key), list):
+                return len(data[key])
+    return None
 
 
 def _check_cover_title(epub: Path) -> str | None:

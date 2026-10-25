@@ -32,6 +32,19 @@ from sites_epub.page import DocPage  # noqa: E402
 from sites_epub.codex_nav import parse_nav_html as parse_codex_nav  # noqa: E402
 from sites_epub.walk import blocking_defects, walk_chapters  # noqa: E402
 
+
+def _load_check_epub():
+    """Import the skill's validate script, which is not an importable package."""
+    import importlib.util
+
+    path = ROOT / ".agents" / "skills" / "site2epub" / "scripts" / "check_epub.py"
+    spec = importlib.util.spec_from_file_location("check_epub_skill", path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module
+
+
 FIXTURES = ROOT / "fixtures"
 NAV = FIXTURES / "nav.html"
 SAMPLE = FIXTURES / "sample.png"
@@ -929,6 +942,155 @@ class TestDecorativeSvgAndCardPadding(unittest.TestCase):
         )
         out = sanitize_body_html(html)
         self.assertEqual(out.count("mdx-card"), 1)
+
+
+class TestMainContentRoleStripped(unittest.TestCase):
+    """pandoc's HTML reader drops everything before a role="main" element.
+
+    That silently ate the packer's h1 (group) and h2 (page title) and
+    collapsed gemini's 24.5 MB book into 1.9 MB / 1 chapter / 0 h2 while the
+    validate gate still reported ok (2026-10-25).
+    """
+
+    def test_role_main_is_removed(self) -> None:
+        from sites_epub.page import sanitize_body_html
+
+        html = '<div role="main"><p>Body copy.</p></div>'
+        out = sanitize_body_html(html)
+        self.assertNotIn('role="main"', out)
+        self.assertIn("Body copy", out)
+
+    def test_role_main_token_list_is_removed(self) -> None:
+        from sites_epub.page import sanitize_body_html
+
+        html = '<div role="main navigation"><p>Body copy.</p></div>'
+        out = sanitize_body_html(html)
+        self.assertNotIn('role="main navigation"', out)
+        self.assertIn("Body copy", out)
+
+    def test_role_main_uppercase_is_removed(self) -> None:
+        from sites_epub.page import sanitize_body_html
+
+        html = '<div role="MAIN"><p>Body copy.</p></div>'
+        out = sanitize_body_html(html)
+        self.assertNotIn('role="MAIN"', out)
+
+    def test_other_roles_are_kept(self) -> None:
+        """Only role="main" hijacks the reader; other roles are harmless."""
+        from sites_epub.page import sanitize_body_html
+
+        html = (
+            '<div role="navigation"><nav>Menu</nav></div>'
+            '<div role="banner"><p>Header</p></div>'
+            '<div role="region"><p>Body copy.</p></div>'
+        )
+        out = sanitize_body_html(html)
+        self.assertIn('role="navigation"', out)
+        self.assertIn('role="banner"', out)
+        self.assertIn('role="region"', out)
+
+    def test_pandoc_reader_keeps_group_and_page_headings(self) -> None:
+        """End-to-end: the reader must still see the packer's headings."""
+        import shutil
+        import subprocess
+
+        pandoc = shutil.which("pandoc")
+        if not pandoc:
+            self.skipTest("pandoc not installed")
+        from sites_epub.page import sanitize_body_html
+
+        body = sanitize_body_html('<div role="main"><p>Body copy.</p></div>')
+        html = (
+            '<html><head><title>t</title></head><body>'
+            '<div class="doc-group"><h1>Gemini Apps</h1>'
+            '<div class="doc-page"><h2 class="page-title">Page Title</h2>'
+            f"{body}</div></div></body></html>"
+        )
+        proc = subprocess.run(
+            [pandoc, "-f", "html", "-t", "native"],
+            input=html,
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+        self.assertIn("doc-group", proc.stdout)
+        self.assertIn("page-title", proc.stdout)
+
+
+class TestCollapsedPackGate(unittest.TestCase):
+    """The validate gate must reject a book that lost every page unit.
+
+    A pack whose headings were swallowed by the pandoc reader loses every
+    .doc-page wrapper, and walk_chapters then reports chapter_count 0 /
+    fail_count 0 / ok True.  That is how gemini's 24.5MB book shipped as
+    1.9MB with a single chapter and zero page titles, twice (2026-10-25).
+    """
+
+    def _epub_with_pages(self, path: Path, page_count: int) -> Path:
+        pages = "".join(
+            f'<section id="p{i}" class="level2 page-title doc-page" '
+            f'data-source="https://example.test/p{i}">'
+            f'<h2 class="page-title"><a href="https://example.test/p{i}" '
+            f'class="source-title" rel="external">Page {i}</a></h2>'
+            f"<p>Body copy for page {i} long enough to pass the stub body check.</p>"
+            f"</section>"
+            for i in range(page_count)
+        )
+        with zipfile.ZipFile(path, "w") as zf:
+            zf.writestr("mimetype", "application/epub+zip")
+            zf.writestr(
+                "EPUB/text/ch001.xhtml",
+                '<?xml version="1.0" encoding="UTF-8"?>'
+                '<html xmlns="http://www.w3.org/1999/xhtml"><head>'
+                "<title>ch001</title></head><body>" + pages + "</body></html>",
+            )
+        return path
+
+    def test_zero_page_units_is_a_defect(self) -> None:
+        module = _load_check_epub()
+        with tempfile.TemporaryDirectory() as td:
+            epub = self._epub_with_pages(Path(td) / "collapsed.epub", 0)
+            report = walk_chapters(epub)
+            self.assertEqual(report.chapter_count, 0)
+            self.assertTrue(report.ok)  # the old blind spot
+            defect = module.page_count_defect(report, 501)
+            self.assertIsNotNone(defect)
+            self.assertIn("collapsed", defect)
+
+    def test_page_count_must_match_the_corpus(self) -> None:
+        module = _load_check_epub()
+        with tempfile.TemporaryDirectory() as td:
+            epub = self._epub_with_pages(Path(td) / "short.epub", 3)
+            report = walk_chapters(epub)
+            self.assertEqual(report.chapter_count, 3)
+            self.assertIsNone(module.page_count_defect(report, 3))
+            defect = module.page_count_defect(report, 501)
+            self.assertIsNotNone(defect)
+            self.assertIn("!= corpus routes 501", defect)
+
+    def test_expected_routes_reads_the_vendor_corpus(self) -> None:
+        module = _load_check_epub()
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            corpus = root / "vendors" / "acme" / "corpus"
+            corpus.mkdir(parents=True)
+            (corpus / "routes.json").write_text(
+                '[{"route": "a"}, {"route": "b"}, {"route": "c"}]', encoding="utf-8"
+            )
+            self.assertEqual(module._expected_routes(Path("acme.epub"), root=root), 3)
+            self.assertIsNone(module._expected_routes(Path("other.epub"), root=root))
+
+    def test_collapsed_book_fails_the_gate(self) -> None:
+        module = _load_check_epub()
+        with tempfile.TemporaryDirectory() as td:
+            epub = self._epub_with_pages(Path(td) / "acme.epub", 0)
+            self.assertEqual(module.main([str(epub)]), 1)
+
+    def test_healthy_book_passes_the_gate(self) -> None:
+        module = _load_check_epub()
+        with tempfile.TemporaryDirectory() as td:
+            epub = self._epub_with_pages(Path(td) / "acme.epub", 2)
+            self.assertEqual(module.main([str(epub)]), 0)
 
 
 class TestBlogArticleExtract(unittest.TestCase):

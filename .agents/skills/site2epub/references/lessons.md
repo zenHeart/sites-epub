@@ -518,6 +518,12 @@ gemini 语料是 devsite 系整页 HTML，`book.html` 里大量重复 id（pando
 3. 排查「本地包变小」时，先做 worktree A/B（`git worktree add --detach` 上一笔提交
    再打包），能立刻区分「语料改坏了」与「工具链分歧」。
 
+> **2026-10-25 更正**：本节把根因归给「本机 pandoc 与 CI pandoc 的 reader 差异」，
+> **这个判断是错的**。真正的根因是语料里的 `role="main"`（见 §28）——它让
+> pandoc 的 reader 丢弃标题前的所有内容。2026-10-25 实测 CI 同样塌陷，
+> 且在打包器里删掉 `role="main"` 后，**本机 3.12.1 也能打出 24.5MB 的正常书**，
+> 本机/CI 的「分歧」并不存在。§28 另附了逐值实测表与 3 分钟复现脚本。
+
 ---
 
 ## 26. srcset 逗号切分 bug 的影响面已量化，修法待择时（2026-10-21）
@@ -579,3 +585,79 @@ props="{"options":[1,[[0,{"value":[0,"mobile-nav-tab-3-variant-0"],
   跑一遍，输出必须逐条相同（本次 144 条全同），再加一条针对新载体形态的回归测试。
 - `codex_nav.py` 在 `PACKER_FILES` 里 → 改它 **12 本书全量重打**，
   一次性代价约 25~30 分钟 CI（workflow timeout 45 分钟，够用）。
+
+---
+
+## 28. gemini 的书会「塌陷」成一章：根因是 `role="main"`，不是 reader 的页数上限（2026-10-25）
+
+**症状**：CI 全绿、书也发布了，但线上 `gemini.epub` 只有 **1.9MB / 4 个 xhtml /
+1246 个 section / 0 个 h2 / 0 个 doc-page**，正文全挤在一个 `ch001.xhtml` 里；
+正常形态是 ~24.5MB / 9 个内容 xhtml / 501 个 h2.page-title / 501 个 doc-page。
+目录、章节、切页全废，而用户拿到的是「成功发布」。
+
+**根因（已坐实）**：**pandoc 的 HTML reader 会把带 `role="main"` 的元素当成
+「文档正文」，并把它之前的全部内容丢掉。** 塌陷书 `ch001.xhtml` 的开头就是
+铁证：
+
+```html
+<body epub:type="bodymatter">
+<section id="gemini" class="level1 unnumbered">
+<h1 class="unnumbered">Gemini</h1>
+<div id="hcfe-content" role="main" tabindex="-1">      <!-- ← 元凶 -->
+```
+
+`role="main"` 出现在 **body 的第一个元素**上，于是 reader 把它之前的
+打包器结构全部丢弃：`<section class="doc-group">` 包装、每页的
+`<h2 class="page-title">`、以及每页的 `<div class="doc-page">`。
+结果就是：0 个 h2、0 个页面单元、正文全糊成一坨。
+
+**为什么只有 gemini 中招**：gemini 的 support.google.com 页面（176 页）带
+`role="main"`；其余厂商带的是 `role="navigation"` / `banner` / `region` /
+`dialog` / `presentation` 等，**实测这些都不会触发 reader 丢内容**。
+对 pandoc 3.12.1 逐值实测（把元素放在标题前，看标题还在不在）：
+
+| 触发丢标题 | 不触发 |
+| --- | --- |
+| `role="main"` | `role="navigation"` `banner` `contentinfo` `complementary` `search` `region` `dialog` `alert` `status` `tab` `tablist` `menu` `menubar` `toolbar` `article` `group` `img` `presentation` `list` `listitem` `button` `link` `heading` `none` `document` |
+| `<main>` 标签 | `id="main"` `id="content"` `id="main-content"` |
+
+（`<main>` 标签另有它自己的坑，但打包器早就把 `main`/`article`/`section`
+降级成 `div` 了，见 `page.py`。）
+
+**修法（放在打包器，不放语料）**：`sites_epub/page.py` 的
+`sanitize_body_html()` 里删掉 `role="main"`（token 感知，`role="main
+navigation"`、`role="MAIN"` 一并删）。改在打包器而不是语料，是因为
+**语料每次增量都会重新抓回来**，只在语料上删等于埋雷。`page.py` 在
+`PACKER_FILES` 里 → 12 本书全量重打（约 25~30 分钟 CI）。
+
+**顺带补上门禁盲区**：这次塌陷书**两次**发布都过了 validate，因为
+`walk_chapters` 在塌陷书上照样报 `chapter_count 0 / fail_count 0 / ok True`
+（`div.doc-page` 全没了 → 一个页面单元都找不到 → 空跑 → 绿的），
+`check_epub.py` 也就跟着放过，98MB 门禁只管上限不管下限。
+现在 `check_epub.py` 会拿 `vendors/<vendor>/corpus/routes.json` 的条数当
+**下限**去卡页面单元数：0 个页面单元直接 FAIL，条数对不上也 FAIL。
+
+**怎么发现**：不要看 CI 结论，要看**产物体积与 xhtml 数量**（§25 的规矩）。
+最快的判据是 `git/trees` API 对比两次部署的 epub 大小——
+`curl https://api.github.com/repos/<o>/<r>/git/trees/<gh-pages-sha>` 不下载文件
+就能拿到每个 epub 的字节数。本次 12 本里只有 gemini 从 24.5MB 掉到 1.9MB。
+
+**怎么复现（本地 3 分钟）**：拿一页带 `role="main"` 的语料，按打包器的形状
+拼出 `<div class="doc-group"><h1>..</h1><div class="doc-page"><h2 class="page-title">..</h2>{body}</div></div>`，
+喂 `pandoc -f html -t native`：stdout 里有 `doc-group` / `page-title` 才算健康。
+本次 176/176 页在删 role 前全部塌陷、删 role 后 0 页塌陷。
+
+**怎么防止复发**：
+- **每次增量后都比对 epub 体积**（部署前后各一次），别等用户发现书坏了。
+- 打包器里凡是「reader 语义」类的坑，都要用**逐值实测**确认触发集合，
+  别凭 ARIA 规范推断（本次差点把 20 个 role 全删）。
+- 语料侧根治方向（可选）：gemini 改用 devsite 的 `.md` 双生页（站点有），
+  或按 `data-markdown-export` 剥掉整页外壳，别把 devsite 的整页 HTML 当正文存。
+- **注意**：`!vendors/*/corpus/**` 这条 gitignore 取反会把 `.DS_Store` 一起放进来，
+  已在 2026-10-25 追加 `**/.DS_Store` 重新忽略。
+
+**与 §25 的关系**：§25 记的是「本地 pack 塌陷、CI 正常」，当时猜是「reader 页数
+上限」。本次证明 **CI 也塌陷**，而根因与页数无关，是 `role="main"`。
+结论要修正为：**塌陷是语料形态 + reader 能力共同决定的，不是某一端的 bug**；
+§25 的「本地/CI 分歧」多半也是同一批 `role="main"` 页面在不同 pandoc 版本上的
+表现差异，而不是真正的版本差异。

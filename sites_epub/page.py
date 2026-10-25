@@ -23,6 +23,17 @@ LEARN_BANNER_RE = re.compile(
     r"^>\s*For the complete documentation index, see .*(?:\n>\s.*)*\n?",
     re.M,
 )
+# pandoc's HTML reader treats an element carrying role="main" as THE document's
+# main content and DISCARDS everything that comes before it.  Our packer emits
+# the group name as <h1> and the page title as <h2> ahead of the page body, so
+# a single role="main" inside the body silently eats both headings and the
+# whole book collapses into a single chapter (2026-10-25: gemini's 176
+# support.google.com pages, 24.5 MB book -> 1.9 MB / 1 chapter / 0 h2, and the
+# validate gate still reported ok).  Probed against pandoc 3.12.1: role="main"
+# is the ONLY role value with this effect -- role="navigation"/"banner"/
+# "region"/"dialog"/... and id="main"/"content" leave the headings intact.
+# role="main" means nothing in an EPUB, so drop it.
+MAIN_CONTENT_ROLE = "main"
 
 
 @dataclass
@@ -172,6 +183,14 @@ def sanitize_body_html(html: str, page_url: str | None = None) -> str:
     ):
         for el in root.select(sel):
             el.decompose()
+    # role="main" makes pandoc's HTML reader treat that element as the
+    # document's main content and DROP everything before it -- which eats the
+    # packer's own h1 (group) and h2 (page title) and collapses the book into
+    # one chapter (2026-10-25, gemini).  The role is meaningless in an EPUB.
+    for el in root.find_all(attrs={"role": True}):
+        tokens = (el.get("role") or "").lower().split()
+        if MAIN_CONTENT_ROLE in tokens:
+            del el["role"]
     # 内联 SVG 在 EPUB 阅读器里丢 currentColor 上下文,viewBox 属性还会被
     # HTML 解析小写成 viewbox 导致错位——装饰性图标一律剔除(w-embed 空壳同删)。
     for svg in list(root.find_all("svg")):
