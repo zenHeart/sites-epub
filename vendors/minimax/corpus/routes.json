@@ -26,8 +26,8 @@
   {
     "group": "MiniMax Code",
     "title": "Download MiniMax Code for macOS & Windows | AI Coding and Work \u00b7 Download",
-    "md_url": "https://code.minimax.io/download",
-    "html_url": "https://code.minimax.io/download",
+    "md_url": "https://agent.minimax.io/download",
+    "html_url": "https://agent.minimax.io/download",
     "route": "mm-code-download",
     "kind": "doc"
   },
