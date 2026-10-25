@@ -9,7 +9,7 @@
       "author": "OpenAI",
       "adapter": "codex",
       "updated_at": "2026-10-24T21:49:32Z",
-      "packed_at": "2026-10-09T10:41:29Z",
+      "packed_at": "2026-10-24T23:52:30Z",
       "summary": "ChatGPT Codex 官方文档六段导航与产品博客，按站点目录打包为一部 EPUB。",
       "category": "docs",
       "chapters": 224,
@@ -69,10 +69,10 @@
       "author": "Google",
       "adapter": "gemini",
       "updated_at": "2026-10-24T21:29:27Z",
-      "packed_at": "2026-10-24T22:33:55Z",
+      "packed_at": "2026-10-25T00:11:31Z",
       "summary": "Google AI 会员产品书:Gemini 网页版、AI Studio、Antigravity(含 agy CLI)、Jules、NotebookLM、Flow/Canvas(网页版帮助中心内),Blog 排在末尾;不含 Gemini API 使用文档。",
       "category": "docs",
-      "chapters": 501,
+      "chapters": 502,
       "cover": "covers/gemini.png"
     },
     {
