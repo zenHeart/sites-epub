@@ -1833,6 +1833,14 @@
   },
   {
     "group": "Blog",
+    "title": "expanding claude for nonprofits",
+    "md_url": "https://claude.com/resources/articles/expanding-claude-for-nonprofits.md",
+    "html_url": "https://claude.com/resources/articles/expanding-claude-for-nonprofits",
+    "route": "blog/expanding-claude-for-nonprofits",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "unified claude enterprise",
     "md_url": "https://claude.com/resources/articles/unified-claude-enterprise.md",
     "html_url": "https://claude.com/resources/articles/unified-claude-enterprise",
@@ -1885,22 +1893,6 @@
     "md_url": "https://claude.com/resources/articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
     "html_url": "https://claude.com/resources/articles/how-an-anthropic-japan-business-development-representative-runs-his-day",
     "route": "blog/how-an-anthropic-japan-business-development-representative-runs-his-day",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "solving code review at anthropic",
-    "md_url": "https://claude.dev/blog/solving-code-review-at-anthropic",
-    "html_url": "https://claude.dev/blog/solving-code-review-at-anthropic",
-    "route": "blog/solving-code-review-at-anthropic",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "code review is now generally available",
-    "md_url": "https://claude.com/resources/articles/code-review-is-now-generally-available.md",
-    "html_url": "https://claude.com/resources/articles/code-review-is-now-generally-available",
-    "route": "blog/code-review-is-now-generally-available",
     "kind": "blog"
   },
   {
@@ -2661,6 +2653,14 @@
     "md_url": "https://claude.com/resources/articles/code-review.md",
     "html_url": "https://claude.com/resources/articles/code-review",
     "route": "blog/code-review",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "code review is now generally available",
+    "md_url": "https://claude.com/resources/articles/code-review-is-now-generally-available.md",
+    "html_url": "https://claude.com/resources/articles/code-review-is-now-generally-available",
+    "route": "blog/code-review-is-now-generally-available",
     "kind": "blog"
   },
   {
@@ -3973,6 +3973,14 @@
     "md_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents.md",
     "html_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents",
     "route": "blog/zero-trust-for-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "solving code review at anthropic",
+    "md_url": "https://claude.dev/blog/solving-code-review-at-anthropic",
+    "html_url": "https://claude.dev/blog/solving-code-review-at-anthropic",
+    "route": "blog/solving-code-review-at-anthropic",
     "kind": "blog"
   },
   {

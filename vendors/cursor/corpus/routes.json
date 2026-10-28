@@ -904,6 +904,358 @@
     "kind": "doc"
   },
   {
+    "group": "Cursor: agent-sdk",
+    "title": "agent sdk",
+    "md_url": "https://cursor.com/docs/agent-sdk.md",
+    "html_url": "https://cursor.com/docs/agent-sdk",
+    "route": "docs/agent-sdk",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "changelog",
+    "md_url": "https://cursor.com/docs/agent-sdk/changelog.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/changelog",
+    "route": "docs/agent-sdk/changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "quickstart",
+    "md_url": "https://cursor.com/docs/agent-sdk/quickstart.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/quickstart",
+    "route": "docs/agent-sdk/quickstart",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "github",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/github.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/github",
+    "route": "docs/agent-sdk/guides/github",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "slack",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/slack.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/slack",
+    "route": "docs/agent-sdk/guides/slack",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "webhooks",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/webhooks.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/webhooks",
+    "route": "docs/agent-sdk/guides/webhooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "convert automation",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/convert-automation.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/convert-automation",
+    "route": "docs/agent-sdk/guides/convert-automation",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "opentelemetry",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/opentelemetry.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/opentelemetry",
+    "route": "docs/agent-sdk/guides/opentelemetry",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "gitlab",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/gitlab.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/gitlab",
+    "route": "docs/agent-sdk/guides/gitlab",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "bitbucket",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/bitbucket.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/bitbucket",
+    "route": "docs/agent-sdk/guides/bitbucket",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "pagerduty",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/pagerduty.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/pagerduty",
+    "route": "docs/agent-sdk/guides/pagerduty",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "extensions",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/extensions.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/extensions",
+    "route": "docs/agent-sdk/reference/extensions",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "cloud agents",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/cloud-agents.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/cloud-agents",
+    "route": "docs/agent-sdk/guides/cloud-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "improve",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/improve.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/improve",
+    "route": "docs/agent-sdk/guides/improve",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "jev",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/jev.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/jev",
+    "route": "docs/agent-sdk/guides/jev",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "mcp oauth",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/mcp-oauth.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/mcp-oauth",
+    "route": "docs/agent-sdk/guides/mcp-oauth",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "agent to agent",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/agent-to-agent.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/agent-to-agent",
+    "route": "docs/agent-sdk/guides/agent-to-agent",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "deployment",
+    "md_url": "https://cursor.com/docs/agent-sdk/deployment.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/deployment",
+    "route": "docs/agent-sdk/deployment",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "migrate",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/migrate.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/migrate",
+    "route": "docs/agent-sdk/guides/migrate",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "evals",
+    "md_url": "https://cursor.com/docs/agent-sdk/evals.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/evals",
+    "route": "docs/agent-sdk/evals",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "hillclimbing",
+    "md_url": "https://cursor.com/docs/agent-sdk/hillclimbing.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/hillclimbing",
+    "route": "docs/agent-sdk/hillclimbing",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "building with agents",
+    "md_url": "https://cursor.com/docs/agent-sdk/building-with-agents.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/building-with-agents",
+    "route": "docs/agent-sdk/building-with-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "troubleshooting",
+    "md_url": "https://cursor.com/docs/agent-sdk/troubleshooting.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/troubleshooting",
+    "route": "docs/agent-sdk/troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "reviews",
+    "md_url": "https://cursor.com/docs/agent-sdk/templates/reviews.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/templates/reviews",
+    "route": "docs/agent-sdk/templates/reviews",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "agentic owners",
+    "md_url": "https://cursor.com/docs/agent-sdk/templates/agentic-owners.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/templates/agentic-owners",
+    "route": "docs/agent-sdk/templates/agentic-owners",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "project layout",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/project-layout.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/project-layout",
+    "route": "docs/agent-sdk/reference/project-layout",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "agent config",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/agent-config.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/agent-config",
+    "route": "docs/agent-sdk/reference/agent-config",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "instructions",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/instructions.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/instructions",
+    "route": "docs/agent-sdk/reference/instructions",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "tools",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/tools.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/tools",
+    "route": "docs/agent-sdk/reference/tools",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "skills",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/skills.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/skills",
+    "route": "docs/agent-sdk/reference/skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "connections",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/connections.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/connections",
+    "route": "docs/agent-sdk/reference/connections",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "subagents",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/subagents.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/subagents",
+    "route": "docs/agent-sdk/reference/subagents",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "channels",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/channels.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/channels",
+    "route": "docs/agent-sdk/reference/channels",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "schedules",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/schedules.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/schedules",
+    "route": "docs/agent-sdk/reference/schedules",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "hooks",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/hooks.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/hooks",
+    "route": "docs/agent-sdk/reference/hooks",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "memory",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/memory.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/memory",
+    "route": "docs/agent-sdk/reference/memory",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "evals",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/evals.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/evals",
+    "route": "docs/agent-sdk/reference/evals",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "artifacts",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/artifacts.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/artifacts",
+    "route": "docs/agent-sdk/reference/artifacts",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "sessions",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/sessions.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/sessions",
+    "route": "docs/agent-sdk/reference/sessions",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "playground",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/playground.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/playground",
+    "route": "docs/agent-sdk/reference/playground",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "cli",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/cli.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/cli",
+    "route": "docs/agent-sdk/reference/cli",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "http api",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/http-api.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/http-api",
+    "route": "docs/agent-sdk/reference/http-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "access",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/access.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/access",
+    "route": "docs/agent-sdk/reference/access",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "limits",
+    "md_url": "https://cursor.com/docs/agent-sdk/reference/limits.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/reference/limits",
+    "route": "docs/agent-sdk/reference/limits",
+    "kind": "doc"
+  },
+  {
     "group": "Cursor: cli",
     "title": "overview",
     "md_url": "https://cursor.com/docs/cli/overview.md",
@@ -1573,6 +1925,14 @@
     "md_url": "https://cursor.com/docs/models/cursor-composer-1.md",
     "html_url": "https://cursor.com/docs/models/cursor-composer-1",
     "route": "docs/models/cursor-composer-1",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Docs",
+    "title": "deepseek v4 1 flash 1017",
+    "md_url": "https://cursor.com/docs/models/deepseek-v4-1-flash-1017.md",
+    "html_url": "https://cursor.com/docs/models/deepseek-v4-1-flash-1017",
+    "route": "docs/models/deepseek-v4-1-flash-1017",
     "kind": "doc"
   },
   {
@@ -2753,6 +3113,14 @@
   },
   {
     "group": "Cursor: Help Center",
+    "title": "minimum version",
+    "md_url": "https://cursor.com/help/troubleshooting/minimum-version.md",
+    "html_url": "https://cursor.com/help/troubleshooting/minimum-version",
+    "route": "help/troubleshooting/minimum-version",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
     "title": "network",
     "md_url": "https://cursor.com/help/troubleshooting/network.md",
     "html_url": "https://cursor.com/help/troubleshooting/network",
@@ -3073,6 +3441,14 @@
   },
   {
     "group": "Blog",
+    "title": "agent sdk",
+    "md_url": "https://cursor.com/blog/agent-sdk.md",
+    "html_url": "https://cursor.com/blog/agent-sdk",
+    "route": "blog/agent-sdk",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "improved token efficiency",
     "md_url": "https://cursor.com/blog/improved-token-efficiency.md",
     "html_url": "https://cursor.com/blog/improved-token-efficiency",
@@ -3137,14 +3513,6 @@
   },
   {
     "group": "Blog",
-    "title": "how cursor router works",
-    "md_url": "https://cursor.com/blog/how-cursor-router-works.md",
-    "html_url": "https://cursor.com/blog/how-cursor-router-works",
-    "route": "blog/how-cursor-router-works",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "self driving codebases",
     "md_url": "https://cursor.com/blog/self-driving-codebases.md",
     "html_url": "https://cursor.com/blog/self-driving-codebases",
@@ -3181,6 +3549,14 @@
     "md_url": "https://cursor.com/blog/nokia.md",
     "html_url": "https://cursor.com/blog/nokia",
     "route": "blog/nokia",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how cursor router works",
+    "md_url": "https://cursor.com/blog/how-cursor-router-works.md",
+    "html_url": "https://cursor.com/blog/how-cursor-router-works",
+    "route": "blog/how-cursor-router-works",
     "kind": "blog"
   },
   {

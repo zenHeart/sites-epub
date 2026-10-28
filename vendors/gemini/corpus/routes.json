@@ -4001,6 +4001,14 @@
   },
   {
     "group": "Blog",
+    "title": "college student favorite features",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/college-student-favorite-features/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/college-student-favorite-features/",
+    "route": "blog/products-and-platforms/products/gemini/college-student-favorite-features",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "stylist outfit tips gemini",
     "md_url": "https://blog.google/products-and-platforms/products/gemini/stylist-outfit-tips-gemini/",
     "html_url": "https://blog.google/products-and-platforms/products/gemini/stylist-outfit-tips-gemini/",

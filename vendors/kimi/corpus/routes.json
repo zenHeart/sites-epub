@@ -257,14 +257,6 @@
   },
   {
     "group": "Resources \u6559\u7a0b",
-    "title": "kimi k2 7 code",
-    "md_url": "https://www.kimi.com/resources/kimi-k2-7-code",
-    "html_url": "https://www.kimi.com/resources/kimi-k2-7-code",
-    "route": "resources/kimi-k2-7-code",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
     "title": "ai agent",
     "md_url": "https://www.kimi.com/resources/ai-agent",
     "html_url": "https://www.kimi.com/resources/ai-agent",
@@ -537,6 +529,14 @@
   },
   {
     "group": "Resources \u6559\u7a0b",
+    "title": "kimi k2 7 code",
+    "md_url": "https://www.kimi.com/resources/kimi-k2-7-code",
+    "html_url": "https://www.kimi.com/resources/kimi-k2-7-code",
+    "route": "resources/kimi-k2-7-code",
+    "kind": "doc"
+  },
+  {
+    "group": "Resources \u6559\u7a0b",
     "title": "kimi code introduction",
     "md_url": "https://www.kimi.com/resources/kimi-code-introduction",
     "html_url": "https://www.kimi.com/resources/kimi-code-introduction",
@@ -629,6 +629,14 @@
     "md_url": "https://www.kimi.com/help/websites",
     "html_url": "https://www.kimi.com/help/websites",
     "route": "help/websites",
+    "kind": "doc"
+  },
+  {
+    "group": "Help Center",
+    "title": "3d make",
+    "md_url": "https://www.kimi.com/help/3d-make",
+    "html_url": "https://www.kimi.com/help/3d-make",
+    "route": "help/3d-make",
     "kind": "doc"
   },
   {

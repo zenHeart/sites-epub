@@ -372,6 +372,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [What's new](https://learn.chatgpt.com/docs/whats-new.md): A weekly digest of ChatGPT and Codex features that can change how you work
 - [Create your dot in the ChatGPT mobile app](https://learn.chatgpt.com/docs/whats-new/dots-october-9-2026.md): This week in dots: mobile setup, more context from ChatGPT and Codex, and improvements to browsing, notifications, and everyday use.
 - [DevDay 2026](https://learn.chatgpt.com/docs/whats-new/devday-2026.md): DevDay updates across ChatGPT, Codex, Sites, plugins, the API, and Enterprise.
+- [October 26–30, 2026](https://learn.chatgpt.com/docs/whats-new/october-26-30-2026.md)
 - [October 5–9, 2026](https://learn.chatgpt.com/docs/whats-new/october-5-9-2026.md)
 - [September 28–October 2, 2026](https://learn.chatgpt.com/docs/whats-new/september-28-october-2-2026.md)
 
