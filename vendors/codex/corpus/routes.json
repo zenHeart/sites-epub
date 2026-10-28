@@ -1289,15 +1289,7 @@
   },
   {
     "group": "Administration",
-    "title": "Sign in with ChatGPT",
-    "md_url": "https://learn.chatgpt.com/docs/enterprise/sign-in-with-chatgpt-through-a-gateway.md",
-    "html_url": "https://learn.chatgpt.com/docs/enterprise/sign-in-with-chatgpt-through-a-gateway",
-    "route": "codex/enterprise/sign-in-with-chatgpt-through-a-gateway",
-    "kind": "doc"
-  },
-  {
-    "group": "Administration",
-    "title": "Use API/provider credentials",
+    "title": "Connect to a gateway",
     "md_url": "https://learn.chatgpt.com/docs/enterprise/connect-to-a-gateway.md",
     "html_url": "https://learn.chatgpt.com/docs/enterprise/connect-to-a-gateway",
     "route": "codex/enterprise/connect-to-a-gateway",
@@ -1509,6 +1501,14 @@
     "md_url": "https://learn.chatgpt.com/docs/whats-new/devday-2026.md",
     "html_url": "https://learn.chatgpt.com/docs/whats-new/devday-2026",
     "route": "codex/whats-new/devday-2026",
+    "kind": "doc"
+  },
+  {
+    "group": "Codex: What's New",
+    "title": "dots october 28 2026",
+    "md_url": "https://learn.chatgpt.com/docs/whats-new/dots-october-28-2026.md",
+    "html_url": "https://learn.chatgpt.com/docs/whats-new/dots-october-28-2026",
+    "route": "codex/whats-new/dots-october-28-2026",
     "kind": "doc"
   },
   {

@@ -353,6 +353,14 @@
   },
   {
     "group": "Manus: Features",
+    "title": "agent skills",
+    "md_url": "https://manus.im/features/agent-skills.md",
+    "html_url": "https://manus.im/features/agent-skills",
+    "route": "features/agent-skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
     "title": "app publishing",
     "md_url": "https://manus.im/features/app-publishing.md",
     "html_url": "https://manus.im/features/app-publishing",

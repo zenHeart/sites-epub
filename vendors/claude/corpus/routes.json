@@ -1833,6 +1833,46 @@
   },
   {
     "group": "Blog",
+    "title": "smart reports surveys pooled budgets",
+    "md_url": "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets.md",
+    "html_url": "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets",
+    "route": "blog/smart-reports-surveys-pooled-budgets",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "idc brings quanta into claude and adopts claude across the company",
+    "md_url": "https://claude.com/resources/articles/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company.md",
+    "html_url": "https://claude.com/resources/articles/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company",
+    "route": "blog/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing artifacts for legal work",
+    "md_url": "https://claude.com/resources/articles/introducing-artifacts-for-legal-work.md",
+    "html_url": "https://claude.com/resources/articles/introducing-artifacts-for-legal-work",
+    "route": "blog/introducing-artifacts-for-legal-work",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to manage costs and demonstrate roi for claude code on google cloud",
+    "md_url": "https://claude.com/resources/articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+    "html_url": "https://claude.com/resources/articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud",
+    "route": "blog/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude for financial advisors",
+    "md_url": "https://claude.com/resources/articles/claude-for-financial-advisors.md",
+    "html_url": "https://claude.com/resources/articles/claude-for-financial-advisors",
+    "route": "blog/claude-for-financial-advisors",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "expanding claude for nonprofits",
     "md_url": "https://claude.com/resources/articles/expanding-claude-for-nonprofits.md",
     "html_url": "https://claude.com/resources/articles/expanding-claude-for-nonprofits",
@@ -1861,38 +1901,6 @@
     "md_url": "https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed.md",
     "html_url": "https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed",
     "route": "blog/claude-models-on-google-cloud-anthropic-managed",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "hcltech joins claude partner network",
-    "md_url": "https://claude.com/resources/articles/hcltech-joins-claude-partner-network.md",
-    "html_url": "https://claude.com/resources/articles/hcltech-joins-claude-partner-network",
-    "route": "blog/hcltech-joins-claude-partner-network",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "claude duet",
-    "md_url": "https://claude.com/resources/articles/claude-duet.md",
-    "html_url": "https://claude.com/resources/articles/claude-duet",
-    "route": "blog/claude-duet",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "claude security now scans continuously and tracks fixes",
-    "md_url": "https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes.md",
-    "html_url": "https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes",
-    "route": "blog/claude-security-now-scans-continuously-and-tracks-fixes",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "how an anthropic japan business development representative runs his day",
-    "md_url": "https://claude.com/resources/articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
-    "html_url": "https://claude.com/resources/articles/how-an-anthropic-japan-business-development-representative-runs-his-day",
-    "route": "blog/how-an-anthropic-japan-business-development-representative-runs-his-day",
     "kind": "blog"
   },
   {
@@ -2401,6 +2409,14 @@
   },
   {
     "group": "Blog",
+    "title": "claude duet",
+    "md_url": "https://claude.com/resources/articles/claude-duet.md",
+    "html_url": "https://claude.com/resources/articles/claude-duet",
+    "route": "blog/claude-duet",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "claude enterprise inference hooks",
     "md_url": "https://claude.com/resources/articles/claude-enterprise-inference-hooks.md",
     "html_url": "https://claude.com/resources/articles/claude-enterprise-inference-hooks",
@@ -2437,14 +2453,6 @@
     "md_url": "https://claude.com/resources/articles/claude-for-enterprise.md",
     "html_url": "https://claude.com/resources/articles/claude-for-enterprise",
     "route": "blog/claude-for-enterprise",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "claude for financial advisors",
-    "md_url": "https://claude.com/resources/articles/claude-for-financial-advisors.md",
-    "html_url": "https://claude.com/resources/articles/claude-for-financial-advisors",
-    "route": "blog/claude-for-financial-advisors",
     "kind": "blog"
   },
   {
@@ -2605,6 +2613,14 @@
     "md_url": "https://claude.com/resources/articles/claude-powered-artifacts.md",
     "html_url": "https://claude.com/resources/articles/claude-powered-artifacts",
     "route": "blog/claude-powered-artifacts",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude security now scans continuously and tracks fixes",
+    "md_url": "https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes.md",
+    "html_url": "https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes",
+    "route": "blog/claude-security-now-scans-continuously-and-tracks-fixes",
     "kind": "blog"
   },
   {
@@ -2977,6 +2993,14 @@
   },
   {
     "group": "Blog",
+    "title": "hcltech joins claude partner network",
+    "md_url": "https://claude.com/resources/articles/hcltech-joins-claude-partner-network.md",
+    "html_url": "https://claude.com/resources/articles/hcltech-joins-claude-partner-network",
+    "route": "blog/hcltech-joins-claude-partner-network",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "how a non technical project manager built and shipped a stress management app with claude code in six weeks",
     "md_url": "https://claude.com/resources/articles/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.md",
     "html_url": "https://claude.com/resources/articles/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks",
@@ -3005,6 +3029,14 @@
     "md_url": "https://claude.com/resources/articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
     "html_url": "https://claude.com/resources/articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep",
     "route": "blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how an anthropic japan business development representative runs his day",
+    "md_url": "https://claude.com/resources/articles/how-an-anthropic-japan-business-development-representative-runs-his-day.md",
+    "html_url": "https://claude.com/resources/articles/how-an-anthropic-japan-business-development-representative-runs-his-day",
+    "route": "blog/how-an-anthropic-japan-business-development-representative-runs-his-day",
     "kind": "blog"
   },
   {

@@ -689,6 +689,22 @@
   },
   {
     "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Buddy One VIP \u4f1a\u5458\u6743\u76ca\u8bf4\u660e",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Buddy-One/Benefits",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Buddy-One/Benefits",
+    "route": "wb-workbuddy-buddy-one-benefits",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "Buddy One \u79ef\u5206\u4f7f\u7528\u8bf4\u660e",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Buddy-One/Credits",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Buddy-One/Credits",
+    "route": "wb-workbuddy-buddy-one-credits",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
     "title": "\u8054\u7cfb\u6211\u4eec",
     "md_url": "https://www.workbuddy.cn/docs/workbuddy/Contact",
     "html_url": "https://www.workbuddy.cn/docs/workbuddy/Contact",

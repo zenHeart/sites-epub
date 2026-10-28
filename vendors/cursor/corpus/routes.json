@@ -681,6 +681,14 @@
   },
   {
     "group": "Cursor: origin",
+    "title": "stacks",
+    "md_url": "https://cursor.com/docs/origin/cli/reference/stacks.md",
+    "html_url": "https://cursor.com/docs/origin/cli/reference/stacks",
+    "route": "docs/origin/cli/reference/stacks",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: origin",
     "title": "create repository",
     "md_url": "https://cursor.com/docs/origin/create-repository.md",
     "html_url": "https://cursor.com/docs/origin/create-repository",
@@ -861,6 +869,14 @@
     "md_url": "https://cursor.com/docs/integrations/xcode.md",
     "html_url": "https://cursor.com/docs/integrations/xcode",
     "route": "docs/integrations/xcode",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Integrations",
+    "title": "tailscale",
+    "md_url": "https://cursor.com/docs/integrations/tailscale.md",
+    "html_url": "https://cursor.com/docs/integrations/tailscale",
+    "route": "docs/integrations/tailscale",
     "kind": "doc"
   },
   {
@@ -2897,6 +2913,14 @@
   },
   {
     "group": "Cursor: Help Center",
+    "title": "shared bots",
+    "md_url": "https://cursor.com/help/grok-bot/shared-bots.md",
+    "html_url": "https://cursor.com/help/grok-bot/shared-bots",
+    "route": "help/grok-bot/shared-bots",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
     "title": "sign in",
     "md_url": "https://cursor.com/help/grok-bot/sign-in.md",
     "html_url": "https://cursor.com/help/grok-bot/sign-in",
@@ -2909,14 +2933,6 @@
     "md_url": "https://cursor.com/help/grok-bot/supergrok.md",
     "html_url": "https://cursor.com/help/grok-bot/supergrok",
     "route": "help/grok-bot/supergrok",
-    "kind": "doc"
-  },
-  {
-    "group": "Cursor: Help Center",
-    "title": "team bots",
-    "md_url": "https://cursor.com/help/grok-bot/team-bots.md",
-    "html_url": "https://cursor.com/help/grok-bot/team-bots",
-    "route": "help/grok-bot/team-bots",
     "kind": "doc"
   },
   {

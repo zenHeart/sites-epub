@@ -353,14 +353,6 @@
   },
   {
     "group": "Antigravity",
-    "title": "Features",
-    "md_url": "https://antigravity.google/docs/cli/features.md",
-    "html_url": "https://antigravity.google/docs/cli/features",
-    "route": "antigravity/cli/features",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
     "title": "Migration",
     "md_url": "https://antigravity.google/docs/cli/gcli-migration.md",
     "html_url": "https://antigravity.google/docs/cli/gcli-migration",
@@ -2913,6 +2905,14 @@
   },
   {
     "group": "Blog",
+    "title": "immersive explorations student hub",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/immersive-explorations-student-hub/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/immersive-explorations-student-hub/",
+    "route": "blog/innovation-and-ai/products/gemini-app/immersive-explorations-student-hub",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "gemini models",
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
@@ -3157,6 +3157,14 @@
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing gemini 4 carbon",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon",
     "kind": "blog"
   },
   {
@@ -4021,6 +4029,14 @@
     "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-4-argon-builders/",
     "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-4-argon-builders/",
     "route": "blog/products-and-platforms/products/gemini/gemini-4-argon-builders",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 4 argon in action",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-4-argon-in-action/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-4-argon-in-action/",
+    "route": "blog/products-and-platforms/products/gemini/gemini-4-argon-in-action",
     "kind": "blog"
   }
 ]

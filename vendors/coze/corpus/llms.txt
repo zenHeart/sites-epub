@@ -301,6 +301,7 @@
 - [活动与公告/公告/扣子品牌升级](https://docs.coze.cn/guides_new_coze_brand.md)
 - [活动与公告/公告/订阅套餐上线](https://docs.coze.cn/guides_coze_premium_preview.md): 扣子将于2025年4月8日至10日推出订阅套餐，包括个人进阶版、团队版和企业版，采用混合计费模式。介绍了各套餐适合场景、订阅方式及常见问题，如团队版与个人进阶版、企业版相比的提升，以及订阅版对专业版用户的影响等。
 - [活动与公告/公告/计费体系升级](https://docs.coze.cn/guides_coze_premium_announcement.md)
+- [活动与公告/公告/扣子企业版下线公告](https://docs.coze.cn/enterprise-plan-discontinuation-notice.md): 本公告为扣子Coze团队发布的扣子企业版下线通知，明确分阶段停止新售、全面下线的时间节点，同步说明退款、过渡期使用、客户服务等相关安排，解答常见问题，提醒企业用户提前做好业务调整。
 
 ## 低代码
 
