@@ -121,10 +121,26 @@
   },
   {
     "group": "Antigravity",
+    "title": "Mentions and quoting",
+    "md_url": "https://antigravity.google/docs/at-mentions.md",
+    "html_url": "https://antigravity.google/docs/at-mentions",
+    "route": "antigravity/at-mentions",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Projects",
     "md_url": "https://antigravity.google/docs/projects.md",
     "html_url": "https://antigravity.google/docs/projects",
     "route": "antigravity/projects",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Search and command palette",
+    "md_url": "https://antigravity.google/docs/search.md",
+    "html_url": "https://antigravity.google/docs/search",
+    "route": "antigravity/search",
     "kind": "doc"
   },
   {
@@ -241,6 +257,14 @@
   },
   {
     "group": "Antigravity",
+    "title": "Review changes",
+    "md_url": "https://antigravity.google/docs/review-changes.md",
+    "html_url": "https://antigravity.google/docs/review-changes",
+    "route": "antigravity/review-changes",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Custom subagents",
     "md_url": "https://antigravity.google/docs/subagents.md",
     "html_url": "https://antigravity.google/docs/subagents",
@@ -249,7 +273,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "Teamwork agent teams (/teamwork-preview)",
+    "title": "Teamwork agent teams (/teamwork)",
     "md_url": "https://antigravity.google/docs/teamwork.md",
     "html_url": "https://antigravity.google/docs/teamwork",
     "route": "antigravity/teamwork",
@@ -277,6 +301,14 @@
     "md_url": "https://antigravity.google/docs/commands/browser.md",
     "html_url": "https://antigravity.google/docs/commands/browser",
     "route": "antigravity/commands/browser",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Generative UI command (/generative_ui)",
+    "md_url": "https://antigravity.google/docs/commands/generative-ui.md",
+    "html_url": "https://antigravity.google/docs/commands/generative-ui",
+    "route": "antigravity/commands/generative-ui",
     "kind": "doc"
   },
   {
@@ -341,6 +373,14 @@
     "md_url": "https://antigravity.google/docs/screenshots.md",
     "html_url": "https://antigravity.google/docs/screenshots",
     "route": "antigravity/screenshots",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Build plugins",
+    "md_url": "https://antigravity.google/docs/build-plugins.md",
+    "html_url": "https://antigravity.google/docs/build-plugins",
+    "route": "antigravity/build-plugins",
     "kind": "doc"
   },
   {
@@ -657,7 +697,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "Review changes",
+    "title": "Review changes in the editor",
     "md_url": "https://antigravity.google/docs/ide/review-changes-editor.md",
     "html_url": "https://antigravity.google/docs/ide/review-changes-editor",
     "route": "antigravity/ide/review-changes-editor",
@@ -917,6 +957,14 @@
     "md_url": "https://jules.google/docs/changelog.md",
     "html_url": "https://jules.google/docs/changelog",
     "route": "jules/changelog",
+    "kind": "doc"
+  },
+  {
+    "group": "Jules",
+    "title": "Jules Turndown",
+    "md_url": "https://jules.google/docs/changelog/2026-10-29.md",
+    "html_url": "https://jules.google/docs/changelog/2026-10-29",
+    "route": "jules/changelog/2026-10-29",
     "kind": "doc"
   },
   {
@@ -2909,6 +2957,22 @@
     "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/immersive-explorations-student-hub/",
     "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/immersive-explorations-student-hub/",
     "route": "blog/innovation-and-ai/products/gemini-app/immersive-explorations-student-hub",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "edit files directly",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/",
+    "route": "blog/innovation-and-ai/products/gemini-app/edit-files-directly",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "update resume with gemini",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/update-resume-with-gemini/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/update-resume-with-gemini/",
+    "route": "blog/innovation-and-ai/products/gemini-app/update-resume-with-gemini",
     "kind": "blog"
   },
   {

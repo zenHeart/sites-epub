@@ -1393,7 +1393,7 @@
   },
   {
     "group": "Administration",
-    "title": "Plugin management",
+    "title": "Import and sync plugins from GitHub",
     "md_url": "https://learn.chatgpt.com/docs/enterprise/plugin-management.md",
     "html_url": "https://learn.chatgpt.com/docs/enterprise/plugin-management",
     "route": "codex/enterprise/plugin-management",

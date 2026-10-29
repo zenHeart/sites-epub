@@ -112,11 +112,11 @@ Gemini API Docs and API Reference
 - [Gemini 2.5 Flash image (Nano Banana)](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-image.md.txt): Learn about Gemini 2.5 Flash Image from Google
 - [Gemini 2.5 Flash-Lite](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-lite.md.txt): Learn about Gemini 2.5 Flash-Lite from Google
 - [Gemini 2.5 Flash-Lite preview](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025.md.txt): Learn about Gemini 2.5 Flash-Lite Preview from Google
-- [Gemini 2.5 Flash Live Preview](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025.md.txt): Learn about Gemini 2.5 Flash Live from Google
+- [Gemini 2.5 Flash live preview](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025.md.txt): Learn about Gemini 2.5 Flash Live from Google
 - [Gemini 2.5 Flash Preview](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-preview-09-2025.md.txt): Learn about Gemini 2.5 Flash Preview from Google
 - [Gemini 2.5 Flash text-to-speech](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-preview-tts.md.txt): Learn about Gemini 2.5 Flash TTS from Google
 - [Gemini 2.5 Pro](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro.md.txt): Learn about Gemini 2.5 Pro from Google
-- [Gemini 2.5 Pro Text-to-Speech](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro-preview-tts.md.txt): Learn about Gemini 2.5 Pro TTS from Google
+- [Gemini 2.5 Pro text-to-speech](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro-preview-tts.md.txt): Learn about Gemini 2.5 Pro TTS from Google
 - [Gemini 3 Flash preview](https://ai.google.dev/gemini-api/docs/models/gemini-3-flash-preview.md.txt): Learn about Gemini 3 Flash Preview from Google
 - [Gemini 3 Pro image](https://ai.google.dev/gemini-api/docs/models/gemini-3-pro-image.md.txt): Learn about Gemini 3 Pro Image from Google
 - [Gemini 3 Pro preview](https://ai.google.dev/gemini-api/docs/models/gemini-3-pro-preview.md.txt): Learn about Gemini 3 Pro Preview from Google
