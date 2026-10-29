@@ -1,7 +1,7 @@
 {
   "codex": {
-    "sha256": "7a9cce525c2a65a946aa50855e09ea06fec3b66e300d2e20f79f6c8386ec94d1",
-    "packed_at": "2026-10-28T21:47:45Z",
+    "sha256": "8540e243f6a006fb3b146c821519c963de53a03f6a2826d96afd1b47ce6954e6",
+    "packed_at": "2026-10-29T21:47:22Z",
     "chapters": 225
   },
   "claude": {
@@ -20,9 +20,9 @@
     "chapters": 375
   },
   "gemini": {
-    "sha256": "bc3ae10453783413b87dbfd84d6b035921b189b00db0e6cedcb1adee213e21c7",
-    "packed_at": "2026-10-28T21:55:20Z",
-    "chapters": 505
+    "sha256": "a2dcfa1e5e9d61059a8934ce5f552cdc758d190b5de9a607ba00d094101e9efd",
+    "packed_at": "2026-10-29T21:49:09Z",
+    "chapters": 513
   },
   "manus": {
     "sha256": "a201b4037cc558b8fb51984f9b2c9e8e0d111561c1543075f2707b40ba09b49f",
@@ -30,13 +30,13 @@
     "chapters": 184
   },
   "minimax": {
-    "sha256": "37291e69183094ad947e073cd5a33c66ac828cf2ea0bc30d19df111f93b1209f",
-    "packed_at": "2026-10-28T22:00:02Z",
+    "sha256": "3807e62cc3b78f7dabce987b10d1ea80d328dc9bd119cdcaf0c6b2b30485069e",
+    "packed_at": "2026-10-29T21:54:26Z",
     "chapters": 58
   },
   "kimi": {
-    "sha256": "2c2c3c9ebdf089730f353ba2e4a82fd8e86d9ab0ecd59854e3548d00409a8e6d",
-    "packed_at": "2026-10-28T21:59:45Z",
+    "sha256": "24f1529e8431dbdef2257d4c7b0fe10f448da43cd6c8a7b2484d88b997ee5c2b",
+    "packed_at": "2026-10-29T21:54:02Z",
     "chapters": 109
   },
   "zhipu": {
@@ -55,8 +55,8 @@
     "chapters": 21
   },
   "coze": {
-    "sha256": "1161cf26477b6597581ca1e6b363a2bc2850927d9f52e0f84d806f62a5d455c8",
-    "packed_at": "2026-10-28T21:59:20Z",
+    "sha256": "ba876dc195ea3a847995b20b7527850fb1303fed6ee6bcde6ef47a118ced63f4",
+    "packed_at": "2026-10-29T21:53:26Z",
     "chapters": 959
   },
   "hailuo": {
@@ -70,8 +70,8 @@
     "chapters": 89
   },
   "zencoder": {
-    "sha256": "f778f67e316d83ea52262be57e99f011260a981e21cfa636535c6cffdb38983c",
-    "packed_at": "2026-10-25T00:32:01Z",
+    "sha256": "ac94d881a84a042930487ffe553722197e80dcbf3a99f9689907dd7efe04a904",
+    "packed_at": "2026-10-29T21:56:44Z",
     "chapters": 544
   }
 }
