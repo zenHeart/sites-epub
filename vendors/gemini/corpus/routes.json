@@ -10,49 +10,81 @@
   {
     "group": "AI Studio",
     "title": "Quickstart",
-    "md_url": "https://ai.google.dev/gemini-api/docs/ai-studio-quickstart.md",
-    "html_url": "https://ai.google.dev/gemini-api/docs/ai-studio-quickstart",
+    "md_url": "https://aistudio.google.com/docs/ai-studio-quickstart.md",
+    "html_url": "https://aistudio.google.com/docs/ai-studio-quickstart",
     "route": "gemini-api/docs/ai-studio-quickstart",
     "kind": "doc"
   },
   {
     "group": "AI Studio",
-    "title": "Vibe code in Build mode",
-    "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-build-mode.md",
-    "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-build-mode",
+    "title": "Google AI plans",
+    "md_url": "https://aistudio.google.com/docs/google-ai-plans.md",
+    "html_url": "https://aistudio.google.com/docs/google-ai-plans",
+    "route": "gemini-api/docs/google-ai-plans",
+    "kind": "doc"
+  },
+  {
+    "group": "AI Studio",
+    "title": "Vibe code in Build",
+    "md_url": "https://aistudio.google.com/docs/aistudio-build-mode.md",
+    "html_url": "https://aistudio.google.com/docs/aistudio-build-mode",
     "route": "gemini-api/docs/aistudio-build-mode",
     "kind": "doc"
   },
   {
     "group": "AI Studio",
-    "title": "Developing full-stack apps",
-    "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-fullstack.md",
-    "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-fullstack",
+    "title": "Full-stack apps",
+    "md_url": "https://aistudio.google.com/docs/aistudio-fullstack.md",
+    "html_url": "https://aistudio.google.com/docs/aistudio-fullstack",
     "route": "gemini-api/docs/aistudio-fullstack",
     "kind": "doc"
   },
   {
     "group": "AI Studio",
     "title": "Build Android apps",
-    "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-android.md",
-    "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-android",
+    "md_url": "https://aistudio.google.com/docs/aistudio-android.md",
+    "html_url": "https://aistudio.google.com/docs/aistudio-android",
     "route": "gemini-api/docs/aistudio-android",
     "kind": "doc"
   },
   {
     "group": "AI Studio",
     "title": "Deploying your app",
-    "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-deploying.md",
-    "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-deploying",
+    "md_url": "https://aistudio.google.com/docs/aistudio-deploying.md",
+    "html_url": "https://aistudio.google.com/docs/aistudio-deploying",
     "route": "gemini-api/docs/aistudio-deploying",
     "kind": "doc"
   },
   {
     "group": "AI Studio",
-    "title": "Agents in AI Studio Playground",
-    "md_url": "https://ai.google.dev/gemini-api/docs/aistudio-agents.md",
-    "html_url": "https://ai.google.dev/gemini-api/docs/aistudio-agents",
+    "title": "Agents in AI Studio",
+    "md_url": "https://aistudio.google.com/docs/aistudio-agents.md",
+    "html_url": "https://aistudio.google.com/docs/aistudio-agents",
     "route": "gemini-api/docs/aistudio-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "AI Studio",
+    "title": "Try out LearnLM",
+    "md_url": "https://aistudio.google.com/docs/learnlm.md",
+    "html_url": "https://aistudio.google.com/docs/learnlm",
+    "route": "gemini-api/docs/learnlm",
+    "kind": "doc"
+  },
+  {
+    "group": "AI Studio",
+    "title": "Troubleshooting",
+    "md_url": "https://aistudio.google.com/docs/troubleshoot-ai-studio.md",
+    "html_url": "https://aistudio.google.com/docs/troubleshoot-ai-studio",
+    "route": "gemini-api/docs/troubleshoot-ai-studio",
+    "kind": "doc"
+  },
+  {
+    "group": "AI Studio",
+    "title": "Google Workspace access",
+    "md_url": "https://aistudio.google.com/docs/workspace.md",
+    "html_url": "https://aistudio.google.com/docs/workspace",
+    "route": "gemini-api/docs/workspace",
     "kind": "doc"
   },
   {
@@ -173,6 +205,14 @@
     "md_url": "https://antigravity.google/docs/artifact-review.md",
     "html_url": "https://antigravity.google/docs/artifact-review",
     "route": "antigravity/artifact-review",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Customization discovery",
+    "md_url": "https://antigravity.google/docs/customization-discovery.md",
+    "html_url": "https://antigravity.google/docs/customization-discovery",
+    "route": "antigravity/customization-discovery",
     "kind": "doc"
   },
   {
@@ -1417,7 +1457,7 @@
   },
   {
     "group": "Gemini Code Assist",
-    "title": "Control Network Access with User Domain Restrictions",
+    "title": "Control network access with user domain restrictions",
     "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/network-access.md",
     "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/network-access",
     "route": "code-assist/codeassist/network-access",
@@ -1589,14 +1629,6 @@
     "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/monitor-gemini-code-assist.md",
     "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/monitor-gemini-code-assist",
     "route": "code-assist/codeassist/monitor-gemini-code-assist",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini Code Assist",
-    "title": "Business AI Code audit logging",
-    "md_url": "https://docs.cloud.google.com/gemini/docs/codeassist/business-audit-logging.md",
-    "html_url": "https://docs.cloud.google.com/gemini/docs/codeassist/business-audit-logging",
-    "route": "code-assist/codeassist/business-audit-logging",
     "kind": "doc"
   },
   {
@@ -2361,7 +2393,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "View & manage your Memory summary in Gemini Apps",
+    "title": "View & manage your memory summary in Gemini Apps",
     "md_url": "https://support.google.com/gemini/answer/18617127",
     "html_url": "https://support.google.com/gemini/answer/18617127",
     "route": "gemini-app/18617127",

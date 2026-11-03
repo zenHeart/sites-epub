@@ -1,5 +1,6 @@
 {
   "wb-workbuddy-account-cancellation": "c55a67bdb7be3e291b8d04718e304977da8c5c447562cbdc3d756e654c14beca",
+  "wb-workbuddy-assistant-guide": "57e96f43072b302fd2c2b1a7d3da7f7f0746207cae6f58681b06e91ac6de4917",
   "wb-workbuddy-buddy-one-benefits": "d2820662bd1a5e7b1b971662d099d216bef3a8195084c43a7c934daa28f76928",
   "wb-workbuddy-buddy-one-credits": "06a26da29361aa86cf009a581bf1158fc2ce8a4c0c91fa558e0fb5bd7301047f",
   "wb-workbuddy-changelog": "d286676ec2279bf08b740c69099631081463475870af2a1c35c9a69b8759bd09",
@@ -7,9 +8,7 @@
   "wb-workbuddy-conversation": "66d6478304d085aebf3408ba321a4204d12390909eb1d4ad2b326a49110b4812",
   "wb-workbuddy-create-task": "ccc682a78748f16f09aa9b7c33565e96402ba69652083ca5255a0c2558d4a077",
   "wb-workbuddy-credits": "79a4c249e4e71a5ff790812ab46e5ddab5b0b7100d9def5453ce9edc986dd361",
-  "wb-workbuddy-dingtalk-guide": "fc94595b4b02f3f5b9cea9aa66ad2def5340f71e846fef7268521a7845c3fa32",
   "wb-workbuddy-download-history": "c5c89e23f189d97aa39944875d57f1ce6faef15f76c208bdc4b881a620ed9b52",
-  "wb-workbuddy-feishu-guide": "b47018395d8d3f1519da6446fed817eaee94b17a5142867e231bf57f30dac4be",
   "wb-workbuddy-firsttask": "b2bb6b7a42d19408b0fea140a83d22c0c517510df19584816cc8434c6b5c1cdf",
   "wb-workbuddy-from-beginner-to-expert-guide-efficient-tips": "a5837ae27af602228e14e09ddcc44773babccf59d39718471ceaf1236587235c",
   "wb-workbuddy-from-beginner-to-expert-guide-error-code": "7e8a188abc95fb93993fe1e333edea9300c30d43c043fb751b8603ff18d011dd",
@@ -80,12 +79,8 @@
   "wb-workbuddy-overview": "49f134612f5c6c443b8a276363c69708271cc329ece9131b028c9c9549f62d4c",
   "wb-workbuddy-plan": "403ed845aa55e78d566b717d480bb4b4c53a9e52674a85b9360968871e26d210",
   "wb-workbuddy-pricing": "90ab51e22f3a10e0d5045696b11671ccff48c1d2a4aed1c9097400eed52f7906",
-  "wb-workbuddy-qq-guide": "194b1a6287de5eeb6393b8c01686955005338dd98c6c88f26df810747ac314dc",
   "wb-workbuddy-results": "23654a3c107b9d61d952e57eb165755a4a66f1b98b3953a09e626643960e386a",
   "wb-workbuddy-scenarios": "9b369b4420d73f531a2a4a235328d8d9864d27d6652cd2faf05626a04dd3ddab",
   "wb-workbuddy-task-management": "3361f7f2a939e0fb351176e67a888ac0831372bdb206f94041ecee6af51c99b2",
-  "wb-workbuddy-usage": "7bae6123676314892d5b0e281dec24ab4a68aa182adb30565e181a67402436a3",
-  "wb-workbuddy-wechat-guide": "df70bb2721cfb996028e20e15942fd21649df84a8265bc2e75c3e0b8220afdf9",
-  "wb-workbuddy-wecom-guide": "321f29f09b9daae267e61062726fefdc57c81ff2da9f591cf1c64b3b529e35b8",
-  "wb-workbuddy-weixinbot-guide": "385c408dc2c7ca5d2d808c9ea7ae82ab00062a2da0bdadcfb46e7a547aa515c2"
+  "wb-workbuddy-usage": "7bae6123676314892d5b0e281dec24ab4a68aa182adb30565e181a67402436a3"
 }

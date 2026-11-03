@@ -49,6 +49,14 @@
   },
   {
     "group": "Manus: Features",
+    "title": "Parallel Tasks",
+    "md_url": "https://manus.im/docs/features/parallel-tasks.md",
+    "html_url": "https://manus.im/docs/features/parallel-tasks",
+    "route": "docs/features/parallel-tasks",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
     "title": "Manus Slides",
     "md_url": "https://manus.im/docs/features/slides.md",
     "html_url": "https://manus.im/docs/features/slides",
@@ -77,6 +85,22 @@
     "md_url": "https://manus.im/docs/features/multi-modal.md",
     "html_url": "https://manus.im/docs/features/multi-modal",
     "route": "docs/features/multi-modal",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Game Developer",
+    "md_url": "https://manus.im/docs/features/game-developer.md",
+    "html_url": "https://manus.im/docs/features/game-developer",
+    "route": "docs/features/game-developer",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Video Editor",
+    "md_url": "https://manus.im/docs/features/video-editor.md",
+    "html_url": "https://manus.im/docs/features/video-editor",
+    "route": "docs/features/video-editor",
     "kind": "doc"
   },
   {
@@ -113,7 +137,7 @@
   },
   {
     "group": "Manus: Features",
-    "title": "Desktop",
+    "title": "Manus Studio",
     "md_url": "https://manus.im/docs/features/desktop.md",
     "html_url": "https://manus.im/docs/features/desktop",
     "route": "docs/features/desktop",
@@ -128,11 +152,43 @@
     "kind": "doc"
   },
   {
+    "group": "Manus: Features",
+    "title": "Branch",
+    "md_url": "https://manus.im/docs/features/branch.md",
+    "html_url": "https://manus.im/docs/features/branch",
+    "route": "docs/features/branch",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Built-in Models",
+    "md_url": "https://manus.im/docs/models/built-in-models.md",
+    "html_url": "https://manus.im/docs/models/built-in-models",
+    "route": "docs/models/built-in-models",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Manus Flex",
+    "md_url": "https://manus.im/docs/models/manus-flex.md",
+    "html_url": "https://manus.im/docs/models/manus-flex",
+    "route": "docs/models/manus-flex",
+    "kind": "doc"
+  },
+  {
     "group": "Manus: Website Builder",
     "title": "Getting started",
     "md_url": "https://manus.im/docs/website-builder/getting-started.md",
     "html_url": "https://manus.im/docs/website-builder/getting-started",
     "route": "docs/website-builder/getting-started",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Website Builder",
+    "title": "Build locally in Manus Studio",
+    "md_url": "https://manus.im/docs/website-builder/build-locally.md",
+    "html_url": "https://manus.im/docs/website-builder/build-locally",
+    "route": "docs/website-builder/build-locally",
     "kind": "doc"
   },
   {
@@ -177,6 +233,14 @@
   },
   {
     "group": "Manus: Website Builder",
+    "title": "Data cache",
+    "md_url": "https://manus.im/docs/website-builder/data-cache.md",
+    "html_url": "https://manus.im/docs/website-builder/data-cache",
+    "route": "docs/website-builder/data-cache",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Website Builder",
     "title": "Access Control",
     "md_url": "https://manus.im/docs/website-builder/access-control.md",
     "html_url": "https://manus.im/docs/website-builder/access-control",
@@ -197,6 +261,14 @@
     "md_url": "https://manus.im/docs/website-builder/payments.md",
     "html_url": "https://manus.im/docs/website-builder/payments",
     "route": "docs/website-builder/payments",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Website Builder",
+    "title": "Shopify",
+    "md_url": "https://manus.im/docs/website-builder/shopify.md",
+    "html_url": "https://manus.im/docs/website-builder/shopify",
+    "route": "docs/website-builder/shopify",
     "kind": "doc"
   },
   {
@@ -237,6 +309,14 @@
     "md_url": "https://manus.im/docs/website-builder/make-a-copy.md",
     "html_url": "https://manus.im/docs/website-builder/make-a-copy",
     "route": "docs/website-builder/make-a-copy",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Website Builder",
+    "title": "Edit in New Task",
+    "md_url": "https://manus.im/docs/website-builder/edit-in-new-task.md",
+    "html_url": "https://manus.im/docs/website-builder/edit-in-new-task",
+    "route": "docs/website-builder/edit-in-new-task",
     "kind": "doc"
   },
   {
@@ -293,6 +373,14 @@
     "md_url": "https://manus.im/docs/integrations/mcp-connectors.md",
     "html_url": "https://manus.im/docs/integrations/mcp-connectors",
     "route": "docs/integrations/mcp-connectors",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Integrations",
+    "title": "Connectors",
+    "md_url": "https://manus.im/docs/integrations/connectors.md",
+    "html_url": "https://manus.im/docs/integrations/connectors",
+    "route": "docs/integrations/connectors",
     "kind": "doc"
   },
   {
@@ -493,6 +581,14 @@
     "md_url": "https://manus.im/blog/introducing-manus-2-0.md",
     "html_url": "https://manus.im/blog/introducing-manus-2-0",
     "route": "blog/introducing-manus-2-0",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "rebuilding manus with manus",
+    "md_url": "https://manus.im/blog/rebuilding-manus-with-manus.md",
+    "html_url": "https://manus.im/blog/rebuilding-manus-with-manus",
+    "route": "blog/rebuilding-manus-with-manus",
     "kind": "blog"
   },
   {

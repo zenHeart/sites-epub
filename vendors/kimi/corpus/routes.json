@@ -112,6 +112,14 @@
     "kind": "doc"
   },
   {
+    "group": "Features",
+    "title": "skills",
+    "md_url": "https://www.kimi.com/features/skills",
+    "html_url": "https://www.kimi.com/features/skills",
+    "route": "features/skills",
+    "kind": "doc"
+  },
+  {
     "group": "Academy \u6559\u7a0b",
     "title": "kimi work getting started",
     "md_url": "https://www.kimi.com/academy/kimi-work-getting-started",
@@ -125,6 +133,14 @@
     "md_url": "https://www.kimi.com/academy/kimi-code-cheat-sheet",
     "html_url": "https://www.kimi.com/academy/kimi-code-cheat-sheet",
     "route": "academy/kimi-code-cheat-sheet",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "org admin api",
+    "md_url": "https://www.kimi.com/academy/org-admin-api",
+    "html_url": "https://www.kimi.com/academy/org-admin-api",
+    "route": "academy/org-admin-api",
     "kind": "doc"
   },
   {

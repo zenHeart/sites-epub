@@ -8,22 +8,6 @@
     "kind": "doc"
   },
   {
-    "group": "MiniMax Models",
-    "title": "MiniMax M2.7",
-    "md_url": "https://www.minimax.io/models/text/m27.md",
-    "html_url": "https://www.minimax.io/models/text/m27",
-    "route": "minimax-iomodels-text-m27",
-    "kind": "doc"
-  },
-  {
-    "group": "MiniMax Models",
-    "title": "MiniMax M2.5",
-    "md_url": "https://www.minimax.io/models/text.md",
-    "html_url": "https://www.minimax.io/models/text",
-    "route": "minimax-iomodels-text",
-    "kind": "doc"
-  },
-  {
     "group": "MiniMax Code",
     "title": "Download MiniMax Code for macOS & Windows | AI Coding and Work \u00b7 Download",
     "md_url": "https://agent.minimax.io/download",
@@ -369,18 +353,18 @@
   },
   {
     "group": "Blog",
-    "title": "minimax code mini app 1792650729",
-    "md_url": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",
-    "html_url": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",
-    "route": "blog/minimax-code-mini-app-1792650729",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "minimax music 3 0 next generation open weights production ready versatile music model",
     "md_url": "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
     "html_url": "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
     "route": "blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "minimax code mini app 1792650729",
+    "md_url": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",
+    "html_url": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",
+    "route": "blog/minimax-code-mini-app-1792650729",
     "kind": "blog"
   },
   {

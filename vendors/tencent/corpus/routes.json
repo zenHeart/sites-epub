@@ -353,6 +353,14 @@
   },
   {
     "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u52a9\u7406\u63a5\u5165\u6307\u5357",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Assistant-Guide",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Assistant-Guide",
+    "route": "wb-workbuddy-assistant-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
     "title": "\u7cfb\u7edf\u8bbe\u7f6e",
     "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Setting",
     "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Setting",
@@ -589,54 +597,6 @@
     "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Error-Code",
     "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Error-Code",
     "route": "wb-workbuddy-from-beginner-to-expert-guide-error-code",
-    "kind": "doc"
-  },
-  {
-    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
-    "title": "\u5fae\u4fe1\u52a9\u7406\u63a5\u5165\u6307\u5357\uff08\u63a8\u8350\uff09",
-    "md_url": "https://www.workbuddy.cn/docs/workbuddy/WeixinBot-Guide",
-    "html_url": "https://www.workbuddy.cn/docs/workbuddy/WeixinBot-Guide",
-    "route": "wb-workbuddy-weixinbot-guide",
-    "kind": "doc"
-  },
-  {
-    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
-    "title": "\u5fae\u4fe1\u5ba2\u670d\u53f7\u63a5\u5165\u6307\u5357",
-    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Wechat-Guide",
-    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Wechat-Guide",
-    "route": "wb-workbuddy-wechat-guide",
-    "kind": "doc"
-  },
-  {
-    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
-    "title": "\u4f01\u5fae\u52a9\u7406\u63a5\u5165\u6307\u5357",
-    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Wecom-Guide",
-    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Wecom-Guide",
-    "route": "wb-workbuddy-wecom-guide",
-    "kind": "doc"
-  },
-  {
-    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
-    "title": "QQ \u673a\u5668\u4eba\u63a5\u5165\u6307\u5357",
-    "md_url": "https://www.workbuddy.cn/docs/workbuddy/QQ-Guide",
-    "html_url": "https://www.workbuddy.cn/docs/workbuddy/QQ-Guide",
-    "route": "wb-workbuddy-qq-guide",
-    "kind": "doc"
-  },
-  {
-    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
-    "title": "\u98de\u4e66\u63a5\u5165\u6307\u5357",
-    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Feishu-Guide",
-    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Feishu-Guide",
-    "route": "wb-workbuddy-feishu-guide",
-    "kind": "doc"
-  },
-  {
-    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
-    "title": "\u9489\u9489\u673a\u5668\u4eba\u63a5\u5165\u6307\u5357",
-    "md_url": "https://www.workbuddy.cn/docs/workbuddy/Dingtalk-Guide",
-    "html_url": "https://www.workbuddy.cn/docs/workbuddy/Dingtalk-Guide",
-    "route": "wb-workbuddy-dingtalk-guide",
     "kind": "doc"
   },
   {

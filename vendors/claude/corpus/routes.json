@@ -1833,6 +1833,14 @@
   },
   {
     "group": "Blog",
+    "title": "message threads",
+    "md_url": "https://claude.com/resources/articles/message-threads.md",
+    "html_url": "https://claude.com/resources/articles/message-threads",
+    "route": "blog/message-threads",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "smart reports surveys pooled budgets",
     "md_url": "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets.md",
     "html_url": "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets",
@@ -1893,14 +1901,6 @@
     "md_url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security.md",
     "html_url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security",
     "route": "blog/claude-duet-safety-privacy-and-security",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "claude models on google cloud anthropic managed",
-    "md_url": "https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed.md",
-    "html_url": "https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed",
-    "route": "blog/claude-models-on-google-cloud-anthropic-managed",
     "kind": "blog"
   },
   {
@@ -2557,6 +2557,14 @@
     "md_url": "https://claude.com/resources/articles/claude-models-explained-choosing-the-best-model-for-your-use-case.md",
     "html_url": "https://claude.com/resources/articles/claude-models-explained-choosing-the-best-model-for-your-use-case",
     "route": "blog/claude-models-explained-choosing-the-best-model-for-your-use-case",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude models on google cloud anthropic managed",
+    "md_url": "https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed.md",
+    "html_url": "https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed",
+    "route": "blog/claude-models-on-google-cloud-anthropic-managed",
     "kind": "blog"
   },
   {

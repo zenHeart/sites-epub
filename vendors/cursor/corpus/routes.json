@@ -3457,6 +3457,14 @@
   },
   {
     "group": "Blog",
+    "title": "claude code extension security notice",
+    "md_url": "https://cursor.com/blog/claude-code-extension-security-notice.md",
+    "html_url": "https://cursor.com/blog/claude-code-extension-security-notice",
+    "route": "blog/claude-code-extension-security-notice",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "agent sdk",
     "md_url": "https://cursor.com/blog/agent-sdk.md",
     "html_url": "https://cursor.com/blog/agent-sdk",
@@ -3521,14 +3529,6 @@
   },
   {
     "group": "Blog",
-    "title": "grok 4 6",
-    "md_url": "https://cursor.com/blog/grok-4-6.md",
-    "html_url": "https://cursor.com/blog/grok-4-6",
-    "route": "blog/grok-4-6",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "self driving codebases",
     "md_url": "https://cursor.com/blog/self-driving-codebases.md",
     "html_url": "https://cursor.com/blog/self-driving-codebases",
@@ -3565,6 +3565,14 @@
     "md_url": "https://cursor.com/blog/nokia.md",
     "html_url": "https://cursor.com/blog/nokia",
     "route": "blog/nokia",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "grok 4 6",
+    "md_url": "https://cursor.com/blog/grok-4-6.md",
+    "html_url": "https://cursor.com/blog/grok-4-6",
+    "route": "blog/grok-4-6",
     "kind": "blog"
   },
   {

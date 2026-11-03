@@ -11,22 +11,32 @@
 - [Manus Skills](https://manus.im/docs/features/skills.md)
 - [Design View](https://manus.im/docs/features/design-view.md): Manus Design View is a powerful extension of the Manus agent that transforms your creative process into a seamless AI design workflow, giving you granular control over every detail.
 - [Wide Research](https://manus.im/docs/features/wide-research.md): Parallel multi-agent system for large-scale research and processing tasks.
+- [Parallel Tasks](https://manus.im/docs/features/parallel-tasks.md): Ask Manus to split your work into separate tasks and manage them from one main task. Start in a Project so that every task shares the same context.
 - [Manus Slides](https://manus.im/docs/features/slides.md): Manus creates complete presentations from a simple description. It conducts research, develops content, designs slides, generates visuals, and writes detailed speaker notes—delivering presentation-ready decks in minutes.
 - [Automations](https://manus.im/docs/automations.md)
 - [Data Analysis & Visualization](https://manus.im/docs/features/data-visualization.md): Turn raw data into presentation-ready insights in minutes
 - [Multimedia Processing](https://manus.im/docs/features/multi-modal.md): Generate and understand images, video, voice, and speech
+- [Game Developer](https://manus.im/docs/features/game-developer.md): Create browser games from a playable template and a plain-language description. Edit gameplay, art, and sound in the Edit panel, host online multiplayer games on a Cloud Computer, and publish a link so others can play.
+- [Video Editor](https://manus.im/docs/features/video-editor.md): Make and edit videos on a multi-track timeline in Manus Studio. Start from an idea or your own footage, then refine the cut by hand or by asking Manus.
 - [Mail Manus](https://manus.im/docs/features/mail-manus.md): Email-based task interface for Manus AI agent
 - [Manus Collab](https://manus.im/docs/features/collab.md): Real-time collaboration on AI tasks—one workspace, one version, zero confusion
 - [Cloud browser](https://manus.im/docs/features/cloud-browser.md): Manus's cloud-based browser that operates like a real person
 - [Browser Operator](https://manus.im/docs/features/browser-operator.md): A browser extension that transforms your web browser into an autonomous agent.
-- [Desktop](https://manus.im/docs/features/desktop.md)
+- [Manus Studio](https://manus.im/docs/features/desktop.md): Let Manus work on your own computer. Manus Studio gives Manus access to your files, terminal, and apps, with permission modes that keep you in control.
 - [Meeting minutes](https://manus.im/docs/features/meeting-minutes.md)
+- [Branch](https://manus.im/docs/features/branch.md): Branch lets you take any task in a new direction from any Manus reply. The new task keeps everything up to that point, and your original task stays unchanged.
+
+### Models
+
+- [Built-in Models](https://manus.im/docs/models/built-in-models.md): The video, image, audio, and 3D models built into Manus, what each one is for, and how to choose one. All built-in models use Manus credits.
+- [Manus Flex](https://manus.im/docs/models/manus-flex.md): Run Manus with your own API key from a supported inference provider. Learn how to connect a provider, choose a model, and see who bills each cost.
 
 ## Website Builder
 
 ### Getting Started
 
 - [Getting started](https://manus.im/docs/website-builder/getting-started.md): Description of your new file.
+- [Build locally in Manus Studio](https://manus.im/docs/website-builder/build-locally.md): Build websites, web apps, mobile apps, and games in a folder on your own computer with Manus Studio. Choose Manus-managed services or a plain local project.
 - [Editing and Previewing](https://manus.im/docs/website-builder/editing-and-previewing.md): Manus lets you build and refine your web app with instant feedback and natural-language edits
 - [Publishing](https://manus.im/docs/website-builder/publishing.md): Build and go live
 - [Usage and Pricing](https://manus.im/docs/website-builder/getting-started/usage-and-pricing.md): This document outlines the billing structure for websites built with Manus. It covers how you are charged for building, hosting, and powering experiences for your users.
@@ -35,9 +45,11 @@
 
 - [Built-in AI Capabilities](https://manus.im/docs/website-builder/ai-capabilities.md): Learn how to incorporate AI capabilities into your web application
 - [Cloud Infrastructure](https://manus.im/docs/website-builder/cloud-infrastructure.md): Fully managed cloud infrastructure for Manus apps—backend, database, file storage, and one‑command deployment
+- [Data cache](https://manus.im/docs/website-builder/data-cache.md): Add a managed backend cache to your web app so that your server does slow work once and serves every visitor fast.
 - [Access Control](https://manus.im/docs/website-builder/access-control.md): Manage access for your web application
 - [Notifications](https://manus.im/docs/website-builder/notifications.md): Get real time updates on your web applications
 - [Payments](https://manus.im/docs/website-builder/payments.md): How to monetize your builds
+- [Shopify](https://manus.im/docs/website-builder/shopify.md): Build a custom storefront for your Shopify store in a Website Builder project, and manage your store from the chat with the Shopify connector.
 
 ### Project Management
 
@@ -49,6 +61,7 @@
 
 - [Code Control](https://manus.im/docs/website-builder/code-control.md): Get full access to your app’s code so you can copy what you need or download the entire codebase and stay fully in control.
 - [Make a Copy](https://manus.im/docs/website-builder/make-a-copy.md)
+- [Edit in New Task](https://manus.im/docs/website-builder/edit-in-new-task.md): Open an existing website or app in a new task and keep editing the same project. Run several tasks on one website at the same time.
 - [Import from Figma: From Design to App in One Step](https://manus.im/docs/website-builder/import-figma.md): Turn your Figma designs into a working web app by sharing links to the frame and describing what you want
 - [Third-Party Integrations](https://manus.im/docs/website-builder/third-party-integrations.md): Connect Stripe, Shopify, Google Maps, or any REST API—secure keys, simple natural‑language setup.
 - [GitHub Integration](https://manus.im/docs/website-builder/github-integration.md): Export your Manus project to a private GitHub repo, then keep working from either place. Manus and GitHub stay in step by automatically sending new changes and pulling the latest updates, so you can use your favorite coding tools without losing sync.
@@ -59,6 +72,7 @@
 
 - [Integrate Manus with Your Existing Tools](https://manus.im/docs/integrations/integrations.md): Connect Manus to your tools and workflows
 - [MCP Connectors](https://manus.im/docs/integrations/mcp-connectors.md): Connect Manus to your team’s tools and enable context-driven creation — moving from idea to validation to live app faster than ever.
+- [Connectors](https://manus.im/docs/integrations/connectors.md): Browse every connector available in Manus and learn how to connect apps, MCP servers, and APIs to your tasks.
 - [Custom MCP Servers](https://manus.im/docs/integrations/custom-mcp.md): Build integrations with your internal tools and proprietary systems
 - [Manus Browser Operator ](https://manus.im/docs/integrations/manus-browser-operator.md): Local browser automation with your authenticated sessions
 - [Slack Integration](https://manus.im/docs/integrations/slack-integration.md): Bring Manus into your team conversations
@@ -71,20 +85,20 @@
 
 ## Indexes
 
-- [Italian (44 pages)](https://manus.im/docs/_llms/it.txt): Documentation for Italian.
-- [German (44 pages)](https://manus.im/docs/_llms/de.txt): Documentation for German.
-- [Turkish (44 pages)](https://manus.im/docs/_llms/tr.txt): Documentation for Turkish.
-- [Spanish (44 pages)](https://manus.im/docs/_llms/es.txt): Documentation for Spanish.
-- [French (44 pages)](https://manus.im/docs/_llms/fr.txt): Documentation for French.
-- [Hindi (44 pages)](https://manus.im/docs/_llms/hi.txt): Documentation for Hindi.
-- [Korean (44 pages)](https://manus.im/docs/_llms/ko.txt): Documentation for Korean.
-- [Japanese (44 pages)](https://manus.im/docs/_llms/ja.txt): Documentation for Japanese.
-- [Brazilian Portuguese (44 pages)](https://manus.im/docs/_llms/pt-br.txt): Documentation for Brazilian Portuguese.
-- [Simplified Chinese (44 pages)](https://manus.im/docs/_llms/zh-hans.txt): Documentation for Simplified Chinese.
-- [Arabic (44 pages)](https://manus.im/docs/_llms/ar.txt): Documentation for Arabic.
-- [Traditional Chinese (44 pages)](https://manus.im/docs/_llms/zh-hant.txt): Documentation for Traditional Chinese.
-- [Indonesian (44 pages)](https://manus.im/docs/_llms/id.txt): Documentation for Indonesian.
-- [Vietnamese (44 pages)](https://manus.im/docs/_llms/vi.txt): Documentation for Vietnamese.
+- [Italian (55 pages)](https://manus.im/docs/_llms/it.txt): Documentation for Italian.
+- [German (55 pages)](https://manus.im/docs/_llms/de.txt): Documentation for German.
+- [Turkish (55 pages)](https://manus.im/docs/_llms/tr.txt): Documentation for Turkish.
+- [Spanish (55 pages)](https://manus.im/docs/_llms/es.txt): Documentation for Spanish.
+- [French (55 pages)](https://manus.im/docs/_llms/fr.txt): Documentation for French.
+- [Hindi (55 pages)](https://manus.im/docs/_llms/hi.txt): Documentation for Hindi.
+- [Korean (55 pages)](https://manus.im/docs/_llms/ko.txt): Documentation for Korean.
+- [Japanese (55 pages)](https://manus.im/docs/_llms/ja.txt): Documentation for Japanese.
+- [Brazilian Portuguese (55 pages)](https://manus.im/docs/_llms/pt-br.txt): Documentation for Brazilian Portuguese.
+- [Simplified Chinese (55 pages)](https://manus.im/docs/_llms/zh-hans.txt): Documentation for Simplified Chinese.
+- [Arabic (55 pages)](https://manus.im/docs/_llms/ar.txt): Documentation for Arabic.
+- [Traditional Chinese (55 pages)](https://manus.im/docs/_llms/zh-hant.txt): Documentation for Traditional Chinese.
+- [Indonesian (55 pages)](https://manus.im/docs/_llms/id.txt): Documentation for Indonesian.
+- [Vietnamese (55 pages)](https://manus.im/docs/_llms/vi.txt): Documentation for Vietnamese.
 
 
 This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

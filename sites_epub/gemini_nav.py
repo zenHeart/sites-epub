@@ -42,6 +42,13 @@ BLOG_SECTIONS = (
     "innovation-and-ai/models-and-research/gemini-models/",
 )
 
+# AI Studio got its own site with its own llms.txt (2026-11-04). The devsite nav
+# at ai.google.dev/gemini-api/docs stopped listing the AI Studio product pages,
+# which silently dropped six live chapters from the book (lessons §17/§20: a
+# single enumeration face collapsing loses pages while `fetch` still reports ok).
+AISTUDIO_LLMS = "https://aistudio.google.com/llms.txt"
+AISTUDIO_TITLE_PREFIX = "Google AI Studio"
+
 BLOG_SITEMAP = "https://blog.google/en-us/sitemap.xml"
 
 
@@ -163,6 +170,48 @@ def help_center_entries(landing: str, product: str, group: str, prefix: str) -> 
     return out
 
 
+def ai_studio_llms_entries(fetch_text_fn) -> list[IndexEntry]:
+    """AI Studio product pages from aistudio.google.com/llms.txt.
+
+    Scope rule (SKILL.md 范围铁律): that llms.txt also lists the whole Gemini
+    API surface (keys, endpoints, pricing, rate limits, API reference) which is
+    OUT of scope for this product-book series. Only the "Google AI Studio — ..."
+    product pages are kept; the API rows are dropped.
+
+    Routes stay under the historical "gemini-api/docs/<slug>" namespace so the
+    chapters keep their corpus file identity across the site's move (only the
+    URL changes, the route/group do not — lessons §16).
+    """
+    text = fetch_text_fn(AISTUDIO_LLMS)
+    out: list[IndexEntry] = []
+    seen: set[str] = set()
+    for title, href in LLMS_LINK.findall(text):
+        title = title.strip()
+        if not title.startswith(AISTUDIO_TITLE_PREFIX):
+            continue
+        clean = _clean_href(href, AISTUDIO_LLMS)
+        if not clean:
+            continue
+        p = urlparse(clean)
+        if p.netloc != "aistudio.google.com" or not p.path.startswith("/docs/"):
+            continue
+        slug = re.sub(r"\.md$", "", p.path[len("/docs/"):]).strip("/")
+        if not slug or slug in seen:
+            continue
+        seen.add(slug)
+        out.append(
+            IndexEntry(
+                group="AI Studio",
+                title=title[len(AISTUDIO_TITLE_PREFIX):].lstrip("—- ").strip() or slug,
+                md_url=clean,
+                html_url=re.sub(r"\.md$", "", clean),
+                route="gemini-api/docs/" + slug,
+                kind="doc",
+            )
+        )
+    return out
+
+
 def parse_gemini_docs() -> list[IndexEntry]:
     docs: list[IndexEntry] = []
 
@@ -198,6 +247,10 @@ def parse_gemini_docs() -> list[IndexEntry]:
         "AI Studio",
         strip="/gemini-api",
     )
+    # 1b. AI Studio product pages from their new home. Two enumeration faces
+    #     are unioned (devsite nav + aistudio llms.txt) so neither collapse can
+    #     silently drop chapters again (lessons §17/§20).
+    docs += ai_studio_llms_entries(fetch)
     # 2. Antigravity incl. the agy CLI (llms.txt; keep only the /docs/ section)
     text = fetch("https://antigravity.google/llms.txt")
     seen: set[str] = set()
@@ -272,7 +325,15 @@ def parse_gemini_docs() -> list[IndexEntry]:
         "NotebookLM Help",
         "notebooklm/",
     )
-    return docs
+    # Two enumeration faces can now yield the same route; keep the first.
+    deduped: list[IndexEntry] = []
+    seen_routes: set[str] = set()
+    for entry in docs:
+        if entry.route in seen_routes:
+            continue
+        seen_routes.add(entry.route)
+        deduped.append(entry)
+    return deduped
 
 
 def parse_gemini_blog() -> list[IndexEntry]:

@@ -149,6 +149,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Prisma AIRS](https://learn.chatgpt.com/docs/enterprise/prisma-airs.md): Connect Palo Alto Networks Prisma AIRS to scan Codex prompts
 - [Roles and workspace permissions](https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions.md): Separate ChatGPT workspace access from local runtime, API, plugin, and source-system controls
 - [Roll out a gateway](https://learn.chatgpt.com/docs/enterprise/roll-out-a-gateway.md): Distribute and verify a Codex gateway connection for your organization
+- [Self-host Codex configuration for your team](https://learn.chatgpt.com/docs/enterprise/configuration-server.md): Serve configuration defaults and required settings to Codex from an HTTPS endpoint you operate.
 - [Service accounts](https://learn.chatgpt.com/docs/enterprise/service-accounts.md): Set up and manage service accounts for Codex automation in your ChatGPT workspace
 - [Set up and manage @ChatGPT in Slack and Microsoft Teams](https://learn.chatgpt.com/docs/enterprise/chatgpt-slack-and-teams.md): Install @ChatGPT, configure shared access, and manage your Slack or Microsoft Teams deployment.
 - [Set up and manage teams and Team Tasks](https://learn.chatgpt.com/docs/enterprise/teams.md): Set team and task permissions, configure shared connections, and create and manage recurring Team Tasks.
@@ -167,6 +168,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Codex Cloud (Legacy)](https://learn.chatgpt.com/docs/environments/cloud-environment.md): Configure legacy environments for Code Review and the Linear and GitHub integrations
 - [Codex environments](https://learn.chatgpt.com/docs/environments/modes.md): Choose where a Codex chat runs and how its files stay isolated
 - [Local environments](https://learn.chatgpt.com/docs/environments/local-environment.md): Configure common actions and setup scripts for worktrees
+- [Run Codex with an NFS home directory](https://learn.chatgpt.com/docs/environments/network-file-systems.md): Configure a shared Codex home for interactive work across Linux hosts.
 - [Worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees.md): Use Git worktrees in Codex to run chats in parallel
 
 ## Extend
@@ -298,7 +300,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Codex Security](https://learn.chatgpt.com/docs/security.md): Scan code, investigate findings, and review fixes with Codex Security.
 - [Codex Security CI/CD overview](https://learn.chatgpt.com/docs/security/cli/ci.md): Choose a CI integration, prepare scan access, and decide how findings and scan coverage affect your pipeline.
 - [Codex Security CLI FAQ](https://learn.chatgpt.com/docs/security/cli/faq.md): Answers about Codex Security scans, findings, false positives, coverage, cost, and CI.
-- [Codex Security CLI quickstart](https://learn.chatgpt.com/docs/security/cli.md): Sign in, scan a local repository, and review the findings and coverage.
+- [Codex Security CLI quickstart](https://learn.chatgpt.com/docs/security/cli.md): Sign in, scan a local repository, and review the scan scope and findings.
 - [Codex Security CLI reference](https://learn.chatgpt.com/docs/security/cli/reference.md): Arguments, output formats, scan artifacts, and exit codes for the Codex Security CLI.
 - [Codex Security Cloud FAQ](https://learn.chatgpt.com/docs/security/faq.md): Understand Cloud scan results, validation, patches, and commit monitoring.
 - [Codex Security Cloud setup](https://learn.chatgpt.com/docs/security/setup.md): Install Codex Security Cloud, scan a GitHub repository, and review findings.

@@ -1233,6 +1233,14 @@
   },
   {
     "group": "Administration",
+    "title": "NFS home directories",
+    "md_url": "https://learn.chatgpt.com/docs/environments/network-file-systems.md",
+    "html_url": "https://learn.chatgpt.com/docs/environments/network-file-systems",
+    "route": "codex/environments/network-file-systems",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
     "title": "Manage app updates",
     "md_url": "https://learn.chatgpt.com/docs/enterprise/manage-app-updates.md",
     "html_url": "https://learn.chatgpt.com/docs/enterprise/manage-app-updates",
@@ -1245,6 +1253,14 @@
     "md_url": "https://learn.chatgpt.com/docs/enterprise/managed-configuration.md",
     "html_url": "https://learn.chatgpt.com/docs/enterprise/managed-configuration",
     "route": "codex/enterprise/managed-configuration",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Self-host configuration",
+    "md_url": "https://learn.chatgpt.com/docs/enterprise/configuration-server.md",
+    "html_url": "https://learn.chatgpt.com/docs/enterprise/configuration-server",
+    "route": "codex/enterprise/configuration-server",
     "kind": "doc"
   },
   {

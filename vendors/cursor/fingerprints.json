@@ -25,6 +25,7 @@
   "blog/builds": "12ebdabaf4d62a7ba7734e7408c4b745209f313da6d503082ad90dc7e75b4e56",
   "blog/canvas": "f45fc739c2c3a4f956a2bdcd40e20021548ef8fbc2608c91902185df4b06344c",
   "blog/cfo-council": "99d32e70fa0322099ad25393491ba1b1928ce51dad230cbd8ba37c5d9d1a1e6f",
+  "blog/claude-code-extension-security-notice": "43c01b613ca913565cb9fb4e80a296acc300890e1b26e87bea9897aef51f9bf3",
   "blog/cli": "aa59027f0a2bdb06f5cd3a96b396eaf5d00d6c0e6e4e7adb4e16fc416983c0ef",
   "blog/cloud-agent-development-environments": "902b0f4c9b39ca8f99a31024add0e83fcec9b87e2c4a3f018ef9a33c5094fe2e",
   "blog/cloud-agent-environment": "8f3aa48043ffbf283c1cd6e2c9c0abd318e84265f65a319b3269ff142ef6847a",
