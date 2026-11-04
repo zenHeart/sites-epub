@@ -1385,6 +1385,14 @@
   },
   {
     "group": "Blog",
+    "title": "spec driven development for financial services",
+    "md_url": "https://zencoder.ai/blog/spec-driven-development-for-financial-services",
+    "html_url": "https://zencoder.ai/blog/spec-driven-development-for-financial-services",
+    "route": "blog/spec-driven-development-for-financial-services",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "ai code generation the critical role of human validation",
     "md_url": "https://zencoder.ai/blog/ai-code-generation-the-critical-role-of-human-validation",
     "html_url": "https://zencoder.ai/blog/ai-code-generation-the-critical-role-of-human-validation",
@@ -1613,14 +1621,6 @@
     "md_url": "https://zencoder.ai/blog/integrate-ai-code-generators-vscode",
     "html_url": "https://zencoder.ai/blog/integrate-ai-code-generators-vscode",
     "route": "blog/integrate-ai-code-generators-vscode",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "spec driven development for financial services",
-    "md_url": "https://zencoder.ai/blog/spec-driven-development-for-financial-services",
-    "html_url": "https://zencoder.ai/blog/spec-driven-development-for-financial-services",
-    "route": "blog/spec-driven-development-for-financial-services",
     "kind": "blog"
   },
   {

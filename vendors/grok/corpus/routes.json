@@ -1881,6 +1881,14 @@
   },
   {
     "group": "Grok Bot Guides",
+    "title": "grok bot for linear",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-linear.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-linear",
+    "route": "bot/guides/grok-bot-for-linear",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot Guides",
     "title": "grok bot for marketing",
     "md_url": "https://x.ai/bot/guides/grok-bot-for-marketing.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-marketing",
@@ -2201,10 +2209,10 @@
   },
   {
     "group": "Bot Guides",
-    "title": "Sales Grok Bot for Clay Grok Bot builds your GTM workflows, and Clay supplies the data to run them. Together they handle enrichment, research, signals and outbound sequencing.",
-    "md_url": "https://x.ai/bot/guides/grok-bot-for-clay.md",
-    "html_url": "https://x.ai/bot/guides/grok-bot-for-clay",
-    "route": "bot-guides/grok-bot-for-clay",
+    "title": "Product Grok Bot for Linear Connect Linear and Grok Bot to investigate product problems, plan work, and coordinate coding agents. Every decision keeps its reasoning attached.",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-linear.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-linear",
+    "route": "bot-guides/grok-bot-for-linear",
     "kind": "doc"
   },
   {
@@ -2229,6 +2237,14 @@
     "md_url": "https://x.ai/bot/guides/grok-bot-for-post-sales.md",
     "html_url": "https://x.ai/bot/guides/grok-bot-for-post-sales",
     "route": "bot-guides/grok-bot-for-post-sales",
+    "kind": "doc"
+  },
+  {
+    "group": "Bot Guides",
+    "title": "Grok Bot for Clay Grok Bot builds your GTM workflows, and Clay supplies the data to run them. Together they handle enrichment, research, signals and outbound sequencing. Sales",
+    "md_url": "https://x.ai/bot/guides/grok-bot-for-clay.md",
+    "html_url": "https://x.ai/bot/guides/grok-bot-for-clay",
+    "route": "bot-guides/grok-bot-for-clay",
     "kind": "doc"
   },
   {

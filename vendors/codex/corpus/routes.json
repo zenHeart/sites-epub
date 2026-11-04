@@ -57,6 +57,14 @@
   },
   {
     "group": "Overview",
+    "title": "Working with agents",
+    "md_url": "https://learn.chatgpt.com/docs/working-with-agents.md",
+    "html_url": "https://learn.chatgpt.com/docs/working-with-agents",
+    "route": "codex/working-with-agents",
+    "kind": "doc"
+  },
+  {
+    "group": "Overview",
     "title": "Model selection",
     "md_url": "https://learn.chatgpt.com/docs/model-selection.md",
     "html_url": "https://learn.chatgpt.com/docs/model-selection",
@@ -1469,6 +1477,14 @@
     "md_url": "https://learn.chatgpt.com/docs/enterprise/agent-security.md",
     "html_url": "https://learn.chatgpt.com/docs/enterprise/agent-security",
     "route": "codex/enterprise/agent-security",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
+    "title": "Safety and security in dots",
+    "md_url": "https://learn.chatgpt.com/docs/enterprise/dots-security.md",
+    "html_url": "https://learn.chatgpt.com/docs/enterprise/dots-security",
+    "route": "codex/enterprise/dots-security",
     "kind": "doc"
   },
   {

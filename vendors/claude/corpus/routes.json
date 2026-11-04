@@ -1833,6 +1833,14 @@
   },
   {
     "group": "Blog",
+    "title": "new agents and products claude marketplace",
+    "md_url": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace.md",
+    "html_url": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace",
+    "route": "blog/new-agents-and-products-claude-marketplace",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "message threads",
     "md_url": "https://claude.com/resources/articles/message-threads.md",
     "html_url": "https://claude.com/resources/articles/message-threads",

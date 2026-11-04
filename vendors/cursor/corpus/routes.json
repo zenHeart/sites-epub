@@ -481,6 +481,14 @@
   },
   {
     "group": "Cursor: cloud-agents",
+    "title": "apps",
+    "md_url": "https://cursor.com/docs/cloud-agent/apps.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/apps",
+    "route": "docs/cloud-agent/apps",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
     "title": "capabilities",
     "md_url": "https://cursor.com/docs/cloud-agent/capabilities.md",
     "html_url": "https://cursor.com/docs/cloud-agent/capabilities",

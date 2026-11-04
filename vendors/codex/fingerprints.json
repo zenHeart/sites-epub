@@ -95,6 +95,7 @@
   "codex/enterprise/configuration-server": "0f7e321b1c6de715ba84444f133b8f891977cd9a1d3aaae2359ee57f16fc1d17",
   "codex/enterprise/connect-to-a-gateway": "62b156361ff406c62a5867288e2e8998ddb938470f71f92b6d30a5b8aaf016de",
   "codex/enterprise/dots-admin-guide": "024123002e2289252ed22241a3508c724159db9247b70e95d9a012f683dd6541",
+  "codex/enterprise/dots-security": "78c8d4d1b521269bbf18e8454c403f89346d3096e06fea01cbf672b75ff58b12",
   "codex/enterprise/dynamic-groups": "ec55e950b22d02bb658d09df2d1f269659b7e939b486e9023b903734345c80cd",
   "codex/enterprise/education-plans": "53c167dc9e744436607e12248c657e7eb2e524255f3bc1c64785cd924c78af42",
   "codex/enterprise/gateway-compatibility": "01c10c34a6563a4eb4661bc22ed46f7de0b77e83093907377f1245dce57c7462",
@@ -225,5 +226,6 @@
   "codex/whats-new/september-28-october-2-2026": "4bb49ce26492a01291dc9fadec611d62cbf64be00202753eeb299409562d2bca",
   "codex/windows/windows-app": "4837d35a44746ee18dc71011f96056b7ad4dd2818c9143f7357bf3c431a188ff",
   "codex/windows/windows-sandbox": "3eb36a277ec584766aa12ce93aecb0e2b55ccc110f9aafc8c5cec1ff7238c2ab",
-  "codex/windows/wsl": "7bc7cabfbe456741e7c93ec7fb1e006e82176e052446a66f87926602114bd59e"
+  "codex/windows/wsl": "7bc7cabfbe456741e7c93ec7fb1e006e82176e052446a66f87926602114bd59e",
+  "codex/working-with-agents": "4918cdf81c815974d3dd86b8272e8fe7b6dd83ffdd663c5975ff6fd7227d24b4"
 }

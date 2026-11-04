@@ -9,10 +9,26 @@
   },
   {
     "group": "Manus: Introduction",
+    "title": "Get started with Manus",
+    "md_url": "https://manus.im/docs/introduction/quickstart.md",
+    "html_url": "https://manus.im/docs/introduction/quickstart",
+    "route": "docs/introduction/quickstart",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Introduction",
     "title": "Plans and Pricing",
     "md_url": "https://manus.im/docs/introduction/plans.md",
     "html_url": "https://manus.im/docs/introduction/plans",
     "route": "docs/introduction/plans",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Manus features overview",
+    "md_url": "https://manus.im/docs/features/overview.md",
+    "html_url": "https://manus.im/docs/features/overview",
+    "route": "docs/features/overview",
     "kind": "doc"
   },
   {
@@ -33,18 +49,10 @@
   },
   {
     "group": "Manus: Features",
-    "title": "Design View",
-    "md_url": "https://manus.im/docs/features/design-view.md",
-    "html_url": "https://manus.im/docs/features/design-view",
-    "route": "docs/features/design-view",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Features",
-    "title": "Wide Research",
-    "md_url": "https://manus.im/docs/features/wide-research.md",
-    "html_url": "https://manus.im/docs/features/wide-research",
-    "route": "docs/features/wide-research",
+    "title": "Automations",
+    "md_url": "https://manus.im/docs/automations.md",
+    "html_url": "https://manus.im/docs/automations",
+    "route": "docs/automations",
     "kind": "doc"
   },
   {
@@ -57,6 +65,38 @@
   },
   {
     "group": "Manus: Features",
+    "title": "Branch",
+    "md_url": "https://manus.im/docs/features/branch.md",
+    "html_url": "https://manus.im/docs/features/branch",
+    "route": "docs/features/branch",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Manus Collab",
+    "md_url": "https://manus.im/docs/features/collab.md",
+    "html_url": "https://manus.im/docs/features/collab",
+    "route": "docs/features/collab",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Mail Manus",
+    "md_url": "https://manus.im/docs/features/mail-manus.md",
+    "html_url": "https://manus.im/docs/features/mail-manus",
+    "route": "docs/features/mail-manus",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Wide Research",
+    "md_url": "https://manus.im/docs/features/wide-research.md",
+    "html_url": "https://manus.im/docs/features/wide-research",
+    "route": "docs/features/wide-research",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
     "title": "Manus Slides",
     "md_url": "https://manus.im/docs/features/slides.md",
     "html_url": "https://manus.im/docs/features/slides",
@@ -65,10 +105,10 @@
   },
   {
     "group": "Manus: Features",
-    "title": "Automations",
-    "md_url": "https://manus.im/docs/automations.md",
-    "html_url": "https://manus.im/docs/automations",
-    "route": "docs/automations",
+    "title": "Design View",
+    "md_url": "https://manus.im/docs/features/design-view.md",
+    "html_url": "https://manus.im/docs/features/design-view",
+    "route": "docs/features/design-view",
     "kind": "doc"
   },
   {
@@ -89,14 +129,6 @@
   },
   {
     "group": "Manus: Features",
-    "title": "Game Developer",
-    "md_url": "https://manus.im/docs/features/game-developer.md",
-    "html_url": "https://manus.im/docs/features/game-developer",
-    "route": "docs/features/game-developer",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Features",
     "title": "Video Editor",
     "md_url": "https://manus.im/docs/features/video-editor.md",
     "html_url": "https://manus.im/docs/features/video-editor",
@@ -105,18 +137,10 @@
   },
   {
     "group": "Manus: Features",
-    "title": "Mail Manus",
-    "md_url": "https://manus.im/docs/features/mail-manus.md",
-    "html_url": "https://manus.im/docs/features/mail-manus",
-    "route": "docs/features/mail-manus",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Features",
-    "title": "Manus Collab",
-    "md_url": "https://manus.im/docs/features/collab.md",
-    "html_url": "https://manus.im/docs/features/collab",
-    "route": "docs/features/collab",
+    "title": "Meeting minutes",
+    "md_url": "https://manus.im/docs/features/meeting-minutes.md",
+    "html_url": "https://manus.im/docs/features/meeting-minutes",
+    "route": "docs/features/meeting-minutes",
     "kind": "doc"
   },
   {
@@ -145,18 +169,194 @@
   },
   {
     "group": "Manus: Features",
-    "title": "Meeting minutes",
-    "md_url": "https://manus.im/docs/features/meeting-minutes.md",
-    "html_url": "https://manus.im/docs/features/meeting-minutes",
-    "route": "docs/features/meeting-minutes",
+    "title": "Manus 2.0",
+    "md_url": "https://manus.im/docs/website-builder/getting-started.md",
+    "html_url": "https://manus.im/docs/website-builder/getting-started",
+    "route": "docs/website-builder/getting-started",
     "kind": "doc"
   },
   {
     "group": "Manus: Features",
-    "title": "Branch",
-    "md_url": "https://manus.im/docs/features/branch.md",
-    "html_url": "https://manus.im/docs/features/branch",
-    "route": "docs/features/branch",
+    "title": "Build locally in Manus Studio",
+    "md_url": "https://manus.im/docs/website-builder/build-locally.md",
+    "html_url": "https://manus.im/docs/website-builder/build-locally",
+    "route": "docs/website-builder/build-locally",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Game Developer",
+    "md_url": "https://manus.im/docs/features/game-developer.md",
+    "html_url": "https://manus.im/docs/features/game-developer",
+    "route": "docs/features/game-developer",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Editing and Previewing",
+    "md_url": "https://manus.im/docs/website-builder/editing-and-previewing.md",
+    "html_url": "https://manus.im/docs/website-builder/editing-and-previewing",
+    "route": "docs/website-builder/editing-and-previewing",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Publishing",
+    "md_url": "https://manus.im/docs/website-builder/publishing.md",
+    "html_url": "https://manus.im/docs/website-builder/publishing",
+    "route": "docs/website-builder/publishing",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "App Publishing (mobile)",
+    "md_url": "https://manus.im/docs/website-builder/app-publishing.md",
+    "html_url": "https://manus.im/docs/website-builder/app-publishing",
+    "route": "docs/website-builder/app-publishing",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Usage and Pricing",
+    "md_url": "https://manus.im/docs/website-builder/getting-started/usage-and-pricing.md",
+    "html_url": "https://manus.im/docs/website-builder/getting-started/usage-and-pricing",
+    "route": "docs/website-builder/getting-started/usage-and-pricing",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Built-in AI Capabilities",
+    "md_url": "https://manus.im/docs/website-builder/ai-capabilities.md",
+    "html_url": "https://manus.im/docs/website-builder/ai-capabilities",
+    "route": "docs/website-builder/ai-capabilities",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Cloud Infrastructure",
+    "md_url": "https://manus.im/docs/website-builder/cloud-infrastructure.md",
+    "html_url": "https://manus.im/docs/website-builder/cloud-infrastructure",
+    "route": "docs/website-builder/cloud-infrastructure",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Data cache",
+    "md_url": "https://manus.im/docs/website-builder/data-cache.md",
+    "html_url": "https://manus.im/docs/website-builder/data-cache",
+    "route": "docs/website-builder/data-cache",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Access Control",
+    "md_url": "https://manus.im/docs/website-builder/access-control.md",
+    "html_url": "https://manus.im/docs/website-builder/access-control",
+    "route": "docs/website-builder/access-control",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Notifications",
+    "md_url": "https://manus.im/docs/website-builder/notifications.md",
+    "html_url": "https://manus.im/docs/website-builder/notifications",
+    "route": "docs/website-builder/notifications",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Payments",
+    "md_url": "https://manus.im/docs/website-builder/payments.md",
+    "html_url": "https://manus.im/docs/website-builder/payments",
+    "route": "docs/website-builder/payments",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Shopify",
+    "md_url": "https://manus.im/docs/website-builder/shopify.md",
+    "html_url": "https://manus.im/docs/website-builder/shopify",
+    "route": "docs/website-builder/shopify",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Schedules",
+    "md_url": "https://manus.im/docs/website-builder/schedules.md",
+    "html_url": "https://manus.im/docs/website-builder/schedules",
+    "route": "docs/website-builder/schedules",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Project Analytics ",
+    "md_url": "https://manus.im/docs/website-builder/project-analytics.md",
+    "html_url": "https://manus.im/docs/website-builder/project-analytics",
+    "route": "docs/website-builder/project-analytics",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Custom Domains: Professionalize Your Brand",
+    "md_url": "https://manus.im/docs/website-builder/custom-domains.md",
+    "html_url": "https://manus.im/docs/website-builder/custom-domains",
+    "route": "docs/website-builder/custom-domains",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Search Engine Optimization",
+    "md_url": "https://manus.im/docs/website-builder/seo.md",
+    "html_url": "https://manus.im/docs/website-builder/seo",
+    "route": "docs/website-builder/seo",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Code Control",
+    "md_url": "https://manus.im/docs/website-builder/code-control.md",
+    "html_url": "https://manus.im/docs/website-builder/code-control",
+    "route": "docs/website-builder/code-control",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Make a Copy",
+    "md_url": "https://manus.im/docs/website-builder/make-a-copy.md",
+    "html_url": "https://manus.im/docs/website-builder/make-a-copy",
+    "route": "docs/website-builder/make-a-copy",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Edit in New Task",
+    "md_url": "https://manus.im/docs/website-builder/edit-in-new-task.md",
+    "html_url": "https://manus.im/docs/website-builder/edit-in-new-task",
+    "route": "docs/website-builder/edit-in-new-task",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Import from Figma: From Design to App in One Step",
+    "md_url": "https://manus.im/docs/website-builder/import-figma.md",
+    "html_url": "https://manus.im/docs/website-builder/import-figma",
+    "route": "docs/website-builder/import-figma",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "Third-Party Integrations",
+    "md_url": "https://manus.im/docs/website-builder/third-party-integrations.md",
+    "html_url": "https://manus.im/docs/website-builder/third-party-integrations",
+    "route": "docs/website-builder/third-party-integrations",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Features",
+    "title": "GitHub Integration",
+    "md_url": "https://manus.im/docs/website-builder/github-integration.md",
+    "html_url": "https://manus.im/docs/website-builder/github-integration",
+    "route": "docs/website-builder/github-integration",
     "kind": "doc"
   },
   {
@@ -176,187 +376,11 @@
     "kind": "doc"
   },
   {
-    "group": "Manus: Website Builder",
-    "title": "Getting started",
-    "md_url": "https://manus.im/docs/website-builder/getting-started.md",
-    "html_url": "https://manus.im/docs/website-builder/getting-started",
-    "route": "docs/website-builder/getting-started",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Build locally in Manus Studio",
-    "md_url": "https://manus.im/docs/website-builder/build-locally.md",
-    "html_url": "https://manus.im/docs/website-builder/build-locally",
-    "route": "docs/website-builder/build-locally",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Editing and Previewing",
-    "md_url": "https://manus.im/docs/website-builder/editing-and-previewing.md",
-    "html_url": "https://manus.im/docs/website-builder/editing-and-previewing",
-    "route": "docs/website-builder/editing-and-previewing",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Publishing",
-    "md_url": "https://manus.im/docs/website-builder/publishing.md",
-    "html_url": "https://manus.im/docs/website-builder/publishing",
-    "route": "docs/website-builder/publishing",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Usage and Pricing",
-    "md_url": "https://manus.im/docs/website-builder/getting-started/usage-and-pricing.md",
-    "html_url": "https://manus.im/docs/website-builder/getting-started/usage-and-pricing",
-    "route": "docs/website-builder/getting-started/usage-and-pricing",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Built-in AI Capabilities",
-    "md_url": "https://manus.im/docs/website-builder/ai-capabilities.md",
-    "html_url": "https://manus.im/docs/website-builder/ai-capabilities",
-    "route": "docs/website-builder/ai-capabilities",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Cloud Infrastructure",
-    "md_url": "https://manus.im/docs/website-builder/cloud-infrastructure.md",
-    "html_url": "https://manus.im/docs/website-builder/cloud-infrastructure",
-    "route": "docs/website-builder/cloud-infrastructure",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Data cache",
-    "md_url": "https://manus.im/docs/website-builder/data-cache.md",
-    "html_url": "https://manus.im/docs/website-builder/data-cache",
-    "route": "docs/website-builder/data-cache",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Access Control",
-    "md_url": "https://manus.im/docs/website-builder/access-control.md",
-    "html_url": "https://manus.im/docs/website-builder/access-control",
-    "route": "docs/website-builder/access-control",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Notifications",
-    "md_url": "https://manus.im/docs/website-builder/notifications.md",
-    "html_url": "https://manus.im/docs/website-builder/notifications",
-    "route": "docs/website-builder/notifications",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Payments",
-    "md_url": "https://manus.im/docs/website-builder/payments.md",
-    "html_url": "https://manus.im/docs/website-builder/payments",
-    "route": "docs/website-builder/payments",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Shopify",
-    "md_url": "https://manus.im/docs/website-builder/shopify.md",
-    "html_url": "https://manus.im/docs/website-builder/shopify",
-    "route": "docs/website-builder/shopify",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Project Analytics ",
-    "md_url": "https://manus.im/docs/website-builder/project-analytics.md",
-    "html_url": "https://manus.im/docs/website-builder/project-analytics",
-    "route": "docs/website-builder/project-analytics",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Custom Domains: Professionalize Your Brand",
-    "md_url": "https://manus.im/docs/website-builder/custom-domains.md",
-    "html_url": "https://manus.im/docs/website-builder/custom-domains",
-    "route": "docs/website-builder/custom-domains",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Search Engine Optimization",
-    "md_url": "https://manus.im/docs/website-builder/seo.md",
-    "html_url": "https://manus.im/docs/website-builder/seo",
-    "route": "docs/website-builder/seo",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Code Control",
-    "md_url": "https://manus.im/docs/website-builder/code-control.md",
-    "html_url": "https://manus.im/docs/website-builder/code-control",
-    "route": "docs/website-builder/code-control",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Make a Copy",
-    "md_url": "https://manus.im/docs/website-builder/make-a-copy.md",
-    "html_url": "https://manus.im/docs/website-builder/make-a-copy",
-    "route": "docs/website-builder/make-a-copy",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Edit in New Task",
-    "md_url": "https://manus.im/docs/website-builder/edit-in-new-task.md",
-    "html_url": "https://manus.im/docs/website-builder/edit-in-new-task",
-    "route": "docs/website-builder/edit-in-new-task",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Import from Figma: From Design to App in One Step",
-    "md_url": "https://manus.im/docs/website-builder/import-figma.md",
-    "html_url": "https://manus.im/docs/website-builder/import-figma",
-    "route": "docs/website-builder/import-figma",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Third-Party Integrations",
-    "md_url": "https://manus.im/docs/website-builder/third-party-integrations.md",
-    "html_url": "https://manus.im/docs/website-builder/third-party-integrations",
-    "route": "docs/website-builder/third-party-integrations",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "GitHub Integration",
-    "md_url": "https://manus.im/docs/website-builder/github-integration.md",
-    "html_url": "https://manus.im/docs/website-builder/github-integration",
-    "route": "docs/website-builder/github-integration",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "App Publishing (mobile)",
-    "md_url": "https://manus.im/docs/website-builder/app-publishing.md",
-    "html_url": "https://manus.im/docs/website-builder/app-publishing",
-    "route": "docs/website-builder/app-publishing",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Website Builder",
-    "title": "Schedules",
-    "md_url": "https://manus.im/docs/website-builder/schedules.md",
-    "html_url": "https://manus.im/docs/website-builder/schedules",
-    "route": "docs/website-builder/schedules",
+    "group": "Manus: Features",
+    "title": "Nano Banana Pro",
+    "md_url": "https://manus.im/docs/integrations/nano-banana-pro.md",
+    "html_url": "https://manus.im/docs/integrations/nano-banana-pro",
+    "route": "docs/integrations/nano-banana-pro",
     "kind": "doc"
   },
   {
@@ -365,38 +389,6 @@
     "md_url": "https://manus.im/docs/integrations/integrations.md",
     "html_url": "https://manus.im/docs/integrations/integrations",
     "route": "docs/integrations/integrations",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Integrations",
-    "title": "MCP Connectors",
-    "md_url": "https://manus.im/docs/integrations/mcp-connectors.md",
-    "html_url": "https://manus.im/docs/integrations/mcp-connectors",
-    "route": "docs/integrations/mcp-connectors",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Integrations",
-    "title": "Connectors",
-    "md_url": "https://manus.im/docs/integrations/connectors.md",
-    "html_url": "https://manus.im/docs/integrations/connectors",
-    "route": "docs/integrations/connectors",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Integrations",
-    "title": "Custom MCP Servers",
-    "md_url": "https://manus.im/docs/integrations/custom-mcp.md",
-    "html_url": "https://manus.im/docs/integrations/custom-mcp",
-    "route": "docs/integrations/custom-mcp",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Integrations",
-    "title": "Manus Browser Operator ",
-    "md_url": "https://manus.im/docs/integrations/manus-browser-operator.md",
-    "html_url": "https://manus.im/docs/integrations/manus-browser-operator",
-    "route": "docs/integrations/manus-browser-operator",
     "kind": "doc"
   },
   {
@@ -425,18 +417,34 @@
   },
   {
     "group": "Manus: Integrations",
-    "title": "Nano Banana Pro",
-    "md_url": "https://manus.im/docs/integrations/nano-banana-pro.md",
-    "html_url": "https://manus.im/docs/integrations/nano-banana-pro",
-    "route": "docs/integrations/nano-banana-pro",
-    "kind": "doc"
-  },
-  {
-    "group": "Manus: Integrations",
     "title": "Data Sources",
     "md_url": "https://manus.im/docs/integrations/data-sources.md",
     "html_url": "https://manus.im/docs/integrations/data-sources",
     "route": "docs/integrations/data-sources",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Integrations",
+    "title": "Connectors",
+    "md_url": "https://manus.im/docs/integrations/connectors.md",
+    "html_url": "https://manus.im/docs/integrations/connectors",
+    "route": "docs/integrations/connectors",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Integrations",
+    "title": "MCP Connectors",
+    "md_url": "https://manus.im/docs/integrations/mcp-connectors.md",
+    "html_url": "https://manus.im/docs/integrations/mcp-connectors",
+    "route": "docs/integrations/mcp-connectors",
+    "kind": "doc"
+  },
+  {
+    "group": "Manus: Integrations",
+    "title": "Custom MCP Servers",
+    "md_url": "https://manus.im/docs/integrations/custom-mcp.md",
+    "html_url": "https://manus.im/docs/integrations/custom-mcp",
+    "route": "docs/integrations/custom-mcp",
     "kind": "doc"
   },
   {

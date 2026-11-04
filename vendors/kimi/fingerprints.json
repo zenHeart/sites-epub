@@ -1,4 +1,5 @@
 {
+  "academy/3d-tutorial": "12bfb181888f130695688fe37d8df0a7a3463c40ccc395df914a3d466379e811",
   "academy/best-practices-for-context-caching": "4d90ec83d458c737957b11f8b56938c63a52d3b0a3789e04af08ce95af543975",
   "academy/best-practices-for-web-search": "77f8044f6e6747ba2063c694972c9f3968e24a487c9b2eb3d2b9d5fa1497272b",
   "academy/discord-community-ops-agent": "1afd338b6ccb10f0159f2773fff14b298decd3226ab4afc2f01584b40814517b",
@@ -94,7 +95,6 @@
   "resources/kimi-for-mac": "50605f5d876a0886c0ff1dfaaf68daf15b6b77b439b18f1b8d9fe35a2e5277b5",
   "resources/kimi-for-windows": "42aa3b844f9ac02f5e5593bad1e85dab0b2494dfe995c4c29abeaf67ae50d9d9",
   "resources/kimi-k2-7-code": "9ef3c44b05ec5eab7be683eb990899943dc2e88397c5f01c52b9984100e33e66",
-  "resources/kimi-mira-introduction": "98d3ab0e7ef3226b04d30de40f74879794cbe8570ae448753cfe09803c0373b0",
   "resources/kimi-work-dashboard": "8cf0a09cab466e877f68c4e959a848a7e212b592817deaab76c8caa562f9db63",
   "resources/kimi-work-introduction": "1f49afedfb93cac5d63b435ae644e02cef54e14463609047196020a449e4ead7",
   "resources/kimi-work-remote-control": "c51f1885b7e7f5a761c20dacf4402b176b7019af6e1d2285dd4ccb980aa8bcd7",

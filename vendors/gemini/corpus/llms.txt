@@ -4,13 +4,13 @@
 
 ## How agents should use this documentation
 - **Canonical SDK:** Always use `google-genai` (`pip install google-genai` or `npm install @google/genai`). Never generate code using deprecated packages like `google-generativeai` or `@google/generative-ai`.
-- **API Choice:** Use the Interactions API (`client.interactions`) as the default across all workflows. `generateContent` should we just say generateConent is still supported for existing integrations, but is considered a legacy API.
+- **API Choice:** Use the Interactions API (`client.interactions`) as the default across all workflows. `generateContent` is still supported for existing integrations, but is considered a legacy API.
 - **Markdown Pages:** Every documentation page is available as clean markdown by appending `.md` to the URL.
 
 ## Agent setup & developer tooling
 - [Coding agent setup](https://aistudio.google.com/docs/coding-agents.md): Configure Cursor, Claude Code, Antigravity, and other coding assistants.
 - [Gemini skills repository](https://github.com/google-gemini/gemini-skills): Portable agent skills (`gemini-api-dev`, `gemini-live-api-dev`) for coding assistants.
-- [Gemini API plugin](https://github.com/google-gemini/gemini-skills/tree/main/plugins/gemini-api): Bundled plugin with skills, subagents, and hooks for Claude Code and Jetski.
+- [Gemini API plugin](https://github.com/google-gemini/gemini-skills): Bundled plugin with skills, subagents, and hooks for Claude Code and Antigravity.
 - [Gemini Docs MCP server](https://gemini-api-docs-mcp.dev): Model Context Protocol server providing live documentation search (`npx add-mcp "https://gemini-api-docs-mcp.dev"`).
 
 ## Get started

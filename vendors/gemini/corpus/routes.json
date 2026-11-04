@@ -161,6 +161,14 @@
   },
   {
     "group": "Antigravity",
+    "title": "Voice mode",
+    "md_url": "https://antigravity.google/docs/voice-mode.md",
+    "html_url": "https://antigravity.google/docs/voice-mode",
+    "route": "antigravity/voice-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Projects",
     "md_url": "https://antigravity.google/docs/projects.md",
     "html_url": "https://antigravity.google/docs/projects",
@@ -173,6 +181,14 @@
     "md_url": "https://antigravity.google/docs/search.md",
     "html_url": "https://antigravity.google/docs/search",
     "route": "antigravity/search",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Remote Agents",
+    "md_url": "https://antigravity.google/docs/remote-agents.md",
+    "html_url": "https://antigravity.google/docs/remote-agents",
+    "route": "antigravity/remote-agents",
     "kind": "doc"
   },
   {
@@ -457,6 +473,14 @@
   },
   {
     "group": "Antigravity",
+    "title": "Agent Client Protocol (ACP)",
+    "md_url": "https://antigravity.google/docs/cli/acp.md",
+    "html_url": "https://antigravity.google/docs/cli/acp",
+    "route": "antigravity/cli/acp",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Reviewing artifacts",
     "md_url": "https://antigravity.google/docs/cli/artifacts.md",
     "html_url": "https://antigravity.google/docs/cli/artifacts",
@@ -617,7 +641,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "Voice dictation (/voice)",
+    "title": "Voice mode and dictation (/voice)",
     "md_url": "https://antigravity.google/docs/cli/commands/voice.md",
     "html_url": "https://antigravity.google/docs/cli/commands/voice",
     "route": "antigravity/cli/commands/voice",

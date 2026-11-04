@@ -2241,6 +2241,14 @@
   },
   {
     "group": "\u6263\u5b50: \u5b9a\u4ef7",
+    "title": "\u6d3b\u52a8\u4e0e\u516c\u544a/\u6d3b\u52a8/\u53cc\u5341\u4e00\u79ef\u5206\u52a0\u8d60\u6d3b\u52a8",
+    "md_url": "https://docs.coze.cn/double-11-credits-bonus.md",
+    "html_url": "https://docs.coze.cn/double-11-credits-bonus",
+    "route": "double-11-credits-bonus",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u5b9a\u4ef7",
     "title": "\u6d3b\u52a8\u4e0e\u516c\u544a/\u6d3b\u52a8/\u4e2a\u4eba\u9ad8\u9636\u7248\u4e0e\u65d7\u8230\u7248\u9996\u6708\u4f18\u60e0\u6d3b\u52a8\u8c03\u6574",
     "md_url": "https://docs.coze.cn/coze-premium-activity-adjustment-0819.md",
     "html_url": "https://docs.coze.cn/coze-premium-activity-adjustment-0819",
@@ -2277,6 +2285,22 @@
     "md_url": "https://docs.coze.cn/guides_limited_time_3x_points_event.md",
     "html_url": "https://docs.coze.cn/guides_limited_time_3x_points_event",
     "route": "guides_limited_time_3x_points_event",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u5b9a\u4ef7",
+    "title": "\u6d3b\u52a8\u4e0e\u516c\u544a/\u516c\u544a/\u79ef\u5206\u5355\u4f4d\u8c03\u6574\u516c\u544a",
+    "md_url": "https://docs.coze.cn/credits-unit-update.md",
+    "html_url": "https://docs.coze.cn/credits-unit-update",
+    "route": "credits-unit-update",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u5b9a\u4ef7",
+    "title": "\u6d3b\u52a8\u4e0e\u516c\u544a/\u516c\u544a/\u6263\u5b50\u4e2a\u4eba\u7248\u5957\u9910\u4ef7\u683c\u8c03\u6574\u516c\u544a",
+    "md_url": "https://docs.coze.cn/subscription-plan-adjustment-20261112.md",
+    "html_url": "https://docs.coze.cn/subscription-plan-adjustment-20261112",
+    "route": "subscription-plan-adjustment-20261112",
     "kind": "doc"
   },
   {

@@ -145,6 +145,14 @@
   },
   {
     "group": "Academy \u6559\u7a0b",
+    "title": "3d tutorial",
+    "md_url": "https://www.kimi.com/academy/3d-tutorial",
+    "html_url": "https://www.kimi.com/academy/3d-tutorial",
+    "route": "academy/3d-tutorial",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
     "title": "mini game studio",
     "md_url": "https://www.kimi.com/academy/mini-game-studio",
     "html_url": "https://www.kimi.com/academy/mini-game-studio",
@@ -365,14 +373,6 @@
     "md_url": "https://www.kimi.com/resources/kimi-community",
     "html_url": "https://www.kimi.com/resources/kimi-community",
     "route": "resources/kimi-community",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "kimi mira introduction",
-    "md_url": "https://www.kimi.com/resources/kimi-mira-introduction",
-    "html_url": "https://www.kimi.com/resources/kimi-mira-introduction",
-    "route": "resources/kimi-mira-introduction",
     "kind": "doc"
   },
   {
