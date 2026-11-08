@@ -1833,6 +1833,22 @@
   },
   {
     "group": "Blog",
+    "title": "introducing personal finance in claude",
+    "md_url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude.md",
+    "html_url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
+    "route": "blog/introducing-personal-finance-in-claude",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude enterprise security updates",
+    "md_url": "https://claude.com/resources/articles/claude-enterprise-security-updates.md",
+    "html_url": "https://claude.com/resources/articles/claude-enterprise-security-updates",
+    "route": "blog/claude-enterprise-security-updates",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "new agents and products claude marketplace",
     "md_url": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace.md",
     "html_url": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace",
@@ -1901,14 +1917,6 @@
     "md_url": "https://claude.com/resources/articles/unified-claude-enterprise.md",
     "html_url": "https://claude.com/resources/articles/unified-claude-enterprise",
     "route": "blog/unified-claude-enterprise",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "claude duet safety privacy and security",
-    "md_url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security.md",
-    "html_url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security",
-    "route": "blog/claude-duet-safety-privacy-and-security",
     "kind": "blog"
   },
   {
@@ -2421,6 +2429,14 @@
     "md_url": "https://claude.com/resources/articles/claude-duet.md",
     "html_url": "https://claude.com/resources/articles/claude-duet",
     "route": "blog/claude-duet",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude duet safety privacy and security",
+    "md_url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security.md",
+    "html_url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security",
+    "route": "blog/claude-duet-safety-privacy-and-security",
     "kind": "blog"
   },
   {

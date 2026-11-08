@@ -377,6 +377,14 @@
   },
   {
     "group": "Resources \u6559\u7a0b",
+    "title": "kimi mira introduction",
+    "md_url": "https://www.kimi.com/resources/kimi-mira-introduction",
+    "html_url": "https://www.kimi.com/resources/kimi-mira-introduction",
+    "route": "resources/kimi-mira-introduction",
+    "kind": "doc"
+  },
+  {
+    "group": "Resources \u6559\u7a0b",
     "title": "agent harness",
     "md_url": "https://www.kimi.com/resources/agent-harness",
     "html_url": "https://www.kimi.com/resources/agent-harness",

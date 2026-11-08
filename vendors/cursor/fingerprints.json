@@ -203,6 +203,7 @@
   "docs/agent/tools/canvas": "97f7a8577702a3c662a355d3e0545815b7e44f0426c977d69fd5fbe5fe74f918",
   "docs/agent/tools/search": "60b8b5e8b4e860e5de0f9939a56b3ff94942ece769732e96471283c71888e8e1",
   "docs/agent/tools/terminal": "aa4e8d89606a6c6302285d5d0551eea499d060822b7d36bf6761c2525e868f7a",
+  "docs/agent/voice-chat": "b5ab6604a304e08d0d1ffa89e8b5f4fc6706f3a70c9ead73423614b2f4cb800d",
   "docs/api": "ed3a3eb7e1f33dd6409f4c2ed283208cb6f952e16ff5ca73ed1ba7896e4fb033",
   "docs/api/origin": "fc16521c73b88ab178bcb5c95518a61b861615780569a64fd0d11c057d5ae4ab",
   "docs/api/origin/acting-as-users": "60565a61d17a8556271685cf2a1ced938e5cbcb716b8e825279b86986ef88c7f",

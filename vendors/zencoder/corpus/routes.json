@@ -1145,14 +1145,6 @@
   },
   {
     "group": "Blog",
-    "title": "ai automation business opportunities",
-    "md_url": "https://zencoder.ai/blog/ai-automation-business-opportunities",
-    "html_url": "https://zencoder.ai/blog/ai-automation-business-opportunities",
-    "route": "blog/ai-automation-business-opportunities",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "claude ai vs chatgpt for coding",
     "md_url": "https://zencoder.ai/blog/claude-ai-vs-chatgpt-for-coding",
     "html_url": "https://zencoder.ai/blog/claude-ai-vs-chatgpt-for-coding",
@@ -1165,14 +1157,6 @@
     "md_url": "https://zencoder.ai/blog/how-to-implement-ai-in-business-using-workflows-ai-agents",
     "html_url": "https://zencoder.ai/blog/how-to-implement-ai-in-business-using-workflows-ai-agents",
     "route": "blog/how-to-implement-ai-in-business-using-workflows-ai-agents",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "autonomous ai agents examples",
-    "md_url": "https://zencoder.ai/blog/autonomous-ai-agents-examples",
-    "html_url": "https://zencoder.ai/blog/autonomous-ai-agents-examples",
-    "route": "blog/autonomous-ai-agents-examples",
     "kind": "blog"
   },
   {
@@ -1225,18 +1209,18 @@
   },
   {
     "group": "Blog",
-    "title": "the next great disruptor the birth of the ai first worker",
-    "md_url": "https://zencoder.ai/blog/the-next-great-disruptor-the-birth-of-the-ai-first-worker",
-    "html_url": "https://zencoder.ai/blog/the-next-great-disruptor-the-birth-of-the-ai-first-worker",
-    "route": "blog/the-next-great-disruptor-the-birth-of-the-ai-first-worker",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "javascript debugging guide",
     "md_url": "https://zencoder.ai/blog/javascript-debugging-guide",
     "html_url": "https://zencoder.ai/blog/javascript-debugging-guide",
     "route": "blog/javascript-debugging-guide",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai automation business opportunities",
+    "md_url": "https://zencoder.ai/blog/ai-automation-business-opportunities",
+    "html_url": "https://zencoder.ai/blog/ai-automation-business-opportunities",
+    "route": "blog/ai-automation-business-opportunities",
     "kind": "blog"
   },
   {
@@ -1269,6 +1253,14 @@
     "md_url": "https://zencoder.ai/blog/ai-cinematic-ui-design",
     "html_url": "https://zencoder.ai/blog/ai-cinematic-ui-design",
     "route": "blog/ai-cinematic-ui-design",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "no code ai agent builder",
+    "md_url": "https://zencoder.ai/blog/no-code-ai-agent-builder",
+    "html_url": "https://zencoder.ai/blog/no-code-ai-agent-builder",
+    "route": "blog/no-code-ai-agent-builder",
     "kind": "blog"
   },
   {
@@ -1385,14 +1377,6 @@
   },
   {
     "group": "Blog",
-    "title": "spec driven development for financial services",
-    "md_url": "https://zencoder.ai/blog/spec-driven-development-for-financial-services",
-    "html_url": "https://zencoder.ai/blog/spec-driven-development-for-financial-services",
-    "route": "blog/spec-driven-development-for-financial-services",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "ai code generation the critical role of human validation",
     "md_url": "https://zencoder.ai/blog/ai-code-generation-the-critical-role-of-human-validation",
     "html_url": "https://zencoder.ai/blog/ai-code-generation-the-critical-role-of-human-validation",
@@ -1421,6 +1405,14 @@
     "md_url": "https://zencoder.ai/blog/software-design-patterns-with-ai-future-trends",
     "html_url": "https://zencoder.ai/blog/software-design-patterns-with-ai-future-trends",
     "route": "blog/software-design-patterns-with-ai-future-trends",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "autonomous ai agents examples",
+    "md_url": "https://zencoder.ai/blog/autonomous-ai-agents-examples",
+    "html_url": "https://zencoder.ai/blog/autonomous-ai-agents-examples",
+    "route": "blog/autonomous-ai-agents-examples",
     "kind": "blog"
   },
   {
@@ -1621,6 +1613,14 @@
     "md_url": "https://zencoder.ai/blog/integrate-ai-code-generators-vscode",
     "html_url": "https://zencoder.ai/blog/integrate-ai-code-generators-vscode",
     "route": "blog/integrate-ai-code-generators-vscode",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the next great disruptor the birth of the ai first worker",
+    "md_url": "https://zencoder.ai/blog/the-next-great-disruptor-the-birth-of-the-ai-first-worker",
+    "html_url": "https://zencoder.ai/blog/the-next-great-disruptor-the-birth-of-the-ai-first-worker",
+    "route": "blog/the-next-great-disruptor-the-birth-of-the-ai-first-worker",
     "kind": "blog"
   },
   {
@@ -2497,14 +2497,6 @@
   },
   {
     "group": "Blog",
-    "title": "ai coding agents generating context aware code",
-    "md_url": "https://zencoder.ai/blog/ai-coding-agents-generating-context-aware-code",
-    "html_url": "https://zencoder.ai/blog/ai-coding-agents-generating-context-aware-code",
-    "route": "blog/ai-coding-agents-generating-context-aware-code",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "ai for code governance",
     "md_url": "https://zencoder.ai/blog/ai-for-code-governance",
     "html_url": "https://zencoder.ai/blog/ai-for-code-governance",
@@ -2685,6 +2677,14 @@
     "md_url": "https://zencoder.ai/blog/coderabbit-alternatives",
     "html_url": "https://zencoder.ai/blog/coderabbit-alternatives",
     "route": "blog/coderabbit-alternatives",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai agent survival guide part 3 that mcp server you just installed",
+    "md_url": "https://zencoder.ai/blog/ai-agent-survival-guide-part-3-that-mcp-server-you-just-installed",
+    "html_url": "https://zencoder.ai/blog/ai-agent-survival-guide-part-3-that-mcp-server-you-just-installed",
+    "route": "blog/ai-agent-survival-guide-part-3-that-mcp-server-you-just-installed",
     "kind": "blog"
   },
   {
@@ -2921,14 +2921,6 @@
   },
   {
     "group": "Blog",
-    "title": "how to create software engineer portfolio",
-    "md_url": "https://zencoder.ai/blog/how-to-create-software-engineer-portfolio",
-    "html_url": "https://zencoder.ai/blog/how-to-create-software-engineer-portfolio",
-    "route": "blog/how-to-create-software-engineer-portfolio",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "best code documentation tools",
     "md_url": "https://zencoder.ai/blog/best-code-documentation-tools",
     "html_url": "https://zencoder.ai/blog/best-code-documentation-tools",
@@ -3053,6 +3045,14 @@
     "md_url": "https://zencoder.ai/blog/ai-enhanced-docstring-comment-generation",
     "html_url": "https://zencoder.ai/blog/ai-enhanced-docstring-comment-generation",
     "route": "blog/ai-enhanced-docstring-comment-generation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "spec driven development for financial services",
+    "md_url": "https://zencoder.ai/blog/spec-driven-development-for-financial-services",
+    "html_url": "https://zencoder.ai/blog/spec-driven-development-for-financial-services",
+    "route": "blog/spec-driven-development-for-financial-services",
     "kind": "blog"
   },
   {
@@ -3193,18 +3193,18 @@
   },
   {
     "group": "Blog",
-    "title": "ai agent survival guide part 3 that mcp server you just installed",
-    "md_url": "https://zencoder.ai/blog/ai-agent-survival-guide-part-3-that-mcp-server-you-just-installed",
-    "html_url": "https://zencoder.ai/blog/ai-agent-survival-guide-part-3-that-mcp-server-you-just-installed",
-    "route": "blog/ai-agent-survival-guide-part-3-that-mcp-server-you-just-installed",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "choose right docstring format",
     "md_url": "https://zencoder.ai/blog/choose-right-docstring-format",
     "html_url": "https://zencoder.ai/blog/choose-right-docstring-format",
     "route": "blog/choose-right-docstring-format",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to create software engineer portfolio",
+    "md_url": "https://zencoder.ai/blog/how-to-create-software-engineer-portfolio",
+    "html_url": "https://zencoder.ai/blog/how-to-create-software-engineer-portfolio",
+    "route": "blog/how-to-create-software-engineer-portfolio",
     "kind": "blog"
   },
   {
@@ -4113,6 +4113,14 @@
   },
   {
     "group": "Blog",
+    "title": "ai coding agents generating context aware code",
+    "md_url": "https://zencoder.ai/blog/ai-coding-agents-generating-context-aware-code",
+    "html_url": "https://zencoder.ai/blog/ai-coding-agents-generating-context-aware-code",
+    "route": "blog/ai-coding-agents-generating-context-aware-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "demystifying swe bench",
     "md_url": "https://zencoder.ai/blog/demystifying-swe-bench",
     "html_url": "https://zencoder.ai/blog/demystifying-swe-bench",
@@ -4253,6 +4261,14 @@
     "md_url": "https://zencoder.ai/blog/ai-tools-for-freelancers",
     "html_url": "https://zencoder.ai/blog/ai-tools-for-freelancers",
     "route": "blog/ai-tools-for-freelancers",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "document workflow automation",
+    "md_url": "https://zencoder.ai/blog/document-workflow-automation",
+    "html_url": "https://zencoder.ai/blog/document-workflow-automation",
+    "route": "blog/document-workflow-automation",
     "kind": "blog"
   },
   {

@@ -217,6 +217,14 @@
   },
   {
     "group": "Cursor: Agent",
+    "title": "voice chat",
+    "md_url": "https://cursor.com/docs/agent/voice-chat.md",
+    "html_url": "https://cursor.com/docs/agent/voice-chat",
+    "route": "docs/agent/voice-chat",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Agent",
     "title": "debug mode",
     "md_url": "https://cursor.com/docs/agent/debug-mode.md",
     "html_url": "https://cursor.com/docs/agent/debug-mode",
