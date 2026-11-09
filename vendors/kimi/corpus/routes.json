@@ -57,10 +57,10 @@
   },
   {
     "group": "Features",
-    "title": "websites",
-    "md_url": "https://www.kimi.com/features/websites",
-    "html_url": "https://www.kimi.com/features/websites",
-    "route": "features/websites",
+    "title": "build",
+    "md_url": "https://www.kimi.com/features/build",
+    "html_url": "https://www.kimi.com/features/build",
+    "route": "features/build",
     "kind": "doc"
   },
   {
@@ -93,6 +93,14 @@
     "md_url": "https://www.kimi.com/features/deep-research",
     "html_url": "https://www.kimi.com/features/deep-research",
     "route": "features/deep-research",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "websites",
+    "md_url": "https://www.kimi.com/features/websites",
+    "html_url": "https://www.kimi.com/features/websites",
+    "route": "features/websites",
     "kind": "doc"
   },
   {
@@ -373,6 +381,14 @@
     "md_url": "https://www.kimi.com/resources/kimi-community",
     "html_url": "https://www.kimi.com/resources/kimi-community",
     "route": "resources/kimi-community",
+    "kind": "doc"
+  },
+  {
+    "group": "Resources \u6559\u7a0b",
+    "title": "kimi mira introduction",
+    "md_url": "https://www.kimi.com/resources/kimi-mira-introduction",
+    "html_url": "https://www.kimi.com/resources/kimi-mira-introduction",
+    "route": "resources/kimi-mira-introduction",
     "kind": "doc"
   },
   {

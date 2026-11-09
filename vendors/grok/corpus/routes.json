@@ -1041,7 +1041,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Get Started",
+    "title": "Get started",
     "md_url": "https://docs.x.ai/grok-bot/overview.md",
     "html_url": "https://docs.x.ai/grok-bot/overview",
     "route": "grok-bot/overview",
@@ -1049,7 +1049,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Get Started \u2014 Get started",
+    "title": "Get started \u2014 Get started",
     "md_url": "https://docs.x.ai/grok-bot/get-started.md",
     "html_url": "https://docs.x.ai/grok-bot/get-started",
     "route": "grok-bot/get-started",
@@ -1057,7 +1057,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Get Started \u2014 Use cases",
+    "title": "Get started \u2014 Use cases",
     "md_url": "https://docs.x.ai/grok-bot/use-cases.md",
     "html_url": "https://docs.x.ai/grok-bot/use-cases",
     "route": "grok-bot/use-cases",
@@ -1065,15 +1065,15 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Get Started \u2014 Grok Bot for Mobile",
-    "md_url": "https://docs.x.ai/grok-bot/mobile.md",
-    "html_url": "https://docs.x.ai/grok-bot/mobile",
-    "route": "grok-bot/mobile",
+    "title": "Get started \u2014 How Grok Bot works",
+    "md_url": "https://docs.x.ai/grok-bot/how-grok-bot-works.md",
+    "html_url": "https://docs.x.ai/grok-bot/how-grok-bot-works",
+    "route": "grok-bot/how-grok-bot-works",
     "kind": "doc"
   },
   {
     "group": "Grok Bot",
-    "title": "Work with Grok Bot",
+    "title": "Use Grok Bot",
     "md_url": "https://docs.x.ai/grok-bot/bots.md",
     "html_url": "https://docs.x.ai/grok-bot/bots",
     "route": "grok-bot/bots",
@@ -1081,15 +1081,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Work with Grok Bot \u2014 Shared Bots",
-    "md_url": "https://docs.x.ai/grok-bot/shared-bots.md",
-    "html_url": "https://docs.x.ai/grok-bot/shared-bots",
-    "route": "grok-bot/shared-bots",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Work with Grok Bot \u2014 Message and collaborate",
+    "title": "Use Grok Bot \u2014 Message and collaborate",
     "md_url": "https://docs.x.ai/grok-bot/chat-and-collaboration.md",
     "html_url": "https://docs.x.ai/grok-bot/chat-and-collaboration",
     "route": "grok-bot/chat-and-collaboration",
@@ -1097,15 +1089,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Work with Grok Bot \u2014 Tag @bot on X",
-    "md_url": "https://docs.x.ai/grok-bot/tag-on-x.md",
-    "html_url": "https://docs.x.ai/grok-bot/tag-on-x",
-    "route": "grok-bot/tag-on-x",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Work with Grok Bot \u2014 Files and results",
+    "title": "Use Grok Bot \u2014 Files and results",
     "md_url": "https://docs.x.ai/grok-bot/files-and-results.md",
     "html_url": "https://docs.x.ai/grok-bot/files-and-results",
     "route": "grok-bot/files-and-results",
@@ -1113,7 +1097,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Work with Grok Bot \u2014 Use the computer and apps",
+    "title": "Use Grok Bot \u2014 Use the computer and apps",
     "md_url": "https://docs.x.ai/grok-bot/computer-and-apps.md",
     "html_url": "https://docs.x.ai/grok-bot/computer-and-apps",
     "route": "grok-bot/computer-and-apps",
@@ -1121,15 +1105,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Work with Grok Bot \u2014 Vault and secure sign-in",
-    "md_url": "https://docs.x.ai/grok-bot/vault.md",
-    "html_url": "https://docs.x.ai/grok-bot/vault",
-    "route": "grok-bot/vault",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Work with Grok Bot \u2014 Skills and routines",
+    "title": "Use Grok Bot \u2014 Skills and routines",
     "md_url": "https://docs.x.ai/grok-bot/skills-routines-and-automations.md",
     "html_url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
     "route": "grok-bot/skills-routines-and-automations",
@@ -1137,15 +1113,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Manage and protect",
-    "md_url": "https://docs.x.ai/grok-bot/settings-and-notifications.md",
-    "html_url": "https://docs.x.ai/grok-bot/settings-and-notifications",
-    "route": "grok-bot/settings-and-notifications",
-    "kind": "doc"
-  },
-  {
-    "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Approvals, security, and privacy",
+    "title": "Use Grok Bot \u2014 Approvals and privacy",
     "md_url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy.md",
     "html_url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
     "route": "grok-bot/approvals-security-and-privacy",
@@ -1153,7 +1121,39 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Teams and enterprises",
+    "title": "Use Grok Bot \u2014 Vault and secure sign-in",
+    "md_url": "https://docs.x.ai/grok-bot/vault.md",
+    "html_url": "https://docs.x.ai/grok-bot/vault",
+    "route": "grok-bot/vault",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Use Grok Bot \u2014 Shared Bots",
+    "md_url": "https://docs.x.ai/grok-bot/shared-bots.md",
+    "html_url": "https://docs.x.ai/grok-bot/shared-bots",
+    "route": "grok-bot/shared-bots",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Use Grok Bot \u2014 Grok Bot for Mobile",
+    "md_url": "https://docs.x.ai/grok-bot/mobile.md",
+    "html_url": "https://docs.x.ai/grok-bot/mobile",
+    "route": "grok-bot/mobile",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Use Grok Bot \u2014 Tag @bot on X",
+    "md_url": "https://docs.x.ai/grok-bot/tag-on-x.md",
+    "html_url": "https://docs.x.ai/grok-bot/tag-on-x",
+    "route": "grok-bot/tag-on-x",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Teams and enterprises",
     "md_url": "https://docs.x.ai/grok-bot/teams-and-enterprises.md",
     "html_url": "https://docs.x.ai/grok-bot/teams-and-enterprises",
     "route": "grok-bot/teams-and-enterprises",
@@ -1161,7 +1161,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Deploy to your organization",
+    "title": "Teams and enterprises \u2014 Deploy to your organization",
     "md_url": "https://docs.x.ai/grok-bot/deployment.md",
     "html_url": "https://docs.x.ai/grok-bot/deployment",
     "route": "grok-bot/deployment",
@@ -1169,7 +1169,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Identity and access",
+    "title": "Teams and enterprises \u2014 Identity and access",
     "md_url": "https://docs.x.ai/grok-bot/identity-and-access.md",
     "html_url": "https://docs.x.ai/grok-bot/identity-and-access",
     "route": "grok-bot/identity-and-access",
@@ -1177,7 +1177,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Private networks",
+    "title": "Teams and enterprises \u2014 Private networks",
     "md_url": "https://docs.x.ai/grok-bot/private-networks.md",
     "html_url": "https://docs.x.ai/grok-bot/private-networks",
     "route": "grok-bot/private-networks",
@@ -1185,7 +1185,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Teams and enterprises \u2014 TLS-inspecting proxies",
+    "title": "Teams and enterprises \u2014 TLS-inspecting proxies",
     "md_url": "https://docs.x.ai/grok-bot/proxies.md",
     "html_url": "https://docs.x.ai/grok-bot/proxies",
     "route": "grok-bot/proxies",
@@ -1193,7 +1193,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Manage computers",
+    "title": "Teams and enterprises \u2014 Manage computers",
     "md_url": "https://docs.x.ai/grok-bot/computers.md",
     "html_url": "https://docs.x.ai/grok-bot/computers",
     "route": "grok-bot/computers",
@@ -1201,7 +1201,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Inference hooks",
+    "title": "Teams and enterprises \u2014 Inference hooks",
     "md_url": "https://docs.x.ai/grok-bot/inference-hooks.md",
     "html_url": "https://docs.x.ai/grok-bot/inference-hooks",
     "route": "grok-bot/inference-hooks",
@@ -1209,7 +1209,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Grok Bot security",
+    "title": "Teams and enterprises \u2014 Security",
     "md_url": "https://docs.x.ai/grok-bot/security.md",
     "html_url": "https://docs.x.ai/grok-bot/security",
     "route": "grok-bot/security",
@@ -1217,7 +1217,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Manage and protect \u2014 Teams and enterprises \u2014 Grok Bot security FAQ",
+    "title": "Teams and enterprises \u2014 Security FAQ",
     "md_url": "https://docs.x.ai/grok-bot/security-faq.md",
     "html_url": "https://docs.x.ai/grok-bot/security-faq",
     "route": "grok-bot/security-faq",
@@ -1225,7 +1225,15 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Help",
+    "title": "Reference",
+    "md_url": "https://docs.x.ai/grok-bot/settings-and-notifications.md",
+    "html_url": "https://docs.x.ai/grok-bot/settings-and-notifications",
+    "route": "grok-bot/settings-and-notifications",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
+    "title": "Reference \u2014 Troubleshooting",
     "md_url": "https://docs.x.ai/grok-bot/troubleshooting.md",
     "html_url": "https://docs.x.ai/grok-bot/troubleshooting",
     "route": "grok-bot/troubleshooting",
@@ -1233,7 +1241,7 @@
   },
   {
     "group": "Grok Bot",
-    "title": "Help \u2014 FAQ",
+    "title": "Reference \u2014 FAQ",
     "md_url": "https://docs.x.ai/grok-bot/faq.md",
     "html_url": "https://docs.x.ai/grok-bot/faq",
     "route": "grok-bot/faq",

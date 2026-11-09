@@ -1273,6 +1273,30 @@
   },
   {
     "group": "Blog",
+    "title": "how to build your first game with ai",
+    "md_url": "https://manus.im/blog/how-to-build-your-first-game-with-ai.md",
+    "html_url": "https://manus.im/blog/how-to-build-your-first-game-with-ai",
+    "route": "blog/how-to-build-your-first-game-with-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai game makers for beginners",
+    "md_url": "https://manus.im/blog/best-ai-game-makers-for-beginners.md",
+    "html_url": "https://manus.im/blog/best-ai-game-makers-for-beginners",
+    "route": "blog/best-ai-game-makers-for-beginners",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai tools for game development",
+    "md_url": "https://manus.im/blog/best-ai-tools-for-game-development.md",
+    "html_url": "https://manus.im/blog/best-ai-tools-for-game-development",
+    "route": "blog/best-ai-tools-for-game-development",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "learn ai with manus",
     "md_url": "https://manus.im/blog/learn-ai-with-manus.md",
     "html_url": "https://manus.im/blog/learn-ai-with-manus",

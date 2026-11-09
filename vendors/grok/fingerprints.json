@@ -220,6 +220,7 @@
   "grok-bot/faq": "6dbd3940a0e403c2d09b828269476235e9942c248f5d3cbe4b0e3112afd4cb9e",
   "grok-bot/files-and-results": "861cd7542dbb1c036069cc398cdcab9af2e3410619576ff4943fc2384ae6e5ca",
   "grok-bot/get-started": "f5d0122116d3e8ab09a0cd85aa798e8a03866a77eddf3bf75fa5e9d6bf30940a",
+  "grok-bot/how-grok-bot-works": "90a53e23833ff5cab09962f7acb9951e633bf4bd556c0e72c91e41add3b5eb6c",
   "grok-bot/identity-and-access": "81118c243e543e40cabbb5c2de6660a0c8a0d5bbd6a8eddbebae008aeb6d5ffd",
   "grok-bot/inference-hooks": "fbd275a6e05e53b5a5fa38261f14ef0237cbf89f82f2511c7964a775680387ba",
   "grok-bot/mobile": "b6c318cfc5afc8df082a0eee98e7f7e66ef11c16e82244f7997961bc48273c61",

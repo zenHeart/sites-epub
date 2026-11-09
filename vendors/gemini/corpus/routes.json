@@ -185,6 +185,14 @@
   },
   {
     "group": "Antigravity",
+    "title": "Side panel and Overview panel",
+    "md_url": "https://antigravity.google/docs/side-panel.md",
+    "html_url": "https://antigravity.google/docs/side-panel",
+    "route": "antigravity/side-panel",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Remote Agents",
     "md_url": "https://antigravity.google/docs/remote-agents.md",
     "html_url": "https://antigravity.google/docs/remote-agents",
@@ -317,6 +325,14 @@
     "md_url": "https://antigravity.google/docs/review-changes.md",
     "html_url": "https://antigravity.google/docs/review-changes",
     "route": "antigravity/review-changes",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Jupyter notebooks",
+    "md_url": "https://antigravity.google/docs/jupyter-notebooks.md",
+    "html_url": "https://antigravity.google/docs/jupyter-notebooks",
+    "route": "antigravity/jupyter-notebooks",
     "kind": "doc"
   },
   {
@@ -793,7 +809,7 @@
   },
   {
     "group": "Antigravity",
-    "title": "Separate Chrome profile",
+    "title": "Chrome profile",
     "md_url": "https://antigravity.google/docs/ide/separate-chrome-profile.md",
     "html_url": "https://antigravity.google/docs/ide/separate-chrome-profile",
     "route": "antigravity/ide/separate-chrome-profile",
@@ -2073,14 +2089,6 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Use Deep Think in Gemini Apps",
-    "md_url": "https://support.google.com/gemini/answer/16345172",
-    "html_url": "https://support.google.com/gemini/answer/16345172",
-    "route": "gemini-app/16345172",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini App Help",
     "title": "Use Gemini on your smartwatch",
     "md_url": "https://support.google.com/gemini/answer/16401122",
     "html_url": "https://support.google.com/gemini/answer/16401122",
@@ -3029,6 +3037,14 @@
     "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/update-resume-with-gemini/",
     "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/update-resume-with-gemini/",
     "route": "blog/innovation-and-ai/products/gemini-app/update-resume-with-gemini",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "turn drawings into apps gemini",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/turn-drawings-into-apps-gemini/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/turn-drawings-into-apps-gemini/",
+    "route": "blog/innovation-and-ai/products/gemini-app/turn-drawings-into-apps-gemini",
     "kind": "blog"
   },
   {

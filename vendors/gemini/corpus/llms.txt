@@ -6,6 +6,7 @@
 - **Canonical SDK:** Always use `google-genai` (`pip install google-genai` or `npm install @google/genai`). Never generate code using deprecated packages like `google-generativeai` or `@google/generative-ai`.
 - **API Choice:** Use the Interactions API (`client.interactions`) as the default across all workflows. `generateContent` is still supported for existing integrations, but is considered a legacy API.
 - **Markdown Pages:** Every documentation page is available as clean markdown by appending `.md` to the URL.
+- **Page Versions:** Pages labeled `(generateContent)` cover the legacy `generateContent` API, and pages labeled `(v1)` are the stable v1 API reference. Unlabeled pages cover the Interactions API and the v1beta API reference.
 
 ## Agent setup & developer tooling
 - [Coding agent setup](https://aistudio.google.com/docs/coding-agents.md): Configure Cursor, Claude Code, Antigravity, and other coding assistants.
@@ -15,8 +16,11 @@
 
 ## Get started
 - [Overview](https://aistudio.google.com/docs.md): Build apps and agents with Gemini, Nano Banana, Gemini Omni, and Lyria using the Gemini API documentation and reference.
+- [Overview (generateContent)](https://aistudio.google.com/docs.md?generate-content=true): Build apps and agents with Gemini, Nano Banana, Gemini Omni, and Lyria using the Gemini API documentation and reference.
 - [Get started](https://aistudio.google.com/docs/get-started.md): Get started with the Gemini API for Developers using the Interactions API
+- [Get started (generateContent)](https://aistudio.google.com/docs/get-started.md?generate-content=true): Get started with the Gemini API for Developers using generateContent
 - [API keys](https://aistudio.google.com/docs/api-key.md): Get your Gemini API key and start building in less than 5 minutes using the Interactions API.
+- [API keys (generateContent)](https://aistudio.google.com/docs/api-key.md?generate-content=true): Get your Gemini API key and start building in less than 5 minutes.
 - [Pricing](https://aistudio.google.com/docs/pricing.md): Gemini Developer API Pricing
 - [Coding agent setup](https://aistudio.google.com/docs/coding-agents.md): Use Gemini API skills, MCP tools, plugins, and machine-readable documentation to help your coding agent write accurate Gemini code.
 - [API CLI](https://aistudio.google.com/docs/cli.md): Give coding agents, shell scripts, and CI pipelines a stateless CLI to generate text and media, analyze files, and run Gemini managed agents.
@@ -80,44 +84,72 @@
 - [Lyria 3 Clip preview](https://aistudio.google.com/docs/models/lyria-3-clip-preview.md): Learn about Lyria 3 Clip Preview from Google DeepMind
 - [Lyria 3 Pro preview](https://aistudio.google.com/docs/models/lyria-3-pro-preview.md): Learn about Lyria 3 Pro Preview from Google DeepMind
 - [Latest Gemini models](https://aistudio.google.com/docs/latest-model.md): Learn what's new in Gemini 4 Argon (gemini-4-argon), Google's new Gemini 4 model with a 1M shared context window, long decode, pricing, and API migration guide.
+- [Latest Gemini models (generateContent)](https://aistudio.google.com/docs/latest-model.md?generate-content=true): Learn what's new in Gemini 4 Argon (gemini-4-argon), Google's new Gemini 4 model with a 1M shared context window, long decode, pricing, and API migration guide.
 - [What's new in Gemini 3.8 Flash](https://aistudio.google.com/docs/whats-new-gemini-3.8.md): Learn about what's new in Gemini 3.8 Flash, including model capabilities, API changes, and migration guidance.
+- [What's new in Gemini 3.8 Flash (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.8.md?generate-content=true): Learn about what's new in Gemini 3.8 Flash, including model capabilities, API changes, and migration guidance.
 - [What's new in Gemini 3.7 Flash](https://aistudio.google.com/docs/whats-new-gemini-3.7.md): Learn about what's new in Gemini 3.7 Flash, including model capabilities, API changes, and migration guidance.
+- [What's new in Gemini 3.7 Flash (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.7.md?generate-content=true): Learn about what's new in Gemini 3.7 Flash, including model capabilities, API changes, and migration guidance.
 - [What's new in Gemini 3.6 Flash and 3.5 Flash-Lite](https://aistudio.google.com/docs/whats-new-gemini-3.6.md): Learn about what's new in Gemini 3.6 Flash and Gemini 3.5 Flash-Lite, including model capabilities, API changes, and migration guidance.
+- [What's new in Gemini 3.6 Flash and 3.5 Flash-Lite (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.6.md?generate-content=true): Learn about what's new in Gemini 3.6 Flash and Gemini 3.5 Flash-Lite, including model capabilities, API changes, and migration guidance.
 - [What's new in Gemini 3.5 Flash](https://aistudio.google.com/docs/whats-new-gemini-3.5.md): Learn about the new features and migration guidance for Gemini 3.5 Flash.
+- [What's new in Gemini 3.5 Flash (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.5.md?generate-content=true): Learn about the new features and migration guidance for Gemini 3.5 Flash.
 - [Nano Banana](https://aistudio.google.com/docs/image-generation.md): Get started generating images with the Gemini API using Nano Banana and Nano Banana Pro
+- [Nano Banana (generateContent)](https://aistudio.google.com/docs/image-generation.md?generate-content=true): Get started generating images with the Gemini API using Nano Banana and Nano Banana Pro
 - [Veo](https://aistudio.google.com/docs/veo.md): Generate high-fidelity videos with native audio using Google's Veo 3.1 API.
 - [Gemini Omni Flash](https://aistudio.google.com/docs/omni.md): Get started with Gemini Omni Flash for fast, conversational video generation and editing using the Interactions API.
 - [Lyria 3.5 — Lyria 3.5 & Lyria Clip](https://aistudio.google.com/docs/music-generation.md): Generate music with the Gemini API using Lyria 3 Clip and Lyria 3.5.
+- [Lyria 3.5 — Lyria 3.5 & Lyria Clip (generateContent)](https://aistudio.google.com/docs/music-generation.md?generate-content=true): Generate music with the Gemini API using Lyria 3 Clip and Lyria 3.5
 - [Lyria 3.5 — Lyria RealTime](https://aistudio.google.com/docs/realtime-music-generation.md): Get started building with Lyria RealTime's real-time, streaming music generation in the Gemini API
 - [Lyria 3.5 — Lyria prompt guide](https://aistudio.google.com/docs/lyria-prompt-guide.md): Guide to prompt engineering for music generation with Lyria 3.5 and Lyria RealTime in the Gemini API.
 - [Imagen](https://aistudio.google.com/docs/imagen.md): Imagen models are shut down; migrate to Nano Banana for image generation.
 - [Text-to-speech — Overview](https://aistudio.google.com/docs/speech-generation.md): Generate high-fidelity speech and multi-speaker audio with the Gemini API using gemini-3.8-flash-tts and gemini-3.8-flash-lite-tts.
+- [Text-to-speech — Overview (generateContent)](https://aistudio.google.com/docs/speech-generation.md?generate-content=true): Generate high-fidelity speech and multi-speaker audio with the Gemini API using gemini-3.8-flash-tts and gemini-3.8-flash-lite-tts.
 - [Text-to-speech — Voice design](https://aistudio.google.com/docs/voice-design.md): Create persistent custom vocal personas from natural-language descriptions with Gemini 3.8 TTS.
+- [Text-to-speech — Voice design (generateContent)](https://aistudio.google.com/docs/voice-design.md?generate-content=true): Create persistent custom vocal personas from natural-language descriptions with Gemini 3.8 TTS.
 - [Text-to-speech — Voice replication](https://aistudio.google.com/docs/voice-replication.md): Replicate a speaker's voice with persistent voice IDs or stateless client keys in the Gemini API.
+- [Text-to-speech — Voice replication (generateContent)](https://aistudio.google.com/docs/voice-replication.md?generate-content=true): Replicate a speaker's voice with persistent voice IDs or stateless client keys in the Gemini API.
+- [Text-to-speech — Voice remixing](https://aistudio.google.com/docs/voice-remixing.md): Edit and remix prebuilt or designed voices using natural-language instructions for Gemini 3.8 TTS models.
+- [Text-to-speech — Voice remixing (generateContent)](https://aistudio.google.com/docs/voice-remixing.md?generate-content=true): Edit and remix prebuilt or designed voices using natural-language instructions for Gemini 3.8 TTS models.
 - [Transcribe](https://aistudio.google.com/docs/transcribe.md): Get started transcribing audio with the Gemini 3.5 Transcribe model in the Gemini API
+- [Transcribe (generateContent)](https://aistudio.google.com/docs/transcribe.md?generate-content=true): Get started transcribing audio with the Gemini 3.5 Transcribe model in the Gemini API
 - [Live](https://aistudio.google.com/docs/live-api.md): Enable low-latency, real-time voice and video interactions with the Live API.
 - [Live translate](https://aistudio.google.com/docs/live-api/live-translate.md): Perform low-latency, real-time speech-to-speech translation with Live API.
 - [Embeddings](https://aistudio.google.com/docs/embeddings.md): Generate vector embeddings for semantic search and classification using Gemini.
 - [Robotics — Overview](https://aistudio.google.com/docs/robotics-overview.md): Overview of Gemini Robotics ER models and capabilities for building robotics applications.
+- [Robotics — Overview (generateContent)](https://aistudio.google.com/docs/robotics-overview.md?generate-content=true): Overview of Gemini Robotics ER models and capabilities for building robotics applications.
 - [Robotics — Spatial reasoning](https://aistudio.google.com/docs/robotics-spatial.md): Use Gemini Robotics ER for spatial reasoning tasks including object detection, tracking, and trajectory planning.
+- [Robotics — Spatial reasoning (generateContent)](https://aistudio.google.com/docs/robotics-spatial.md?generate-content=true): Use Gemini Robotics ER for spatial reasoning tasks including object detection, tracking, and trajectory planning.
 - [Robotics — Agentic vision](https://aistudio.google.com/docs/robotics-agentic.md): Use Gemini Robotics ER agentic capabilities including code execution, instrument reading, and image annotation.
+- [Robotics — Agentic vision (generateContent)](https://aistudio.google.com/docs/robotics-agentic.md?generate-content=true): Use Gemini Robotics ER agentic capabilities including code execution, instrument reading, and image annotation.
 - [Robotics — Task orchestration](https://aistudio.google.com/docs/robotics-orchestration.md): Orchestrate long-horizon robotics tasks by combining spatial reasoning with custom robot APIs.
+- [Robotics — Task orchestration (generateContent)](https://aistudio.google.com/docs/robotics-orchestration.md?generate-content=true): Orchestrate long-horizon robotics tasks by combining spatial reasoning with custom robot APIs.
 - [Robotics — With streaming](https://aistudio.google.com/docs/robotics-streaming.md): Use the Gemini Live API with Gemini Robotics ER 2 Streaming preview for real-time, bidirectional robot orchestration.
 - [Robotics — Video understanding](https://aistudio.google.com/docs/robotics-video-progress.md): Use Gemini Robotics ER 2 to track task progress and identify key moments in robot task videos.
+- [Robotics — Video understanding (generateContent)](https://aistudio.google.com/docs/robotics-video-progress.md?generate-content=true): Use Gemini Robotics ER 2 to track task progress and identify key moments in robot task videos.
 
 ## Core capabilities
 - [Text](https://aistudio.google.com/docs/text-generation.md): Get started building text generation and multi-turn interaction apps with the Gemini API
+- [Text (generateContent)](https://aistudio.google.com/docs/text-generation.md?generate-content=true): Get started building chat and text generation apps with the Gemini API
 - [Image — Image understanding](https://aistudio.google.com/docs/image-understanding.md): Get started building with Gemini's multimodal capabilities in the Gemini API
+- [Image — Image understanding (generateContent)](https://aistudio.google.com/docs/image-understanding.md?generate-content=true): Get started building with Gemini's multimodal capabilities in the Gemini API
 - [Video — Video overview](https://aistudio.google.com/docs/video.md): Generate and edit videos in the Gemini API using Gemini Omni Flash.
 - [Video — Video understanding](https://aistudio.google.com/docs/video-understanding.md): Get started building with Gemini's multimodal capabilities in the Gemini API
+- [Video — Video understanding (generateContent)](https://aistudio.google.com/docs/video-understanding.md?generate-content=true): Get started building with Gemini's multimodal capabilities in the Gemini API
 - [Documents](https://aistudio.google.com/docs/document-processing.md): Learn how to use the Gemini API to process documents like PDFs
+- [Documents (generateContent)](https://aistudio.google.com/docs/document-processing.md?generate-content=true): Learn how to use the Gemini API to process documents like PDFs
 - [Speech and audio — Audio understanding](https://aistudio.google.com/docs/audio.md): Learn how to analyze audio input and generate text responses using the Gemini API.
+- [Speech and audio — Audio understanding (generateContent)](https://aistudio.google.com/docs/audio.md?generate-content=true): Learn how to analyze audio input and generate text responses using the Gemini API.
 - [Thinking — Thinking](https://aistudio.google.com/docs/thinking.md): Use thinking capabilities with the Gemini API
+- [Thinking — Thinking (generateContent)](https://aistudio.google.com/docs/thinking.md?generate-content=true): Learn how to use Gemini's reasoning and thinking process using the generateContent API.
 - [Thinking — Thought signatures](https://aistudio.google.com/docs/thought-signatures.md): Learn how the Interactions API handles thought signatures and model reasoning.
+- [Thinking — Thought signatures (generateContent)](https://aistudio.google.com/docs/thought-signatures.md?generate-content=true): Understand how Gemini thought signatures preserve reasoning context across multi-step interactions.
 - [Structured outputs](https://aistudio.google.com/docs/structured-output.md): Learn how to generate structured JSON output with the Gemini API.
+- [Structured outputs (generateContent)](https://aistudio.google.com/docs/structured-output.md?generate-content=true): Learn how to generate structured JSON output with the Gemini API.
 - [Function calling](https://aistudio.google.com/docs/function-calling.md): Get started using Function Calling with the Gemini API
+- [Function calling (generateContent)](https://aistudio.google.com/docs/function-calling.md?generate-content=true): Get started using Function Calling with the Gemini API
 - [Long context](https://aistudio.google.com/docs/long-context.md): Learn about how to get started building with long context (1 million context window) on Gemini.
 - [Long decode](https://aistudio.google.com/docs/long-decode.md): Use long decode with Gemini 4 Argon on the Interactions API to generate past 64K tokens up to the 1M-token context window with background execution or client-side continuation.
+- [Long decode (generateContent)](https://aistudio.google.com/docs/long-decode.md?generate-content=true): Use long decode with Gemini 4 Argon in generateContent and streamGenerateContent to generate up to the 1M-token unified context window across continuation hops.
 
 ## Agents
 - [Overview](https://aistudio.google.com/docs/agents.md): Build agents that reason, write code, manage files, and browse the web with the Gemini API.
@@ -132,12 +164,19 @@
 ## Tools
 - [Overview](https://aistudio.google.com/docs/tools.md): Use tools with the Gemini API to extend the capabilities of Gemini models, enabling them to access real-time information and perform complex computational tasks.
 - [Google Search](https://aistudio.google.com/docs/google-search.md): Ground your model's responses in real-time information from Google Search to improve factual accuracy and provide citations.
+- [Google Search (generateContent)](https://aistudio.google.com/docs/google-search.md?generate-content=true): Ground your model's responses in real-time information from Google Search to improve factual accuracy and provide citations.
 - [Google Maps](https://aistudio.google.com/docs/maps-grounding.md): Ground your model's responses in rich, real-world data from Google Maps to provide factually accurate, location-aware answers
+- [Google Maps (generateContent)](https://aistudio.google.com/docs/maps-grounding.md?generate-content=true): Ground your model's responses in rich, real-world data from Google Maps to provide factually accurate, location-aware answers
 - [Code execution](https://aistudio.google.com/docs/code-execution.md): Learn how to use the Gemini API code execution feature.
+- [Code execution (generateContent)](https://aistudio.google.com/docs/code-execution.md?generate-content=true): Learn how to use the Gemini API code execution feature.
 - [URL context](https://aistudio.google.com/docs/url-context.md): Ground your model's responses in real-time information by providing URLs as context for more accurate and citation-backed answers.
+- [URL context (generateContent)](https://aistudio.google.com/docs/url-context.md?generate-content=true): Learn how to provide additional URL context to Gemini models using the generateContent API.
 - [Computer use](https://aistudio.google.com/docs/computer-use.md): Learn how to use the Gemini API computer use feature.
+- [Computer use (generateContent)](https://aistudio.google.com/docs/computer-use.md?generate-content=true): Learn how to use the Gemini API computer use feature.
 - [File search](https://aistudio.google.com/docs/file-search.md): Get started building RAG solutions with the File Search tool in the Gemini API
+- [File search (generateContent)](https://aistudio.google.com/docs/file-search.md?generate-content=true): Get started building RAG solutions with the File Search tool in the Gemini API
 - [Combine tools and function calling](https://aistudio.google.com/docs/tool-combination.md): Learn how to maintain context and enable built-in and custom tool combinations in the Gemini API.
+- [Combine tools and function calling (generateContent)](https://aistudio.google.com/docs/tool-combination.md?generate-content=true): Learn how to maintain context and enable built-in and custom tool combinations in the Gemini API.
 
 ## Live API
 - [Get started — Using GenAI SDK](https://aistudio.google.com/docs/live-api/get-started-sdk.md): Build real-time Live API applications using the Google GenAI SDK.
@@ -154,23 +193,32 @@
 - [Overview](https://aistudio.google.com/docs/optimization.md): Learn about the different inference and optimization options from the Gemini API.
 - [Batch API](https://aistudio.google.com/docs/batch-api.md): Get started building with the Batch API
 - [Webhooks](https://aistudio.google.com/docs/webhooks.md): Learn how to use webhooks in the Gemini API.
+- [Webhooks (generateContent)](https://aistudio.google.com/docs/webhooks.md?generate-content=true): Learn how to use webhooks in the Gemini API.
 - [Flex inference](https://aistudio.google.com/docs/flex-inference.md): Learn how to optimize costs with the Flex inference tier in the Interactions API
+- [Flex inference (generateContent)](https://aistudio.google.com/docs/flex-inference.md?generate-content=true): Learn how to use Gemini Flex inference for latency-tolerant workloads at a reduced cost.
 - [Priority inference](https://aistudio.google.com/docs/priority-inference.md): Learn how to use Gemini Priority inference for business-critical workloads requiring lower latency.
+- [Priority inference (generateContent)](https://aistudio.google.com/docs/priority-inference.md?generate-content=true): Learn how to use Gemini Priority inference for business-critical workloads requiring lower latency.
 - [Context caching](https://aistudio.google.com/docs/caching.md): Learn how to use Context Caching in the Interactions API
+- [Context caching (generateContent)](https://aistudio.google.com/docs/caching.md?generate-content=true): Learn how to use Context Caching in the Gemini API
 
 ## Guides
 - [Interactions API](https://aistudio.google.com/docs/interactions-overview.md): The Interactions API is the simplest and recommended way to build with Gemini models and agents.
 - [Streaming](https://aistudio.google.com/docs/streaming.md): Learn how to stream responses, tool calls, thinking, and images in real time with the Interactions API.
 - [Background execution](https://aistudio.google.com/docs/background-execution.md): Run long-running background tasks and agents using background=true in the Interactions API.
 - [File input — Input methods](https://aistudio.google.com/docs/file-input-methods.md): Get started building with Gemini's multimodal capabilities in the Gemini API
+- [File input — Input methods (generateContent)](https://aistudio.google.com/docs/file-input-methods.md?generate-content=true): Get started building with Gemini's multimodal capabilities in the Gemini API
 - [File input — Files API](https://aistudio.google.com/docs/files.md): Learn how to upload, manage, and process media files using the Gemini Interactions API.
+- [File input — Files API (generateContent)](https://aistudio.google.com/docs/files.md?generate-content=true): Learn how to upload, manage, and process media files using the Gemini generateContent API.
 - [OpenAI compatibility](https://aistudio.google.com/docs/openai.md): Call Gemini models directly using standard OpenAI SDKs and REST endpoints.
 - [Media resolution](https://aistudio.google.com/docs/media-resolution.md): Learn about how to use media resolutions with multimodal inputs in the Interactions API.
+- [Media resolution (generateContent)](https://aistudio.google.com/docs/media-resolution.md?generate-content=true): Learn about how to use media resolutions with multimodal inputs.
 - [Token counting](https://aistudio.google.com/docs/tokens.md): Understand and count tokens with the Gemini API
+- [Token counting (generateContent)](https://aistudio.google.com/docs/tokens.md?generate-content=true): Learn how Gemini models process tokens and how to count tokens in your API requests.
 - [Prompt engineering](https://aistudio.google.com/docs/prompting-strategies.md): Get started designing prompts for Gemini AI models.
 - [Logs and datasets — Get started with logs](https://aistudio.google.com/docs/logs-datasets.md): Learn how to configure project logging, view logs in AI Studio, and create shared datasets.
 - [Logs and datasets — Data logs and sharing](https://aistudio.google.com/docs/logs-policy.md): The policy for sharing your data logs for Gemini improvements.
 - [Safety — Safety settings](https://aistudio.google.com/docs/safety-settings.md): Configure content moderation filters and safety thresholds in the Gemini API.
+- [Safety — Safety settings (generateContent)](https://aistudio.google.com/docs/safety-settings.md?generate-content=true): Configure content moderation filters and safety thresholds in the Gemini API.
 - [Safety — Safety guidance](https://aistudio.google.com/docs/safety-guidance.md): Apply best practices for safety, fairness, and factuality in Gemini apps.
 - [Frameworks — LangChain & LangGraph](https://aistudio.google.com/docs/langgraph-example.md): Building LangGraph Agents with Gemini
 - [Frameworks — CrewAI](https://aistudio.google.com/docs/crewai-example.md): Building CrewAI Agents with Gemini
@@ -187,15 +235,17 @@
 - [Migration — Interactions breaking changes (May 2026)](https://aistudio.google.com/docs/interactions-breaking-changes-may-2026.md): Guide for migrating to upcoming breaking changes in the Interactions API, including the steps schema and response format changes.
 - [Rate limits](https://aistudio.google.com/docs/rate-limits.md): Understand request quotas, token limits, and rate limits for the Gemini API.
 - [Billing info](https://aistudio.google.com/docs/billing.md): Understand Gemini API billing tiers, pricing structures, and usage charges.
+- [Project and account verification](https://aistudio.google.com/docs/verification.md): Verify your Google Cloud project or Google Account with a mobile device to use the Gemini API free tier and Google AI Studio.
 - [API troubleshooting](https://aistudio.google.com/docs/troubleshooting.md): Diagnose and resolve common errors and API exceptions when using Gemini.
 - [API errors](https://aistudio.google.com/docs/api-errors.md): Reference for Interactions API error codes and response format
+- [API errors (generateContent)](https://aistudio.google.com/docs/api-errors.md?generate-content=true): Reference for generateContent API error codes and response format
 - [Partner and library integrations](https://aistudio.google.com/docs/partner-integration.md): Provide the Gemini API as an integration into your platform or library.
 - [Google AI Studio — Quickstart](https://aistudio.google.com/docs/ai-studio-quickstart.md): Get started with prompt engineering and prototyping in Google AI Studio.
 - [Google AI Studio — Google AI plans](https://aistudio.google.com/docs/google-ai-plans.md)
 - [Google AI Studio — Vibe code in Build](https://aistudio.google.com/docs/aistudio-build-mode.md): Learn how to build full-stack applications using the vibe coding experience in Google AI Studio.
 - [Google AI Studio — Full-stack apps](https://aistudio.google.com/docs/aistudio-fullstack.md): Learn how to develop full-stack applications with server-side logic in Google AI Studio.
 - [Google AI Studio — Build Android apps](https://aistudio.google.com/docs/aistudio-android.md): Learn how to build native Android apps with Kotlin and Jetpack Compose in Google AI Studio.
-- [Google AI Studio — Deploying your app](https://aistudio.google.com/docs/aistudio-deploying.md): Deploy full-stack generative AI applications directly from Google AI Studio.
+- [Google AI Studio — Deploying your app](https://aistudio.google.com/docs/aistudio-deploying.md): Deploy full-stack generative AI applications from Google AI Studio.
 - [Google AI Studio — Agents in AI Studio](https://aistudio.google.com/docs/aistudio-agents.md): Learn how to use Agents in AI Studio
 - [Google AI Studio — Try out LearnLM](https://aistudio.google.com/docs/learnlm.md): Use pedagogical learning capabilities with standard Gemini models in AI Studio.
 - [Google AI Studio — Troubleshooting](https://aistudio.google.com/docs/troubleshoot-ai-studio.md): This page provides suggestions for troubleshooting Google AI Studio if you encounter issues.
@@ -209,6 +259,7 @@
 - [Available regions](https://aistudio.google.com/docs/available-regions.md): Check the supported regions and access rules for AI Studio and Gemini API.
 - [Abuse monitoring](https://aistudio.google.com/docs/usage-policies.md): Review Gemini API terms of service, usage policies, and abuse monitoring.
 - [Feedback information](https://aistudio.google.com/docs/feedback-policies.md): Review AI Studio feedback workflows, data usage, and evaluation policies.
+- [Documentation policy](https://aistudio.google.com/docs/documentation-policy.md): Review the content licenses, code sample licenses, and trademark disclaimers for Google AI Studio developer documentation.
 
 ## API reference
 - [Overview](https://aistudio.google.com/api-reference.md): Unary REST, streaming, and WebSocket API reference for Gemini models and managed agents.
@@ -216,13 +267,21 @@
 
 ## API reference — Core APIs
 - [Interactions API — Overview](https://aistudio.google.com/api-reference/interactions-api.md): The Gemini Interactions API allows developers to build generative AI applications using Gemini models.
+- [Interactions API — Overview (v1)](https://aistudio.google.com/api-reference/interactions-api.md?api-version=v1): The Gemini Interactions API allows developers to build generative AI applications using Gemini models.
 - [Interactions API — create](https://aistudio.google.com/api-reference/interactions-api/create-interaction.md): Creates a new interaction.
+- [Interactions API — create (v1)](https://aistudio.google.com/api-reference/interactions-api/create-interaction.md?api-version=v1): Creates a new interaction.
 - [Interactions API — cancel](https://aistudio.google.com/api-reference/interactions-api/cancel-interaction-by-id.md): Cancels an interaction by id.
+- [Interactions API — cancel (v1)](https://aistudio.google.com/api-reference/interactions-api/cancel-interaction-by-id.md?api-version=v1): Cancels an interaction by id.
 - [Interactions API — get](https://aistudio.google.com/api-reference/interactions-api/get-interaction-by-id.md): Retrieves the full details of a single interaction based on its `Interaction.id`.
+- [Interactions API — get (v1)](https://aistudio.google.com/api-reference/interactions-api/get-interaction-by-id.md?api-version=v1): Retrieves the full details of a single interaction based on its `Interaction.id`.
 - [Interactions API — delete](https://aistudio.google.com/api-reference/interactions-api/delete-interaction.md): Deletes the interaction by id.
+- [Interactions API — delete (v1)](https://aistudio.google.com/api-reference/interactions-api/delete-interaction.md?api-version=v1): Deletes the interaction by id.
 - [GenerateContent — Overview](https://aistudio.google.com/api-reference/generate-content.md): The Gemini API supports content generation with images, audio, code, tools, and more.
+- [GenerateContent — Overview (v1)](https://aistudio.google.com/api-reference/generate-content.md?api-version=v1): The Gemini API supports content generation with images, audio, code, tools, and more.
 - [GenerateContent — generateContent](https://aistudio.google.com/api-reference/generate-content/generate-content.md): Generates a model response given an input `GenerateContentRequest`.
+- [GenerateContent — generateContent (v1)](https://aistudio.google.com/api-reference/generate-content/generate-content.md?api-version=v1): Generates a model response given an input `GenerateContentRequest`.
 - [GenerateContent — streamGenerateContent](https://aistudio.google.com/api-reference/generate-content/stream-generate-content.md): Generates a [streamed response](/docs/text-generation#streaming-responses) from the model given an input `GenerateContentRequest`.
+- [GenerateContent — streamGenerateContent (v1)](https://aistudio.google.com/api-reference/generate-content/stream-generate-content.md?api-version=v1): Generates a [streamed response](/docs/text-generation#streaming-responses) from the model given an input `GenerateContentRequest`.
 - [GenerateContent — createToken](https://aistudio.google.com/api-reference/generate-content/create-token.md): Creates a token that can be used to constrain the behavior of a BidiGenerateContent session.
 
 ## API reference — Real-time APIs
@@ -269,24 +328,43 @@
 
 ## API reference — Platform APIs
 - [Files API — Overview](https://aistudio.google.com/api-reference/files.md): The Gemini API supports uploading media files separately from the prompt input, allowing your media to be reused across multiple requests and multiple prompts.
+- [Files API — Overview (v1)](https://aistudio.google.com/api-reference/files.md?api-version=v1): The Gemini API supports uploading media files separately from the prompt input, allowing your media to be reused across multiple requests and multiple prompts.
 - [Files API — get](https://aistudio.google.com/api-reference/files/get-file.md): Gets the metadata for the given `File`.
+- [Files API — get (v1)](https://aistudio.google.com/api-reference/files/get-file.md?api-version=v1): Gets the metadata for the given `File`.
 - [Files API — list](https://aistudio.google.com/api-reference/files/list-files.md): Lists the metadata for `File`s owned by the requesting project.
+- [Files API — list (v1)](https://aistudio.google.com/api-reference/files/list-files.md?api-version=v1): Lists the metadata for `File`s owned by the requesting project.
 - [Files API — delete](https://aistudio.google.com/api-reference/files/delete-file.md): Deletes the `File`.
+- [Files API — delete (v1)](https://aistudio.google.com/api-reference/files/delete-file.md?api-version=v1): Deletes the `File`.
 - [Files API — registerFiles](https://aistudio.google.com/api-reference/files/register-files.md): Registers a Google Cloud Storage files with FileService.
+- [Files API — registerFiles (v1)](https://aistudio.google.com/api-reference/files/register-files.md?api-version=v1): Registers a Google Cloud Storage files with FileService.
 - [Files API — create](https://aistudio.google.com/api-reference/files/create-file.md): Creates a `File`.
+- [Files API — create (v1)](https://aistudio.google.com/api-reference/files/create-file.md?api-version=v1): Creates a `File`.
 - [File Search stores — Overview](https://aistudio.google.com/api-reference/file-search/file-search-stores.md): The File Search API provides a hosted question answering service for building Retrieval Augmented Generation (RAG) systems using Google's infrastructure.
+- [File Search stores — Overview (v1)](https://aistudio.google.com/api-reference/file-search/file-search-stores.md?api-version=v1): The File Search API provides a hosted question answering service for building Retrieval Augmented Generation (RAG) systems using Google's infrastructure.
 - [File Search stores — create](https://aistudio.google.com/api-reference/file-search/file-search-stores/create-file-search-store.md): Creates an empty `FileSearchStore`.
+- [File Search stores — create (v1)](https://aistudio.google.com/api-reference/file-search/file-search-stores/create-file-search-store.md?api-version=v1): Creates an empty `FileSearchStore`.
 - [File Search stores — delete](https://aistudio.google.com/api-reference/file-search/file-search-stores/delete-file-search-store.md): Deletes a `FileSearchStore`.
+- [File Search stores — delete (v1)](https://aistudio.google.com/api-reference/file-search/file-search-stores/delete-file-search-store.md?api-version=v1): Deletes a `FileSearchStore`.
 - [File Search stores — get](https://aistudio.google.com/api-reference/file-search/file-search-stores/get-file-search-store.md): Gets information about a specific `FileSearchStore`.
+- [File Search stores — get (v1)](https://aistudio.google.com/api-reference/file-search/file-search-stores/get-file-search-store.md?api-version=v1): Gets information about a specific `FileSearchStore`.
 - [File Search stores — list](https://aistudio.google.com/api-reference/file-search/file-search-stores/list-file-search-stores.md): Lists all `FileSearchStores` owned by the user.
+- [File Search stores — list (v1)](https://aistudio.google.com/api-reference/file-search/file-search-stores/list-file-search-stores.md?api-version=v1): Lists all `FileSearchStores` owned by the user.
 - [File Search stores — importFile](https://aistudio.google.com/api-reference/file-search/file-search-stores/import-file.md): Imports a `File` from File Service to a `FileSearchStore`.
+- [File Search stores — importFile (v1)](https://aistudio.google.com/api-reference/file-search/file-search-stores/import-file.md?api-version=v1): Imports a `File` from File Service to a `FileSearchStore`.
 - [File Search stores — getFileSearchStoreOperation](https://aistudio.google.com/api-reference/file-search/file-search-stores/get-file-search-store-operation.md): Gets the latest state of a long-running operation.
+- [File Search stores — getFileSearchStoreOperation (v1)](https://aistudio.google.com/api-reference/file-search/file-search-stores/get-file-search-store-operation.md?api-version=v1): Gets the latest state of a long-running operation.
 - [File Search stores — getFileSearchStoreUploadOperation](https://aistudio.google.com/api-reference/file-search/file-search-stores/get-file-search-store-upload-operation.md): Gets the latest state of a long-running operation.
+- [File Search stores — getFileSearchStoreUploadOperation (v1)](https://aistudio.google.com/api-reference/file-search/file-search-stores/get-file-search-store-upload-operation.md?api-version=v1): Gets the latest state of a long-running operation.
 - [File Search stores — uploadToFileSearchStore](https://aistudio.google.com/api-reference/file-search/file-search-stores/upload-to-file-search-store.md): Uploads data to a FileSearchStore, preprocesses and chunks before storing it in a FileSearchStore Document.
+- [File Search stores — uploadToFileSearchStore (v1)](https://aistudio.google.com/api-reference/file-search/file-search-stores/upload-to-file-search-store.md?api-version=v1): Uploads data to a FileSearchStore, preprocesses and chunks before storing it in a FileSearchStore Document.
 - [File Search documents — Overview](https://aistudio.google.com/api-reference/file-search/documents.md): The File Search API references your raw source files, or documents, as temporary File objects.
+- [File Search documents — Overview (v1)](https://aistudio.google.com/api-reference/file-search/documents.md?api-version=v1): The File Search API references your raw source files, or documents, as temporary File objects.
 - [File Search documents — delete](https://aistudio.google.com/api-reference/file-search/documents/delete-document.md): Deletes a `Document`.
+- [File Search documents — delete (v1)](https://aistudio.google.com/api-reference/file-search/documents/delete-document.md?api-version=v1): Deletes a `Document`.
 - [File Search documents — get](https://aistudio.google.com/api-reference/file-search/documents/get-document.md): Gets information about a specific `Document`.
+- [File Search documents — get (v1)](https://aistudio.google.com/api-reference/file-search/documents/get-document.md?api-version=v1): Gets information about a specific `Document`.
 - [File Search documents — list](https://aistudio.google.com/api-reference/file-search/documents/list-documents.md): Lists all `Document`s in a `Corpus`.
+- [File Search documents — list (v1)](https://aistudio.google.com/api-reference/file-search/documents/list-documents.md?api-version=v1): Lists all `Document`s in a `Corpus`.
 - [Caching — Overview](https://aistudio.google.com/api-reference/caching.md): Context caching allows you to save and reuse precomputed input tokens that you wish to use repeatedly, for example when asking different questions about the same media file.
 - [Caching — create](https://aistudio.google.com/api-reference/caching/create-cached-content.md): Creates CachedContent resource.
 - [Caching — list](https://aistudio.google.com/api-reference/caching/list-cached-contents.md): Lists CachedContents.
@@ -294,28 +372,46 @@
 - [Caching — update](https://aistudio.google.com/api-reference/caching/update-cached-content.md): Updates CachedContent resource (only expiration is updatable).
 - [Caching — delete](https://aistudio.google.com/api-reference/caching/delete-cached-content.md): Deletes CachedContent resource.
 - [Embeddings — Overview](https://aistudio.google.com/api-reference/embeddings.md): Embeddings are a numerical representation of text input that open up a number of unique use cases, such as clustering, similarity measurement and information retrieval.
+- [Embeddings — Overview (v1)](https://aistudio.google.com/api-reference/embeddings.md?api-version=v1): Embeddings are a numerical representation of text input that open up a number of unique use cases, such as clustering, similarity measurement and information retrieval.
 - [Embeddings — embedContent](https://aistudio.google.com/api-reference/embeddings/embed-content.md): Generates a text embedding vector from the input `Content` using the specified [Gemini Embedding model](/docs/models#specialized-task-models).
+- [Embeddings — embedContent (v1)](https://aistudio.google.com/api-reference/embeddings/embed-content.md?api-version=v1): Generates a text embedding vector from the input `Content` using the specified [Gemini Embedding model](/docs/models#specialized-task-models).
 - [Embeddings — batchEmbedContents](https://aistudio.google.com/api-reference/embeddings/batch-embed-contents.md): Generates multiple embedding vectors from the input `Content` which consists of a batch of strings represented as `EmbedContentRequest` objects.
+- [Embeddings — batchEmbedContents (v1)](https://aistudio.google.com/api-reference/embeddings/batch-embed-contents.md?api-version=v1): Generates multiple embedding vectors from the input `Content` which consists of a batch of strings represented as `EmbedContentRequest` objects.
 - [Embeddings — asyncBatchEmbedContent](https://aistudio.google.com/api-reference/embeddings/async-batch-embed-content.md): Enqueues a batch of `EmbedContent` requests for batch processing.
+- [Embeddings — asyncBatchEmbedContent (v1)](https://aistudio.google.com/api-reference/embeddings/async-batch-embed-content.md?api-version=v1): Enqueues a batch of `EmbedContent` requests for batch processing.
 - [Batch API — Overview](https://aistudio.google.com/api-reference/batch-api.md): The Gemini API supports batch APIs, which let you process multiple requests in a single call.
+- [Batch API — Overview (v1)](https://aistudio.google.com/api-reference/batch-api.md?api-version=v1): The Gemini API supports batch APIs, which let you process multiple requests in a single call.
 - [Batch API — batchGenerateContent](https://aistudio.google.com/api-reference/batch-api/batch-generate-content.md): Enqueues a batch of `GenerateContent` requests for batch processing.
+- [Batch API — batchGenerateContent (v1)](https://aistudio.google.com/api-reference/batch-api/batch-generate-content.md?api-version=v1): Enqueues a batch of `GenerateContent` requests for batch processing.
 - [Batch API — asyncBatchEmbedContent](https://aistudio.google.com/api-reference/batch-api/async-batch-embed-content.md): Enqueues a batch of `EmbedContent` requests for batch processing.
+- [Batch API — asyncBatchEmbedContent (v1)](https://aistudio.google.com/api-reference/batch-api/async-batch-embed-content.md?api-version=v1): Enqueues a batch of `EmbedContent` requests for batch processing.
 - [Batch API — get](https://aistudio.google.com/api-reference/batch-api/get-batch.md): Gets the latest state of a long-running operation.
+- [Batch API — get (v1)](https://aistudio.google.com/api-reference/batch-api/get-batch.md?api-version=v1): Gets the latest state of a long-running operation.
 - [Batch API — list](https://aistudio.google.com/api-reference/batch-api/list-batches.md): Lists operations that match the specified filter in the request.
+- [Batch API — list (v1)](https://aistudio.google.com/api-reference/batch-api/list-batches.md?api-version=v1): Lists operations that match the specified filter in the request.
 - [Batch API — cancel](https://aistudio.google.com/api-reference/batch-api/cancel-batch.md): Starts asynchronous cancellation on a long-running operation.
+- [Batch API — cancel (v1)](https://aistudio.google.com/api-reference/batch-api/cancel-batch.md?api-version=v1): Starts asynchronous cancellation on a long-running operation.
 - [Batch API — delete](https://aistudio.google.com/api-reference/batch-api/delete-batch.md): Deletes a long-running operation.
+- [Batch API — delete (v1)](https://aistudio.google.com/api-reference/batch-api/delete-batch.md?api-version=v1): Deletes a long-running operation.
 - [Batch API — update](https://aistudio.google.com/api-reference/batch-api/update-generate-content-batch.md): Updates a batch of GenerateContent requests for batch processing.
+- [Batch API — update (v1)](https://aistudio.google.com/api-reference/batch-api/update-generate-content-batch.md?api-version=v1): Updates a batch of GenerateContent requests for batch processing.
 - [Batch API — updateEmbedContentBatch](https://aistudio.google.com/api-reference/batch-api/update-embed-content-batch.md): Updates a batch of EmbedContent requests for batch processing.
+- [Batch API — updateEmbedContentBatch (v1)](https://aistudio.google.com/api-reference/batch-api/update-embed-content-batch.md?api-version=v1): Updates a batch of EmbedContent requests for batch processing.
 - [Tokens — Overview](https://aistudio.google.com/api-reference/tokens.md): For a detailed guide on counting tokens using the Gemini API, including how images, audio and video are counted, see the [Token counting guide](/docs/tokens) and accompanying [Cookbook recipe](https://colab.research.google.com/github/google-gemini/cookbook/blob/main/quickstarts/Counting_Tokens.ipynb).
+- [Tokens — Overview (v1)](https://aistudio.google.com/api-reference/tokens.md?api-version=v1): For a detailed guide on counting tokens using the Gemini API, including how images, audio and video are counted, see the [Token counting guide](/docs/tokens) and accompanying [Cookbook recipe](https://colab.research.google.com/github/google-gemini/cookbook/blob/main/quickstarts/Counting_Tokens.ipynb).
 - [Tokens — countTokens](https://aistudio.google.com/api-reference/tokens/count-tokens.md): Runs a model's tokenizer on input `Content` and returns the token count.
+- [Tokens — countTokens (v1)](https://aistudio.google.com/api-reference/tokens/count-tokens.md?api-version=v1): Runs a model's tokenizer on input `Content` and returns the token count.
 - [Voices — Overview](https://aistudio.google.com/api-reference/voices.md): The Voices API allows you to create custom voices from natural language prompts (Voice Design) or from reference audio and speaker consent recordings (Voice Replication), as well as list, retrieve, and manage custom and prebuilt voices for Text-to-Speech (TTS) synthesis.
 - [Voices — create](https://aistudio.google.com/api-reference/voices/create-voice.md): Creates a custom voice from a natural-language prompt (`VOICE_TYPE_PROMPTED`) or from reference and consent audio recordings (`VOICE_TYPE_REPLICATED`).
 - [Voices — list](https://aistudio.google.com/api-reference/voices/list-voices.md): Lists custom stored voices owned by the caller (ordered newest first) followed by prebuilt system voices from Google's voice catalog.
 - [Voices — get](https://aistudio.google.com/api-reference/voices/get-voice.md): Gets a custom stored voice (`store = true`) by resource name.
 - [Voices — delete](https://aistudio.google.com/api-reference/voices/delete-voice.md): Deletes a custom stored voice (`store = true`) by resource name.
 - [Model API — Overview](https://aistudio.google.com/api-reference/models.md): The models endpoint provides a way for you to programmatically list the available models, and retrieve extended metadata such as supported functionality and context window sizing.
+- [Model API — Overview (v1)](https://aistudio.google.com/api-reference/models.md?api-version=v1): The models endpoint provides a way for you to programmatically list the available models, and retrieve extended metadata such as supported functionality and context window sizing.
 - [Model API — get](https://aistudio.google.com/api-reference/models/get-model.md): Gets information about a specific `Model` such as its version number, token limits, [parameters](/docs/prompting-strategies#model-parameters) and other metadata.
+- [Model API — get (v1)](https://aistudio.google.com/api-reference/models/get-model.md?api-version=v1): Gets information about a specific `Model` such as its version number, token limits, [parameters](/docs/prompting-strategies#model-parameters) and other metadata.
 - [Model API — list](https://aistudio.google.com/api-reference/models/list-models.md): Lists the [`Model`s](/docs/models) available through the Gemini API.
+- [Model API — list (v1)](https://aistudio.google.com/api-reference/models/list-models.md?api-version=v1): Lists the [`Model`s](/docs/models) available through the Gemini API.
 - [All methods](https://aistudio.google.com/api-reference/all-methods.md): Every REST method in the Gemini API, grouped by reference page.
 
 ## Optional
