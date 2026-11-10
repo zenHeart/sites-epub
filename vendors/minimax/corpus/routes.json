@@ -361,6 +361,14 @@
   },
   {
     "group": "Blog",
+    "title": "minimax h3 image",
+    "md_url": "https://www.minimax.io/blog/minimax-h3-image",
+    "html_url": "https://www.minimax.io/blog/minimax-h3-image",
+    "route": "blog/minimax-h3-image",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "minimax code mini app 1792650729",
     "md_url": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",
     "html_url": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",

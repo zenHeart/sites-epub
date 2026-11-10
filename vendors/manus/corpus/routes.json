@@ -593,6 +593,14 @@
   },
   {
     "group": "Blog",
+    "title": "how we built a data agent",
+    "md_url": "https://manus.im/blog/how-we-built-a-data-agent.md",
+    "html_url": "https://manus.im/blog/how-we-built-a-data-agent",
+    "route": "blog/how-we-built-a-data-agent",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "rebuilding manus with manus",
     "md_url": "https://manus.im/blog/rebuilding-manus-with-manus.md",
     "html_url": "https://manus.im/blog/rebuilding-manus-with-manus",

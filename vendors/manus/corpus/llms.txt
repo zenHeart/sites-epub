@@ -93,20 +93,20 @@
 
 ## Indexes
 
-- [Italian (56 pages)](https://manus.im/docs/_llms/it.txt): Documentation for Italian.
-- [German (56 pages)](https://manus.im/docs/_llms/de.txt): Documentation for German.
-- [Turkish (56 pages)](https://manus.im/docs/_llms/tr.txt): Documentation for Turkish.
-- [Spanish (56 pages)](https://manus.im/docs/_llms/es.txt): Documentation for Spanish.
-- [French (56 pages)](https://manus.im/docs/_llms/fr.txt): Documentation for French.
-- [Hindi (56 pages)](https://manus.im/docs/_llms/hi.txt): Documentation for Hindi.
-- [Korean (56 pages)](https://manus.im/docs/_llms/ko.txt): Documentation for Korean.
-- [Japanese (56 pages)](https://manus.im/docs/_llms/ja.txt): Documentation for Japanese.
-- [Brazilian Portuguese (56 pages)](https://manus.im/docs/_llms/pt-br.txt): Documentation for Brazilian Portuguese.
-- [Simplified Chinese (56 pages)](https://manus.im/docs/_llms/zh-hans.txt): Documentation for Simplified Chinese.
-- [Arabic (56 pages)](https://manus.im/docs/_llms/ar.txt): Documentation for Arabic.
-- [Traditional Chinese (56 pages)](https://manus.im/docs/_llms/zh-hant.txt): Documentation for Traditional Chinese.
-- [Indonesian (56 pages)](https://manus.im/docs/_llms/id.txt): Documentation for Indonesian.
-- [Vietnamese (56 pages)](https://manus.im/docs/_llms/vi.txt): Documentation for Vietnamese.
+- [Italian (56 pages)](https://manus.im/docs/_llms/it.txt): Introduzione, Funzionalità, Integrazioni.
+- [German (56 pages)](https://manus.im/docs/_llms/de.txt): Einführung, Funktionen, Integrationen.
+- [Turkish (56 pages)](https://manus.im/docs/_llms/tr.txt): Giriş, Özellikler, Entegrasyonlar.
+- [Spanish (56 pages)](https://manus.im/docs/_llms/es.txt): Introducción, Características, Integraciones.
+- [French (56 pages)](https://manus.im/docs/_llms/fr.txt): Introduction, Fonctionnalités, Intégrations.
+- [Hindi (56 pages)](https://manus.im/docs/_llms/hi.txt): परिचय, विशेषताएँ, एकीकरण.
+- [Korean (56 pages)](https://manus.im/docs/_llms/ko.txt): 소개, 기능, 통합.
+- [Japanese (56 pages)](https://manus.im/docs/_llms/ja.txt): はじめに, 機能, 連携.
+- [Brazilian Portuguese (56 pages)](https://manus.im/docs/_llms/pt-br.txt): Introdução, Recursos, Integrações.
+- [Simplified Chinese (56 pages)](https://manus.im/docs/_llms/zh-hans.txt): 介绍, 功能, 集成.
+- [Arabic (56 pages)](https://manus.im/docs/_llms/ar.txt): مقدمة, الميزات, التكاملات.
+- [Traditional Chinese (56 pages)](https://manus.im/docs/_llms/zh-hant.txt): 介紹, 功能, 整合.
+- [Indonesian (56 pages)](https://manus.im/docs/_llms/id.txt): Pendahuluan, Fitur, Integrasi.
+- [Vietnamese (56 pages)](https://manus.im/docs/_llms/vi.txt): Giới thiệu, Tính năng, Tích hợp.
 
 
 This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

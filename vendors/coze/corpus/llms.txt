@@ -298,7 +298,7 @@
 - [活动与公告/活动/618 限时活动积分发放通知](https://docs.coze.cn/guides_618_bonus_points_event.md)
 - [活动与公告/活动/扣子个人版 3 倍积分膨胀限时活动细则](https://docs.coze.cn/guides_limited_time_3x_points_event.md)
 - [活动与公告/公告/积分单位调整公告](https://docs.coze.cn/credits-unit-update.md): 这是扣子平台发布的积分单位调整公告，明确2026年11月5日起执行25旧积分折算1新积分的规则，说明各类积分换算方案、实际购买力不变，同时解答用户常见疑问。
-- [活动与公告/公告/扣子个人版套餐价格调整公告](https://docs.coze.cn/subscription-plan-adjustment-20261112.md)
+- [活动与公告/公告/扣子个人版套餐价格调整公告](https://docs.coze.cn/subscription-plan-adjustment-20261112.md): 本公告说明扣子个人版4档套餐将于2026年11月12日起调整订阅价格与月度积分额度，功能权益保持不变，明确新购、续订用户执行规则及常见问题解答。
 - [活动与公告/公告/扣子企业版下线公告](https://docs.coze.cn/enterprise-plan-discontinuation-notice.md): 本公告为扣子Coze团队发布的扣子企业版下线通知，明确分阶段停止新售、全面下线的时间节点，同步说明退款、过渡期使用、客户服务等相关安排，解答常见问题，提醒企业用户提前做好业务调整。
 - [活动与公告/公告/企业版套餐定价调整](https://docs.coze.cn/guides_enterprise_plan_pricing_adjustment.md): 扣子企业版套餐定价调整通知，自2026年7月14日起生效。因服务投入和运维成本增加，价格和权益调整。介绍了企业标准版和旗舰版套餐调整前后价格及费用构成，还说明了套餐权益及存量用户安排，如2026年7月14日前购买或续费仍按现行价格执行等。
 - [活动与公告/公告/扣子订阅套餐升级](https://docs.coze.cn/guides_20260119_coze_premium_upgraded.md): 扣子空间和开发平台升级为扣子和扣子编程产品，订阅套餐等全面升级。2026年1月18日新套餐上线，旧版套餐续费截止至12月31日。介绍了升级内容，如新增功能、套餐档位调整等，还说明了对个人版、团队版、企业版、专业版用户的影响及老用户优惠活动。

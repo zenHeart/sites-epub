@@ -1616,206 +1616,6 @@
     "kind": "doc"
   },
   {
-    "group": "What's New",
-    "title": "What's new",
-    "md_url": "https://code.claude.com/docs/en/whats-new/index.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/index",
-    "route": "whats-new/index",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 37 \u00b7 September 7\u201311, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w37.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w37",
-    "route": "whats-new/2026-w37",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 36 \u00b7 August 31 \u2013 September 4, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w36.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w36",
-    "route": "whats-new/2026-w36",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 35 \u00b7 August 24\u201328, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w35.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w35",
-    "route": "whats-new/2026-w35",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 34 \u00b7 August 17\u201321, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w34.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w34",
-    "route": "whats-new/2026-w34",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 33 \u00b7 August 10\u201314, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w33.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w33",
-    "route": "whats-new/2026-w33",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 32 \u00b7 August 3\u20137, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w32.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w32",
-    "route": "whats-new/2026-w32",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 30 \u00b7 July 20\u201324, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w30.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w30",
-    "route": "whats-new/2026-w30",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 29 \u00b7 July 13\u201317, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w29.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w29",
-    "route": "whats-new/2026-w29",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 28 \u00b7 July 6\u201310, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w28.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w28",
-    "route": "whats-new/2026-w28",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 27 \u00b7 June 29 \u2013 July 3, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w27.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w27",
-    "route": "whats-new/2026-w27",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 26 \u00b7 June 22\u201326, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w26.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w26",
-    "route": "whats-new/2026-w26",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 25 \u00b7 June 15\u201319, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w25.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w25",
-    "route": "whats-new/2026-w25",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 24 \u00b7 June 8\u201312, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w24.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w24",
-    "route": "whats-new/2026-w24",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 23 \u00b7 June 1\u20135, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w23.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w23",
-    "route": "whats-new/2026-w23",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 22 \u00b7 May 25\u201329, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w22.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w22",
-    "route": "whats-new/2026-w22",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 21 \u00b7 May 18\u201322, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w21.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w21",
-    "route": "whats-new/2026-w21",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 20 \u00b7 May 11\u201315, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w20.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w20",
-    "route": "whats-new/2026-w20",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 19 \u00b7 May 4\u20138, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w19.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w19",
-    "route": "whats-new/2026-w19",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 18 \u00b7 April 27 \u2013 May 1, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w18.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w18",
-    "route": "whats-new/2026-w18",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 17 \u00b7 April 20\u201324, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w17.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w17",
-    "route": "whats-new/2026-w17",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 16 \u00b7 April 13\u201317, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w16.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w16",
-    "route": "whats-new/2026-w16",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 15 \u00b7 April 6\u201310, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w15.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w15",
-    "route": "whats-new/2026-w15",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 14 \u00b7 March 30 \u2013 April 3, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w14.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w14",
-    "route": "whats-new/2026-w14",
-    "kind": "doc"
-  },
-  {
-    "group": "What's New",
-    "title": "Week 13 \u00b7 March 23\u201327, 2026",
-    "md_url": "https://code.claude.com/docs/en/whats-new/2026-w13.md",
-    "html_url": "https://code.claude.com/docs/en/whats-new/2026-w13",
-    "route": "whats-new/2026-w13",
-    "kind": "doc"
-  },
-  {
     "group": "Resources",
     "title": "Legal and compliance",
     "md_url": "https://code.claude.com/docs/en/legal-and-compliance.md",
@@ -1825,10 +1625,58 @@
   },
   {
     "group": "Blog",
-    "title": "building agents when to fold subagents into your main agent loop",
-    "md_url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
-    "html_url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
-    "route": "blog/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
+    "title": "sheets whiteboards data",
+    "md_url": "https://claude.com/resources/articles/sheets-whiteboards-data.md",
+    "html_url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+    "route": "blog/sheets-whiteboards-data",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "interactive connectors full tool",
+    "md_url": "https://claude.com/resources/articles/interactive-connectors-full-tool.md",
+    "html_url": "https://claude.com/resources/articles/interactive-connectors-full-tool",
+    "route": "blog/interactive-connectors-full-tool",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how curative is building a national provider network with agents on claude",
+    "md_url": "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "html_url": "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
+    "route": "blog/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "more ways to work with claude sheets whiteboards and interactive connectors",
+    "md_url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors.md",
+    "html_url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
+    "route": "blog/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "jpmorganchase expands claude code",
+    "md_url": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code.md",
+    "html_url": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code",
+    "route": "blog/jpmorganchase-expands-claude-code",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "safely scaling multi agent teams with fable 5 2",
+    "md_url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2",
+    "html_url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2",
+    "route": "blog/safely-scaling-multi-agent-teams-with-fable-5-2",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "which claude model should you build with",
+    "md_url": "https://claude.dev/blog/which-claude-model-should-you-build-with",
+    "html_url": "https://claude.dev/blog/which-claude-model-should-you-build-with",
+    "route": "blog/which-claude-model-should-you-build-with",
     "kind": "blog"
   },
   {
@@ -1837,78 +1685,6 @@
     "md_url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude.md",
     "html_url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
     "route": "blog/introducing-personal-finance-in-claude",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "claude enterprise security updates",
-    "md_url": "https://claude.com/resources/articles/claude-enterprise-security-updates.md",
-    "html_url": "https://claude.com/resources/articles/claude-enterprise-security-updates",
-    "route": "blog/claude-enterprise-security-updates",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "new agents and products claude marketplace",
-    "md_url": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace.md",
-    "html_url": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace",
-    "route": "blog/new-agents-and-products-claude-marketplace",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "message threads",
-    "md_url": "https://claude.com/resources/articles/message-threads.md",
-    "html_url": "https://claude.com/resources/articles/message-threads",
-    "route": "blog/message-threads",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "smart reports surveys pooled budgets",
-    "md_url": "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets.md",
-    "html_url": "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets",
-    "route": "blog/smart-reports-surveys-pooled-budgets",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "idc brings quanta into claude and adopts claude across the company",
-    "md_url": "https://claude.com/resources/articles/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company.md",
-    "html_url": "https://claude.com/resources/articles/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company",
-    "route": "blog/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "introducing artifacts for legal work",
-    "md_url": "https://claude.com/resources/articles/introducing-artifacts-for-legal-work.md",
-    "html_url": "https://claude.com/resources/articles/introducing-artifacts-for-legal-work",
-    "route": "blog/introducing-artifacts-for-legal-work",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "how to manage costs and demonstrate roi for claude code on google cloud",
-    "md_url": "https://claude.com/resources/articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
-    "html_url": "https://claude.com/resources/articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud",
-    "route": "blog/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "claude for financial advisors",
-    "md_url": "https://claude.com/resources/articles/claude-for-financial-advisors.md",
-    "html_url": "https://claude.com/resources/articles/claude-for-financial-advisors",
-    "route": "blog/claude-for-financial-advisors",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "expanding claude for nonprofits",
-    "md_url": "https://claude.com/resources/articles/expanding-claude-for-nonprofits.md",
-    "html_url": "https://claude.com/resources/articles/expanding-claude-for-nonprofits",
-    "route": "blog/expanding-claude-for-nonprofits",
     "kind": "blog"
   },
   {
@@ -2193,6 +1969,14 @@
   },
   {
     "group": "Blog",
+    "title": "building agents when to fold subagents into your main agent loop",
+    "md_url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop.md",
+    "html_url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
+    "route": "blog/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "building agents with skills equipping agents for specialized work",
     "md_url": "https://claude.com/resources/articles/building-agents-with-skills-equipping-agents-for-specialized-work.md",
     "html_url": "https://claude.com/resources/articles/building-agents-with-skills-equipping-agents-for-specialized-work",
@@ -2441,6 +2225,14 @@
   },
   {
     "group": "Blog",
+    "title": "claude enterprise security updates",
+    "md_url": "https://claude.com/resources/articles/claude-enterprise-security-updates.md",
+    "html_url": "https://claude.com/resources/articles/claude-enterprise-security-updates",
+    "route": "blog/claude-enterprise-security-updates",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "claude excel powerpoint updates",
     "md_url": "https://claude.com/resources/articles/claude-excel-powerpoint-updates.md",
     "html_url": "https://claude.com/resources/articles/claude-excel-powerpoint-updates",
@@ -2469,6 +2261,14 @@
     "md_url": "https://claude.com/resources/articles/claude-for-enterprise.md",
     "html_url": "https://claude.com/resources/articles/claude-for-enterprise",
     "route": "blog/claude-for-enterprise",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude for financial advisors",
+    "md_url": "https://claude.com/resources/articles/claude-for-financial-advisors.md",
+    "html_url": "https://claude.com/resources/articles/claude-for-financial-advisors",
+    "route": "blog/claude-for-financial-advisors",
     "kind": "blog"
   },
   {
@@ -2953,6 +2753,14 @@
   },
   {
     "group": "Blog",
+    "title": "expanding claude for nonprofits",
+    "md_url": "https://claude.com/resources/articles/expanding-claude-for-nonprofits.md",
+    "html_url": "https://claude.com/resources/articles/expanding-claude-for-nonprofits",
+    "route": "blog/expanding-claude-for-nonprofits",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "extending claude capabilities with skills mcp servers",
     "md_url": "https://claude.com/resources/articles/extending-claude-capabilities-with-skills-mcp-servers.md",
     "html_url": "https://claude.com/resources/articles/extending-claude-capabilities-with-skills-mcp-servers",
@@ -3329,6 +3137,14 @@
   },
   {
     "group": "Blog",
+    "title": "how to manage costs and demonstrate roi for claude code on google cloud",
+    "md_url": "https://claude.com/resources/articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud.md",
+    "html_url": "https://claude.com/resources/articles/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud",
+    "route": "blog/how-to-manage-costs-and-demonstrate-roi-for-claude-code-on-google-cloud",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "how to prepare for ai driven code modernization projects",
     "md_url": "https://claude.com/resources/articles/how-to-prepare-for-ai-driven-code-modernization-projects.md",
     "html_url": "https://claude.com/resources/articles/how-to-prepare-for-ai-driven-code-modernization-projects",
@@ -3341,6 +3157,14 @@
     "md_url": "https://claude.com/resources/articles/how-warp-builds-self-improving-agents-on-claude.md",
     "html_url": "https://claude.com/resources/articles/how-warp-builds-self-improving-agents-on-claude",
     "route": "blog/how-warp-builds-self-improving-agents-on-claude",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "idc brings quanta into claude and adopts claude across the company",
+    "md_url": "https://claude.com/resources/articles/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company.md",
+    "html_url": "https://claude.com/resources/articles/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company",
+    "route": "blog/idc-brings-quanta-into-claude-and-adopts-claude-across-the-company",
     "kind": "blog"
   },
   {
@@ -3389,6 +3213,14 @@
     "md_url": "https://claude.com/resources/articles/interactive-tools-in-claude.md",
     "html_url": "https://claude.com/resources/articles/interactive-tools-in-claude",
     "route": "blog/interactive-tools-in-claude",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing artifacts for legal work",
+    "md_url": "https://claude.com/resources/articles/introducing-artifacts-for-legal-work.md",
+    "html_url": "https://claude.com/resources/articles/introducing-artifacts-for-legal-work",
+    "route": "blog/introducing-artifacts-for-legal-work",
     "kind": "blog"
   },
   {
@@ -3497,6 +3329,14 @@
   },
   {
     "group": "Blog",
+    "title": "message threads",
+    "md_url": "https://claude.com/resources/articles/message-threads.md",
+    "html_url": "https://claude.com/resources/articles/message-threads",
+    "route": "blog/message-threads",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "millennium and anthropic are building a digital risk analyst with claude",
     "md_url": "https://claude.com/resources/articles/millennium-and-anthropic-are-building-a-digital-risk-analyst-with-claude.md",
     "html_url": "https://claude.com/resources/articles/millennium-and-anthropic-are-building-a-digital-risk-analyst-with-claude",
@@ -3509,6 +3349,14 @@
     "md_url": "https://claude.com/resources/articles/multi-agent-coordination-patterns.md",
     "html_url": "https://claude.com/resources/articles/multi-agent-coordination-patterns",
     "route": "blog/multi-agent-coordination-patterns",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "new agents and products claude marketplace",
+    "md_url": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace.md",
+    "html_url": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace",
+    "route": "blog/new-agents-and-products-claude-marketplace",
     "kind": "blog"
   },
   {
@@ -3717,6 +3565,14 @@
     "md_url": "https://claude.com/resources/articles/skills-explained.md",
     "html_url": "https://claude.com/resources/articles/skills-explained",
     "route": "blog/skills-explained",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "smart reports surveys pooled budgets",
+    "md_url": "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets.md",
+    "html_url": "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets",
+    "route": "blog/smart-reports-surveys-pooled-budgets",
     "kind": "blog"
   },
   {
@@ -4037,22 +3893,6 @@
     "md_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents.md",
     "html_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents",
     "route": "blog/zero-trust-for-ai-agents",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "which claude model should you build with",
-    "md_url": "https://claude.dev/blog/which-claude-model-should-you-build-with",
-    "html_url": "https://claude.dev/blog/which-claude-model-should-you-build-with",
-    "route": "blog/which-claude-model-should-you-build-with",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "safely scaling multi agent teams with fable 5 2",
-    "md_url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2",
-    "html_url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2",
-    "route": "blog/safely-scaling-multi-agent-teams-with-fable-5-2",
     "kind": "blog"
   },
   {

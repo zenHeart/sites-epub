@@ -1569,6 +1569,14 @@
   },
   {
     "group": "Blog",
+    "title": "pushing voice agents further",
+    "md_url": "https://learn.chatgpt.com/blog/pushing-voice-agents-further.md",
+    "html_url": "https://learn.chatgpt.com/blog/pushing-voice-agents-further",
+    "route": "blog/pushing-voice-agents-further",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "build a game with modretro chromatic",
     "md_url": "https://learn.chatgpt.com/blog/build-a-game-with-modretro-chromatic.md",
     "html_url": "https://learn.chatgpt.com/blog/build-a-game-with-modretro-chromatic",

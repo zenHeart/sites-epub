@@ -353,6 +353,14 @@
   },
   {
     "group": "Antigravity",
+    "title": "Swarm (/swarm)",
+    "md_url": "https://antigravity.google/docs/swarm.md",
+    "html_url": "https://antigravity.google/docs/swarm",
+    "route": "antigravity/swarm",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Boost deep reasoning (/boost)",
     "md_url": "https://antigravity.google/docs/boost.md",
     "html_url": "https://antigravity.google/docs/boost",
@@ -3301,6 +3309,22 @@
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 4 carbon now available",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "multimodal knowledge agent benchmark",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark",
     "kind": "blog"
   },
   {

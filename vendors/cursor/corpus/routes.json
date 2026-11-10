@@ -73,6 +73,14 @@
   },
   {
     "group": "Cursor: Get Started",
+    "title": "gemini 4 carbon",
+    "md_url": "https://cursor.com/docs/models/gemini-4-carbon.md",
+    "html_url": "https://cursor.com/docs/models/gemini-4-carbon",
+    "route": "docs/models/gemini-4-carbon",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
     "title": "gemini 4 argon",
     "md_url": "https://cursor.com/docs/models/gemini-4-argon.md",
     "html_url": "https://cursor.com/docs/models/gemini-4-argon",
@@ -2937,14 +2945,6 @@
   },
   {
     "group": "Cursor: Help Center",
-    "title": "shared bots",
-    "md_url": "https://cursor.com/help/grok-bot/shared-bots.md",
-    "html_url": "https://cursor.com/help/grok-bot/shared-bots",
-    "route": "help/grok-bot/shared-bots",
-    "kind": "doc"
-  },
-  {
-    "group": "Cursor: Help Center",
     "title": "sign in",
     "md_url": "https://cursor.com/help/grok-bot/sign-in.md",
     "html_url": "https://cursor.com/help/grok-bot/sign-in",
@@ -2957,6 +2957,14 @@
     "md_url": "https://cursor.com/help/grok-bot/supergrok.md",
     "html_url": "https://cursor.com/help/grok-bot/supergrok",
     "route": "help/grok-bot/supergrok",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Help Center",
+    "title": "team bots",
+    "md_url": "https://cursor.com/help/grok-bot/team-bots.md",
+    "html_url": "https://cursor.com/help/grok-bot/team-bots",
+    "route": "help/grok-bot/team-bots",
     "kind": "doc"
   },
   {
