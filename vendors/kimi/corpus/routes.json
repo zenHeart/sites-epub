@@ -97,14 +97,6 @@
   },
   {
     "group": "Features",
-    "title": "websites",
-    "md_url": "https://www.kimi.com/features/websites",
-    "html_url": "https://www.kimi.com/features/websites",
-    "route": "features/websites",
-    "kind": "doc"
-  },
-  {
-    "group": "Features",
     "title": "design",
     "md_url": "https://www.kimi.com/features/design",
     "html_url": "https://www.kimi.com/features/design",
@@ -141,6 +133,14 @@
     "md_url": "https://www.kimi.com/academy/kimi-code-cheat-sheet",
     "html_url": "https://www.kimi.com/academy/kimi-code-cheat-sheet",
     "route": "academy/kimi-code-cheat-sheet",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "3d ceramics website",
+    "md_url": "https://www.kimi.com/academy/3d-ceramics-website",
+    "html_url": "https://www.kimi.com/academy/3d-ceramics-website",
+    "route": "academy/3d-ceramics-website",
     "kind": "doc"
   },
   {
@@ -625,10 +625,10 @@
   },
   {
     "group": "Help Center",
-    "title": "kimi webbridge",
-    "md_url": "https://www.kimi.com/help/kimi-webbridge",
-    "html_url": "https://www.kimi.com/help/kimi-webbridge",
-    "route": "help/kimi-webbridge",
+    "title": "kimi browser extension",
+    "md_url": "https://www.kimi.com/help/kimi-browser-extension",
+    "html_url": "https://www.kimi.com/help/kimi-browser-extension",
+    "route": "help/kimi-browser-extension",
     "kind": "doc"
   },
   {

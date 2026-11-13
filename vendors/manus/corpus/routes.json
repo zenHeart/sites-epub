@@ -1281,6 +1281,30 @@
   },
   {
     "group": "Blog",
+    "title": "game ideas",
+    "md_url": "https://manus.im/blog/game-ideas.md",
+    "html_url": "https://manus.im/blog/game-ideas",
+    "route": "blog/game-ideas",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to make a mobile game",
+    "md_url": "https://manus.im/blog/how-to-make-a-mobile-game.md",
+    "html_url": "https://manus.im/blog/how-to-make-a-mobile-game",
+    "route": "blog/how-to-make-a-mobile-game",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai game maker vs game engine",
+    "md_url": "https://manus.im/blog/ai-game-maker-vs-game-engine.md",
+    "html_url": "https://manus.im/blog/ai-game-maker-vs-game-engine",
+    "route": "blog/ai-game-maker-vs-game-engine",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "how to build your first game with ai",
     "md_url": "https://manus.im/blog/how-to-build-your-first-game-with-ai.md",
     "html_url": "https://manus.im/blog/how-to-build-your-first-game-with-ai",

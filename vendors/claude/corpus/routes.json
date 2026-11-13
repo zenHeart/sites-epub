@@ -1233,6 +1233,14 @@
   },
   {
     "group": "Configuration",
+    "title": "Run tool calls from code with Code Mode",
+    "md_url": "https://code.claude.com/docs/en/code-mode.md",
+    "html_url": "https://code.claude.com/docs/en/code-mode",
+    "route": "code-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Configuration",
     "title": "Output styles",
     "md_url": "https://code.claude.com/docs/en/output-styles.md",
     "html_url": "https://code.claude.com/docs/en/output-styles",
@@ -1625,18 +1633,66 @@
   },
   {
     "group": "Blog",
-    "title": "sheets whiteboards data",
-    "md_url": "https://claude.com/resources/articles/sheets-whiteboards-data.md",
-    "html_url": "https://claude.com/resources/articles/sheets-whiteboards-data",
-    "route": "blog/sheets-whiteboards-data",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "interactive connectors full tool",
     "md_url": "https://claude.com/resources/articles/interactive-connectors-full-tool.md",
     "html_url": "https://claude.com/resources/articles/interactive-connectors-full-tool",
     "route": "blog/interactive-connectors-full-tool",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "building always on agents",
+    "md_url": "https://claude.com/resources/articles/building-always-on-agents.md",
+    "html_url": "https://claude.com/resources/articles/building-always-on-agents",
+    "route": "blog/building-always-on-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude tag guide for startups",
+    "md_url": "https://claude.com/resources/articles/claude-tag-guide-for-startups.md",
+    "html_url": "https://claude.com/resources/articles/claude-tag-guide-for-startups",
+    "route": "blog/claude-tag-guide-for-startups",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "self hosted claude managed agents",
+    "md_url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents.md",
+    "html_url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
+    "route": "blog/self-hosted-claude-managed-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "j crew style advisor with claude",
+    "md_url": "https://claude.com/resources/articles/j-crew-style-advisor-with-claude.md",
+    "html_url": "https://claude.com/resources/articles/j-crew-style-advisor-with-claude",
+    "route": "blog/j-crew-style-advisor-with-claude",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude for manufacturing",
+    "md_url": "https://claude.com/resources/articles/claude-for-manufacturing.md",
+    "html_url": "https://claude.com/resources/articles/claude-for-manufacturing",
+    "route": "blog/claude-for-manufacturing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude meetings",
+    "md_url": "https://claude.com/resources/articles/claude-meetings.md",
+    "html_url": "https://claude.com/resources/articles/claude-meetings",
+    "route": "blog/claude-meetings",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "using claude opus 5 5 as your daily driver for knowledge work",
+    "md_url": "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work.md",
+    "html_url": "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
+    "route": "blog/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
     "kind": "blog"
   },
   {
@@ -1657,34 +1713,10 @@
   },
   {
     "group": "Blog",
-    "title": "jpmorganchase expands claude code",
-    "md_url": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code.md",
-    "html_url": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code",
-    "route": "blog/jpmorganchase-expands-claude-code",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "safely scaling multi agent teams with fable 5 2",
-    "md_url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2",
-    "html_url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2",
-    "route": "blog/safely-scaling-multi-agent-teams-with-fable-5-2",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "which claude model should you build with",
-    "md_url": "https://claude.dev/blog/which-claude-model-should-you-build-with",
-    "html_url": "https://claude.dev/blog/which-claude-model-should-you-build-with",
-    "route": "blog/which-claude-model-should-you-build-with",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "introducing personal finance in claude",
-    "md_url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude.md",
-    "html_url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
-    "route": "blog/introducing-personal-finance-in-claude",
+    "title": "sheets whiteboards data",
+    "md_url": "https://claude.com/resources/articles/sheets-whiteboards-data.md",
+    "html_url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+    "route": "blog/sheets-whiteboards-data",
     "kind": "blog"
   },
   {
@@ -3241,6 +3273,14 @@
   },
   {
     "group": "Blog",
+    "title": "introducing personal finance in claude",
+    "md_url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude.md",
+    "html_url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
+    "route": "blog/introducing-personal-finance-in-claude",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "introducing routines in claude code",
     "md_url": "https://claude.com/resources/articles/introducing-routines-in-claude-code.md",
     "html_url": "https://claude.com/resources/articles/introducing-routines-in-claude-code",
@@ -3261,6 +3301,14 @@
     "md_url": "https://claude.com/resources/articles/introduction-to-agentic-coding.md",
     "html_url": "https://claude.com/resources/articles/introduction-to-agentic-coding",
     "route": "blog/introduction-to-agentic-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "jpmorganchase expands claude code",
+    "md_url": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code.md",
+    "html_url": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code",
+    "route": "blog/jpmorganchase-expands-claude-code",
     "kind": "blog"
   },
   {
@@ -3437,14 +3485,6 @@
     "md_url": "https://claude.com/resources/articles/product-development-in-the-agentic-era.md",
     "html_url": "https://claude.com/resources/articles/product-development-in-the-agentic-era",
     "route": "blog/product-development-in-the-agentic-era",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "product management on the ai exponential",
-    "md_url": "https://claude.com/resources/articles/product-management-on-the-ai-exponential.md",
-    "html_url": "https://claude.com/resources/articles/product-management-on-the-ai-exponential",
-    "route": "blog/product-management-on-the-ai-exponential",
     "kind": "blog"
   },
   {
@@ -3893,6 +3933,22 @@
     "md_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents.md",
     "html_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents",
     "route": "blog/zero-trust-for-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "which claude model should you build with",
+    "md_url": "https://claude.dev/blog/which-claude-model-should-you-build-with",
+    "html_url": "https://claude.dev/blog/which-claude-model-should-you-build-with",
+    "route": "blog/which-claude-model-should-you-build-with",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "safely scaling multi agent teams with fable 5 2",
+    "md_url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2",
+    "html_url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2",
+    "route": "blog/safely-scaling-multi-agent-teams-with-fable-5-2",
     "kind": "blog"
   },
   {

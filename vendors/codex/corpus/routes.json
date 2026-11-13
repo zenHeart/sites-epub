@@ -905,6 +905,22 @@
   },
   {
     "group": "Security",
+    "title": "Findings and fixes",
+    "md_url": "https://learn.chatgpt.com/docs/security/findings-and-fixes.md",
+    "html_url": "https://learn.chatgpt.com/docs/security/findings-and-fixes",
+    "route": "codex/security/findings-and-fixes",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Import scanner findings",
+    "md_url": "https://learn.chatgpt.com/docs/security/scanner-imports.md",
+    "html_url": "https://learn.chatgpt.com/docs/security/scanner-imports",
+    "route": "codex/security/scanner-imports",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
     "title": "Security Review",
     "md_url": "https://learn.chatgpt.com/docs/security/security-review.md",
     "html_url": "https://learn.chatgpt.com/docs/security/security-review",
@@ -917,6 +933,14 @@
     "md_url": "https://learn.chatgpt.com/docs/security/threat-model.md",
     "html_url": "https://learn.chatgpt.com/docs/security/threat-model",
     "route": "codex/security/threat-model",
+    "kind": "doc"
+  },
+  {
+    "group": "Security",
+    "title": "Notifications",
+    "md_url": "https://learn.chatgpt.com/docs/security/notifications.md",
+    "html_url": "https://learn.chatgpt.com/docs/security/notifications",
+    "route": "codex/security/notifications",
     "kind": "doc"
   },
   {
@@ -1257,6 +1281,14 @@
   },
   {
     "group": "Administration",
+    "title": "Desktop browser policies",
+    "md_url": "https://learn.chatgpt.com/docs/enterprise/desktop-browser-policies.md",
+    "html_url": "https://learn.chatgpt.com/docs/enterprise/desktop-browser-policies",
+    "route": "codex/enterprise/desktop-browser-policies",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
     "title": "Self-host configuration",
     "md_url": "https://learn.chatgpt.com/docs/enterprise/configuration-server.md",
     "html_url": "https://learn.chatgpt.com/docs/enterprise/configuration-server",
@@ -1566,6 +1598,14 @@
     "html_url": "https://learn.chatgpt.com/docs/whats-new/september-28-october-2-2026",
     "route": "codex/whats-new/september-28-october-2-2026",
     "kind": "doc"
+  },
+  {
+    "group": "Blog",
+    "title": "securing persistent agents like openclaw at openai",
+    "md_url": "https://learn.chatgpt.com/blog/securing-persistent-agents-like-openclaw-at-openai.md",
+    "html_url": "https://learn.chatgpt.com/blog/securing-persistent-agents-like-openclaw-at-openai",
+    "route": "blog/securing-persistent-agents-like-openclaw-at-openai",
+    "kind": "blog"
   },
   {
     "group": "Blog",

@@ -49,10 +49,18 @@
   },
   {
     "group": "AI Studio",
-    "title": "Deploying your app",
+    "title": "Publish your app",
     "md_url": "https://aistudio.google.com/docs/aistudio-deploying.md",
     "html_url": "https://aistudio.google.com/docs/aistudio-deploying",
     "route": "gemini-api/docs/aistudio-deploying",
+    "kind": "doc"
+  },
+  {
+    "group": "AI Studio",
+    "title": "Custom domains",
+    "md_url": "https://aistudio.google.com/docs/aistudio-custom-domains.md",
+    "html_url": "https://aistudio.google.com/docs/aistudio-custom-domains",
+    "route": "gemini-api/docs/aistudio-custom-domains",
     "kind": "doc"
   },
   {
@@ -165,6 +173,14 @@
     "md_url": "https://antigravity.google/docs/voice-mode.md",
     "html_url": "https://antigravity.google/docs/voice-mode",
     "route": "antigravity/voice-mode",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Browser use",
+    "md_url": "https://antigravity.google/docs/browser.md",
+    "html_url": "https://antigravity.google/docs/browser",
+    "route": "antigravity/browser",
     "kind": "doc"
   },
   {
@@ -353,6 +369,14 @@
   },
   {
     "group": "Antigravity",
+    "title": "Dynamic Workflows (/run-workflow)",
+    "md_url": "https://antigravity.google/docs/dynamic-workflows.md",
+    "html_url": "https://antigravity.google/docs/dynamic-workflows",
+    "route": "antigravity/dynamic-workflows",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Swarm (/swarm)",
     "md_url": "https://antigravity.google/docs/swarm.md",
     "html_url": "https://antigravity.google/docs/swarm",
@@ -373,6 +397,30 @@
     "md_url": "https://antigravity.google/docs/plan.md",
     "html_url": "https://antigravity.google/docs/plan",
     "route": "antigravity/plan",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Customizations command (/agy-customizations)",
+    "md_url": "https://antigravity.google/docs/commands/agy-customizations.md",
+    "html_url": "https://antigravity.google/docs/commands/agy-customizations",
+    "route": "antigravity/commands/agy-customizations",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Antigravity guide command (/antigravity-guide)",
+    "md_url": "https://antigravity.google/docs/commands/antigravity-guide.md",
+    "html_url": "https://antigravity.google/docs/commands/antigravity-guide",
+    "route": "antigravity/commands/antigravity-guide",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Automation command (/automation)",
+    "md_url": "https://antigravity.google/docs/commands/automation.md",
+    "html_url": "https://antigravity.google/docs/commands/automation",
+    "route": "antigravity/commands/automation",
     "kind": "doc"
   },
   {
@@ -3057,6 +3105,30 @@
   },
   {
     "group": "Blog",
+    "title": "gemini on apple carplay",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-on-apple-carplay/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-on-apple-carplay/",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-on-apple-carplay",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "research with gemini in chrome",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/research-with-gemini-in-chrome/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/research-with-gemini-in-chrome/",
+    "route": "blog/innovation-and-ai/products/gemini-app/research-with-gemini-in-chrome",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "google wallet gemini app",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/google-wallet-gemini-app/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/google-wallet-gemini-app/",
+    "route": "blog/innovation-and-ai/products/gemini-app/google-wallet-gemini-app",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "gemini models",
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
@@ -3325,6 +3397,14 @@
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing gemini 4 hydrogen",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen",
     "kind": "blog"
   },
   {

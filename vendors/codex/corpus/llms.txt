@@ -133,6 +133,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Compliance API and audit events](https://learn.chatgpt.com/docs/enterprise/compliance-api.md): Understand the purpose and administration boundary of the Compliance API
 - [Connect to a gateway](https://learn.chatgpt.com/docs/enterprise/connect-to-a-gateway.md): Configure a model gateway and authenticate with native gateway OAuth, an API key, or a credential helper.
 - [Deploy the Windows app and Codex CLI](https://learn.chatgpt.com/docs/enterprise/windows-deployment.md): Deploy the Windows desktop app and Codex CLI with Intune, SCCM, or another enterprise management tool
+- [Desktop browser policies](https://learn.chatgpt.com/docs/enterprise/desktop-browser-policies.md): Deploy and verify supported Chrome policies for the built-in desktop browser
 - [Dynamic groups](https://learn.chatgpt.com/docs/enterprise/dynamic-groups.md): Automatically manage group membership using SCIM user attributes
 - [Gateway compatibility requirements](https://learn.chatgpt.com/docs/enterprise/gateway-compatibility.md): Check the gateway requirements for Codex
 - [Governance](https://learn.chatgpt.com/docs/enterprise/governance.md): Choose the appropriate analytics, usage, and audit surface for each administration question
@@ -299,22 +300,25 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Codex Security CLI FAQ](https://learn.chatgpt.com/docs/security/cli/faq.md): Answers about Codex Security scans, findings, false positives, coverage, cost, and CI.
 - [Codex Security CLI quickstart](https://learn.chatgpt.com/docs/security/cli.md): Sign in, scan a local repository, and review the scan scope and findings.
 - [Codex Security CLI reference](https://learn.chatgpt.com/docs/security/cli/reference.md): Arguments, output formats, scan artifacts, and exit codes for the Codex Security CLI.
-- [Codex Security Cloud FAQ](https://learn.chatgpt.com/docs/security/faq.md): Understand Cloud scan results, validation, patches, and commit monitoring.
-- [Codex Security Cloud setup](https://learn.chatgpt.com/docs/security/setup.md): Install Codex Security Cloud, scan a GitHub repository, and review findings.
 - [Codex Security plugin changelog](https://learn.chatgpt.com/docs/security/plugin/changelog.md): Notable user-facing changes to the Codex Security plugin.
 - [Codex Security plugin quickstart](https://learn.chatgpt.com/docs/security/plugin.md): Install the Codex Security plugin, run your first read-only scan, and review the result in Codex.
 - [Codex Security TypeScript SDK](https://learn.chatgpt.com/docs/security/sdk.md): Run Codex Security scans from TypeScript, select targets, inspect results, and manage scan lifecycle.
+- [Daybreak Defense Factory FAQ](https://learn.chatgpt.com/docs/security/faq.md): Understand cloud scan results, validation, patches, and commit monitoring.
+- [Daybreak notifications](https://learn.chatgpt.com/docs/security/notifications.md): Send Daybreak scan events to a workspace webhook.
 - [Export and track security findings](https://learn.chatgpt.com/docs/security/plugin/export-findings.md): Export scan results or create issues and draft advisories.
 - [Fix and verify security findings](https://learn.chatgpt.com/docs/security/plugin/fix-findings.md): Generate a patch for a finding and verify that it fixes the issue.
-- [Improve the Cloud threat model](https://learn.chatgpt.com/docs/security/threat-model.md): Add deployment context and security assumptions to a monitored repository's threat model.
+- [Import scanner findings into Daybreak](https://learn.chatgpt.com/docs/security/scanner-imports.md): Connect Wiz, Snyk Open Source, or Endor Labs, upload a scanner report, and choose which assessed findings to share.
+- [Improve the repository threat model](https://learn.chatgpt.com/docs/security/threat-model.md): Add deployment context and security assumptions to a monitored repository's threat model.
 - [Propose security hardening](https://learn.chatgpt.com/docs/security/plugin/security-hardening.md): Compare architectural changes and their security and engineering tradeoffs.
 - [Review code changes for security](https://learn.chatgpt.com/docs/security/plugin/code-changes.md): Review pull requests and local changes for security regressions manually or in CI/CD.
+- [Review findings and fixes in Daybreak](https://learn.chatgpt.com/docs/security/findings-and-fixes.md): Triage a finding, compare evidence from different scanners, and review a patch before opening a pull request.
 - [Run a Codex Security scan](https://learn.chatgpt.com/docs/security/plugin/scans.md): Scan a repository.
 - [Run a deep security scan](https://learn.chatgpt.com/docs/security/plugin/deep-scans.md): Run repeated security reviews of a repository or folder and set limits on concurrency and duration.
 - [Run bulk security scans](https://learn.chatgpt.com/docs/security/cli/bulk-scans.md): Discover GitHub repositories or run resumable security scans from a CSV inventory.
 - [Run Codex Security in GitHub Actions](https://learn.chatgpt.com/docs/security/cli/ci/github.md): Scan pull requests and repositories with the Codex Security Action, save reports, upload SARIF, and configure enforcement.
 - [Run Codex Security in GitLab CI/CD](https://learn.chatgpt.com/docs/security/cli/ci/gitlab.md): Scan GitLab merge requests and branches, publish SARIF findings, and optionally open draft merge requests with verified fixes.
 - [Security Review](https://learn.chatgpt.com/docs/security/security-review.md): Configure and run in-depth security reviews for GitHub pull requests.
+- [Set up Daybreak Defense Factory](https://learn.chatgpt.com/docs/security/setup.md): Connect GitHub, run your first security scan, and choose how to check future changes.
 - [Triage a backlog](https://learn.chatgpt.com/docs/security/plugin/triage-backlog.md): Review existing security findings against a repository and order follow-up work.
 - [Use the Codex Security workbench](https://learn.chatgpt.com/docs/security/plugin/workbench.md): Start security scans, review findings, and inspect repository history in the Codex desktop app.
 - [Write vulnerability reports](https://learn.chatgpt.com/docs/security/plugin/vulnerability-reports.md): Turn findings, disclosure notes, source, and proof-of-concept material into vulnerability reports with supporting evidence.

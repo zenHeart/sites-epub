@@ -26,8 +26,23 @@
 - [API CLI](https://aistudio.google.com/docs/cli.md): Give coding agents, shell scripts, and CI pipelines a stateless CLI to generate text and media, analyze files, and run Gemini managed agents.
 
 ## Models
+- [Latest Gemini models — Overview](https://aistudio.google.com/docs/latest-model.md): Compare the latest Gemini models across text, code, images, video, and audio, run a quickstart, and connect your coding agent.
+- [Latest Gemini models — Overview (generateContent)](https://aistudio.google.com/docs/latest-model.md?generate-content=true): Compare the latest Gemini models across text, code, images, video, and audio, run a quickstart, and connect your coding agent.
+- [Latest Gemini models — Gemini 4 Carbon - what's new](https://aistudio.google.com/docs/whats-new-gemini-4-carbon.md): Learn what's new in Gemini 4 Carbon (gemini-4-carbon), Google's latest Gemini 4 model featuring a 1M shared context window, long decode, pricing, and API migration guidance.
+- [Latest Gemini models — Gemini 4 Carbon - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-4-carbon.md?generate-content=true): Learn what's new in Gemini 4 Carbon (gemini-4-carbon), Google's latest Gemini 4 model featuring a 1M shared context window, long decode, pricing, and API migration guidance.
+- [Latest Gemini models — Gemini 4 Argon - what's new](https://aistudio.google.com/docs/whats-new-gemini-4-argon.md): Learn what's new in Gemini 4 Argon (gemini-4-argon), our efficient Gemini 4 frontier reasoning model with a 1M shared context window, long decode, pricing, and API migration guidance.
+- [Latest Gemini models — Gemini 4 Argon - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-4-argon.md?generate-content=true): Learn what's new in Gemini 4 Argon (gemini-4-argon), our efficient Gemini 4 frontier reasoning model with a 1M shared context window, long decode, pricing, and API migration guidance.
+- [Latest Gemini models — Gemini 3.8 Flash - what's new](https://aistudio.google.com/docs/whats-new-gemini-3.8.md): Learn about what's new in Gemini 3.8 Flash, including model capabilities, API changes, and migration guidance.
+- [Latest Gemini models — Gemini 3.8 Flash - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.8.md?generate-content=true): Learn about what's new in Gemini 3.8 Flash, including model capabilities, API changes, and migration guidance.
+- [Latest Gemini models — Gemini 3.6 & 3.5 Flash-Lite - what's new](https://aistudio.google.com/docs/whats-new-gemini-3.6.md): Learn about what's new in Gemini 3.6 Flash and Gemini 3.5 Flash-Lite, including model capabilities, API changes, and migration guidance.
+- [Latest Gemini models — Gemini 3.6 & 3.5 Flash-Lite - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.6.md?generate-content=true): Learn about what's new in Gemini 3.6 Flash and Gemini 3.5 Flash-Lite, including model capabilities, API changes, and migration guidance.
+- [Latest Gemini models — Gemini 3.7 Flash - what's new](https://aistudio.google.com/docs/whats-new-gemini-3.7.md): Learn about what's new in Gemini 3.7 Flash, including model capabilities, API changes, and migration guidance.
+- [Latest Gemini models — Gemini 3.7 Flash - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.7.md?generate-content=true): Learn about what's new in Gemini 3.7 Flash, including model capabilities, API changes, and migration guidance.
+- [Latest Gemini models — Gemini 3.5 Flash - what's new](https://aistudio.google.com/docs/whats-new-gemini-3.5.md): Learn about the new features and migration guidance for Gemini 3.5 Flash.
+- [Latest Gemini models — Gemini 3.5 Flash - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.5.md?generate-content=true): Learn about the new features and migration guidance for Gemini 3.5 Flash.
 - [All models](https://aistudio.google.com/docs/models.md): Learn about all of Google's most advanced AI models
-- [Gemini 4 Argon](https://aistudio.google.com/docs/models/gemini-4-argon.md): Explore Gemini 4 Argon (gemini-4-argon), Google's latest Gemini 4 model for coding, reasoning, and agents, featuring a 1M context window and long decode.
+- [Gemini 4 Carbon](https://aistudio.google.com/docs/models/gemini-4-carbon.md): Explore Gemini 4 Carbon (gemini-4-carbon), Google's latest Gemini 4 model for coding, reasoning, science, and agents, featuring a 1M context window and long decode.
+- [Gemini 4 Argon](https://aistudio.google.com/docs/models/gemini-4-argon.md): Explore Gemini 4 Argon (gemini-4-argon), our efficient Gemini 4 frontier reasoning model with faster responses and lower token spend per turn compared to Gemini 4 Carbon.
 - [Gemini Nano Banana 2.1](https://aistudio.google.com/docs/models/gemini-nano-banana-2.1.md): Learn about Gemini Nano Banana 2.1 from Google
 - [Gemini 3.1 Flash image (Nano Banana 2)](https://aistudio.google.com/docs/models/gemini-3.1-flash-image.md): Learn about Gemini 3.1 Flash Image from Google
 - [Gemini 3.1 Pro preview](https://aistudio.google.com/docs/models/gemini-3.1-pro-preview.md): Learn about Gemini 3.1 Pro Preview from Google
@@ -83,16 +98,6 @@
 - [Lyria 3.5](https://aistudio.google.com/docs/models/lyria-3.5.md): Learn about Lyria 3.5 from Google DeepMind
 - [Lyria 3 Clip preview](https://aistudio.google.com/docs/models/lyria-3-clip-preview.md): Learn about Lyria 3 Clip Preview from Google DeepMind
 - [Lyria 3 Pro preview](https://aistudio.google.com/docs/models/lyria-3-pro-preview.md): Learn about Lyria 3 Pro Preview from Google DeepMind
-- [Latest Gemini models](https://aistudio.google.com/docs/latest-model.md): Learn what's new in Gemini 4 Argon (gemini-4-argon), Google's new Gemini 4 model with a 1M shared context window, long decode, pricing, and API migration guide.
-- [Latest Gemini models (generateContent)](https://aistudio.google.com/docs/latest-model.md?generate-content=true): Learn what's new in Gemini 4 Argon (gemini-4-argon), Google's new Gemini 4 model with a 1M shared context window, long decode, pricing, and API migration guide.
-- [What's new in Gemini 3.8 Flash](https://aistudio.google.com/docs/whats-new-gemini-3.8.md): Learn about what's new in Gemini 3.8 Flash, including model capabilities, API changes, and migration guidance.
-- [What's new in Gemini 3.8 Flash (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.8.md?generate-content=true): Learn about what's new in Gemini 3.8 Flash, including model capabilities, API changes, and migration guidance.
-- [What's new in Gemini 3.7 Flash](https://aistudio.google.com/docs/whats-new-gemini-3.7.md): Learn about what's new in Gemini 3.7 Flash, including model capabilities, API changes, and migration guidance.
-- [What's new in Gemini 3.7 Flash (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.7.md?generate-content=true): Learn about what's new in Gemini 3.7 Flash, including model capabilities, API changes, and migration guidance.
-- [What's new in Gemini 3.6 Flash and 3.5 Flash-Lite](https://aistudio.google.com/docs/whats-new-gemini-3.6.md): Learn about what's new in Gemini 3.6 Flash and Gemini 3.5 Flash-Lite, including model capabilities, API changes, and migration guidance.
-- [What's new in Gemini 3.6 Flash and 3.5 Flash-Lite (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.6.md?generate-content=true): Learn about what's new in Gemini 3.6 Flash and Gemini 3.5 Flash-Lite, including model capabilities, API changes, and migration guidance.
-- [What's new in Gemini 3.5 Flash](https://aistudio.google.com/docs/whats-new-gemini-3.5.md): Learn about the new features and migration guidance for Gemini 3.5 Flash.
-- [What's new in Gemini 3.5 Flash (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.5.md?generate-content=true): Learn about the new features and migration guidance for Gemini 3.5 Flash.
 - [Nano Banana](https://aistudio.google.com/docs/image-generation.md): Get started generating images with the Gemini API using Nano Banana and Nano Banana Pro
 - [Nano Banana (generateContent)](https://aistudio.google.com/docs/image-generation.md?generate-content=true): Get started generating images with the Gemini API using Nano Banana and Nano Banana Pro
 - [Veo](https://aistudio.google.com/docs/veo.md): Generate high-fidelity videos with native audio using Google's Veo 3.1 API.
@@ -148,8 +153,8 @@
 - [Function calling](https://aistudio.google.com/docs/function-calling.md): Get started using Function Calling with the Gemini API
 - [Function calling (generateContent)](https://aistudio.google.com/docs/function-calling.md?generate-content=true): Get started using Function Calling with the Gemini API
 - [Long context](https://aistudio.google.com/docs/long-context.md): Learn about how to get started building with long context (1 million context window) on Gemini.
-- [Long decode](https://aistudio.google.com/docs/long-decode.md): Use long decode with Gemini 4 Argon on the Interactions API to generate past 64K tokens up to the 1M-token context window with background execution or client-side continuation.
-- [Long decode (generateContent)](https://aistudio.google.com/docs/long-decode.md?generate-content=true): Use long decode with Gemini 4 Argon in generateContent and streamGenerateContent to generate up to the 1M-token unified context window across continuation hops.
+- [Long decode](https://aistudio.google.com/docs/long-decode.md): Use long decode with Gemini 4 models (gemini-4-carbon and gemini-4-argon) on the Interactions API to generate past 64K tokens up to the 1M-token context window with background execution or client-side continuation.
+- [Long decode (generateContent)](https://aistudio.google.com/docs/long-decode.md?generate-content=true): Use long decode with Gemini 4 models (gemini-4-carbon and gemini-4-argon) in generateContent and streamGenerateContent to generate up to the 1M-token unified context window across continuation hops.
 
 ## Agents
 - [Overview](https://aistudio.google.com/docs/agents.md): Build agents that reason, write code, manage files, and browse the web with the Gemini API.
@@ -245,7 +250,8 @@
 - [Google AI Studio — Vibe code in Build](https://aistudio.google.com/docs/aistudio-build-mode.md): Learn how to build full-stack applications using the vibe coding experience in Google AI Studio.
 - [Google AI Studio — Full-stack apps](https://aistudio.google.com/docs/aistudio-fullstack.md): Learn how to develop full-stack applications with server-side logic in Google AI Studio.
 - [Google AI Studio — Build Android apps](https://aistudio.google.com/docs/aistudio-android.md): Learn how to build native Android apps with Kotlin and Jetpack Compose in Google AI Studio.
-- [Google AI Studio — Deploying your app](https://aistudio.google.com/docs/aistudio-deploying.md): Deploy full-stack generative AI applications from Google AI Studio.
+- [Google AI Studio — Publish your app](https://aistudio.google.com/docs/aistudio-deploying.md): Publish full-stack generative AI apps directly from Google AI Studio.
+- [Google AI Studio — Custom domains](https://aistudio.google.com/docs/aistudio-custom-domains.md): Buy, connect, and manage custom domains for web apps published in Google AI Studio.
 - [Google AI Studio — Agents in AI Studio](https://aistudio.google.com/docs/aistudio-agents.md): Learn how to use Agents in AI Studio
 - [Google AI Studio — Try out LearnLM](https://aistudio.google.com/docs/learnlm.md): Use pedagogical learning capabilities with standard Gemini models in AI Studio.
 - [Google AI Studio — Troubleshooting](https://aistudio.google.com/docs/troubleshoot-ai-studio.md): This page provides suggestions for troubleshooting Google AI Studio if you encounter issues.

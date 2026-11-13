@@ -1681,14 +1681,6 @@
   },
   {
     "group": "Blog",
-    "title": "how to write html code",
-    "md_url": "https://zencoder.ai/blog/how-to-write-html-code",
-    "html_url": "https://zencoder.ai/blog/how-to-write-html-code",
-    "route": "blog/how-to-write-html-code",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "demystifying swe bench",
     "md_url": "https://zencoder.ai/blog/demystifying-swe-bench",
     "html_url": "https://zencoder.ai/blog/demystifying-swe-bench",
@@ -2137,6 +2129,14 @@
   },
   {
     "group": "Blog",
+    "title": "next js debugging tips",
+    "md_url": "https://zencoder.ai/blog/next-js-debugging-tips",
+    "html_url": "https://zencoder.ai/blog/next-js-debugging-tips",
+    "route": "blog/next-js-debugging-tips",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "future generative ai software development",
     "md_url": "https://zencoder.ai/blog/future-generative-ai-software-development",
     "html_url": "https://zencoder.ai/blog/future-generative-ai-software-development",
@@ -2277,6 +2277,14 @@
     "md_url": "https://zencoder.ai/blog/importance-of-docstrings-software-development",
     "html_url": "https://zencoder.ai/blog/importance-of-docstrings-software-development",
     "route": "blog/importance-of-docstrings-software-development",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai agent routing",
+    "md_url": "https://zencoder.ai/blog/ai-agent-routing",
+    "html_url": "https://zencoder.ai/blog/ai-agent-routing",
+    "route": "blog/ai-agent-routing",
     "kind": "blog"
   },
   {
@@ -2545,14 +2553,6 @@
   },
   {
     "group": "Blog",
-    "title": "ai advancements in code review",
-    "md_url": "https://zencoder.ai/blog/ai-advancements-in-code-review",
-    "html_url": "https://zencoder.ai/blog/ai-advancements-in-code-review",
-    "route": "blog/ai-advancements-in-code-review",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "supermaven vs codeium",
     "md_url": "https://zencoder.ai/blog/supermaven-vs-codeium",
     "html_url": "https://zencoder.ai/blog/supermaven-vs-codeium",
@@ -2621,6 +2621,14 @@
     "md_url": "https://zencoder.ai/blog/what-is-autonomous-coding",
     "html_url": "https://zencoder.ai/blog/what-is-autonomous-coding",
     "route": "blog/what-is-autonomous-coding",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "open source vs commercial llms",
+    "md_url": "https://zencoder.ai/blog/open-source-vs-commercial-llms",
+    "html_url": "https://zencoder.ai/blog/open-source-vs-commercial-llms",
+    "route": "blog/open-source-vs-commercial-llms",
     "kind": "blog"
   },
   {
@@ -2813,6 +2821,14 @@
     "md_url": "https://zencoder.ai/blog/best-python-code-checker",
     "html_url": "https://zencoder.ai/blog/best-python-code-checker",
     "route": "blog/best-python-code-checker",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "ai cinematic ui design",
+    "md_url": "https://zencoder.ai/blog/ai-cinematic-ui-design",
+    "html_url": "https://zencoder.ai/blog/ai-cinematic-ui-design",
+    "route": "blog/ai-cinematic-ui-design",
     "kind": "blog"
   },
   {
@@ -3049,6 +3065,14 @@
   },
   {
     "group": "Blog",
+    "title": "ai advancements in code review",
+    "md_url": "https://zencoder.ai/blog/ai-advancements-in-code-review",
+    "html_url": "https://zencoder.ai/blog/ai-advancements-in-code-review",
+    "route": "blog/ai-advancements-in-code-review",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "cody vs copilot",
     "md_url": "https://zencoder.ai/blog/cody-vs-copilot",
     "html_url": "https://zencoder.ai/blog/cody-vs-copilot",
@@ -3069,14 +3093,6 @@
     "md_url": "https://zencoder.ai/blog/tabnine-vs-amazon-codewhisperer",
     "html_url": "https://zencoder.ai/blog/tabnine-vs-amazon-codewhisperer",
     "route": "blog/tabnine-vs-amazon-codewhisperer",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "onboarding efficiency ai",
-    "md_url": "https://zencoder.ai/blog/onboarding-efficiency-ai",
-    "html_url": "https://zencoder.ai/blog/onboarding-efficiency-ai",
-    "route": "blog/onboarding-efficiency-ai",
     "kind": "blog"
   },
   {
@@ -3489,22 +3505,6 @@
   },
   {
     "group": "Blog",
-    "title": "ai cinematic ui design",
-    "md_url": "https://zencoder.ai/blog/ai-cinematic-ui-design",
-    "html_url": "https://zencoder.ai/blog/ai-cinematic-ui-design",
-    "route": "blog/ai-cinematic-ui-design",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "ai agent routing",
-    "md_url": "https://zencoder.ai/blog/ai-agent-routing",
-    "html_url": "https://zencoder.ai/blog/ai-agent-routing",
-    "route": "blog/ai-agent-routing",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "zenflow snowflake integration ai data warehouse tutorial",
     "md_url": "https://zencoder.ai/blog/zenflow-snowflake-integration-ai-data-warehouse-tutorial",
     "html_url": "https://zencoder.ai/blog/zenflow-snowflake-integration-ai-data-warehouse-tutorial",
@@ -3841,14 +3841,6 @@
   },
   {
     "group": "Blog",
-    "title": "open source vs commercial llms",
-    "md_url": "https://zencoder.ai/blog/open-source-vs-commercial-llms",
-    "html_url": "https://zencoder.ai/blog/open-source-vs-commercial-llms",
-    "route": "blog/open-source-vs-commercial-llms",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "mintlify alternatives",
     "md_url": "https://zencoder.ai/blog/mintlify-alternatives",
     "html_url": "https://zencoder.ai/blog/mintlify-alternatives",
@@ -3869,6 +3861,14 @@
     "md_url": "https://zencoder.ai/blog/generative-ai-code-generation-tools",
     "html_url": "https://zencoder.ai/blog/generative-ai-code-generation-tools",
     "route": "blog/generative-ai-code-generation-tools",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to write html code",
+    "md_url": "https://zencoder.ai/blog/how-to-write-html-code",
+    "html_url": "https://zencoder.ai/blog/how-to-write-html-code",
+    "route": "blog/how-to-write-html-code",
     "kind": "blog"
   },
   {
@@ -4073,6 +4073,14 @@
   },
   {
     "group": "Blog",
+    "title": "onboarding efficiency ai",
+    "md_url": "https://zencoder.ai/blog/onboarding-efficiency-ai",
+    "html_url": "https://zencoder.ai/blog/onboarding-efficiency-ai",
+    "route": "blog/onboarding-efficiency-ai",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "cve vs cwe",
     "md_url": "https://zencoder.ai/blog/cve-vs-cwe",
     "html_url": "https://zencoder.ai/blog/cve-vs-cwe",
@@ -4269,14 +4277,6 @@
     "md_url": "https://zencoder.ai/blog/ai-tools-for-freelancers",
     "html_url": "https://zencoder.ai/blog/ai-tools-for-freelancers",
     "route": "blog/ai-tools-for-freelancers",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "next js debugging tips",
-    "md_url": "https://zencoder.ai/blog/next-js-debugging-tips",
-    "html_url": "https://zencoder.ai/blog/next-js-debugging-tips",
-    "route": "blog/next-js-debugging-tips",
     "kind": "blog"
   },
   {
