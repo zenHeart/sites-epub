@@ -105,7 +105,7 @@
   },
   {
     "group": "Developers",
-    "title": "Imagine",
+    "title": "Image & Video",
     "md_url": "https://docs.x.ai/developers/model-capabilities/imagine.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/imagine",
     "route": "developers/model-capabilities/imagine",
@@ -113,7 +113,7 @@
   },
   {
     "group": "Developers",
-    "title": "Imagine \u2014 Image Generation",
+    "title": "Image & Video \u2014 Image Generation",
     "md_url": "https://docs.x.ai/developers/model-capabilities/images/generation.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/images/generation",
     "route": "developers/model-capabilities/images/generation",
@@ -121,7 +121,7 @@
   },
   {
     "group": "Developers",
-    "title": "Imagine \u2014 Image Editing",
+    "title": "Image & Video \u2014 Image Editing",
     "md_url": "https://docs.x.ai/developers/model-capabilities/images/editing.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/images/editing",
     "route": "developers/model-capabilities/images/editing",
@@ -129,7 +129,7 @@
   },
   {
     "group": "Developers",
-    "title": "Imagine \u2014 Multi-Image Editing",
+    "title": "Image & Video \u2014 Multi-Image Editing",
     "md_url": "https://docs.x.ai/developers/model-capabilities/images/multi-image-editing.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/images/multi-image-editing",
     "route": "developers/model-capabilities/images/multi-image-editing",
@@ -137,7 +137,7 @@
   },
   {
     "group": "Developers",
-    "title": "Imagine \u2014 Image Prompting Guide",
+    "title": "Image & Video \u2014 Image Prompting Guide",
     "md_url": "https://docs.x.ai/developers/model-capabilities/images/prompting-guide.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/images/prompting-guide",
     "route": "developers/model-capabilities/images/prompting-guide",
@@ -145,7 +145,7 @@
   },
   {
     "group": "Developers",
-    "title": "Imagine \u2014 Video Generation",
+    "title": "Image & Video \u2014 Video Generation",
     "md_url": "https://docs.x.ai/developers/model-capabilities/video/generation.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/video/generation",
     "route": "developers/model-capabilities/video/generation",
@@ -153,7 +153,7 @@
   },
   {
     "group": "Developers",
-    "title": "Imagine \u2014 Video Overview",
+    "title": "Image & Video \u2014 Video Overview",
     "md_url": "https://docs.x.ai/developers/model-capabilities/video/overview.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/video/overview",
     "route": "developers/model-capabilities/video/overview",
@@ -161,7 +161,7 @@
   },
   {
     "group": "Developers",
-    "title": "Imagine \u2014 Image-to-Video",
+    "title": "Image & Video \u2014 Image-to-Video",
     "md_url": "https://docs.x.ai/developers/model-capabilities/video/image-to-video.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/video/image-to-video",
     "route": "developers/model-capabilities/video/image-to-video",
@@ -169,7 +169,7 @@
   },
   {
     "group": "Developers",
-    "title": "Imagine \u2014 Reference-to-Video",
+    "title": "Image & Video \u2014 Reference-to-Video",
     "md_url": "https://docs.x.ai/developers/model-capabilities/video/reference-to-video.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/video/reference-to-video",
     "route": "developers/model-capabilities/video/reference-to-video",
@@ -177,7 +177,7 @@
   },
   {
     "group": "Developers",
-    "title": "Imagine \u2014 Video Editing",
+    "title": "Image & Video \u2014 Video Editing",
     "md_url": "https://docs.x.ai/developers/model-capabilities/video/editing.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/video/editing",
     "route": "developers/model-capabilities/video/editing",
@@ -185,7 +185,7 @@
   },
   {
     "group": "Developers",
-    "title": "Imagine \u2014 Video Extension",
+    "title": "Image & Video \u2014 Video Extension",
     "md_url": "https://docs.x.ai/developers/model-capabilities/video/extension.md",
     "html_url": "https://docs.x.ai/developers/model-capabilities/video/extension",
     "route": "developers/model-capabilities/video/extension",

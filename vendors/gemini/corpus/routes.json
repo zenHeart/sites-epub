@@ -2521,6 +2521,14 @@
   },
   {
     "group": "Gemini App Help",
+    "title": "Assign & track Gemini tasks through email",
+    "md_url": "https://support.google.com/gemini/answer/18745518",
+    "html_url": "https://support.google.com/gemini/answer/18745518",
+    "route": "gemini-app/18745518",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
     "title": "Use Google Antigravity in the Gemini app on Mac",
     "md_url": "https://support.google.com/gemini/answer/18755601",
     "html_url": "https://support.google.com/gemini/answer/18755601",
@@ -2533,6 +2541,14 @@
     "md_url": "https://support.google.com/gemini/answer/18766567",
     "html_url": "https://support.google.com/gemini/answer/18766567",
     "route": "gemini-app/18766567",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Make purchases & payments with Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/18891937",
+    "html_url": "https://support.google.com/gemini/answer/18891937",
+    "route": "gemini-app/18891937",
     "kind": "doc"
   },
   {

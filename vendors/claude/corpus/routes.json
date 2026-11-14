@@ -881,6 +881,14 @@
   },
   {
     "group": "Administration",
+    "title": "Claude Code with Claude Models on Google Cloud (Anthropic managed)",
+    "md_url": "https://code.claude.com/docs/en/claude-models-on-google-cloud-anthropic-managed.md",
+    "html_url": "https://code.claude.com/docs/en/claude-models-on-google-cloud-anthropic-managed",
+    "route": "claude-models-on-google-cloud-anthropic-managed",
+    "kind": "doc"
+  },
+  {
+    "group": "Administration",
     "title": "Claude Code on Google Cloud's Agent Platform",
     "md_url": "https://code.claude.com/docs/en/google-vertex-ai.md",
     "html_url": "https://code.claude.com/docs/en/google-vertex-ai",

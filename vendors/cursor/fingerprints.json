@@ -104,6 +104,7 @@
   "blog/scaling-agents": "b006b2cd4ffd4d92a092f995db75ebaeca83fe70839108f4e8c6c6a04bb3eb14",
   "blog/secure-codebase-indexing": "1627295e284794d40105e096f7ab799e4b765d71e56590a1c8d7ed5533338fc8",
   "blog/security-agents": "494e4fc230fe655251b66c2ee3326a105fbef3cd40900f9f3dcc9a99e666874e",
+  "blog/security-incident-update": "fb9ed4a5e8a8d1117a9e9affabb3182cf59a1a47ac188f550d29878f0959f3eb",
   "blog/self-driving-codebases": "6f062e280164978f72b5ffd377944b0ac97b5f42e91d13673f80e5b441578fd5",
   "blog/self-hosted-cloud-agents": "1c86442b54d45e609c75798902a4aef4ecb9b12b9d24bfa96044dbc77fc6eb6a",
   "blog/self-hosted-machines": "bcb56b514a4e6096c6d4ed20e85e0d6c99422e2e8dd5bfe736c007ebf934bea0",

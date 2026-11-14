@@ -3201,6 +3201,14 @@
   },
   {
     "group": "Blog",
+    "title": "security incident update",
+    "md_url": "https://cursor.com/blog/security-incident-update.md",
+    "html_url": "https://cursor.com/blog/security-incident-update",
+    "route": "blog/security-incident-update",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "projects multiplayer",
     "md_url": "https://cursor.com/blog/projects-multiplayer.md",
     "html_url": "https://cursor.com/blog/projects-multiplayer",
@@ -3265,14 +3273,6 @@
   },
   {
     "group": "Blog",
-    "title": "aiuc 1",
-    "md_url": "https://cursor.com/blog/aiuc-1.md",
-    "html_url": "https://cursor.com/blog/aiuc-1",
-    "route": "blog/aiuc-1",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
     "title": "self driving codebases",
     "md_url": "https://cursor.com/blog/self-driving-codebases.md",
     "html_url": "https://cursor.com/blog/self-driving-codebases",
@@ -3309,6 +3309,14 @@
     "md_url": "https://cursor.com/blog/nokia.md",
     "html_url": "https://cursor.com/blog/nokia",
     "route": "blog/nokia",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "aiuc 1",
+    "md_url": "https://cursor.com/blog/aiuc-1.md",
+    "html_url": "https://cursor.com/blog/aiuc-1",
+    "route": "blog/aiuc-1",
     "kind": "blog"
   },
   {

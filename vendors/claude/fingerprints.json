@@ -364,6 +364,7 @@
   "claude-apps-gateway-spend-limits": "d366894636585b26f150e707dd0c26382408f7984c6a6d2fe168de59b2c3652c",
   "claude-code-on-the-web": "1d3ff3b858506ced4f57af435da4455ba2387136d46249e52879cf58a1247070",
   "claude-directory": "8830400c1435e2f8164d59b223c904fa44a6331e0c74703f049f91ef6dabc41e",
+  "claude-models-on-google-cloud-anthropic-managed": "93d2f97537090dd788a4367d30787605dce0259560516e835b7354492435308c",
   "claude-platform-on-aws": "defeff154ecad1a00f8f543a4f2476114ce186f5ac0e1ddd5ece14aded021077",
   "claude-projects": "30af5d411d1ad6dc0824155de1d4ed623940b774427dfb372a5f510334332c4f",
   "claude-security": "05afc01b020c1727cde7748a40e938e71e1502971414714a899098a257bc5465",
