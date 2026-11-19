@@ -132,6 +132,18 @@ RESOURCES_KEEP = frozenset({
     "how-to-build-landing-pages", "how-to-write-a-business-proposal",
 })
 
+#: Entries of ``RESOURCES_KEEP`` whose slug has a programmatic SEO landing-page
+#: shape but whose content is a real tutorial.  The lint
+#: (``scripts/seo_lint.py``) requires each of them to be listed here *and* to
+#: carry a written reason, so the next SEO slug cannot be waved through by
+#: adding one string to the allowlist above (issue #2, root cause 2).
+RESOURCES_KEEP_EXEMPT = frozenset({
+    "agent-skills-examples",  # allow: 讲技能机制本身，不是某个技能分类的落地页
+    "how-to-build-landing-pages",  # allow: 合同必需路由（建站走查）
+    "how-to-install-hermes-agent",  # allow: 同类编程 Agent 的安装教程
+    "how-to-write-a-business-proposal",  # allow: 合同必需路由（长文写作）
+})
+
 
 def _path_of(url: str) -> str | None:
     parsed = urlparse(url)

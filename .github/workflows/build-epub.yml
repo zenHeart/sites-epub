@@ -43,6 +43,13 @@ jobs:
           python3 -m pip install --user beautifulsoup4 lxml
           pandoc --version | head -1
 
+      - name: Lint scope allowlists
+        # A hand-written allowlist is a human decision, and human decisions
+        # drift: kimi's RESOURCES_KEEP once held 27 programmatic SEO landing
+        # pages that the filter itself let through (2026-10-10, issue #2).
+        # The lint is stdlib-only and costs nothing.
+        run: python3 .agents/skills/site2epub/scripts/seo_lint.py
+
       - name: Pack catalog vendors (offline)
         env:
           SITESEPUB_PREV_SITE: prev-site

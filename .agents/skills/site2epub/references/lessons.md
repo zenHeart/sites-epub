@@ -549,6 +549,17 @@ gemini 语料是 devsite 系整页 HTML，`book.html` 里大量重复 id（pando
 `pack --id grok` 与 `pack --id minimax` 验体积（grok 线上 47.4MB、minimax 26.5MB，
 离 98MB 门禁都很远）→ 提交 → 盯 CI 全量重打 → 确认 12 本都绿再收工。
 
+**2026-10-11 补充判据（先问「为什么大」，再选杠杆）**：本节教的是**压图**，
+但它只在「路由合法、只是图多」时成立。kimi 那一轮语料涨到 61.4MB 文本 +
+139.2MB 图片，EPUB 136.3MB——原因是 `/resources` 收了 135 条路由，其中 24 条是
+程序化 SEO 落地页。此时压图要压 5 轮还踩到 JPEG 误删 bug，而**砍路由**一次
+就回到 192→95 章、39.75→21.01MB，一张图都没压。
+
+> **判据**：体积超标时，先按范围铁律过一遍路由，数 out-of-scope 占比。
+> **out-of-scope > 10% → 范围问题，砍路由；路由全合法 → 压图。**
+> 更早的信号：**语料字节数相比上一轮涨了一个数量级，必然是新收了不该收的**，
+> 此时停下来查枚举，不要进压缩循环。
+
 ---
 
 ## 27. 导航控件从 `<select>` 换成客户端渲染的 island：codex 抓取整体断掉（2026-10-25）
@@ -862,3 +873,133 @@ mtime），不是别人的改动。「脏即停」把「别人正在改」和「
 12/12 与线上 `pack-hashes.json` 的 `sha256` 字段一致，才认这个结论。
 
 
+
+---
+
+## 35. `.md` 孪生页可能是删节版，必须与 HTML 比正文量（cursor，2026-10-11）
+
+**症状**：`help/account-and-billing/bugbot-usage-based-billing` 抓到 **2334** 字符，
+线上 HTML 同站同 extractor 是 **4850**；`help/grok-bot/agent-email` **6361** vs
+**12908**。两页都只有线上正文量的约 48%–52%，而 `fetch` 报 `ok:true`。
+
+**根因**：`fetch_source()`（`compile.py`）的切换条件只有
+`_html_body_has_content_images(html)`——**只检测图片丢失，从不检测文字丢失**。
+这两页 HTML 无正文插图，于是走到 `return md`，把删节版孪生页交了出去。
+docstring 写的是 "Prefer readable HTML when the .md twin loses content"，实现没兑现。
+这是**通用缺口**，不是 cursor 特例：任何「孪生页格式良好、只是内容被删减、
+且原页无插图」的站点都会静默中招。
+
+**怎么修**：`fetch_source()` 对 `md` 与 `html` 各量一次正文长度，保留正文更丰的一方
+（阈值 `MD_TWIN_MIN_RATIO = 0.7`：孪生页不足 HTML 正文的七成就判为删节版，改用
+HTML）。回归测试 `tests/test_fetch_source.py` 用 cursor 那两组真实数字
+（2334/4850、6361/12908）做夹具。
+
+**2026-11-19 实现时踩到的两个陷阱（都让「朴素实现」既慢又错）**：
+
+1. **不能拿打包器的 `extract_page` 当量尺**：它对 markdown 走 pandoc，
+   单页 **9.1s**（17KB 文档），HTML 走 bs4+lxml **4.2s**。逐页跑一遍，
+   一次 claude 抓取从 90 秒变成 45 分钟。**量尺必须是廉价的**：
+   `compile._text_size()` 用正则剥标签与 markdown 语法，实测与打包器口径
+   相差 2%–3%。
+2. **HTML 的正文量不能按整页算**：cursor 的 help 页是响应式布局，**同一篇文章
+   印了两遍**（两个 `<main>`，各 2619 字），整页正文量 = 5239，比孪生页的
+   2566 整整大一倍——**看起来像删节，其实孪生页是全的**。量尺只取
+   **最大的 `<article>`/`<main>` 块**（一份，不重复），才与 md 侧可比。
+   claude 的文档页同样如此：整页 115k 字符里 11k 是正文，其余是导航。
+
+**怎么防止复发**：
+- 任何站点提供「更方便格式」（`.md`、`.txt`、纯文本 API）时，**先与 canonical
+  格式比一次正文量再信任它**；
+- 比对要**按块量**（article/main），不要按整页量；整页会把导航与响应式重复
+  一起算进去；
+- 比对要**先预筛**：只对「比本厂商中位数短一半」的页面多拉一次 HTML 并比对，
+  否则每页多一个请求（claude 514 页就是多 170 秒）；
+- 逐路由验收闸门 `scripts/verify_corpus.py` 报告「相对上一版缩水过半」的路由
+  —— 页面还在、正文没了，这是删节版的形状；
+- 抓取后跑 `scripts/verify_corpus.py`，不要只看 `fetch` 的 `ok:true`。
+
+> **更正**：本条最初记的是「cursor 抓到了删节版孪生页」。2026-11-19 复测发现，
+> 那两条路由现在的 `md_url` 已等于 `html_url`（不再有 `.md` 孪生），且 HTML 的
+> 正文量翻倍是**响应式布局重复**所致。**孪生页与原文等量是常态**，删节版没有
+> 实测实例——但「切换条件从不比文字」这个缺口是真的，所以闸门照做，只是判据
+> 从「整页正文量」改成「单个 article/main 块」。
+
+---
+
+## 36. 手写白名单超过 20 条必须配机械 lint（kimi，2026-10-11）
+
+**症状**：`RESOURCES_KEEP` 有 136 条，实测其中 **27 条**是程序化 SEO 落地页
+（`how-to-make-a-2d-game`、`game-ideas`、`ai-for-business`、
+`how-to-create-a-3d-model-from-a-picture`…）。过滤器本身是生效的（书里 135 条
+`/resources` 路由全部在白名单内，0 条漏网）——**是白名单自己放行的**。
+注释还写着「Everything else on that hub is an office suite or third-party PDF
+utility SEO page and stays out of the book」，即当时认为已经筛过。
+
+**根因**：人工 curated 的大 allowlist 不可靠，而「再人工 review 一遍」解决不了
+这类错误——**人审不可信，模式可机械判定**。
+
+**怎么修**：白名单缩到 38 条；配套 `scripts/seo_lint.py`：对任何形如
+`*_KEEP` / `*_ALLOW` / `*_WHITELIST` 的手写白名单跑 deny 模式
+（`how-to-*`、`*-ideas`、`game-*`、`ai-for-*`、`*-examples`、`3d-model`），
+命中就必须写进配套的 `<NAME>_EXEMPT` 集合并在**同一行**写明理由
+（`# allow: ...`），否则构建失败。
+
+**怎么防止复发**：
+- 豁免必须是**显式 + 带理由**的，lint 会同时报「死豁免」与「无理由豁免」；
+- 回归测试 `tests/test_seo_lint.py` 用那 27 条历史 slug 做夹具，确保 lint
+  抓得住旧实现；
+- **注意误报**：`how-to-build-landing-pages` 与 `how-to-write-a-business-proposal`
+  是合同必需路由，靠显式豁免放行。
+
+---
+
+## 37. 量成品书内容前，先确认 dist 不是旧的（2026-10-11）
+
+**症状**：修完语料后，`dist/cursor.epub` 的 mtime 比
+`vendors/cursor/corpus/routes.json` 早 **5 小时**。直接量 `dist/` 得到的是修复前
+的旧值（2541 / 6529），而同一份语料用 `extract_page` 量是新值（5592 / 14058）
+——**同一时刻两个口径给出相反结论**，极易误判为「没修」。
+
+**根因**：`dist/` 被 gitignore，`fetch` 不碰它；`pack` 只在显式调用时更新。
+agent 修完语料直接提交推送，没在本地重 pack。
+
+**怎么防止复发**：两条路选一，**别混用**——
+(a) 量书之前先 `python3 -m sites_epub pack --id <id>`；
+(b) 验收阶段直接量 corpus + `extract_page`，不量 `dist/`。
+**混用两个口径会得出相反结论**。
+
+**附**：本机 pandoc 与 CI pandoc 版本不同（§33），本地 `pack` 的**结论**也可能
+与线上不一致——**体积**可比，**结构**不可比。
+
+---
+
+## 38. 体积预算要在 pack 之前看：超预算先问「为什么大」（2026-10-11）
+
+**症状**：kimi 的 EPUB 打包后才 136.3MB，超 98MB 预算 39%。于是做了 5 轮图片
+压缩（`fixkimi` / `fixkimi2` / … / `fixkimi5`）才压回 39.75MB，其中还踩到
+`shrink_corpus_images.py` 的 `out` 路径与已存在 `.jpg` 碰撞、误删已转换 JPEG 的
+bug，又引发一轮完整重抓。
+
+**根因**：体积预算**只在打包后**校验，而「超预算」有两种完全不同的成因：
+**范围问题**（收了不该收的路由）与**资源问题**（路由合法、只是图多）。
+前者压图是在治症状，还把范围错误永久掩盖。
+
+**怎么修**：`scripts/verify_corpus.py` 在 fetch 之后、pack 之前给出两个信号——
+① **体积预估**（页面真实引用的图片字节 + 半数正文字节 vs 98MB 预算）；
+② **相对上一版的语料增长**（涨一个数量级 = 枚举出错）。
+两者都在 pack 之前报出来，让「先砍范围」成为默认动作。
+
+**怎么防止复发**：见 §18 末尾的判据：**路由越界就砍路由，路由合法才压图**；
+压缩是治症状，且掩盖范围错误。
+
+---
+
+## 39. 会话从列表里消失 ≠ 任务没成（2026-10-11）
+
+**症状**：收尾会话跑完并推送后，agent 列表里已经查不到它，很容易误判成
+「掉线 / 没跑完 / 丢了」，于是又开一轮。
+
+**怎么防止复发**：任务是否完成**只看两样**：`git log origin/main`（有没有推进）
+与 CI run 的 conclusion。**不看会话列表**。会话消失 + main 未推进才是真掉了。
+
+---

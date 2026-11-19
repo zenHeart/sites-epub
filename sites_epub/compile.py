@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 from urllib.parse import urljoin, urlparse
@@ -307,14 +308,119 @@ def _html_body_has_content_images(html: str) -> bool:
     return False
 
 
-def fetch_source(entry: IndexEntry) -> str:
+SCRIPT_RE = re.compile(r"<(script|style|noscript)\b.*?</\1>", re.I | re.S)
+CHROME_RE = re.compile(r"<(nav|header|footer)\b[^>]*>.*?</\1>", re.I | re.S)
+TAG_RE = re.compile(r"<[^>]+>")
+MD_NOISE_RE = re.compile(r"[#*_>`\[\]()!|]|^\s*[-=]{3,}\s*$", re.M)
+MD_LINK_TARGET_RE = re.compile(r"\]\([^)]*\)")
+ARTICLE_RE = re.compile(r"<(article|main)\b[^>]*>(.*?)</\1>", re.I | re.S)
+
+
+def _html_text_size(raw: str) -> int:
+    """Visible text of the richest article/main block of an HTML page.
+
+    The whole page would count the chrome -- claude's docs page carries 117k
+    characters of navigation around an 11k article -- so the comparison would
+    always pick the HTML.  The packer makes the same choice of root
+    (``page._richest_root``); this is the cheap version of it: drop the
+    chrome, then take the largest article/main block, else the whole page.
+    """
+    body = CHROME_RE.sub(" ", raw)
+    best = 0
+    for match in ARTICLE_RE.finditer(body):
+        chunk = SCRIPT_RE.sub(" ", match.group(2))
+        chunk = TAG_RE.sub(" ", chunk)
+        size = len(re.sub(r"\s+", " ", chunk).strip())
+        best = max(best, size)
+    if best:
+        return best
+    chunk = SCRIPT_RE.sub(" ", body)
+    chunk = TAG_RE.sub(" ", chunk)
+    return len(re.sub(r"\s+", " ", chunk).strip())
+
+
+def _md_text_size(raw: str) -> int:
+    """Visible text of a markdown source, with link targets removed."""
+    text = MD_LINK_TARGET_RE.sub("]", raw)
+    text = MD_NOISE_RE.sub(" ", text)
+    return len(re.sub(r"\s+", " ", text).strip())
+
+
+def _text_size(raw: str) -> int:
+    """Cheap text size of a source.
+
+    Deliberately *not* the packer's ``extract_page``: that runs pandoc for
+    every markdown page (9s for a 17KB document on this machine), and the
+    comparison below runs on every fetched route.  Both sides are measured the
+    same way, so the ratio stays meaningful.
+    """
+    if not raw:
+        return 0
+    if raw.lstrip().lower().startswith("<!"):
+        return _html_text_size(raw)
+    return _md_text_size(raw)
+
+
+#: A .md twin is kept only when it carries at least this fraction of the HTML
+#: article's body text.  Below it the twin is an abridgement and the live
+#: article is the faithful source (issue #2: cursor shipped 2334 of 4850
+#: characters, and 6361 of 12908, because the switch condition only looked at
+#: *images* and never at *text*).
+MD_TWIN_MIN_RATIO = 0.7
+
+#: A .md twin shorter than this share of the vendor's median page is *suspect*
+#: and gets compared against the live article.  The comparison costs one extra
+#: request, so it must not run on every page: on claude, 26 of 514 pages are
+#: below half the median, and those are the ones worth checking.
+SUSPECT_RATIO = 0.5
+
+
+def corpus_median_size(pages_dir: Path, limit: int = 300) -> int:
+    """Median text size of the committed pages (0 when the corpus is empty)."""
+    sizes: list[int] = []
+    for path in sorted(pages_dir.glob("**/*.md"))[:limit]:
+        try:
+            sizes.append(_text_size(path.read_text(encoding="utf-8", errors="replace")))
+        except OSError:
+            continue
+    if not sizes:
+        return 0
+    sizes.sort()
+    return sizes[len(sizes) // 2]
+
+
+def _exact_body_length(text: str, url: str) -> int:
+    """Body-text length as the packer measures it (pandoc for markdown)."""
+    if not text:
+        return 0
+    kind = "html" if text.lstrip().lower().startswith("<!") else "md"
+    try:
+        page = extract_page(text, url=url, kind=kind)
+    except Exception:
+        return 0
+    return len((page.body_text or "").strip())
+
+
+def fetch_source(entry: IndexEntry, *, suspect_below: int = 0) -> str:
     """Prefer readable HTML when the .md twin loses content.
 
-    Two known losses on md twins: (1) Mintlify "View as Markdown" / rel=alternate
+    Three known losses on md twins: (1) Mintlify "View as Markdown" / rel=alternate
     points at MDX runtime source (claude-directory.md is export const + useMemo);
     (2) some markdown exports strip every illustration (codex quickstart renders
-    7 screenshots the .md simply omits). In both cases the live HTML article is
-    what the reader sees.
+    7 screenshots the .md simply omits); (3) some markdown exports are an
+    abridgement of the live article and carry less than half its text.
+    In all three cases the live HTML article is what the reader sees.
+
+    ``suspect_below`` is the text size under which a .md twin is considered
+    suspect and is compared against the live article: the comparison costs one
+    extra request, so it must not run on every page.  It is 0 when the vendor
+    has no corpus yet, in which case only the classic rules apply.
+
+    The comparison uses ``_text_size`` -- the *article* block of the HTML, not
+    the whole page.  Two traps make the packer's own measure wrong here:
+    pandoc costs 9s per markdown page, and a responsive layout prints the same
+    article twice (cursor's help pages), which doubles the HTML body text and
+    makes a faithful twin look abridged.
     """
     md = ""
     try:
@@ -322,20 +428,37 @@ def fetch_source(entry: IndexEntry) -> str:
     except Exception:
         md = ""
     html = ""
+    same_url = entry.md_url == entry.html_url
+    md_missing = _looks_missing(md)
+    runtime = looks_like_runtime_source(md)
+    md_size = 0 if md_missing else _text_size(md)
+    suspect = suspect_below > 0 and 0 < md_size < suspect_below
     need_html = (
-        _looks_missing(md) or looks_like_runtime_source(md) or not _has_image_markup(md)
+        md_missing
+        or runtime
+        or not _has_image_markup(md)
+        or suspect
     )
     if need_html:
         try:
-            html = fetch_text(entry.html_url)
+            # A twin that lives at the same address as the article is the
+            # article: fetch it once, and retry once if that attempt failed.
+            html = md if (same_url and md) else fetch_text(entry.html_url)
         except Exception:
             html = ""
-    if looks_like_runtime_source(md) and html and not _looks_missing(html):
+    if runtime and html and not _looks_missing(html):
         return merge_explorer_into_html(html, md, entry.html_url)
-    if not _looks_missing(md):
-        # md 本身可读但完全没有图:若 HTML 版正文确有插图,保真优先选 HTML。
-        if html and not _looks_missing(html) and _html_body_has_content_images(html):
-            return html
+    if not md_missing:
+        if html and not _looks_missing(html):
+            # 正文量比对(issue #2 根因 1):此前只比「有没有图」,从不比「有多少字」。
+            # md 孪生页若是删节版,正文只有 HTML 的 ~48%,却被原样交了出去。
+            if suspect:
+                html_size = _text_size(html)
+                if html_size and html_size > md_size / MD_TWIN_MIN_RATIO:
+                    return html
+            # md 本身可读但完全没有图:若 HTML 版正文确有插图,保真优先选 HTML。
+            if _html_body_has_content_images(html) and not _has_image_markup(md):
+                return html
         return md
     return html
 
@@ -567,6 +690,11 @@ def fetch_vendor(
     skipped: list[str] = []
     sources: dict[str, str] = {}
 
+    # Pages whose .md twin is far below the vendor's median are the ones that
+    # may be abridged copies of the live article; they get compared against it.
+    median_size = corpus_median_size(pages_dir)
+    suspect_below = int(median_size * SUSPECT_RATIO)
+
     def load_one(entry: IndexEntry) -> tuple[str, str, bool]:
         dest = pages_dir / f"{entry.route}.md"
         dest.parent.mkdir(parents=True, exist_ok=True)
@@ -580,7 +708,7 @@ def fetch_vendor(
             return entry.route, cached, False
         # refetch 绕过指纹缓存,让存量页面吃到新的 fetch_source 判定
         # (如「md 无图回退 HTML」);默认增量模式仍直读缓存。
-        text = fetch_source(entry)
+        text = fetch_source(entry, suspect_below=suspect_below)
         if not text.strip():
             # 空正文 = 源站没给出内容(403 挑战页 / 死链 / 临时故障)。
             # 既有缓存若是好的就保留它,别用空文件覆盖;否则该路由没有正文,

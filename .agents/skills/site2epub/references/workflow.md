@@ -88,6 +88,60 @@ git push
 | 目录标题乱码（`�`） | 源站强制 gzip，响应体被当 UTF-8 存进语料 | 修 `http.py` 解压（已修，见 `lessons.md` §12），refetch 对应页 |
 | EPUB 超 100MB 在 gh-pages push 才爆 | 门禁只查破图不查体积 | 语料图重压 + CI Validate 已加 98MB 门禁（`lessons.md` §11） |
 
+## 质量闸门顺序（多 vendor 任务按 vendor 循环，每个 vendor 过完才进下一个）
+
+```
+1. 枚举       → 产出 routes.json
+2. 范围闸门   → 按范围铁律逐条过；白名单跑 SEO deny lint；out-of-scope 占比 > 10% 回到 1
+3. 抓取       → fetch --id <id>
+4. 内容闸门   → 逐路由量正文：< 40 字符 = 壳页（与 packer 的 empty_or_stub_body 同阈值），
+                相对上一版缩水过半 = 疑似删节孪生页，任一出现即回到 3
+5. 体积预估   → 累加「页面真实引用的图片字节 + 半数正文字节」；
+                超 98MB 回到 2（砍范围），不要进压缩
+6. pack       → pack --id <id>
+7. check_epub → scripts/check_epub.py，exit 必须 0
+8. 提交       → 先语料一笔，再 changelog 单独一笔；推送前跑密钥正则扫描
+9. CI         → Actions 最新 run conclusion 必须 success；本地 main 与 origin/main 必须 0/0
+```
+
+关键在 **4 和 5 的位置**：2026-10-10 那轮的两个缺陷（cursor 删节、kimi 超收）在
+步骤 2 和 4 就会被抓住，而不是 4 小时后由人工发现。步骤 5 的「不要进压缩」是对
+§11/§18 的限定，不是否定（详见 lessons §18 末尾与 §38）。
+
+对应脚本：
+
+```bash
+python3 .agents/skills/site2epub/scripts/seo_lint.py        # 步骤 2：手写白名单 deny 模式
+python3 .agents/skills/site2epub/scripts/verify_corpus.py    # 步骤 4/5：逐路由内容 + 体积预估
+python3 .agents/skills/site2epub/scripts/verify_corpus.py --exact   # 同上，用 packer 的 extract_page 量（慢）
+```
+
+**注意**：`verify_corpus.py` 比的是**相对上一版的变化**，所以它要在 fetch 之后、
+提交之前跑；跑在提交之后就没有基线可比了。
+
+### 评审分工：确定性校验归管线闸门，语义评审归 Codex
+
+2026-10-10 那轮的四个缺陷**全部**能被确定性规则抓住，不需要第二个模型：
+
+| 缺陷 | 抓住它的东西 | 类型 |
+|---|---|---|
+| cursor 抓到删节版 `.md` | `fetch_source` 比对 md/html 正文量（§35） | 确定性规则 |
+| kimi 24 条 SEO 落地页 | deny 模式 lint（§36） | 确定性规则 |
+| 5 轮图片压缩弯路 | 体积预估 + 增长判据（§38） | 确定性规则 |
+| 本地 dist 陈旧导致误判 | 量书前先 pack（§37） | 确定性规则 |
+
+**四个全是规则**。用 LLM 评审去解决已有机械答案的问题，是在给确定性问题加延迟与
+非确定性——这本身就是「长时间执行效率低下、持续返工」的成因之一。
+
+Codex 的用武之地是**跨文件影响面**这类规则表达不了的问题（例如「改这两条路由时
+有没有误改其它 490 条」）。代价约 13 分钟/轮，**只在高风险变更后跑一次**（改了
+适配器、改了 fetch 逻辑、动了白名单），不是每轮都跑。
+
+**Codex 在 cheng 上当前不可用**（0.156.1 对非 OpenAI base_url 的 websocket 404
+硬编码 + `review` 子命令不接受自定义 prompt），需要先升级到 0.162.1 并修掉坏掉的
+SessionStart hook；本机 Mac（0.161.0 / ChatGPT）可用。**不可用时不要用别的模型
+顶替评审**——按上表先把确定性闸门补齐。
+
 ## 提交前自检
 
 ```bash
@@ -109,16 +163,22 @@ python3 .agents/skills/site2epub/scripts/sanitize_corpus_html.py <id>   # 默认
 python3 .agents/skills/site2epub/scripts/sanitize_corpus_html.py <id> --report-only   # 只读体检，不改文件
 python3 .agents/skills/site2epub/scripts/shrink_corpus_images.py <id>
 
-# 4b. 抹掉构建噪声：image-map.json 的末尾换行、docs.html/blog.html 的部署号、
+# 4a. 手写白名单的 SEO deny 模式（手写 allowlist 必须配机械 lint，lessons §36）
+python3 .agents/skills/site2epub/scripts/seo_lint.py
+
+# 4b. 逐路由内容闸门 + 体积预估（fetch 之后、提交之前跑，lessons §35/§38）
+python3 .agents/skills/site2epub/scripts/verify_corpus.py
+
+# 4c. 抹掉构建噪声：image-map.json 的末尾换行、docs.html/blog.html 的部署号、
 #     llms.txt 的 build id / 时间戳。它们都不进打包内容，却会改打包键，
 #     让本来没变的书白白重打（lessons §23）。跑在 sanitize / shrink 之后。
 python3 .agents/skills/site2epub/scripts/restore_corpus_noise.py
 
-# 4c. 对齐指纹（脚本改动过语料字节时）。按「活跃路由」重算，不 glob 全部
+# 4d. 对齐指纹（脚本改动过语料字节时）。按「活跃路由」重算，不 glob 全部
 #     页面文件，否则会把孤儿页写回指纹（lessons §24）。
 python3 .agents/skills/site2epub/scripts/recompute_fingerprints.py <id>
 
-# 4d. 范围与结构门禁：路由数 vs HEAD（静默掉页）、Blog 是否最后一个 TOC
+# 4e. 范围与结构门禁：路由数 vs HEAD（静默掉页）、Blog 是否最后一个 TOC
 #     parent、有没有新混进来的开放平台 API 路由、有没有 0 字节页。
 python3 .agents/skills/site2epub/scripts/scope_gate.py
 
