@@ -52,6 +52,13 @@ jobs:
           python3 -m sites_epub catalog --dest site
           ls -la dist/*.epub site/
 
+      - name: Validate site assets
+        # Every local reference the site index makes must resolve to a file
+        # that is actually published. A missing cover ships as a broken image
+        # on the live site and nothing else notices (2026-09: covers/deepseek.png
+        # was deleted while the shelf entry still pointed at it).
+        run: python3 .agents/skills/site2epub/scripts/check_site.py site
+
       - name: Validate EPUBs
         run: |
           python3 - <<'PY'
