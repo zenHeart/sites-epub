@@ -57,10 +57,10 @@
   },
   {
     "group": "Features",
-    "title": "websites",
-    "md_url": "https://www.kimi.com/features/websites",
-    "html_url": "https://www.kimi.com/features/websites",
-    "route": "features/websites",
+    "title": "build",
+    "md_url": "https://www.kimi.com/features/build",
+    "html_url": "https://www.kimi.com/features/build",
+    "route": "features/build",
     "kind": "doc"
   },
   {
@@ -112,6 +112,14 @@
     "kind": "doc"
   },
   {
+    "group": "Features",
+    "title": "skills",
+    "md_url": "https://www.kimi.com/features/skills",
+    "html_url": "https://www.kimi.com/features/skills",
+    "route": "features/skills",
+    "kind": "doc"
+  },
+  {
     "group": "Academy \u6559\u7a0b",
     "title": "kimi work getting started",
     "md_url": "https://www.kimi.com/academy/kimi-work-getting-started",
@@ -125,6 +133,30 @@
     "md_url": "https://www.kimi.com/academy/kimi-code-cheat-sheet",
     "html_url": "https://www.kimi.com/academy/kimi-code-cheat-sheet",
     "route": "academy/kimi-code-cheat-sheet",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "3d ceramics website",
+    "md_url": "https://www.kimi.com/academy/3d-ceramics-website",
+    "html_url": "https://www.kimi.com/academy/3d-ceramics-website",
+    "route": "academy/3d-ceramics-website",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "org admin api",
+    "md_url": "https://www.kimi.com/academy/org-admin-api",
+    "html_url": "https://www.kimi.com/academy/org-admin-api",
+    "route": "academy/org-admin-api",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "3d tutorial",
+    "md_url": "https://www.kimi.com/academy/3d-tutorial",
+    "html_url": "https://www.kimi.com/academy/3d-tutorial",
+    "route": "academy/3d-tutorial",
     "kind": "doc"
   },
   {
@@ -593,10 +625,10 @@
   },
   {
     "group": "Help Center",
-    "title": "kimi webbridge",
-    "md_url": "https://www.kimi.com/help/kimi-webbridge",
-    "html_url": "https://www.kimi.com/help/kimi-webbridge",
-    "route": "help/kimi-webbridge",
+    "title": "kimi browser extension",
+    "md_url": "https://www.kimi.com/help/kimi-browser-extension",
+    "html_url": "https://www.kimi.com/help/kimi-browser-extension",
+    "route": "help/kimi-browser-extension",
     "kind": "doc"
   },
   {
