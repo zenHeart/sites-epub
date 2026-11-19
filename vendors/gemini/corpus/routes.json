@@ -225,6 +225,14 @@
   },
   {
     "group": "Antigravity",
+    "title": "Connect over SSH",
+    "md_url": "https://antigravity.google/docs/ssh.md",
+    "html_url": "https://antigravity.google/docs/ssh",
+    "route": "antigravity/ssh",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Settings",
     "md_url": "https://antigravity.google/docs/settings.md",
     "html_url": "https://antigravity.google/docs/settings",
@@ -433,6 +441,14 @@
   },
   {
     "group": "Antigravity",
+    "title": "Side question command (/btw)",
+    "md_url": "https://antigravity.google/docs/commands/btw.md",
+    "html_url": "https://antigravity.google/docs/commands/btw",
+    "route": "antigravity/commands/btw",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Generative UI command (/generative_ui)",
     "md_url": "https://antigravity.google/docs/commands/generative-ui.md",
     "html_url": "https://antigravity.google/docs/commands/generative-ui",
@@ -613,14 +629,6 @@
     "md_url": "https://antigravity.google/docs/cli/commands/agents.md",
     "html_url": "https://antigravity.google/docs/cli/commands/agents",
     "route": "antigravity/cli/commands/agents",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "Side question command (/btw)",
-    "md_url": "https://antigravity.google/docs/cli/commands/btw.md",
-    "html_url": "https://antigravity.google/docs/cli/commands/btw",
-    "route": "antigravity/cli/commands/btw",
     "kind": "doc"
   },
   {
@@ -893,6 +901,22 @@
     "md_url": "https://antigravity.google/docs/enterprise.md",
     "html_url": "https://antigravity.google/docs/enterprise",
     "route": "antigravity/enterprise",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Google Workspace accounts",
+    "md_url": "https://antigravity.google/docs/workspace.md",
+    "html_url": "https://antigravity.google/docs/workspace",
+    "route": "antigravity/workspace",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Pay As You Go",
+    "md_url": "https://antigravity.google/docs/pay-as-you-go.md",
+    "html_url": "https://antigravity.google/docs/pay-as-you-go",
+    "route": "antigravity/pay-as-you-go",
     "kind": "doc"
   },
   {
@@ -1761,7 +1785,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Manage & delete your activity in Gemini Apps",
+    "title": "Manage & delete your history in Gemini Apps",
     "md_url": "https://support.google.com/gemini/answer/13278892",
     "html_url": "https://support.google.com/gemini/answer/13278892",
     "route": "gemini-app/13278892",
@@ -1921,7 +1945,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Upload & analyze files in Gemini Apps",
+    "title": "Attach & analyze files in Gemini Apps",
     "md_url": "https://support.google.com/gemini/answer/14903178",
     "html_url": "https://support.google.com/gemini/answer/14903178",
     "route": "gemini-app/14903178",
@@ -2337,7 +2361,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Get Started with Gemini Go",
+    "title": "Get Started with the Gemini mobile app on lower-memory Android devices",
     "md_url": "https://support.google.com/gemini/answer/17079170",
     "html_url": "https://support.google.com/gemini/answer/17079170",
     "route": "gemini-app/17079170",
@@ -2545,10 +2569,26 @@
   },
   {
     "group": "Gemini App Help",
+    "title": "Monitor & manage the remote computer for tasks in Gemini",
+    "md_url": "https://support.google.com/gemini/answer/18789153",
+    "html_url": "https://support.google.com/gemini/answer/18789153",
+    "route": "gemini-app/18789153",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
     "title": "Make purchases & payments with Gemini Apps",
     "md_url": "https://support.google.com/gemini/answer/18891937",
     "html_url": "https://support.google.com/gemini/answer/18891937",
     "route": "gemini-app/18891937",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Assign & track Gemini tasks through text message",
+    "md_url": "https://support.google.com/gemini/answer/18941404",
+    "html_url": "https://support.google.com/gemini/answer/18941404",
+    "route": "gemini-app/18941404",
     "kind": "doc"
   },
   {
@@ -2665,7 +2705,7 @@
   },
   {
     "group": "NotebookLM Help",
-    "title": "Use public notebooks and featured notebooks in Gemini Notebook",
+    "title": "Use public notebooks & featured notebooks in Gemini Notebook",
     "md_url": "https://support.google.com/gemininotebook/answer/16322204",
     "html_url": "https://support.google.com/gemininotebook/answer/16322204",
     "route": "notebooklm/16322204",
@@ -2757,6 +2797,14 @@
     "md_url": "https://support.google.com/gemininotebook/answer/18784282",
     "html_url": "https://support.google.com/gemininotebook/answer/18784282",
     "route": "notebooklm/18784282",
+    "kind": "doc"
+  },
+  {
+    "group": "NotebookLM Help",
+    "title": "Generate sites in Gemini Notebook",
+    "md_url": "https://support.google.com/gemininotebook/answer/18945748",
+    "html_url": "https://support.google.com/gemininotebook/answer/18945748",
+    "route": "notebooklm/18945748",
     "kind": "doc"
   },
   {
@@ -3145,6 +3193,38 @@
   },
   {
     "group": "Blog",
+    "title": "regional voices",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/",
+    "route": "blog/innovation-and-ai/products/gemini-app/regional-voices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "updated controls",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/",
+    "route": "blog/innovation-and-ai/products/gemini-app/updated-controls",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "tasks in gemini free new features",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+    "route": "blog/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini lower memory devices",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "gemini models",
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
@@ -3421,6 +3501,14 @@
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing gemini 4 neon",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon",
     "kind": "blog"
   },
   {
@@ -4293,6 +4381,14 @@
     "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-4-argon-in-action/",
     "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-4-argon-in-action/",
     "route": "blog/products-and-platforms/products/gemini/gemini-4-argon-in-action",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 4 carbon builders",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-4-carbon-builders/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-4-carbon-builders/",
+    "route": "blog/products-and-platforms/products/gemini/gemini-4-carbon-builders",
     "kind": "blog"
   }
 ]

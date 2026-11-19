@@ -15,8 +15,8 @@
 - [Gemini Docs MCP server](https://gemini-api-docs-mcp.dev): Model Context Protocol server providing live documentation search (`npx add-mcp "https://gemini-api-docs-mcp.dev"`).
 
 ## Get started
-- [Overview](https://aistudio.google.com/docs.md): Build apps and agents with Gemini, Nano Banana, Gemini Omni, and Lyria using the Gemini API documentation and reference.
-- [Overview (generateContent)](https://aistudio.google.com/docs.md?generate-content=true): Build apps and agents with Gemini, Nano Banana, Gemini Omni, and Lyria using the Gemini API documentation and reference.
+- [Overview](https://aistudio.google.com/docs.md): Build apps and agents with Gemini, Gemini Decision 1, Nano Banana, Gemini Omni, and Lyria using the Gemini API documentation and reference.
+- [Overview (generateContent)](https://aistudio.google.com/docs.md?generate-content=true): Build apps and agents with Gemini, Gemini Decision 1, Nano Banana, Gemini Omni, and Lyria using the Gemini API documentation and reference.
 - [Get started](https://aistudio.google.com/docs/get-started.md): Get started with the Gemini API for Developers using the Interactions API
 - [Get started (generateContent)](https://aistudio.google.com/docs/get-started.md?generate-content=true): Get started with the Gemini API for Developers using generateContent
 - [API keys](https://aistudio.google.com/docs/api-key.md): Get your Gemini API key and start building in less than 5 minutes using the Interactions API.
@@ -32,6 +32,8 @@
 - [Latest Gemini models — Gemini 4 Carbon - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-4-carbon.md?generate-content=true): Learn what's new in Gemini 4 Carbon (gemini-4-carbon), Google's latest Gemini 4 model featuring a 1M shared context window, long decode, pricing, and API migration guidance.
 - [Latest Gemini models — Gemini 4 Argon - what's new](https://aistudio.google.com/docs/whats-new-gemini-4-argon.md): Learn what's new in Gemini 4 Argon (gemini-4-argon), our efficient Gemini 4 frontier reasoning model with a 1M shared context window, long decode, pricing, and API migration guidance.
 - [Latest Gemini models — Gemini 4 Argon - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-4-argon.md?generate-content=true): Learn what's new in Gemini 4 Argon (gemini-4-argon), our efficient Gemini 4 frontier reasoning model with a 1M shared context window, long decode, pricing, and API migration guidance.
+- [Latest Gemini models — Gemini 4 Hydrogen - what's new](https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen.md): Learn what's new in Gemini 4 Hydrogen (gemini-4-hydrogen), bringing cutting-edge intelligence to everyone, with speed and efficiency for everyday coding and agentic workflows.
+- [Latest Gemini models — Gemini 4 Hydrogen - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen.md?generate-content=true): Learn what's new in Gemini 4 Hydrogen (gemini-4-hydrogen), bringing cutting-edge intelligence to everyone, with speed and efficiency for everyday coding and agentic workflows.
 - [Latest Gemini models — Gemini 3.8 Flash - what's new](https://aistudio.google.com/docs/whats-new-gemini-3.8.md): Learn about what's new in Gemini 3.8 Flash, including model capabilities, API changes, and migration guidance.
 - [Latest Gemini models — Gemini 3.8 Flash - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.8.md?generate-content=true): Learn about what's new in Gemini 3.8 Flash, including model capabilities, API changes, and migration guidance.
 - [Latest Gemini models — Gemini 3.6 & 3.5 Flash-Lite - what's new](https://aistudio.google.com/docs/whats-new-gemini-3.6.md): Learn about what's new in Gemini 3.6 Flash and Gemini 3.5 Flash-Lite, including model capabilities, API changes, and migration guidance.
@@ -41,6 +43,7 @@
 - [Latest Gemini models — Gemini 3.5 Flash - what's new](https://aistudio.google.com/docs/whats-new-gemini-3.5.md): Learn about the new features and migration guidance for Gemini 3.5 Flash.
 - [Latest Gemini models — Gemini 3.5 Flash - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.5.md?generate-content=true): Learn about the new features and migration guidance for Gemini 3.5 Flash.
 - [All models](https://aistudio.google.com/docs/models.md): Learn about all of Google's most advanced AI models
+- [Gemini 4 Hydrogen](https://aistudio.google.com/docs/models/gemini-4-hydrogen.md): Explore Gemini 4 Hydrogen (gemini-4-hydrogen), bringing cutting-edge intelligence to everyone, with speed and efficiency for everyday coding and agentic workflows.
 - [Gemini 4 Carbon](https://aistudio.google.com/docs/models/gemini-4-carbon.md): Explore Gemini 4 Carbon (gemini-4-carbon), Google's latest Gemini 4 model for coding, reasoning, science, and agents, featuring a 1M context window and long decode.
 - [Gemini 4 Argon](https://aistudio.google.com/docs/models/gemini-4-argon.md): Explore Gemini 4 Argon (gemini-4-argon), our efficient Gemini 4 frontier reasoning model with faster responses and lower token spend per turn compared to Gemini 4 Carbon.
 - [Gemini Nano Banana 2.1](https://aistudio.google.com/docs/models/gemini-nano-banana-2.1.md): Learn about Gemini Nano Banana 2.1 from Google
@@ -85,6 +88,7 @@
 - [Gemini Embedding model](https://aistudio.google.com/docs/models/gemini-embedding-001.md): Learn about the Gemini Embedding model from Google
 - [Gemini Embedding 2 model](https://aistudio.google.com/docs/models/gemini-embedding-2.md): Learn about the Gemini Embedding 2 model from Google
 - [Gemini Embedding 2 preview model](https://aistudio.google.com/docs/models/gemini-embedding-2-preview.md): Learn about the Gemini Embedding 2 model from Google
+- [Gemini Decision 1](https://aistudio.google.com/docs/models/gemini-decision-1.md): Fast, calibrated multimodal yes/no, choice, and score decisions with zero output tokens.
 - [Gemini Robotics ER 2](https://aistudio.google.com/docs/models/gemini-robotics-er-2-preview.md): Learn about Gemini Robotics ER 2 from Google
 - [Gemini Robotics ER 2 streaming](https://aistudio.google.com/docs/models/gemini-robotics-er-2-streaming-preview.md): Learn about Gemini Robotics ER 2 Streaming from Google
 - [Gemini Robotics-ER 1.5](https://aistudio.google.com/docs/models/gemini-robotics-er-1.5-preview.md): Learn about Gemini Robotics Preview model from Google
@@ -120,6 +124,7 @@
 - [Live](https://aistudio.google.com/docs/live-api.md): Enable low-latency, real-time voice and video interactions with the Live API.
 - [Live translate](https://aistudio.google.com/docs/live-api/live-translate.md): Perform low-latency, real-time speech-to-speech translation with Live API.
 - [Embeddings](https://aistudio.google.com/docs/embeddings.md): Generate vector embeddings for semantic search and classification using Gemini.
+- [Decisions](https://aistudio.google.com/docs/decisions-api.md): Answer typed yes/no, choice, and score questions about text, images, audio, video, and PDFs with the Gemini Decisions API.
 - [Robotics — Overview](https://aistudio.google.com/docs/robotics-overview.md): Overview of Gemini Robotics ER models and capabilities for building robotics applications.
 - [Robotics — Overview (generateContent)](https://aistudio.google.com/docs/robotics-overview.md?generate-content=true): Overview of Gemini Robotics ER models and capabilities for building robotics applications.
 - [Robotics — Spatial reasoning](https://aistudio.google.com/docs/robotics-spatial.md): Use Gemini Robotics ER for spatial reasoning tasks including object detection, tracking, and trajectory planning.
@@ -153,8 +158,8 @@
 - [Function calling](https://aistudio.google.com/docs/function-calling.md): Get started using Function Calling with the Gemini API
 - [Function calling (generateContent)](https://aistudio.google.com/docs/function-calling.md?generate-content=true): Get started using Function Calling with the Gemini API
 - [Long context](https://aistudio.google.com/docs/long-context.md): Learn about how to get started building with long context (1 million context window) on Gemini.
-- [Long decode](https://aistudio.google.com/docs/long-decode.md): Use long decode with Gemini 4 models (gemini-4-carbon and gemini-4-argon) on the Interactions API to generate past 64K tokens up to the 1M-token context window with background execution or client-side continuation.
-- [Long decode (generateContent)](https://aistudio.google.com/docs/long-decode.md?generate-content=true): Use long decode with Gemini 4 models (gemini-4-carbon and gemini-4-argon) in generateContent and streamGenerateContent to generate up to the 1M-token unified context window across continuation hops.
+- [Long decode](https://aistudio.google.com/docs/long-decode.md): Use long decode with Gemini 4 models (gemini-4-carbon, gemini-4-argon, and gemini-4-hydrogen) on the Interactions API to generate past 64K tokens up to the 1M-token context window with background execution or client-side continuation.
+- [Long decode (generateContent)](https://aistudio.google.com/docs/long-decode.md?generate-content=true): Use long decode with Gemini 4 models (gemini-4-carbon, gemini-4-argon, and gemini-4-hydrogen) in generateContent and streamGenerateContent to generate up to the 1M-token unified context window across continuation hops.
 
 ## Agents
 - [Overview](https://aistudio.google.com/docs/agents.md): Build agents that reason, write code, manage files, and browse the web with the Gemini API.
@@ -418,6 +423,8 @@
 - [Model API — get (v1)](https://aistudio.google.com/api-reference/models/get-model.md?api-version=v1): Gets information about a specific `Model` such as its version number, token limits, [parameters](/docs/prompting-strategies#model-parameters) and other metadata.
 - [Model API — list](https://aistudio.google.com/api-reference/models/list-models.md): Lists the [`Model`s](/docs/models) available through the Gemini API.
 - [Model API — list (v1)](https://aistudio.google.com/api-reference/models/list-models.md?api-version=v1): Lists the [`Model`s](/docs/models) available through the Gemini API.
+- [Gemini Decisions API — Overview](https://aistudio.google.com/api-reference/decisions.md): The Decisions API evaluates a batch of structured decision questions against a shared input in a single request.
+- [Gemini Decisions API — create](https://aistudio.google.com/api-reference/decisions/create-decision.md): Evaluates a batch of structured decision questions against a shared input.
 - [All methods](https://aistudio.google.com/api-reference/all-methods.md): Every REST method in the Gemini API, grouped by reference page.
 
 ## Optional

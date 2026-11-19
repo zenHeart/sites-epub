@@ -593,6 +593,14 @@
   },
   {
     "group": "Blog",
+    "title": "manus joins godot foundation",
+    "md_url": "https://manus.im/blog/manus-joins-godot-foundation.md",
+    "html_url": "https://manus.im/blog/manus-joins-godot-foundation",
+    "route": "blog/manus-joins-godot-foundation",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "how we built a data agent",
     "md_url": "https://manus.im/blog/how-we-built-a-data-agent.md",
     "html_url": "https://manus.im/blog/how-we-built-a-data-agent",

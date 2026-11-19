@@ -1457,7 +1457,7 @@
   },
   {
     "group": "Agent SDK",
-    "title": "Streaming Input",
+    "title": "Send messages to a running agent",
     "md_url": "https://code.claude.com/docs/en/agent-sdk/streaming-vs-single-mode.md",
     "html_url": "https://code.claude.com/docs/en/agent-sdk/streaming-vs-single-mode",
     "route": "agent-sdk/streaming-vs-single-mode",
@@ -1649,6 +1649,30 @@
   },
   {
     "group": "Blog",
+    "title": "linked billing on claude platform",
+    "md_url": "https://claude.com/resources/articles/linked-billing-on-claude-platform.md",
+    "html_url": "https://claude.com/resources/articles/linked-billing-on-claude-platform",
+    "route": "blog/linked-billing-on-claude-platform",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "chaos loop claude docs launch",
+    "md_url": "https://claude.dev/blog/chaos-loop-claude-docs-launch",
+    "html_url": "https://claude.dev/blog/chaos-loop-claude-docs-launch",
+    "route": "blog/chaos-loop-claude-docs-launch",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how the claude code team thinks about verification",
+    "md_url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification",
+    "html_url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification",
+    "route": "blog/how-the-claude-code-team-thinks-about-verification",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "building always on agents",
     "md_url": "https://claude.com/resources/articles/building-always-on-agents.md",
     "html_url": "https://claude.com/resources/articles/building-always-on-agents",
@@ -1701,30 +1725,6 @@
     "md_url": "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work.md",
     "html_url": "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
     "route": "blog/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "how curative is building a national provider network with agents on claude",
-    "md_url": "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
-    "html_url": "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
-    "route": "blog/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "more ways to work with claude sheets whiteboards and interactive connectors",
-    "md_url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors.md",
-    "html_url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
-    "route": "blog/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "sheets whiteboards data",
-    "md_url": "https://claude.com/resources/articles/sheets-whiteboards-data.md",
-    "html_url": "https://claude.com/resources/articles/sheets-whiteboards-data",
-    "route": "blog/sheets-whiteboards-data",
     "kind": "blog"
   },
   {
@@ -3073,6 +3073,14 @@
   },
   {
     "group": "Blog",
+    "title": "how curative is building a national provider network with agents on claude",
+    "md_url": "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude.md",
+    "html_url": "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
+    "route": "blog/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "how datadog built a universal machine tool for claude code",
     "md_url": "https://claude.com/resources/articles/how-datadog-built-a-universal-machine-tool-for-claude-code.md",
     "html_url": "https://claude.com/resources/articles/how-datadog-built-a-universal-machine-tool-for-claude-code",
@@ -3401,6 +3409,14 @@
   },
   {
     "group": "Blog",
+    "title": "more ways to work with claude sheets whiteboards and interactive connectors",
+    "md_url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors.md",
+    "html_url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
+    "route": "blog/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "multi agent coordination patterns",
     "md_url": "https://claude.com/resources/articles/multi-agent-coordination-patterns.md",
     "html_url": "https://claude.com/resources/articles/multi-agent-coordination-patterns",
@@ -3597,6 +3613,14 @@
     "md_url": "https://claude.com/resources/articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions.md",
     "html_url": "https://claude.com/resources/articles/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions",
     "route": "blog/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "sheets whiteboards data",
+    "md_url": "https://claude.com/resources/articles/sheets-whiteboards-data.md",
+    "html_url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+    "route": "blog/sheets-whiteboards-data",
     "kind": "blog"
   },
   {

@@ -17,8 +17,8 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 
 ## Agent Configuration
 - [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md.md): Give Codex extra instructions and context for your project
+- [Fast and Ultrafast modes](https://learn.chatgpt.com/docs/agent-configuration/speed.md): Choose a speed in the ChatGPT Work or Codex composer and check which models and plans support Ultrafast.
 - [Rules](https://learn.chatgpt.com/docs/agent-configuration/rules.md): Control which commands Codex can run outside the sandbox
-- [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed.md): Increase speed without sacrificing intelligence
 - [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents.md): Use subagents in ChatGPT and Codex, and configure custom Codex agents
 
 ## Amazon Bedrock
@@ -106,6 +106,9 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Models and Trusted Access](https://learn.chatgpt.com/docs/cyber-safety.md): Understand Daybreak Blue and Daybreak Red access, cyber models, and Trusted Access for Cyber
 - [Recommended configuration](https://learn.chatgpt.com/docs/cyber-safety/recommended-configuration.md): Configure isolation, least-privilege permissions, and guardrails for authorized cybersecurity work
 
+## Developer Settings
+- [Developer settings](https://learn.chatgpt.com/docs/developer-settings.md): Configure development settings across ChatGPT and Codex clients
+
 ## Developers
 - [Developers](https://learn.chatgpt.com/docs/developers.md): Configure development workflows, environments, extensions, and integrations
 
@@ -131,6 +134,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [ChatGPT Work: usage and cost](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-usage-and-cost.md): Understand shared credit consumption, billing impact, spending controls, and role-based adoption planning for ChatGPT Work
 - [Codex security cookbook](https://learn.chatgpt.com/docs/enterprise/security-cookbook.md): Configure, verify, and combine enterprise controls for Codex access, files, services, and actions
 - [Compliance API and audit events](https://learn.chatgpt.com/docs/enterprise/compliance-api.md): Understand the purpose and administration boundary of the Compliance API
+- [Connect Codex to Google Cloud Vertex AI](https://learn.chatgpt.com/docs/enterprise/connect-to-vertex-ai.md): Configure Codex to send model requests through your Google Cloud project.
 - [Connect to a gateway](https://learn.chatgpt.com/docs/enterprise/connect-to-a-gateway.md): Configure a model gateway and authenticate with native gateway OAuth, an API key, or a credential helper.
 - [Deploy the Windows app and Codex CLI](https://learn.chatgpt.com/docs/enterprise/windows-deployment.md): Deploy the Windows desktop app and Codex CLI with Intune, SCCM, or another enterprise management tool
 - [Desktop browser policies](https://learn.chatgpt.com/docs/enterprise/desktop-browser-policies.md): Deploy and verify supported Chrome policies for the built-in desktop browser
@@ -220,6 +224,8 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 
 ## Learn
 - [Best practices](https://learn.chatgpt.com/guides/best-practices.md): Getting started with Codex and proven practices for better results
+- [From concept art to editable SVGs and 3D scenes](https://learn.chatgpt.com/guides/svg-3d-design.md): Use GPT Image references and Astra to design editable icons, animate SVG illustrations with JavaScript, and art direct 3D scenes.
+- [Prompting GPT-6.2 in Codex](https://learn.chatgpt.com/guides/prompting-gpt-6-2-astra.md): Choose reasoning effort, delegate parallel work, and refine visual assets with the GPT-6.2 model family in Codex.
 
 ## Linux
 - [ChatGPT desktop app for Linux](https://learn.chatgpt.com/docs/linux/linux-app.md): Install and update ChatGPT on supported Ubuntu, Debian, Fedora, and Arch Linux desktop distributions
@@ -317,7 +323,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Run bulk security scans](https://learn.chatgpt.com/docs/security/cli/bulk-scans.md): Discover GitHub repositories or run resumable security scans from a CSV inventory.
 - [Run Codex Security in GitHub Actions](https://learn.chatgpt.com/docs/security/cli/ci/github.md): Scan pull requests and repositories with the Codex Security Action, save reports, upload SARIF, and configure enforcement.
 - [Run Codex Security in GitLab CI/CD](https://learn.chatgpt.com/docs/security/cli/ci/gitlab.md): Scan GitLab merge requests and branches, publish SARIF findings, and optionally open draft merge requests with verified fixes.
-- [Security Review](https://learn.chatgpt.com/docs/security/security-review.md): Configure and run in-depth security reviews for GitHub pull requests.
+- [Security Review](https://learn.chatgpt.com/docs/security/security-review.md): Configure and run security reviews for GitHub pull requests.
 - [Set up Daybreak Defense Factory](https://learn.chatgpt.com/docs/security/setup.md): Connect GitHub, run your first security scan, and choose how to check future changes.
 - [Triage a backlog](https://learn.chatgpt.com/docs/security/plugin/triage-backlog.md): Review existing security findings against a repository and order follow-up work.
 - [Use the Codex Security workbench](https://learn.chatgpt.com/docs/security/plugin/workbench.md): Start security scans, review findings, and inspect repository history in the Codex desktop app.
@@ -374,6 +380,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [What's new](https://learn.chatgpt.com/docs/whats-new.md): A weekly digest of ChatGPT and Codex features that can change how you work
 - [Create your dot in the ChatGPT mobile app](https://learn.chatgpt.com/docs/whats-new/dots-october-9-2026.md): This week in dots: mobile setup, more context from ChatGPT and Codex, and improvements to browsing, notifications, and everyday use.
 - [DevDay 2026](https://learn.chatgpt.com/docs/whats-new/devday-2026.md): DevDay updates across ChatGPT, Codex, Sites, plugins, the API, and Enterprise.
+- [GPT-6.2](https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol.md): See what GPT-6.2 brings to the Responses API, Codex, and ChatGPT Work, including conversation settings, speed options, and model availability.
 - [November 2–6, 2026](https://learn.chatgpt.com/docs/whats-new/november-2-6-2026.md): Reply and share on iOS, give feedback in conversation, and continue tasks more reliably on Windows.
 - [October 26–30, 2026](https://learn.chatgpt.com/docs/whats-new/october-26-30-2026.md)
 - [October 5–9, 2026](https://learn.chatgpt.com/docs/whats-new/october-5-9-2026.md)

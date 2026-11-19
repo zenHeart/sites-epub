@@ -1137,6 +1137,14 @@
   },
   {
     "group": "Grok Bot",
+    "title": "Use Grok Bot \u2014 Create and share a Team Bot",
+    "md_url": "https://docs.x.ai/grok-bot/create-a-team-bot.md",
+    "html_url": "https://docs.x.ai/grok-bot/create-a-team-bot",
+    "route": "grok-bot/create-a-team-bot",
+    "kind": "doc"
+  },
+  {
+    "group": "Grok Bot",
     "title": "Use Grok Bot \u2014 Grok Bot for Mobile",
     "md_url": "https://docs.x.ai/grok-bot/mobile.md",
     "html_url": "https://docs.x.ai/grok-bot/mobile",
@@ -2401,10 +2409,18 @@
   },
   {
     "group": "News",
-    "title": "Nov 2, 2026 Introducing Grok Bot 1.0 Bots now work with your whole team, take on work without being asked, and get more done, faster. Read More",
+    "title": "Nov 11, 2026 Introducing Grok Bot 1.0 Bots now work with your whole team, take on work without being asked, and get more done, faster. Read More",
     "md_url": "https://x.ai/news/grok-bot-1-0.md",
     "html_url": "https://x.ai/news/grok-bot-1-0",
     "route": "news/grok-bot-1-0",
+    "kind": "blog"
+  },
+  {
+    "group": "News",
+    "title": "Product \u00b7 Nov 16, 2026 Building an accounting team with Grok Bot",
+    "md_url": "https://x.ai/news/grok-bot-accounting.md",
+    "html_url": "https://x.ai/news/grok-bot-accounting",
+    "route": "news/grok-bot-accounting",
     "kind": "blog"
   },
   {
@@ -2433,7 +2449,7 @@
   },
   {
     "group": "News",
-    "title": "Product \u00b7 Oct 20, 2026 Using Grok Bot to detect and respond to incidents",
+    "title": "Using Grok Bot to detect and respond to incidents IncidentWatch spots ticket spikes before internal alerts fire. IncidentSweep clears the related backlog in an approved batch. Oct 20, 2026",
     "md_url": "https://x.ai/news/incident-sweep.md",
     "html_url": "https://x.ai/news/incident-sweep",
     "route": "news/incident-sweep",

@@ -81,6 +81,14 @@
   },
   {
     "group": "Cursor: Get Started",
+    "title": "gemini 4 neon",
+    "md_url": "https://cursor.com/docs/models/gemini-4-neon.md",
+    "html_url": "https://cursor.com/docs/models/gemini-4-neon",
+    "route": "docs/models/gemini-4-neon",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: Get Started",
     "title": "gemini 4 hydrogen",
     "md_url": "https://cursor.com/docs/models/gemini-4-hydrogen.md",
     "html_url": "https://cursor.com/docs/models/gemini-4-hydrogen",
@@ -413,6 +421,14 @@
     "md_url": "https://cursor.com/docs/cloud-agent/metadata.md",
     "html_url": "https://cursor.com/docs/cloud-agent/metadata",
     "route": "docs/cloud-agent/metadata",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: cloud-agents",
+    "title": "repo access",
+    "md_url": "https://cursor.com/docs/cloud-agent/repo-access.md",
+    "html_url": "https://cursor.com/docs/cloud-agent/repo-access",
+    "route": "docs/cloud-agent/repo-access",
     "kind": "doc"
   },
   {

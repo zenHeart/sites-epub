@@ -33,6 +33,14 @@
   },
   {
     "group": "Models",
+    "title": "kimi k3 1 pro",
+    "md_url": "https://www.kimi.com/ai-models/kimi-k3-1-pro",
+    "html_url": "https://www.kimi.com/ai-models/kimi-k3-1-pro",
+    "route": "ai-models/kimi-k3-1-pro",
+    "kind": "doc"
+  },
+  {
+    "group": "Models",
     "title": "kimi k3",
     "md_url": "https://www.kimi.com/ai-models/kimi-k3",
     "html_url": "https://www.kimi.com/ai-models/kimi-k3",
@@ -89,14 +97,6 @@
   },
   {
     "group": "Features",
-    "title": "deep research",
-    "md_url": "https://www.kimi.com/features/deep-research",
-    "html_url": "https://www.kimi.com/features/deep-research",
-    "route": "features/deep-research",
-    "kind": "doc"
-  },
-  {
-    "group": "Features",
     "title": "design",
     "md_url": "https://www.kimi.com/features/design",
     "html_url": "https://www.kimi.com/features/design",
@@ -105,10 +105,18 @@
   },
   {
     "group": "Features",
-    "title": "agent swarm",
-    "md_url": "https://www.kimi.com/features/agent-swarm",
-    "html_url": "https://www.kimi.com/features/agent-swarm",
-    "route": "features/agent-swarm",
+    "title": "deep research",
+    "md_url": "https://www.kimi.com/features/deep-research",
+    "html_url": "https://www.kimi.com/features/deep-research",
+    "route": "features/deep-research",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "plugins",
+    "md_url": "https://www.kimi.com/features/plugins",
+    "html_url": "https://www.kimi.com/features/plugins",
+    "route": "features/plugins",
     "kind": "doc"
   },
   {
@@ -117,6 +125,14 @@
     "md_url": "https://www.kimi.com/features/skills",
     "html_url": "https://www.kimi.com/features/skills",
     "route": "features/skills",
+    "kind": "doc"
+  },
+  {
+    "group": "Features",
+    "title": "agent swarm",
+    "md_url": "https://www.kimi.com/features/agent-swarm",
+    "html_url": "https://www.kimi.com/features/agent-swarm",
+    "route": "features/agent-swarm",
     "kind": "doc"
   },
   {
@@ -133,6 +149,22 @@
     "md_url": "https://www.kimi.com/academy/kimi-code-cheat-sheet",
     "html_url": "https://www.kimi.com/academy/kimi-code-cheat-sheet",
     "route": "academy/kimi-code-cheat-sheet",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "kimi code built in browser",
+    "md_url": "https://www.kimi.com/academy/kimi-code-built-in-browser",
+    "html_url": "https://www.kimi.com/academy/kimi-code-built-in-browser",
+    "route": "academy/kimi-code-built-in-browser",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
+    "title": "kimi mini games",
+    "md_url": "https://www.kimi.com/academy/kimi-mini-games",
+    "html_url": "https://www.kimi.com/academy/kimi-mini-games",
+    "route": "academy/kimi-mini-games",
     "kind": "doc"
   },
   {
@@ -281,10 +313,26 @@
   },
   {
     "group": "Academy \u6559\u7a0b",
+    "title": "kimi k3 for legal work",
+    "md_url": "https://www.kimi.com/academy/kimi-k3-for-legal-work",
+    "html_url": "https://www.kimi.com/academy/kimi-k3-for-legal-work",
+    "route": "academy/kimi-k3-for-legal-work",
+    "kind": "doc"
+  },
+  {
+    "group": "Academy \u6559\u7a0b",
     "title": "slides intro",
     "md_url": "https://www.kimi.com/academy/slides-intro",
     "html_url": "https://www.kimi.com/academy/slides-intro",
     "route": "academy/slides-intro",
+    "kind": "doc"
+  },
+  {
+    "group": "Resources \u6559\u7a0b",
+    "title": "kimi k2 7 code",
+    "md_url": "https://www.kimi.com/resources/kimi-k2-7-code",
+    "html_url": "https://www.kimi.com/resources/kimi-k2-7-code",
+    "route": "resources/kimi-k2-7-code",
     "kind": "doc"
   },
   {
@@ -557,14 +605,6 @@
     "md_url": "https://www.kimi.com/resources/kimi-work-introduction",
     "html_url": "https://www.kimi.com/resources/kimi-work-introduction",
     "route": "resources/kimi-work-introduction",
-    "kind": "doc"
-  },
-  {
-    "group": "Resources \u6559\u7a0b",
-    "title": "kimi k2 7 code",
-    "md_url": "https://www.kimi.com/resources/kimi-k2-7-code",
-    "html_url": "https://www.kimi.com/resources/kimi-k2-7-code",
-    "route": "resources/kimi-k2-7-code",
     "kind": "doc"
   },
   {

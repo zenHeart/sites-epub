@@ -159,6 +159,7 @@ Add the programming language you want code examples in to the `Accept-Language` 
 - [Use Grok Bot — Approvals and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy.md)
 - [Use Grok Bot — Vault and secure sign-in](https://docs.x.ai/grok-bot/vault.md)
 - [Use Grok Bot — Team Bots](https://docs.x.ai/grok-bot/team-bots.md)
+- [Use Grok Bot — Create and share a Team Bot](https://docs.x.ai/grok-bot/create-a-team-bot.md)
 - [Use Grok Bot — Grok Bot for Mobile](https://docs.x.ai/grok-bot/mobile.md)
 - [Use Grok Bot — Use Grok Bot in Microsoft Teams](https://docs.x.ai/grok-bot/microsoft-teams.md)
 - [Use Grok Bot — Add a Bot to your meetings](https://docs.x.ai/grok-bot/meetings.md)
