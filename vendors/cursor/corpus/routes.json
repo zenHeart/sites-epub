@@ -728,6 +728,14 @@
     "kind": "doc"
   },
   {
+    "group": "Cursor: origin",
+    "title": "access policies",
+    "md_url": "https://cursor.com/docs/origin/access-policies.md",
+    "html_url": "https://cursor.com/docs/origin/access-policies",
+    "route": "docs/origin/access-policies",
+    "kind": "doc"
+  },
+  {
     "group": "Cursor: Integrations",
     "title": "slack",
     "md_url": "https://cursor.com/docs/integrations/slack.md",
@@ -905,6 +913,14 @@
   },
   {
     "group": "Cursor: agent-sdk",
+    "title": "teams",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/teams.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/teams",
+    "route": "docs/agent-sdk/guides/teams",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
     "title": "webhooks",
     "md_url": "https://cursor.com/docs/agent-sdk/guides/webhooks.md",
     "html_url": "https://cursor.com/docs/agent-sdk/guides/webhooks",
@@ -993,6 +1009,14 @@
   },
   {
     "group": "Cursor: agent-sdk",
+    "title": "per user connections",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/per-user-connections.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/per-user-connections",
+    "route": "docs/agent-sdk/guides/per-user-connections",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
     "title": "agent to agent",
     "md_url": "https://cursor.com/docs/agent-sdk/guides/agent-to-agent.md",
     "html_url": "https://cursor.com/docs/agent-sdk/guides/agent-to-agent",
@@ -1005,6 +1029,14 @@
     "md_url": "https://cursor.com/docs/agent-sdk/deployment.md",
     "html_url": "https://cursor.com/docs/agent-sdk/deployment",
     "route": "docs/agent-sdk/deployment",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: agent-sdk",
+    "title": "workload identity",
+    "md_url": "https://cursor.com/docs/agent-sdk/guides/workload-identity.md",
+    "html_url": "https://cursor.com/docs/agent-sdk/guides/workload-identity",
+    "route": "docs/agent-sdk/guides/workload-identity",
     "kind": "doc"
   },
   {
@@ -1309,6 +1341,46 @@
     "md_url": "https://cursor.com/docs/cli/reference/configuration.md",
     "html_url": "https://cursor.com/docs/cli/reference/configuration",
     "route": "docs/cli/reference/configuration",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: security",
+    "title": "security",
+    "md_url": "https://cursor.com/docs/security.md",
+    "html_url": "https://cursor.com/docs/security",
+    "route": "docs/security",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: security",
+    "title": "api keys",
+    "md_url": "https://cursor.com/docs/security/api-keys.md",
+    "html_url": "https://cursor.com/docs/security/api-keys",
+    "route": "docs/security/api-keys",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: security",
+    "title": "sessions",
+    "md_url": "https://cursor.com/docs/security/sessions.md",
+    "html_url": "https://cursor.com/docs/security/sessions",
+    "route": "docs/security/sessions",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: security",
+    "title": "network controls",
+    "md_url": "https://cursor.com/docs/security/network-controls.md",
+    "html_url": "https://cursor.com/docs/security/network-controls",
+    "route": "docs/security/network-controls",
+    "kind": "doc"
+  },
+  {
+    "group": "Cursor: security",
+    "title": "oauth applications",
+    "md_url": "https://cursor.com/docs/security/oauth-applications.md",
+    "html_url": "https://cursor.com/docs/security/oauth-applications",
+    "route": "docs/security/oauth-applications",
     "kind": "doc"
   },
   {

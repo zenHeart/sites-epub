@@ -4,8 +4,9 @@
   "zcode-automations": "33b6e83899056e1cc51c124fbb73bc618f2b21d6b7d1f299f9e3c4051e8b7680",
   "zcode-bot-channel": "6f19c781f5a67ef5c5ff19709d6f0bfbd4a9ad397906e852b2ace32b1f6a2d60",
   "zcode-browser-use": "aa02ae6fc835570c14cf8f05d71a6e093143eb44d0ba872f8d6f94be4fee5300",
-  "zcode-changelog": "7106f46f7d6ca7121f11d6f3f3d903842973f22c3184f28843da61efb29a29ce",
+  "zcode-changelog": "970aac36eaafea873cac441afc18b21f58bcdf395d4d7a5736312141bc028578",
   "zcode-commands": "fa9eb1eaf535524e62dcca0b8a6579c0ed1ba564cec6ab9f2f86409939b3ee37",
+  "zcode-computer-use": "8e3b42ece8fa71f944534f72ccca1380c544ad80e2a988cd9f602b775a5bbe5e",
   "zcode-configuration": "3ff9a659ddc6b8a01bac8ef12ac5f8ec3701f02a2334253b1e38f5a827af2e45",
   "zcode-edit-history": "1e94ae915c73cd6be9b4941abebee4b8a05415e2b243dce11cedc368ce329d29",
   "zcode-feedback": "21adb9d20289fda24068269df394884cc1efac236e97a5b752db0e1f341dc793",
@@ -20,11 +21,11 @@
   "zcode-qa": "0eaddd3a6fce4bd34efe3311c31422aef7a5ed336166db3e7bb070376f340c32",
   "zcode-remote-control": "8a1acf63963716370de38e5876520e34eb6da360993ad817fb6e0f4ba02eade8",
   "zcode-remote-development": "cb3c4d0931f0da69fb373c66884bfb3d6319b9492d6000cf1cc3090f3cde24a6",
-  "zcode-repo-wiki": "f587d740f022d4c26d82d12e0132499f20a18deb035e5f291e3f66ae089f25b7",
   "zcode-safety-confirm": "8d33fd0402eb210d64e12f50006ada3fc167c5b334140c179ccd8df618211372",
   "zcode-skill": "b6ecac0199e975be48c8f09b8af990793f9c0ed8e59201e8ab34698ec10e8605",
   "zcode-subagents": "a8f243035dcbeaac32e9954f6b8c6ad561ee0ce4608413a3f1c6ef4bf38b7857",
   "zcode-task-management": "0c69bd0b4ee1cff4f3257b7a40728128f37e1ade33a5db6e6166aa3a33c254c7",
   "zcode-usage-stats": "3cd918eb96bdd4cc4c85cd6bd69dea638b21bcd3870944db1fe3e0c313d8a6c6",
-  "zcode-welcome": "b220a5efb4183b363e006dee7a4886189b67576f645ddc9f0f2a823f6a88ab83"
+  "zcode-welcome": "b220a5efb4183b363e006dee7a4886189b67576f645ddc9f0f2a823f6a88ab83",
+  "zcode-workflow": "9a1e242ac36a48bdce3f0c0a80fe59e90315b1ddd96d2fe2675749c0870a75b0"
 }

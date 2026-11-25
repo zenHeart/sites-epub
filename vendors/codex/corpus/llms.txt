@@ -341,6 +341,7 @@ Use this as a compact map of ChatGPT docs for Codex. Each page has a Markdown tw
 - [Data and connections](https://learn.chatgpt.com/docs/sites/data-and-connections.md): Save records, connect apps, and add sign-in to your site
 - [Manage a site](https://learn.chatgpt.com/docs/sites/managing-a-site.md): Review analytics, change domains and settings, and manage site versions
 - [Publish and share](https://learn.chatgpt.com/docs/sites/publishing-and-sharing.md): Review your site, choose its audience, and collaborate with editors
+- [Usage and cost](https://learn.chatgpt.com/docs/sites/usage-and-cost.md): Check hosting allowances and usage rates for Sites, and estimate your monthly cost
 
 ## Skills And Plugins
 - [Skills & Plugins](https://learn.chatgpt.com/docs/skills-and-plugins.md): Add reusable workflows, expertise, and connected tools to ChatGPT and Codex

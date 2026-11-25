@@ -369,6 +369,14 @@
   },
   {
     "group": "Blog",
+    "title": "practical cryptanalysis with minimaxs latest internal model",
+    "md_url": "https://www.minimax.io/blog/practical-cryptanalysis-with-minimaxs-latest-internal-model",
+    "html_url": "https://www.minimax.io/blog/practical-cryptanalysis-with-minimaxs-latest-internal-model",
+    "route": "blog/practical-cryptanalysis-with-minimaxs-latest-internal-model",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "minimax code mini app 1792650729",
     "md_url": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",
     "html_url": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",

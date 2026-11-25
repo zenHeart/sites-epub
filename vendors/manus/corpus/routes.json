@@ -1289,6 +1289,30 @@
   },
   {
     "group": "Blog",
+    "title": "how make a multiplayer game",
+    "md_url": "https://manus.im/blog/how-make-a-multiplayer-game.md",
+    "html_url": "https://manus.im/blog/how-make-a-multiplayer-game",
+    "route": "blog/how-make-a-multiplayer-game",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "how to make a 3d game",
+    "md_url": "https://manus.im/blog/how-to-make-a-3d-game.md",
+    "html_url": "https://manus.im/blog/how-to-make-a-3d-game",
+    "route": "blog/how-to-make-a-3d-game",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "best ai character generators",
+    "md_url": "https://manus.im/blog/best-ai-character-generators.md",
+    "html_url": "https://manus.im/blog/best-ai-character-generators",
+    "route": "blog/best-ai-character-generators",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "game ideas",
     "md_url": "https://manus.im/blog/game-ideas.md",
     "html_url": "https://manus.im/blog/game-ideas",

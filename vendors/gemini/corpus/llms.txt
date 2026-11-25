@@ -32,6 +32,8 @@
 - [Latest Gemini models — Gemini 4 Carbon - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-4-carbon.md?generate-content=true): Learn what's new in Gemini 4 Carbon (gemini-4-carbon), Google's latest Gemini 4 model featuring a 1M shared context window, long decode, pricing, and API migration guidance.
 - [Latest Gemini models — Gemini 4 Argon - what's new](https://aistudio.google.com/docs/whats-new-gemini-4-argon.md): Learn what's new in Gemini 4 Argon (gemini-4-argon), our efficient Gemini 4 frontier reasoning model with a 1M shared context window, long decode, pricing, and API migration guidance.
 - [Latest Gemini models — Gemini 4 Argon - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-4-argon.md?generate-content=true): Learn what's new in Gemini 4 Argon (gemini-4-argon), our efficient Gemini 4 frontier reasoning model with a 1M shared context window, long decode, pricing, and API migration guidance.
+- [Latest Gemini models — Gemini 4 Neon - what's new](https://aistudio.google.com/docs/whats-new-gemini-4-neon.md): Learn what's new in Gemini 4 Neon (gemini-4-neon), bringing frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work, and science workflows.
+- [Latest Gemini models — Gemini 4 Neon - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-4-neon.md?generate-content=true): Learn what's new in Gemini 4 Neon (gemini-4-neon), bringing frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work, and science workflows.
 - [Latest Gemini models — Gemini 4 Hydrogen - what's new](https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen.md): Learn what's new in Gemini 4 Hydrogen (gemini-4-hydrogen), bringing cutting-edge intelligence to everyone, with speed and efficiency for everyday coding and agentic workflows.
 - [Latest Gemini models — Gemini 4 Hydrogen - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen.md?generate-content=true): Learn what's new in Gemini 4 Hydrogen (gemini-4-hydrogen), bringing cutting-edge intelligence to everyone, with speed and efficiency for everyday coding and agentic workflows.
 - [Latest Gemini models — Gemini 3.8 Flash - what's new](https://aistudio.google.com/docs/whats-new-gemini-3.8.md): Learn about what's new in Gemini 3.8 Flash, including model capabilities, API changes, and migration guidance.
@@ -43,6 +45,8 @@
 - [Latest Gemini models — Gemini 3.5 Flash - what's new](https://aistudio.google.com/docs/whats-new-gemini-3.5.md): Learn about the new features and migration guidance for Gemini 3.5 Flash.
 - [Latest Gemini models — Gemini 3.5 Flash - what's new (generateContent)](https://aistudio.google.com/docs/whats-new-gemini-3.5.md?generate-content=true): Learn about the new features and migration guidance for Gemini 3.5 Flash.
 - [All models](https://aistudio.google.com/docs/models.md): Learn about all of Google's most advanced AI models
+- [Choosing a model](https://aistudio.google.com/docs/choosing-a-model.md): Compare Gemini models across reasoning depth, speed, cost, and modality to pick the right model for your workload.
+- [Gemini 4 Neon](https://aistudio.google.com/docs/models/gemini-4-neon.md): Explore Gemini 4 Neon (gemini-4-neon), bringing frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work, and science workflows.
 - [Gemini 4 Hydrogen](https://aistudio.google.com/docs/models/gemini-4-hydrogen.md): Explore Gemini 4 Hydrogen (gemini-4-hydrogen), bringing cutting-edge intelligence to everyone, with speed and efficiency for everyday coding and agentic workflows.
 - [Gemini 4 Carbon](https://aistudio.google.com/docs/models/gemini-4-carbon.md): Explore Gemini 4 Carbon (gemini-4-carbon), Google's latest Gemini 4 model for coding, reasoning, science, and agents, featuring a 1M context window and long decode.
 - [Gemini 4 Argon](https://aistudio.google.com/docs/models/gemini-4-argon.md): Explore Gemini 4 Argon (gemini-4-argon), our efficient Gemini 4 frontier reasoning model with faster responses and lower token spend per turn compared to Gemini 4 Carbon.
@@ -61,6 +65,7 @@
 - [Gemini 3.5 Flash](https://aistudio.google.com/docs/models/gemini-3.5-flash.md): Learn about Gemini 3.5 Flash from Google
 - [Gemini 3.5 Flash-Lite](https://aistudio.google.com/docs/models/gemini-3.5-flash-lite.md): Learn about Gemini 3.5 Flash-Lite from Google
 - [Gemini Omni Flash](https://aistudio.google.com/docs/models/gemini-omni-flash.md): Learn about the Gemini Omni Flash video generation and editing model
+- [Genie 4](https://aistudio.google.com/docs/models/genie-4.md): Learn about Genie 4, Google's real-time interactive world generation model on the Interactions API.
 - [Gemini 3.5 Transcribe](https://aistudio.google.com/docs/models/gemini-3.5-transcribe.md): Learn about the Gemini 3.5 Transcribe model from Google
 - [Gemini 3.1 Flash Lite image (Nano Banana 2 Lite)](https://aistudio.google.com/docs/models/gemini-3.1-flash-lite-image.md): Learn about Gemini 3.1 Flash Lite Image from Google
 - [Gemini 3.5 Live translate](https://aistudio.google.com/docs/models/gemini-3.5-live-translate-preview.md): Learn about the Gemini 3.5 Live Translate model from Google
@@ -106,6 +111,8 @@
 - [Nano Banana (generateContent)](https://aistudio.google.com/docs/image-generation.md?generate-content=true): Get started generating images with the Gemini API using Nano Banana and Nano Banana Pro
 - [Veo](https://aistudio.google.com/docs/veo.md): Generate high-fidelity videos with native audio using Google's Veo 3.1 API.
 - [Gemini Omni Flash](https://aistudio.google.com/docs/omni.md): Get started with Gemini Omni Flash for fast, conversational video generation and editing using the Interactions API.
+- [Genie 4 — Overview](https://aistudio.google.com/docs/genie.md): Stream real-time, steerable 24 fps interactive worlds with synchronized 48 kHz stereo audio using Genie 4 on the Interactions API.
+- [Genie 4 — Genie 4 prompt and controls guide](https://aistudio.google.com/docs/genie-prompting.md): Design responsive, coherent interactive worlds in Google AI Studio and the Interactions API using five tested Genie 4 prompt and control patterns.
 - [Lyria 3.5 — Lyria 3.5 & Lyria Clip](https://aistudio.google.com/docs/music-generation.md): Generate music with the Gemini API using Lyria 3 Clip and Lyria 3.5.
 - [Lyria 3.5 — Lyria 3.5 & Lyria Clip (generateContent)](https://aistudio.google.com/docs/music-generation.md?generate-content=true): Generate music with the Gemini API using Lyria 3 Clip and Lyria 3.5
 - [Lyria 3.5 — Lyria RealTime](https://aistudio.google.com/docs/realtime-music-generation.md): Get started building with Lyria RealTime's real-time, streaming music generation in the Gemini API
@@ -158,8 +165,8 @@
 - [Function calling](https://aistudio.google.com/docs/function-calling.md): Get started using Function Calling with the Gemini API
 - [Function calling (generateContent)](https://aistudio.google.com/docs/function-calling.md?generate-content=true): Get started using Function Calling with the Gemini API
 - [Long context](https://aistudio.google.com/docs/long-context.md): Learn about how to get started building with long context (1 million context window) on Gemini.
-- [Long decode](https://aistudio.google.com/docs/long-decode.md): Use long decode with Gemini 4 models (gemini-4-carbon, gemini-4-argon, and gemini-4-hydrogen) on the Interactions API to generate past 64K tokens up to the 1M-token context window with background execution or client-side continuation.
-- [Long decode (generateContent)](https://aistudio.google.com/docs/long-decode.md?generate-content=true): Use long decode with Gemini 4 models (gemini-4-carbon, gemini-4-argon, and gemini-4-hydrogen) in generateContent and streamGenerateContent to generate up to the 1M-token unified context window across continuation hops.
+- [Long decode](https://aistudio.google.com/docs/long-decode.md): Use long decode with Gemini 4 models (gemini-4-carbon, gemini-4-argon, gemini-4-neon, and gemini-4-hydrogen) on the Interactions API to generate past 64K tokens up to the 1M-token context window with background execution or client-side continuation.
+- [Long decode (generateContent)](https://aistudio.google.com/docs/long-decode.md?generate-content=true): Use long decode with Gemini 4 models (gemini-4-carbon, gemini-4-argon, gemini-4-neon, and gemini-4-hydrogen) in generateContent and streamGenerateContent to generate up to the 1M-token unified context window across continuation hops.
 
 ## Agents
 - [Overview](https://aistudio.google.com/docs/agents.md): Build agents that reason, write code, manage files, and browse the web with the Gemini API.
@@ -185,6 +192,7 @@
 - [Computer use (generateContent)](https://aistudio.google.com/docs/computer-use.md?generate-content=true): Learn how to use the Gemini API computer use feature.
 - [File search](https://aistudio.google.com/docs/file-search.md): Get started building RAG solutions with the File Search tool in the Gemini API
 - [File search (generateContent)](https://aistudio.google.com/docs/file-search.md?generate-content=true): Get started building RAG solutions with the File Search tool in the Gemini API
+- [Tool retrieval](https://aistudio.google.com/docs/tool-retrieval.md): Let Gemini search for and load tool schemas on demand so large tool libraries don't fill the context window.
 - [Combine tools and function calling](https://aistudio.google.com/docs/tool-combination.md): Learn how to maintain context and enable built-in and custom tool combinations in the Gemini API.
 - [Combine tools and function calling (generateContent)](https://aistudio.google.com/docs/tool-combination.md?generate-content=true): Learn how to maintain context and enable built-in and custom tool combinations in the Gemini API.
 
@@ -225,8 +233,8 @@
 - [Token counting](https://aistudio.google.com/docs/tokens.md): Understand and count tokens with the Gemini API
 - [Token counting (generateContent)](https://aistudio.google.com/docs/tokens.md?generate-content=true): Learn how Gemini models process tokens and how to count tokens in your API requests.
 - [Prompt engineering](https://aistudio.google.com/docs/prompting-strategies.md): Get started designing prompts for Gemini AI models.
-- [Logs and datasets — Get started with logs](https://aistudio.google.com/docs/logs-datasets.md): Learn how to configure project logging, view logs in AI Studio, and create shared datasets.
-- [Logs and datasets — Data logs and sharing](https://aistudio.google.com/docs/logs-policy.md): The policy for sharing your data logs for Gemini improvements.
+- [Logs — Get started with logs](https://aistudio.google.com/docs/logs-datasets.md): Learn how to configure project logging, view logs in AI Studio, and create shared datasets.
+- [Logs — Data logs and sharing](https://aistudio.google.com/docs/logs-policy.md): The policy for sharing your data logs for Gemini improvements.
 - [Safety — Safety settings](https://aistudio.google.com/docs/safety-settings.md): Configure content moderation filters and safety thresholds in the Gemini API.
 - [Safety — Safety settings (generateContent)](https://aistudio.google.com/docs/safety-settings.md?generate-content=true): Configure content moderation filters and safety thresholds in the Gemini API.
 - [Safety — Safety guidance](https://aistudio.google.com/docs/safety-guidance.md): Apply best practices for safety, fairness, and factuality in Gemini apps.
@@ -251,7 +259,7 @@
 - [API errors (generateContent)](https://aistudio.google.com/docs/api-errors.md?generate-content=true): Reference for generateContent API error codes and response format
 - [Partner and library integrations](https://aistudio.google.com/docs/partner-integration.md): Provide the Gemini API as an integration into your platform or library.
 - [Google AI Studio — Quickstart](https://aistudio.google.com/docs/ai-studio-quickstart.md): Get started with prompt engineering and prototyping in Google AI Studio.
-- [Google AI Studio — Google AI plans](https://aistudio.google.com/docs/google-ai-plans.md)
+- [Google AI Studio — Google AI plans](https://aistudio.google.com/docs/google-ai-plans.md): Use your Google AI subscription plan in Google AI Studio and claim monthly Gemini API credits directly in AI Studio.
 - [Google AI Studio — Vibe code in Build](https://aistudio.google.com/docs/aistudio-build-mode.md): Learn how to build full-stack applications using the vibe coding experience in Google AI Studio.
 - [Google AI Studio — Full-stack apps](https://aistudio.google.com/docs/aistudio-fullstack.md): Learn how to develop full-stack applications with server-side logic in Google AI Studio.
 - [Google AI Studio — Build Android apps](https://aistudio.google.com/docs/aistudio-android.md): Learn how to build native Android apps with Kotlin and Jetpack Compose in Google AI Studio.

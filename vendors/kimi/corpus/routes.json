@@ -841,22 +841,6 @@
   },
   {
     "group": "Kimi \u4ea7\u54c1",
-    "title": "inspiration",
-    "md_url": "https://www.kimi.com/inspiration",
-    "html_url": "https://www.kimi.com/inspiration",
-    "route": "inspiration",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi \u4ea7\u54c1",
-    "title": "make3d",
-    "md_url": "https://www.kimi.com/make3d",
-    "html_url": "https://www.kimi.com/make3d",
-    "route": "make3d",
-    "kind": "doc"
-  },
-  {
-    "group": "Kimi \u4ea7\u54c1",
     "title": "code",
     "md_url": "https://www.kimi.com/code",
     "html_url": "https://www.kimi.com/code",

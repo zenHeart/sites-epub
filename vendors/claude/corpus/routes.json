@@ -201,6 +201,14 @@
   },
   {
     "group": "Getting started",
+    "title": "Share a cloud or Remote Control session",
+    "md_url": "https://code.claude.com/docs/en/share-sessions.md",
+    "html_url": "https://code.claude.com/docs/en/share-sessions",
+    "route": "share-sessions",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
     "title": "Automate work with scheduled tasks",
     "md_url": "https://code.claude.com/docs/en/routines.md",
     "html_url": "https://code.claude.com/docs/en/routines",
@@ -257,18 +265,10 @@
   },
   {
     "group": "Getting started",
-    "title": "Review locally with /code-review",
-    "md_url": "https://code.claude.com/docs/en/code-review-local.md",
-    "html_url": "https://code.claude.com/docs/en/code-review-local",
-    "route": "code-review-local",
-    "kind": "doc"
-  },
-  {
-    "group": "Getting started",
-    "title": "Find bugs with ultrareview",
-    "md_url": "https://code.claude.com/docs/en/ultrareview.md",
-    "html_url": "https://code.claude.com/docs/en/ultrareview",
-    "route": "ultrareview",
+    "title": "Claude Ship",
+    "md_url": "https://code.claude.com/docs/en/claude-ship.md",
+    "html_url": "https://code.claude.com/docs/en/claude-ship",
+    "route": "claude-ship",
     "kind": "doc"
   },
   {
@@ -325,6 +325,134 @@
     "md_url": "https://code.claude.com/docs/en/code-review-troubleshooting.md",
     "html_url": "https://code.claude.com/docs/en/code-review-troubleshooting",
     "route": "code-review-troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "PR Steward",
+    "md_url": "https://code.claude.com/docs/en/pr-steward.md",
+    "html_url": "https://code.claude.com/docs/en/pr-steward",
+    "route": "pr-steward",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Set up PR Steward",
+    "md_url": "https://code.claude.com/docs/en/pr-steward-setup.md",
+    "html_url": "https://code.claude.com/docs/en/pr-steward-setup",
+    "route": "pr-steward-setup",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Work with PR Steward on a pull request",
+    "md_url": "https://code.claude.com/docs/en/pr-steward-pull-requests.md",
+    "html_url": "https://code.claude.com/docs/en/pr-steward-pull-requests",
+    "route": "pr-steward-pull-requests",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "What PR Steward can access",
+    "md_url": "https://code.claude.com/docs/en/pr-steward-security.md",
+    "html_url": "https://code.claude.com/docs/en/pr-steward-security",
+    "route": "pr-steward-security",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Troubleshoot PR Steward",
+    "md_url": "https://code.claude.com/docs/en/pr-steward-troubleshooting.md",
+    "html_url": "https://code.claude.com/docs/en/pr-steward-troubleshooting",
+    "route": "pr-steward-troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Claude Approvals",
+    "md_url": "https://code.claude.com/docs/en/approvals.md",
+    "html_url": "https://code.claude.com/docs/en/approvals",
+    "route": "approvals",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Set up Claude Approvals",
+    "md_url": "https://code.claude.com/docs/en/approvals-setup.md",
+    "html_url": "https://code.claude.com/docs/en/approvals-setup",
+    "route": "approvals-setup",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Work with Claude Approvals on a pull request",
+    "md_url": "https://code.claude.com/docs/en/approvals-pull-requests.md",
+    "html_url": "https://code.claude.com/docs/en/approvals-pull-requests",
+    "route": "approvals-pull-requests",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Claude Approvals and your GitHub rules",
+    "md_url": "https://code.claude.com/docs/en/approvals-github-rules.md",
+    "html_url": "https://code.claude.com/docs/en/approvals-github-rules",
+    "route": "approvals-github-rules",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Claude Approvals policy file reference",
+    "md_url": "https://code.claude.com/docs/en/approvals-policy.md",
+    "html_url": "https://code.claude.com/docs/en/approvals-policy",
+    "route": "approvals-policy",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Claude Approvals classifiers",
+    "md_url": "https://code.claude.com/docs/en/approvals-classifiers.md",
+    "html_url": "https://code.claude.com/docs/en/approvals-classifiers",
+    "route": "approvals-classifiers",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Troubleshoot Claude Approvals",
+    "md_url": "https://code.claude.com/docs/en/approvals-troubleshooting.md",
+    "html_url": "https://code.claude.com/docs/en/approvals-troubleshooting",
+    "route": "approvals-troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Get a pull request ready with /ship and /steward",
+    "md_url": "https://code.claude.com/docs/en/ship-command.md",
+    "html_url": "https://code.claude.com/docs/en/ship-command",
+    "route": "ship-command",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Troubleshoot /ship and /steward",
+    "md_url": "https://code.claude.com/docs/en/ship-command-troubleshooting.md",
+    "html_url": "https://code.claude.com/docs/en/ship-command-troubleshooting",
+    "route": "ship-command-troubleshooting",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Review locally with /code-review",
+    "md_url": "https://code.claude.com/docs/en/code-review-local.md",
+    "html_url": "https://code.claude.com/docs/en/code-review-local",
+    "route": "code-review-local",
+    "kind": "doc"
+  },
+  {
+    "group": "Getting started",
+    "title": "Find bugs with ultrareview",
+    "md_url": "https://code.claude.com/docs/en/ultrareview.md",
+    "html_url": "https://code.claude.com/docs/en/ultrareview",
+    "route": "ultrareview",
     "kind": "doc"
   },
   {
@@ -1649,6 +1777,54 @@
   },
   {
     "group": "Blog",
+    "title": "install as app",
+    "md_url": "https://claude.com/resources/articles/install-as-app.md",
+    "html_url": "https://claude.com/resources/articles/install-as-app",
+    "route": "blog/install-as-app",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "skills over mcp tasks and more",
+    "md_url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more.md",
+    "html_url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+    "route": "blog/skills-over-mcp-tasks-and-more",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "kpmg todd lohr on ai when your data is also your clients data",
+    "md_url": "https://claude.com/resources/articles/kpmg-todd-lohr-on-ai-when-your-data-is-also-your-clients-data.md",
+    "html_url": "https://claude.com/resources/articles/kpmg-todd-lohr-on-ai-when-your-data-is-also-your-clients-data",
+    "route": "blog/kpmg-todd-lohr-on-ai-when-your-data-is-also-your-clients-data",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "zero data retention with enterprise frontier safeguards",
+    "md_url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards.md",
+    "html_url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+    "route": "blog/zero-data-retention-with-enterprise-frontier-safeguards",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "enterprise guide to securing coding agents",
+    "md_url": "https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents.md",
+    "html_url": "https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents",
+    "route": "blog/enterprise-guide-to-securing-coding-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "introducing claude ship",
+    "md_url": "https://claude.com/resources/articles/introducing-claude-ship.md",
+    "html_url": "https://claude.com/resources/articles/introducing-claude-ship",
+    "route": "blog/introducing-claude-ship",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "linked billing on claude platform",
     "md_url": "https://claude.com/resources/articles/linked-billing-on-claude-platform.md",
     "html_url": "https://claude.com/resources/articles/linked-billing-on-claude-platform",
@@ -1677,54 +1853,6 @@
     "md_url": "https://claude.com/resources/articles/building-always-on-agents.md",
     "html_url": "https://claude.com/resources/articles/building-always-on-agents",
     "route": "blog/building-always-on-agents",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "claude tag guide for startups",
-    "md_url": "https://claude.com/resources/articles/claude-tag-guide-for-startups.md",
-    "html_url": "https://claude.com/resources/articles/claude-tag-guide-for-startups",
-    "route": "blog/claude-tag-guide-for-startups",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "self hosted claude managed agents",
-    "md_url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents.md",
-    "html_url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
-    "route": "blog/self-hosted-claude-managed-agents",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "j crew style advisor with claude",
-    "md_url": "https://claude.com/resources/articles/j-crew-style-advisor-with-claude.md",
-    "html_url": "https://claude.com/resources/articles/j-crew-style-advisor-with-claude",
-    "route": "blog/j-crew-style-advisor-with-claude",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "claude for manufacturing",
-    "md_url": "https://claude.com/resources/articles/claude-for-manufacturing.md",
-    "html_url": "https://claude.com/resources/articles/claude-for-manufacturing",
-    "route": "blog/claude-for-manufacturing",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "claude meetings",
-    "md_url": "https://claude.com/resources/articles/claude-meetings.md",
-    "html_url": "https://claude.com/resources/articles/claude-meetings",
-    "route": "blog/claude-meetings",
-    "kind": "blog"
-  },
-  {
-    "group": "Blog",
-    "title": "using claude opus 5 5 as your daily driver for knowledge work",
-    "md_url": "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work.md",
-    "html_url": "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
-    "route": "blog/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
     "kind": "blog"
   },
   {
@@ -2329,6 +2457,14 @@
   },
   {
     "group": "Blog",
+    "title": "claude for manufacturing",
+    "md_url": "https://claude.com/resources/articles/claude-for-manufacturing.md",
+    "html_url": "https://claude.com/resources/articles/claude-for-manufacturing",
+    "route": "blog/claude-for-manufacturing",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "claude for small business launches new workflows integrations and training programs",
     "md_url": "https://claude.com/resources/articles/claude-for-small-business-launches-new-workflows-integrations-and-training-programs.md",
     "html_url": "https://claude.com/resources/articles/claude-for-small-business-launches-new-workflows-integrations-and-training-programs",
@@ -2397,6 +2533,14 @@
     "md_url": "https://claude.com/resources/articles/claude-marketplace.md",
     "html_url": "https://claude.com/resources/articles/claude-marketplace",
     "route": "blog/claude-marketplace",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude meetings",
+    "md_url": "https://claude.com/resources/articles/claude-meetings.md",
+    "html_url": "https://claude.com/resources/articles/claude-meetings",
+    "route": "blog/claude-meetings",
     "kind": "blog"
   },
   {
@@ -2493,6 +2637,14 @@
     "md_url": "https://claude.com/resources/articles/claude-security-public-beta.md",
     "html_url": "https://claude.com/resources/articles/claude-security-public-beta",
     "route": "blog/claude-security-public-beta",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "claude tag guide for startups",
+    "md_url": "https://claude.com/resources/articles/claude-tag-guide-for-startups.md",
+    "html_url": "https://claude.com/resources/articles/claude-tag-guide-for-startups",
+    "route": "blog/claude-tag-guide-for-startups",
     "kind": "blog"
   },
   {
@@ -3321,6 +3473,14 @@
   },
   {
     "group": "Blog",
+    "title": "j crew style advisor with claude",
+    "md_url": "https://claude.com/resources/articles/j-crew-style-advisor-with-claude.md",
+    "html_url": "https://claude.com/resources/articles/j-crew-style-advisor-with-claude",
+    "route": "blog/j-crew-style-advisor-with-claude",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "jpmorganchase expands claude code",
     "md_url": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code.md",
     "html_url": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code",
@@ -3601,6 +3761,14 @@
   },
   {
     "group": "Blog",
+    "title": "self hosted claude managed agents",
+    "md_url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents.md",
+    "html_url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
+    "route": "blog/self-hosted-claude-managed-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "self serve enterprise",
     "md_url": "https://claude.com/resources/articles/self-serve-enterprise.md",
     "html_url": "https://claude.com/resources/articles/self-serve-enterprise",
@@ -3817,6 +3985,14 @@
   },
   {
     "group": "Blog",
+    "title": "using claude opus 5 5 as your daily driver for knowledge work",
+    "md_url": "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work.md",
+    "html_url": "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
+    "route": "blog/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "using llms to secure source code",
     "md_url": "https://claude.com/resources/articles/using-llms-to-secure-source-code.md",
     "html_url": "https://claude.com/resources/articles/using-llms-to-secure-source-code",
@@ -3965,6 +4141,14 @@
     "md_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents.md",
     "html_url": "https://claude.com/resources/articles/zero-trust-for-ai-agents",
     "route": "blog/zero-trust-for-ai-agents",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "the work after you open a pr",
+    "md_url": "https://claude.dev/blog/the-work-after-you-open-a-pr",
+    "html_url": "https://claude.dev/blog/the-work-after-you-open-a-pr",
+    "route": "blog/the-work-after-you-open-a-pr",
     "kind": "blog"
   },
   {

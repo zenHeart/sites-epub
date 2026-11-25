@@ -584,6 +584,14 @@
     "kind": "doc"
   },
   {
+    "group": "Developers",
+    "title": "Advanced API Usage \u2014 Troubleshooting Reasoning",
+    "md_url": "https://docs.x.ai/developers/advanced-api-usage/troubleshooting-reasoning.md",
+    "html_url": "https://docs.x.ai/developers/advanced-api-usage/troubleshooting-reasoning",
+    "route": "developers/advanced-api-usage/troubleshooting-reasoning",
+    "kind": "doc"
+  },
+  {
     "group": "Cookbook",
     "title": "Advanced API Usage \u2014 Cookbook",
     "md_url": "https://docs.x.ai/cookbook.md",

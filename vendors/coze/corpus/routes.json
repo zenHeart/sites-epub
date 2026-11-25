@@ -2289,6 +2289,14 @@
   },
   {
     "group": "\u6263\u5b50: \u5b9a\u4ef7",
+    "title": "\u6d3b\u52a8\u4e0e\u516c\u544a/\u516c\u544a/\u6263\u5b50\u8d26\u53f7\u4f53\u7cfb\u878d\u5408\u5347\u7ea7",
+    "md_url": "https://docs.coze.cn/coze-account-upgrade-and-integration.md",
+    "html_url": "https://docs.coze.cn/coze-account-upgrade-and-integration",
+    "route": "coze-account-upgrade-and-integration",
+    "kind": "doc"
+  },
+  {
+    "group": "\u6263\u5b50: \u5b9a\u4ef7",
     "title": "\u6d3b\u52a8\u4e0e\u516c\u544a/\u516c\u544a/\u79ef\u5206\u5355\u4f4d\u8c03\u6574\u516c\u544a",
     "md_url": "https://docs.coze.cn/credits-unit-update.md",
     "html_url": "https://docs.coze.cn/credits-unit-update",
@@ -2305,7 +2313,7 @@
   },
   {
     "group": "\u6263\u5b50: \u5b9a\u4ef7",
-    "title": "\u6d3b\u52a8\u4e0e\u516c\u544a/\u516c\u544a/\u6263\u5b50\u4f01\u4e1a\u7248\u4e0b\u7ebf\u516c\u544a",
+    "title": "\u6d3b\u52a8\u4e0e\u516c\u544a/\u516c\u544a/\u6263\u5b50\u4f01\u4e1a\u7248\u505c\u6b62\u65b0\u552e\u4e0e\u7eed\u8d39",
     "md_url": "https://docs.coze.cn/enterprise-plan-discontinuation-notice.md",
     "html_url": "https://docs.coze.cn/enterprise-plan-discontinuation-notice",
     "route": "enterprise-plan-discontinuation-notice",

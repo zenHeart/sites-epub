@@ -121,6 +121,14 @@
   },
   {
     "group": "WorkBuddy \u5de5\u4f5c\u53f0",
+    "title": "\u4e91\u7535\u8111",
+    "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Cloud-Computer",
+    "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Cloud-Computer",
+    "route": "wb-workbuddy-from-beginner-to-expert-guide-function-description-cloud-computer",
+    "kind": "doc"
+  },
+  {
+    "group": "WorkBuddy \u5de5\u4f5c\u53f0",
     "title": "\u8bbe\u8ba1\u521b\u610f",
     "md_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Design-Idea",
     "html_url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Design-Idea",

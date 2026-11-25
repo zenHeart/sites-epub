@@ -1,7 +1,7 @@
 [
   {
     "group": "ZCode \u4ea7\u54c1",
-    "title": "ZCode for GLM-5.3",
+    "title": "ZCode for GLM-5.4",
     "md_url": "https://zcode.z.ai/cn/docs/welcome",
     "html_url": "https://zcode.z.ai/cn/docs/welcome",
     "route": "zcode-welcome",
@@ -49,10 +49,34 @@
   },
   {
     "group": "ZCode \u4ea7\u54c1",
+    "title": "\u5b50\u667a\u80fd\u4f53",
+    "md_url": "https://zcode.z.ai/cn/docs/subagents",
+    "html_url": "https://zcode.z.ai/cn/docs/subagents",
+    "route": "zcode-subagents",
+    "kind": "doc"
+  },
+  {
+    "group": "ZCode \u4ea7\u54c1",
+    "title": "\u52a8\u6001\u5de5\u4f5c\u6d41",
+    "md_url": "https://zcode.z.ai/cn/docs/workflow",
+    "html_url": "https://zcode.z.ai/cn/docs/workflow",
+    "route": "zcode-workflow",
+    "kind": "doc"
+  },
+  {
+    "group": "ZCode \u4ea7\u54c1",
     "title": "\u6d4f\u89c8\u5668\u81ea\u52a8\u5316",
     "md_url": "https://zcode.z.ai/cn/docs/browser-use",
     "html_url": "https://zcode.z.ai/cn/docs/browser-use",
     "route": "zcode-browser-use",
+    "kind": "doc"
+  },
+  {
+    "group": "ZCode \u4ea7\u54c1",
+    "title": "\u7535\u8111\u63a7\u5236",
+    "md_url": "https://zcode.z.ai/cn/docs/computer-use",
+    "html_url": "https://zcode.z.ai/cn/docs/computer-use",
+    "route": "zcode-computer-use",
     "kind": "doc"
   },
   {
@@ -65,14 +89,6 @@
   },
   {
     "group": "ZCode \u4ea7\u54c1",
-    "title": "Wiki",
-    "md_url": "https://zcode.z.ai/cn/docs/repo-wiki",
-    "html_url": "https://zcode.z.ai/cn/docs/repo-wiki",
-    "route": "zcode-repo-wiki",
-    "kind": "doc"
-  },
-  {
-    "group": "ZCode \u4ea7\u54c1",
     "title": "Memory",
     "md_url": "https://zcode.z.ai/cn/docs/memory",
     "html_url": "https://zcode.z.ai/cn/docs/memory",
@@ -81,7 +97,7 @@
   },
   {
     "group": "ZCode \u4ea7\u54c1",
-    "title": "\u81ea\u52a8\u5316",
+    "title": "\u5b9a\u65f6\u4efb\u52a1",
     "md_url": "https://zcode.z.ai/cn/docs/automations",
     "html_url": "https://zcode.z.ai/cn/docs/automations",
     "route": "zcode-automations",
@@ -125,14 +141,6 @@
     "md_url": "https://zcode.z.ai/cn/docs/bot-channel",
     "html_url": "https://zcode.z.ai/cn/docs/bot-channel",
     "route": "zcode-bot-channel",
-    "kind": "doc"
-  },
-  {
-    "group": "ZCode \u4ea7\u54c1",
-    "title": "\u5b50\u667a\u80fd\u4f53",
-    "md_url": "https://zcode.z.ai/cn/docs/subagents",
-    "html_url": "https://zcode.z.ai/cn/docs/subagents",
-    "route": "zcode-subagents",
     "kind": "doc"
   },
   {
@@ -185,6 +193,14 @@
   },
   {
     "group": "ZCode \u4ea7\u54c1",
+    "title": "\u5feb\u6377\u952e",
+    "md_url": "https://zcode.z.ai/cn/docs/keyboard-shortcuts",
+    "html_url": "https://zcode.z.ai/cn/docs/keyboard-shortcuts",
+    "route": "zcode-keyboard-shortcuts",
+    "kind": "doc"
+  },
+  {
+    "group": "ZCode \u4ea7\u54c1",
     "title": "\u5b89\u5168\u64cd\u4f5c\u786e\u8ba4",
     "md_url": "https://zcode.z.ai/cn/docs/safety-confirm",
     "html_url": "https://zcode.z.ai/cn/docs/safety-confirm",
@@ -197,14 +213,6 @@
     "md_url": "https://zcode.z.ai/cn/docs/ADE-tools",
     "html_url": "https://zcode.z.ai/cn/docs/ADE-tools",
     "route": "zcode-ADE-tools",
-    "kind": "doc"
-  },
-  {
-    "group": "ZCode \u4ea7\u54c1",
-    "title": "\u5feb\u6377\u952e\u8868",
-    "md_url": "https://zcode.z.ai/cn/docs/keyboard-shortcuts",
-    "html_url": "https://zcode.z.ai/cn/docs/keyboard-shortcuts",
-    "route": "zcode-keyboard-shortcuts",
     "kind": "doc"
   },
   {

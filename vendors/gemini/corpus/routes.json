@@ -273,6 +273,14 @@
   },
   {
     "group": "Antigravity",
+    "title": "MCP Apps",
+    "md_url": "https://antigravity.google/docs/mcp-apps.md",
+    "html_url": "https://antigravity.google/docs/mcp-apps",
+    "route": "antigravity/mcp-apps",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Agent skills",
     "md_url": "https://antigravity.google/docs/skills.md",
     "html_url": "https://antigravity.google/docs/skills",
@@ -369,46 +377,6 @@
   },
   {
     "group": "Antigravity",
-    "title": "Teamwork agent teams (/teamwork)",
-    "md_url": "https://antigravity.google/docs/teamwork.md",
-    "html_url": "https://antigravity.google/docs/teamwork",
-    "route": "antigravity/teamwork",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "Dynamic Workflows (/run-workflow)",
-    "md_url": "https://antigravity.google/docs/dynamic-workflows.md",
-    "html_url": "https://antigravity.google/docs/dynamic-workflows",
-    "route": "antigravity/dynamic-workflows",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "Swarm (/swarm)",
-    "md_url": "https://antigravity.google/docs/swarm.md",
-    "html_url": "https://antigravity.google/docs/swarm",
-    "route": "antigravity/swarm",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "Boost deep reasoning (/boost)",
-    "md_url": "https://antigravity.google/docs/boost.md",
-    "html_url": "https://antigravity.google/docs/boost",
-    "route": "antigravity/boost",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
-    "title": "Plan (/plan)",
-    "md_url": "https://antigravity.google/docs/plan.md",
-    "html_url": "https://antigravity.google/docs/plan",
-    "route": "antigravity/plan",
-    "kind": "doc"
-  },
-  {
-    "group": "Antigravity",
     "title": "Customizations command (/agy-customizations)",
     "md_url": "https://antigravity.google/docs/commands/agy-customizations.md",
     "html_url": "https://antigravity.google/docs/commands/agy-customizations",
@@ -433,6 +401,14 @@
   },
   {
     "group": "Antigravity",
+    "title": "Boost deep reasoning (/boost)",
+    "md_url": "https://antigravity.google/docs/boost.md",
+    "html_url": "https://antigravity.google/docs/boost",
+    "route": "antigravity/boost",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Browser command (/browser)",
     "md_url": "https://antigravity.google/docs/commands/browser.md",
     "html_url": "https://antigravity.google/docs/commands/browser",
@@ -445,6 +421,14 @@
     "md_url": "https://antigravity.google/docs/commands/btw.md",
     "html_url": "https://antigravity.google/docs/commands/btw",
     "route": "antigravity/commands/btw",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Compact command (/compact)",
+    "md_url": "https://antigravity.google/docs/commands/compact.md",
+    "html_url": "https://antigravity.google/docs/commands/compact",
+    "route": "antigravity/commands/compact",
     "kind": "doc"
   },
   {
@@ -481,10 +465,50 @@
   },
   {
     "group": "Antigravity",
+    "title": "MCP Apps development command (/mcp-app-development)",
+    "md_url": "https://antigravity.google/docs/commands/mcp-app-development.md",
+    "html_url": "https://antigravity.google/docs/commands/mcp-app-development",
+    "route": "antigravity/commands/mcp-app-development",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Plan (/plan)",
+    "md_url": "https://antigravity.google/docs/plan.md",
+    "html_url": "https://antigravity.google/docs/plan",
+    "route": "antigravity/plan",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Dynamic Workflows (/run-workflow)",
+    "md_url": "https://antigravity.google/docs/dynamic-workflows.md",
+    "html_url": "https://antigravity.google/docs/dynamic-workflows",
+    "route": "antigravity/dynamic-workflows",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Schedule command (/schedule)",
     "md_url": "https://antigravity.google/docs/commands/schedule.md",
     "html_url": "https://antigravity.google/docs/commands/schedule",
     "route": "antigravity/commands/schedule",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Swarm (/swarm)",
+    "md_url": "https://antigravity.google/docs/swarm.md",
+    "html_url": "https://antigravity.google/docs/swarm",
+    "route": "antigravity/swarm",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Teamwork agent teams (/teamwork)",
+    "md_url": "https://antigravity.google/docs/teamwork.md",
+    "html_url": "https://antigravity.google/docs/teamwork",
+    "route": "antigravity/teamwork",
     "kind": "doc"
   },
   {
@@ -753,6 +777,54 @@
   },
   {
     "group": "Antigravity",
+    "title": "Learn overview",
+    "md_url": "https://antigravity.google/docs/learn.md",
+    "html_url": "https://antigravity.google/docs/learn",
+    "route": "antigravity/learn",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Prompting and instructions",
+    "md_url": "https://antigravity.google/docs/learn/prompting.md",
+    "html_url": "https://antigravity.google/docs/learn/prompting",
+    "route": "antigravity/learn/prompting",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Context windows and tokens",
+    "md_url": "https://antigravity.google/docs/learn/context-and-tokens.md",
+    "html_url": "https://antigravity.google/docs/learn/context-and-tokens",
+    "route": "antigravity/learn/context-and-tokens",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "How AI agents work",
+    "md_url": "https://antigravity.google/docs/learn/how-agents-work.md",
+    "html_url": "https://antigravity.google/docs/learn/how-agents-work",
+    "route": "antigravity/learn/how-agents-work",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Verification and guardrails",
+    "md_url": "https://antigravity.google/docs/learn/verification-and-guardrails.md",
+    "html_url": "https://antigravity.google/docs/learn/verification-and-guardrails",
+    "route": "antigravity/learn/verification-and-guardrails",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Build a playable 3D browser world",
+    "md_url": "https://antigravity.google/docs/learn/build-3d-browser-world.md",
+    "html_url": "https://antigravity.google/docs/learn/build-3d-browser-world",
+    "route": "antigravity/learn/build-3d-browser-world",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Antigravity SDK overview",
     "md_url": "https://antigravity.google/docs/sdk/overview.md",
     "html_url": "https://antigravity.google/docs/sdk/overview",
@@ -825,6 +897,70 @@
   },
   {
     "group": "Antigravity",
+    "title": "Visual Studio Code",
+    "md_url": "https://antigravity.google/docs/ide/extensions/vscode.md",
+    "html_url": "https://antigravity.google/docs/ide/extensions/vscode",
+    "route": "antigravity/ide/extensions/vscode",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Visual Studio",
+    "md_url": "https://antigravity.google/docs/ide/extensions/visual-studio.md",
+    "html_url": "https://antigravity.google/docs/ide/extensions/visual-studio",
+    "route": "antigravity/ide/extensions/visual-studio",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Eclipse",
+    "md_url": "https://antigravity.google/docs/ide/extensions/eclipse.md",
+    "html_url": "https://antigravity.google/docs/ide/extensions/eclipse",
+    "route": "antigravity/ide/extensions/eclipse",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "IntelliJ-based IDEs",
+    "md_url": "https://antigravity.google/docs/ide/extensions/jetbrains.md",
+    "html_url": "https://antigravity.google/docs/ide/extensions/jetbrains",
+    "route": "antigravity/ide/extensions/jetbrains",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Android Studio",
+    "md_url": "https://antigravity.google/docs/ide/extensions/android-studio.md",
+    "html_url": "https://antigravity.google/docs/ide/extensions/android-studio",
+    "route": "antigravity/ide/extensions/android-studio",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Zed",
+    "md_url": "https://antigravity.google/docs/ide/extensions/zed.md",
+    "html_url": "https://antigravity.google/docs/ide/extensions/zed",
+    "route": "antigravity/ide/extensions/zed",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Xcode",
+    "md_url": "https://antigravity.google/docs/ide/extensions/xcode.md",
+    "html_url": "https://antigravity.google/docs/ide/extensions/xcode",
+    "route": "antigravity/ide/extensions/xcode",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Other editors (ACP)",
+    "md_url": "https://antigravity.google/docs/ide/extensions/acp.md",
+    "html_url": "https://antigravity.google/docs/ide/extensions/acp",
+    "route": "antigravity/ide/extensions/acp",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
     "title": "Tab",
     "md_url": "https://antigravity.google/docs/ide/tab.md",
     "html_url": "https://antigravity.google/docs/ide/tab",
@@ -893,6 +1029,14 @@
     "md_url": "https://antigravity.google/docs/firebase-studio-migration.md",
     "html_url": "https://antigravity.google/docs/firebase-studio-migration",
     "route": "antigravity/firebase-studio-migration",
+    "kind": "doc"
+  },
+  {
+    "group": "Antigravity",
+    "title": "Workflows to skills migration",
+    "md_url": "https://antigravity.google/docs/migration/workflows-to-skills.md",
+    "html_url": "https://antigravity.google/docs/migration/workflows-to-skills",
+    "route": "antigravity/migration/workflows-to-skills",
     "kind": "doc"
   },
   {
@@ -2273,14 +2417,6 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Create & manage AI mini-apps or custom workflows as Gems from Google Labs",
-    "md_url": "https://support.google.com/gemini/answer/16802014",
-    "html_url": "https://support.google.com/gemini/answer/16802014",
-    "route": "gemini-app/16802014",
-    "kind": "doc"
-  },
-  {
-    "group": "Gemini App Help",
     "title": "About personalization with Connected Apps",
     "md_url": "https://support.google.com/gemini/answer/16836988",
     "html_url": "https://support.google.com/gemini/answer/16836988",
@@ -2473,7 +2609,7 @@
   },
   {
     "group": "Gemini App Help",
-    "title": "Ask Gemini to handle your everyday phone calls",
+    "title": "Ask Gemini to handle your everyday phone calls on your Pixel phone",
     "md_url": "https://support.google.com/gemini/answer/18336420",
     "html_url": "https://support.google.com/gemini/answer/18336420",
     "route": "gemini-app/18336420",
@@ -2589,6 +2725,22 @@
     "md_url": "https://support.google.com/gemini/answer/18941404",
     "html_url": "https://support.google.com/gemini/answer/18941404",
     "route": "gemini-app/18941404",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Ask Gemini to make phone calls to businesses",
+    "md_url": "https://support.google.com/gemini/answer/18961634",
+    "html_url": "https://support.google.com/gemini/answer/18961634",
+    "route": "gemini-app/18961634",
+    "kind": "doc"
+  },
+  {
+    "group": "Gemini App Help",
+    "title": "Transfer skills from other platforms to Gemini Apps",
+    "md_url": "https://support.google.com/gemini/answer/18977944",
+    "html_url": "https://support.google.com/gemini/answer/18977944",
+    "route": "gemini-app/18977944",
     "kind": "doc"
   },
   {
@@ -3217,10 +3369,34 @@
   },
   {
     "group": "Blog",
+    "title": "computer use mac",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/",
+    "route": "blog/innovation-and-ai/products/gemini-app/computer-use-mac",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
     "title": "gemini lower memory devices",
     "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
     "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
     "route": "blog/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "switch ai assistants transfer history",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/switch-ai-assistants-transfer-history/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/switch-ai-assistants-transfer-history/",
+    "route": "blog/innovation-and-ai/products/gemini-app/switch-ai-assistants-transfer-history",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini canvas tasks",
+    "md_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-canvas-tasks/",
+    "html_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-canvas-tasks/",
+    "route": "blog/innovation-and-ai/products/gemini-app/gemini-canvas-tasks",
     "kind": "blog"
   },
   {
@@ -3509,6 +3685,22 @@
     "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
     "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
     "route": "blog/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 4 hydrogen builders",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-hydrogen-builders/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-hydrogen-builders/",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-4-hydrogen-builders",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini 4 neon builders",
+    "md_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-neon-builders/",
+    "html_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-neon-builders/",
+    "route": "blog/innovation-and-ai/models-and-research/gemini-models/gemini-4-neon-builders",
     "kind": "blog"
   },
   {
@@ -4389,6 +4581,14 @@
     "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-4-carbon-builders/",
     "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-4-carbon-builders/",
     "route": "blog/products-and-platforms/products/gemini/gemini-4-carbon-builders",
+    "kind": "blog"
+  },
+  {
+    "group": "Blog",
+    "title": "gemini golden state",
+    "md_url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+    "html_url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+    "route": "blog/products-and-platforms/products/gemini/gemini-golden-state",
     "kind": "blog"
   }
 ]
