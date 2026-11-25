@@ -76,6 +76,15 @@ GROWTH_FAIL_FACTOR = 3.0
 TAG_RE = re.compile(r"<[^>]+>")
 MARKDOWN_NOISE_RE = re.compile(r"[#*_>`\[\]()!|]|^\s*[-=]{3,}\s*$", re.M)
 IMG_URL_RE = re.compile(r"!\[[^\]]*\]\(([^)\s]+)|<img[^>]+src=[\"']([^\"']+)", re.I)
+#: Script/style/template *contents* are code, not prose.  The sanitizer strips
+#: them from the corpus (scripts/sanitize_corpus_html.py), and a page whose
+#: only loss is that payload has not lost any content -- it has been cleaned.
+#: Measured on 2026-11-26: zhipu's zcode-changelog went from 109KB to 44KB
+#: because ~65KB of inline JavaScript (a GTM snippet plus the hydration blob)
+#: was removed.  Its prose was byte-identical before and after (3719 chars).
+SCRIPT_BLOCK_RE = re.compile(
+    r"<(script|style|template)\b[^>]*>.*?</\1\s*>", re.S | re.I
+)
 
 
 def _text_len(raw: str) -> int:
@@ -85,6 +94,19 @@ def _text_len(raw: str) -> int:
     text = TAG_RE.sub(" ", raw)
     text = MARKDOWN_NOISE_RE.sub(" ", text)
     return len(re.sub(r"\s+", " ", text).strip())
+
+
+def _prose_len(raw: str) -> int:
+    """Body-text length with script/style/template contents removed.
+
+    Used for the shrink rule, where both sides must be measured the same way:
+    the committed page still carries the inline JavaScript that the sanitizer
+    strips from the working tree, so comparing raw bytes would report a
+    content loss that never happened.
+    """
+    if not raw:
+        return 0
+    return _text_len(SCRIPT_BLOCK_RE.sub(" ", raw))
 
 
 def _exact_text_len(raw: str, url: str) -> int:
@@ -121,6 +143,19 @@ def _committed_sizes(rel: str, root: Path | None = None) -> dict[str, int]:
         except ValueError:
             continue
     return sizes
+
+
+def _git_show_text(rel: str, root: Path | None = None) -> str | None:
+    """The committed content of one file, or None if it is not in HEAD."""
+    root = Path(root) if root else ROOT
+    res = subprocess.run(
+        ["git", "show", f"HEAD:{rel}"],
+        cwd=root,
+        capture_output=True,
+    )
+    if res.returncode != 0:
+        return None
+    return res.stdout.decode("utf-8", errors="replace")
 
 
 def _referenced_images(corpus: Path, pages: dict[str, str]) -> int:
@@ -208,20 +243,44 @@ def check_vendor(vid: str, *, exact: bool = False, root: Path | None = None) -> 
     result["median_chars"] = median
 
     # Shrink detection: the route still exists but no longer holds the article.
+    #
+    # The cheap byte comparison is only a pre-filter.  A page can lose bytes
+    # without losing content -- the sanitizer strips inline <script> blocks
+    # from the corpus, and on 2026-11-26 that made zhipu's zcode-changelog look
+    # like it had lost 60% of itself while its prose stayed byte-identical.
+    # So every candidate is re-measured as prose against the committed blob,
+    # and only a real prose loss counts.
     committed = _committed_sizes(f"vendors/{vid}/corpus/pages", root)
     shrunk: list[str] = []
+    cleaned: list[str] = []
     for name, size in page_bytes.items():
-        old = committed.get(f"vendors/{vid}/corpus/pages/{name}.md")
+        rel = f"vendors/{vid}/corpus/pages/{name}.md"
+        old = committed.get(rel)
         if not old or old < SHRINK_MIN_BYTES:
             continue
-        if size < old * SHRINK_RATIO:
+        if size >= old * SHRINK_RATIO:
+            continue
+        old_raw = _git_show_text(rel, root)
+        if old_raw is None:
             shrunk.append(f"{name} ({size}B of {old}B)")
+            continue
+        old_prose = _prose_len(old_raw)
+        new_prose = _prose_len(pages.get(name, ""))
+        if old_prose and new_prose < old_prose * SHRINK_RATIO:
+            shrunk.append(
+                f"{name} ({new_prose} prose chars of {old_prose})"
+            )
+        else:
+            # Bytes went down, prose did not: the payload that went away was
+            # script/style boilerplate, i.e. a cleanup, not a content loss.
+            cleaned.append(f"{name} ({size}B of {old}B, prose kept)")
     if shrunk:
         problems.append(
-            f"{len(shrunk)} route(s) lost more than half their committed size "
+            f"{len(shrunk)} route(s) lost more than half their committed prose "
             f"(possible abridged source): {shrunk[:8]}"
         )
     result["shrunk_pages"] = len(shrunk)
+    result["cleaned_pages"] = len(cleaned)
 
     image_bytes = _referenced_images(corpus, pages)
     text_bytes = sum(len(raw) for raw in pages.values())
