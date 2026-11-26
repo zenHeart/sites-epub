@@ -1003,3 +1003,122 @@ bug，又引发一轮完整重抓。
 与 CI run 的 conclusion。**不看会话列表**。会话消失 + main 未推进才是真掉了。
 
 ---
+
+## 40. 落地页的 promo banner 会用链接文本压过文章真实标题（gemini，2026-11-27）
+
+**症状**：`fetch --id gemini` 报 `fetched=0, skipped=574`，但 `routes.json` 里
+`gemini-app/13275745` 的 title 从 `"Use Gemini Apps"` 变成了 `"Learn how"`。
+线上书还没坏（那次抓取还没提交），但**明天再抓一次就会把错标题带进 EPUB**。
+`fetch` 报 `ok:true`，三条闸门（scope_gate / verify_corpus / seo_lint）**全都绿**
+——标题错到这种程度，没有任何一条门禁会拦。
+
+**根因**：support.google.com 每个 help-center 页面顶部都挂一条全局推广横幅：
+
+```html
+<div class="notification" data-name="always_on_global">
+  <p><a href="https://support.google.com/gemini/answer/13275745">Learn how</a> to manage your Gemini App</p>
+</div>
+```
+
+横幅的链接指向**真实文章**，但锚文本是通用 CTA，不是文章标题。同一篇文章在页面
+下方还有两个正确标题的锚（`a.article-link` → `Use Gemini Apps`）。
+`help_center_entries()` 先扫落地页锚点、再扫 topic 页，且用 `setdefault`
+**保留先到的文本** → 横幅的 "Learn how" 赢了。
+
+**怎么发现**：`fetch` 报 0 变化却看见 `routes.json` 变了，就去比对**文章页自己的
+`<h1>`**（`curl` 线上页抓 `<h1>`）与 `routes.json` 的 title。两个面不一致就说明
+枚举面的 title 不可信。
+
+**怎么修**（`gemini_nav.py`）：promo 横幅锚点进**低优先级层**，仍可贡献路由，
+但永不覆盖真实文章标题：
+
+```python
+PROMO_CLASS_RE = re.compile(r"(?:^|[-_ ])(?:notification|info-bar)(?:$|[-_ ])", re.I)
+# 锚点向上找 6 层，命中 notification / info-bar 容器即判为 promo
+answers: dict[str, str] = {}   # 真实标题
+promo:   dict[str, str] = {}   # 横幅标题
+# ...扫锚点时按层级分流...
+for path, title in promo.items():
+    answers.setdefault(path, title)   # 只填真实标题没有的路由
+```
+
+**A/B 证据（2026-11-27，线上真实页面）**：新旧实现各跑一遍——
+路由集合**完全一致**（Gemini App Help 105 条 + NotebookLM Help 27 条），
+**恰好 1 条** title 变化：`'Learn how'` → `'Use Gemini Apps'`。
+NotebookLM 那侧 0 变化。
+
+**成本**：`gemini_nav.py` **不在 `PACKER_FILES` 里** → 改它**不会**触发 12 本书
+全量重打（对照 §27 里 `codex_nav.py` 在 `PACKER_FILES` 里的情形）。
+这是「改适配器」与「改打包器」成本差别的关键判据，动手前先查
+`pack_cache.py` 的 `PACKER_FILES`。
+
+**怎么防止复发**：
+- 新增 `tests/test_gemini_nav.py`，夹具照抄线上形状（横幅 + 正确锚同指一篇文章）。
+  关键：**测试必须能对旧实现失败**——所以调用方式不能依赖新签名，
+  要 patch 模块级 `gemini_nav.fetch_text`（旧实现也用它），
+  断言才会以 `'Learn how' != 'Use Gemini Apps'` 的**行为差异**失败，
+  而不是 `TypeError: unexpected keyword argument`。
+- 通用判据：**枚举面的标题是二手信息，文章页的 `<h1>` 是一手信息**。
+  两者不一致时，优先怀疑枚举面的优先级规则。
+
+---
+
+## 41. help-center 的 topic 展开是死代码：相对 URL 喂给 `fetch_text` 必抛异常（gemini，2026-11-27）
+
+**症状**：`help_center_entries()` 里有一段「扫 topic 页再补路由」的逻辑，
+实测**从来没有生效过**：落地页上 `/gemini/topic/*` 的链接被以**相对路径**存进
+`topics`，随后 `fetch_text(tp)` 拿到的是 `"/gemini/topic/16622650"` 这种相对串，
+`urllib.request.Request` 直接抛 `ValueError: unknown url type`，
+被 `except Exception: continue` 静默吞掉。
+
+**影响面**：两个 topic 页（`/gemini/topic/16622650` 30 条、
+`/gemini/topic/16695153` 10 条）合计引用 **40 篇文章**，其中 **32 篇**
+（23 + 9）不在落地页的 105 条里 → **这 32 篇 Gemini App 产品帮助文章从未进过书**。
+`fetch` 一直报 `ok:true`、`entries` 数不变，没有任何异常信号。
+
+**为什么没顺手修**：修它会让 gemini 的书**多 32 章**，属于「扩大书的范围」，
+不是一个无人值守增量任务该顺手做的决定（§10 边界）。**已留档待人工决策**。
+
+**怎么修（一行）**：把 topic 拼成绝对 URL 再取：
+
+```python
+for tp in sorted(topics):
+    try:
+        thtml = fetch(f"https://support.google.com{tp}")   # ← 绝对 URL
+    except Exception:
+        continue
+```
+
+**怎么防止复发**：
+- 枚举面里凡是「存了路径、下一轮再拿它去请求」的写法，一律先确认 URL 是绝对的。
+- `except Exception: continue` 包住网络请求时，**记一次日志**——
+  静默吞异常正是这个 bug 藏了这么久的唯一原因。
+
+---
+
+## 42. 两个「本地看起来失败、其实不是」的坑（2026-11-27）
+
+**坑一：`git fetch origin --prune` 不会更新 `origin/gh-pages`。**
+本仓的 fetch refspec 是**窄的**：
+
+```
+$ git config --get-all remote.origin.fetch
++refs/heads/main:refs/remotes/origin/main
+```
+
+只有 main。所以 `git fetch origin --prune` 后 `origin/gh-pages` **永远停在几天前**，
+`git log origin/gh-pages` 会显示「部署没发生」，而线上其实早更新了——
+2026-11-27 实测线上已是新书，`origin/gh-pages` 却还指着上一次部署的 commit。
+**判据**：先 `git ls-remote origin refs/heads/gh-pages`（权威），
+或显式 `git fetch origin +refs/heads/gh-pages:refs/remotes/origin/gh-pages`。
+**别**据此判定「CI 没部署」。
+
+**坑二：非交互 shell 的 PATH 里没有 `/usr/local/bin`。**
+`pandoc` 装在 `/usr/local/bin/pandoc`，但非交互 bash 的 PATH 只有
+`/usr/bin:/bin:/usr/sbin:/sbin` → `tests/test_bisect.py` 报
+`FileNotFoundError: 'pandoc'`，4 个用例 error，看起来像**代码回归**，
+其实是**环境没配**。同理 `gh` 也在 `/usr/local/bin`（见主 SKILL 的环境段）。
+**做法**：跑测试 / 查 CI 前先 `export PATH="/usr/local/bin:$PATH"`，
+再判断是真失败还是环境失败——**先看报错是断言不符还是工具找不到**。
+
+---
