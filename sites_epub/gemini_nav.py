@@ -51,6 +51,32 @@ AISTUDIO_TITLE_PREFIX = "Google AI Studio"
 
 BLOG_SITEMAP = "https://blog.google/en-us/sitemap.xml"
 
+# support.google.com renders a global promo banner on every help-centre page
+# ("Learn how to manage your Gemini App").  The banner links to a real article,
+# but its anchor text is a generic call-to-action, NOT that article's title.
+# The landing page's anchors are scanned before the topic pages and the old
+# `setdefault` kept whichever text came first, so the banner text won and the
+# chapter shipped titled "Learn how" instead of "Use Gemini Apps" (2026-11-27).
+#
+# Promo anchors now go to a lower-priority tier: they can still contribute a
+# route the nav never links, but they never override a real article title.
+PROMO_CLASS_RE = re.compile(r"(?:^|[-_ ])(?:notification|info-bar)(?:$|[-_ ])", re.I)
+
+
+def _in_promo_banner(anchor) -> bool:
+    """True when the anchor sits inside a support.google.com promo banner."""
+    node = anchor.parent
+    for _ in range(6):
+        if node is None or getattr(node, "name", None) == "body":
+            return False
+        classes = node.get("class") or []
+        if isinstance(classes, str):
+            classes = [classes]
+        if any(PROMO_CLASS_RE.search(c) for c in classes):
+            return True
+        node = node.parent
+    return False
+
 
 def _clean_href(href: str, base: str) -> str | None:
     href = href.split("#", 1)[0].split("?", 1)[0].strip()
@@ -127,11 +153,21 @@ def nav_entries(
     return out
 
 
-def help_center_entries(landing: str, product: str, group: str, prefix: str) -> list[IndexEntry]:
+def help_center_entries(
+    landing: str,
+    product: str,
+    group: str,
+    prefix: str,
+    fetch_text_fn=None,
+) -> list[IndexEntry]:
     """support.google.com help center: flat SSR landing links, expand topics once."""
-    html = fetch_text(landing)
+    # Resolved at call time (not as a default argument) so tests can patch the
+    # module-level fetch_text and still drive this function.
+    fetch = fetch_text_fn or fetch_text
+    html = fetch(landing)
     soup = BeautifulSoup(html, "lxml")
     answers: dict[str, str] = {}
+    promo: dict[str, str] = {}
     topics: set[str] = set()
     for a in soup.find_all("a", href=True):
         absu = urljoin(landing, a["href"]).split("#")[0].split("?")[0]
@@ -141,10 +177,15 @@ def help_center_entries(landing: str, product: str, group: str, prefix: str) -> 
         if m.group(1) == "topic":
             topics.add(m.group(0))
         else:
-            answers.setdefault(m.group(0), " ".join(a.get_text(" ", strip=True).split()))
+            text = " ".join(a.get_text(" ", strip=True).split())
+            # A promo banner link is a real route but its text is a call-to-action.
+            if _in_promo_banner(a):
+                promo.setdefault(m.group(0), text)
+            else:
+                answers.setdefault(m.group(0), text)
     for tp in sorted(topics):
         try:
-            thtml = fetch_text(tp)
+            thtml = fetch(tp)
         except Exception:  # noqa: BLE001
             continue
         for a in BeautifulSoup(thtml, "lxml").find_all("a", href=True):
@@ -154,6 +195,9 @@ def help_center_entries(landing: str, product: str, group: str, prefix: str) -> 
                 answers.setdefault(
                     m.group(0), " ".join(a.get_text(" ", strip=True).split())
                 )
+    # Promo titles only fill routes that the nav never linked on its own.
+    for path, title in promo.items():
+        answers.setdefault(path, title)
     out: list[IndexEntry] = []
     for path, title in sorted(answers.items()):
         clean = f"https://support.google.com{path}"
