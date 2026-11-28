@@ -87,6 +87,12 @@ def discover_entries(
         from .gemini_nav import parse_gemini_docs
 
         docs = parse_gemini_docs()
+    elif vendor.adapter == "muse":
+        from .muse_nav import parse_muse_docs
+
+        if not docs_html:
+            raise ValueError("muse adapter needs docs HTML")
+        docs = parse_muse_docs(docs_html, vendor.docs_url)
     else:
         from .generic_nav import parse_docs_html, parse_llms_generic
 

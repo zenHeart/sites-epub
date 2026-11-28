@@ -180,4 +180,6 @@ def guess_adapter(docs_url: str) -> str:
         return "claude"
     if "docs.x.ai" in host or "x.ai" in host:
         return "xai"
+    if "musemuse.dev" in host or "dev.meta.ai" in host:
+        return "muse"
     return "generic"

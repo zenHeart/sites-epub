@@ -179,6 +179,21 @@
       "category": "docs",
       "chapters": 29,
       "cover": ""
+    },
+    {
+      "id": "muse",
+      "name": "Muse",
+      "docs_url": "https://www.musemuse.dev/docs/muse-code",
+      "blog_url": null,
+      "icon": "vendors/muse/icon.png",
+      "author": "Meta",
+      "adapter": "muse",
+      "updated_at": "2026-11-28T00:23:59Z",
+      "packed_at": "2026-11-28T00:30:05Z",
+      "summary": "收录 Muse 官方产品文档，无博客。",
+      "category": "docs",
+      "chapters": 11,
+      "cover": "covers/muse.png"
     }
   ],
   "sites": [

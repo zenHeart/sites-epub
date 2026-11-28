@@ -1,0 +1,90 @@
+[
+  {
+    "group": "Muse Code",
+    "title": "Skip to content",
+    "md_url": "https://www.musemuse.dev/docs/muse-code",
+    "html_url": "https://www.musemuse.dev/docs/muse-code",
+    "route": "index",
+    "kind": "doc"
+  },
+  {
+    "group": "Muse Code",
+    "title": "Authentication and billing",
+    "md_url": "https://www.musemuse.dev/docs/muse-code/auth",
+    "html_url": "https://www.musemuse.dev/docs/muse-code/auth",
+    "route": "auth",
+    "kind": "doc"
+  },
+  {
+    "group": "Muse Code",
+    "title": "Subscriptions",
+    "md_url": "https://www.musemuse.dev/docs/muse-code/subscriptions",
+    "html_url": "https://www.musemuse.dev/docs/muse-code/subscriptions",
+    "route": "subscriptions",
+    "kind": "doc"
+  },
+  {
+    "group": "Muse Code",
+    "title": "Permissions and safety",
+    "md_url": "https://www.musemuse.dev/docs/muse-code/permissions",
+    "html_url": "https://www.musemuse.dev/docs/muse-code/permissions",
+    "route": "permissions",
+    "kind": "doc"
+  },
+  {
+    "group": "Muse Code",
+    "title": "Working with the agent",
+    "md_url": "https://www.musemuse.dev/docs/muse-code/interactive",
+    "html_url": "https://www.musemuse.dev/docs/muse-code/interactive",
+    "route": "interactive",
+    "kind": "doc"
+  },
+  {
+    "group": "Muse Code",
+    "title": "Workflows",
+    "md_url": "https://www.musemuse.dev/docs/muse-code/workflows",
+    "html_url": "https://www.musemuse.dev/docs/muse-code/workflows",
+    "route": "workflows",
+    "kind": "doc"
+  },
+  {
+    "group": "Muse Code",
+    "title": "Session messaging",
+    "md_url": "https://www.musemuse.dev/docs/muse-code/session-messaging",
+    "html_url": "https://www.musemuse.dev/docs/muse-code/session-messaging",
+    "route": "session-messaging",
+    "kind": "doc"
+  },
+  {
+    "group": "Muse Code",
+    "title": "Rewind a conversation",
+    "md_url": "https://www.musemuse.dev/docs/muse-code/rewind",
+    "html_url": "https://www.musemuse.dev/docs/muse-code/rewind",
+    "route": "rewind",
+    "kind": "doc"
+  },
+  {
+    "group": "Muse Code",
+    "title": "Configuration and context",
+    "md_url": "https://www.musemuse.dev/docs/muse-code/configuration",
+    "html_url": "https://www.musemuse.dev/docs/muse-code/configuration",
+    "route": "configuration",
+    "kind": "doc"
+  },
+  {
+    "group": "Muse Code",
+    "title": "Extending and automating",
+    "md_url": "https://www.musemuse.dev/docs/muse-code/extending",
+    "html_url": "https://www.musemuse.dev/docs/muse-code/extending",
+    "route": "extending",
+    "kind": "doc"
+  },
+  {
+    "group": "Muse Code",
+    "title": "Changelog",
+    "md_url": "https://www.musemuse.dev/docs/muse-code/changelog",
+    "html_url": "https://www.musemuse.dev/docs/muse-code/changelog",
+    "route": "changelog",
+    "kind": "doc"
+  }
+]
